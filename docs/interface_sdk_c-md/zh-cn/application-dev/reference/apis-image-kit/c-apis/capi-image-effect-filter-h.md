@@ -203,7 +203,7 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_SetFilterName(OH_EffectFilterInfo *inf
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectFilterInfo_GetFilterName()
 
@@ -230,7 +230,7 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_GetFilterName(OH_EffectFilterInfo *inf
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectFilterInfo_SetSupportedBufferTypes()
 
@@ -258,7 +258,7 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_SetSupportedBufferTypes(OH_EffectFilte
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectFilterInfo_GetSupportedBufferTypes()
 
@@ -286,7 +286,7 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_GetSupportedBufferTypes(OH_EffectFilte
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectFilterInfo_SetSupportedFormats()
 
@@ -314,7 +314,7 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_SetSupportedFormats(OH_EffectFilterInf
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectFilterInfo_GetSupportedFormats()
 
@@ -342,7 +342,7 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_GetSupportedFormats(OH_EffectFilterInf
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectFilterInfo_Release()
 
@@ -368,7 +368,7 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_Release(OH_EffectFilterInfo *info)
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_Create()
 
@@ -415,7 +415,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetAddr(OH_EffectBufferInfo *info, voi
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_GetAddr()
 
@@ -442,7 +442,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetAddr(OH_EffectBufferInfo *info, voi
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_SetWidth()
 
@@ -469,7 +469,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetWidth(OH_EffectBufferInfo *info, in
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_GetWidth()
 
@@ -496,7 +496,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetWidth(OH_EffectBufferInfo *info, in
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_SetHeight()
 
@@ -523,7 +523,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetHeight(OH_EffectBufferInfo *info, i
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_GetHeight()
 
@@ -550,7 +550,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetHeight(OH_EffectBufferInfo *info, i
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_SetRowSize()
 
@@ -577,7 +577,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetRowSize(OH_EffectBufferInfo *info, 
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_GetRowSize()
 
@@ -604,7 +604,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetRowSize(OH_EffectBufferInfo *info, 
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_SetEffectFormat()
 
@@ -631,7 +631,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetEffectFormat(OH_EffectBufferInfo *i
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_GetEffectFormat()
 
@@ -658,7 +658,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetEffectFormat(OH_EffectBufferInfo *i
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_SetTextureId()
 
@@ -685,7 +685,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetTextureId(OH_EffectBufferInfo *info
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：参数缺失。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：参数缺失。 |
 
 ### OH_EffectBufferInfo_GetTextureId()
 
@@ -712,7 +712,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetTextureId(OH_EffectBufferInfo *info
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：参数缺失。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：参数缺失。 |
 
 ### OH_EffectBufferInfo_Release()
 
@@ -738,7 +738,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_Release(OH_EffectBufferInfo *info)
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectFilterDelegate_SetValue()
 
@@ -922,7 +922,7 @@ ImageEffect_ErrorCode OH_EffectFilter_SetValue(OH_EffectFilter *filter, const ch
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_KEY_ERROR：参数无效。          EFFECT_PARAM_ERROR：参数值无效。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_KEY_ERROR：参数无效。          EFFECT_PARAM_ERROR：参数值无效。 |
 
 ### OH_EffectFilter_GetValue()
 
@@ -950,7 +950,7 @@ ImageEffect_ErrorCode OH_EffectFilter_GetValue(OH_EffectFilter *filter, const ch
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_KEY_ERROR：参数无效。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_KEY_ERROR：参数无效。 |
 
 ### OH_EffectFilter_Register()
 
@@ -977,7 +977,7 @@ ImageEffect_ErrorCode OH_EffectFilter_Register(const OH_EffectFilterInfo *info, 
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectFilter_LookupFilters()
 
@@ -1044,7 +1044,7 @@ ImageEffect_ErrorCode OH_EffectFilter_LookupFilterInfo(const char *name, OH_Effe
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针或其他无效值。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针或其他无效值。 |
 
 ### OH_EffectFilter_Render()
 
@@ -1072,7 +1072,7 @@ ImageEffect_ErrorCode OH_EffectFilter_Render(OH_EffectFilter *filter, OH_Pixelma
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectFilter_RenderWithTextureId()
 
@@ -1101,7 +1101,7 @@ ImageEffect_ErrorCode OH_EffectFilter_RenderWithTextureId(OH_EffectFilter *filte
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：参数缺失。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：参数缺失。 |
 
 ### OH_EffectFilter_Release()
 
@@ -1127,7 +1127,7 @@ ImageEffect_ErrorCode OH_EffectFilter_Release(OH_EffectFilter *filter)
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_SetTimestamp()
 
@@ -1154,7 +1154,7 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetTimestamp(OH_EffectBufferInfo *info
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_EffectBufferInfo_GetTimestamp()
 
@@ -1181,6 +1181,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetTimestamp(OH_EffectBufferInfo *info
 
 | 类型 | 说明 |
 | -- | -- |
-| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 

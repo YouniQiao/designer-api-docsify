@@ -2035,7 +2035,7 @@ OH_AVPlayerVideoOutput* OH_AVPlayer_SetVideoSideOutput(OH_AVPlayer *player, OHNa
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
-| OHNativeWindow *window | 指向OHNativeWindow实例的指针，请参见[OHNativeWindow](../AVCodecKit/capi-codecbase-nativewindow.md) |
+| OHNativeWindow *window | 指向OHNativeWindow实例的指针，请参见[OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
 
 **返回：**
 

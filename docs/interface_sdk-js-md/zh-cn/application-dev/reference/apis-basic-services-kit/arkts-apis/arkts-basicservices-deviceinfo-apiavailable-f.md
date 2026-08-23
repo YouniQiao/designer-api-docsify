@@ -12,7 +12,7 @@ import { deviceInfo } from '@kit.BasicServicesKit';
 function apiAvailable(version: string | int): boolean
 ```
 
-检查指定的API版本在当前设备上是否可用。 此方法提供跨不同OpenHarmony/分布式操作系统版本的兼容性检查。它会根据输入格式和API版本范围自动选择合适的版本检查方法。
+检查指定的API版本在当前设备上是否可用。 此方法提供OpenHarmony及其各发行版系统版本的兼容性检查。该方法会根据输入格式和API版本范围自动选择合适的版本检查方法。
 
 **起始版本：** 26.1.0
 

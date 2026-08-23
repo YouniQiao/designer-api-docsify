@@ -402,7 +402,7 @@ Camera_ErrorCode OH_CaptureSession_AddSecureOutput(Camera_CaptureSession* sessio
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | 要标记为安全输出的Camera_PreviewOutput。 |
+| Camera_PreviewOutput* previewOutput | 要标记为安全输出的Camera_PreviewOutput。 |
 
 **返回：**
 
@@ -475,7 +475,7 @@ Camera_ErrorCode OH_CaptureSession_AddInput(Camera_CaptureSession* session, Came
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| Camera_Input* cameraInput | 要添加的相机输入实例。 |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | 要添加的相机输入实例。 |
 
 **返回：**
 
@@ -500,7 +500,7 @@ Camera_ErrorCode OH_CaptureSession_RemoveInput(Camera_CaptureSession* session, C
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| Camera_Input* cameraInput | 要删除的相机输入实例。 |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | 要删除的相机输入实例。 |
 
 **返回：**
 
@@ -525,7 +525,7 @@ Camera_ErrorCode OH_CaptureSession_AddPreviewOutput(Camera_CaptureSession* sessi
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | 要添加的预览输出实例。 |
+| Camera_PreviewOutput* previewOutput | 要添加的预览输出实例。 |
 
 **返回：**
 
@@ -550,7 +550,7 @@ Camera_ErrorCode OH_CaptureSession_RemovePreviewOutput(Camera_CaptureSession* se
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | 要删除的预览输出实例。 |
+| Camera_PreviewOutput* previewOutput | 要删除的预览输出实例。 |
 
 **返回：**
 
@@ -2215,7 +2215,7 @@ Camera_ErrorCode OH_CaptureSession_CanAddInput(Camera_CaptureSession* session, C
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| Camera_Input* cameraInput | 要设置的相机输入实例。 |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | 要设置的相机输入实例。 |
 | bool* isSuccessful | 是否可以将相机输入添加到会话中的结果。返回true表示可以将相机输入添加到会话中，返回false表示不可以。 |
 
 **返回：**
@@ -2241,7 +2241,7 @@ Camera_ErrorCode OH_CaptureSession_CanAddPreviewOutput(Camera_CaptureSession* se
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* cameraOutput | 要设置的预览输出实例。 |
+| Camera_PreviewOutput* cameraOutput | 要设置的预览输出实例。 |
 | bool* isSuccessful | 是否可以将相机预览输出添加到会话中的结果。返回true表示可以将相机预览输出添加到会话中，返回false表示不可以。 |
 
 **返回：**

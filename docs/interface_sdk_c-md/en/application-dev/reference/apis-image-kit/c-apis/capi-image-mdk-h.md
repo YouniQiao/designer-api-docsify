@@ -158,7 +158,7 @@ Obtains [OhosImageSize](capi-image-ohosimagesize.md) of an [ImageNative](capi-im
 | Parameter | Description |
 | -- | -- |
 | [const ImageNative](capi-image-imagenative-.md)* native | Indicates the pointer to an [ImageNative](capi-image-imagenative-.md) object at the native layer. |
-| struct OhosImageSize* size | Indicates the pointer to the [OhosImageSize](capi-image-ohosimagesize.md) object obtained. |
+| [struct OhosImageSize](capi-image-ohosimagesize.md)* size | Indicates the pointer to the [OhosImageSize](capi-image-ohosimagesize.md) object obtained. |
 
 **Returns**:
 

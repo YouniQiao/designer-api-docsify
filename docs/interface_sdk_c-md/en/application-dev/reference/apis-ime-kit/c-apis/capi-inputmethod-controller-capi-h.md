@@ -44,7 +44,7 @@ Attach application to the input method service.
 | -- | -- |
 | InputMethod_TextEditorProxy *textEditorProxy | Pointer to the [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance.The caller needs to manage the **textEditorProxy** lifecycle.If the calling is successful, the caller cannot release **textEditorProxy** before the next binding orunbinding call. |
 | [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) *options | Represents a pointer to an [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance.The options when attaching input method. |
-| InputMethod_InputMethodProxy **inputMethodProxy | Represents a pointer to an [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) instance.Lifecycle is maintained until the next attach or detach call. |
+| [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) **inputMethodProxy | Represents a pointer to an [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) instance.Lifecycle is maintained until the next attach or detach call. |
 
 **Returns**:
 
@@ -71,7 +71,7 @@ Attach application to the input method service.
 | ArkUI_ContextHandle context | Pointer to the [ArkUI_Context](../apis-arkui/capi-arkui-nativemodule-arkui-context.md) instance. |
 | InputMethod_TextEditorProxy *textEditorProxy | Pointer to the [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance.The caller needs to manage the **textEditorProxy** lifecycle.If the calling is successful, the caller cannot release **textEditorProxy** before the next binding orunbinding call. |
 | [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) *options | Represents a pointer to an [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance.The options when attaching input method. |
-| InputMethod_InputMethodProxy **inputMethodProxy | Represents a pointer to an [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) instance.Lifecycle is maintained until the next attach or detach call. |
+| [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) **inputMethodProxy | Represents a pointer to an [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) instance.Lifecycle is maintained until the next attach or detach call. |
 
 **Returns**:
 
@@ -95,7 +95,7 @@ Detach application from the input method service.
 
 | Parameter | Description |
 | -- | -- |
-| InputMethod_InputMethodProxy *inputMethodProxy | Represents a pointer to an [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) instance.The inputMethodProxy is obtained from [OH_InputMethodController_Attach](capi-inputmethod-controller-capi-h.md#oh_inputmethodcontroller_attach). |
+| [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) *inputMethodProxy | Represents a pointer to an [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) instance.The inputMethodProxy is obtained from [OH_InputMethodController_Attach](capi-inputmethod-controller-capi-h.md#oh_inputmethodcontroller_attach). |
 
 **Returns**:
 
