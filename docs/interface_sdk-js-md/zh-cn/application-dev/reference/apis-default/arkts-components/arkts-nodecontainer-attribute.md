@@ -65,7 +65,7 @@ setNodeContainerOptions(controller: NodeController): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [NodeController](../arkts-apis/arkts-nodecontroller-c.md) | 是 | NodeContainer的控制器实例。 |
+| controller | [NodeController](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md) | 是 | NodeContainer的控制器实例。 |
 
 **返回值：**
 

@@ -7,7 +7,7 @@
 > LazyCustomLayoutAlgorithm类对象可以作为
 > [LazyDynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazydynamiclayout.md)组件的入参指定布局算法。
 
-**继承/实现关系：** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](../../apis-default/arkts-apis/arkts-lazylayoutalgorithm-i.md)
+**继承/实现关系：** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md)
 
 **起始版本：** 26.0.0
 
@@ -37,7 +37,7 @@ constructor(option?: LazyCustomLayoutAlgorithmOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [LazyCustomLayoutAlgorithmOptions](../../apis-default/arkts-apis/arkts-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | 否 | 自定义懒加载布局算法的构造入参，设置布局算法的轴向。 |
+| option | [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | 否 | 自定义懒加载布局算法的构造入参，设置布局算法的轴向。 |
 
 ## onLayout
 
@@ -114,5 +114,5 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelp
 | --- | --- | --- | --- |
 | self | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 懒加载动态布局组件在组件树上的实体节点。 |
 | constraint | [LayoutConstraint](../../apis-default/arkts-apis/arkts-framenode-layoutconstraint-i.md) | 是 | 懒加载动态布局组件进行测量时使用的布局约束。 |
-| helper | [LazyLayoutHelper](../../apis-default/arkts-apis/arkts-lazylayoutalgorithm-lazylayouthelper-c.md) | 否 | 懒加载布局辅助对象，提供布局方向和可视区域位置信息。为undefined时表示不支持懒加载。helper为undefined的场景如下： <br>1. 在WaterFlow组件多列模式或分段模式的多列分段下使用时不支持懒加载。 <br>2. 在List组件下使用，当List设置了 lanes、 chainAnimation、scrollSnapAlign属性 中的任意一个时不支持懒加载。 |
+| helper | [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | 否 | 懒加载布局辅助对象，提供布局方向和可视区域位置信息。为undefined时表示不支持懒加载。helper为undefined的场景如下： <br>1. 在WaterFlow组件多列模式或分段模式的多列分段下使用时不支持懒加载。 <br>2. 在List组件下使用，当List设置了 lanes、 chainAnimation、scrollSnapAlign属性 中的任意一个时不支持懒加载。 |
 

@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the SIM card in a specified slot is activated.
+获取指定卡槽SIM卡是否激活。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -24,8 +24,8 @@ Checks whether the SIM card in a specified slot is activated.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Indicates the callback for checking whether the SIM card in a specified slot is activated. Returns {@code true} if the SIM card is activated; returns {@code false} otherwise. |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回指定卡槽是否激活。<br/>- true:激活。<br/>- false：未激活。 |
 
 **示例**
 
@@ -56,7 +56,7 @@ sim.isSimActive(0).then((data: boolean) => {
 function isSimActive(slotId: int): Promise<boolean>
 ```
 
-Checks whether the SIM card in a specified slot is activated.
+获取指定卡槽SIM卡是否激活。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -68,13 +68,13 @@ Checks whether the SIM card in a specified slot is activated.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | 以Promise形式返回指定卡槽是否激活。<br/>- true:激活。<br/>- false：未激活。 |
 
 **示例**
 

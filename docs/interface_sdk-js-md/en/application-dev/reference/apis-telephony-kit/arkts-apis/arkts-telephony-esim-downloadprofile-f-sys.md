@@ -13,7 +13,7 @@ function downloadProfile(slotId: int, portIndex: int, profile: DownloadableProfi
                            configuration: DownloadConfiguration): Promise<DownloadProfileResult>
 ```
 
-Attempt to download the given downloadable Profile.
+Downloads a profile. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -29,16 +29,16 @@ Attempt to download the given downloadable Profile.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
-| portIndex | int | Yes | Index of the port for the slot. |
-| profile | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | Yes | The Bound Profile Package data returned by SM-DP+ server. |
-| configuration | [DownloadConfiguration](arkts-telephony-esim-downloadconfiguration-i-sys.md) | Yes | Configuration information during downloading. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| portIndex | int | Yes | Port index of the slot. |
+| profile | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | Yes | Downloadable profile. |
+| configuration | [DownloadConfiguration](arkts-telephony-esim-downloadconfiguration-i-sys.md) | Yes | Download configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[DownloadProfileResult](arkts-telephony-esim-downloadprofileresult-i-sys.md)&gt; | Return the given downloadableProfile. |
+| Promise&lt;[DownloadProfileResult](arkts-telephony-esim-downloadprofileresult-i-sys.md)&gt; | Promise used to return the profile download result. |
 
 **Error codes:**
 

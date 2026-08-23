@@ -1,6 +1,6 @@
 # ProxySchemeFilter
 
-Enum type supplied to [insertProxyRule](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyconfig-c.md#insertproxyrule) for indicating the scheme filter for proxy. @enum { number }
+Enum type supplied to [insertProxyRule](arkts-webview-proxyconfig-c.md#insertproxyrule) for indicating the scheme filter for proxy. @enum { number }
 
 **起始版本：** 23
 

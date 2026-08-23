@@ -101,7 +101,7 @@ handleError(error: MediaError, errorMessage: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| error | [MediaError](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediaerror-e.md) | 是 | 错误类型。 |
+| error | [MediaError](arkts-webview-mediaerror-e.md) | 是 | 错误类型。 |
 | errorMessage | string | 是 | 错误的详细描述。 |
 
 ## handleFullscreenChanged
@@ -212,7 +212,7 @@ handleReadyStateChanged(state: ReadyState): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [ReadyState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
+| state | [ReadyState](arkts-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
 
 ## handleSeekFinished
 
@@ -266,7 +266,7 @@ handleStatusChanged(status: PlaybackStatus): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| status | [PlaybackStatus](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
+| status | [PlaybackStatus](arkts-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
 
 ## handleTimeUpdate
 

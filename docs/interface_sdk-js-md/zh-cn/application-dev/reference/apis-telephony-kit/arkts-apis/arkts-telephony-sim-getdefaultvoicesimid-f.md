@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getDefaultVoiceSimId(callback: AsyncCallback<int>): void
 ```
 
-Obtains the default SIM ID for the voice service.
+获取默认语音业务的SIM卡ID。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -24,7 +24,7 @@ Obtains the default SIM ID for the voice service.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | Returns the SIM ID of the default voice sim and SIM ID will increase from 1. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。<br/>与SIM卡绑定，从1开始递增。 |
 
 **错误码：**
 
@@ -68,7 +68,7 @@ promise.then((data: number) => {
 function getDefaultVoiceSimId(): Promise<int>
 ```
 
-Obtains the default SIM ID for the voice service.
+获取默认语音业务的SIM卡ID。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -80,7 +80,7 @@ Obtains the default SIM ID for the voice service.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;int&gt; | Returns the SIM ID of the default voice sim and SIM ID will increase from 1. |
+| Promise&lt;int&gt; | 以Promise形式返回默认语音业务的SIM卡ID。<br/>与SIM卡绑定，从1开始递增。 |
 
 **错误码：**
 

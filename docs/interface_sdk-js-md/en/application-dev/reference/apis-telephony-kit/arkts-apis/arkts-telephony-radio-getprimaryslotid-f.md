@@ -12,9 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function getPrimarySlotId(callback: AsyncCallback<int>): void
 ```
 
-Obtains the index number of the card slot where the primary card is located if multiple SIM cards are inserted.
-
-The primary card is the SIM card inserted in the card slot that uses data services by default.
+Obtains the ID of the slot in which the primary card is located. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -26,7 +24,7 @@ The primary card is the SIM card inserted in the card slot that uses data servic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates the callback for getting the index number of the primary card slot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -69,9 +67,7 @@ radio.getPrimarySlotId().then((data: number) => {
 function getPrimarySlotId(): Promise<int>
 ```
 
-Obtains the index number of the card slot where the primary card is located if multiple SIM cards are inserted.
-
-The primary card is the SIM card inserted in the card slot that uses data services by default.
+Obtains the ID of the slot in which the primary card is located. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -83,7 +79,7 @@ The primary card is the SIM card inserted in the card slot that uses data servic
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Returns the index number of the primary card slot. |
+| Promise&lt;int&gt; | Promise used to return the result. |
 
 **Error codes:**
 

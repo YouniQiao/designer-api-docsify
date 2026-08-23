@@ -2,8 +2,6 @@
 
 Indicates IMS registration technology.
 
-@enum { int }
-
 **Since:** 23
 
 <!--Device-radio-export enum ImsRegTech--><!--Device-radio-export enum ImsRegTech-End-->

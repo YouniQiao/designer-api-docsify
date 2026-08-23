@@ -119,7 +119,7 @@ Returns the proxy rules.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[ProxyRule](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyrule-c.md)&gt; | The proxy rules. |
+| Array&lt;[ProxyRule](arkts-webview-proxyrule-c.md)&gt; | The proxy rules. |
 
 ## insertBypassRule
 
@@ -169,7 +169,7 @@ Insert a proxy rule that indicates URLs that match the schemeFilter will connect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | The scheme filter for this rule. |
+| schemeFilter | [ProxySchemeFilter](arkts-webview-proxyschemefilter-e.md) | 否 | The scheme filter for this rule. |
 
 **错误码：**
 
@@ -202,7 +202,7 @@ e.g. example.com host: example.com https://example.com scheme: https host: examp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | proxyRule | string | 是 | The proxy rule. |
-| schemeFilter | [ProxySchemeFilter](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | The scheme filter for this rule. |
+| schemeFilter | [ProxySchemeFilter](arkts-webview-proxyschemefilter-e.md) | 否 | The scheme filter for this rule. |
 
 **错误码：**
 

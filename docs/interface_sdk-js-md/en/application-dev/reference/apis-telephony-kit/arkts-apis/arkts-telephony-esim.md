@@ -1,8 +1,6 @@
 # @ohos.telephony.esim
 
-This indicates that the eSIM card performs the profile management operation synchronously. Includes methods defined by GSMA Spec (SGP.22) and customized methods.
-
-@namespace eSIM
+The **esim** module provides basic eSIM management capabilities, including checking whether a specified card slot supports the eSIM function.
 
 **Since:** 23
 
@@ -22,33 +20,33 @@ import { eSIM } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
-| [addProfile](arkts-telephony-esim-addprofile-f.md) | Starts a page through an ability, on which users can touch the button to download a profile. |
-| [isSupported](arkts-telephony-esim-issupported-f.md) | Whether embedded subscriptions are currently supported. |
+| [addProfile](arkts-telephony-esim-addprofile-f.md) | Launches the download page for the user to add a single profile. This API uses a promise to return the result. |
+| [isSupported](arkts-telephony-esim-issupported-f.md) | Checks whether the specified card slot supports the eSIM function. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [cancelSession](arkts-telephony-esim-cancelsession-f-sys.md) | Cancel session can be used in the 1.after the response to "ES9+.AuthenticateClient" 2.after the response to "ES9+.GetBoundProfilePackage" |
-| [deleteProfile](arkts-telephony-esim-deleteprofile-f-sys.md) | Deletes the given profile from eUICC. |
-| [downloadProfile](arkts-telephony-esim-downloadprofile-f-sys.md) | Attempt to download the given downloadable Profile. |
-| [getContractInfo](arkts-telephony-esim-getcontractinfo-f-sys.md) | Get contract info |
-| [getDefaultSmdpAddress](arkts-telephony-esim-getdefaultsmdpaddress-f-sys.md) | Gets the default SM-DP+ address stored in an eUICC. |
-| [getDownloadableProfileMetadata](arkts-telephony-esim-getdownloadableprofilemetadata-f-sys.md) | Fills in and gets the metadata for a downloadable profile. |
-| [getDownloadableProfiles](arkts-telephony-esim-getdownloadableprofiles-f-sys.md) | Gets downloadable profile List which are available for download on this device. |
-| [getEid](arkts-telephony-esim-geteid-f-sys.md) | Returns the EID identifying for the eUICC hardware. |
-| [getEsimFreeStorage](arkts-telephony-esim-getesimfreestorage-f-sys.md) | Returns the remaining storage space in KB for the eUICC hardware. |
-| [getEuiccInfo](arkts-telephony-esim-geteuiccinfo-f-sys.md) | Returns the eUICC Information. |
-| [getEuiccProfileInfoList](arkts-telephony-esim-geteuiccprofileinfolist-f-sys.md) | Returns a list of all eUICC profile information. |
-| [getOsuStatus](arkts-telephony-esim-getosustatus-f-sys.md) | Returns the current status of eUICC OS upgrade. |
-| [getSupportedPkids](arkts-telephony-esim-getsupportedpkids-f-sys.md) | Get supported pkids |
-| [reserveProfilesForFactoryRestore](arkts-telephony-esim-reserveprofilesforfactoryrestore-f-sys.md) | Ensure that profiles will be retained on the next factory reset. |
-| [resetMemory](arkts-telephony-esim-resetmemory-f-sys.md) | Erase all specific profiles and reset the eUICC. |
-| [setDefaultSmdpAddress](arkts-telephony-esim-setdefaultsmdpaddress-f-sys.md) | Set or update the default SM-DP+ address stored in an eUICC. |
-| [setProfileNickname](arkts-telephony-esim-setprofilenickname-f-sys.md) | Adds or updates the given profile nickname. |
-| [startOsu](arkts-telephony-esim-startosu-f-sys.md) | Execute OS upgrade if current OS upgrade is not the latest one. |
-| [switchToProfile](arkts-telephony-esim-switchtoprofile-f-sys.md) | Switch to (enable) the given profile on the eUICC. |
+| [cancelSession](arkts-telephony-esim-cancelsession-f-sys.md) | Cancels a session. This API uses a promise to return the result. |
+| [deleteProfile](arkts-telephony-esim-deleteprofile-f-sys.md) | Deletes a profile. This API uses a promise to return the result. |
+| [downloadProfile](arkts-telephony-esim-downloadprofile-f-sys.md) | Downloads a profile. This API uses a promise to return the result. |
+| [getContractInfo](arkts-telephony-esim-getcontractinfo-f-sys.md) | Obtains the encrypted eSIM ID and other information required for enabling eSIM. |
+| [getDefaultSmdpAddress](arkts-telephony-esim-getdefaultsmdpaddress-f-sys.md) | Obtains the default SM-DP+ address stored in the eUICC. This API uses a promise to return the result. |
+| [getDownloadableProfileMetadata](arkts-telephony-esim-getdownloadableprofilemetadata-f-sys.md) | Obtains the metadata of the downloadable profile. This API uses a promise to return the result. |
+| [getDownloadableProfiles](arkts-telephony-esim-getdownloadableprofiles-f-sys.md) | Obtains the list of downloadable profiles. This API uses a promise to return the result. |
+| [getEid](arkts-telephony-esim-geteid-f-sys.md) | Obtains the equipment identifier (EID) of the eUICC hardware in a specified card slot. |
+| [getEsimFreeStorage](arkts-telephony-esim-getesimfreestorage-f-sys.md) | This API is used to obtain the remaining storage space of the eUICC hardware. This API uses a promise to return the result. |
+| [getEuiccInfo](arkts-telephony-esim-geteuiccinfo-f-sys.md) | Obtains eUICC information. This API uses a promise to return the result. |
+| [getEuiccProfileInfoList](arkts-telephony-esim-geteuiccprofileinfolist-f-sys.md) | Obtains the profile information list. This API uses a promise to return the result. |
+| [getOsuStatus](arkts-telephony-esim-getosustatus-f-sys.md) | Obtains the OS upgrade status for the eSIM in the specified slot. This API uses a promise to return the result. |
+| [getSupportedPkids](arkts-telephony-esim-getsupportedpkids-f-sys.md) | Obtains the public key ID information supported by the phone. |
+| [reserveProfilesForFactoryRestore](arkts-telephony-esim-reserveprofilesforfactoryrestore-f-sys.md) | Restores factory settings and retains profiles. This API uses a promise to return the result. |
+| [resetMemory](arkts-telephony-esim-resetmemory-f-sys.md) | Clears all specific profiles and resets the eUICC. This API uses a promise to return the result. |
+| [setDefaultSmdpAddress](arkts-telephony-esim-setdefaultsmdpaddress-f-sys.md) | Sets or updates the default SM-DP+ address stored in the eUICC. This API uses a promise to return the result. |
+| [setProfileNickname](arkts-telephony-esim-setprofilenickname-f-sys.md) | Sets a nickname for the specified profile. This API uses a promise to return the result. |
+| [startOsu](arkts-telephony-esim-startosu-f-sys.md) | Upgrades the OS if the OS version of the eSIM in the specified slot is not the latest. This API uses a promise to return the result. |
+| [switchToProfile](arkts-telephony-esim-switchtoprofile-f-sys.md) | Switches to the specified profile. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -56,22 +54,22 @@ import { eSIM } from '@kit.TelephonyKit';
 | Name | Description |
 | --- | --- |
 | [AccessRule](arkts-telephony-esim-accessrule-i.md) | Establishes a single UICC access rule pursuant to the GlobalPlatform Secure Element Access Control specification. |
-| [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | Information about a profile which is downloadable to an eUICC using. |
+| [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | Defines a downloadable profile. |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [ContractRequestData](arkts-telephony-esim-contractrequestdata-i-sys.md) | Contract request data |
-| [DownloadConfiguration](arkts-telephony-esim-downloadconfiguration-i-sys.md) | Specifies the download configuration. |
-| [DownloadProfileResult](arkts-telephony-esim-downloadprofileresult-i-sys.md) | Result of the given downloadable Profile. |
-| [EuiccInfo](arkts-telephony-esim-euiccinfo-i-sys.md) | Information related to eUICC chips/devices. |
-| [EuiccProfile](arkts-telephony-esim-euiccprofile-i-sys.md) | Information about an embedded profile (subscription) on an eUICC. |
-| [GetDownloadableProfileMetadataResult](arkts-telephony-esim-getdownloadableprofilemetadataresult-i-sys.md) | Result the metadata for a downloadableProfile. |
-| [GetDownloadableProfilesResult](arkts-telephony-esim-getdownloadableprofilesresult-i-sys.md) | Result of downloadable Profile list. |
-| [GetEuiccProfileInfoListResult](arkts-telephony-esim-geteuiccprofileinfolistresult-i-sys.md) | Result of all eUICC profile information. |
-| [OperatorId](arkts-telephony-esim-operatorid-i-sys.md) | Information about the eUICC chip/device. |
+| [ContractRequestData](arkts-telephony-esim-contractrequestdata-i-sys.md) | Information required for encryption. |
+| [DownloadConfiguration](arkts-telephony-esim-downloadconfiguration-i-sys.md) | Defines the download configuration. |
+| [DownloadProfileResult](arkts-telephony-esim-downloadprofileresult-i-sys.md) | Defines the profile download result. |
+| [EuiccInfo](arkts-telephony-esim-euiccinfo-i-sys.md) | Defines the eUICC information. |
+| [EuiccProfile](arkts-telephony-esim-euiccprofile-i-sys.md) | Profile information. |
+| [GetDownloadableProfileMetadataResult](arkts-telephony-esim-getdownloadableprofilemetadataresult-i-sys.md) | Obtains the metadata of the downloadable profile. |
+| [GetDownloadableProfilesResult](arkts-telephony-esim-getdownloadableprofilesresult-i-sys.md) | Obtains the list of default downloadable profiles. |
+| [GetEuiccProfileInfoListResult](arkts-telephony-esim-geteuiccprofileinfolistresult-i-sys.md) | Obtains the profile information list. |
+| [OperatorId](arkts-telephony-esim-operatorid-i-sys.md) | Obtains information about the eUICC chip or device. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -79,13 +77,13 @@ import { eSIM } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
-| [CancelReason](arkts-telephony-esim-cancelreason-e-sys.md) | The reason for canceling a profile download session. |
-| [OsuStatus](arkts-telephony-esim-osustatus-e-sys.md) | Euicc OS upgrade status. |
-| [PolicyRules](arkts-telephony-esim-policyrules-e-sys.md) | The policy rules of the profile. |
-| [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md) | The Profile class. |
-| [ProfileState](arkts-telephony-esim-profilestate-e-sys.md) | The profile state. |
-| [ResetOption](arkts-telephony-esim-resetoption-e-sys.md) | Options for resetting eUICC memory. |
-| [ResultCode](arkts-telephony-esim-resultcode-e-sys.md) | Result state. |
-| [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md) | The solvable errors. |
+| [CancelReason](arkts-telephony-esim-cancelreason-e-sys.md) | Reason for canceling the session. |
+| [OsuStatus](arkts-telephony-esim-osustatus-e-sys.md) | Defines the OS upgrade status. |
+| [PolicyRules](arkts-telephony-esim-policyrules-e-sys.md) | Enumerates the profile policy rules. |
+| [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md) | Enumerates the profile classes. |
+| [ProfileState](arkts-telephony-esim-profilestate-e-sys.md) | Enumerates the profile states. |
+| [ResetOption](arkts-telephony-esim-resetoption-e-sys.md) | Defines the reset options. |
+| [ResultCode](arkts-telephony-esim-resultcode-e-sys.md) | Enumerates the result codes. |
+| [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md) | Enumerates the solvable errors. |
 <!--DelEnd-->
 

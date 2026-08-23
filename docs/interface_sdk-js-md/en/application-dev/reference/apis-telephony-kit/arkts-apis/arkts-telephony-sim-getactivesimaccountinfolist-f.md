@@ -12,7 +12,15 @@ import { sim } from '@kit.TelephonyKit';
 function getActiveSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void
 ```
 
-Get the list of active SIM card account information.
+Obtains the list of activated SIM card accounts. This API uses an asynchronous callback to return the result.
+
+**Required permission**: ohos.permission.GET_TELEPHONY_STATE
+
+> **NOTE：**
+> 
+> The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
+> sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
+> are empty.
 
 **Since:** 23
 
@@ -26,7 +34,7 @@ Get the list of active SIM card account information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Yes | The callback is used to return the array of [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md). The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result, which is a list of activated SIM card accounts. |
 
 **Error codes:**
 
@@ -68,7 +76,15 @@ sim.getActiveSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
 function getActiveSimAccountInfoList(): Promise<Array<IccAccountInfo>>
 ```
 
-Get the list of active SIM card account information.
+Obtains the list of activated SIM card accounts. This API uses a promise to return the result.
+
+**Required permission**: ohos.permission.GET_TELEPHONY_STATE
+
+> **NOTE：**
+> 
+> The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
+> sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
+> are empty.
 
 **Since:** 23
 
@@ -82,7 +98,7 @@ Get the list of active SIM card account information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Returns the array of { |
+| Promise&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

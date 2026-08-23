@@ -1,8 +1,6 @@
 # NetworkRadioTech
 
-Describes the radio access technology (RAT) of registered network.
-
-@interface NetworkRadioTech
+Defines the radio access technology for the packet switched (PS) or circuit switched (CS) network.
 
 **Since:** 23
 
@@ -22,7 +20,7 @@ import { radio } from '@kit.TelephonyKit';
 csRadioTech: RadioTechnology
 ```
 
-Indicates radio access technology (RAT) of circuit service (CS) domain.
+CS.
 
 **Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
@@ -38,7 +36,7 @@ Indicates radio access technology (RAT) of circuit service (CS) domain.
 psRadioTech: RadioTechnology
 ```
 
-Indicates radio access technology (RAT) of packet service (PS) domain.
+PS.
 
 **Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 

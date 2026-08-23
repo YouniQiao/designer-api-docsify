@@ -1,8 +1,6 @@
 # EuiccProfile (System API)
 
-Information about an embedded profile (subscription) on an eUICC.
-
-@interface EuiccProfile
+Profile information.
 
 **Since:** 23
 
@@ -24,7 +22,7 @@ import { eSIM } from '@kit.TelephonyKit';
 accessRules: Array<AccessRule>
 ```
 
-Optional access rules that specify which apps can manage this profile. Default platform management when not set.
+Profile access rules.
 
 **Type:** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i.md)&gt;
 
@@ -42,7 +40,7 @@ Optional access rules that specify which apps can manage this profile. Default p
 iccid: string
 ```
 
-The iccid of the profile.
+Profile ICCID.
 
 **Type:** string
 
@@ -60,7 +58,7 @@ The iccid of the profile.
 nickName: string
 ```
 
-An optional nickname for the profile.
+Profile nickname.
 
 **Type:** string
 
@@ -78,7 +76,7 @@ An optional nickname for the profile.
 operatorId: OperatorId
 ```
 
-The operator Id of the profile.
+Operation ID of the profile.
 
 **Type:** [OperatorId](arkts-telephony-esim-operatorid-i-sys.md)
 
@@ -96,7 +94,7 @@ The operator Id of the profile.
 policyRules: PolicyRules
 ```
 
-The policy rules of the profile.
+Profile policy rules.
 
 **Type:** [PolicyRules](arkts-telephony-esim-policyrules-e-sys.md)
 
@@ -114,7 +112,7 @@ The policy rules of the profile.
 profileClass: ProfileClass
 ```
 
-Profile class for the profile.
+Profile class.
 
 **Type:** [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md)
 
@@ -132,7 +130,7 @@ Profile class for the profile.
 profileName: string
 ```
 
-The profile name.
+Profile name.
 
 **Type:** string
 
@@ -150,7 +148,7 @@ The profile name.
 serviceProviderName: string
 ```
 
-The service provider name for the profile.
+Service provider name.
 
 **Type:** string
 
@@ -168,7 +166,7 @@ The service provider name for the profile.
 state: ProfileState
 ```
 
-The profile state.
+Profile status.
 
 **Type:** [ProfileState](arkts-telephony-esim-profilestate-e-sys.md)
 

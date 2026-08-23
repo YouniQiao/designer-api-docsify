@@ -12,7 +12,9 @@ import { radio } from '@kit.TelephonyKit';
 function getRadioTech(slotId: int, callback: AsyncCallback<NetworkRadioTech>): void
 ```
 
-Obtains radio access technology (RAT) of the registered network. The system returns RAT of the packet service (PS) and circuit service (CS) domain.
+Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses an asynchronous callback to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,8 +28,8 @@ Obtains radio access technology (RAT) of the registered network. The system retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Yes | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_GSM} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_1XRTT} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_WCDMA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPAP} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EVDO} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EHRPD} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE_CA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_IWLAN} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_NR} &lt;/ul&gt; |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Yes | Callback used to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -73,7 +75,9 @@ radio.getRadioTech(slotId).then((data: radio.NetworkRadioTech) => {
 function getRadioTech(slotId: int): Promise<NetworkRadioTech>
 ```
 
-Obtains radio access technology (RAT) of the registered network. The system returns RAT of the packet service (PS) and circuit service (CS) domain.
+Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses a promise to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -87,12 +91,13 @@ Obtains radio access technology (RAT) of the registered network. The system retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;{psRadioTech: RadioTechnology, csRadioTech: RadioTechnology | > } Promise used to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.<br>**Applicable version:** 6 - 10 |
 | Promise&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{ |
 
 **Error codes:**

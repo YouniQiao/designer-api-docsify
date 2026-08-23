@@ -1,4 +1,4 @@
-# exportVCard
+# exportVCard (System API)
 
 ## Modules to Import
 
@@ -12,7 +12,7 @@ import { vcard } from '@kit.TelephonyKit';
 function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, options: VCardBuilderOptions, callback: AsyncCallback<string>): void
 ```
 
-Export contact data to a vcf file.
+Exports contacts as a vcard file (VCF). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -22,20 +22,23 @@ Export contact data to a vcf file.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+**System API:** This is a system API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Execute statement. |
-| options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md) | Yes | Encoding and version. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
+| context | Context | Yes | Application context. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Query statement. |
+| options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i-sys.md) | Yes | VCard version and encoding type. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to Address of the generated vcard file (VCF). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 11 - 22 |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
@@ -115,7 +118,7 @@ class EntryAbility extends UIAbility {
 function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, options?: VCardBuilderOptions): Promise<string>
 ```
 
-Export contact data to a vcf file.
+Exports contacts as a vcard file (VCF). This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -125,25 +128,28 @@ Export contact data to a vcf file.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+**System API:** This is a system API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Execute statement. |
-| options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md) | No | Encoding and version. |
+| context | Context | Yes | Application context. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Query statement. |
+| options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i-sys.md) | No | VCard version and encoding type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | the promise represents the address of the generated vcf file.. |
+| Promise&lt;string&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 11 - 22 |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
@@ -160,7 +166,7 @@ See [exportVCard](#exportvcard)
 function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<string>): void
 ```
 
-Export contact data to a vcf file.
+Exports contacts as a vcard file (VCF). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -170,19 +176,22 @@ Export contact data to a vcf file.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+**System API:** This is a system API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Execute statement. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
+| context | Context | Yes | Application context. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Query statement. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to Address of the generated vcard file (VCF). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 11 - 22 |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |

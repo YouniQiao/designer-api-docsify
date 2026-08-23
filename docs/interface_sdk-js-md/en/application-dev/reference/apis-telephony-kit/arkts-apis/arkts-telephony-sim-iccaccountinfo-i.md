@@ -2,8 +2,6 @@
 
 Defines the ICC account information.
 
-@interface IccAccountInfo
-
 **Since:** 23
 
 <!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->
@@ -22,7 +20,7 @@ import { sim } from '@kit.TelephonyKit';
 iccId: string
 ```
 
-Indicates the iccId for card.
+ICCID number.
 
 **Type:** string
 
@@ -38,7 +36,11 @@ Indicates the iccId for card.
 isActive: boolean
 ```
 
-Indicates the active status for card.
+Whether the card is activated.
+
+**true**: activated.
+
+**false**: not activated.
 
 **Type:** boolean
 
@@ -54,7 +56,9 @@ Indicates the active status for card.
 isEsim: boolean
 ```
 
-Indicates the mark card is eSim or not.
+Whether the SIM card is an eSIM.
+
+- **true**: The SIM card is an eSIM. - **false**: The SIM card is not an eSIM.
 
 **Type:** boolean
 
@@ -70,7 +74,7 @@ Indicates the mark card is eSim or not.
 showName: string
 ```
 
-Indicates the display name for card.
+SIM card display name.
 
 **Type:** string
 
@@ -86,7 +90,7 @@ Indicates the display name for card.
 showNumber: string
 ```
 
-Indicates the display number for card.
+SIM card display number.
 
 **Type:** string
 
@@ -102,7 +106,7 @@ Indicates the display number for card.
 simId: int
 ```
 
-Indicates the sim Id for card.
+SIM card ID.
 
 **Type:** int
 
@@ -118,7 +122,7 @@ Indicates the sim Id for card.
 slotIndex: int
 ```
 
-Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
+Card slot ID.
 
 **Type:** int
 

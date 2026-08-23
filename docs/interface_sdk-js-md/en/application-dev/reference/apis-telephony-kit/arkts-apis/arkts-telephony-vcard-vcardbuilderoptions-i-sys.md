@@ -1,14 +1,14 @@
-# VCardBuilderOptions
+# VCardBuilderOptions (System API)
 
-Indicates the options for VCard export.
-
-@interface VCardBuilderOptions
+Defines the VCard information.
 
 **Since:** 23
 
 <!--Device-vcard-export interface VCardBuilderOptions--><!--Device-vcard-export interface VCardBuilderOptions-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -22,9 +22,9 @@ import { vcard } from '@kit.TelephonyKit';
 cardType?: VCardType
 ```
 
-Indicates the VCard types.
+VCard version. The default value is **VERSION_21**.
 
-**Type:** [VCardType](arkts-telephony-vcard-vcardtype-e.md)
+**Type:** [VCardType](arkts-telephony-vcard-vcardtype-e-sys.md)
 
 **Since:** 23
 
@@ -32,13 +32,15 @@ Indicates the VCard types.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+**System API:** This is a system API.
+
 ## charset
 
 ```TypeScript
 charset?: string
 ```
 
-Indicates the Encoding format.
+VCard encoding type. The default value is **UTF-8**.
 
 **Type:** string
 
@@ -47,4 +49,6 @@ Indicates the Encoding format.
 <!--Device-VCardBuilderOptions-charset?: string--><!--Device-VCardBuilderOptions-charset?: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
+
+**System API:** This is a system API.
 

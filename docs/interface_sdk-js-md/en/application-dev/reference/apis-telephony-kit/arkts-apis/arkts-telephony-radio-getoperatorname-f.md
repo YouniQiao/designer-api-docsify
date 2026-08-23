@@ -12,7 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function getOperatorName(slotId: int, callback: AsyncCallback<string>): void
 ```
 
-Get the operator name of the specified SIM card slot.
+Obtains the carrier name of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ Get the operator name of the specified SIM card slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the operator name. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the carrier name, for example, China Mobile. |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ radio.getOperatorName(slotId).then((data: string) => {
 function getOperatorName(slotId: int): Promise<string>
 ```
 
-Get the operator name of the specified SIM card slot.
+Obtains the carrier name of the SIM card in the specified slot. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -82,13 +82,13 @@ Get the operator name of the specified SIM card slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the operator name. |
+| Promise&lt;string&gt; | Promise used to return the result, for example, China Mobile. |
 
 **Error codes:**
 

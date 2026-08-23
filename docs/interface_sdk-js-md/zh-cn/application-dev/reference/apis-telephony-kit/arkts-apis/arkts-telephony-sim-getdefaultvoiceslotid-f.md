@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void
 ```
 
-Obtains the default card slot for the voice service.
+获取默认语音业务的卡槽ID。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -24,7 +24,7 @@ Obtains the default card slot for the voice service.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | Indicates the callback for getting the default card slot for the voice service. Returns {@code 0} if card 1 is used as the default card slot for the voice service; returns {@code 1} if card 2 is used as the default card slot for the voice service; returns {@code -1} if no card is available for the voice service. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。&lt;br /&gt;- 0：卡槽1。&lt;br /&gt;- 1：卡槽2。&lt;br /&gt;- -1：未设置或服务不可用。 |
 
 **示例**
 
@@ -55,7 +55,7 @@ sim.getDefaultVoiceSlotId().then((data: number) => {
 function getDefaultVoiceSlotId(): Promise<int>
 ```
 
-Obtains the default card slot for the voice service.
+获取默认语音业务的卡槽ID。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -67,7 +67,7 @@ Obtains the default card slot for the voice service.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;int&gt; | Returns { |
+| Promise&lt;int&gt; | 以Promise形式返回默认语音业务的卡槽ID。&lt;br /&gt;- 0：卡槽1。&lt;br /&gt;- 1：卡槽2。&lt;br /&gt;- -1：未设置或服务不可用。 |
 
 **示例**
 

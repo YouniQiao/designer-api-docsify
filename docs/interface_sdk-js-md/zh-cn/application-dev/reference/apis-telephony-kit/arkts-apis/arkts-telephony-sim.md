@@ -1,8 +1,6 @@
 # @ohos.telephony.sim
 
-Provides applications with APIs for obtaining SIM card status, card file information, and card specifications. SIM cards include SIM, USIM, and CSIM cards.
-
-@namespace sim
+SIM卡管理模块提供了SIM卡管理的基础能力，包括获取指定卡槽SIM卡的ISO国家码、归属PLMN号、服务提供商名称、SIM卡状态、卡类型、是否插卡、是否激活等。
 
 **起始版本：** 23
 
@@ -22,47 +20,47 @@ import { sim } from '@kit.TelephonyKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getActiveSimAccountInfoList](arkts-telephony-sim-getactivesimaccountinfolist-f.md) | Get the list of active SIM card account information. |
-| [getActiveSimAccountInfoList](arkts-telephony-sim-getactivesimaccountinfolist-f.md) | Get the list of active SIM card account information. |
-| [getCardType](arkts-telephony-sim-getcardtype-f.md) | Obtains the type of the SIM card installed in a specified slot. |
-| [getCardType](arkts-telephony-sim-getcardtype-f.md) | Obtains the type of the SIM card installed in a specified slot. |
-| [getCardTypeSync](arkts-telephony-sim-getcardtypesync-f.md) | Obtains the type of the SIM card inserted in a specified slot. |
-| [getDefaultVoiceSimId](arkts-telephony-sim-getdefaultvoicesimid-f.md) | Obtains the default SIM ID for the voice service. |
-| [getDefaultVoiceSimId](arkts-telephony-sim-getdefaultvoicesimid-f.md) | Obtains the default SIM ID for the voice service. |
-| [getDefaultVoiceSlotId](arkts-telephony-sim-getdefaultvoiceslotid-f.md) | Obtains the default card slot for the voice service. |
-| [getDefaultVoiceSlotId](arkts-telephony-sim-getdefaultvoiceslotid-f.md) | Obtains the default card slot for the voice service. |
-| [getISOCountryCodeForSim](arkts-telephony-sim-getisocountrycodeforsim-f.md) | Obtains the ISO country code of the SIM card in a specified slot. |
-| [getISOCountryCodeForSim](arkts-telephony-sim-getisocountrycodeforsim-f.md) | Obtains the ISO country code of the SIM card in a specified slot. |
-| [getISOCountryCodeForSimSync](arkts-telephony-sim-getisocountrycodeforsimsync-f.md) | Obtains the ISO country code of the SIM card in a specified slot. |
-| [getMaxSimCount](arkts-telephony-sim-getmaxsimcount-f.md) | Obtains the maximum number of SIM cards that can be used simultaneously on the device, that is, the maximum number of SIM card slots. |
-| [getOpKey](arkts-telephony-sim-getopkey-f.md) | Obtains the operator key of the SIM card in a specified slot. |
-| [getOpKey](arkts-telephony-sim-getopkey-f.md) | Obtains the operator key of the SIM card in a specified slot. |
-| [getOpKeySync](arkts-telephony-sim-getopkeysync-f.md) | Obtains the operator key of the SIM card in a specified slot. |
-| [getOpName](arkts-telephony-sim-getopname-f.md) | Obtains the operator name of the SIM card in a specified slot. |
-| [getOpName](arkts-telephony-sim-getopname-f.md) | Obtains the operator name of the SIM card in a specified slot. |
-| [getOpNameSync](arkts-telephony-sim-getopnamesync-f.md) | Obtains the operator name of the SIM card in a specified slot. |
-| [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md) | Get account information of SIM card. |
-| [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md) | Get account information of SIM card. |
-| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md) | Obtains the SIM card label. |
-| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md) | 获取SIM卡标签名称 |
-| [getSimLabelSync](arkts-telephony-sim-getsimlabelsync-f.md) | Obtains the SIM card label synchronously. |
-| [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md) | Obtains the home PLMN number of the SIM card in a specified slot. |
-| [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md) | Obtains the home PLMN number of the SIM card in a specified slot. |
-| [getSimOperatorNumericSync](arkts-telephony-sim-getsimoperatornumericsync-f.md) | Obtains the home PLMN number of the SIM card in a specified slot. |
-| [getSimSpn](arkts-telephony-sim-getsimspn-f.md) | Obtains the service provider name (SPN) of the SIM card in a specified slot. |
-| [getSimSpn](arkts-telephony-sim-getsimspn-f.md) | Obtains the service provider name (SPN) of the SIM card in a specified slot. |
-| [getSimSpnSync](arkts-telephony-sim-getsimspnsync-f.md) | Obtains the service provider name (SPN) of the SIM card in a specified slot. |
-| [getSimState](arkts-telephony-sim-getsimstate-f.md) | Obtains the state of the SIM card in a specified slot. |
-| [getSimState](arkts-telephony-sim-getsimstate-f.md) | Obtains the state of the SIM card in a specified slot. |
-| [getSimStateSync](arkts-telephony-sim-getsimstatesync-f.md) | Obtains the state of the SIM card in a specified slot. |
-| [hasOperatorPrivileges](arkts-telephony-sim-hasoperatorprivileges-f.md) | Checks whether your application (the caller) has been granted the operator permissions. |
-| [hasOperatorPrivileges](arkts-telephony-sim-hasoperatorprivileges-f.md) | Checks whether your application (the caller) has been granted the operator permissions. |
-| [hasSimCard](arkts-telephony-sim-hassimcard-f.md) | Checks whether a SIM card is inserted in a specified slot. |
-| [hasSimCard](arkts-telephony-sim-hassimcard-f.md) | Checks whether a SIM card is inserted in a specified slot. |
-| [hasSimCardSync](arkts-telephony-sim-hassimcardsync-f.md) | Checks whether a SIM card is inserted in a specified slot. |
-| [isSimActive](arkts-telephony-sim-issimactive-f.md) | Checks whether the SIM card in a specified slot is activated. |
-| [isSimActive](arkts-telephony-sim-issimactive-f.md) | Checks whether the SIM card in a specified slot is activated. |
-| [isSimActiveSync](arkts-telephony-sim-issimactivesync-f.md) | Checks whether the SIM card in a specified slot is activated. |
+| [getActiveSimAccountInfoList](arkts-telephony-sim-getactivesimaccountinfolist-f.md) | 获取激活SIM卡账户信息列表。使用callback异步回调。 |
+| [getActiveSimAccountInfoList](arkts-telephony-sim-getactivesimaccountinfolist-f.md) | 获取激活SIM卡账户信息列表。使用Promise异步回调。 |
+| [getCardType](arkts-telephony-sim-getcardtype-f.md) | 获取指定卡槽SIM卡的卡类型。使用callback异步回调。 |
+| [getCardType](arkts-telephony-sim-getcardtype-f.md) | 获取指定卡槽SIM卡的卡类型。使用Promise异步回调。 |
+| [getCardTypeSync](arkts-telephony-sim-getcardtypesync-f.md) | 获取指定卡槽SIM卡的卡类型。 |
+| [getDefaultVoiceSimId](arkts-telephony-sim-getdefaultvoicesimid-f.md) | 获取默认语音业务的SIM卡ID。使用callback异步回调。 |
+| [getDefaultVoiceSimId](arkts-telephony-sim-getdefaultvoicesimid-f.md) | 获取默认语音业务的SIM卡ID。使用Promise异步回调。 |
+| [getDefaultVoiceSlotId](arkts-telephony-sim-getdefaultvoiceslotid-f.md) | 获取默认语音业务的卡槽ID。使用callback异步回调。 |
+| [getDefaultVoiceSlotId](arkts-telephony-sim-getdefaultvoiceslotid-f.md) | 获取默认语音业务的卡槽ID。使用Promise异步回调。 |
+| [getISOCountryCodeForSim](arkts-telephony-sim-getisocountrycodeforsim-f.md) | 获取指定卡槽SIM卡的ISO国家码。使用callback异步回调。 |
+| [getISOCountryCodeForSim](arkts-telephony-sim-getisocountrycodeforsim-f.md) | 获取指定卡槽SIM卡的ISO国家码。使用Promise异步回调。 |
+| [getISOCountryCodeForSimSync](arkts-telephony-sim-getisocountrycodeforsimsync-f.md) | 获取指定卡槽SIM卡的ISO国家码。 |
+| [getMaxSimCount](arkts-telephony-sim-getmaxsimcount-f.md) | 获取卡槽数量。 |
+| [getOpKey](arkts-telephony-sim-getopkey-f.md) | 获取指定卡槽中SIM卡的opkey。使用callback异步回调。 |
+| [getOpKey](arkts-telephony-sim-getopkey-f.md) | 获取指定卡槽中SIM卡的opkey。使用Promise异步回调。 |
+| [getOpKeySync](arkts-telephony-sim-getopkeysync-f.md) | 获取指定卡槽中SIM卡的opkey。 |
+| [getOpName](arkts-telephony-sim-getopname-f.md) | 获取指定卡槽中SIM卡的OpName。使用callback异步回调。 |
+| [getOpName](arkts-telephony-sim-getopname-f.md) | 获取指定卡槽中SIM卡的OpName。使用Promise异步回调。 |
+| [getOpNameSync](arkts-telephony-sim-getopnamesync-f.md) | 获取指定卡槽中SIM卡的OpName。 |
+| [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md) | 获取SIM卡账户信息。使用callback异步回调。 |
+| [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md) | 获取SIM卡账户信息。使用Promise异步回调。 |
+| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md) | 查看卡槽ID和SIM卡的对应关系： |
+| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md) | 获取SIM卡的标签信息。使用Promise异步回调。 |
+| [getSimLabelSync](arkts-telephony-sim-getsimlabelsync-f.md) | 通过传入SIM卡槽的ID，获取对应的SIM卡标签。 |
+| [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md) | 获取指定卡槽SIM卡的归属PLMN(Public Land Mobile Network)号。使用callback异步回调。 |
+| [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md) | 获取指定卡槽SIM卡的归属PLMN(Public Land Mobile Network)号。使用Promise异步回调。 |
+| [getSimOperatorNumericSync](arkts-telephony-sim-getsimoperatornumericsync-f.md) | 获取指定卡槽SIM卡的归属PLMN(Public Land Mobile Network)号。 |
+| [getSimSpn](arkts-telephony-sim-getsimspn-f.md) | 获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。使用callback异步回调。 |
+| [getSimSpn](arkts-telephony-sim-getsimspn-f.md) | 获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。使用Promise异步回调。 |
+| [getSimSpnSync](arkts-telephony-sim-getsimspnsync-f.md) | 获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。 |
+| [getSimState](arkts-telephony-sim-getsimstate-f.md) | 获取指定卡槽的SIM卡状态。使用callback异步回调。 |
+| [getSimState](arkts-telephony-sim-getsimstate-f.md) | 获取指定卡槽的SIM卡状态。使用Promise异步回调。 |
+| [getSimStateSync](arkts-telephony-sim-getsimstatesync-f.md) | 获取指定卡槽的SIM卡状态。 |
+| [hasOperatorPrivileges](arkts-telephony-sim-hasoperatorprivileges-f.md) | 检查应用(调用者)是否已被授予运营商权限。使用callback异步回调。 |
+| [hasOperatorPrivileges](arkts-telephony-sim-hasoperatorprivileges-f.md) | 检查应用(调用者)是否已被授予运营商权限。使用Promise异步回调。 |
+| [hasSimCard](arkts-telephony-sim-hassimcard-f.md) | 获取指定卡槽SIM卡是否插卡。使用callback异步回调。 |
+| [hasSimCard](arkts-telephony-sim-hassimcard-f.md) | 获取指定卡槽SIM卡是否插卡。使用Promise异步回调。 |
+| [hasSimCardSync](arkts-telephony-sim-hassimcardsync-f.md) | 获取指定卡槽SIM卡是否插卡。 |
+| [isSimActive](arkts-telephony-sim-issimactive-f.md) | 获取指定卡槽SIM卡是否激活。使用callback异步回调。 |
+| [isSimActive](arkts-telephony-sim-issimactive-f.md) | 获取指定卡槽SIM卡是否激活。使用Promise异步回调。 |
+| [isSimActiveSync](arkts-telephony-sim-issimactivesync-f.md) | 获取指定卡槽SIM卡是否激活。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -83,8 +81,8 @@ import { sim } from '@kit.TelephonyKit';
 | [delIccDiallingNumbers](arkts-telephony-sim-deliccdiallingnumbers-f-sys.md) | Delete dialing number information on SIM card. |
 | [getAllSimAccountInfoList](arkts-telephony-sim-getallsimaccountinfolist-f-sys.md) | Get the list of all SIM card account information. |
 | [getAllSimAccountInfoList](arkts-telephony-sim-getallsimaccountinfolist-f-sys.md) | Get the list of all SIM card account information. |
-| [getDsdsMode](arkts-telephony-sim-getdsdsmode-f-sys.md) | Obtains the value of dsds mode. |
-| [getDsdsMode](arkts-telephony-sim-getdsdsmode-f-sys.md) | Obtains the value of dsds mode. |
+| [getDsdsMode](arkts-telephony-sim-getdsdsmode-f-sys.md) |  |
+| [getDsdsMode](arkts-telephony-sim-getdsdsmode-f-sys.md) |  |
 | [getIMSI](arkts-telephony-sim-getimsi-f-sys.md) | Get the international mobile subscriber ID. |
 | [getIMSI](arkts-telephony-sim-getimsi-f-sys.md) | Get the international mobile subscriber ID. |
 | [getLockState](arkts-telephony-sim-getlockstate-f-sys.md) | Get the lock status of the SIM card in the specified slot. |
@@ -142,30 +140,30 @@ import { sim } from '@kit.TelephonyKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md) | Defines the ICC account information. |
-| [SimLabel](arkts-telephony-sim-simlabel-i.md) | 定义SIM卡标签信息。 @interface SimLabel |
+| [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md) | Icc账户信息。 |
+| [SimLabel](arkts-telephony-sim-simlabel-i.md) | SIM卡标签。 |
 
 <!--Del-->
 ### 接口（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [DiallingNumbersInfo](arkts-telephony-sim-diallingnumbersinfo-i-sys.md) | Defines the contact number information. |
-| [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i-sys.md) | Defines the ICC account information. |
-| [LockInfo](arkts-telephony-sim-lockinfo-i-sys.md) | Defines the personalized lock information. |
-| [LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md) | Defines the personalized lock information. |
-| [OperatorConfig](arkts-telephony-sim-operatorconfig-i-sys.md) | Defines the carrier configuration. |
-| [PersoLockInfo](arkts-telephony-sim-persolockinfo-i-sys.md) | Defines the personalized lock information. |
-| [SimAuthenticationResponse](arkts-telephony-sim-simauthenticationresponse-i-sys.md) | Defines the SIM card authentication response. |
+| [DiallingNumbersInfo](arkts-telephony-sim-diallingnumbersinfo-i-sys.md) |  |
+| [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i-sys.md) | Icc账户信息。 |
+| [LockInfo](arkts-telephony-sim-lockinfo-i-sys.md) |  |
+| [LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md) |  |
+| [OperatorConfig](arkts-telephony-sim-operatorconfig-i-sys.md) |  |
+| [PersoLockInfo](arkts-telephony-sim-persolockinfo-i-sys.md) |  |
+| [SimAuthenticationResponse](arkts-telephony-sim-simauthenticationresponse-i-sys.md) |  |
 <!--DelEnd-->
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [CardType](arkts-telephony-sim-cardtype-e.md) | Indicates the SIM card types. |
-| [SimState](arkts-telephony-sim-simstate-e.md) | Indicates the SIM card states. |
-| [SimType](arkts-telephony-sim-simtype-e.md) | Indicates the SIM card type. |
+| [CardType](arkts-telephony-sim-cardtype-e.md) | 卡类型。 |
+| [SimState](arkts-telephony-sim-simstate-e.md) | SIM卡状态。 |
+| [SimType](arkts-telephony-sim-simtype-e.md) | SIM卡类型的枚举。 |
 
 <!--Del-->
 ### 枚举（系统接口）
@@ -177,8 +175,8 @@ import { sim } from '@kit.TelephonyKit';
 | [DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md) | Indicates the Dsds Mode. |
 | [LockState](arkts-telephony-sim-lockstate-e-sys.md) | Indicates the lock states. |
 | [LockType](arkts-telephony-sim-locktype-e-sys.md) | Indicates the lock types. |
-| [OperatorConfigKey](arkts-telephony-sim-operatorconfigkey-e-sys.md) | Indicates the carrier configuration keys. |
-| [OperatorSimCard](arkts-telephony-sim-operatorsimcard-e-sys.md) | Indicates the operator of SIM. |
+| [OperatorConfigKey](arkts-telephony-sim-operatorconfigkey-e-sys.md) |  |
+| [OperatorSimCard](arkts-telephony-sim-operatorsimcard-e-sys.md) |  |
 | [PersoLockType](arkts-telephony-sim-persolocktype-e-sys.md) | Indicates the personalized lock types. |
 <!--DelEnd-->
 

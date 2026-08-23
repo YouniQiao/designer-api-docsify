@@ -1257,7 +1257,7 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 > - 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的TouchType中DOWN和UP字段都要
 > 有，防止出现未定义行为。
 > 
-> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
+> - [webview](../../apis-default/arkts-apis/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
 > 
 > - postTouchEvent接口需要提供手势坐标相对于接收事件的目标节点内的局部坐标，postInputEvent接口需要提供手势坐标相对于接收事件的目标节点内的窗口坐标。
 > 
@@ -1319,7 +1319,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 > - 如果event转化为对应的事件后，该事件为开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的
 > TouchType中必须同时包含DOWN和UP两个字段，防止出现程序异常或意外崩溃。
 > 
-> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
+> - [webview](../../apis-default/arkts-apis/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
 > 
 > - postTouchEvent接口需要提供手势坐标相对于接收事件的目标节点内的局部坐标，postInputEventWithStrategy接口需要提供手势坐标相对于接收事件的目标节点内的窗口坐标。
 > 
@@ -1370,7 +1370,7 @@ offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中�
 > 
 > - 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。
 > 
-> - 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
+> - 在[webview](../../apis-default/arkts-apis/arkts-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
 > 
 > - 同一时间戳，postTouchEvent只能调用一次。
 

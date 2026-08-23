@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getSimState(slotId: int, callback: AsyncCallback<SimState>): void
 ```
 
-Obtains the state of the SIM card in a specified slot.
+获取指定卡槽的SIM卡状态。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -24,8 +24,8 @@ Obtains the state of the SIM card in a specified slot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimState&gt; | 是 | Indicates the callback for getting one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{@code SimState#SIM_STATE_UNKNOWN} &lt;li&gt;{@code SimState#SIM_STATE_NOT_PRESENT} &lt;li&gt;{@code SimState#SIM_STATE_LOCKED} &lt;li&gt;{@code SimState#SIM_STATE_NOT_READY} &lt;li&gt;{@code SimState#SIM_STATE_READY} &lt;li&gt;{@code SimState#SIM_STATE_LOADED} &lt;/ul&gt; |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimState&gt; | 是 | 回调函数。参考[SimState](arkts-telephony-sim-simstate-e.md)。 |
 
 **错误码：**
 
@@ -66,7 +66,7 @@ sim.getSimState(0).then((data: sim.SimState) => {
 function getSimState(slotId: int): Promise<SimState>
 ```
 
-Obtains the state of the SIM card in a specified slot.
+获取指定卡槽的SIM卡状态。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -78,13 +78,13 @@ Obtains the state of the SIM card in a specified slot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SimState&gt; | Returns one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{ |
+| Promise&lt;SimState&gt; | 以Promise形式返回获取指定卡槽的SIM卡状态。 |
 
 **错误码：**
 

@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function getEuiccProfileInfoList(slotId: int): Promise<GetEuiccProfileInfoListResult>
 ```
 
-Returns a list of all eUICC profile information.
+Obtains the profile information list. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ Returns a list of all eUICC profile information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[GetEuiccProfileInfoListResult](arkts-telephony-esim-geteuiccprofileinfolistresult-i-sys.md)&gt; | Return a list of eUICC profile information. |
+| Promise&lt;[GetEuiccProfileInfoListResult](arkts-telephony-esim-geteuiccprofileinfolistresult-i-sys.md)&gt; | Promise used to return the profile information list. |
 
 **Error codes:**
 

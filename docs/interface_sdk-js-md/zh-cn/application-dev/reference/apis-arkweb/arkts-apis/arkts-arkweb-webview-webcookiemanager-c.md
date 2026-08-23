@@ -26,7 +26,7 @@ import { webview } from '@kit.ArkWeb';
 static clearAllCookies(): Promise<void>
 ```
 
-清除所有cookie（包括会话cookie和持久化cookie），使用Promise异步回调。如需仅清除会话cookie，请使用 [clearSessionCookie](#clearsessioncookie)。
+清除所有cookie（包括会话cookie和持久化cookie），使用Promise异步回调。如需仅清除会话cookie，请使用 [clearSessionCookie](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#clearsessioncookie)。
 
 **起始版本：** 11
 
@@ -182,7 +182,7 @@ struct WebComponent {
 static clearAllCookies(callback: AsyncCallback<void>): void
 ```
 
-清除所有cookie（包括会话cookie和持久化cookie），使用callback异步回调。如需仅清除会话cookie，请使用 [clearSessionCookie](#clearsessioncookie)。
+清除所有cookie（包括会话cookie和持久化cookie），使用callback异步回调。如需仅清除会话cookie，请使用 [clearSessionCookie](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#clearsessioncookie)。
 
 **起始版本：** 11
 
@@ -214,7 +214,7 @@ static clearAllCookies(callback: AsyncCallback<void>): void
 static clearAllCookiesSync(incognito?: boolean): void
 ```
 
-清除所有cookie（包括会话cookie和持久化cookie）。如需仅清除会话cookie，请使用 [clearSessionCookieSync](#clearsessioncookiesync)。
+清除所有cookie（包括会话cookie和持久化cookie）。如需仅清除会话cookie，请使用 [clearSessionCookieSync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#clearsessioncookiesync)。
 
 **起始版本：** 11
 
@@ -555,7 +555,7 @@ static configCookie(url: string, value: string): Promise<void>
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync)进行强制落盘。
+> [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -814,7 +814,7 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync)进行强制落盘。
+> [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -870,7 +870,7 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync)进行强制落盘。
+> [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -923,7 +923,7 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 > - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync)进行强制落盘。
+> [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -1092,7 +1092,7 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 > - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync)进行强制落盘。
+> [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -1141,7 +1141,7 @@ static deleteEntireCookie(): void
 
 **废弃版本：** 11
 
-**替代接口：** [clearAllCookiesSync](#clearallcookiessync)
+**替代接口：** [clearAllCookiesSync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#clearallcookiessync)
 
 <!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
 
@@ -1182,7 +1182,7 @@ static deleteSessionCookie(): void
 
 **废弃版本：** 11
 
-**替代接口：** [clearSessionCookieSync](#clearsessioncookiesync)
+**替代接口：** [clearSessionCookieSync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#clearsessioncookiesync)
 
 <!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
 
@@ -1315,7 +1315,7 @@ static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | Promise对象，用于获取所有cookie及其对应的字段值。 |
+| Promise&lt;Array&lt;[WebHttpCookie](../../apis-default/arkts-apis/arkts-webview-webhttpcookie-i.md)&gt;&gt; | Promise对象，用于获取所有cookie及其对应的字段值。 |
 
 **示例**
 
@@ -2058,7 +2058,7 @@ static getCookie(url: string): string
 
 **废弃版本：** 11
 
-**替代接口：** [fetchCookieSync](#fetchcookiesync)
+**替代接口：** [fetchCookieSync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#fetchcookiesync)
 
 <!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
 
@@ -2732,7 +2732,7 @@ static setCookie(url: string, value: string): void
 
 **废弃版本：** 11
 
-**替代接口：** [configCookieSync](#configcookiesync)
+**替代接口：** [configCookieSync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#configcookiesync)
 
 <!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
 

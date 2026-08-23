@@ -1,6 +1,6 @@
 # WebBlanklessErrorCode
 
-Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey) or [BlanklessInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessinfo-i.md).
+Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](arkts-webview-webviewcontroller-c.md#setblanklessloadingwithkey) or [BlanklessInfo](arkts-webview-blanklessinfo-i.md).
 
 @enum { number }
 

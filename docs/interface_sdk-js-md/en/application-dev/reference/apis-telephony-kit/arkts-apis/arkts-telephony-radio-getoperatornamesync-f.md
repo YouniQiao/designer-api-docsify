@@ -12,7 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function getOperatorNameSync(slotId: int): string
 ```
 
-Get the operator name of the specified SIM card slot.
+Obtains the carrier name of the SIM card in the specified slot.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ Get the operator name of the specified SIM card slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Returns the operator name. |
+| string | Carrier name, for example, China Mobile. |
 
 **Examples**
 

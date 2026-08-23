@@ -1,8 +1,6 @@
 # EuiccInfo (System API)
 
-Information related to eUICC chips/devices.
-
-@interface EuiccInfo
+Defines the eUICC information.
 
 **Since:** 23
 
@@ -24,7 +22,7 @@ import { eSIM } from '@kit.TelephonyKit';
 osVersion: string
 ```
 
-Operating system version.
+OS version.
 
 **Type:** string
 

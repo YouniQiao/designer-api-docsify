@@ -1,8 +1,6 @@
 # ProfileClass (System API)
 
-The Profile class.
-
-@enum { int }
+Enumerates the profile classes.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@ The Profile class.
 PROFILE_CLASS_UNSPECIFIED = -1
 ```
 
-Profile class not specified.
+Profile class unspecified.
 
 **Since:** 23
 
@@ -34,7 +32,7 @@ Profile class not specified.
 PROFILE_CLASS_TEST = 0
 ```
 
-Testing profiles.
+Test profile.
 
 **Since:** 23
 
@@ -50,7 +48,7 @@ Testing profiles.
 PROFILE_CLASS_PROVISIONING = 1
 ```
 
-Provisioning profiles that preloaded on the eUICC.
+Profile preloaded to the eUICC.
 
 **Since:** 23
 
@@ -66,7 +64,7 @@ Provisioning profiles that preloaded on the eUICC.
 PROFILE_CLASS_OPERATIONAL = 2
 ```
 
-Operational profiles that can be preloaded or downloaded.
+Profile that can be preloaded or downloaded.
 
 **Since:** 23
 

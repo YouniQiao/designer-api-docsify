@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function hasSimCardSync(slotId: int): boolean
 ```
 
-Checks whether a SIM card is inserted in a specified slot.
+Checks whether the SIM card in the specified slot is installed.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ Checks whether a SIM card is inserted in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Whether the SIM card in the specified slot is installed. <br>- **true**: installed. <br>- **false**: not installed. |
 
 **Examples**
 

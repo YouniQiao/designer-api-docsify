@@ -1,9 +1,5 @@
 # DiallingNumbersInfo（系统接口）
 
-Defines the contact number information.
-
-@interface DiallingNumbersInfo
-
 **起始版本：** 23
 
 <!--Device-sim-export interface DiallingNumbersInfo--><!--Device-sim-export interface DiallingNumbersInfo-End-->
@@ -23,8 +19,6 @@ import { sim } from '@kit.TelephonyKit';
 ```TypeScript
 alphaTag: string
 ```
-
-Indicates the tag.
 
 **类型：** string
 
@@ -59,8 +53,6 @@ Indicates the call transfer number.
 ```TypeScript
 pin2?: string
 ```
-
-Indicates the PIN 2.
 
 **类型：** string
 

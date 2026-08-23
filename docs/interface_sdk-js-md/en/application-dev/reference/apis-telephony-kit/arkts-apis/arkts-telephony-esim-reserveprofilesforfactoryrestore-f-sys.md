@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function reserveProfilesForFactoryRestore(slotId: int): Promise<ResultCode>
 ```
 
-Ensure that profiles will be retained on the next factory reset.
+Restores factory settings and retains profiles. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ Ensure that profiles will be retained on the next factory reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the result code. |
+| Promise&lt;ResultCode&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

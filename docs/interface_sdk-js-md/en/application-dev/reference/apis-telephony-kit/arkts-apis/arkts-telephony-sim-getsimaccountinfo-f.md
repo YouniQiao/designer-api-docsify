@@ -12,7 +12,15 @@ import { sim } from '@kit.TelephonyKit';
 function getSimAccountInfo(slotId: int, callback: AsyncCallback<IccAccountInfo>): void
 ```
 
-Get account information of SIM card.
+Obtains SIM card account information. This API uses an asynchronous callback to return the result.
+
+**Required permission**: ohos.permission.GET_TELEPHONY_STATE
+
+> **NOTE：**
+> 
+> The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
+> sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
+> are empty.
 
 **Since:** 23
 
@@ -26,13 +34,14 @@ Get account information of SIM card.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt; | Yes | Indicates the callback for getting a {@code IccAccountInfo} object. The ICCID and phone number will be null if the permission ohos.permission.GET_TELEPHONY_STATE is not granted. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt; | Yes | Callback used to return the result, which is the account information of the SIM card in the specified slot. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 - 22 |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
@@ -70,7 +79,15 @@ sim.getSimAccountInfo(0).then((data: sim.IccAccountInfo) => {
 function getSimAccountInfo(slotId: int): Promise<IccAccountInfo>
 ```
 
-Get account information of SIM card.
+Obtains SIM card account information. This API uses a promise to return the result.
+
+**Required permission**: ohos.permission.GET_TELEPHONY_STATE
+
+> **NOTE：**
+> 
+> The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
+> sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
+> are empty.
 
 **Since:** 23
 
@@ -84,18 +101,19 @@ Get account information of SIM card.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt; | Returns a { |
+| Promise&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 - 22 |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |

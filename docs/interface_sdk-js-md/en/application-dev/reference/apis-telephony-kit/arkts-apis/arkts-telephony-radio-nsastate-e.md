@@ -1,8 +1,6 @@
 # NsaState
 
-Describes the nsa state.
-
-@enum { int }
+Enumerates NSA network states.
 
 **Since:** 23
 
@@ -16,7 +14,7 @@ Describes the nsa state.
 NSA_STATE_NOT_SUPPORT = 1
 ```
 
-Indicates that a device is idle under or is connected to an LTE cell that does not support NSA.
+The device is in idle or connected state in an LTE cell that does not support NSA.
 
 **Since:** 23
 
@@ -30,7 +28,7 @@ Indicates that a device is idle under or is connected to an LTE cell that does n
 NSA_STATE_NO_DETECT = 2
 ```
 
-Indicates that a device is idle under an LTE cell supporting NSA but not NR coverage detection.
+The device is in the idle state in an LTE cell that supports NSA but not NR coverage detection.
 
 **Since:** 23
 
@@ -44,7 +42,7 @@ Indicates that a device is idle under an LTE cell supporting NSA but not NR cove
 NSA_STATE_CONNECTED_DETECT = 3
 ```
 
-Indicates that a device is connected to an LTE network under an LTE cell that supports NSA and NR coverage detection.
+The device is connected to the LTE network in an LTE cell that supports NSA and NR coverage detection.
 
 **Since:** 23
 
@@ -58,7 +56,7 @@ Indicates that a device is connected to an LTE network under an LTE cell that su
 NSA_STATE_IDLE_DETECT = 4
 ```
 
-Indicates that a device is idle under an LTE cell supporting NSA and NR coverage detection.
+The device is in the idle state in an LTE cell that supports NSA and NR coverage detection.
 
 **Since:** 23
 
@@ -72,7 +70,7 @@ Indicates that a device is idle under an LTE cell supporting NSA and NR coverage
 NSA_STATE_DUAL_CONNECTED = 5
 ```
 
-Indicates that a device is connected to an LTE + NR network under an LTE cell that supports NSA.
+The device is connected to the LTE/NR network in an LTE cell that supports NSA.
 
 **Since:** 23
 
@@ -86,7 +84,7 @@ Indicates that a device is connected to an LTE + NR network under an LTE cell th
 NSA_STATE_SA_ATTACHED = 6
 ```
 
-Indicates that a device is idle under or is connected to an NG-RAN cell while being attached to 5GC.
+The device is idle or connected to the NG-RAN cell when being attached to the 5G Core.
 
 **Since:** 23
 

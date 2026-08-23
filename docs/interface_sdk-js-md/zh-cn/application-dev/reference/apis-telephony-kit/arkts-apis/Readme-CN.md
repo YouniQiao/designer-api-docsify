@@ -344,6 +344,83 @@
   - [ApnInfo](arkts-telephony-data-apninfo-i.md)
   - [DataConnectState](arkts-telephony-data-dataconnectstate-e.md)
   - [DataFlowType](arkts-telephony-data-dataflowtype-e.md)
+- [@ohos.telephony.esim](arkts-telephony-esim.md)
+  - [addProfile](arkts-telephony-esim-addprofile-f.md)
+  <!--Del-->
+  - [cancelSession(系统接口)](arkts-telephony-esim-cancelsession-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [deleteProfile(系统接口)](arkts-telephony-esim-deleteprofile-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [downloadProfile(系统接口)](arkts-telephony-esim-downloadprofile-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getContractInfo(系统接口)](arkts-telephony-esim-getcontractinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getDefaultSmdpAddress(系统接口)](arkts-telephony-esim-getdefaultsmdpaddress-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getDownloadableProfileMetadata(系统接口)](arkts-telephony-esim-getdownloadableprofilemetadata-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getDownloadableProfiles(系统接口)](arkts-telephony-esim-getdownloadableprofiles-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getEid(系统接口)](arkts-telephony-esim-geteid-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getEsimFreeStorage(系统接口)](arkts-telephony-esim-getesimfreestorage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getEuiccInfo(系统接口)](arkts-telephony-esim-geteuiccinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getEuiccProfileInfoList(系统接口)](arkts-telephony-esim-geteuiccprofileinfolist-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getOsuStatus(系统接口)](arkts-telephony-esim-getosustatus-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getSupportedPkids(系统接口)](arkts-telephony-esim-getsupportedpkids-f-sys.md)<!--DelEnd-->
+  - [isSupported](arkts-telephony-esim-issupported-f.md)
+  <!--Del-->
+  - [reserveProfilesForFactoryRestore(系统接口)](arkts-telephony-esim-reserveprofilesforfactoryrestore-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [resetMemory(系统接口)](arkts-telephony-esim-resetmemory-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setDefaultSmdpAddress(系统接口)](arkts-telephony-esim-setdefaultsmdpaddress-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setProfileNickname(系统接口)](arkts-telephony-esim-setprofilenickname-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [startOsu(系统接口)](arkts-telephony-esim-startosu-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [switchToProfile(系统接口)](arkts-telephony-esim-switchtoprofile-f-sys.md)<!--DelEnd-->
+  - [AccessRule](arkts-telephony-esim-accessrule-i.md)
+  <!--Del-->
+  - [ContractRequestData(系统接口)](arkts-telephony-esim-contractrequestdata-i-sys.md)<!--DelEnd-->
+  - [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md)
+  <!--Del-->
+  - [DownloadConfiguration(系统接口)](arkts-telephony-esim-downloadconfiguration-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DownloadProfileResult(系统接口)](arkts-telephony-esim-downloadprofileresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EuiccInfo(系统接口)](arkts-telephony-esim-euiccinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EuiccProfile(系统接口)](arkts-telephony-esim-euiccprofile-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GetDownloadableProfileMetadataResult(系统接口)](arkts-telephony-esim-getdownloadableprofilemetadataresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GetDownloadableProfilesResult(系统接口)](arkts-telephony-esim-getdownloadableprofilesresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GetEuiccProfileInfoListResult(系统接口)](arkts-telephony-esim-geteuiccprofileinfolistresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [OperatorId(系统接口)](arkts-telephony-esim-operatorid-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CancelReason(系统接口)](arkts-telephony-esim-cancelreason-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [OsuStatus(系统接口)](arkts-telephony-esim-osustatus-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PolicyRules(系统接口)](arkts-telephony-esim-policyrules-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ProfileClass(系统接口)](arkts-telephony-esim-profileclass-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ProfileState(系统接口)](arkts-telephony-esim-profilestate-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ResetOption(系统接口)](arkts-telephony-esim-resetoption-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ResultCode(系统接口)](arkts-telephony-esim-resultcode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SolvableErrors(系统接口)](arkts-telephony-esim-solvableerrors-e-sys.md)<!--DelEnd-->
 - [@ohos.telephony.observer](arkts-telephony-observer.md)
   - [off_callStateChange](arkts-telephony-observer-offcallstatechange-f.md)
   - [off_callStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md)
@@ -411,6 +488,128 @@
   - [SimState](arkts-telephony-observer-simstate-t.md)
   - [TelCallState](arkts-telephony-observer-telcallstate-t.md)
   - [LockReason](arkts-telephony-observer-lockreason-e.md)
+- [@ohos.telephony.radio](arkts-telephony-radio.md)
+  <!--Del-->
+  - [factoryReset(系统接口)](arkts-telephony-radio-factoryreset-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getBasebandVersion(系统接口)](arkts-telephony-radio-getbasebandversion-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getCellInformation(系统接口)](arkts-telephony-radio-getcellinformation-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getIMEI(系统接口)](arkts-telephony-radio-getimei-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getIMEISV(系统接口)](arkts-telephony-radio-getimeisv-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getImsRegInfo(系统接口)](arkts-telephony-radio-getimsreginfo-f-sys.md)<!--DelEnd-->
+  - [getISOCountryCodeForNetwork](arkts-telephony-radio-getisocountrycodefornetwork-f.md)
+  - [getISOCountryCodeForNetworkSync](arkts-telephony-radio-getisocountrycodefornetworksync-f.md)
+  <!--Del-->
+  - [getMEID(系统接口)](arkts-telephony-radio-getmeid-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getNetworkCapability(系统接口)](arkts-telephony-radio-getnetworkcapability-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getNetworkSearchInformation(系统接口)](arkts-telephony-radio-getnetworksearchinformation-f-sys.md)<!--DelEnd-->
+  - [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md)
+  - [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md)
+  <!--Del-->
+  - [getNrOptionMode(系统接口)](arkts-telephony-radio-getnroptionmode-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getNROptionMode(系统接口)](arkts-telephony-radio-getnroptionmode-f-sys.md)<!--DelEnd-->
+  - [getOperatorName](arkts-telephony-radio-getoperatorname-f.md)
+  - [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md)
+  <!--Del-->
+  - [getPreferredNetwork(系统接口)](arkts-telephony-radio-getpreferrednetwork-f-sys.md)<!--DelEnd-->
+  - [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md)
+  - [getRadioTech](arkts-telephony-radio-getradiotech-f.md)
+  - [getRadioTechSync](arkts-telephony-radio-getradiotechsync-f.md)
+  - [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md)
+  - [getSignalInformationSync](arkts-telephony-radio-getsignalinformationsync-f.md)
+  <!--Del-->
+  - [getUniqueDeviceId(系统接口)](arkts-telephony-radio-getuniquedeviceid-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [isManualNetworkScanning(系统接口)](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md)<!--DelEnd-->
+  - [isNrSupported](arkts-telephony-radio-isnrsupported-f.md)
+  - [isNRSupported](arkts-telephony-radio-isnrsupported-f.md)
+  - [isRadioOn](arkts-telephony-radio-isradioon-f.md)
+  <!--Del-->
+  - [off_imsRegStateChange(系统接口)](arkts-telephony-radio-offimsregstatechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offImsRegStateChange(系统接口)](arkts-telephony-radio-offimsregstatechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_imsRegStateChange(系统接口)](arkts-telephony-radio-onimsregstatechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onImsRegStateChange(系统接口)](arkts-telephony-radio-onimsregstatechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [sendUpdateCellLocationRequest(系统接口)](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setNetworkCapability(系统接口)](arkts-telephony-radio-setnetworkcapability-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setNetworkSelectionMode(系统接口)](arkts-telephony-radio-setnetworkselectionmode-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setNROptionMode(系统接口)](arkts-telephony-radio-setnroptionmode-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setPreferredNetwork(系统接口)](arkts-telephony-radio-setpreferrednetwork-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setPrimarySlotId(系统接口)](arkts-telephony-radio-setprimaryslotid-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [startManualNetworkScan(系统接口)](arkts-telephony-radio-startmanualnetworkscan-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [stopManualNetworkScan(系统接口)](arkts-telephony-radio-stopmanualnetworkscan-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [turnOffRadio(系统接口)](arkts-telephony-radio-turnoffradio-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [turnOnRadio(系统接口)](arkts-telephony-radio-turnonradio-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CdmaCellInformation(系统接口)](arkts-telephony-radio-cdmacellinformation-i-sys.md)<!--DelEnd-->
+  - [CellInformation](arkts-telephony-radio-cellinformation-i.md)
+  <!--Del-->
+  - [CellInformation(系统接口)](arkts-telephony-radio-cellinformation-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GsmCellInformation(系统接口)](arkts-telephony-radio-gsmcellinformation-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ImsRegInfo(系统接口)](arkts-telephony-radio-imsreginfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LteCellInformation(系统接口)](arkts-telephony-radio-ltecellinformation-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NetworkInformation(系统接口)](arkts-telephony-radio-networkinformation-i-sys.md)<!--DelEnd-->
+  - [NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)
+  <!--Del-->
+  - [NetworkSearchRealTimeResult(系统接口)](arkts-telephony-radio-networksearchrealtimeresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NetworkSearchResult(系统接口)](arkts-telephony-radio-networksearchresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NetworkSelectionModeOptions(系统接口)](arkts-telephony-radio-networkselectionmodeoptions-i-sys.md)<!--DelEnd-->
+  - [NetworkState](arkts-telephony-radio-networkstate-i.md)
+  <!--Del-->
+  - [NrCellInformation(系统接口)](arkts-telephony-radio-nrcellinformation-i-sys.md)<!--DelEnd-->
+  - [SignalInformation](arkts-telephony-radio-signalinformation-i.md)
+  <!--Del-->
+  - [TdscdmaCellInformation(系统接口)](arkts-telephony-radio-tdscdmacellinformation-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [WcdmaCellInformation(系统接口)](arkts-telephony-radio-wcdmacellinformation-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ImsRegState(系统接口)](arkts-telephony-radio-imsregstate-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ImsRegTech(系统接口)](arkts-telephony-radio-imsregtech-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ImsServiceType(系统接口)](arkts-telephony-radio-imsservicetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NetworkCapabilityState(系统接口)](arkts-telephony-radio-networkcapabilitystate-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NetworkCapabilityType(系统接口)](arkts-telephony-radio-networkcapabilitytype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NetworkInformationState(系统接口)](arkts-telephony-radio-networkinformationstate-e-sys.md)<!--DelEnd-->
+  - [NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)
+  - [NetworkType](arkts-telephony-radio-networktype-e.md)
+  <!--Del-->
+  - [NrOptionMode(系统接口)](arkts-telephony-radio-nroptionmode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NROptionMode(系统接口)](arkts-telephony-radio-nroptionmode-e-sys.md)<!--DelEnd-->
+  - [NsaState](arkts-telephony-radio-nsastate-e.md)
+  <!--Del-->
+  - [PreferredNetworkMode(系统接口)](arkts-telephony-radio-preferrednetworkmode-e-sys.md)<!--DelEnd-->
+  - [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
+  - [RegState](arkts-telephony-radio-regstate-e.md)
 - [@ohos.telephony.sim](arkts-telephony-sim.md)
   <!--Del-->
   - [activateSim(系统接口)](arkts-telephony-sim-activatesim-f-sys.md)<!--DelEnd-->
@@ -652,3 +851,12 @@
   - [SmsEncodingScheme(系统接口)](arkts-telephony-sms-smsencodingscheme-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SmsShortCodeType(系统接口)](arkts-telephony-sms-smsshortcodetype-e-sys.md)<!--DelEnd-->
+- [@ohos.telephony.vcard](arkts-telephony-vcard.md)
+  <!--Del-->
+  - [exportVCard(系统接口)](arkts-telephony-vcard-exportvcard-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [importVCard(系统接口)](arkts-telephony-vcard-importvcard-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [VCardBuilderOptions(系统接口)](arkts-telephony-vcard-vcardbuilderoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [VCardType(系统接口)](arkts-telephony-vcard-vcardtype-e-sys.md)<!--DelEnd-->

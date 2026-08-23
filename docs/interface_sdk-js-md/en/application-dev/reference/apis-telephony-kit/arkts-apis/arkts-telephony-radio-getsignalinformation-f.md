@@ -12,7 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function getSignalInformation(slotId: int, callback: AsyncCallback<Array<SignalInformation>>): void
 ```
 
-Obtains the list of signal strength information of the registered network corresponding to a specified SIM card.
+Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ Obtains the list of signal strength information of the registered network corres
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting the instance list of the child classes derived from [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Callback used to return the result, which is an array of child class objects derived from [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ radio.getSignalInformation(slotId).then((data: Array<radio.SignalInformation>) =
 function getSignalInformation(slotId: int): Promise<Array<SignalInformation>>
 ```
 
-Obtains the list of signal strength information of the registered network corresponding to a specified SIM card.
+Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -82,13 +82,13 @@ Obtains the list of signal strength information of the registered network corres
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SignalInformation&gt;&gt; | Returns the callback for getting the instance list of the child classes derived from { |
+| Promise&lt;Array&lt;SignalInformation&gt;&gt; | Promise used to return the result, which is a list of child class objects derived from [SignalInformation]{ |
 
 **Error codes:**
 

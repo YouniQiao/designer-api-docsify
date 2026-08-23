@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getSimStateSync(slotId: int): SimState
 ```
 
-Obtains the state of the SIM card in a specified slot.
+Obtains the state of the SIM card in the specified slot.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ Obtains the state of the SIM card in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SimState | Returns one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{ |
+| SimState | State of the SIM card in the specified slot. |
 
 **Examples**
 

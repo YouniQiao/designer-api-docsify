@@ -2,8 +2,6 @@
 
 Obtains GSM cell information.
 
-@interface GsmCellInformation
-
 **Since:** 23
 
 <!--Device-radio-export interface GsmCellInformation--><!--Device-radio-export interface GsmCellInformation-End-->

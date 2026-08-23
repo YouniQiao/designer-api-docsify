@@ -12,7 +12,9 @@ import { radio } from '@kit.TelephonyKit';
 function getRadioTechSync(slotId: int): NetworkRadioTech
 ```
 
-Obtains radio access technology (RAT) of the registered network.
+Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,13 +28,13 @@ Obtains radio access technology (RAT) of the registered network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md) | Returns the RAT of PS domain and CS domain of registered network. |
+| [NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md) | RAT used in the CS and PS domains. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain. |
 
 **Error codes:**
 

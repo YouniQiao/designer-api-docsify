@@ -1,8 +1,6 @@
 # CellInformation
 
-Obtains current cell information.
-
-@interface CellInformation
+Defines the cell information.
 
 **Since:** 23
 

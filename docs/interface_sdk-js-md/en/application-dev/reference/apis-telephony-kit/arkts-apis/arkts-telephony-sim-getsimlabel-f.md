@@ -12,7 +12,9 @@ import { sim } from '@kit.TelephonyKit';
 function getSimLabel(slotId: int, callback: AsyncCallback<SimLabel>): void
 ```
 
-Obtains the SIM card label.
+Checks the mapping between card slot IDs and SIM cards.
+
+- Slot 1 corresponds to SIM card 1 or SIM card 2. - Slot 2 corresponds to SIM card 2 or eSIMX.
 
 **Since:** 23
 
@@ -24,8 +26,8 @@ Obtains the SIM card label.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | SIM card slot ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | Yes | Callback used to return the SIM card label. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | Yes | Callback used to return the result, which is the SIM card label. |
 
 **Error codes:**
 
@@ -65,7 +67,7 @@ sim.getSimLabel(0).then((data: sim.SimLabel) => {
 function getSimLabel(slotId: int): Promise<SimLabel>
 ```
 
-Obtains the SIM card label.
+Obtains the SIM card label. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -77,13 +79,13 @@ Obtains the SIM card label.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | SIM card slot ID. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | Promise used to return the SIM card label. |
+| Promise&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | Promise used to return \\${the SIM card label}. |
 
 **Error codes:**
 

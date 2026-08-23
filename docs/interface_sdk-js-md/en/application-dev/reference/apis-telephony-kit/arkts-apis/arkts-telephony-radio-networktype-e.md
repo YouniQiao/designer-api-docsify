@@ -1,8 +1,6 @@
 # NetworkType
 
-Describes the network type.
-
-@enum { int }
+Enumerates network types.
 
 **Since:** 23
 
@@ -16,7 +14,7 @@ Describes the network type.
 NETWORK_TYPE_UNKNOWN = 0
 ```
 
-Indicates unknown network type.
+Unknown network.
 
 **Since:** 23
 
@@ -30,7 +28,7 @@ Indicates unknown network type.
 NETWORK_TYPE_GSM = 1
 ```
 
-Indicates that the network type is GSM.
+GSM network.
 
 **Since:** 23
 
@@ -44,7 +42,7 @@ Indicates that the network type is GSM.
 NETWORK_TYPE_CDMA = 2
 ```
 
-Indicates that the network type is CDMA.
+CDMA network.
 
 **Since:** 23
 
@@ -58,7 +56,7 @@ Indicates that the network type is CDMA.
 NETWORK_TYPE_WCDMA = 3
 ```
 
-Indicates that the network type is WCDMA.
+WCDMA network.
 
 **Since:** 23
 
@@ -72,7 +70,7 @@ Indicates that the network type is WCDMA.
 NETWORK_TYPE_TDSCDMA = 4
 ```
 
-Indicates that the network type is TD-SCDMA.
+TD-SCDMA network.
 
 **Since:** 23
 
@@ -86,7 +84,7 @@ Indicates that the network type is TD-SCDMA.
 NETWORK_TYPE_LTE = 5
 ```
 
-Indicates that the network type is LTE.
+LTE network.
 
 **Since:** 23
 
@@ -100,7 +98,7 @@ Indicates that the network type is LTE.
 NETWORK_TYPE_NR = 6
 ```
 
-Indicates that the network type is 5G NR.
+NR network.
 
 **Since:** 23
 

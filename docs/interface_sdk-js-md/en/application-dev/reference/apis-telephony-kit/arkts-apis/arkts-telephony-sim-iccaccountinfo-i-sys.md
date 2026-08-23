@@ -2,8 +2,6 @@
 
 Defines the ICC account information.
 
-@interface IccAccountInfo
-
 **Since:** 23
 
 <!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->

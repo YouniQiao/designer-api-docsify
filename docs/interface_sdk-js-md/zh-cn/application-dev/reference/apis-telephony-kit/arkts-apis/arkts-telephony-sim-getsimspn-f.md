@@ -12,9 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getSimSpn(slotId: int, callback: AsyncCallback<string>): void
 ```
 
-Obtains the service provider name (SPN) of the SIM card in a specified slot.
-
-<p>The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -26,8 +24,8 @@ Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Indicates the callback for getting the SPN; returns an empty string if no SIM card is inserted or no EFSPN file in the SIM card. |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。返回指定卡槽SIM卡的SPN。 |
 
 **错误码：**
 
@@ -69,9 +67,7 @@ sim.getSimSpn(0).then((data: string) => {
 function getSimSpn(slotId: int): Promise<string>
 ```
 
-Obtains the service provider name (SPN) of the SIM card in a specified slot.
-
-<p>The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -83,13 +79,13 @@ Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the SPN; returns an empty string if no SIM card is inserted or no EFSPN file in the SIM card. |
+| Promise&lt;string&gt; | 以Promise形式返回获取指定卡槽SIM卡的SPN。 |
 
 **错误码：**
 

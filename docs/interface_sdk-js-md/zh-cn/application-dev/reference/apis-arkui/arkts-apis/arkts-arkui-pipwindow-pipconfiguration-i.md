@@ -140,7 +140,7 @@ customUIController?: NodeController
 
 自定义UI控制器，用于实现在画中画界面的自定义UI功能。此参数不填时，默认不使用自定义UI功能
 
-**类型：** [NodeController](../../apis-default/arkts-apis/arkts-nodecontroller-c.md)
+**类型：** [NodeController](arkts-arkui-nodecontroller-c.md)
 
 **起始版本：** 26.0.0
 

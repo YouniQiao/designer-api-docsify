@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function getOsuStatus(slotId: int): Promise<OsuStatus>
 ```
 
-Returns the current status of eUICC OS upgrade.
+Obtains the OS upgrade status for the eSIM in the specified slot. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ Returns the current status of eUICC OS upgrade.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[OsuStatus](arkts-telephony-esim-osustatus-e-sys.md)&gt; | Return the status of eUICC OS upgrade. |
+| Promise&lt;[OsuStatus](arkts-telephony-esim-osustatus-e-sys.md)&gt; | Promise used to return the OS upgrade status. <br> 1. Updating. <br> 2. Update failed. <br> 3. Update succeeded. <br> 4. Already the latest version. <br> 5. Update service unavailable. |
 
 **Error codes:**
 

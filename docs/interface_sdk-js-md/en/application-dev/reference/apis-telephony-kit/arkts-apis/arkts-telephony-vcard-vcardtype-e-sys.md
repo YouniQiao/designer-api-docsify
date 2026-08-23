@@ -1,8 +1,6 @@
-# VCardType
+# VCardType (System API)
 
-Indicates the VCard types.
-
-@enum { string }
+Enumerates VCard versions.
 
 **Since:** 23
 
@@ -10,13 +8,15 @@ Indicates the VCard types.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+**System API:** This is a system API.
+
 ## VERSION_21
 
 ```TypeScript
 VERSION_21 = 0
 ```
 
-Indicates the VCard version 2.1.
+VCard 2.1.
 
 **Since:** 23
 
@@ -24,13 +24,15 @@ Indicates the VCard version 2.1.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+**System API:** This is a system API.
+
 ## VERSION_30
 
 ```TypeScript
 VERSION_30 = 1
 ```
 
-Indicates the VCard version 3.0.
+VCard 3.0.
 
 **Since:** 23
 
@@ -38,17 +40,21 @@ Indicates the VCard version 3.0.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+**System API:** This is a system API.
+
 ## VERSION_40
 
 ```TypeScript
 VERSION_40 = 2
 ```
 
-Indicates the VCard version 4.0.
+VCard 4.0.
 
 **Since:** 23
 
 <!--Device-VCardType-VERSION_40 = 2--><!--Device-VCardType-VERSION_40 = 2-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
+
+**System API:** This is a system API.
 

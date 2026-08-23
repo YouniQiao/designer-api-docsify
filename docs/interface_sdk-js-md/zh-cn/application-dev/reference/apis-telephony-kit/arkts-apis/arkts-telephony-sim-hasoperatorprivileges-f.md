@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function hasOperatorPrivileges(slotId: int, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether your application (the caller) has been granted the operator permissions.
+检查应用(调用者)是否已被授予运营商权限。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -24,8 +24,8 @@ Checks whether your application (the caller) has been granted the operator permi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Indicates the callback of hasOperatorPrivileges. Returns {@code true} if your application has been granted the operator permissions; returns {@code false} otherwise. If no SIM card is inserted or the SIM card is deactivated will be return {@code false}. |
+| slotId | int | 是 | 卡槽ID。&lt;br /&gt;- 0：卡槽1。&lt;br /&gt;- 1：卡槽2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。 返回检查应用（调用者）是否已被授予运营商权限。<br/>- true：授权。<br/>- false：未授权（未插入SIM卡或停 用）。 |
 
 **错误码：**
 
@@ -66,7 +66,7 @@ sim.hasOperatorPrivileges(0).then((data: boolean) => {
 function hasOperatorPrivileges(slotId: int): Promise<boolean>
 ```
 
-Checks whether your application (the caller) has been granted the operator permissions.
+检查应用(调用者)是否已被授予运营商权限。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -78,13 +78,13 @@ Checks whether your application (the caller) has been granted the operator permi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| slotId | int | 是 | 卡槽ID。&lt;br /&gt;- 0：卡槽1。&lt;br /&gt;- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | 以Promise形式返回检查应用(调用者)是否已被授予运营商权限。<br/>- true：授权。<br/>- false：未授权（未插入SIM卡或停用）。 |
 
 **错误码：**
 

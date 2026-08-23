@@ -1,8 +1,6 @@
 # OsuStatus (System API)
 
-Euicc OS upgrade status.
-
-@enum { int }
+Defines the OS upgrade status.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@ Euicc OS upgrade status.
 EUICC_UPGRADE_IN_PROGRESS = 1
 ```
 
-The OS upgrade is in progress.
+Upgrading.
 
 **Since:** 23
 
@@ -34,7 +32,7 @@ The OS upgrade is in progress.
 EUICC_UPGRADE_FAILED = 2
 ```
 
-The OS upgrade failed.
+Upgrade failed.
 
 **Since:** 23
 
@@ -50,7 +48,7 @@ The OS upgrade failed.
 EUICC_UPGRADE_SUCCESSFUL = 3
 ```
 
-The OS upgrade successful.
+Update succeeded.
 
 **Since:** 23
 
@@ -66,7 +64,7 @@ The OS upgrade successful.
 EUICC_UPGRADE_ALREADY_LATEST = 4
 ```
 
-The OS upgrade not needed since current eUICC OS is latest.
+Already the latest version.
 
 **Since:** 23
 
@@ -82,7 +80,7 @@ The OS upgrade not needed since current eUICC OS is latest.
 EUICC_UPGRADE_SERVICE_UNAVAILABLE = 5
 ```
 
-The OS upgrade status is unavailable since eUICC service is unavailable.
+Update service unavailable.
 
 **Since:** 23
 

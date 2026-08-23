@@ -12,7 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function getISOCountryCodeForNetwork(slotId: int, callback: AsyncCallback<string>): void
 ```
 
-Obtains the ISO-defined country code of the country where the registered network is deployed.
+Obtains the ISO country code of the network with which the SIM card in the specified slot is registered. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ Obtains the ISO-defined country code of the country where the registered network
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the country code defined in ISO 3166-2; returns an empty string if the device is not registered with any network. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. which is a country code, for example, **CN** (China). If the device is not registered with any network, an empty string is returned. |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ radio.getISOCountryCodeForNetwork(slotId).then((data: string) => {
 function getISOCountryCodeForNetwork(slotId: int): Promise<string>
 ```
 
-Obtains the ISO-defined country code of the country where the registered network is deployed.
+Obtains the ISO country code of the network with which the SIM card in the specified slot is registered. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -82,13 +82,13 @@ Obtains the ISO-defined country code of the country where the registered network
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the country code defined in ISO 3166-2. Returns an empty string if the device is not registered with any network. |
+| Promise&lt;string&gt; | Promise used to return the result, which is an ISO country code, for example, **CN** ( China). If the device is not registered with any network, an empty string is returned. |
 
 **Error codes:**
 

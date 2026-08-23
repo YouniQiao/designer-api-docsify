@@ -20,9 +20,9 @@ import { webview } from '@kit.ArkWeb';
 errCode: WebBlanklessErrorCode
 ```
 
-无白屏加载的错误码，见[WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)定义。
+无白屏加载的错误码，见[WebBlanklessErrorCode](../../apis-default/arkts-apis/arkts-webview-webblanklesserrorcode-e.md)定义。
 
-**类型：** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
+**类型：** [WebBlanklessErrorCode](../../apis-default/arkts-apis/arkts-webview-webblanklesserrorcode-e.md)
 
 **起始版本：** 20
 

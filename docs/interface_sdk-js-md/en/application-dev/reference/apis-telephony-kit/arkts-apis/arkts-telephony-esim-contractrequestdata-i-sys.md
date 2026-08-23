@@ -1,8 +1,6 @@
 # ContractRequestData (System API)
 
-Contract request data
-
-@interface ContractRequestData
+Information required for encryption.
 
 **Since:** 23
 
@@ -24,7 +22,7 @@ import { eSIM } from '@kit.TelephonyKit';
 nonce: string
 ```
 
-Nonce required to get contract info
+Random number.
 
 **Type:** string
 
@@ -42,7 +40,7 @@ Nonce required to get contract info
 pkid: string
 ```
 
-Euicc Ci PKID to be used, required to get contract info
+Selected public key ID.
 
 **Type:** string
 
@@ -60,7 +58,7 @@ Euicc Ci PKID to be used, required to get contract info
 publicKey: string
 ```
 
-Public key required to get contract info
+Public key.
 
 **Type:** string
 

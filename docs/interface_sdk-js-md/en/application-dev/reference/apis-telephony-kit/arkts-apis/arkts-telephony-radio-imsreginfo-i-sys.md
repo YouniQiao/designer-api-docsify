@@ -2,8 +2,6 @@
 
 Indicates IMS registration information.
 
-@interface ImsRegInfo
-
 **Since:** 23
 
 <!--Device-radio-export interface ImsRegInfo--><!--Device-radio-export interface ImsRegInfo-End-->

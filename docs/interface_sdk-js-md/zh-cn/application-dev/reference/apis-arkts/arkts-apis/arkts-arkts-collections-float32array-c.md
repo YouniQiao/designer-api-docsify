@@ -1,6 +1,6 @@
 # Float32Array
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md)实现。
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-arkts-collections-n.md)实现。
 
 > **说明：**
 > 

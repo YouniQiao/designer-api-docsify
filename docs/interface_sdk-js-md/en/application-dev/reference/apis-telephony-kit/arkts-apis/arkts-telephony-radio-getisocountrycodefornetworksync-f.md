@@ -12,7 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function getISOCountryCodeForNetworkSync(slotId: int): string
 ```
 
-Obtains the ISO-defined country code of the country where the registered network is deployed.
+Obtains the ISO country code of the network with which the SIM card in the specified slot is registered.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ Obtains the ISO-defined country code of the country where the registered network
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Returns the country code defined in ISO 3166-2. Returns an empty string if the device is not registered with any network. |
+| string | ISO country code of the network, for example, **CN** (China). If the device is not registered with any network, an empty string is returned. |
 
 **Examples**
 

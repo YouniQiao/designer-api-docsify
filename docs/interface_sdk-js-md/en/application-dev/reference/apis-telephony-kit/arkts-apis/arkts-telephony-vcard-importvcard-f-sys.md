@@ -1,4 +1,4 @@
-# importVCard
+# importVCard (System API)
 
 ## Modules to Import
 
@@ -12,7 +12,7 @@ import { vcard } from '@kit.TelephonyKit';
 function importVCard(context: Context, filePath: string, accountId: int, callback: AsyncCallback<void>): void
 ```
 
-Import contacts from the specified vcf file.
+Imports a VCard file (that is, **.vcf** file) to the contact database. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -22,20 +22,23 @@ Import contacts from the specified vcf file.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+**System API:** This is a system API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| filePath | string | Yes | Vcf file path. |
-| accountId | int | Yes | Contact account ID. When the app chooses to import the vcf file into a contact account, it needs to pass in the accountId. If the accountId is not passed, a new contact account will be added by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of the function. |
+| context | Context | Yes | Application context. |
+| filePath | string | Yes | URL of the vcard file (VCF). |
+| accountId | int | Yes | Contact account ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 11 - 22 |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
@@ -102,7 +105,7 @@ class EntryAbility extends UIAbility {
 function importVCard(context: Context, filePath: string, accountId?: int): Promise<void>
 ```
 
-Import contacts from the specified vcf file.
+Imports a VCard file (that is, **.vcf** file) to the contact database. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -112,25 +115,28 @@ Import contacts from the specified vcf file.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+**System API:** This is a system API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| filePath | string | Yes | Vcf file path. |
-| accountId | int | No | Contact account ID.When the app chooses to import the vcf file into a contact account, it needs to pass in the accountId. If the accountId is not passed, a new contact account will be added by default. |
+| context | Context | Yes | Application context. |
+| filePath | string | Yes | URL of the vcard file (VCF). |
+| accountId | int | No | Contact account ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 11 - 22 |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
@@ -147,7 +153,7 @@ See [importVCard](#importvcard)
 function importVCard(context: Context, filePath: string, callback: AsyncCallback<void>): void
 ```
 
-Import contacts from the specified vcf file.
+Imports a VCard file (that is, **.vcf** file) to the contact database. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -157,19 +163,22 @@ Import contacts from the specified vcf file.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+**System API:** This is a system API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| filePath | string | Yes | Vcf file path. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of the function. |
+| context | Context | Yes | Application context. |
+| filePath | string | Yes | URL of the vcard file (VCF). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 11 - 22 |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |

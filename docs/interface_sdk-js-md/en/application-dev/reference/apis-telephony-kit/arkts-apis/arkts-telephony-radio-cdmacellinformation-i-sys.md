@@ -2,8 +2,6 @@
 
 Obtains CDMA cell information.
 
-@interface CdmaCellInformation
-
 **Since:** 23
 
 <!--Device-radio-export interface CdmaCellInformation--><!--Device-radio-export interface CdmaCellInformation-End-->

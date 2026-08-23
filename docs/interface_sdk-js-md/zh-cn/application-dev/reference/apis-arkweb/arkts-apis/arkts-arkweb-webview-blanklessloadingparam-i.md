@@ -24,7 +24,7 @@ callback?: Callback<BlanklessFrameInterpolationInfo>
 
 只有在enable为true时生效。可选，不设置则不进行任何操作。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-default/arkts-apis/arkts-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **起始版本：** 23
 

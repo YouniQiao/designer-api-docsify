@@ -1,8 +1,6 @@
 # ResultCode (System API)
 
-Result state.
-
-@enum { int }
+Enumerates the result codes.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@ Result state.
 RESULT_SOLVABLE_ERRORS = -2
 ```
 
-Indicates that the user must resolve a solvable error.
+Solving of the solvable errors required.
 
 **Since:** 23
 
@@ -34,7 +32,7 @@ Indicates that the user must resolve a solvable error.
 RESULT_MUST_DISABLE_PROFILE = -1
 ```
 
-Indicates that the active profile must be disabled to perform the operation.
+Disabling of the active profile required.
 
 **Since:** 23
 
@@ -50,7 +48,7 @@ Indicates that the active profile must be disabled to perform the operation.
 RESULT_OK = 0
 ```
 
-Operation succeeded.
+Operation success.
 
 **Since:** 23
 
@@ -82,7 +80,7 @@ Failed to obtain the EID.
 RESULT_ACTIVATION_CODE_CHANGED = 203
 ```
 
-The activation code is changed after the end user confirms the operation.
+Activation code changed upon user confirmation.
 
 **Since:** 23
 
@@ -98,7 +96,7 @@ The activation code is changed after the end user confirms the operation.
 RESULT_ACTIVATION_CODE_INVALID = 204
 ```
 
-The activation code is invalid.
+Invalid activation code.
 
 **Since:** 23
 
@@ -114,7 +112,7 @@ The activation code is invalid.
 RESULT_SMDP_ADDRESS_INVALID = 205
 ```
 
-The SM-DP+ server address is invalid.
+Invalid SM-DP+ server address.
 
 **Since:** 23
 
@@ -146,7 +144,7 @@ Invalid eUICC information.
 RESULT_TLS_HANDSHAKE_FAILED = 207
 ```
 
-TLS handshake fails.
+TLS handshake failed.
 
 **Since:** 23
 
@@ -178,7 +176,7 @@ Certificate network connection error.
 RESULT_CERTIFICATE_RESPONSE_TIMEOUT = 209
 ```
 
-The certificate address is invalid or the response times out.
+Invalid certificate address or response timeout.
 
 **Since:** 23
 
@@ -194,7 +192,7 @@ The certificate address is invalid or the response times out.
 RESULT_AUTHENTICATION_FAILED = 210
 ```
 
-Authentication fails.
+Authentication failed.
 
 **Since:** 23
 
@@ -210,7 +208,7 @@ Authentication fails.
 RESULT_RESPONSE_HTTP_FAILED = 211
 ```
 
-HTTP response fails.
+HTTP response failed.
 
 **Since:** 23
 
@@ -242,7 +240,7 @@ Incorrect confirmation code.
 RESULT_EXCEEDED_CONFIRMATION_CODE_TRY_LIMIT = 213
 ```
 
-The maximum number of confirmation code attempts is reached.
+Maximum confirmation code retries reached.
 
 **Since:** 23
 
@@ -258,7 +256,7 @@ The maximum number of confirmation code attempts is reached.
 RESULT_NO_PROFILE_ON_SERVER = 214
 ```
 
-There is no profile on the server for download.
+No downloadable profile available on the server.
 
 **Since:** 23
 
@@ -274,7 +272,7 @@ There is no profile on the server for download.
 RESULT_TRANSACTION_ID_INVALID = 215
 ```
 
-The transaction ID is invalid.
+Invalid transaction ID.
 
 **Since:** 23
 
@@ -290,7 +288,7 @@ The transaction ID is invalid.
 RESULT_SERVER_ADDRESS_INVALID = 216
 ```
 
-The server address is invalid.
+Invalid server address.
 
 **Since:** 23
 
@@ -306,7 +304,7 @@ The server address is invalid.
 RESULT_GET_BOUND_PROFILE_PACKAGE_FAILED = 217
 ```
 
-Failed to obtain the bound profile package.
+Failed to obtain the BPP.
 
 **Since:** 23
 
@@ -322,7 +320,7 @@ Failed to obtain the bound profile package.
 RESULT_USER_CANCEL_DOWNLOAD = 218
 ```
 
-The download is canceled by the end user.
+Download cancelled by the user.
 
 **Since:** 23
 
@@ -338,7 +336,7 @@ The download is canceled by the end user.
 RESULT_SERVER_UNAVAILABLE = 220
 ```
 
-The carrier server is unavailable.
+Carrier server unavailable.
 
 **Since:** 23
 
@@ -354,7 +352,7 @@ The carrier server is unavailable.
 RESULT_PROFILE_NON_DELETE = 223
 ```
 
-The profile is attached to a non-delete profile policy rule.
+File deletion not allowed by the PPR rule.
 
 **Since:** 23
 
@@ -370,7 +368,7 @@ The profile is attached to a non-delete profile policy rule.
 RESULT_SMDP_ADDRESS_INCORRECT = 226
 ```
 
-The authentication response server address does not match.
+Incorrect SMDP server address.
 
 **Since:** 23
 
@@ -386,7 +384,7 @@ The authentication response server address does not match.
 RESULT_ANALYZE_AUTHENTICATION_SERVER_RESPONSE_FAILED = 228
 ```
 
-Failed to analyze the authentication server response.
+Failed to parse the server authentication response.
 
 **Since:** 23
 
@@ -402,7 +400,7 @@ Failed to analyze the authentication server response.
 RESULT_ANALYZE_AUTHENTICATION_CLIENT_RESPONSE_FAILED = 229
 ```
 
-Failed to analyze the authentication client response.
+Failed to parse the client authentication response.
 
 **Since:** 23
 
@@ -418,7 +416,7 @@ Failed to analyze the authentication client response.
 RESULT_ANALYZE_AUTHENTICATION_CLIENT_MATCHING_ID_REFUSED = 231
 ```
 
-Failed to analyze the authentication client response because the matching ID is rejected.
+Failed to parse the client authentication response because the matching ID was rejected.
 
 **Since:** 23
 
@@ -434,7 +432,7 @@ Failed to analyze the authentication client response because the matching ID is 
 RESULT_PROFILE_TYPE_ERROR_AUTHENTICATION_STOPPED = 233
 ```
 
-Authentication stopped due to an error in the profile type.
+Authentication stopped due to incorrect profile type.
 
 **Since:** 23
 
@@ -450,7 +448,7 @@ Authentication stopped due to an error in the profile type.
 RESULT_CARRIER_SERVER_REFUSED_ERRORS = 249
 ```
 
-The carrier server refused errors of which the reason code is 3.8.
+Rejection cause code of the carrier server, which is 3.8.
 
 **Since:** 23
 
@@ -466,7 +464,7 @@ The carrier server refused errors of which the reason code is 3.8.
 RESULT_CERTIFICATE_INVALID = 251
 ```
 
-The certificate is invalid.
+Invalid certificate.
 
 **Since:** 23
 
@@ -482,7 +480,7 @@ The certificate is invalid.
 RESULT_OUT_OF_MEMORY = 263
 ```
 
-Profile installation failed due to insufficient memory.
+Failed to install the profile due to insufficient memory.
 
 **Since:** 23
 
@@ -498,7 +496,7 @@ Profile installation failed due to insufficient memory.
 RESULT_PPR_FORBIDDEN = 268
 ```
 
-The profile policy rule prohibits this operation during download.
+Operation not allowed by the PPR rule.
 
 **Since:** 23
 
@@ -514,7 +512,7 @@ The profile policy rule prohibits this operation during download.
 RESULT_NOTHING_TO_DELETE = 270
 ```
 
-Nothing is to be deleted.
+No configuration file for deletion.
 
 **Since:** 23
 
@@ -530,7 +528,7 @@ Nothing is to be deleted.
 RESULT_PPR_NOT_MATCH = 276
 ```
 
-The profile policy rule does not match.
+PPR rule mismatch.
 
 **Since:** 23
 
@@ -546,7 +544,7 @@ The profile policy rule does not match.
 RESULT_CAT_BUSY = 283
 ```
 
-A session is ongoing.
+Session in progress.
 
 **Since:** 23
 
@@ -562,7 +560,7 @@ A session is ongoing.
 RESULT_PROFILE_EID_INVALID = 284
 ```
 
-This eSIM profile is already in use or is invalid.
+eSIM profile in use or invalid.
 
 **Since:** 23
 
@@ -578,7 +576,7 @@ This eSIM profile is already in use or is invalid.
 RESULT_DOWNLOAD_TIMEOUT = 287
 ```
 
-Download times out.
+Download timeout.
 
 **Since:** 23
 

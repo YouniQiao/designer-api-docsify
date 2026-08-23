@@ -1,8 +1,6 @@
 # ProfileState (System API)
 
-The profile state.
-
-@enum { int }
+Enumerates the profile states.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@ The profile state.
 PROFILE_STATE_UNSPECIFIED = -1
 ```
 
-Profile state not specified.
+Profile status unspecified.
 
 **Since:** 23
 
@@ -34,7 +32,7 @@ Profile state not specified.
 PROFILE_STATE_DISABLED = 0
 ```
 
-Disabled profiles.
+Profile disabled.
 
 **Since:** 23
 
@@ -50,7 +48,7 @@ Disabled profiles.
 PROFILE_STATE_ENABLED = 1
 ```
 
-Enabled profile.
+Profile enabled.
 
 **Since:** 23
 

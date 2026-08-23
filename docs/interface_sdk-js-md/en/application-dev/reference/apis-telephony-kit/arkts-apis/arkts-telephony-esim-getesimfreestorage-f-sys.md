@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function getEsimFreeStorage(): Promise<int>
 ```
 
-Returns the remaining storage space in KB for the eUICC hardware.
+This API is used to obtain the remaining storage space of the eUICC hardware. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Returns the remaining storage space in KB for the eUICC hardware.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Returns the size of the remaining storage space in KB for the eUICC. |
+| Promise&lt;int&gt; | Promise used to return the remaining storage space of the eUICC hardware, in KB. |
 
 **Error codes:**
 

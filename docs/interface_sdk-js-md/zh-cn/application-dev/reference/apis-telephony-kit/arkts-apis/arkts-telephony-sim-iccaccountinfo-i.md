@@ -1,8 +1,6 @@
 # IccAccountInfo
 
-Defines the ICC account information.
-
-@interface IccAccountInfo
+Icc账户信息。
 
 **起始版本：** 23
 
@@ -22,7 +20,7 @@ import { sim } from '@kit.TelephonyKit';
 iccId: string
 ```
 
-Indicates the iccId for card.
+ICCID号码。
 
 **类型：** string
 
@@ -38,7 +36,9 @@ Indicates the iccId for card.
 isActive: boolean
 ```
 
-Indicates the active status for card.
+卡是否被激活。
+
+- true:激活。 - false：未激活。
 
 **类型：** boolean
 
@@ -54,7 +54,9 @@ Indicates the active status for card.
 isEsim: boolean
 ```
 
-Indicates the mark card is eSim or not.
+标记卡是否是eSim。
+
+- true:是eSim。 - false：不是eSim。
 
 **类型：** boolean
 
@@ -70,7 +72,7 @@ Indicates the mark card is eSim or not.
 showName: string
 ```
 
-Indicates the display name for card.
+SIM卡显示名称。
 
 **类型：** string
 
@@ -86,7 +88,7 @@ Indicates the display name for card.
 showNumber: string
 ```
 
-Indicates the display number for card.
+SIM卡显示号码。
 
 **类型：** string
 
@@ -102,7 +104,7 @@ Indicates the display number for card.
 simId: int
 ```
 
-Indicates the sim Id for card.
+SIM卡ID。
 
 **类型：** int
 
@@ -118,7 +120,7 @@ Indicates the sim Id for card.
 slotIndex: int
 ```
 
-Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
+卡槽ID。
 
 **类型：** int
 

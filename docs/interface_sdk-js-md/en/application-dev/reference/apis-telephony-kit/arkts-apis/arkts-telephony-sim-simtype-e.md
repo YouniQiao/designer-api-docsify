@@ -1,8 +1,6 @@
 # SimType
 
-Indicates the SIM card type.
-
-@enum { int }
+Enumerates the SIM card types.
 
 **Since:** 23
 
@@ -16,7 +14,7 @@ Indicates the SIM card type.
 PSIM = 0
 ```
 
-Indicates psim type.
+Physical SIM card.
 
 **Since:** 23
 
@@ -30,7 +28,7 @@ Indicates psim type.
 ESIM = 1
 ```
 
-Indicates esim type.
+eSIM card.
 
 **Since:** 23
 

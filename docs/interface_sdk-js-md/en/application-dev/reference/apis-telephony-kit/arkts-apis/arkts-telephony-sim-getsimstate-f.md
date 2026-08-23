@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getSimState(slotId: int, callback: AsyncCallback<SimState>): void
 ```
 
-Obtains the state of the SIM card in a specified slot.
+Obtains the state of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ Obtains the state of the SIM card in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimState&gt; | Yes | Indicates the callback for getting one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{@code SimState#SIM_STATE_UNKNOWN} &lt;li&gt;{@code SimState#SIM_STATE_NOT_PRESENT} &lt;li&gt;{@code SimState#SIM_STATE_LOCKED} &lt;li&gt;{@code SimState#SIM_STATE_NOT_READY} &lt;li&gt;{@code SimState#SIM_STATE_READY} &lt;li&gt;{@code SimState#SIM_STATE_LOADED} &lt;/ul&gt; |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimState&gt; | Yes | Callback used to return the result, which is the state of the SIM card in the specified slot. For details, see [SimState](arkts-telephony-sim-simstate-e.md). |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ sim.getSimState(0).then((data: sim.SimState) => {
 function getSimState(slotId: int): Promise<SimState>
 ```
 
-Obtains the state of the SIM card in a specified slot.
+Obtains the state of the SIM card in the specified slot. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -78,13 +78,13 @@ Obtains the state of the SIM card in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SimState&gt; | Returns one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{ |
+| Promise&lt;SimState&gt; | Promise used to return the result. |
 
 **Error codes:**
 

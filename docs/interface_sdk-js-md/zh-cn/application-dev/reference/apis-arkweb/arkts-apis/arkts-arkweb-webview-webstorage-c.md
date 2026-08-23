@@ -92,7 +92,7 @@ static deleteOrigin(origin: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| origin | string | 是 | 指定源的字符串索引，来自于 [getOrigins](#getorigins)。 |
+| origin | string | 是 | 指定源的字符串索引，来自于 [getOrigins](../../apis-default/arkts-apis/arkts-webview-webstorage-c.md#getorigins)。 |
 
 **错误码：**
 
@@ -397,7 +397,7 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Promise实例，用于获取当前所有源的信息。 |
+| Promise&lt;Array&lt;[WebStorageOrigin](../../apis-default/arkts-apis/arkts-webview-webstorageorigin-i.md)&gt;&gt; | Promise实例，用于获取当前所有源的信息。 |
 
 **错误码：**
 
@@ -502,7 +502,7 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | 是 | 以数组方式返回源的信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](../../apis-default/arkts-apis/arkts-webview-webstorageorigin-i.md)&gt;&gt; | 是 | 以数组方式返回源的信息。 |
 
 **错误码：**
 

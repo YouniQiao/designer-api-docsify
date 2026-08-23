@@ -78,7 +78,7 @@ setLazyDynamicLayoutOptions(algorithm: LazyLayoutAlgorithm): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](arkts-lazylayoutalgorithm-i.md) | 是 |  |
+| algorithm | [LazyLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-i.md) | 是 |  |
 
 **返回值：**
 

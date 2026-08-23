@@ -1,8 +1,6 @@
 # DownloadableProfile
 
-Information about a profile which is downloadable to an eUICC using.
-
-@interface DownloadableProfile
+Defines a downloadable profile.
 
 **Since:** 23
 
@@ -22,7 +20,7 @@ import { eSIM } from '@kit.TelephonyKit';
 accessRules?: Array<AccessRule>
 ```
 
-Gets the accessRules.
+Access rule array.
 
 **Type:** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i.md)&gt;
 
@@ -38,7 +36,7 @@ Gets the accessRules.
 activationCode: string
 ```
 
-Activation code.
+Activation code. For a profile that does not require an activation code, the value may be left empty.
 
 **Type:** string
 

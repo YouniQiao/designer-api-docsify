@@ -1,6 +1,6 @@
 # OfflineResourceMap
 
-本地离线资源配置对象，用于配置将被[injectOfflineResources](arkts-arkweb-webview-webviewcontroller-c.md#injectofflineresources)接口注入到内存缓存的本地离线资源的相 关信息，内核会根据此信息生成资源缓存，并据此控制缓存的有效期。
+本地离线资源配置对象，用于配置将被[injectOfflineResources](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#injectofflineresources)接口注入到内存缓存的本地离线资源的相 关信息，内核会根据此信息生成资源缓存，并据此控制缓存的有效期。
 
 **起始版本：** 12
 
@@ -54,7 +54,7 @@ type: OfflineResourceType
 
 资源的类型，目前仅支持JavaScript、图片和CSS类型的资源。
 
-**类型：** [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md)
+**类型：** [OfflineResourceType](../../apis-default/arkts-apis/arkts-webview-offlineresourcetype-e.md)
 
 **起始版本：** 12
 

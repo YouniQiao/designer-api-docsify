@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function setDefaultSmdpAddress(slotId: int, address: string): Promise<ResultCode>
 ```
 
-Set or update the default SM-DP+ address stored in an eUICC.
+Sets or updates the default SM-DP+ address stored in the eUICC. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,14 +28,14 @@ Set or update the default SM-DP+ address stored in an eUICC.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
-| address | string | Yes | The default SM-DP+ address to set. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| address | string | Yes | Default SM-DP+ address. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the result code. |
+| Promise&lt;ResultCode&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

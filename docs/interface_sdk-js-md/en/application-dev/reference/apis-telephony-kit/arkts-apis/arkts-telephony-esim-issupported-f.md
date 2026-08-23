@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function isSupported(slotId: int): boolean
 ```
 
-Whether embedded subscriptions are currently supported.
+Checks whether the specified card slot supports the eSIM function.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ Whether embedded subscriptions are currently supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Whether the specified card slot supports the eSIM function. If yes, **true** is returned. If no, **false** is returned. |
 
 **Error codes:**
 

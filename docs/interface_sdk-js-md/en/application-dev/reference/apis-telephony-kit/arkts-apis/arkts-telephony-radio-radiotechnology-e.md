@@ -1,8 +1,6 @@
 # RadioTechnology
 
-Describes the radio access technology.
-
-@enum { int }
+Enumerates radio access technologies.
 
 **Since:** 23
 
@@ -16,7 +14,7 @@ Describes the radio access technology.
 RADIO_TECHNOLOGY_UNKNOWN = 0
 ```
 
-Indicates unknown radio access technology (RAT).
+Unknown RAT
 
 **Since:** 23
 
@@ -30,7 +28,7 @@ Indicates unknown radio access technology (RAT).
 RADIO_TECHNOLOGY_GSM = 1
 ```
 
-Indicates that RAT is global system for mobile communications (GSM), including GSM, general packet radio system (GPRS), and enhanced data rates for GSM evolution (EDGE).
+Global System for Mobile Communication (GSM)
 
 **Since:** 23
 
@@ -44,7 +42,7 @@ Indicates that RAT is global system for mobile communications (GSM), including G
 RADIO_TECHNOLOGY_1XRTT = 2
 ```
 
-Indicates that RAT is code division multiple access (CDMA), including Interim Standard 95 (IS95) and Single-Carrier Radio Transmission Technology (1xRTT).
+Single-Carrier Radio Transmission Technology (1XRTT)
 
 **Since:** 23
 
@@ -58,7 +56,7 @@ Indicates that RAT is code division multiple access (CDMA), including Interim St
 RADIO_TECHNOLOGY_WCDMA = 3
 ```
 
-Indicates that RAT is wideband code division multiple address (WCDMA).
+Wideband Code Division Multiple Access (WCDMA)
 
 **Since:** 23
 
@@ -72,7 +70,7 @@ Indicates that RAT is wideband code division multiple address (WCDMA).
 RADIO_TECHNOLOGY_HSPA = 4
 ```
 
-Indicates that RAT is high-speed packet access (HSPA), including HSPA, high-speed downlink packet access (HSDPA), and high-speed uplink packet access (HSUPA).
+High Speed Packet Access (HSPA)
 
 **Since:** 23
 
@@ -86,7 +84,7 @@ Indicates that RAT is high-speed packet access (HSPA), including HSPA, high-spee
 RADIO_TECHNOLOGY_HSPAP = 5
 ```
 
-Indicates that RAT is evolved high-speed packet access (HSPA+), including HSPA+ and dual-carrier HSPA+ (DC-HSPA+).
+Evolved High Speed Packet Access (HSPA+)
 
 **Since:** 23
 
@@ -100,7 +98,7 @@ Indicates that RAT is evolved high-speed packet access (HSPA+), including HSPA+ 
 RADIO_TECHNOLOGY_TD_SCDMA = 6
 ```
 
-Indicates that RAT is time division-synchronous code division multiple access (TD-SCDMA).
+TD-SCDMA.
 
 **Since:** 23
 
@@ -114,7 +112,7 @@ Indicates that RAT is time division-synchronous code division multiple access (T
 RADIO_TECHNOLOGY_EVDO = 7
 ```
 
-Indicates that RAT is evolution data only (EVDO), including EVDO Rev.0, EVDO Rev.A, and EVDO Rev.B.
+Evolution-Data Optimized (EVDO)
 
 **Since:** 23
 
@@ -128,7 +126,7 @@ Indicates that RAT is evolution data only (EVDO), including EVDO Rev.0, EVDO Rev
 RADIO_TECHNOLOGY_EHRPD = 8
 ```
 
-Indicates that RAT is evolved high rate packet data (EHRPD).
+Evolved High Rate Package Data (EHRPD)
 
 **Since:** 23
 
@@ -142,7 +140,7 @@ Indicates that RAT is evolved high rate packet data (EHRPD).
 RADIO_TECHNOLOGY_LTE = 9
 ```
 
-Indicates that RAT is long term evolution (LTE).
+Long Term Evolution (LTE)
 
 **Since:** 23
 
@@ -156,7 +154,7 @@ Indicates that RAT is long term evolution (LTE).
 RADIO_TECHNOLOGY_LTE_CA = 10
 ```
 
-Indicates that RAT is LTE carrier aggregation (LTE-CA).
+Long Term Evolution_Carrier Aggregation (LTE_CA)
 
 **Since:** 23
 
@@ -170,7 +168,7 @@ Indicates that RAT is LTE carrier aggregation (LTE-CA).
 RADIO_TECHNOLOGY_IWLAN = 11
 ```
 
-Indicates that RAT is interworking WLAN (I-WLAN).
+Industrial Wireless LAN (IWLAN)
 
 **Since:** 23
 
@@ -184,7 +182,7 @@ Indicates that RAT is interworking WLAN (I-WLAN).
 RADIO_TECHNOLOGY_NR = 12
 ```
 
-Indicates that RAT is 5G new radio (NR).
+New Radio (NR)
 
 **Since:** 23
 

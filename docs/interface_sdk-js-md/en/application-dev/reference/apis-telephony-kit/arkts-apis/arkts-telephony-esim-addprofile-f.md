@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function addProfile(profile: DownloadableProfile): Promise<boolean>
 ```
 
-Starts a page through an ability, on which users can touch the button to download a profile.
+Launches the download page for the user to add a single profile. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -26,13 +26,13 @@ Starts a page through an ability, on which users can touch the button to downloa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | Yes | Bound profile package data returned by the SM-DP+ server. |
+| profile | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | Yes | Profile that can be downloaded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

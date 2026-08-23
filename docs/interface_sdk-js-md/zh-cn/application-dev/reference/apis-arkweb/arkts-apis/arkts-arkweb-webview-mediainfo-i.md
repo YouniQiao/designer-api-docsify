@@ -1,6 +1,6 @@
 # MediaInfo
 
-[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md)回调函数的一个参数。包含了网页中媒体的信息。应用可以根据这些信息来创建 接管网页媒体播放的播放器。
+[CreateNativeMediaPlayerCallback](../../apis-default/arkts-apis/arkts-webview-createnativemediaplayercallback-t.md)回调函数的一个参数。包含了网页中媒体的信息。应用可以根据这些信息来创建 接管网页媒体播放的播放器。
 
 **起始版本：** 12
 
@@ -108,7 +108,7 @@ mediaSrcList: MediaSourceInfo[]
 
 媒体的源。可能有多个源，应用需要选择一个支持的源来播放。
 
-**类型：** [MediaSourceInfo](arkts-arkweb-webview-mediasourceinfo-c.md)[]
+**类型：** [MediaSourceInfo](../../apis-default/arkts-apis/arkts-webview-mediasourceinfo-c.md)[]
 
 **起始版本：** 12
 
@@ -182,7 +182,7 @@ preload: Preload
 
 是否需要预加载。
 
-**类型：** [Preload](arkts-arkweb-webview-preload-e.md)
+**类型：** [Preload](../../apis-default/arkts-apis/arkts-webview-preload-e.md)
 
 **起始版本：** 12
 
@@ -200,7 +200,7 @@ surfaceInfo: NativeMediaPlayerSurfaceInfo
 
 用于同层渲染的 surface 信息。
 
-**类型：** [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md)
+**类型：** [NativeMediaPlayerSurfaceInfo](../../apis-default/arkts-apis/arkts-webview-nativemediaplayersurfaceinfo-c.md)
 
 **起始版本：** 12
 

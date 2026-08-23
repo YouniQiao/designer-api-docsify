@@ -2,8 +2,6 @@
 
 Obtains the option mode of NR.
 
-@enum { int }
-
 **Since:** 23
 
 <!--Device-radio-export enum NROptionMode--><!--Device-radio-export enum NROptionMode-End-->

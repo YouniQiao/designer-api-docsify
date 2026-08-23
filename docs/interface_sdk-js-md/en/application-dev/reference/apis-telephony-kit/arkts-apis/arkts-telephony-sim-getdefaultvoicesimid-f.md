@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getDefaultVoiceSimId(callback: AsyncCallback<int>): void
 ```
 
-Obtains the default SIM ID for the voice service.
+Obtains the default slot ID of the SIM card that provides voice services. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Obtains the default SIM ID for the voice service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Returns the SIM ID of the default voice sim and SIM ID will increase from 1. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. <br>The return value is bound to the SIM card and increases from 1. |
 
 **Error codes:**
 
@@ -68,7 +68,7 @@ promise.then((data: number) => {
 function getDefaultVoiceSimId(): Promise<int>
 ```
 
-Obtains the default SIM ID for the voice service.
+Obtains the default slot ID of the SIM card that provides voice services. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ Obtains the default SIM ID for the voice service.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Returns the SIM ID of the default voice sim and SIM ID will increase from 1. |
+| Promise&lt;int&gt; | Promise used to return the result. <br>The return value is bound to the SIM card and increases from 1. |
 
 **Error codes:**
 

@@ -1,8 +1,6 @@
 # ResetOption (System API)
 
-Options for resetting eUICC memory.
-
-@enum { int }
+Defines the reset options.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@ Options for resetting eUICC memory.
 DELETE_OPERATIONAL_PROFILES = 1
 ```
 
-Deletes all operational profiles on reset.
+Deletion of all operational profiles.
 
 **Since:** 23
 
@@ -34,7 +32,7 @@ Deletes all operational profiles on reset.
 DELETE_FIELD_LOADED_TEST_PROFILES = 1 << 1
 ```
 
-Deletes all field-loaded testing profiles on reset.
+Deletion of the downloaded test profiles.
 
 **Since:** 23
 
@@ -50,7 +48,7 @@ Deletes all field-loaded testing profiles on reset.
 RESET_DEFAULT_SMDP_ADDRESS = 1 << 2
 ```
 
-Resets the default SM-DP+ address on reset.
+Resetting of the default SM-DP+ address.
 
 **Since:** 23
 

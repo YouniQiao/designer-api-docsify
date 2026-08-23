@@ -140,7 +140,7 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 cookie的同站策略。
 
-**类型：** [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
+**类型：** [WebHttpCookieSameSitePolicy](../../apis-default/arkts-apis/arkts-webview-webhttpcookiesamesitepolicy-e.md)
 
 **起始版本：** 23
 

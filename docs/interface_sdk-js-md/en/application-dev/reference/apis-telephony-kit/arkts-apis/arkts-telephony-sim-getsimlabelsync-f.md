@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getSimLabelSync(slotId: int): SimLabel
 ```
 
-Obtains the SIM card label synchronously.
+Obtains the SIM card label based on the specified SIM card slot ID.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Obtains the SIM card label synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | SIM card slot ID, which ranges from 0 to the maximum number of slots supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 

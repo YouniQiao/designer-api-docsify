@@ -1,8 +1,6 @@
 # DownloadProfileResult (System API)
 
-Result of the given downloadable Profile.
-
-@interface DownloadProfileResult
+Defines the profile download result.
 
 **Since:** 23
 
@@ -24,7 +22,7 @@ import { eSIM } from '@kit.TelephonyKit';
 cardId: int
 ```
 
-Gets the card Id. This value comes from EuiccService and is used when resolving solvable errors.
+Card ID.
 
 **Type:** int
 
@@ -42,7 +40,7 @@ Gets the card Id. This value comes from EuiccService and is used when resolving 
 responseResult: ResultCode
 ```
 
-Gets the result of the operation.
+Operation result code.
 
 **Type:** ResultCode
 
@@ -60,7 +58,7 @@ Gets the result of the operation.
 solvableErrors: SolvableErrors
 ```
 
-Gets the solvable errors.
+Solvable errors.
 
 **Type:** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 

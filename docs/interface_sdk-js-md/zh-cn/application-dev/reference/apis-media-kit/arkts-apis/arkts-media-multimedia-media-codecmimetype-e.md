@@ -196,3 +196,19 @@ AUDIO_AMR_WB = 'audio/amr-wb'
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## AUDIO_RAW
+
+```TypeScript
+AUDIO_RAW = 'audio/raw'
+```
+
+表示音频/RAW类型。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CodecMimeType-AUDIO_RAW = 'audio/raw'--><!--Device-CodecMimeType-AUDIO_RAW = 'audio/raw'-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+

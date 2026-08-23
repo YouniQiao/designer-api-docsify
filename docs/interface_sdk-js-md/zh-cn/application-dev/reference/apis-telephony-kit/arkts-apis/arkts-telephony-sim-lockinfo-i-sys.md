@@ -1,9 +1,5 @@
 # LockInfo（系统接口）
 
-Defines the personalized lock information.
-
-@interface LockInfo
-
 **起始版本：** 23
 
 <!--Device-sim-export interface LockInfo--><!--Device-sim-export interface LockInfo-End-->
@@ -24,8 +20,6 @@ import { sim } from '@kit.TelephonyKit';
 lockType: LockType
 ```
 
-Indicates the lock type.
-
 **类型：** [LockType](arkts-telephony-sim-locktype-e-sys.md)
 
 **起始版本：** 23
@@ -42,8 +36,6 @@ Indicates the lock type.
 password: string
 ```
 
-Indicates the password.
-
 **类型：** string
 
 **起始版本：** 23
@@ -59,8 +51,6 @@ Indicates the password.
 ```TypeScript
 state: LockState
 ```
-
-Indicates the lock state.
 
 **类型：** [LockState](arkts-telephony-sim-lockstate-e-sys.md)
 

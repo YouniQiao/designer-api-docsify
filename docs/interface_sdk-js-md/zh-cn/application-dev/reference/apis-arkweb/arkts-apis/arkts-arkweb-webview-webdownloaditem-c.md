@@ -1,6 +1,6 @@
 # WebDownloadItem
 
-WebDownloadItem是ArkWeb框架中用于表示和管理单个下载任务的类。通过[WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md)的回调参数，应用可以获取到 WebDownloadItem实例，进而对下载任务进行查询和控制，包括启动下载到指定路径、查询下载进度和状态、暂停/恢复/取消任务、序列化失败任务以便后续恢复等。
+WebDownloadItem是ArkWeb框架中用于表示和管理单个下载任务的类。通过[WebDownloadDelegate](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md)的回调参数，应用可以获取到 WebDownloadItem实例，进而对下载任务进行查询和控制，包括启动下载到指定路径、查询下载进度和状态、暂停/恢复/取消任务、序列化失败任务以便后续恢复等。
 
 > **说明：**
 > 
@@ -209,7 +209,7 @@ static deserialize(serializedData: Uint8Array): WebDownloadItem
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | 从字节数组反序列化为一个WebDownloadItem对象。 |
+| [WebDownloadItem](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md) | 从字节数组反序列化为一个WebDownloadItem对象。 |
 
 **错误码：**
 
@@ -747,7 +747,7 @@ getLastErrorCode(): WebDownloadErrorCode
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | 下载失败时的错误码。 |
+| [WebDownloadErrorCode](../../apis-default/arkts-apis/arkts-webview-webdownloaderrorcode-e.md) | 下载失败时的错误码。 |
 
 **示例**
 
@@ -1718,7 +1718,7 @@ getState(): WebDownloadState
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | 下载的状态。 |
+| [WebDownloadState](../../apis-default/arkts-apis/arkts-webview-webdownloadstate-e.md) | 下载的状态。 |
 
 **示例**
 

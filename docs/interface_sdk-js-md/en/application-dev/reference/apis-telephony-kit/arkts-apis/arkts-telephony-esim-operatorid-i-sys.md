@@ -1,8 +1,6 @@
 # OperatorId (System API)
 
-Information about the eUICC chip/device.
-
-@interface OperatorId
+Obtains information about the eUICC chip or device.
 
 **Since:** 23
 
@@ -24,7 +22,7 @@ import { eSIM } from '@kit.TelephonyKit';
 gid1: string
 ```
 
-Group id level 1.
+Group ID level 1.
 
 **Type:** string
 
@@ -42,7 +40,7 @@ Group id level 1.
 gid2: string
 ```
 
-Group id level 2.
+Group ID level 2.
 
 **Type:** string
 
@@ -60,7 +58,7 @@ Group id level 2.
 mcc: string
 ```
 
-Mobile country code.
+Mobile country code (MCC).
 
 **Type:** string
 
@@ -78,7 +76,7 @@ Mobile country code.
 mnc: string
 ```
 
-Mobile network code.
+Network code.
 
 **Type:** string
 

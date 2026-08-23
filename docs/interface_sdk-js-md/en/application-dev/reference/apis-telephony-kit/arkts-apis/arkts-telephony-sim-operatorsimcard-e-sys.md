@@ -2,8 +2,6 @@
 
 Indicates the operator of SIM.
 
-@enum { string }
-
 **Since:** 23
 
 <!--Device-sim-export enum OperatorSimCard--><!--Device-sim-export enum OperatorSimCard-End-->

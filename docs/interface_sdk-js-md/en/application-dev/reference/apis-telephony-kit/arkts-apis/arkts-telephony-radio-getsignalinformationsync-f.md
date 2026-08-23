@@ -12,7 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function getSignalInformationSync(slotId: int): Array<SignalInformation>
 ```
 
-Obtains the list of signal strength information of the registered network corresponding to a specified SIM card.
+Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ Obtains the list of signal strength information of the registered network corres
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SignalInformation&gt; | Returns the callback for getting the instance list of the child classes derived from { |
+| Array&lt;SignalInformation&gt; | Array of child class objects derived from [SignalInformation]{ |
 
 **Examples**
 

@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function setProfileNickname(slotId: int, iccid: string, nickname: string): Promise<ResultCode>
 ```
 
-Adds or updates the given profile nickname.
+Sets a nickname for the specified profile. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,15 +28,15 @@ Adds or updates the given profile nickname.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
-| iccid | string | Yes | The iccid of the profile. |
-| nickname | string | Yes | The nickname of the profile. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| iccid | string | Yes | Profile ID. |
+| nickname | string | Yes | Profile nickname. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the result of the set nickname operation. |
+| Promise&lt;ResultCode&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

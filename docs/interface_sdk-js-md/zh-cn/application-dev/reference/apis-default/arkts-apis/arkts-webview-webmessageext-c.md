@@ -203,7 +203,7 @@ Get the type of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
+| [WebMessageType](arkts-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
 
 ## setArray
 
@@ -399,7 +399,7 @@ Set the type of the web message.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [WebMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessagetype-e.md) | 是 | set WebMessageType type data |
+| type | [WebMessageType](arkts-webview-webmessagetype-e.md) | 是 | set WebMessageType type data |
 
 **错误码：**
 

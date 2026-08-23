@@ -2,8 +2,6 @@
 
 Obtains IMS registration status.
 
-@enum { int }
-
 **Since:** 23
 
 <!--Device-radio-export enum ImsRegState--><!--Device-radio-export enum ImsRegState-End-->

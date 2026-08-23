@@ -1,9 +1,5 @@
 # SimAuthenticationResponse（系统接口）
 
-Defines the SIM card authentication response.
-
-@interface SimAuthenticationResponse
-
 **起始版本：** 23
 
 <!--Device-sim-export interface SimAuthenticationResponse--><!--Device-sim-export interface SimAuthenticationResponse-End-->
@@ -23,8 +19,6 @@ import { sim } from '@kit.TelephonyKit';
 ```TypeScript
 response: string
 ```
-
-Indicates the response of authentication.
 
 **类型：** string
 

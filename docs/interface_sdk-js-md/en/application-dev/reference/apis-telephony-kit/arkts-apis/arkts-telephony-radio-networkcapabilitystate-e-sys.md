@@ -2,8 +2,6 @@
 
 Enum for network capability state.
 
-@enum { int }
-
 **Since:** 23
 
 <!--Device-radio-export enum NetworkCapabilityState--><!--Device-radio-export enum NetworkCapabilityState-End-->

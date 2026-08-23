@@ -468,7 +468,7 @@ getUrl(): string
 
 获取重定向或因HSTS而更改后的URL。
 
-风险提示：若想获取URL来做JavascriptProxy通信接口认证，请使用 [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkweb-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl) 。
+风险提示：若想获取URL来做JavascriptProxy通信接口认证，请使用 [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl) 。
 
 **起始版本：** 12
 

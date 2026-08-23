@@ -12,8 +12,6 @@ import { sim } from '@kit.TelephonyKit';
 function getDsdsMode(callback: AsyncCallback<DsdsMode>): void
 ```
 
-Obtains the value of dsds mode.
-
 **起始版本：** 23
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
@@ -74,8 +72,6 @@ promise.then((data: sim.DsdsMode) => {
 ```TypeScript
 function getDsdsMode(): Promise<DsdsMode>
 ```
-
-Obtains the value of dsds mode.
 
 **起始版本：** 23
 

@@ -20,7 +20,7 @@ import { webview } from '@kit.ArkWeb';
 getArchitecture(): string
 ```
 
-获取平台的架构类型。不调用对应的[setArchitecture](#setarchitecture)设置时，架构类型默认值：""。
+获取平台的架构类型。不调用对应的[setArchitecture](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setarchitecture)设置时，架构类型默认值：""。
 
 **起始版本：** 24
 
@@ -46,7 +46,7 @@ ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-api
 getBitness(): string
 ```
 
-获取平台的位数类型。不调用对应的[setBitness](#setbitness)设置时，位数类型默认值：Desktop："64"，其他设备：""。
+获取平台的位数类型。不调用对应的[setBitness](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setbitness)设置时，位数类型默认值：Desktop："64"，其他设备：""。
 
 **起始版本：** 24
 
@@ -72,7 +72,7 @@ ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-api
 getBrandVersionList(): Array<UserAgentBrandVersion>
 ```
 
-获取品牌和版本信息列表。不调用对应的[setBrandVersionList](#setbrandversionlist)进行设置时，列表默认值： [{"brand":"Chromium","version":[ChromeCompatibleVersion](../../../web/web-default-userAgent.md#默认user-agent结构)}, {"brand":"ArkWeb","version":[OSVersion](../../../web/web-default-userAgent.md#默认user-agent结构)}]。
+获取品牌和版本信息列表。不调用对应的[setBrandVersionList](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setbrandversionlist)进行设置时，列表默认值： [{"brand":"Chromium","version":[ChromeCompatibleVersion](../../../web/web-default-userAgent.md#默认user-agent结构)}, {"brand":"ArkWeb","version":[OSVersion](../../../web/web-default-userAgent.md#默认user-agent结构)}]。
 
 **起始版本：** 24
 
@@ -86,7 +86,7 @@ getBrandVersionList(): Array<UserAgentBrandVersion>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | 品牌和版本信息列表。 |
+| Array&lt;[UserAgentBrandVersion](../../apis-default/arkts-apis/arkts-webview-useragentbrandversion-c.md)&gt; | 品牌和版本信息列表。 |
 
 **示例**
 
@@ -98,7 +98,7 @@ ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-api
 getFormFactors(): Array<UserAgentFormFactor>
 ```
 
-获取设备形态信息，如手机、平板等。不调用对应的[setFormFactors](#setformfactors)进行设置时，形态信息默认值：手机："Mobile"、 手表："Watch"、车机："Automotive"、PC："Desktop"、平板："Tablet"。
+获取设备形态信息，如手机、平板等。不调用对应的[setFormFactors](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setformfactors)进行设置时，形态信息默认值：手机："Mobile"、 手表："Watch"、车机："Automotive"、PC："Desktop"、平板："Tablet"。
 
 **起始版本：** 24
 
@@ -112,7 +112,7 @@ getFormFactors(): Array<UserAgentFormFactor>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | 设备形态信息。 |
+| Array&lt;[UserAgentFormFactor](../../apis-default/arkts-apis/arkts-webview-useragentformfactor-e.md)&gt; | 设备形态信息。 |
 
 **示例**
 
@@ -124,7 +124,7 @@ ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-api
 getFullVersion(): string
 ```
 
-获取完整版本号。不调用对应的[setFullVersion](#setfullversion)设置时，版本号默认值：""。
+获取完整版本号。不调用对应的[setFullVersion](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setfullversion)设置时，版本号默认值：""。
 
 **起始版本：** 24
 
@@ -152,7 +152,7 @@ ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-api
 getMobile(): boolean
 ```
 
-获取是否为移动设备。不调用对应的[setMobile](#setmobile)设置时，默认值：手机: true，手表、车机、平板、大屏: false。
+获取是否为移动设备。不调用对应的[setMobile](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setmobile)设置时，默认值：手机: true，手表、车机、平板、大屏: false。
 
 **起始版本：** 24
 
@@ -178,7 +178,7 @@ ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-api
 getModel(): string
 ```
 
-获取设备型号。不调用对应的[setModel](#setmodel)设置时，型号默认值：手机根据const.product.model取设备型号；手表、大屏、车机、 PC、平板：""。
+获取设备型号。不调用对应的[setModel](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setmodel)设置时，型号默认值：手机根据const.product.model取设备型号；手表、大屏、车机、 PC、平板：""。
 
 **起始版本：** 24
 
@@ -204,7 +204,7 @@ ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-api
 getPlatform(): string
 ```
 
-获取操作系统名称。不调用对应的[setPlatform](#setplatform)设置时，名称默认值："OpenHarmony" 。
+获取操作系统名称。不调用对应的[setPlatform](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setplatform)设置时，名称默认值："OpenHarmony" 。
 
 **起始版本：** 24
 
@@ -230,7 +230,7 @@ ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-api
 getPlatformVersion(): string
 ```
 
-获取操作系统版本号。不调用对应的[setPlatformVersion](#setplatformversion)设置时，版本号默认值：按OpenHarmony平台 版本号规则，同const.product.os.dist.version。
+获取操作系统版本号。不调用对应的[setPlatformVersion](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setplatformversion)设置时，版本号默认值：按OpenHarmony平台 版本号规则，同const.product.os.dist.version。
 
 **起始版本：** 24
 
@@ -256,7 +256,7 @@ ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-api
 getWow64(): boolean
 ```
 
-获取二进制文件是否是在64位Windows上以32位模式运行。不调用对应的[setWow64](#setwow64)设置时，默认值为false。
+获取二进制文件是否是在64位Windows上以32位模式运行。不调用对应的[setWow64](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setwow64)设置时，默认值为false。
 
 **起始版本：** 24
 
@@ -348,7 +348,7 @@ setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | 是 | 对应请求标头的Sec-CH-UA-Full-Version-List。空代表使用ArkWeb默认值。 |
+| brandVersionList | Array&lt;[UserAgentBrandVersion](../../apis-default/arkts-apis/arkts-webview-useragentbrandversion-c.md)&gt; | 是 | 对应请求标头的Sec-CH-UA-Full-Version-List。空代表使用ArkWeb默认值。 |
 
 **示例**
 
@@ -374,7 +374,7 @@ setFormFactors(formFactors: Array<UserAgentFormFactor>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | 是 | 对应请求标头的Sec-CH-UA-Form-Factor。空代表使用ArkWeb默认值。 |
+| formFactors | Array&lt;[UserAgentFormFactor](../../apis-default/arkts-apis/arkts-webview-useragentformfactor-e.md)&gt; | 是 | 对应请求标头的Sec-CH-UA-Form-Factor。空代表使用ArkWeb默认值。 |
 
 **示例**
 

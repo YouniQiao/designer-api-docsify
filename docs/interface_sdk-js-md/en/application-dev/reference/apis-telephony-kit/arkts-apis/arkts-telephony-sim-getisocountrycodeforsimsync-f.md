@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getISOCountryCodeForSimSync(slotId: int): string
 ```
 
-Obtains the ISO country code of the SIM card in a specified slot.
+Obtains the ISO country code of the SIM card in the specified slot.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Returns the country code defined in ISO 3166-2; returns an empty string if no SIM card is inserted. |
+| string | ISO country code of the SIM card in the specified slot, for example, **CN** (China). |
 
 **Examples**
 

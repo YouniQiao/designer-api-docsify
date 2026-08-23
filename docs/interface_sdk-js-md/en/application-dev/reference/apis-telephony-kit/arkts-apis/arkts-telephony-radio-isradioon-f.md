@@ -12,7 +12,9 @@ import { radio } from '@kit.TelephonyKit';
 function isRadioOn(slotId: int, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the radio service is enabled.
+Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,8 +28,8 @@ Checks whether the radio service is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Returns {@code true} If the radio service is enabled. Returns {@code false} otherwise. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. <br>- **true**: The radio service is enabled. <br>- **false**: The radio service is disabled. |
 
 **Error codes:**
 
@@ -85,7 +87,9 @@ radio.isRadioOn(slotId).then((data: boolean) => {
 function isRadioOn(slotId?: int): Promise<boolean>
 ```
 
-Checks whether the radio service is enabled.
+Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses a promise to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -99,13 +103,13 @@ Checks whether the radio service is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | No | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | No | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. <br>If the slot ID is not specified, this API is defaulted to check whether the radio service is enabled on the primary SIM card. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. <br>- **true**: The radio service is enabled. <br>- **false**: The radio service is disabled. |
 
 **Error codes:**
 
@@ -129,7 +133,9 @@ See [isRadioOn](#isradioon)
 function isRadioOn(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the radio service is enabled.
+Checks whether the radio service is enabled on the primary SIM card. This API uses an asynchronous callback to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -143,7 +149,7 @@ Checks whether the radio service is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Returns {@code true} If the radio service is enabled. Returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. <br>- **true**: The radio service is enabled. <br>- **false**: The radio service is disabled. |
 
 **Error codes:**
 

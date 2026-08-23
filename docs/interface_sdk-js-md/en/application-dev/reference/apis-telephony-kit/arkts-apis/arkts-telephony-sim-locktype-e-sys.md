@@ -2,8 +2,6 @@
 
 Indicates the lock types.
 
-@enum { int }
-
 **Since:** 23
 
 <!--Device-sim-export enum LockType--><!--Device-sim-export enum LockType-End-->

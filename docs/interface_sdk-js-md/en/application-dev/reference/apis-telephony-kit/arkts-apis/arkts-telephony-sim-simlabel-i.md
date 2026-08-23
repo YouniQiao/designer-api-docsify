@@ -1,6 +1,6 @@
 # SimLabel
 
-Defines the SIM card label. @interface SimLabel
+Defines the SIM card label.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { sim } from '@kit.TelephonyKit';
 index: int
 ```
 
-Represents the SIM card index.
+Unique index ID of the SIM card.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ Represents the SIM card index.
 simType: SimType
 ```
 
-Represents the SIM card type.
+SIM card type.
 
 **Type:** [SimType](arkts-telephony-sim-simtype-e.md)
 

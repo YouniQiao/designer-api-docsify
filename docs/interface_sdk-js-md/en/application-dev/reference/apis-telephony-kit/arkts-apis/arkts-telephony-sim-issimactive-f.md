@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the SIM card in a specified slot is activated.
+Checks whether the SIM card in the specified slot is activated. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ Checks whether the SIM card in a specified slot is activated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for checking whether the SIM card in a specified slot is activated. Returns {@code true} if the SIM card is activated; returns {@code false} otherwise. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result, which indicates whether the SIM card in the specified slot is activated. <br>**true**: activated. <br>**false**: not activated. |
 
 **Examples**
 
@@ -56,7 +56,7 @@ sim.isSimActive(0).then((data: boolean) => {
 function isSimActive(slotId: int): Promise<boolean>
 ```
 
-Checks whether the SIM card in a specified slot is activated.
+Checks whether the SIM card in the specified slot is activated. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -68,13 +68,13 @@ Checks whether the SIM card in a specified slot is activated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. <br>**true**: activated. <br>**false**: not activated. |
 
 **Examples**
 

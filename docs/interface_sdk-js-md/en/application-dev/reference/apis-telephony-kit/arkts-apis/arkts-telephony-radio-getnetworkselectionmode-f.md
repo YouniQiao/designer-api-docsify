@@ -12,7 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function getNetworkSelectionMode(slotId: int, callback: AsyncCallback<NetworkSelectionMode>): void
 ```
 
-Obtains the network search mode of the SIM card in a specified slot.
+Obtains the network selection mode of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ Obtains the network search mode of the SIM card in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Yes | Indicates the callback for getting the network search mode of the SIM card. Available values are as follows: &lt;ul&gt; &lt;li&gt;[NETWORK_SELECTION_UNKNOWN](arkts-telephony-radio-networkselectionmode-e.md#network_selection_unknown) &lt;li&gt;[NETWORK_SELECTION_AUTOMATIC](arkts-telephony-radio-networkselectionmode-e.md#network_selection_automatic) &lt;li&gt;[NETWORK_SELECTION_MANUAL](arkts-telephony-radio-networkselectionmode-e.md#network_selection_manual) &lt;ul&gt; |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ radio.getNetworkSelectionMode(slotId).then((data: radio.NetworkSelectionMode) =>
 function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>
 ```
 
-Obtains the network search mode of the SIM card in a specified slot.
+Obtains the network selection mode of the SIM card in the specified slot. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -82,13 +82,13 @@ Obtains the network search mode of the SIM card in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Returns the network search mode of the SIM card. Available values are as follows: &lt;ul&gt; &lt;li&gt;{ |
+| Promise&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

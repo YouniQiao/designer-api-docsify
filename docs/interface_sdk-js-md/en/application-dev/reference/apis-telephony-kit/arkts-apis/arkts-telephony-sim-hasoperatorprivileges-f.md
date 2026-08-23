@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function hasOperatorPrivileges(slotId: int, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether your application (the caller) has been granted the operator permissions.
+Checks whether the application (caller) has been granted the operator permission. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ Checks whether your application (the caller) has been granted the operator permi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback of hasOperatorPrivileges. Returns {@code true} if your application has been granted the operator permissions; returns {@code false} otherwise. If no SIM card is inserted or the SIM card is deactivated will be return {@code false}. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result, which indicates whether the application (caller) has been granted the operator permission. <br>- **true**: The application (caller) has been granted the operator permission. <br>- **false**: The application (caller) has not been granted the operator permission (no SIM card inserted or the SIM card is invalid). |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ sim.hasOperatorPrivileges(0).then((data: boolean) => {
 function hasOperatorPrivileges(slotId: int): Promise<boolean>
 ```
 
-Checks whether your application (the caller) has been granted the operator permissions.
+Checks whether the application (caller) has been granted the operator permission. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -78,13 +78,13 @@ Checks whether your application (the caller) has been granted the operator permi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the application (caller) has been granted the carrier permission, and the value **false** indicates the opposite. <br>- **true**: The application (caller) has been granted the operator permission. <br>- **false**: The application (caller) has not been granted the operator permission (no SIM card inserted or the SIM card is invalid). |
 
 **Error codes:**
 

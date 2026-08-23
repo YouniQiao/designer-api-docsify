@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function getEuiccInfo(slotId: int): Promise<EuiccInfo>
 ```
 
-Returns the eUICC Information.
+Obtains eUICC information. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ Returns the eUICC Information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[EuiccInfo](arkts-telephony-esim-euiccinfo-i-sys.md)&gt; | Returns the eUICC information to obtain. When eUICC is not ready, the return value may be null. |
+| Promise&lt;[EuiccInfo](arkts-telephony-esim-euiccinfo-i-sys.md)&gt; | Promise used to return the eUICC information. |
 
 **Error codes:**
 

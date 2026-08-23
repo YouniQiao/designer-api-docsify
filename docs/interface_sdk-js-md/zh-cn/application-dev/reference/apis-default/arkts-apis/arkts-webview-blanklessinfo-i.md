@@ -23,7 +23,7 @@ errCode: WebBlanklessErrorCode
 
 Defines the error codes of blankless.
 
-**类型：** [WebBlanklessErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webblanklesserrorcode-e.md)
+**类型：** [WebBlanklessErrorCode](arkts-webview-webblanklesserrorcode-e.md)
 
 **起始版本：** 23
 

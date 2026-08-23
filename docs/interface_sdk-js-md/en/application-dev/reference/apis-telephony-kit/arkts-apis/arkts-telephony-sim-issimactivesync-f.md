@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function isSimActiveSync(slotId: int): boolean
 ```
 
-Checks whether the SIM card in a specified slot is activated.
+Checks whether the SIM card in the specified slot is activated.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ Checks whether the SIM card in a specified slot is activated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Whether the SIM card in the specified slot is activated. <br>**true**: activated. <br>**false**: not activated. |
 
 **Examples**
 

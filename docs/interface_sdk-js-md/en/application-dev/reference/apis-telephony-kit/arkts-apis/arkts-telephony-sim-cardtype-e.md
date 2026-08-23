@@ -1,8 +1,6 @@
 # CardType
 
-Indicates the SIM card types.
-
-@enum { int }
+Enumerates SIM card types.
 
 **Since:** 23
 
@@ -16,7 +14,7 @@ Indicates the SIM card types.
 UNKNOWN_CARD = -1
 ```
 
-Icc card type: unknown type Card.
+Unknown type.
 
 **Since:** 23
 
@@ -30,7 +28,7 @@ Icc card type: unknown type Card.
 SINGLE_MODE_SIM_CARD = 10
 ```
 
-Icc card type: Single sim card type.
+Single-card (SIM).
 
 **Since:** 23
 
@@ -44,7 +42,7 @@ Icc card type: Single sim card type.
 SINGLE_MODE_USIM_CARD = 20
 ```
 
-Icc card type: Single usim card type.
+Single-card (USIM).
 
 **Since:** 23
 
@@ -58,7 +56,7 @@ Icc card type: Single usim card type.
 SINGLE_MODE_RUIM_CARD = 30
 ```
 
-Icc card type: Single ruim card type.
+Single-card (RUIM).
 
 **Since:** 23
 
@@ -72,7 +70,7 @@ Icc card type: Single ruim card type.
 DUAL_MODE_CG_CARD = 40
 ```
 
-Icc card type: Double card C+G.
+Dual-card (CDMA+GSM).
 
 **Since:** 23
 
@@ -86,7 +84,7 @@ Icc card type: Double card C+G.
 CT_NATIONAL_ROAMING_CARD = 41
 ```
 
-Icc card type: China Telecom Internal Roaming Card (Dual Mode).
+China Telecom internal roaming card.
 
 **Since:** 23
 
@@ -100,7 +98,7 @@ Icc card type: China Telecom Internal Roaming Card (Dual Mode).
 CU_DUAL_MODE_CARD = 42
 ```
 
-Icc card type: China Unicom Dual Mode Card.
+China Unicom dual-mode card.
 
 **Since:** 23
 
@@ -114,7 +112,7 @@ Icc card type: China Unicom Dual Mode Card.
 DUAL_MODE_TELECOM_LTE_CARD = 43
 ```
 
-Icc card type: China Telecom LTE Card (Dual Mode).
+China Telecom dual-mode LTE card.
 
 **Since:** 23
 
@@ -128,7 +126,7 @@ Icc card type: China Telecom LTE Card (Dual Mode).
 DUAL_MODE_UG_CARD = 50
 ```
 
-Icc card type: Double card U+G.
+Dual-mode card (UMTS+GSM).
 
 **Since:** 23
 
@@ -142,7 +140,7 @@ Icc card type: Double card U+G.
 SINGLE_MODE_ISIM_CARD = 60
 ```
 
-Icc card type: Single isim card type.
+Single-card (ISIM).
 
 **Since:** 23
 

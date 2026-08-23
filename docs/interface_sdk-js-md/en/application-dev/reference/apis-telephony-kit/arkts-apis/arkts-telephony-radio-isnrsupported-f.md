@@ -12,7 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function isNRSupported(): boolean
 ```
 
-Checks whether the device supports 5G New Radio (NR).
+Checks whether the current device supports NR.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Checks whether the device supports 5G New Radio (NR).
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | true**: supported <br>- **false**: not supported |
 
 **Examples**
 
@@ -46,7 +46,7 @@ console.info("Result: "+ result);
 function isNRSupported(slotId: int): boolean
 ```
 
-Checks whether the device supports 5G New Radio (NR) by according card slot.
+Checks whether the SIM card in the specified slot supports NR.
 
 **Since:** 23
 
@@ -58,13 +58,13 @@ Checks whether the device supports 5G New Radio (NR) by according card slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index int, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | true**: supported <br>- **false**: not supported |
 
 **Examples**
 

@@ -58,5 +58,5 @@ invoke(origin: string, allow: boolean, retain: boolean): void
 | --- | --- | --- | --- |
 | origin | string | 是 | 发起地理位置权限请求的网页源，用于标识特定网站的地理位置请求来源。 <br>origin格式必须遵循RFC 6454中定义的格式。 |
 | allow | boolean | 是 | 设置的地理位置权限状态。 <br>true表示开启地理位置权限，false表示不开启地理位置权限。 |
-| retain | boolean | 是 | 是否允许将地理位置权限状态保存到系统中。可通过 [GeolocationPermissions](../arkts-apis/arkts-arkweb-webview-geolocationpermissions-c.md)接口管理保存到系统的地理位置权限。 <br>true表示保存地理位置权限状态到系统，false表示不保存到系统。 |
+| retain | boolean | 是 | 是否允许将地理位置权限状态保存到系统中。可通过 [GeolocationPermissions](../../apis-default/arkts-apis/arkts-webview-geolocationpermissions-c.md)接口管理保存到系统的地理位置权限。 <br>true表示保存地理位置权限状态到系统，false表示不保存到系统。 |
 

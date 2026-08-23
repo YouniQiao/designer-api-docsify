@@ -2,8 +2,6 @@
 
 Indicates the Dsds Mode.
 
-@enum { int }
-
 **起始版本：** 23
 
 <!--Device-sim-export enum DsdsMode--><!--Device-sim-export enum DsdsMode-End-->

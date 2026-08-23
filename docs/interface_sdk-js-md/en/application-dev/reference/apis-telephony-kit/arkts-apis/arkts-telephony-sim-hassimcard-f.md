@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function hasSimCard(slotId: int, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a SIM card is inserted in a specified slot.
+Checks whether the SIM card in the specified slot is installed. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ Checks whether a SIM card is inserted in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for hasSimCard. Returns {@code true} if a SIM card is inserted; return {@code false} otherwise. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. <br>- **true**: installed. <br>- **false**: not installed. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ sim.hasSimCard(0).then((data: boolean) => {
 function hasSimCard(slotId: int): Promise<boolean>
 ```
 
-Checks whether a SIM card is inserted in a specified slot.
+Checks whether the SIM card in the specified slot is installed. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -78,13 +78,13 @@ Checks whether a SIM card is inserted in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. <br>- **true**: installed. <br>- **false**: not installed. |
 
 **Error codes:**
 

@@ -1,8 +1,6 @@
 # NetworkSelectionMode
 
-Obtains the network selection mode.
-
-@enum { int }
+Enumerates network selection modes.
 
 **Since:** 23
 
@@ -16,7 +14,7 @@ Obtains the network selection mode.
 NETWORK_SELECTION_UNKNOWN = 0
 ```
 
-Indicates that the network is unavailable for registration.
+Unknown network selection mode.
 
 **Since:** 23
 
@@ -30,7 +28,7 @@ Indicates that the network is unavailable for registration.
 NETWORK_SELECTION_AUTOMATIC = 1
 ```
 
-Indicates that the network is unavailable for registration.
+Automatic network selection mode.
 
 **Since:** 23
 
@@ -44,7 +42,7 @@ Indicates that the network is unavailable for registration.
 NETWORK_SELECTION_MANUAL = 2
 ```
 
-Manual network selection modes.
+Manual network selection mode.
 
 **Since:** 23
 

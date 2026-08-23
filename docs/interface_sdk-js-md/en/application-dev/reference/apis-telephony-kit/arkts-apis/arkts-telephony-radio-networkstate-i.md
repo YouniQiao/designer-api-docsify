@@ -1,8 +1,6 @@
 # NetworkState
 
-Describes the network registration state.
-
-@interface NetworkState
+Defines the network status.
 
 **Since:** 23
 
@@ -22,7 +20,7 @@ import { radio } from '@kit.TelephonyKit';
 cfgTech: RadioTechnology
 ```
 
-Obtains the radio Access technology after config conversion.
+RAT of the device.
 
 **Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
@@ -38,9 +36,7 @@ Obtains the radio Access technology after config conversion.
 isCaActive: boolean
 ```
 
-Obtains the status of CA.
-
-Returns {@code true} if CA is actived; returns {@code false} otherwise.
+CA status.
 
 **Type:** boolean
 
@@ -56,9 +52,7 @@ Returns {@code true} if CA is actived; returns {@code false} otherwise.
 isEmergency: boolean
 ```
 
-Checks whether this device is allowed to make emergency calls only.
-
-Returns {@code true} if this device is allowed to make emergency calls only; returns {@code false} otherwise.
+Whether only emergency calls are allowed.
 
 **Type:** boolean
 
@@ -74,7 +68,7 @@ Returns {@code true} if this device is allowed to make emergency calls only; ret
 isRoaming: boolean
 ```
 
-Checks whether the device is roaming.
+Whether the user is roaming.
 
 **Type:** boolean
 
@@ -90,9 +84,7 @@ Checks whether the device is roaming.
 longOperatorName: string
 ```
 
-Obtains the operator name in the long alphanumeric format of the registered network.
-
-Returns the operator name in the long alphanumeric format as a string; returns an empty string if no operator name is obtained.
+Long carrier name of the registered network.
 
 **Type:** string
 
@@ -108,9 +100,7 @@ Returns the operator name in the long alphanumeric format as a string; returns a
 nsaState: NsaState
 ```
 
-Obtains the NSA network registration status of the device.
-
-Returns the NSA network registration status {@code NsaState}.
+NSA network registration status of the device.
 
 **Type:** [NsaState](arkts-telephony-radio-nsastate-e.md)
 
@@ -126,9 +116,7 @@ Returns the NSA network registration status {@code NsaState}.
 plmnNumeric: string
 ```
 
-Obtains the PLMN code of the registered network.
-
-Returns the PLMN code as a string; returns an empty string if no operator name is obtained.
+PLMN code of the registered network.
 
 **Type:** string
 
@@ -144,7 +132,7 @@ Returns the PLMN code as a string; returns an empty string if no operator name i
 regState: RegState
 ```
 
-Obtains the network registration status of the device.
+Network registration status of the device.
 
 **Type:** [RegState](arkts-telephony-radio-regstate-e.md)
 
@@ -160,9 +148,7 @@ Obtains the network registration status of the device.
 shortOperatorName: string
 ```
 
-Obtains the operator name in the short alphanumeric format of the registered network.
-
-Returns the operator name in the short alphanumeric format as a string; returns an empty string if no operator name is obtained.
+Short carrier name of the registered network.
 
 **Type:** string
 

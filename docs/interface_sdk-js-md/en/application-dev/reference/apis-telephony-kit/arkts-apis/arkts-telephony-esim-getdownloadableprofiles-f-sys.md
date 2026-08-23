@@ -13,7 +13,7 @@ function getDownloadableProfiles(slotId: int, portIndex: int,
                                    forceDisableProfile: boolean): Promise<GetDownloadableProfilesResult>
 ```
 
-Gets downloadable profile List which are available for download on this device.
+Obtains the list of downloadable profiles. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -29,15 +29,15 @@ Gets downloadable profile List which are available for download on this device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
-| portIndex | int | Yes | Index of the port for the slot. |
-| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform the operation. Otherwise, the resultCode should return [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#result_must_disable_profile) to allow the user to agree to this operation first. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| portIndex | int | Yes | Port index of the slot. |
+| forceDisableProfile | boolean | Yes | Whether to forcibly deactivate the current profile during profile switching. <br> **true**: The current profile is forcibly deactivated, and profile switching can be directly performed. <br> **false**: An error is returned, and profile switching can be performed only after the user authorization is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[GetDownloadableProfilesResult](arkts-telephony-esim-getdownloadableprofilesresult-i-sys.md)&gt; | Return metadata for downloadableProfile which are available for download on this device. |
+| Promise&lt;[GetDownloadableProfilesResult](arkts-telephony-esim-getdownloadableprofilesresult-i-sys.md)&gt; | Promise used to return the list of downloadable profiles. |
 
 **Error codes:**
 

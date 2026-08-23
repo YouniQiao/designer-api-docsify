@@ -12,7 +12,9 @@ import { sim } from '@kit.TelephonyKit';
 function getSimLabel(slotId: int, callback: AsyncCallback<SimLabel>): void
 ```
 
-Obtains the SIM card label.
+查看卡槽ID和SIM卡的对应关系：
+
+- 卡槽1对应SIM卡1或SIM卡2 - 卡槽2对应SIM卡2或ESIMX
 
 **起始版本：** 23
 
@@ -24,8 +26,8 @@ Obtains the SIM card label.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | SIM card slot ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | 是 | Callback used to return the SIM card label. |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | 是 | 回调函数。获取SIM卡标签信息。 |
 
 **错误码：**
 
@@ -65,7 +67,7 @@ sim.getSimLabel(0).then((data: sim.SimLabel) => {
 function getSimLabel(slotId: int): Promise<SimLabel>
 ```
 
-获取SIM卡标签名称
+获取SIM卡的标签信息。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -77,13 +79,13 @@ function getSimLabel(slotId: int): Promise<SimLabel>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | 卡槽索引号 |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | 返回SIM卡标签： |
+| Promise&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | 回调函数。获取SIM卡标签信息。 |
 
 **错误码：**
 

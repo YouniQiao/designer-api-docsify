@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function getEid(slotId: int): Promise<string>
 ```
 
-Returns the EID identifying for the eUICC hardware.
+Obtains the equipment identifier (EID) of the eUICC hardware in a specified card slot.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ Returns the EID identifying for the eUICC hardware.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the EID. When eUICC is not ready, the return value may be null. |
+| Promise&lt;string&gt; | EID of the eUICC in the specified slot. |
 
 **Error codes:**
 

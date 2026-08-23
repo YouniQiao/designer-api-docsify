@@ -1,9 +1,5 @@
 # OperatorConfig（系统接口）
 
-Defines the carrier configuration.
-
-@interface OperatorConfig
-
 **起始版本：** 23
 
 <!--Device-sim-export interface OperatorConfig--><!--Device-sim-export interface OperatorConfig-End-->
@@ -24,8 +20,6 @@ import { sim } from '@kit.TelephonyKit';
 field: string
 ```
 
-Indicates the field.
-
 **类型：** string
 
 **起始版本：** 23
@@ -41,8 +35,6 @@ Indicates the field.
 ```TypeScript
 value: string
 ```
-
-Indicates the value.
 
 **类型：** string
 

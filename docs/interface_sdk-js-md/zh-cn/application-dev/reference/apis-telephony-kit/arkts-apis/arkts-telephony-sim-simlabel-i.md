@@ -1,6 +1,6 @@
 # SimLabel
 
-定义SIM卡标签信息。 @interface SimLabel
+SIM卡标签。
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ import { sim } from '@kit.TelephonyKit';
 index: int
 ```
 
-表示卡片索引。
+SIM卡的唯一标识索引值。
 
 **类型：** int
 
@@ -36,7 +36,7 @@ index: int
 simType: SimType
 ```
 
-表示SIM卡类型。
+表示SIM卡类型的枚举。
 
 **类型：** [SimType](arkts-telephony-sim-simtype-e.md)
 

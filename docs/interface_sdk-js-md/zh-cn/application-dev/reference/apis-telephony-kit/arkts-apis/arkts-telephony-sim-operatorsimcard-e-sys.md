@@ -1,9 +1,5 @@
 # OperatorSimCard（系统接口）
 
-Indicates the operator of SIM.
-
-@enum { string }
-
 **起始版本：** 23
 
 <!--Device-sim-export enum OperatorSimCard--><!--Device-sim-export enum OperatorSimCard-End-->

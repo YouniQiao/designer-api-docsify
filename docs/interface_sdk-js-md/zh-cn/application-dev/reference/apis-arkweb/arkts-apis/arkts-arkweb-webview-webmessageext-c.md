@@ -1,8 +1,8 @@
 # WebMessageExt
 
-WebMessageExt是[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口中用于接收和发送的拓展数据对象，支持多种数据类型：字符串（STRING）、数值（NUMBER）、布尔值（ BOOLEAN）、二进制数据（ARRAY_BUFFER）、数组（ARRAY）和错误对象（ERROR）。该类为ArkTS侧与HTML5侧之间的跨语言消息通信提供了结构化的数据载体，通过setType/getType设置和获取数据类 型，再通过对应的setter/getter方法读写具体数据。
+WebMessageExt是[WebMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md)接口中用于接收和发送的拓展数据对象，支持多种数据类型：字符串（STRING）、数值（NUMBER）、布尔值（ BOOLEAN）、二进制数据（ARRAY_BUFFER）、数组（ARRAY）和错误对象（ERROR）。该类为ArkTS侧与HTML5侧之间的跨语言消息通信提供了结构化的数据载体，通过setType/getType设置和获取数据类 型，再通过对应的setter/getter方法读写具体数据。
 
-WebMessageExt与WebMessagePort配合使用：WebMessagePort负责消息通道的建立和消息的收发，WebMessageExt作为消息的有效载荷在不同语言运行时之间传递。使用扩展接口 [postMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#postmessageeventext)/ onMessageEventExt时，消息载 体即为WebMessageExt对象。
+WebMessageExt与WebMessagePort配合使用：WebMessagePort负责消息通道的建立和消息的收发，WebMessageExt作为消息的有效载荷在不同语言运行时之间传递。使用扩展接口 [postMessageEventExt](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md#postmessageeventext)/ onMessageEventExt时，消息载 体即为WebMessageExt对象。
 
 **起始版本：** 10
 
@@ -204,7 +204,7 @@ getType(): WebMessageType
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | [WebMessagePort]{ |
+| [WebMessageType](../../apis-default/arkts-apis/arkts-webview-webmessagetype-e.md) | [WebMessagePort]{ |
 
 ## setArray
 
@@ -400,7 +400,7 @@ setType(type: WebMessageType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | 是 | [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口所支持的数据类型。 |
+| type | [WebMessageType](../../apis-default/arkts-apis/arkts-webview-webmessagetype-e.md) | 是 | [WebMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md)接口所支持的数据类型。 |
 
 **错误码：**
 

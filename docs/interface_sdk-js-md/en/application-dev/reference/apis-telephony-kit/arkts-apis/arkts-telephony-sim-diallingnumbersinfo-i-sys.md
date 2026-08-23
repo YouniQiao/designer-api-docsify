@@ -2,8 +2,6 @@
 
 Defines the contact number information.
 
-@interface DiallingNumbersInfo
-
 **Since:** 23
 
 <!--Device-sim-export interface DiallingNumbersInfo--><!--Device-sim-export interface DiallingNumbersInfo-End-->

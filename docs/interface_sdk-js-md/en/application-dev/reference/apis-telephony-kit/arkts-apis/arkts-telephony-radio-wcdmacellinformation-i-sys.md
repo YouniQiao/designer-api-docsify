@@ -2,8 +2,6 @@
 
 Obtains WCDMA cell information.
 
-@interface WcdmaCellInformation
-
 **Since:** 23
 
 <!--Device-radio-export interface WcdmaCellInformation--><!--Device-radio-export interface WcdmaCellInformation-End-->

@@ -97,8 +97,8 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 > **说明：**
 > 
 > NodeContainer不支持跨实例复用。如果出现跨实例复用NodeContainer，传入
-> NodeContainer的[NodeController](#nodecontroller)触发
-> [makeNode](#makenode)回调方法时，入参中的[UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者
+> NodeContainer的[NodeController](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md)触发
+> [makeNode](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md#makenode)回调方法时，入参中的[UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者
 > 判断入参中的[UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)对象是否为undefined，防止后续使用此入参时出现
 > [UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
 
@@ -300,7 +300,7 @@ onWillUnbind(containerId: long): void
 rebuild(): void
 ```
 
-调用此接口通知NodeContainer组件重新回调[makeNode](#makenode)方法，更改子节点。
+调用此接口通知NodeContainer组件重新回调[makeNode](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md#makenode)方法，更改子节点。
 
 > **说明：**
 > 

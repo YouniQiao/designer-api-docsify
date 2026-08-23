@@ -2,8 +2,6 @@
 
 Obtains the network search results.
 
-@interface NetworkSearchResult
-
 **Since:** 23
 
 <!--Device-radio-export interface NetworkSearchResult--><!--Device-radio-export interface NetworkSearchResult-End-->

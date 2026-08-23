@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function startOsu(slotId: int): Promise<OsuStatus>
 ```
 
-Execute OS upgrade if current OS upgrade is not the latest one.
+Upgrades the OS if the OS version of the eSIM in the specified slot is not the latest. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ Execute OS upgrade if current OS upgrade is not the latest one.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[OsuStatus](arkts-telephony-esim-osustatus-e-sys.md)&gt; | Return the status of OS upgrade when OS upgrade status changed. |
+| Promise&lt;[OsuStatus](arkts-telephony-esim-osustatus-e-sys.md)&gt; | Promise used to return the OS upgrade status. <br> 1. Updating. <br> 2. Update failed. <br> 3. Update succeeded. <br> 4. Already the latest version. <br> 5. Update service unavailable. |
 
 **Error codes:**
 

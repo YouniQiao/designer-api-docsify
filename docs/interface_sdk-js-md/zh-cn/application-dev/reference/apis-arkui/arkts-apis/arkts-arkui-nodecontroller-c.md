@@ -94,8 +94,8 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 > 
 > NodeContainer不支持跨实例复用。如果出现跨实例复用
 > NodeContainer，传入
-> NodeContainer的[NodeController](../../apis-default/arkts-apis/arkts-nodecontroller-c.md)触发
-> [makeNode](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#makenode)回调方法时，入参中的[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者
+> NodeContainer的[NodeController](#nodecontroller)触发
+> [makeNode](#makenode)回调方法时，入参中的[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者
 > 判断该对象是否为undefined，防止后续使用此入参时出现[UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
 
 **起始版本：** 11
@@ -126,7 +126,7 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 onAttach?(): void
 ```
 
-当NodeController绑定的NodeContainer挂载至主节点树时触发此回调。与 [aboutToAppear](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#abouttoappear)不同，aboutToAppear在NodeContainer挂载显示后触发，onAttach在NodeContainer挂载至主 节点树时触发，两者触发时机可能不同。
+当NodeController绑定的NodeContainer挂载至主节点树时触发此回调。与 [aboutToAppear](#abouttoappear)不同，aboutToAppear在NodeContainer挂载显示后触发，onAttach在NodeContainer挂载至主 节点树时触发，两者触发时机可能不同。
 
 > **说明：**
 > 
@@ -148,7 +148,7 @@ onAttach?(): void
 onBind?(containerId: number): void
 ```
 
-当NodeController与NodeContainer绑定后触发此回调。该回调后于 [onWillBind](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#onwillbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
+当NodeController与NodeContainer绑定后触发此回调。该回调后于 [onWillBind](#onwillbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
 
 **起始版本：** 18
 
@@ -172,7 +172,7 @@ onBind?(containerId: number): void
 onDetach?(): void
 ```
 
-当NodeController绑定的NodeContainer从主节点树卸载时触发此回调。与 [aboutToDisappear](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#abouttodisappear)不同，aboutToDisappear在NodeContainer销毁时触发，onDetach在 NodeContainer从主节点树卸载时触发，两者触发时机可能不同。
+当NodeController绑定的NodeContainer从主节点树卸载时触发此回调。与 [aboutToDisappear](#abouttodisappear)不同，aboutToDisappear在NodeContainer销毁时触发，onDetach在 NodeContainer从主节点树卸载时触发，两者触发时机可能不同。
 
 > **说明：**
 > 
@@ -218,7 +218,7 @@ onTouchEvent?(event: TouchEvent): void
 onUnbind?(containerId: number): void
 ```
 
-当NodeController与NodeContainer解绑后触发此回调。该回调后于 [onWillUnbind](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#onwillunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
+当NodeController与NodeContainer解绑后触发此回调。该回调后于 [onWillUnbind](#onwillunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
 
 **起始版本：** 18
 
@@ -242,7 +242,7 @@ onUnbind?(containerId: number): void
 onWillBind?(containerId: number): void
 ```
 
-当NodeController与NodeContainer即将绑定前触发此回调。该回调先于 [onBind](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#onbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
+当NodeController与NodeContainer即将绑定前触发此回调。该回调先于 [onBind](#onbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
 
 **起始版本：** 18
 
@@ -266,7 +266,7 @@ onWillBind?(containerId: number): void
 onWillUnbind?(containerId: number): void
 ```
 
-当NodeController与NodeContainer即将解绑前触发此回调。该回调先于 [onUnbind](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#onunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
+当NodeController与NodeContainer即将解绑前触发此回调。该回调先于 [onUnbind](#onunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
 
 **起始版本：** 18
 
@@ -290,7 +290,7 @@ onWillUnbind?(containerId: number): void
 rebuild(): void
 ```
 
-调用此接口通知NodeContainer组件重新回调 [makeNode](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#makenode)方法，更改子节点。例如，当NodeContainer展示的内容数据发生变化、需要更新显示的子节点时，可调用此方法触发重新构建。
+调用此接口通知NodeContainer组件重新回调 [makeNode](#makenode)方法，更改子节点。例如，当NodeContainer展示的内容数据发生变化、需要更新显示的子节点时，可调用此方法触发重新构建。
 
 > **说明：**
 > 

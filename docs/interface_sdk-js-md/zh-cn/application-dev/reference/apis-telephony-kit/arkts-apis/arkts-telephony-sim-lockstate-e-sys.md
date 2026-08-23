@@ -2,8 +2,6 @@
 
 Indicates the lock states.
 
-@enum { int }
-
 **起始版本：** 23
 
 <!--Device-sim-export enum LockState--><!--Device-sim-export enum LockState-End-->

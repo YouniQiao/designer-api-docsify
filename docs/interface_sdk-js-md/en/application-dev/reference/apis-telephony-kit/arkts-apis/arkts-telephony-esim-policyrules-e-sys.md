@@ -1,8 +1,6 @@
 # PolicyRules (System API)
 
-The policy rules of the profile.
-
-@enum { int }
+Enumerates the profile policy rules.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@ The policy rules of the profile.
 POLICY_RULE_DISABLE_NOT_ALLOWED = 1
 ```
 
-Disabling of this Profile is not allowed.
+A profile cannot be disabled after being enabled.
 
 **Since:** 23
 
@@ -34,7 +32,7 @@ Disabling of this Profile is not allowed.
 POLICY_RULE_DELETE_NOT_ALLOWED = 1 << 1
 ```
 
-Deletion of this Profile is not allowed.
+The profile cannot be deleted.
 
 **Since:** 23
 
@@ -50,7 +48,7 @@ Deletion of this Profile is not allowed.
 POLICY_RULE_DISABLE_AND_DELETE = 1 << 2
 ```
 
-This profile should be deleted when disabled.
+A profile must be deleted immediately after being enabled.
 
 **Since:** 23
 

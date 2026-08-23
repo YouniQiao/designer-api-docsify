@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function deleteProfile(slotId: int, iccid: string): Promise<ResultCode>
 ```
 
-Deletes the given profile from eUICC.
+Deletes a profile. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,14 +28,14 @@ Deletes the given profile from eUICC.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
-| iccid | string | Yes | The iccid of the profile. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| iccid | string | Yes | Profile ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the response to deletes the given profile. |
+| Promise&lt;ResultCode&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

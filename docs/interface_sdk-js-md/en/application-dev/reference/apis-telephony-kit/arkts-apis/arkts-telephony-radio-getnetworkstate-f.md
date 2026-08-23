@@ -12,7 +12,9 @@ import { radio } from '@kit.TelephonyKit';
 function getNetworkState(slotId: int, callback: AsyncCallback<NetworkState>): void
 ```
 
-Obtains the network state of the registered network.
+Obtains the network status of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,8 +28,8 @@ Obtains the network state of the registered network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting network registration state. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -85,7 +87,9 @@ radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
 function getNetworkState(slotId?: int): Promise<NetworkState>
 ```
 
-Obtains the network state of the registered network.
+Obtains the network status of the SIM card in the specified slot. This API uses a promise to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -99,13 +103,13 @@ Obtains the network state of the registered network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | No | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. if no slotId is provided, the default slotId is 0. |
+| slotId | int | No | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 <br> If no card slot is specified, card slot 1 is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetworkState&gt; | Returns the NetworkState object. |
+| Promise&lt;NetworkState&gt; | Promise used to return the network status. |
 
 **Error codes:**
 
@@ -129,7 +133,9 @@ See [getNetworkState](#getnetworkstate)
 function getNetworkState(callback: AsyncCallback<NetworkState>): void
 ```
 
-Obtains the network state of the registered network.
+Obtains the network status. This API uses an asynchronous callback to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -143,7 +149,7 @@ Obtains the network state of the registered network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting network registration state. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

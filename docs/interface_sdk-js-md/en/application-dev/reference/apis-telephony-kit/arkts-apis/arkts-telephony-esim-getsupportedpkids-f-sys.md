@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function getSupportedPkids(slotId: int) : Promise<string>
 ```
 
-Get supported pkids
+Obtains the public key ID information supported by the phone.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ Get supported pkids
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the supported pkids. |
+| Promise&lt;string&gt; | Promise used to return the public key ID information supported by the mobile phone in the Tag-Length-Value (TLV) format. |
 
 **Error codes:**
 

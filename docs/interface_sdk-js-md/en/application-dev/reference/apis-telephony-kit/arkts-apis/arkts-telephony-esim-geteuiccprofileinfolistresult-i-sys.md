@@ -1,8 +1,6 @@
 # GetEuiccProfileInfoListResult (System API)
 
-Result of all eUICC profile information.
-
-@interface GetEuiccProfileInfoListResult
+Obtains the profile information list.
 
 **Since:** 23
 
@@ -24,7 +22,7 @@ import { eSIM } from '@kit.TelephonyKit';
 isRemovable: boolean
 ```
 
-Gets whether the eUICC can be removed.
+Whether the eUICC is removable. The value **true** indicates that the eUICC is removable, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -42,7 +40,7 @@ Gets whether the eUICC can be removed.
 profiles: Array<EuiccProfile>
 ```
 
-Gets the profile list (only upon success).
+Profile array.
 
 **Type:** Array&lt;[EuiccProfile](arkts-telephony-esim-euiccprofile-i-sys.md)&gt;
 
@@ -60,7 +58,7 @@ Gets the profile list (only upon success).
 responseResult: ResultCode
 ```
 
-Gets the result of the operation.
+Promise used to return the operation result.
 
 **Type:** ResultCode
 

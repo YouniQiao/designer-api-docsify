@@ -1,8 +1,6 @@
 # SimType
 
-Indicates the SIM card type.
-
-@enum { int }
+SIM卡类型的枚举。
 
 **起始版本：** 23
 
@@ -16,7 +14,7 @@ Indicates the SIM card type.
 PSIM = 0
 ```
 
-Indicates psim type.
+实体SIM卡。
 
 **起始版本：** 23
 
@@ -30,7 +28,7 @@ Indicates psim type.
 ESIM = 1
 ```
 
-Indicates esim type.
+电子SIM卡。
 
 **起始版本：** 23
 

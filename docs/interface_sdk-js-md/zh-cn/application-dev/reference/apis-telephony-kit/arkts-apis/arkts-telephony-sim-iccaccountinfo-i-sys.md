@@ -1,8 +1,6 @@
 # IccAccountInfo
 
-Defines the ICC account information.
-
-@interface IccAccountInfo
+Icc账户信息。
 
 **起始版本：** 23
 

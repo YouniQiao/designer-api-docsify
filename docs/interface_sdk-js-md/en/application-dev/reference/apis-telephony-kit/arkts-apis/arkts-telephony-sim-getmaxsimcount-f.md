@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getMaxSimCount(): int
 ```
 
-Obtains the maximum number of SIM cards that can be used simultaneously on the device, that is, the maximum number of SIM card slots.
+Obtains the number of card slots.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Obtains the maximum number of SIM cards that can be used simultaneously on the d
 
 | Type | Description |
 | --- | --- |
-| int | Returns the maximum number of SIM card slots. |
+| int | Number of card slots. |
 
 **Examples**
 

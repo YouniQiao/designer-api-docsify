@@ -2,7 +2,7 @@
 
 WebResourceHandler是自定义scheme拦截场景中用于向Web组件返回拦截请求结果的处理器。当WebSchemeHandler决定拦截一个请求后，开发者通过WebResourceHandler向Web组件提供自定义 的响应头（didReceiveResponse）、响应体数据（didReceiveResponseBody），并通知请求完成（didFinish）或失败（didFail）。其中didFail支持重载方法（API version 2 0+）以简化错误处理流程。该接口实现了应用层对网络请求的完全自定义响应。
 
-WebResourceHandler与[WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md)、 [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md)配合使用：WebSchemeHandler的onRequestStart回调中接收 WebResourceHandler实例，开发者构造WebSchemeHandlerResponse对象，通过WebResourceHandler的didReceiveResponse和didReceiveResponseBody 传入响应头和响应体数据，最后调用didFinish或didFail结束请求。
+WebResourceHandler与[WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md)、 [WebSchemeHandlerResponse](../../apis-default/arkts-apis/arkts-webview-webschemehandlerresponse-c.md)配合使用：WebSchemeHandler的onRequestStart回调中接收 WebResourceHandler实例，开发者构造WebSchemeHandlerResponse对象，通过WebResourceHandler的didReceiveResponse和didReceiveResponseBody 传入响应头和响应体数据，最后调用didFinish或didFail结束请求。
 
 **起始版本：** 12
 
@@ -22,7 +22,7 @@ import { webview } from '@kit.ArkWeb';
 didFail(code: WebNetErrorList): void
 ```
 
-通知ArkWeb内核被拦截请求将返回失败，并结束该网络请求，调用前需调用[didReceiveResponse](#didreceiveresponse)传入响应 头。
+通知ArkWeb内核被拦截请求将返回失败，并结束该网络请求，调用前需调用[didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse)传入响应 头。
 
 **起始版本：** 12
 
@@ -202,7 +202,7 @@ struct WebComponent {
 didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 ```
 
-通知ArkWeb内核，被拦截请求将返回失败。若completeIfNoResponse为false，调用前需调用 [didReceiveResponse](#didreceiveresponse)传入响应头。若completeIfNoResponse为true，且调用前未调用 [didReceiveResponse](#didreceiveresponse)，则自动生成一个响应头，网络错误码为-104，详情参见 [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md)。
+通知ArkWeb内核，被拦截请求将返回失败。若completeIfNoResponse为false，调用前需调用 [didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse)传入响应头。若completeIfNoResponse为true，且调用前未调用 [didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse)，则自动生成一个响应头，网络错误码为-104，详情参见 [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md)。
 
 **起始版本：** 20
 
@@ -215,7 +215,7 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | 网络错误码，用于标识请求失败的原因。 |
-| completeIfNoResponse | boolean | 是 | 是否在未调用 [didReceiveResponse](#didreceiveresponse)时自动完成此次网络请求；值为true时自动生成响应头（网络错误码为-10 4）并完成请求，值为false时等待应用调用[didReceiveResponse](#didreceiveresponse)。 |
+| completeIfNoResponse | boolean | 是 | 是否在未调用 [didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse)时自动完成此次网络请求；值为true时自动生成响应头（网络错误码为-10 4）并完成请求，值为false时等待应用调用[didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse)。 |
 
 **错误码：**
 
@@ -247,7 +247,7 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | 网络错误码。 |
-| completeIfNoResponse | boolean | 是 | 值为true时，若之前未调用过[didReceiveResponse](#didreceiveresponse)， 则会自动生成一个response以完成此次网络请求，网络错误码为-104；值为false时，若之前未调用过[didReceiveResponse](#didreceiveresponse)， 将等待应用调用[didReceiveResponse](#didreceiveresponse)并传入response，不会直接完成此次网络请求。 |
+| completeIfNoResponse | boolean | 是 | 值为true时，若之前未调用过[didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse)， 则会自动生成一个response以完成此次网络请求，网络错误码为-104；值为false时，若之前未调用过[didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse)， 将等待应用调用[didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse)并传入response，不会直接完成此次网络请求。 |
 | customErrorCode | number | 是 | 该请求的自定义错误码，会通过onErrorReceive事件直接传递给应用。 详情参考WebResourceError.getCustomErrorCode。 |
 
 **错误码：**
@@ -266,7 +266,7 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 didFinish(): void
 ```
 
-通知Web组件被拦截的请求已经完成，并且没有更多的数据可用，调用前需调用[didReceiveResponse](#didreceiveresponse)传入响应 头。
+通知Web组件被拦截的请求已经完成，并且没有更多的数据可用，调用前需调用[didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse)传入响应 头。
 
 **起始版本：** 12
 
@@ -306,7 +306,7 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| response | [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md) | 是 | 该拦截请求的响应，用于向Web组件传递自定义的响应头信息，包括状态码、响应头字段等。开发者需先构造此对象，然后通过 didReceiveResponse方法传递给被拦截的请求。 |
+| response | [WebSchemeHandlerResponse](../../apis-default/arkts-apis/arkts-webview-webschemehandlerresponse-c.md) | 是 | 该拦截请求的响应，用于向Web组件传递自定义的响应头信息，包括状态码、响应头字段等。开发者需先构造此对象，然后通过 didReceiveResponse方法传递给被拦截的请求。 |
 
 **错误码：**
 

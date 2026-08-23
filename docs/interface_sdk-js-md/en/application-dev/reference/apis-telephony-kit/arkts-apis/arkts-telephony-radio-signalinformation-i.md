@@ -1,8 +1,6 @@
 # SignalInformation
 
-Returns child class objects specific to the network type.
-
-@interface SignalInformation
+Defines the signal strength.
 
 **Since:** 23
 
@@ -22,7 +20,7 @@ import { radio } from '@kit.TelephonyKit';
 dBm: int
 ```
 
-rsrp for LTE and NR; dbm for CDMA and EVDO; rscp for WCDMA; rssi for GSM.
+Signal strength. The value range is [–140, 140]. If the value is out of range, an error is returned.
 
 **Type:** int
 
@@ -38,7 +36,7 @@ rsrp for LTE and NR; dbm for CDMA and EVDO; rscp for WCDMA; rssi for GSM.
 signalLevel: int
 ```
 
-Obtains the signal level of the current network.
+Signal strength level. The value range is [0, 5]. If the value is out of range, an error is returned.
 
 **Type:** int
 
@@ -54,7 +52,7 @@ Obtains the signal level of the current network.
 signalType: NetworkType
 ```
 
-Obtains the network type corresponding to the signal.
+Signal strength type.
 
 **Type:** NetworkType
 

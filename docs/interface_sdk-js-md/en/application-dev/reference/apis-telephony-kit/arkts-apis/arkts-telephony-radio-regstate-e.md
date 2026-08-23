@@ -1,8 +1,6 @@
 # RegState
 
-Describes the network registration state.
-
-@enum { int }
+Defines the network registration status of the device.
 
 **Since:** 23
 
@@ -16,7 +14,7 @@ Describes the network registration state.
 REG_STATE_NO_SERVICE = 0
 ```
 
-Indicates a state in which a device cannot use any service.
+The device cannot use any services, including data, SMS, and call services.
 
 **Since:** 23
 
@@ -30,7 +28,7 @@ Indicates a state in which a device cannot use any service.
 REG_STATE_IN_SERVICE = 1
 ```
 
-Indicates a state in which a device can use services properly.
+The device can use services properly, including data, SMS, and call services.
 
 **Since:** 23
 
@@ -44,7 +42,7 @@ Indicates a state in which a device can use services properly.
 REG_STATE_EMERGENCY_CALL_ONLY = 2
 ```
 
-Indicates a state in which a device can use only the emergency call service.
+The device can use only the emergency call service.
 
 **Since:** 23
 
@@ -58,7 +56,7 @@ Indicates a state in which a device can use only the emergency call service.
 REG_STATE_POWER_OFF = 3
 ```
 
-Indicates that the cellular radio is powered off.
+The device cannot communicate with the network because the cellular radio service is disabled or the modem is powered off.
 
 **Since:** 23
 

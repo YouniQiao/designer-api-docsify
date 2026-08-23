@@ -22,7 +22,7 @@ import { webview } from '@kit.ArkWeb';
 close(): void
 ```
 
-不需要发送消息时关闭该消息端口。在使用close前，请先使用[createWebMessagePorts](arkts-arkweb-webview-webviewcontroller-c.md#createwebmessageports)创建消息端 口。
+不需要发送消息时关闭该消息端口。在使用close前，请先使用[createWebMessagePorts](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#createwebmessageports)创建消息端 口。
 
 **起始版本：** 9
 
@@ -128,7 +128,7 @@ struct WebComponent {
 onMessageEvent(callback: (result: WebMessage) => void): void
 ```
 
-在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessage](arkts-arkweb-webview-webmessage-t.md)类型消息。完整示例代码参考 [postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage)。
+在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessage](../../apis-default/arkts-apis/arkts-webview-webmessage-t.md)类型消息。完整示例代码参考 [postMessage](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#postmessage)。
 
 **起始版本：** 9
 
@@ -157,7 +157,7 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 onMessageEventExt(callback: (result: WebMessageExt) => void): void
 ```
 
-在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md)类型消息。
+在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](../../apis-default/arkts-apis/arkts-webview-webmessagetype-e.md)类型消息。
 
 **起始版本：** 10
 
@@ -672,7 +672,7 @@ function postStringToApp() {
 postMessageEvent(message: WebMessage): void
 ```
 
-发送[WebMessage](arkts-arkweb-webview-webmessage-t.md)类型消息给HTML5侧，必须先调用 onMessageEvent，否则会发送失败。完整示 例代码参考[postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage)。
+发送[WebMessage](../../apis-default/arkts-apis/arkts-webview-webmessage-t.md)类型消息给HTML5侧，必须先调用 onMessageEvent，否则会发送失败。完整示 例代码参考[postMessage](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#postmessage)。
 
 **起始版本：** 9
 
@@ -686,7 +686,7 @@ postMessageEvent(message: WebMessage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [WebMessage](arkts-arkweb-webview-webmessage-t.md) | 是 | 要发送的消息。 |
+| message | [WebMessage](../../apis-default/arkts-apis/arkts-webview-webmessage-t.md) | 是 | 要发送的消息。 |
 
 **错误码：**
 
@@ -835,7 +835,7 @@ struct WebComponent {
 postMessageEventExt(message: WebMessageExt): void
 ```
 
-发送[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md)类型消息给HTML5侧，必须先调用 onMessageEventExt，否则 会发送失败。完整示例代码参考 onMessageEventExt。
+发送[WebMessageType](../../apis-default/arkts-apis/arkts-webview-webmessagetype-e.md)类型消息给HTML5侧，必须先调用 onMessageEventExt，否则 会发送失败。完整示例代码参考 onMessageEventExt。
 
 **起始版本：** 10
 
@@ -849,7 +849,7 @@ postMessageEventExt(message: WebMessageExt): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [WebMessageExt](arkts-arkweb-webview-webmessageext-c.md) | 是 | 要发送的消息。 |
+| message | [WebMessageExt](../../apis-default/arkts-apis/arkts-webview-webmessageext-c.md) | 是 | 要发送的消息。 |
 
 **错误码：**
 
@@ -864,7 +864,7 @@ postMessageEventExt(message: WebMessageExt): void
 isExtentionType?: boolean
 ```
 
-创建WebMessagePort时是否指定使用扩展增强接口，[postMessageEventExt](#postmessageeventext)、 onMessageEventExt。
+创建WebMessagePort时是否指定使用扩展增强接口，[postMessageEventExt](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md#postmessageeventext)、 onMessageEventExt。
 
 true表示使用扩展增强接口，false表示不使用扩展增强接口。
 

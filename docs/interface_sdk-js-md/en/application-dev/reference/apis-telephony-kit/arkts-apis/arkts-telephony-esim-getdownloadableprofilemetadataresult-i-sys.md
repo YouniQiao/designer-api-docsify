@@ -1,8 +1,6 @@
 # GetDownloadableProfileMetadataResult (System API)
 
-Result the metadata for a downloadableProfile.
-
-@interface GetDownloadableProfileMetadataResult
+Obtains the metadata of the downloadable profile.
 
 **Since:** 23
 
@@ -24,7 +22,7 @@ import { eSIM } from '@kit.TelephonyKit';
 downloadableProfile: DownloadableProfile
 ```
 
-Information about a profile which is downloadable to an eUICC using.
+Downloadable profile.
 
 **Type:** [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md)
 
@@ -42,7 +40,7 @@ Information about a profile which is downloadable to an eUICC using.
 iccid: string
 ```
 
-The iccid of the profile.
+Profile ICCID.
 
 **Type:** string
 
@@ -60,7 +58,7 @@ The iccid of the profile.
 pprFlag: boolean
 ```
 
-The flag of profile policy rule.
+Whether the profile has a policy rule. The value **true** indicates that the profile has a policy rule, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -78,7 +76,7 @@ The flag of profile policy rule.
 pprType: int
 ```
 
-The type of profile policy rule.
+Profile policy rule type.
 
 **Type:** int
 
@@ -96,7 +94,7 @@ The type of profile policy rule.
 profileClass: ProfileClass
 ```
 
-Profile class for the profile.
+Profile class.
 
 **Type:** [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md)
 
@@ -114,7 +112,7 @@ Profile class for the profile.
 profileName: string
 ```
 
-The profile name.
+Profile name.
 
 **Type:** string
 
@@ -132,7 +130,7 @@ The profile name.
 responseResult: ResultCode
 ```
 
-Gets the result of the operation.
+Operation result code.
 
 **Type:** ResultCode
 
@@ -150,7 +148,7 @@ Gets the result of the operation.
 serviceProviderName: string
 ```
 
-The service provider name for the profile.
+Service provider name.
 
 **Type:** string
 
@@ -168,7 +166,7 @@ The service provider name for the profile.
 solvableErrors: SolvableErrors
 ```
 
-Gets the solvable errors.
+Solvable errors.
 
 **Type:** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 

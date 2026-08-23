@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getOpNameSync(slotId: int): string
 ```
 
-Obtains the operator name of the SIM card in a specified slot.
+获取指定卡槽中SIM卡的OpName。
 
 **起始版本：** 23
 
@@ -24,13 +24,13 @@ Obtains the operator name of the SIM card in a specified slot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Returns the operator name; returns an empty string if no SIM card is inserted or no operator name is matched. |
+| string | 返回指定卡槽中SIM卡的OpName。 |
 
 **示例**
 

@@ -3567,7 +3567,7 @@ forceDisplayScrollBar(enabled: boolean)
 > 
 > - 该接口在当前应用的所有Web组件中全局生效。多个Web组件设置不同值时，以首次设置的值为准。
 > 
-> - 若同时调用[setScrollbarMode](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setscrollbarmode)，该接口设置不生效。
+> - 若同时调用[setScrollbarMode](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setscrollbarmode)，该接口设置不生效。
 
 **起始版本：** 14
 
@@ -3867,7 +3867,7 @@ horizontalScrollBarAccess(horizontalScrollBar: boolean)
 > **说明：**
 > 
 > - 通过[@State](../../../ui/state-management/arkts-state.md)变量控制横向滚动条的隐藏/显示后，需要调用
-> [controller.refresh()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)生效。
+> [controller.refresh()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#refresh)生效。
 > 
 > - 通过[@State](../../../ui/state-management/arkts-state.md)变量频繁动态改变时，建议切换开关变量和Web组件一一对应。
 
@@ -4349,7 +4349,7 @@ javaScriptProxy(javaScriptProxy: JavaScriptProxy)
 > **说明：**
 > 
 > javaScriptProxy接口需要和
-> [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister)
+> [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#deletejavascriptregister)
 > 接口配合使用，防止内存泄漏。
 > 
 > javaScriptProxy对象的所有参数不支持更新。
@@ -4357,7 +4357,7 @@ javaScriptProxy(javaScriptProxy: JavaScriptProxy)
 > 注册javaScriptProxy对象时，同步与异步列表请至少选择一项不为空，可同时注册两类方法。
 > 
 > 此接口只支持注册一个对象，若需要注册多个对象请使用
-> [registerJavaScriptProxy&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#registerjavascriptproxy)
+> [registerJavaScriptProxy&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#registerjavascriptproxy)
 > 。
 
 **起始版本：** 8
@@ -6177,7 +6177,7 @@ onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback)
 
 通知应用当前网页的摄像头状态，摄像头有三个状态：无状态、捕获中、暂停中。使用callback异步回调。
 
-可以通过startCamera，stopCamera，closeCamera这三个接口来切换摄像头的状态。这三个接口分别对应开启，暂停，停止摄像头功能。示例使用场景详见 [startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera)。
+可以通过startCamera，stopCamera，closeCamera这三个接口来切换摄像头的状态。这三个接口分别对应开启，暂停，停止摄像头功能。示例使用场景详见 [startCamera](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#startcamera)。
 
 > **说明：**
 > 
@@ -7403,7 +7403,7 @@ onControllerAttached(callback: () => void)
 
 当Controller成功绑定到Web组件时触发该回调，并且该Controller必须为WebviewController，且禁止在该事件回调前调用Web组件相关的接口，否则会抛出js-error异常。
 
-因该回调调用时网页还未加载，无法在回调中使用有关操作网页的接口，例如[zoomIn](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomin)、 [zoomOut](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomout)等，可以使用 [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)、 [getWebId](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getwebid)等操作网页不相关的接口。
+因该回调调用时网页还未加载，无法在回调中使用有关操作网页的接口，例如[zoomIn](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#zoomin)、 [zoomOut](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#zoomout)等，可以使用 [loadUrl](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#loadurl)、 [getWebId](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getwebid)等操作网页不相关的接口。
 
 组件生命周期详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
 
@@ -9407,7 +9407,7 @@ struct WebComponent {
 onInterceptRequest(callback: Callback<OnInterceptRequestEvent, WebResourceResponse>)
 ```
 
-当Web组件加载URL之前触发该回调，用于拦截URL并返回响应数据。`onInterceptRequest`可拦截所有跳转请求并返回响应数据，但无法访问POST请求体（Body）内容，且不支持分片缓冲（buffer）类型数据获取。 此类场景需改用[WebSchemeHandler](../arkts-apis/arkts-arkweb-webview-webschemehandler-c.md)实现，依据具体业务需求进行判断。
+当Web组件加载URL之前触发该回调，用于拦截URL并返回响应数据。`onInterceptRequest`可拦截所有跳转请求并返回响应数据，但无法访问POST请求体（Body）内容，且不支持分片缓冲（buffer）类型数据获取。 此类场景需改用[WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md)实现，依据具体业务需求进行判断。
 
 **起始版本：** 9
 
@@ -9955,7 +9955,7 @@ onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback)
 
 通知应用当前网页中麦克风状态，麦克风有三个状态：未工作、捕获中、暂停中。使用callback异步回调。
 
-可以通过resumeMicrophone，pauseMicrophone，stopMicrophone这三个接口来切换麦克风的状态。这三个接口功能分别对应解除暂停，暂停，停止麦克风。示例使用场景详见 [resumeMicrophone&lt;sup&gt;23+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone)。
+可以通过resumeMicrophone，pauseMicrophone，stopMicrophone这三个接口来切换麦克风的状态。这三个接口功能分别对应解除暂停，暂停，停止麦克风。示例使用场景详见 [resumeMicrophone&lt;sup&gt;23+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#resumemicrophone)。
 
 > **说明：**
 > 
@@ -11727,9 +11727,9 @@ onOverrideErrorPage(callback: OnOverrideErrorPageCallback)
 > **说明：**
 > 
 > - 该功能需通过调用
-> [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup
+> [setErrorPageEnabled](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup
 &gt; &gt;20+&lt;/sup&gt;启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用
-> [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)
+> [setErrorPageEnabled](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#seterrorpageenabled)
 > 接口并将includeSubframe设置为true。
 > 
 > - 通过[errorPageEvent.request.isMainFrame()](arkts-arkweb-webresourcerequest-c.md#ismainframe)判断请求来源是mainframe还是subframe，以便在回调中
@@ -12905,7 +12905,7 @@ onRenderExited(callback: Callback<OnRenderExitedEvent>)
 
 多个Web组件可能共享单个渲染进程，每个受影响的Web组件都会触发该回调。
 
-应用处理该回调时，可以调用绑定的webviewController相关接口来恢复页面。例如[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) 、[loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)等。
+应用处理该回调时，可以调用绑定的webviewController相关接口来恢复页面。例如[refresh](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#refresh) 、[loadUrl](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#loadurl)等。
 
 组件生命周期回调详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
 
@@ -12985,7 +12985,7 @@ onRenderExited(callback: (event?: { detail: object }) => boolean)
 
 多个Web组件可能共享单个渲染进程，每个受影响的Web组件都会触发该回调。
 
-应用处理该回调时，可以调用绑定的WebViewController接口来恢复页面。例如[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)、 [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)等。
+应用处理该回调时，可以调用绑定的WebViewController接口来恢复页面。例如[refresh](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#refresh)、 [loadUrl](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#loadurl)等。
 
 详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
 
@@ -13019,7 +13019,7 @@ onRenderProcessNotResponding(callback: OnRenderProcessNotRespondingCallback)
 
 只要网页进程一直无响应，此回调仍可能会持续触发，直到网页进程再次响应，此时[onRenderProcessResponding](#onrenderprocessresponding)将会触发。
 
-应用可以通过WebviewController接口 [terminateRenderProcess](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#terminaterenderprocess)来终止关联的渲染进程，这可能会影响 同一渲染进程的其他Web组件。
+应用可以通过WebviewController接口 [terminateRenderProcess](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#terminaterenderprocess)来终止关联的渲染进程，这可能会影响 同一渲染进程的其他Web组件。
 
 **起始版本：** 12
 

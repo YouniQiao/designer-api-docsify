@@ -1,8 +1,8 @@
 # WebSchemeHandler
 
-WebSchemeHandler是用于拦截指定scheme（协议）的网络请求的拦截器类，支持自定义协议处理、本地资源替换、特定请求拦截等场景。开发者通过实现onRequestStart回调来决定是否拦截某个请求，被拦截的请求可通过 WebResourceHandler自定义响应内容。通过WebviewController的 [setWebSchemeHandler](arkts-arkweb-webview-webviewcontroller-c.md#setwebschemehandler)方法将WebSchemeHandler实例注册到指定的scheme上，从而实现对该 scheme所有请求的截获和处理。
+WebSchemeHandler是用于拦截指定scheme（协议）的网络请求的拦截器类，支持自定义协议处理、本地资源替换、特定请求拦截等场景。开发者通过实现onRequestStart回调来决定是否拦截某个请求，被拦截的请求可通过 WebResourceHandler自定义响应内容。通过WebviewController的 [setWebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setwebschemehandler)方法将WebSchemeHandler实例注册到指定的scheme上，从而实现对该 scheme所有请求的截获和处理。
 
-WebSchemeHandler与[WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md)、 [WebResourceHandler](arkts-arkweb-webview-webresourcehandler-c.md)、 [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md)配合使用：onRequestStart回调接收WebSchemeHandlerRequest（被拦 截的请求信息）和WebResourceHandler（用于返回自定义响应的处理器），返回boolean值表示是否拦截。onRequestStop在请求结束时触发（仅对已拦截的请求），用于资源清理。
+WebSchemeHandler与[WebSchemeHandlerRequest](../../apis-default/arkts-apis/arkts-webview-webschemehandlerrequest-c.md)、 [WebResourceHandler](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md)、 [WebSchemeHandlerResponse](../../apis-default/arkts-apis/arkts-webview-webschemehandlerresponse-c.md)配合使用：onRequestStart回调接收WebSchemeHandlerRequest（被拦 截的请求信息）和WebResourceHandler（用于返回自定义响应的处理器），返回boolean值表示是否拦截。onRequestStop在请求结束时触发（仅对已拦截的请求），用于资源清理。
 
 **起始版本：** 12
 
@@ -71,7 +71,7 @@ onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md)&gt; | 是 | 对应请求结束的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSchemeHandlerRequest](../../apis-default/arkts-apis/arkts-webview-webschemehandlerrequest-c.md)&gt; | 是 | 对应请求结束的回调函数。 |
 
 **错误码：**
 

@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function hasSimCard(slotId: int, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a SIM card is inserted in a specified slot.
+获取指定卡槽SIM卡是否插卡。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -24,8 +24,8 @@ Checks whether a SIM card is inserted in a specified slot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Indicates the callback for hasSimCard. Returns {@code true} if a SIM card is inserted; return {@code false} otherwise. |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调返回指定卡槽是否插卡。<br/>- true:插卡。<br/>- false：未插卡。 |
 
 **错误码：**
 
@@ -66,7 +66,7 @@ sim.hasSimCard(0).then((data: boolean) => {
 function hasSimCard(slotId: int): Promise<boolean>
 ```
 
-Checks whether a SIM card is inserted in a specified slot.
+获取指定卡槽SIM卡是否插卡。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -78,13 +78,13 @@ Checks whether a SIM card is inserted in a specified slot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | 以Promise形式返回指定卡槽是否插卡。<br/>- true:插卡。<br/>- false：未插卡。 |
 
 **错误码：**
 

@@ -1,9 +1,5 @@
 # LockStatusResponse（系统接口）
 
-Defines the personalized lock information.
-
-@interface LockStatusResponse
-
 **起始版本：** 23
 
 <!--Device-sim-export interface LockStatusResponse--><!--Device-sim-export interface LockStatusResponse-End-->

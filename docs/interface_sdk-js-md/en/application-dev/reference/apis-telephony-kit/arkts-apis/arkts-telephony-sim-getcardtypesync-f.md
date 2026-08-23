@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getCardTypeSync(slotId: int): CardType
 ```
 
-Obtains the type of the SIM card inserted in a specified slot.
+Obtains the type of the SIM card in the specified slot.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ Obtains the type of the SIM card inserted in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CardType | Returns the SIM card type. |
+| CardType | Type of the SIM card in the specified slot. |
 
 **Examples**
 

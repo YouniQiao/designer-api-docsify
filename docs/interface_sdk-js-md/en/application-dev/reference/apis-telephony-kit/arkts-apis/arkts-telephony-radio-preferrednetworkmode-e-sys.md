@@ -2,8 +2,6 @@
 
 Indicates the preferred network.
 
-@enum { int }
-
 **Since:** 23
 
 <!--Device-radio-export enum PreferredNetworkMode--><!--Device-radio-export enum PreferredNetworkMode-End-->

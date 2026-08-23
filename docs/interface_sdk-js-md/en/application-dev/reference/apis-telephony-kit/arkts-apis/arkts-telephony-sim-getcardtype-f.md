@@ -12,7 +12,7 @@ import { sim } from '@kit.TelephonyKit';
 function getCardType(slotId: int, callback: AsyncCallback<CardType>): void
 ```
 
-Obtains the type of the SIM card installed in a specified slot.
+Obtains the type of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ Obtains the type of the SIM card installed in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CardType&gt; | Yes | Indicates the callback for getting the SIM card type. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CardType&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ sim.getCardType(0).then((data: sim.CardType) => {
 function getCardType(slotId: int): Promise<CardType>
 ```
 
-Obtains the type of the SIM card installed in a specified slot.
+Obtains the type of the SIM card in the specified slot. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -79,13 +79,13 @@ Obtains the type of the SIM card installed in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CardType&gt; | Returns the SIM card type. |
+| Promise&lt;CardType&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function getDefaultSmdpAddress(slotId: int): Promise<string>
 ```
 
-Gets the default SM-DP+ address stored in an eUICC.
+Obtains the default SM-DP+ address stored in the eUICC. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ Gets the default SM-DP+ address stored in an eUICC.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the default SM-DP+ address. |
+| Promise&lt;string&gt; | Promise used to return the SM-DP+ address. |
 
 **Error codes:**
 

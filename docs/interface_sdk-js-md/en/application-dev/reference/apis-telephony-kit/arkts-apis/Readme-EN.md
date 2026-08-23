@@ -852,7 +852,11 @@
   <!--Del-->
   - [SmsShortCodeType(system api)](arkts-telephony-sms-smsshortcodetype-e-sys.md)<!--DelEnd-->
 - [@ohos.telephony.vcard](arkts-telephony-vcard.md)
-  - [exportVCard](arkts-telephony-vcard-exportvcard-f.md)
-  - [importVCard](arkts-telephony-vcard-importvcard-f.md)
-  - [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md)
-  - [VCardType](arkts-telephony-vcard-vcardtype-e.md)
+  <!--Del-->
+  - [exportVCard(system api)](arkts-telephony-vcard-exportvcard-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [importVCard(system api)](arkts-telephony-vcard-importvcard-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [VCardBuilderOptions(system api)](arkts-telephony-vcard-vcardbuilderoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [VCardType(system api)](arkts-telephony-vcard-vcardtype-e-sys.md)<!--DelEnd-->

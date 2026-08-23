@@ -175,7 +175,7 @@ struct WebComponent {
 backward()
 ```
 
-按照历史栈，后退一个页面。建议在调用backward前先调用 [accessBackward&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessbackward)检查当前页面是否可后退。
+按照历史栈，后退一个页面。建议在调用backward前先调用 [accessBackward&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessbackward)检查当前页面是否可后退。
 
 **起始版本：** 8
 
@@ -317,7 +317,7 @@ struct WebComponent {
 forward()
 ```
 
-按照历史栈，前进一个页面。建议在调用forward前先调用 [accessForward&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessforward)检查当前页面是否可前进。
+按照历史栈，前进一个页面。建议在调用forward前先调用 [accessForward&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessforward)检查当前页面是否可前进。
 
 **起始版本：** 8
 
@@ -362,7 +362,7 @@ getCookieManager(): WebCookie
 
 **废弃版本：** 9
 
-**替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
+**替代接口：** [WebCookieManager](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md)
 
 <!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
 
@@ -910,7 +910,7 @@ zoom(factor: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [zoom](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoom)
+**替代接口：** [zoom](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#zoom)
 
 <!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
 

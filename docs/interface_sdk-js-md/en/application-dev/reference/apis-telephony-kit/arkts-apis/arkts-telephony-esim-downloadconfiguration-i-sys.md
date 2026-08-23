@@ -1,8 +1,6 @@
 # DownloadConfiguration (System API)
 
-Specifies the download configuration.
-
-@interface DownloadConfiguration
+Defines the download configuration.
 
 **Since:** 23
 
@@ -24,7 +22,11 @@ import { eSIM } from '@kit.TelephonyKit';
 forceDisableProfile: boolean
 ```
 
-Specifies whether to forcibly disable the profile. If true, the active profile is disabled in order to perform the operation. Otherwise, [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#result_must_disable_profile) is returned in resultCode to ask for the user's agreement to the operation.
+Whether to forcibly deactivate the current profile during profile switching.
+
+**true**: The current profile is forcibly deactivated, and profile switching can be directly performed.
+
+**false**: An error is returned, and profile switching can be performed only after the user authorization is obtained.
 
 **Type:** boolean
 
@@ -42,7 +44,7 @@ Specifies whether to forcibly disable the profile. If true, the active profile i
 isPprAllowed: boolean
 ```
 
-Specifies whether the user allows the service provider to enforce this Profile Policy Rule (PPR) after being informed of its restrictions.
+Whether user authorization is obtained to implement the profile policy rule. The value **true** indicates that user authorization is obtained, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -60,7 +62,7 @@ Specifies whether the user allows the service provider to enforce this Profile P
 switchAfterDownload: boolean
 ```
 
-Specifies whether to enable the profile after successful download.
+Whether to enable the profile after successful download. The value **true** means to enable the default profile, and the value **false** means the opposite.
 
 **Type:** boolean
 

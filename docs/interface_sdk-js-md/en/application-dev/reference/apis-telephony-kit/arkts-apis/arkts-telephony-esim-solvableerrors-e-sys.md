@@ -1,8 +1,6 @@
 # SolvableErrors (System API)
 
-The solvable errors.
-
-@enum { int }
+Enumerates the solvable errors.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@ The solvable errors.
 SOLVABLE_ERROR_NEED_CONFIRMATION_CODE = 1 << 0
 ```
 
-Indicates that the user needs to input a confirmation code during the download.
+The user needs to enter the confirmation code during the download.
 
 **Since:** 23
 
@@ -34,7 +32,7 @@ Indicates that the user needs to input a confirmation code during the download.
 SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1
 ```
 
-Indicates that the download process requires user consent to allow profile policy rules.
+The download process requires user consent to allow the profile policy rules.
 
 **Since:** 23
 

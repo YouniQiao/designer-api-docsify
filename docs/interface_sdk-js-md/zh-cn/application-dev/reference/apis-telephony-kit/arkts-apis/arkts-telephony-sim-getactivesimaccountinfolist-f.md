@@ -12,7 +12,11 @@ import { sim } from '@kit.TelephonyKit';
 function getActiveSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void
 ```
 
-Get the list of active SIM card account information.
+获取激活SIM卡账户信息列表。使用callback异步回调。
+
+> **说明：**
+> 
+> 获取ICCID和号码信息时需要GET_TELEPHONY_STATE权限，ICCID和号码信息为敏感数据，不向三方应用开放。调用接口时，获取到的ICCID和号码信息为空。
 
 **起始版本：** 23
 
@@ -26,7 +30,7 @@ Get the list of active SIM card account information.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | 是 | The callback is used to return the array of [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md). The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。返回激活SIM卡账户信息列表。 |
 
 **错误码：**
 
@@ -68,7 +72,11 @@ sim.getActiveSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
 function getActiveSimAccountInfoList(): Promise<Array<IccAccountInfo>>
 ```
 
-Get the list of active SIM card account information.
+获取激活SIM卡账户信息列表。使用Promise异步回调。
+
+> **说明：**
+> 
+> 获取ICCID和号码信息时需要GET_TELEPHONY_STATE权限，ICCID和号码信息为敏感数据，不向三方应用开放。调用接口时，获取到的ICCID和号码信息为空。
 
 **起始版本：** 23
 
@@ -82,7 +90,7 @@ Get the list of active SIM card account information.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Returns the array of { |
+| Promise&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | 以Promise形式返回激活卡槽SIM卡的账户信息列表。 |
 
 **错误码：**
 

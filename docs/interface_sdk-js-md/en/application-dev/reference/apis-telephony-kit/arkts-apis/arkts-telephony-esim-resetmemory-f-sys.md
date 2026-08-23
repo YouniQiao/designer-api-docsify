@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function resetMemory(slotId: int, options?:ResetOption): Promise<ResultCode>
 ```
 
-Erase all specific profiles and reset the eUICC.
+Clears all specific profiles and resets the eUICC. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,14 +28,14 @@ Erase all specific profiles and reset the eUICC.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
-| options | [ResetOption](arkts-telephony-esim-resetoption-e-sys.md) | No | Options for resetting eUICC memory. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| options | [ResetOption](arkts-telephony-esim-resetoption-e-sys.md) | No | Reset options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the result of the reset operation. |
+| Promise&lt;ResultCode&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

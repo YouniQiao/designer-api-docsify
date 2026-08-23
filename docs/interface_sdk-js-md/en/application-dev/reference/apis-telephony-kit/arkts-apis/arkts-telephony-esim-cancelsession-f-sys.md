@@ -12,7 +12,7 @@ import { eSIM } from '@kit.TelephonyKit';
 function cancelSession(slotId: int, transactionId: string, cancelReason: CancelReason): Promise<ResultCode>
 ```
 
-Cancel session can be used in the 1.after the response to "ES9+.AuthenticateClient" 2.after the response to "ES9+.GetBoundProfilePackage"
+Cancels a session. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,15 +28,15 @@ Cancel session can be used in the 1.after the response to "ES9+.AuthenticateClie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the card slot index number. |
-| transactionId | string | Yes | The transaction ID returned by SM-DP+ server. |
-| cancelReason | [CancelReason](arkts-telephony-esim-cancelreason-e-sys.md) | Yes | The cancel reason. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| transactionId | string | Yes | Service ID. |
+| cancelReason | [CancelReason](arkts-telephony-esim-cancelreason-e-sys.md) | Yes | Reason for canceling the session. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the result code. |
+| Promise&lt;ResultCode&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

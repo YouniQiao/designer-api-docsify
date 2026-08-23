@@ -2,8 +2,6 @@
 
 Enum for network capability type.
 
-@enum { int }
-
 **Since:** 23
 
 <!--Device-radio-export enum NetworkCapabilityType--><!--Device-radio-export enum NetworkCapabilityType-End-->

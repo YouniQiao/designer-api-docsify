@@ -1,8 +1,6 @@
 # GetDownloadableProfilesResult (System API)
 
-Result of downloadable Profile list.
-
-@interface GetDownloadableProfilesResult
+Obtains the list of default downloadable profiles.
 
 **Since:** 23
 
@@ -24,7 +22,7 @@ import { eSIM } from '@kit.TelephonyKit';
 downloadableProfiles: Array<DownloadableProfile>
 ```
 
-Gets the downloadable Profiles with filled-in metadata.
+Downloadable file array.
 
 **Type:** Array&lt;[DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md)&gt;
 
@@ -42,7 +40,7 @@ Gets the downloadable Profiles with filled-in metadata.
 responseResult: ResultCode
 ```
 
-Gets the result of the operation.
+Promise used to return the operation result.
 
 **Type:** ResultCode
 

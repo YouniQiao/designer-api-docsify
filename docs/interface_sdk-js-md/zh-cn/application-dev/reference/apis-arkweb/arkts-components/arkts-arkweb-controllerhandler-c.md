@@ -1,6 +1,6 @@
 # ControllerHandler
 
-ControllerHandler是ArkWeb提供的处理新建Web组件控制器分配的帮助类。当Web页面通过`window.open`等方式请求创建新窗口，且Web组件已开启 [multiWindowAccess](arkts-arkweb-web-attribute.md#multiwindowaccess)能力时，系统通过[onWindowNew](arkts-arkweb-web-attribute.md#onwindownew)事件将 ControllerHandler对象提供给应用。开发者需调用其[setWebController](#setwebcontroller)方法为新窗口设置有效的 [WebviewController](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md)对象，将新窗口与页面中实际创建的Web组件关联；Web内核在等待 setWebController调用期间会阻塞渲染进程，若应用决定不创建新窗口，必须调用`setWebController(null)`通知Web内核，否则渲染进程会持续阻塞。典型使用场景是在自定义弹窗、新页面或分屏中打开Web新窗 口，并需要应用侧显式管理新窗口的URL展示与安全隔离。
+ControllerHandler是ArkWeb提供的处理新建Web组件控制器分配的帮助类。当Web页面通过`window.open`等方式请求创建新窗口，且Web组件已开启 [multiWindowAccess](arkts-arkweb-web-attribute.md#multiwindowaccess)能力时，系统通过[onWindowNew](arkts-arkweb-web-attribute.md#onwindownew)事件将 ControllerHandler对象提供给应用。开发者需调用其[setWebController](#setwebcontroller)方法为新窗口设置有效的 [WebviewController](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md)对象，将新窗口与页面中实际创建的Web组件关联；Web内核在等待 setWebController调用期间会阻塞渲染进程，若应用决定不创建新窗口，必须调用`setWebController(null)`通知Web内核，否则渲染进程会持续阻塞。典型使用场景是在自定义弹窗、新页面或分屏中打开Web新窗 口，并需要应用侧显式管理新窗口的URL展示与安全隔离。
 
 **起始版本：** 9
 
