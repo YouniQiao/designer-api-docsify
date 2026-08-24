@@ -94,7 +94,7 @@ typedef void (*OH_TextEditorProxy_GetTextConfigFunc)(InputMethod_TextEditorProxy
 | 参数项 | 描述 |
 | -- | -- |
 | [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | 输入指针，指向当前被回调的[InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md)实例。用于标识触发回调的代理对象。 |
-| InputMethod_TextConfig \*config | 输出指针，表示指向[InputMethod_TextConfig](capi-inputmethod-inputmethod-textconfig.md)实例的指针。需要在函数实现中对其设置各配置属性（输入类型、回车键类型、光标信息等）以填充输入框配置。此指针仅在回调执行期间有效，回调返回后该内存将被释放，不可再访问。开发者必须在回调内部完成所有设置操作，不得在回调外部继续使用此指针。 |
+| [InputMethod_TextConfig](capi-inputmethod-inputmethod-textconfig.md) \*config | 输出指针，表示指向[InputMethod_TextConfig](capi-inputmethod-inputmethod-textconfig.md)实例的指针。需要在函数实现中对其设置各配置属性（输入类型、回车键类型、光标信息等）以填充输入框配置。此指针仅在回调执行期间有效，回调返回后该内存将被释放，不可再访问。开发者必须在回调内部完成所有设置操作，不得在回调外部继续使用此指针。 |
 
 ### OH_TextEditorProxy_InsertTextFunc()
 
@@ -333,7 +333,7 @@ typedef int32_t (*OH_TextEditorProxy_ReceivePrivateCommandFunc)(InputMethod_Text
 | 参数项 | 描述 |
 | -- | -- |
 | [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | 输入指针，指向当前被回调的TextEditorProxy实例。 |
-| [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) \*privateCommand[] | 输入指针，私有数据命令数组。此指针仅在回调执行期间有效，回调返回后该内存将被释放，不可再访问。开发者应在回调内部完成必要的数据拷贝或处理，不得在回调外部继续使用此指针。 |
+| InputMethod_PrivateCommand \*privateCommand[] | 输入指针，私有数据命令数组。此指针仅在回调执行期间有效，回调返回后该内存将被释放，不可再访问。开发者应在回调内部完成必要的数据拷贝或处理，不得在回调外部继续使用此指针。 |
 | size_t size | 输入参数，私有数据命令数组中的元素数量。取值范围：大于0且不超过5。 |
 
 **返回：**

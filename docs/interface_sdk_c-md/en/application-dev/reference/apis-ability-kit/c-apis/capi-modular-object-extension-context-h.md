@@ -77,7 +77,7 @@ Starts the self UIAbility.
 | Parameter | Description |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | Represents a pointer to a modular object extension ability context. |
-| const AbilityBase_Want *want | The arguments passed to start the self UIAbility.For details, see [AbilityBase_Want](capi-abilitybase-abilitybase-want.md). |
+| [const AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | The arguments passed to start the self UIAbility.For details, see [AbilityBase_Want](capi-abilitybase-abilitybase-want.md). |
 
 **Returns**:
 
@@ -104,7 +104,7 @@ Starts the self UIAbility with start options.
 | Parameter | Description |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | Represents a pointer to a modular object extension ability context. |
-| const AbilityBase_Want *want | The arguments passed to start the self UIAbility.For details, see [AbilityBase_Want](capi-abilitybase-abilitybase-want.md). |
+| [const AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | The arguments passed to start the self UIAbility.For details, see [AbilityBase_Want](capi-abilitybase-abilitybase-want.md). |
 | const AbilityRuntime_StartOptions *options | The start options passed to start the self UIAbility.For details, see {@link AbilityRuntime_StartOptions}. |
 
 **Returns**:
