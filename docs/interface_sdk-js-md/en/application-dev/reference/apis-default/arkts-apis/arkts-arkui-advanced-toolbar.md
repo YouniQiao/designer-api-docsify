@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ToolBarModifier](arkts-arkui-advanced-toolbar-toolbarmodifier-c.md) | Provides APIs for setting the height (**height**), background color (**backgroundColor**), left and right padding ( **padding**, which only takes effect when there are fewer than five items) of the toolbar, and whether to display the pressed state effect (**stateEffect**). |
+| [ToolBarModifier](arkts-arkui-advanced-toolbar-toolbarmodifier-c.md) | Provides APIs for setting the height (**height**), background color (**backgroundColor**), left and right padding (**padding**, which only takes effect when there are fewer than five items) of the toolbar, and whether to display the pressed state effect (**stateEffect**). |
 | [ToolBarOption](arkts-arkui-advanced-toolbar-toolbaroption-c.md) | Defines the content and attributes of a toolbar. |
 
 ### Structs

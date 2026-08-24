@@ -21,6 +21,8 @@ Defines DynamicLayout Component.
 
 **ArkTS mode:** ArkTS-Sta since version 24.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function DynamicLayout (    algorithm: LayoutAlgorithm,     content_: CustomBuilder,): DynamicLayoutAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function DynamicLayout (    algorithm: LayoutAlgorithm,     content_: CustomBuilder,): DynamicLayoutAttribute-End-->

@@ -1,8 +1,6 @@
 # Hyperlink properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
-
-The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** HyperlinkAttribute extends CommonMethod<HyperlinkAttribute>
 

@@ -1,8 +1,6 @@
 # CommunicationDeviceType
 
-表示用于通信的可用设备类型的枚举。
-
-@enum { int }
+表示用于通信的可用设备类型的枚举。@enum { int }
 
 **起始版本：** 23
 

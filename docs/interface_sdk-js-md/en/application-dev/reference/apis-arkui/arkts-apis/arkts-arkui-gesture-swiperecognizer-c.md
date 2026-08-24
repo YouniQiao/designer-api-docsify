@@ -1,8 +1,6 @@
 # SwipeRecognizer
 
-Defines the swipe gesture recognizer.
-
-@extends GestureRecognizer
+Defines the swipe gesture recognizer.@extends GestureRecognizer
 
 **Inheritance/Implementation:** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md)
 

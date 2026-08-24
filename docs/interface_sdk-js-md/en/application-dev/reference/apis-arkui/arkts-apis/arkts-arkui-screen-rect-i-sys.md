@@ -14,7 +14,6 @@ Describes the rectangle information.
 
 ```TypeScript
 import { screen } from '@kit.ArkUI';
-import { screenshot } from '@kit.ArkUI';
 ```
 
 ## height

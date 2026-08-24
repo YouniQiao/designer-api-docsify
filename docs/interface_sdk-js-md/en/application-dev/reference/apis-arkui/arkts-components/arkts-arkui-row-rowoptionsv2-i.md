@@ -1,8 +1,6 @@
 # RowOptionsV2
 
-Define options used to construct a row.
-
-@interface RowOptionsV2
+Define options used to construct a row.@interface RowOptionsV2
 
 **Since:** 23
 

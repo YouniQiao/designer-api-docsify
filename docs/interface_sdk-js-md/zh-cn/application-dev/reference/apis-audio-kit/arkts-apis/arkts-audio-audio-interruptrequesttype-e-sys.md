@@ -1,6 +1,6 @@
 # InterruptRequestType（系统接口）
 
-Enumerates the audio interrupt request type.
+枚举，音频中断请求类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Enumerates the audio interrupt request type.
 INTERRUPT_REQUEST_TYPE_DEFAULT = 0
 ```
 
-Default type to request audio interrupt.
+默认类型，可中断音频请求。
 
 **起始版本：** 23
 

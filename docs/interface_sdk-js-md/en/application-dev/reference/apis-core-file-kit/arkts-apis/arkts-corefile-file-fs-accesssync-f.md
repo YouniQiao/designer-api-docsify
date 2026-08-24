@@ -14,9 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function accessSync(path: string, mode?: AccessModeType): boolean
 ```
 
-Checks whether a file or directory exists or has the operation permission. This API returns the result synchronously.
-
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether a file or directory exists or has the operation permission. This API returns the result synchronously.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 9
 
@@ -97,9 +95,7 @@ try {
 declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean
 ```
 
-Checks whether a file or directory is stored locally or has the operation permission. This API returns the result synchronously.
-
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether a file or directory is stored locally or has the operation permission. This API returns the result synchronously.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 12
 

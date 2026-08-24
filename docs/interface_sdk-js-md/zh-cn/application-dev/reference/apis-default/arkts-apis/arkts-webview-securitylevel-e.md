@@ -1,8 +1,6 @@
 # SecurityLevel
 
-Defines the security level for the page.
-
-@enum {number}
+Defines the security level for the page.@enum {number}
 
 **起始版本：** 23
 

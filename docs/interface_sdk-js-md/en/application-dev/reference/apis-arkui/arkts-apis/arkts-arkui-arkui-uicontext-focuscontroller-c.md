@@ -2,8 +2,7 @@
 
 Provides capabilities to control focus, including features such as clearing, moving, and activating focus.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > In the following API examples, you must first use [getFocusController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getfocuscontroller) in
 > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
 
@@ -159,9 +158,7 @@ struct ClearFocusExample {
 isActive(): boolean
 ```
 
-Obtains the focus activation state of the UI instance.
-
-For details about the focus activation state, see [Basic Concepts](../../../ui/arkts-common-events-focus-event.md#basic-concepts).
+Obtains the focus activation state of the UI instance.For details about the focus activation state, see [Basic Concepts](../../../ui/arkts-common-events-focus-event.md#basic-concepts).
 
 **Since:** 20
 

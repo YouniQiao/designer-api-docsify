@@ -12,7 +12,7 @@ import { statistics } from '@kit.NetworkKit';
 function getIfaceRxBytes(nic: string, callback: AsyncCallback<long>): void
 ```
 
-Obtains the total downlink traffic of the specified NIC from the last startup to the time when this API is called ( in bytes). This API uses an asynchronous callback to return the result.
+Obtains the total downlink traffic of the specified NIC from the last startup to the time when this API is called (in bytes). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 

@@ -56,7 +56,7 @@ Domain information.
 gateway: number
 ```
 
-Default gateway, represented in decimal format, usually the IP address of the router. The address ranges from 0.0 .0.0 to 255.255.255.255.
+Default gateway, represented in decimal format, usually the IP address of the router. The address ranges from 0.0.0.0 to 255.255.255.255.
 
 **Type:** number
 

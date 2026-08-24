@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**装饰器类型：** @Observed
+
 <!--Device-unnamed-declare class SegmentButtonItemOptions--><!--Device-unnamed-declare class SegmentButtonItemOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -12,7 +14,6 @@
 
 ```TypeScript
 import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from '@kit.ArkUI';
-import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -45,11 +46,7 @@ constructor(options: SegmentButtonItemOptionsConstructorOptions)
 accessibilityDescription?: ResourceStr
 ```
 
-无障碍说明，用于为用户进一步说明当前组件，开发人员可为组件的该属性设置相对较详细的解释文本，帮助用户理解将要执行的操作。如帮助用户理解将要执行的操作可能导致什么后果，尤其是当这些后果无法从组件本身属性与无障碍文本中了解到时。若组件 既拥有文本属性又拥有无障碍说明属性，则组件被选中时，先播报组件的文本属性，再播报无障碍说明属性的内容。
-
-默认值：空字符串。
-
-值为undefined时，按默认值处理。
+无障碍说明，用于为用户进一步说明当前组件，开发人员可为组件的该属性设置相对较详细的解释文本，帮助用户理解将要执行的操作。如帮助用户理解将要执行的操作可能导致什么后果，尤其是当这些后果无法从组件本身属性与无障碍文本中了解到时。若组件 既拥有文本属性又拥有无障碍说明属性，则组件被选中时，先播报组件的文本属性，再播报无障碍说明属性的内容。默认值：空字符串。值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 
@@ -71,21 +68,7 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-无障碍重要性，控制当前组件是否可被无障碍辅助服务识别。
-
-支持的值为：
-
-"auto"：当前组件可被无障碍辅助服务所识别。
-
-"yes"：当前组件可被无障碍辅助服务所识别。
-
-"no"：当前组件不可被无障碍辅助服务所识别。
-
-"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。
-
-默认值："auto"
-
-值为undefined时，按默认值处理。
+无障碍重要性，控制当前组件是否可被无障碍辅助服务识别。支持的值为："auto"：当前组件可被无障碍辅助服务所识别。"yes"：当前组件可被无障碍辅助服务所识别。"no"：当前组件不可被无障碍辅助服务所识别。"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。默认值："auto"值为undefined时，按默认值处理。
 
 **类型：** string
 
@@ -107,12 +90,7 @@ accessibilityLevel?: string
 icon?: ResourceStr
 ```
 
-未选中态的按钮图标。
-
-默认值：不显示未选中态的按钮图标。
-
-值为undefined时，按默认值处理。
-
+未选中态的按钮图标。默认值：不显示未选中态的按钮图标。值为undefined时，按默认值处理。  
 **说明：** icon和selectedIcon需同时设置，单独设置无效。
 
 **类型：** ResourceStr
@@ -133,11 +111,7 @@ icon?: ResourceStr
 iconAccessibilityText?: ResourceStr
 ```
 
-未选中态按钮图标的无障碍文本。
-
-默认值：空字符串。
-
-值为undefined时，按默认值处理。
+未选中态按钮图标的无障碍文本。默认值：空字符串。值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 
@@ -159,12 +133,7 @@ iconAccessibilityText?: ResourceStr
 selectedIcon?: ResourceStr
 ```
 
-选中态的按钮图标。
-
-默认值：不显示选中态按钮图标。
-
-值为undefined时，按默认值处理。
-
+选中态的按钮图标。默认值：不显示选中态按钮图标。值为undefined时，按默认值处理。  
 **说明：** icon和selectedIcon需同时设置，单独设置无效。
 
 **类型：** ResourceStr
@@ -185,11 +154,7 @@ selectedIcon?: ResourceStr
 selectedIconAccessibilityText?: ResourceStr
 ```
 
-选中态按钮图标的无障碍文本。
-
-默认值：空字符串。
-
-值为undefined时，按默认值处理。
+选中态按钮图标的无障碍文本。默认值：空字符串。值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 
@@ -211,11 +176,7 @@ selectedIconAccessibilityText?: ResourceStr
 text?: ResourceStr
 ```
 
-按钮文本。
-
-默认值：空字符串。
-
-值为undefined时，按默认值处理。
+按钮文本。默认值：空字符串。值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 

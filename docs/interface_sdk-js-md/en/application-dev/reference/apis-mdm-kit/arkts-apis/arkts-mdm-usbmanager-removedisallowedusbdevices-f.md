@@ -12,10 +12,7 @@ import { usbManager } from '@kit.MDMKit';
 function removeDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void
 ```
 
-Removes the disallowed USB device types.
-
-Use cases:
-
+Removes the disallowed USB device types.Use cases:  
 - Lifts the restriction on certain USB device types in enterprise security management scenarios. - Enable device administrators to dynamically adjust the list of disallowed USB device types. - Remove USB device types from the blocklist when they no longer pose a security risk.
 
 **Since:** 14

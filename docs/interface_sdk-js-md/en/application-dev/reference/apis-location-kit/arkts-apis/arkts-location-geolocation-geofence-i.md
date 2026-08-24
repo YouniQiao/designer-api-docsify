@@ -1,8 +1,6 @@
 # Geofence
 
-Circular fence information.
-
-@interface Geofence
+Circular fence information.@interface Geofence
 
 **Since:** 8
 

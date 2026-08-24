@@ -1,8 +1,6 @@
 # UnionEffectContainerOptions (System API)
 
-Defines the constructor options for UnionEffectContainer.
-
-@interface UnionEffectContainerOptions
+Defines the constructor options for UnionEffectContainer.@interface UnionEffectContainerOptions
 
 **Since:** 23
 

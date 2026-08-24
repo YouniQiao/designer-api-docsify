@@ -12,7 +12,7 @@ import { drm } from '@kit.DrmKit';
 function isMediaKeySystemSupported(name: string, mimeType: string, level: ContentProtectionLevel): boolean
 ```
 
-Judge whether a system that specifies name, mimetype and content protection level is supported.
+判断设备是否支持指定的DRM解决方案、媒体类型及内容保护级别。
 
 **起始版本：** 23
 
@@ -26,15 +26,15 @@ Judge whether a system that specifies name, mimetype and content protection leve
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | Used to point a Digital Right Management solution. |
-| mimeType | string | 是 | Used to specifies the media type. |
-| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | 是 | Used to specifies the ContentProtectionLevel. |
+| name | string | 是 | DRM解决方案名称。可通过[getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md)接口获取设备支持的DRM解决方案名称，如"com.clearplay.drm"。 |
+| mimeType | string | 是 | 媒体类型，支持的媒体类型取决于DRM解决方案。 |
+| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | 是 | 内容保护级别，用于指定DRM内容的安全保护程度，不同级别对应不同的解密能力和安全要求。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether these conditions will be met. |
+| boolean | 返回是否支持指定的DRM解决方案、媒体类型以及内容保护级别。当name、mimeType和level都支持时返回true，否则返回false。 |
 
 **错误码：**
 
@@ -74,7 +74,7 @@ console.info("isMediaKeySystemSupported: ", supported);
 function isMediaKeySystemSupported(name: string, mimeType: string): boolean
 ```
 
-Judge whether a system that specifies name, mimetype is supported.
+判断设备是否支持指定的DRM解决方案及媒体类型。
 
 **起始版本：** 23
 
@@ -88,14 +88,14 @@ Judge whether a system that specifies name, mimetype is supported.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | Used to point a Digital Right Management solution. |
-| mimeType | string | 是 | Used to specifies the media type. |
+| name | string | 是 | DRM解决方案名称。从API版本12开始，可通过[getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md)接口获取设备支持的DRM解决方案名称，如"com.clearplay.drm"。 |
+| mimeType | string | 是 | 媒体类型，支持的媒体类型取决于DRM解决方案，如：video/avc、video/hevc。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether these conditions will be met. |
+| boolean | 返回是否支持指定的DRM解决方案及媒体类型。当name和mimeType都支持时返回true，否则返回false。 |
 
 **错误码：**
 
@@ -116,7 +116,7 @@ Judge whether a system that specifies name, mimetype is supported.
 function isMediaKeySystemSupported(name: string): boolean
 ```
 
-Judge whether a system that specifies name is supported.
+判断设备是否支持指定的DRM解决方案。
 
 **起始版本：** 23
 
@@ -130,13 +130,13 @@ Judge whether a system that specifies name is supported.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | Used to point a Digital Right Management solution. |
+| name | string | 是 | DRM解决方案名称，长度不超过4096字节。可通过[getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md)接口获取设备支持的DRM解决方案名称，如"com.clearplay.drm"。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether these conditions will be met. |
+| boolean | 返回是否支持指定的DRM解决方案。true表示支持，false表示不支持。 |
 
 **错误码：**
 

@@ -1,8 +1,6 @@
 # DepthColorRGB (System API)
 
-RGB color in depth space.
-
-@interface DepthColorRGB
+RGB color in depth space.@interface DepthColorRGB
 
 **Since:** 26.0.0
 

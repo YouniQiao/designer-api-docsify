@@ -1,8 +1,6 @@
 # ResponseType
 
-ResponseType for contextMenu
-
-@enum { number }
+ResponseType for contextMenu@enum { number }
 
 **Since:** 23
 

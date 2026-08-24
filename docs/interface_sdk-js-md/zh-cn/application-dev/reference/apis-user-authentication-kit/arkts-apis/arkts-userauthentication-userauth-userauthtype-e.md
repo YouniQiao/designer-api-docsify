@@ -62,8 +62,7 @@ FINGERPRINT = 4
 COMPANION_DEVICE = 64
 ```
 
-伴随设备认证。用户通过佩戴的伴随设备完成认证。伴随设备认证支持多种认证可信等级，详细划分原则可参考 [生物认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。
-
+伴随设备认证。用户通过佩戴的伴随设备完成认证。伴随设备认证支持多种认证可信等级，详细划分原则可参考 [生物认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。  
 **注意**：暂不支持与其他认证类型（PIN/FACE/FINGERPRINT）同时发起认证。
 
 **起始版本：** 26.0.0

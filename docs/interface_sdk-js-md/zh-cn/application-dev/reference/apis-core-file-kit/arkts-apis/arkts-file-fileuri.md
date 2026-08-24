@@ -1,8 +1,6 @@
 # @ohos.file.fileuri
 
-提供文件URI相关接口，可用于URI与应用沙箱路径之间的转换。
-
-@namespace fileUri
+提供文件URI相关接口，可用于URI与应用沙箱路径之间的转换。@namespace fileUri
 
 **起始版本：** 23
 
@@ -28,5 +26,5 @@ import { fileUri } from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri表示文件的URI，继承自uri.URI。 |
+| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri表示文件的URI，继承自uri.URI。@extends uri.URI |
 

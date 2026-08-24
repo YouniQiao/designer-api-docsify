@@ -109,8 +109,7 @@ setCurrentTime(value: number)
 
 Sets the video playback position.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To start playback from a specific position, disable autoplay, wait for video preparation to complete, and then
 > seek to the target position.
 

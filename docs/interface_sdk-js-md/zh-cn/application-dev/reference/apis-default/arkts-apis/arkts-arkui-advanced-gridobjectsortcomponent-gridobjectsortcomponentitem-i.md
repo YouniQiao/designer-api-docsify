@@ -21,12 +21,8 @@
 id: int | string
 ```
 
-数据id序号，不可重复。
-
-默认值：空字符串。
-
-**ArkTS-Dyn起始版本：** 11
-
+数据id序号，不可重复。默认值：空字符串。  
+**ArkTS-Dyn起始版本：** 11  
 **ArkTS-Sta起始版本：** 23
 
 **类型：** int \| string
@@ -67,10 +63,8 @@ order: int
 selected: boolean
 ```
 
-是否已经被添加，已添加：true，未添加：false。
-
-**ArkTS-Dyn起始版本：** 11
-
+是否已经被添加，已添加：true，未添加：false。  
+**ArkTS-Dyn起始版本：** 11  
 **ArkTS-Sta起始版本：** 23
 
 **类型：** boolean
@@ -111,10 +105,8 @@ GridObjectSortComponentType类型为IMAGE_TEXT时，需要传入Symbol图标资�
 text: ResourceStr
 ```
 
-显示文本信息。
-
-**ArkTS-Dyn起始版本：** 11
-
+显示文本信息。  
+**ArkTS-Dyn起始版本：** 11  
 **ArkTS-Sta起始版本：** 23
 
 **类型：** ResourceStr

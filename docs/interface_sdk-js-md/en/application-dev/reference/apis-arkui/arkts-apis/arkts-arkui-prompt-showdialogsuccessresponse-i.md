@@ -1,8 +1,6 @@
 # ShowDialogSuccessResponse
 
-Defines the response of ShowDialog.
-
-@interface ShowDialogSuccessResponse
+Defines the response of ShowDialog.@interface ShowDialogSuccessResponse
 
 **Since:** 8
 
@@ -18,7 +16,6 @@ Defines the response of ShowDialog.
 
 ```TypeScript
 import { prompt } from '@kit.ArkUI';
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## index

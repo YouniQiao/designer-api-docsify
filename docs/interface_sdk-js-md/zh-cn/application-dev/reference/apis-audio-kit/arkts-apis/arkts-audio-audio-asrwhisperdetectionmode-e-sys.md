@@ -1,6 +1,6 @@
 # AsrWhisperDetectionMode（系统接口）
 
-ASR whisper detection mode.
+枚举，自动语音识别（ASR）的耳语检测模式。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ ASR whisper detection mode.
 BYPASS = 0
 ```
 
-No operation.
+不启用检测模型。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ No operation.
 STANDARD = 1
 ```
 
-Use standard whisper detection model.
+耳语检测模型。
 
 **起始版本：** 23
 

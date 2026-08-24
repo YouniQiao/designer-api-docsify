@@ -1,8 +1,6 @@
 # RenderStrategy
 
-Enum for RenderStrategy. Define Graphics Rendering Strategy.
-
-@enum { number }
+Enum for RenderStrategy. Define Graphics Rendering Strategy.@enum { number }
 
 **Since:** 23
 

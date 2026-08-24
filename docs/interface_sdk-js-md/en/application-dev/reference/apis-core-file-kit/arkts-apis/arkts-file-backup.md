@@ -1,8 +1,6 @@
 # @ohos.file.backup
 
-Module providing backup and restore capabilities.
-
-@namespace backup
+Module providing backup and restore capabilities.@namespace backup
 
 **Since:** 23
 
@@ -49,22 +47,22 @@ import { backup } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [File](arkts-corefile-backup-file-i.md) | Corresponds to a file, including its metadata and data and the file's manifest data. Files are useful as IPC and backup services. |
-| [IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md) | Corresponds to an incremental application, including its last incremental time and incremental list. |
+| [File](arkts-corefile-backup-file-i.md) | Corresponds to a file, including its metadata and data and the file's manifest data. Files are useful as IPC and backup services.@extends FileMeta, FileData, FileManifestData @interface File |
+| [IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md) | Corresponds to an incremental application, including its last incremental time and incremental list.@extends IncrementalBackupTime, FileManifestData, BackupParams, BackupPriority @interface IncrementalBackupData |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [BackupParams](arkts-corefile-backup-backupparams-i-sys.md) | Provides configuration parameters for backup and restore. |
-| [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md) | Control backup and restore priority sequence |
-| [FileData](arkts-corefile-backup-filedata-i-sys.md) | Corresponding to a file's data. Filedata is useful when doing IPC with the backup service. |
-| [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md) | Manifest file information in incremental data. FileManifestData is useful when doing IPC with the backup service. |
-| [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service. |
-| [FileSystemRequestConfig](arkts-corefile-backup-filesystemrequestconfig-i-sys.md) | Parameters required to perform garbage collection (GC). |
-| [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | General callbacks for both backup and restore procedure. The backup service will notify the client by these callbacks. |
-| [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md) | Save the time information of the incremental backup. IncrementalBackupTime is useful when doing IPC with the backup service. |
+| [BackupParams](arkts-corefile-backup-backupparams-i-sys.md) | Provides configuration parameters for backup and restore.@interface BackupParams |
+| [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md) | Control backup and restore priority sequence@interface BackupPriority |
+| [FileData](arkts-corefile-backup-filedata-i-sys.md) | Corresponding to a file's data. Filedata is useful when doing IPC with the backup service.@interface FileData |
+| [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md) | Manifest file information in incremental data. FileManifestData is useful when doing IPC with the backup service.@interface FileManifestData |
+| [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service.@interface FileMeta |
+| [FileSystemRequestConfig](arkts-corefile-backup-filesystemrequestconfig-i-sys.md) | Parameters required to perform garbage collection (GC).@interface FileSystemRequestConfig |
+| [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | General callbacks for both backup and restore procedure. The backup service will notify the client by these callbacks.@interface GeneralCallbacks |
+| [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md) | Save the time information of the incremental backup. IncrementalBackupTime is useful when doing IPC with the backup service.@interface IncrementalBackupTime |
 | [PathInfo](arkts-corefile-backup-pathinfo-i-sys.md) | Path information for file migration. |
 <!--DelEnd-->
 

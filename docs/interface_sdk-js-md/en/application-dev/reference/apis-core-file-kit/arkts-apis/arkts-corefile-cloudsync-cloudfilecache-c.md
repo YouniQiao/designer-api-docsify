@@ -12,7 +12,6 @@ Provides APIs for the file manager application to download files from the Drive 
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## cleanAllFileCache
@@ -673,9 +672,7 @@ See [start](#start)
 startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>
 ```
 
-Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result.
-
-Different batch download tasks can be distinguished by the task ID returned.
+Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result.Different batch download tasks can be distinguished by the task ID returned.
 
 **Since:** 23
 
@@ -735,9 +732,7 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 stop(uri: string, needClean?: boolean): Promise<void>
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
-
-When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
+Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
 
 **Since:** 23
 
@@ -887,9 +882,7 @@ download.stop(uri, (err: BusinessError) => {
 stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.
-
-When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
+Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
 
 **Since:** 23
 
@@ -923,9 +916,7 @@ See [stop](#stop)
 stopBatch(downloadId: long, needClean?: boolean): Promise<void>
 ```
 
-Stops the batch download task enabled by [startBatch](#startbatch) of a file from the Drive Kit. This API uses a promise to return the result.
-
-When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
+Stops the batch download task enabled by [startBatch](#startbatch) of a file from the Drive Kit. This API uses a promise to return the result.When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
 
 **Since:** 23
 

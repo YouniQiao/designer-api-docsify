@@ -8,5 +8,5 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value: T | Pr
 
 <!--Device-unnamed-declare type PromiseConstructorLike = new <T>(executor: (resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void) => PromiseLike<T>--><!--Device-unnamed-declare type PromiseConstructorLike = new <T>(executor: (resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void) => PromiseLike<T>-End-->
 
-**Property type:** new&lt;T&gt;(executor: (resolve: (value: T | [PromiseLike](arkts-lib-es5-promiselike-i.md)&lt;T&gt;) =&gt; void, reject: (reason?: any) =&gt; void) =&gt; void) =&gt; PromiseLike&lt;T&gt;
+**Property type:** new&lt;T&gt;(executor: (resolve: (value: T | PromiseLike&lt;T&gt;) =&gt; void, reject: (reason?: any) =&gt; void) =&gt; void) =&gt; PromiseLike&lt;T&gt;
 

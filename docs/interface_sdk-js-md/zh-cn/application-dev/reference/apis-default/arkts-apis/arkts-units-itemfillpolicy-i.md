@@ -1,8 +1,6 @@
 # ItemFillPolicy
 
-定义一个适用于WaterFlow、Grid、 List、Swiper和 [LazyVWaterFlowLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazyvwaterflowlayout.md)组件的响应式布局策略。 LazyVWaterFlowLayout组件从API版本26.0.0开始支持。
-
-@interface ItemFillPolicy
+定义一个适用于WaterFlow、Grid、 List、Swiper和 [LazyVWaterFlowLayout](arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayout-f.md)组件的响应式布局策略。 LazyVWaterFlowLayout组件从API版本26.0.0开始支持。@interface ItemFillPolicy
 
 **起始版本：** 23
 

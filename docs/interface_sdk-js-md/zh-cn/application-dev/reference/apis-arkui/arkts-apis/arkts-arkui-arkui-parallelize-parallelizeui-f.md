@@ -21,6 +21,8 @@ export declare function ParallelizeUI(
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Builder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@Builderexport declare function ParallelizeUI(  options: ParallelOption | undefined,  content_: CustomBuilder,): void--><!--Device-unnamed-@Builderexport declare function ParallelizeUI(  options: ParallelOption | undefined,  content_: CustomBuilder,): void-End-->
@@ -51,6 +53,8 @@ export declare function ParallelizeUI<T>(
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +88,8 @@ export declare function ParallelizeUI<V, T>(
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

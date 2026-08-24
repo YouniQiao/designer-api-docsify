@@ -1,8 +1,6 @@
 # WebDownloadDelegate
 
-WebDownloadDelegate is a delegate class in the ArkWeb framework used to listen for and handle download task events of the Web component. When a web page in the Web component triggers a file download (for example, when the user taps a download link or the **startDownload** method is called), the download task state changes are notified to the app through the callback APIs of this class. Developers register a **WebDownloadDelegate** instance with the Web component through **setDownloadDelegate** to take over the complete lifecycle management of the download process.
-
-WebDownloadDelegate defines four download lifecycle callbacks: [onBeforeDownload](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#onbeforedownload) is invoked before the download starts, and the app must call [WebDownloadItem.start](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#start) in this callback and specify a download path; otherwise, the download remains in the PENDING state. [onDownloadUpdated](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadupdated) is invoked during the download process, providing updated information such as the download progress (percentage) and the number of bytes received. [onDownloadFinish](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadfinish) is invoked when the download is complete. [onDownloadFailed](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadfailed) is invoked when the download fails, and the failed task can be saved through [WebDownloadItem.serialize](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#serialize) for later recovery.
+WebDownloadDelegate is a delegate class in the ArkWeb framework used to listen for and handle download task events of the Web component. When a web page in the Web component triggers a file download (for example, when the user taps a download link or the **startDownload** method is called), the download task state changes are notified to the app through the callback APIs of this class. Developers register a **WebDownloadDelegate** instance with the Web component through **setDownloadDelegate** to take over the complete lifecycle management of the download process.WebDownloadDelegate defines four download lifecycle callbacks: [onBeforeDownload](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#onbeforedownload) is invoked before the download starts, and the app must call [WebDownloadItem.start](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#start) in this callback and specify a download path; otherwise, the download remains in the PENDING state. [onDownloadUpdated](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadupdated) is invoked during the download process, providing updated information such as the download progress (percentage) and the number of bytes received. [onDownloadFinish](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadfinish) is invoked when the download is complete. [onDownloadFailed](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadfailed) is invoked when the download fails, and the failed task can be saved through [WebDownloadItem.serialize](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#serialize) for later recovery.
 
 **Since:** 11
 
@@ -24,8 +22,7 @@ onBeforeDownload(callback: Callback<WebDownloadItem>): void
 
 Invoked to notify the app before the download starts. The app must call **WebDownloadItem.start("xxx")** in this API and provide a download path. Otherwise, the download remains in the PENDING state.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For a download task in the PENDING state, the file is first saved to a temporary directory. After
 > [WebDownloadItem.start](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#start) is called and the target path is specified, the
 > temporary file is renamed to the target file name, and the remaining part of the download is saved directly to
@@ -362,7 +359,7 @@ struct WebComponent {
 onDownloadUpdated(callback: Callback<WebDownloadItem>): void
 ```
 
-Callback invoked during the download process. The app can obtain information such as the download progress ( percentage) and the number of bytes received through this callback to monitor or update the download status.
+Callback invoked during the download process. The app can obtain information such as the download progress (percentage) and the number of bytes received through this callback to monitor or update the download status.
 
 **Since:** 11
 

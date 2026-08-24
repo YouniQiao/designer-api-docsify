@@ -23,8 +23,7 @@ static show(value: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | A
 
 Shows an alert dialog box.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Since API version 10, you can use the
 > [showAlertDialog](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#showalertdialog) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md), which ensures that the alert dialog box is shown in the intended UI

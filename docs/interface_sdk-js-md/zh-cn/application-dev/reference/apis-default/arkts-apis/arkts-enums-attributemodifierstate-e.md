@@ -1,8 +1,6 @@
 # AttributeModifierState
 
-Defines the state types that can be monitored by AttributeModifiers.
-
-@enum { number }
+Defines the state types that can be monitored by AttributeModifiers.@enum { number }
 
 **起始版本：** 23
 

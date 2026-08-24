@@ -37,8 +37,7 @@ Icon of the drop-down menu option.
 symbolIcon?: SymbolGlyphModifier
 ```
 
-Symbol icon of drop-down menu option.
-
+Symbol icon of drop-down menu option.  
 **symbolIcon** takes precedence over **icon**.
 
 **Type:** SymbolGlyphModifier

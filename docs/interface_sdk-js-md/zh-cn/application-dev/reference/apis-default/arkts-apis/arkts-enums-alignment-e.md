@@ -1,8 +1,6 @@
 # Alignment
 
-Alignment enumeration description.
-
-@enum { number }
+Alignment enumeration description.@enum { number }
 
 **起始版本：** 23
 

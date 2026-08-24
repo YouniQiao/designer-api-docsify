@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
-@brief Sends a private command to the system-default input method application.
+Sends a private command to the system-default input method application.
 
 **Since:** 26.0.0
 

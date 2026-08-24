@@ -14,8 +14,7 @@ function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Prom
 
 Sets extended attributes of the network specified by **netHandle** to indicate its security level. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, this API is available only for PCs.
 
 **Since:** 20

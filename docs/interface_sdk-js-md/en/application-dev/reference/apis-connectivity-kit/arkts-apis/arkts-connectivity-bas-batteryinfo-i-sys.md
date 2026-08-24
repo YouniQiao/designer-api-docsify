@@ -13,7 +13,6 @@ Describe the contents of the battery information.
 ## Modules to Import
 
 ```TypeScript
-import { baseProfile } from '@kit.ConnectivityKit';
 import { bas } from '@kit.ConnectivityKit';
 ```
 

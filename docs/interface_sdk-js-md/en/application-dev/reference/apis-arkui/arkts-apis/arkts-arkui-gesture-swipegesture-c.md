@@ -1,8 +1,6 @@
 # SwipeGesture
 
-Defines SwipeGesture.
-
-@extends Gesture
+Defines SwipeGesture.@extends Gesture
 
 **Inheritance/Implementation:** SwipeGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 

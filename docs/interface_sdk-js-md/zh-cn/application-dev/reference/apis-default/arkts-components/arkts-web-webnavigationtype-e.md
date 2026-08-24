@@ -1,8 +1,6 @@
 # WebNavigationType
 
-Enum type supplied to [navigationType](arkts-web-loadcommitteddetails-i.md#navigationtype) for the navigation's type.
-
-@enum { number }
+Enum type supplied to [navigationType](arkts-web-loadcommitteddetails-i.md#navigationtype) for the navigation's type.@enum { number }
 
 **起始版本：** 23
 
@@ -50,7 +48,10 @@ A new entry was created due to a navigation happened on the main frame. Contains
 MAIN_FRAME_EXISTING_ENTRY = 2
 ```
 
-Navigate to an existing entry due to a navigation on the main frame. e.g. 1. History navigations. 2. Reloads (contains loading the same url). 3. Same-document navigations(history.replaceState(), location.replace()).
+Navigate to an existing entry due to a navigation on the main frame. e.g.
+1. History navigations.
+2. Reloads (contains loading the same url).
+3. Same-document navigations(history.replaceState(), location.replace()).
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # RouteType
 
-Declare the jump method.
-
-@enum { number }
+Declare the jump method.@enum { number }
 
 **Since:** 23
 

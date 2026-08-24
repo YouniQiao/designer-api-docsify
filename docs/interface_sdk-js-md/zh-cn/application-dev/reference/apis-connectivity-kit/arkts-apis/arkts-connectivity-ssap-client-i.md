@@ -1,10 +1,6 @@
 # Client
 
-SSAP客户端类，提供了和服务端进行连接和数据传输等操作方法。
-
-使用该类的方法前，需通过[ssap.createClient](arkts-connectivity-ssap-createclient-f.md)方法构造该类的实例。
-
-同一应用针对同一远端设备创建一个[Client](#client)实例即可，重复创建会增加不必要的资源开销。
+SSAP客户端类，提供了和服务端进行连接和数据传输等操作方法。使用该类的方法前，需通过[ssap.createClient](arkts-connectivity-ssap-createclient-f.md)方法构造该类的实例。同一应用针对同一远端设备创建一个[Client](#client)实例即可，重复创建会增加不必要的资源开销。
 
 **起始版本：** 26.0.0
 
@@ -212,9 +208,7 @@ offPropertyChange(callback?: Callback<Property>): void
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-订阅连接状态变化事件。使用callback异步回调。
-
-应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
+订阅连接状态变化事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -236,9 +230,7 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 onMtuChange(callback: Callback<int>): void
 ```
 
-订阅MTU变化事件。使用callback异步回调。
-
-应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
+订阅MTU变化事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -260,9 +252,7 @@ onMtuChange(callback: Callback<int>): void
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-订阅属性变化事件。使用callback异步回调。
-
-应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
+订阅属性变化事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 

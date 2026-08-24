@@ -4,6 +4,8 @@ Defines toolBarV2 symbolGlyph.
 
 **起始版本：** 18
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export class ToolBarV2SymbolGlyph--><!--Device-unnamed-export class ToolBarV2SymbolGlyph-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ The constructor used to create a ToolBarV2SymbolGlyph object.
 ## activated
 
 ```TypeScript
-@Trace
-  activated?: SymbolGlyphModifier
+activated?: SymbolGlyphModifier
 ```
 
 Modifier of toolbarV2's activated symbol.
@@ -50,6 +51,8 @@ Modifier of toolbarV2's activated symbol.
 **类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,8 +65,7 @@ Modifier of toolbarV2's activated symbol.
 ## normal
 
 ```TypeScript
-@Trace
-  normal: SymbolGlyphModifier
+normal: SymbolGlyphModifier
 ```
 
 Modifier of toolbarV2's normal symbol.
@@ -71,6 +73,8 @@ Modifier of toolbarV2's normal symbol.
 **类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -21,6 +21,8 @@ Defines ArcListItem Component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 <!--Device-unnamed-@ComponentBuilderexport declare function ArcListItem(    content_?: CustomBuilder,): ArcListItemAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ArcListItem(    content_?: CustomBuilder,): ArcListItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -53,6 +55,8 @@ Defines ArcListItem Component.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

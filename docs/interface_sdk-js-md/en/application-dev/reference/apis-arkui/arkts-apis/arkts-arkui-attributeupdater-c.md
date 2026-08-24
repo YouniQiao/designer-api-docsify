@@ -1,6 +1,6 @@
 # AttributeUpdater
 
-*AttributeUpdater** directly set attributes to a component to trigger UI re-renders, without marking them as state variables.
+**AttributeUpdater** directly set attributes to a component to trigger UI re-renders, without marking them as state variables.
 
 **Inheritance/Implementation:** AttributeUpdater implements AttributeModifier<T>
 
@@ -190,7 +190,7 @@ struct updaterDemo4 {
 updateConstructorParams: C
 ```
 
-*C** indicates the constructor type of the component, for example, **TextInterface** of the **Text** component and **ImageInterface** of the **Image** component. The type is used to change the constructor input parameters of the component.
+**C** indicates the constructor type of the component, for example, **TextInterface** of the **Text** component and **ImageInterface** of the **Image** component. The type is used to change the constructor input parameters of the component.
 
 **Type:** C
 

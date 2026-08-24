@@ -12,9 +12,7 @@ import { asset } from '@kit.AssetStoreKit';
 function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>
 ```
 
-Removes assets in batches based on an alias list.
-
-Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) can be removed in batches.
+Removes assets in batches based on an alias list.Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) can be removed in batches.
 
 **Since:** 26.0.0
 

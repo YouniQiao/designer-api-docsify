@@ -6,6 +6,8 @@ The class for PickerController
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Observed
+
 <!--Device-unnamed-export declare class PickerController--><!--Device-unnamed-export declare class PickerController-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

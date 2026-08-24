@@ -2,8 +2,7 @@
 
 The **socket** module implements data transfer over TCP, UDP, Web, and TLS socket connections.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You are advised to call the APIs of this module in the worker thread or taskpool to perform network-related
 > operations. Otherwise, the UI thread may be suspended.
 

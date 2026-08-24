@@ -2,8 +2,7 @@
 
 LocalSocketConnection连接，即LocalSocket客户端与服务端的会话连接。在调用LocalSocketConnection的方法前，需要先获取LocalSocketConnection对象。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 客户端与服务端成功建立连接后，才能通过返回的LocalSocketConnection对象调用相应的接口。
 
 **起始版本：** 11
@@ -631,12 +630,9 @@ getSocketFd(): Promise<int>
 
 获取LocalSocketConnection连接的文件描述符。使用Promise异步回调。
 
-> **说明：**
-> 
-> - 成功建立连接后，才可调用此方法。
-> 
-> - 连接断开、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
-> 
+> **说明：**&gt;
+> - 成功建立连接后，才可调用此方法。&gt;
+> - 连接断开、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。&gt;
 > - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-localsocket-i.md#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 23
@@ -1249,8 +1245,7 @@ send(options: LocalSendOptions): Promise<void>
 
 通过LocalSocketConnection连接对象发送数据。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 服务端与客户端建立连接后，服务端通过connect事件回调得到LocalSocketConnection连接对象后，才可使用连接对象调用此方法。
 
 **起始版本：** 11

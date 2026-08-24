@@ -2,13 +2,14 @@
 
 DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second).
 
-> **Description:**
-> 
+> **Description:**&gt;
 > - This component interface can only be used in Stage model.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct DatePickerComponent--><!--Device-unnamed-export declare struct DatePickerComponent-End-->
 
@@ -22,8 +23,7 @@ DatePickerComponent component is used to select date (year, month, day) and time
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -31,6 +31,8 @@ The method to build component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,8 +43,7 @@ The method to build component.
 ## options
 
 ```TypeScript
-@PropRef
-  options: DatePickerComponentOptions
+options: DatePickerComponentOptions
 ```
 
 Defines options for the date time picker component.
@@ -52,6 +53,8 @@ Defines options for the date time picker component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

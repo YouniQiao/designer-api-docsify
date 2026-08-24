@@ -482,9 +482,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 context: FormExtensionContext
 ```
 
-Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
-
-This API can be used in atomic services since API version 11.
+Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).This API can be used in atomic services since API version 11.
 
 **Type:** [FormExtensionContext](arkts-form-formextensioncontext-c-sys.md)
 
@@ -504,9 +502,7 @@ This API can be used in atomic services since API version 11.
 onAcquireFormState?: OnAcquireFormStateFn
 ```
 
-Called to return a FormState object.
-
-<p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p>
+Called to return a FormState object.<p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p>
 
 **Type:** [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md)
 

@@ -1,8 +1,6 @@
 # BarrierDirection
 
-Specifies the direction value of Barrier.
-
-@enum { number }
+Specifies the direction value of Barrier.@enum { number }
 
 **Since:** 23
 

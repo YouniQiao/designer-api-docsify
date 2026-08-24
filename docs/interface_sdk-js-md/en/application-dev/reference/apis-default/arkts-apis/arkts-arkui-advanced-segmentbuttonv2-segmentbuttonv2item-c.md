@@ -6,6 +6,8 @@ Defines segmented button item.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class SegmentButtonV2Item--><!--Device-unnamed-export declare class SegmentButtonV2Item-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,10 +43,6 @@ The constructor of SegmentedButtonItem
 
 ## accessibilityDescription
 
-```TypeScript
-@Trace accessibilityDescription?: ResourceStr
-```
-
 Sets the accessibility description of the segmented button item.
 
 **Type:** ResourceStr
@@ -52,6 +50,8 @@ Sets the accessibility description of the segmented button item.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,10 +61,6 @@ Sets the accessibility description of the segmented button item.
 
 ## accessibilityLevel
 
-```TypeScript
-@Trace accessibilityLevel?: string
-```
-
 Sets the accessibility level of the segmented button item.
 
 **Type:** string
@@ -72,6 +68,8 @@ Sets the accessibility level of the segmented button item.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,10 +79,6 @@ Sets the accessibility level of the segmented button item.
 
 ## accessibilityText
 
-```TypeScript
-@Trace accessibilityText?: ResourceStr
-```
-
 Sets the accessibility text of the segmented button item.
 
 **Type:** ResourceStr
@@ -92,6 +86,8 @@ Sets the accessibility text of the segmented button item.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,10 +97,6 @@ Sets the accessibility text of the segmented button item.
 
 ## enabled
 
-```TypeScript
-@Trace enabled: boolean
-```
-
 Sets whether segmented button item is enabled?
 
 **Type:** boolean
@@ -112,6 +104,8 @@ Sets whether segmented button item is enabled?
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,10 +115,6 @@ Sets whether segmented button item is enabled?
 
 ## icon
 
-```TypeScript
-@Trace icon?: ResourceStr
-```
-
 Sets the image icon of the segmented button item. This field will be useless if the symbol field is sets.
 
 **Type:** ResourceStr
@@ -132,6 +122,8 @@ Sets the image icon of the segmented button item. This field will be useless if 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,10 +133,6 @@ Sets the image icon of the segmented button item. This field will be useless if 
 
 ## iconModifier
 
-```TypeScript
-@Trace iconModifier?: ImageModifier
-```
-
 Sets modifier for the image icon of the segmented button item.
 
 **Type:** ImageModifier
@@ -152,6 +140,8 @@ Sets modifier for the image icon of the segmented button item.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,10 +151,6 @@ Sets modifier for the image icon of the segmented button item.
 
 ## symbol
 
-```TypeScript
-@Trace symbol?: Resource
-```
-
 Sets the symbol icon of the segmented button item.
 
 **Type:** Resource
@@ -172,6 +158,8 @@ Sets the symbol icon of the segmented button item.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,10 +169,6 @@ Sets the symbol icon of the segmented button item.
 
 ## symbolModifier
 
-```TypeScript
-@Trace symbolModifier?: SymbolGlyphModifier
-```
-
 Sets modifier for the symbol icon of the segmented button item.
 
 **Type:** SymbolGlyphModifier
@@ -192,6 +176,8 @@ Sets modifier for the symbol icon of the segmented button item.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -201,10 +187,6 @@ Sets modifier for the symbol icon of the segmented button item.
 
 ## text
 
-```TypeScript
-@Trace text?: ResourceStr
-```
-
 Sets the text of the segmented button item.
 
 **Type:** ResourceStr
@@ -212,6 +194,8 @@ Sets the text of the segmented button item.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -221,10 +205,6 @@ Sets the text of the segmented button item.
 
 ## textModifier
 
-```TypeScript
-@Trace textModifier?: TextModifier
-```
-
 Sets modifier for the text of the segmented button item.
 
 **Type:** [TextModifier](../../apis-arkui/arkts-apis/arkts-arkui-textmodifier-c.md)
@@ -232,6 +212,8 @@ Sets modifier for the text of the segmented button item.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,6 @@
 # BorderRadiuses
 
-type BorderRadiuses = { topLeft: Length; topRight: Length; bottomLeft: Length; bottomRight: Length; }
-
-圆角类型，用于描述组件边框圆角半径。
-
-引用该对象时，至少传入一个参数。
-
-@interface BorderRadiuses
+type BorderRadiuses = { topLeft: Length; topRight: Length; bottomLeft: Length; bottomRight: Length; }圆角类型，用于描述组件边框圆角半径。引用该对象时，至少传入一个参数。@interface BorderRadiuses
 
 **起始版本：** 23
 

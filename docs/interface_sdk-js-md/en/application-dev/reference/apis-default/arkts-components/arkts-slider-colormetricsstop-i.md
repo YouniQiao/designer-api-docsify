@@ -18,7 +18,7 @@ color: ColorMetrics
 
 Color property.
 
-**Type:** [ColorMetrics](../arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
@@ -36,8 +36,7 @@ Color property.
 offset: Length
 ```
 
-the color offset. value range [0, 1].
-
+the color offset. value range [0, 1].  
 **NOTE：**If the value specified is less than 0, the value **0** is used. If the value specified is greater than 1, the value **1** is used.
 
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)

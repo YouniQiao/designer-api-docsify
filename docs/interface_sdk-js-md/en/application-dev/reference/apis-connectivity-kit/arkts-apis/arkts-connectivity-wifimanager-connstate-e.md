@@ -1,8 +1,6 @@
 # ConnState
 
-The state of Wi-Fi connection enumeration.
-
-@enum { int }
+The state of Wi-Fi connection enumeration.@enum { int }
 
 **Since:** 23
 

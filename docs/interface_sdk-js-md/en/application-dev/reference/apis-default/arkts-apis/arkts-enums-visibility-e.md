@@ -1,8 +1,6 @@
 # Visibility
 
-Controls the display or hide of the current component
-
-@enum { number }
+Controls the display or hide of the current component@enum { number }
 
 **Since:** 23
 

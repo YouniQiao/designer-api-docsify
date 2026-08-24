@@ -110,7 +110,7 @@ Checks whether a module can be removed. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the module can be removed, **true** is returned ; otherwise, **false** is returned. |
+| Promise&lt;boolean&gt; | Promise used to return the result. If the module can be removed, **true** is returned; otherwise, **false** is returned. |
 
 **Error codes:**
 

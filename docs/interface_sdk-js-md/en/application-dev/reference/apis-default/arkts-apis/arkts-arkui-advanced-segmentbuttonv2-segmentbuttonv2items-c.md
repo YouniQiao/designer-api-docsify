@@ -8,6 +8,8 @@ Defines the items of the segmented button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class SegmentButtonV2Items--><!--Device-unnamed-export declare class SegmentButtonV2Items-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

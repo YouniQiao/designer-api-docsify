@@ -516,7 +516,7 @@ static from<U>(arrayLike: ArrayLike<U> | Iterable<U>): SparseArray<U>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;U&gt; \| Iterable&lt;U&gt; | 是 | 待转换为稀疏数组的类数组对象或可迭代对象。 |
+| arrayLike | ArrayLike&lt;U&gt; \| Iterable&lt;U&gt; | 是 | 待转换为稀疏数组的类数组对象或可迭代对象。 |
 
 **返回值：**
 
@@ -546,7 +546,7 @@ static from<U>(arr: ArrayLike<U>): SparseArray<U>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arr | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;U&gt; | 是 | 待转换为稀疏数组的类数组对象或可迭代对象。 |
+| arr | ArrayLike&lt;U&gt; | 是 | 待转换为稀疏数组的类数组对象或可迭代对象。 |
 
 **返回值：**
 

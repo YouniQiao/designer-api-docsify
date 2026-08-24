@@ -1,11 +1,9 @@
 # AudioSessionManager
 
-音频会话管理。
-
-在使用AudioSessionManager的接口之前，需先通过[getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager)获取 AudioSessionManager实例。
+音频会话管理。 在使用AudioSessionManager的接口之前，需先通过 [getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager)获取AudioSessionManager实例。
 
 > **说明：**
-> 
+
 > - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 23
@@ -18,7 +16,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## activateAudioSession
@@ -158,15 +155,7 @@ audioSessionManager.deactivateAudioSession().then(() => {
 enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 ```
 
-启用混音播放下接收静音播放建议通知功能。
-
-通常，当使用混音模式时，如果其他应用同时播放音频，会和其他应用进行混音播放。但在某些场景下（如游戏或广播），应用自身会通过静音自身的音频以给用户提供更好的体验。
-
-如果启用此功能，当订阅音频会话状态更改事件后静音建议和取消静音建议提示将通过[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)回 调发送。收到静音建议表示其他应用程序开始播放音频，且播放的音频和本应用的音频不能混音。
-
-此功能仅支持已设置[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)并激活模式模式为CONCURRENCY_MIX_WITH_OTHERS的音频会话使用。并且仅在激活音频会话期 间生效一次，每次激活音频会话前都必须重新启用。
-
-详细说明请参考[启用混音播放下静音建议通知](../../../media/audio/audio-session-management.md#启用混音播放下静音建议通知)。
+启用混音播放下接收静音播放建议通知功能。 通常，当使用混音模式时，如果其他应用同时播放音频，会和其他应用进行混音播放。但在某些场景下（如游戏或广播），应用自身会通过静音自身的音频以给用户提供更好的体验。 如果启用此功能，当订阅音频会话状态更改事件后静音建议和取消静音建议提示将通过 [AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)回调发送。收到静音建议表示其他应 用程序开始播放音频，且播放的音频和本应用的音频不能混音。 此功能仅支持已设置[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)并激活模式模式为 CONCURRENCY_MIX_WITH_OTHERS的音频会话使用。并且仅在激活音频会话期间生效一次，每次激活音频会话前都必须重新启用。 详细说明请参考启用混音播放下静音建议通知文档。
 
 **起始版本：** 23
 
@@ -312,7 +301,7 @@ getDefaultOutputDevice(): DeviceType
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceType | 设备类型。 <br>仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| DeviceType | 设备类型。 仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **错误码：**
 
@@ -569,7 +558,7 @@ off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceC
 offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void
 ```
 
-取消订阅音频会话去激活事件。
+取消监听音频会话停用事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -584,7 +573,7 @@ offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | 否 | Callback invoked for the audio session deactivated event.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | 否 | 回调函数，返回音频会话停用原因。<br>**起始版本：** 23 |
 
 **错误码：**
 
@@ -614,7 +603,7 @@ audioSessionManager.offAudioSessionDeactivated(audioSessionDeactivatedCallback);
 offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void
 ```
 
-Unsubscribes to audio session deactivated event.
+取消监听音频会话状态变更事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -626,7 +615,7 @@ Unsubscribes to audio session deactivated event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | 否 | Callback invoked for the audio session state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | 否 | 回调函数，返回音频会话变更提示信息。 |
 
 **错误码：**
 
@@ -657,7 +646,7 @@ audioSessionManager.offAudioSessionStateChanged(audioSessionStateChangedCallback
 offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void
 ```
 
-Unsubscribes to available device change events.
+取消监听音频可选设备连接状态变化事件。
 
 **起始版本：** 24
 
@@ -669,7 +658,7 @@ Unsubscribes to available device change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数，返回可选设备更新详情。 |
 
 **错误码：**
 
@@ -713,7 +702,7 @@ audioSessionManager.offAvailableDeviceChange(availableDeviceChangeCallback);
 offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void
 ```
 
-Unsubscribes current input device change events.
+取消监听当前输入设备的变化事件。
 
 **起始版本：** 24
 
@@ -725,7 +714,7 @@ Unsubscribes current input device change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | 否 | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | 否 | 回调函数，用于返回当前输入设备变化的信息。 |
 
 **错误码：**
 
@@ -943,7 +932,7 @@ on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceCha
 onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void
 ```
 
-Listens for audio session deactivated event. When the audio session is deactivated, registered clients will receive the callback.
+监听音频会话停用事件（当音频会话停用时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -958,7 +947,7 @@ Listens for audio session deactivated event. When the audio session is deactivat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | 是 | Callback invoked for the audio session deactivated event.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | 是 | 回调函数，返回音频会话停用原因。<br>**起始版本：** 23 |
 
 **错误码：**
 
@@ -980,7 +969,7 @@ audioSessionManager.onAudioSessionDeactivated((audioSessionDeactivatedEvent: aud
 onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void
 ```
 
-Listens for audio session state change event. When the audio session state change, registered clients will receive the callback.
+监听音频会话状态变更事件（当音频会话焦点变更时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -992,7 +981,7 @@ Listens for audio session state change event. When the audio session state chang
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | 是 | Callback invoked for the audio session state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | 是 | 回调函数，返回音频会话变更提示信息。 |
 
 **错误码：**
 
@@ -1016,7 +1005,7 @@ audioSessionManager.onAudioSessionStateChanged((audioSessionStateChangedEvent: a
 onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
 ```
 
-Subscribes to available device change events. When a device is connected/disconnected, registered clients will receive the callback.
+监听音频可选设备连接状态变化事件（当音频可选设备连接状态发生变化时触发）。
 
 **起始版本：** 24
 
@@ -1028,8 +1017,8 @@ Subscribes to available device change events. When a device is connected/disconn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 是 | Audio device usage to filter available devices. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | Callback used to obtain the device update details. |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 是 | 音频设备类型（根据用途分类）。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | 回调函数，返回设备更新详情。 |
 
 **错误码：**
 
@@ -1058,7 +1047,7 @@ audioSessionManager.onAvailableDeviceChange(audio.DeviceUsage.MEDIA_INPUT_DEVICE
 onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void
 ```
 
-Subscribes input device change event callback. The event is triggered when current input device change.
+监听当前输入设备变化事件（当前输入设备发生变化时触发）。
 
 **起始版本：** 24
 
@@ -1070,7 +1059,7 @@ Subscribes input device change event callback. The event is triggered when curre
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | 是 | Callback used to listen input device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | 是 | 回调函数，返回当前输入设备信息。 |
 
 **错误码：**
 
@@ -1095,7 +1084,7 @@ audioSessionManager.onCurrentInputDeviceChanged(currentInputDeviceChangedCallbac
 onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void
 ```
 
-Subscribes output device change event callback. The event is triggered when device change.
+监听当前输出设备变化事件（当前输出设备发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1107,7 +1096,7 @@ Subscribes output device change event callback. The event is triggered when devi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | 是 | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | 是 | 回调函数，返回当前输出设备信息。 |
 
 **错误码：**
 
@@ -1135,18 +1124,14 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 
 设置媒体输入设备。使用Promise异步回调。
 
-> **说明：**
-> 
-> - 本接口不适用于VoIP通话录音，即[SourceType](arkts-audio-audio-sourcetype-e.md)为SOURCE_TYPE_VOICE_COMMUNICATION的场景不适用。
-> 
+> **说明：**&gt;
+> - 本接口不适用于VoIP通话录音，即[SourceType](arkts-audio-audio-sourcetype-e.md)为SOURCE_TYPE_VOICE_COMMUNICATION的
+> 场景不适用。&gt;
 > - 本接口调用前需要先调用[getAvailableDevices](#getavailabledevices)接口查询到当前可用输入设备列表，从列表中选择输入
-> 设备。
-> 
-> - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。
-> 
-> - 应用程序可以监听
-> [currentInputDeviceChanged](#onaudiosessiondeactivated)
-> 事件来获得实际的输入设备。
+> 设备。&gt;
+> - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。&gt;
+> - 应用程序可以监听[currentInputDeviceChanged](#oncurrentinputdevicechanged)事件来获得实际的输入设备
+> 。
 
 **起始版本：** 24
 
@@ -1205,9 +1190,9 @@ setAudioSessionBehavior(behavior: int): void
 
 设置音频会话行为参数，支持多种标志位的组合使用。
 
-> **说明：**
-> 
-> 当音频会话在激活状态时调用此接口后，必须重新调用接口[activateAudioSession](#activateaudiosession)使其生效。
+> **说明：**&gt;
+> 当音频会话在激活状态时调用此接口后，必须重新调用接口
+> [activateAudioSession](#activateaudiosession)使其生效。
 
 **起始版本：** 24
 
@@ -1221,7 +1206,7 @@ setAudioSessionBehavior(behavior: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| behavior | int | 是 | 用于设置音频会话行为。 <br>该参数可以是单个标志，也可以是多个标志的按位OR组合。 <br>当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
+| behavior | int | 是 | 用于设置音频会话行为。<br>该参数可以是单个标志，也可以是多个标志的按位OR组合。<br>当前支持的音频会话行为详见 [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
 
 **错误码：**
 
@@ -1280,15 +1265,11 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 
 设置在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。使用Promise异步回调。
 
-> **说明：**
-> 
-> - 应用程序可以在蓝牙或星闪连接之前设置此分类，系统将在设备连接时优先使用蓝牙或星闪进行录音。
-> 
-> - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。
-> 
-> - 应用程序可以监听
-> [currentInputDeviceChanged](#onaudiosessiondeactivated)
-> 事件来获得实际的输入设备。
+> **说明：**&gt;
+> - 应用程序可以在蓝牙或星闪连接之前设置此分类，系统将在设备连接时优先使用蓝牙或星闪进行录音。&gt;
+> - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。&gt;
+> - 应用程序可以监听[currentInputDeviceChanged](#oncurrentinputdevicechanged)事件来获得实际的输入设备
+> 。
 
 **起始版本：** 24
 
@@ -1338,13 +1319,11 @@ setCapturerMuteHint(mute: boolean): Promise<void>
 
 应用将当前音频会话内录音流的自身静音状态传递给系统音频模块。<!--RP1-->该接口不会触发录音流静音，当前仅在部分PC/2in1设备上用于优化设备功耗。<!--RP1End-->使用Promise异步回调。
 
-> **说明：**
-> 
-> - 该接口用于向系统音频模块上报当前音频会话内录音流的静音状态，不会改变录音流的实际静音状态。
-> 
-> - 该接口仅在当前音频会话存在运行中的录音流时允许调用，否则返回错误码6800103。
-> 
-> - 若某条录音流同时调用了流级接口[AudioCapturer.setMuteHint](arkts-audio-audio-audiocapturer-i.md#setmutehint)和本接口，流级接口设置优先级更高，以流级接口设置值为准。
+> **说明：**&gt;
+> - 该接口用于向系统音频模块上报当前音频会话内录音流的静音状态，不会改变录音流的实际静音状态。&gt;
+> - 该接口仅在当前音频会话存在运行中的录音流时允许调用，否则返回错误码6800103。&gt;
+> - 若某条录音流同时调用了流级接口[AudioCapturer.setMuteHint](arkts-audio-audio-audiocapturer-i.md#setmutehint)和本接口，
+> 流级接口设置优先级更高，以流级接口设置值为准。
 
 **起始版本：** 24
 
@@ -1392,12 +1371,11 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 设置默认发声设备。使用Promise方式进行异步回调。
 
-> **说明：**
-> 
-> - 本接口适用于以下情况：当设置的[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为VoIP场景时，激活AudioSession后立即生效。若
-> [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为非VoIP场景，激活AudioSession时不会生效，仅在启动播放的
-> [StreamUsage](arkts-audio-audio-streamusage-e.md)为语音消息、VoIP语音通话或VoIP视频通话时才生效。支持听筒、扬声器和系统默认设备。
-> 
+> **说明：**&gt;
+> - 本接口适用于以下情况：当设置的[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为VoIP场景时，激活
+> AudioSession后立即生效。若[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为非VoIP场景，激活
+> AudioSession时不会生效，仅在启动播放的[StreamUsage](arkts-audio-audio-streamusage-e.md)为语音消息、VoIP语音通话或VoIP视频通话时才
+> 生效。支持听筒、扬声器和系统默认设备。&gt;
 > - 本接口允许在AudioSessionManager创建后随时调用，系统会记录应用设置的默认本机内置发声设备。但只有激活AudioSession后才能生效。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从
 > 外接设备发声。否则，系统遵循应用设置的默认本机内置发声设备。
 
@@ -1411,7 +1389,7 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | DeviceType | 是 | 设备类型。 <br>仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| deviceType | DeviceType | 是 | 设备类型。<br>仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **返回值：**
 
@@ -1460,13 +1438,11 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 
 当连接其他音频外设（如蓝牙耳机或有线耳机）时，将媒体输出设备切换为内置扬声器。使用Promise异步回调。
 
-> **说明：**
-> 
-> - 本接口仅适用于媒体播放场景，并且会作用于应用内发起的所有媒体流。
-> 
+> **说明：**&gt;
+> - 本接口仅适用于媒体播放场景，并且会作用于应用内发起的所有媒体流。&gt;
 > - 若存在更高优先级的并发播放流或用户手动选择输出设备，则应用程序实际使用的输出设备将与本接口设置的设备不同。应用程序可通过监听
-> [CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)事件获取当前活跃的输出设备。
-> 
+> [CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)事件获取当前活跃的输
+> 出设备。&gt;
 > - 当应用程序需要清除之前通过接口设置的扬声器输出配置时，可通过调用接口将媒体输出设备设置为DEFAULT（系统默认设备）来实现。该设置仅在应用程序运行期间有效，当应用程序退出时，此接口的设置将自动清除。
 
 **起始版本：** 26.0.0
@@ -1481,7 +1457,7 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | DeviceType | 是 | 设备类型。 <br>仅支持以下设备：SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| deviceType | DeviceType | 是 | 可用的设备类型有 SPEAKER：内置扬声器 DEFAULT：恢复到系统默认输出设备。 - - - - 设备类型。<br>仅支持以下设备：SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **返回值：**
 

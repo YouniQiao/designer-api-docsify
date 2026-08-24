@@ -1,8 +1,6 @@
 # TextSpanType
 
-Defines span type.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The order for menu type matching is as follows. <br>When the user interacts with text, the system follows this order to decides which type of menu to display. &lt;ol&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.LONG_PRESS.&lt;/li&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.DEFAULT.&lt;/li&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.LONG_PRESS.&lt;/li&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.DEFAULT.&lt;/li&gt; &lt;/ol&gt; </p>
+Defines span type.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The order for menu type matching is as follows. <br>When the user interacts with text, the system follows this order to decides which type of menu to display. &lt;ol&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.LONG_PRESS.&lt;/li&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.DEFAULT.&lt;/li&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.LONG_PRESS.&lt;/li&gt; &lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.DEFAULT.&lt;/li&gt; &lt;/ol&gt; </p>
 
 **Since:** 23
 

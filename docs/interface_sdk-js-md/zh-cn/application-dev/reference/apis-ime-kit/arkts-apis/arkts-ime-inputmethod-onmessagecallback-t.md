@@ -4,7 +4,7 @@
 type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void
 ```
 
-@brief 当输入法框架需要显示预览文本时触发的回调。
+当输入法框架需要显示预览文本时触发的回调。
 
 **起始版本：** 23
 

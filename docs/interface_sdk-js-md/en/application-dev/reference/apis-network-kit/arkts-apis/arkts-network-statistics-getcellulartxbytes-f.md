@@ -14,8 +14,7 @@ function getCellularTxBytes(callback: AsyncCallback<long>): void
 
 Obtains the total uplink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > It is recommended to call this API when the cellular network is in the connected state. Otherwise, error code 210
 > 3012 will be thrown.
 
@@ -70,8 +69,7 @@ function getCellularTxBytes(): Promise<long>
 
 Obtains the total uplink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > It is recommended to call this API when the cellular network is in the connected state. Otherwise, error code 210
 > 3012 will be thrown.
 

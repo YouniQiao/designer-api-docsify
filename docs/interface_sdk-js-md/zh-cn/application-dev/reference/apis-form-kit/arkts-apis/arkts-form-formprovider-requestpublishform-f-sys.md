@@ -30,7 +30,7 @@ function requestPublishForm(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 发布请求，需包含以下字段。 <br>abilityName: 目标卡片ability <br>parameters: <br>'ohos.extra.param.key.form_dimension' <br>'ohos.extra.param.key.form_name' <br>'ohos.extra.param.key.module_name' |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 发布请求，需包含以下字段。 <br>abilityName: 目标卡片ability <br>parameters: <br>'ohos.extra.param.key.form_dimension'<br>'ohos.extra.param.key.form_name'<br>'ohos.extra.param.key.module_name' |
 | formBindingData | formBindingData.FormBindingData | 是 | 创建卡片的数据。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回卡片标识。 |
 
@@ -255,7 +255,7 @@ function requestPublishForm(want: Want, callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 发布请求，需包含以下字段。 <br>abilityName: 目标卡片ability <br>parameters: <br>'ohos.extra.param.key.form_dimension' <br>'ohos.extra.param.key.form_name' <br>'ohos.extra.param.key.module_name' |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 发布请求，需包含以下字段。 <br>abilityName: 目标卡片ability <br>parameters: <br>'ohos.extra.param.key.form_dimension'<br>'ohos.extra.param.key.form_name'<br>'ohos.extra.param.key.module_name' |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回卡片标识。 |
 
 **错误码：**
@@ -297,7 +297,7 @@ function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 发布请求，需包含以下字段。 <br>abilityName: 目标卡片ability <br>parameters: <br>'ohos.extra.param.key.form_dimension' <br>'ohos.extra.param.key.form_name' <br>'ohos.extra.param.key.module_name' |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 发布请求，需包含以下字段。 <br>abilityName: 目标卡片ability <br>parameters: <br>'ohos.extra.param.key.form_dimension'<br>'ohos.extra.param.key.form_name'<br>'ohos.extra.param.key.module_name' |
 | formBindingData | formBindingData.FormBindingData | 否 | 创建卡片的数据，默认为空，不提供创建卡片数据。 |
 
 **返回值：**

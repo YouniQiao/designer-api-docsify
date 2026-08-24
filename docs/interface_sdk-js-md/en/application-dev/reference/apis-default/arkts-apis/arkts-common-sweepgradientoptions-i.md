@@ -19,9 +19,7 @@ center: [
     ]
 ```
 
-Defines center point for angle gradient.
-
-Anonymous Object Rectification.
+Defines center point for angle gradient.Anonymous Object Rectification.
 
 **Type:** [         Length,         Length     ]
 
@@ -44,9 +42,7 @@ colors: Array<[
     ]>
 ```
 
-Defines color description for gradients.
-
-Anonymous Object Rectification.
+Defines color description for gradients.Anonymous Object Rectification.
 
 **Type:** Array&lt;[         ResourceColor, double     ]&gt;
 
@@ -66,9 +62,7 @@ Anonymous Object Rectification.
 end?: double | string
 ```
 
-Defines end point of angle gradient.
-
-Anonymous Object Rectification.
+Defines end point of angle gradient.Anonymous Object Rectification.
 
 **Type:** double \| string
 
@@ -113,9 +107,7 @@ Defines color description in ColorMetrics format for gradients. This parameter t
 repeating?: boolean
 ```
 
-Defines gradient colors with repeated coloring.
-
-Anonymous Object Rectification.
+Defines gradient colors with repeated coloring.Anonymous Object Rectification.
 
 **Type:** boolean
 
@@ -137,9 +129,7 @@ Anonymous Object Rectification.
 rotation?: double | string
 ```
 
-Defines the rotation angle of the gradient.
-
-Anonymous Object Rectification.
+Defines the rotation angle of the gradient.Anonymous Object Rectification.
 
 **Type:** double \| string
 
@@ -161,9 +151,7 @@ Anonymous Object Rectification.
 start?: double | string
 ```
 
-Defines the starting point of angle gradient.
-
-Anonymous Object Rectification.
+Defines the starting point of angle gradient.Anonymous Object Rectification.
 
 **Type:** double \| string
 

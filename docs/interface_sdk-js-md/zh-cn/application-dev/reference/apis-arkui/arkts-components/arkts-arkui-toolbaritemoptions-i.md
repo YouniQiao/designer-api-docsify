@@ -19,12 +19,8 @@
 placement?: ToolBarItemPlacement
 ```
 
-设置工具栏项的放置位置。
-
-默认值：**ToolBarItemPlacement.TOP_BAR_LEADING**。
-
-**ToolBarItemPlacement.TOP_BAR_LEADING**：将工具栏项放置在对应顶部栏的开头位置。
-
+设置工具栏项的放置位置。默认值：**ToolBarItemPlacement.TOP_BAR_LEADING**。  
+**ToolBarItemPlacement.TOP_BAR_LEADING**：将工具栏项放置在对应顶部栏的开头位置。  
 **ToolBarItemPlacement.TOP_BAR_TRAILING**：将工具栏项放置在对应顶部栏的末尾位置。
 
 **类型：** [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)

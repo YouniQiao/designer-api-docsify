@@ -1,8 +1,6 @@
 # ImmersiveMode
 
-页面内弹窗蒙层显示区域模式。
-
-@enum { number }
+页面内弹窗蒙层显示区域模式。@enum { number }
 
 **起始版本：** 23
 

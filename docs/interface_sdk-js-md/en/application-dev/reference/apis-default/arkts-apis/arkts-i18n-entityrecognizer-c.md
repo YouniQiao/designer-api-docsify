@@ -37,7 +37,7 @@ Creates an entityRecognizer object. This object is used to recognize entities in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | No | Locale ID, which consists of the language, script, and country/region, for example, "zh-Hans-CN". The default value is the current system locale. |
+| locale | string | No | Locale ID, which consists of the language, script, and country/region, for example,"zh-Hans-CN". The default value is the current system locale. |
 
 **Error codes:**
 

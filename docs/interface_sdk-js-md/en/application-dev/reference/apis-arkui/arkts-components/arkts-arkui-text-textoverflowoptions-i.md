@@ -1,8 +1,6 @@
 # TextOverflowOptions
 
-Text overflow options.
-
-Anonymous Object Rectification.
+Text overflow options.Anonymous Object Rectification.
 
 **Since:** 23
 
@@ -18,9 +16,7 @@ Anonymous Object Rectification.
 overflow: TextOverflow | undefined
 ```
 
-Text overflow option. Use TextOverflow::NONE when the value is undefined.
-
-Anonymous Object Rectification.
+Text overflow option. Use TextOverflow::NONE when the value is undefined.Anonymous Object Rectification.
 
 **Type:** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) \| undefined
 

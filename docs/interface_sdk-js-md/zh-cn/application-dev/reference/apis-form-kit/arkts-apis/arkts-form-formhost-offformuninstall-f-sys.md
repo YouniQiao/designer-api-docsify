@@ -12,9 +12,7 @@ import { formHost } from '@kit.FormKit';
 function offFormUninstall(callback?: Callback<string>): void
 ```
 
-Cancels listening to the event of uninstall form.
-
-You can use this method to cancel listening to the event of uninstall form.
+Cancels listening to the event of uninstall form.You can use this method to cancel listening to the event of uninstall form.
 
 **起始版本：** 23
 

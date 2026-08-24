@@ -1,8 +1,6 @@
 # AccessibilityAction（系统接口）
 
-表示无障碍节点元素可执行的操作枚举。
-
-无障碍节点元素是指，UI界面上可执行无障碍操作的组件，例如：按钮、文本输入框等。
+表示无障碍节点元素可执行的操作枚举。无障碍节点元素是指，UI界面上可执行无障碍操作的组件，例如：按钮、文本输入框等。
 
 **起始版本：** 23
 
@@ -194,7 +192,7 @@ SET_TEXT = 10
 SCROLL_FORWARD = 11
 ```
 
-表示向前滚动组件（向内容末尾方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType，参数值为 'fullScreen'或'halfScreen'。
+表示向前滚动组件（向内容末尾方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType，参数值为'fullScreen'或'halfScreen'。
 
 **起始版本：** 23
 
@@ -210,7 +208,7 @@ SCROLL_FORWARD = 11
 SCROLL_BACKWARD = 12
 ```
 
-表示向后滚动组件（向内容起始方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType，参数值为 'fullScreen'或'halfScreen'。
+表示向后滚动组件（向内容起始方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType，参数值为'fullScreen'或'halfScreen'。
 
 **起始版本：** 23
 
@@ -258,8 +256,7 @@ SET_CURSOR_POSITION = 14
 HOME = 15
 ```
 
-表示执行返回首页操作。
-
+表示执行返回首页操作。  
 **使用约束：** 此操作在多屏场景下，仅在主屏幕上生效。
 
 **起始版本：** 23

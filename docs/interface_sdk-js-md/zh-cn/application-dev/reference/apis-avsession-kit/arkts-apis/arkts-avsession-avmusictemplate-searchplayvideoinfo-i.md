@@ -1,8 +1,6 @@
 # SearchPlayVideoInfo
 
-搜播的视频信息的定义。
-
-@interface SearchPlayVideoInfo
+搜播的视频信息的定义。@interface SearchPlayVideoInfo
 
 **起始版本：** 23
 

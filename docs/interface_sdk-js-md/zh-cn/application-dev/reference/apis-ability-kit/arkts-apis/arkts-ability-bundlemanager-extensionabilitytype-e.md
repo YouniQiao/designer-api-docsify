@@ -1,10 +1,6 @@
 # ExtensionAbilityType
 
-扩展组件的类型。
-
-<!--Table: 30%; 10%; 60%-->
-
-<!--RP2--><!--RP2End-->
+扩展组件的类型。<!--Table: 30%; 10%; 60%--><!--RP2--><!--RP2End-->
 
 **起始版本：** 23
 
@@ -428,8 +424,7 @@ LIVE_FORM = 30
 SELECTION = 31
 ```
 
-[SelectionExtensionAbility](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)：为开发者提 供划词弹窗能力的ExtensionAbility。
-
+[SelectionExtensionAbility](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)：为开发者提 供划词弹窗能力的ExtensionAbility。  
 **模型约束**：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
@@ -446,7 +441,7 @@ SELECTION = 31
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md)：为开发者提供Web原生消息通信能力的 ExtensionAbility。
+[WebNativeMessagingExtensionAbility](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md)：为开发者提供Web原生消息通信能力的 ExtensionAbility。
 
 **起始版本：** 23
 
@@ -502,8 +497,7 @@ CRYPTO = 35
 PARTNER_AGENT = 36
 ```
 
-PartnerAgentExtensionAbility：基于蓝牙通信技术，提供设备发现与设备下线的 通知功能。
-
+PartnerAgentExtensionAbility：基于蓝牙通信技术，提供设备发现与设备下线的 通知功能。  
 **模型约束**：此接口仅可在Stage模型下使用。
 
 **起始版本：** 23
@@ -520,8 +514,7 @@ PartnerAgentExtensionAbility：基于蓝牙通信技术，提供设备发现与�
 AGENT = 37
 ```
 
-[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)：提供智能体扩展能 力，包括智能体服务的创建、销毁、连接、断开的生命周期回调接口，以及接收客户端所发送数据和安全认证的回调接口。
-
+[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)：提供智能体扩展能 力，包括智能体服务的创建、销毁、连接、断开的生命周期回调接口，以及接收客户端所发送数据和安全认证的回调接口。  
 **模型约束**：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
@@ -538,8 +531,7 @@ AGENT = 37
 AGENT_UI = 38
 ```
 
-AgentUIExtensionAbility：为开发者提供接入 端侧Agent UI界面显示能力。
-
+AgentUIExtensionAbility：为开发者提供接入 端侧Agent UI界面显示能力。  
 **模型约束**：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24

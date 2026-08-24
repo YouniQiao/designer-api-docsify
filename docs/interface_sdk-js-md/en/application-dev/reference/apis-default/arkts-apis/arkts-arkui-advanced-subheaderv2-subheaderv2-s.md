@@ -1,13 +1,9 @@
 # SubHeaderV2
 
-The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.
+The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates.
 
-This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates.
-
-> **NOTE：**
-> 
-> - This component can be used only in the stage model.
-> 
+> **NOTE：**&gt;
+> - This component can be used only in the stage model.&gt;
 > - If the **SubHeaderV2** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -18,6 +14,8 @@ This component is implemented based on [state management V2](../../../ui/state-m
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct SubHeaderV2--><!--Device-unnamed-export declare struct SubHeaderV2-End-->
 
@@ -31,8 +29,7 @@ This component is implemented based on [state management V2](../../../ui/state-m
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -41,6 +38,8 @@ The method to build component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Builder
+
 <!--Device-SubHeaderV2-@Builder  build(): void--><!--Device-SubHeaderV2-@Builder  build(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -48,14 +47,10 @@ The method to build component.
 ## icon
 
 ```TypeScript
-@Param
-  readonly icon?: SubHeaderV2IconType
+readonly icon?: SubHeaderV2IconType
 ```
 
-Icon.
-
-Default value: **undefined**
-
+Icon.Default value: **undefined**  
 **icon** takes effect only when **secondaryTitle** is used for **title**.
 
 **Type:** [SubHeaderV2IconType](arkts-subheaderv2icontype-t.md)
@@ -63,6 +58,8 @@ Default value: **undefined**
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,19 +70,18 @@ Default value: **undefined**
 ## operationItems
 
 ```TypeScript
-@Param
-  readonly operationItems?: SubHeaderV2OperationItem[]
+readonly operationItems?: SubHeaderV2OperationItem[]
 ```
 
-Items in the operation area.
-
-Default value: **undefined**
+Items in the operation area.Default value: **undefined**
 
 **Type:** [SubHeaderV2OperationItem](arkts-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 <!--Device-SubHeaderV2-@Param  readonly operationItems?: SubHeaderV2OperationItem[]--><!--Device-SubHeaderV2-@Param  readonly operationItems?: SubHeaderV2OperationItem[]-End-->
 
@@ -94,19 +90,18 @@ Default value: **undefined**
 ## operationType
 
 ```TypeScript
-@Param
-  readonly operationType?: SubHeaderV2OperationType
+readonly operationType?: SubHeaderV2OperationType
 ```
 
-Style of elements in the operation area.
-
-Default value: **SubHeaderV2OperationType.BUTTON**
+Style of elements in the operation area.Default value: **SubHeaderV2OperationType.BUTTON**
 
 **Type:** [SubHeaderV2OperationType](arkts-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 <!--Device-SubHeaderV2-@Param  readonly operationType?: SubHeaderV2OperationType--><!--Device-SubHeaderV2-@Param  readonly operationType?: SubHeaderV2OperationType-End-->
 
@@ -115,19 +110,18 @@ Default value: **SubHeaderV2OperationType.BUTTON**
 ## select
 
 ```TypeScript
-@Param
-  readonly select?: SubHeaderV2Select
+readonly select?: SubHeaderV2Select
 ```
 
-Content and events for selection.
-
-Default value: **undefined**
+Content and events for selection.Default value: **undefined**
 
 **Type:** [SubHeaderV2Select](arkts-arkui-advanced-subheaderv2-subheaderv2select-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 <!--Device-SubHeaderV2-@Param  readonly select?: SubHeaderV2Select--><!--Device-SubHeaderV2-@Param  readonly select?: SubHeaderV2Select-End-->
 
@@ -136,19 +130,18 @@ Default value: **undefined**
 ## title
 
 ```TypeScript
-@Param
-  readonly title?: SubHeaderV2Title
+readonly title?: SubHeaderV2Title
 ```
 
-Title of the subheader.
-
-Default value: **undefined**
+Title of the subheader.Default value: **undefined**
 
 **Type:** [SubHeaderV2Title](arkts-arkui-advanced-subheaderv2-subheaderv2title-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,19 +152,18 @@ Default value: **undefined**
 ## titleBuilder
 
 ```TypeScript
-@BuilderParam
-  titleBuilder?: SubHeaderV2TitleBuilder
+titleBuilder?: SubHeaderV2TitleBuilder
 ```
 
-Custom content for the title area.
-
-Default value: **() =&gt; void**
+Custom content for the title area.Default value: **() =&gt; void**
 
 **Type:** [SubHeaderV2TitleBuilder](arkts-subheaderv2titlebuilder-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @BuilderParam
 
 <!--Device-SubHeaderV2-@BuilderParam  titleBuilder?: SubHeaderV2TitleBuilder--><!--Device-SubHeaderV2-@BuilderParam  titleBuilder?: SubHeaderV2TitleBuilder-End-->
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct SelectDialogV2--><!--Device-unnamed-export declare struct SelectDialogV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,17 +19,16 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## confirm
 
 ```TypeScript
-@Param
-  confirm?: AdvancedDialogV2Button
+confirm?: AdvancedDialogV2Button
 ```
 
-选择弹出框底部按钮。
-
-默认不显示。
+选择弹出框底部按钮。默认不显示。
 
 **类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,8 +41,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
 选择弹出框内容。默认不显示。
@@ -49,6 +49,8 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 **类型：** ResourceStr
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,9 +63,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## radioContent
 
 ```TypeScript
-@Require
-  @Param
-  radioContent: SheetInfo[]
+radioContent: SheetInfo[]
 ```
 
 选择弹出框的子项内容列表，每个选择项支持设置文本和选中的回调事件。
@@ -71,6 +71,8 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 **类型：** SheetInfo[]
 
 **起始版本：** 18
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,19 +85,16 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## selectedIndex
 
 ```TypeScript
-@Param
-  selectedIndex?: number
+selectedIndex?: number
 ```
 
-选择弹出框的选中项，基于0的索引（0表示第一个选项）。
-
-默认值：-1，没有选中项。若设置数值不在取值范围，按没有选中项处理。
-
-取值范围：小于选择弹出框的子项内容列表长度。
+选择弹出框的选中项，基于0的索引（0表示第一个选项）。默认值：-1，没有选中项。若设置数值不在取值范围，按没有选中项处理。取值范围：小于选择弹出框的子项内容列表长度。
 
 **类型：** number
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,18 +107,17 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## title
 
 ```TypeScript
-@Require
-  @Param
-  title: ResourceStr
+title: ResourceStr
 ```
 
-选择弹出框标题。
-
+选择弹出框标题。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
 
 **起始版本：** 18
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

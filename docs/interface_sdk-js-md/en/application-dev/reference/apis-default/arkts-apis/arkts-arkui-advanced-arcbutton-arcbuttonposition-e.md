@@ -1,8 +1,6 @@
 # ArcButtonPosition
 
-Describes the Position of arc button.
-
-@enum { int }
+Describes the Position of arc button.@enum { int }
 
 **Since:** 23
 

@@ -14,7 +14,6 @@ Describes an audio effect property.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## category

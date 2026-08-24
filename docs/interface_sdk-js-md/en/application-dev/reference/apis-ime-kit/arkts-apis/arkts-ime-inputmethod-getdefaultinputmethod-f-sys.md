@@ -4,11 +4,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## getDefaultInputMethod
@@ -17,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getDefaultInputMethod(userId?: int): InputMethodProperty
 ```
 
-@brief Get the default input method of a specified user.
+Get the default input method of a specified user.
 
 **Since:** 26.0.0
 

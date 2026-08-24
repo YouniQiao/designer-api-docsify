@@ -1,8 +1,6 @@
 # LazyColumnLayoutAttribute
 
-Defines the lazy column layout attribute.
-
-@extends CommonMethod&lt;LazyColumnLayoutAttribute&gt;
+Defines the lazy column layout attribute.@extends CommonMethod&lt;LazyColumnLayoutAttribute&gt;
 
 **Inheritance/Implementation:** LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>
 
@@ -160,7 +158,7 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. <br>Default value: 0. <br>Range: [0, +∞). |
+| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. <br>Default value: 0. <br>Range: [0, +∞). |
 
 **Return value:**
 

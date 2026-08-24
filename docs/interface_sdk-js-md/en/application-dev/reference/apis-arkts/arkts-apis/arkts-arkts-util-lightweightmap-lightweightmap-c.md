@@ -485,7 +485,7 @@ Obtains the key of an element at the specified position in this LightWeightMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is , 2147483647. |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
@@ -568,7 +568,7 @@ Obtains the value of an element at the specified position in this LightWeightMap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is , 2147483647. |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 

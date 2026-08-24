@@ -21,13 +21,7 @@
 defaultFocus?: boolean
 ```
 
-是否默认获取焦点。
-
-true：获焦。
-
-false：不获焦。
-
-默认值：false。
+是否默认获取焦点。true：获焦。false：不获焦。默认值：false。
 
 **类型：** boolean
 

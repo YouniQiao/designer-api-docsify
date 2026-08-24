@@ -1,6 +1,6 @@
 # RequestKeyboardReason
 
-@brief Enumerates the reasons for requesting the keyboard.
+Enumerates the reasons for requesting the keyboard.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@
 NONE = 0
 ```
 
-@brief The keyboard request is triggered for no reason.
+The keyboard request is triggered for no reason.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ NONE = 0
 MOUSE = 1
 ```
 
-@brief The keyboard request is triggered by a mouse operation.
+The keyboard request is triggered by a mouse operation.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ MOUSE = 1
 TOUCH = 2
 ```
 
-@brief The keyboard request is triggered by a touch operation.
+The keyboard request is triggered by a touch operation.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ TOUCH = 2
 OTHER = 20
 ```
 
-@brief The keyboard request is triggered by other reasons.
+The keyboard request is triggered by other reasons.
 
 **Since:** 23
 

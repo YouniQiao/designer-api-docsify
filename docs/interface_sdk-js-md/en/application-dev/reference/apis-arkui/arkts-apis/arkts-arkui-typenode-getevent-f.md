@@ -22,7 +22,7 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node. |
 | nodeType | 'Scroll' | Yes | Scroll** node type for scroll event configuration. |
 
 **Return value:**
@@ -58,7 +58,7 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node. |
 | nodeType | 'List' | Yes | List** node type for scroll event configuration. |
 
 **Return value:**
@@ -78,7 +78,7 @@ See Scroll Event Example.
 function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined
 ```
 
-Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-typenode-waterflow-t.md) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
+Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](../../apis-default/arkts-apis/arkts-typenode-waterflow-t.md) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
 
@@ -94,7 +94,7 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node. |
 | nodeType | 'WaterFlow' | Yes | WaterFlow** node type for scroll event configuration. |
 
 **Return value:**
@@ -130,7 +130,7 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node. |
 | nodeType | 'Grid' | Yes | Grid** node type for scroll event configuration. |
 
 **Return value:**

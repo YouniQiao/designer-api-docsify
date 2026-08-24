@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
-import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -31,5 +30,5 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 
 | 名称 | 说明 |
 | --- | --- |
-| [PopoverOptions](arkts-arkui-arkui-advanced-dialog-popoveroptions-i.md) | 跟手弹出框参数，用于设置弹出框内容、位置属性等。 |
+| [PopoverOptions](arkts-arkui-arkui-advanced-dialog-popoveroptions-i.md) | 跟手弹出框参数，用于设置弹出框内容、位置属性等。继承自CustomPopupOptions。 |
 

@@ -312,8 +312,7 @@ equal(obj: Object): boolean
 
 Checks whether the elements of this LightWeightSet are the same as those of **obj**.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
 
 **Since:** 8
@@ -496,7 +495,7 @@ Obtains the value of the element at the specified position in this LightWeightSe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is , 2147483647. |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 

@@ -408,7 +408,7 @@ scrollBarColor(color: ColorMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) \| undefined | 是 |  |
+| color | [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -430,7 +430,7 @@ scrollBarWidth(width: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
+| width | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -474,7 +474,7 @@ space(space: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
+| space | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
 
 **返回值：**
 

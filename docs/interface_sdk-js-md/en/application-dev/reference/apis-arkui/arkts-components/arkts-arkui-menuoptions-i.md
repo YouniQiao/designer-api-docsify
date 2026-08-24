@@ -1,8 +1,6 @@
 # MenuOptions
 
-Configues menu item information, which is inherited from [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
-
-@extends ContextMenuOptions @interface MenuOptions
+Configues menu item information, which is inherited from [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).@extends ContextMenuOptions @interface MenuOptions
 
 **Inheritance/Implementation:** MenuOptions extends [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)
 
@@ -23,15 +21,9 @@ Configues menu item information, which is inherited from [ContextMenuOptions](ar
 showInSubWindow?: boolean
 ```
 
-Whether to show the menu in a subwindow.
-
-**true**: yes; **false**: no
-
-Default value: **true** for 2-in-1 devices and **false** for other devices
-
-**NOTE：**
-
-This parameter takes effect only for 2-in-1 devices.
+Whether to show the menu in a subwindow.  
+**true**: yes; **false**: no Default value: **true** for 2-in-1 devices and **false** for other devices  
+**NOTE：**This parameter takes effect only for 2-in-1 devices.
 
 **Type:** boolean
 
@@ -53,11 +45,8 @@ This parameter takes effect only for 2-in-1 devices.
 title?: ResourceStr
 ```
 
-Menu title.
-
-**NOTE：**
-
-This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt;.
+Menu title.  
+**NOTE：**This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt;.
 
 **Type:** ResourceStr
 

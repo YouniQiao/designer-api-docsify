@@ -12,7 +12,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 function getInputMethodAbility(): InputMethodAbility
 ```
 
-@brief Obtains an [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) instance for the input method. This API can be called only by an input method. <br> <br>The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/ destroy an input method panel, and the like.
+Obtains an [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) instance for the input method. This API can be called only by an input method. <br> <br>The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/ destroy an input method panel, and the like.
 
 **Since:** 9
 
@@ -39,7 +39,7 @@ let InputMethodAbility: inputMethodEngine.InputMethodAbility = inputMethodEngine
 function getInputMethodAbility(): InputMethodAbility | null
 ```
 
-@brief Get InputMethodAbility object to subscribe events about IME.
+Get InputMethodAbility object to subscribe events about IME.
 
 **Since:** 23
 

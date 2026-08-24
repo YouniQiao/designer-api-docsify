@@ -2,8 +2,7 @@
 
 The **dragInteraction** module provides the APIs to enable and disable listening for dragging status changes.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The APIs provided by this module are system APIs.
 
 **Since:** 23

@@ -84,7 +84,7 @@ getHttpBodyStream(): WebHttpBodyStream | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebHttpBodyStream](../../apis-default/arkts-apis/arkts-webview-webhttpbodystream-c.md) \| null | 返回资源请求中的WebHttpBodyStream，如果没有则返回null。 |
+| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) \| null | 返回资源请求中的WebHttpBodyStream，如果没有则返回null。 |
 
 **示例**
 
@@ -160,7 +160,7 @@ getRequestResourceType(): WebResourceType
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebResourceType](../../apis-default/arkts-apis/arkts-webview-webresourcetype-e.md) | 返回资源请求的资源类型。 |
+| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | 返回资源请求的资源类型。 |
 
 **示例**
 

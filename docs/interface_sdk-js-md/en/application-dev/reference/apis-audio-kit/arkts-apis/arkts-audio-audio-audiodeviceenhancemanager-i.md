@@ -12,7 +12,6 @@ Provides enhanced audio device management capabilities.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## isEnhancedRoutingSupported

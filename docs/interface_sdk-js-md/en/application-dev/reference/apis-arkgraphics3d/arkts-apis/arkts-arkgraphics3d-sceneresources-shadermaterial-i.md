@@ -1,8 +1,6 @@
 # ShaderMaterial
 
-Shader material, which inherits from Material.
-
-@extends Material @interface ShaderMaterial
+Shader material, which inherits from Material.@extends Material @interface ShaderMaterial
 
 **Inheritance/Implementation:** ShaderMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 

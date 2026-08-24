@@ -2,16 +2,13 @@
 
 Defines a contact's portrait.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Since API version 22, contact portraits can be set in URI or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 > format. (Currently, contact avatars cannot be set through the [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md) or
-> [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md) API.)
-> 
+> [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md) API.)&gt;
 > URI indicates the address of the contact portrait file that can be accessed, and
 > [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) indicates the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
-> object generated based on the contact portrait resource.
-> 
+> object generated based on the contact portrait resource.&gt;
 > Since API version 22, the profile picture resource can be read through URI. The resource can be opened only in
 > [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md) mode and cannot be directly displayed in the **Image** component using a URI. You need to read
 > the resource and display it in [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) format.

@@ -1,8 +1,6 @@
 # ImageAnimator properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** ImageAnimatorAttribute extends CommonMethod<ImageAnimatorAttribute>
 
@@ -63,7 +61,7 @@ Sets the status before and after execution of the animation in the current playb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FillMode | Yes | Status before and after execution of the animation in the current playback direction.&lt; br&gt;Default value: **FillMode.Forwards |
+| value | FillMode | Yes | Status before and after execution of the animation in the current playback direction.<br>Default value: **FillMode.Forwards |
 
 ## fixedSize
 
@@ -285,8 +283,7 @@ preDecode(value: number)
 
 Sets the number of images to be pre-decoded.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 7 and deprecated since API version 9. Currently, no substitute is
 > available.
 
@@ -326,7 +323,7 @@ Sets the playback direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Playback direction.<br>The value **false** indicates that images are played from the first one to the last one, and **true** indicates that images are played from the last one to the first one.&lt;br &gt;Default value: **false |
+| value | boolean | Yes | Playback direction.<br>The value **false** indicates that images are played from the first one to the last one, and **true** indicates that images are played from the last one to the first one.<br>Default value: **false |
 
 ## state
 

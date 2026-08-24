@@ -1,8 +1,6 @@
 # ImageGenerationModel (System API)
 
-AI Image Model Abstract Interface.
-
-@interface ImageGenerationModel
+AI Image Model Abstract Interface.@interface ImageGenerationModel
 
 **Since:** 23
 

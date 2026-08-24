@@ -1,6 +1,6 @@
 # EnterKeyType
 
-@brief Enumerates the function types represented by the Enter key of the input method.
+Enumerates the function types represented by the Enter key of the input method.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@
 UNSPECIFIED = 0
 ```
 
-@brief Not specified.
+Not specified.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ UNSPECIFIED = 0
 NONE
 ```
 
-@brief None.
+None.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ NONE
 GO
 ```
 
-@brief Go.
+Go.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ GO
 SEARCH
 ```
 
-@brief Search.
+Search.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ SEARCH
 SEND
 ```
 
-@brief Send.
+Send.
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ SEND
 NEXT
 ```
 
-@brief Next.
+Next.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ NEXT
 DONE
 ```
 
-@brief Done.
+Done.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ DONE
 PREVIOUS
 ```
 
-@brief Previous.
+Previous.
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ PREVIOUS
 NEWLINE
 ```
 
-@brief Line break.
+Line break.
 
 **Since:** 23
 

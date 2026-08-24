@@ -14,11 +14,9 @@ function setScreenWatermarkImage(admin: Want, pixelMap: image.PixelMap): void
 
 Sets a screen watermark policy, which takes effect for all users.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. The screen watermark policy tiles the configured image across the entire screen. It is advised to use an image
-> with transparency to ensure that the device screen content remains visible.
-> 
+> with transparency to ensure that the device screen content remains visible.&gt;
 > 2. If the watermark image size is smaller than the screen, the image will be stretched. If the watermark image
 > size is larger than the screen, the image will be compressed. This implementation differs from the repeated
 > tiling approach used for application-level watermarks.

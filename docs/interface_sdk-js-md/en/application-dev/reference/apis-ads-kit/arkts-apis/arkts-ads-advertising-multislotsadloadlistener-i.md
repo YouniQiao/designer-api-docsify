@@ -11,9 +11,6 @@ Enumerates the callbacks used for the request for loading multiple ads.
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit';
-import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
-import { AutoAdComponent } from '@kit.AdsKit';
 import { advertising } from '@kit.AdsKit';
 ```
 

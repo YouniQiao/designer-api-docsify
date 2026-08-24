@@ -91,12 +91,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void
 ```
 
-Commits the edited image or video asset. This API uses an asynchronous callback to return the result.
+Commits the edited image or video asset. This API uses an asynchronous callback to return the result.The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
-The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The commit operation overwrites the previous edited data.
 
 **Since:** 23
@@ -193,12 +190,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string): Promise<void>
 ```
 
-Commits the edited image or video asset. This API uses a promise to return the result.
+Commits the edited image or video asset. This API uses a promise to return the result.The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
-The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The commit operation overwrites the previous edited data.
 
 **Since:** 23
@@ -431,9 +425,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getEditData(): Promise<MediaAssetEditData>
 ```
 
-Obtains the edited data of this asset. This API uses a promise to return the result.
-
-If the asset has never been edited, an empty string is returned.
+Obtains the edited data of this asset. This API uses a promise to return the result.If the asset has never been edited, an empty string is returned.
 
 **Since:** 23
 
@@ -492,12 +484,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(callback: AsyncCallback<string>): void
 ```
 
-Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.
+Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
-The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and
 > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via
 > [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns.
@@ -595,12 +584,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(): Promise<string>
 ```
 
-Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result.
+Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result.The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
-The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and
 > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via
 > [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns.
@@ -937,12 +923,9 @@ See [isEdited](#isedited)
 open(mode: string, callback: AsyncCallback<number>): void
 ```
 
-Opens this file asset. This API uses an asynchronous callback to return the result.
+Opens this file asset. This API uses an asynchronous callback to return the result.The returned FD must be closed when it is not required.
 
-The returned FD must be closed when it is not required.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API
 > for obtaining the media file handle is no longer provided.
 
@@ -1024,12 +1007,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 open(mode: string): Promise<number>
 ```
 
-Opens this file asset. This API uses a promise to return the result.
+Opens this file asset. This API uses a promise to return the result.The returned FD must be closed when it is not required.
 
-The returned FD must be closed when it is not required.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API
 > for obtaining the media file handle is no longer provided.
 
@@ -1079,9 +1059,7 @@ See [open](#open)
 requestEditData(callback: AsyncCallback<string>): void
 ```
 
-Obtains the edit data of this image or video asset. This API uses an asynchronous callback to return the result.
-
-If the asset has never been edited, an empty string is returned.
+Obtains the edit data of this image or video asset. This API uses an asynchronous callback to return the result.If the asset has never been edited, an empty string is returned.
 
 **Since:** 23
 
@@ -1167,9 +1145,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestEditData(): Promise<string>
 ```
 
-Obtains the edit data of this image or video asset. This API uses a promise to return the result.
-
-If the asset has never been edited, an empty string is returned.
+Obtains the edit data of this image or video asset. This API uses a promise to return the result.If the asset has never been edited, an empty string is returned.
 
 **Since:** 23
 
@@ -1206,9 +1182,7 @@ See [requestEditData](#requesteditdata)
 requestPhoto(callback: AsyncCallback<image.PixelMap>): string
 ```
 
-Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result.
-
-The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail is 256 x 256. After this API is called, the callback will be invoked twice to return a quick thumbnail and a quality thumbnail in sequence.
+Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result.The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail is 256 x 256. After this API is called, the callback will be invoked twice to return a quick thumbnail and a quality thumbnail in sequence.
 
 **Since:** 11
 
@@ -1569,8 +1543,7 @@ revertToOriginal(callback: AsyncCallback<void>): void
 
 Reverts to the state of the file before being edited. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored.
 > Exercise caution when using this API.
 
@@ -1664,8 +1637,7 @@ revertToOriginal(): Promise<void>
 
 Reverts to the state of the file before being edited. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored.
 > Exercise caution when using this API.
 
@@ -1894,9 +1866,7 @@ See [setFavorite](#setfavorite)
 setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets this file asset to the hidden state. This API uses an asynchronous callback to return the result.
-
-Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
+Sets this file asset to the hidden state. This API uses an asynchronous callback to return the result.Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -2037,9 +2007,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setHidden(hiddenState: boolean): Promise<void>
 ```
 
-Sets this file asset to the hidden state. This API uses a promise to return the result.
-
-Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
+Sets this file asset to the hidden state. This API uses a promise to return the result.Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -2087,12 +2055,9 @@ See [setHidden](#sethidden)
 setPending(pendingState: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets the pending state for this image or video asset. This API uses an asynchronous callback to return the result.
+Sets the pending state for this image or video asset. This API uses an asynchronous callback to return the result.The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
 
-The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)**
 > cannot be used to set the pending state for the file.
 
@@ -2174,12 +2139,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPending(pendingState: boolean): Promise<void>
 ```
 
-Sets the pending state for this image or video asset. This API uses a promise to return the result.
+Sets the pending state for this image or video asset. This API uses a promise to return the result.The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
 
-The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)**
 > cannot be used to set the pending state for the file.
 

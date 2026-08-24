@@ -1,8 +1,6 @@
 # Flash
 
-*Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md).
-
-It provides APIs related to the flash.
+**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md).It provides APIs related to the flash.
 
 **Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
@@ -16,7 +14,6 @@ It provides APIs related to the flash.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableLcdFlash
@@ -25,9 +22,7 @@ import { cameraPicker } from '@kit.CameraKit';
 enableLcdFlash(enabled: boolean): void
 ```
 
-Enables or disables the LCD flash.
-
-Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#islcdflashsupported) to check whether the device supports the LCD flash.
+Enables or disables the LCD flash.Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#islcdflashsupported) to check whether the device supports the LCD flash.
 
 **Since:** 23
 

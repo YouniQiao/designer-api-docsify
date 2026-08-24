@@ -1,8 +1,6 @@
 # SelectModifier
 
-Defines Select Modifier
-
-@implements { SelectAttribute, AttributeModifier&lt;SelectAttribute&gt; }
+Defines Select Modifier@implements { SelectAttribute, AttributeModifier&lt;SelectAttribute&gt; }
 
 **Inheritance/Implementation:** SelectModifier implements SelectAttribute, AttributeModifier<SelectAttribute>
 

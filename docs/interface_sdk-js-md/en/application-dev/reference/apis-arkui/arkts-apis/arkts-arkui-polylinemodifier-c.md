@@ -1,8 +1,6 @@
 # PolylineModifier
 
-Defines Polyline Modifier
-
-@implements PolylineAttribute, AttributeModifier&lt;PolylineAttribute&gt;
+Defines Polyline Modifier@implements PolylineAttribute, AttributeModifier&lt;PolylineAttribute&gt;
 
 **Inheritance/Implementation:** PolylineModifier implements PolylineAttribute, AttributeModifier<PolylineAttribute>
 

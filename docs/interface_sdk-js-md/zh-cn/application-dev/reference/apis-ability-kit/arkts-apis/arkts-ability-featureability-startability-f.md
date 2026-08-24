@@ -14,8 +14,7 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 
 启动新的Ability。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 6
@@ -97,8 +96,7 @@ function startAbility(parameter: StartAbilityParameter): Promise<number>
 
 启动新的Ability。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 6

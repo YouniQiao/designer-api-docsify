@@ -1,8 +1,6 @@
 # LongPressGestureEvent
 
-Defines event info for long press gesture.
-
-@extends BaseGestureEvent @interface LongPressGestureEvent
+Defines event info for long press gesture.@extends BaseGestureEvent @interface LongPressGestureEvent
 
 **Inheritance/Implementation:** LongPressGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md)
 

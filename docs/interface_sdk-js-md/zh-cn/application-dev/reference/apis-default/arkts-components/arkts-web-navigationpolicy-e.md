@@ -1,8 +1,6 @@
 # NavigationPolicy
 
-Enum type for navigationPolicy in OnWindowNewExtEvent.
-
-@enum { number }
+Enum type for navigationPolicy in OnWindowNewExtEvent.@enum { number }
 
 **起始版本：** 23
 

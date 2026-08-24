@@ -1,8 +1,6 @@
 # ItemAlign
 
-ItemAlign enumeration description
-
-@enum { number }
+ItemAlign enumeration description@enum { number }
 
 **Since:** 23
 

@@ -13,8 +13,7 @@ Defining of entry of page
 ## entry
 
 ```TypeScript
-@Builder
-  entry(): void
+entry(): void
 ```
 
 Define entry function of page
@@ -22,6 +21,8 @@ Define entry function of page
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

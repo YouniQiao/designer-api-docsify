@@ -2,16 +2,12 @@
 
 Represents the network connection object type.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > (1) When the network transitions from unavailable to available, the **netAvailable**, **netCapabilitiesChange**,
-> and **netConnectionPropertiesChange** events are triggered.
-> 
+> and **netConnectionPropertiesChange** events are triggered.&gt;
 > (2) If the network transitions from available to unavailable after a **netAvailable** event is received, a
-> **netLost** event is triggered.
-> 
-> (3) If no **netAvailable** event is received, a **netUnavailable** event is directly triggered.
-> 
+> **netLost** event is triggered.&gt;
+> (3) If no **netAvailable** event is received, a **netUnavailable** event is directly triggered.&gt;
 > (4) When the network transitions from Wi-Fi to cellular, a **netLost** event is first triggered to indicate that
 > the Wi-Fi network is lost and then a **netAvailable** event is triggered to indicate that the cellular network is
 > available.
@@ -384,8 +380,7 @@ register(callback: AsyncCallback<void>): void
 
 Registers a listener for network status changes. To listen for a specific type of events, call **on** to enable listening and then call **register** to register an event listener.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > After using the **register** API, you need to call **unregister** to deregister the listener.
 > **Required permission**: ohos.permission.GET_NETWORK_INFO
 

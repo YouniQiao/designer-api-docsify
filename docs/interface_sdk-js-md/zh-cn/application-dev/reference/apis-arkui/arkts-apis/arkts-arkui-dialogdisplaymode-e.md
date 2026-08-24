@@ -1,8 +1,6 @@
 # DialogDisplayMode
 
-Dialog display mode.
-
-@enum { DialogDisplayMode }
+Dialog display mode.@enum { DialogDisplayMode }
 
 **起始版本：** 26.0.0
 

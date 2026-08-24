@@ -14,8 +14,7 @@ function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 
 Navigates to a specified page in the application.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
@@ -188,8 +187,7 @@ function pushUrl(options: RouterOptions): Promise<void>
 
 Navigates to a specified page in the application.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
@@ -241,8 +239,7 @@ function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallba
 
 Navigates to a specified page in the application.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
@@ -290,8 +287,7 @@ function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 
 Navigates to a specified page in the application.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated

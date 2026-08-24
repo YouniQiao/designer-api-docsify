@@ -1,8 +1,6 @@
 # RenderParameters
 
-渲染参数接口。
-
-@interface RenderParameters
+渲染参数接口。@interface RenderParameters
 
 **起始版本：** 23
 

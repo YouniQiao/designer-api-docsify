@@ -32,7 +32,7 @@ Unknown reason.
 START_ABILITY = 1
 ```
 
-The ability is started by calling [startAbility](arkts-ability-uiabilitycontext-c.md#startability) .
+The ability is started by calling [startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 
 **Since:** 23
 

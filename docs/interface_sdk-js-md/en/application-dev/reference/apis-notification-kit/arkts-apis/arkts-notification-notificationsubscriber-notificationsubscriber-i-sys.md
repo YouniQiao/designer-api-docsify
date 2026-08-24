@@ -274,7 +274,7 @@ Returns the changes of the enabling state of the application's silent reminder.
 onNotificationSwitchChanged?: NotificationSwitchChangedCallback
 ```
 
-Returns the changes of the notification switch status set by [notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md).
+Returns the changes of the notification switch status set by [notificationManager.setNotificationSwitch]{@link../@ohos.notificationManager:notificationManager.setNotificationSwitch}.
 
 **Type:** [NotificationSwitchChangedCallback](arkts-notification-notificationswitchchangedcallback-t-sys.md)
 

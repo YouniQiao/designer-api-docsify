@@ -2,8 +2,7 @@
 
 警告弹窗中按钮的样式。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 18
@@ -85,9 +84,7 @@ defaultFocus?: boolean
 enabled?: boolean
 ```
 
-点击Button是否响应，默认值true。
-
-值为true时，Button可以响应。值为false时，Button不可以响应。
+点击Button是否响应，默认值true。值为true时，Button可以响应。值为false时，Button不可以响应。
 
 **类型：** boolean
 

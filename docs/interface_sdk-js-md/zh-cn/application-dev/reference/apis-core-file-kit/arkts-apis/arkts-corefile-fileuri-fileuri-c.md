@@ -1,8 +1,6 @@
 # FileUri
 
-FileUri表示文件的URI，继承自uri.URI。
-
-@extends uri.URI
+FileUri表示文件的URI，继承自uri.URI。@extends uri.URI
 
 **继承/实现关系：** FileUri extends uri.URI
 

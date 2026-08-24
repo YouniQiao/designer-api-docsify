@@ -50,14 +50,14 @@ Defines the namespace of focus controller.
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityHoverEvent](arkts-common-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation. |
+| [AccessibilityHoverEvent](arkts-common-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation.@extends BaseEvent |
 | [AlignRuleOption](arkts-common-alignruleoption-i.md) | Defines the align rule options of relative container. |
 | [AnimatableArithmetic](arkts-common-animatablearithmetic-i.md) | 该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\&lt;T\&gt;接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算 和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\&lt;T\&gt;接口的类型。 |
 | [AnimateParam](arkts-common-animateparam-i.md) | 动画效果相关参数。 |
 | [AreaChangeOptions](arkts-common-areachangeoptions-i.md) | Defines the options about AreaChangeEvent. |
 | [AsymmetricTransitionOption](arkts-common-asymmetrictransitionoption-i.md) | Defines the option of asymmetric transition. |
 | [AttributeModifier](arkts-common-attributemodifier-i.md) | Defines the attribute modifier. |
-| [AxisEvent](arkts-common-axisevent-i.md) | The axis event triggers this method invocation. |
+| [AxisEvent](arkts-common-axisevent-i.md) | The axis event triggers this method invocation.@extends BaseEvent |
 | [BackgroundBlurStyleOptions](arkts-common-backgroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](arkts-common-blurstyleoptions-i.md)。 |
 | [BackgroundBrightnessOptions](arkts-common-backgroundbrightnessoptions-i.md) | 背景亮度选项。 |
 | [BackgroundEffectOptions](arkts-common-backgroundeffectoptions-i.md) | 背景效果参数。 |
@@ -71,12 +71,12 @@ Defines the namespace of focus controller.
 | [BorderImageOption](arkts-common-borderimageoption-i.md) | Border image option |
 | [CaretOffset](arkts-common-caretoffset-i.md) | CaretOffset info. |
 | [ClickEffect](arkts-common-clickeffect-i.md) | 定义点击效果。 |
-| [ClickEvent](arkts-common-clickevent-i.md) | The tap action triggers this method invocation. |
+| [ClickEvent](arkts-common-clickevent-i.md) | The tap action triggers this method invocation.@extends BaseEvent |
 | [CommonConfiguration](arkts-common-commonconfiguration-i.md) | Defines the common configuration. |
 | [CommonMethod](arkts-common-commonmethod-i.md) | CommonMethod |
-| [CommonShapeMethod](arkts-common-commonshapemethod-i.md) | CommonShapeMethod |
+| [CommonShapeMethod](arkts-common-commonshapemethod-i.md) | CommonShapeMethod@extends CommonMethod |
 | [Configuration](arkts-common-configuration-i.md) | Defines the data type of the interface restriction. |
-| [ContentCoverOptions](arkts-common-contentcoveroptions-i.md) | 继承自[BindOptions](arkts-common-bindoptions-i.md)。 |
+| [ContentCoverOptions](arkts-common-contentcoveroptions-i.md) | 继承自[BindOptions](arkts-common-bindoptions-i.md)。全屏模态页面内容选项。 |
 | [ContentModifier](arkts-common-contentmodifier-i.md) | Defines the content modifier. |
 | [ContextMenuAnimationOptions](arkts-common-contextmenuanimationoptions-i.md) | Defines the ContextMenu's preview animator options. |
 | [ContextMenuOptions](arkts-common-contextmenuoptions-i.md) | Defines the context menu options. |
@@ -98,19 +98,19 @@ Defines the namespace of focus controller.
 | [EventTarget](arkts-common-eventtarget-i.md) | Defines the event target. |
 | [ExpectedFrameRateRange](arkts-common-expectedframeraterange-i.md) | 设置动画期望的帧率。 |
 | [FadingEdgeOptions](arkts-common-fadingedgeoptions-i.md) | Defines the fadingEdge options. |
-| [FocusAxisEvent](arkts-common-focusaxisevent-i.md) | Focus axis event object description. |
+| [FocusAxisEvent](arkts-common-focusaxisevent-i.md) | Focus axis event object description.@extends BaseEvent |
 | [FocusMovement](arkts-common-focusmovement-i.md) | Defines the next focus item. |
-| [ForegroundBlurStyleOptions](arkts-common-foregroundblurstyleoptions-i.md) | Defines the options of ForegroundBlurStyle |
+| [ForegroundBlurStyleOptions](arkts-common-foregroundblurstyleoptions-i.md) | Defines the options of ForegroundBlurStyle@extends BlurStyleOptions |
 | [ForegroundEffectOptions](arkts-common-foregroundeffectoptions-i.md) | Defines the options of ForegroundEffect |
-| [GeometryInfo](arkts-common-geometryinfo-i.md) | Sub component layout info. |
+| [GeometryInfo](arkts-common-geometryinfo-i.md) | Sub component layout info.@extends SizeResult |
 | [GeometryTransitionOptions](arkts-common-geometrytransitionoptions-i.md) | Defines the options of geometry transition. |
 | [GestureModifier](arkts-common-gesturemodifier-i.md) | Defines the gesture modifier. |
 | [HistoricalPoint](arkts-common-historicalpoint-i.md) | TouchObject getHistoricalPoints Function Parameters |
 | [HorizontalAlignParam](arkts-common-horizontalalignparam-i.md) | Defines the horizontal align rule options of relative container. |
-| [HoverEvent](arkts-common-hoverevent-i.md) | The hover action triggers this method invocation. |
+| [HoverEvent](arkts-common-hoverevent-i.md) | The hover action triggers this method invocation.@extends BaseEvent |
 | [InputCounterOptions](arkts-common-inputcounteroptions-i.md) | Define the ratio of characters entered by the the percentage of InputCounterOptions. |
 | [InputEventInterceptResult](arkts-common-inputeventinterceptresult-i.md) | Defines the input event intercept result. |
-| [InputEventMonitor](arkts-common-inputeventmonitor-i.md) | Defines the input event monitor identifier. |
+| [InputEventMonitor](arkts-common-inputeventmonitor-i.md) | Defines the input event monitor identifier.Important Notes: - This object is created and returned by the system as a unique identifier for the listener. - The object is an empty object with no accessible members. - Developers cannot actively construct this object, it can only be obtained through the registration interface. - Used for subsequent unregistration to verify identity. |
 | [InvertOptions](arkts-common-invertoptions-i.md) | Define the options of invert |
 | [ItemDragEventHandler](arkts-common-itemdrageventhandler-i.md) | Define item drag event handler. |
 | [ItemDragInfo](arkts-common-itemdraginfo-i.md) | ItemDragInfo object description |
@@ -124,20 +124,20 @@ Defines the namespace of focus controller.
 | [LocalizedHorizontalAlignParam](arkts-common-localizedhorizontalalignparam-i.md) | Defines the localized horizontal align param of relative container. |
 | [LocalizedVerticalAlignParam](arkts-common-localizedverticalalignparam-i.md) | Defines the localized vertical align param of relative container. |
 | [Measurable](arkts-common-measurable-i.md) | Sub component info passed from framework when measure happens. |
-| [MeasureResult](arkts-common-measureresult-i.md) | Provides the measurement result of the component. |
+| [MeasureResult](arkts-common-measureresult-i.md) | Provides the measurement result of the component.@extends SizeResult |
 | [MenuElement](arkts-common-menuelement-i.md) | Defines the menu element. |
 | [MenuGridStyleOptions](arkts-common-menugridstyleoptions-i.md) | Defines grid style of menu. |
 | [MenuMaskType](arkts-common-menumasktype-i.md) | Menu mask type |
-| [MenuOptions](arkts-common-menuoptions-i.md) | Defines the menu options. |
+| [MenuOptions](arkts-common-menuoptions-i.md) | Defines the menu options.@extends ContextMenuOptions |
 | [MotionBlurAnchor](arkts-common-motionbluranchor-i.md) | Define motion blur anchor coordinates. |
 | [MotionBlurOptions](arkts-common-motionbluroptions-i.md) | Define motion blur options. |
 | [MotionPathOptions](arkts-common-motionpathoptions-i.md) | 设置组件的运动路径。 |
-| [MouseEvent](arkts-common-mouseevent-i.md) | The mouse click action triggers this method invocation. |
+| [MouseEvent](arkts-common-mouseevent-i.md) | The mouse click action triggers this method invocation.@extends BaseEvent |
 | [MouseHistoricalPoint](arkts-common-mousehistoricalpoint-i.md) | Defines the historical point information for mouse event. |
 | [MultiShadowOptions](arkts-common-multishadowoptions-i.md) | Defines the options of Shadow. |
 | [NestedScrollOptions](arkts-common-nestedscrolloptions-i.md) | Define nested scroll options |
 | [OverlayOffset](arkts-common-overlayoffset-i.md) | Defines the OverlayOffset. |
-| [OverlayOptions](arkts-common-overlayoptions-i.md) | Defines the OverlayOptions interface. |
+| [OverlayOptions](arkts-common-overlayoptions-i.md) | Defines the OverlayOptions interface.&lt;strong&gt;NOTE&lt;/strong&gt;:<br> When both align and offset are set, the effects are combined. The overlay is first aligned relative to the component and then offset from its current upper left corner. |
 | [PickerDialogButtonStyle](arkts-common-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
 | [PickerTextStyle](arkts-common-pickertextstyle-i.md) | Provide an interface for the text style of picker |
 | [PixelRoundPolicy](arkts-common-pixelroundpolicy-i.md) | Defines the direction of pixel rounding at the component level. |
@@ -158,12 +158,12 @@ Defines the namespace of focus controller.
 | [RotateAngleOptions](arkts-common-rotateangleoptions-i.md) | 指定各轴旋转角的旋转参数选项。 |
 | [RotateOptions](arkts-common-rotateoptions-i.md) | 组件旋转参数。 |
 | [ScaleOptions](arkts-common-scaleoptions-i.md) |  |
-| [ScrollableCommonMethod](arkts-common-scrollablecommonmethod-i.md) | CommonScrollableMethod |
+| [ScrollableCommonMethod](arkts-common-scrollablecommonmethod-i.md) | CommonScrollableMethod@extends CommonMethod |
 | [SelectionOptions](arkts-common-selectionoptions-i.md) | Defines the selection options. |
 | [ShadowOptions](arkts-common-shadowoptions-i.md) | Define the options of shadow |
 | [sharedTransitionOptions](arkts-common-sharedtransitionoptions-i.md) | 共享元素转场动画参数。 |
 | [SheetDismiss](arkts-common-sheetdismiss-i.md) | 控制半模态的关闭。 |
-| [SheetOptions](arkts-common-sheetoptions-i.md) | 继承自[BindOptions](arkts-common-bindoptions-i.md)。 |
+| [SheetOptions](arkts-common-sheetoptions-i.md) | 继承自[BindOptions](arkts-common-bindoptions-i.md)。半模态页面内容选项。 |
 | [SheetTitleOptions](arkts-common-sheettitleoptions-i.md) | 半模态面板的标题。 |
 | [SizeResult](arkts-common-sizeresult-i.md) | Provides the component size information. |
 | [SmartGestureShortcutOptions](arkts-common-smartgestureshortcutoptions-i.md) | Options for configuring smart gesture shortcuts. |
@@ -175,12 +175,12 @@ Defines the namespace of focus controller.
 | [TextContentControllerOptions](arkts-common-textcontentcontrolleroptions-i.md) | Defines the span options of TextContentController. |
 | [TextDecorationOptions](arkts-common-textdecorationoptions-i.md) | Defines the options of decoration. |
 | [TipsOptions](arkts-common-tipsoptions-i.md) | Defines the Tips options. |
-| [TouchEvent](arkts-common-touchevent-i.md) | Touch Action Function Parameters |
+| [TouchEvent](arkts-common-touchevent-i.md) | Touch Action Function Parameters@extends BaseEvent |
 | [TouchObject](arkts-common-touchobject-i.md) | Type of the touch event. |
 | [TranslateOptions](arkts-common-translateoptions-i.md) | Defines the options of translate. |
 | [UICommonEvent](arkts-common-uicommonevent-i.md) | Defines a UICommonEvent which is used to set different common event to target component. |
 | [UIGestureEvent](arkts-common-uigestureevent-i.md) | Defines a UIGestureEvent which is used to set different gestures to target component. |
-| [UIScrollableCommonEvent](arkts-common-uiscrollablecommonevent-i.md) | Defines a UIScrollableCommonEvent which is used to set event to target component. |
+| [UIScrollableCommonEvent](arkts-common-uiscrollablecommonevent-i.md) | Defines a UIScrollableCommonEvent which is used to set event to target component.@extends UICommonEvent |
 | [VerticalAlignParam](arkts-common-verticalalignparam-i.md) | Defines the align rule options of relative container. |
 | [VisibleAreaEventOptions](arkts-common-visibleareaeventoptions-i.md) | Defines the options about VisibleAreaEvent. |
 
@@ -197,10 +197,10 @@ Defines the namespace of focus controller.
 | [EdgeLightParams](arkts-common-edgelightparams-i-sys.md) | Defines the parameters of the edge light effect. |
 | [GeometryTransitionOptions](arkts-common-geometrytransitionoptions-i-sys.md) | Defines the options of geometry transition. |
 | [GravityCenterOptions](arkts-common-gravitycenteroptions-i-sys.md) | Defines the parameters of the center of gravity. |
-| [LightSource](arkts-common-lightsource-i-sys.md) | 一个组件支持添加1个光源。 |
+| [LightSource](arkts-common-lightsource-i-sys.md) | 一个组件支持添加1个光源。@interface LightSource |
 | [PixelMapMock](arkts-common-pixelmapmock-i-sys.md) | pixelmap object with release function. |
 | [PointLightStyle](arkts-common-pointlightstyle-i-sys.md) | 通过设置光源和被照亮的类型实现点光源照亮周围组件的UI效果。 |
-| [SheetOptions](arkts-common-sheetoptions-i-sys.md) | 继承自[BindOptions](arkts-common-bindoptions-i.md)。 |
+| [SheetOptions](arkts-common-sheetoptions-i-sys.md) | 继承自[BindOptions](arkts-common-bindoptions-i.md)。半模态页面内容选项。 |
 | [SpatialEffectParams](arkts-common-spatialeffectparams-i-sys.md) | Spatial effect params. |
 | [SpatialPosition](arkts-common-spatialposition-i-sys.md) | Spatial corner positions in 3D space. |
 <!--DelEnd-->
@@ -213,51 +213,51 @@ Defines the namespace of focus controller.
 | [AccessibilityActionInterceptResult](arkts-common-accessibilityactioninterceptresult-e.md) | Enum for the result of accessibility action intercept function @enum { int } |
 | [AccessibilityRoleType](arkts-common-accessibilityroletype-e.md) | Enum for accessibility component type @enum { int } |
 | [AccessibilitySamePageMode](arkts-common-accessibilitysamepagemode-e.md) | Defines the same page mode @enum { int } |
-| [AdaptiveColor](arkts-common-adaptivecolor-e.md) | Defines adaptive color |
-| [AnchoredColorMode](arkts-common-anchoredcolormode-e.md) | enum color mode of pointing popup @enum { number } |
-| [AvailableLayoutArea](arkts-common-availablelayoutarea-e.md) | Defines the available layout area. |
-| [BlendApplyType](arkts-common-blendapplytype-e.md) | Enum for BlendApplyType. Indicate how to apply specified blend mode to the view's content. |
-| [BlendMode](arkts-common-blendmode-e.md) | Enum for BlendMode. Blend modes for compositing current component with overlapping content. Use overlapping content as dst, current component as src. |
+| [AdaptiveColor](arkts-common-adaptivecolor-e.md) | Defines adaptive color@enum { number } |
+| [AnchoredColorMode](arkts-common-anchoredcolormode-e.md) | enum color mode of pointing popup@enum { number } |
+| [AvailableLayoutArea](arkts-common-availablelayoutarea-e.md) | Defines the available layout area.@enum { number } |
+| [BlendApplyType](arkts-common-blendapplytype-e.md) | Enum for BlendApplyType. Indicate how to apply specified blend mode to the view's content.@enum { number } |
+| [BlendMode](arkts-common-blendmode-e.md) | Enum for BlendMode. Blend modes for compositing current component with overlapping content. Use overlapping content as dst, current component as src.@enum { number } |
 | [BlurStyle](arkts-common-blurstyle-e.md) | 模糊样式类型。 |
 | [BlurStyleActivePolicy](arkts-common-blurstyleactivepolicy-e.md) | 定义背景模糊激活策略。 |
-| [ChainStyle](arkts-common-chainstyle-e.md) | Enumerates the chain styles in relative container. |
-| [ContentClipMode](arkts-common-contentclipmode-e.md) | Enum of scrollable containers' content clip mode. |
-| [DismissReason](arkts-common-dismissreason-e.md) | 关闭原因类型。 |
-| [DragBehavior](arkts-common-dragbehavior-e.md) | Enum for Drag Behavior. |
-| [DraggingSizeChangeEffect](arkts-common-draggingsizechangeeffect-e.md) | Define drag start animation effect from drag preview to the handle drag image |
-| [DragPreviewMode](arkts-common-dragpreviewmode-e.md) | Defines the drag preview mode. |
-| [DragResult](arkts-common-dragresult-e.md) | Enum for Drag Result. |
-| [EffectEdge](arkts-common-effectedge-e.md) | Enumerates the effective edge of the edge effect. |
-| [EffectType](arkts-common-effecttype-e.md) | Enum of using the effects template mode. |
+| [ChainStyle](arkts-common-chainstyle-e.md) | Enumerates the chain styles in relative container.@enum { number } |
+| [ContentClipMode](arkts-common-contentclipmode-e.md) | Enum of scrollable containers' content clip mode.@enum { number } |
+| [DismissReason](arkts-common-dismissreason-e.md) | 关闭原因类型。@enum { number } |
+| [DragBehavior](arkts-common-dragbehavior-e.md) | Enum for Drag Behavior.&lt;strong&gt;NOTE&lt;/strong&gt;:<br> DragBehavior serves to inform you about the intended method of data handling, whether it's a copy or a move, but it does not actually dictate the real processing of the data.@enum { number } |
+| [DraggingSizeChangeEffect](arkts-common-draggingsizechangeeffect-e.md) | Define drag start animation effect from drag preview to the handle drag image@enum { number } |
+| [DragPreviewMode](arkts-common-dragpreviewmode-e.md) | Defines the drag preview mode.@enum { number } |
+| [DragResult](arkts-common-dragresult-e.md) | Enum for Drag Result.@enum { number } |
+| [EffectEdge](arkts-common-effectedge-e.md) | Enumerates the effective edge of the edge effect.@enum { int } |
+| [EffectType](arkts-common-effecttype-e.md) | Enum of using the effects template mode.@enum { number } |
 | [FinishCallbackType](arkts-common-finishcallbacktype-e.md) | 动画中定义onFinish回调的类型。 |
-| [HapticFeedbackMode](arkts-common-hapticfeedbackmode-e.md) | Defines the menu haptic feedback mode. |
+| [HapticFeedbackMode](arkts-common-hapticfeedbackmode-e.md) | Defines the menu haptic feedback mode.@enum { number } |
 | [HoverModeAreaType](arkts-common-hovermodeareatype-e.md) | 悬停态显示区域类型。 |
-| [KeyboardAvoidMode](arkts-common-keyboardavoidmode-e.md) | enum keyboard avoid mode |
-| [LayoutSafeAreaEdge](arkts-common-layoutsafeareaedge-e.md) | Define the edges for expanding the safe area in layout. |
-| [LayoutSafeAreaType](arkts-common-layoutsafeareatype-e.md) | Describe the types for expanding the safe area in layout. |
-| [MenuGridPosition](arkts-common-menugridposition-e.md) | Defines menu grid position. |
-| [MenuKeyboardAvoidMode](arkts-common-menukeyboardavoidmode-e.md) | Define the mode of menu how to avoid keyboard. |
-| [MenuPolicy](arkts-common-menupolicy-e.md) | Define the menu pop-up policy |
-| [MenuPreviewMode](arkts-common-menupreviewmode-e.md) | Defines the menu preview mode. |
-| [ModalMode](arkts-common-modalmode-e.md) | Define the modal mode of menu. |
+| [KeyboardAvoidMode](arkts-common-keyboardavoidmode-e.md) | enum keyboard avoid mode@enum { number } |
+| [LayoutSafeAreaEdge](arkts-common-layoutsafeareaedge-e.md) | Define the edges for expanding the safe area in layout.@enum { number } |
+| [LayoutSafeAreaType](arkts-common-layoutsafeareatype-e.md) | Describe the types for expanding the safe area in layout.@enum { number } |
+| [MenuGridPosition](arkts-common-menugridposition-e.md) | Defines menu grid position.@enum { int } |
+| [MenuKeyboardAvoidMode](arkts-common-menukeyboardavoidmode-e.md) | Define the mode of menu how to avoid keyboard.@enum { number } |
+| [MenuPolicy](arkts-common-menupolicy-e.md) | Define the menu pop-up policy@enum { number } |
+| [MenuPreviewMode](arkts-common-menupreviewmode-e.md) | Defines the menu preview mode.@enum { number } |
+| [ModalMode](arkts-common-modalmode-e.md) | Define the modal mode of menu.@enum { number } |
 | [ModalTransition](arkts-common-modaltransition-e.md) | 全屏模态转场方式枚举类型，用于设置全屏模态转场类型。 |
-| [OutlineStyle](arkts-common-outlinestyle-e.md) | Outline Style |
-| [PreDragStatus](arkts-common-predragstatus-e.md) | Defines the drag status before drag action. |
-| [PreviewScaleMode](arkts-common-previewscalemode-e.md) | Defines the scaling mode for custom preview of contextMenu. |
-| [RepeatMode](arkts-common-repeatmode-e.md) | Defines the Border Image Repeat Mode. |
-| [SafeAreaEdge](arkts-common-safeareaedge-e.md) | Enumerates the safe area edges. |
-| [SafeAreaType](arkts-common-safeareatype-e.md) | The types of expanded safe areas. |
+| [OutlineStyle](arkts-common-outlinestyle-e.md) | Outline Style@enum { number } |
+| [PreDragStatus](arkts-common-predragstatus-e.md) | Defines the drag status before drag action.@enum { number } |
+| [PreviewScaleMode](arkts-common-previewscalemode-e.md) | Defines the scaling mode for custom preview of contextMenu.@enum { number } |
+| [RepeatMode](arkts-common-repeatmode-e.md) | Defines the Border Image Repeat Mode.@enum { number } |
+| [SafeAreaEdge](arkts-common-safeareaedge-e.md) | Enumerates the safe area edges.@enum { number } |
+| [SafeAreaType](arkts-common-safeareatype-e.md) | The types of expanded safe areas.@enum { number } |
 | [ScrollSizeMode](arkts-common-scrollsizemode-e.md) | 半模态面板上下滑动时的内容更新方式。 |
-| [ShadowStyle](arkts-common-shadowstyle-e.md) | enum Shadow style |
-| [ShadowType](arkts-common-shadowtype-e.md) | Define the type of shadow |
+| [ShadowStyle](arkts-common-shadowstyle-e.md) | enum Shadow style@enum { number } |
+| [ShadowType](arkts-common-shadowtype-e.md) | Define the type of shadow@enum { number } |
 | [SheetKeyboardAvoidMode](arkts-common-sheetkeyboardavoidmode-e.md) | 半模态激活输入法时对软键盘的避让方式。 |
 | [SheetMode](arkts-common-sheetmode-e.md) | 半模态的显示层级模式。 |
 | [SheetSize](arkts-common-sheetsize-e.md) | 指定半模态的高度。 |
 | [SheetType](arkts-common-sheettype-e.md) | 半模态弹窗的样式。 |
-| [SourceTool](arkts-common-sourcetool-e.md) | Defines the event tool type. |
-| [SourceType](arkts-common-sourcetype-e.md) | Defines the event source type. |
-| [ThemeColorMode](arkts-common-themecolormode-e.md) | enum color mode |
-| [TouchTestStrategy](arkts-common-touchteststrategy-e.md) | Defines the touch test strategy object. |
+| [SourceTool](arkts-common-sourcetool-e.md) | Defines the event tool type.@enum { number } |
+| [SourceType](arkts-common-sourcetype-e.md) | Defines the event source type.@enum { number } |
+| [ThemeColorMode](arkts-common-themecolormode-e.md) | enum color mode@enum { number } |
+| [TouchTestStrategy](arkts-common-touchteststrategy-e.md) | Defines the touch test strategy object.@enum { number } |
 | [TransitionEdge](arkts-common-transitionedge-e.md) | 转场边缘类型。 |
 
 <!--Del-->
@@ -265,11 +265,11 @@ Defines the namespace of focus controller.
 
 | 名称 | 说明 |
 | --- | --- |
-| [BlendApplyType](arkts-common-blendapplytype-e-sys.md) | Enum for BlendApplyType. Indicate how to apply specified blend mode to the view's content. |
+| [BlendApplyType](arkts-common-blendapplytype-e-sys.md) | Enum for BlendApplyType. Indicate how to apply specified blend mode to the view's content.@enum { number } |
 | [DistortionMode](arkts-common-distortionmode-e-sys.md) | Enum for distortion animation mode. |
-| [DragAnimationType](arkts-common-draganimationtype-e-sys.md) | Enum for Drag Animation Type. |
+| [DragAnimationType](arkts-common-draganimationtype-e-sys.md) | Enum for Drag Animation Type.@enum { int } |
 | [EdgeLightMode](arkts-common-edgelightmode-e-sys.md) | 边缘光效动画模式枚举。 |
-| [TransitionHierarchyStrategy](arkts-common-transitionhierarchystrategy-e-sys.md) | 共享元素动画过程中in/out组件层级位置移动策略枚举。 |
+| [TransitionHierarchyStrategy](arkts-common-transitionhierarchystrategy-e-sys.md) | 共享元素动画过程中in/out组件层级位置移动策略枚举。  \| 名称 \| 值 \| 说明 \| \| ------ \| - \| ---- \| \| NONE \| 0 \| 无层级提拉，in/out组件保持原来的层级位置，受父组件scale、position影响。 \| \| ADAPTIVE \| 1 \| 有层级提拉，in/out组件中相对低层级的组件被提拉至组件树上in/out组件相对高层级的位置上。此模式还会导致被提拉的组件与父组件解绑，不受父组件scale、position影响。例如in组件层级高于out组件，开启层级提拉后会在动画过程中将out组件从自己的父组件处解耦，并提拉至in组件的层级位置处，in组件层级位置不变。\| |
 <!--DelEnd-->
 
 ### 类型
@@ -302,7 +302,7 @@ Defines the namespace of focus controller.
 | [GestureRecognizerJudgeBeginCallback](arkts-gesturerecognizerjudgebegincallback-t.md) | Defines the callback type used in onGestureRecognizerJudgeBegin. |
 | [HoverCallback](arkts-hovercallback-t.md) | Defines the callback type used in hover events. The value of isHover indicates whether the mouse is hovering over the component. The value of event contains information about HoverEvent. |
 | [ICurve](arkts-icurve-t.md) | 曲线对象。 |
-| [InputEventListener](arkts-inputeventlistener-t.md) | Defines the input event listener callback function type. |
+| [InputEventListener](arkts-inputeventlistener-t.md) | Defines the input event listener callback function type.Performance Warning: Do not perform time-consuming operations in the callback, otherwise it may cause the application to freeze.The listener executes synchronously in the UI thread and will directly block the event processing flow. It is recommended to only perform simple judgments and calculations, avoiding: - Synchronous I/O operations - Complex data processing - Network requests - Massive log output |
 | [Matrix4Transit](arkts-matrix4transit-t.md) | 矩阵对象接口。 |
 | [ModifierKeyStateGetter](arkts-modifierkeystategetter-t.md) | The modifier key state query function block. |
 | [NavDestinationInfo](arkts-navdestinationinfo-t.md) | The navigation destination information. |

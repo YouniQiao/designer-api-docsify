@@ -14,8 +14,7 @@ function getDnsAscii(host: string, flag?: ConversionProcess): string
 
 Converts the host name from Unicode to ASCII and controls the conversion behavior through the optional conversion process parameter (**conversionProcess**).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If **conversionProcess** is set to **NO_CONFIGURATION**, only the domain names corresponding to the Unicode
 > characters that have been officially allocated can be converted.
 

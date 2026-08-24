@@ -15,12 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
-import { ArrayListComparatorFn } from '@kit.ArkTS';
-import { ArrayListForEachCb } from '@kit.ArkTS';
-import { ArrayListReplaceCb } from '@kit.ArkTS';
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
 ```
 
 ## $_get
@@ -805,7 +799,7 @@ static from<T>(arr: ArrayLike<T>): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arr | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | 是 | 待转换为数组的类数组对象。 |
+| arr | ArrayLike&lt;T&gt; | 是 | 待转换为数组的类数组对象。 |
 
 **返回值：**
 
@@ -835,7 +829,7 @@ static from<T>(iterable: ArrayLike<T> | Iterable<T>): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| iterable | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 待转换为数组的可迭代对象或类数组对象。 |
+| iterable | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 待转换为数组的可迭代对象或类数组对象。 |
 
 **返回值：**
 
@@ -896,7 +890,7 @@ static from<T, U>(iterable: ArrayLike<T> | Iterable<T>, mapfn: (v: T, k: int) =>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| iterable | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 待转换为数组的可迭代对象或类数组对象。 |
+| iterable | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 待转换为数组的可迭代对象或类数组对象。 |
 | mapfn | (v: T, k: int) =&gt; U | 是 | 对数组每个元素调用的映射函数。 |
 
 **返回值：**

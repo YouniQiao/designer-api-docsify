@@ -1,8 +1,6 @@
 # FoldStatus
 
-Enumerates the fold status.
-
-@enum { number }
+Enumerates the fold status.@enum { number }
 
 **起始版本：** 12
 

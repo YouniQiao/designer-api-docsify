@@ -18,9 +18,7 @@ Scroll controller for list component.
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-Collapses the list items in the EXPANDED state and sets callback events.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- A &lt;em&gt;ListScroller&lt;/em&gt; must be bound to the &lt;em&gt;List&lt;/em&gt; component. </p>
+Collapses the list items in the EXPANDED state and sets callback events.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- A &lt;em&gt;ListScroller&lt;/em&gt; must be bound to the &lt;em&gt;List&lt;/em&gt; component. </p>
 
 **Since:** 23
 
@@ -51,9 +49,7 @@ Collapses the list items in the EXPANDED state and sets callback events.
 getItemRectInGroup(index: int, indexInGroup: int): RectResult
 ```
 
-Obtains the size of a list item in a list item group and its position relative to the list.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. <br>- The child component for which &lt;em&gt;index&lt;/em&gt; is set must be a list item group. Otherwise, the &lt;em&gt;index &lt;/em&gt;value is considered invalid. <br>- The value of &lt;em&gt;indexInGroup&lt;/em&gt; must be the index of a list item in the list item group visible in the display area. Otherwise, the value is considered invalid. <br>- When &lt;em&gt;index&lt;/em&gt; or &lt;em&gt;indexInGroup&lt;/em&gt; is set to an invalid value, the returned size and position are both &lt;em&gt;0&lt;/em&gt;. </p>
+Obtains the size of a list item in a list item group and its position relative to the list.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. <br>- The child component for which &lt;em&gt;index&lt;/em&gt; is set must be a list item group. Otherwise, the &lt;em&gt;index &lt;/em&gt;value is considered invalid. <br>- The value of &lt;em&gt;indexInGroup&lt;/em&gt; must be the index of a list item in the list item group visible in the display area. Otherwise, the value is considered invalid. <br>- When &lt;em&gt;index&lt;/em&gt; or &lt;em&gt;indexInGroup&lt;/em&gt; is set to an invalid value, the returned size and position are both &lt;em&gt;0&lt;/em&gt;. </p>
 
 **Since:** 23
 
@@ -91,9 +87,7 @@ Obtains the size of a list item in a list item group and its position relative t
 getVisibleListContentInfo(x: double, y: double): VisibleListContentInfo
 ```
 
-Obtains the index information of the child component at the specified coordinates.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- If the provided value of &lt;em&gt;x&lt;/em&gt; or &lt;em&gt;y&lt;/em&gt; is invalid, the returned VisibleListContentInfo object has the &lt;em&gt;index&lt;/em&gt; property set to &lt;em&gt;-1&lt;/em&gt;, and both &lt;em&gt;itemGroupArea&lt;/em&gt; and &lt;em&gt;itemIndexInGroup&lt;/em&gt; are &lt;em&gt;undefined&lt;/em&gt;. </p>
+Obtains the index information of the child component at the specified coordinates.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- If the provided value of &lt;em&gt;x&lt;/em&gt; or &lt;em&gt;y&lt;/em&gt; is invalid, the returned VisibleListContentInfo object has the &lt;em&gt;index&lt;/em&gt; property set to &lt;em&gt;-1&lt;/em&gt;, and both &lt;em&gt;itemGroupArea&lt;/em&gt; and &lt;em&gt;itemIndexInGroup&lt;/em&gt; are &lt;em&gt;undefined&lt;/em&gt;. </p>
 
 **Since:** 23
 

@@ -22,7 +22,7 @@ import { i18n } from '@kit.LocalizationKit';
 isSuggestedFirst?: boolean
 ```
 
-Whether to move the recommended language or country/region to the top in the sorting result. The value "true" means to move the recommended language or country/region to the top, and the value "false" means the opposite. The default value is true.
+Whether to move the recommended language or country/region to the top in the sorting result. The value "true"means to move the recommended language or country/region to the top, and the value "false" means the opposite. The default value is true.
 
 **Type:** boolean
 

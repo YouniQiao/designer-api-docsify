@@ -2,8 +2,7 @@
 
 拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相 机功能(录像，拍照)。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
@@ -20,7 +19,6 @@
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getBeauty

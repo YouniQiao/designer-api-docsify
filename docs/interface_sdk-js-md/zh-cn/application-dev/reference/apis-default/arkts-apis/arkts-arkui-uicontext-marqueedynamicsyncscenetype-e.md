@@ -1,8 +1,6 @@
 # MarqueeDynamicSyncSceneType
 
-Enum of scene type for Marquee
-
-@enum { number } MarqueeDynamicSyncSceneType
+Enum of scene type for Marquee@enum { number } MarqueeDynamicSyncSceneType
 
 **起始版本：** 23
 

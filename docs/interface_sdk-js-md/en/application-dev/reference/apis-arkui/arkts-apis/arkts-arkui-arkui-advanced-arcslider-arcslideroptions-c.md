@@ -4,6 +4,8 @@ Defines the properties of the arc slider.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-declare class ArcSliderOptions--><!--Device-unnamed-declare class ArcSliderOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -39,19 +41,16 @@ A constructor used to create an **ArcSliderOptions** instance.
 ## digitalCrownSensitivity
 
 ```TypeScript
-@Trace
-  digitalCrownSensitivity?: CrownSensitivity
+digitalCrownSensitivity?: CrownSensitivity
 ```
 
-Sensitivity to the digital crown rotation.
-
-Default value: **CrownSensitivity.MEDIUM**
-
-@Trace
+Sensitivity to the digital crown rotation.Default value: **CrownSensitivity.MEDIUM**@Trace
 
 **Type:** CrownSensitivity
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -62,19 +61,16 @@ Default value: **CrownSensitivity.MEDIUM**
 ## layoutOptions
 
 ```TypeScript
-@Trace
-  layoutOptions?: ArcSliderLayoutOptions
+layoutOptions?: ArcSliderLayoutOptions
 ```
 
-Style of the arc slider.
-
-Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
-
-@Trace
+Style of the arc slider.Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)@Trace
 
 **Type:** [ArcSliderLayoutOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -85,19 +81,16 @@ Default value: default values of all properties of [ArcSliderStyleOptions](../..
 ## onChange
 
 ```TypeScript
-@Trace
-  onChange?: ArcSliderChangeHandler
+onChange?: ArcSliderChangeHandler
 ```
 
-Callback invoked to notify the application when the progress value of the arc slider changes.
-
-Default value: If this parameter is not provided, no callback will be invoked.
-
-@Trace
+Callback invoked to notify the application when the progress value of the arc slider changes.Default value: If this parameter is not provided, no callback will be invoked.@Trace
 
 **Type:** [ArcSliderChangeHandler](../../apis-default/arkts-apis/arkts-arcsliderchangehandler-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -108,19 +101,16 @@ Default value: If this parameter is not provided, no callback will be invoked.
 ## onEnlarge
 
 ```TypeScript
-@Trace
-  onEnlarge?: ArcSliderEnlargeHandler
+onEnlarge?: ArcSliderEnlargeHandler
 ```
 
-Callback invoked to notify the application when the arc slider is enlarged or reduced.
-
-Default value: If this parameter is not provided, no callback will be invoked.
-
-@Trace
+Callback invoked to notify the application when the arc slider is enlarged or reduced.Default value: If this parameter is not provided, no callback will be invoked.@Trace
 
 **Type:** [ArcSliderEnlargeHandler](../../apis-default/arkts-apis/arkts-arcsliderenlargehandler-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -131,19 +121,16 @@ Default value: If this parameter is not provided, no callback will be invoked.
 ## onTouch
 
 ```TypeScript
-@Trace
-  onTouch?: ArcSliderTouchHandler
+onTouch?: ArcSliderTouchHandler
 ```
 
-Callback invoked to notify the application when the arc slider is touched.
-
-Default value: If this parameter is not provided, no callback will be invoked.
-
-@Trace
+Callback invoked to notify the application when the arc slider is touched.Default value: If this parameter is not provided, no callback will be invoked.@Trace
 
 **Type:** [ArcSliderTouchHandler](../../apis-default/arkts-apis/arkts-arcslidertouchhandler-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -154,19 +141,16 @@ Default value: If this parameter is not provided, no callback will be invoked.
 ## styleOptions
 
 ```TypeScript
-@Trace
-  styleOptions?: ArcSliderStyleOptions
+styleOptions?: ArcSliderStyleOptions
 ```
 
-Style of the arc slider.
-
-Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
-
-@Trace
+Style of the arc slider.Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)@Trace
 
 **Type:** [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -177,19 +161,16 @@ Default value: default values of all properties of [ArcSliderStyleOptions](../..
 ## valueOptions
 
 ```TypeScript
-@Trace
-  valueOptions?: ArcSliderValueOptions
+valueOptions?: ArcSliderValueOptions
 ```
 
-Style of the arc slider.
-
-Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
-
-@Trace
+Style of the arc slider.Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)@Trace
 
 **Type:** [ArcSliderValueOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

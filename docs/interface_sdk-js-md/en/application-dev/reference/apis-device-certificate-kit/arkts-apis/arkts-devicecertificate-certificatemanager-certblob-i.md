@@ -12,7 +12,6 @@ Indicates the certificate file data.
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## certData

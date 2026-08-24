@@ -4,11 +4,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## getCurrentInputMethodSubtype
@@ -17,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype
 ```
 
-@brief 获取指定用户的当前输入法子类型。
+获取指定用户的当前输入法子类型。
 
 **起始版本：** 26.0.0
 

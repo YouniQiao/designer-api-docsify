@@ -28,7 +28,7 @@ Defines LazyDynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
+| algorithm | [LazyLayoutAlgorithm](../../apis-default/arkts-apis/arkts-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
 
 **Return value:**
 

@@ -1,12 +1,12 @@
 # ChipV2PrefixSymbolIcon
 
-ChipV2PrefixSymbolIcon定义前缀Symbol图标类。
-
-继承自[ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md)。
+ChipV2PrefixSymbolIcon定义前缀Symbol图标类。继承自[ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md)。
 
 **继承/实现关系：** ChipV2PrefixSymbolIcon extends [ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @ObservedV2
 
 <!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon--><!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon-End-->
 

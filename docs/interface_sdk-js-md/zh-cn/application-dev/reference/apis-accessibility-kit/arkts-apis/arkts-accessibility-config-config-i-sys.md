@@ -169,9 +169,7 @@ config.highContrastText.off(callback);
 on(callback: Callback<T>): void
 ```
 
-添加属性变化监听。使用callback异步回调。
-
-需与[off](#off_callbackt)配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
+添加属性变化监听。使用callback异步回调。需与[off](#off_callbackt)配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
 
 **起始版本：** 23
 

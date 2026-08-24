@@ -1,6 +1,6 @@
 # FolderStack
 
-*FolderStack** extends the [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack) container, adding the <!--RP1-->foldable phone hover<!--RP1End--> capability. Child components specified in the **upperItems** array of [FolderStackOptions](arkts-arkui-folderstackoptions-i.md) automatically avoid the screen crease area and reposition to the upper display. > **NOTE** > > The hover capability is designed for and only works on <!--RP2-->dual-fold devices<!--RP2End-->. > > When the component's parent is an > [if/else conditional render](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) node, the foldable > hover feature is disabled. > > **Child Components** > > Multiple child components are supported.
+**FolderStack** extends the [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack) container, adding the <!--RP1-->foldable phone hover<!--RP1End--> capability. Child components specified in the **upperItems** array of [FolderStackOptions](arkts-arkui-folderstackoptions-i.md) automatically avoid the screen crease area and reposition to the upper display.> **NOTE**>> The hover capability is designed for and only works on <!--RP2-->dual-fold devices<!--RP2End-->.>> When the component's parent is an> [if/else conditional render](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) node, the foldable> hover feature is disabled.>> **Child Components**>> Multiple child components are supported.
 
 ## FolderStack
 

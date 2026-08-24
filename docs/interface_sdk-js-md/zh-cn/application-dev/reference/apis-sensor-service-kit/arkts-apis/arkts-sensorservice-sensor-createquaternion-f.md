@@ -14,8 +14,7 @@ function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback
 
 将旋转矢量转换为四元数。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)
 > 替代。
@@ -79,8 +78,7 @@ function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>
 
 将旋转矢量转换为四元数。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)替代。
 

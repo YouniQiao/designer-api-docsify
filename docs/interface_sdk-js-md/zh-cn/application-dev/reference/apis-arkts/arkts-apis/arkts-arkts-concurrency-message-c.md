@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -122,9 +121,7 @@ constructor(callback: () => void, handler: concurrency.MessageHandler)
 equals(other: concurrency.Message): boolean
 ```
 
-判断当前消息是否与另一个消息相等。
-
-如果两个消息的目标处理器不同，则返回false；对于回调消息，会继续比较回调函数是否相同； 对于携带标识符的消息，会继续比较标识符和数据对象是否相同。
+判断当前消息是否与另一个消息相等。如果两个消息的目标处理器不同，则返回false；对于回调消息，会继续比较回调函数是否相同； 对于携带标识符的消息，会继续比较标识符和数据对象是否相同。
 
 **起始版本：** 26.0.0
 

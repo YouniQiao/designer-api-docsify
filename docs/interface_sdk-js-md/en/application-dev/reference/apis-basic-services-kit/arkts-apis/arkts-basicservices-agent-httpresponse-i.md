@@ -12,7 +12,6 @@ Describes the data structure of the task response header.
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## headers

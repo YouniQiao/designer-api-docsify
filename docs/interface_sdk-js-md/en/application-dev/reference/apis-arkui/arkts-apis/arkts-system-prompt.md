@@ -18,9 +18,9 @@ import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuc
 
 | Name | Description |
 | --- | --- |
-| [Button](arkts-arkui-system-prompt-button-i.md) | Defines the prompt info of button. |
-| [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | Defines the option of ShowActionMenu. |
-| [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | Defines the option of show dialog. |
-| [ShowDialogSuccessResponse](arkts-arkui-system-prompt-showdialogsuccessresponse-i.md) | Defines the response of ShowDialog. |
-| [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Defines the options of ShowToast. |
+| [Button](arkts-arkui-system-prompt-button-i.md) | Defines the prompt info of button.@interface Button |
+| [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | Defines the option of ShowActionMenu.@interface ShowActionMenuOptions |
+| [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | Defines the option of show dialog.@interface ShowDialogOptions |
+| [ShowDialogSuccessResponse](arkts-arkui-system-prompt-showdialogsuccessresponse-i.md) | Defines the response of ShowDialog.@interface ShowDialogSuccessResponse |
+| [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Defines the options of ShowToast.@interface ShowToastOptions |
 

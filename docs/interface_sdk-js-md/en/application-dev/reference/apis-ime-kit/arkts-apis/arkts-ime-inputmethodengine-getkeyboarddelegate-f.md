@@ -12,7 +12,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 function getKeyboardDelegate(): KeyboardDelegate
 ```
 
-@brief Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) instance for the input method. <br> <br>The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
+Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) instance for the input method. <br> <br>The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
 
 **Since:** 9
 
@@ -39,7 +39,7 @@ let KeyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.get
 function getKeyboardDelegate(): KeyboardDelegate | null
 ```
 
-@brief Get KeyboardDelegate object to subscribe key event or events about editor.
+Get KeyboardDelegate object to subscribe key event or events about editor.
 
 **Since:** 23
 

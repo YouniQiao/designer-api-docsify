@@ -1,11 +1,8 @@
 # MediaAssetChangeRequest
 
-MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).
+MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).资产变更请求。
 
-资产变更请求。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Class首批接口从API version 11开始支持。
 
 **继承/实现关系：** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
@@ -30,8 +27,7 @@ addResource(type: ResourceType, fileUri: string): void
 
 通过文件URI从应用沙箱添加资源，待添加资源的数据来源可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
 
 **起始版本：** 23
@@ -130,8 +126,7 @@ addResource(type: ResourceType, data: ArrayBuffer): void
 
 通过ArrayBuffer数据添加资源。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
 
 **起始版本：** 23
@@ -341,7 +336,7 @@ static createAssetRequest(context: Context, photoType: PhotoType, extension: str
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
 | photoType | PhotoType | 是 | 待创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件扩展名，例如：'jpg'。 |
-| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，例如：{title: 'testPhoto'}。 <br>文件名中不允许出现非法英文字符，包括：. .. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，例如：{title: 'testPhoto'}。 <br>文件名中不允许出现非法英文字符，包括：. .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **返回值：**
 
@@ -448,9 +443,7 @@ static createAssetRequest(context: Context, photoType: PhotoType, extension: str
 static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-创建图片资产变更请求。
-
-指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+创建图片资产变更请求。指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **起始版本：** 11
 
@@ -547,9 +540,7 @@ static createImageAssetRequest(context: Context, fileUri: string): MediaAssetCha
 static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-创建视频资产变更请求。
-
-指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+创建视频资产变更请求。指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **起始版本：** 11
 
@@ -1001,8 +992,7 @@ getAsset(): PhotoAsset
 
 获取当前资产变更请求中的资产。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 对于创建资产的变更请求，在调用接口
 > 
 > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)
@@ -1090,8 +1080,7 @@ getWriteCacheHandler(): Promise<int>
 
 获取临时文件写句柄。使用Promise异步回调。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 对于同一个资产变更请求，不支持在成功获取临时文件写句柄后，重复调用该接口。
 
 **起始版本：** 23
@@ -1348,9 +1337,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 readonly comment: string
 ```
 
-用于MediaChangeRequest类型校验。
-
-如果类（如[MediaAssetChangeRequest](#mediaassetchangerequest)或 [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
+用于MediaChangeRequest类型校验。如果类（如[MediaAssetChangeRequest](#mediaassetchangerequest)或 [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
 
 **类型：** string
 

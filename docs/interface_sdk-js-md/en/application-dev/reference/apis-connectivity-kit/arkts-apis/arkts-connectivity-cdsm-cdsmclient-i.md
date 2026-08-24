@@ -1,12 +1,8 @@
 # CdsmClient
 
-Defines a CDSM client class, which provides APIs for obtaining the CDSM information of a remote device.
-
-- Before using the methods of this class, call [cdsm.createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md) to construct an instance of this class.
-
-This class is applicable to scenarios where you need to obtain the member devices and connection status changes of a group of NearLink devices (CDSM) and perform service coordination accordingly. For example, after a phone is paired with earphones, the phone can use the CDSM to query the left and right earphones and detect their connection status changes.
-
-An app only needs to create one [CdsmClient](#cdsmclient) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
+Defines a CDSM client class, which provides APIs for obtaining the CDSM information of a remote device.  
+- Before using the methods of this class, call [cdsm.createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md) to construct an instance of this class.  
+This class is applicable to scenarios where you need to obtain the member devices and connection status changes of a group of NearLink devices (CDSM) and perform service coordination accordingly. For example, after a phone is paired with earphones, the phone can use the CDSM to query the left and right earphones and detect their connection status changes.An app only needs to create one [CdsmClient](#cdsmclient) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
 
 **Since:** 26.0.0
 
@@ -80,9 +76,7 @@ Unsubscribes from the CDSM information change event. This API uses an asynchrono
 onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 ```
 
-Subscribes to the CDSM information change event. This API uses an asynchronous callback to return the result.
-
-The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the CDSM information change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 

@@ -1,8 +1,6 @@
 # AvailableLayoutArea
 
-Defines the available layout area.
-
-@enum { number }
+Defines the available layout area.@enum { number }
 
 **起始版本：** 23
 

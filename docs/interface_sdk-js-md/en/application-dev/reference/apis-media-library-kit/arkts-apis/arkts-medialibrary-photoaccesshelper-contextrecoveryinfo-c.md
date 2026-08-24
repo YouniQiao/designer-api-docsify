@@ -20,10 +20,8 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 albumUri: string
 ```
 
-URI of the album in the media library when the user selects an image and exits.
-
-- If the user selects from all images, **albumUri** is a fixed **"allPhotos"** string. - If the user exits after selecting from search results, text recommendations, or avatar recommendations, the next restoration is not supported, and the returned **albumUri** is an empty string.
-
+URI of the album in the media library when the user selects an image and exits.  
+- If the user selects from all images, **albumUri** is a fixed **"allPhotos"** string. - If the user exits after selecting from search results, text recommendations, or avatar recommendations, the next restoration is not supported, and the returned **albumUri** is an empty string.  
 The default value is an empty string.
 
 **Type:** string
@@ -100,9 +98,7 @@ Level of the grid when the user exits last time.
 recommendationType: int
 ```
 
-Enumerated value of the recommended content set by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md).
-
-If no recommendation was set during the last selection, the default value is **0**.
+Enumerated value of the recommended content set by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md).If no recommendation was set during the last selection, the default value is **0**.
 
 **Type:** int
 
@@ -120,9 +116,7 @@ If no recommendation was set during the last selection, the default value is **0
 selectedRecommendationType: int
 ```
 
-Enumerated value of the recommended content selected by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md).
-
-If no recommendation was selected during the last selection or **All** was selected, the default value is **0**.
+Enumerated value of the recommended content selected by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md).If no recommendation was selected during the last selection or **All** was selected, the default value is **0**.
 
 **Type:** int
 
@@ -160,10 +154,8 @@ Sorting rule of the grid interface when the user last selected an image. The def
 time: long
 ```
 
-Time of the top-left image in the grid interface when the user last selected an image.
-
-- For albums sorted by capture time, the capture time is returned. - For albums sorted by save time, the save time is returned. The default value is **0**.
-
+Time of the top-left image in the grid interface when the user last selected an image.  
+- For albums sorted by capture time, the capture time is returned. - For albums sorted by save time, the save time is returned. The default value is **0**.  
 Unit: ms, The value must be greater than or equal to 0.
 
 **Type:** long
@@ -182,9 +174,7 @@ Unit: ms, The value must be greater than or equal to 0.
 version: int
 ```
 
-Version number of the state data, used to verify the compatibility of the state information data with the state recovery capability.
-
-The version number must be greater than or equal to 1.0.
+Version number of the state data, used to verify the compatibility of the state information data with the state recovery capability.The version number must be greater than or equal to 1.0.
 
 **Type:** int
 

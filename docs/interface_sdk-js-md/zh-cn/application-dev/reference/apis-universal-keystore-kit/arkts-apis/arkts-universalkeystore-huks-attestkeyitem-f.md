@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## attestKeyItem
@@ -13,11 +12,8 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-获取密钥证书。使用callback异步回调。
-
-<!--RP6-->   
-> **说明：**
-> 
+获取密钥证书。使用callback异步回调。<!--RP6-->  
+> **说明：**&gt;
 > 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。 <!--RP6End-->
 
 **起始版本：** 9
@@ -249,11 +245,8 @@ async function attestKey() {
 function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-获取密钥证书。使用Promise异步回调。
-
-<!--RP6-->   
-> **说明：**
-> 
+获取密钥证书。使用Promise异步回调。<!--RP6-->  
+> **说明：**&gt;
 > 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。 <!--RP6End-->
 
 **起始版本：** 9

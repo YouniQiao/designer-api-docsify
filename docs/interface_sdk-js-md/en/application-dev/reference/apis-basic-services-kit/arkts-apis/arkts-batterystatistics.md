@@ -2,8 +2,7 @@
 
 The **batteryStatistics** module provides APIs for querying software and hardware power consumption statistics.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The APIs provided by this module are system APIs.
 
 **Since:** 23

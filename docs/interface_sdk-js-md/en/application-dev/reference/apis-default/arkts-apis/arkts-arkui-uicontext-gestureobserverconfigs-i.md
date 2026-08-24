@@ -1,8 +1,6 @@
 # GestureObserverConfigs
 
-The observer options for global gesture listener.
-
-@interface GestureObserverConfigs
+The observer options for global gesture listener.@interface GestureObserverConfigs
 
 **Since:** 26.0.0
 

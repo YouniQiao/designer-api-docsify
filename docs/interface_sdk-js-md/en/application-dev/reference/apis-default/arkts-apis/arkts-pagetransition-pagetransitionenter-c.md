@@ -1,8 +1,6 @@
 # PageTransitionEnter
 
-Provides an interface to set transition style when a page enters.
-
-@extends CommonTransition
+Provides an interface to set transition style when a page enters.@extends CommonTransition
 
 **Inheritance/Implementation:** PageTransitionEnter extends [CommonTransition](arkts-pagetransition-commontransition-c.md)
 

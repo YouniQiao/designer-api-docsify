@@ -1,8 +1,6 @@
 # WifiP2pDevice
 
-P2P设备信息。
-
-@interface WifiP2pDevice
+P2P设备信息。@interface WifiP2pDevice
 
 **起始版本：** 8
 
@@ -18,9 +16,6 @@ P2P设备信息。
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## deviceAddress

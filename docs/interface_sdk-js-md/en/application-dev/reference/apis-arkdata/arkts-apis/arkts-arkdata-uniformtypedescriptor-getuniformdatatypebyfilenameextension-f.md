@@ -33,7 +33,7 @@ Obtains the uniform data type ID based on the given file name extension and data
 
 | Type | Description |
 | --- | --- |
-| string | ID of the uniform data type that matches the specified file name extension and **belongsTo** ( if specified). If no match is found, the data type dynamically generated based on the rules specified by the input parameters is returned. |
+| string | ID of the uniform data type that matches the specified file name extension and **belongsTo** (if specified). If no match is found, the data type dynamically generated based on the rules specified by the input parameters is returned. |
 
 **Error codes:**
 

@@ -116,8 +116,7 @@ SMSC address. By default, the SMSC address in the SIM card is used.
 slotId: int
 ```
 
-Slot ID of the SIM card used for sending SMS messages.
-
+Slot ID of the SIM card used for sending SMS messages.  
 - **0**: card slot 1. - **1**: card slot 2
 
 **Type:** int

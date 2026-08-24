@@ -1,11 +1,8 @@
 # AudioCapturer
 
-This interface provides APIs for audio capture.
+This interface provides APIs for audio capture.Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) to create an AudioCapturer instance.
 
-Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) to create an AudioCapturer instance.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 23
@@ -18,7 +15,6 @@ Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkt
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## offReadMicInData

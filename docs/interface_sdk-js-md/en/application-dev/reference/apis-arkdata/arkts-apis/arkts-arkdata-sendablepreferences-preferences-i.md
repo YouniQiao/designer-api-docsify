@@ -391,7 +391,7 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#constants) . |
+| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#constants). |
 | defValue | lang.ISendable | Yes | Default value to be returned. |
 
 **Return value:**

@@ -106,8 +106,7 @@ if (iFaceInfo) {
 function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>
 ```
 
-Obtains the historical data traffic of the specified NIC. This API uses a promise to return the result.
-
+Obtains the historical data traffic of the specified NIC. This API uses a promise to return the result.  
 | Name | Type | Mandatory| Description | | --------- | ------------------------- | ---- | --------------------------------------------------- | | ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | NIC information. For details, see [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md).|
 
 **Since:** 23

@@ -1,8 +1,6 @@
 # CapsuleSegmentButtonConstructionOptions
 
-用于构建胶囊类的SegmentButtonOptions对象。
-
-继承[CommonSegmentButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)。
+用于构建胶囊类的SegmentButtonOptions对象。继承[CommonSegmentButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)。
 
 **继承/实现关系：** CapsuleSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)
 
@@ -45,13 +43,7 @@ buttons: SegmentButtonItemTuple
 multiply?: boolean
 ```
 
-是否可以多选。
-
-默认值：false
-
-值为undefined时，按默认值处理。
-
-true表示可以多选，false表示不可以多选。
+是否可以多选。默认值：false值为undefined时，按默认值处理。true表示可以多选，false表示不可以多选。
 
 **类型：** boolean
 

@@ -20,9 +20,7 @@ import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } fro
 onRequestFailure?: OnRequestFailureFn
 ```
 
-Callback invoked when launching the specified ability fails.
-
-This API can be used in atomic services since API version 21.
+Callback invoked when launching the specified ability fails.This API can be used in atomic services since API version 21.
 
 **Type:** [OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md)
 
@@ -42,9 +40,7 @@ This API can be used in atomic services since API version 21.
 onRequestSuccess?: OnRequestSuccessFn
 ```
 
-Callback invoked when the specified ability is successfully launched.
-
-This API can be used in atomic services since API version 21.
+Callback invoked when the specified ability is successfully launched.This API can be used in atomic services since API version 21.
 
 **Type:** [OnRequestSuccessFn](arkts-ability-onrequestsuccessfn-t.md)
 

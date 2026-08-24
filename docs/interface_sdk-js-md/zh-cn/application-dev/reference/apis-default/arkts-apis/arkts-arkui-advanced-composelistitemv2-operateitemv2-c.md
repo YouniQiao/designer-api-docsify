@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class OperateItemV2--><!--Device-unnamed-export declare class OperateItemV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ OperateItemV2的构造函数。
 ## arrow
 
 ```TypeScript
-@Trace
-  public arrow?: OperateIconV2
+public arrow?: OperateIconV2
 ```
 
 设置箭头。
@@ -54,6 +55,8 @@ OperateItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateItemV2-@Trace  public arrow?: OperateIconV2--><!--Device-OperateItemV2-@Trace  public arrow?: OperateIconV2-End-->
@@ -63,8 +66,7 @@ OperateItemV2的构造函数。
 ## button
 
 ```TypeScript
-@Trace
-  public button?: OperateButtonV2
+public button?: OperateButtonV2
 ```
 
 设置按钮。
@@ -75,6 +77,8 @@ OperateItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateItemV2-@Trace  public button?: OperateButtonV2--><!--Device-OperateItemV2-@Trace  public button?: OperateButtonV2-End-->
@@ -84,8 +88,7 @@ OperateItemV2的构造函数。
 ## checkbox
 
 ```TypeScript
-@Trace
-  public checkbox?: OperateCheckV2
+public checkbox?: OperateCheckV2
 ```
 
 设置多选框。
@@ -96,6 +99,8 @@ OperateItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateItemV2-@Trace  public checkbox?: OperateCheckV2--><!--Device-OperateItemV2-@Trace  public checkbox?: OperateCheckV2-End-->
@@ -105,8 +110,7 @@ OperateItemV2的构造函数。
 ## icon
 
 ```TypeScript
-@Trace
-  public icon?: OperateIconV2
+public icon?: OperateIconV2
 ```
 
 设置图标
@@ -117,6 +121,8 @@ OperateItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateItemV2-@Trace  public icon?: OperateIconV2--><!--Device-OperateItemV2-@Trace  public icon?: OperateIconV2-End-->
@@ -126,8 +132,7 @@ OperateItemV2的构造函数。
 ## image
 
 ```TypeScript
-@Trace
-  public image?: ResourceStr
+public image?: ResourceStr
 ```
 
 设置图片。
@@ -138,6 +143,8 @@ OperateItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateItemV2-@Trace  public image?: ResourceStr--><!--Device-OperateItemV2-@Trace  public image?: ResourceStr-End-->
@@ -147,8 +154,7 @@ OperateItemV2的构造函数。
 ## radio
 
 ```TypeScript
-@Trace
-  public radio?: OperateCheckV2
+public radio?: OperateCheckV2
 ```
 
 设置单选框。
@@ -159,6 +165,8 @@ OperateItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateItemV2-@Trace  public radio?: OperateCheckV2--><!--Device-OperateItemV2-@Trace  public radio?: OperateCheckV2-End-->
@@ -168,8 +176,7 @@ OperateItemV2的构造函数。
 ## subIcon
 
 ```TypeScript
-@Trace
-  public subIcon?: OperateIconV2
+public subIcon?: OperateIconV2
 ```
 
 设置子图标。
@@ -180,6 +187,8 @@ OperateItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateItemV2-@Trace  public subIcon?: OperateIconV2--><!--Device-OperateItemV2-@Trace  public subIcon?: OperateIconV2-End-->
@@ -189,8 +198,7 @@ OperateItemV2的构造函数。
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 设置Symbol图标。
@@ -201,6 +209,8 @@ OperateItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier--><!--Device-OperateItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier-End-->
@@ -210,8 +220,7 @@ OperateItemV2的构造函数。
 ## text
 
 ```TypeScript
-@Trace
-  public text?: ResourceStr
+public text?: ResourceStr
 ```
 
 设置文本。
@@ -222,6 +231,8 @@ OperateItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateItemV2-@Trace  public text?: ResourceStr--><!--Device-OperateItemV2-@Trace  public text?: ResourceStr-End-->
@@ -231,8 +242,7 @@ OperateItemV2的构造函数。
 ## toggle
 
 ```TypeScript
-@Trace
-  public toggle?: OperateCheckV2
+public toggle?: OperateCheckV2
 ```
 
 设置开关。
@@ -242,6 +252,8 @@ OperateItemV2的构造函数。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

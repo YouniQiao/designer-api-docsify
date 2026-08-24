@@ -2,13 +2,10 @@
 
 Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 12.&gt;
 > - In the following API examples, you must first use [getComponentSnapshot()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.
-> 
+> in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.&gt;
 > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the
 > target component. Applying these transformation properties directly to the target component itself has no effect;
 > the snapshot will still display the component as it appears before any transformations are applied.
@@ -37,12 +34,10 @@ createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap
 
 Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md). This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in
 > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive
-> scenarios.
-> 
+> scenarios.&gt;
 > - If a component is on a time-consuming task, for example, an Image or Web component
 > that is loading online images, its loading may be still in progress when this API is called. In this case, the
 > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
@@ -61,9 +56,9 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder | Yes | Builder of the custom component.<br>Note: The global builder is not supported.&lt; br&gt;If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
+| builder | CustomBuilder | Yes | Builder of the custom component.<br>Note: The global builder is not supported.<br>If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md). Otherwise, **err** provides detailed error information. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
-| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.<br> When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.&lt; br&gt;Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.<br> Default value: **300**<br> Unit: ms<br> Value range: [0, +∞). If the value is less than 0, the default value is used. |
+| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.<br> When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.<br>Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.<br> Default value: **300**<br> Unit: ms<br> Value range: [0, +∞). If the value is less than 0, the default value is used. |
 | checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.<br>Default value: **false**. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
@@ -196,12 +191,10 @@ createFromBuilder(builder: CustomBuilder, delay?: number,
 
 Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md). This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in
 > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive
-> scenarios.
-> 
+> scenarios.&gt;
 > - If a component is on a time-consuming task, for example, an Image or Web component
 > that is loading online images, its loading may be still in progress when this API is called. In this case, the
 > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
@@ -220,8 +213,8 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder | Yes | Builder of the custom component.<br>Note: The global builder is not supported.&lt; br&gt;If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
-| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.<br> When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.&lt; br&gt;Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.<br> Default value: **300**<br> Unit: ms<br> Value range: [0, +∞). If the value is less than 0, the default value is used. |
+| builder | CustomBuilder | Yes | Builder of the custom component.<br>Note: The global builder is not supported.<br>If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
+| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.<br> When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.<br>Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.<br> Default value: **300**<br> Unit: ms<br> Value range: [0, +∞). If the value is less than 0, the default value is used. |
 | checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.<br>Default value: **false**. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
@@ -269,7 +262,7 @@ Captures a snapshot of the provided component content. This API uses a promise t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | Component content to be captured. This is the content currently displayed in the **UIContext**. |
-| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.<br> When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.&lt; br&gt;Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.<br> Value range: [0, +∞). If the value is less than 0, the default value is used.<br>Default value: **300**<br> Unit: ms |
+| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.<br> When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.<br>Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.<br> Value range: [0, +∞). If the value is less than 0, the default value is used.<br>Default value: **300**<br> Unit: ms |
 | checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.<br>Default value: **false**. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. You can specify the scale ratio for the pixelmap during rendering and whether to force the system to complete all rendering commands before taking the snapshot. |
 
@@ -377,8 +370,7 @@ get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnap
 
 Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
 > update, the re-rendered content will not be included in the obtained snapshot.
 
@@ -501,8 +493,7 @@ get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.Pixe
 
 Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
 > update, the re-rendered content will not be included in the obtained snapshot.
 
@@ -573,8 +564,7 @@ getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 
 Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) after completing the capture. Note that this API blocks the main thread and has a 3-second timeout. If the operation exceeds this limit, it throws an exception. Use with caution in performance-critical scenarios.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
 > update, the re-rendered content will not be included in the obtained snapshot.
 
@@ -659,8 +649,7 @@ getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOption
 
 Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
 > update, the re-rendered content will not be included in the obtained snapshot.
 
@@ -678,7 +667,7 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](../../apis-default/arkts-apis/arkts-framenode-c.md#getuniqueid) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**
@@ -762,8 +751,7 @@ getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): 
 
 Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
 > update, the re-rendered content will not be included in the obtained snapshot.
 
@@ -781,7 +769,7 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](../../apis-default/arkts-apis/arkts-framenode-c.md#getuniqueid) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**

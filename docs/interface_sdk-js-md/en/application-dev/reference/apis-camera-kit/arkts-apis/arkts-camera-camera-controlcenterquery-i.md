@@ -12,7 +12,6 @@ ControlCenterQuery is used to check whether the camera controller is supported.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getSupportedEffectTypes

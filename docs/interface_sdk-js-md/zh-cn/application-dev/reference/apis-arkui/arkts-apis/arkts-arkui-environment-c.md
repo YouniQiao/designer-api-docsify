@@ -23,9 +23,7 @@ Environment提供设备环境状态的查询能力，可将系统环境变量（
 static EnvProp<S>(key: string, value: S): boolean
 ```
 
-将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入 [AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入 AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。
-
-在没有调用EnvProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
+将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入 [AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入 AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。在没有调用EnvProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
 
 **起始版本：** 7
 
@@ -62,9 +60,7 @@ Environment.EnvProp('accessibilityEnabled', 'default');
 static envProp<S>(key: string, value: S): boolean
 ```
 
-将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入 [AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入 AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。
-
-在没有调用envProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
+将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入 [AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入 AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。在没有调用envProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
 
 **起始版本：** 10
 

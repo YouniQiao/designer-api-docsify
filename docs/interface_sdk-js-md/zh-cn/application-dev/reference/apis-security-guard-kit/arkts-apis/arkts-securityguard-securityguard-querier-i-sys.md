@@ -1,8 +1,6 @@
 # Querier（系统接口）
 
-用于接收安全数据的回调函数。
-
-@interface Querier
+用于接收安全数据的回调函数。@interface Querier
 
 **起始版本：** 12
 

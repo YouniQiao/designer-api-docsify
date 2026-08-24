@@ -1,9 +1,8 @@
 # NodeContent
 
-*NodeContent** is the ArkUI-provided manager for ContentSlot.
+**NodeContent** is the ArkUI-provided manager for ContentSlot.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - **NodeContent** objects do not support JSON serialization.
 
 **Inheritance/Implementation:** NodeContent extends Content
@@ -36,7 +35,7 @@ Adds a FrameNode to this **NodeContent** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to add. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | FrameNode to add. |
 
 **Error codes:**
 
@@ -108,7 +107,7 @@ Removes a FrameNode from this **NodeContent** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to remove. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | FrameNode to remove. |
 
 **Examples**
 

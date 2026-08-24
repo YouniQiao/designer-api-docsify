@@ -16,7 +16,6 @@ Represents the tip information displayed during the authentication, which is use
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## module

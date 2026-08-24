@@ -2,8 +2,7 @@
 
 Provides APIs for listening for UI component behavior changes.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - UIObserver can only listen for relevant information within the current process and does not support obtaining
 > information in cross-process scenarios<!--Del--
 > such as UIExtensionComponent<!--
@@ -71,9 +70,9 @@ import { uiObserver } from '@kit.ArkUI';
 | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Provides the observer options for the page switching event of the **Navigation** component. |
 | [NavigationInfo](arkts-arkui-uiobserver-navigationinfo-i.md) | Provides information about the **Navigation** component. |
 | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Describes the observer options. |
-| [ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md) | ScrollEvent info. |
+| [ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md) | ScrollEvent info.@interface ScrollEventInfo |
 | [TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md) | Provides the **TabContent** switching information. |
-| [TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md) | Text change event info |
+| [TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md) | Text change event info@interface TextChangeEventInfo |
 
 ### Enums
 
@@ -81,6 +80,6 @@ import { uiObserver } from '@kit.ArkUI';
 | --- | --- |
 | [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md) | Describes the state of the **NavDestination** component. |
 | [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](../../apis-default/arkts-apis/arkts-uiobserver-routerpageinfo-c.md) as the callback parameter for passive observation via [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate). |
-| [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md) | ScrollEvent type. |
+| [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md) | ScrollEvent type.@enum { number } |
 | [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md) | TabContent state. |
 

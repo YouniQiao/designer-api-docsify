@@ -2,8 +2,7 @@
 
 Represents the result returned.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - For details about the error codes, see
 > [HUKS Error Codes](../errorcode-huks.md).
 
@@ -21,7 +20,6 @@ Represents the result returned.
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## certChains
@@ -30,9 +28,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 certChains?: Array<string>
 ```
 
-Reserved field.
-
-Note: This API is deprecated since API version 9. No substitute API is provided.
+Reserved field.Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** Array&lt;string&gt;
 
@@ -50,9 +46,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 errorCode: number
 ```
 
-Reserved field.
-
-Note: This API is deprecated since API version 9. No substitute API is provided.
+Reserved field.Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** number
 
@@ -70,9 +64,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 outData?: Uint8Array
 ```
 
-Reserved field.
-
-Note: This API is deprecated since API version 9. No substitute API is provided.
+Reserved field.Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** Uint8Array
 
@@ -90,9 +82,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 properties?: Array<HuksParam>
 ```
 
-Reserved field.
-
-Note: This API is deprecated since API version 9. No substitute API is provided.
+Reserved field.Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 

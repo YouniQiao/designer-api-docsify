@@ -132,9 +132,7 @@ const ERROR_UNHANDLED_HTTP_CODE: int
 const ERROR_UNKNOWN: int
 ```
 
-(Download error codes) Unknown error.
-
-In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returned by the DNS is blocked, a handshake timeout may occur, leading to an ERROR_UNKNOWN error.
+(Download error codes) Unknown error.In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returned by the DNS is blocked, a handshake timeout may occur, leading to an ERROR_UNKNOWN error.
 
 **Since:** 23
 
@@ -330,9 +328,7 @@ const PAUSED_UNKNOWN: int
 const PAUSED_WAITING_FOR_NETWORK: int
 ```
 
-(Causes of download pause) Download paused due to a network connection problem.
-
-Example: network disconnection
+(Causes of download pause) Download paused due to a network connection problem.Example: network disconnection
 
 **Since:** 23
 

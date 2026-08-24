@@ -25,17 +25,17 @@ import { radio } from '@kit.TelephonyKit';
 | [getISOCountryCodeForNetworkSync](arkts-telephony-radio-getisocountrycodefornetworksync-f.md) | Obtains the ISO country code of the network with which the SIM card in the specified slot is registered. |
 | [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md) | Obtains the network selection mode of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md) | Obtains the network selection mode of the SIM card in the specified slot. This API uses a promise to return the result. |
-| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md) | Obtains the network status of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
-| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md) | Obtains the network status of the SIM card in the specified slot. This API uses a promise to return the result. |
-| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md) | Obtains the network status. This API uses an asynchronous callback to return the result. |
+| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md) | Obtains the network status of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
+| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md) | Obtains the network status of the SIM card in the specified slot. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
+| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md) | Obtains the network status. This API uses an asynchronous callback to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
 | [getOperatorName](arkts-telephony-radio-getoperatorname-f.md) | Obtains the carrier name of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getOperatorName](arkts-telephony-radio-getoperatorname-f.md) | Obtains the carrier name of the SIM card in the specified slot. This API uses a promise to return the result. |
 | [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md) | Obtains the carrier name of the SIM card in the specified slot. |
 | [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md) | Obtains the ID of the slot in which the primary card is located. This API uses an asynchronous callback to return the result. |
 | [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md) | Obtains the ID of the slot in which the primary card is located. This API uses a promise to return the result. |
-| [getRadioTech](arkts-telephony-radio-getradiotech-f.md) | Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses an asynchronous callback to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain. |
-| [getRadioTech](arkts-telephony-radio-getradiotech-f.md) | Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses a promise to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain. |
-| [getRadioTechSync](arkts-telephony-radio-getradiotechsync-f.md) | Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain. |
+| [getRadioTech](arkts-telephony-radio-getradiotech-f.md) | Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses an asynchronous callback to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
+| [getRadioTech](arkts-telephony-radio-getradiotech-f.md) | Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses a promise to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
+| [getRadioTechSync](arkts-telephony-radio-getradiotechsync-f.md) | Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
 | [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md) | Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. This API uses an asynchronous callback to return the result. |
 | [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md) | Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. This API uses a promise to return the result. |
 | [getSignalInformationSync](arkts-telephony-radio-getsignalinformationsync-f.md) | Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. |
@@ -43,9 +43,9 @@ import { radio } from '@kit.TelephonyKit';
 | [isNrSupported](arkts-telephony-radio-isnrsupported-f.md) | Checks whether the SIM card in the specified slot supports NR. |
 | [isNRSupported](arkts-telephony-radio-isnrsupported-f.md) | Checks whether the current device supports NR. |
 | [isNRSupported](arkts-telephony-radio-isnrsupported-f.md) | Checks whether the SIM card in the specified slot supports NR. |
-| [isRadioOn](arkts-telephony-radio-isradioon-f.md) | Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
-| [isRadioOn](arkts-telephony-radio-isradioon-f.md) | Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses a promise to return the result. |
-| [isRadioOn](arkts-telephony-radio-isradioon-f.md) | Checks whether the radio service is enabled on the primary SIM card. This API uses an asynchronous callback to return the result. |
+| [isRadioOn](arkts-telephony-radio-isradioon-f.md) | Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses an asynchronous callback to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
+| [isRadioOn](arkts-telephony-radio-isradioon-f.md) | Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
+| [isRadioOn](arkts-telephony-radio-isradioon-f.md) | Checks whether the radio service is enabled on the primary SIM card. This API uses an asynchronous callback to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
 
 <!--Del-->
 ### Functions(System API)
@@ -78,9 +78,9 @@ import { radio } from '@kit.TelephonyKit';
 | [getNROptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md) | Get the option mode of NR. |
 | [getPreferredNetwork](arkts-telephony-radio-getpreferrednetwork-f-sys.md) | Get the preferred network for the specified SIM card slot. |
 | [getPreferredNetwork](arkts-telephony-radio-getpreferrednetwork-f-sys.md) | Get the preferred network for the specified SIM card slot. |
-| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md) | Obtains the unique device ID of a specified card slot of the device. |
-| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md) | Obtains the unique device ID of a specified card slot of the device. |
-| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md) | Obtains the unique device ID of a specified card slot of the device. |
+| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md) | Obtains the unique device ID of a specified card slot of the device.If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned. |
+| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md) | Obtains the unique device ID of a specified card slot of the device.If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned. |
+| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md) | Obtains the unique device ID of a specified card slot of the device.If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned. |
 | [isManualNetworkScanning](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md) | Determine whether the current manual network scan is in progress. |
 | [off_imsRegStateChange](arkts-telephony-radio-offimsregstatechange-f-sys.md) | Unsubscribe from imsRegStateChange event. |
 | [offImsRegStateChange](arkts-telephony-radio-offimsregstatechange-f-sys.md) | Unsubscribe from imsRegStateChange event. |

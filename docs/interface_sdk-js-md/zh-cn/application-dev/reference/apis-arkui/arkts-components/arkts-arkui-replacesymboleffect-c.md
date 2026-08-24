@@ -74,9 +74,7 @@ ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换�
 replaceType?: ReplaceEffectType
 ```
 
-替换动效类型。具体枚举值及说明请参考ReplaceEffectType枚举说明。
-
-默认值：ReplaceEffectType.SEQUENTIAL
+替换动效类型。具体枚举值及说明请参考ReplaceEffectType枚举说明。默认值：ReplaceEffectType.SEQUENTIAL
 
 **类型：** [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md)
 
@@ -98,9 +96,7 @@ replaceType?: ReplaceEffectType
 scope?: EffectScope
 ```
 
-动效范围。具体枚举值及说明请参考EffectScope枚举说明。
-
-默认值：EffectScope.LAYER
+动效范围。具体枚举值及说明请参考EffectScope枚举说明。默认值：EffectScope.LAYER
 
 **类型：** [EffectScope](arkts-arkui-effectscope-e.md)
 

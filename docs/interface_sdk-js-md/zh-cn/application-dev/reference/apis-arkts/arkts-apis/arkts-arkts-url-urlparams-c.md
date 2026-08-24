@@ -138,9 +138,7 @@ paramsObject.append('fod', '3');
 constructor(init?: string[][] | Record<string, string> | string | URLParams)
 ```
 
-ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; | string | URLParams)
-
-URLParams的构造函数，用于创建URL参数对象，适用于需要解析、构造或操作URL查询参数的场景。
+ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; | string | URLParams)URLParams的构造函数，用于创建URL参数对象，适用于需要解析、构造或操作URL查询参数的场景。
 
 **起始版本：** 9
 
@@ -154,7 +152,7 @@ URLParams的构造函数，用于创建URL参数对象，适用于需要解析�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | string[][] \| [Record](arkts-arkts-map-record-c.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | 入参对象。 <br/>- string[][]：字符串二维数组。 <br/>- Record&lt;string, string&gt;：对象列表。 <br/>- string：URL查询参数字符串。 <br/>- URLParams：URLParams实例对象。 <br/>- 默认值：null。 |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | 入参对象。 <br/>- string[][]：字符串二维数组。 <br/>- Record&lt;string, string&gt;：对象列表。 <br/>- string：URL查询参数字符串。 <br/>- URLParams：URLParams实例对象。 <br/>- 默认值：null。 |
 
 **示例**
 
@@ -240,7 +238,7 @@ constructor(init?: [string, string][] | Record<string, string> | string | URLPar
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | [string, string][] \| [Record](arkts-arkts-map-record-c.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | init init |
+| init | [string, string][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | init init |
 
 **示例**
 
@@ -484,8 +482,7 @@ get(name: string): string | undefined
 
 根据指定的键获取第一个键值对的值。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 若查找一个不存在的键值对名称时返回值为undefined。
 
 **起始版本：** 23
@@ -656,9 +653,7 @@ for (let key of keys) {
 set(name: string, value: string): void
 ```
 
-将与name关联的URLParams对象中的值设置为value。
-
-如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不存在该键名，则将键值对附加到查询字符串。
+将与name关联的URLParams对象中的值设置为value。如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不存在该键名，则将键值对附加到查询字符串。
 
 **起始版本：** 23
 

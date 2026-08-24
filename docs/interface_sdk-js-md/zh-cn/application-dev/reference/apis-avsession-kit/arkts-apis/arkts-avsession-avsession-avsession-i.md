@@ -2,8 +2,7 @@
 
 调用[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)后，返回会话的实例，可以获得会话ID，完成设置元数据，播放状态信息等操作。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Interface首批接口从API version 10开始支持。
 
 **起始版本：** 23
@@ -104,9 +103,7 @@ activate(): Promise<void>
 deactivate(callback: AsyncCallback<void>): void
 ```
 
-禁用当前会话。结果通过callback异步回调方式返回。
-
-禁用当前会话的功能，可通过[activate](#activate)恢复。
+禁用当前会话。结果通过callback异步回调方式返回。禁用当前会话的功能，可通过[activate](#activate)恢复。
 
 **起始版本：** 23
 
@@ -349,7 +346,7 @@ Dispatch the session event of this session.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | Session event name to dispatch |
-| args | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | The parameters of session event |
+| args | Record&lt;string, Object&gt; | 是 | The parameters of session event |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully |
 
 **错误码：**
@@ -425,7 +422,7 @@ Dispatch the session event of this session.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | Session event name to dispatch |
-| args | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | The parameters of session event |
+| args | Record&lt;string, Object&gt; | 是 | The parameters of session event |
 
 **返回值：**
 
@@ -1139,7 +1136,7 @@ Unsubscribes from custom data changes.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | 是 | Custom data type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
 
 **错误码：**
 
@@ -1342,8 +1339,7 @@ off(type: 'playFromAssetId', callback?: (assetId: number) => void): void
 
 取消媒体ID播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 11开始支持，从API version 20开始废弃。建议使用
 > [off('playWithAssetId')](#offplay)取消
 > 媒体ID播放事件监听。
@@ -1862,7 +1858,7 @@ Unsubscribes from custom data changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
 
 **错误码：**
 
@@ -1987,9 +1983,7 @@ avcontroller.offDesktopLyricVisibilityChanged();
 offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void
 ```
 
-取消会话快进事件监听。使用callback异步回调。
-
-指定callback，取消对应监听；未指定callback，则取消所有事件监听。
+取消会话快进事件监听。使用callback异步回调。指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 23
 
@@ -2158,9 +2152,7 @@ currentAVSession.offPause();
 offPlay(callback?: Callback<CommandInfo>): void
 ```
 
-取消会话播放事件监听。使用callback异步回调。
-
-指定callback，取消对应监听；未指定callback，则取消所有事件监听。
+取消会话播放事件监听。使用callback异步回调。指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 23
 
@@ -2193,9 +2185,7 @@ currentAVSession.offPlay();
 offPlayNext(callback?: Callback<CommandInfo>): void
 ```
 
-取消会话播放下一首事件监听。使用callback异步回调。
-
-指定callback，取消对应监听；未指定callback，则取消所有事件监听。
+取消会话播放下一首事件监听。使用callback异步回调。指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 23
 
@@ -2232,9 +2222,7 @@ currentAVSession.offPlayNext();
 offPlayPrevious(callback?: Callback<CommandInfo>): void
 ```
 
-取消会话播放上一首事件监听。使用callback异步回调。
-
-指定callback，取消对应监听；未指定callback，则取消所有事件监听。
+取消会话播放上一首事件监听。使用callback异步回调。指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 23
 
@@ -2306,9 +2294,7 @@ currentAVSession.offPlayWithAssetId();
 offRewind(callback?: TwoParamCallback<long, CommandInfo>): void
 ```
 
-取消会话快退事件监听。使用callback异步回调。
-
-指定callback，取消对应监听；未指定callback，则取消所有事件监听。
+取消会话快退事件监听。使用callback异步回调。指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 23
 
@@ -2605,9 +2591,7 @@ currentAVSession.offToggleFavorite();
 on(type: 'answer', callback: Callback<void>): void
 ```
 
-设置通话接听的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置通话接听的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -2638,9 +2622,7 @@ on(type: 'answer', callback: Callback<void>): void
 on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void
 ```
 
-设置扩展屏投播显示设备变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置扩展屏投播显示设备变化的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 12
 
@@ -2671,9 +2653,7 @@ on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void
 on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Object}) => void): void
 ```
 
-设置自定义控制命令变化的监听器。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置自定义控制命令变化的监听器。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2719,7 +2699,7 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | 是 | 事件回调类型，支持事件'customDataChange'，当媒体提供方发送自定义数据时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
 
 **错误码：**
 
@@ -2734,9 +2714,7 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 on(type: 'fastForward', callback: (time ?: long) => void): void
 ```
 
-设置快进命令监听事件。注册该监听，说明应用支持快进指令。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置快进命令监听事件。注册该监听，说明应用支持快进指令。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2767,9 +2745,7 @@ on(type: 'fastForward', callback: (time ?: long) => void): void
 on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void
 ```
 
-设置蓝牙/有线等外设接入的按键输入事件的监听，监听多媒体按键事件中播放、暂停、上下一首、快进、快退的指令。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置蓝牙/有线等外设接入的按键输入事件的监听，监听多媒体按键事件中播放、暂停、上下一首、快进、快退的指令。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2800,9 +2776,7 @@ on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void
 on(type: 'hangUp', callback: Callback<void>): void
 ```
 
-设置通话挂断的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置通话挂断的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -2833,9 +2807,7 @@ on(type: 'hangUp', callback: Callback<void>): void
 on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
 ```
 
-设置播放设备变化的监听事件。应用接入[multimedia.avCastPicker (投播组件)](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md)，当用户通过组件切换设备 时，会收到设备切换的回调。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放设备变化的监听事件。应用接入[multimedia.avCastPicker (投播组件)](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md)，当用户通过组件切换设备 时，会收到设备切换的回调。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2866,9 +2838,7 @@ on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: Output
 on(type: 'pause', callback: () => void): void
 ```
 
-设置暂停命令监听事件。注册该监听，说明应用支持暂停指令。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置暂停命令监听事件。注册该监听，说明应用支持暂停指令。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2899,9 +2869,7 @@ on(type: 'pause', callback: () => void): void
 on(type: 'play', callback: () => void): void
 ```
 
-设置播放命令监听事件。注册该监听，说明应用支持播放指令。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放命令监听事件。注册该监听，说明应用支持播放指令。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2934,8 +2902,7 @@ on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 
 设置媒体ID播放监听事件。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 11开始支持，从API version 20开始废弃。建议使用
 > [on('playWithAssetId')](#onplay)设置媒体
 > ID播放监听事件。
@@ -2973,9 +2940,7 @@ on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 on(type: 'playNext', callback: () => void): void
 ```
 
-设置播放下一首命令监听事件。注册该监听，说明应用支持下一首指令。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放下一首命令监听事件。注册该监听，说明应用支持下一首指令。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3006,9 +2971,7 @@ on(type: 'playNext', callback: () => void): void
 on(type: 'playPrevious', callback: () => void): void
 ```
 
-设置播放上一首命令监听事件。注册该监听，说明应用支持上一首指令。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放上一首命令监听事件。注册该监听，说明应用支持上一首指令。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3039,9 +3002,7 @@ on(type: 'playPrevious', callback: () => void): void
 on(type: 'playWithAssetId', callback: Callback<string>): void
 ```
 
-设置指定资源id进行播放的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置指定资源id进行播放的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 20
 
@@ -3071,9 +3032,7 @@ on(type: 'playWithAssetId', callback: Callback<string>): void
 on(type: 'rewind', callback: (time ?: long) => void): void
 ```
 
-设置快退命令监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置快退命令监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3104,9 +3063,7 @@ on(type: 'rewind', callback: (time ?: long) => void): void
 on(type: 'seek', callback: (time: long) => void): void
 ```
 
-设置跳转节点监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置跳转节点监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3137,9 +3094,7 @@ on(type: 'seek', callback: (time: long) => void): void
 on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void
 ```
 
-设置循环模式的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置循环模式的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3170,9 +3125,7 @@ on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void
 on(type: 'setSpeed', callback: (speed: double) => void): void
 ```
 
-设置播放速率的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放速率的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3203,9 +3156,7 @@ on(type: 'setSpeed', callback: (speed: double) => void): void
 on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void
 ```
 
-设置目标循环模式的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置目标循环模式的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 18
 
@@ -3235,9 +3186,7 @@ on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void
 on(type: 'skipToQueueItem', callback: (itemId: int) => void): void
 ```
 
-设置播放列表其中某项被选中的监听事件，session端可以选择对这个单项歌曲进行播放。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放列表其中某项被选中的监听事件，session端可以选择对这个单项歌曲进行播放。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3268,9 +3217,7 @@ on(type: 'skipToQueueItem', callback: (itemId: int) => void): void
 on(type: 'stop', callback: () => void): void
 ```
 
-设置停止命令监听事件。注册该监听，说明应用支持停止指令。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置停止命令监听事件。注册该监听，说明应用支持停止指令。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3301,9 +3248,7 @@ on(type: 'stop', callback: () => void): void
 on(type: 'toggleCallMute', callback: Callback<void>): void
 ```
 
-设置通话静音的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置通话静音的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -3334,9 +3279,7 @@ on(type: 'toggleCallMute', callback: Callback<void>): void
 on(type: 'toggleFavorite', callback: (assetId: string) => void): void
 ```
 
-设置是否收藏的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置是否收藏的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3490,7 +3433,7 @@ Register listener for custom data sent from remote device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
 
 **错误码：**
 
@@ -3632,9 +3575,7 @@ avcontroller.onDesktopLyricVisibilityChanged((visible: boolean) => {
 onFastForward(callback: TwoParamCallback<long, CommandInfo>): void
 ```
 
-设置快进命令监听事件。使用callback异步回调。
-
-应用将通过回调接收控制器发送的快进时间参数，以及对应的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
+设置快进命令监听事件。使用callback异步回调。应用将通过回调接收控制器发送的快进时间参数，以及对应的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 23
 
@@ -3817,9 +3758,7 @@ currentAVSession.onPause(() => {
 onPlay(callback: Callback<CommandInfo>): void
 ```
 
-设置播放命令监听事件。使用callback异步回调。
-
-应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
+设置播放命令监听事件。使用callback异步回调。应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 23
 
@@ -3854,9 +3793,7 @@ currentAVSession.onPlay((info: avSession.CommandInfo) => {
 onPlayNext(callback: Callback<CommandInfo>): void
 ```
 
-设置播放下一首命令监听事件。使用callback异步回调。
-
-应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
+设置播放下一首命令监听事件。使用callback异步回调。应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 23
 
@@ -3897,9 +3834,7 @@ currentAVSession.onPlayNext((info: avSession.CommandInfo) => {
 onPlayPrevious(callback: Callback<CommandInfo>): void
 ```
 
-设置播放上一首命令监听事件。使用callback异步回调。
-
-应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
+设置播放上一首命令监听事件。使用callback异步回调。应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 23
 
@@ -3978,9 +3913,7 @@ currentAVSession.onPlayWithAssetId(playWithAssetIdCallback);
 onRewind(callback: TwoParamCallback<long, CommandInfo>): void
 ```
 
-设置快退命令监听事件。使用callback异步回调。
-
-应用将通过回调接收控制器发送的快退时间参数，以及对应的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
+设置快退命令监听事件。使用callback异步回调。应用将通过回调接收控制器发送的快退时间参数，以及对应的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 23
 
@@ -4311,7 +4244,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。服务端仅解析key为'customData'，且Object为string类型的对象。 |
+| data | Record&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。服务端仅解析key为'customData'，且Object为string类型的对象。 |
 
 **返回值：**
 
@@ -4958,9 +4891,7 @@ setAVQueueTitle(title: string): Promise<void>
 setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>
 ```
 
-设置后台播放模式。使用promise异步回调。
-
-建议与应用内"是否支持后台播放开关"关联。如未设置，'audio'类型会话默认值为ENABLE_BACKGROUND_PLAY；'video'类型会话默认值为DISABLE_BACKGROUND_PLAY。
+设置后台播放模式。使用promise异步回调。建议与应用内"是否支持后台播放开关"关联。如未设置，'audio'类型会话默认值为ENABLE_BACKGROUND_PLAY；'video'类型会话默认值为DISABLE_BACKGROUND_PLAY。
 
 **起始版本：** 24
 
@@ -5340,7 +5271,7 @@ Set the custom media packets for this session.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extras | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | The custom media packets <br>设置的应用自定义扩展参数 |
+| extras | Record&lt;string, Object&gt; | 是 | The custom media packets <br>设置的应用自定义扩展参数 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully. <br>回调返回 |
 
 **错误码：**
@@ -5414,7 +5345,7 @@ Set the custom media packets for this session.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extras | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | The custom media packets |
+| extras | Record&lt;string, Object&gt; | 是 | The custom media packets |
 
 **返回值：**
 
@@ -5439,9 +5370,7 @@ Set the custom media packets for this session.
 setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void
 ```
 
-设置一个WantAgent用于拉起会话的Ability。结果通过callback异步回调方式返回。
-
-通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)接口传入的context所属的UIAbility界面。
+设置一个WantAgent用于拉起会话的Ability。结果通过callback异步回调方式返回。通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)接口传入的context所属的UIAbility界面。
 
 **起始版本：** 23
 
@@ -5553,9 +5482,7 @@ wantAgent.getWantAgent(wantAgentInfo).then((agent) => {
 setLaunchAbility(ability: WantAgent): Promise<void>
 ```
 
-设置一个WantAgent用于拉起会话的Ability。结果通过Promise异步回调方式返回。
-
-通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)接口传入的context所属的UIAbility界面。
+设置一个WantAgent用于拉起会话的Ability。结果通过Promise异步回调方式返回。通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)接口传入的context所属的UIAbility界面。
 
 **起始版本：** 23
 
@@ -5595,9 +5522,7 @@ setLaunchAbility(ability: WantAgent): Promise<void>
 setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>
 ```
 
-设置应用支持的控制类型列表。使用Promise异步回调。
-
-设置优先显示在播控中心的控制类型列表，若未设置控制类型优先级，播控中心将根据[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)显示，具体显示规则参考 [创建不同类型的会话](../../../media/avsession/avsession-access-scene.md#创建不同类型的会话)。
+设置应用支持的控制类型列表。使用Promise异步回调。设置优先显示在播控中心的控制类型列表，若未设置控制类型优先级，播控中心将根据[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)显示，具体显示规则参考 [创建不同类型的会话](../../../media/avsession/avsession-access-scene.md#创建不同类型的会话)。
 
 **起始版本：** 26.0.0
 

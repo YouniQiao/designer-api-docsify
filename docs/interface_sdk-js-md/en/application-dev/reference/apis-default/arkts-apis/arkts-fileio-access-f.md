@@ -11,9 +11,7 @@
 function access(path: string, mode?: AccessModeType): Promise<boolean>
 ```
 
-Checks whether a file or directory exists or has the operation permission. This API uses a promise to return the result.
-
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether a file or directory exists or has the operation permission. This API uses a promise to return the result.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 23
 
@@ -101,9 +99,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>
 ```
 
-Checks whether the file or directory is on the local host or verifies the operation permission. This API uses a promise to return the result.
-
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether the file or directory is on the local host or verifies the operation permission. This API uses a promise to return the result.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 23
 

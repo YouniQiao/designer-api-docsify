@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class OperateItemV2--><!--Device-unnamed-export declare class OperateItemV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,17 +43,16 @@ OperateItemV2的构造函数。
 ## arrow
 
 ```TypeScript
-@Trace
-  public arrow?: OperateIconV2
+public arrow?: OperateIconV2
 ```
 
-列表项右侧元素为箭头，大小为12*24vp。
-
-默认不设置或设置为undefined，列表项右侧箭头不显示。
+列表项右侧元素为箭头，大小为12*24vp。默认不设置或设置为undefined，列表项右侧箭头不显示。
 
 **类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,17 +65,16 @@ OperateItemV2的构造函数。
 ## button
 
 ```TypeScript
-@Trace
-  public button?: OperateButtonV2
+public button?: OperateButtonV2
 ```
 
-列表项右侧元素为按钮。
-
-默认不设置或设置为undefined，列表项右侧按钮不显示。
+列表项右侧元素为按钮。默认不设置或设置为undefined，列表项右侧按钮不显示。
 
 **类型：** [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,17 +87,16 @@ OperateItemV2的构造函数。
 ## checkbox
 
 ```TypeScript
-@Trace
-  public checkbox?: OperateCheckV2
+public checkbox?: OperateCheckV2
 ```
 
-列表项右侧元素为多选框，大小为24*24vp。
-
-默认不设置或设置为undefined，列表项右侧多选框不显示。
+列表项右侧元素为多选框，大小为24*24vp。默认不设置或设置为undefined，列表项右侧多选框不显示。
 
 **类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,19 +109,16 @@ OperateItemV2的构造函数。
 ## icon
 
 ```TypeScript
-@Trace
-  public icon?: OperateIconV2
+public icon?: OperateIconV2
 ```
 
-左侧元素的图标资源。
-
-默认不设置或设置为undefined，表示不显示icon图标资源。
-
-同时设置symbolStyle时，只显示Symbol图标。
+左侧元素的图标资源。默认不设置或设置为undefined，表示不显示icon图标资源。同时设置symbolStyle时，只显示Symbol图标。
 
 **类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -135,19 +131,16 @@ OperateItemV2的构造函数。
 ## image
 
 ```TypeScript
-@Trace
-  public image?: ResourceStr
+public image?: ResourceStr
 ```
 
-列表项右侧元素为图片，大小为48*48vp。
-
-默认不设置或设置为undefined，列表项右侧图片不显示。
-
-同时设置symbolStyle时，只显示Symbol图标。
+列表项右侧元素为图片，大小为48*48vp。默认不设置或设置为undefined，列表项右侧图片不显示。同时设置symbolStyle时，只显示Symbol图标。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,17 +153,16 @@ OperateItemV2的构造函数。
 ## radio
 
 ```TypeScript
-@Trace
-  public radio?: OperateCheckV2
+public radio?: OperateCheckV2
 ```
 
-列表项右侧元素为单选框，大小为24*24vp。
-
-默认不设置或设置为undefined，列表项右侧单选框不显示。
+列表项右侧元素为单选框，大小为24*24vp。默认不设置或设置为undefined，列表项右侧单选框不显示。
 
 **类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -183,17 +175,16 @@ OperateItemV2的构造函数。
 ## subIcon
 
 ```TypeScript
-@Trace
-  public subIcon?: OperateIconV2
+public subIcon?: OperateIconV2
 ```
 
-列表项右侧元素的第二个图标，大小为24*24vp。
-
-默认不设置或设置为undefined，列表项右侧第二个图标不显示。
+列表项右侧元素的第二个图标，大小为24*24vp。默认不设置或设置为undefined，列表项右侧第二个图标不显示。
 
 **类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -206,17 +197,16 @@ OperateItemV2的构造函数。
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
-列表项右侧元素为Symbol图标资源，大小为48*48vp，优先级大于image，同时设置时只显示Symbol图标。
-
-默认不设置或设置为undefined，列表项右侧Symbol图标不显示。
+列表项右侧元素为Symbol图标资源，大小为48*48vp，优先级大于image，同时设置时只显示Symbol图标。默认不设置或设置为undefined，列表项右侧Symbol图标不显示。
 
 **类型：** SymbolGlyphModifier
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -229,17 +219,16 @@ OperateItemV2的构造函数。
 ## text
 
 ```TypeScript
-@Trace
-  public text?: ResourceStr
+public text?: ResourceStr
 ```
 
-列表项右侧元素为文字。
-
-默认不设置或设置为undefined，列表项右侧文字不显示。
+列表项右侧元素为文字。默认不设置或设置为undefined，列表项右侧文字不显示。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -252,17 +241,16 @@ OperateItemV2的构造函数。
 ## toggle
 
 ```TypeScript
-@Trace
-  public toggle?: OperateCheckV2
+public toggle?: OperateCheckV2
 ```
 
-列表项右侧元素为开关。
-
-默认不设置或设置为undefined，列表项右侧开关不显示。
+列表项右侧元素为开关。默认不设置或设置为undefined，列表项右侧开关不显示。
 
 **类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

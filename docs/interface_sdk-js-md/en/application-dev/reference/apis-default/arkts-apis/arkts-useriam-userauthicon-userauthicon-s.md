@@ -1,16 +1,14 @@
 # UserAuthIcon
 
-The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM) system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to display the face authentication or fingerprint authentication icon on the application UI. It supports custom icon colors and dimensions, and can directly launch the system authentication dialog box component when the icon is tapped.
-
-This module applies to the following scenarios:
-
-- Quickly integrating the face or fingerprint authentication entry into the application UI. - Displaying biometric authentication icons in a unified style. - Tapping the icon to trigger the system-level authentication process.
-
+The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM) system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to display the face authentication or fingerprint authentication icon on the application UI. It supports custom icon colors and dimensions, and can directly launch the system authentication dialog box component when the icon is tapped.This module applies to the following scenarios:  
+- Quickly integrating the face or fingerprint authentication entry into the application UI. - Displaying biometric authentication icons in a unified style. - Tapping the icon to trigger the system-level authentication process.  
 @struct { UserAuthIcon }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct UserAuthIcon--><!--Device-unnamed-export declare struct UserAuthIcon-End-->
 
@@ -24,8 +22,7 @@ This module applies to the following scenarios:
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build the component.
@@ -33,6 +30,8 @@ The method to build the component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

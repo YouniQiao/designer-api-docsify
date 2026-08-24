@@ -1,8 +1,6 @@
 # RowOptionsV2
 
-设置Row组件的子组件间距属性。 间距类型SpaceType支持number、string或Resource类型。
-
-@interface RowOptionsV2
+设置Row组件的子组件间距属性。 间距类型SpaceType支持number、string或Resource类型。@interface RowOptionsV2
 
 **起始版本：** 23
 

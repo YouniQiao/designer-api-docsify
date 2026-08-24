@@ -27,20 +27,20 @@ FileIO
 
 | 名称 | 说明 |
 | --- | --- |
-| [access](arkts-fileio-access-f.md) | 检查文件或目录是否存在，或校验操作权限。使用Promise异步回调。 |
+| [access](arkts-fileio-access-f.md) | 检查文件或目录是否存在，或校验操作权限。使用Promise异步回调。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。 |
 | [access](arkts-fileio-access-f.md) | 检查文件或目录是否存在。使用callback异步回调。 |
-| [access](arkts-fileio-access-f.md) | 检查文件或目录是否在本地，或校验操作权限。使用Promise异步回调。 |
-| [accessSync](arkts-fileio-accesssync-f.md) | 以同步方法检查文件或目录是否存在，或校验操作权限。 |
-| [accessSync](arkts-fileio-accesssync-f.md) | 以同步方法检查文件或目录是否在本地，或校验操作权限。 |
+| [access](arkts-fileio-access-f.md) | 检查文件或目录是否在本地，或校验操作权限。使用Promise异步回调。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。 |
+| [accessSync](arkts-fileio-accesssync-f.md) | 以同步方法检查文件或目录是否存在，或校验操作权限。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。 |
+| [accessSync](arkts-fileio-accesssync-f.md) | 以同步方法检查文件或目录是否在本地，或校验操作权限。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。 |
 | [close](arkts-fileio-close-f.md) | 关闭文件或目录，关闭后文件描述符fd失效，不可再用于读写等操作。使用Promise异步回调。 |
 | [close](arkts-fileio-close-f.md) | 关闭文件或目录，关闭后文件描述符fd失效，不可再用于读写等操作。使用callback异步回调。 |
 | [closeSync](arkts-fileio-closesync-f.md) | 以同步方法关闭文件或目录，关闭后文件描述符fd失效，不可再用于读写等操作。 |
-| [copy](arkts-fileio-copy-f.md) | 拷贝文件或目录。使用Promise异步回调。 |
-| [copy](arkts-fileio-copy-f.md) | 拷贝文件或者目录。使用callback异步回调。 |
-| [copy](arkts-fileio-copy-f.md) | 拷贝文件或者目录。使用callback异步回调。 |
+| [copy](arkts-fileio-copy-f.md) | 拷贝文件或目录。使用Promise异步回调。支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。 |
+| [copy](arkts-fileio-copy-f.md) | 拷贝文件或者目录。使用callback异步回调。支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。 |
+| [copy](arkts-fileio-copy-f.md) | 拷贝文件或者目录。使用callback异步回调。支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。 |
 | [copyDir](arkts-fileio-copydir-f.md) | 复制源目录及其内容至目标路径下，可设置冲突处理模式。使用Promise异步回调。 |
-| [copyDir](arkts-fileio-copydir-f.md) | 复制源目录及其内容至目标路径下。使用callback异步回调。 |
-| [copyDirWithConflictFiles](arkts-fileio-copydirwithconflictfiles-f.md) | 复制源目录及其内容至目标路径下，可设置冲突处理模式。使用callback异步回调。 |
+| [copyDir](arkts-fileio-copydir-f.md) | 复制源目录及其内容至目标路径下。使用callback异步回调。如果目标目录下有与源目录名冲突的目录，且冲突目录下有同名文件，则抛出异常。源目录下未冲突的文件全部拷贝至目标目录下，目标目录下未冲突文件将继续保留。 |
+| [copyDirWithConflictFiles](arkts-fileio-copydirwithconflictfiles-f.md) | 复制源目录及其内容至目标路径下，可设置冲突处理模式。使用callback异步回调。如果目标目录下有与源目录名冲突的目录，且冲突目录下有同名文件，则抛出异常。 源目录下未冲突的文件全部移动至目标目录下，目标目录下冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt;ConflictFiles&gt;形式提供。 |
 | [copyDir](arkts-fileio-copydir-f.md) | 复制源目录及其内容至目标路径下，可设置冲突处理模式。使用callback异步回调。 |
 | [copyDirWithConflictFiles](arkts-fileio-copydirwithconflictfiles-f.md) | 复制源目录及其内容至目标路径下，可设置冲突处理模式。使用callback异步回调。 |
 | [copyDirSync](arkts-fileio-copydirsync-f.md) | 以同步方法复制源目录至目标路径下。 |
@@ -68,12 +68,12 @@ FileIO
 | [fsync](arkts-fileio-fsync-f.md) | 将文件系统缓存数据写入磁盘。使用Promise异步回调。 |
 | [fsync](arkts-fileio-fsync-f.md) | 将文件系统缓存数据写入磁盘。使用callback异步回调。 |
 | [fsyncSync](arkts-fileio-fsyncsync-f.md) | 以同步方法将文件系统缓存数据写入磁盘。 |
-| [listFile](arkts-fileio-listfile-f.md) | 默认列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。使用Promise异步回调。 |
+| [listFile](arkts-fileio-listfile-f.md) | 默认列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。使用Promise异步回调。可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。 |
 | [listFile](arkts-fileio-listfile-f.md) | 默认列出当前目录下所有文件名和目录名，返回文件名数组。使用callback异步回调。 |
-| [listFile](arkts-fileio-listfile-f.md) | 默认列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。使用callback异步回调。 |
-| [listFileSync](arkts-fileio-listfilesync-f.md) | 默认以同步方式列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。 |
-| [listFileExt](arkts-fileio-listfileext-f.md) | 列出目录下所有文件名，支持递归列出和自定义文件名过滤。使用Promise异步回调。 |
-| [listFileExtSync](arkts-fileio-listfileextsync-f.md) | 以同步方式列出目录下所有文件名，支持递归列出和自定义文件名过滤。 |
+| [listFile](arkts-fileio-listfile-f.md) | 默认列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。使用callback异步回调。可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。 |
+| [listFileSync](arkts-fileio-listfilesync-f.md) | 默认以同步方式列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。 |
+| [listFileExt](arkts-fileio-listfileext-f.md) | 列出目录下所有文件名，支持递归列出和自定义文件名过滤。使用Promise异步回调。可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。 |
+| [listFileExtSync](arkts-fileio-listfileextsync-f.md) | 以同步方式列出目录下所有文件名，支持递归列出和自定义文件名过滤。可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。 |
 | [lseek](arkts-fileio-lseek-f.md) | 调整文件偏移指针位置。 |
 | [lstat](arkts-fileio-lstat-f.md) | 获取符号链接文件信息，返回符号链接本身的属性而非目标文件的属性。使用Promise异步回调。 |
 | [lstat](arkts-fileio-lstat-f.md) | 获取符号链接文件信息，返回符号链接本身的属性而非目标文件的属性。使用callback异步回调。 |
@@ -90,7 +90,7 @@ FileIO
 | [mmap](arkts-fileio-mmap-f.md) | 基于文件描述符或文件对象创建文件映射对象，实现文件的高效读写访问。使用Promise异步回调。 |
 | [mmapSync](arkts-fileio-mmapsync-f.md) | 以同步方法基于文件描述符或文件对象创建文件映射对象，实现文件的高效读写访问。 |
 | [moveDir](arkts-fileio-movedir-f.md) | 移动源目录及其内容至目标路径下。使用Promise异步回调。 |
-| [moveDir](arkts-fileio-movedir-f.md) | 移动源目录及其内容至目标路径下。使用callback异步回调。 |
+| [moveDir](arkts-fileio-movedir-f.md) | 移动源目录及其内容至目标路径下。使用callback异步回调。移动模式为目录级别抛异常。当目标目录下存在与源目录名冲突的目录，则抛出异常。 |
 | [moveDirWithConflictFiles](arkts-fileio-movedirwithconflictfiles-f.md) | Moves the source directory to the destination directory. This API uses an asynchronous callback to return the result. |
 | [moveDir](arkts-fileio-movedir-f.md) | 移动源目录及其内容至目标路径下，支持设置冲突处理模式。使用callback异步回调。 |
 | [moveDirWithConflictFiles](arkts-fileio-movedirwithconflictfiles-f.md) | 移动源目录及其内容至目标路径下，支持设置冲突处理模式。使用callback异步回调。 |
@@ -101,7 +101,7 @@ FileIO
 | [moveFileSync](arkts-fileio-movefilesync-f.md) | 以同步方式移动文件至目标路径。 |
 | [open](arkts-fileio-open-f.md) | 打开文件或目录，支持使用URI打开文件。使用Promise异步回调。 |
 | [open](arkts-fileio-open-f.md) | 打开文件或目录，支持使用URI打开文件。使用callback异步回调。 |
-| [open](arkts-fileio-open-f.md) | 打开文件或目录，可设置打开文件的选项。使用callback异步回调。 |
+| [open](arkts-fileio-open-f.md) | 打开文件或目录，可设置打开文件的选项。使用callback异步回调。支持使用URI打开文件。 |
 | [openSync](arkts-fileio-opensync-f.md) | 以同步方法打开文件或目录。支持使用URI打开文件。 |
 | [read](arkts-fileio-read-f.md) | 从文件读取数据，返回实际读取的字节数。使用Promise异步回调。 |
 | [read](arkts-fileio-read-f.md) | 从文件读取数据，返回实际读取的字节数。使用callback异步回调。 |
@@ -151,7 +151,7 @@ FileIO
 | 名称 | 说明 |
 | --- | --- |
 | [TaskSignal](arkts-fileio-tasksignal-c.md) | 拷贝中断信号。 |
-| [ReadStream](arkts-fileio-readstream-c.md) | 文件可读流，需要先通过[fileIo.createReadStream](arkts-fileio-createreadstream-f.md)方法来构建一个ReadStream实例。ReadStream继承自数据流基类 [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)。 |
+| [ReadStream](arkts-fileio-readstream-c.md) | 文件可读流，需要先通过[fileIo.createReadStream](arkts-fileio-createreadstream-f.md)方法来构建一个ReadStream实例。ReadStream继承自数据流基类 [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)。  **规格**：ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。 |
 | [WriteStream](arkts-fileio-writestream-c.md) | 文件可写流，需要先通过[fileIo.createWriteStream](arkts-fileio-createwritestream-f.md)方法来构建一个WriteStream实例。WriteStream继承自数据流基类 [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md)。 |
 | [AtomicFile](arkts-fileio-atomicfile-c.md) | AtomicFile是一个用于对文件进行原子读写等操作的类。 在写操作时，通过写入临时文件，并在写入成功后将其重命名到原始文件位置来确保写入文件的完整性；而在写入失败时删除临时文件，不修改原始文件内容。 使用者可以自行调用finishWrite或failWrite来完成文件内容的写入或回滚。 |
 

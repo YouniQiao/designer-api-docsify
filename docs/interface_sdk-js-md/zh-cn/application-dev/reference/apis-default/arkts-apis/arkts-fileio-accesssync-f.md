@@ -11,9 +11,7 @@
 function accessSync(path: string, mode?: AccessModeType): boolean
 ```
 
-以同步方法检查文件或目录是否存在，或校验操作权限。
-
-校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+以同步方法检查文件或目录是否存在，或校验操作权限。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 23
 
@@ -60,9 +58,7 @@ function accessSync(path: string, mode?: AccessModeType): boolean
 function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean
 ```
 
-以同步方法检查文件或目录是否在本地，或校验操作权限。
-
-校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+以同步方法检查文件或目录是否在本地，或校验操作权限。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 23
 

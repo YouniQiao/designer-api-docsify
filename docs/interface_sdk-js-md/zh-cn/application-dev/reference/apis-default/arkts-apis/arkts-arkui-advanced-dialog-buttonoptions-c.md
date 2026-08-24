@@ -2,10 +2,8 @@
 
 按钮的样式参数，用于设置弹出框按钮属性。
 
-> **说明：**
-> 
-> buttonStyle和role优先级高于fontColor和background。当buttonStyle和role设置的是默认值时，fontColor和background生效。
-> 
+> **说明：**&gt;
+> buttonStyle和role优先级高于fontColor和background。当buttonStyle和role设置的是默认值时，fontColor和background生效。&gt;
 > 若同时给多个按钮设置defaultFocus，则默认焦点为设置defaultFocus按钮中显示顺序的第一个按钮。
 
 **起始版本：** 23
@@ -47,9 +45,7 @@ public action?: () => void
 public background?: ResourceColor
 ```
 
-按钮的背景色。
-
-默认值跟随buttonStyle。
+按钮的背景色。默认值跟随buttonStyle。
 
 **类型：** ResourceColor
 
@@ -69,9 +65,7 @@ public background?: ResourceColor
 public buttonStyle?: ButtonStyleMode
 ```
 
-按钮的样式。
-
-默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
+按钮的样式。默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
 
 **类型：** ButtonStyleMode
 
@@ -93,13 +87,7 @@ public buttonStyle?: ButtonStyleMode
 public defaultFocus?: boolean
 ```
 
-按钮是否设置默认焦点。
-
-true：按钮是默认焦点
-
-false：按钮不是默认焦点
-
-默认值：false
+按钮是否设置默认焦点。true：按钮是默认焦点false：按钮不是默认焦点默认值：false
 
 **类型：** boolean
 
@@ -121,9 +109,7 @@ false：按钮不是默认焦点
 public fontColor?: ResourceColor
 ```
 
-按钮的字体颜色。
-
-默认值跟随buttonStyle。
+按钮的字体颜色。默认值跟随buttonStyle。
 
 **类型：** ResourceColor
 
@@ -143,9 +129,7 @@ public fontColor?: ResourceColor
 public role?: ButtonRole
 ```
 
-按钮的角色。
-
-默认值：ButtonRole.NORMAL
+按钮的角色。默认值：ButtonRole.NORMAL
 
 **类型：** ButtonRole
 
@@ -167,9 +151,7 @@ public role?: ButtonRole
 public textAlign?: TextAlign
 ```
 
-按钮文本的对齐方式。
-
-默认值：TextAlign.Start
+按钮文本的对齐方式。默认值：TextAlign.Start
 
 **类型：** TextAlign
 

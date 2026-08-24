@@ -11,42 +11,7 @@ Provides APIs to compare rational numbers and obtain numerators and denominators
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
-import { ArrayListComparatorFn } from '@kit.ArkTS';
-import { ArrayListForEachCb } from '@kit.ArkTS';
-import { ArrayListReplaceCb } from '@kit.ArkTS';
 import { util } from '@kit.ArkTS';
-import { Deque } from '@kit.ArkTS';
-import { DequeForEachCb } from '@kit.ArkTS';
-import { HashMap } from '@kit.ArkTS';
-import { HashMapCbFn } from '@kit.ArkTS';
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
-import { LightWeightSet } from '@kit.ArkTS';
-import { LightWeightSetForEachCb } from '@kit.ArkTS';
-import { LinkedList } from '@kit.ArkTS';
-import { LinkedListForEachCb } from '@kit.ArkTS';
-import { List } from '@kit.ArkTS';
-import { ListComparatorFn } from '@kit.ArkTS';
-import { ListForEachCb } from '@kit.ArkTS';
-import { ListReplaceCb } from '@kit.ArkTS';
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
-import { Queue } from '@kit.ArkTS';
-import { QueueForEachCb } from '@kit.ArkTS';
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
-import { TreeMap } from '@kit.ArkTS';
-import { TreeMapForEachCb } from '@kit.ArkTS';
-import { TreeMapComparator } from '@kit.ArkTS';
-import { TreeSet } from '@kit.ArkTS';
-import { TreeSetForEachCb } from '@kit.ArkTS';
-import { TreeSetComparator } from '@kit.ArkTS';
-import { stream } from '@kit.ArkTS';
-import { Vector } from '@kit.ArkTS';
-import { JSON } from '@kit.ArkTS';
 ```
 
 ## compare
@@ -312,8 +277,7 @@ static createRationalFromString(rationalString: string): RationalNumber
 
 Creates a **RationalNumber** object based on the given string.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not
 > intercepted, but the error message "createRationalFromString: The type of Parameter must be integer string" is
 > displayed.
@@ -431,8 +395,7 @@ static getCommonFactor(number1: number, number2: number): number
 
 Obtains the greatest common divisor of two specified integers.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is
 > not intercepted, but the error message "getCommonFactor: The type of Parameter must be integer" is displayed.
 
@@ -673,8 +636,7 @@ static parseRationalNumber(numerator: number, denominator: number): RationalNumb
 
 Creates a **RationalNumber** instance with a given numerator and denominator.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the
 > function is not intercepted, but the error message "parseRationalNumber: The type of Parameter must be integer"
 > is displayed.
@@ -692,7 +654,7 @@ Creates a **RationalNumber** instance with a given numerator and denominator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | numerator | number | Yes | Numerator, which is an integer. Value range: -Number.MAX_VALUE &lt;= numerator &lt;= Number.MAX_VALUE. |
-| denominator | number | Yes | Denominator, which is an integer. Value range: -Number.MAX_VALUE &lt;= denominator &lt; = Number.MAX_VALUE. |
+| denominator | number | Yes | Denominator, which is an integer. Value range: -Number.MAX_VALUE &lt;= denominator &lt;= Number.MAX_VALUE. |
 
 **Return value:**
 

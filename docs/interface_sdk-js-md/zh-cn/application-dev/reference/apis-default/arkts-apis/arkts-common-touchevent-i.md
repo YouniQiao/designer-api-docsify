@@ -1,8 +1,6 @@
 # TouchEvent
 
-Touch Action Function Parameters
-
-@extends BaseEvent
+Touch Action Function Parameters@extends BaseEvent
 
 **继承/实现关系：** TouchEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 

@@ -4,6 +4,8 @@ Declare Component ProgressButton
 
 **Since:** 22
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ProgressButton--><!--Device-unnamed-export declare struct ProgressButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -12,7 +14,6 @@ Declare Component ProgressButton
 
 ```TypeScript
 import { ProgressButton } from '@kit.ArkUI';
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUI';
 ```
 
 ## clickCallback
@@ -37,15 +38,13 @@ Sets the ProgressButton clickCallback.
 
 ## colorOptions
 
-```TypeScript
-@Prop colorOptions?: ProgressButtonColorOptions
-```
-
 Set Color options of the ProgressButton.
 
 **Type:** [ProgressButtonColorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md)
 
 **Since:** 22
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,15 +56,13 @@ Set Color options of the ProgressButton.
 
 ## content
 
-```TypeScript
-@Prop content: ResourceStr
-```
-
 Sets the ProgressButton content.
 
 **Type:** ResourceStr
 
 **Since:** 20
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,15 +74,13 @@ Sets the ProgressButton content.
 
 ## enable
 
-```TypeScript
-@Prop enable: boolean
-```
-
 Sets the ProgressButton enable state.
 
 **Type:** boolean
 
 **Since:** 22
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,15 +92,13 @@ Sets the ProgressButton enable state.
 
 ## progress
 
-```TypeScript
-@Prop progress: number
-```
-
 Sets the ProgressButton progress.
 
 **Type:** number
 
 **Since:** 22
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,15 +110,13 @@ Sets the ProgressButton progress.
 
 ## progressButtonRadius
 
-```TypeScript
-@Prop progressButtonRadius?: LengthMetrics
-```
-
 Set border rounded corner radius of progress.
 
 **Type:** LengthMetrics
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

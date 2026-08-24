@@ -1,8 +1,6 @@
 # PolicyErrorResult
 
-Failed policy result on URI.
-
-@interface { object }
+Failed policy result on URI.@interface { object }
 
 **Since:** 23
 

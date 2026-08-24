@@ -48,9 +48,7 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
 beginsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值以指定字符串开头的字段。
-
-此方法类似于SQL语句的“value%”。
+配置谓词以匹配数据类型为string且值以指定字符串开头的字段。此方法类似于SQL语句的“value%”。
 
 **起始版本：** 7
 
@@ -207,9 +205,7 @@ dataAbilityPredicates.equalTo("NAME", "Rose").distinct();
 endsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值以指定字符串结尾的字段。
-
-此方法类似于SQL语句的“%value”。
+配置谓词以匹配数据类型为string且值以指定字符串结尾的字段。此方法类似于SQL语句的“%value”。
 
 **起始版本：** 7
 
@@ -273,9 +269,7 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 equalTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据，数据的指定字段数据类型为ValueType且值等于指定值。
-
-此方法类似于SQL语句的“=”。
+配置谓词以匹配数据，数据的指定字段数据类型为ValueType且值等于指定值。此方法类似于SQL语句的“=”。
 
 **起始版本：** 7
 
@@ -679,9 +673,7 @@ dataAbilityPredicates.lessThanOrEqualTo("AGE", 20);
 like(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值类似于指定字符串的字段。
-
-此方法类似于SQL语句“like”。
+配置谓词以匹配数据类型为string且值类似于指定字符串的字段。此方法类似于SQL语句“like”。
 
 **起始版本：** 7
 
@@ -780,9 +772,7 @@ dataAbilityPredicates.notBetween("AGE", 10, 50);
 notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据，数据的指定字段数据类型为ValueType且不等于指定值。
-
-此方法类似于SQL语句的“!=”。
+配置谓词以匹配数据，数据的指定字段数据类型为ValueType且不等于指定值。此方法类似于SQL语句的“!=”。
 
 **起始版本：** 7
 
@@ -881,9 +871,7 @@ dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3);
 or(): DataAbilityPredicates
 ```
 
-将或条件添加到谓词中。
-
-此方法类似于SQL语句“or”。
+将或条件添加到谓词中。此方法类似于SQL语句“or”。
 
 **起始版本：** 7
 

@@ -1,8 +1,6 @@
 # FlexWrap
 
-FlexWrap enumeration description
-
-@enum { number }
+FlexWrap enumeration description@enum { number }
 
 **Since:** 23
 

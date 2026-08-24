@@ -8,6 +8,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2SuffixSymbolIcon--><!--Device-unnamed-export declare class ChipV2SuffixSymbolIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -44,8 +46,7 @@ ChipV2SuffixSymbolIcon的构造函数
 ## action
 
 ```TypeScript
-@Trace
-  public action?: VoidCallback
+public action?: VoidCallback
 ```
 
 在单击后缀符号时调用。
@@ -56,6 +57,8 @@ ChipV2SuffixSymbolIcon的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2SuffixSymbolIcon-@Trace  public action?: VoidCallback--><!--Device-ChipV2SuffixSymbolIcon-@Trace  public action?: VoidCallback-End-->
@@ -65,8 +68,7 @@ ChipV2SuffixSymbolIcon的构造函数
 ## activatedAccessibility
 
 ```TypeScript
-@Trace
-  public activatedAccessibility?: ChipV2Accessibility
+public activatedAccessibility?: ChipV2Accessibility
 ```
 
 为后缀符号设置激活的无障碍配置。
@@ -77,6 +79,8 @@ ChipV2SuffixSymbolIcon的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2SuffixSymbolIcon-@Trace  public activatedAccessibility?: ChipV2Accessibility--><!--Device-ChipV2SuffixSymbolIcon-@Trace  public activatedAccessibility?: ChipV2Accessibility-End-->
@@ -86,8 +90,7 @@ ChipV2SuffixSymbolIcon的构造函数
 ## normalAccessibility
 
 ```TypeScript
-@Trace
-  public normalAccessibility?: ChipV2Accessibility
+public normalAccessibility?: ChipV2Accessibility
 ```
 
 为后缀符号设置正常的无障碍配置。
@@ -97,6 +100,8 @@ ChipV2SuffixSymbolIcon的构造函数
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

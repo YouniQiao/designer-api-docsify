@@ -13,7 +13,7 @@
 | --- | --- |
 | [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md) | Describes the text background color style. |
 | [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md) | Describes the text baseline offset style. |
-| [CustomSpan](arkts-arkui-customspan-c.md) | Describes the custom span. Only the base class is provided. You need to define the specific implementation. |
+| [CustomSpan](arkts-arkui-customspan-c.md) | Describes the custom span. Only the base class is provided. You need to define the specific implementation.The drag preview of a custom span is blank. |
 | [DecorationStyle](arkts-arkui-decorationstyle-c.md) | Describes the text decorative line style. |
 | [GestureStyle](arkts-arkui-gesturestyle-c.md) | Describes the event gesture style. |
 | [ImageAttachment](arkts-arkui-imageattachment-c.md) | Describes the image attachment. |
@@ -22,12 +22,12 @@
 | [LineHeightStyle](arkts-arkui-lineheightstyle-c.md) | Describes the text line height style. |
 | [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) | Describes the text line spacing style. |
 | [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class. |
-| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) | Describes the text paragraph style. |
+| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) | Describes the text paragraph style.Except the first paragraph, all paragraphs are formed using the escape character '\n'.The style of a paragraph is the one (if any) set for the first element or the paragraph style of the bound component.Before API version 26.0.0, if the first placeholder in a paragraph of the styled string is a [CustomSpan](arkts-arkui-customspan-c.md) or [ImageAttachment](arkts-arkui-imageattachment-c.md), the paragraph style set for that paragraph does not take effect. From API version 26.0.0, the paragraph style takes effect. |
 | [StyledString](arkts-arkui-styledstring-c.md) | StyledString |
 | [TextShadowStyle](arkts-arkui-textshadowstyle-c.md) | Describes the text shadow style. |
 | [TextStyle](arkts-arkui-textstyle-c.md) | Describes the text style. |
-| [UrlStyle](arkts-arkui-urlstyle-c.md) | Describes the hyperlink style. |
-| [UserDataSpan](arkts-arkui-userdataspan-c.md) | Implements a **UserDataSpan** object for storing and obtaining user data. Only the base class is provided. You need to define the specific implementation. |
+| [UrlStyle](arkts-arkui-urlstyle-c.md) | Describes the hyperlink style.The default color, font size, and font weight are **'#ff0a59f7'**, **'16fp'**, and **'FontWeight.Regular'**, respectively. If the styled string has **TextStyle** set, the **TextStyle** settings take precedence. |
+| [UserDataSpan](arkts-arkui-userdataspan-c.md) | Implements a **UserDataSpan** object for storing and obtaining user data. Only the base class is provided. You need to define the specific implementation.The extended user data does not affect the display effect. |
 
 <!--Del-->
 ### Classes(System API)

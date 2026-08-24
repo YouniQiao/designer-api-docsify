@@ -1,8 +1,6 @@
 # TextMetrics
 
-Size information of the text
-
-@interface TextMetrics
+Size information of the text@interface TextMetrics
 
 **Since:** 23
 

@@ -300,7 +300,7 @@ EDIT_FORM_KEY = 'ohos.extra.param.key.edit_form_id'
 UPDATE_FORM_REASON_KEY = 'ohos.extra.param.key.update_form_reason'
 ```
 
-Indicates the key specifying the reason for the form update. which is represented as want: { "parameters": { UPDATE_FORM_REASON_KEY: FormUpdateReason.FORM_NODE_REUSE } }.
+Indicates the key specifying the reason for the form update. which is represented as want: {"parameters": {UPDATE_FORM_REASON_KEY: FormUpdateReason.FORM_NODE_REUSE}}.
 
 **起始版本：** 24
 

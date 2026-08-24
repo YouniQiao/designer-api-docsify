@@ -14,8 +14,7 @@ function cubicBezier(x1: number, y1: number, x2: number, y2: number): string
 
 构造三阶贝塞尔曲线对象，曲线的值必须处于0-1之间。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves.cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md)替代。
 
 **起始版本：** 7

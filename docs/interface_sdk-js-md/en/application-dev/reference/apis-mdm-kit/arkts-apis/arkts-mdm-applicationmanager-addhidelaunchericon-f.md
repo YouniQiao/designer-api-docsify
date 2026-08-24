@@ -14,13 +14,10 @@ function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 
 Adds applications to the home screen icon hide list.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. This API can only hide home screen icons for applications of the current user. Hiding application widgets are
-> not supported.
-> 
-> 2. If a hidden application has clones, the clones are hidden synchronously.
-> 
+> not supported.&gt;
+> 2. If a hidden application has clones, the clones are hidden synchronously.&gt;
 > 3. Not all applications on the home screen can be added to the hidden list. Otherwise, all applications will
 > still be displayed on the home screen.
 

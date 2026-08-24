@@ -12,8 +12,7 @@ import { netFirewall } from '@kit.NetworkKit';
 function getNetFirewallRules(userId: int, requestParam: RequestParam): Promise<FirewallRulePage>
 ```
 
-Obtains firewall rules by user ID. You need to specify the pagination query parameter when calling this API. Currently, firewall rules can be sorted by name. This API uses a promise to return the result.
-
+Obtains firewall rules by user ID. You need to specify the pagination query parameter when calling this API. Currently, firewall rules can be sorted by name. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_NET_FIREWALL
 
 **Since:** 15

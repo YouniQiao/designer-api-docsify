@@ -17,7 +17,6 @@ Provides APIs to query and synchronize data in a device KV store. This class inh
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## closeResultSet
@@ -151,10 +150,8 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 
 Obtains a string value that matches the specified device ID and key. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -264,10 +261,8 @@ get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Arr
 
 Obtains a string value that matches the specified device ID and key. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -308,10 +303,8 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 
 Obtains all KV pairs that match the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -679,10 +672,8 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 Obtains all KV pairs that match the specified device ID and key prefix. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -786,10 +777,8 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 
 Obtains the KV pairs that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -825,10 +814,8 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 Obtains the KV pairs that match the specified device ID and **Query** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -869,10 +856,8 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStor
 
 Obtains a **KvStoreResultSet** object that matches the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -1224,10 +1209,8 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>
 
 Obtains a **KvStoreResultSet** object that matches the specified device ID and key prefix. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -1331,10 +1314,8 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResu
 
 Obtains a **KvStoreResultSet** object that matches the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -1370,10 +1351,8 @@ getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>
 
 Obtains a **KvStoreResultSet** object that matches the specified device ID and **Query** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -1657,10 +1636,8 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 
 Obtains the number of results that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -1696,10 +1673,8 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 
 Obtains the number of results that match the specified device ID and **Query** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -1912,10 +1887,8 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 Deletes data of the specified device from this KV store. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -2048,10 +2021,8 @@ removeDeviceData(deviceId: string): Promise<void>
 
 Deletes data of the specified device from this KV store. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
+> **NOTE：**&gt;
+> The value of **deviceId** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -2091,10 +2062,8 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 
 Synchronizes the KV store manually.
 
-> **NOTE：**
-> 
-> **deviceIds** is **networkId** in <!--RP2--
-> 
+> **NOTE：**&gt;
+> **deviceIds** is **networkId** in <!--RP2-->
 > [DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md), which can be obtained by
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system

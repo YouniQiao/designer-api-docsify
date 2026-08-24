@@ -14,8 +14,7 @@ function uninit(): boolean
 
 Uninitializes the active tag resources.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
 

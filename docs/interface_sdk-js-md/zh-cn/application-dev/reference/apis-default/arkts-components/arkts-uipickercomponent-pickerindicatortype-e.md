@@ -1,8 +1,6 @@
 # PickerIndicatorType
 
-设置选中项指示器的类型。
-
-@enum { int }
+设置选中项指示器的类型。@enum { int }
 
 **起始版本：** 23
 

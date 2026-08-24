@@ -2,10 +2,8 @@
 
 Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 10.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 10.&gt;
 > - In the following API examples, you must first use [getPromptAction()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getpromptaction) in
 > **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
 
@@ -482,9 +480,7 @@ struct Index {
 getTopOrder(): LevelOrder
 ```
 
-Obtains the order of the topmost dialog box.
-
-This API returns the order of the dialog box currently at the top layer. This information can be used to specify the desired order for subsequent dialog boxes.
+Obtains the order of the topmost dialog box.This API returns the order of the dialog box currently at the top layer. This information can be used to specify the desired order for subsequent dialog boxes.
 
 **Since:** 18
 
@@ -780,9 +776,7 @@ struct Index {
 openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 ```
 
-Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.
-
-+
+Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.+ *
 
 **Since:** 12
 
@@ -798,7 +792,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md)+ and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,+ only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ |
+| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br> + * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + |
 
 **Return value:**
 
@@ -824,9 +818,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
     options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-Opens a custom dialog box corresponding to **dialogContent**. This API uses a promise to return the result. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.
-
-The dialog box displayed through this API has its content fully following style settings of **dialogContent**. It is displayed in the same way where **customStyle** is set to **true**.
+Opens a custom dialog box corresponding to **dialogContent**. This API uses a promise to return the result. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.The dialog box displayed through this API has its content fully following style settings of **dialogContent**. It is displayed in the same way where **customStyle** is set to **true**.
 
 **Since:** 18
 
@@ -934,18 +926,14 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 Opens a menu with the specified content. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - If an invalid **target** is provided, the menu will not be displayed.
-> 
+> **NOTE：**&gt;
+> - If an invalid **target** is provided, the menu will not be displayed.&gt;
 > - You must maintain the provided **content**, on which [updateMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#updatemenu) and
-> [closeMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#closemenu) rely to identify the target menu.
-> 
+> [closeMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#closemenu) rely to identify the target menu.&gt;
 > - If your **wrapBuilder** includes other components (such as Popup or
-> Chip), the [ComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-c.md)
+> Chip), the [ComponentContent](arkts-arkui-componentcontent-c.md)
 > constructor must include four parameters, and the **options** parameter must be
-> **{ nestingBuilderSupported: true }**.
-> 
+> **{ nestingBuilderSupported: true }**.&gt;
 > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#openmenu) has
 > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
@@ -1044,15 +1032,12 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 Creates and displays a popup with the specified content. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - If an invalid **target** is provided, the popup will not be displayed.
-> 
+> **NOTE：**&gt;
+> - If an invalid **target** is provided, the popup will not be displayed.&gt;
 > - You must maintain the provided **content**, on which [updatePopup](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#updatepopup) and
-> [closePopup](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#closepopup) rely to identify the target popup.
-> 
+> [closePopup](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#closepopup) rely to identify the target popup.&gt;
 > - If your **wrapBuilder** includes other components (such as Popup or
-> Chip), the [ComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-c.md)
+> Chip), the [ComponentContent](arkts-arkui-componentcontent-c.md)
 > constructor must include four parameters, and the **options** parameter must be
 > **{ nestingBuilderSupported: true }**.
 
@@ -1266,9 +1251,7 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
     options?: promptAction.DialogOptions): Promise<number>
 ```
 
-Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.
-
-The dialog box ID can be included in the dialog box content for related operations. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.
+Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.The dialog box ID can be included in the dialog box content for related operations. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.
 
 **Since:** 18
 
@@ -1954,12 +1937,10 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 Updates the style of the menu corresponding to the provided **content**. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**,
 > **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**,
-> **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.
-> 
+> **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.&gt;
 > - The mask style can be updated by configuring MenuMaskType. However, this API does not
 > support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by
 > setting a boolean value.
@@ -2062,8 +2043,7 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 Updates the style of the popup corresponding to the provided **content**. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**.
 
 **Since:** 18

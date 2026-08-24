@@ -231,9 +231,7 @@ digest(): Promise<DataBlob>
 digestSync(): DataBlob
 ```
 
-生成消息摘要，通过同步方式返回摘要计算结果。
-
-<br><br>**说明：** <br>建议优先使用异步API，[digest](#digest)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+生成消息摘要，通过同步方式返回摘要计算结果。<br><br>**说明：** <br>建议优先使用异步API，[digest](#digest)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -399,8 +397,7 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 传入消息进行Md更新摘要状态。使用callback异步回调。update和digest为两段式接口，需要成组使用。其中digest必选，update可选。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > Md算法多次调用update更新的代码示例详见开发指导
 > [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
 
@@ -441,8 +438,7 @@ update(input: DataBlob): Promise<void>
 
 传入消息进行Md更新摘要状态。使用Promise异步回调。update和digest为两段式接口，需要成组使用。其中digest必选，update可选。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > Md算法多次调用update更新的代码示例详见开发指导
 > [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
 
@@ -486,11 +482,9 @@ updateSync(input: DataBlob): void
 
 传入消息进行Md更新摘要状态，通过同步方式更新。updateSync和digestSync为两段式接口，需要成组使用。其中digestSync必选， updateSync可选。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > Md算法多次调用updateSync更新的代码示例详见开发指导
 > [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
-
 <br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23

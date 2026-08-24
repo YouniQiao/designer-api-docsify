@@ -16,13 +16,7 @@
 borderRadius?: Length
 ```
 
-背板的圆角半径（不支持百分比设置）。
-
-默认值：8.0
-
-单位：vp
-
-取值范围：[0, +∞)。
+背板的圆角半径（不支持百分比设置）。默认值：8.0单位：vp取值范围：[0, +∞)。
 
 **类型：** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 

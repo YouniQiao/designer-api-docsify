@@ -1,8 +1,6 @@
 # RippleFieldOptions
 
-Defines ripple field options.
-
-@interface RippleFieldOptions
+Defines ripple field options.@interface RippleFieldOptions
 
 **Since:** 24
 
@@ -64,7 +62,7 @@ center?: PositionT<double>
 
 The central point where the ripple field generates force. The top-left corner of the component is the origin of coordinates. The coordinate unit is vp.
 
-**Type:** [PositionT](../arkts-apis/arkts-positiont-t.md)&lt;double&gt;
+**Type:** [PositionT](../../apis-arkui/arkts-apis/arkts-arkui-positiont-t.md)&lt;double&gt;
 
 **Default:** {x:0,y:0}
 

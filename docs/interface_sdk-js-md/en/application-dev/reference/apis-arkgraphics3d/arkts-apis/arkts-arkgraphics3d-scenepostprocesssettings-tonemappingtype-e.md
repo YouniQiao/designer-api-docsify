@@ -1,8 +1,6 @@
 # ToneMappingType
 
-Enumerates the tone mapping types.
-
-@enum { int }
+Enumerates the tone mapping types.@enum { int }
 
 **Since:** 23
 

@@ -6,6 +6,8 @@ Declare type OperateCheckV2
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class OperateCheckV2--><!--Device-unnamed-export declare class OperateCheckV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ The constructor of OperateCheckV2.
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of the checkbox/switch/radio.
@@ -54,6 +55,8 @@ The accessibilityDescription of the checkbox/switch/radio.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateCheckV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateCheckV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -63,8 +66,7 @@ The accessibilityDescription of the checkbox/switch/radio.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 The accessibilityLevel of the checkbox/switch/radio.
@@ -77,6 +79,8 @@ The accessibilityLevel of the checkbox/switch/radio.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateCheckV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateCheckV2-@Trace  public accessibilityLevel?: string-End-->
@@ -86,8 +90,7 @@ The accessibilityLevel of the checkbox/switch/radio.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of the checkbox/switch/radio.
@@ -98,6 +101,8 @@ The accessibilityText of the checkbox/switch/radio.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateCheckV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateCheckV2-@Trace  public accessibilityText?: ResourceStr-End-->
@@ -107,8 +112,7 @@ The accessibilityText of the checkbox/switch/radio.
 ## isCheck
 
 ```TypeScript
-@Trace
-  public isCheck?: boolean
+public isCheck?: boolean
 ```
 
 Whether is checked on default.
@@ -119,6 +123,8 @@ Whether is checked on default.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateCheckV2-@Trace  public isCheck?: boolean--><!--Device-OperateCheckV2-@Trace  public isCheck?: boolean-End-->
@@ -128,8 +134,7 @@ Whether is checked on default.
 ## onChange
 
 ```TypeScript
-@Trace
-  public onChange?: OnChangeCallback
+public onChange?: OnChangeCallback
 ```
 
 Callback function when operate the checkbox/switch/radio.
@@ -139,6 +144,8 @@ Callback function when operate the checkbox/switch/radio.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

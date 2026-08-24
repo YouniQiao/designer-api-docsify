@@ -1,8 +1,6 @@
 # ExpandedRegionLayoutOptions
 
-展开态布局信息。
-
-@interface ExpandedRegionLayoutOptions
+展开态布局信息。@interface ExpandedRegionLayoutOptions
 
 **起始版本：** 23
 

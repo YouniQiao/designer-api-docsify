@@ -25,7 +25,7 @@
 | [FrameCallback](arkts-arkui-uicontext-framecallback-c.md) | Class FrameCallback |
 | [GestureHandlingResolution](arkts-arkui-uicontext-gesturehandlingresolution-c.md) | Class GestureHandlingResolution. Represents the developer's decision result for smart gesture handling. |
 | [Magnifier](arkts-arkui-uicontext-magnifier-c.md) | Provides the method for magnifier capabilities. |
-| [MarqueeDynamicSyncScene](arkts-arkui-uicontext-marqueedynamicsyncscene-c.md) | Represents a dynamic synchronization scene of Marquee. |
+| [MarqueeDynamicSyncScene](arkts-arkui-uicontext-marqueedynamicsyncscene-c.md) | Represents a dynamic synchronization scene of Marquee.@extends DynamicSyncScene |
 | [MeasureUtils](arkts-arkui-uicontext-measureutils-c.md) | class MeasureUtils |
 | [MediaQuery](arkts-arkui-uicontext-mediaquery-c.md) | class MediaQuery |
 | [NoneActionProposal](arkts-arkui-uicontext-noneactionproposal-c.md) | Class NoneActionProposal. |
@@ -37,7 +37,7 @@
 | [ScrollActionProposal](arkts-arkui-uicontext-scrollactionproposal-c.md) | Class ScrollActionProposal. The default scroll direction is forward. |
 | [SelectActionProposal](arkts-arkui-uicontext-selectactionproposal-c.md) | Class SelectActionProposal. |
 | [SmartGestureController](arkts-arkui-uicontext-smartgesturecontroller-c.md) | Class SmartGestureController. |
-| [SwiperDynamicSyncScene](arkts-arkui-uicontext-swiperdynamicsyncscene-c.md) | Represents a dynamic synchronization scene of Swiper. |
+| [SwiperDynamicSyncScene](arkts-arkui-uicontext-swiperdynamicsyncscene-c.md) | Represents a dynamic synchronization scene of Swiper.@extends DynamicSyncScene |
 | [TargetedGestureProposal](arkts-arkui-uicontext-targetedgestureproposal-c.md) | Class TargetedGestureProposal. |
 | [TextMenuController](arkts-arkui-uicontext-textmenucontroller-c.md) | class TextMenuController |
 | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | class UIContext |
@@ -59,27 +59,27 @@
 | Name | Description |
 | --- | --- |
 | [AtomicServiceBar](arkts-arkui-uicontext-atomicservicebar-i.md) | interface AtomicServiceBar @interface AtomicServiceBar |
-| [GestureObserverConfigs](arkts-arkui-uicontext-gestureobserverconfigs-i.md) | The observer options for global gesture listener. |
-| [GestureTriggerInfo](arkts-arkui-uicontext-gesturetriggerinfo-i.md) | The information when one gesture specific callback is triggered. |
-| [OrderOverlayOptions](arkts-arkui-uicontext-orderoverlayoptions-i.md) | Options for opening an overlay with order. |
-| [OverlayManagerOptions](arkts-arkui-uicontext-overlaymanageroptions-i.md) | the property of OverlayManager. |
-| [PageInfo](arkts-arkui-uicontext-pageinfo-i.md) | Defines the PageInfo type. The value of routerPageInfo indicates the information of the router page, or undefined if the frameNode does not have router page information. And the value of navDestinationInfo indicates the information of the navDestination, or undefined if the frameNode does not have navDestination information. |
-| [SwiperContentInfo](arkts-arkui-uicontext-swipercontentinfo-i.md) | The information returned when the Swiper content changes. |
-| [SwiperItemInfo](arkts-arkui-uicontext-swiperiteminfo-i.md) | The information of changed SwiperItem. |
-| [TargetInfo](arkts-arkui-uicontext-targetinfo-i.md) | Defines the target info. |
+| [GestureObserverConfigs](arkts-arkui-uicontext-gestureobserverconfigs-i.md) | The observer options for global gesture listener.@interface GestureObserverConfigs |
+| [GestureTriggerInfo](arkts-arkui-uicontext-gesturetriggerinfo-i.md) | The information when one gesture specific callback is triggered.@interface GestureTriggerInfo |
+| [OrderOverlayOptions](arkts-arkui-uicontext-orderoverlayoptions-i.md) | Options for opening an overlay with order.@interface OrderOverlayOptions |
+| [OverlayManagerOptions](arkts-arkui-uicontext-overlaymanageroptions-i.md) | the property of OverlayManager.@interface OverlayManagerOptions |
+| [PageInfo](arkts-arkui-uicontext-pageinfo-i.md) | Defines the PageInfo type. The value of routerPageInfo indicates the information of the router page, or undefined if the frameNode does not have router page information. And the value of navDestinationInfo indicates the information of the navDestination, or undefined if the frameNode does not have navDestination information.@interface PageInfo |
+| [SwiperContentInfo](arkts-arkui-uicontext-swipercontentinfo-i.md) | The information returned when the Swiper content changes.@interface SwiperContentInfo |
+| [SwiperItemInfo](arkts-arkui-uicontext-swiperiteminfo-i.md) | The information of changed SwiperItem.@interface SwiperContentInfo |
+| [TargetInfo](arkts-arkui-uicontext-targetinfo-i.md) | Defines the target info.@interface TargetInfo |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CustomKeyboardContinueFeature](arkts-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Enum of CustomKeyboardContinueFeature |
-| [GestureActionPhase](arkts-arkui-uicontext-gestureactionphase-e.md) | This is an enumeration type representing the gesture callback phases to be triggered, corresponding to the action callbacks defined in gesture.d.ts. Therefore, not all gesture types have all the following phase definitions. For example, SwipeGesture only has one callback named onAction, so it also only has one enumeration type, which is WILL_START. |
-| [GestureListenerType](arkts-arkui-uicontext-gesturelistenertype-e.md) | This is an enumeration type indicating what kind of gesture you want to monitor for. |
-| [KeyboardAvoidMode](arkts-arkui-uicontext-keyboardavoidmode-e.md) | Enum of KeyBoardAvoidMethodType |
-| [MarqueeDynamicSyncSceneType](arkts-arkui-uicontext-marqueedynamicsyncscenetype-e.md) | Enum of scene type for Marquee |
-| [NodeRenderState](arkts-arkui-uicontext-noderenderstate-e.md) | An enumeration type that identifies the current node's rendering state. The UI components used in the application are automatically managed by the system and controlled for participation in graphical rendering by either mounting them onto the render tree or removing them from it. Only nodes that participate in graphical rendering have the potential to be displayed. However, participating in rendering does not equal to the node's visibility, as there may be many occlusion scenarios in the actual implementation of the application. Nevertheless, if a node does not participate in rendering, it will definitely not be visible. |
+| [CustomKeyboardContinueFeature](arkts-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Enum of CustomKeyboardContinueFeature@enum { int } CustomKeyboardContinueFeature |
+| [GestureActionPhase](arkts-arkui-uicontext-gestureactionphase-e.md) | This is an enumeration type representing the gesture callback phases to be triggered, corresponding to the action callbacks defined in gesture.d.ts. Therefore, not all gesture types have all the following phase definitions. For example, SwipeGesture only has one callback named onAction, so it also only has one enumeration type, which is WILL_START.@enum { number } GestureActionPhase |
+| [GestureListenerType](arkts-arkui-uicontext-gesturelistenertype-e.md) | This is an enumeration type indicating what kind of gesture you want to monitor for.@enum { number } GestureListenerType |
+| [KeyboardAvoidMode](arkts-arkui-uicontext-keyboardavoidmode-e.md) | Enum of KeyBoardAvoidMethodType@enum { number } KeyBoardAvoidMethodType |
+| [MarqueeDynamicSyncSceneType](arkts-arkui-uicontext-marqueedynamicsyncscenetype-e.md) | Enum of scene type for Marquee@enum { number } MarqueeDynamicSyncSceneType |
+| [NodeRenderState](arkts-arkui-uicontext-noderenderstate-e.md) | An enumeration type that identifies the current node's rendering state. The UI components used in the application are automatically managed by the system and controlled for participation in graphical rendering by either mounting them onto the render tree or removing them from it. Only nodes that participate in graphical rendering have the potential to be displayed. However, participating in rendering does not equal to the node's visibility, as there may be many occlusion scenarios in the actual implementation of the application. Nevertheless, if a node does not participate in rendering, it will definitely not be visible.@enum { number } NodeRenderState |
 | [ResolveStrategy](arkts-arkui-uicontext-resolvestrategy-e.md) | Enum of strategy of resolved UIContext. @enum { number } strategy of resolved UIContext. |
-| [SwiperDynamicSyncSceneType](arkts-arkui-uicontext-swiperdynamicsyncscenetype-e.md) | Enum of SwiperDynamicSyncSceneType |
+| [SwiperDynamicSyncSceneType](arkts-arkui-uicontext-swiperdynamicsyncscenetype-e.md) | Enum of SwiperDynamicSyncSceneType@enum { number } SwiperDynamicSyncSceneType |
 | [TextSelectionClearPolicy](arkts-arkui-uicontext-textselectionclearpolicy-e.md) | Enum of TextSelectionClearPolicy |
 
 ### Types

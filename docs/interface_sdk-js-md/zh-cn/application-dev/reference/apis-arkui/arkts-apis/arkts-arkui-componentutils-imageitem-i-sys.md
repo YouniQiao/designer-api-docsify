@@ -1,8 +1,6 @@
 # ImageItem（系统接口）
 
-Image object with layout information.
-
-@interface ImageItem
+Image object with layout information.@interface ImageItem
 
 **起始版本：** 23
 

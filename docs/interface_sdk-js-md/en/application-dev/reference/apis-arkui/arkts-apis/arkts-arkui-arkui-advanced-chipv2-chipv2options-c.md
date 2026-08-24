@@ -4,7 +4,9 @@ Defines chip options class.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export class ChipV2Options--><!--Device-unnamed-export class ChipV2Options-End-->
+**Decorator:** @ObservedV2
+
+<!--Device-unnamed-export declare class ChipV2Options--><!--Device-unnamed-export declare class ChipV2Options-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,8 +43,7 @@ The constructor of ChipV2Options
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 Set accessibility description for Chip.
@@ -50,6 +51,8 @@ Set accessibility description for Chip.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ Set accessibility description for Chip.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 Set accessibility level for Chip.
@@ -71,6 +73,8 @@ Set accessibility level for Chip.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +87,7 @@ Set accessibility level for Chip.
 ## accessibilitySelectedType
 
 ```TypeScript
-@Trace
-  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType
+public accessibilitySelectedType?: ChipV2AccessibilitySelectedType
 ```
 
 Sets the accessibility selection type for the chip.
@@ -92,6 +95,8 @@ Sets the accessibility selection type for the chip.
 **Type:** [ChipV2AccessibilitySelectedType](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityselectedtype-e.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +109,7 @@ Sets the accessibility selection type for the chip.
 ## activated
 
 ```TypeScript
-@Trace
-  public activated?: boolean
+public activated?: boolean
 ```
 
 Set whether chip is active or not.
@@ -113,6 +117,8 @@ Set whether chip is active or not.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +131,7 @@ Set whether chip is active or not.
 ## activatedBackgroundColor
 
 ```TypeScript
-@Trace
-  public activatedBackgroundColor?: ColorMetrics
+public activatedBackgroundColor?: ColorMetrics
 ```
 
 Chip background color when chip is activated.
@@ -134,6 +139,8 @@ Chip background color when chip is activated.
 **Type:** ColorMetrics
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,8 +153,7 @@ Chip background color when chip is activated.
 ## activatedBackgroundSystemMaterial
 
 ```TypeScript
-@Trace
-  public activatedBackgroundSystemMaterial?: uiMaterial.Material
+public activatedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component which is activated. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -155,6 +161,8 @@ Set system-styled materials for the component which is activated. Different mate
 **Type:** uiMaterial.Material
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,8 +175,7 @@ Set system-styled materials for the component which is activated. Different mate
 ## allowClose
 
 ```TypeScript
-@Trace
-  public allowClose?: boolean
+public allowClose?: boolean
 ```
 
 Show close icon.
@@ -176,6 +183,8 @@ Show close icon.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +197,7 @@ Show close icon.
 ## backgroundColor
 
 ```TypeScript
-@Trace
-  public backgroundColor?: ColorMetrics
+public backgroundColor?: ColorMetrics
 ```
 
 Chip background color.
@@ -197,6 +205,8 @@ Chip background color.
 **Type:** ColorMetrics
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -209,8 +219,7 @@ Chip background color.
 ## backgroundSystemMaterial
 
 ```TypeScript
-@Trace
-  public backgroundSystemMaterial?: uiMaterial.Material
+public backgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -218,6 +227,8 @@ Set system-styled materials for the component. Different materials have differen
 **Type:** uiMaterial.Material
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,8 +241,7 @@ Set system-styled materials for the component. Different materials have differen
 ## borderRadius
 
 ```TypeScript
-@Trace
-  public borderRadius?: LengthMetrics
+public borderRadius?: LengthMetrics
 ```
 
 Chip radius.
@@ -239,6 +249,8 @@ Chip radius.
 **Type:** LengthMetrics
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,8 +263,7 @@ Chip radius.
 ## closeIcon
 
 ```TypeScript
-@Trace
-  public closeIcon?: ChipV2CloseIcon
+public closeIcon?: ChipV2CloseIcon
 ```
 
 Set config for default close icon when 'allowClose' is true.
@@ -260,6 +271,8 @@ Set config for default close icon when 'allowClose' is true.
 **Type:** [ChipV2CloseIcon](arkts-arkui-arkui-advanced-chipv2-chipv2closeicon-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,8 +285,7 @@ Set config for default close icon when 'allowClose' is true.
 ## direction
 
 ```TypeScript
-@Trace
-  public direction?: Direction
+public direction?: Direction
 ```
 
 Indicates the attribute of the current chip direction.
@@ -281,6 +293,8 @@ Indicates the attribute of the current chip direction.
 **Type:** Direction
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -293,8 +307,7 @@ Indicates the attribute of the current chip direction.
 ## enabled
 
 ```TypeScript
-@Trace
-  public enabled?: boolean
+public enabled?: boolean
 ```
 
 Enable chip.
@@ -302,6 +315,8 @@ Enable chip.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,8 +329,7 @@ Enable chip.
 ## fontSize
 
 ```TypeScript
-@Trace
-  public fontSize?: LengthMetrics
+public fontSize?: LengthMetrics
 ```
 
 Set font size for the label text and the close icon.
@@ -323,6 +337,8 @@ Set font size for the label text and the close icon.
 **Type:** LengthMetrics
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -335,8 +351,7 @@ Set font size for the label text and the close icon.
 ## label
 
 ```TypeScript
-@Trace
-  public label: ChipV2Label
+public label: ChipV2Label
 ```
 
 Chip prefix icon.
@@ -344,6 +359,8 @@ Chip prefix icon.
 **Type:** [ChipV2Label](arkts-arkui-arkui-advanced-chipv2-chipv2label-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -356,8 +373,7 @@ Chip prefix icon.
 ## maxFontScale
 
 ```TypeScript
-@Trace
-  public maxFontScale?: number | Resource
+public maxFontScale?: number | Resource
 ```
 
 Maximum font scale for Chip.
@@ -365,6 +381,8 @@ Maximum font scale for Chip.
 **Type:** number \| Resource
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -377,8 +395,7 @@ Maximum font scale for Chip.
 ## minFontScale
 
 ```TypeScript
-@Trace
-  public minFontScale?: number | Resource
+public minFontScale?: number | Resource
 ```
 
 Minimum font scale for Chip.
@@ -386,6 +403,8 @@ Minimum font scale for Chip.
 **Type:** number \| Resource
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -438,8 +457,7 @@ On close action.
 ## padding
 
 ```TypeScript
-@Trace
-  public padding?: LocalizedPadding
+public padding?: LocalizedPadding
 ```
 
 Chip padding.
@@ -447,6 +465,8 @@ Chip padding.
 **Type:** LocalizedPadding
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -459,8 +479,7 @@ Chip padding.
 ## prefixIcon
 
 ```TypeScript
-@Trace
-  public prefixIcon?: ChipV2Icon
+public prefixIcon?: ChipV2Icon
 ```
 
 Chip prefix icon.
@@ -468,6 +487,8 @@ Chip prefix icon.
 **Type:** [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -480,8 +501,7 @@ Chip prefix icon.
 ## size
 
 ```TypeScript
-@Trace
-  public size?: ChipV2Size | SizeT<LengthMetrics>
+public size?: ChipV2Size | SizeT<LengthMetrics>
 ```
 
 Chip size.
@@ -489,6 +509,8 @@ Chip size.
 **Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -501,8 +523,7 @@ Chip size.
 ## suffixIcon
 
 ```TypeScript
-@Trace
-  public suffixIcon?: ChipV2Icon
+public suffixIcon?: ChipV2Icon
 ```
 
 Chip suffix icon.
@@ -510,6 +531,8 @@ Chip suffix icon.
 **Type:** [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

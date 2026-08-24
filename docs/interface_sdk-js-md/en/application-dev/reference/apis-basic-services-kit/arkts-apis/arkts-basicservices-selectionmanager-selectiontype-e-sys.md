@@ -1,7 +1,6 @@
 # SelectionType (System API)
 
-Enumerates the word selection types.
-
+Enumerates the word selection types.  
 | Name | Value| Description | | ------------ | -- | ------------------ | | MOUSE_MOVE | 1 | Word selection by sliding the mouse or touchpad. | | DOUBLE_CLICK | 2 | Word selection by double-clicking the mouse or touchpad. | | TRIPLE_CLICK | 3 | Word selection by triple-clicking the mouse or touchpad. |
 
 **Since:** 24

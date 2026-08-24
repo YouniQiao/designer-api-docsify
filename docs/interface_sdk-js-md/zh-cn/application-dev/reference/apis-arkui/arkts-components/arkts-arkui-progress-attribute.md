@@ -1,8 +1,6 @@
 # Progress属性/事件
 
-除支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)外，还支持以下属性。
-
-支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)。
+除支持通用属性外，还支持以下属性。支持通用事件。
 
 **继承/实现关系：** ProgressAttribute extends CommonMethod<ProgressAttribute<Type>>
 
@@ -23,11 +21,7 @@
 color(value: ResourceColor | LinearGradient)
 ```
 
-设置进度条前景色。
-
-从API version 10开始支持利用LinearGradient设置Ring样式的渐变色。Ring类型不建议设置透明度，如需设置透明度，建议使用 DataPanel。
-
-从API version 23开始支持利用LinearGradient设置Linear样式和Capsule样式的渐变色。API version 22及之前版本使用该方式设置时，会以默认主题色显示。
+设置进度条前景色。从API version 10开始支持利用LinearGradient设置Ring样式的渐变色。Ring类型不建议设置透明度，如需设置透明度，建议使用 DataPanel。从API version 23开始支持利用LinearGradient设置Linear样式和Capsule样式的渐变色。API version 22及之前版本使用该方式设置时，会以默认主题色显示。
 
 **起始版本：** 7
 
@@ -43,7 +37,7 @@ color(value: ResourceColor | LinearGradient)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor \| LinearGradient | 是 | 进度条前景色。 <br>从API version 10开始支持利用LinearGradient设置Ring样式的渐变色，从API version 23开始支持利用LinearGradient设置Linear样式和Capsule样式的渐变 色。 <br>默认值： <br>- Capsule： <br>   API version 9及以下：'#ff007dff' <br>   API version 10：'#33006cde' <br>   API version 11及以上：'#33007dff' <br>- Ring： <br>   API version 9及以下：'#ff007dff' <br>   API version 10及以上：起始端：'#ff86c1ff'，结束端：'#ff254ff7' <br>- 其他样式：'#ff007dff' |
+| value | ResourceColor \| LinearGradient | 是 | 进度条前景色。 <br>从API version 10开始支持利用LinearGradient设置Ring样式的渐变色，从API version 23开始支持利用LinearGradient设置Linear样式和Capsule样式的渐变 色。 <br>默认值： <br>- Capsule： <br>   API version 9及以下：'#ff007dff'<br>   API version 10：'#33006cde'<br>   API version 11及以上：'#33007dff'<br>- Ring： <br>   API version 9及以下：'#ff007dff'<br>   API version 10及以上：起始端：'#ff86c1ff'，结束端：'#ff254ff7'<br>- 其他样式：'#ff007dff' |
 
 ## contentModifier
 
@@ -77,8 +71,7 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 设置隐私敏感。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -121,7 +114,7 @@ style(value: Style)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Style | 是 | 组件的样式。 <br>**说明：** 不同的type需分别对应相应的style属性设置，详细映射关系参考 [ProgressStyleMap](../../../reference/apis-arkui/arkui-ts/ts-basic-components-progress.md#progressstylemap10)。 <br>- CapsuleStyleOptions：设置Capsule的样式。 <br>- RingStyleOptions：设置Ring的样式。 <br>- LinearStyleOptions：设置Linear的样式。 <br>- ScaleRingStyleOptions：设置ScaleRing的样式。 <br>- EclipseStyleOptions：设置Eclipse的样式。 <br>- ProgressStyleOptions：仅可设置各类型进度条的strokeWidth、scaleCount、scaleWidth，仅对支持这些样式设置的进度条生效。 |
+| value | Style | 是 | 组件的样式。 <br>**说明：** 不同的type需分别对应相应的style属性设置，详细映射关系参考 [ProgressStyleMap](arkts-arkui-progressstylemap-i.md)。 <br>- CapsuleStyleOptions：设置Capsule的样式。 <br>- RingStyleOptions：设置Ring的样式。 <br>- LinearStyleOptions：设置Linear的样式。 <br>- ScaleRingStyleOptions：设置ScaleRing的样式。 <br>- EclipseStyleOptions：设置Eclipse的样式。 <br>- ProgressStyleOptions：仅可设置各类型进度条的strokeWidth、scaleCount、scaleWidth，仅对支持这些样式设置的进度条生效。 |
 
 ## value
 

@@ -2,14 +2,10 @@
 
 网络连接对象类型。
 
-> **说明：**
-> 
-> （1）设备从无网络状态转变为有网络状态时，将触发netAvailable事件、netCapabilitiesChange事件和netConnectionPropertiesChange事件；
-> 
-> （2）接收到netAvailable事件后，若设备从有网络状态转变为无网络状态，将触发netLost事件；
-> 
-> （3）若未接收到netAvailable事件，则将直接接收到netUnavailable事件；
-> 
+> **说明：**&gt;
+> （1）设备从无网络状态转变为有网络状态时，将触发netAvailable事件、netCapabilitiesChange事件和netConnectionPropertiesChange事件；&gt;
+> （2）接收到netAvailable事件后，若设备从有网络状态转变为无网络状态，将触发netLost事件；&gt;
+> （3）若未接收到netAvailable事件，则将直接接收到netUnavailable事件；&gt;
 > （4）设备从WiFi网络切换至蜂窝网络时，将先触发netLost事件（WiFi丢失），随后触发netAvailable事件（蜂窝可用）。
 
 **起始版本：** 23
@@ -436,8 +432,7 @@ register(callback: AsyncCallback<void>): void
 
 订阅指定网络状态变化的通知。如需监听特定事件，确保调用on监听事件后再调用register进行注册。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 使用完register接口后需要及时调用unregister取消注册。
 
 **起始版本：** 23

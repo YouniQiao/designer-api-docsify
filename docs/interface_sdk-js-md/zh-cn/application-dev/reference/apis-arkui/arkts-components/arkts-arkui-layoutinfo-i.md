@@ -1,8 +1,6 @@
 # LayoutInfo
 
-子组件布局位置信息
-
-@interface LayoutInfo
+子组件布局位置信息@interface LayoutInfo
 
 **起始版本：** 9
 

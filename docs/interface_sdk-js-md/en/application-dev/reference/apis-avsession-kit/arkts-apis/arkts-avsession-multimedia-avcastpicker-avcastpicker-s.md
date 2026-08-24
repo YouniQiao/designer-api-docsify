@@ -4,6 +4,8 @@ A picker view to show available streaming device list.
 
 **Since:** 10
 
+**Decorator:** @Component
+
 <!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -12,14 +14,12 @@ A picker view to show available streaming device list.
 
 ```TypeScript
 import { AVCastPicker } from '@kit.AVSessionKit';
-import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKit';
 ```
 
 ## activeColor
 
 ```TypeScript
-@Prop
-  activeColor?: Color | number | string
+activeColor?: Color | number | string
 ```
 
 Assigns the color of picker component at active state.
@@ -27,6 +27,8 @@ Assigns the color of picker component at active state.
 **Type:** Color \| number \| string
 
 **Since:** 11
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -37,8 +39,7 @@ Assigns the color of picker component at active state.
 ## colorMode
 
 ```TypeScript
-@Prop
-  colorMode?: AVCastPickerColorMode
+colorMode?: AVCastPickerColorMode
 ```
 
 Set the picker color mode.
@@ -46,6 +47,8 @@ Set the picker color mode.
 **Type:** [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,8 +59,7 @@ Set the picker color mode.
 ## customPicker
 
 ```TypeScript
-@Prop
-  customPicker?: CustomBuilder
+customPicker?: CustomBuilder
 ```
 
 Set the custom builder for the picker appearance. If not set, system will show the default appearance for different device type.
@@ -65,6 +67,8 @@ Set the custom builder for the picker appearance. If not set, system will show t
 **Type:** CustomBuilder
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -75,8 +79,7 @@ Set the custom builder for the picker appearance. If not set, system will show t
 ## normalColor
 
 ```TypeScript
-@Prop
-  normalColor?: Color | number | string
+normalColor?: Color | number | string
 ```
 
 Assigns the color of picker component at normal state .
@@ -84,6 +87,8 @@ Assigns the color of picker component at normal state .
 **Type:** Color \| number \| string
 
 **Since:** 11
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -112,8 +117,7 @@ Picker state change callback.
 ## pickerStyle
 
 ```TypeScript
-@Prop
-  pickerStyle?: AVCastPickerStyle
+pickerStyle?: AVCastPickerStyle
 ```
 
 Set the picker style.
@@ -121,6 +125,8 @@ Set the picker style.
 **Type:** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -131,8 +137,7 @@ Set the picker style.
 ## sessionType
 
 ```TypeScript
-@Prop
-  sessionType?: string
+sessionType?: string
 ```
 
 Set the session type used by current picker component which can refer to AVSessionType in avSession. If not set, default value is 'audio'.
@@ -140,6 +145,8 @@ Set the session type used by current picker component which can refer to AVSessi
 **Type:** string
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

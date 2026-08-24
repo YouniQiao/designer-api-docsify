@@ -4,6 +4,8 @@ Defines chip component with V2 state management.
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ChipV2--><!--Device-unnamed-export declare struct ChipV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,9 +37,7 @@ Sets the build function of the ChipV2.
 ## chipV2Options
 
 ```TypeScript
-@Require
-  @Param
-  readonly chipV2Options: ChipV2Options
+readonly chipV2Options: ChipV2Options
 ```
 
 Chip options.
@@ -45,6 +45,8 @@ Chip options.
 **Type:** [ChipV2Options](arkts-arkui-arkui-advanced-chipv2-chipv2options-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

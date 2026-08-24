@@ -14,8 +14,7 @@ function openNfc(): boolean
 
 Opens NFC.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md) instead.
 

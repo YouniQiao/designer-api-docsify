@@ -1,8 +1,6 @@
 # AccessibilityHoverEvent
 
-The accessibility hover action triggers this method invocation.
-
-@extends BaseEvent
+The accessibility hover action triggers this method invocation.@extends BaseEvent
 
 **Inheritance/Implementation:** AccessibilityHoverEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 

@@ -13,8 +13,7 @@ function rename(oldPath: string, newPath: string): Promise<void>
 
 重命名文件或目录。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 23
@@ -71,8 +70,7 @@ function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>)
 
 重命名文件或目录。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 23

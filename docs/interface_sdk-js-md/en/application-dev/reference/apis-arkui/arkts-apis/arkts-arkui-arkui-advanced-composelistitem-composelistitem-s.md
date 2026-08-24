@@ -2,10 +2,8 @@
 
 The **ComposeListItem** component is a container that presents a series of items arranged in a column with the same width. You can use it to present data of the same type in a multiple and coherent row style, for example, images or text.
 
-> **NOTE：**
-> 
-> - This component can be used only in the stage model.
-> 
+> **NOTE：**&gt;
+> - This component can be used only in the stage model.&gt;
 > - If the **ComposeListItem** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -15,6 +13,8 @@ The **ComposeListItem** component is a container that presents a series of items
 
 **Since:** 10
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ComposeListItem--><!--Device-unnamed-export declare struct ComposeListItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,14 +23,12 @@ The **ComposeListItem** component is a container that presents a series of items
 
 ```TypeScript
 import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
-import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUI';
 ```
 
 ## contentItem
 
 ```TypeScript
-@Prop
-  contentItem?: ContentItem
+contentItem?: ContentItem
 ```
 
 Elements on the left and in the center.
@@ -38,6 +36,8 @@ Elements on the left and in the center.
 **Type:** [ContentItem](arkts-arkui-arkui-advanced-composelistitem-contentitem-c.md)
 
 **Since:** 10
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +50,7 @@ Elements on the left and in the center.
 ## operateItem
 
 ```TypeScript
-@Prop
-  operateItem?: OperateItem
+operateItem?: OperateItem
 ```
 
 Element on the right.
@@ -59,6 +58,8 @@ Element on the right.
 **Type:** [OperateItem](arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md)
 
 **Since:** 10
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

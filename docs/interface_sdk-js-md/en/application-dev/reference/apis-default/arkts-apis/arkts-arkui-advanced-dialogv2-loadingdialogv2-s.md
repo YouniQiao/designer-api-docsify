@@ -1,12 +1,12 @@
 # LoadingDialogV2
 
-Declare CustomDialog LoadingDialogV2
-
-@struct { LoadingDialogV2 }
+Declare CustomDialog LoadingDialogV2@struct { LoadingDialogV2 }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct LoadingDialogV2--><!--Device-unnamed-export declare struct LoadingDialogV2-End-->
 
@@ -20,8 +20,7 @@ Declare CustomDialog LoadingDialogV2
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +40,7 @@ The method to build component.
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
 Sets the LoadingDialogV2 content.
@@ -50,6 +50,8 @@ Sets the LoadingDialogV2 content.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

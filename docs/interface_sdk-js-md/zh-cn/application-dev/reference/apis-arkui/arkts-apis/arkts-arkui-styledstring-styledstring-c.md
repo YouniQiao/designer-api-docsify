@@ -69,9 +69,7 @@ equals(other: StyledString): boolean
 static fromHtml(html: string): Promise<StyledString | undefined>
 ```
 
-将HTML格式字符串转换成属性字符串，使用Promise异步回调。当前支持转换的HTML标签范围：\<p>、\&lt;span&gt;、\&lt;img&gt;、\
-
-、\&lt;strong&gt;、\&lt;b&gt;、\&lt;a&gt;、\&lt;i&gt;、\&lt;em&gt;、\&lt;s&gt;、\&lt;u&gt;、\&lt;del&gt;、\&lt;sup&gt;、\&lt;sub&gt;、\&lt;cite&gt;、\&lt;dfn&gt;、\&lt;small&gt;、\&lt;h1&gt;、\&lt;h2&gt;、\&lt;h3&gt;、\&lt;h4&gt;、\&lt; h5&gt;、\
+将HTML格式字符串转换成属性字符串，使用Promise异步回调。当前支持转换的HTML标签范围：\<p>、\&lt;span&gt;、\&lt;img&gt;、\、\&lt;strong&gt;、\&lt;b&gt;、\&lt;a&gt;、\&lt;i&gt;、\&lt;em&gt;、\&lt;s&gt;、\&lt;u&gt;、\&lt;del&gt;、\&lt;sup&gt;、\&lt;sub&gt;、\&lt;cite&gt;、\&lt;dfn&gt;、\&lt;small&gt;、\&lt;h1&gt;、\&lt;h2&gt;、\&lt;h3&gt;、\&lt;h4&gt;、\&lt;h5&gt;、\
 
 **起始版本：** 23
 
@@ -131,9 +129,7 @@ getString(): string
 getStyles(start: int, length: int, styledKey?: StyledStringKey): Array<SpanStyle> | undefined
 ```
 
-获取指定范围属性字符串的样式集合。不能超出属性字符串的长度。
-
-该接口仅返回开发者设置的样式。
+获取指定范围属性字符串的样式集合。不能超出属性字符串的长度。该接口仅返回开发者设置的样式。
 
 **起始版本：** 23
 
@@ -188,7 +184,7 @@ subStyledString(start: int, length?: int): StyledString | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined | 子属性字符串。<br/>**说明：** <br/>当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。&lt; br/&gt;当start和length越界或者必填传入undefined时，会抛出异常。 |
+| [StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined | 子属性字符串。<br/>**说明：** <br/>当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。<br/>当start和length越界或者必填传入undefined时，会抛出异常。 |
 
 ## toHtml
 
@@ -196,9 +192,7 @@ subStyledString(start: int, length?: int): StyledString | undefined
 static toHtml(styledString: StyledString): string
 ```
 
-将属性字符串转换成HTML格式字符串。支持转换的属性字符串[StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md)包括：StyledStringKey.FONT、 StyledStringKey.DECORATION、StyledStringKey.LETTER_SPACING、StyledStringKey.TEXT_SHADOW、StyledStringKey.LINE_HEIGHT 、StyledStringKey.IMAGE。
-
-使用方法参考 [示例12（fromHtml和toHtml互相转换）](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#示例12fromhtml和tohtml互相转换)。
+将属性字符串转换成HTML格式字符串。支持转换的属性字符串[StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md)包括：StyledStringKey.FONT、 StyledStringKey.DECORATION、StyledStringKey.LETTER_SPACING、StyledStringKey.TEXT_SHADOW、StyledStringKey.LINE_HEIGHT 、StyledStringKey.IMAGE。使用方法参考 示例12（fromHtml和toHtml互相转换）。
 
 **起始版本：** 23
 

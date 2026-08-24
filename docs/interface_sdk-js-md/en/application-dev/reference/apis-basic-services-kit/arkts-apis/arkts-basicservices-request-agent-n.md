@@ -12,7 +12,6 @@ The request agent api. Supports "background" and "frontend" tasks as while. Thou
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -34,8 +33,8 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 | [search](arkts-basicservices-agent-search-f.md) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). This API uses an asynchronous callback to return the result. |
 | [search](arkts-basicservices-agent-search-f.md) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). This API uses a promise to return the result. |
 | [createGroup](arkts-basicservices-agent-creategroup-f.md) | Creates a group based on [GroupConfig](arkts-basicservices-agent-groupconfig-i.md). This API uses a promise to return the result. |
-| [attachGroup](arkts-basicservices-agent-attachgroup-f.md) | Attaches multiple download task IDs to a specified group ID. This API uses a promise to return the result. |
-| [deleteGroup](arkts-basicservices-agent-deletegroup-f.md) | Deletes a specified group. No task ID can be added to the group. This API uses a promise to return the result. |
+| [attachGroup](arkts-basicservices-agent-attachgroup-f.md) | Attaches multiple download task IDs to a specified group ID. This API uses a promise to return the result.If any task ID does not meet the attachment conditions, all tasks in the list will not be added to the group. |
+| [deleteGroup](arkts-basicservices-agent-deletegroup-f.md) | Deletes a specified group. No task ID can be added to the group. This API uses a promise to return the result.When all tasks in a group are succeeded, failed, or removed and the group is deleted, the completion and failure notifications of this group are displayed. |
 
 <!--Del-->
 ### Functions(System API)
@@ -54,7 +53,7 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 | [FormItem](arkts-basicservices-agent-formitem-i.md) | Describes the form item of a task. |
 | [Notification](arkts-basicservices-agent-notification-i.md) | Describes the custom information of the notification bar. |
 | [MinSpeed](arkts-basicservices-agent-minspeed-i.md) | Defines the minimum speed of a task. If the task speed is lower than the preset value for a specified period of time, the task fails. The failure cause is [LOW_SPEED](arkts-basicservices-agent-faults-e.md). |
-| [Timeout](arkts-basicservices-agent-timeout-i.md) | Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see [WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md) . |
+| [Timeout](arkts-basicservices-agent-timeout-i.md) | Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see [WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md). |
 | [Config](arkts-basicservices-agent-config-i.md) | Provides the configuration information of an upload or download task. |
 | [Progress](arkts-basicservices-agent-progress-i.md) | Describes the data structure of the task progress. |
 | [Filter](arkts-basicservices-agent-filter-i.md) | Defines the filter criteria. |
@@ -78,9 +77,9 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [Action](arkts-basicservices-agent-action-e.md) | Defines action options. |
-| [Mode](arkts-basicservices-agent-mode-e.md) | Defines mode options. |
-| [Network](arkts-basicservices-agent-network-e.md) | Defines network options. |
-| [BroadcastEvent](arkts-basicservices-agent-broadcastevent-e.md) | Defines a custom system event. You can use a common event API to obtain the event. |
+| [Mode](arkts-basicservices-agent-mode-e.md) | Defines mode options.After foreground tasks of an application are switched to the background for a period of time, background tasks are not affected but foreground tasks will fail or pause. |
+| [Network](arkts-basicservices-agent-network-e.md) | Defines network options.If the network does not meet the preset conditions, the tasks that have not been executed will await for execution, and the tasks that are being executed will fail or pause. |
+| [BroadcastEvent](arkts-basicservices-agent-broadcastevent-e.md) | Defines a custom system event. You can use a common event API to obtain the event.The upload and download SA has the **ohos.permission.SEND_TASK_COMPLETE_EVENT** permission. You can configure the level-2 configuration file to which the metadata of an event points to intercept other event senders.Use the **CommonEventData** type to transmit data related to common events. The members in **CommonEventData** are different from those described in [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md). Specifically, **CommonEventData.code** indicates the task status, which is **0x40 COMPLETE** or **0x41 FAILED**, and **CommonEventData.data** indicates the task ID.<!--Del-->For details about how to obtain the event configuration and configure the level-2 configuration file, see [Subscribing to Common Events in Static Mode (for System Applications Only)](../../../basic-services/common-event/common-event-static-subscription-sys.md).<!--DelEnd--> |
 | [State](arkts-basicservices-agent-state-e.md) | Defines the current task status. |
 | [Faults](arkts-basicservices-agent-faults-e.md) | Defines the cause of a task failure. |
 | [WaitingReason](arkts-basicservices-agent-waitingreason-e.md) | Enumerates the reasons why a task is waiting. |

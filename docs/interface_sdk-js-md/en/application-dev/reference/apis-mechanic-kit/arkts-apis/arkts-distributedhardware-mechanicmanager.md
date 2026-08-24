@@ -1,8 +1,6 @@
 # @ohos.distributedHardware.mechanicManager
 
-Provides capabilities for controlling and interacting with mechanical devices connected to this device. The capabilities cover connection management, control, and monitoring.
-
-@namespace mechanicManager
+Provides capabilities for controlling and interacting with mechanical devices connected to this device. The capabilities cover connection management, control, and monitoring.@namespace mechanicManager
 
 **Since:** 23
 
@@ -101,7 +99,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 
 | Name | Description |
 | --- | --- |
-| [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md) | Device attach states. |
+| [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md) | Device attach states.@enum { int } |
 | [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | Enumerates the camera tracking layouts. @enum { int } |
 | [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | Enumerates the mechanical device types. @enum { int } |
 | [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md) | Enumerates the tracking events. @enum { int } |
@@ -117,10 +115,10 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e-sys.md) | Enumerates the mechanical device types. @enum { int } |
 | [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md) | Mechanic event definition. |
 | [Operation](arkts-mechanic-mechanicmanager-operation-e-sys.md) | Enumerates the user operations. @enum { int } |
-| [Result](arkts-mechanic-mechanicmanager-result-e-sys.md) | Rotation execution results. |
+| [Result](arkts-mechanic-mechanicmanager-result-e-sys.md) | Rotation execution results.@enum { int } |
 | [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md) | Enumerates the rotation axis limit states. @enum { int } |
-| [SearchDirection](arkts-mechanic-mechanicmanager-searchdirection-e-sys.md) | Search direction. |
+| [SearchDirection](arkts-mechanic-mechanicmanager-searchdirection-e-sys.md) | Search direction.@enum { int } |
 | [SpeedGear](arkts-mechanic-mechanicmanager-speedgear-e-sys.md) | Speed gear definition. |
-| [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md) | Target type. |
+| [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md) | Target type.@enum { int } |
 <!--DelEnd-->
 

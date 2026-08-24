@@ -1,8 +1,6 @@
 # ImageAnimatorModifier
 
-Defines ImageAnimator Modifier
-
-@implements { ImageAnimatorAttribute, AttributeModifier&lt;ImageAnimatorAttribute&gt; }
+Defines ImageAnimator Modifier@implements { ImageAnimatorAttribute, AttributeModifier&lt;ImageAnimatorAttribute&gt; }
 
 **Inheritance/Implementation:** ImageAnimatorModifier implements ImageAnimatorAttribute, AttributeModifier<ImageAnimatorAttribute>
 

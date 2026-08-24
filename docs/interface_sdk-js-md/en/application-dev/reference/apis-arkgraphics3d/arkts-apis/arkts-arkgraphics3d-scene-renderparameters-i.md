@@ -1,8 +1,6 @@
 # RenderParameters
 
-Describes the rendering parameters.
-
-@interface RenderParameters
+Describes the rendering parameters.@interface RenderParameters
 
 **Since:** 23
 

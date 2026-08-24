@@ -1,8 +1,6 @@
 # Screen properties/events
 
-Defines the attribute functions of Screen.
-
-@extends CommonMethod&lt;ScreenAttribute&gt;
+Defines the attribute functions of Screen.@extends CommonMethod&lt;ScreenAttribute&gt;
 
 **Inheritance/Implementation:** ScreenAttribute extends CommonMethod<ScreenAttribute>
 
@@ -19,7 +17,5 @@ Defines the attribute functions of Screen.
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
-import { screenshot } from '@kit.ArkUI';
 ```
 

@@ -1,12 +1,6 @@
 # EdgeColors
 
-type EdgeColors = { top: ResourceColor; right: ResourceColor; bottom: ResourceColor; left: ResourceColor; }
-
-边框颜色，用于描述组件边框四条边的颜色。
-
-引入该对象时，至少传入一个参数。
-
-@interface EdgeColors
+type EdgeColors = { top: ResourceColor; right: ResourceColor; bottom: ResourceColor; left: ResourceColor; }边框颜色，用于描述组件边框四条边的颜色。引入该对象时，至少传入一个参数。@interface EdgeColors
 
 **起始版本：** 23
 

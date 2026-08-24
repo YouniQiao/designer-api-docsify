@@ -1,11 +1,8 @@
 # MediaAssetChangeRequest
 
-MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).
+MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).资产变更请求。
 
-资产变更请求。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Class首批接口从API version 11开始支持。
 
 **继承/实现关系：** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
@@ -30,8 +27,7 @@ addResource(type: ResourceType, proxy: PhotoProxy): void
 
 通过PhotoProxy数据添加资源。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 对于同一个资产变更请求，不支持在成功添加资源后，重复调用该接口。
 
 **起始版本：** 23
@@ -184,15 +180,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest
 ```
 
-指定待创建的图片或者视频的文件名，创建资产变更请求。
-
-待创建的文件名参数规格为：
-
-- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。
-
-API18开始，非法字符包括： \ / : ? " &lt; &gt; |
-
-API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+指定待创建的图片或者视频的文件名，创建资产变更请求。待创建的文件名参数规格为：  
+- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。  
+API18开始，非法字符包括： \ / : * ? " &lt; &gt; |API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 11
 
@@ -320,10 +310,8 @@ static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Pr
 
 通过资产URI批量彻底删除照片或视频，不经过回收站。使用promise异步回调。
 
-> **说明：**
-> 
-> - 对仅存在于本端设备的资产、仅存在于云端的资产、存在于本端设备和云端的资产，均可以彻底删除，不经过回收站。
-> 
+> **说明：**&gt;
+> - 对仅存在于本端设备的资产、仅存在于云端的资产、存在于本端设备和云端的资产，均可以彻底删除，不经过回收站。&gt;
 > - 此操作不可逆。执行此操作后文件资源将被彻底删除，请谨慎操作。
 
 **起始版本：** 24
@@ -382,12 +370,9 @@ static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 批量删除云端状态的媒体资产（照片或视频）到回收站。使用promise异步回调。
 
-> **说明：**
-> 
-> - 对仅存在于本端设备的资产，不做任何处理。
-> 
-> - 对仅存在于云端的资产，直接删除到回收站。
-> 
+> **说明：**&gt;
+> - 对仅存在于本端设备的资产，不做任何处理。&gt;
+> - 对仅存在于云端的资产，直接删除到回收站。&gt;
 > - 对存在于本端设备和云端的资产，删除后变化为本地资产，云端资产进入回收站。
 
 **起始版本：** 26.0.0
@@ -443,8 +428,7 @@ static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>)
 
 批量彻底删除照片或者视频。使用Promise异步回调。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
 
 **起始版本：** 23
@@ -510,8 +494,7 @@ static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<st
 
 通过资产Uri批量彻底删除照片或者视频。使用promise异步回调。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 此操作不可逆，执行此操作后文件资源将被彻底删除，请谨慎操作。
 
 **起始版本：** 23
@@ -584,12 +567,9 @@ static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 批量删除本地状态的媒体资产（照片或视频）到回收站。使用promise异步回调。
 
-> **说明：**
-> 
-> - 对仅存在于本端设备的资产，直接删除到回收站。
-> 
-> - 对仅存在于云端的资产，不做任何处理。
-> 
+> **说明：**&gt;
+> - 对仅存在于本端设备的资产，直接删除到回收站。&gt;
+> - 对仅存在于云端的资产，不做任何处理。&gt;
 > - 对存在于本端设备和云端的资产，删除后变化为云端资产，本地资产进入回收站。
 
 **起始版本：** 26.0.0
@@ -1574,7 +1554,7 @@ setMovingPhotoVersion(version: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| version | int | 是 | 动图版本号<br>取值范围为全体整数。 |
+| version | int | 是 | 动图版本号 <br>取值范围为全体整数。 |
 
 **错误码：**
 
@@ -1688,7 +1668,7 @@ setTitleByFile(name: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 资产修改名称。 <br>取值范围:1-255 <br>不应包含扩展名。 文件名字符串长度为1~255。 不允许出现的非法英文字符，包括： . \ / : ? " ' ` &lt; &gt; \| { } [ ] 不允许仅命名.或者.. 文管目录下不允许重名 |
+| name | string | 是 | 资产修改名称。 <br>取值范围:1-255 <br>不应包含扩展名。 文件名字符串长度为1~255。 不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; \| { } [ ] 不允许仅命名.或者.. 文管目录下不允许重名 |
 
 **错误码：**
 

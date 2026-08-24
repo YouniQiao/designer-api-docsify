@@ -1,10 +1,6 @@
 # EmbeddedComponent properties/events
 
-The universal attributes are supported.
-
-Event information related to screen coordinates is converted based on the position, width, and height of the **EmbeddedComponent**, before being transferred to the EmbeddedUIExtensionAbility for processing.
-
-Universal events, such as the click event, are not supported. Only the following events are supported.
+The universal attributes are supported.Event information related to screen coordinates is converted based on the position, width, and height of the **EmbeddedComponent**, before being transferred to the EmbeddedUIExtensionAbility for processing.Universal events, such as the click event, are not supported. Only the following events are supported.
 
 **Inheritance/Implementation:** EmbeddedComponentAttribute extends CommonMethod<EmbeddedComponentAttribute>
 
@@ -51,8 +47,7 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 
 Called when an error occurs during the running of the started EmbeddedUIExtensionAbility. Through the **code**, **name**, and **message** in the callback parameters, error information can be obtained and handled. For details about the error codes, see [UIExtension Error Codes](../errorcode-uiextension.md).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API cannot be called within attributeModifier.
 
 **Since:** 12
@@ -79,8 +74,7 @@ onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 
 Triggered when the the launched EmbeddedUIExtensionAbility exits normally by calling [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult) or [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API cannot be called within attributeModifier.
 
 **Since:** 12

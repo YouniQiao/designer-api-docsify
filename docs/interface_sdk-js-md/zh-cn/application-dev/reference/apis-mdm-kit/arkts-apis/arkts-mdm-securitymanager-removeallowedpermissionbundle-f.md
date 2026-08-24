@@ -14,8 +14,7 @@ function removeAllowedPermissionBundle(admin: Want, permission: string, applicat
 
 从权限使用例外名单中移除指定应用，移除后该应用不能继续使用对应的权限。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 必须先通过[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)接口禁用权限后，才能从权限使用例外名单移除应用，否则返回错误码92010
 > 44。
 

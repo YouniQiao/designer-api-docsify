@@ -1,8 +1,6 @@
 # ImageReceiver
 
-Image receiver class. You can use it to obtain the surface ID of a component, read the latest image and the next image, and release **ImageReceiver** instances.
-
-Before calling any APIs in ImageReceiver, you must create an ImageReceiver instance.
+Image receiver class. You can use it to obtain the surface ID of a component, read the latest image and the next image, and release **ImageReceiver** instances.Before calling any APIs in ImageReceiver, you must create an ImageReceiver instance.
 
 **Since:** 12
 
@@ -104,8 +102,7 @@ readLatestImage(): Promise<Image>
 
 Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called to receive data only after the [on](#onimagearrival) callback is
 > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
 > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after
@@ -152,8 +149,7 @@ readNextImage(): Promise<Image>
 
 Reads the next image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called to receive data only after the [on](#onimagearrival) callback is
 > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
 > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after
@@ -289,9 +285,7 @@ async function Demo() {
 readonly capacity: number
 ```
 
-Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value.
-
-The actual capacity is determined by the device hardware.
+Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value.The actual capacity is determined by the device hardware.
 
 **Type:** number
 

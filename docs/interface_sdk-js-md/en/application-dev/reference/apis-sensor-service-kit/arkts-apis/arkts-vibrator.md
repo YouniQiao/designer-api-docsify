@@ -92,6 +92,6 @@ import { vibrator } from '@kit.SensorServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [Usage](arkts-sensorservice-vibrator-usage-t.md) | Enumerates the vibration scenarios. |
+| [Usage](arkts-sensorservice-vibrator-usage-t.md) | Enumerates the vibration scenarios.<!--RP1End--> |
 | [VibrateEffect](arkts-sensorservice-vibrator-vibrateeffect-t.md) | Enumerates vibration effects of the vibrator. You can specify the vibration effect when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md). |
 

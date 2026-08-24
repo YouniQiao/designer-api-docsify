@@ -1,8 +1,6 @@
 # SliderCustomContentOptions
 
-Defines the options for customizing the accessibility of content within a slider. These options can be used to enhance the user experience for assistive technologies.
-
-@interface SliderCustomContentOptions
+Defines the options for customizing the accessibility of content within a slider. These options can be used to enhance the user experience for assistive technologies.@interface SliderCustomContentOptions
 
 **Since:** 23
 

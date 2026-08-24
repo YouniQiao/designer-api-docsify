@@ -1,8 +1,6 @@
 # PrefixIconOptions
 
-PrefixIconOptions定义前缀图标的属性。
-
-继承于[IconCommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md)。
+PrefixIconOptions定义前缀图标的属性。继承于[IconCommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md)。
 
 **继承/实现关系：** PrefixIconOptions extends [IconCommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md)
 

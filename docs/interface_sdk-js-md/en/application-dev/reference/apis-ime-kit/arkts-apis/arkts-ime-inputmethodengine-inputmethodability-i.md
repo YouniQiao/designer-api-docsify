@@ -1,6 +1,6 @@
 # InputMethodAbility
 
-@brief In the following API examples, you must first use [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void
 ```
 
-@brief Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result. <br> <br>   
+Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -97,7 +97,7 @@ if (this.context) {
 createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
-@brief Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result. <br> <br>   
+Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -144,7 +144,7 @@ See [createPanel](#createpanel)
 destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 ```
 
-@brief Destroys the specified input method panel. This API uses an asynchronous callback to return the result.
+Destroys the specified input method panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -235,7 +235,7 @@ if (inputPanel) {
 destroyPanel(panel: Panel): Promise<void>
 ```
 
-@brief Destroys the specified input method panel. This API uses a promise to return the result.
+Destroys the specified input method panel. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -271,7 +271,7 @@ See [destroyPanel](#destroypanel)
 getSecurityMode(): SecurityMode
 ```
 
-@brief Obtains the current security mode of the input method.
+Obtains the current security mode of the input method.
 
 **Since:** 23
 
@@ -304,7 +304,7 @@ console.error(`getSecurityMode, securityMode is : ${security}`);
 off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
 ```
 
-@brief Disables listening for changes of the screen ID of the window associated with the edit box. This API uses an asynchronous callback to return the result.
+Disables listening for changes of the screen ID of the window associated with the edit box. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
 
@@ -333,7 +333,7 @@ inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (num: n
 off(type: 'discardTypingText', callback?: Callback<void>): void
 ```
 
-@brief Unsubscribes from the event of discarding candidate words and sends the event to the input method. This API uses an asynchronous callback to return the result.
+Unsubscribes from the event of discarding candidate words and sends the event to the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -362,7 +362,7 @@ inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
 off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void
 ```
 
-@brief Disables listening for the input method binding event. This API uses an asynchronous callback to return the result.
+Disables listening for the input method binding event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -389,7 +389,7 @@ inputMethodEngine.getInputMethodAbility().off('inputStart');
 off(type: 'inputStop', callback: () => void): void
 ```
 
-@brief Disables listening for the input method stop event. This API uses an asynchronous callback to return the result.
+Disables listening for the input method stop event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -418,7 +418,7 @@ inputMethodEngine.getInputMethodAbility().off('inputStop', () => {
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-@brief Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -450,7 +450,7 @@ inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-@brief Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -475,7 +475,7 @@ See off_keyboardHide
 off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void
 ```
 
-@brief Disables listening for the private data event of the input method. This API uses an asynchronous callback to return the result.
+Disables listening for the private data event of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -515,7 +515,7 @@ inputMethodEngine.getInputMethodAbility().off('privateCommand', privateCommandCa
 off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
 ```
 
-@brief Disables listening for the security mode changes of the input method. This API uses an asynchronous callback to return the result.
+Disables listening for the security mode changes of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -548,7 +548,7 @@ inputMethodAbility.off('securityModeChange', securityChangeCallback);
 off(type: 'setCallingWindow', callback: (wid: number) => void): void
 ```
 
-@brief Disables listening for the window invocation setting event. This API uses an asynchronous callback to return the result.
+Disables listening for the window invocation setting event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -577,7 +577,7 @@ inputMethodEngine.getInputMethodAbility().off('setCallingWindow', (wid: number) 
 off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void
 ```
 
-@brief Disables listening for the input method subtype setting event. This API uses an asynchronous callback to return the result.
+Disables listening for the input method subtype setting event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -606,7 +606,7 @@ inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
 offCallingDisplayDidChange(callback?: Callback<int>): void
 ```
 
-@brief Unsubscribe 'callingDisplayDidChange' event.
+Unsubscribe 'callingDisplayDidChange' event.
 
 **Since:** 23
 
@@ -626,7 +626,7 @@ offCallingDisplayDidChange(callback?: Callback<int>): void
 offDiscardTypingText(callback?: Callback<void>): void
 ```
 
-@brief Unsubscribe 'discardTypingText' event.
+Unsubscribe 'discardTypingText' event.
 
 **Since:** 23
 
@@ -646,7 +646,7 @@ offDiscardTypingText(callback?: Callback<void>): void
 offInputStart(callback?: IMAInputStartCallback): void
 ```
 
-@brief Unsubscribe 'inputStart' event.
+Unsubscribe 'inputStart' event.
 
 **Since:** 23
 
@@ -666,7 +666,7 @@ offInputStart(callback?: IMAInputStartCallback): void
 offInputStop(callback: Callback<void>): void
 ```
 
-@brief Unsubscribe 'inputStop'.
+Unsubscribe 'inputStop'.
 
 **Since:** 23
 
@@ -686,7 +686,7 @@ offInputStop(callback: Callback<void>): void
 offKeyboardHide(callback?: Callback<void>): void
 ```
 
-@brief Unsubscribe 'keyboardHide'.
+Unsubscribe 'keyboardHide'.
 
 **Since:** 23
 
@@ -706,7 +706,7 @@ offKeyboardHide(callback?: Callback<void>): void
 offKeyboardShow(callback?: Callback<void>): void
 ```
 
-@brief Unsubscribe 'keyboardShow'.
+Unsubscribe 'keyboardShow'.
 
 **Since:** 23
 
@@ -726,7 +726,7 @@ offKeyboardShow(callback?: Callback<void>): void
 offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
 ```
 
-@brief Unsubscribe 'privateCommand'. This function can only be called by default input method configured by system.
+Unsubscribe 'privateCommand'. This function can only be called by default input method configured by system.
 
 **Since:** 23
 
@@ -752,7 +752,7 @@ offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
 offSecurityModeChange(callback?: Callback<SecurityMode>): void
 ```
 
-@brief Unsubscribe 'securityModeChange' event.
+Unsubscribe 'securityModeChange' event.
 
 **Since:** 23
 
@@ -772,7 +772,7 @@ offSecurityModeChange(callback?: Callback<SecurityMode>): void
 offSetCallingWindow(callback: Callback<int>): void
 ```
 
-@brief Unsubscribe 'setCallingWindow'.
+Unsubscribe 'setCallingWindow'.
 
 **Since:** 23
 
@@ -792,7 +792,7 @@ offSetCallingWindow(callback: Callback<int>): void
 offSetSubtype(callback?: Callback<InputMethodSubtype>): void
 ```
 
-@brief Unsubscribe 'setSubtype'.
+Unsubscribe 'setSubtype'.
 
 **Since:** 23
 
@@ -812,7 +812,7 @@ offSetSubtype(callback?: Callback<InputMethodSubtype>): void
 on(type: 'callingDisplayDidChange', callback: Callback<number>): void
 ```
 
-@brief Enables listening for changes of the screen ID of the window associated with the edit box. This API uses an asynchronous callback to return the result.
+Enables listening for changes of the screen ID of the window associated with the edit box. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
 
@@ -848,7 +848,7 @@ inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', callingD
 on(type: 'discardTypingText', callback: Callback<void>): void
 ```
 
-@brief Subscribes to the event of discarding candidate words and sends the event to the input method. This API uses an asynchronous callback to return the result.
+Subscribes to the event of discarding candidate words and sends the event to the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -877,7 +877,7 @@ inputMethodEngine.getInputMethodAbility().on('discardTypingText', () => {
 on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void
 ```
 
-@brief Enables listening for the input method binding event. This API uses an asynchronous callback to return the result.
+Enables listening for the input method binding event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -909,7 +909,7 @@ inputMethodEngine.getInputMethodAbility()
 on(type: 'inputStop', callback: () => void): void
 ```
 
-@brief Enables listening for the input method unbinding event. This API uses an asynchronous callback to return the result.
+Enables listening for the input method unbinding event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -938,7 +938,7 @@ inputMethodEngine.getInputMethodAbility().on('inputStop', () => {
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-@brief Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -970,7 +970,7 @@ inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-@brief Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -995,7 +995,7 @@ See on_keyboardHide
 on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void
 ```
 
-@brief Enables listening for the private data event of the input method. This API uses an asynchronous callback to return the result.
+Enables listening for the private data event of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -1034,7 +1034,7 @@ inputMethodEngine.getInputMethodAbility().on('privateCommand', privateCommandCal
 on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
 ```
 
-@brief Enables listening for the security mode changes of the input method. This API uses an asynchronous callback to return the result.
+Enables listening for the security mode changes of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -1064,7 +1064,7 @@ inputMethodEngine.getInputMethodAbility()
 on(type: 'setCallingWindow', callback: (wid: number) => void): void
 ```
 
-@brief Enables listening for the window invocation setting event. This API uses an asynchronous callback to return the result.
+Enables listening for the window invocation setting event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1093,7 +1093,7 @@ inputMethodEngine.getInputMethodAbility().on('setCallingWindow', (wid: number) =
 on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void
 ```
 
-@brief Enables listening for the input method subtype setting event. This API uses an asynchronous callback to return the result.
+Enables listening for the input method subtype setting event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1124,7 +1124,7 @@ inputMethodEngine.getInputMethodAbility().on('setSubtype', (inputMethodSubtype: 
 onCallingDisplayDidChange(callback: Callback<int>): void
 ```
 
-@brief Subscribe 'callingDisplayDidChange' event.
+Subscribe 'callingDisplayDidChange' event.
 
 **Since:** 23
 
@@ -1150,7 +1150,7 @@ onCallingDisplayDidChange(callback: Callback<int>): void
 onDiscardTypingText(callback: Callback<void>): void
 ```
 
-@brief Subscribe 'discardTypingText' event.
+Subscribe 'discardTypingText' event.
 
 **Since:** 23
 
@@ -1170,7 +1170,7 @@ onDiscardTypingText(callback: Callback<void>): void
 onInputStart(callback: IMAInputStartCallback): void
 ```
 
-@brief Subscribe 'inputStart' event.
+Subscribe 'inputStart' event.
 
 **Since:** 23
 
@@ -1190,7 +1190,7 @@ onInputStart(callback: IMAInputStartCallback): void
 onInputStop(callback: Callback<void>): void
 ```
 
-@brief Subscribe 'inputStop'.
+Subscribe 'inputStop'.
 
 **Since:** 23
 
@@ -1210,7 +1210,7 @@ onInputStop(callback: Callback<void>): void
 onKeyboardHide(callback: Callback<void>): void
 ```
 
-@brief Subscribe 'keyboardHide'.
+Subscribe 'keyboardHide'.
 
 **Since:** 23
 
@@ -1230,7 +1230,7 @@ onKeyboardHide(callback: Callback<void>): void
 onKeyboardShow(callback: Callback<void>): void
 ```
 
-@brief Subscribe 'keyboardShow'.
+Subscribe 'keyboardShow'.
 
 **Since:** 23
 
@@ -1250,7 +1250,7 @@ onKeyboardShow(callback: Callback<void>): void
 onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 ```
 
-@brief Subscribe 'privateCommand'. This function can only be called by default input method configured by system.
+Subscribe 'privateCommand'. This function can only be called by default input method configured by system.
 
 **Since:** 23
 
@@ -1276,7 +1276,7 @@ onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 onSecurityModeChange(callback: Callback<SecurityMode>): void
 ```
 
-@brief Subscribe 'securityModeChange' event.
+Subscribe 'securityModeChange' event.
 
 **Since:** 23
 
@@ -1296,7 +1296,7 @@ onSecurityModeChange(callback: Callback<SecurityMode>): void
 onSetCallingWindow(callback: Callback<int>): void
 ```
 
-@brief Subscribe 'setCallingWindow'.
+Subscribe 'setCallingWindow'.
 
 **Since:** 23
 
@@ -1316,7 +1316,7 @@ onSetCallingWindow(callback: Callback<int>): void
 onSetSubtype(callback: Callback<InputMethodSubtype>): void
 ```
 
-@brief Subscribe 'setSubtype'.
+Subscribe 'setSubtype'.
 
 **Since:** 23
 

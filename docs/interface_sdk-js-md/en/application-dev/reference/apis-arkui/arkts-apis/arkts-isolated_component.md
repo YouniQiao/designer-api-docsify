@@ -12,7 +12,7 @@
 
 | Name | Description |
 | --- | --- |
-| [IsolatedComponentAttribute(System API)](arkts-arkui-isolatedcomponentattribute-c-sys.md) | Only the width, height, and backgroundColor universal attributes are supported. |
+| [IsolatedComponentAttribute(System API)](arkts-arkui-isolatedcomponentattribute-c-sys.md) | Only the width, height, and backgroundColor universal attributes are supported.The universal events are not supported.Events are asynchronously passed to the restricted Worker thread after coordinate conversion.The following events are supported: |
 <!--DelEnd-->
 
 <!--Del-->

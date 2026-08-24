@@ -1,8 +1,6 @@
 # @ohos.app.agent.agentManager
 
-The module provides the capability to interact with agents in the system.
-
-@namespace agentManager
+The module provides the capability to interact with agents in the system.@namespace agentManager
 
 **Since:** 24
 

@@ -14,9 +14,7 @@
 HEIFS_DELAY_TIME = 'HeifsDelayTime'
 ```
 
-HEIF序列图片的每帧延迟时长。
-
-单位：毫秒（ms）。
+HEIF序列图片的每帧延迟时长。单位：毫秒（ms）。
 
 **起始版本：** 23
 
@@ -32,9 +30,7 @@ HEIF序列图片的每帧延迟时长。
 HEIFS_UNCLAMPED_DELAY_TIME = 'HeifsUnclampedDelayTime'
 ```
 
-HEIF序列图片未钳制的帧延迟时长。
-
-单位：毫秒（ms）。
+HEIF序列图片未钳制的帧延迟时长。单位：毫秒（ms）。
 
 **起始版本：** 26.0.0
 
@@ -50,9 +46,7 @@ HEIF序列图片未钳制的帧延迟时长。
 HEIFS_CANVAS_HEIGHT = 'HeifsCanvasHeight'
 ```
 
-HEIF序列图片的画布高度。
-
-单位：像素（px）。
+HEIF序列图片的画布高度。单位：像素（px）。
 
 **起始版本：** 26.0.0
 
@@ -68,9 +62,7 @@ HEIF序列图片的画布高度。
 HEIFS_CANVAS_WIDTH = 'HeifsCanvasWidth'
 ```
 
-HEIF序列图片的画布宽度。
-
-单位：像素（px）。
+HEIF序列图片的画布宽度。单位：像素（px）。
 
 **起始版本：** 26.0.0
 

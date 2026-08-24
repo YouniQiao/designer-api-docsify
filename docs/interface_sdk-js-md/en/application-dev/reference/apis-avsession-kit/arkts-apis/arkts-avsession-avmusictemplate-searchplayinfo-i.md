@@ -1,8 +1,6 @@
 # SearchPlayInfo
 
-The definition of SearchPlayInfo.
-
-@interface SearchPlayInfo
+The definition of SearchPlayInfo.@interface SearchPlayInfo
 
 **Since:** 23
 

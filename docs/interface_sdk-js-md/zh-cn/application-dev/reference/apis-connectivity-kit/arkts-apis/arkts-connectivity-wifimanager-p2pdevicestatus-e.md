@@ -1,8 +1,6 @@
 # P2pDeviceStatus
 
-P2P设备状态。
-
-@enum { int }
+P2P设备状态。@enum { int }
 
 **起始版本：** 23
 

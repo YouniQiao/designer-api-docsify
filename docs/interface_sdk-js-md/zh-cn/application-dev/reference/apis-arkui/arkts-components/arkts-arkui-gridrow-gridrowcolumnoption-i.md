@@ -1,8 +1,6 @@
 # GridRowColumnOption
 
-栅格在不同宽度设备类型下，栅格列数。
-
-@interface GridRowColumnOption
+栅格在不同宽度设备类型下，栅格列数。@interface GridRowColumnOption
 
 **起始版本：** 23
 

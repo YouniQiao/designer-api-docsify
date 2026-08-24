@@ -6,6 +6,8 @@ Defines chip group item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipGroupV2Item--><!--Device-unnamed-export declare class ChipGroupV2Item-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ The constructor of ChipGroupV2Item
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 Set accessibility description for ChipGroupV2 item.
@@ -54,6 +55,8 @@ Set accessibility description for ChipGroupV2 item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2Item-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-ChipGroupV2Item-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -63,8 +66,7 @@ Set accessibility description for ChipGroupV2 item.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 Set accessibility level for ChipGroupV2 item.
@@ -77,6 +79,8 @@ Set accessibility level for ChipGroupV2 item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2Item-@Trace  public accessibilityLevel?: string--><!--Device-ChipGroupV2Item-@Trace  public accessibilityLevel?: string-End-->
@@ -86,8 +90,7 @@ Set accessibility level for ChipGroupV2 item.
 ## allowClose
 
 ```TypeScript
-@Trace
-  public allowClose?: boolean
+public allowClose?: boolean
 ```
 
 Allow close.
@@ -98,6 +101,8 @@ Allow close.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2Item-@Trace  public allowClose?: boolean--><!--Device-ChipGroupV2Item-@Trace  public allowClose?: boolean-End-->
@@ -107,8 +112,7 @@ Allow close.
 ## closeIcon
 
 ```TypeScript
-@Trace
-  public closeIcon?: ChipV2CloseConfig
+public closeIcon?: ChipV2CloseConfig
 ```
 
 Set config for default close icon when 'allowClose' is true.
@@ -119,6 +123,8 @@ Set config for default close icon when 'allowClose' is true.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2Item-@Trace  public closeIcon?: ChipV2CloseConfig--><!--Device-ChipGroupV2Item-@Trace  public closeIcon?: ChipV2CloseConfig-End-->
@@ -128,8 +134,7 @@ Set config for default close icon when 'allowClose' is true.
 ## label
 
 ```TypeScript
-@Trace
-  public label: ChipV2Label
+public label: ChipV2Label
 ```
 
 Chip label.
@@ -140,6 +145,8 @@ Chip label.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2Item-@Trace  public label: ChipV2Label--><!--Device-ChipGroupV2Item-@Trace  public label: ChipV2Label-End-->
@@ -149,8 +156,7 @@ Chip label.
 ## prefixIcon
 
 ```TypeScript
-@Trace
-  public prefixIcon?: ChipV2PrefixImageIcon
+public prefixIcon?: ChipV2PrefixImageIcon
 ```
 
 Prefix icon.
@@ -161,6 +167,8 @@ Prefix icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2Item-@Trace  public prefixIcon?: ChipV2PrefixImageIcon--><!--Device-ChipGroupV2Item-@Trace  public prefixIcon?: ChipV2PrefixImageIcon-End-->
@@ -170,8 +178,7 @@ Prefix icon.
 ## prefixSymbolIcon
 
 ```TypeScript
-@Trace
-  public prefixSymbolIcon?: ChipV2PrefixSymbolIcon
+public prefixSymbolIcon?: ChipV2PrefixSymbolIcon
 ```
 
 Prefix symbol icon.
@@ -182,6 +189,8 @@ Prefix symbol icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2Item-@Trace  public prefixSymbolIcon?: ChipV2PrefixSymbolIcon--><!--Device-ChipGroupV2Item-@Trace  public prefixSymbolIcon?: ChipV2PrefixSymbolIcon-End-->
@@ -191,8 +200,7 @@ Prefix symbol icon.
 ## suffixIcon
 
 ```TypeScript
-@Trace
-  public suffixIcon?: ChipV2SuffixImageIcon
+public suffixIcon?: ChipV2SuffixImageIcon
 ```
 
 Suffix icon.
@@ -203,6 +211,8 @@ Suffix icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2Item-@Trace  public suffixIcon?: ChipV2SuffixImageIcon--><!--Device-ChipGroupV2Item-@Trace  public suffixIcon?: ChipV2SuffixImageIcon-End-->
@@ -212,8 +222,7 @@ Suffix icon.
 ## suffixSymbolIcon
 
 ```TypeScript
-@Trace
-  public suffixSymbolIcon?: ChipV2SuffixSymbolIcon
+public suffixSymbolIcon?: ChipV2SuffixSymbolIcon
 ```
 
 Suffix symbol icon.
@@ -223,6 +232,8 @@ Suffix symbol icon.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

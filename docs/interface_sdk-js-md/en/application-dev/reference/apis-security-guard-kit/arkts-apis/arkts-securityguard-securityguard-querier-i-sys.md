@@ -1,8 +1,6 @@
 # Querier (System API)
 
-Definition callback of receiving the query data.
-
-@interface Querier
+Definition callback of receiving the query data.@interface Querier
 
 **Since:** 12
 

@@ -12,10 +12,8 @@ import { usbManager } from '@kit.MDMKit';
 function removeAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>): void
 ```
 
-移除USB设备可用名单。
-
-**使用场景**：
-
+移除USB设备可用名单。  
+**使用场景**：  
 - 企业安全管理场景，需要撤销某些USB设备的访问权限 - 设备管理员需要动态调整允许使用的USB设备列表 - 当USB设备不再需要或存在安全风险时，从允许名单中移除
 
 **起始版本：** 12

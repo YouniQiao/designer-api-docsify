@@ -2,25 +2,21 @@
 
 The universal attributes are supported.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When the layout algorithm is [RowLayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-rowlayoutalgorithm-c.md) or
 > [ColumnLayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-columnlayoutalgorithm-c.md),
 > the [Flex layout](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-flex-layout.md) attributes set
-> for child components take effect.
-> 
+> for child components take effect.&gt;
 > - When the layout algorithm is [StackLayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-stacklayoutalgorithm-c.md),
-> the layoutGravity attribute set for child components takes effect.
-> 
+> the layoutGravity attribute set for child components takes effect.&gt;
 > - When the layout algorithm is
 > [CustomLayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-customlayoutalgorithm-c.md),
-> the [setMeasuredSize](arkts-arkui-framenode-c.md#setmeasuredsize) method of the
-> [FrameNode](arkts-arkui-framenode-c.md) component of **DynamicLayout** has a higher priority than the
+> the [setMeasuredSize](../../apis-default/arkts-apis/arkts-framenode-c.md#setmeasuredsize) method of the
+> [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) component of **DynamicLayout** has a higher priority than the
 > sizing and border styling attributes. The
-> [measure](arkts-arkui-framenode-c.md#measure) and [layout](arkts-arkui-framenode-c.md#layout) methods
-> of the child component [FrameNode](arkts-arkui-framenode-c.md) have a higher priority than the
+> [measure](../../apis-default/arkts-apis/arkts-framenode-c.md#measure) and [layout](../../apis-default/arkts-apis/arkts-framenode-c.md#layout) methods
+> of the child component [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) have a higher priority than the
 > ignoreLayoutSafeArea attribute.
-
 The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>

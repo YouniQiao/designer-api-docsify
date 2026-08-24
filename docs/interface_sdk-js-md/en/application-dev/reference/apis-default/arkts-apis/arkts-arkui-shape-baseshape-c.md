@@ -1,8 +1,6 @@
 # BaseShape
 
-Base shape class
-
-@extends CommonShapeMethod
+Base shape class@extends CommonShapeMethod
 
 **Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](arkts-arkui-shape-commonshapemethod-c.md)
 

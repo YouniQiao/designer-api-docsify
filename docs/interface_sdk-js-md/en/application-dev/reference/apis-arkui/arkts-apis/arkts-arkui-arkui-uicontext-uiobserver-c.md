@@ -2,13 +2,10 @@
 
 Provides APIs for listening for UI component behavior changes.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 11.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 11.&gt;
 > - In the following API examples, you must first use [getUIObserver()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getuiobserver) in
-> **UIContext** to obtain a **UIObserver** instance, and then call the APIs using the obtained instance.
-> 
+> **UIContext** to obtain a **UIObserver** instance, and then call the APIs using the obtained instance.&gt;
 > - UIObserver can only listen for relevant information within the current process and does not support obtaining
 > information in cross-process scenarios<!--Del--
 > such as UIExtensionComponent<!--
@@ -460,7 +457,7 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'navDestinationSwitch' | Yes | The type of event to remove the listener for. Must be ' navDestinationSwitch'. |
+| type | 'navDestinationSwitch' | Yes | The type of event to remove the listener for. Must be 'navDestinationSwitch'. |
 | callback | [Callback](../../apis-default/arkts-apis/arkts-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## off('navDestinationSwitch')
@@ -489,7 +486,7 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'navDestinationSwitch' | Yes | The type of event to remove the listener for. Must be ' navDestinationSwitch'. |
+| type | 'navDestinationSwitch' | Yes | The type of event to remove the listener for. Must be 'navDestinationSwitch'. |
 | observerOptions | observer.NavDestinationSwitchObserverOptions | Yes | Options. |
 | callback | [Callback](../../apis-default/arkts-apis/arkts-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
@@ -1410,11 +1407,7 @@ Registers a callback function to be called when the navigation destination is up
 on(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback: NodeRenderStateChangeCallback): void
 ```
 
-Registers a callback to be invoked when the rendering state of a specific node changes. This callback is executed immediately once upon successful registration.
-
-Be mindful of node quantity limitations. For performance reasons, registering too many nodes within a single UI instance will throw an exception.
-
-Typically, a **RENDER_OUT** notification is received when a component moves off-screen. However, in certain scenarios, a **RENDER_OUT** notification might not be triggered even if a component has moved off-screen. For example, components with caching capabilities like Swiper will not trigger **RENDER_OUT** notifications even when the **isShown** parameter in the cachedCount attribute is set to **true**.
+Registers a callback to be invoked when the rendering state of a specific node changes. This callback is executed immediately once upon successful registration.Be mindful of node quantity limitations. For performance reasons, registering too many nodes within a single UI instance will throw an exception.Typically, a **RENDER_OUT** notification is received when a component moves off-screen. However, in certain scenarios, a **RENDER_OUT** notification might not be triggered even if a component has moved off-screen. For example, components with caching capabilities like Swiper will not trigger **RENDER_OUT** notifications even when the **isShown** parameter in the cachedCount attribute is set to **true**.
 
 **Since:** 20
 

@@ -2,14 +2,14 @@
 
 A non-linear data structure.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
-
 - T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Since:** 12
+
+**Decorator:** @Sendable
 
 <!--Device-collections-class Set--><!--Device-collections-class Set-End-->
 

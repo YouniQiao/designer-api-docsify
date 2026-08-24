@@ -1,12 +1,12 @@
 # ArcSlider
 
-ArcSlider({ options: ArcSliderOptions })
-
-创建ArcSlider实例，入参是弧形进度条配置选项。
+ArcSlider({ options: ArcSliderOptions })创建ArcSlider实例，入参是弧形进度条配置选项。
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @ComponentV2
 
 <!--Device-unnamed-export declare struct ArcSlider--><!--Device-unnamed-export declare struct ArcSlider-End-->
 
@@ -20,8 +20,7 @@ ArcSlider({ options: ArcSliderOptions })
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,8 +40,7 @@ The method to build component.
 ## options
 
 ```TypeScript
-@Param
-  options: ArcSliderOptions
+options: ArcSliderOptions
 ```
 
 The options of a ArcSlider component.
@@ -50,6 +50,8 @@ The options of a ArcSlider component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 <!--Device-ArcSlider-@Param  options: ArcSliderOptions--><!--Device-ArcSlider-@Param  options: ArcSliderOptions-End-->
 

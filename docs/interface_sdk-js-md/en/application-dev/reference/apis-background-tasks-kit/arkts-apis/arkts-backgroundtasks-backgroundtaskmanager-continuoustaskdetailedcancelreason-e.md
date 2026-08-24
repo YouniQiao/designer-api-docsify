@@ -142,7 +142,7 @@ A continuous task of an invalid type is used. For example, a continuous task of 
 SYSTEM_CANCEL_DATA_TRANSFER_NOT_UPDATE = 12
 ```
 
-A continuous task of the **DATA_TRANSFER** type is requested, but the progress is not updated for a long time ( the first update takes more than 10 minutes).
+A continuous task of the **DATA_TRANSFER** type is requested, but the progress is not updated for a long time (the first update takes more than 10 minutes).
 
 **Since:** 26.0.0
 

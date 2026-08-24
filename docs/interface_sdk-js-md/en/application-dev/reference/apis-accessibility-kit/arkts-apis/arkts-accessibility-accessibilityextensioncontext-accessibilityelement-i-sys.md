@@ -1,8 +1,6 @@
 # AccessibilityElement
 
-An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes.
-
-Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement) or [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow).
+An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes.Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement) or [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow).
 
 **Since:** 23
 
@@ -232,9 +230,7 @@ rootElement.findElement('textType', condition).then((data: AccessibilityElement[
 findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
 ```
 
-Queries the node element in the current active window based on the element ID. This API uses a promise to return the result.
-
-This method and [findElementById](#findelementbyid) both find a node element by element ID. They are functionally equivalent. It is recommended to use findElementById.
+Queries the node element in the current active window based on the element ID. This API uses a promise to return the result.This method and [findElementById](#findelementbyid) both find a node element by element ID. They are functionally equivalent. It is recommended to use findElementById.
 
 **Since:** 12
 
@@ -385,9 +381,7 @@ Find elements that match the condition.
 findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityElement>
 ```
 
-Searches for an element based on the focus direction. This API uses a promise to return the result.
-
-Compared with [findElementsByCondition](#findelementsbycondition), this method is mainly used to search for web components, while findElementsByCondition is mainly used to search for UI components.
+Searches for an element based on the focus direction. This API uses a promise to return the result.Compared with [findElementsByCondition](#findelementsbycondition), this method is mainly used to search for web components, while findElementsByCondition is mainly used to search for UI components.
 
 **Since:** 23
 
@@ -500,9 +494,7 @@ See [findElementByFocusDirection](#findelementbyfocusdirection)
 findElementById(condition: long): Promise<AccessibilityElement>
 ```
 
-Searches for a node element in the active window by element ID. This API uses a promise to return the result.
-
-This method is functionally equivalent to findElement('elementId') and is recommended for priority use.
+Searches for a node element in the active window by element ID. This API uses a promise to return the result.This method is functionally equivalent to findElement('elementId') and is recommended for priority use.
 
 **Since:** 23
 
@@ -674,9 +666,7 @@ axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
 findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<FocusMoveResult>
 ```
 
-Queries focusable nodes that meet the conditions. This API uses a promise to return the result.
-
-Compared with [findElementByFocusDirection](#findelementbyfocusdirection), this method is mainly used to find UI components, while findElementByFocusDirection is mainly used to find Web components.
+Queries focusable nodes that meet the conditions. This API uses a promise to return the result.Compared with [findElementByFocusDirection](#findelementbyfocusdirection), this method is mainly used to find UI components, while findElementByFocusDirection is mainly used to find Web components.
 
 **Since:** 23
 
@@ -992,9 +982,7 @@ for (let window of windows) {
 accessibilityFocused?: boolean
 ```
 
-Whether the element gains focus for accessibility purposes. The value **true** indicates that the element has gained focus, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element gains focus for accessibility purposes. The value **true** indicates that the element has gained focus, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1012,9 +1000,7 @@ Default value: **false**.
 accessibilityGroup?: boolean
 ```
 
-Whether the element is an accessibility group. The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is an accessibility group. The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1032,14 +1018,10 @@ Default value: **false**.
 accessibilityLevel?: string
 ```
 
-Accessibility level of the component.
-
-**'auto'**: The accessibility grouping service and ArkUI jointly determine whether the component can be recognized by accessibility.
-
-**'yes'**: The component can be recognized by accessibility.
-
-**'no'**: The component cannot be recognized by accessibility.
-
+Accessibility level of the component.  
+**'auto'**: The accessibility grouping service and ArkUI jointly determine whether the component can be recognized by accessibility.  
+**'yes'**: The component can be recognized by accessibility.  
+**'no'**: The component cannot be recognized by accessibility.  
 **'no-hide-descendants'**: The component and all its child components cannot be recognized by accessibility. Default value: **'auto'**.
 
 **Type:** string
@@ -1058,9 +1040,7 @@ Accessibility level of the component.
 accessibilityNextFocusId?: long
 ```
 
-ID of the next component to gain focus.
-
-Default value: **-1**.
+ID of the next component to gain focus.Default value: **-1**.
 
 **Type:** long
 
@@ -1078,9 +1058,7 @@ Default value: **-1**.
 accessibilityPreviousFocusId?: long
 ```
 
-ID of the previous component to gain focus.
-
-Default value: **-1**.
+ID of the previous component to gain focus.Default value: **-1**.
 
 **Type:** long
 
@@ -1098,11 +1076,7 @@ Default value: **-1**.
 accessibilityScrollable?: boolean
 ```
 
-Whether the element is scrollable for accessibility purposes. This attribute has a higher priority than scrollable. That is, when the value of accessibilityScrollable conflicts with that of scrollable, the value of accessibilityScrollable prevails.
-
-The value **true** indicates that the element is scrollable, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is scrollable for accessibility purposes. This attribute has a higher priority than scrollable. That is, when the value of accessibilityScrollable conflicts with that of scrollable, the value of accessibilityScrollable prevails.The value **true** indicates that the element is scrollable, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1214,9 +1188,7 @@ Bundle name.
 checkable?: boolean
 ```
 
-Whether the element is checkable. The value **true** indicates that the element is checkable, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is checkable. The value **true** indicates that the element is checkable, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1234,9 +1206,7 @@ Default value: **false**.
 checked?: boolean
 ```
 
-Whether the element is checked. The value **true** indicates that the element is checked, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is checked. The value **true** indicates that the element is checked, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1292,9 +1262,7 @@ ID of the child component tree of the element. Default value: **-1**.
 clickable?: boolean
 ```
 
-Whether the element is clickable. The value **true** indicates that the element is clickable, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is clickable. The value **true** indicates that the element is clickable, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1330,9 +1298,7 @@ Whether the component needs clipping. The value **true** indicates that clipping
 componentId?: long
 ```
 
-ID of the component to which the element belongs.
-
-Default value: **-1**.
+ID of the component to which the element belongs.Default value: **-1**.
 
 **Type:** long
 
@@ -1386,9 +1352,7 @@ Content displayed by the element. Default value: empty array.
 currentIndex?: int
 ```
 
-Index of the current item.
-
-Default value: **0**.
+Index of the current item.Default value: **0**.
 
 **Type:** int
 
@@ -1480,9 +1444,7 @@ Description of the element.
 editable?: boolean
 ```
 
-Whether the element is editable. The value **true** indicates that the element is editable, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is editable. The value **true** indicates that the element is editable, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1500,9 +1462,7 @@ Default value: **false**.
 endIndex?: int
 ```
 
-Index of the last list item displayed on the screen.
-
-Default value: **0**.
+Index of the last list item displayed on the screen.Default value: **0**.
 
 **Type:** int
 
@@ -1556,9 +1516,7 @@ Extra information of the element. The value is a JSON string.
 focusable?: boolean
 ```
 
-Whether the element can gain focus (here it refers to accessibility focus, which is different from input focus). The value **true** indicates that the element can gain focus, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element can gain focus (here it refers to accessibility focus, which is different from input focus). The value **true** indicates that the element can gain focus, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1612,9 +1570,7 @@ Touchable area of the element.
 inputType?: int
 ```
 
-Type of the input text. Different values correspond to different input modes: **0** indicates no specific type; **1** indicates text; **2** indicates email; **3** indicates date; **4** indicates time; **5** indicates number; **6** indicates password; **7** indicates phone number; **8** indicates username; **9** indicates new password.
-
-Default value: **0**.
+Type of the input text. Different values correspond to different input modes: **0** indicates no specific type; **1** indicates text; **2** indicates email; **3** indicates date; **4** indicates time; **5** indicates number; **6** indicates password; **7** indicates phone number; **8** indicates username; **9** indicates new password.Default value: **0**.
 
 **Type:** int
 
@@ -1650,9 +1606,7 @@ Inspector key.
 isActive?: boolean
 ```
 
-Whether the element is active. The value **true** indicates that the element is active, and **false** indicates the opposite.
-
-Default value: **true**.
+Whether the element is active. The value **true** indicates that the element is active, and **false** indicates the opposite.Default value: **true**.
 
 **Type:** boolean
 
@@ -1670,9 +1624,7 @@ Default value: **true**.
 isEnable?: boolean
 ```
 
-Whether the element is enabled. The value **true** indicates that the element is enabled, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is enabled. The value **true** indicates that the element is enabled, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1710,9 +1662,7 @@ Whether the element is essential to the user. The value **true** indicates that 
 isFocused?: boolean
 ```
 
-Whether the element has gained focus (here it refers to accessibility focus, which is different from input focus). The value **true** indicates that the element has gained focus, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element has gained focus (here it refers to accessibility focus, which is different from input focus). The value **true** indicates that the element has gained focus, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1730,9 +1680,7 @@ Default value: **false**.
 isHint?: boolean
 ```
 
-Whether the element is a hint. The value **true** indicates that the element is a hint, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is a hint. The value **true** indicates that the element is a hint, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1750,9 +1698,7 @@ Default value: **false**.
 isPassword?: boolean
 ```
 
-Whether the element is a password. The value **true** indicates that the element is a password, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is a password. The value **true** indicates that the element is a password, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1770,9 +1716,7 @@ Default value: **false**.
 isVisible?: boolean
 ```
 
-Whether the element is visible. The value **true** indicates that the element is visible, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is visible. The value **true** indicates that the element is visible, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1790,9 +1734,7 @@ Default value: **false**.
 itemCount?: int
 ```
 
-Total number of items.
-
-Default value: **0**.
+Total number of items.Default value: **0**.
 
 **Type:** int
 
@@ -1846,9 +1788,7 @@ Display layer of the element.
 longClickable?: boolean
 ```
 
-Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -1902,9 +1842,7 @@ Navigation destination ID of the component. Default value: **-1**.
 offset?: double
 ```
 
-Pixel offset of the content area relative to the top coordinate of the scrollable component (such as List and Grid ), in pixels (px).
-
-Default value: **0**.
+Pixel offset of the content area relative to the top coordinate of the scrollable component (such as List and Grid), in pixels (px).Default value: **0**.
 
 **Type:** double
 
@@ -1922,9 +1860,7 @@ Default value: **0**.
 pageId?: int
 ```
 
-Page ID.
-
-Default value: **-1**.
+Page ID.Default value: **-1**.
 
 **Type:** int
 
@@ -1960,9 +1896,7 @@ Parent element ID of the component. Default value: **-1**.
 pluralLineSupported?: boolean
 ```
 
-Whether the element supports multi-line text. The value **true** indicates that the element supports multi-line text, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element supports multi-line text. The value **true** indicates that the element supports multi-line text, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -2034,9 +1968,7 @@ Display area of the element.
 scrollable?: boolean
 ```
 
-Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite. When the value conflicts with that of accessibilityScrollable, the value of accessibilityScrollable prevails.
-
-Default value: **false**.
+Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite. When the value conflicts with that of accessibilityScrollable, the value of accessibilityScrollable prevails.Default value: **false**.
 
 **Type:** boolean
 
@@ -2054,9 +1986,7 @@ Default value: **false**.
 selected?: boolean
 ```
 
-Whether the element is selected. The value **true** indicates that the element is selected, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is selected. The value **true** indicates that the element is selected, and **false** indicates the opposite.Default value: **false**.
 
 **Type:** boolean
 
@@ -2112,9 +2042,7 @@ Array of accessibility hyperlink text information of the component. Default valu
 startIndex?: int
 ```
 
-Index of the first list item on the screen.
-
-Default value: **0**.
+Index of the first list item on the screen.Default value: **0**.
 
 **Type:** int
 
@@ -2186,9 +2114,7 @@ Maximum text length of the element. Default value: **0**.
 textMoveUnit?: accessibility.TextMoveUnit
 ```
 
-Movement unit for text reading.
-
-Default value: **char**.
+Movement unit for text reading.Default value: **char**.
 
 **Type:** accessibility.TextMoveUnit
 
@@ -2260,9 +2186,7 @@ Window type of the element.
 valueMax?: double
 ```
 
-Maximum value.
-
-Default value: **0**.
+Maximum value.Default value: **0**.
 
 **Type:** double
 
@@ -2280,9 +2204,7 @@ Default value: **0**.
 valueMin?: double
 ```
 
-Minimum value.
-
-Default value: **0**.
+Minimum value.Default value: **0**.
 
 **Type:** double
 
@@ -2300,9 +2222,7 @@ Default value: **0**.
 valueNow?: double
 ```
 
-Current value.
-
-Default value: **0**.
+Current value.Default value: **0**.
 
 **Type:** double
 
@@ -2320,9 +2240,7 @@ Default value: **0**.
 windowId?: int
 ```
 
-Window ID.
-
-Default value: **-1**.
+Window ID.Default value: **-1**.
 
 **Type:** int
 

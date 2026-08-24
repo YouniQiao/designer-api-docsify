@@ -32,9 +32,7 @@ Unspecified exposure.
 EXPOSURE_MODE_LOCKED = 0
 ```
 
-Exposure locked. The metering point cannot be set.
-
-After this mode is used, the exposure will be locked by default for each photo capture.
+Exposure locked. The metering point cannot be set.After this mode is used, the exposure will be locked by default for each photo capture.
 
 **Since:** 23
 
@@ -50,9 +48,7 @@ After this mode is used, the exposure will be locked by default for each photo c
 EXPOSURE_MODE_AUTO = 1
 ```
 
-Auto exposure. The metering point can be set by calling [AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint).
-
-After this mode is used, it takes effect only for the first photo capture.
+Auto exposure. The metering point can be set by calling [AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint).After this mode is used, it takes effect only for the first photo capture.
 
 **Since:** 23
 
@@ -68,9 +64,7 @@ After this mode is used, it takes effect only for the first photo capture.
 EXPOSURE_MODE_CONTINUOUS_AUTO = 2
 ```
 
-Continuous auto exposure. The metering point cannot be set.
-
-After this mode is used, the camera system automatically adjusts the exposure based on the environment changes each time.
+Continuous auto exposure. The metering point cannot be set.After this mode is used, the camera system automatically adjusts the exposure based on the environment changes each time.
 
 **Since:** 23
 

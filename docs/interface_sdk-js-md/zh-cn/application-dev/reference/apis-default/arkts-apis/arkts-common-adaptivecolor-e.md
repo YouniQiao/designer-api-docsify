@@ -1,8 +1,6 @@
 # AdaptiveColor
 
-Defines adaptive color
-
-@enum { number }
+Defines adaptive color@enum { number }
 
 **起始版本：** 23
 

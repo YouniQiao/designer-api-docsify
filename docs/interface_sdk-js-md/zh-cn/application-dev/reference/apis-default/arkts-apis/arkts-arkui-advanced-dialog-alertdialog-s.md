@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @CustomDialog
+
 <!--Device-unnamed-export declare struct AlertDialog--><!--Device-unnamed-export declare struct AlertDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,7 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -26,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,9 +43,7 @@ The method to build component.
 content: ResourceStr
 ```
 
-确认弹出框内容。
-
-默认不设置或设置为undefined，确认弹出框内容不显示。
+确认弹出框内容。默认不设置或设置为undefined，确认弹出框内容不显示。
 
 **类型：** ResourceStr
 
@@ -61,8 +63,7 @@ content: ResourceStr
 controller: CustomDialogController
 ```
 
-确认弹出框控制器。
-
+确认弹出框控制器。  
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
@@ -83,9 +84,7 @@ controller: CustomDialogController
 primaryButton?: ButtonOptions
 ```
 
-确认弹出框左侧按钮。
-
-默认不设置或设置为undefined，确认弹出框左侧按钮不显示。
+确认弹出框左侧按钮。默认不设置或设置为undefined，确认弹出框左侧按钮不显示。
 
 **类型：** [ButtonOptions](arkts-arkui-advanced-dialog-buttonoptions-c.md)
 
@@ -105,10 +104,7 @@ primaryButton?: ButtonOptions
 primaryTitle?: ResourceStr
 ```
 
-确认弹出框一级标题。
-
-默认不设置或设置为undefined，确认弹出框一级标题不显示。
-
+确认弹出框一级标题。默认不设置或设置为undefined，确认弹出框一级标题不显示。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -129,9 +125,7 @@ primaryTitle?: ResourceStr
 secondaryButton?: ButtonOptions
 ```
 
-确认弹出框右侧按钮。
-
-默认不设置或设置为undefined，确认弹出框右侧按钮不显示。
+确认弹出框右侧按钮。默认不设置或设置为undefined，确认弹出框右侧按钮不显示。
 
 **类型：** [ButtonOptions](arkts-arkui-advanced-dialog-buttonoptions-c.md)
 
@@ -151,10 +145,7 @@ secondaryButton?: ButtonOptions
 secondaryTitle?: ResourceStr
 ```
 
-确认弹出框二级标题。
-
-默认不设置或设置为undefined，确认弹出框二级标题不显示。
-
+确认弹出框二级标题。默认不设置或设置为undefined，确认弹出框二级标题不显示。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -195,9 +186,7 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 

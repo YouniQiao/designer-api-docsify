@@ -2,8 +2,7 @@
 
 Enumerates the device-cloud sync states.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If a sync progress event listener is registered for an application, a callback will be invoked to notify the
 > application when the device-cloud sync state is changed.
 

@@ -1,8 +1,6 @@
 # Edges
 
-位置类型，表示相对四边的偏移量。同时设置top和bottom，仅top生效；同时设置left和right，仅left生效。
-
-@interface Edges
+位置类型，表示相对四边的偏移量。同时设置top和bottom，仅top生效；同时设置left和right，仅left生效。@interface Edges
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # DialogButtonInfo
 
-The definition of dialog button information.
-
-@interface DialogButtonInfo
+The definition of dialog button information.@interface DialogButtonInfo
 
 **Since:** 23
 

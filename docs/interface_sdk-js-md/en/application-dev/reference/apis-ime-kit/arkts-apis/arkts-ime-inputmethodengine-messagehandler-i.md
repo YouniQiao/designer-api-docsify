@@ -1,6 +1,6 @@
 # MessageHandler
 
-@brief Represents a custom communication object. <br> <br>   
+Represents a custom communication object. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -33,7 +33,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-@brief Receives the custom data callback sent by the edit box application attached to the input method application. <br> <br>   
+Receives the custom data callback sent by the edit box application attached to the input method application. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -83,7 +83,7 @@ inputMethodEngine.getInputMethodAbility()
 onTerminated(): void
 ```
 
-@brief Listens for MessageHandler termination. <br> <br>   
+Listens for MessageHandler termination. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -126,7 +126,7 @@ inputMethodEngine.getInputMethodAbility()
 onMessage: OnMessageCallback
 ```
 
-@brief onMessage(msgId: string, msgParam?: ArrayBuffer): void <br> <br>Receives the custom data callback sent by the edit box application attached to the input method application. <br> <br>   
+onMessage(msgId: string, msgParam?: ArrayBuffer): void <br> <br>Receives the custom data callback sent by the edit box application attached to the input method application. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -151,7 +151,7 @@ onMessage: OnMessageCallback
 onTerminated: Callback<void>
 ```
 
-@brief Listens for MessageHandler termination. <br> <br>   
+Listens for MessageHandler termination. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br

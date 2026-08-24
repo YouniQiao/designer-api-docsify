@@ -1,19 +1,13 @@
 # tag
 
-The **tag** module provides APIs for operating and managing NFC tags. The following tag read modes are available:
+The **tag** module provides APIs for operating and managing NFC tags. The following tag read modes are available:Background mode: The device reads the tag by using NFC without starting any application, and then searches for applications based on the tag type. If only one application is matched, the card reading page of that application will be started. If multiple applications are matched, an application selector will be started, asking the user to select an application. Background mode does not involve tag-related APIs. For details, see [nfc-tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md#accessing-an-nfc-tag-without-starting-an-application).Foreground mode: A foreground application has priority to read the NFC tag discovered.
 
-Background mode: The device reads the tag by using NFC without starting any application, and then searches for applications based on the tag type. If only one application is matched, the card reading page of that application will be started. If multiple applications are matched, an application selector will be started, asking the user to select an application. Background mode does not involve tag-related APIs. For details, see [nfc-tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md#accessing-an-nfc-tag-without-starting-an-application).
-
-Foreground mode: A foreground application has priority to read the NFC tag discovered.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 2. Since API version 26.0.0, it is more accurate to determine whether a device supports NFC by calling both
 > [canIUse("SystemCapability.Communication.NFC.Tag")](../../../reference/common/init.md#caniuse) and
 > [nfcController.isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md). If the device does not
 > support NFC, the application stability may be affected. For details, see
-> [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
-> 
+> [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).&gt;
 > 3. If an error is reported while importing the tag module editor, the capabilities of a specific device model may
 > exceed the capability set defined for the default device. To use these capabilities, configure a custom SysCap by
 > following instructions in
@@ -63,7 +57,7 @@ import { tag } from '@kit.ConnectivityKit';
 | [onReaderMode](arkts-connectivity-tag-onreadermode-f.md) | Set reader mode enabled when the specific application is foreground. Dispatches to this application only if a tag discovered. |
 | [off_readerMode](arkts-connectivity-tag-offreadermode-f.md) | Unsubscribes from the NFC tag card read event. The device exits the reader mode and resumes card emulation. If the NFC reader mode is enabled by [tag.on](arkts-connectivity-tag-onreadermode-f.md), this API must be used when the application page exits the foreground or is destroyed. |
 | [offReaderMode](arkts-connectivity-tag-offreadermode-f.md) | Disable foreground reader mode settings explicitly. |
-| [on_readerModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md) | Subscribes to the NFC tag read event so that the tag can be preferentially dispatched to a foreground application. You can also set the interval for detecting whether a card is present. This API uses an asynchronous callback to return the result. |
+| [on_readerModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md) | Subscribes to the NFC tag read event so that the tag can be preferentially dispatched to a foreground application. You can also set the interval for detecting whether a card is present. This API uses an asynchronous callback to return the result.  - The device enters the reader mode and disables card emulation. - You can set the supported NFC tag technologies in **discTech** and set the interval for detecting whether a card is present. The callback returns [TagInfo](arkts-connectivity-tag-taginfo-i.md) read. - This API must be used with [tag.off](arkts-connectivity-tag-offreadermode-f.md) in pairs. If the NFC reader mode is enabled by **tag.on**, [tag.off](arkts-connectivity-tag-offreadermode-f.md) must be called when the application page exits the foreground or is destroyed. - This API and [tag.on](arkts-connectivity-tag-onreadermode-f.md) are mutually exclusive. |
 | [onReaderModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md) | Set reader mode enabled when the specific application is on foreground and set card presence interval. Tag infomation will be dispatched to the application only if a NFC tag is discovered. |
 | [off_readerModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md) | Unsubscribes from the NFC tag card read event. The device exits the reader mode and resumes card emulation. If the NFC reader mode is enabled by [tag.on](arkts-connectivity-tag-onreadermode-f.md), this API must be used when the application page exits the foreground or is destroyed. This API uses an asynchronous callback to return the result. |
 | [offReaderModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md) | Disable foreground reader mode settings explicitly. |
@@ -108,7 +102,7 @@ import { tag } from '@kit.ConnectivityKit';
 | [MifareUltralightTag](arkts-connectivity-tag-mifareultralighttag-t.md) | Obtains a **MifareUltralightTag** object. |
 | [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md) | Obtains a **NdefFormatableTag** object. |
 | [NdefMessage](arkts-connectivity-tag-ndefmessage-t.md) | Obtains an **NdefMessage** object. |
-| [TagSession](arkts-connectivity-tag-tagsession-t.md) | Obtains a **TagSession** object. |
+| [TagSession](arkts-connectivity-tag-tagsession-t.md) | Obtains a **TagSession** object.<!--no_check--> |
 | [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) | Obtains a **BarcodeTag** object. |
 
 ### Constants

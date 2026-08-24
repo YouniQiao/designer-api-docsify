@@ -4,7 +4,7 @@ Defines chip symbol icon config.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface ChipV2SymbolIconConfig--><!--Device-unnamed-export interface ChipV2SymbolIconConfig-End-->
+<!--Device-unnamed-export declare interface ChipV2SymbolIconConfig--><!--Device-unnamed-export declare interface ChipV2SymbolIconConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

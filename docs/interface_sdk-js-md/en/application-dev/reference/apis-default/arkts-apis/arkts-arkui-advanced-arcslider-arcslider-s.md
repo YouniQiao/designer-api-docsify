@@ -1,12 +1,12 @@
 # ArcSlider
 
-Defines ArcSlider Component.
-
-@struct { ArcSlider }
+Defines ArcSlider Component.@struct { ArcSlider }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct ArcSlider--><!--Device-unnamed-export declare struct ArcSlider-End-->
 
@@ -20,8 +20,7 @@ Defines ArcSlider Component.
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +40,7 @@ The method to build component.
 ## options
 
 ```TypeScript
-@Param
-  options: ArcSliderOptions
+options: ArcSliderOptions
 ```
 
 The options of a ArcSlider component.
@@ -50,6 +50,8 @@ The options of a ArcSlider component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 <!--Device-ArcSlider-@Param  options: ArcSliderOptions--><!--Device-ArcSlider-@Param  options: ArcSliderOptions-End-->
 

@@ -16,9 +16,7 @@
 height?: double
 ```
 
-自定义绘制Span的高。
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+自定义绘制Span的高。单位：vp
 
 **类型：** double
 
@@ -38,9 +36,7 @@ height?: double
 width: double
 ```
 
-自定义绘制Span的宽。
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+自定义绘制Span的宽。单位：vp
 
 **类型：** double
 

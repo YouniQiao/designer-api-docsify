@@ -1,8 +1,6 @@
 # ToneMappingType
 
-色调映射类型枚举。
-
-@enum { int }
+色调映射类型枚举。@enum { int }
 
 **起始版本：** 23
 

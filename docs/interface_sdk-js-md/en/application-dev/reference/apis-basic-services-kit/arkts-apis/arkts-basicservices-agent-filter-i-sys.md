@@ -12,7 +12,6 @@ Defines the filter criteria.
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## bundle

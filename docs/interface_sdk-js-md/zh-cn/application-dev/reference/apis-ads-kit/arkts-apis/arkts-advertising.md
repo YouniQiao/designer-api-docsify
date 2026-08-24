@@ -2,8 +2,7 @@
 
 本模块提供广告操作能力，包括请求广告、展示广告。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本模块首批接口从API version 11开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 11
@@ -15,9 +14,6 @@
 ## 导入模块
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit';
-import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
-import { AutoAdComponent } from '@kit.AdsKit';
 import { advertising } from '@kit.AdsKit';
 ```
 

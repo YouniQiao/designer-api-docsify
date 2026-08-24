@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @CustomDialog
+
 <!--Device-unnamed-export declare struct LoadingDialog--><!--Device-unnamed-export declare struct LoadingDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,7 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -26,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,9 +43,7 @@ The method to build component.
 content?: ResourceStr
 ```
 
-加载弹出框内容。
-
-默认不设置或设置为undefined，加载弹出框内容不显示。
+加载弹出框内容。默认不设置或设置为undefined，加载弹出框内容不显示。
 
 **类型：** ResourceStr
 
@@ -61,8 +63,7 @@ content?: ResourceStr
 Controller: CustomDialogController
 ```
 
-加载弹出框控制器。
-
+加载弹出框控制器。  
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
@@ -103,9 +104,7 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 

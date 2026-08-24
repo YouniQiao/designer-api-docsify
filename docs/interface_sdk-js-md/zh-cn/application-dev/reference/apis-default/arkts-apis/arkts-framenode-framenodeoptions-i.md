@@ -16,13 +16,7 @@ FrameNode选项，可设置FrameNode是否支持多线程操作。
 supportMultiThread?: boolean
 ```
 
-FrameNode是否支持多线程操作。
-
-true表示支持多线程操作，该节点可以在多线程场景中使用。
-
-false或不设置表示不支持多线程操作。
-
-默认为false。
+FrameNode是否支持多线程操作。true表示支持多线程操作，该节点可以在多线程场景中使用。false或不设置表示不支持多线程操作。默认为false。
 
 **类型：** boolean
 

@@ -16,7 +16,6 @@ Define configuration of the ipsec VPN network.
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
-import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## ipsecCaCertConfig

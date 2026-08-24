@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -796,9 +795,7 @@ start(callback: AsyncCallback<void>): void
 stop(): Promise<void>
 ```
 
-异步方法停止云盘端云同步。使用Promise异步回调。
-
-调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
+异步方法停止云盘端云同步。使用Promise异步回调。调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 
 **起始版本：** 23
 
@@ -1075,9 +1072,7 @@ download.stop(uri, (err: BusinessError<void> | null): void => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-异步方法停止云盘端云同步。使用callback异步回调。
-
-调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
+异步方法停止云盘端云同步。使用callback异步回调。调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 
 **起始版本：** 23
 

@@ -38,9 +38,7 @@ Image fit.
 size: ParticleTuple<Dimension, Dimension>
 ```
 
-Particle image size.
-
-Anonymous Object Rectification.
+Particle image size.Anonymous Object Rectification.
 
 **Type:** [ParticleTuple](arkts-particletuple-t.md)&lt;[Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)&gt;
 

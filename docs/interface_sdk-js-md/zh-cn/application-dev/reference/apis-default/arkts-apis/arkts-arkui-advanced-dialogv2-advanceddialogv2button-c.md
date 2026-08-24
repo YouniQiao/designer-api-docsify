@@ -2,15 +2,15 @@
 
 弹出框操作区按钮。
 
-> **说明：**
-> 
-> buttonStyle和role优先级高于fontColor和background。如果buttonStyle和role设置的是默认值，那么fontColor和background可生效。
-> 
+> **说明：**&gt;
+> buttonStyle和role优先级高于fontColor和background。如果buttonStyle和role设置的是默认值，那么fontColor和background可生效。&gt;
 > 若同时给多个按钮设置defaultFocus，那么默认焦点为设置defaultFocus按钮显示顺序的第一个。
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @ObservedV2
 
 <!--Device-unnamed-export declare class AdvancedDialogV2Button--><!--Device-unnamed-export declare class AdvancedDialogV2Button-End-->
 
@@ -48,19 +48,18 @@ AdvancedDialogV2Button的构造函数。
 ## action
 
 ```TypeScript
-@Trace
-  public action?: AdvancedDialogV2ButtonAction
+public action?: AdvancedDialogV2ButtonAction
 ```
 
-按钮的点击事件。
-
-默认无事件。
+按钮的点击事件。默认无事件。
 
 **类型：** [AdvancedDialogV2ButtonAction](../../apis-arkui/arkts-apis/arkts-arkui-advanceddialogv2buttonaction-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,19 +70,18 @@ AdvancedDialogV2Button的构造函数。
 ## background
 
 ```TypeScript
-@Trace
-  public background?: ColorMetrics
+public background?: ColorMetrics
 ```
 
-按钮的背景。
+按钮的背景。默认值跟随buttonStyle。
 
-默认值跟随buttonStyle。
-
-**类型：** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -94,13 +92,10 @@ AdvancedDialogV2Button的构造函数。
 ## buttonStyle
 
 ```TypeScript
-@Trace
-  public buttonStyle?: ButtonStyleMode
+public buttonStyle?: ButtonStyleMode
 ```
 
-按钮的样式。
-
-默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
+按钮的样式。默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
 
 **类型：** ButtonStyleMode
 
@@ -109,6 +104,8 @@ AdvancedDialogV2Button的构造函数。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -119,8 +116,7 @@ AdvancedDialogV2Button的构造函数。
 ## content
 
 ```TypeScript
-@Trace
-  public content: ResourceStr
+public content: ResourceStr
 ```
 
 按钮的内容。
@@ -131,6 +127,8 @@ AdvancedDialogV2Button的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AdvancedDialogV2Button-@Trace  public content: ResourceStr--><!--Device-AdvancedDialogV2Button-@Trace  public content: ResourceStr-End-->
@@ -140,17 +138,10 @@ AdvancedDialogV2Button的构造函数。
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  public defaultFocus?: boolean
+public defaultFocus?: boolean
 ```
 
-是否为默认焦点。
-
-true：按钮是默认焦点。
-
-false：按钮不是默认焦点。
-
-默认值：false
+是否为默认焦点。true：按钮是默认焦点。false：按钮不是默认焦点。默认值：false
 
 **类型：** boolean
 
@@ -159,6 +150,8 @@ false：按钮不是默认焦点。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -169,17 +162,10 @@ false：按钮不是默认焦点。
 ## enabled
 
 ```TypeScript
-@Trace
-  public enabled?: boolean
+public enabled?: boolean
 ```
 
-是否可用。
-
-true：按钮可用。
-
-false：按钮不可用。
-
-默认值：true
+是否可用。true：按钮可用。false：按钮不可用。默认值：true
 
 **类型：** boolean
 
@@ -188,6 +174,8 @@ false：按钮不可用。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -198,19 +186,18 @@ false：按钮不可用。
 ## fontColor
 
 ```TypeScript
-@Trace
-  public fontColor?: ColorMetrics
+public fontColor?: ColorMetrics
 ```
 
-按钮的字体颜色。
+按钮的字体颜色。默认值跟随buttonStyle。
 
-默认值跟随buttonStyle。
-
-**类型：** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -221,13 +208,10 @@ false：按钮不可用。
 ## role
 
 ```TypeScript
-@Trace
-  public role?: ButtonRole
+public role?: ButtonRole
 ```
 
-按钮的角色。
-
-默认值：ButtonRole.NORMAL
+按钮的角色。默认值：ButtonRole.NORMAL
 
 **类型：** ButtonRole
 
@@ -236,6 +220,8 @@ false：按钮不可用。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -246,13 +232,10 @@ false：按钮不可用。
 ## textAlign
 
 ```TypeScript
-@Trace
-  public textAlign?: TextAlign
+public textAlign?: TextAlign
 ```
 
-按钮文本的对齐方式。
-
-默认值：TextAlign.Start
+按钮文本的对齐方式。默认值：TextAlign.Start
 
 **类型：** TextAlign
 
@@ -261,6 +244,8 @@ false：按钮不可用。
 **起始版本：** 24
 
 **ArkTS模式：** ArkTS-Sta起始版本为24。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

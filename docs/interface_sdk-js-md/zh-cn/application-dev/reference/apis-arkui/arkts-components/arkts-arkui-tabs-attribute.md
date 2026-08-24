@@ -1,8 +1,6 @@
 # Tabs属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** TabsAttribute extends CommonMethod<TabsAttribute>
 
@@ -39,7 +37,7 @@ animationCurve(curve: Curve | ICurve)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| curve | Curve \| ICurve | 是 | Tabs翻页的动画曲线。<br/>默认值：<br/>滑动TabContent翻页时，默认值为interpolatingSpring(-1, 1, 228, 30 )。<br/>点击TabBar页签和调用TabsController的changeIndex接口翻页时，默认值为cubicBezierCurve(0.2, 0.0, 0.1, 1.0)。<br/>设置自定义动画曲线时，滑动 翻页和点击页签、调用changeIndex翻页都使用设置的动画曲线。 |
+| curve | Curve \| ICurve | 是 | Tabs翻页的动画曲线。<br/>默认值：<br/>滑动TabContent翻页时，默认值为interpolatingSpring(-1, 1, 228, 30)。<br/>点击TabBar页签和调用TabsController的changeIndex接口翻页时，默认值为cubicBezierCurve(0.2, 0.0, 0.1, 1.0)。<br/>设置自定义动画曲线时，滑动 翻页和点击页签、调用changeIndex翻页都使用设置的动画曲线。 |
 
 ## animationDuration
 
@@ -47,11 +45,7 @@ animationCurve(curve: Curve | ICurve)
 animationDuration(value: number)
 ```
 
-设置Tabs翻页动画时长。
-
-animationCurve不设置时，由于滑动TabContent翻页动画曲线interpolatingSpring(-1, 1, 228, 30)时长只受曲线自身参数影响，animationDuration只能控制点击 TabBar页签和调用TabsController的changeIndex接口切换TabContent的动画时长。
-
-不受animationDuration控制的曲线可以查阅[插值计算](../arkts-apis/arkts-curves.md)模块，比如 [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、 [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)和 [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)类型的曲线。
+设置Tabs翻页动画时长。animationCurve不设置时，由于滑动TabContent翻页动画曲线interpolatingSpring(-1, 1, 228, 30)时长只受曲线自身参数影响，animationDuration只能控制点击 TabBar页签和调用TabsController的changeIndex接口切换TabContent的动画时长。不受animationDuration控制的曲线可以查阅[插值计算](../arkts-apis/arkts-curves.md)模块，比如 [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、 [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)和 [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)类型的曲线。
 
 **起始版本：** 7
 
@@ -250,9 +244,7 @@ barGridAlign(value: BarGridColumnOptions)
 barHeight(value: Length)
 ```
 
-设置TabBar的高度值。横向Tabs可以设置height为'auto'，让TabBar自适应子组件高度。height设置为小于0或大于Tabs高度值时，按默认值显示。设置为负值或undefined时按默认值处理。
-
-API version 14之前的版本，若设置barHeight为固定值后，TabBar无法扩展底部安全区。从API version 14开始支持配合 safeAreaPadding属性，当safeAreaPadding不设置bottom或者bottom设置为0时，可以实现扩展安全区。
+设置TabBar的高度值。横向Tabs可以设置height为'auto'，让TabBar自适应子组件高度。height设置为小于0或大于Tabs高度值时，按默认值显示。设置为负值或undefined时按默认值处理。API version 14之前的版本，若设置barHeight为固定值后，TabBar无法扩展底部安全区。从API version 14开始支持配合 safeAreaPadding属性，当safeAreaPadding不设置bottom或者bottom设置为0时，可以实现扩展安全区。
 
 **起始版本：** 7
 
@@ -464,11 +456,15 @@ cachedMaxCount(count: number, mode: TabsCacheMode)
 customContentTransition(delegate: TabsCustomContentTransitionCallback)
 ```
 
-自定义Tabs页面切换动画。适用场景：需要个性化页签切换动效时使用，如翻转、淡入淡出、缩放等。
-
-使用说明：
-
-1. 当使用自定义切换动画时，Tabs组件自带的默认切换动画会被禁用，同时，页面也无法跟手滑动。 2. 当设置为undefined时，表示不使用自定义切换动画，仍然使用组件自带的默认切换动画。 3. 当前自定义切换动画不支持打断。 4. 目前自定义切换动画只支持两种场景触发：点击页签和调用TabsController.changeIndex()接口。 5. 当使用自定义切换动画时，Tabs组件支持的事件中，除了onGestureSwipe，其他事件均支持。 6. [onChange](#onchange)和[onAnimationEnd](#onanimationend)事件的触发时机需要特殊说明：如果在第一次自定义动画执行过程中，触发了第二次自定义动画，那么在开始第二次自定义动画时，就会触发第一次自定义动画的onChange和onAnimationEnd事件。 7. 当使用自定义动画时，参与动画的页面布局方式会改为Stack布局。如果开发者未主动设置相关页面的zIndex属性，那么所有页面的zIndex值是一样的，页面的渲染层级会按照在组件树上的顺序（即页面的index值顺序）确定。因此，开发者需要主动修改页面的zIndex属性，来控制页面的渲染层级。 8. 此属性不支持在attributeModifier中调用。
+自定义Tabs页面切换动画。适用场景：需要个性化页签切换动效时使用，如翻转、淡入淡出、缩放等。使用说明：
+1. 当使用自定义切换动画时，Tabs组件自带的默认切换动画会被禁用，同时，页面也无法跟手滑动。
+2. 当设置为undefined时，表示不使用自定义切换动画，仍然使用组件自带的默认切换动画。
+3. 当前自定义切换动画不支持打断。
+4. 目前自定义切换动画只支持两种场景触发：点击页签和调用TabsController.changeIndex()接口。
+5. 当使用自定义切换动画时，Tabs组件支持的事件中，除了onGestureSwipe，其他事件均支持。
+6. [onChange](#onchange)和[onAnimationEnd](#onanimationend)事件的触发时机需要特殊说明：如果在第一次自定义动画执行过程中，触发了第二次自定义动画，那么在开始第二次自定义动画时，就会触发第一次自定义动画的onChange和onAnimationEnd事件。
+7. 当使用自定义动画时，参与动画的页面布局方式会改为Stack布局。如果开发者未主动设置相关页面的zIndex属性，那么所有页面的zIndex值是一样的，页面的渲染层级会按照在组件树上的顺序（即页面的index值顺序）确定。因此，开发者需要主动修改页面的zIndex属性，来控制页面的渲染层级。
+8. 此属性不支持在attributeModifier中调用。
 
 > **说明：**
 
@@ -644,24 +640,13 @@ onAnimationStart(handler: OnTabsAnimationStartCallback)
 onChange(event: Callback<number>)
 ```
 
-Tab页签切换后触发的事件。
-
-满足以下任一条件，即可触发该事件：
-
-1、滑动页面进行页面切换时，组件滑动动画结束后触发。
-
-2、通过[控制器](arkts-arkui-tabscontroller-c.md)调用[changeIndex](arkts-arkui-tabscontroller-c.md#changeindex)接口，Tab页签切换后触发。
-
-3、动态修改[状态变量](../../../ui/state-management/arkts-state.md)构造的index属性值，Tab页签切换后触发。
-
-4、点击TabBar页签，Tab页签切换后触发。
+Tab页签切换后触发的事件。满足以下任一条件，即可触发该事件：1、滑动页面进行页面切换时，组件滑动动画结束后触发。2、通过[控制器](arkts-arkui-tabscontroller-c.md)调用[changeIndex](arkts-arkui-tabscontroller-c.md#changeindex)接口，Tab页签切换后触发。3、动态修改[状态变量](../../../ui/state-management/arkts-state.md)构造的index属性值，Tab页签切换后触发。4、点击TabBar页签，Tab页签切换后触发。
 
 > **说明：**
 
 > 使用自定义页签时，在onChange事件中联动可能会导致滑动页面切换后才执行页签联动，引起自定义页签切换效果延迟。建议在
 > [onAnimationStart](#onanimationstart)中监听并刷新当前索引，以确保动效能够及时触发。具体实现可参考
-> [示例3](../../../reference/apis-arkui/arkui-ts/ts-container-tabs.md#示例3自定义页签切换联动)。
-> 
+> [示例3](../../../reference/apis-arkui/arkui-ts/ts-container-tabs.md#示例3自定义页签切换联动)。&gt;
 > 如果在动画过程中index参数发生变化，将使用最新值触发回调。
 
 **起始版本：** 7
@@ -684,9 +669,7 @@ Tab页签切换后触发的事件。
 onContentDidScroll(handler: OnTabsContentDidScrollCallback | undefined)
 ```
 
-监听Tabs页面滑动事件。
-
-在页面滑动过程中，会对视窗内所有页面逐帧触发[OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md)回调。例如，当视窗内有下标为0、1的两个页面 时，会每帧触发两次index值分别为0和1的回调。
+监听Tabs页面滑动事件。在页面滑动过程中，会对视窗内所有页面逐帧触发[OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md)回调。例如，当视窗内有下标为0、1的两个页面 时，会每帧触发两次index值分别为0和1的回调。
 
 **起始版本：** 23
 
@@ -710,19 +693,7 @@ onContentDidScroll(handler: OnTabsContentDidScrollCallback | undefined)
 onContentWillChange(handler: OnTabsContentWillChangeCallback)
 ```
 
-自定义Tabs页面切换拦截事件能力，新页面即将显示时触发该回调。
-
-满足以下任一条件，即可触发该事件：
-
-1、滑动TabContent切换新页面时触发。
-
-2、通过TabsController.[changeIndex](arkts-arkui-tabscontroller-c.md#changeindex)接口切换新页面时触发。
-
-3、通过动态修改index属性值切换新页面时触发。
-
-4、通过点击TabBar页签切换新页面时触发。
-
-5、TabBar页签获焦后，通过键盘左右方向键等切换新页面时触发。
+自定义Tabs页面切换拦截事件能力，新页面即将显示时触发该回调。满足以下任一条件，即可触发该事件：1、滑动TabContent切换新页面时触发。2、通过TabsController.[changeIndex](arkts-arkui-tabscontroller-c.md#changeindex)接口切换新页面时触发。3、通过动态修改index属性值切换新页面时触发。4、通过点击TabBar页签切换新页面时触发。5、TabBar页签获焦后，通过键盘左右方向键等切换新页面时触发。
 
 > **说明：**
 
@@ -774,16 +745,10 @@ onGestureSwipe(handler: OnTabsGestureSwipeCallback)
 onSelected(event: Callback<number>)
 ```
 
-当选中元素改变时触发该回调，返回值为当前选中的元素的索引值。
-
-满足以下任一条件，即可触发该事件：
-
+当选中元素改变时触发该回调，返回值为当前选中的元素的索引值。满足以下任一条件，即可触发该事件：
 1. 滑动离手时满足翻页阈值，开始切换动画时触发。
-
 2. 通过[TabsController控制器](arkts-arkui-tabscontroller-c.md)调用[changeIndex](arkts-arkui-tabscontroller-c.md#changeindex)接口，开始切换动画时触发。
-
 3. 动态修改[状态变量](../../../ui/state-management/arkts-state.md)构造的index属性值后触发。
-
 4. 通过页签处点击触发。
 
 > **说明：**
@@ -836,16 +801,10 @@ Tab页签点击后触发的事件。
 onUnselected(event: Callback<number>)
 ```
 
-当选中元素改变时触发该回调，返回值为将要隐藏的元素的索引值。
-
-满足以下任一条件，即可触发该事件：
-
+当选中元素改变时触发该回调，返回值为将要隐藏的元素的索引值。满足以下任一条件，即可触发该事件：
 1. 滑动离手时满足翻页阈值，开始切换动画时触发。
-
 2. 通过[TabsController控制器](arkts-arkui-tabscontroller-c.md)调用[changeIndex](arkts-arkui-tabscontroller-c.md#changeindex)接口，开始切换动画时触发。
-
 3. 动态修改[状态变量](../../../ui/state-management/arkts-state.md)构造的index属性值后触发。
-
 4. 通过页签处点击触发。
 
 > **说明：**

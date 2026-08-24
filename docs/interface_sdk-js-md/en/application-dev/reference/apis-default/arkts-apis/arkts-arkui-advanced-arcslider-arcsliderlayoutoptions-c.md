@@ -6,6 +6,8 @@ The options for ArcSlider layout.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcSliderLayoutOptions--><!--Device-unnamed-export declare class ArcSliderLayoutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -40,8 +42,7 @@ The constructor used to create a ArcSliderLayoutOptions object.
 ## position
 
 ```TypeScript
-@Trace
-  position?: ArcSliderPosition
+position?: ArcSliderPosition
 ```
 
 Set the component's position on the screen.
@@ -54,6 +55,8 @@ Set the component's position on the screen.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderLayoutOptions-@Trace  position?: ArcSliderPosition--><!--Device-ArcSliderLayoutOptions-@Trace  position?: ArcSliderPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -61,8 +64,7 @@ Set the component's position on the screen.
 ## reverse
 
 ```TypeScript
-@Trace
-  reverse?: boolean
+reverse?: boolean
 ```
 
 Set whether the component's arc direction is counterclockwise.
@@ -74,6 +76,8 @@ Set whether the component's arc direction is counterclockwise.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 <!--Device-ArcSliderLayoutOptions-@Trace  reverse?: boolean--><!--Device-ArcSliderLayoutOptions-@Trace  reverse?: boolean-End-->
 

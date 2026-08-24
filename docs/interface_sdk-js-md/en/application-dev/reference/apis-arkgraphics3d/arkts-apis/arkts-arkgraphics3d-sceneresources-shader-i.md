@@ -1,8 +1,6 @@
 # Shader
 
-Shader resource, which inherits from SceneResource.
-
-@extends SceneResource @interface Shader
+Shader resource, which inherits from SceneResource.@extends SceneResource @interface Shader
 
 **Inheritance/Implementation:** Shader extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 

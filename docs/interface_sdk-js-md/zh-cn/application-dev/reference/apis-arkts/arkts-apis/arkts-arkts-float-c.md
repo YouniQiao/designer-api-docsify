@@ -39,13 +39,13 @@ public add(other: Float): Float
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | 是 | 加法运算的右操作数。 |
+| other | Float | 是 | 加法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) | 加法运算的结果。 |
+| Float | 加法运算的结果。 |
 
 ## bitCastFromInt
 
@@ -160,7 +160,7 @@ public compareTo(other: Float): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | 是 | 用于比较的Float对象。 |
+| other | Float | 是 | 用于比较的Float对象。 |
 
 **返回值：**
 
@@ -256,13 +256,13 @@ public div(other: Float): Float
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | 是 | 除法运算的右操作数。 |
+| other | Float | 是 | 除法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) | 除法运算的结果。 |
+| Float | 除法运算的结果。 |
 
 ## equals
 
@@ -370,7 +370,7 @@ public isGreaterEqualThan(other: Float): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | 是 | 比较运算的右操作数。 |
+| other | Float | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -400,7 +400,7 @@ public isGreaterThan(other: Float): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | 是 | 比较运算的右操作数。 |
+| other | Float | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -484,7 +484,7 @@ public isLessEqualThan(other: Float): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | 是 | 比较运算的右操作数。 |
+| other | Float | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -514,7 +514,7 @@ public isLessThan(other: Float): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | 是 | 比较运算的右操作数。 |
+| other | Float | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -652,13 +652,13 @@ public mul(other: Float): Float
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | 是 | 乘法运算的右操作数。 |
+| other | Float | 是 | 乘法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) | 乘法运算的结果。 |
+| Float | 乘法运算的结果。 |
 
 ## sub
 
@@ -682,13 +682,13 @@ public sub(other: Float): Float
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | 是 | 减法运算的右操作数。 |
+| other | Float | 是 | 减法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) | 减法运算的结果。 |
+| Float | 减法运算的结果。 |
 
 ## toByte
 

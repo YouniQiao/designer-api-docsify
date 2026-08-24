@@ -107,7 +107,7 @@ Obtains the sequence of the year, month, and day in the specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example, "zh-Hans-CN". |
+| locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example,"zh-Hans-CN". |
 
 **Return value:**
 
@@ -158,7 +158,7 @@ Converts a language code from two letters to three letters. For example, the two
 static getThreeLetterRegion(locale: string): string
 ```
 
-Converts a region code from two letters to three letters. For example, the two-letter region code of China is "CN", and the corresponding three-letter region code is "CHN". For details, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
+Converts a region code from two letters to three letters. For example, the two-letter region code of China is"CN", and the corresponding three-letter region code is "CHN". For details, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
 
 **Since:** 23
 
@@ -290,7 +290,7 @@ Sets the text direction for certain text within a paragraph, including RTL (righ
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Input characters need to set direction. |
-| direction | 'RTL' \| 'LTR' | Yes | The value can be "RTL" or "LTR". "RTL" indicates setting the input text direction from right to left. "LTR" indicates setting the input text direction from left to right. |
+| direction | 'RTL' \| 'LTR' | Yes | The value can be "RTL" or "LTR"."RTL" indicates setting the input text direction from right to left."LTR" indicates setting the input text direction from left to right. |
 
 **Return value:**
 
@@ -323,7 +323,7 @@ Converts one measurement unit into another and formats the unit based on the spe
 | fromUnit | [UnitInfo](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
 | toUnit | [UnitInfo](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
 | value | double | Yes | Value of the measurement unit to be converted. |
-| locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example, "zh-Hans-CN". |
+| locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example,"zh-Hans-CN". |
 | style | string | No | Style used for formatting. The value can be long, short, or narrow. The default value is short. For details about the meaning or display effect of different values, see Number and Unit of Measurement Formatting. |
 
 **Return value:**

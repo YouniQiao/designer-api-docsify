@@ -30,8 +30,7 @@ Standard mode.
 DOWNLOAD = 1
 ```
 
-Download mode.
-
+Download mode.  
 **Note：**: The directories created in DOWNLOAD mode are used only to save files. There is no access isolation between directories. You are advised not to save sensitive application data.
 
 **Since:** 23

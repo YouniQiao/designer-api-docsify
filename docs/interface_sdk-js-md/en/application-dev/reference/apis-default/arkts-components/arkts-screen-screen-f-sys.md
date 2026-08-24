@@ -16,6 +16,8 @@ Defines Screen Component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Screen(   screenId: long,   content_?: CustomBuilder,): ScreenAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Screen(   screenId: long,   content_?: CustomBuilder,): ScreenAttribute-End-->

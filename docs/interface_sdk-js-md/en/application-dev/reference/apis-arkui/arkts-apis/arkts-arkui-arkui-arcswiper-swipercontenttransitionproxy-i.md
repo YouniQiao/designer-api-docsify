@@ -11,8 +11,7 @@ Implements the proxy object returned during the execution of the custom page tra
 > the animation started on the current frame, and **mainAxisLength** as the length of page 0 on the main axis. The
 > second callback has **selectedIndex** as **0**, **index** as **1**, **position** as the ratio of how much page 1
 > has moved relative to page 0 before the animation started on the current frame, and **mainAxisLength** as the
-> length of page 1 on the main axis.
-> 
+> length of page 1 on the main axis.&gt;
 > - If the animation curve is a spring interpolation curve, during the transition animation from page 0 to page 1,
 > due to the position and velocity when the user lifts their finger off the screen, animation may overshoot and slide
 > past to page 2, then bounce back to page 1. Throughout this process, a callback is triggered for pages 1 and 2

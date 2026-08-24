@@ -16,5 +16,5 @@ export type NodeOffset = Vector2
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [Vector2](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector2-i.md)
+**属性类型：** [Vector2](arkts-graphics-vector2-i.md)
 

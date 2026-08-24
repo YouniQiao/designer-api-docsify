@@ -12,10 +12,8 @@ import { serialManager } from '@kit.BasicServicesKit';
 function close(portId: int): void
 ```
 
-关闭串口。需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请权限，再调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口。 通常在应用退出时、设备断开连接时、需要释放串口资源时调用此接口。关闭串口不会移除访问权限，如需移除权限请调用cancelSerialRight。
-
-**配对调用：** - 与[open](arkts-basicservices-serialmanager-open-f.md)方法成对使用 - 打开串口后，使用完毕必须调用本方法关闭串口释放资源
-
+关闭串口。需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请权限，再调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口。 通常在应用退出时、设备断开连接时、需要释放串口资源时调用此接口。关闭串口不会移除访问权限，如需移除权限请调用cancelSerialRight。  
+**配对调用：** - 与[open](arkts-basicservices-serialmanager-open-f.md)方法成对使用 - 打开串口后，使用完毕必须调用本方法关闭串口释放资源  
 **前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请访问权限 - 需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口
 
 **起始版本：** 23

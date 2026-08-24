@@ -1,8 +1,6 @@
 # TapRecognizer
 
-Defines the tap gesture recognizer.
-
-@extends GestureRecognizer
+Defines the tap gesture recognizer.@extends GestureRecognizer
 
 **Inheritance/Implementation:** TapRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md)
 

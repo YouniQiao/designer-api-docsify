@@ -2,14 +2,15 @@
 
 水平方向线性布局算法类。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > RowLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的入参
 > 指定布局算法。
 
-**继承/实现关系：** RowLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
+**继承/实现关系：** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
 **起始版本：** 24
+
+**装饰器类型：** @ObservedV2
 
 <!--Device-unnamed-export class RowLayoutAlgorithm--><!--Device-unnamed-export class RowLayoutAlgorithm-End-->
 
@@ -39,25 +40,17 @@ constructor(option?: RowLayoutAlgorithmOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [RowLayoutAlgorithmOptions](../../apis-default/arkts-apis/arkts-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | 否 | 水平方向线性布局算法的构造入参，设置布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
+| option | [RowLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | 否 | 水平方向线性布局算法的构造入参，设置布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
 
 ## alignItems
 
-```TypeScript
-@Trace public alignItems?: VerticalAlign
-```
-
-所有子组件在垂直方向上的对齐格式。
-
-默认值：VerticalAlign.Center
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+所有子组件在垂直方向上的对齐格式。默认值：VerticalAlign.Center非法值：按默认值处理。装饰器类型：@Trace
 
 **类型：** [VerticalAlign](../../apis-default/arkts-apis/arkts-enums-verticalalign-e.md)
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,21 +64,13 @@ constructor(option?: RowLayoutAlgorithmOptions)
 
 ## isReverse
 
-```TypeScript
-@Trace public isReverse?: boolean
-```
-
-子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性direction影响，如果 direction属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。
-
-默认值：false
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性direction影响，如果 direction属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。默认值：false非法值：按默认值处理。装饰器类型：@Trace
 
 **类型：** boolean
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,21 +84,13 @@ constructor(option?: RowLayoutAlgorithmOptions)
 
 ## justifyContent
 
-```TypeScript
-@Trace public justifyContent?: FlexAlign
-```
-
-所有子组件在水平方向上的对齐格式。
-
-默认值：FlexAlign.Start
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+所有子组件在水平方向上的对齐格式。默认值：FlexAlign.Start非法值：按默认值处理。装饰器类型：@Trace
 
 **类型：** [FlexAlign](../../apis-default/arkts-apis/arkts-enums-flexalign-e.md)
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,21 +104,13 @@ constructor(option?: RowLayoutAlgorithmOptions)
 
 ## space
 
-```TypeScript
-@Trace public space?: LengthMetrics
-```
+横向布局元素水平方向间距。默认值：LengthMetrics.vp(0)非法值：按默认值处理。装饰器类型：@Trace
 
-横向布局元素水平方向间距。
-
-默认值：LengthMetrics.vp(0)
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
-
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

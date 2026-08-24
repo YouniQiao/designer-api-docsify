@@ -1,8 +1,6 @@
 # ArcAlphabetIndexerAttribute
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>
 
@@ -379,7 +377,7 @@ selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | 是 | 选中项文字样式。<br/>默认值：{<br/>size:'13.0fp',<br/> style:FontStyle.Normal,<br/> weight:500 ,<br/> family:'HarmonyOS Sans'<br/>} |
+| font | Optional&lt;Font&gt; | 是 | 选中项文字样式。<br/>默认值：{<br/>size:'13.0fp',<br/> style:FontStyle.Normal,<br/> weight:500,<br/> family:'HarmonyOS Sans'<br/>} |
 
 **返回值：**
 

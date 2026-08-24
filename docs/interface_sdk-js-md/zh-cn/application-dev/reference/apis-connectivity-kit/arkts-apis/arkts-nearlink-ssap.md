@@ -29,13 +29,13 @@ import { ssap } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i.md) | SSAP客户端类，提供了和服务端进行连接和数据传输等操作方法。 |
+| [Client](arkts-connectivity-ssap-client-i.md) | SSAP客户端类，提供了和服务端进行连接和数据传输等操作方法。使用该类的方法前，需通过[ssap.createClient](arkts-connectivity-ssap-createclient-f.md)方法构造该类的实例。同一应用针对同一远端设备创建一个[Client](arkts-connectivity-ssap-client-i.md)实例即可，重复创建会增加不必要的资源开销。 |
 | [ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md) | 表示连接状态上报参数。 |
 | [Property](arkts-connectivity-ssap-property-i.md) | 表示服务的Property。 |
 | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | 表示Property的描述符。 |
 | [PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md) | 表示客户端的Property读请求参数。 |
 | [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md) | 表示客户端的Property写请求参数。 |
-| [Server](arkts-connectivity-ssap-server-i.md) | SSAP服务端类，提供了和客户端进行连接和数据交互等操作方法。 |
+| [Server](arkts-connectivity-ssap-server-i.md) | SSAP服务端类，提供了和客户端进行连接和数据交互等操作方法。使用该类的方法前，需通过[ssap.createServer](arkts-connectivity-ssap-createserver-f.md)方法构造该类的实例。同一应用创建一个[Server](arkts-connectivity-ssap-server-i.md)实例即可，重复创建会增加不必要的资源开销。 |
 | [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | 表示回复客户端请求的响应。 |
 | [Service](arkts-connectivity-ssap-service-i.md) | 表示星闪服务。 |
 
@@ -44,7 +44,7 @@ import { ssap } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i-sys.md) | SSAP客户端类，提供了和服务端进行连接和数据传输等操作方法。 |
+| [Client](arkts-connectivity-ssap-client-i-sys.md) | SSAP客户端类，提供了和服务端进行连接和数据传输等操作方法。使用该类的方法前，需通过[ssap.createClient](arkts-connectivity-ssap-createclient-f.md)方法构造该类的实例。同一应用针对同一远端设备创建一个[Client](arkts-connectivity-ssap-client-i.md)实例即可，重复创建会增加不必要的资源开销。 |
 | [Event](arkts-connectivity-ssap-event-i-sys.md) | 表示服务的事件。 |
 | [Method](arkts-connectivity-ssap-method-i-sys.md) | 表示服务的方法。 |
 | [Service](arkts-connectivity-ssap-service-i-sys.md) | 表示星闪服务。 |

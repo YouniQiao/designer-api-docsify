@@ -12,7 +12,6 @@ Represents control transfer parameters.
 
 ```TypeScript
 import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## bmRequestType

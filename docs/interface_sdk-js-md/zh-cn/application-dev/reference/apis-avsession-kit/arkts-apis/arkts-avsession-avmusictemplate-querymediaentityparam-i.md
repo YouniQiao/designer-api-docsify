@@ -1,8 +1,6 @@
 # QueryMediaEntityParam
 
-查询媒体实例参数的定义。
-
-@interface QueryMediaEntityParam
+查询媒体实例参数的定义。@interface QueryMediaEntityParam
 
 **起始版本：** 23
 

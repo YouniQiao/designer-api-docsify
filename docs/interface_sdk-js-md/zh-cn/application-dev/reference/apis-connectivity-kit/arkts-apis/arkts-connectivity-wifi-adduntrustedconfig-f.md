@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## addUntrustedConfig
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 ```
 
-添加不可信网络配置，使用Promise异步回调。
-
-<p>该方法一次添加一个配置。添加该配置后，设备将决定是否连接到热点。
+添加不可信网络配置，使用Promise异步回调。<p>该方法一次添加一个配置。添加该配置后，设备将决定是否连接到热点。
 
 **起始版本：** 7
 
@@ -114,9 +109,7 @@ try {
 function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void
 ```
 
-添加不可信网络配置，使用callback异步回调。
-
-<p>该方法一次添加一个配置。添加该配置后，设备将决定是否连接到热点。
+添加不可信网络配置，使用callback异步回调。<p>该方法一次添加一个配置。添加该配置后，设备将决定是否连接到热点。
 
 **起始版本：** 7
 

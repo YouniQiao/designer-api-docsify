@@ -1,12 +1,12 @@
 # ArcButton
 
-ArcButton({ options: ArcButtonOptions })
-
-创建ArcButton实例，入参是弧形按钮配置选项。
+ArcButton({ options: ArcButtonOptions })创建ArcButton实例，入参是弧形按钮配置选项。
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @ComponentV2
 
 <!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
 
@@ -20,8 +20,7 @@ ArcButton({ options: ArcButtonOptions })
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -30,6 +29,8 @@ The method to build component.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Builder
+
 <!--Device-ArcButton-@Builder  build(): void--><!--Device-ArcButton-@Builder  build(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -37,9 +38,7 @@ The method to build component.
 ## options
 
 ```TypeScript
-@Require
-  @Param
-  readonly options: ArcButtonOptions
+readonly options: ArcButtonOptions
 ```
 
 定义ArcButton组件的文本、背景色、阴影等参数。
@@ -49,6 +48,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Require、@Param
 
 <!--Device-ArcButton-@Require  @Param  readonly options: ArcButtonOptions--><!--Device-ArcButton-@Require  @Param  readonly options: ArcButtonOptions-End-->
 

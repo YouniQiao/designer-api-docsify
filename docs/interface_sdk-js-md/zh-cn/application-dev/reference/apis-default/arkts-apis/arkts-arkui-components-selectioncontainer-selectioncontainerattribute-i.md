@@ -1,12 +1,10 @@
 # SelectionContainerAttribute
 
-支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。
+支持通用属性。
 
-> **说明：**
-> 
-> - 不支持[隐私遮罩](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-obscured.md)。
-> 
-> - 不支持[图形变换](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md)，跨节点场景中Text子组件不支持图形变
+> **说明：**&gt;
+> - 不支持隐私遮罩。&gt;
+> - 不支持图形变换，跨节点场景中Text子组件不支持图形变
 > 换。
 
 **继承/实现关系：** SelectionContainerAttribute extends CommonMethod

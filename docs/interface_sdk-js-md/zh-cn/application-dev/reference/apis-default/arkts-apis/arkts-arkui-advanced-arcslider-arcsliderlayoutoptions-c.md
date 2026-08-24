@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcSliderLayoutOptions--><!--Device-unnamed-export declare class ArcSliderLayoutOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -40,13 +42,10 @@ ArcSliderLayoutOptions的构造函数。
 ## position
 
 ```TypeScript
-@Trace
-  position?: ArcSliderPosition
+position?: ArcSliderPosition
 ```
 
-弧形Slider的屏幕显示位置。
-
-默认值：ArcSliderPosition.RIGHT
+弧形Slider的屏幕显示位置。默认值：ArcSliderPosition.RIGHT
 
 **类型：** [ArcSliderPosition](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
 
@@ -56,6 +55,8 @@ ArcSliderLayoutOptions的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcSliderLayoutOptions-@Trace  position?: ArcSliderPosition--><!--Device-ArcSliderLayoutOptions-@Trace  position?: ArcSliderPosition-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -63,13 +64,10 @@ ArcSliderLayoutOptions的构造函数。
 ## reverse
 
 ```TypeScript
-@Trace
-  reverse?: boolean
+reverse?: boolean
 ```
 
-设置弧形Slider取值范围是否反向。
-
-默认值：true。表示从下往上滑动。
+设置弧形Slider取值范围是否反向。默认值：true。表示从下往上滑动。
 
 **类型：** boolean
 
@@ -78,6 +76,8 @@ ArcSliderLayoutOptions的构造函数。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 <!--Device-ArcSliderLayoutOptions-@Trace  reverse?: boolean--><!--Device-ArcSliderLayoutOptions-@Trace  reverse?: boolean-End-->
 

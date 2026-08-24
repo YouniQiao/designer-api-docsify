@@ -1,8 +1,6 @@
 # Matrix4Transit
 
-Matrix4Transit.
-
-@interface Matrix4Transit
+Matrix4Transit.@interface Matrix4Transit
 
 **Since:** 23
 

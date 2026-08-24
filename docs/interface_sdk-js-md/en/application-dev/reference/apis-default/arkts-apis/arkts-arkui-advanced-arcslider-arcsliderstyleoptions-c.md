@@ -6,6 +6,8 @@ The options for ArcSlider style.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcSliderStyleOptions--><!--Device-unnamed-export declare class ArcSliderStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -40,13 +42,10 @@ The constructor used to create a ArcSliderStyleOptions object.
 ## activeTrackThickness
 
 ```TypeScript
-@Trace
-  activeTrackThickness?: double
+activeTrackThickness?: double
 ```
 
-Set the track thickness of the component under active status, unit is vp.
-
-Value range: [24, 36]
+Set the track thickness of the component under active status, unit is vp.Value range: [24, 36]
 
 **Type:** double
 
@@ -56,6 +55,8 @@ Value range: [24, 36]
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderStyleOptions-@Trace  activeTrackThickness?: double--><!--Device-ArcSliderStyleOptions-@Trace  activeTrackThickness?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -63,8 +64,7 @@ Value range: [24, 36]
 ## selectedColor
 
 ```TypeScript
-@Trace
-  selectedColor?: string
+selectedColor?: string
 ```
 
 Set the selected color of the component.
@@ -77,6 +77,8 @@ Set the selected color of the component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderStyleOptions-@Trace  selectedColor?: string--><!--Device-ArcSliderStyleOptions-@Trace  selectedColor?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -84,8 +86,7 @@ Set the selected color of the component.
 ## trackBlur
 
 ```TypeScript
-@Trace
-  trackBlur?: double
+trackBlur?: double
 ```
 
 Set the track blur of the component, unit is vp.
@@ -98,6 +99,8 @@ Set the track blur of the component, unit is vp.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderStyleOptions-@Trace  trackBlur?: double--><!--Device-ArcSliderStyleOptions-@Trace  trackBlur?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -105,8 +108,7 @@ Set the track blur of the component, unit is vp.
 ## trackColor
 
 ```TypeScript
-@Trace
-  trackColor?: string
+trackColor?: string
 ```
 
 Set the track color of the component.
@@ -119,6 +121,8 @@ Set the track color of the component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderStyleOptions-@Trace  trackColor?: string--><!--Device-ArcSliderStyleOptions-@Trace  trackColor?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -126,13 +130,10 @@ Set the track color of the component.
 ## trackThickness
 
 ```TypeScript
-@Trace
-  trackThickness?: double
+trackThickness?: double
 ```
 
-Set the track thickness of the component under normal status, unit is vp.
-
-Value range: [5, 16]
+Set the track thickness of the component under normal status, unit is vp.Value range: [5, 16]
 
 **Type:** double
 
@@ -141,6 +142,8 @@ Value range: [5, 16]
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 <!--Device-ArcSliderStyleOptions-@Trace  trackThickness?: double--><!--Device-ArcSliderStyleOptions-@Trace  trackThickness?: double-End-->
 

@@ -23,8 +23,7 @@ alignContent(value: Alignment)
 
 设置子组件在容器内的对齐方式，调用后子组件按照指定的对齐方式在容器内排列。该属性与align同时设置时，后设置的属性生效。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -49,12 +48,9 @@ alignContent(value: Alignment)
 autoHalfFold(value: boolean)
 ```
 
-设置在半折叠状态下是否开启FolderStack组件的自动旋转。当系统自动旋转开关关闭时，可通过该属性控制FolderStack在半折叠状态下是否进行自动旋转。
+设置在半折叠状态下是否开启FolderStack组件的自动旋转。当系统自动旋转开关关闭时，可通过该属性控制FolderStack在半折叠状态下是否进行自动旋转。典型使用场景：当用户在系统设置中关闭自动旋转功能后，希望在折叠屏设备半折叠状态下仍然能够根据折叠状态自动调整应用布局方向。
 
-典型使用场景：当用户在系统设置中关闭自动旋转功能后，希望在折叠屏设备半折叠状态下仍然能够根据折叠状态自动调整应用布局方向。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -81,8 +77,7 @@ enableAnimation(value: boolean)
 
 设置是否使用默认动效，调用后启用或禁用FolderStack的默认悬停动画效果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -107,12 +102,9 @@ enableAnimation(value: boolean)
 onFolderStateChange(callback: OnFoldStatusChangeCallback)
 ```
 
-当前设备的折叠状态改变时触发回调<!--RP3-->（该回调仅在横屏状态下生效）<!--RP3End-->。
+当前设备的折叠状态改变时触发回调<!--RP3-->（该回调仅在横屏状态下生效）<!--RP3End-->。典型使用场景：根据折叠状态调整应用布局，例如在展开状态下显示双栏布局，在半折叠状态下调整上半屏和下半屏的内容分布。
 
-典型使用场景：根据折叠状态调整应用布局，例如在展开状态下显示双栏布局，在半折叠状态下调整上半屏和下半屏的内容分布。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -137,12 +129,9 @@ onFolderStateChange(callback: OnFoldStatusChangeCallback)
 onHoverStatusChange(handler: OnHoverStatusChangeCallback)
 ```
 
-当前设备的悬停状态改变时触发回调。
+当前设备的悬停状态改变时触发回调。典型使用场景：根据悬停状态调整应用布局和交互逻辑，例如在悬停模式下优化上半屏和下半屏的内容展示。
 
-典型使用场景：根据悬停状态调整应用布局和交互逻辑，例如在悬停模式下优化上半屏和下半屏的内容展示。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12

@@ -1,8 +1,6 @@
 # PromptOptions
 
-Configuration parameter of ExceptionPrompt.
-
-@interface PromptOptions
+Configuration parameter of ExceptionPrompt.@interface PromptOptions
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # ShowDialogOptions
 
-Defines the option of show dialog.
-
-@interface ShowDialogOptions
+Defines the option of show dialog.@interface ShowDialogOptions
 
 **Since:** 11
 

@@ -1,8 +1,6 @@
 # KeySource
 
-Type of the input device that triggers the current key.
-
-@enum { number }
+Type of the input device that triggers the current key.@enum { number }
 
 **Since:** 23
 

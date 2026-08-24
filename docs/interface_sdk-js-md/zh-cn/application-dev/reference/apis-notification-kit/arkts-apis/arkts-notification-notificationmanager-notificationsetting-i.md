@@ -20,8 +20,7 @@ import { notificationManager } from '@kit.NotificationKit';
 badgeNumberEnabled?: boolean
 ```
 
-表示是否开启通知角标数字展示。
-
+表示是否开启通知角标数字展示。  
 - true：开启。 - false：关闭。
 
 **类型：** boolean
@@ -40,8 +39,7 @@ badgeNumberEnabled?: boolean
 bannerEnabled?: boolean
 ```
 
-表示是否开启横幅通知。
-
+表示是否开启横幅通知。  
 - true：开启。 - false：关闭。
 
 **类型：** boolean
@@ -60,8 +58,7 @@ bannerEnabled?: boolean
 lockScreenEnabled?: boolean
 ```
 
-表示是否开启锁屏通知。
-
+表示是否开启锁屏通知。  
 - true：开启。 - false：关闭。
 
 **类型：** boolean
@@ -80,8 +77,7 @@ lockScreenEnabled?: boolean
 notificationEnabled?: boolean
 ```
 
-表示应用通知使能状态。
-
+表示应用通知使能状态。  
 - true：开启。 - false：关闭。
 
 **类型：** boolean
@@ -100,8 +96,7 @@ notificationEnabled?: boolean
 soundEnabled: boolean
 ```
 
-表示是否开启响铃。
-
+表示是否开启响铃。  
 - true：开启。 - false：关闭。
 
 **类型：** boolean
@@ -118,8 +113,7 @@ soundEnabled: boolean
 vibrationEnabled: boolean
 ```
 
-表示是否开启振动。
-
+表示是否开启振动。  
 - true：开启。 - false：关闭。
 
 **类型：** boolean

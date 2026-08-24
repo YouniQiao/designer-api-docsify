@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct TipsDialogV2--><!--Device-unnamed-export declare struct TipsDialogV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,19 +40,18 @@ The method to build component.
 ## checked
 
 ```TypeScript
-@Param
-  checked?: boolean
+checked?: boolean
 ```
 
-checked为true时，表示选择框已选中。checked为false时，表示选择框未选中。
-
-默认值：false
+checked为true时，表示选择框已选中。checked为false时，表示选择框未选中。默认值：false
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,19 +62,18 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 ## checkTips
 
 ```TypeScript
-@Param
-  checkTips?: ResourceStr
+checkTips?: ResourceStr
 ```
 
-选择框的提示内容。
-
-默认不显示。
+选择框的提示内容。默认不显示。
 
 **类型：** ResourceStr
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,19 +84,18 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
-提示弹出框内容。
-
-默认不显示。
+提示弹出框内容。默认不显示。
 
 **类型：** ResourceStr
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,19 +106,18 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 ## imageBorderColor
 
 ```TypeScript
-@Param
-  imageBorderColor?: ColorMetrics
+imageBorderColor?: ColorMetrics
 ```
 
-图片描边颜色。
+图片描边颜色。默认值：Color.Black
 
-默认值：Color.Black
-
-**类型：** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,19 +128,18 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 ## imageBorderWidth
 
 ```TypeScript
-@Param
-  imageBorderWidth?: LengthMetrics
+imageBorderWidth?: LengthMetrics
 ```
 
-图片描边宽度。
+图片描边宽度。默认无描边效果。
 
-默认无描边效果。
-
-**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -152,9 +150,7 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 ## imageRes
 
 ```TypeScript
-@Require
-  @Param
-  imageRes: ResourceStr | PixelMap
+imageRes: ResourceStr | PixelMap
 ```
 
 展示的图片。
@@ -165,6 +161,8 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Require、@Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TipsDialogV2-@Require  @Param  imageRes: ResourceStr | PixelMap--><!--Device-TipsDialogV2-@Require  @Param  imageRes: ResourceStr | PixelMap-End-->
@@ -174,19 +172,18 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 ## imageSize
 
 ```TypeScript
-@Param
-  imageSize?: SizeOptions
+imageSize?: SizeOptions
 ```
 
-自定义图片尺寸。
-
-默认值：64*64vp
+自定义图片尺寸。默认值：64*64vp
 
 **类型：** SizeOptions
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -197,19 +194,18 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 ## onCheckedChange
 
 ```TypeScript
-@Param
-  onCheckedChange?: AdvancedDialogV2OnCheckedChange
+onCheckedChange?: AdvancedDialogV2OnCheckedChange
 ```
 
-选择框的选中状态改变事件。
-
-默认无事件。
+选择框的选中状态改变事件。默认无事件。
 
 **类型：** [AdvancedDialogV2OnCheckedChange](../../apis-arkui/arkts-apis/arkts-arkui-advanceddialogv2oncheckedchange-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -220,19 +216,18 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 ## primaryButton
 
 ```TypeScript
-@Param
-  primaryButton?: AdvancedDialogV2Button
+primaryButton?: AdvancedDialogV2Button
 ```
 
-提示弹出框左侧按钮。
-
-默认不显示。
+提示弹出框左侧按钮。默认不显示。
 
 **类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -243,19 +238,18 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 ## secondaryButton
 
 ```TypeScript
-@Param
-  secondaryButton?: AdvancedDialogV2Button
+secondaryButton?: AdvancedDialogV2Button
 ```
 
-提示弹出框右侧按钮。
-
-默认不显示。
+提示弹出框右侧按钮。默认不显示。
 
 **类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,14 +260,10 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 ## title
 
 ```TypeScript
-@Param
-  title?: ResourceStr
+title?: ResourceStr
 ```
 
-提示弹出框标题。
-
-默认不显示。
-
+提示弹出框标题。默认不显示。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -281,6 +271,8 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

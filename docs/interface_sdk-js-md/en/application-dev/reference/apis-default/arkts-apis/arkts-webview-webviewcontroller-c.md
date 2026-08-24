@@ -5439,9 +5439,7 @@ Register the callback for controller attach state change.
 onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 ```
 
-Called when the [application takes over media playback of the web page](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12) and a media file is played on the web page.
-
-If the application does not take over media playback on the web page, this callback is not invoked.
+Called when the [application takes over media playback of the web page](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12) and a media file is played on the web page.If the application does not take over media playback on the web page, this callback is not invoked.
 
 **Since:** 23
 
@@ -7120,9 +7118,7 @@ struct WebComponent {
 removeCache(clearRom: boolean): void
 ```
 
-Clears the cache in the application. This API will clear the cache for all webviews in the same application.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You can view the Webview cache in the data/storage/el2/base/cache/web/Cache directory. </p>
+Clears the cache in the application. This API will clear the cache for all webviews in the same application.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You can view the Webview cache in the data/storage/el2/base/cache/web/Cache directory. </p>
 
 **Since:** 23
 
@@ -8771,8 +8767,7 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 Sets the ArkWeb kernel version. If the system does not support the specified version, the setting is invalid. This API is a global static API and must be called before **initializeWebEngine** is called. If any **Web** component has been loaded, the setting of this API is invalid.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - **setActiveWebEngineVersion** cannot be called in an asynchronous thread.
 
 > - **setActiveWebEngineVersion** takes effect globally and needs to be called only once in an application
@@ -8819,9 +8814,14 @@ export default class EntryAbility extends UIAbility {
 static setAppCustomUserAgent(userAgent: string) : void
 ```
 
-Set the default User-Agent for the application.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Unlike setCustomUserAgent, which only takes effect in the current web context, the priority for pages loaded in the web is as follows: 1. The User-Agent set by setCustomUserAgent is used first. 2. If not set, it will check whether a specific User-Agent has been assigned to the current page via setUserAgentForHosts. 3. If no specific User-Agent is assigned, the application will fall back to using the User-Agent set by setAppCustomUserAgent. 4. If the app's default User-Agent is also not specified, the web's default User-Agent will be used as the final fallback. </p>
+Set the default User-Agent for the application.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Unlike setCustomUserAgent, which only takes effect in the current web context, the priority for pages loaded in the web is as follows:
+1. The User-Agent set by setCustomUserAgent is used first.
+2. If not set, it will check whether a specific User-Agent has been
+assigned to the current page via setUserAgentForHosts.
+3. If no specific User-Agent is assigned, the application will fall back
+to using the User-Agent set by setAppCustomUserAgent.
+4. If the app's default User-Agent is also not specified, the web's default
+User-Agent will be used as the final fallback. </p>
 
 **Since:** 23
 
@@ -9161,9 +9161,7 @@ setBlanklessLoadingWithParams(key: string,
             param: BlanklessLoadingParam) : WebBlanklessErrorCode
 ```
 
-Triggers frame interpolation and sets frame interpolation parameters. This API must be used in pair with the getBlanklessInfoWithKey API.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Triggers frame interpolation and sets frame interpolation parameters. This API must be used in pair with the getBlanklessInfoWithKey API.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **Since:** 23
 
@@ -9675,24 +9673,18 @@ setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
 Sets a path list. When the file protocol accesses resources in the path list, cross-origin access to local files and other online resources is allowed. In addition, when a path list is set, the file protocol can access only the resources in the path list. The behavior of fileAccess will be overwritten by that of this API. The paths in the list must be any of the following:
-
-1. The path of subdirectory of the application file directory. (The application file directory is obtained using [Context.filesDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#filesdir) in the Ability Kit.) For example:
-
-/data/storage/el2/base/files/example /data/storage/el2/base/haps/entry/files/example
-
-2. The path of application resource directory or its subdirectory. (The application resource directory is obtained from [Context.resourceDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#resourcedir) in the Ability Kit.) For example:
-
-/data/storage/el1/bundle/entry/resources/resfile /data/storage/el1/bundle/entry/resources/resfile/example
-
-3. Since API version 21, the application cache directory and its subdirectories are also supported. (The application cache directory is obtained through [Context.cacheDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#cachedir) in Ability Kit). For example:
-
-/data/storage/el2/base/cache /data/storage/el2/base/haps/entry/cache/example The **cache/web** directory is not allowed. If it is included, an exception with the code **401** will be thrown. If the **cache** directory is set, **cache/web** cannot be accessed.
-
-4. Since API version 21, the temporary application directory and its subdirectories are also supported. (The temporary application directory is obtained through [Context.tempDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#tempdir) in Ability Kit). For example:
-
-/data/storage/el2/base/temp /data/storage/el2/base/haps/entry/temp/example
-
-If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the fileAccess.
+1. The path of subdirectory of the application file directory.
+(The application file directory is obtained using [Context.filesDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#filesdir) in the Ability Kit.) For example:  
+* /data/storage/el2/base/files/example * /data/storage/el2/base/haps/entry/files/example
+2. The path of application resource directory or its subdirectory.
+(The application resource directory is obtained from [Context.resourceDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#resourcedir) in the Ability Kit.) For example:  
+* /data/storage/el1/bundle/entry/resources/resfile * /data/storage/el1/bundle/entry/resources/resfile/example
+3. Since API version 21, the application cache directory and its subdirectories are also supported.
+(The application cache directory is obtained through [Context.cacheDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#cachedir) in Ability Kit). For example:  
+* /data/storage/el2/base/cache * /data/storage/el2/base/haps/entry/cache/example * The **cache/web** directory is not allowed. If it is included, an exception with the code **401** will be thrown. If the **cache** directory is set, **cache/web** cannot be accessed.
+4. Since API version 21, the temporary application directory and its subdirectories are also supported.
+(The temporary application directory is obtained through [Context.tempDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#tempdir) in Ability Kit). For example:  
+* /data/storage/el2/base/temp * /data/storage/el2/base/haps/entry/temp/example If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the fileAccess.
 
 **Since:** 23
 
@@ -9883,7 +9875,7 @@ Set render process mode of the ArkWeb.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [RenderProcessMode](arkts-webview-renderprocessmode-e.md) | Yes | The render process mode for the ArkWeb. Call [getRenderProcessMode](#getrenderprocessmode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value *0 indicates the single render subprocess mode, and *1 indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of *RenderProcessMode is passed, the multi-render subprocess mode is used by default. |
+| mode | [RenderProcessMode](arkts-webview-renderprocessmode-e.md) | Yes | The render process mode for the ArkWeb. Call [getRenderProcessMode](#getrenderprocessmode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value * *0 * * indicates the single render subprocess mode, and * *1 * * indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of * *RenderProcessMode * * is passed, the multi-render subprocess mode is used by default. |
 
 **Error codes:**
 
@@ -10254,13 +10246,7 @@ struct WebComponent {
 setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void
 ```
 
-Sets the URL trust list for the ArkWeb.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> When the URL trust list is set, only the URLs in the list can be accessed.
-
-Example of the urlTrustList:
-
-{ "UrlPermissionList": [ { "scheme": "https", "host": "www.example1.com", "port": 443, "path": "pathA/pathB" }, { "scheme": "http", "host": "*.example2.com", "port": 80, "path": "test1/test2/test3" } ] } </p>
+Sets the URL trust list for the ArkWeb.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> When the URL trust list is set, only the URLs in the list can be accessed.Example of the urlTrustList:{"UrlPermissionList": [{"scheme": "https","host": "www.example1.com","port": 443,"path": "pathA/pathB"}, {"scheme": "http","host": "*.example2.com","port": 80,"path": "test1/test2/test3"}]} </p>
 
 **Since:** 24
 
@@ -10629,15 +10615,7 @@ struct WebComponent {
 setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 ```
 
-Sets the User-Agent metadata corresponding to the User-Agent.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> This User-Agent metadata will be used to populate the User-Agent client hints, They can provide the client's branding and version information, the underlying operating system's branding and major version, as well as details about the underlying device.
-
-The User-Agent can be set with setCustomUserAgent or setAppCustomUserAgent or setUserAgentForHosts.
-
-If the UserAgentMetadata is not found according to the overridden User-Agent and the overridden User-Agent contains the system default User-Agent, the system default value will be used.
-
-If the UserAgentMetadata is not found according to the overridden User-Agent but the overridden User-Agent does not contain the system default User-Agent, only the low-entry User-Agent client hints will be generated. </p>
+Sets the User-Agent metadata corresponding to the User-Agent.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> This User-Agent metadata will be used to populate the User-Agent client hints, They can provide the client's branding and version information, the underlying operating system's branding and major version, as well as details about the underlying device.The User-Agent can be set with setCustomUserAgent or setAppCustomUserAgent or setUserAgentForHosts.If the UserAgentMetadata is not found according to the overridden User-Agent and the overridden User-Agent contains the system default User-Agent, the system default value will be used.If the UserAgentMetadata is not found according to the overridden User-Agent but the overridden User-Agent does not contain the system default User-Agent, only the low-entry User-Agent client hints will be generated. </p>
 
 **Since:** 24
 
@@ -10666,9 +10644,7 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](#setuser
 static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 ```
 
-Sets whether to enable web debugging. By default, web debugging is disabled. For details, see Debugging Frontend Pages by Using DevTools.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this function in the officially released version of the app. </p>
+Sets whether to enable web debugging. By default, web debugging is disabled. For details, see Debugging Frontend Pages by Using DevTools.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this function in the officially released version of the app. </p>
 
 **Since:** 23
 
@@ -10682,7 +10658,7 @@ Sets whether to enable web debugging. By default, web debugging is disabled. For
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| webDebuggingAccess | boolean | Yes | Sets whether to enable web debugging.{@code true} enable web debugging;{@code false} disable web debugging. The default value is false. |
+| webDebuggingAccess | boolean | Yes | Sets whether to enable web debugging.{@code true} enable web debugging; {@code false} disable web debugging. The default value is false. |
 
 **Error codes:**
 
@@ -11683,9 +11659,7 @@ export default class EntryAbility extends UIAbility {
 webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void
 ```
 
-Web page snapshot.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Only screenshots of assets on the rendering process are supported: still images and text. If there is a video on the page, the placeholder image of the video will be displayed when you take a screenshot, and blank if there is no placeholder. </p>
+Web page snapshot.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Only screenshots of assets on the rendering process are supported: still images and text. If there is a video on the page, the placeholder image of the video will be displayed when you take a screenshot, and blank if there is no placeholder. </p>
 
 **Since:** 23
 

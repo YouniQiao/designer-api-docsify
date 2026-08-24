@@ -1,8 +1,6 @@
 # DialogElement
 
-The &lt;dialog&gt; component is a custom pop-up container.
-
-@extends Element @interface DialogElement
+The &lt;dialog&gt; component is a custom pop-up container.@extends Element @interface DialogElement
 
 **Inheritance/Implementation:** DialogElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 

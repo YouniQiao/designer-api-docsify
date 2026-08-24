@@ -14,8 +14,7 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 
 取消注册Callback。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent)
 > 替代。
@@ -50,8 +49,7 @@ function off(type: 'BundleStatusChange'): Promise<string>
 
 取消注册Callback。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent)
 > 替代。

@@ -1,8 +1,6 @@
 # LineJoinStyle
 
-Line Join Style
-
-@enum { number }
+Line Join Style@enum { number }
 
 **起始版本：** 23
 

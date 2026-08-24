@@ -4,11 +4,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## onAttachmentDidFail
@@ -17,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 ```
 
-@brief Subscribes to attachment failure events. This API uses an asynchronous callback to return the result.
+Subscribes to attachment failure events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 

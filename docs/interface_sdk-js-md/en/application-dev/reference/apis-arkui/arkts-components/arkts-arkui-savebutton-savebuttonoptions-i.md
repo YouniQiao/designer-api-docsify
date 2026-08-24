@@ -1,8 +1,6 @@
 # SaveButtonOptions
 
-Declares the interface for setting the save button options.
-
-@interface SaveButtonOptions
+Declares the interface for setting the save button options.@interface SaveButtonOptions
 
 **Since:** 23
 

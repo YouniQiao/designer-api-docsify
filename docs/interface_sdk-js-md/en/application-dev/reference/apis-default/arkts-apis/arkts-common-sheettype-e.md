@@ -1,8 +1,6 @@
 # SheetType
 
-Defines the sheet type.
-
-@enum { number }
+Defines the sheet type.@enum { number }
 
 **Since:** 23
 

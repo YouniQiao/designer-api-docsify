@@ -1,8 +1,6 @@
 # WaterFlowModifier
 
-Defines WaterFlow Modifier
-
-@extends WaterFlowAttribute @implements AttributeModifier&lt;WaterFlowAttribute&gt;
+Defines WaterFlow Modifier@extends WaterFlowAttribute @implements AttributeModifier&lt;WaterFlowAttribute&gt;
 
 **Inheritance/Implementation:** WaterFlowModifier extends WaterFlowAttribute and implements AttributeModifier<WaterFlowAttribute>
 

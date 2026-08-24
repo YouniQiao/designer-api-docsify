@@ -62,7 +62,7 @@ result?: Record<string, Object>
 
 表示脚本执行结果。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 26.0.0
 

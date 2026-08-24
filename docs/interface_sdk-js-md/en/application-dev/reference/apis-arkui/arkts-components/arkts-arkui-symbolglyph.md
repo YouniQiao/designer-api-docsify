@@ -1,7 +1,6 @@
 # SymbolGlyph
 
 The **SymbolGlyph** component represents a symbol glyph.<!--RP1--><!--RP1End-->
-
 > **NOTE**
 
 ## Child Components

@@ -59,9 +59,7 @@ insertValue: string
 previewText?: string
 ```
 
-插入的预上屏文本内容。
-
-默认值：空字符串。
+插入的预上屏文本内容。默认值：空字符串。
 
 **类型：** string
 

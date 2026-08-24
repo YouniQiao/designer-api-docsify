@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): void
 ```
 
-@brief Unsubscribes from system panel state change events.
+Unsubscribes from system panel state change events.
 
 **Since:** 26.0.0
 

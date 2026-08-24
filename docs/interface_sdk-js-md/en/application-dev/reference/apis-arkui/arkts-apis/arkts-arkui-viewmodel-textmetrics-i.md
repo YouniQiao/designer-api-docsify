@@ -1,8 +1,6 @@
 # TextMetrics
 
-TextMetrics
-
-@interface TextMetrics
+TextMetrics@interface TextMetrics
 
 **Since:** 4
 

@@ -1,11 +1,9 @@
 # AudioStreamManager
 
-音频流管理。
-
-在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager)获取AudioStreamManager实例。
+音频流管理。 在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager) 获取AudioStreamManager实例。
 
 > **说明：**
-> 
+
 > - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 23
@@ -18,7 +16,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getAudioEffectInfoArray
@@ -40,7 +37,7 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为获取到的当前音效模式的信息；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为获取到的当前音效模式的信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -165,8 +162,7 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 
 获取当前音频采集器的信息。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 23
@@ -179,7 +175,7 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频采集器的信息成功，err为undefined，data为获取到的当前音 频采集器的信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频采集器的信息成功，err为undefined，data为获取到的当前音频采集器的信息 ；否则为错误对象。 |
 
 **示例**
 
@@ -213,8 +209,7 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 
 获取当前音频采集器的信息。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 23
@@ -241,8 +236,7 @@ getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 
 获取当前音频采集器的信息。同步返回结果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 23
@@ -279,8 +273,7 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 
 获取当前音频渲染器的信息。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 23
@@ -293,7 +286,7 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频渲染器的信息成功，err为undefined，data为获取到的当前音 频渲染器的信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频渲染器的信息成功，err为undefined，data为获取到的当前音频渲染器的信息 ；否则为错误对象。 |
 
 **示例**
 
@@ -327,8 +320,7 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 
 获取当前音频渲染器的信息。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 23
@@ -355,8 +347,7 @@ getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 
 获取当前音频渲染器的信息。同步返回结果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 23
@@ -439,6 +430,11 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 获取指定音频流活跃状态。使用callback异步回调。
 
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [isStreamActive](#isstreamactive)替代。
+
 **起始版本：** 23
 
 **废弃版本：** 20
@@ -510,6 +506,11 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 获取指定音频流是否为活跃状态。使用Promise异步回调。
 
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [isStreamActive](#isstreamactive)替代。
+
 **起始版本：** 23
 
 **废弃版本：** 20
@@ -543,6 +544,11 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 ```
 
 获取指定音频流是否为活跃状态。同步返回结果。
+
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 20开始废弃，建议使用
+> [isStreamActive](#isstreamactive)替代。
 
 **起始版本：** 23
 
@@ -958,7 +964,7 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 代表录制是否可以启动成功。true表示成功，false表示失败。 <br>仅检测是否可以获取音频采集器信息中音源类型的焦点。通常在音频录制启动前调用，否则已存在的录制流可能会拒绝其启动。 |
+| boolean | 代表录制是否可以启动成功。true表示成功，false表示失败。 |
 
 **错误码：**
 
@@ -1058,8 +1064,7 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 
 取消监听音频采集器更改事件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
@@ -1073,7 +1078,7 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 事件回调类型，支持的事件为'audioCapturerChange'，当取消监听音频采集器更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频采集器信息。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频采集器信息。 |
 
 **错误码：**
 
@@ -1089,8 +1094,7 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 
 取消监听音频渲染器更改事件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 9
@@ -1104,7 +1108,7 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'，当取消监听音频渲染器更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频渲染器信息。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频渲染器信息。 |
 
 **错误码：**
 
@@ -1118,7 +1122,10 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-Unsubscribes to audio capturer change events.
+取消监听音频采集器更改事件。使用callback异步回调。
+
+> **说明：**&gt;
+> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 23
 
@@ -1130,7 +1137,7 @@ Unsubscribes to audio capturer change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio capturer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频采集器信息。 |
 
 **错误码：**
 
@@ -1170,7 +1177,10 @@ audioStreamManager.offAudioCapturerChange(audioCapturerChangeCallback);
 offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void
 ```
 
-Unsubscribes to audio renderer change events.
+取消监听音频渲染器更改事件。使用callback异步回调。
+
+> **说明：**&gt;
+> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 23
 
@@ -1182,7 +1192,7 @@ Unsubscribes to audio renderer change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio renderer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | 回调函数用于音频渲染器更改事件。 |
 
 **错误码：**
 
@@ -1210,8 +1220,7 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 
 监听音频采集器更改事件（当音频录制流状态变化或设备变化时触发）。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
@@ -1242,8 +1251,7 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 
 监听音频渲染器更改事件（当音频播放流状态变化或设备变化时触发）。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 9
@@ -1272,7 +1280,10 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-Listens for audio capturer change events. When there is any audio capturer change, registered clients will receive the callback.
+/** 监听音频采集器更改事件（当音频录制流状态变化或设备变化时触发）。使用callback异步回调。
+
+> **说明：**&gt;
+> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 23
 
@@ -1284,7 +1295,7 @@ Listens for audio capturer change events. When there is any audio capturer chang
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio capturer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数，返回当前音频采集器信息。 |
 
 **错误码：**
 
@@ -1312,7 +1323,10 @@ audioStreamManager.onAudioCapturerChange((audioCapturerChangeInfoArray: audio.Au
 onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void
 ```
 
-Listens for audio renderer change events. When there is any audio renderer change, registered clients will receive the callback.
+监听音频渲染器更改事件（当音频播放流状态变化或设备变化时触发）。使用callback异步回调。
+
+> **说明：**&gt;
+> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 23
 
@@ -1324,7 +1338,7 @@ Listens for audio renderer change events. When there is any audio renderer chang
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio renderer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数用于音频渲染器更改事件。 |
 
 **错误码：**
 

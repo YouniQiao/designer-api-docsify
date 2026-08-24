@@ -1,11 +1,8 @@
 # AudioCapturer
 
-This interface provides APIs for audio capture.
+This interface provides APIs for audio capture.Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) to create an AudioCapturer instance.
 
-Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) to create an AudioCapturer instance.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 23
@@ -18,7 +15,6 @@ Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkt
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getAudioStreamId
@@ -237,9 +233,7 @@ See [getAudioTime](#getaudiotime)
 getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 ```
 
-Obtains the timestamp and position information of an input audio stream.
-
-This API obtains the actual recording position (specified by **framePos**) of the audio channel and the timestamp when recording to that position (specified by **timestamp**, in nanoseconds).
+Obtains the timestamp and position information of an input audio stream.This API obtains the actual recording position (specified by **framePos**) of the audio channel and the timestamp when recording to that position (specified by **timestamp**, in nanoseconds).
 
 **Since:** 23
 
@@ -1354,11 +1348,7 @@ Subscribes to the audio capturer configuration change event, which is triggered 
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
-
-The AudioCapturer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
-
-After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.The AudioCapturer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 10
 
@@ -1414,9 +1404,7 @@ Subscribes to the audio input device change event, which is triggered when an au
 on(type: 'markReach', frame: long, callback: Callback<long>): void
 ```
 
-Subscribes to the mark reached event, which is triggered (only once) when the number of frames captured reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result.
-
-For example, if **frame** is set to **100**, the callback is invoked when the number of captured frames reaches the 100th frame.
+Subscribes to the mark reached event, which is triggered (only once) when the number of frames captured reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result.For example, if **frame** is set to **100**, the callback is invoked when the number of captured frames reaches the 100th frame.
 
 **Since:** 8
 
@@ -1438,9 +1426,7 @@ For example, if **frame** is set to **100**, the callback is invoked when the nu
 on(type: 'periodReach', frame: long, callback: Callback<long>): void
 ```
 
-Subscribes to the period reached event, which is triggered each time the number of frames captured reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result.
-
-For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are captured, for example , when the number of frames captured reaches the 10th frame, 20th frame, and 30th frame.
+Subscribes to the period reached event, which is triggered each time the number of frames captured reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result.For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are captured, for example, when the number of frames captured reaches the 10th frame, 20th frame, and 30th frame.
 
 **Since:** 8
 
@@ -1462,11 +1448,7 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 on(type: 'readData', callback: Callback<ArrayBuffer>): void
 ```
 
-Subscribes to the audio data read event, which is triggered when audio stream data needs to be read. This API uses an asynchronous callback to return the result.
-
-The callback function is used only to read audio data. Do not call AudioCapturer APIs in it.
-
-To eliminate power-on noise caused by the microphone hardware design, the first 100 ms of data after recording starts is typically muted.
+Subscribes to the audio data read event, which is triggered when audio stream data needs to be read. This API uses an asynchronous callback to return the result.The callback function is used only to read audio data. Do not call AudioCapturer APIs in it.To eliminate power-on noise caused by the microphone hardware design, the first 100 ms of data after recording starts is typically muted.
 
 **Since:** 11
 
@@ -1913,8 +1895,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int
 
 Sets the independent audio session strategy and behavior parameters.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If this API is called while an audio capturer is running, you must call the
 > [start](#start) API again for
 > the settings to take effect.
@@ -2012,7 +1993,7 @@ Sets noise reduction mode for current audio capturer. The supported mode should 
 setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 ```
 
-Sets whether to [mute the current audio recording stream when an audio interruption occurs](../../../media/audio/using-audiocapturer-for-recording.md#setting-the-mute-interruption-mode) . This API uses a promise to return the result.
+Sets whether to [mute the current audio recording stream when an audio interruption occurs](../../../media/audio/using-audiocapturer-for-recording.md#setting-the-mute-interruption-mode). This API uses a promise to return the result.
 
 **Since:** 23
 

@@ -35,7 +35,7 @@ public backgroundColor(backgroundColor: ColorMetrics): ToolBarV2Modifier
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| backgroundColor | [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | 是 | toolBarV2's backgroundColor. |
+| backgroundColor | [ColorMetrics](arkts-graphics-colormetrics-c.md) | 是 | toolBarV2's backgroundColor. |
 
 **返回值：**
 
@@ -65,7 +65,7 @@ public height(height: LengthMetrics): ToolBarV2Modifier
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | 是 | toolBarV2's height. |
+| height | [LengthMetrics](arkts-graphics-lengthmetrics-c.md) | 是 | toolBarV2's height. |
 
 **返回值：**
 
@@ -95,7 +95,7 @@ public padding(padding: LengthMetrics): ToolBarV2Modifier
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| padding | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | 是 | left and right padding. |
+| padding | [LengthMetrics](arkts-graphics-lengthmetrics-c.md) | 是 | left and right padding. |
 
 **返回值：**
 

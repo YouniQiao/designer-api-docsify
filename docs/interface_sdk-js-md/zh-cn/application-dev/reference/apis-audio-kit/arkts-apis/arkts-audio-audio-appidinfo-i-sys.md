@@ -1,6 +1,6 @@
 # AppIdInfo（系统接口）
 
-描述app id信息。
+应用ID信息，包含应用的UID（标识应用身份）、PID（标识运行中的进程）、Token ID（用于常规身份识别与权限校验）和FullToken ID（携带应用完整身份权限信息，用于原始应用溯源与全链路权限校验）。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## appFullTokenId
@@ -23,7 +22,7 @@ import { audioHaptic } from '@kit.AudioKit';
 appFullTokenId: long
 ```
 
-应用完整令牌ID。
+应用FullToken ID，携带应用完整身份权限信息，用于原始应用溯源与全链路权限校验。
 
 **类型：** long
 
@@ -43,7 +42,7 @@ appFullTokenId: long
 appPid: int
 ```
 
-应用pid。
+应用PID，用于标识运行中的进程。
 
 **类型：** int
 
@@ -63,7 +62,7 @@ appPid: int
 appTokenId: int
 ```
 
-应用令牌ID。
+应用Token ID，用于常规身份识别与权限校验。
 
 **类型：** int
 
@@ -83,7 +82,7 @@ appTokenId: int
 appUid: int
 ```
 
-应用uid。
+应用UID，用于标识应用身份。
 
 **类型：** int
 

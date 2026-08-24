@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## dmDeviceInfo
@@ -21,7 +20,7 @@ import { audioHaptic } from '@kit.AudioKit';
 readonly dmDeviceInfo?: string
 ```
 
-Extended information for distributed device, including whether the device supports stereo, Device SN, etc.
+分布式设备扩展信息，包括设备是否支持立体声、设备序列号等。此接口仅可在Stage模型下使用。SystemCapability.Multimedia.Audio.Core
 
 **类型：** string
 
@@ -41,7 +40,7 @@ Extended information for distributed device, including whether the device suppor
 readonly dmDeviceType?: int
 ```
 
-Only [SPEAKER](arkts-audio-audio-devicetype-e.md#speaker) with networkId, [REMOTE_CAST](arkts-audio-audio-devicetype-e.md#remote_cast) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#remote_daudio) has dmDeviceType which indicated deviceTypeId.
+设备的子类型ID。SystemCapability.Multimedia.Audio.Core
 
 **类型：** int
 
@@ -59,7 +58,7 @@ Only [SPEAKER](arkts-audio-audio-devicetype-e.md#speaker) with networkId, [REMOT
 readonly highQualityRecordingSupported?: boolean
 ```
 
-Whether device supports high quality recording.
+是否支持高品质录音。true表示支持，false表示不支持。SystemCapability.Multimedia.Audio.Core
 
 **类型：** boolean
 
@@ -77,7 +76,7 @@ Whether device supports high quality recording.
 readonly interruptGroupId: int
 ```
 
-Interrupt group id
+设备所处的焦点组ID。SystemCapability.Multimedia.Audio.Device
 
 **类型：** int
 
@@ -95,6 +94,8 @@ Interrupt group id
 readonly networkId: string
 ```
 
+设备组网的ID。SystemCapability.Multimedia.Audio.Device
+
 **类型：** string
 
 **起始版本：** 23
@@ -111,7 +112,7 @@ readonly networkId: string
 readonly volumeGroupId: int
 ```
 
-Volume group id
+设备所处的音量组ID。SystemCapability.Multimedia.Audio.Device
 
 **类型：** int
 

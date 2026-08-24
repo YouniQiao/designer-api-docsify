@@ -35,7 +35,7 @@ constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lineSpacing | LengthMetrics | 是 | 文本的行间距。 <br>取值范围：[0, +∞) |
+| lineSpacing | LengthMetrics | 是 | 文本的行间距。 <br>取值范围：0, +∞) |
 | options | LineSpacingOptions | 否 | 行间距的配置项。 |
 
 ## lineSpacing
@@ -44,11 +44,7 @@ constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 readonly lineSpacing: number
 ```
 
-文本行间距。
-
-取值范围：[0, +∞)
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+文本行间距。取值范围：[0, +∞)单位：[vp
 
 **类型：** number
 

@@ -1,11 +1,8 @@
 # MediaAlbumChangeRequest
 
-MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).
+MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).相册变更请求。
 
-相册变更请求。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Class首批接口从API version 11开始支持。
 
 **继承/实现关系：** MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
@@ -28,14 +25,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest
 ```
 
-创建相册变更请求。
-
-相册名的参数规格为：
-
-- 相册名字符串长度为1~255。 - 不允许出现的非法英文字符，包括：
-
-. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
-
+创建相册变更请求。相册名的参数规格为：  
+- 相册名字符串长度为1~255。 - 不允许出现的非法英文字符，包括：  
+. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - 英文字符大小写不敏感。 - 相册名不允许重名。
 
 **起始版本：** 11
@@ -306,8 +298,7 @@ deleteAssets(assets: Array<PhotoAsset>): void
 
 从回收站中彻底删除资产。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
 
 **起始版本：** 23
@@ -543,8 +534,7 @@ deleteAssetsWithUri(assetUris: Array<string>): void
 
 从回收站中彻底删除资产。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 此操作不可逆，执行此操作后文件资源将被彻底删除，请谨慎操作。
 
 **起始版本：** 23
@@ -1303,7 +1293,7 @@ setAlbumNameByFile(name: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 相册名。 <br>取值范围:1-255 <br>相册名参数规格： 相册名字符串长度为1~255。 不允许出现的非法英文字符，包括： \ / : ? " ' ` &lt; &gt; \| { } [ ] 不允许仅命名为.或者.. 英文字符大小写不敏感。 相册名不允许重名。 |
+| name | string | 是 | 相册名。 <br>取值范围:1-255 <br>相册名参数规格： 相册名字符串长度为1~255。 不允许出现的非法英文字符，包括： \ / : * ? " ' ` &lt; &gt; \| { } [ ] 不允许仅命名为.或者.. 英文字符大小写不敏感。 相册名不允许重名。 |
 
 **错误码：**
 

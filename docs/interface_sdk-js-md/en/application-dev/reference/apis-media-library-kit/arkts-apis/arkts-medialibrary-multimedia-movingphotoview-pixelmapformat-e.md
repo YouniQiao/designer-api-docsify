@@ -1,8 +1,6 @@
 # PixelMapFormat (System API)
 
-Enumerates pixel map formats.
-
-@enum { int }
+Enumerates pixel map formats.@enum { int }
 
 **Since:** 14
 

@@ -1,8 +1,6 @@
 # HoverEventParam
 
-Defines the Embed Data info.
-
-@interface HoverEventParam
+Defines the Embed Data info.@interface HoverEventParam
 
 **Since:** 23
 

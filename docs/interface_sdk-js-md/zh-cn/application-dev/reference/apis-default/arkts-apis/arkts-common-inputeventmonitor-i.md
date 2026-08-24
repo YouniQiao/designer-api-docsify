@@ -1,8 +1,6 @@
 # InputEventMonitor
 
-Defines the input event monitor identifier.
-
-Important Notes: - This object is created and returned by the system as a unique identifier for the listener. - The object is an empty object with no accessible members. - Developers cannot actively construct this object, it can only be obtained through the registration interface. - Used for subsequent unregistration to verify identity.
+Defines the input event monitor identifier.Important Notes: - This object is created and returned by the system as a unique identifier for the listener. - The object is an empty object with no accessible members. - Developers cannot actively construct this object, it can only be obtained through the registration interface. - Used for subsequent unregistration to verify identity.
 
 **起始版本：** 26.0.0
 

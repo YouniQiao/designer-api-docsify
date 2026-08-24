@@ -22,8 +22,7 @@ closeAshmem(): void
 
 Closes this **Ashmem** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Before closing the **Ashmem** object, you need to remove the address mapping.
 
 **Since:** 23
@@ -561,8 +560,7 @@ readAshmem(size: number, offset: number): number[]
 
 Reads data from the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
@@ -679,8 +677,7 @@ readDataFromAshmem(size: int, offset: int): ArrayBuffer
 
 Reads data from the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
@@ -745,8 +742,7 @@ readFromAshmem(size: number, offset: number): number[]
 
 Reads data from the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
@@ -919,8 +915,7 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 Writes data to the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
@@ -1018,8 +1013,7 @@ writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 
 Writes data to the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
@@ -1076,8 +1070,7 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 Writes data to the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 

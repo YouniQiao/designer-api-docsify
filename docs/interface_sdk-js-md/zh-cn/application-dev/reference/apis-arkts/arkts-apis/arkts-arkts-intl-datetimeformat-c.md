@@ -209,7 +209,7 @@ public static supportedLocalesOf(locales: string | Locale | ReadonlyArray<string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locales | string \| Locale \| [ReadonlyArray](arkts-arkts-readonlyarray-i.md)&lt;string \| Locale&gt; | 是 | 区域设置。 |
+| locales | string \| Locale \| ReadonlyArray&lt;string \| Locale&gt; | 是 | 区域设置。 |
 | options | [DateTimeFormatOptions](arkts-arkts-intl-datetimeformatoptions-i.md) | 否 | 选项。 |
 
 **返回值：**

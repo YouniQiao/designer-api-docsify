@@ -22,9 +22,7 @@ import { componentUtils } from '@kit.ArkUI';
 x: double
 ```
 
-x点坐标。
-
-单位: px
+x点坐标。单位: px
 
 **类型：** double
 
@@ -44,9 +42,7 @@ x点坐标。
 y: double
 ```
 
-y点坐标。
-
-单位: px
+y点坐标。单位: px
 
 **类型：** double
 

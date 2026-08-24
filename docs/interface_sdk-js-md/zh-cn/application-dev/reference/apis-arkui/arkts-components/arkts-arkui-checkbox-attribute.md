@@ -1,8 +1,6 @@
 # Checkbox属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** CheckboxAttribute extends CommonMethod<CheckboxAttribute>
 
@@ -87,7 +85,7 @@ mark(value: MarkStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | MarkStyle | 是 | 多选框内部图标样式。 从API version 12开始，设置了indicatorBuilder时，按照indicatorBuilder中的内容显示。<br/>默认值：{&lt; br/&gt;strokeColor : `\\$r('sys.color.ohos_id_color_foreground_contrary')`,<br/>strokeWidth: `\\$r('sys.float.ohos_id_checkbox_stroke_width')`,<br/>size: '20vp'<br/>} |
+| value | MarkStyle | 是 | 多选框内部图标样式。 从API version 12开始，设置了indicatorBuilder时，按照indicatorBuilder中的内容显示。<br/>默认值：{<br/>strokeColor : `\\$r('sys.color.ohos_id_color_foreground_contrary')`,<br/>strokeWidth: `\\$r('sys.float.ohos_id_checkbox_stroke_width')`,<br/>size: '20vp'<br/>} |
 
 ## mark
 
@@ -169,11 +167,7 @@ onChange(callback: Optional<OnCheckboxChangeCallback>)
 select(value: boolean)
 ```
 
-设置多选框选中状态。
-
-从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-
-从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置多选框选中状态。从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 8
 
@@ -197,9 +191,7 @@ select(value: boolean)
 select(isSelected: Optional<boolean>)
 ```
 
-设置多选框选中状态。与[select](#select)相比，isSelected参数新增了对undefined类型的支持。
-
-该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、 [!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置多选框选中状态。与[select](#select)相比，isSelected参数新增了对undefined类型的支持。该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、 [!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 18
 
@@ -267,7 +259,7 @@ selectedColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | 是 | 多选框选中状态颜色。<br/>当resColor的值为undefined时取默认值\\$r(' sys.color.ohos_id_color_text_primary_activated')。<br/>异常值按照默认值处理。 |
+| resColor | Optional&lt;ResourceColor&gt; | 是 | 多选框选中状态颜色。<br/>当resColor的值为undefined时取默认值\\$r('sys.color.ohos_id_color_text_primary_activated')。<br/>异常值按照默认值处理。 |
 
 ## shape
 
@@ -367,5 +359,5 @@ unselectedColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | 是 | 多选框非选中状态边框颜色。<br/>当resColor的值为undefined时取默认值\\$r(' sys.color.ohos_id_color_switch_outline_off') |
+| resColor | Optional&lt;ResourceColor&gt; | 是 | 多选框非选中状态边框颜色。<br/>当resColor的值为undefined时取默认值\\$r('sys.color.ohos_id_color_switch_outline_off') |
 

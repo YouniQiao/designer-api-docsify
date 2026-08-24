@@ -160,8 +160,7 @@ Pending state.
 DATE_TRASHED_MS = 'date_trashed_ms'
 ```
 
-Date when the file was deleted. The value is the number of milliseconds elapsed since the Epoch time.
-
+Date when the file was deleted. The value is the number of milliseconds elapsed since the Epoch time.  
 **NOTE：**: The photos queried cannot be sorted based on this field.
 
 **Since:** 23

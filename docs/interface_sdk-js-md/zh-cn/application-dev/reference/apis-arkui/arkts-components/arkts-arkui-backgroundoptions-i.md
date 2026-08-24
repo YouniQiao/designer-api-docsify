@@ -1,8 +1,6 @@
 # BackgroundOptions
 
-指定背景选项
-
-@interface BackgroundOptions
+指定背景选项@interface BackgroundOptions
 
 **起始版本：** 20
 
@@ -21,9 +19,7 @@
 align?: Alignment
 ```
 
-Set the alignment of the custom background and component.
-
-Anonymous Object Rectification.
+Set the alignment of the custom background and component.Anonymous Object Rectification.
 
 **类型：** Alignment
 

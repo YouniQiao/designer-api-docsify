@@ -1181,7 +1181,7 @@ struct WebComponent {
 static clearPrefetchedResource(cacheKeyList: Array<string>): void
 ```
 
-Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by API[prefetchResource](#prefetchresource).
+Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by API[prefetchResource](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#prefetchresource).
 
 **起始版本：** 23
 
@@ -1796,8 +1796,8 @@ Rendering current Web page into Pdf data, return the result in async mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](arkts-webview-pdfconfiguration-i.md) | 是 | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-webview-pdfdata-c.md)&gt; | 是 | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
+| configuration | [PdfConfiguration](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
 
 **错误码：**
 
@@ -2055,13 +2055,13 @@ Rendering current Web page into Pdf data, return the result in promise mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](arkts-webview-pdfconfiguration-i.md) | 是 | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
+| configuration | [PdfConfiguration](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PdfData](arkts-webview-pdfdata-c.md)&gt; | The promise returned by the function. PdfData is pdf data stream of current web page in Uint8Array { |
+| Promise&lt;[PdfData](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfdata-c.md)&gt; | The promise returned by the function. PdfData is pdf data stream of current web page in Uint8Array { |
 
 **错误码：**
 
@@ -2100,7 +2100,7 @@ Create web message ports
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[WebMessagePort](arkts-webview-webmessageport-i.md)&gt; | An array represent 2 WebMessagePort, then can use those ports to communication with html pages. |
+| Array&lt;[WebMessagePort](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageport-i.md)&gt; | An array represent 2 WebMessagePort, then can use those ports to communication with html pages. |
 
 **错误码：**
 
@@ -2249,7 +2249,7 @@ Register Web custom schemes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](arkts-webview-webcustomscheme-i.md)&gt; | 是 | Configuration of web custom scheme. |
+| schemes | Array&lt;[WebCustomScheme](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webcustomscheme-i.md)&gt; | 是 | Configuration of web custom scheme. |
 
 **错误码：**
 
@@ -2432,7 +2432,7 @@ Register Web custom schemes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](arkts-webview-webcustomscheme-i.md)&gt; | 是 | Configuration of web custom scheme. |
+| schemes | Array&lt;[WebCustomScheme](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webcustomscheme-i.md)&gt; | 是 | Configuration of web custom scheme. |
 | lazyInitWebEngine | boolean | 是 | When true: The interface internally skips initializing WebEngine and temporarily stores the registered schemes, which will be passed to WebEngine when it actually initializes. When false: The interface automatically performs WebEngine initialization internally. |
 
 **错误码：**
@@ -2737,7 +2737,7 @@ Enable the application disable some features such as PDFViewer to enhance the se
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| securityParams | [SecurityParams](arkts-webview-securityparams-i.md) | 是 | The options means which supported option or item will be disabled. |
+| securityParams | [SecurityParams](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-securityparams-i.md) | 是 | The options means which supported option or item will be disabled. |
 
 **示例**
 
@@ -2827,7 +2827,7 @@ Enable the BackForwardCache and indicate features that are allowed to enter Back
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| features | [BackForwardCacheSupportedFeatures](arkts-webview-backforwardcachesupportedfeatures-c.md) | 否 | The features that supports BackForwardCache. @static |
+| features | [BackForwardCacheSupportedFeatures](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-backforwardcachesupportedfeatures-c.md) | 否 | The features that supports BackForwardCache. @static |
 
 **示例**
 
@@ -3307,7 +3307,7 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArkWebEngineVersion](arkts-webview-arkwebengineversion-e.md) | 返回由[ArkWebEngineVersion]{ |
+| [ArkWebEngineVersion](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-arkwebengineversion-e.md) | 返回由[ArkWebEngineVersion]{ |
 
 **示例**
 
@@ -3333,7 +3333,7 @@ Get whether webviewController is attached to a web component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ControllerAttachState](arkts-webview-controllerattachstate-e.md) | the attach state of controller |
+| [ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md) | the attach state of controller |
 
 ## getBackForwardEntries
 
@@ -3355,7 +3355,7 @@ Get back forward stack list from current webview.
 
 | 类型 | 说明 |
 | --- | --- |
-| [BackForwardList](arkts-webview-backforwardlist-i.md) | Back forward list for current webview. |
+| [BackForwardList](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-backforwardlist-i.md) | Back forward list for current webview. |
 
 **错误码：**
 
@@ -3448,7 +3448,7 @@ Obtains the prediction information about the blankless loading solution and enab
 
 | 类型 | 说明 |
 | --- | --- |
-| [BlanklessInfo](arkts-webview-blanklessinfo-i.md) | The prediction information about the blankless loading solution. |
+| [BlanklessInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessinfo-i.md) | The prediction information about the blankless loading solution. |
 
 **错误码：**
 
@@ -4509,7 +4509,7 @@ Gets the last hit test value of HitTest.
 
 | 类型 | 说明 |
 | --- | --- |
-| [HitTestValue](arkts-webview-hittestvalue-i.md) | Return the element information of the clicked area. |
+| [HitTestValue](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-hittestvalue-i.md) | Return the element information of the clicked area. |
 
 **错误码：**
 
@@ -4881,7 +4881,7 @@ getMediaPlaybackState(): MediaPlaybackState
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaPlaybackState](arkts-webview-mediaplaybackstate-e.md) | 当前网页的播放状态，具体值为NONE、PLAYING、PAUSED、STOPPED。 |
+| [MediaPlaybackState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediaplaybackstate-e.md) | 当前网页的播放状态，具体值为NONE、PLAYING、PAUSED、STOPPED。 |
 
 **错误码：**
 
@@ -5150,7 +5150,7 @@ Get the page offset. And the unit is virtual pixel.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollOffset](arkts-webview-scrolloffset-i.md) | page offset |
+| [ScrollOffset](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-scrolloffset-i.md) | page offset |
 
 **错误码：**
 
@@ -5436,7 +5436,7 @@ Get render process mode of the ArkWeb.
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderProcessMode](arkts-webview-renderprocessmode-e.md) | mode - The render process mode of the ArkWeb. Call { |
+| [RenderProcessMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-renderprocessmode-e.md) | mode - The render process mode of the ArkWeb. Call { |
 
 **示例**
 
@@ -5603,7 +5603,7 @@ Get the scroll offset of the webpage in view port, the coordinates of the top le
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollOffset](arkts-webview-scrolloffset-i.md) | scroll offset |
+| [ScrollOffset](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-scrolloffset-i.md) | scroll offset |
 
 **示例**
 
@@ -5845,7 +5845,7 @@ Get the site isolation mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| [SiteIsolationMode](arkts-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
+| [SiteIsolationMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
 
 **示例**
 
@@ -6395,7 +6395,7 @@ Get the User-Agent metadata corresponding to the User-Agent.
 
 | 类型 | 说明 |
 | --- | --- |
-| [UserAgentMetadata](arkts-webview-useragentmetadata-c.md) | The UserAgentMetadata for the userAgent. |
+| [UserAgentMetadata](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-useragentmetadata-c.md) | The UserAgentMetadata for the userAgent. |
 
 **示例**
 
@@ -6746,7 +6746,7 @@ Inject offline resources into cache.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceMaps | Array&lt;[OfflineResourceMap](arkts-webview-offlineresourcemap-i.md)&gt; | 是 | Array of offline resource info maps. The count of array must between 1 and 30. |
+| resourceMaps | Array&lt;[OfflineResourceMap](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-offlineresourcemap-i.md)&gt; | 是 | Array of offline resource info maps. The count of array must between 1 and 30. |
 
 **错误码：**
 
@@ -8592,7 +8592,7 @@ Unregister the callback for controller attach state change.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-webview-controllerattachstate-e.md)&gt; | 否 | Callback used to return the controller attach state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 | Callback used to return the controller attach state. |
 
 **示例**
 
@@ -8751,7 +8751,7 @@ Register the callback for controller attach state change.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-webview-controllerattachstate-e.md)&gt; | 是 | Callback used to return the controller attach state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 | Callback used to return the controller attach state. |
 
 **示例**
 
@@ -8763,9 +8763,7 @@ Register the callback for controller attach state change.
 onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 ```
 
-注册回调函数，开启 [应用接管网页媒体播放功能](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12) 后，当网页中有播放媒体时，触发注册的回调函数。
-
-如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
+注册回调函数，开启 [应用接管网页媒体播放功能](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12) 后，当网页中有播放媒体时，触发注册的回调函数。如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
 
 **起始版本：** 23
 
@@ -8779,7 +8777,7 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [CreateNativeMediaPlayerCallback](arkts-webview-createnativemediaplayercallback-t.md) | 是 | 接管网页媒体播放的回调函数。 |
+| callback | [CreateNativeMediaPlayerCallback](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-createnativemediaplayercallback-t.md) | 是 | 接管网页媒体播放的回调函数。 |
 
 **示例**
 
@@ -9207,7 +9205,7 @@ function shouldHandle(mediaInfo: webview.MediaInfo) {
 onInactive(): void
 ```
 
-Call this interface to notify the Web component to enter the inactive state. In this callback, the developer can realize the appropriate behavior when the application loses focus. In this state, any content that can be safely paused will be paused as much as possible, such as animation and geographical location. However, JavaScript will not be paused. To pause JavaScript globally, please use [pauseAllTimers](#pausealltimers).To reactivate the Web component, call onActive.
+Call this interface to notify the Web component to enter the inactive state. In this callback, the developer can realize the appropriate behavior when the application loses focus. In this state, any content that can be safely paused will be paused as much as possible, such as animation and geographical location. However, JavaScript will not be paused. To pause JavaScript globally, please use [pauseAllTimers](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#pausealltimers).To reactivate the Web component, call onActive.
 
 **起始版本：** 23
 
@@ -9761,7 +9759,7 @@ Post web message port to html
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | Data name information to send. |
-| ports | Array&lt;[WebMessagePort](arkts-webview-webmessageport-i.md)&gt; | 是 | Port number array information to send. |
+| ports | Array&lt;[WebMessagePort](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageport-i.md)&gt; | 是 | Port number array information to send. |
 | uri | string | 是 | URI to receive this information. |
 
 **错误码：**
@@ -10136,7 +10134,7 @@ Compile javascript and generate code cache.
 | --- | --- | --- | --- |
 | url | string | 是 | Url of the javascript. Only support HTTP/HTTPS protocol and length no longer than 2048. |
 | script | string \| Uint8Array | 是 | Javascript source code. script must not be empty. |
-| cacheOptions | [CacheOptions](arkts-webview-cacheoptions-i.md) | 是 | Generate code cache option. |
+| cacheOptions | [CacheOptions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-cacheoptions-i.md) | 是 | Generate code cache option. |
 
 **返回值：**
 
@@ -10802,7 +10800,7 @@ Prefetch the resources required by the page, but will not execute js or render t
 | --- | --- | --- | --- |
 | url | string | 是 | Which url to preresolve/preconnect. |
 | additionalHeaders | Array&lt;WebHeader&gt; | 否 | Additional HTTP request header of the URL. |
-| prefetchOptions | [PrefetchOptions](arkts-webview-prefetchoptions-c.md) | 否 | Prefetch behavior can be customized via ‌prefetchOptions‌, including ignoring Cache-Control: no-store and adjusting the throttling interval. |
+| prefetchOptions | [PrefetchOptions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-prefetchoptions-c.md) | 否 | Prefetch behavior can be customized via ‌prefetchOptions‌, including ignoring Cache-Control: no-store and adjusting the throttling interval. |
 
 **错误码：**
 
@@ -10822,7 +10820,7 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
         cacheValidTime?: int): void
 ```
 
-Prefetches resource requests based on specified request information and additional HTTP request headers, saves the requests to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests whose Content-Type is application/x-www-form-urlencoded are supported. A maximum of six POST requests can be pre-obtained. To prefetch the seventh post request, call API[clearPrefetchedResource](#clearprefetchedresource) to clear the cache of unnecessary post requests. Otherwise, the cache of the earliest prefetched POST request will be automatically cleared. To use the prefetched resource cache, you need to add the key value ArkWebPostCacheKey to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache.
+Prefetches resource requests based on specified request information and additional HTTP request headers, saves the requests to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests whose Content-Type is application/x-www-form-urlencoded are supported. A maximum of six POST requests can be pre-obtained. To prefetch the seventh post request, call API[clearPrefetchedResource](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#clearprefetchedresource) to clear the cache of unnecessary post requests. Otherwise, the cache of the earliest prefetched POST request will be automatically cleared. To use the prefetched resource cache, you need to add the key value ArkWebPostCacheKey to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache.
 
 **起始版本：** 23
 
@@ -11531,9 +11529,7 @@ struct WebComponent {
 removeCache(clearRom: boolean): void
 ```
 
-Clears the cache in the application. This API will clear the cache for all webviews in the same application.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You can view the Webview cache in the data/storage/el2/base/cache/web/Cache directory. </p>
+Clears the cache in the application. This API will clear the cache for all webviews in the same application.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You can view the Webview cache in the data/storage/el2/base/cache/web/Cache directory. </p>
 
 **起始版本：** 23
 
@@ -12682,7 +12678,7 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[JsMessageExt](arkts-webview-jsmessageext-c.md)&gt; | A promise is solved after the JavaScript script is executed. This parameter will be the result of JavaScript script execution. If the JavaScript script fails to execute or has no return value, a none type value will be returned. |
+| Promise&lt;[JsMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessageext-c.md)&gt; | A promise is solved after the JavaScript script is executed. This parameter will be the result of JavaScript script execution. If the JavaScript script fails to execute or has no return value, a none type value will be returned. |
 
 **错误码：**
 
@@ -13459,7 +13455,7 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | script | string \| ArrayBuffer | 是 | JavaScript Script. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-webview-jsmessageext-c.md)&gt; | 是 | Callbacks execute JavaScript script results. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | Callbacks execute JavaScript script results. |
 
 **错误码：**
 
@@ -14204,10 +14200,8 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 设置ArkWeb内核版本。若系统不支持指定版本，则设置无效。该接口为全局静态API，须在调用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。
 
-> **说明：**
-> 
-> - setActiveWebEngineVersion不支持在异步线程中调用。
-> 
+> **说明：**&gt;
+> - setActiveWebEngineVersion不支持在异步线程中调用。&gt;
 > - setActiveWebEngineVersion全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
 
 **起始版本：** 23
@@ -14222,7 +14216,7 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| engineVersion | [ArkWebEngineVersion](arkts-webview-arkwebengineversion-e.md) | 是 | ArkWeb内核版本。 |
+| engineVersion | [ArkWebEngineVersion](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-arkwebengineversion-e.md) | 是 | ArkWeb内核版本。 |
 
 **示例**
 
@@ -14272,9 +14266,14 @@ export default class EntryAbility extends UIAbility {
 static setAppCustomUserAgent(userAgent: string) : void
 ```
 
-Set the default User-Agent for the application.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Unlike setCustomUserAgent, which only takes effect in the current web context, the priority for pages loaded in the web is as follows: 1. The User-Agent set by setCustomUserAgent is used first. 2. If not set, it will check whether a specific User-Agent has been assigned to the current page via setUserAgentForHosts. 3. If no specific User-Agent is assigned, the application will fall back to using the User-Agent set by setAppCustomUserAgent. 4. If the app's default User-Agent is also not specified, the web's default User-Agent will be used as the final fallback. </p>
+Set the default User-Agent for the application.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Unlike setCustomUserAgent, which only takes effect in the current web context, the priority for pages loaded in the web is as follows:
+1. The User-Agent set by setCustomUserAgent is used first.
+2. If not set, it will check whether a specific User-Agent has been
+assigned to the current page via setUserAgentForHosts.
+3. If no specific User-Agent is assigned, the application will fall back
+to using the User-Agent set by setAppCustomUserAgent.
+4. If the app's default User-Agent is also not specified, the web's default
+User-Agent will be used as the final fallback. </p>
 
 **起始版本：** 23
 
@@ -14534,7 +14533,7 @@ Configure the BackForwardCache.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [BackForwardCacheOptions](arkts-webview-backforwardcacheoptions-c.md) | 否 | The configuration of BackForwardCache. |
+| options | [BackForwardCacheOptions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-backforwardcacheoptions-c.md) | 否 | The configuration of BackForwardCache. |
 
 **错误码：**
 
@@ -14731,7 +14730,7 @@ Sets whether to enable blankless page loading. This API must be used in pair wit
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebBlanklessErrorCode](arkts-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
+| [WebBlanklessErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
 
 **错误码：**
 
@@ -14824,9 +14823,7 @@ setBlanklessLoadingWithParams(key: string,
             param: BlanklessLoadingParam) : WebBlanklessErrorCode
 ```
 
-Triggers frame interpolation and sets frame interpolation parameters. This API must be used in pair with the getBlanklessInfoWithKey API.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Triggers frame interpolation and sets frame interpolation parameters. This API must be used in pair with the getBlanklessInfoWithKey API.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **起始版本：** 23
 
@@ -14843,13 +14840,13 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | Key value that uniquely identifies the current page. The key value must be the same as that of getBlanklessInfoWithKey. <br>Value range: (0, 2048] <br>Value range: (0, 2048] <br>which must be the same as the key value in getBlanklessInfoWithKey |
-| param | [BlanklessLoadingParam](arkts-webview-blanklessloadingparam-i.md) | 是 | The parameter of blankless. For details see {@Link BlanklessLoadingParam}. <br>na |
+| param | [BlanklessLoadingParam](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessloadingparam-i.md) | 是 | The parameter of blankless. For details see {@Link BlanklessLoadingParam}. <br>na |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebBlanklessErrorCode](arkts-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
+| [WebBlanklessErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
 
 **错误码：**
 
@@ -15160,7 +15157,7 @@ Set delegate for download. Used to notify the progress of the download triggered
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](arkts-webview-webdownloaddelegate-c.md) | 是 | Delegate used for download triggered from web. |
+| delegate | [WebDownloadDelegate](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaddelegate-c.md) | 是 | Delegate used for download triggered from web. |
 
 **错误码：**
 
@@ -15440,7 +15437,7 @@ Set web engine to use HttpDns server to resolve dns.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| secureDnsMode | [SecureDnsMode](arkts-webview-securednsmode-e.md) | 是 | using HttpDns. |
+| secureDnsMode | [SecureDnsMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-securednsmode-e.md) | 是 | using HttpDns. |
 | secureDnsConfig | string | 是 | The configuration of the HttpDns server. Must be https protocol and only allow one server to be configured. |
 
 **错误码：**
@@ -15618,13 +15615,11 @@ struct WebComponent {
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-Sets a path list. When a file protocol accesses resources in the path list, it can access the local files across domains. In addition, when a path list is set, the file protocol can access only the resources in the path list. The behavior of fileAccess will be overwritten by that of this API.
-
-The paths in the list must be any of the following(sub path and module name must be provided):
-
-1. The path of subdirectory of the application file directory, like "/data/storage/el2/base/files/example" or "/data/storage/el2/base/haps/entry/files/example". The application file directory is obtained using Context.filesDir in the Ability Kit. 2. The path of application resource directory or its subdirectory, like "/data/storage/el1/bundle/entry/resource/resfile" or "/data/storage/el1/bundle/entry/resource/resfile/example". The application resource directory is obtained from Context.resourceDir in the Ability Kit.
-
-If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the fileAccess.
+Sets a path list. When a file protocol accesses resources in the path list, it can access the local files across domains. In addition, when a path list is set, the file protocol can access only the resources in the path list. The behavior of fileAccess will be overwritten by that of this API.The paths in the list must be any of the following(sub path and module name must be provided):
+1. The path of subdirectory of the application file directory, like "/data/storage/el2/base/files/example"
+or "/data/storage/el2/base/haps/entry/files/example". The application file directory is obtained using Context.filesDir in the Ability Kit.
+2. The path of application resource directory or its subdirectory, like "/data/storage/el1/bundle/entry/resource/resfile"
+or "/data/storage/el1/bundle/entry/resource/resfile/example". The application resource directory is obtained from Context.resourceDir in the Ability Kit.If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the fileAccess.
 
 **起始版本：** 23
 
@@ -15886,7 +15881,7 @@ Set render process mode of the ArkWeb.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [RenderProcessMode](arkts-webview-renderprocessmode-e.md) | 是 | The render process mode for the ArkWeb. Call [getRenderProcessMode](#getrenderprocessmode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value *0 indicates the single render subprocess mode, and *1 indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of *RenderProcessMode is passed, the multi-render subprocess mode is used by default. |
+| mode | [RenderProcessMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-renderprocessmode-e.md) | 是 | The render process mode for the ArkWeb. Call [getRenderProcessMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getrenderprocessmode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value * *0 * * indicates the single render subprocess mode, and * *1 * * indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of * *RenderProcessMode * * is passed, the multi-render subprocess mode is used by default. |
 
 **错误码：**
 
@@ -15975,7 +15970,7 @@ Set whether scroll is allowed; default is true.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | Set whether scrolling is allowed {@code true} means scrolling is allowed. {@code false} means scrolling is disabled. |
-| type | [ScrollType](arkts-webview-scrolltype-e.md) | 否 | Enable scrolling type When the input parameter enable is false, it indicates that scrolling of the ScrollType type is prohibited. When ScrollType is not specified,it indicates that all types of webpage scrolling are prohibited. When the input parameter enable is true, regardless of whether ScrollType is specified, it indicates that all types of webpage scrolling are allowed. |
+| type | [ScrollType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-scrolltype-e.md) | 否 | Enable scrolling type When the input parameter enable is false, it indicates that scrolling of the ScrollType type is prohibited. When ScrollType is not specified,it indicates that all types of webpage scrolling are prohibited. When the input parameter enable is true, regardless of whether ScrollType is specified, it indicates that all types of webpage scrolling are allowed. |
 
 **错误码：**
 
@@ -16064,7 +16059,7 @@ Sets whether to switch web scrollbar mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scrollbarMode | [ScrollbarMode](arkts-webview-scrollbarmode-e.md) | 是 | web scrollbar mode, default OVERLAY_LAYOUT_SCROLLBAR. |
+| scrollbarMode | [ScrollbarMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-scrollbarmode-e.md) | 是 | web scrollbar mode, default OVERLAY_LAYOUT_SCROLLBAR. |
 
 **示例**
 
@@ -16166,7 +16161,7 @@ Set web scheme handler for specific scheme. This is used for service worker.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scheme | string | 是 | String value for url scheme. |
-| handler | [WebSchemeHandler](arkts-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
+| handler | [WebSchemeHandler](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
 
 **错误码：**
 
@@ -16256,7 +16251,7 @@ Set the site isolation mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [SiteIsolationMode](arkts-webview-siteisolationmode-e.md) | 是 | The site isolation mode of the application, default value depends on different devices type. |
+| mode | [SiteIsolationMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-siteisolationmode-e.md) | 是 | The site isolation mode of the application, default value depends on different devices type. |
 
 **错误码：**
 
@@ -16404,7 +16399,7 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebSoftKeyboardBehaviorMode](arkts-webview-websoftkeyboardbehaviormode-e.md) | 是 | The WebSoftKeyboardBehaviorMode of this web. |
+| mode | [WebSoftKeyboardBehaviorMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) | 是 | The WebSoftKeyboardBehaviorMode of this web. |
 
 **错误码：**
 
@@ -16468,13 +16463,7 @@ struct WebComponent {
 setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void
 ```
 
-Sets the URL trust list for the ArkWeb.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> When the URL trust list is set, only the URLs in the list can be accessed.
-
-Example of the urlTrustList:
-
-{ "UrlPermissionList": [ { "scheme": "https", "host": "www.example1.com", "port": 443, "path": "pathA/pathB" }, { "scheme": "http", "host": "*.example2.com", "port": 80, "path": "test1/test2/test3" } ] } </p>
+Sets the URL trust list for the ArkWeb.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> When the URL trust list is set, only the URLs in the list can be accessed.Example of the urlTrustList:{"UrlPermissionList": [{"scheme": "https","host": "www.example1.com","port": 443,"path": "pathA/pathB"}, {"scheme": "http","host": "*.example2.com","port": 80,"path": "test1/test2/test3"}]} </p>
 
 **起始版本：** 24
 
@@ -17114,15 +17103,7 @@ struct WebComponent {
 setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 ```
 
-Sets the User-Agent metadata corresponding to the User-Agent.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> This User-Agent metadata will be used to populate the User-Agent client hints, They can provide the client's branding and version information, the underlying operating system's branding and major version, as well as details about the underlying device.
-
-The User-Agent can be set with setCustomUserAgent or setAppCustomUserAgent or setUserAgentForHosts.
-
-If the UserAgentMetadata is not found according to the overridden User-Agent and the overridden User-Agent contains the system default User-Agent, the system default value will be used.
-
-If the UserAgentMetadata is not found according to the overridden User-Agent but the overridden User-Agent does not contain the system default User-Agent, only the low-entry User-Agent client hints will be generated. </p>
+Sets the User-Agent metadata corresponding to the User-Agent.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> This User-Agent metadata will be used to populate the User-Agent client hints, They can provide the client's branding and version information, the underlying operating system's branding and major version, as well as details about the underlying device.The User-Agent can be set with setCustomUserAgent or setAppCustomUserAgent or setUserAgentForHosts.If the UserAgentMetadata is not found according to the overridden User-Agent and the overridden User-Agent contains the system default User-Agent, the system default value will be used.If the UserAgentMetadata is not found according to the overridden User-Agent but the overridden User-Agent does not contain the system default User-Agent, only the low-entry User-Agent client hints will be generated. </p>
 
 **起始版本：** 24
 
@@ -17139,7 +17120,7 @@ If the UserAgentMetadata is not found according to the overridden User-Agent but
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userAgent | string | 是 | The User-Agent string. |
-| metaData | [UserAgentMetadata](arkts-webview-useragentmetadata-c.md) | 是 | The UserAgentMetadata for the userAgent. |
+| metaData | [UserAgentMetadata](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-useragentmetadata-c.md) | 是 | The UserAgentMetadata for the userAgent. |
 
 **示例**
 
@@ -17153,9 +17134,7 @@ If the UserAgentMetadata is not found according to the overridden User-Agent but
 static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 ```
 
-Sets whether to enable web debugging. By default, web debugging is disabled. For details, see Debugging Frontend Pages by Using DevTools.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this function in the officially released version of the app. </p>
+Sets whether to enable web debugging. By default, web debugging is disabled. For details, see Debugging Frontend Pages by Using DevTools.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this function in the officially released version of the app. </p>
 
 **起始版本：** 23
 
@@ -17169,7 +17148,7 @@ Sets whether to enable web debugging. By default, web debugging is disabled. For
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| webDebuggingAccess | boolean | 是 | Sets whether to enable web debugging.{@code true} enable web debugging;{@code false} disable web debugging. The default value is false. |
+| webDebuggingAccess | boolean | 是 | Sets whether to enable web debugging.{@code true} enable web debugging; {@code false} disable web debugging. The default value is false. |
 
 **错误码：**
 
@@ -17347,7 +17326,7 @@ Set web destroy mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebDestroyMode](arkts-webview-webdestroymode-e.md) | 是 | web destroy mode, default NORMAL_MODE. |
+| mode | [WebDestroyMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdestroymode-e.md) | 是 | web destroy mode, default NORMAL_MODE. |
 
 **示例**
 
@@ -17412,7 +17391,7 @@ Set web scheme handler for specific scheme. This is only used for related web co
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scheme | string | 是 | String value for url scheme. |
-| handler | [WebSchemeHandler](arkts-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
+| handler | [WebSchemeHandler](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
 
 **错误码：**
 
@@ -18473,7 +18452,7 @@ Trim memory by different memory pressure level.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | [PressureLevel](arkts-webview-pressurelevel-e.md) | 是 | The memory pressure level for the ArkWeb. |
+| level | [PressureLevel](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pressurelevel-e.md) | 是 | The memory pressure level for the ArkWeb. |
 
 **错误码：**
 
@@ -18573,7 +18552,7 @@ Wait for the controller to attach a web component until timeout.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ControllerAttachState](arkts-webview-controllerattachstate-e.md)&gt; | Promise used to return the state of attach. |
+| Promise&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Promise used to return the state of attach. |
 
 **示例**
 
@@ -18719,9 +18698,7 @@ export default class EntryAbility extends UIAbility {
 webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void
 ```
 
-Web page snapshot.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Only screenshots of assets on the rendering process are supported: still images and text. If there is a video on the page, the placeholder image of the video will be displayed when you take a screenshot, and blank if there is no placeholder. </p>
+Web page snapshot.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Only screenshots of assets on the rendering process are supported: still images and text. If there is a video on the page, the placeholder image of the video will be displayed when you take a screenshot, and blank if there is no placeholder. </p>
 
 **起始版本：** 23
 
@@ -18735,8 +18712,8 @@ Web page snapshot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [SnapshotInfo](arkts-webview-snapshotinfo-i.md) | 是 | The snapshot info. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-webview-snapshotresult-i.md)&gt; | 是 | the callback of snapshot. |
+| info | [SnapshotInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-snapshotinfo-i.md) | 是 | The snapshot info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 | the callback of snapshot. |
 
 **示例**
 

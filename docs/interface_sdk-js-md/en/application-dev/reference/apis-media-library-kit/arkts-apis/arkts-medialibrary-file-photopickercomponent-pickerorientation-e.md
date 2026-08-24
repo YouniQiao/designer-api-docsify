@@ -1,8 +1,6 @@
 # PickerOrientation
 
-Enumerates the sliding preview directions of the Picker grid page.
-
-This capability can be configured since API version 20. If this capability is set since API version 12 to 19, the setting does not take effect and the default direction (vertical) is used.
+Enumerates the sliding preview directions of the Picker grid page.This capability can be configured since API version 20. If this capability is set since API version 12 to 19, the setting does not take effect and the default direction (vertical) is used.
 
 **Since:** 12
 

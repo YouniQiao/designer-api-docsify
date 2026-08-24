@@ -23,7 +23,7 @@ import { scan } from '@kit.ConnectivityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md) | 取消订阅星闪扫描结果。使用callback异步回调。 |
-| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md) | 订阅星闪扫描结果。使用callback异步回调。 |
+| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md) | 订阅星闪扫描结果。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。 |
 | [startScan](arkts-connectivity-scan-startscan-f.md) | 发起星闪扫描。使用Promise异步回调。需先调用scan.onDeviceFound订阅扫描结果回调，本接口发起扫描后，扫描到的设备信息通过 scan.onDeviceFound回调上报。扫描完成后可调用[scan.stopScan](arkts-connectivity-scan-stopscan-f.md)停止扫描。 |
 | [stopScan](arkts-connectivity-scan-stopscan-f.md) | 停止星闪扫描。使用Promise异步回调。 |
 

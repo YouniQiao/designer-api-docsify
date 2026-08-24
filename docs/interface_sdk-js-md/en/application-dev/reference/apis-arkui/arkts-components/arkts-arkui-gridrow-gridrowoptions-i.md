@@ -1,8 +1,6 @@
 # GridRowOptions
 
-Defines the options of grid-row component.
-
-@interface GridRowOptions
+Defines the options of grid-row component.@interface GridRowOptions
 
 **Since:** 23
 

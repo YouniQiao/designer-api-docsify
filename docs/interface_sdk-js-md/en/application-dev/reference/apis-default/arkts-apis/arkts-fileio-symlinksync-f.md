@@ -13,8 +13,7 @@ function symlinkSync(target: string, srcPath: string): void
 
 Creates a symbolic link based on the file path. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 23

@@ -1,8 +1,6 @@
 # OverlayManagerOptions
 
-初始化[OverlayManager](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)时所用参数。
-
-@interface OverlayManagerOptions
+初始化[OverlayManager](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)时所用参数。@interface OverlayManagerOptions
 
 **起始版本：** 23
 
@@ -45,7 +43,11 @@ enableBackPressedEvent?: boolean
 onBackPress?: OnOverlayBackPressCallback
 ```
 
-Callback for intercepting back-press events on an overlay. **NOTE：**1. When this callback is registered and **enableBackPressedEvent** is set to **true**, the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback to decide whether the event should be propagated to the underlying components. 2. Return **true** to intercept the event (the event is consumed and will not be passed to lower layers), or **false** to allow the event to propagate through to the components below the overlay.
+Callback for intercepting back-press events on an overlay. **NOTE：**
+1. When this callback is registered and **enableBackPressedEvent** is set to **true**,
+the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback to decide whether the event should be propagated to the underlying components.
+2. Return **true** to intercept the event (the event is consumed and will not be passed
+to lower layers), or **false** to allow the event to propagate through to the components below the overlay.
 
 **类型：** [OnOverlayBackPressCallback](arkts-onoverlaybackpresscallback-t.md)
 

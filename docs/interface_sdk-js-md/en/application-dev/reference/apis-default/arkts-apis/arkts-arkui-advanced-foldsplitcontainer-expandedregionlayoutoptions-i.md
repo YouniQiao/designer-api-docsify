@@ -1,8 +1,6 @@
 # ExpandedRegionLayoutOptions
 
-The layout options for the container when the foldable screen is expanded.
-
-@interface ExpandedRegionLayoutOptions
+The layout options for the container when the foldable screen is expanded.@interface ExpandedRegionLayoutOptions
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # TextDecorationType
 
-Type of text modifier.
-
-@enum { number }
+Type of text modifier.@enum { number }
 
 **Since:** 23
 

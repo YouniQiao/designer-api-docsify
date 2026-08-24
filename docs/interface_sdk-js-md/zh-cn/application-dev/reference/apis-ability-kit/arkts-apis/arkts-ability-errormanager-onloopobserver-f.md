@@ -12,9 +12,7 @@ import { errorManager } from '@kit.AbilityKit';
 function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 ```
 
-注册主线程消息处理耗时监听器。注册后可以捕获到应用主线程处理消息的具体执行时间。
-
-仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注册主线程消息处理耗时监听器。注册后可以捕获到应用主线程处理消息的具体执行时间。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 12
 

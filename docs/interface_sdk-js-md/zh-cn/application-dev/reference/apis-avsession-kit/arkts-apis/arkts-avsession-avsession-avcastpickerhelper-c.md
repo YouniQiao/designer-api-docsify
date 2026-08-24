@@ -2,10 +2,8 @@
 
 投播半模态对象，可拉起半模态窗口，选择投播设备。在使用前，需要创建AVCastPickerHelper实例。
 
-> **说明：**
-> 
-> - 本Class首批接口从API version 14开始支持。
-> 
+> **说明：**&gt;
+> - 本Class首批接口从API version 14开始支持。&gt;
 > - AVCastPickerHelper样式显示为半模态，实际会绑定
 > 全模态页面（bindContentCover）
 > 。
@@ -152,9 +150,7 @@ async function onPickerStateChange(context: common.Context) {
 on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
 ```
 
-设置半模态窗口变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置半模态窗口变化的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 14
 

@@ -1,8 +1,6 @@
 # RadioOptions
 
-Input parameter for creating a radio box.
-
-@interface RadioOptions
+Input parameter for creating a radio box.@interface RadioOptions
 
 **Since:** 23
 

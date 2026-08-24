@@ -1,6 +1,6 @@
 # Matrix2D
 
-用于画布绘制 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)、 [OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)、 [CanvasPattern](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvaspattern.md)和 [Path2D](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)的矩阵对象， 可以对矩阵进行缩放、旋转和平移等变换。
+用于画布绘制 CanvasRenderingContext2D、 OffscreenCanvasRenderingContext2D、 CanvasPattern和 Path2D的矩阵对象， 可以对矩阵进行缩放、旋转和平移等变换。
 
 **起始版本：** 8
 
@@ -57,7 +57,7 @@ constructor(unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| unit | LengthMetricsUnit | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改， 配置方法同[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 <br>异常值NaN和Infinity按默认值处理。<br>默认值：DEFAULT |
+| unit | LengthMetricsUnit | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改， 配置方法同CanvasRenderingContext2D。 <br>异常值NaN和Infinity按默认值处理。<br>默认值：DEFAULT |
 
 ## identity
 
@@ -194,7 +194,7 @@ rotate(degree: number, rx?: number, ry?: number): Matrix2D
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| degree | number | 是 | 旋转角度，取值范围无限制。顺时针方向为正角度， 可以通过 degree Math.PI / 180 将角度转换为弧度值。 <br>异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。 <br>默认单位：弧度 |
+| degree | number | 是 | 旋转角度，取值范围无限制。顺时针方向为正角度， 可以通过 degree * Math.PI / 180 将角度转换为弧度值。 <br>异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。 <br>默认单位：弧度 |
 | rx | number | 否 | 旋转点的水平方向坐标，取值范围无限制。<br>默认单位：vp <br>异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。 <br>默认值：0 |
 | ry | number | 否 | 旋转点的垂直方向坐标，取值范围无限制。<br>默认单位：vp <br>异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。 <br>默认值：0 |
 

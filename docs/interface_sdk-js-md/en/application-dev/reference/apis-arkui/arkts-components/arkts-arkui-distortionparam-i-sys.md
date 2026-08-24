@@ -2,14 +2,11 @@
 
 Defines the spatial distortion parameters.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The coordinates of the four corners of the component can be set as follows: top-left corner: { x:0, y:0 }, top-right
-> corner: { x:1, y:0 }, bottom-left corner: { x:0, y:1 }, bottom-right corner: { x:1, y:1 }.
-> 
+> corner: { x:1, y:0 }, bottom-left corner: { x:0, y:1 }, bottom-right corner: { x:1, y:1 }.&gt;
 > - For example, if the **bottomLeft** attribute is set to **{ x:0.5, y:0.5 }**, the bottom-left corner is deformed to the
-> position of the component center, and the corresponding distortion effect is generated.
-> 
+> position of the component center, and the corresponding distortion effect is generated.&gt;
 > - When setting the coordinates of the four corners, ensure they follow spatial logic. For example, if **topLeft**
 > is **{ x:0, y:0.7 }** and **bottomLeft** is **{ x:0, y:0.2 }**, the top-left corner is lower than the bottom-left corner, which
 > violates the spatial logic and may cause rendering exceptions.
@@ -33,13 +30,7 @@ Defines the spatial distortion parameters.
 barrelDistortion: Vector4
 ```
 
-Barrel distortion degree of the four edges.
-
-The four values in **Vector4** are as follows: **x** indicates the left edge, **y** indicates the right edge, **z** indicates the top edge, and **w** indicates the bottom edge.
-
-A positive value indicates outward distortion, and a negative value indicates inward distortion. When the absolute value of the distortion parameter reaches 1, the distortion degree is extreme.
-
-Recommended value range for x, y, z, and w: **[-1, 1]**
+Barrel distortion degree of the four edges.The four values in **Vector4** are as follows: **x** indicates the left edge, **y** indicates the right edge, **z** indicates the top edge, and **w** indicates the bottom edge.A positive value indicates outward distortion, and a negative value indicates inward distortion. When the absolute value of the distortion parameter reaches 1, the distortion degree is extreme.Recommended value range for x, y, z, and w: **[-1, 1]**
 
 **Type:** [Vector4](arkts-arkui-vector4-t-sys.md)
 

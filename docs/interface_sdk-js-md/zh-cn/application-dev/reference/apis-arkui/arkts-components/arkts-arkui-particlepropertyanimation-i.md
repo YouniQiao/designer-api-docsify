@@ -19,9 +19,7 @@
 curve?: Curve | ICurve
 ```
 
-设置动画曲线。
-
-默认值：Curve.Linear
+设置动画曲线。默认值：Curve.Linear
 
 **类型：** Curve \| ICurve
 
@@ -43,11 +41,7 @@ curve?: Curve | ICurve
 endMillis: number
 ```
 
-动画结束时间。
-
-单位：毫秒。
-
-取值范围：[0, +∞)。
+动画结束时间。单位：毫秒。取值范围：[0, +∞)。
 
 **类型：** number
 
@@ -87,11 +81,7 @@ from: T
 startMillis: number
 ```
 
-动画开始时间。
-
-单位：毫秒。
-
-取值范围：[0, +∞)。
+动画开始时间。单位：毫秒。取值范围：[0, +∞)。
 
 **类型：** number
 

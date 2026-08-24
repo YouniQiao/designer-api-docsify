@@ -32,7 +32,7 @@ function from(array: double[]): Buffer
 
 | 类型 | 说明 |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 新的Buffer对象。 |
+| Buffer | 新的Buffer对象。 |
 
 **示例**
 
@@ -123,7 +123,7 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 | 类型 | 说明 |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回一个Buffer对象，该对象与入参对象`arrayBuffer`共享相同的内存区域。 |
+| Buffer | 返回一个Buffer对象，该对象与入参对象`arrayBuffer`共享相同的内存区域。 |
 
 **错误码：**
 
@@ -164,7 +164,7 @@ function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer
 
 | 类型 | 说明 |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回ArrayBuffer的视图。 |
+| Buffer | 返回ArrayBuffer的视图。 |
 
 **错误码：**
 
@@ -197,13 +197,13 @@ function from(buffer: Buffer | Uint8Array): Buffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 用于创建新Buffer的Buffer或Uint8Array对象。 |
+| buffer | Buffer \| Uint8Array | 是 | 用于创建新Buffer的Buffer或Uint8Array对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 新的Buffer对象。 |
+| Buffer | 新的Buffer对象。 |
 
 **示例**
 
@@ -238,7 +238,7 @@ function from(object: Object, offsetOrEncoding: int | string, length: int): Buff
 
 | 类型 | 说明 |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回新的Buffer对象。 |
+| Buffer | 返回新的Buffer对象。 |
 
 **示例**
 
@@ -272,7 +272,7 @@ function from(string: String, encoding?: BufferEncoding): Buffer
 
 | 类型 | 说明 |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回新的Buffer对象。 |
+| Buffer | 返回新的Buffer对象。 |
 
 **示例**
 

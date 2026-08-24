@@ -1,8 +1,6 @@
 # RectModifier
 
-Defines Rect Modifier
-
-@implements RectAttribute, AttributeModifier&lt;RectAttribute&gt;
+Defines Rect Modifier@implements RectAttribute, AttributeModifier&lt;RectAttribute&gt;
 
 **Inheritance/Implementation:** RectModifier implements RectAttribute, AttributeModifier<RectAttribute>
 

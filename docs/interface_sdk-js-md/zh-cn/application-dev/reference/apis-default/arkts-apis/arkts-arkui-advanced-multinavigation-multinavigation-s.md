@@ -1,14 +1,12 @@
 # MultiNavigation
 
-MultiNavigation({navDestination: PageMapBuilder | undefined, multiStack: MultiNavPathStack, onNavigationModeChange?: OnNavigationModeChangeCallback, onHomeShowOnTop?: OnHomeShowOnTopCallback})
-
-创建并初始化MultiNavigation组件。
-
-MultiNavigation组件遵循默认的左起右清栈规则，这意味着从左侧主页点击时，会触发详情页的加载并同时清除右侧所有其他详情页，确保右侧仅展示最新加载的详情页。然而，若在右侧的详情页上再次执行详情页加载操作，系统将不会执行清栈动 作。效果可参见主页跳转详情页效果演示。
+MultiNavigation({navDestination: PageMapBuilder | undefined, multiStack: MultiNavPathStack, onNavigationModeChange?: OnNavigationModeChangeCallback, onHomeShowOnTop?: OnHomeShowOnTopCallback})创建并初始化MultiNavigation组件。MultiNavigation组件遵循默认的左起右清栈规则，这意味着从左侧主页点击时，会触发详情页的加载并同时清除右侧所有其他详情页，确保右侧仅展示最新加载的详情页。然而，若在右侧的详情页上再次执行详情页加载操作，系统将不会执行清栈动 作。效果可参见主页跳转详情页效果演示。
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct MultiNavigation--><!--Device-unnamed-export declare struct MultiNavigation-End-->
 
@@ -22,8 +20,7 @@ MultiNavigation组件遵循默认的左起右清栈规则，这意味着从左�
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build multiNavigation.
@@ -31,6 +28,8 @@ The method to build multiNavigation.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,8 +40,7 @@ The method to build multiNavigation.
 ## multiStack
 
 ```TypeScript
-@State
-  multiStack: MultiNavPathStack
+multiStack: MultiNavPathStack
 ```
 
 设置路由栈。
@@ -53,6 +51,8 @@ The method to build multiNavigation.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @State
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiNavigation-@State  multiStack: MultiNavPathStack--><!--Device-MultiNavigation-@State  multiStack: MultiNavPathStack-End-->
@@ -62,19 +62,18 @@ The method to build multiNavigation.
 ## navDestination
 
 ```TypeScript
-@BuilderParam
-  navDestination: PageMapBuilder | undefined
+navDestination: PageMapBuilder | undefined
 ```
 
-设置加载目标页面的路由规则。
-
-取值为undefined时，不会加载。
+设置加载目标页面的路由规则。取值为undefined时，不会加载。
 
 **类型：** [PageMapBuilder](arkts-pagemapbuilder-t.md) \| undefined
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,8 +1,6 @@
 # ClickType
 
-ClickType. include SELECTED and DESELECTED
-
-@enum { int } ClickType
+ClickType. include SELECTED and DESELECTED@enum { int } ClickType
 
 **Since:** 26.0.0
 

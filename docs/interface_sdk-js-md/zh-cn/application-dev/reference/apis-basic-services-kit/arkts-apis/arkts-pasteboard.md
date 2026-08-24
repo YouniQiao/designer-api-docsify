@@ -26,7 +26,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 | [createHtmlTextRecord](arkts-basicservices-pasteboard-createhtmltextrecord-f.md) | 创建一条HTML内容的条目。 |
 | [createPlainTextData](arkts-basicservices-pasteboard-createplaintextdata-f.md) | 构建一个纯文本剪贴板内容对象。 |
 | [createPlainTextRecord](arkts-basicservices-pasteboard-createplaintextrecord-f.md) | 创建一条纯文本内容条目。 |
-| [createRecord](arkts-basicservices-pasteboard-createrecord-f.md) | 创建一条指定类型的数据内容条目，将数据内容封装为PasteDataRecord对象。调用此方法后，系统将根据MIME类型封装数据内容，返回可添加到PasteData中的条目对象。 参数mimeType长度不能超过1024字节，value类型需与mimeType对应（如mimeType为MIMETYPE_TEXT_PLAIN，则value类型必须是string），参数不能为空。 |
+| [createRecord](arkts-basicservices-pasteboard-createrecord-f.md) | 创建一条指定类型的数据内容条目，将数据内容封装为PasteDataRecord对象。调用此方法后，系统将根据MIME类型封装数据内容，返回可添加到PasteData中的条目对象。 参数mimeType长度不能超过1024字节，value类型需与mimeType对应（如mimeType为MIMETYPE_TEXT_PLAIN，则value类型必须是string），参数不能为空。  - 创建的条目通常需要通过[addRecord](arkts-basicservices-pasteboard-pastedata-i.md#addrecord)方法添加到 [PasteData](arkts-basicservices-pasteboard-pastedata-i.md)对象中才能生效。 - 典型使用流程：先通过[createData](arkts-basicservices-pasteboard-createdata-f.md)创建PasteData对象， 再使用createRecord创建条目，最后通过addRecord添加条目。 |
 | [createUriData](arkts-basicservices-pasteboard-createuridata-f.md) | 构建一个URI剪贴板内容对象。 |
 | [createUriRecord](arkts-basicservices-pasteboard-createurirecord-f.md) | 创建一条URI内容的条目。 |
 | [createWantData](arkts-basicservices-pasteboard-createwantdata-f.md) | 构建一个Want剪贴板内容对象。 |
@@ -79,7 +79,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [MAX_RECORD_NUM](arkts-basicservices-pasteboard-con.md#max_record_num) | API version 10之前，此常量值为512，表示单个PasteData中所能包含的最大条目数为512。当剪贴板内容中添加的条目达到数量上限512后，后续的添加操作无效。 |
+| [MAX_RECORD_NUM](arkts-basicservices-pasteboard-con.md#max_record_num) | API version 10之前，此常量值为512，表示单个PasteData中所能包含的最大条目数为512。当剪贴板内容中添加的条目达到数量上限512后，后续的添加操作无效。从API version 10开始，不再限制单个PasteData中所能包含的最大条目数。 单位: Numbers，该值必须是 [512, 512] 范围内的整数。 |
 | [MIMETYPE_PIXELMAP](arkts-basicservices-pasteboard-con.md#mimetype_pixelmap) | PixelMap内容的MIME类型，值为'pixelMap'。 |
 | [MIMETYPE_TEXT_HTML](arkts-basicservices-pasteboard-con.md#mimetype_text_html) | HTML内容的MIME类型，值为'text/html'。 |
 | [MIMETYPE_TEXT_PLAIN](arkts-basicservices-pasteboard-con.md#mimetype_text_plain) | 纯文本内容的MIME类型，值为'text/plain'。 |

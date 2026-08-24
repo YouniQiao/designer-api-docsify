@@ -1,8 +1,6 @@
 # VideoOptions
 
-Defines the video options.
-
-@interface VideoOptions
+Defines the video options.@interface VideoOptions
 
 **Since:** 23
 

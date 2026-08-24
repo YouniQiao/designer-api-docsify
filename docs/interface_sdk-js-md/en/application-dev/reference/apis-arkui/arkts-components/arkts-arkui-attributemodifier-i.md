@@ -1,8 +1,6 @@
 # AttributeModifier
 
-Defines the attribute modifier.
-
-@interface AttributeModifier&lt;T&gt;
+Defines the attribute modifier.@interface AttributeModifier&lt;T&gt;
 
 **Since:** 12
 

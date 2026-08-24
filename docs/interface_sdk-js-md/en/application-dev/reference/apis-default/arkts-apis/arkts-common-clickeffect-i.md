@@ -38,9 +38,7 @@ Set the click effect level.
 scale?: double
 ```
 
-Set scale number. This default scale is same as the scale of click effect level.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br> This parameter works based on the setting of ClickEffectLevel. <br> If level is set to ClickEffectLevel.LIGHT, the default value is 0.90. <br> If level is set to ClickEffectLevel.MIDDLE or ClickEffectLevel.HEAVY, the default value is 0.95. <br> If level is set to undefined or null (both of which evaluate to ClickEffectLevel.LIGHT), the default value is 0.90. <br> If scale is set to undefined or null, the default zoom ratio for the set level will be used. </p>
+Set scale number. This default scale is same as the scale of click effect level.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br> This parameter works based on the setting of ClickEffectLevel. <br> If level is set to ClickEffectLevel.LIGHT, the default value is 0.90. <br> If level is set to ClickEffectLevel.MIDDLE or ClickEffectLevel.HEAVY, the default value is 0.95. <br> If level is set to undefined or null (both of which evaluate to ClickEffectLevel.LIGHT), the default value is 0.90. <br> If scale is set to undefined or null, the default zoom ratio for the set level will be used. </p>
 
 **Type:** double
 

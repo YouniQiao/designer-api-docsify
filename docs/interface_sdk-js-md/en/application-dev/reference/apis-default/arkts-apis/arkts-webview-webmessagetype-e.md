@@ -1,8 +1,6 @@
 # WebMessageType
 
-Enum type supplied to [onMessageEventExt](arkts-webview-webmessageport-i.md#onmessageeventext) for indicating the type of web message.
-
-@enum {number}
+Enum type supplied to [onMessageEventExt](arkts-webview-webmessageport-i.md#onmessageeventext) for indicating the type of web message.@enum {number}
 
 **Since:** 23
 

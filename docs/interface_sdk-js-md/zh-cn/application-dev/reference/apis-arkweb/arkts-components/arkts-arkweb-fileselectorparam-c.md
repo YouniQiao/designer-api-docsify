@@ -1,12 +1,6 @@
 # FileSelectorParam
 
-FileSelectorParam是ArkWeb组件中的文件选择器参数类，用于获取Web页面中`&lt;input type="file"&gt;`触发文件选择请求时的相关参数信息，包括文件选择模式、文件过滤类型、MIME类型、建议文件名、默认起 始路径等，帮助开发者高效构建符合HTML规范的自定义文件选择器。
-
-当Web页面发起文件选择请求时，开发者通过FileSelectorParam获取前端传递的完整参数信息，据此构建与前端需求匹配的自定义文件选择器，确保文件选择的模式、类型过滤、命名等行为与HTML规范一致。
-
-在Web组件中需要自定义处理文件上传请求的场景下使用。注册`onShowFileSelector`回调以拦截文件选择请求；从回调事件的`fileSelector`属性获取FileSelectorParam实例；读取参数后构建对应的系统 文件选择器（如DocumentViewPicker、PhotoViewPicker等）；通过FileSelectorResult返回选择结果至Web组件。
-
-示例代码参考[onShowFileSelector](arkts-arkweb-web-attribute.md#onshowfileselector)。
+FileSelectorParam是ArkWeb组件中的文件选择器参数类，用于获取Web页面中`&lt;input type="file"&gt;`触发文件选择请求时的相关参数信息，包括文件选择模式、文件过滤类型、MIME类型、建议文件名、默认起 始路径等，帮助开发者高效构建符合HTML规范的自定义文件选择器。当Web页面发起文件选择请求时，开发者通过FileSelectorParam获取前端传递的完整参数信息，据此构建与前端需求匹配的自定义文件选择器，确保文件选择的模式、类型过滤、命名等行为与HTML规范一致。在Web组件中需要自定义处理文件上传请求的场景下使用。注册`onShowFileSelector`回调以拦截文件选择请求；从回调事件的`fileSelector`属性获取FileSelectorParam实例；读取参数后构建对应的系统 文件选择器（如DocumentViewPicker、PhotoViewPicker等）；通过FileSelectorResult返回选择结果至Web组件。示例代码参考[onShowFileSelector](arkts-arkweb-web-attribute.md#onshowfileselector)。
 
 **起始版本：** 9
 
@@ -17,11 +11,6 @@ FileSelectorParam是ArkWeb组件中的文件选择器参数类，用于获取Web
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## constructor

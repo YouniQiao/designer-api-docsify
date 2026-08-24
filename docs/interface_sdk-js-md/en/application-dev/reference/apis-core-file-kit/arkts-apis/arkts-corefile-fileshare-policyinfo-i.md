@@ -1,8 +1,6 @@
 # PolicyInfo
 
-Policy information to manager permissions on a URI.
-
-@interface PolicyInfo
+Policy information to manager permissions on a URI.@interface PolicyInfo
 
 **Since:** 23
 

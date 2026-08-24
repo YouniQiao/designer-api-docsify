@@ -36,7 +36,7 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt;&gt; | Returns the insight intent entity information. |
+| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | Returns the insight intent entity information. |
 
 **错误码：**
 
@@ -160,7 +160,7 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Record
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;&gt; | Returns the insight intent entity information. |
+| Promise&lt;Array&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;&gt; | Returns the insight intent entity information. |
 
 **错误码：**
 

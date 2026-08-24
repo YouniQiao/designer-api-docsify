@@ -1,8 +1,6 @@
 # MixedMode
 
-The Web's behavior to load from HTTP or HTTPS. Defaults to MixedMode.None.
-
-@enum { number }
+The Web's behavior to load from HTTP or HTTPS. Defaults to MixedMode.None.@enum { number }
 
 **起始版本：** 23
 

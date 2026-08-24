@@ -197,5 +197,5 @@ Get the type of the JavaScript code execution result.
 
 | 类型 | 说明 |
 | --- | --- |
-| [JsMessageType](arkts-webview-jsmessagetype-e.md) | Returns data of JsMessageType type |
+| [JsMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessagetype-e.md) | Returns data of JsMessageType type |
 

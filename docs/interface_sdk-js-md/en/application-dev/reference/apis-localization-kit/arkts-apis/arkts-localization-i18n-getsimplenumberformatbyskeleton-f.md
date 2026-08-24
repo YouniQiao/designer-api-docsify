@@ -26,7 +26,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons) . |
+| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons). |
 | locale | Intl.Locale | No | Locale** object. The default value is the current system locale. |
 
 **Return value:**
@@ -94,7 +94,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons) . |
+| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons). |
 | locale | intl.Locale | No | Locale** object. The default value is the current system locale. |
 
 **Return value:**

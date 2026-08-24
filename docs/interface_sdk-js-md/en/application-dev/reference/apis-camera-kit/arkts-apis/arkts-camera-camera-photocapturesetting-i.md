@@ -12,7 +12,6 @@ Describes the settings for taking an image.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## compressionQuality

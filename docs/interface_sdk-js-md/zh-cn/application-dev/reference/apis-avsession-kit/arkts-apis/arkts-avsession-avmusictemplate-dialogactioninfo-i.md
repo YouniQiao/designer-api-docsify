@@ -1,8 +1,6 @@
 # DialogActionInfo
 
-对话框动作信息的定义。
-
-@interface DialogActionInfo
+对话框动作信息的定义。@interface DialogActionInfo
 
 **起始版本：** 23
 

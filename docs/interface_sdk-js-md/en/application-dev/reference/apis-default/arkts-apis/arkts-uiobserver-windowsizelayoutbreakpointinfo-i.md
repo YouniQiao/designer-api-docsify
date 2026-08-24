@@ -1,8 +1,6 @@
 # WindowSizeLayoutBreakpointInfo
 
-Defines the window size layout breakpoint information. This interface provides the current breakpoint classification of the window's width and height based on the configured breakpoint thresholds.
-
-@interface WindowSizeLayoutBreakpointInfo
+Defines the window size layout breakpoint information. This interface provides the current breakpoint classification of the window's width and height based on the configured breakpoint thresholds.@interface WindowSizeLayoutBreakpointInfo
 
 **Since:** 24
 

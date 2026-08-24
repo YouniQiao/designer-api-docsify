@@ -8,6 +8,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @Component
+
 <!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -21,8 +23,7 @@ import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition
 ## options
 
 ```TypeScript
-@Require
-    readonly options: ArcButtonOptions
+readonly options: ArcButtonOptions
 ```
 
 定义ArcButton组件的文本、背景色、阴影等参数。
@@ -30,6 +31,8 @@ import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition
 **类型：** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Require
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

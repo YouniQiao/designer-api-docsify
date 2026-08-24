@@ -1,8 +1,6 @@
 # BorderStyle
 
-Border Style
-
-@enum { number }
+Border Style@enum { number }
 
 **Since:** 23
 

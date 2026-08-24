@@ -1,8 +1,6 @@
 # ParticleType
 
-Enumerates the particle types.
-
-@enum { string }
+Enumerates the particle types.@enum { string }
 
 **Since:** 10
 

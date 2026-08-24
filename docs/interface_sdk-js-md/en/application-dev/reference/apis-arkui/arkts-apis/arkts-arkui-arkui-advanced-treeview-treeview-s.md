@@ -1,11 +1,8 @@
 # TreeView
 
-The **TreeView** component represents a tree view used to display a hierarchical list of items. Each item can contain subitems, which may be expanded or collapsed.
+The **TreeView** component represents a tree view used to display a hierarchical list of items. Each item can contain subitems, which may be expanded or collapsed.This component is applicable in productivity applications, such as side navigation bars in notepad, email, and Gallery applications.
 
-This component is applicable in productivity applications, such as side navigation bars in notepad, email, and Gallery applications.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - If the **TreeView** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -15,6 +12,8 @@ This component is applicable in productivity applications, such as side navigati
 
 **Since:** 10
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct TreeView--><!--Device-unnamed-export declare struct TreeView-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,7 +22,6 @@ This component is applicable in productivity applications, such as side navigati
 
 ```TypeScript
 import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUI';
 ```
 
 ## treeController

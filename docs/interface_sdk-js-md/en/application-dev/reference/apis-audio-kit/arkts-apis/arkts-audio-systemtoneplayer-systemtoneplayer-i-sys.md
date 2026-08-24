@@ -373,9 +373,7 @@ systemTonePlayer.on('error', (err: BusinessError) => {
 on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 ```
 
-Subscribes to the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result.
-
-The object to listen for is an audio stream specified by **streamId**. If **streamId** is set to **0**, this API subscribes to the playback complete event of all audio streams of the player.
+Subscribes to the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result.The object to listen for is an audio stream specified by **streamId**. If **streamId** is set to **0**, this API subscribes to the playback complete event of all audio streams of the player.
 
 **Since:** 18
 
@@ -613,9 +611,7 @@ try {
 setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 ```
 
-Sets a haptics style of the ringtone.
-
-Before calling this API, call [getSupportedHapticsFeatures](#getsupportedhapticsfeatures) to obtain the supported haptics styles. The setting fails if the haptics style to set is not supported.
+Sets a haptics style of the ringtone.Before calling this API, call [getSupportedHapticsFeatures](#getsupportedhapticsfeatures) to obtain the supported haptics styles. The setting fails if the haptics style to set is not supported.
 
 **Since:** 23
 

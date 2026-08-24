@@ -41,11 +41,7 @@ constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 readonly lineSpacing: double
 ```
 
-文本行间距。
-
-取值范围：[0, +∞)
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+文本行间距。取值范围：0, +∞)单位：[vp
 
 **类型：** double
 

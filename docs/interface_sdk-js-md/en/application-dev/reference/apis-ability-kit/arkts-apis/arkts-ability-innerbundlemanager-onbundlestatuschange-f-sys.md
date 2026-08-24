@@ -15,8 +15,7 @@ function on(type: 'BundleStatusChange',
 
 Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [on](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_bundlechangedevent)
 > instead.
@@ -52,8 +51,7 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 
 Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [on](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_bundlechangedevent)
 > instead.

@@ -12,7 +12,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [IsolatedComponentAttribute(System API)](arkts-arkui-isolatedcomponentattribute-c-sys.md) | 仅支持width、height和backgroundColor通用属性。 |
+| [IsolatedComponentAttribute(System API)](arkts-arkui-isolatedcomponentattribute-c-sys.md) | 仅支持width、height和backgroundColor通用属性。不支持通用事件。事件经过坐标转换后异步传递给受限Worker线程处理。不支持线程之间的事件冒泡，线程之间的UI交互存在事件冲突现象。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -39,7 +39,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [IsolatedComponent(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponent) | IsolatedComponent用于支持在本页面内嵌入显示独立Abc（方舟字节码，.abc文件）提供的UI，展示的内容在受限Worker线程中运行。 |
+| [IsolatedComponent(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponent) | IsolatedComponent用于支持在本页面内嵌入显示独立Abc（方舟字节码，.abc文件）提供的UI，展示的内容在受限Worker线程中运行。通常用于有Abc热更新（可动态替换IsolatedComponent加载的Abc文件，无需通过重新安装应用的方式实现内容更新）诉求的模块化开发场景。 |
 | [IsolatedComponentInstance(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponentinstance) | 定义IsolatedComponent组件实例。 |
 <!--DelEnd-->
 

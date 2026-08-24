@@ -12,7 +12,6 @@ Represents the download state and progress information of historical version fil
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## errType

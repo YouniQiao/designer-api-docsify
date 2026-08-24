@@ -646,14 +646,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAlbum(name: string, callback: AsyncCallback<Album>): void
 ```
 
-创建相册。使用callback异步回调。
-
-待创建的相册名参数规格为：
-
-- 相册名字符串长度为1~255。 - 不允许出现的非法英文字符，包括：
-
-. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
-
+创建相册。使用callback异步回调。待创建的相册名参数规格为：  
+- 相册名字符串长度为1~255。 - 不允许出现的非法英文字符，包括：  
+. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - 相册名不允许重名。
 
 **起始版本：** 10
@@ -728,14 +723,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAlbum(name: string): Promise<Album>
 ```
 
-创建相册。使用Promise异步回调。
-
-待创建的相册名参数规格为：
-
-- 相册名字符串长度为1~255。 - 不允许出现的非法英文字符，包括：
-
-. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
-
+创建相册。使用Promise异步回调。待创建的相册名参数规格为：  
+- 相册名字符串长度为1~255。 - 不允许出现的非法英文字符，包括：  
+. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - 相册名不允许重名。
 
 **起始版本：** 10
@@ -785,15 +775,9 @@ createAlbum(name: string): Promise<Album>
 createAsset(displayName: string, callback: AsyncCallback<PhotoAsset>): void
 ```
 
-指定待创建的图片或者视频的文件名，创建图片或视频资源。使用callback异步回调。
-
-待创建的文件名参数规格为：
-
-- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。
-
-API18开始，非法字符包括： \ / : ? " &lt; &gt; |
-
-API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+指定待创建的图片或者视频的文件名，创建图片或视频资源。使用callback异步回调。待创建的文件名参数规格为：  
+- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。  
+API18开始，非法字符包括： \ / : * ? " &lt; &gt; |API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 23
 
@@ -962,15 +946,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(displayName: string): Promise<PhotoAsset>
 ```
 
-指定待创建的图片或者视频的文件名，创建图片或视频资源。使用Promise异步回调。
-
-待创建的文件名参数规格为：
-
-- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。
-
-API18开始，非法字符包括： \ / : ? " &lt; &gt; |
-
-API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+指定待创建的图片或者视频的文件名，创建图片或视频资源。使用Promise异步回调。待创建的文件名参数规格为：  
+- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。  
+API18开始，非法字符包括： \ / : * ? " &lt; &gt; |API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 23
 
@@ -1015,15 +993,9 @@ API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 createAsset(displayName: string, options: PhotoCreateOptions): Promise<PhotoAsset>
 ```
 
-指定待创建的图片或者视频的文件名和创建选项，创建图片或视频资源。使用Promise异步回调。
-
-待创建的文件名参数规格为：
-
-- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。
-
-API18开始，非法字符包括： \ / : ? " &lt; &gt; |
-
-API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+指定待创建的图片或者视频的文件名和创建选项，创建图片或视频资源。使用Promise异步回调。待创建的文件名参数规格为：  
+- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。  
+API18开始，非法字符包括： \ / : * ? " &lt; &gt; |API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 23
 
@@ -1069,15 +1041,9 @@ API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 createAsset(displayName: string, options: PhotoCreateOptions, callback: AsyncCallback<PhotoAsset>): void
 ```
 
-指定待创建的图片或者视频的文件名和创建选项，创建图片或视频资源。使用callback异步回调。
-
-待创建的文件名参数规格为：
-
-- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。
-
-API18开始，非法字符包括： \ / : ? " &lt; &gt; |
-
-API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+指定待创建的图片或者视频的文件名和创建选项，创建图片或视频资源。使用callback异步回调。待创建的文件名参数规格为：  
+- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。  
+API18开始，非法字符包括： \ / : * ? " &lt; &gt; |API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 23
 
@@ -2120,9 +2086,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getClonedAlbumUris(oldUris: Array<string>): Promise<Map<string, string>>
 ```
 
-通过克隆后的相册URI列表获取当前uri。使用Promise异步回调。
-
-为控制数据库表空间占用规模，当前每次克隆时都会自动将上次存储的克隆数据进行清除，所以该接口只保存最近一次克隆时用户新/旧设备uri的对应关系。
+通过克隆后的相册URI列表获取当前uri。使用Promise异步回调。为控制数据库表空间占用规模，当前每次克隆时都会自动将上次存储的克隆数据进行清除，所以该接口只保存最近一次克隆时用户新/旧设备uri的对应关系。
 
 **起始版本：** 26.0.0
 
@@ -2183,9 +2147,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getClonedAssetUris(oldUris: Array<string>): Promise<Map<string, string>>
 ```
 
-通过克隆后的资产URI列表获取当前uri。使用Promise异步回调。
-
-为控制数据库表空间占用规模，当前每次克隆时都会自动将上次存储的克隆数据进行清除，所以该接口只保存最近一次克隆时用户新/旧设备uri的对应关系。
+通过克隆后的资产URI列表获取当前uri。使用Promise异步回调。为控制数据库表空间占用规模，当前每次克隆时都会自动将上次存储的克隆数据进行清除，所以该接口只保存最近一次克隆时用户新/旧设备uri的对应关系。
 
 **起始版本：** 26.0.0
 
@@ -2303,8 +2265,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getDeepOptimizeSpace(): Promise<long>
 ```
 
-获取可以深度优化存储空间的大小，单位为字节（byte）。使用Promise异步回调。 <br> Unit:Byte{s}.
-
+获取可以深度优化存储空间的大小，单位为字节（byte）。使用Promise异步回调。<br> Unit:Byte{s}.  
 - 此接口耗时较长，建议先调用[canPerformDeepOptimizeSpace](#canperformdeepoptimizespace)确认当前系统状态是否允许执行。 - 仅在返回true时调用此接口。
 
 **起始版本：** 26.0.0
@@ -2755,9 +2716,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getPhotoAlbums(options?: FetchOptions):Promise<FetchResult<Album>>
 ```
 
-根据指定的选项获取系统、用户和来源相册。使用Promise异步回调。
-
-在获取相册之前，确保相册已存在。
+根据指定的选项获取系统、用户和来源相册。使用Promise异步回调。在获取相册之前，确保相册已存在。
 
 **起始版本：** 23
 
@@ -5799,9 +5758,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 startDeepOptimizeSpace(callback?: Callback<DeepOptimizeSpaceProgress>): Promise<void>
 ```
 
-开启深度优化存储空间。使用Promise异步回调。
-
-建议先调用[canPerformDeepOptimizeSpace](#canperformdeepoptimizespace)确认当前系统状态是否允许执行，仅在返回true时调用此接口。
+开启深度优化存储空间。使用Promise异步回调。建议先调用[canPerformDeepOptimizeSpace](#canperformdeepoptimizespace)确认当前系统状态是否允许执行，仅在返回true时调用此接口。
 
 **起始版本：** 26.0.0
 

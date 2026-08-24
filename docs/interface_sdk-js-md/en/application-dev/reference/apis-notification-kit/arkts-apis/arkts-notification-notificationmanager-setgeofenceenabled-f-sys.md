@@ -28,7 +28,7 @@ Sets the enabling state of geofencing. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether geofencing is enabled. The value **true** indicates that geofencing is enabled , and the value **false** indicates the opposite. |
+| enabled | boolean | Yes | Whether geofencing is enabled. The value **true** indicates that geofencing is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**
 

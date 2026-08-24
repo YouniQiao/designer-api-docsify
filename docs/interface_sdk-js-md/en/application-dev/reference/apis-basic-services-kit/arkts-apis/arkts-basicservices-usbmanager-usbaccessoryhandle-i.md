@@ -12,7 +12,6 @@ Describes the USB accessory handle.
 
 ```TypeScript
 import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## accessoryFd

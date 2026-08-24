@@ -46,9 +46,9 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [DistanceRank](arkts-multimodalawareness-spatialawareness-distancerank-e-sys.md) | 测距结果的距离挡位，不同的挡位对应不同的距离范围。 |
-| [PositionRelativeToDoor](arkts-multimodalawareness-spatialawareness-positionrelativetodoor-e-sys.md) | 门内外识别接口返回结果中表示门内或门外位置的枚举。 |
-| [ReportingMode](arkts-multimodalawareness-spatialawareness-reportingmode-e-sys.md) | 测距接口执行完成后结果的上报模式。 |
-| [TechnologyType](arkts-multimodalawareness-spatialawareness-technologytype-e-sys.md) | 提供输入信号的类型。接口根据输入信号类型，执行对应算法。 |
+| [DistanceRank](arkts-multimodalawareness-spatialawareness-distancerank-e-sys.md) | 测距结果的距离挡位，不同的挡位对应不同的距离范围。@enum { string } 表示测距距离类型 |
+| [PositionRelativeToDoor](arkts-multimodalawareness-spatialawareness-positionrelativetodoor-e-sys.md) | 门内外识别接口返回结果中表示门内或门外位置的枚举。@enum { int } 门内外识别结果的枚举 |
+| [ReportingMode](arkts-multimodalawareness-spatialawareness-reportingmode-e-sys.md) | 测距接口执行完成后结果的上报模式。@enum { int } 测距结果上报方式 |
+| [TechnologyType](arkts-multimodalawareness-spatialawareness-technologytype-e-sys.md) | 提供输入信号的类型。接口根据输入信号类型，执行对应算法。@enum { int } 测距技术类型 |
 <!--DelEnd-->
 

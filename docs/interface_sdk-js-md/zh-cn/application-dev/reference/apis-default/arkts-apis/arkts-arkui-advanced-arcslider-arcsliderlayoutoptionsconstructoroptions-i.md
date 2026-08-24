@@ -21,9 +21,7 @@ ArcSliderLayoutOptions的构造信息。
 position?: ArcSliderPosition
 ```
 
-弧形Slider的屏幕显示位置。
-
-默认值：ArcSliderPosition.RIGHT
+弧形Slider的屏幕显示位置。默认值：ArcSliderPosition.RIGHT
 
 **类型：** [ArcSliderPosition](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
 
@@ -43,9 +41,7 @@ position?: ArcSliderPosition
 reverse?: boolean
 ```
 
-设置弧形Slider取值范围是否反向。
-
-默认值：true。表示从下往上滑动。
+设置弧形Slider取值范围是否反向。默认值：true。表示从下往上滑动。
 
 **类型：** boolean
 

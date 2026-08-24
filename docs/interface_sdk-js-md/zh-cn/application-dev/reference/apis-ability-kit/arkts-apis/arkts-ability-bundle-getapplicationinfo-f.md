@@ -3,22 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleResourceManager } from '@kit.AbilityKit';
 import { bundle } from '@kit.AbilityKit';
-import { defaultAppManager } from '@kit.AbilityKit';
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { freeInstall } from '@kit.AbilityKit';
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { overlay } from '@kit.AbilityKit';
-import { shortcutManager } from '@kit.AbilityKit';
-import { skillManager } from '@kit.AbilityKit';
-import { appDomainVerify } from '@kit.AbilityKit';
-import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getApplicationInfo
@@ -28,9 +13,7 @@ function getApplicationInfo(bundleName: string,
     bundleFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-根据给定的Bundle名称获取指定用户下的ApplicationInfo，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+根据给定的Bundle名称获取指定用户下的ApplicationInfo，使用callback异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 
@@ -107,9 +90,7 @@ bundle.getApplicationInfo(bundleName, bundleFlags, (err, data) => {
 function getApplicationInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-根据给定的Bundle名称获取ApplicationInfo，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+根据给定的Bundle名称获取ApplicationInfo，使用callback异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 
@@ -140,9 +121,7 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, callback: A
 function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<ApplicationInfo>
 ```
 
-根据给定的Bundle名称获取ApplicationInfo。使用Promise异步回调。
-
-获取调用方自己的信息时不需要权限。
+根据给定的Bundle名称获取ApplicationInfo。使用Promise异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 

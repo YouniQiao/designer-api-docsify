@@ -1,8 +1,6 @@
 # Operation（系统接口）
 
-用户操作
-
-@enum { int }
+用户操作@enum { int }
 
 **起始版本：** 23
 

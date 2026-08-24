@@ -1,8 +1,6 @@
 # SurfaceParam (System API)
 
-Surface configuration parameters.
-
-@interface SurfaceParam
+Surface configuration parameters.@interface SurfaceParam
 
 **Since:** 23
 

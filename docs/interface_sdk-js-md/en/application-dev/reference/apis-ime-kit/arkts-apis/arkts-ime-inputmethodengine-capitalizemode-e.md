@@ -1,6 +1,6 @@
 # CapitalizeMode
 
-@brief Enumerates the modes of capitalizing the first letter of a text.<br> <br> | Name| Value| Description| | -------- | -- | -------- | | NONE | 0 | The first letter is not capitalized.| | SENTENCES | 1 | The first letter of each sentence is capitalized.| | WORDS | 2 | The first letter of each word is capitalized.| | CHARACTERS | 3 | All letters are capitalized.|
+Enumerates the modes of capitalizing the first letter of a text.<br> <br> | Name| Value| Description| | -------- | -- | -------- | | NONE | 0 | The first letter is not capitalized.| | SENTENCES | 1 | The first letter of each sentence is capitalized.| | WORDS | 2 | The first letter of each word is capitalized.| | CHARACTERS | 3 | All letters are capitalized.|
 
 **Since:** 23
 
@@ -14,7 +14,7 @@
 NONE = 0
 ```
 
-@brief Capitalize nothing.
+Capitalize nothing.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ NONE = 0
 SENTENCES
 ```
 
-@brief Capitalize the first letter of each sentence.
+Capitalize the first letter of each sentence.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ SENTENCES
 WORDS
 ```
 
-@brief Capitalize the first letter of each word.
+Capitalize the first letter of each word.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ WORDS
 CHARACTERS
 ```
 
-@brief Capitalize each letter.
+Capitalize each letter.
 
 **Since:** 23
 

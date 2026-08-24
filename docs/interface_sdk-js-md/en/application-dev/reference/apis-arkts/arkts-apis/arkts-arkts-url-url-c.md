@@ -429,7 +429,7 @@ readonly searchParams: URLSearchParams
 
 Gets the URLSearchParams object that represents the URL query parameter. This property is read-only, but URLSearchParams provides an object that can be used to change the URL instance. To replace the entire query parameter for a URL, use url.searchsetter.
 
-**Type:** [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md)
+**Type:** URLSearchParams
 
 **Since:** 7
 

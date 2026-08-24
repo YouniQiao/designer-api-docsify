@@ -16,7 +16,6 @@ Provides APIs for managing the **Authenticator** object.
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## execute

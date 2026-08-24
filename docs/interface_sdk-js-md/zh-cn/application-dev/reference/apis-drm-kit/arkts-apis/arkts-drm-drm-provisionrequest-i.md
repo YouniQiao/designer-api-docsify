@@ -38,7 +38,7 @@ data: Uint8Array
 defaultURL: string
 ```
 
-Provision服务（设备证书请求服务）URL。
+Provision服务（设备证书请求服务）URL。需符合URL格式规范，建议使用HTTPS协议。
 
 **类型：** string
 

@@ -16,11 +16,7 @@
 observeProps?: boolean
 ```
 
-是否开启属性观察。
-
-true：开启属性观察；false：不开启属性观察。
-
-默认值：false。
+是否开启属性观察。true：开启属性观察；false：不开启属性观察。默认值：false。
 
 **类型：** boolean
 

@@ -43,9 +43,7 @@ getConfigInRouteMap(): RouteMapConfig | undefined
 mode?: NavDestinationMode
 ```
 
-当前NavDestination的类型。 默认值：NavDestinationMode.Standard。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+当前NavDestination的类型。 默认值：NavDestinationMode.Standard。从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** [NavDestinationMode](arkts-arkui-navdestinationmode-e.md)
 

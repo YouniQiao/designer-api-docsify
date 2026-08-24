@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { systemTime } from '@kit.BasicServicesKit';
-import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## setTimezone
@@ -31,7 +30,7 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timezone | string | Yes | System time zone to set. For details, see Supported System Time Zones . |
+| timezone | string | Yes | System time zone to set. For details, see Supported System Time Zones. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -99,7 +98,7 @@ Sets the system time zone. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timezone | string | Yes | System time zone to set. For details, see Supported System Time Zones . |
+| timezone | string | Yes | System time zone to set. For details, see Supported System Time Zones. |
 
 **Return value:**
 

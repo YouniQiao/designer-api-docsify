@@ -1,8 +1,6 @@
 # VideoPlayerState
 
-VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH
-
-@enum { int } VideoPlayerState
+VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH@enum { int } VideoPlayerState
 
 **Since:** 26.0.0
 

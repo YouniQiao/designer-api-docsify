@@ -14,8 +14,7 @@ function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>)
 
 Reports the network availability to the network management module. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is used by the browser to connect to the portal network. After the network authentication is successful,
 > the browser reports the network connection success to the network management module. The network management
 > module then triggers network detection and updates the network status.
@@ -76,8 +75,7 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function reportNetConnected(netHandle: NetHandle): Promise<void>
 ```
 
-Reports that the network is available to the network management module. This API uses a promise to return the result.
-
+Reports that the network is available to the network management module. This API uses a promise to return the result.  
 **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8

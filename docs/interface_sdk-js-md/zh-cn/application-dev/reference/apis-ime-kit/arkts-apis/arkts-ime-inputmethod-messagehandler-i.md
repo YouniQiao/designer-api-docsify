@@ -1,6 +1,6 @@
 # MessageHandler
 
-@brief 自定义通信对象。 <br> <br>   
+自定义通信对象。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -27,11 +27,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## onMessage
@@ -40,7 +35,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-@brief 接收输入法应用发送的自定义数据回调函数。 <br> <br>   
+接收输入法应用发送的自定义数据回调函数。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -86,7 +81,7 @@ inputMethodController.recvMessage(messageHandler);
 onTerminated(): void
 ```
 
-@brief 监听对象终止回调函数。 <br> <br>   
+监听对象终止回调函数。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -125,7 +120,7 @@ inputMethodController.recvMessage(messageHandler);
 onMessage: OnMessageCallback
 ```
 
-@brief 接收输入法应用发送的自定义数据回调函数。 <br> <br>   
+接收输入法应用发送的自定义数据回调函数。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -150,7 +145,7 @@ onMessage: OnMessageCallback
 onTerminated: Callback<void>
 ```
 
-@brief 监听对象终止回调函数。 <br> <br>   
+监听对象终止回调函数。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br

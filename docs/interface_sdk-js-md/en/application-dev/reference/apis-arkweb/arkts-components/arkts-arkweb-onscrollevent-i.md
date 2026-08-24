@@ -11,11 +11,6 @@ Defines the callback information triggered when the scrollbar scrolls to a speci
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## xOffset
@@ -24,9 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 xOffset: number
 ```
 
-Position of the scrollbar on the x-axis relative to the leftmost of the web page.
-
-Unit: vp.
+Position of the scrollbar on the x-axis relative to the leftmost of the web page.Unit: vp.
 
 **Type:** number
 
@@ -44,9 +37,7 @@ Unit: vp.
 yOffset: number
 ```
 
-Position of the scrollbar on the y-axis relative to the top of the web page.
-
-Unit: vp.
+Position of the scrollbar on the y-axis relative to the top of the web page.Unit: vp.
 
 **Type:** number
 

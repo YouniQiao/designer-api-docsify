@@ -14,7 +14,6 @@ Provides configuration options for capsule-style segmented buttons. Inherits fro
 
 ```TypeScript
 import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from '@kit.ArkUI';
-import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUI';
 ```
 
 ## type
@@ -23,12 +22,9 @@ import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesCha
 type: "capsule"
 ```
 
-Type of the **SegmentButton** component.
-
+Type of the **SegmentButton** component.  
 **NOTE：**
-
-**"tab"**: tab-style segmented buttons, designed for page or content section switching.
-
+**"tab"**: tab-style segmented buttons, designed for page or content section switching.  
 **"capsule"**: capsule-style segmented buttons, suitable for single or multiple selection scenarios.
 
 **Type:** "capsule"

@@ -65,9 +65,7 @@ function copyDir(src: string, dest: string, mode?: int): Promise<void>
 function copyDir(src: string, dest: string, callback: AsyncCallback<void>): void
 ```
 
-复制源目录及其内容至目标路径下。使用callback异步回调。
-
-如果目标目录下有与源目录名冲突的目录，且冲突目录下有同名文件，则抛出异常。源目录下未冲突的文件全部拷贝至目标目录下，目标目录下未冲突文件将继续保留。
+复制源目录及其内容至目标路径下。使用callback异步回调。如果目标目录下有与源目录名冲突的目录，且冲突目录下有同名文件，则抛出异常。源目录下未冲突的文件全部拷贝至目标目录下，目标目录下未冲突文件将继续保留。
 
 **起始版本：** 23
 

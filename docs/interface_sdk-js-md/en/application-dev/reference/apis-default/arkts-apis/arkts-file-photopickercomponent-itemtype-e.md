@@ -1,8 +1,6 @@
 # ItemType
 
-ItemType. include CAMERA and THUMBNAIL
-
-@enum { int } ItemType
+ItemType. include CAMERA and THUMBNAIL@enum { int } ItemType
 
 **Since:** 26.0.0
 

@@ -1,8 +1,6 @@
 # ShowDialogOptions
 
-Defines the option of show dialog.
-
-@interface ShowDialogOptions
+Defines the option of show dialog.@interface ShowDialogOptions
 
 **Since:** 8
 
@@ -18,7 +16,6 @@ Defines the option of show dialog.
 
 ```TypeScript
 import { prompt } from '@kit.ArkUI';
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## buttons

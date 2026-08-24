@@ -258,7 +258,7 @@ strokeWidth?: LengthMetrics | double
 
 The stroke width of the text.
 
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| double
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| double
 
 **Since:** 23
 

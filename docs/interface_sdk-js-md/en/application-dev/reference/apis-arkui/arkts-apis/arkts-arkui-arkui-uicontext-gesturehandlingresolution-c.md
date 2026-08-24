@@ -117,10 +117,8 @@ struct Index {
 isConsumed: boolean
 ```
 
-Whether to consume the current smart gesture.
-
-**true**: The smart gesture is consumed. If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.
-
+Whether to consume the current smart gesture.  
+**true**: The smart gesture is consumed. If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.  
 **false**: The smart gesture is not consumed, and the system treats it as unhandled.
 
 **Type:** boolean
@@ -141,11 +139,7 @@ Whether to consume the current smart gesture.
 selectedProposal?: BaseGestureHandlingProposal
 ```
 
-The smart gesture handling behavior specified by the user.
-
-When **isConsumed** is **true**: If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.
-
-When **isConsumed** is **false**, the **selectedProposal** setting does not take effect.
+The smart gesture handling behavior specified by the user.When **isConsumed** is **true**: If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.When **isConsumed** is **false**, the **selectedProposal** setting does not take effect.
 
 **Type:** [BaseGestureHandlingProposal](../../apis-default/arkts-apis/arkts-arkui-uicontext-basegesturehandlingproposal-c.md)
 

@@ -1,8 +1,6 @@
 # EdgeColors
 
-Defines the border color property.
-
-@interface EdgeColors
+Defines the border color property.@interface EdgeColors
 
 **Since:** 23
 

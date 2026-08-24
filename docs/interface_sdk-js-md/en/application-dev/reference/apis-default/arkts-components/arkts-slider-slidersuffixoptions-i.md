@@ -1,8 +1,6 @@
 # SliderSuffixOptions
 
-Options used for customizing the suffix part of the slider. It extends the SliderCustomContentOptions to inherit accessibility customization options.
-
-@extends SliderCustomContentOptions @interface SliderSuffixOptions
+Options used for customizing the suffix part of the slider. It extends the SliderCustomContentOptions to inherit accessibility customization options.@extends SliderCustomContentOptions @interface SliderSuffixOptions
 
 **Inheritance/Implementation:** SliderSuffixOptions extends [SliderCustomContentOptions](arkts-slider-slidercustomcontentoptions-i.md)
 

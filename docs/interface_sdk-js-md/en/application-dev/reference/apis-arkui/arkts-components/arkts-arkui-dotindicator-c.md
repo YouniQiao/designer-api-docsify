@@ -39,7 +39,7 @@ Sets the color of the dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Color of the dot-style navigation indicator.<br>Default value: **'#1A182431'** ( light gray) |
+| value | ResourceColor | Yes | Color of the dot-style navigation indicator.<br>Default value: **'#1A182431'** (light gray) |
 
 **Return value:**
 
@@ -55,13 +55,11 @@ constructor()
 
 A constructor used to create a **DotIndicator** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
 > distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
 > The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and
-> **selectedItemHeight**.
-> 
+> **selectedItemHeight**.&gt;
 > - If there are too many pages and dot-style indicators exceed the page, you are advised to use the
 > **maxDisplayCount** parameter to set the number of dots to be displayed.
 
@@ -291,7 +289,7 @@ Sets the height of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.&lt; br&gt;Default value: **6**<br>Unit: vp<br>Value range: (0, +∞) |
+| value | Length | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.<br>Default value: **6**<br>Unit: vp<br>Value range: (0, +∞) |
 
 **Return value:**
 
@@ -355,7 +353,7 @@ Sets the spacing between dot-style navigation indicators of the **Swiper** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | LengthMetrics | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.<br>Default value: **10** for PCs and 2-in-1 devices and **8** for other devices<br>Unit: vp&lt; br&gt;Value range: [0, +∞) |
+| space | LengthMetrics | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.<br>Default value: **10** for PCs and 2-in-1 devices and **8** for other devices<br>Unit: vp<br>Value range: [0, +∞) |
 
 **Return value:**
 

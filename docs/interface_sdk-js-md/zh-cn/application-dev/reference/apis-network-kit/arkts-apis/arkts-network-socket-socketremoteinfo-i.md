@@ -36,10 +36,8 @@ address: string
 family: 'IPv4' | 'IPv6'
 ```
 
-网络协议类型，可选类型：
-
-- IPv4 - IPv6
-
+网络协议类型，可选类型：  
+- IPv4 - IPv6  
 默认为IPv4。
 
 **类型：** 'IPv4' \| 'IPv6'

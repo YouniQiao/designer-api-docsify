@@ -28,7 +28,7 @@ Obtains the Calendar object for the specified locale and calendar type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example, zh-Hans-CN. |
-| type | string | No | Calendar. The value can be: "buddhist", "chinese", "coptic", "ethiopic", "hebrew", "gregory", "indian", "islamic_civil", "islamic_tbla", "islamic_umalqura", "japanese", or "persian". The default value is the default calendar of the locale. For details about the meanings and application scenarios of different values, see Calendar Setting. |
+| type | string | No | Calendar. The value can be: "buddhist", "chinese", "coptic", "ethiopic","hebrew", "gregory", "indian", "islamic_civil", "islamic_tbla","islamic_umalqura", "japanese", or "persian". The default value is the default calendar of the locale. For details about the meanings and application scenarios of different values, see Calendar Setting. |
 
 **Return value:**
 

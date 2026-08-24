@@ -12,18 +12,13 @@ import { systemManager } from '@kit.MDMKit';
 function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: boolean, accountId: number): void
 ```
 
-Sets whether local installation of enterprise applications is supported for a specified user. After the policy of supporting local enterprise application installation is delivered to a PC/2-in-1 enterprise device that has the local installation capability, the user can double-click an enterprise application installation package on the desktop or in the Files application to install it.
+Sets whether local installation of enterprise applications is supported for a specified user. After the policy of supporting local enterprise application installation is delivered to a PC/2-in-1 enterprise device that has the local installation capability, the user can double-click an enterprise application installation package on the desktop or in the Files application to install it.Only enterprise applications signed with the **enterprise_normal** or **enterprise_mdm** signature type are supported.
 
-Only enterprise applications signed with the **enterprise_normal** or **enterprise_mdm** signature type are supported.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > A PC/2-in-1 enterprise device supports local installation of enterprise applications for the current user if any
-> of the following conditions is met:
-> 
+> of the following conditions is met:&gt;
 > 1. The offline installer has been enabled by calling
-> [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md).
-> 
+> [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md).&gt;
 > 2. Local installation of enterprise applications is enabled for the current user by calling this API.
 
 **Since:** 24

@@ -16,6 +16,8 @@ Defines the Image component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Image(    src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,    imageAIOptions?: ImageAIOptions): ImageAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Image(    src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,    imageAIOptions?: ImageAIOptions): ImageAttribute-End-->
@@ -52,6 +54,8 @@ Defines the Image component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +94,8 @@ Defines the Image component.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Image(    src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,    reloadKey?: string): ImageAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Image(    src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,    reloadKey?: string): ImageAttribute-End-->
@@ -122,6 +128,8 @@ Defines the Image component. It requires call setImageOptions at start of the co
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ToggleModifier](arkts-togglemodifier-c.md) | Defines Toggle Modifier |
+| [ToggleModifier](arkts-togglemodifier-c.md) | Defines Toggle Modifier@implements { ToggleAttribute, AttributeModifier&lt;ToggleAttribute&gt; } |
 

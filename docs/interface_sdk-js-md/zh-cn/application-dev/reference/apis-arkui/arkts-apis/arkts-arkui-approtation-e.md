@@ -1,8 +1,6 @@
 # AppRotation
 
-Enumerates the app rotation.
-
-@enum { number }
+Enumerates the app rotation.@enum { number }
 
 **起始版本：** 12
 

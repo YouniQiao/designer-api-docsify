@@ -13,8 +13,7 @@ function moveDir(src: string, dest: string, mode?: int): Promise<void>
 
 Moves the source directory and its content to the destination path. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in a distributed directory.
 
 **Since:** 23
@@ -70,12 +69,9 @@ Moves the source directory and its content to the destination path. This API use
 function moveDir(src: string, dest: string, callback: AsyncCallback<void>): void
 ```
 
-Moves the source directory and its content to the destination path. This API uses an asynchronous callback to return the result.
+Moves the source directory and its content to the destination path. This API uses an asynchronous callback to return the result.An exception will be thrown if a directory conflict occurs, that is, the destination directory contains a directory with the same name as the source directory.
 
-An exception will be thrown if a directory conflict occurs, that is, the destination directory contains a directory with the same name as the source directory.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in a distributed directory.
 
 **Since:** 23
@@ -126,8 +122,7 @@ function moveDir(src: string, dest: string, mode: int, callback: AsyncCallback<v
 
 Moves the source directory and its content to the destination path. You can set the conflict handling mode. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in a distributed directory.
 
 **Since:** 23

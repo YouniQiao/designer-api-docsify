@@ -1,8 +1,6 @@
 # RenderContext
 
-Defines the context of all rendering resources. Multiple scenes created within the same render context can share rendering resources.
-
-@interface RenderContext
+Defines the context of all rendering resources. Multiple scenes created within the same render context can share rendering resources.@interface RenderContext
 
 **Since:** 23
 

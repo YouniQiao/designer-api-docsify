@@ -14,8 +14,7 @@ function getAllLauncherAbilityInfos(userId: number, callback: AsyncCallback<Arra
 
 Obtains the information about all launcher abilities. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md)
 > instead.
@@ -50,8 +49,7 @@ function getAllLauncherAbilityInfos(userId: number): Promise<Array<LauncherAbili
 
 Obtains the information about all launcher abilities. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md)
 > instead.

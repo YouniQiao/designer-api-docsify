@@ -1,8 +1,6 @@
 # GuideLinePosition
 
-guideLine位置参数，用于定义guideLine的位置。
-
-@interface GuideLinePosition
+guideLine位置参数，用于定义guideLine的位置。@interface GuideLinePosition
 
 **起始版本：** 23
 

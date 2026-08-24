@@ -16,11 +16,7 @@ DragEvent object description
 enableInternalDropAnimation(configuration: string): void
 ```
 
-Enable the internal drop animation, which is only avaiable for system applications.
-
-The animations' configuration need to be provided through the input paramerter, and it is a string in json format.
-
-This method can only be called in onDrop, and please do not use custom drop animation after this method, as it will reset the calling result, and use custom drop animation insteadly.
+Enable the internal drop animation, which is only avaiable for system applications.The animations' configuration need to be provided through the input paramerter, and it is a string in json format.This method can only be called in onDrop, and please do not use custom drop animation after this method, as it will reset the calling result, and use custom drop animation insteadly.
 
 **起始版本：** 26.0.0
 
@@ -54,7 +50,9 @@ This method can only be called in onDrop, and please do not use custom drop anim
 executeFollowHandMorphDropAnimation(onAnimationFinished: VoidCallback, animationOption?: string): void
 ```
 
-Setup one follow-hand morph drop animation execution callback, which will be triggered by system after the drag framework animation ends. [Note]: 1. This method is effective only when dragAnimationType is FOLLOW_HAND_MORPH. 2. Do not implement animation no-related logic in the callback.
+Setup one follow-hand morph drop animation execution callback, which will be triggered by system after the drag framework animation ends. [Note]:
+1. This method is effective only when dragAnimationType is FOLLOW_HAND_MORPH.
+2. Do not implement animation no-related logic in the callback.
 
 **起始版本：** 26.0.0
 

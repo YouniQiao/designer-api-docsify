@@ -23,8 +23,7 @@ childrenMainSize(value: ChildrenMainSize)
 
 设置ListItemGroup组件的子组件在主轴方向的大小信息。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 当List组件的子组件包含ListItemGroup时，必须同时给List组件和每个ListItemGroup组件设置childrenMainSize属性。ListItemGroup通过该属性提供其子组件在主轴方向的大小信
 > 息，用于配合List组件的childrenMainSize属性正常生效。
 
@@ -52,11 +51,7 @@ divider(
   )
 ```
 
-设置ListItem分割线样式，默认无分割线。
-
-strokeWidth，startMargin和endMargin不支持设置百分比。
-
-ListItem设置多态样式时，被按压的子组件上下的分割线不绘制。
+设置ListItem分割线样式，默认无分割线。strokeWidth，startMargin和endMargin不支持设置百分比。ListItem设置多态样式时，被按压的子组件上下的分割线不绘制。
 
 **起始版本：** 9
 

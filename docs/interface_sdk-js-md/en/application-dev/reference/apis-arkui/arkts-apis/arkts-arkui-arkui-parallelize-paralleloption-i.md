@@ -1,8 +1,6 @@
 # ParallelOption
 
-Describe the options for the ParallelizeUI.
-
-@interface ParallelOption
+Describe the options for the ParallelizeUI.@interface ParallelOption
 
 **Since:** 23
 

@@ -50,9 +50,7 @@ Starts the switching animation before loading the content of the target page. Th
 NO_ANIMATION = 2
 ```
 
-Disables the default switching animation. Note that this mode is ineffective when the **changeIndex** API of **TabsController** is used to switch content.
-
-To disable the animation under this scenario, set **animationDuration** to **0**.
+Disables the default switching animation. Note that this mode is ineffective when the **changeIndex** API of **TabsController** is used to switch content.To disable the animation under this scenario, set **animationDuration** to **0**.
 
 **Since:** 12
 

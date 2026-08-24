@@ -23,9 +23,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [getInspectorByKey](arkts-inspector-getinspectorbykey-f.md) | 获取指定id组件的所有属性，不包括子组件信息。 |
-| [getInspectorTree](arkts-inspector-getinspectortree-f.md) | 获取组件树及组件属性。 |
-| [sendEventByKey](arkts-inspector-sendeventbykey-f.md) | 给指定id的组件发送事件。 |
+| [getInspectorByKey](arkts-inspector-getinspectorbykey-f.md) | 获取指定id组件的所有属性，不包括子组件信息。此接口仅用于对应用的测试，使用时建议等应用启动且布局完成后再调用。由于耗时长，不建议测试之外的场景使用。 |
+| [getInspectorTree](arkts-inspector-getinspectortree-f.md) | 获取组件树及组件属性。此接口仅用于对应用的测试。由于耗时长，不建议测试之外的场景使用。 |
+| [sendEventByKey](arkts-inspector-sendeventbykey-f.md) | 给指定id的组件发送事件。此接口仅用于对应用的测试。由于耗时长，不建议测试之外的场景使用。 |
 
 ### 接口
 

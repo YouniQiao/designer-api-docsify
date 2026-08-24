@@ -1,6 +1,6 @@
 # InputMethodController
 
-@brief In the following API examples, you must first use [getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain an **InputMethodController** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain an **InputMethodController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## hideSoftKeyboard
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 hideSoftKeyboard(displayId: long): Promise<void>
 ```
 
-@brief Hides the soft keyboard on a specified screen. This API uses a promise to return the result. <br> <br>   
+Hides the soft keyboard on a specified screen. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -106,7 +101,7 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 showSoftKeyboard(displayId: long): Promise<void>
 ```
 
-@brief Shows the soft keyboard on a specified screen. This API uses a promise to return the result. <br> <br>   
+Shows the soft keyboard on a specified screen. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br

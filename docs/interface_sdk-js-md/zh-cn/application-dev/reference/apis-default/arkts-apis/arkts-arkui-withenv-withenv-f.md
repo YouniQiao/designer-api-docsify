@@ -20,6 +20,8 @@ WithEnv组件用于为子组件树设置局部环境变量作用域。开发者�
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function WithEnv(    content_?: CustomBuilder,): WithEnvAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function WithEnv(    content_?: CustomBuilder,): WithEnvAttribute-End-->

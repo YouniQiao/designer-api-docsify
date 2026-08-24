@@ -324,7 +324,7 @@ data: Record<string, ArrayBuffer>
 
 自定义数据内容。对此属性的修改无效。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, ArrayBuffer&gt;
+**类型：** Record&lt;string, ArrayBuffer&gt;
 
 **起始版本：** 23
 

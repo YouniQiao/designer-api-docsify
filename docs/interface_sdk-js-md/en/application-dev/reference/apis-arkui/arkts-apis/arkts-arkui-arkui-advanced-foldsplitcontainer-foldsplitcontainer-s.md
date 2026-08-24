@@ -1,9 +1,8 @@
 # FoldSplitContainer
 
-*FoldSplitContainer** is a layout container designed to manage regions for two-panel and three-panel arrangements on a foldable device across various states, including the expanded state, the semi-folded state, and the folded state.
+**FoldSplitContainer** is a layout container designed to manage regions for two-panel and three-panel arrangements on a foldable device across various states, including the expanded state, the semi-folded state, and the folded state.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > By default, a two-panel layout is used when the window width is less than or equal to 600 vp.
 > When the window width exceeds 600 vp, an extended area is supported alongside the top-bottom split layout.
 > A semi-folded state layout can be triggered when the window width is greater than 600 vp and the device
@@ -12,6 +11,8 @@
 > be configured not to display in the semi-folded state.
 
 **Since:** 12
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct FoldSplitContainer--><!--Device-unnamed-export declare struct FoldSplitContainer-End-->
 
@@ -26,8 +27,7 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 ## animationOptions
 
 ```TypeScript
-@Prop
-    animationOptions?: AnimateParam | null
+animationOptions?: AnimateParam | null
 ```
 
 Animation settings. The value **null** indicates that the animation is disabled.
@@ -35,6 +35,8 @@ Animation settings. The value **null** indicates that the animation is disabled.
 **Type:** [AnimateParam](../../apis-default/arkts-apis/arkts-common-animateparam-i.md) \| null
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +49,7 @@ Animation settings. The value **null** indicates that the animation is disabled.
 ## expandedLayoutOptions
 
 ```TypeScript
-@Prop
-    expandedLayoutOptions: ExpandedRegionLayoutOptions
+expandedLayoutOptions: ExpandedRegionLayoutOptions
 ```
 
 Layout information for the expanded state.
@@ -56,6 +57,8 @@ Layout information for the expanded state.
 **Type:** [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +71,7 @@ Layout information for the expanded state.
 ## extra
 
 ```TypeScript
-@BuilderParam
-    extra?: Callback<void>
+extra?: Callback<void>
 ```
 
 Callback function for the extra region. If this parameter is not provided, there is no corresponding region.
@@ -77,6 +79,8 @@ Callback function for the extra region. If this parameter is not provided, there
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,8 +93,7 @@ Callback function for the extra region. If this parameter is not provided, there
 ## foldedLayoutOptions
 
 ```TypeScript
-@Prop
-    foldedLayoutOptions: FoldedRegionLayoutOptions
+foldedLayoutOptions: FoldedRegionLayoutOptions
 ```
 
 Layout information for the folded state.
@@ -98,6 +101,8 @@ Layout information for the folded state.
 **Type:** [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,8 +115,7 @@ Layout information for the folded state.
 ## hoverModeLayoutOptions
 
 ```TypeScript
-@Prop
-    hoverModeLayoutOptions: HoverModeRegionLayoutOptions
+hoverModeLayoutOptions: HoverModeRegionLayoutOptions
 ```
 
 Layout information for the semi-folded state.
@@ -119,6 +123,8 @@ Layout information for the semi-folded state.
 **Type:** [HoverModeRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,8 +157,7 @@ Callback function triggered when the foldable device enters or exits the semi-fo
 ## primary
 
 ```TypeScript
-@BuilderParam
-    primary: Callback<void>
+primary: Callback<void>
 ```
 
 Callback function for the primary region.
@@ -160,6 +165,8 @@ Callback function for the primary region.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,8 +179,7 @@ Callback function for the primary region.
 ## secondary
 
 ```TypeScript
-@BuilderParam
-    secondary: Callback<void>
+secondary: Callback<void>
 ```
 
 Callback function for the extra region.
@@ -181,6 +187,8 @@ Callback function for the extra region.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

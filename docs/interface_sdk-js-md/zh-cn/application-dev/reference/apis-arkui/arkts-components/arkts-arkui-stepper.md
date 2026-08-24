@@ -1,10 +1,8 @@
 # Stepper
 
 步骤导航器组件，适用于引导用户按照步骤完成任务的导航场景。
-
 > **说明：**
-
-> - 从API version 8开始支持，从API version 22开始废弃，建议使用Swiper替代。详细示例请参考 > [示例2](../../../reference/apis-arkui/arkui-ts/ts-basic-components-stepper.md#示例2使用swiper替代stepper)。
+> - 从API version 8开始支持，从API version 22开始废弃，建议使用Swiper替代。详细示例请参考> 示例2。
 
 ## 子组件
 

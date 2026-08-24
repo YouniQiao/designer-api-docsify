@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## deleteKeyItem
@@ -166,8 +165,7 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 删除密钥。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 删除[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9

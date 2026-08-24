@@ -1,8 +1,6 @@
 # @ohos.telephony.call
 
-该模块提供呼叫管理功能，包括拨打电话、跳转到拨号界面、获取通话状态、格式化电话号码等。
-
-如需订阅通话状态请使用 [`observer.on('callStateChange')`](arkts-telephony-observer-onnetworkstatechange-f.md) 。
+该模块提供呼叫管理功能，包括拨打电话、跳转到拨号界面、获取通话状态、格式化电话号码等。如需订阅通话状态请使用 [`observer.on('callStateChange')`](arkts-telephony-observer-onnetworkstatechange-f.md) 。
 
 **起始版本：** 23
 
@@ -25,11 +23,11 @@ import { call } from '@kit.TelephonyKit';
 | [dial](arkts-telephony-call-dial-f.md) | 拨打电话，可设置通话参数。使用callback异步回调。 |
 | [dial](arkts-telephony-call-dial-f.md) | 拨打电话，可设置通话参数。使用Promise异步回调。 |
 | [dial](arkts-telephony-call-dial-f.md) | 拨打电话。使用callback异步回调。 |
-| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | 格式化电话号码，可设置格式化参数。使用callback异步回调。 |
-| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | 格式化电话号码，可设置格式化参数。使用Promise异步回调。 |
-| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | 格式化电话号码。使用callback异步回调。 |
-| [formatPhoneNumberToE164](arkts-telephony-call-formatphonenumbertoe164-f.md) | 将电话号码格式化为E.164表示形式，使用callback异步回调。 |
-| [formatPhoneNumberToE164](arkts-telephony-call-formatphonenumbertoe164-f.md) | 将电话号码格式化为E.164表示形式，使用Promise异步回调。 |
+| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | 格式化电话号码，可设置格式化参数。使用callback异步回调。电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。 |
+| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | 格式化电话号码，可设置格式化参数。使用Promise异步回调。电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。 |
+| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | 格式化电话号码。使用callback异步回调。电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。 |
+| [formatPhoneNumberToE164](arkts-telephony-call-formatphonenumbertoe164-f.md) | 将电话号码格式化为E.164表示形式，使用callback异步回调。待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。 |
+| [formatPhoneNumberToE164](arkts-telephony-call-formatphonenumbertoe164-f.md) | 将电话号码格式化为E.164表示形式，使用Promise异步回调。待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。支持所有国家码。 |
 | [getCallState](arkts-telephony-call-getcallstate-f.md) | 获取当前通话状态。使用callback异步回调。 |
 | [getCallState](arkts-telephony-call-getcallstate-f.md) | 获取当前通话状态。使用Promise异步回调。 |
 | [getCallStateSync](arkts-telephony-call-getcallstatesync-f.md) | 获取当前通话状态。 |
@@ -156,8 +154,8 @@ import { call } from '@kit.TelephonyKit';
 | [onReceiveRttMessage](arkts-telephony-call-onreceiverttmessage-f-sys.md) | 订阅RTT消息事件 |
 | [onRttErrCause](arkts-telephony-call-onrtterrcause-f-sys.md) | 订阅rtt通话错误事件 |
 | [onRttModifyInd](arkts-telephony-call-onrttmodifyind-f-sys.md) | 订阅rtt通话变化 |
-| [postDialProceed](arkts-telephony-call-postdialproceed-f-sys.md) | 继续进行通话。使用callback异步回调。 |
-| [postDialProceed](arkts-telephony-call-postdialproceed-f-sys.md) | 继续进行通话。使用Promise异步回调。 |
+| [postDialProceed](arkts-telephony-call-postdialproceed-f-sys.md) | 继续进行通话。使用callback异步回调。当用户呼叫号码为：“普通电话号码”+“;”+"DTMF字符"(例如：“400xxxxxxx;123”)，并且已经订阅了通话后延迟事件，电话接通后，系统将上报通话后延迟事件，应用可以调用此接口选择是否发送DTMF音。 |
+| [postDialProceed](arkts-telephony-call-postdialproceed-f-sys.md) | 继续进行通话。使用Promise异步回调。当用户呼叫号码为：“普通电话号码”+“;”+"DTMF字符"(例如：“400xxxxxxx;123”)，并且已经订阅了通话后延迟事件，电话接通后，系统将上报通话后延迟事件，应用可以调用此接口选择是否发送DTMF音。 |
 | [preloadCallUI](arkts-telephony-call-preloadcallui-f-sys.md) | 预加载通话应用 |
 | [rejectCall](arkts-telephony-call-rejectcall-f-sys.md) | 拒绝来电。使用callback异步回调。 |
 | [rejectCall](arkts-telephony-call-rejectcall-f-sys.md) | 拒绝来电。使用Promise异步回调。 |

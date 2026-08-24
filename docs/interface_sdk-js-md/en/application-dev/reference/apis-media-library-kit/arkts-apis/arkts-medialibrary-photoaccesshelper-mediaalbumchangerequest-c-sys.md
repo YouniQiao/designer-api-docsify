@@ -22,14 +22,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest
 ```
 
-Creates a MediaAlbumChangeRequest instance.
-
-The album name must meet the following requirements:
-
-- The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are:
-
-. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
-
+Creates a MediaAlbumChangeRequest instance.The album name must meet the following requirements:  
+- The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are:  
+. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - The characters are case insensitive. - Duplicate album names are not allowed.
 
 **Since:** 11
@@ -300,8 +295,7 @@ deleteAssets(assets: Array<PhotoAsset>): void
 
 Permanently deletes assets from the trash.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.
 
@@ -538,8 +532,7 @@ deleteAssetsWithUri(assetUris: Array<string>): void
 
 Permanently deletes assets from the trash.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.
 

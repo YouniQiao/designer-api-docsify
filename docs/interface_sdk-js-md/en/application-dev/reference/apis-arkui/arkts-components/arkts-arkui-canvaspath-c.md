@@ -813,12 +813,10 @@ struct LineTo {
 moveTo(x: number, y: number): void
 ```
 
-Moves a drawing path from the current position to a target position on the canvas.   
-> **NOTE：**
-> 
+Moves a drawing path from the current position to a target position on the canvas.  
+> **NOTE：**&gt;
 > In versions earlier than API version 18, if the **moveTo** API is not called or invalid arguments
-> are passed to it, the path starts from (0,0).
-> 
+> are passed to it, the path starts from (0,0).&gt;
 > Starting from API version 18, if the **moveTo** API is not executed or invalid arguments are passed
 > to it, the path will begin at the start point of the first valid call to **lineTo**, **arcTo**,
 > **bezierCurveTo**, or **quadraticCurveTo**.

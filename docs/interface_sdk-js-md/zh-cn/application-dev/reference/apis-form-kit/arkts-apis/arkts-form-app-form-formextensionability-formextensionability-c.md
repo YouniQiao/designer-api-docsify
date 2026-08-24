@@ -202,7 +202,7 @@ Called to notify the widget provider that the widget visibility status is being 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| newStatus | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, int&gt; | 是 | ID and visibility status of the widget to be changed.<br>**起始版本：** 11 |
+| newStatus | Record&lt;string, int&gt; | 是 | ID and visibility status of the widget to be changed.<br>**起始版本：** 11 |
 
 **示例**
 
@@ -595,7 +595,7 @@ Called to notify the widget provider that a widget is being updated, with update
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | ID of the widget that requests to be updated. |
-| wantParams | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 否 | Parameters used for the update. |
+| wantParams | Record&lt;string, Object&gt; | 否 | Parameters used for the update. |
 
 **示例**
 
@@ -654,9 +654,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 context: FormExtensionContext
 ```
 
-Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
-
-This API can be used in atomic services since API version 11.
+Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).This API can be used in atomic services since API version 11.
 
 **类型：** [FormExtensionContext](arkts-form-formextensioncontext-c-sys.md)
 
@@ -676,9 +674,7 @@ This API can be used in atomic services since API version 11.
 onAcquireFormState?: OnAcquireFormStateFn
 ```
 
-Called to return a FormState object.
-
-<p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p>
+Called to return a FormState object.<p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p>
 
 **类型：** [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md)
 

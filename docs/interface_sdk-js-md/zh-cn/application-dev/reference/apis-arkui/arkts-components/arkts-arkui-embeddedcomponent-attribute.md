@@ -1,10 +1,6 @@
 # EmbeddedComponent属性/事件
 
-支持通用属性。
-
-与屏幕坐标相关的事件信息，根据**EmbeddedComponent**的位置、宽高进行转换后，传递给EmbeddedUIExtensionAbility处理。
-
-不支持点击事件等通用事件。仅支持以下事件。
+支持通用属性。与屏幕坐标相关的事件信息，根据**EmbeddedComponent**的位置、宽高进行转换后，传递给EmbeddedUIExtensionAbility处理。不支持点击事件等通用事件。仅支持以下事件。
 
 **继承/实现关系：** EmbeddedComponentAttribute extends CommonMethod<EmbeddedComponentAttribute>
 
@@ -51,8 +47,7 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 
 当启动的EmbeddedUIExtensionAbility运行过程中发生错误时调用。通过回调参数中的**code**、**name**和**message**可以获取并处理错误信息。关于错误码的详细信息，请参见[UIExtension错误码](../errorcode-uiextension.md)。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口不能在attributeModifier内调用。
 
 **起始版本：** 12
@@ -79,8 +74,7 @@ onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 
 当启动的EmbeddedUIExtensionAbility通过调用 [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult) 或 [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself) 正常退出时回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口不能在attributeModifier内调用。
 
 **起始版本：** 12

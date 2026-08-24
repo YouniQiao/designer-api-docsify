@@ -1,8 +1,6 @@
 # SideBarContainerModifier
 
-Defines SideBarContainer Modifier
-
-@implements { SideBarContainerAttribute, AttributeModifier&lt;SideBarContainerAttribute&gt; }
+Defines SideBarContainer Modifier@implements { SideBarContainerAttribute, AttributeModifier&lt;SideBarContainerAttribute&gt; }
 
 **Inheritance/Implementation:** SideBarContainerModifier implements SideBarContainerAttribute, AttributeModifier<SideBarContainerAttribute>
 

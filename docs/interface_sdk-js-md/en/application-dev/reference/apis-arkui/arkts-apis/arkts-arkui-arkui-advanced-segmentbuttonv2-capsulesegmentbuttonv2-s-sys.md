@@ -4,6 +4,8 @@ Defines the segmented button with capsule style.
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct CapsuleSegmentButtonV2--><!--Device-unnamed-export declare struct CapsuleSegmentButtonV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,8 +19,7 @@ import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesCha
 ## backgroundSystemMaterial
 
 ```TypeScript
-@Param
-    readonly backgroundSystemMaterial?: uiMaterial.Material
+readonly backgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -26,6 +27,8 @@ Set system-styled materials for the component. Different materials have differen
 **Type:** uiMaterial.Material
 
 **Since:** 23
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

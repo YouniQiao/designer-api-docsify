@@ -1,8 +1,6 @@
 # SceneResource
 
-Describes a resource in a scene.
-
-@interface SceneResource
+Describes a resource in a scene.@interface SceneResource
 
 **Since:** 23
 

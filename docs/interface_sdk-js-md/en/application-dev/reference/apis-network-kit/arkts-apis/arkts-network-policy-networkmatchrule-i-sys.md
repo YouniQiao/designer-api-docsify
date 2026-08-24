@@ -22,11 +22,7 @@ import { policy } from '@kit.NetworkKit';
 identity: string
 ```
 
-ID of the SIM card on the metered cellular network.
-
-It is used for Ethernet and Wi-Fi networks.
-
-It is used together with **iccid**.
+ID of the SIM card on the metered cellular network.It is used for Ethernet and Wi-Fi networks.It is used together with **iccid**.
 
 **Type:** string
 
@@ -62,9 +58,7 @@ Network type.
 simId: string
 ```
 
-Identifier of the SIM card on the metered cellular network.
-
-It is not used for Ethernet and Wi-Fi networks.
+Identifier of the SIM card on the metered cellular network.It is not used for Ethernet and Wi-Fi networks.
 
 **Type:** string
 

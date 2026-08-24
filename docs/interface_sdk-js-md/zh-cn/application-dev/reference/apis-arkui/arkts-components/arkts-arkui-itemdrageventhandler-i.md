@@ -1,8 +1,6 @@
 # ItemDragEventHandler
 
-定义拖拽事件
-
-@interface ItemDragEventHandler
+定义拖拽事件@interface ItemDragEventHandler
 
 **起始版本：** 20
 

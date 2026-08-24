@@ -1,8 +1,6 @@
 # IlluminatedType (System API)
 
-Enum of Illuminated type
-
-@enum { number }
+Enum of Illuminated type@enum { number }
 
 **Since:** 23
 

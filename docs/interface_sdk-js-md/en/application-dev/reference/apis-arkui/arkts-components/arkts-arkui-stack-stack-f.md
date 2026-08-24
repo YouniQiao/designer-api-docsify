@@ -16,6 +16,8 @@ Defines Stack Component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Stack(    options?: StackOptions,    content_?: CustomBuilder,): StackAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Stack(    options?: StackOptions,    content_?: CustomBuilder,): StackAttribute-End-->
@@ -51,6 +53,8 @@ Defines Stack Component.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

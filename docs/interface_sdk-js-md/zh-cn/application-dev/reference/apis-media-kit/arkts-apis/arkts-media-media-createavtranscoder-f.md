@@ -14,8 +14,7 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 创建视频转码实例。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可创建的视频转码实例不能超过2个。
 
 **起始版本：** 12
@@ -63,11 +62,8 @@ media.createAVTranscoder().then((transcoder: media.AVTranscoder) => {
 function createAVTranscoder(): Promise<AVTranscoder | undefined>
 ```
 
-Creates an **AVTranscoder** instance. This API uses a promise to return the result.
-
-**NOTE：**
-
-A maximum of 2 **AVTranscoder** instances can be created.
+Creates an **AVTranscoder** instance. This API uses a promise to return the result.  
+**NOTE：**A maximum of 2 **AVTranscoder** instances can be created.
 
 **起始版本：** 23
 

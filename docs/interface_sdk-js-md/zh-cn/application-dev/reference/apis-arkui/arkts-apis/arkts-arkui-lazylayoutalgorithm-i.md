@@ -1,6 +1,6 @@
 # LazyLayoutAlgorithm
 
-[LazyDynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazydynamiclayout.md)组件支持的懒加载布局算法详细信息。
+[LazyDynamicLayout](../../apis-default/arkts-apis/arkts-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md)组件支持的懒加载布局算法详细信息。
 
 **起始版本：** 26.0.0
 

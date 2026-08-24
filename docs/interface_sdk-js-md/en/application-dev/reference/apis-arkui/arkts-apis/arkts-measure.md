@@ -18,5 +18,5 @@ import { MeasureText, MeasureOptions } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Defines the options of MeasureText. |
+| [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Defines the options of MeasureText.@interface MeasureOptions |
 

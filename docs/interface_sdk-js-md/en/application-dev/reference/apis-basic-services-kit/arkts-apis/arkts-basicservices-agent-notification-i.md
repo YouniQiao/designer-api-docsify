@@ -12,7 +12,6 @@ Describes the custom information of the notification bar.
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## text

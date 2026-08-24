@@ -1,8 +1,6 @@
 # PathModifier
 
-Defines Path Modifier
-
-@implements PathAttribute, AttributeModifier&lt;PathAttribute&gt;
+Defines Path Modifier@implements PathAttribute, AttributeModifier&lt;PathAttribute&gt;
 
 **Inheritance/Implementation:** PathModifier implements PathAttribute, AttributeModifier<PathAttribute>
 

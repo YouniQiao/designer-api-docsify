@@ -16,8 +16,7 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 
 Creates a symbolic link based on a file path. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
@@ -93,8 +92,7 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 
 Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9

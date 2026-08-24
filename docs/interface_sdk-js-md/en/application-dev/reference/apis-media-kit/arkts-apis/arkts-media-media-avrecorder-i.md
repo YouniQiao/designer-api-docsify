@@ -1,11 +1,8 @@
 # AVRecorder
 
-AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-media-createavrecorder-f.md) to create an AVRecorder instance.
+AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-media-createavrecorder-f.md) to create an AVRecorder instance.For details about the audio and video recording demo, see [Audio Recording](../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../media/media/video-recording.md).
 
-For details about the audio and video recording demo, see [Audio Recording](../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../media/media/video-recording.md).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 
 > To use the camera to record videos, the camera module is required. For details about how to use the APIs
 > provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md).
@@ -66,11 +63,7 @@ add a watermark for the AVRecorder. This API uses a promise to return the result
 getAudioCapturerMaxAmplitude(callback: AsyncCallback<int>): void
 ```
 
-Obtains the maximum amplitude of the current audio capturer. This API uses an asynchronous callback to return the result.
-
-This API can be called only after the [prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.
-
-The return value is the maximum amplitude within the duration from the time the maximum amplitude is obtained last time to the current time. For example, if you have obtained the maximum amplitude at 1s and you call this API again at 2s, then the return value is the maximum amplitude within the duration from 1s to 2s.
+Obtains the maximum amplitude of the current audio capturer. This API uses an asynchronous callback to return the result.This API can be called only after the [prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.The return value is the maximum amplitude within the duration from the time the maximum amplitude is obtained last time to the current time. For example, if you have obtained the maximum amplitude at 1s and you call this API again at 2s, then the return value is the maximum amplitude within the duration from 1s to 2s.
 
 **Since:** 23
 
@@ -128,11 +121,7 @@ avRecorder.getAudioCapturerMaxAmplitude().then((amplitude: number) => {
 getAudioCapturerMaxAmplitude(): Promise<int>
 ```
 
-Obtains the maximum amplitude of the current audio capturer. This API uses a promise to return the result.
-
-This API can be called only after the [prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.
-
-The return value is the maximum amplitude within the duration from the time the maximum amplitude is obtained last time to the current time. For example, if you have obtained the maximum amplitude at 1s and you call this API again at 2s, then the return value is the maximum amplitude within the duration from 1s to 2s.
+Obtains the maximum amplitude of the current audio capturer. This API uses a promise to return the result.This API can be called only after the [prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.The return value is the maximum amplitude within the duration from the time the maximum amplitude is obtained last time to the current time. For example, if you have obtained the maximum amplitude at 1s and you call this API again at 2s, then the return value is the maximum amplitude within the duration from 1s to 2s.
 
 **Since:** 23
 
@@ -260,9 +249,7 @@ See [getAvailableEncoder](#getavailableencoder)
 getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 ```
 
-Obtains the real-time configuration of this AVRecorder. This API uses an asynchronous callback to return the result.
-
-This API can be called only after [prepare()](#prepare) is called.
+Obtains the real-time configuration of this AVRecorder. This API uses an asynchronous callback to return the result.This API can be called only after [prepare()](#prepare) is called.
 
 **Since:** 11
 
@@ -333,7 +320,7 @@ Obtains the real-time configuration of this AVRecorder. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the real-time configuration obtained ; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the real-time configuration obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -353,9 +340,7 @@ See [getAVRecorderConfig](#getavrecorderconfig)
 getAVRecorderConfig(): Promise<AVRecorderConfig>
 ```
 
-Obtains the real-time configuration of this AVRecorder. This API uses a promise to return the result.
-
-This API can be called only after [prepare()](#prepare) is called.
+Obtains the real-time configuration of this AVRecorder. This API uses a promise to return the result.This API can be called only after [prepare()](#prepare) is called.
 
 **Since:** 11
 
@@ -419,9 +404,7 @@ See [getAVRecorderConfig](#getavrecorderconfig)
 getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInfo>): void
 ```
 
-Obtains the information about the current audio capturer. This API uses an asynchronous callback to return the result.
-
-This API can be called only after the [prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.
+Obtains the information about the current audio capturer. This API uses an asynchronous callback to return the result.This API can be called only after the [prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.
 
 **Since:** 11
 
@@ -482,9 +465,7 @@ avRecorder.getCurrentAudioCapturerInfo().then((capturerInfo: audio.AudioCapturer
 getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInfo | undefined>): void
 ```
 
-Obtains the information about the current audio capturer. This API uses an asynchronous callback to return the result.
-
-This API can be called only after the **prepare()** API is called. If this API is called after **stop()** is successfully called, an error is reported.
+Obtains the information about the current audio capturer. This API uses an asynchronous callback to return the result.This API can be called only after the **prepare()** API is called. If this API is called after **stop()** is successfully called, an error is reported.
 
 **Since:** 23
 
@@ -516,9 +497,7 @@ See [getCurrentAudioCapturerInfo](#getcurrentaudiocapturerinfo)
 getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 ```
 
-Obtains the information about the current audio capturer. This API uses a promise to return the result.
-
-This API can be called only after the [prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.
+Obtains the information about the current audio capturer. This API uses a promise to return the result.This API can be called only after the [prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.
 
 **Since:** 11
 
@@ -550,9 +529,7 @@ See [getCurrentAudioCapturerInfo](#getcurrentaudiocapturerinfo)
 getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo | undefined>
 ```
 
-Obtains the information about the current audio capturer. This API uses a promise to return the result.
-
-This API can be called only after the **prepare()** API is called. If this API is called after **stop()** is successfully called, an error is reported.
+Obtains the information about the current audio capturer. This API uses a promise to return the result.This API can be called only after the **prepare()** API is called. If this API is called after **stop()** is successfully called, an error is reported.
 
 **Since:** 23
 
@@ -584,13 +561,7 @@ See [getCurrentAudioCapturerInfo](#getcurrentaudiocapturerinfo)
 getInputSurface(callback: AsyncCallback<string>): void
 ```
 
-Obtains the surface required for recording. This API uses an asynchronous callback to return the result.
-
-The caller obtains the surface buffer from this surface and fills in the corresponding video data.
-
-Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.
-
-This API can be called only after the [prepare()](#prepare) API is called.
+Obtains the surface required for recording. This API uses an asynchronous callback to return the result.The caller obtains the surface buffer from this surface and fills in the corresponding video data.Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.This API can be called only after the [prepare()](#prepare) API is called.
 
 **Since:** 9
 
@@ -675,11 +646,7 @@ avRecorder.getInputSurface().then((surfaceId: string) => {
 getInputSurface(callback: AsyncCallback<string | undefined>): void
 ```
 
-Obtains the surface required for recording. This API uses an asynchronous callback to return the result. The caller obtains the **surfaceBuffer** from this surface and fills in the corresponding video data.
-
-Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.
-
-This API can be called only after the prepare() API is called.
+Obtains the surface required for recording. This API uses an asynchronous callback to return the result. The caller obtains the **surfaceBuffer** from this surface and fills in the corresponding video data.Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.This API can be called only after the prepare() API is called.
 
 **Since:** 23
 
@@ -711,13 +678,7 @@ See [getInputSurface](#getinputsurface)
 getInputSurface(): Promise<string>
 ```
 
-Obtains the surface required for recording. This API uses a promise to return the result.
-
-The caller obtains the surface buffer from this surface and fills in the corresponding video data.
-
-Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.
-
-This API can be called only after the [prepare()](#prepare) API is called.
+Obtains the surface required for recording. This API uses a promise to return the result.The caller obtains the surface buffer from this surface and fills in the corresponding video data.Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.This API can be called only after the [prepare()](#prepare) API is called.
 
 **Since:** 9
 
@@ -749,11 +710,7 @@ See [getInputSurface](#getinputsurface)
 getInputSurface(): Promise<string | undefined>
 ```
 
-Obtains the surface required for recording. This API uses a promise to return the result. The caller obtains the **surfaceBuffer** from this surface and fills in the corresponding video data.
-
-Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.
-
-This API can be called only after the prepare() API is called.
+Obtains the surface required for recording. This API uses a promise to return the result. The caller obtains the **surfaceBuffer** from this surface and fills in the corresponding video data.Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.This API can be called only after the prepare() API is called.
 
 **Since:** 23
 
@@ -798,7 +755,7 @@ Subscribes to audio capturer configuration changes. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type, which is **'audioCapturerChange'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | No | Callback used to return the changed audio capturer configuration. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled.<br>This parameter is supported since API version 12 .<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | No | Callback used to return the changed audio capturer configuration. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled.<br>This parameter is supported since API version 12.<br>**Since:** 12 |
 
 ## off('error')
 
@@ -953,9 +910,7 @@ Unsubscribes from AVRecorder state changes. This event can be triggered by both 
 on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo>): void
 ```
 
-Subscribes to audio capturer configuration changes. Any configuration change triggers the callback that returns the entire configuration information. This API uses an asynchronous callback to return the result.
-
-When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to audio capturer configuration changes. Any configuration change triggers the callback that returns the entire configuration information. This API uses an asynchronous callback to return the result.When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 11
 
@@ -982,9 +937,7 @@ When the application initiates multiple subscriptions to this event, the last su
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the [AVRecorderState](arkts-media-media-avrecorderstate-t.md) is also switched to error, call [reset()](#reset) or [release()] [release()](#release) to exit the recording. This API uses an asynchronous callback to return the result.
-
-An application can subscribe to only one AVRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the [AVRecorderState](arkts-media-media-avrecorderstate-t.md) is also switched to error, call [reset()](#reset) or [release()] [release()](#release) to exit the recording. This API uses an asynchronous callback to return the result.An application can subscribe to only one AVRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 9
 
@@ -1022,9 +975,7 @@ An application can subscribe to only one AVRecorder error event. When the applic
 on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to media asset callback events. When [FileGenerationMode](arkts-media-media-filegenerationmode-e.md) is used during media file creation, the [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md) object is called back to the application after the [stop](#stop) operation is complete. This API uses an asynchronous callback to return the result.
-
-When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to media asset callback events. When [FileGenerationMode](arkts-media-media-filegenerationmode-e.md) is used during media file creation, the [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md) object is called back to the application after the [stop](#stop) operation is complete. This API uses an asynchronous callback to return the result.When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
 
@@ -1082,9 +1033,7 @@ Subscribes to AVRecorder state changes. An application can subscribe to only one
 onAudioCapturerChange(callback: Callback<audio.AudioCapturerChangeInfo>): void
 ```
 
-Subscribes to audio capturer configuration changes. Any configuration change triggers the callback that returns the entire configuration information.
-
-When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to audio capturer configuration changes. Any configuration change triggers the callback that returns the entire configuration information.When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 23
 
@@ -1110,9 +1059,7 @@ When the application initiates multiple subscriptions to this event, the last su
 onError(callback: ErrorCallback): void
 ```
 
-Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the AVRecorderState is also switched to error, call reset() or release() to exit the recording.
-
-An application can subscribe to only one AVRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied. This event is triggered when an error occurs during recording.
+Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the AVRecorderState is also switched to error, call reset() or release() to exit the recording.An application can subscribe to only one AVRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied. This event is triggered when an error occurs during recording.
 
 **Since:** 23
 
@@ -1147,9 +1094,7 @@ An application can subscribe to only one AVRecorder error event. When the applic
 onPhotoAssetAvailable(callback: Callback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to media asset callback events. When FileGenerationMode is used during media file creation, the PhotoAsset object is called back to the application after the stop operation is complete.
-
-When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when a photo asset is available.
+Subscribes to media asset callback events. When FileGenerationMode is used during media file creation, the PhotoAsset object is called back to the application after the stop operation is complete.When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when a photo asset is available.
 
 **Since:** 23
 
@@ -1203,9 +1148,7 @@ Subscribes to AVRecorder state changes. An application can subscribe to only one
 pause(callback: AsyncCallback<void>): void
 ```
 
-Pauses video recording. This API uses an asynchronous callback to return the result.
-
-This API can be called only after the [start()](#start) API is called. You can call [resume()](#resume) to resume recording.
+Pauses video recording. This API uses an asynchronous callback to return the result.This API can be called only after the [start()](#start) API is called. You can call [resume()](#resume) to resume recording.
 
 **Since:** 23
 
@@ -1363,9 +1306,7 @@ videoPlayer.pause().then(() => {
 pause(): Promise<void>
 ```
 
-Pauses video recording. This API uses a promise to return the result.
-
-This API can be called only after the [start()](#start) API is called. You can call [resume()](#resume) to resume recording.
+Pauses video recording. This API uses a promise to return the result.This API can be called only after the [start()](#start) API is called. You can call [resume()](#resume) to resume recording.
 
 **Since:** 23
 
@@ -1711,9 +1652,7 @@ See [prepare](#prepare)
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases the audio and video recording resources. This API uses an asynchronous callback to return the result.
-
-After the resources are released, you can no longer perform any operation on the AVRecorder instance.
+Releases the audio and video recording resources. This API uses an asynchronous callback to return the result.After the resources are released, you can no longer perform any operation on the AVRecorder instance.
 
 **Since:** 23
 
@@ -1974,9 +1913,7 @@ videoPlayer.release().then(() => {
 release(): Promise<void>
 ```
 
-Releases the audio and video recording resources. This API uses a promise to return the result.
-
-After the resources are released, you can no longer perform any operation on the AVRecorder instance.
+Releases the audio and video recording resources. This API uses a promise to return the result.After the resources are released, you can no longer perform any operation on the AVRecorder instance.
 
 **Since:** 23
 
@@ -2008,9 +1945,7 @@ See [release](#release)
 reset(callback: AsyncCallback<void>): void
 ```
 
-Resets audio and video recording. This API uses an asynchronous callback to return the result.
-
-For audio-only recording, you can call [prepare()](#prepare) again for re -recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re- recording.
+Resets audio and video recording. This API uses an asynchronous callback to return the result.For audio-only recording, you can call [prepare()](#prepare) again for re -recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re- recording.
 
 **Since:** 23
 
@@ -2152,9 +2087,7 @@ videoPlayer.reset().then(() => {
 reset(): Promise<void>
 ```
 
-Resets audio and video recording. This API uses a promise to return the result.
-
-For audio-only recording, you can call [prepare()](#prepare) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re-recording.
+Resets audio and video recording. This API uses a promise to return the result.For audio-only recording, you can call [prepare()](#prepare) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re-recording.
 
 **Since:** 23
 
@@ -2185,9 +2118,7 @@ See [reset](#reset)
 resume(callback: AsyncCallback<void>): void
 ```
 
-Resumes video recording. This API uses an asynchronous callback to return the result.
-
-This API can be called only after the [pause()](#pause) API is called.
+Resumes video recording. This API uses an asynchronous callback to return the result.This API can be called only after the [pause()](#pause) API is called.
 
 **Since:** 23
 
@@ -2286,9 +2217,7 @@ async function test() {
 resume(): Promise<void>
 ```
 
-Resumes video recording. This API uses a promise to return the result.
-
-This API can be called only after the [pause()](#pause) API is called.
+Resumes video recording. This API uses a promise to return the result.This API can be called only after the [pause()](#pause) API is called.
 
 **Since:** 23
 
@@ -2368,9 +2297,7 @@ avRecorder.setWillMuteWhenInterrupted(true).then(() => {
 start(callback: AsyncCallback<void>): void
 ```
 
-Starts video recording. This API uses an asynchronous callback to return the result.
-
-For audio-only recording, this API can be called only after the [prepare()](#prepare) API is called. For video-only recording, this API can be called only after the [getInputSurface()](#getinputsurface) API is called.
+Starts video recording. This API uses an asynchronous callback to return the result.For audio-only recording, this API can be called only after the [prepare()](#prepare) API is called. For video-only recording, this API can be called only after the [getInputSurface()](#getinputsurface) API is called.
 
 **Since:** 23
 
@@ -2469,9 +2396,7 @@ async function test() {
 start(): Promise<void>
 ```
 
-Starts video recording. This API uses a promise to return the result.
-
-For audio-only recording, this API can be called only after the [prepare()](#prepare) API is called. For video-only recording, this API can be called only after the [getInputSurface()](#getinputsurface) API is called.
+Starts video recording. This API uses a promise to return the result.For audio-only recording, this API can be called only after the [prepare()](#prepare) API is called. For video-only recording, this API can be called only after the [getInputSurface()](#getinputsurface) API is called.
 
 **Since:** 23
 
@@ -2505,11 +2430,7 @@ See [start](#start)
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops video recording. This API uses an asynchronous callback to return the result.
-
-This API can be called only after the [start()](#start) or [pause()](#pause) API is called.
-
-For audio-only recording, you can call [prepare()](#prepare) again for re -recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re- recording.
+Stops video recording. This API uses an asynchronous callback to return the result.This API can be called only after the [start()](#start) or [pause()](#pause) API is called.For audio-only recording, you can call [prepare()](#prepare) again for re -recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re- recording.
 
 **Since:** 23
 
@@ -2652,11 +2573,7 @@ videoPlayer.stop().then(() => {
 stop(): Promise<void>
 ```
 
-Stops video recording. This API uses a promise to return the result.
-
-This API can be called only after the [start()](#start) or [pause()](#pause) API is called.
-
-For audio-only recording, you can call [prepare()](#prepare) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re-recording.
+Stops video recording. This API uses a promise to return the result.This API can be called only after the [start()](#start) or [pause()](#pause) API is called.For audio-only recording, you can call [prepare()](#prepare) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re-recording.
 
 **Since:** 23
 
@@ -2690,9 +2607,7 @@ See [stop](#stop)
 updateRotation(rotation: int): Promise<void>
 ```
 
-Updates the video rotation angle, in degrees. This API uses a promise to return the result.
-
-This API can be called only after the [prepare()](#prepare) event is triggered and before the [start()](#start) API is called.
+Updates the video rotation angle, in degrees. This API uses a promise to return the result.This API can be called only after the [prepare()](#prepare) event is triggered and before the [start()](#start) API is called.
 
 **Since:** 23
 

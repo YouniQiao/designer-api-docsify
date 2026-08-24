@@ -15,6 +15,8 @@ export declare function ContainerSpan(
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function ContainerSpan(    content_?: CustomBuilder,): ContainerSpanAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ContainerSpan(    content_?: CustomBuilder,): ContainerSpanAttribute-End-->
@@ -49,6 +51,8 @@ export declare function ContainerSpan(
 **起始版本：** 26.1.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.1.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -12,7 +12,6 @@ Represents the device-cloud file version management class. It allows you to mana
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## clearFileConflict
@@ -192,11 +191,7 @@ fileVersion.downloadHistoryVersion(uri, versionId, callback).then((fileUri: stri
 getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>
 ```
 
-Obtains the list of historical versions. The returned versions are sorted by modification time. The earlier the modification time, the later the version. This API uses a promise to return the result.
-
-If the number of cloud versions is less than the length limit, the list will be returned with the actual number of versions.
-
-If the number of cloud versions is greater than or equal to the length limit, the number of the latest versions ( specified by **versionNumLimit**) will be returned.
+Obtains the list of historical versions. The returned versions are sorted by modification time. The earlier the modification time, the later the version. This API uses a promise to return the result.If the number of cloud versions is less than the length limit, the list will be returned with the actual number of versions.If the number of cloud versions is greater than or equal to the length limit, the number of the latest versions (specified by **versionNumLimit**) will be returned.
 
 **Since:** 23
 
@@ -209,7 +204,7 @@ If the number of cloud versions is greater than or equal to the length limit, th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| versionNumLimit | int | Yes | Length limit of the historical version list. The value range is [0, 100000] ( unit: number). If the input value is greater than 100,000, the list is returned according to the maximum value. |
+| versionNumLimit | int | Yes | Length limit of the historical version list. The value range is [0, 100000] (unit: number). If the input value is greater than 100,000, the list is returned according to the maximum value. |
 
 **Return value:**
 
@@ -257,9 +252,7 @@ fileVersion.getHistoryVersionList(uri, limit).then((versionList: Array<cloudSync
 isFileConflict(uri: string): Promise<boolean>
 ```
 
-Obtains the version conflict flag of a local file. This API uses a promise to return the result. This API takes effect only when the application is configured for manual conflict resolution. Otherwise, conflicts are automatically resolved during synchronization, and the return value will be **false**.
-
-Once the application is configured for manual conflict resolution, calling this API returns whether the current local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the conflict is resolved, you need to call the [clearFileConflict](#clearfileconflict) method to clear the conflict flag and synchronize the file to the cloud.
+Obtains the version conflict flag of a local file. This API uses a promise to return the result. This API takes effect only when the application is configured for manual conflict resolution. Otherwise, conflicts are automatically resolved during synchronization, and the return value will be **false**.Once the application is configured for manual conflict resolution, calling this API returns whether the current local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the conflict is resolved, you need to call the [clearFileConflict](#clearfileconflict) method to clear the conflict flag and synchronize the file to the cloud.
 
 **Since:** 23
 

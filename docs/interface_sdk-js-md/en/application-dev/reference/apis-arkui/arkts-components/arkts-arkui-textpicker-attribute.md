@@ -1,8 +1,6 @@
 # TextPicker properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** TextPickerAttribute extends CommonMethod<TextPickerAttribute>
 
@@ -205,7 +203,7 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{&lt;br &gt;color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | PickerTextStyle | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
 ## disappearTextStyle
 
@@ -261,9 +259,7 @@ Sets the text style of edge items (the second item above or below the selected i
 divider(value: DividerOptions | null)
 ```
 
-Sets the divider style. If not explicitly set, the divider uses the default style.
-
-If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
+Sets the divider style. If not explicitly set, the divider uses the default style.If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
 
 **Since:** 12
 
@@ -287,9 +283,7 @@ If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-
 divider(textDivider: Optional<DividerOptions | null>)
 ```
 
-Sets the divider style. If not explicitly set, the divider uses the default style. Compared with [divider&lt;sup&gt;12+&lt;/sup&gt;](#divider), this API supports the **undefined** type for the **textDivider** parameter.
-
-If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
+Sets the divider style. If not explicitly set, the divider uses the default style. Compared with [divider&lt;sup&gt;12+&lt;/sup&gt;](#divider), this API supports the **undefined** type for the **textDivider** parameter.If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
 
 **Since:** 18
 
@@ -385,9 +379,7 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 onAccept(callback: (value: string, index: number) => void)
 ```
 
-Triggered when the OK button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box.
-
-This API is supported since API version 8 and deprecated since API version 10. No substitute is provided.
+Triggered when the OK button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box.This API is supported since API version 8 and deprecated since API version 10. No substitute is provided.
 
 **Since:** 8
 
@@ -409,9 +401,7 @@ This API is supported since API version 8 and deprecated since API version 10. N
 onCancel(callback: () => void)
 ```
 
-Triggered when the cancel button in the dialog box is clicked. This event can be triggered only in the text picker dialog box.
-
-This API is supported since API version 8 and deprecated since API version 10. No substitute is provided.
+Triggered when the cancel button in the dialog box is clicked. This event can be triggered only in the text picker dialog box.This API is supported since API version 8 and deprecated since API version 10. No substitute is provided.
 
 **Since:** 8
 
@@ -433,9 +423,7 @@ This API is supported since API version 8 and deprecated since API version 10. N
 onChange(callback: (value: string | string[], index: number | number[]) => void)
 ```
 
-Triggered when the text picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. When the picker contains text only or a combination of images and text, **value** indicates the text of the selected item. When the picker contains images only, **value** is empty.
-
-This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
+Triggered when the text picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. When the picker contains text only or a combination of images and text, **value** indicates the text of the selected item. When the picker contains images only, **value** is empty.This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
 
 **Since:** 8
 
@@ -457,9 +445,7 @@ This callback is triggered only after the scroll animation completes. To obtain 
 onChange(callback: Optional<OnTextPickerChangeCallback>)
 ```
 
-Triggered when the text picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. When the picker contains text only or a combination of images and text, **value** indicates the text of the selected item. When the picker contains images only, **value** is empty. Compared with [onChange] onChange, this API supports the **undefined** type for the **callback** parameter.
-
-This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
+Triggered when the text picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. When the picker contains text only or a combination of images and text, **value** indicates the text of the selected item. When the picker contains images only, **value** is empty. Compared with [onChange] onChange, this API supports the **undefined** type for the **callback** parameter.This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
 
 **Since:** 18
 
@@ -485,17 +471,14 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback)
 
 Triggered when an option enters the selection zone during text picker scrolling (when the scroll distance exceeds half the selected item's height).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This event is triggered earlier than the [onChange]
 > onChange
-> event.
-> 
+> event.&gt;
 > - In scenarios where the picker contains linked columns, the use of this callback is not recommended. The reason
 > is that it identifies nodes where items enter the divider area during scrolling. However, items that change in
 > response to the scrolling do not themselves scroll. As a result, the callback's return values will only reflect
-> changes for the currently scrolling column, while other non-scrolling columns will remain unchanged.
-> 
+> changes for the currently scrolling column, while other non-scrolling columns will remain unchanged.&gt;
 > - This API cannot be called within attributeModifier.
 
 **Since:** 18
@@ -520,12 +503,9 @@ Triggered when an option enters the selection zone during text picker scrolling 
 onScrollStop(callback: TextPickerScrollStopCallback)
 ```
 
-Triggered when the scrolling in the text picker stops.
+Triggered when the scrolling in the text picker stops.If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
 
-If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 14
@@ -550,12 +530,9 @@ If the scrolling is initiated by a gesture, this event is triggered when the fin
 onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 ```
 
-Triggered when the scrolling in the text picker stops. Compared with [onScrollStop&lt;sup&gt;14+&lt;/sup&gt;](#onscrollstop), this API supports the **undefined** type for the **callback** parameter.
+Triggered when the scrolling in the text picker stops. Compared with [onScrollStop&lt;sup&gt;14+&lt;/sup&gt;](#onscrollstop), this API supports the **undefined** type for the **callback** parameter.If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
 
-If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 18
@@ -596,7 +573,7 @@ Sets the background style of selected items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | Optional&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | Yes | Background color and corner radius for selected items. Applies to all columns in multi-column mode.<br>Default value:<br>{ <br>color: \\$r('sys.color.comp_background_tertiary') ,<br>borderRadius: \\$r('sys.float.corner_radius_level12')<br>} |
+| style | Optional&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | Yes | Background color and corner radius for selected items. Applies to all columns in multi-column mode.<br>Default value:<br>{ <br>color: \\$r('sys.color.comp_background_tertiary'),<br>borderRadius: \\$r('sys.float.corner_radius_level12')<br>} |
 
 ## selectedIndex
 
@@ -620,7 +597,7 @@ Sets the index of the selected item or items in the data list. This setting take
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| number[] | Yes | Index of the selected item or items in the data list. The index is zero-based. <br>Default value: **0**<br>If the value is negative or exceeds the maximum index, the default value is used.&lt; br&gt; |
+| value | number \| number[] | Yes | Index of the selected item or items in the data list. The index is zero-based. <br>Default value: **0**<br>If the value is negative or exceeds the maximum index, the default value is used.<br> |
 
 ## selectedIndex
 
@@ -668,7 +645,7 @@ Sets the text color, font size, and font weight of the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | Yes | Text color, font size, and font weight of the selected item.<br>Default value:&lt; br&gt;{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>} |
+| value | PickerTextStyle | Yes | Text color, font size, and font weight of the selected item.<br>Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>} |
 
 ## selectedTextStyle
 
@@ -692,7 +669,7 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | Yes | Text color, font size, and font weight of the selected item.<br> Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>}&lt; br&gt;If the value of **style** is **undefined**, the default value is used. |
+| style | Optional&lt;PickerTextStyle&gt; | Yes | Text color, font size, and font weight of the selected item.<br> Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>}<br>If the value of **style** is **undefined**, the default value is used. |
 
 ## selectedTextStyle
 
@@ -740,7 +717,7 @@ Sets the text color, font size, and font weight of candidate items (the first it
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | Yes | Text color, font size, and font weight for candidate items.<br>Default value:&lt;br &gt;{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | PickerTextStyle | Yes | Text color, font size, and font weight for candidate items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
 ## textStyle
 

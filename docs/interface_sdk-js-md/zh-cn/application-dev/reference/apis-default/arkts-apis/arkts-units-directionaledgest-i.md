@@ -1,8 +1,6 @@
 # DirectionalEdgesT
 
-边缘宽度类型，用于描述组件边缘不同方向的宽度。支持全球化。
-
-@interface DirectionalEdgesT
+边缘宽度类型，用于描述组件边缘不同方向的宽度。支持全球化。@interface DirectionalEdgesT
 
 **起始版本：** 23
 

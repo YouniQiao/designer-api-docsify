@@ -1,8 +1,6 @@
 # GestureShortcut
 
-Define the smart gesture shortcut priority enumeration.
-
-@enum { number }
+Define the smart gesture shortcut priority enumeration.@enum { number }
 
 **Since:** 26.0.0
 

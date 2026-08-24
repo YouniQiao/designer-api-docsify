@@ -14,14 +14,11 @@ function setProcDumpInSharedOOM(enable: boolean): void
 
 Changes the dump heap snapshot from the thread-level to the process-level.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To dump a process-level heap snapshot, you must call this API and pass **true**. In addition, SharedHeap OOM must
-> occur.
-> 
+> occur.&gt;
 > This API does not affect the heap snapshot dumped in other scenarios. For example, it does not affect the result
-> of [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md).
-> 
+> of [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md).&gt;
 > This API can be called multiple times in the application lifecycle, but only the last call takes effect.
 
 **Since:** 24

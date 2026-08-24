@@ -2,8 +2,7 @@
 
 结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API Version 9开始，该接口不再维护，推荐使用新接口[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)。
 
 **起始版本：** 7
@@ -546,9 +545,7 @@ const isColumnNull = resultSet.isColumnNull(resultSet.getColumnIndex("CODES"));
 columnCount: number
 ```
 
-columnCount: number
-
-获取结果集中的列数。
+columnCount: number获取结果集中的列数。
 
 **类型：** number
 
@@ -568,9 +565,7 @@ columnCount: number
 columnNames: Array<string>
 ```
 
-columnNames: Array&lt;string&gt;
-
-获取结果集中所有列的名称。
+columnNames: Array&lt;string&gt;获取结果集中所有列的名称。
 
 **类型：** Array&lt;string&gt;
 
@@ -590,9 +585,7 @@ columnNames: Array&lt;string&gt;
 isAtFirstRow: boolean
 ```
 
-isAtFirstRow: boolean
-
-检查结果集是否位于第一行。
+isAtFirstRow: boolean检查结果集是否位于第一行。
 
 **类型：** boolean
 
@@ -612,9 +605,7 @@ isAtFirstRow: boolean
 isAtLastRow: boolean
 ```
 
-isAtLastRow: boolean
-
-检查结果集是否位于最后一行。
+isAtLastRow: boolean检查结果集是否位于最后一行。
 
 **类型：** boolean
 
@@ -634,9 +625,7 @@ isAtLastRow: boolean
 isClosed: boolean
 ```
 
-isClosed: boolean
-
-检查当前结果集是否关闭。
+isClosed: boolean检查当前结果集是否关闭。
 
 **类型：** boolean
 
@@ -656,9 +645,7 @@ isClosed: boolean
 isEnded: boolean
 ```
 
-isEnded: boolean
-
-检查结果集是否位于最后一行之后。
+isEnded: boolean检查结果集是否位于最后一行之后。
 
 **类型：** boolean
 
@@ -678,9 +665,7 @@ isEnded: boolean
 isStarted: boolean
 ```
 
-isStarted: boolean
-
-检查指针是否移动过。
+isStarted: boolean检查指针是否移动过。
 
 **类型：** boolean
 
@@ -700,9 +685,7 @@ isStarted: boolean
 rowCount: number
 ```
 
-rowCount: number
-
-获取结果集中的行数。
+rowCount: number获取结果集中的行数。
 
 **类型：** number
 
@@ -722,9 +705,7 @@ rowCount: number
 rowIndex: number
 ```
 
-rowIndex: number
-
-获取结果集当前行的索引。
+rowIndex: number获取结果集当前行的索引。
 
 **类型：** number
 

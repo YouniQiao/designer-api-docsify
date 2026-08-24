@@ -1,8 +1,6 @@
 # SwipeGestureHandler
 
-Defines the SwipeGesture handler.
-
-@extends GestureHandler
+Defines the SwipeGesture handler.@extends GestureHandler
 
 **Inheritance/Implementation:** SwipeGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)
 

@@ -1,10 +1,6 @@
 # LocalizedBorderRadiuses
 
-圆角类型，用于描述组件边框圆角半径。
-
-引用该对象时，至少传入一个参数。
-
-@interface LocalizedBorderRadiuses
+圆角类型，用于描述组件边框圆角半径。引用该对象时，至少传入一个参数。@interface LocalizedBorderRadiuses
 
 **起始版本：** 23
 
@@ -20,9 +16,7 @@
 bottomEnd?: LengthMetrics
 ```
 
-组件右下角圆角半径。
-
-从右至左显示语言模式下为组件左下角圆角半径。
+组件右下角圆角半径。从右至左显示语言模式下为组件左下角圆角半径。
 
 **类型：** [LengthMetrics](arkts-lengthmetrics-t.md)
 
@@ -42,9 +36,7 @@ bottomEnd?: LengthMetrics
 bottomStart?: LengthMetrics
 ```
 
-组件左下角圆角半径。
-
-从右至左显示语言模式下为组件右下角圆角半径。
+组件左下角圆角半径。从右至左显示语言模式下为组件右下角圆角半径。
 
 **类型：** [LengthMetrics](arkts-lengthmetrics-t.md)
 
@@ -64,9 +56,7 @@ bottomStart?: LengthMetrics
 topEnd?: LengthMetrics
 ```
 
-组件右上角圆角半径。
-
-从右至左显示语言模式下为组件左上角圆角半径。
+组件右上角圆角半径。从右至左显示语言模式下为组件左上角圆角半径。
 
 **类型：** [LengthMetrics](arkts-lengthmetrics-t.md)
 
@@ -86,9 +76,7 @@ topEnd?: LengthMetrics
 topStart?: LengthMetrics
 ```
 
-组件左上角圆角半径。
-
-从右至左显示语言模式下为组件右上角圆角半径。
+组件左上角圆角半径。从右至左显示语言模式下为组件右上角圆角半径。
 
 **类型：** [LengthMetrics](arkts-lengthmetrics-t.md)
 

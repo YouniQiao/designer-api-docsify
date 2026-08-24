@@ -1,9 +1,8 @@
 # @ohos.data.preferences
 
-The **Preferences** module provides APIs for processing data in the form of key-value (KV) pairs, including querying, modifying, and persisting KV pairs. The key is of string type, and the value can be a number, string, boolean value, or an array of numbers, strings, or boolean values. The user preference persistent files are stored in the [preferencesDir](../../../application-models/application-context-stage.md#obtaining-application-file-paths) directory. Before creating a preferences object, ensure that the **preferencesDir** directory is readable and writeable. The [encryption level](../../apis-ability-kit/arkts-apis/arkts-ability-contextconstant-areamode-e.md) of the persistent file directory determines the access to the files. For details, see [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path) .
+The **Preferences** module provides APIs for processing data in the form of key-value (KV) pairs, including querying, modifying, and persisting KV pairs. The key is of string type, and the value can be a number, string, boolean value, or an array of numbers, strings, or boolean values. The user preference persistent files are stored in the [preferencesDir](../../../application-models/application-context-stage.md#obtaining-application-file-paths) directory. Before creating a preferences object, ensure that the **preferencesDir** directory is readable and writeable. The [encryption level](../../apis-ability-kit/arkts-apis/arkts-ability-contextconstant-areamode-e.md) of the persistent file directory determines the access to the files. For details, see [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Preferences are not thread-safe and may cause file damage and data loss when used in multi-process scenarios. Do
 > not use preferences in multi-process scenarios.
 
@@ -47,7 +46,7 @@ import { preferences } from '@kit.ArkData';
 | Name | Description |
 | --- | --- |
 | [Options](arkts-arkdata-preferences-options-i.md) | Represents the configuration of a **Preferences** instance. |
-| [Preferences](arkts-arkdata-preferences-preferences-i.md) | Provides APIs for obtaining and modifying the stored data. Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using [preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md) . |
+| [Preferences](arkts-arkdata-preferences-preferences-i.md) | Provides APIs for obtaining and modifying the stored data. Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using [preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md). |
 
 ### Enums
 
@@ -59,8 +58,8 @@ import { preferences } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [RecordData](arkts-arkdata-preferences-recorddata-t.md) | RecordData is used for input parameter obj of the equal function |
-| [ValueType](arkts-arkdata-preferences-valuetype-t.md) | Indicates possible value types |
+| [RecordData](arkts-arkdata-preferences-recorddata-t.md) | RecordData is used for input parameter obj of the equal function@FaAndStageModel |
+| [ValueType](arkts-arkdata-preferences-valuetype-t.md) | Indicates possible value types@FaAndStageModel |
 
 ### Constants
 

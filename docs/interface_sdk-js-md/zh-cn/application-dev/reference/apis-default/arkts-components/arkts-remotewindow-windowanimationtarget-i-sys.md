@@ -1,8 +1,6 @@
 # WindowAnimationTarget（系统接口）
 
-目标窗口，用来远程控制实现动画。
-
-@interface WindowAnimationTarget
+目标窗口，用来远程控制实现动画。@interface WindowAnimationTarget
 
 **起始版本：** 23
 

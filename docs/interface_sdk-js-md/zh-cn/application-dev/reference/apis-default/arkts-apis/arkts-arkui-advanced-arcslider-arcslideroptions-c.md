@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcSliderOptions--><!--Device-unnamed-export declare class ArcSliderOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -40,19 +42,18 @@ ArcSliderOptions的构造函数。
 ## digitalCrownSensitivity
 
 ```TypeScript
-@Trace
-  digitalCrownSensitivity?: CrownSensitivity
+digitalCrownSensitivity?: CrownSensitivity
 ```
 
-设置旋转表冠的灵敏度。
-
-默认值：CrownSensitivity.MEDIUM
+设置旋转表冠的灵敏度。默认值：CrownSensitivity.MEDIUM
 
 **类型：** CrownSensitivity
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 <!--Device-ArcSliderOptions-@Trace  digitalCrownSensitivity?: CrownSensitivity--><!--Device-ArcSliderOptions-@Trace  digitalCrownSensitivity?: CrownSensitivity-End-->
 
@@ -61,19 +62,18 @@ ArcSliderOptions的构造函数。
 ## layoutOptions
 
 ```TypeScript
-@Trace
-  layoutOptions?: ArcSliderLayoutOptions
+layoutOptions?: ArcSliderLayoutOptions
 ```
 
-配置弧形Slider的样式信息。
-
-默认值：[ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。默认值：[ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderLayoutOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 <!--Device-ArcSliderOptions-@Trace  layoutOptions?: ArcSliderLayoutOptions--><!--Device-ArcSliderOptions-@Trace  layoutOptions?: ArcSliderLayoutOptions-End-->
 
@@ -82,19 +82,18 @@ ArcSliderOptions的构造函数。
 ## onChange
 
 ```TypeScript
-@Trace
-  onChange?: ArcSliderChangeHandler
+onChange?: ArcSliderChangeHandler
 ```
 
-弧形Slider的进度值发生变化时，告知应用。
-
-默认值：不传入的情况，无回调。
+弧形Slider的进度值发生变化时，告知应用。默认值：不传入的情况，无回调。
 
 **类型：** [ArcSliderChangeHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcsliderchangehandler-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 <!--Device-ArcSliderOptions-@Trace  onChange?: ArcSliderChangeHandler--><!--Device-ArcSliderOptions-@Trace  onChange?: ArcSliderChangeHandler-End-->
 
@@ -103,19 +102,18 @@ ArcSliderOptions的构造函数。
 ## onEnlarge
 
 ```TypeScript
-@Trace
-  onEnlarge?: ArcSliderEnlargeHandler
+onEnlarge?: ArcSliderEnlargeHandler
 ```
 
-弧形Slider放大或缩小时，告知应用。
-
-默认值：不传入的情况，无回调。
+弧形Slider放大或缩小时，告知应用。默认值：不传入的情况，无回调。
 
 **类型：** [ArcSliderEnlargeHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcsliderenlargehandler-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 <!--Device-ArcSliderOptions-@Trace  onEnlarge?: ArcSliderEnlargeHandler--><!--Device-ArcSliderOptions-@Trace  onEnlarge?: ArcSliderEnlargeHandler-End-->
 
@@ -124,19 +122,18 @@ ArcSliderOptions的构造函数。
 ## onTouch
 
 ```TypeScript
-@Trace
-  onTouch?: ArcSliderTouchHandler
+onTouch?: ArcSliderTouchHandler
 ```
 
-弧形Slider被触摸时，告知应用。
-
-默认值：不传入的情况，无回调。
+弧形Slider被触摸时，告知应用。默认值：不传入的情况，无回调。
 
 **类型：** [ArcSliderTouchHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcslidertouchhandler-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 <!--Device-ArcSliderOptions-@Trace  onTouch?: ArcSliderTouchHandler--><!--Device-ArcSliderOptions-@Trace  onTouch?: ArcSliderTouchHandler-End-->
 
@@ -145,19 +142,18 @@ ArcSliderOptions的构造函数。
 ## styleOptions
 
 ```TypeScript
-@Trace
-  styleOptions?: ArcSliderStyleOptions
+styleOptions?: ArcSliderStyleOptions
 ```
 
-配置弧形Slider的样式信息。
-
-默认值：[ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。默认值：[ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 <!--Device-ArcSliderOptions-@Trace  styleOptions?: ArcSliderStyleOptions--><!--Device-ArcSliderOptions-@Trace  styleOptions?: ArcSliderStyleOptions-End-->
 
@@ -166,19 +162,18 @@ ArcSliderOptions的构造函数。
 ## valueOptions
 
 ```TypeScript
-@Trace
-  valueOptions?: ArcSliderValueOptions
+valueOptions?: ArcSliderValueOptions
 ```
 
-配置弧形Slider的样式信息。
-
-默认值：[ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。默认值：[ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderValueOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 <!--Device-ArcSliderOptions-@Trace  valueOptions?: ArcSliderValueOptions--><!--Device-ArcSliderOptions-@Trace  valueOptions?: ArcSliderValueOptions-End-->
 

@@ -6,7 +6,7 @@
 const LOCAL_NETWORK_ID: string
 ```
 
-Define local device network id for audio
+本地设备网络id。
 
 **起始版本：** 23
 

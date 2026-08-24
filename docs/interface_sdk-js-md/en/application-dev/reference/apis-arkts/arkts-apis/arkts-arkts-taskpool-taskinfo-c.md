@@ -20,7 +20,7 @@ import { taskpool } from '@kit.ArkTS';
 duration?: number
 ```
 
-Duration that the task has been executed, in ms. The default value is **0**. If the return value is **0**, the task is not running. If the return value is empty, no task is running. You are advised not to change the value.&lt; br&gt; This API can be used in atomic services since API version 11.
+Duration that the task has been executed, in ms. The default value is **0**. If the return value is **0**, the task is not running. If the return value is empty, no task is running. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** number
 

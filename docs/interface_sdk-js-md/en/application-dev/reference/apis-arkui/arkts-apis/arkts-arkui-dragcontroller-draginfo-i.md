@@ -1,8 +1,6 @@
 # DragInfo
 
-DragInfo object description
-
-@interface DragInfo
+DragInfo object description@interface DragInfo
 
 **Since:** 23
 

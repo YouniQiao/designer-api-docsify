@@ -12,8 +12,7 @@ import { netFirewall } from '@kit.NetworkKit';
 function getNetFirewallRule(userId: int, ruleId: int): Promise<NetFirewallRule>
 ```
 
-Obtains a firewall rule based on the specified user ID and rule ID. This API uses a promise to return the result.
-
+Obtains a firewall rule based on the specified user ID and rule ID. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_NET_FIREWALL
 
 **Since:** 15

@@ -16,5 +16,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ToneMappingType](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingtype-e.md) | 色调映射类型枚举。 |
+| [ToneMappingType](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingtype-e.md) | 色调映射类型枚举。@enum { int } |
 

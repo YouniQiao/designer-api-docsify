@@ -184,9 +184,7 @@ See [isNotificationEnabled](#isnotificationenabled)
 function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Queries the notification authorization status of the current application. This API uses an asynchronous callback to return the result.
-
-This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
+Queries the notification authorization status of the current application. This API uses an asynchronous callback to return the result.This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
 
 **Since:** 23
 
@@ -229,9 +227,7 @@ See [isNotificationEnabled](#isnotificationenabled)
 function isNotificationEnabled(): Promise<boolean>
 ```
 
-Queries the notification authorization status of the current application. This API uses a promise to return the result.
-
-This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
+Queries the notification authorization status of the current application. This API uses a promise to return the result.This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
 
 **Since:** 23
 

@@ -124,9 +124,7 @@ setTabContentOptions(): this
 tabBar(content: ComponentContentBase | SubTabBarStyle | BottomTabBarStyle | string | Resource | CustomBuilder | TabBarOptions | undefined): this
 ```
 
-Sets the content displayed on the tab bar. Anonymous Object Rectification
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If BottomTabBarStyle or TabBarOptions is used and an icon is set, a gray block will be displayed if the icon is invalid. <br>If the content exceeds the space provided by the tab bar, it will be clipped. </p>
+Sets the content displayed on the tab bar. Anonymous Object Rectification<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If BottomTabBarStyle or TabBarOptions is used and an icon is set, a gray block will be displayed if the icon is invalid. <br>If the content exceeds the space provided by the tab bar, it will be clipped. </p>
 
 **Since:** 23
 

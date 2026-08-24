@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## finishSession
@@ -13,9 +12,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function finishSession(handle: number, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-Finishes the key operation. This API uses an asynchronous callback to return the result.
-
-The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
+Finishes the key operation. This API uses an asynchronous callback to return the result.The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 
@@ -71,9 +68,7 @@ function finishSession(
   ): void
 ```
 
-Finishes the key operation by segment. The **finishSession** operation is used for user identity authentication and access control. This API uses an asynchronous callback to return the result.
-
-The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
+Finishes the key operation by segment. The **finishSession** operation is used for user identity authentication and access control. This API uses an asynchronous callback to return the result.The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 
@@ -89,7 +84,7 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **finishSession** operation, which is of the uint64 type. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **finishSession** operation. |
-| token | Uint8Array | Yes | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control) . |
+| token | Uint8Array | Yes | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -121,9 +116,7 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 function finishSession(handle: number, options: HuksOptions, token?: Uint8Array): Promise<HuksReturnResult>
 ```
 
-Finishes the key operation. This API uses a promise to return the result.
-
-The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
+Finishes the key operation. This API uses a promise to return the result.The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 
@@ -139,7 +132,7 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **finishSession** operation, which is of the uint64 type. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **finishSession** operation. |
-| token | Uint8Array | No | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control) . If this parameter is left blank, refined key access control is not performed. |
+| token | Uint8Array | No | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). If this parameter is left blank, refined key access control is not performed. |
 
 **Return value:**
 

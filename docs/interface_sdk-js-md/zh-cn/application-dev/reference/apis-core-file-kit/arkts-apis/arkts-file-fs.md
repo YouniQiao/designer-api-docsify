@@ -1,9 +1,8 @@
 # @ohos.file.fs
 
-本模块是Core File Kit的核心模块，提供基础文件操作API，用于对应用沙箱内的文件和目录进行创建、打开、读写、拷贝、移动、删除、查询属性等操作。 模块提供了多种文件访问模式，开发者可根据场景选择： 基于文件描述符（fd）：通过open获取File对象，再使用read/write进行读写，适用于通用文件读写场景。 基于流（Stream）：通过createStream/fdopenStream创建Stream，或通过createReadStream/createWriteStream创建ReadStream/WriteStream，适用于流式数据处理或大文件分块读写等场景。 基于RandomAccessFile：通过createRandomAccessFile创建RandomAccessFile对象，支持独立的偏移指针和随机读写，适用于需要频繁跳转读写位置的场景。 此外，模块还提供文件监听（Watcher）、内存映射（FileMapping）、安全原子写入（AtomicFile）等其他能力。
+本模块是Core File Kit的核心模块，提供基础文件操作API，用于对应用沙箱内的文件和目录进行创建、打开、读写、拷贝、移动、删除、查询属性等操作。模块提供了多种文件访问模式，开发者可根据场景选择：基于文件描述符（fd）：通过open获取File对象，再使用read/write进行读写，适用于通用文件读写场景。 基于流（Stream）：通过createStream/fdopenStream创建Stream，或通过createReadStream/createWriteStream创建ReadStream/WriteStream，适用于流式数据处理或大文件分块读写等场景。 基于RandomAccessFile：通过createRandomAccessFile创建RandomAccessFile对象，支持独立的偏移指针和随机读写，适用于需要频繁跳转读写位置的场景。 此外，模块还提供文件监听（Watcher）、内存映射（FileMapping）、安全原子写入（AtomicFile）等其他能力。
 
 > **使用说明：**
-
 使用该功能模块对文件/目录进行操作前，需要先获取其应用沙箱路径，获取沙箱路径的方式及其接口用法可参考： [应用上下文Context-获取应用文件路径](../../../application-models/application-context-stage.md#获取应用文件路径)。&lt;br/  
 &gt; 指向资源的字符串称为URI。对于只支持沙箱路径作为入参的接口，可以使用构造fileUri对象并获取其沙箱路径的属性的方式将URI转换为沙箱路径，然后使用文件接口。 URI定义及其转换方式请参考：[文件URI](arkts-file-fileuri.md)。
 
@@ -21,27 +20,27 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 
 | 名称 | 说明 |
 | --- | --- |
-| [fileIo](arkts-corefile-fileio-n.md) | 本模块是Core File Kit的核心模块，提供基础文件操作API，用于对应用沙箱内的文件和目录进行创建、打开、读写、拷贝、移动、删除、查询属性等操作。 模块提供了多种文件访问模式，开发者可根据场景选择： 基于文件描述符（fd）：通过open获取File对象，再使用read/write进行读写，适用于通用文件读写场景。 基于流（Stream）：通过createStream/fdopenStream创建Stream，或通过createReadStream/createWriteStream创建ReadStream/WriteStream，适用于流式数据处理或大文件分块读写等场景。 基于RandomAccessFile：通过createRandomAccessFile创建RandomAccessFile对象，支持独立的偏移指针和随机读写，适用于需要频繁跳转读写位置的场景。 此外，模块还提供文件监听（Watcher）、内存映射（FileMapping）、安全原子写入（AtomicFile）等其他能力。 |
+| [fileIo](arkts-corefile-fileio-n.md) | 本模块是Core File Kit的核心模块，提供基础文件操作API，用于对应用沙箱内的文件和目录进行创建、打开、读写、拷贝、移动、删除、查询属性等操作。模块提供了多种文件访问模式，开发者可根据场景选择：基于文件描述符（fd）：通过open获取File对象，再使用read/write进行读写，适用于通用文件读写场景。 基于流（Stream）：通过createStream/fdopenStream创建Stream，或通过createReadStream/createWriteStream创建ReadStream/WriteStream，适用于流式数据处理或大文件分块读写等场景。 基于RandomAccessFile：通过createRandomAccessFile创建RandomAccessFile对象，支持独立的偏移指针和随机读写，适用于需要频繁跳转读写位置的场景。 此外，模块还提供文件监听（Watcher）、内存映射（FileMapping）、安全原子写入（AtomicFile）等其他能力。 |
 
 ### 函数
 
 | 名称 | 说明 |
 | --- | --- |
-| [access](arkts-corefile-file-fs-access-f.md) | 检查文件或目录是否存在，或校验操作权限。使用Promise异步回调。 |
+| [access](arkts-corefile-file-fs-access-f.md) | 检查文件或目录是否存在，或校验操作权限。使用Promise异步回调。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。 |
 | [access](arkts-corefile-file-fs-access-f.md) | 检查文件或目录是否存在。使用callback异步回调。 |
-| [access](arkts-corefile-file-fs-access-f.md) | 检查文件或目录是否在本地，或校验操作权限。使用Promise异步回调。 |
-| [accessSync](arkts-corefile-file-fs-accesssync-f.md) | 以同步方法检查文件或目录是否存在，或校验操作权限。 |
-| [accessSync](arkts-corefile-file-fs-accesssync-f.md) | 以同步方法检查文件或目录是否在本地，或校验操作权限。 |
+| [access](arkts-corefile-file-fs-access-f.md) | 检查文件或目录是否在本地，或校验操作权限。使用Promise异步回调。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。 |
+| [accessSync](arkts-corefile-file-fs-accesssync-f.md) | 以同步方法检查文件或目录是否存在，或校验操作权限。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。 |
+| [accessSync](arkts-corefile-file-fs-accesssync-f.md) | 以同步方法检查文件或目录是否在本地，或校验操作权限。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。 |
 | [close](arkts-corefile-file-fs-close-f.md) | 关闭文件或目录，关闭后文件描述符fd失效，不可再用于读写等操作。使用Promise异步回调。 |
 | [close](arkts-corefile-file-fs-close-f.md) | 关闭文件或目录，关闭后文件描述符fd失效，不可再用于读写等操作。使用callback异步回调。 |
 | [closeSync](arkts-corefile-file-fs-closesync-f.md) | 以同步方法关闭文件或目录，关闭后文件描述符fd失效，不可再用于读写等操作。 |
 | [connectDfs](arkts-corefile-file-fs-connectdfs-f.md) | 业务调用connectDfs接口，触发建链。如果对端设备出现异常，业务执行回调DfsListeners内 onStatus通知应用。 |
-| [copy](arkts-corefile-file-fs-copy-f.md) | 拷贝文件或目录。使用Promise异步回调。 |
-| [copy](arkts-corefile-file-fs-copy-f.md) | 拷贝文件或者目录。使用callback异步回调。 |
-| [copy](arkts-corefile-file-fs-copy-f.md) | 拷贝文件或者目录。使用callback异步回调。 |
+| [copy](arkts-corefile-file-fs-copy-f.md) | 拷贝文件或目录。使用Promise异步回调。支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。 |
+| [copy](arkts-corefile-file-fs-copy-f.md) | 拷贝文件或者目录。使用callback异步回调。支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。 |
+| [copy](arkts-corefile-file-fs-copy-f.md) | 拷贝文件或者目录。使用callback异步回调。支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。 |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md) | 复制源目录及其内容至目标路径下，可设置冲突处理模式。使用Promise异步回调。 |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md) | 复制源目录及其内容至目标路径下。使用callback异步回调。 |
-| [copyDir](arkts-corefile-file-fs-copydir-f.md) | 复制源目录至目标路径下。使用callback异步回调。 |
+| [copyDir](arkts-corefile-file-fs-copydir-f.md) | 复制源目录至目标路径下。使用callback异步回调。如果目标目录下有与源目录名冲突的目录，且冲突目录下有同名文件，则抛出异常。源目录下未冲突的文件全部拷贝至目标目录下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array\&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;形式提供。 |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md) | 复制源目录及其内容至目标路径下，可设置冲突处理模式。使用callback异步回调。 |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md) | 复制源目录及其内容至目标路径下，可设置冲突处理模式。使用callback异步回调。 |
 | [copyDirSync](arkts-corefile-file-fs-copydirsync-f.md) | 以同步方法复制源目录至目标路径下。 |
@@ -72,12 +71,12 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 | [fsyncSync](arkts-corefile-file-fs-fsyncsync-f.md) | 以同步方法将文件系统缓存数据写入磁盘。 |
 | [getxattr](arkts-corefile-file-fs-getxattr-f.md) | 获取文件或目录的扩展属性。使用promise异步回调。 |
 | [getxattrSync](arkts-corefile-file-fs-getxattrsync-f.md) | 使用同步接口获取文件或目录的扩展属性。 |
-| [listFile](arkts-corefile-file-fs-listfile-f.md) | 默认列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。使用Promise异步回调。 |
+| [listFile](arkts-corefile-file-fs-listfile-f.md) | 默认列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。使用Promise异步回调。可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。 |
 | [listFile](arkts-corefile-file-fs-listfile-f.md) | 默认列出当前目录下所有文件名和目录名，返回文件名数组。使用callback异步回调。 |
-| [listFile](arkts-corefile-file-fs-listfile-f.md) | 默认列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。使用callback异步回调。 |
-| [listFileExt](arkts-corefile-file-fs-listfileext-f.md) | 列出目录下所有文件名，支持递归列出和自定义文件名过滤。使用Promise异步回调。 |
-| [listFileExtSync](arkts-corefile-file-fs-listfileextsync-f.md) | 以同步方式列出目录下所有文件名，支持递归列出和自定义文件名过滤。 |
-| [listFileSync](arkts-corefile-file-fs-listfilesync-f.md) | 默认以同步方式列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。 |
+| [listFile](arkts-corefile-file-fs-listfile-f.md) | 默认列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。使用callback异步回调。可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。 |
+| [listFileExt](arkts-corefile-file-fs-listfileext-f.md) | 列出目录下所有文件名，支持递归列出和自定义文件名过滤。使用Promise异步回调。可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。 |
+| [listFileExtSync](arkts-corefile-file-fs-listfileextsync-f.md) | 以同步方式列出目录下所有文件名，支持递归列出和自定义文件名过滤。可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。 |
+| [listFileSync](arkts-corefile-file-fs-listfilesync-f.md) | 默认以同步方式列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。 |
 | [lseek](arkts-corefile-file-fs-lseek-f.md) | 调整文件偏移指针位置。 |
 | [lstat](arkts-corefile-file-fs-lstat-f.md) | 获取符号链接文件信息，返回符号链接本身的属性而非目标文件的属性。使用Promise异步回调。 |
 | [lstat](arkts-corefile-file-fs-lstat-f.md) | 获取符号链接文件信息，返回符号链接本身的属性而非目标文件的属性。使用callback异步回调。 |
@@ -94,8 +93,8 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 | [mmap](arkts-corefile-file-fs-mmap-f.md) | 基于文件描述符或文件对象创建文件映射对象，实现文件的高效读写访问。使用Promise异步回调。 |
 | [mmapSync](arkts-corefile-file-fs-mmapsync-f.md) | 以同步方法基于文件描述符或文件对象创建文件映射对象，实现文件的高效读写访问。 |
 | [moveDir](arkts-corefile-file-fs-movedir-f.md) | 移动源目录及其内容至目标路径下。使用Promise异步回调。 |
-| [moveDir](arkts-corefile-file-fs-movedir-f.md) | 移动源目录及其内容至目标路径下。使用callback异步回调。 |
-| [moveDir](arkts-corefile-file-fs-movedir-f.md) | 移动源目录及其内容至目标路径下。使用callback异步回调。 |
+| [moveDir](arkts-corefile-file-fs-movedir-f.md) | 移动源目录及其内容至目标路径下。使用callback异步回调。移动模式为目录级别抛异常。当目标目录下存在与源目录名冲突的目录，则抛出异常。 |
+| [moveDir](arkts-corefile-file-fs-movedir-f.md) | 移动源目录及其内容至目标路径下。使用callback异步回调。移动模式为目录级别抛异常。当目标目录下存在与源目录名冲突的目录，则抛出异常。 |
 | [moveDir](arkts-corefile-file-fs-movedir-f.md) | 移动源目录及其内容至目标路径下，支持设置冲突处理模式。使用callback异步回调。 |
 | [moveDir](arkts-corefile-file-fs-movedir-f.md) | 移动源目录及其内容至目标路径下，支持设置冲突处理模式。使用callback异步回调。 |
 | [moveDirSync](arkts-corefile-file-fs-movedirsync-f.md) | 以同步方法移动源目录及其内容至目标路径下。 |
@@ -105,7 +104,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 | [moveFileSync](arkts-corefile-file-fs-movefilesync-f.md) | 以同步方式移动文件至目标路径。 |
 | [open](arkts-corefile-file-fs-open-f.md) | 打开文件或目录，支持使用URI打开文件。使用Promise异步回调。 |
 | [open](arkts-corefile-file-fs-open-f.md) | 打开文件或目录，支持使用URI打开文件。使用callback异步回调。 |
-| [open](arkts-corefile-file-fs-open-f.md) | 打开文件或目录，可设置打开文件的选项。使用callback异步回调。 |
+| [open](arkts-corefile-file-fs-open-f.md) | 打开文件或目录，可设置打开文件的选项。使用callback异步回调。支持使用URI打开文件。 |
 | [openSync](arkts-corefile-file-fs-opensync-f.md) | 以同步方法打开文件或目录。支持使用URI打开文件。 |
 | [read](arkts-corefile-file-fs-read-f.md) | 从文件读取数据，返回实际读取的字节数。使用Promise异步回调。 |
 | [read](arkts-corefile-file-fs-read-f.md) | 从文件读取数据，返回实际读取的字节数。使用callback异步回调。 |
@@ -150,7 +149,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 
 | 名称 | 说明 |
 | --- | --- |
-| [AtomicFile](arkts-corefile-file-fs-atomicfile-c.md) | AtomicFile是一个用于对文件进行原子读写等操作的类。 |
+| [AtomicFile](arkts-corefile-file-fs-atomicfile-c.md) | AtomicFile是一个用于对文件进行原子读写等操作的类。在写操作时，通过写入临时文件，并在写入成功后将其重命名到原始文件位置来确保写入文件的完整性；而在写入失败时删除临时文件，不修改原始文件内容。使用者可以自行调用finishWrite或failWrite来完成文件内容的写入或回滚。 |
 | [ReadStream](arkts-corefile-file-fs-readstream-c.md) | 文件可读流，需要先通过fileIo.createReadStream方法来构建一个ReadStream实例。ReadStream继承自数据流基类stream.Readable。 ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。 |
 | [TaskSignal](arkts-corefile-file-fs-tasksignal-c.md) | 拷贝中断信号。 |
 | [WriteStream](arkts-corefile-file-fs-writestream-c.md) | 文件可写流，需要先通过 fileIo.createWriteStream方法来构建一 个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md)。 |

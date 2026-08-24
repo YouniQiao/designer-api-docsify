@@ -1,8 +1,6 @@
 # WebKeyboardAppearanceMode
 
-Enum type supplied to [keyboardAppearance](arkts-web-attribute.md#keyboardappearance) for setting the web keyboard appearance mode.
-
-@enum { number }
+Enum type supplied to [keyboardAppearance](arkts-web-attribute.md#keyboardappearance) for setting the web keyboard appearance mode.@enum { number }
 
 **Since:** 26.0.0
 

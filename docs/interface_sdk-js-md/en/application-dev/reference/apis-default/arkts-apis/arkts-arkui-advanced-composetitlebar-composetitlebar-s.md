@@ -1,11 +1,9 @@
 # ComposeTitleBar
 
-*ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture ( optional). It can come with a Back button for switching between pages of different levels.
+**ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture (optional). It can come with a Back button for switching between pages of different levels.
 
-> **NOTE：**
-> 
-> - This component can be used only in the stage model.
-> 
+> **NOTE：**&gt;
+> - This component can be used only in the stage model.&gt;
 > - If the **ComposeTitleBar** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -16,6 +14,8 @@
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct ComposeTitleBar--><!--Device-unnamed-export declare struct ComposeTitleBar-End-->
 
@@ -29,8 +29,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -38,6 +37,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

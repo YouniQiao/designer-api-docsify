@@ -1,8 +1,6 @@
 # @ohos.app.ability.scriptManager
 
-Namespace for managing and organizing script information.
-
-@namespace scriptManager
+Namespace for managing and organizing script information.@namespace scriptManager
 
 **Since:** 26.0.0
 

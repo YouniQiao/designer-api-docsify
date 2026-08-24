@@ -22,7 +22,7 @@ activatedColor?: ColorMetrics
 
 Text fontColor when the item is activated.
 
-**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -42,7 +42,7 @@ color?: ColorMetrics
 
 Define text fontColor.
 
-**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 

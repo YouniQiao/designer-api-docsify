@@ -1,8 +1,6 @@
 # SheetInfo
 
-The information of sheet.
-
-@interface SheetInfo
+The information of sheet.@interface SheetInfo
 
 **Since:** 23
 

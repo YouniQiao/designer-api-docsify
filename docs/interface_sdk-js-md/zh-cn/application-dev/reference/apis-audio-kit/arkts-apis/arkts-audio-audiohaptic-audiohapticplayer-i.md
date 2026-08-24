@@ -548,8 +548,7 @@ setLoop(loop: boolean): Promise<void>
 
 设置音振播放器循环播放。使用Promise异步回调。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 该方法需在音振播放器销毁前调用。
 
 **起始版本：** 23
@@ -596,8 +595,7 @@ setVolume(volume: double): Promise<void>
 
 设置音振播放器的音量。使用Promise异步回调。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 该方法需在音振播放器释放前调用。
 
 **起始版本：** 23

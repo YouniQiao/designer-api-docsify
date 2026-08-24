@@ -1,8 +1,6 @@
 # Animation
 
-动画类型，继承自SceneResource。
-
-@extends SceneResource @interface Animation
+动画类型，继承自SceneResource。@extends SceneResource @interface Animation
 
 **继承/实现关系：** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 

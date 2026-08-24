@@ -20,9 +20,7 @@ import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } fro
 onRequestFailure?: OnRequestFailureFn
 ```
 
-拉起指定类型的Ability组件失败时的回调函数。
-
-从API version 21开始，该接口支持在原子化服务中使用。
+拉起指定类型的Ability组件失败时的回调函数。从API version 21开始，该接口支持在原子化服务中使用。
 
 **类型：** [OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md)
 
@@ -42,9 +40,7 @@ onRequestFailure?: OnRequestFailureFn
 onRequestSuccess?: OnRequestSuccessFn
 ```
 
-拉起指定类型的Ability组件成功时的回调函数。
-
-从API version 21开始，该接口支持在原子化服务中使用。
+拉起指定类型的Ability组件成功时的回调函数。从API version 21开始，该接口支持在原子化服务中使用。
 
 **类型：** [OnRequestSuccessFn](arkts-ability-onrequestsuccessfn-t.md)
 

@@ -22,8 +22,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 Binds the IP address and port number. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the **TLSSocket** object is upgraded from a **TCPSocket** object, you do not need to execute the **bind**
 > API.
 
@@ -182,8 +181,7 @@ bind(address: NetAddress): Promise<void>
 
 Binds the IP address and port number. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the **TLSSocket** object is upgraded from a **TCPSocket** object, you do not need to execute the **bind**
 > API.
 
@@ -1484,8 +1482,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **TLSSocket** connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Call this API only after the **TLSSocketServer** connection is successfully established.
 
 **Since:** 12
@@ -2510,10 +2507,8 @@ getSocketFd(): Promise<int>
 
 Obtains the file descriptor of the **TLSSocket** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - This API can be called only after **bind** is successfully called.
-> 
+> **NOTE：**&gt;
+> - This API can be called only after **bind** is successfully called.&gt;
 > - The lifecycle of the file descriptor is managed by the system. The application can use the
 > [close](#close) method to close the socket connection,
 > instead of directly operating the file descriptor.
@@ -3406,8 +3401,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 Subscribes to **connect** or **close** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** is successfully called.
 
 **Since:** 9
@@ -3463,8 +3457,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 Subscribes to **connect** or **close** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** is successfully called.
 
 **Since:** 9
@@ -3498,8 +3491,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to **error** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** is successfully called.
 
 **Since:** 9
@@ -3552,8 +3544,7 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 
 Subscribes to **message** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** is successfully called.
 
 **Since:** 9

@@ -4,6 +4,8 @@ Defines chip group space.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipGroupV2Space--><!--Device-unnamed-export declare class ChipGroupV2Space-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ The constructor of ChipGroupV2SpaceConfig
 ## endSpace
 
 ```TypeScript
-@Trace
-    public endSpace?: Length
+public endSpace?: Length
 ```
 
 End space.
@@ -50,6 +51,8 @@ End space.
 **Type:** Length
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ End space.
 ## itemSpace
 
 ```TypeScript
-@Trace
-    public itemSpace?: string | number
+public itemSpace?: string | number
 ```
 
 Space between items.
@@ -71,6 +73,8 @@ Space between items.
 **Type:** string \| number
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +87,7 @@ Space between items.
 ## startSpace
 
 ```TypeScript
-@Trace
-    public startSpace?: Length
+public startSpace?: Length
 ```
 
 Start space.
@@ -92,6 +95,8 @@ Start space.
 **Type:** Length
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

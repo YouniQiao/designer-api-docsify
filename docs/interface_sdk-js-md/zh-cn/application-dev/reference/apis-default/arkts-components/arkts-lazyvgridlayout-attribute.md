@@ -4,31 +4,19 @@
 
 ## columnsGap
 
-default columnsGap(value: LengthMetrics | undefined): this
-
-设置列与列的间距。设置为小于0的值时，按默认值显示。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 | | ------ | ---------------------------- | ---- | ---------------------------- | | value | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 列与列的间距。<br/>默认值：0vp<br/>取值为undefined时，按默认值处理。 |
+default columnsGap(value: LengthMetrics | undefined): this设置列与列的间距。设置为小于0的值时，按默认值显示。  
+**原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。  
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full  
+**参数：**  
+| 参数名 | 类型 | 必填 | 说明 | | ------ | ---------------------------- | ---- | ---------------------------- | | value | [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 | 列与列的间距。<br/>默认值：0vp<br/>取值为undefined时，按默认值处理。 |
 
 ## rowsGap
 
-default rowsGap(value: LengthMetrics | undefined): this
-
-设置行与行的间距。设置为小于0的值时，按默认值显示。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 | | ------ | ---------------------------- | ---- | ---------------------------- | | value | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 行与行的间距。<br/>默认值：0vp<br/>取值为undefined时，按默认值处理。 |
+default rowsGap(value: LengthMetrics | undefined): this设置行与行的间距。设置为小于0的值时，按默认值显示。  
+**原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。  
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full  
+**参数：**  
+| 参数名 | 类型 | 必填 | 说明 | | ------ | ---------------------------- | ---- | ---------------------------- | | value | [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 | 行与行的间距。<br/>默认值：0vp<br/>取值为undefined时，按默认值处理。 |
 
 **继承/实现关系：** LazyVGridLayoutAttribute extends [LazyGridLayoutAttribute](arkts-lazygridlayout-lazygridlayoutattribute-i.md)
 

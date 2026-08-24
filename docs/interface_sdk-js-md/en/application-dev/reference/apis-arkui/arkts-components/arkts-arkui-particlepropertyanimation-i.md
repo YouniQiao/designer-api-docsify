@@ -19,9 +19,7 @@ Defines the particle property lifecycle. @interface ParticlePropertyAnimation
 curve?: Curve | ICurve
 ```
 
-Animation curve.
-
-Default value: **Curve.Linear**
+Animation curve.Default value: **Curve.Linear**
 
 **Type:** Curve \| ICurve
 
@@ -43,11 +41,7 @@ Default value: **Curve.Linear**
 endMillis: number
 ```
 
-End time of the animation.
-
-Unit: ms.
-
-Value range: [0, +∞).
+End time of the animation.Unit: ms.Value range: [0, +∞).
 
 **Type:** number
 
@@ -87,11 +81,7 @@ Initial value of the property. If the value is invalid, the default value will b
 startMillis: number
 ```
 
-Start time of the animation.
-
-Unit: ms.
-
-Value range: [0, +∞).
+Start time of the animation.Unit: ms.Value range: [0, +∞).
 
 **Type:** number
 

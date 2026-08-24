@@ -1,11 +1,9 @@
 # Router
 
-提供通过不同的url访问不同的页面，包括跳转到应用内的指定页面、同应用内的某个页面替换当前页面、返回上一页面或指定的页面等。   
-> **说明：**
-> 
-> - 本Class首批接口从API version 10开始支持。
-> 
-> - 以下API需先使用UIContext中的[getRouter()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取
+提供通过不同的url访问不同的页面，包括跳转到应用内的指定页面、同应用内的某个页面替换当前页面、返回上一页面或指定的页面等。  
+> **说明：**&gt;
+> - 本Class首批接口从API version 10开始支持。&gt;
+> - 以下API需先使用UIContext中的[getRouter()](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter)方法获取
 > 到Router对象，再通过该对象调用对应方法。
 
 **起始版本：** 23
@@ -94,7 +92,7 @@ clear(): void
 getLength(): string
 ```
 
-获取当前在页面栈内的页面数量。   
+获取当前在页面栈内的页面数量。  
 > **说明：**
 > 从API version 10开始支持，从 API version 23开始废弃，建议使用[getStackSize](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md#getstacksize)替代。
 

@@ -131,11 +131,9 @@ constructor(name: string, runningCapacity: number, waitingCapacity?: number)
 
 A constructor used to create an **AsyncRunner** instance. It constructs a global asynchronous queue. If the queue name is the same as an existing name, the same asynchronous queue is returned.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The bottom layer uses the singleton mode to ensure that the same instance is obtained when an asynchronous
-> queue with the same name is created.
-> 
+> queue with the same name is created.&gt;
 > - The task execution concurrency and waiting capacity cannot be modified.
 
 **Since:** 18
@@ -166,20 +164,13 @@ execute(task: Task, priority?: Priority): Promise<Object>
 
 Adds a task to the asynchronous queue for execution. Before using this API, you must create an **AsyncRunner** instance. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - Tasks in a task group cannot be added to the asynchronous queue.
-> 
-> - Tasks in a serial queue cannot be added to the asynchronous queue.
-> 
-> - Tasks in other asynchronous queues cannot be added to the asynchronous queue.
-> 
-> - Periodic tasks cannot be added to the asynchronous queue.
-> 
-> - Delayed tasks cannot be added to the asynchronous queue.
-> 
-> - Tasks that depend others cannot be added to the asynchronous queue.
-> 
+> **NOTE：**&gt;
+> - Tasks in a task group cannot be added to the asynchronous queue.&gt;
+> - Tasks in a serial queue cannot be added to the asynchronous queue.&gt;
+> - Tasks in other asynchronous queues cannot be added to the asynchronous queue.&gt;
+> - Periodic tasks cannot be added to the asynchronous queue.&gt;
+> - Delayed tasks cannot be added to the asynchronous queue.&gt;
+> - Tasks that depend others cannot be added to the asynchronous queue.&gt;
 > - Tasks that have been executed cannot be added to the asynchronous queue.
 
 **Since:** 18

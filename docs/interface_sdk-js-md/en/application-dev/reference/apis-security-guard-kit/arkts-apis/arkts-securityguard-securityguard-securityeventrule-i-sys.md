@@ -1,8 +1,6 @@
 # SecurityEventRule (System API)
 
-Provides the conditions of querySecurityEvent.
-
-@interface SecurityEventRule
+Provides the conditions of querySecurityEvent.@interface SecurityEventRule
 
 **Since:** 12
 

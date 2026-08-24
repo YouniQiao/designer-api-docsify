@@ -14,11 +14,9 @@ function replyCustomEapData(result: CustomResult, data: EapData): void
 
 Notifies the system of the extensible authentication result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - If this callback is used to process received EAP data packets, the customized portion added by the server must
-> be removed from the EAP data transmitted to the system.
-> 
+> be removed from the EAP data transmitted to the system.&gt;
 > - If this callback is used to process sent EAP data packets, the EAP data transmitted to the system is the EAP
 > data with the customized portion added by the server.
 

@@ -1,8 +1,6 @@
 # OperResult
 
-操作结果的定义。
-
-@interface OperResult
+操作结果的定义。@interface OperResult
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # CommonShapeMethod
 
-CommonShapeMethod
-
-@extends CommonMethod
+CommonShapeMethod@extends CommonMethod
 
 **Inheritance/Implementation:** CommonShapeMethod extends [CommonMethod](arkts-common-commonmethod-i.md)
 

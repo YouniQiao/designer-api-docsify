@@ -1,11 +1,8 @@
 # AVTranscoder
 
-视频转码管理类，用于视频转码。在调用AVTranscoder的方法前，需要先通过 [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md)构建一个AVTranscoder实例。
+视频转码管理类，用于视频转码。在调用AVTranscoder的方法前，需要先通过 [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md)构建一个AVTranscoder实例。视频转码demo可参考：[视频转码开发指导](../../../media/media/using-avtranscoder-for-transcodering.md)
 
-视频转码demo可参考：[视频转码开发指导](../../../media/media/using-avtranscoder-for-transcodering.md)
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 23
@@ -185,9 +182,7 @@ async function test() {
 cancel(): Promise<void>
 ```
 
-取消视频转码。使用Promise异步回调。
-
-需要在prepare()、start()、 pause()或resume()事件成功触发后，才能调用cancel方法。
+取消视频转码。使用Promise异步回调。需要在prepare()、start()、 pause()或resume()事件成功触发后，才能调用cancel方法。
 
 **起始版本：** 23
 
@@ -393,9 +388,7 @@ avTranscoder.offProgressUpdate();
 on(type:'complete', callback: Callback<void>):void
 ```
 
-注册转码完成事件，并通过注册的回调方法通知开发者。开发者只能注册一个进度更新事件的回调方法，当开发者重复注册时，以最后一次注册的回调接口为准。使用callback异步回调。
-
-当AVTranscoder上报complete事件时，当前转码操作已完成，开发者需要通过release()退出转码操作。
+注册转码完成事件，并通过注册的回调方法通知开发者。开发者只能注册一个进度更新事件的回调方法，当开发者重复注册时，以最后一次注册的回调接口为准。使用callback异步回调。当AVTranscoder上报complete事件时，当前转码操作已完成，开发者需要通过release()退出转码操作。
 
 **起始版本：** 12
 
@@ -418,9 +411,7 @@ on(type:'complete', callback: Callback<void>):void
 on(type:'error', callback: ErrorCallback):void
 ```
 
-注册AVTranscoder的错误事件，该事件仅用于错误提示。如果AVTranscoder上报error事件，开发者需要通过release()退出转码操作 。使用callback异步回调。
-
-开发者只能订阅一个错误事件的回调方法，当开发者重复订阅时，以最后一次订阅的回调接口为准。
+注册AVTranscoder的错误事件，该事件仅用于错误提示。如果AVTranscoder上报error事件，开发者需要通过release()退出转码操作 。使用callback异步回调。开发者只能订阅一个错误事件的回调方法，当开发者重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 12
 
@@ -479,9 +470,7 @@ on(type:'progressUpdate', callback: Callback<int>):void
 onComplete(callback: Callback<void>):void
 ```
 
-Subscribes to the event indicating that transcoding is complete. An application can subscribe to only one transcoding completion event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
-
-When this event is reported, the current transcoding operation is complete. You need to call [release()](#release) to exit the transcoding.
+Subscribes to the event indicating that transcoding is complete. An application can subscribe to only one transcoding completion event. When the application initiates multiple subscriptions to this event, the last subscription is applied.When this event is reported, the current transcoding operation is complete. You need to call [release()](#release) to exit the transcoding.
 
 **起始版本：** 23
 
@@ -513,9 +502,7 @@ avTranscoder.onComplete(async () => {
 onError(callback: ErrorCallback):void
 ```
 
-Subscribes to AVTranscoder errors. If this event is reported, call [release()](#release) to exit the transcoding.
-
-An application can subscribe to only one AVTranscoder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to AVTranscoder errors. If this event is reported, call [release()](#release) to exit the transcoding.An application can subscribe to only one AVTranscoder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **起始版本：** 23
 
@@ -600,9 +587,7 @@ avTranscoder.onProgressUpdate((progress: number) => {
 pause(): Promise<void>
 ```
 
-暂停视频转码。使用Promise异步回调。
-
-需要start()事件成功触发后，才能调用pause方法，可以通过调用resume()接 口来恢复转码。
+暂停视频转码。使用Promise异步回调。需要start()事件成功触发后，才能调用pause方法，可以通过调用resume()接 口来恢复转码。
 
 **起始版本：** 23
 
@@ -1037,9 +1022,7 @@ videoPlayer.prepare().then(() => {
 release(): Promise<void>
 ```
 
-释放视频转码资源。使用Promise异步回调。
-
-释放视频转码资源之后，该AVTranscoder实例不能再进行任何操作。
+释放视频转码资源。使用Promise异步回调。释放视频转码资源之后，该AVTranscoder实例不能再进行任何操作。
 
 **起始版本：** 23
 
@@ -1298,9 +1281,7 @@ videoPlayer.release().then(() => {
 resume(): Promise<void>
 ```
 
-恢复视频转码。使用Promise异步回调。
-
-需要在pause()事件成功触发后，才能调用resume方法。
+恢复视频转码。使用Promise异步回调。需要在pause()事件成功触发后，才能调用resume方法。
 
 **起始版本：** 23
 
@@ -1401,9 +1382,7 @@ async function test() {
 start(): Promise<void>
 ```
 
-开始视频转码。使用Promise异步回调。
-
-需要prepare()事件成功触发后，才能调用start方法。
+开始视频转码。使用Promise异步回调。需要prepare()事件成功触发后，才能调用start方法。
 
 **起始版本：** 23
 
@@ -1504,10 +1483,8 @@ async function test() {
 fdDst: int
 ```
 
-目标媒体文件描述，通过该属性设置数据输出。在创建AVTranscoder实例后，必须设置fdSrc和fdDst属性。
-
+目标媒体文件描述，通过该属性设置数据输出。在创建AVTranscoder实例后，必须设置fdSrc和fdDst属性。  
 **说明：**
-
 - 将资源句柄（fd）传递给AVTranscoder实例之后，请不要通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator /AVTranscoder。 - 同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致视频转码数据获取异常。
 
 **类型：** int
@@ -1526,14 +1503,9 @@ fdDst: int
 fdSrc: AVFileDescriptor
 ```
 
-源媒体文件描述，通过该属性设置数据源。
-
-**使用示例**：
-
-假设一个连续存储的媒体文件，地址偏移：0，字节长度：100。其文件描述为AVFileDescriptor{ fd = 资源句柄; offset = 0; length = 100; }。
-
+源媒体文件描述，通过该属性设置数据源。  
+**使用示例**：假设一个连续存储的媒体文件，地址偏移：0，字节长度：100。其文件描述为AVFileDescriptor{ fd = 资源句柄; offset = 0; length = 100; }。  
 **说明：**
-
 - 将资源句柄（fd）传递给AVTranscoder实例之后，请不要通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator /AVTranscoder。 - 同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致视频转码数据获取异常。
 
 **类型：** [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md)

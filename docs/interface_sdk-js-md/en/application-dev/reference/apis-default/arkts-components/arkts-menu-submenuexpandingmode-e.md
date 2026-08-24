@@ -1,8 +1,6 @@
 # SubMenuExpandingMode
 
-Declare SubMenuExpandingMode
-
-@enum { number }
+Declare SubMenuExpandingMode@enum { number }
 
 **Since:** 23
 

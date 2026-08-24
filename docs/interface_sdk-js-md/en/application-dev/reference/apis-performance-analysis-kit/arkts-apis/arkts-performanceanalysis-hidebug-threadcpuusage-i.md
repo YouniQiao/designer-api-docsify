@@ -1,8 +1,6 @@
 # ThreadCpuUsage
 
-Describes the CPU usage of a thread.
-
-@interface ThreadCpuUsage
+Describes the CPU usage of a thread.@interface ThreadCpuUsage
 
 **Since:** 23
 

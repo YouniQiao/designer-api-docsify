@@ -1,8 +1,6 @@
 # IntentEntity
 
-意图实体结构体定义，用于定义意图执行过程中涉及的关键信息对象，包括意图参数和意图执行结果等。
-
-开发者通过继承该类来定义意图实体，继承类需使用 @InsightIntentEntity 装饰。
+意图实体结构体定义，用于定义意图执行过程中涉及的关键信息对象，包括意图参数和意图执行结果等。开发者通过继承该类来定义意图实体，继承类需使用 @InsightIntentEntity 装饰。
 
 **起始版本：** 26.0.0
 
@@ -14,8 +12,6 @@
 
 ```TypeScript
 import { insightIntent } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## entityId

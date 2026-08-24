@@ -42,9 +42,7 @@ Extension identity, used to identify additional identity information of the call
 usedType?: PermissionUsedType
 ```
 
-Sensitive permission usage type.
-
-Default value: NORMAL_TYPE.
+Sensitive permission usage type.Default value: NORMAL_TYPE.
 
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 

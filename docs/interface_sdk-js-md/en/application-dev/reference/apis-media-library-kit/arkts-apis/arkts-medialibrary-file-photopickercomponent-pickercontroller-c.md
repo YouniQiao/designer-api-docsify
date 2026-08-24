@@ -4,6 +4,8 @@ Defines an instance used to send data to the **PhotoPickerComponent**.
 
 **Since:** 12
 
+**Decorator:** @Observed
+
 <!--Device-unnamed-export declare class PickerController--><!--Device-unnamed-export declare class PickerController-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -159,8 +161,7 @@ saveTrustedPhotoAssetsEx(trustedUris: Array<string>,settings?: Array<photoAccess
 
 Saves files in a URI list. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is usually used together with
 > [replacePhotoPickerPreview](../../apis-default/arkts-apis/arkts-file-photopickercomponent-pickercontroller-c.md#replacephotopickerpreview) to save the new images or videos in
 > the application sandbox path to Gallery.
@@ -240,9 +241,7 @@ Sets the maximum number of images, videos, or images and videos that can be sele
 setMovingPhotoState(movingPhotoState: photoAccessHelper.MovingPhotoBadgeStateType): Promise<void>
 ```
 
-Sets the state of the moving photo on the photo browser page. This API uses a promise to return the result.
-
-This parameter takes effect only on the photo browser page. **NOT_MOVING_PHOTO** cannot be set.
+Sets the state of the moving photo on the photo browser page. This API uses a promise to return the result.This parameter takes effect only on the photo browser page. **NOT_MOVING_PHOTO** cannot be set.
 
 **Since:** 23
 

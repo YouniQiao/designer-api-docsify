@@ -1,8 +1,6 @@
 # OutlineRadiuses
 
-Defines the outline radius property.
-
-@interface OutlineRadiuses
+Defines the outline radius property.@interface OutlineRadiuses
 
 **Since:** 23
 

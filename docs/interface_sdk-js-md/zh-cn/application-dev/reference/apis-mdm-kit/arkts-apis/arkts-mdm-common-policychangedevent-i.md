@@ -1,8 +1,6 @@
 # PolicyChangedEvent
 
-策略变更事件。
-
-该接口目前在 [onAdminPolicyChanged](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged) 接口中作为回调入参使用。
+策略变更事件。该接口目前在 [onAdminPolicyChanged](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged) 接口中作为回调入参使用。
 
 **起始版本：** 26.0.0
 

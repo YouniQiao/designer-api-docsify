@@ -1,8 +1,6 @@
 # AgentCard
 
-AgentCard相当于Agent(智能体)的"名片"，用于描述Agent的能力和技能，由开发者在Agent的配置文件agent_config.json中配置。
-
-一个Agent就是一个AgentExtensionAbility实例。开发者可以通过AgentExtensionContext中的agentCard属性获取到当前AgentExtensionAbility的AgentCard。
+AgentCard相当于Agent(智能体)的"名片"，用于描述Agent的能力和技能，由开发者在Agent的配置文件agent_config.json中配置。一个Agent就是一个AgentExtensionAbility实例。开发者可以通过AgentExtensionContext中的agentCard属性获取到当前AgentExtensionAbility的AgentCard。
 
 **起始版本：** 24
 
@@ -196,8 +194,7 @@ Agent的扩展配置项。用于存储自定义的扩展配置信息，如Agent�
 iconUrl: string
 ```
 
-Agent图标的URL。提供Agent的可视化标识图标，用于在UI界面中展示，增强Agent的辨识度和用户体验。
-
+Agent图标的URL。提供Agent的可视化标识图标，用于在UI界面中展示，增强Agent的辨识度和用户体验。  
 **说明：**系统不校验该字段内容，使用方需自行验证iconUrl的合法性和安全性。
 
 **类型：** string

@@ -8,7 +8,7 @@
 | --- | --- |
 | [BackgroundColorStyle](arkts-arkui-styledstring-backgroundcolorstyle-c.md) | 文本背景颜色对象说明。 |
 | [BaselineOffsetStyle](arkts-arkui-styledstring-baselineoffsetstyle-c.md) | 文本基线偏移量对象说明。 |
-| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) | 自定义绘制Span，仅提供基类，具体实现由开发者定义。 |
+| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) | 自定义绘制Span，仅提供基类，具体实现由开发者定义。自定义绘制Span拖拽显示的缩略图为空白。 |
 | [DecorationStyle](arkts-arkui-styledstring-decorationstyle-c.md) | 文本装饰线样式对象说明。 |
 | [GestureStyle](arkts-arkui-styledstring-gesturestyle-c.md) | 事件手势对象说明。 |
 | [ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md) | 图片对象说明。 |
@@ -17,12 +17,12 @@
 | [LineHeightStyle](arkts-arkui-styledstring-lineheightstyle-c.md) | 文本行高对象说明。 |
 | [LineSpacingStyle](arkts-arkui-styledstring-linespacingstyle-c.md) | 文本行间距对象说明。 |
 | [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) | 继承于[StyledString](arkts-arkui-styledstring-styledstring-c.md)类。 |
-| [ParagraphStyle](arkts-arkui-styledstring-paragraphstyle-c.md) | 文本段落样式对象说明。 |
+| [ParagraphStyle](arkts-arkui-styledstring-paragraphstyle-c.md) | 文本段落样式对象说明。除首个段落外，后续段落按'\n'划分。每个段落的段落样式按首个占位设置的段落样式生效，未设置时，段落按被绑定组件的段落样式生效。在API版本26.0.0之前，如果属性字符串段落内首个占位为[CustomSpan](arkts-arkui-styledstring-customspan-c.md)或[ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md)时，设置在该段落上的段落样式不生 效。从API版本26.0.0开始，设置段落样式生效。 |
 | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 属性字符串 |
 | [TextShadowStyle](arkts-arkui-styledstring-textshadowstyle-c.md) | 文本阴影对象说明。 |
 | [TextStyle](arkts-arkui-styledstring-textstyle-c.md) | 文本字体样式对象说明。 |
-| [UrlStyle](arkts-arkui-styledstring-urlstyle-c.md) | 超链接对象说明。 |
-| [UserDataSpan](arkts-arkui-styledstring-userdataspan-c.md) | 支持存储自定义扩展信息，用于存储和获取用户数据，仅提供基类，具体实现由开发者定义。 |
+| [UrlStyle](arkts-arkui-styledstring-urlstyle-c.md) | 超链接对象说明。默认颜色、字号、字重分别是'#ff0a59f7'、'16fp'、'FontWeight.Regular'，若属性字符串设置TextStyle，则TextStyle优先级更高。 |
+| [UserDataSpan](arkts-arkui-styledstring-userdataspan-c.md) | 支持存储自定义扩展信息，用于存储和获取用户数据，仅提供基类，具体实现由开发者定义。扩展信息不影响实际显示效果。 |
 
 <!--Del-->
 ### 类（系统接口）
@@ -61,7 +61,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AttachmentType](arkts-arkui-attachmenttype-t.md) | 图片设置项类型，用于设置属性字符串PixelMap类型或[ResourceStr](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcestr)类型图片。 |
+| [AttachmentType](arkts-arkui-attachmenttype-t.md) | 图片设置项类型，用于设置属性字符串PixelMap类型或ResourceStr类型图片。 |
 | [ColorFilterType](arkts-arkui-colorfiltertype-t.md) | 图片颜色滤镜设置项类型。 |
 | [StyledStringValue](arkts-arkui-styledstringvalue-t.md) | 样式对象类型，用于设置属性字符串的样式。 |
 

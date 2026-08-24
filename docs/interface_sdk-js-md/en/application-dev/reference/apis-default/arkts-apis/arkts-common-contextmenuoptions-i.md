@@ -334,9 +334,7 @@ Defines the haptic feedback mode of menu.
 keyboardAvoidMode?: MenuKeyboardAvoidMode
 ```
 
-Determine the mode of menu how to avoid keyboard.
-
-No avoiding by default
+Determine the mode of menu how to avoid keyboard.No avoiding by default
 
 **Type:** [MenuKeyboardAvoidMode](arkts-common-menukeyboardavoidmode-e.md)
 
@@ -402,7 +400,7 @@ maxHeight?: LengthMetrics
 
 Defines the max height of menu.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -422,7 +420,7 @@ minKeyboardAvoidDistance?: LengthMetrics
 
 Defines the minimum distance between menu and keyboard.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 
@@ -798,7 +796,7 @@ targetSpace?: LengthMetrics
 
 Sets the space between the menu and target. When both targetSpace and offset are set, they take effect additively. It is recommended to use targetSpace to set the space between the menu and target, and use offset for additional offset.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
 

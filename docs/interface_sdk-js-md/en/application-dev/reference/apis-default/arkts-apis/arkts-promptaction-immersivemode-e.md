@@ -1,8 +1,6 @@
 # ImmersiveMode
 
-Define the immersive mode of all kind of dialog
-
-@enum { number }
+Define the immersive mode of all kind of dialog@enum { number }
 
 **Since:** 23
 

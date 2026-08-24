@@ -1,10 +1,7 @@
 # @ohos.multimedia.audioHaptic
 
-音振协同，表示在播放声音时，可同步发起振动。可用于来电通知、消息提醒等场景。
-
-**设备行为差异：** 若设备无振动器件，将不会产生振动效果。
-
-@namespace audioHaptic
+音振协同，表示在播放声音时，可同步发起振动。可用于来电通知、消息提醒等场景。  
+**设备行为差异：** 若设备无振动器件，将不会产生振动效果。@namespace audioHaptic
 
 **起始版本：** 23
 
@@ -47,6 +44,6 @@ import { audioHaptic } from '@kit.AudioKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md) | 枚举，音振类型。 |
-| [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md) | 枚举，音频时延模式。 |
+| [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md) | 枚举，音振类型。@enum { int } |
+| [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md) | 枚举，音频时延模式。@enum {int} |
 

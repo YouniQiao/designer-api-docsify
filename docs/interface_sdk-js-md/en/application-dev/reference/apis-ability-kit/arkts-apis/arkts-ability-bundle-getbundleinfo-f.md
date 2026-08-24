@@ -3,22 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleResourceManager } from '@kit.AbilityKit';
 import { bundle } from '@kit.AbilityKit';
-import { defaultAppManager } from '@kit.AbilityKit';
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { freeInstall } from '@kit.AbilityKit';
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { overlay } from '@kit.AbilityKit';
-import { shortcutManager } from '@kit.AbilityKit';
-import { skillManager } from '@kit.AbilityKit';
-import { appDomainVerify } from '@kit.AbilityKit';
-import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleInfo
@@ -28,9 +13,7 @@ function getBundleInfo(bundleName: string,
     bundleFlags: number, options: BundleOptions, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the bundle information based on a given bundle name and bundle options. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on a given bundle name and bundle options. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -113,9 +96,7 @@ bundle.getBundleInfo(bundleName, bundleFlags, options, (err, data) => {
 function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the bundle information based on a given bundle name. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on a given bundle name. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -148,9 +129,7 @@ See [getBundleInfo](#getbundleinfo)
 function getBundleInfo(bundleName: string, bundleFlags: number, options?: BundleOptions): Promise<BundleInfo>
 ```
 
-Obtains the bundle information based on a given bundle name. This API uses a promise to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on a given bundle name. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 

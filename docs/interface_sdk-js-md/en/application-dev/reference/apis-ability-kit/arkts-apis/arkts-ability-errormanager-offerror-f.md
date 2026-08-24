@@ -12,9 +12,7 @@ import { errorManager } from '@kit.AbilityKit';
 function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void
 ```
 
-Unregisters an error observer. This API uses an asynchronous callback to return the result.
-
-This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Unregisters an error observer. This API uses an asynchronous callback to return the result.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 9
 
@@ -69,9 +67,7 @@ try {
 function off(type: 'error', observerId: number): Promise<void>
 ```
 
-Unregisters an error observer. This API uses a promise to return the result.
-
-This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Unregisters an error observer. This API uses a promise to return the result.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 9
 

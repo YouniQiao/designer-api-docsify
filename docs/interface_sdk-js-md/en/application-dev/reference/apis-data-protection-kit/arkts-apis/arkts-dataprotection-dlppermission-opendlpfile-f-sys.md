@@ -12,11 +12,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function openDLPFile(ciphertextFd: number, appId: string): Promise<DLPFile>
 ```
 
-Opens a DLP file. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. This API uses a promise to return the result.
-
-After calling **openDLPFile()** to return a **DLPFile** object, the system must call [closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile) to release resources after using the object.
-
-When a DLP management application or an authorized application needs to access a DLP file, it must first open the file to obtain the managed object.
+Opens a DLP file. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. This API uses a promise to return the result.After calling **openDLPFile()** to return a **DLPFile** object, the system must call [closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile) to release resources after using the object.When a DLP management application or an authorized application needs to access a DLP file, it must first open the file to obtain the managed object.
 
 **Since:** 11
 

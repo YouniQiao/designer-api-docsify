@@ -1,8 +1,6 @@
 # TimePickerDialogOptions
 
-Defines the TimePickerDialogOptions for Data Picker Dialog.
-
-@extends TimePickerOptions @interface TimePickerDialogOptions
+Defines the TimePickerDialogOptions for Data Picker Dialog.@extends TimePickerOptions @interface TimePickerDialogOptions
 
 **Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-timepicker-timepickeroptions-i.md)
 

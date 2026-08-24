@@ -14,9 +14,7 @@ Describes the command for drawing a path.
 commands: string
 ```
 
-Commands for drawing a path. For details about how to convert pixel units, see Pixel Units.
-
-Unit: px
+Commands for drawing a path. For details about how to convert pixel units, see Pixel Units.Unit: px
 
 **Type:** string
 

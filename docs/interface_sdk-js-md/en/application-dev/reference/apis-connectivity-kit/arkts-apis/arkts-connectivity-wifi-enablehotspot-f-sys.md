@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## enableHotspot
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function enableHotspot(): boolean
 ```
 
-Enables a Wi-Fi hotspot.
-
-<p>This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
+Enables a Wi-Fi hotspot.<p>This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
 
 **Since:** 7
 

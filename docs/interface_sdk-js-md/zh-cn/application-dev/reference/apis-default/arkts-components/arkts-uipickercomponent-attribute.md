@@ -1,10 +1,6 @@
 # UIPickerComponentAttribute
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
-
-@extends CommonMethod @interface UIPickerComponentAttribute
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：@extends CommonMethod @interface UIPickerComponentAttribute
 
 **继承/实现关系：** UIPickerComponentAttribute extends CommonMethod
 
@@ -120,7 +116,7 @@ itemHeight(height: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
+| height | [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
 
 **返回值：**
 

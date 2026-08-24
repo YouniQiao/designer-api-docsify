@@ -1,8 +1,6 @@
 # SslError
 
-Enum type supplied to error when onSslErrorEventReceive being called.
-
-@enum { number }
+Enum type supplied to error when onSslErrorEventReceive being called.@enum { number }
 
 **Since:** 23
 

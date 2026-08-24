@@ -1,8 +1,6 @@
 # PolyToPolyOptions
 
-Set poly to poly point options.
-
-@interface PolyToPolyOptions
+Set poly to poly point options.@interface PolyToPolyOptions
 
 **Since:** 23
 

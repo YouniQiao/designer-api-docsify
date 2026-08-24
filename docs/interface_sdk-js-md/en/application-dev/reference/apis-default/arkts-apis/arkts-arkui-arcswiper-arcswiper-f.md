@@ -21,6 +21,8 @@ Defines ArcSwiper Component
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function ArcSwiper(    controller?: ArcSwiperController,     content_?: CustomBuilder): ArcSwiperAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ArcSwiper(    controller?: ArcSwiperController,     content_?: CustomBuilder): ArcSwiperAttribute-End-->
@@ -56,6 +58,8 @@ Defines ArcSwiper Component
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,10 +1,6 @@
 # @ohos.wifiext
 
-提供WLAN扩展接口，供非通用类型产品使用。
-
-<p>本文件涉及的接口为非通用接口。这些扩展接口仅供部分产品类型使用，例如路由器。普通产品不应使用这些接口。</p>
-
-@namespace wifiext
+提供WLAN扩展接口，供非通用类型产品使用。<p>本文件涉及的接口为非通用接口。这些扩展接口仅供部分产品类型使用，例如路由器。普通产品不应使用这些接口。</p>@namespace wifiext
 
 **起始版本：** 8
 
@@ -36,5 +32,5 @@ import { wifiext } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [PowerModel](arkts-connectivity-wifiext-powermodel-e.md) | 表示功率模式的枚举。 |
+| [PowerModel](arkts-connectivity-wifiext-powermodel-e.md) | 表示功率模式的枚举。@enum { number } PowerModel |
 

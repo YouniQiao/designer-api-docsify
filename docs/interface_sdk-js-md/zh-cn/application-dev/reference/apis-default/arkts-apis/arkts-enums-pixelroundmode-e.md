@@ -1,8 +1,6 @@
 # PixelRoundMode
 
-Pixel Round Mode
-
-@enum { number }
+Pixel Round Mode@enum { number }
 
 **起始版本：** 23
 

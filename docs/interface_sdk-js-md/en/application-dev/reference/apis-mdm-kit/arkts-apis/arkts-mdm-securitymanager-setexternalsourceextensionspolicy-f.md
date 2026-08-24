@@ -12,17 +12,12 @@ import { securityManager } from '@kit.MDMKit';
 function setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPolicy): void
 ```
 
-Sets the management policy for extensions from external sources. After the policy is set, the system controls the running behavior of extensions from external sources based on the configured policy. This API is applicable to enterprise security management scenarios, such as preventing employees from installing unauthorized browser extensions or forcibly enabling enterprise-approved extension functions to ensure enterprise device security.
-
-- DEFAULT:
-
+Sets the management policy for extensions from external sources. After the policy is set, the system controls the running behavior of extensions from external sources based on the configured policy. This API is applicable to enterprise security management scenarios, such as preventing employees from installing unauthorized browser extensions or forcibly enabling enterprise-approved extension functions to ensure enterprise device security.  
+- DEFAULT:  
 Default policy with no restrictions applied. Users can enable or disable **Run extensions from external sources** in **Settings**   
 > **Privacy & security**
 > **Advanced option**. - DISALLOW:
-
-Policy that disallows extensions from external sources to run. With this policy, currently running extensions can continue, but cannot be started after being closed. Users cannot enable **Run extensions from external sources**. - FORCE_OPEN:
-
-Policy that forcibly enables extensions from external sources to run. Users cannot disable **Run extensions from external sources**.
+Policy that disallows extensions from external sources to run. With this policy, currently running extensions can continue, but cannot be started after being closed. Users cannot enable **Run extensions from external sources**. - FORCE_OPEN:Policy that forcibly enables extensions from external sources to run. Users cannot disable **Run extensions from external sources**.
 
 **Since:** 22
 

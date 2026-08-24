@@ -12,7 +12,6 @@ Describes the camera metadata, which is the data source of [CameraInput](arkts-c
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## confidence

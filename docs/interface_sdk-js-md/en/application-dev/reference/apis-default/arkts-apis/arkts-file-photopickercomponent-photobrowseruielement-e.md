@@ -1,8 +1,6 @@
 # PhotoBrowserUIElement
 
-PhotoBrowserUIElement. include CHECKBOX and BACK_BUTTON
-
-@enum { int } PhotoBrowserUIElement
+PhotoBrowserUIElement. include CHECKBOX and BACK_BUTTON@enum { int } PhotoBrowserUIElement
 
 **Since:** 26.0.0
 

@@ -1,8 +1,6 @@
 # PreDragStatus
 
-Defines the drag status before drag action.
-
-@enum { number }
+Defines the drag status before drag action.@enum { number }
 
 **起始版本：** 23
 

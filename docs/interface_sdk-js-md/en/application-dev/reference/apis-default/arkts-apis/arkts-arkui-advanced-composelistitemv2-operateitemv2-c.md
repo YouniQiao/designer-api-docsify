@@ -6,6 +6,8 @@ Declare OperateItemV2
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class OperateItemV2--><!--Device-unnamed-export declare class OperateItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ The constructor of OperateItemV2.
 ## arrow
 
 ```TypeScript
-@Trace
-  public arrow?: OperateIconV2
+public arrow?: OperateIconV2
 ```
 
 Sets the arrow.
@@ -54,6 +55,8 @@ Sets the arrow.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateItemV2-@Trace  public arrow?: OperateIconV2--><!--Device-OperateItemV2-@Trace  public arrow?: OperateIconV2-End-->
@@ -63,8 +66,7 @@ Sets the arrow.
 ## button
 
 ```TypeScript
-@Trace
-  public button?: OperateButtonV2
+public button?: OperateButtonV2
 ```
 
 Sets the button.
@@ -75,6 +77,8 @@ Sets the button.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateItemV2-@Trace  public button?: OperateButtonV2--><!--Device-OperateItemV2-@Trace  public button?: OperateButtonV2-End-->
@@ -84,8 +88,7 @@ Sets the button.
 ## checkbox
 
 ```TypeScript
-@Trace
-  public checkbox?: OperateCheckV2
+public checkbox?: OperateCheckV2
 ```
 
 Sets the checkBox.
@@ -96,6 +99,8 @@ Sets the checkBox.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateItemV2-@Trace  public checkbox?: OperateCheckV2--><!--Device-OperateItemV2-@Trace  public checkbox?: OperateCheckV2-End-->
@@ -105,8 +110,7 @@ Sets the checkBox.
 ## icon
 
 ```TypeScript
-@Trace
-  public icon?: OperateIconV2
+public icon?: OperateIconV2
 ```
 
 Sets the icon.
@@ -117,6 +121,8 @@ Sets the icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateItemV2-@Trace  public icon?: OperateIconV2--><!--Device-OperateItemV2-@Trace  public icon?: OperateIconV2-End-->
@@ -126,8 +132,7 @@ Sets the icon.
 ## image
 
 ```TypeScript
-@Trace
-  public image?: ResourceStr
+public image?: ResourceStr
 ```
 
 Sets the image.
@@ -138,6 +143,8 @@ Sets the image.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateItemV2-@Trace  public image?: ResourceStr--><!--Device-OperateItemV2-@Trace  public image?: ResourceStr-End-->
@@ -147,8 +154,7 @@ Sets the image.
 ## radio
 
 ```TypeScript
-@Trace
-  public radio?: OperateCheckV2
+public radio?: OperateCheckV2
 ```
 
 Sets the radio.
@@ -159,6 +165,8 @@ Sets the radio.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateItemV2-@Trace  public radio?: OperateCheckV2--><!--Device-OperateItemV2-@Trace  public radio?: OperateCheckV2-End-->
@@ -168,8 +176,7 @@ Sets the radio.
 ## subIcon
 
 ```TypeScript
-@Trace
-  public subIcon?: OperateIconV2
+public subIcon?: OperateIconV2
 ```
 
 Sets the subIcon.
@@ -180,6 +187,8 @@ Sets the subIcon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateItemV2-@Trace  public subIcon?: OperateIconV2--><!--Device-OperateItemV2-@Trace  public subIcon?: OperateIconV2-End-->
@@ -189,8 +198,7 @@ Sets the subIcon.
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 Sets the symbolStyle.
@@ -201,6 +209,8 @@ Sets the symbolStyle.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier--><!--Device-OperateItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier-End-->
@@ -210,8 +220,7 @@ Sets the symbolStyle.
 ## text
 
 ```TypeScript
-@Trace
-  public text?: ResourceStr
+public text?: ResourceStr
 ```
 
 Sets the text.
@@ -222,6 +231,8 @@ Sets the text.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateItemV2-@Trace  public text?: ResourceStr--><!--Device-OperateItemV2-@Trace  public text?: ResourceStr-End-->
@@ -231,8 +242,7 @@ Sets the text.
 ## toggle
 
 ```TypeScript
-@Trace
-  public toggle?: OperateCheckV2
+public toggle?: OperateCheckV2
 ```
 
 Sets the toggle.
@@ -242,6 +252,8 @@ Sets the toggle.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

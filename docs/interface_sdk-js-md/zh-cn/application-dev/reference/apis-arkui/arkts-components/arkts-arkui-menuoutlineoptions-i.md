@@ -19,9 +19,7 @@
 color?: ResourceColor | EdgeColors
 ```
 
-设置外描边颜色。
-
-默认值：#19ffffff
+设置外描边颜色。默认值：#19ffffff
 
 **类型：** ResourceColor \| EdgeColors
 
@@ -41,9 +39,7 @@ color?: ResourceColor | EdgeColors
 width?: Dimension | EdgeOutlineWidths
 ```
 
-设置外描边宽度，不支持百分比。
-
-默认值：0
+设置外描边宽度，不支持百分比。默认值：0
 
 **类型：** Dimension \| EdgeOutlineWidths
 

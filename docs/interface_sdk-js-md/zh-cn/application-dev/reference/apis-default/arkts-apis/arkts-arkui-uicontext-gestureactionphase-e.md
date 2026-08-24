@@ -1,8 +1,6 @@
 # GestureActionPhase
 
-表示触发的手势回调阶段的枚举类型，对应 the action callbacks defined in gesture.d.ts. Therefore, not all gesture types have all the following phase definitions. For example, SwipeGesture only has one callback named onAction, so it also only has one enumeration type, which is WILL_START.
-
-@enum { number } GestureActionPhase
+表示触发的手势回调阶段的枚举类型，对应 the action callbacks defined in gesture.d.ts. Therefore, not all gesture types have all the following phase definitions. For example, SwipeGesture only has one callback named onAction, so it also only has one enumeration type, which is WILL_START.@enum { number } GestureActionPhase
 
 **起始版本：** 26.0.0
 

@@ -1,8 +1,6 @@
 # WindowScene properties/events
 
-Defines the attribute functions of WindowScene.
-
-@extends CommonMethod&lt;WindowSceneAttribute&gt;
+Defines the attribute functions of WindowScene.@extends CommonMethod&lt;WindowSceneAttribute&gt;
 
 **Inheritance/Implementation:** WindowSceneAttribute extends CommonMethod<WindowSceneAttribute>
 

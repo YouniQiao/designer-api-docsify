@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { usb } from '@kit.BasicServicesKit';
-import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## getDevices
@@ -30,7 +28,7 @@ Obtains the USB device list.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevice&gt;&gt; | USB device list. |
+| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
 
 **Examples**
 

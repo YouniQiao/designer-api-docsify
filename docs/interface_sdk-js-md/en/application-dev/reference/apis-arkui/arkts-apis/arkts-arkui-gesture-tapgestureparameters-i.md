@@ -1,8 +1,6 @@
 # TapGestureParameters
 
-Defines TapGesture parameters.
-
-@extends BaseHandlerOptions @interface TapGestureParameters
+Defines TapGesture parameters.@extends BaseHandlerOptions @interface TapGestureParameters
 
 **Inheritance/Implementation:** TapGestureParameters extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)
 

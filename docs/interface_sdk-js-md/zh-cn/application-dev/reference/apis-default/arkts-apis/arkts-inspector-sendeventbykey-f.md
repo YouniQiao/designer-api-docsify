@@ -11,9 +11,7 @@
 function sendEventByKey(id: string, action: int, params: string): boolean
 ```
 
-给指定id的组件发送事件。
-
-此接口仅用于对应用的测试。由于耗时长，不建议测试之外的场景使用。
+给指定id的组件发送事件。此接口仅用于对应用的测试。由于耗时长，不建议测试之外的场景使用。
 
 **起始版本：** 23
 

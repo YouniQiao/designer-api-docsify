@@ -1,8 +1,6 @@
 # UserAuthInstance
 
-Provides APIs for user authentication. The user authentication widget is supported. This API provides complete user authentication capabilities, including subscribing to authentication results and intermediate states, and starting and canceling authentication. The unified authentication widget provides users with a standardized authentication UI and consistent authentication experience.
-
-Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInstance** instance by using [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md).
+Provides APIs for user authentication. The user authentication widget is supported. This API provides complete user authentication capabilities, including subscribing to authentication results and intermediate states, and starting and canceling authentication. The unified authentication widget provides users with a standardized authentication UI and consistent authentication experience.Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInstance** instance by using [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md).
 
 > **NOTE：**
 
@@ -19,7 +17,6 @@ Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInsta
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## cancel
@@ -309,7 +306,6 @@ Unsubscribes from the user authentication result.
 
 > The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
 > to subscribe to the event.
-
 <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The UserAuthInstance instance used to invoke this API must be the one used to subscribe to the event. </p>
 
 **Since:** 23

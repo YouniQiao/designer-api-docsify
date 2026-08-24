@@ -16,7 +16,6 @@ Describes input parameters of audio interruption events.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## contentType

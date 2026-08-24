@@ -1,8 +1,6 @@
 # MediaQueryEvent
 
-定义MediaQuery事件。
-
-@interface MediaQueryEvent
+定义MediaQuery事件。@interface MediaQueryEvent
 
 **起始版本：** 23
 

@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## predicates
@@ -25,7 +24,7 @@ predicates: Record<string, string>
 
 指定模板的谓词。当调用 [on](arkts-arkdata-datashare-datasharehelper-i-sys.md#ondatachange) 的回调时，谓词用于生成数据。仅适用于rdb存储数据。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 23
 
@@ -43,11 +42,9 @@ predicates: Record<string, string>
 scheduler: string
 ```
 
-指定模板的调度程序sql。其中嵌入自定义函数处理，目前预置自定义函数remindTimer处理。remindTimer在指定场景触发一次订阅刷新。
-
-触发场景：
-
-1. 修改数据时且有订阅的情况下触发对应的调度程序sql语句。 2. 添加对应库第一个订阅的情况下触发对应的调度程序sql语句。
+指定模板的调度程序sql。其中嵌入自定义函数处理，目前预置自定义函数remindTimer处理。remindTimer在指定场景触发一次订阅刷新。触发场景：
+1. 修改数据时且有订阅的情况下触发对应的调度程序sql语句。
+2. 添加对应库第一个订阅的情况下触发对应的调度程序sql语句。
 
 **类型：** string
 

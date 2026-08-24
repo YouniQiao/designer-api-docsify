@@ -2,9 +2,8 @@
 
 除支持通用属性外，还支持以下属性：
 
-> **说明：**
-> 
-> Swiper组件通用属性[clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)的默认值为
+> **说明：**&gt;
+> Swiper组件通用属性clip的默认值为
 > true。
 
 **继承/实现关系：** SwiperAttribute extends CommonMethod

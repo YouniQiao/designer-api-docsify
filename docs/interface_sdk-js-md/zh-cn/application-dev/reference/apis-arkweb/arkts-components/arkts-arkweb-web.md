@@ -1,9 +1,7 @@
 # Web
 
 定义 Web 组件。
-
 <p><strong>API Note</strong>:
-
 <strong>Performance Note</strong>: <p>For details about how to optimize the compilation, resource loading, and JSBridge performance, see Optimizing Web Page Loading <p>When the white screen duration is long due to complex web page parsing, you can enable [optimizeParserBudget](arkts-arkweb-web-attribute.md#optimizeparserbudget) to reduce the first frame rendering content.</p> </p>
 
 ## Web
@@ -14,8 +12,7 @@ Web(value: WebOptions)
 
 Sets Value.
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 在HTML5侧，调用console.log或console.info对应ConsoleMessage的信息级别都为MessageLevel.Info。
 
 **起始版本：** 8

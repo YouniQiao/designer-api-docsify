@@ -40,7 +40,7 @@ borderRadius?: LengthMetrics
 
 Set border rounded corner radius. Default value: min(width, height) / 2.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** min(width, height) / 2
 

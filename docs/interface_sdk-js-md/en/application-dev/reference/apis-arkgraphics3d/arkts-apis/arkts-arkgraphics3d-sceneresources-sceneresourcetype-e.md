@@ -1,8 +1,6 @@
 # SceneResourceType
 
-Enumerates the scene resource types, which are used to classify resources in a scene.
-
-@enum { int }
+Enumerates the scene resource types, which are used to classify resources in a scene.@enum { int }
 
 **Since:** 23
 

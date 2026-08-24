@@ -1,8 +1,6 @@
 # ButtonLabelStyle
 
-ButtonLabelStyle object.
-
-@interface ButtonLabelStyle
+ButtonLabelStyle object.@interface ButtonLabelStyle
 
 **Since:** 23
 
@@ -138,9 +136,7 @@ overflow mode.
 textAlign?: TextAlign
 ```
 
-Set the horizontal center mode of the content.
-
-Device Behavior Differences:Default value is TextAlign.Start. The default value on wearable devices is TextAlign.Center.
+Set the horizontal center mode of the content.Device Behavior Differences:Default value is TextAlign.Start. The default value on wearable devices is TextAlign.Center.
 
 **Type:** [TextAlign](../../apis-arkui/arkts-apis/arkts-arkui-textalign-e.md)
 

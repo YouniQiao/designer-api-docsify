@@ -1,6 +1,6 @@
 # EditorAttribute
 
-@brief Represents the attributes of the edit box.
+Represents the attributes of the edit box.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly abilityName?: string
 ```
 
-@brief Ability name set for the edit box.
+Ability name set for the edit box.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ readonly abilityName?: string
 readonly bundleName?: string
 ```
 
-@brief Name of the application package to which the edit box belongs. The value may be **""**. Handle this scenario when using the attribute.
+Name of the application package to which the edit box belongs. The value may be **""**. Handle this scenario when using the attribute.
 
 **Type:** string
 
@@ -52,7 +52,7 @@ readonly bundleName?: string
 readonly capitalizeMode?: CapitalizeMode
 ```
 
-@brief Whether to capitalize the first letter in the edit box. If it is not set or is set to an invalid value, the first letter is not capitalized by default.
+Whether to capitalize the first letter in the edit box. If it is not set or is set to an invalid value, the first letter is not capitalized by default.
 
 **Type:** CapitalizeMode
 
@@ -68,7 +68,7 @@ readonly capitalizeMode?: CapitalizeMode
 readonly consumeKeyEvents?: boolean
 ```
 
-@brief Whether the editor supports consuming key events.
+Whether the editor supports consuming key events.
 
 **Type:** boolean
 
@@ -86,7 +86,7 @@ readonly consumeKeyEvents?: boolean
 readonly displayId?: long
 ```
 
-@brief Screen ID of the window corresponding to the edit box. If window ID is not set, the screen ID of the focused window is used.
+Screen ID of the window corresponding to the edit box. If window ID is not set, the screen ID of the focused window is used.
 
 **Type:** long
 
@@ -102,7 +102,7 @@ readonly displayId?: long
 readonly enterKeyType: int
 ```
 
-@brief Function attributes of the edit box. For details, see function key definitions in constants.
+Function attributes of the edit box. For details, see function key definitions in constants.
 
 **Type:** int
 
@@ -118,7 +118,7 @@ readonly enterKeyType: int
 readonly extraConfig?: InputMethodExtraConfig
 ```
 
-@brief Extra information about the input method.
+Extra information about the input method.
 
 **Type:** [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md)
 
@@ -134,7 +134,7 @@ readonly extraConfig?: InputMethodExtraConfig
 readonly gradientMode?: GradientMode
 ```
 
-@brief Gradient mode.
+Gradient mode.
 
 **Type:** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
@@ -150,7 +150,7 @@ readonly gradientMode?: GradientMode
 readonly immersiveMode?: ImmersiveMode
 ```
 
-@brief Immersive mode of the input method.
+Immersive mode of the input method.
 
 **Type:** ImmersiveMode
 
@@ -166,7 +166,7 @@ readonly immersiveMode?: ImmersiveMode
 readonly inputPattern: int
 ```
 
-@brief Text attribute of the edit box. For details, see edit box definitions in constants.
+Text attribute of the edit box. For details, see edit box definitions in constants.
 
 **Type:** int
 
@@ -182,7 +182,7 @@ readonly inputPattern: int
 isTextPreviewSupported: boolean
 ```
 
-@brief Whether text preview is supported. <br> <br>- **true**: Supported. <br>- **false**: Unsupported.
+Whether text preview is supported. <br> <br>- **true**: Supported. <br>- **false**: Unsupported.
 
 **Type:** boolean
 
@@ -198,7 +198,7 @@ isTextPreviewSupported: boolean
 readonly placeholder?: string
 ```
 
-@brief Placeholder information set for the edit box.
+Placeholder information set for the edit box.
 
 **Type:** string
 
@@ -214,7 +214,7 @@ readonly placeholder?: string
 readonly windowId?: int
 ```
 
-@brief ID of the window where the edit box is located.
+ID of the window where the edit box is located.
 
 **Type:** int
 

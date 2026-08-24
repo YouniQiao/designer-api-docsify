@@ -2,8 +2,7 @@
 
 Describes the notification timing information.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Since:** 23
@@ -34,8 +33,7 @@ Initial time for the timer, which is used to set the starting point of the timer
 isCountDown?: boolean
 ```
 
-Whether it is countdown mode. The default value is **false**.
-
+Whether it is countdown mode. The default value is **false**.  
 - **true**: The time is displayed decreasing from initialTime. - **false**: The time is displayed increasing from initialTime.
 
 **Type:** boolean
@@ -52,8 +50,7 @@ Whether it is countdown mode. The default value is **false**.
 isInTitle?: boolean
 ```
 
-Whether the time information is displayed in the notification title. The default value is **false**.
-
+Whether the time information is displayed in the notification title. The default value is **false**.  
 - **true**: The timer information will be embedded in the title area. - **false**: The timer information is displayed in a separate area.
 
 **Type:** boolean
@@ -70,8 +67,7 @@ Whether the time information is displayed in the notification title. The default
 isPaused?: boolean
 ```
 
-Whether the timer is paused. The default value is **false**.
-
+Whether the timer is paused. The default value is **false**.  
 - **true**: The timer is paused at the current value. - **false**: The timer runs normally.
 
 **Type:** boolean

@@ -11,11 +11,6 @@ WebResourceResponse is a class in the Web component that represents HTTP respons
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## constructor
@@ -314,7 +309,7 @@ Sets the resource response header.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| header | Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Yes | Resource response header to set. The response header is used to pass HTTP protocol header information, for example, setting "Cache-Control" to control the caching policy, setting " Access-Control-Allow-Origin" to implement cross-origin access, and setting "Content-Type" to specify the content type. Setting the response header affects how the browser or client processes the resource. |
+| header | Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Yes | Resource response header to set. The response header is used to pass HTTP protocol header information, for example, setting "Cache-Control" to control the caching policy, setting "Access-Control-Allow-Origin" to implement cross-origin access, and setting "Content-Type" to specify the content type. Setting the response header affects how the browser or client processes the resource. |
 
 ## setResponseIsReady
 
@@ -324,15 +319,12 @@ setResponseIsReady(IsReady: boolean): void
 
 Sets whether the resource response data is ready.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - In resource request interception scenarios, call setResponseData(), setResponseEncoding(), setResponseMimeType(
 > ), setResponseHeader(), setResponseCode(), setReasonMessage(), and other methods first to set the response
-> attributes. Finally, call setResponseIsReady(true) to trigger resource return.
-> 
+> attributes. Finally, call setResponseIsReady(true) to trigger resource return.&gt;
 > - Asynchronous data scenario: Call setResponseIsReady(false) first. After the data is ready, call setResponseData
-> () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return.
-> 
+> () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return.&gt;
 > - If the calling sequence is incorrect, XMLHttpRequest synchronous requests may be blocked.
 
 **Since:** 9

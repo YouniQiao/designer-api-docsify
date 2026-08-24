@@ -2,8 +2,7 @@
 
 Represents the performance test strategy.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The input parameter type of the **actionCode** and **resetCode** attributes is **Callback\&lt;boolean&gt;**. You need to call
 > this callback in the code segment to notify the framework that the code segment execution is complete. Otherwise, the
 > code segment execution times out. The callback parameter is of the **Boolean** type. The value **true** indicates that

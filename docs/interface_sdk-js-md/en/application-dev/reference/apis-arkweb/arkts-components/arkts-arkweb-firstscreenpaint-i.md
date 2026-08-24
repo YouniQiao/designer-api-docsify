@@ -11,11 +11,6 @@ Provides the event information when the first screen paint is detected, includin
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## firstScreenPaintTime
@@ -24,9 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 firstScreenPaintTime: number
 ```
 
-Time when the first screen paint is completed for the page pointed to by url.
-
-Unit: ms.
+Time when the first screen paint is completed for the page pointed to by url.Unit: ms.
 
 **Type:** number
 
@@ -42,9 +35,7 @@ Unit: ms.
 navigationStartTime: number
 ```
 
-Time when navigation starts for the page pointed to by url.
-
-Unit: ms.
+Time when navigation starts for the page pointed to by url.Unit: ms.
 
 **Type:** number
 

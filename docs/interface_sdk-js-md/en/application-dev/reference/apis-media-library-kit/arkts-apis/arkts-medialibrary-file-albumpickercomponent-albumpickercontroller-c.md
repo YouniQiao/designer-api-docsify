@@ -4,6 +4,8 @@ A controller that enables applications to send data to the **AlbumPickerComponen
 
 **Since:** 20
 
+**Decorator:** @Observed
+
 <!--Device-unnamed-export declare class AlbumPickerController--><!--Device-unnamed-export declare class AlbumPickerController-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

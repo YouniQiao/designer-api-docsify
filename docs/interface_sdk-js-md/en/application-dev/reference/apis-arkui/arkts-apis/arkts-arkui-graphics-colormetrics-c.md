@@ -30,13 +30,13 @@ Sets whether the **ColorMetrics** object automatically updates with system confi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the **ColorMetrics** object constructed using [resourceColor](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md#resourcecolor) automatically refreshes the color value when the system configuration changes. <br>**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. <br>**false**: The object does not proactively listen to the system configuration changes. |
+| value | boolean | Yes | Whether the **ColorMetrics** object constructed using [resourceColor](#resourcecolor) automatically refreshes the color value when the system configuration changes. <br>**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. <br>**false**: The object does not proactively listen to the system configuration changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md) | ColorMetrics** object. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics** object. |
 
 ## blendColor
 
@@ -60,13 +60,13 @@ Blends a specified color (**overlayColor**) with the current color and returns t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| overlayColor | [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md) | Yes | Color to overlay. The alpha value determines the blending strength: **1.0** indicates complete opacity (fully covers the base color), and **0.0** indicates complete transparency (returns the original color). |
+| overlayColor | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes | Color to overlay. The alpha value determines the blending strength: **1.0** indicates complete opacity (fully covers the base color), and **0.0** indicates complete transparency (returns the original color). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md) | New color object with red, green, blue, and alpha channels representing the blended result of the current color and overlay color. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | New color object with red, green, blue, and alpha channels representing the blended result of the current color and overlay color. |
 
 **Error codes:**
 
@@ -106,7 +106,7 @@ Creates a **ColorMetrics** instance using specified ColorSpace and RGBA values. 
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
 
 ## numeric
 
@@ -136,7 +136,7 @@ Instantiates the **ColorMetrics** class using a color in HEX format.
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
 
 ## resourceColor
 
@@ -166,7 +166,7 @@ Instantiates the **ColorMetrics** class using a color in resource reference form
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
 
 **Error codes:**
 
@@ -206,5 +206,5 @@ Instantiates the **ColorMetrics** class using colors in RGB or RGBA format.
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
 

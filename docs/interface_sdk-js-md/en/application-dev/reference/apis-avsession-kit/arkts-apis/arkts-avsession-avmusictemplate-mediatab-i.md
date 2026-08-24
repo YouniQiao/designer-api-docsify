@@ -1,8 +1,6 @@
 # MediaTab
 
-The definition of the tab page.
-
-@interface MediaTab
+The definition of the tab page.@interface MediaTab
 
 **Since:** 23
 

@@ -12,8 +12,6 @@ CMS验签的配置。
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## contentData
@@ -80,8 +78,7 @@ trustCerts: Array<X509Cert>
 
 信任证书。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 需要配置所有签名者的信任证书。
 
 **类型：** Array&lt;X509Cert&gt;

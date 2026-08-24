@@ -1,8 +1,6 @@
 # @ohos.mediaquery
 
-Used to do mediaquery operations.
-
-@namespace mediaquery
+Used to do mediaquery operations.@namespace mediaquery
 
 **Since:** 23
 
@@ -26,6 +24,6 @@ import { mediaquery } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | Defines the Listener of mediaquery. |
-| [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md) | Defines the Result of mediaquery. |
+| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | Defines the Listener of mediaquery.@interface MediaQueryListener @extends MediaQueryResult |
+| [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md) | Defines the Result of mediaquery.@interface MediaQueryResult |
 

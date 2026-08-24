@@ -1,8 +1,6 @@
 # GestureMode
 
-Creating an Object
-
-@enum { number }
+Creating an Object@enum { number }
 
 **Since:** 23
 

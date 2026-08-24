@@ -1,8 +1,6 @@
 # DatePickerDialogOptions
 
-Parameters of the date picker dialog box.
-
-@extends DatePickerOptions @interface DatePickerDialogOptions
+Parameters of the date picker dialog box.@extends DatePickerOptions @interface DatePickerDialogOptions
 
 **Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-datepicker-datepickeroptions-i.md)
 

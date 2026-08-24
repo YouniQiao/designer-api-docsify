@@ -1,8 +1,6 @@
 # ImageAlt
 
-设置图片占位图。
-
-@interface ImageAlt
+设置图片占位图。@interface ImageAlt
 
 **起始版本：** 23
 

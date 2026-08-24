@@ -14,8 +14,7 @@ function notifyUpdatePackages(admin: Want, packageInfo: UpdatePackageInfo): Prom
 
 通知系统更新包信息。内网升级场景下，需要先调用该接口通知系统更新包，再调用[systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md)设置升级 策略。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口比较耗时，当调用此接口后，后续如果在应用主线程调用其他同步接口时需要等待该接口异步返回。
 
 **起始版本：** 12

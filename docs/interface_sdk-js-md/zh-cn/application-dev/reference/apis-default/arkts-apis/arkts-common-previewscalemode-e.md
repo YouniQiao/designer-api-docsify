@@ -1,8 +1,6 @@
 # PreviewScaleMode
 
-Defines the scaling mode for custom preview of contextMenu.
-
-@enum { number }
+Defines the scaling mode for custom preview of contextMenu.@enum { number }
 
 **起始版本：** 23
 

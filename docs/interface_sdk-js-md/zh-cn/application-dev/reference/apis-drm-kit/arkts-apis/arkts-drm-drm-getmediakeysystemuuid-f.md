@@ -12,7 +12,7 @@ import { drm } from '@kit.DrmKit';
 function getMediaKeySystemUuid(name: string): string
 ```
 
-Get a MediaKeySystem's UUID.
+获取DRM解决方案支持的DRM内容保护系统唯一标识。
 
 **起始版本：** 23
 
@@ -26,13 +26,13 @@ Get a MediaKeySystem's UUID.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | The Digital Right Management solution name. |
+| name | string | 是 | DRM解决方案名称。可通过[getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md)接口获取设备支持的DRM解决方案名称，如"com.clearplay.drm"。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | The MediaKeySystem uuid. |
+| string | DRM内容保护系统的唯一标识。 |
 
 **错误码：**
 

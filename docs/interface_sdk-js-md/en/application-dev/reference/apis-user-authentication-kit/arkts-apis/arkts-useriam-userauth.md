@@ -1,11 +1,6 @@
 # @ohos.userIAM.userAuth
 
-The **userAuth** module is the core module for user authentication in OpenHarmony. It provides authentication capabilities in scenarios such as device unlocking, payment verification, and application login.
-
-This module supports multiple biometric authentication methods (face, fingerprint) and password authentication (PIN), and provides various security trust levels. Since API version 26.0.0, the companion device authentication mode is added.
-
-This module applies to the following scenarios:
-
+The **userAuth** module is the core module for user authentication in OpenHarmony. It provides authentication capabilities in scenarios such as device unlocking, payment verification, and application login.This module supports multiple biometric authentication methods (face, fingerprint) and password authentication (PIN), and provides various security trust levels. Since API version 26.0.0, the companion device authentication mode is added.This module applies to the following scenarios:  
 - Device unlocking authentication. - Financial payment verification. - Application login protection. - Confirmation for sensitive operations.
 
 **Since:** 23
@@ -18,7 +13,6 @@ This module applies to the following scenarios:
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary
@@ -69,7 +63,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 | [IUserAuthCallback](arkts-userauthentication-userauth-iuserauthcallback-i.md) | Provides callbacks to return the authentication result. |
 | [ReuseUnlockResult](arkts-userauthentication-userauth-reuseunlockresult-i.md) | Represents information about the authentication result reuse. This API is used to configure parameters related to authentication result reuse, including the reuse mode and validity period. By properly configuring authentication result reuse, you can ensure security while avoiding repeated authentication, improving user experience. |
 | [TipInfo](arkts-userauthentication-userauth-tipinfo-i.md) | Represents the tip information displayed during the authentication, which is used to provide feedback during the authentication process. |
-| [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) | Provides APIs for user authentication. The user authentication widget is supported. This API provides complete user authentication capabilities, including subscribing to authentication results and intermediate states, and starting and canceling authentication. The unified authentication widget provides users with a standardized authentication UI and consistent authentication experience. |
+| [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) | Provides APIs for user authentication. The user authentication widget is supported. This API provides complete user authentication capabilities, including subscribing to authentication results and intermediate states, and starting and canceling authentication. The unified authentication widget provides users with a standardized authentication UI and consistent authentication experience.Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInstance** instance by using [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md). |
 | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Represents the user authentication result. If the authentication is successful, the authentication type and token information are returned. If the authentication fails, the corresponding error code is returned. This API is used to describe the result information after the authentication is complete. The application can obtain the result through the **onResult** callback of [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md). |
 | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | Represents the information presented on the user authentication page. This API is used to configure the display style and interaction mode of the authentication screen, including the title, navigation button text, and window mode. By properly setting these parameters, you can provide clear authentication guidance and good interaction experience for users. |
 
@@ -90,7 +84,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 | Name | Description |
 | --- | --- |
 | [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md) | Enumerates the authentication results. |
-| [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md) | Enumerates the trust levels of the authentication result. This enum defines four trust levels of the authentication result, which are used to describe the security strength of the authentication result. A higher trust level indicates a stronger liveness detection capability and more accurate user identity recognition of the authentication solution, and is applicable to service scenarios that require higher security. The application should select a proper authentication trust level based on the security requirements of service scenarios. |
+| [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md) | Enumerates the trust levels of the authentication result. This enum defines four trust levels of the authentication result, which are used to describe the security strength of the authentication result. A higher trust level indicates a stronger liveness detection capability and more accurate user identity recognition of the authentication solution, and is applicable to service scenarios that require higher security. The application should select a proper authentication trust level based on the security requirements of service scenarios.For typical use cases, see [Principles for Classifying Biometric Authentication Trust Levels](../../../security/UserAuthenticationKit/user-authentication-overview.md#principles-for-classifying-biometric-authentication-trust-levels). |
 | [FaceTips](arkts-userauthentication-userauth-facetips-e.md) | Enumerates the tip codes used during the facial authentication process. |
 | [FingerprintTips](arkts-userauthentication-userauth-fingerprinttips-e.md) | Enumerates the tip codes used during the fingerprint authentication process. |
 | [ResultCode](arkts-userauthentication-userauth-resultcode-e.md) | Enumerates the authentication result codes. |
@@ -115,10 +109,10 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 | Name | Description |
 | --- | --- |
 | [AuthCallbackOnResultFunc](arkts-userauthentication-userauth-authcallbackonresultfunc-t.md) | Called to return the authentication result. If the authentication is successful, UserAuthResult contains the token information. |
-| [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md) | Defines the keyword of the authentication event type. It is used as a parameter of [on](arkts-userauthentication-userauth-authinstance-i.md#on). |
+| [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md) | Defines the keyword of the authentication event type. It is used as a parameter of [on](arkts-userauthentication-userauth-authinstance-i.md#on).It consists of the fields in **Type** in the following table. |
 | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Defines the callback to return the intermediate authentication status. This callback is used to obtain various intermediate status information during authentication, including authentication failure, lockout, and loading and release of the authentication screen. By subscribing to these intermediate statuses, the application can provide more refined user interaction and status management during the authentication process. |
 | [AuthType](arkts-userauthentication-userauth-authtype-t.md) | Enumerates the authentication types. |
-| [EventInfo](arkts-userauthentication-userauth-eventinfo-t.md) | Enumerates the authentication event information types. |
+| [EventInfo](arkts-userauthentication-userauth-eventinfo-t.md) | Enumerates the authentication event information types.It consists of the fields in **Type** in the following table. |
 | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Enumerates the authentication security levels. |
 
 <!--Del-->

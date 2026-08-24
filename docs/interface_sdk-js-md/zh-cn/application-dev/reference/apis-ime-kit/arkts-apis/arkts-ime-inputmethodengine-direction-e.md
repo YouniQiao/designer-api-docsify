@@ -1,6 +1,6 @@
 # Direction
 
-@brief 光标的移动方向。
+光标的移动方向。
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@
 CURSOR_UP = 1
 ```
 
-@brief 向上。
+向上。
 
 **起始版本：** 23
 
@@ -28,7 +28,7 @@ CURSOR_UP = 1
 CURSOR_DOWN
 ```
 
-@brief 向下。
+向下。
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ CURSOR_DOWN
 CURSOR_LEFT
 ```
 
-@brief 向左。
+向左。
 
 **起始版本：** 23
 
@@ -56,7 +56,7 @@ CURSOR_LEFT
 CURSOR_RIGHT
 ```
 
-@brief 向右。
+向右。
 
 **起始版本：** 23
 

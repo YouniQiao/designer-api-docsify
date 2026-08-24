@@ -1,8 +1,6 @@
 # LazyWaterFlowLayoutAttribute
 
-定义懒加载瀑布流布局属性。
-
-@extends CommonMethod&lt;T&gt;
+定义懒加载瀑布流布局属性。@extends CommonMethod&lt;T&gt;
 
 **继承/实现关系：** LazyWaterFlowLayoutAttribute extends CommonMethod<T>
 
@@ -40,7 +38,7 @@ columnsGap(value: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 列之间的间距。 <br>默认值：LengthMetrics.vp(0) |
+| value | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 | 列之间的间距。 <br>默认值：LengthMetrics.vp(0) |
 
 **返回值：**
 
@@ -160,7 +158,7 @@ rowsGap(value: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值：LengthMetrics.vp(0) |
+| value | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值：LengthMetrics.vp(0) |
 
 **返回值：**
 

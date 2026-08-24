@@ -2,11 +2,9 @@
 
 The module provides information about a remote ability.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-RemoteAbilityInfo](#remoteabilityinfo-system-api) instead.
-> 
+> [bundleManager-RemoteAbilityInfo](#remoteabilityinfo-system-api) instead.&gt;
 > The APIs provided by this module are system APIs.
 
 **Since:** 8

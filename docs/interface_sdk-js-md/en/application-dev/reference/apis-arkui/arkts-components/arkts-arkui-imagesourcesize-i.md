@@ -11,7 +11,6 @@ Defines source size of image.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## height

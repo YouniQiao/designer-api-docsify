@@ -22,10 +22,8 @@ bind(address: LocalAddress): Promise<void>
 
 绑定本地套接字文件的路径。使用Promise异步回调。
 
-> **说明：**
-> 
-> bind方法可以使客户端确保有个明确的本地套接字路径，显式的绑定一个本地套接字文件。
-> 
+> **说明：**&gt;
+> bind方法可以使客户端确保有个明确的本地套接字路径，显式的绑定一个本地套接字文件。&gt;
 > bind方法在本地套接字通信中非必须。
 
 **起始版本：** 11
@@ -515,8 +513,7 @@ connect(options: LocalConnectOptions): Promise<void>
 
 连接到指定的套接字文件。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 在没有执行localsocket.bind的情况下，也可以直接调用该接口完成与LocalSocket服务端的连接。
 
 **起始版本：** 11
@@ -998,8 +995,7 @@ getExtraOptions(): Promise<ExtraOptionsBase>
 
 获取LocalSocket的套接字属性。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind或connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 11
@@ -1082,8 +1078,7 @@ getLocalAddress(): Promise<string>
 
 获取LocalSocket的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 12
@@ -1362,12 +1357,9 @@ getSocketFd(): Promise<int>
 
 获取LocalSocket的文件描述符。使用Promise异步回调。
 
-> **说明：**
-> 
-> - bind或connect方法调用成功后，才可调用此方法。
-> 
-> - 获取由系统内核分配的唯一文件描述符，用于标识当前使用的套接字。
-> 
+> **说明：**&gt;
+> - bind或connect方法调用成功后，才可调用此方法。&gt;
+> - 获取由系统内核分配的唯一文件描述符，用于标识当前使用的套接字。&gt;
 > - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 11
@@ -1703,8 +1695,7 @@ getState(): Promise<SocketStateBase>
 
 获取LocalSocket状态。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind或connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 11
@@ -2384,8 +2375,7 @@ send(options: LocalSendOptions): Promise<void>
 
 通过LocalSocket连接发送数据。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 11
@@ -2816,8 +2806,7 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 
 设置LocalSocket的套接字属性。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind或connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 11

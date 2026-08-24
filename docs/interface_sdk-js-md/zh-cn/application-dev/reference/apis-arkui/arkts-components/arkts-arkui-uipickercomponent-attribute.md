@@ -1,8 +1,6 @@
 # UIPickerComponent属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** UIPickerComponentAttribute extends CommonMethod<UIPickerComponentAttribute>
 
@@ -71,10 +69,7 @@ displayedItemCount(count: Optional<int>)
 enableHapticFeedback(enable: Optional<boolean>)
 ```
 
-设置是否开启触控反馈。在需要增强用户交互体验的场景可开启触控反馈。
-
-开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：   
-> 
+设置是否开启触控反馈。在需要增强用户交互体验的场景可开启触控反馈。开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：&gt;  
 > "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **起始版本：** 22
@@ -115,7 +110,7 @@ itemHeight(height: Optional<LengthMetrics>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | Optional&lt;LengthMetrics&gt; | 是 | 选项高度。 <br>单位：与[LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)一致。 <br>取值范围：[40vp, 64vp] <br>设置小于40vp或大于64vp时，使用默认值40vp。 <br>当height的值为undefined时，使用默认值40vp。 <br>不支持“百分比”类型。 |
+| height | Optional&lt;LengthMetrics&gt; | 是 | 选项高度。 <br>单位：与[LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)一致。 <br>取值范围：[40vp, 64vp] <br>设置小于40vp或大于64vp时，使用默认值40vp。 <br>当height的值为undefined时，使用默认值40vp。 <br>不支持“百分比”类型。 |
 
 ## onChange
 
@@ -125,10 +120,8 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 
 滑动选择器选项时，若选中项发生变化，触发该事件。适用于需要在选中项变化时实时更新界面、加载对应数据或执行相关逻辑的场景。
 
-> **说明：**
-> 
-> - 如果某个选项有一半以上的区域进入选中项区域内，则该选项成为选中项。
-> 
+> **说明：**&gt;
+> - 如果某个选项有一半以上的区域进入选中项区域内，则该选项成为选中项。&gt;
 > - 选中项区域可通过设置[selectionIndicator](#selectionindicator)进行标识。
 > 如果设置选中项指示器为背景，则背景区域即为选中项区域。如果设置选中项指示器为分割线，则上下分割线的中心线内的区域为选中项区域。
 
@@ -156,17 +149,12 @@ onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 
 选择器滑动停止时，触发该事件。选择器滑动停止指某次行为触发的滑动动画完全结束。如果某次滑动动画还未结束时又触发了新的滑动动画， 则不属于滑动停止。适用于需要在滑动结束后提交最终选择结果、停止加载动画或执行一次性回调的场景。
 
-> **说明：**
-> 
-> **onChange与onScrollStop的差异：**
-> 
-> - **触发时机**：onChange在选中项发生变化时立即触发；onScrollStop在滑动动画完全停止后触发。
-> 
-> - **触发频率**：连续滑动过程中，onChange可能多次触发（每次选中项变化都会触发）；onScrollStop只在滑动停止时触发一次。
-> 
+> **说明：**&gt;
+> **onChange与onScrollStop的差异：**&gt;
+> - **触发时机**：onChange在选中项发生变化时立即触发；onScrollStop在滑动动画完全停止后触发。&gt;
+> - **触发频率**：连续滑动过程中，onChange可能多次触发（每次选中项变化都会触发）；onScrollStop只在滑动停止时触发一次。&gt;
 > - **使用场景**：onChange适用于需要实时响应的场景（如实时显示选中内容、联动更新其他组件）；onScrollStop适用于需要最终确认的场景
-> （如提交最终选择结果、保存数据）。
-> 
+> （如提交最终选择结果、保存数据）。&gt;
 > - **两者关系**：一次完整的滑动操作可能先后触发这两个事件，可根据实际需求同时使用或选择使用。
 
 **起始版本：** 22
@@ -207,5 +195,5 @@ selectionIndicator(style: Optional<PickerIndicatorStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | 是 | 选中项指示器的样式。 <br>默认值： <br>{ <br>type: PickerIndicatorType.BACKGROUND, <br>borderRadius: { <br>value:12, <br>unit:LengthUnit.vp <br>}, <br>backgroundColor: 'sys.color.comp_background_tertiary' <br>} <br>当style的值为undefined时，使用默认值。 |
+| style | Optional&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | 是 | 选中项指示器的样式。 <br>默认值： <br>{<br>type: PickerIndicatorType.BACKGROUND, <br>borderRadius: {<br>value:12, <br>unit:LengthUnit.vp <br>}, <br>backgroundColor: 'sys.color.comp_background_tertiary'<br>} <br>当style的值为undefined时，使用默认值。 |
 

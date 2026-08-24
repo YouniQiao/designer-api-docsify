@@ -1,8 +1,6 @@
 # WebKeyboardAvoidMode
 
-Enum type supplied to [keyboardAvoidMode](arkts-web-attribute.md#keyboardavoidmode) for setting the web keyboard avoid mode.
-
-@enum { number }
+Enum type supplied to [keyboardAvoidMode](arkts-web-attribute.md#keyboardavoidmode) for setting the web keyboard avoid mode.@enum { number }
 
 **起始版本：** 23
 

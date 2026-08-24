@@ -14,12 +14,9 @@ function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remot
 
 用于查询发起指定网络连接的应用UID。使用同步方式返回。
 
-> **说明：**
-> 
-> - 该接口仅限在VPN应用中调用。
-> 
-> - 调用接口时请设置local和remote参数的端口号。若未设置端口号或将端口号设置为0，接口会基于其他参数筛选出符合条件的UID的集合，并从中返回一个匹配的UID。
-> 
+> **说明：**&gt;
+> - 该接口仅限在VPN应用中调用。&gt;
+> - 调用接口时请设置local和remote参数的端口号。若未设置端口号或将端口号设置为0，接口会基于其他参数筛选出符合条件的UID的集合，并从中返回一个匹配的UID。&gt;
 > - protocol参数为PROTO_TYPE_UDP时，若通过local，remote参数未筛选出符合条件的UID，则仅基于local参数筛选并返回匹配的UID。
 
 **起始版本：** 23

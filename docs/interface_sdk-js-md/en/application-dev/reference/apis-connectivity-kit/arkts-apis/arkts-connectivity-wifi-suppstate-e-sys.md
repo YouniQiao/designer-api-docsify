@@ -1,8 +1,6 @@
 # SuppState (System API)
 
-The state of the supplicant enumeration.
-
-@enum { number } SuppState
+The state of the supplicant enumeration.@enum { number } SuppState
 
 **Since:** 6
 

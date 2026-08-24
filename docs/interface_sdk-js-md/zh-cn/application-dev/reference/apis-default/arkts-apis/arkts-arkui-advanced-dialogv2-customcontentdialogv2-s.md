@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct CustomContentDialogV2--><!--Device-unnamed-export declare struct CustomContentDialogV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,19 +40,18 @@ The method to build component.
 ## buttons
 
 ```TypeScript
-@Param
-  buttons?: AdvancedDialogV2Button[]
+buttons?: AdvancedDialogV2Button[]
 ```
 
-弹出框操作区按钮，最多支持4个按钮。
-
-默认不显示。
+弹出框操作区按钮，最多支持4个按钮。默认不显示。
 
 **类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)[]
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,19 +62,18 @@ The method to build component.
 ## contentAreaPadding
 
 ```TypeScript
-@Param
-  contentAreaPadding?: LocalizedPadding
+contentAreaPadding?: LocalizedPadding
 ```
 
-弹出框内容区内边距。
-
-默认不显示。
+弹出框内容区内边距。默认不显示。
 
 **类型：** LocalizedPadding
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,8 +84,7 @@ The method to build component.
 ## contentBuilder
 
 ```TypeScript
-@BuilderParam
-  contentBuilder: CustomBuilder
+contentBuilder: CustomBuilder
 ```
 
 弹出框内容。
@@ -95,6 +95,8 @@ The method to build component.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @BuilderParam
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CustomContentDialogV2-@BuilderParam  contentBuilder: CustomBuilder--><!--Device-CustomContentDialogV2-@BuilderParam  contentBuilder: CustomBuilder-End-->
@@ -104,14 +106,10 @@ The method to build component.
 ## primaryTitle
 
 ```TypeScript
-@Param
-  primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
-弹出框标题。
-
-默认不显示。
-
+弹出框标题。默认不显示。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -119,6 +117,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,14 +129,10 @@ The method to build component.
 ## secondaryTitle
 
 ```TypeScript
-@Param
-  secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
-弹出框辅助文本。
-
-默认不显示。
-
+弹出框辅助文本。默认不显示。  
 **说明：** 辅助文本超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -144,6 +140,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -126,6 +126,6 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 | [BondState](arkts-connectivity-bluetoothmanager-bondstate-e.md) | The enum of bond state. |
 | [MajorClass](arkts-connectivity-bluetoothmanager-majorclass-e.md) | The enum of major class of a bluetooth device. |
 | [MajorMinorClass](arkts-connectivity-bluetoothmanager-majorminorclass-e.md) | The enum of major minor class of a bluetooth device. |
-| [PlayingState](arkts-connectivity-bluetoothmanager-playingstate-e.md) | The enum of a2dp playing state. |
+| [PlayingState](arkts-connectivity-bluetoothmanager-playingstate-e.md) | The enum of a2dp playing state.@enum { number } |
 | [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md) | The enum of profile id. |
 

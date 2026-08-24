@@ -97,9 +97,7 @@ Query whether the assets exist and whether the invoker has read permission on th
 createAsset(photoType: PhotoType, extension: string, options: CreateOptions, callback: AsyncCallback<string>): void
 ```
 
-Creates an image or video asset with the specified file type, file name extension, and options. This API uses an asynchronous callback to return the result.
-
-If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type, file name extension, and options. This API uses an asynchronous callback to return the result.If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 23
 
@@ -117,7 +115,7 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | --- | --- | --- | --- |
 | photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. |
-| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | Yes | Options used for creation. Currently, only **title** is supported, for example , **{title: 'testPhoto'}**. <br>**NOTE：**<br>If a **subtype** option is passed, the configuration does not take effect. Only DEFAULT images can be saved. <br>The file name must not contain any invalid characters, which are:.. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | Yes | Options used for creation. Currently, only **title** is supported, for example, **{title: 'testPhoto'}**. <br>**NOTE：**<br>If a **subtype** option is passed, the configuration does not take effect. Only DEFAULT images can be saved. <br>The file name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the URI of the created image or video asset. |
 
 **Error codes:**
@@ -126,7 +124,7 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 13900012 | Permission denied<br>**Applicable version:** 10 and later |
+| 13900012 | Permission denied<br>**Applicable version:** 10 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
@@ -269,9 +267,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<string>): void
 ```
 
-Creates an image or video asset with the specified file type and file name extension. This API uses an asynchronous callback to return the result.
-
-If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type and file name extension. This API uses an asynchronous callback to return the result.If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 23
 
@@ -297,7 +293,7 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 13900012 | Permission denied<br>**Applicable version:** 10 and later |
+| 13900012 | Permission denied<br>**Applicable version:** 10 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
@@ -311,9 +307,7 @@ See [createAsset](#createasset)
 createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): Promise<string>
 ```
 
-Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result.
-
-If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result.If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 23
 
@@ -331,7 +325,7 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | --- | --- | --- | --- |
 | photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. |
-| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | No | Options used for creation. Currently, only **title** is supported, for example, **{title: 'testPhoto'}**. <br>**NOTE：**<br>If a **subtype** option is passed, the configuration does not take effect. Only DEFAULT images can be saved. <br>The file name must not contain any invalid characters, which are:.. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | No | Options used for creation. Currently, only **title** is supported, for example, **{title: 'testPhoto'}**. <br>**NOTE：**<br>If a **subtype** option is passed, the configuration does not take effect. Only DEFAULT images can be saved. <br>The file name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Return value:**
 
@@ -345,7 +339,7 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 13900012 | Permission denied<br>**Applicable version:** 10 and later |
+| 13900012 | Permission denied<br>**Applicable version:** 10 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
@@ -359,9 +353,7 @@ See [createAsset](#createasset)
 createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Promise<string>
 ```
 
-Creates an asset with a temporary permission of the given period. When this API is called by an application for the first time, a dialog box will be displayed for the user to confirm whether to save the asset. If the user agrees to save the asset, the asset instance will be created and the file URI granted with the save permission will be returned. The application can write the asset based on the URI.
-
-Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the authorized URI can be automatically returned without the need to display the confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re-trigger the dialog box for authorization confirmation when the application is re-launched.
+Creates an asset with a temporary permission of the given period. When this API is called by an application for the first time, a dialog box will be displayed for the user to confirm whether to save the asset. If the user agrees to save the asset, the asset instance will be created and the file URI granted with the save permission will be returned. The application can write the asset based on the URI.Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the authorized URI can be automatically returned without the need to display the confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re-trigger the dialog box for authorization confirmation when the application is re-launched.
 
 **Since:** 26.0.0
 
@@ -441,11 +433,9 @@ createAssetWithShortTermPermissionEx(creationSetting: CreationSetting): Promise<
 
 Displays the dialog box for the first time for the user to confirm whether to save the asset. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - After the user agrees to save the asset, the API returns the URI of the created asset that has the save
-> permission. The application can use the URI to write the image or video.
-> 
+> permission. The application can use the URI to write the image or video.&gt;
 > - Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the
 > system directly returns the authorized URI for the application to save the image or video without displaying a
 > confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re-
@@ -628,9 +618,7 @@ See [createDeleteRequest](#createdeleterequest)
 createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promise<string>
 ```
 
-Creates an image or video resource with the specified file type, extension, and title. This API uses a promise to return the result.
-
-If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video resource with the specified file type, extension, and title. This API uses a promise to return the result.If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 23
 
@@ -663,7 +651,7 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The extension format is unsupported <br>2. Title contains unsupported character, such as . .. \ / : ? " ' ` &lt; &gt; \| { } [ ] <br>3. The title is an empty string <br>4. The total length of title and extension is more than 255 |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The extension format is unsupported <br>2. Title contains unsupported character, such as . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] <br>3. The title is an empty string <br>4. The total length of title and extension is more than 255 |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -692,9 +680,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getAlbumIdByLpath(lpath: string): Promise<int>
 ```
 
-Obtains the album ID in the media library based on the album's virtual path. This API uses a promise to return the result.
-
-This API supports the following albums: camera application album, screenshot application album, and screen recording application album.
+Obtains the album ID in the media library based on the album's virtual path. This API uses a promise to return the result.This API supports the following albums: camera application album, screenshot application album, and screen recording application album.
 
 **Since:** 23
 
@@ -754,9 +740,7 @@ getAlbums(
     ): void
 ```
 
-Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result.
-
-Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result.Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 23
 
@@ -874,9 +858,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchResult<Album>>): void
 ```
 
-Obtains albums by type. This API uses an asynchronous callback to return the result.
-
-Before the operation, ensure that the albums to obtain exist.
+Obtains albums by type. This API uses an asynchronous callback to return the result.Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 23
 
@@ -914,9 +896,7 @@ See [getAlbums](#getalbums)
 getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promise<FetchResult<Album>>
 ```
 
-Obtains albums based on the specified options and album type. This API uses a promise to return the result.
-
-Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options and album type. This API uses a promise to return the result.Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 23
 
@@ -1393,7 +1373,7 @@ Unregisters a listener for the **'photoAlbumChange'** event to stop monitoring a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoAlbumChange' | Yes | Event type. The value is fixed at **'photoAlbumChange'**. After the unregistration is complete, any change to the albums is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('photoAlbumChange')](#onphotochange) . If this parameter is left unspecified, all listeners for the **'photoAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when an album changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('photoAlbumChange')](#onphotochange). If this parameter is left unspecified, all listeners for the **'photoAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when an album changes. |
 
 **Error codes:**
 
@@ -1424,7 +1404,7 @@ Unregisters the listener for the **'photoChange'** event to stop monitoring medi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoChange' | Yes | Event type. The value is fixed at **'photoChange'**. After the unregistration is complete, any change to the media assets is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('photoChange')](#onphotochange) . If this parameter is left unspecified, all listeners for the **'photoChange'** event are unregistered.<br> **NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a media asset changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('photoChange')](#onphotochange). If this parameter is left unspecified, all listeners for the **'photoChange'** event are unregistered.<br> **NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a media asset changes. |
 
 **Error codes:**
 
@@ -1532,8 +1512,9 @@ offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>):
 ```
 
 Unregisters a listener for a single album. Note the following:
-
-1. If no parameter is specified, all listeners for the single albums are unregistered. 2. If **album** is specified but **callback** is not specified, all callback listeners of the album are unregistered. 3. If both **album** and **callback** are specified, only the specified callback listener is unregistered.
+1. If no parameter is specified, all listeners for the single albums are unregistered.
+2. If **album** is specified but **callback** is not specified, all callback listeners of the album are unregistered.
+3. If both **album** and **callback** are specified, only the specified callback listener is unregistered.
 
 **Since:** 23
 
@@ -1619,8 +1600,10 @@ offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback<PhotoAssetChangeInf
 ```
 
 Unregisters the listener for a single asset. Note the following:
-
-1. If no parameter is specified, all listeners for the single assets are unregistered. 2. If **asset** is specified but **callback** is not specified, all callback listeners of the **asset** are unregistered. 3. If both **asset** and **callback** are specified, only the specified callback listener is unregistered.
+1. If no parameter is specified, all listeners for the single assets are unregistered.
+2. If **asset** is specified but **callback** is not specified,
+all callback listeners of the **asset** are unregistered.
+3. If both **asset** and **callback** are specified, only the specified callback listener is unregistered.
 
 **Since:** 23
 
@@ -2073,9 +2056,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases the **PhotoAccessHelper** instance. This API uses an asynchronous callback to return the result.
-
-Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
+Releases the **PhotoAccessHelper** instance. This API uses an asynchronous callback to return the result.Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
 
 **Since:** 23
 
@@ -2134,9 +2115,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 release(): Promise<void>
 ```
 
-Releases the **PhotoAccessHelper** instance. This API uses a promise to return the result.
-
-Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
+Releases the **PhotoAccessHelper** instance. This API uses a promise to return the result.Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
 
 **Since:** 23
 
@@ -2226,9 +2205,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestReadPermissionResult>
 ```
 
-Grants the read permission for unauthorized URIs. This API uses a promise to return the authorization result.
-
-It contains the list of URIs that have been created and granted the save permission and the list of invalid URIs.
+Grants the read permission for unauthorized URIs. This API uses a promise to return the authorization result.It contains the list of URIs that have been created and granted the save permission and the list of invalid URIs.
 
 **Since:** 26.0.0
 
@@ -2323,12 +2300,9 @@ Sets the asset compatibility capability. The system performs compatibility proce
 showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>
 ```
 
-Displays a dialog box for the user to confirm whether to save the images or videos. If the user agrees to save the images or videos, this API returns a list of URIs that have been created and granted save permissions (this list is permanent), and the application can use these URIs to write the images or videos. If the user declines to save the images or videos, this API returns an empty list.
+Displays a dialog box for the user to confirm whether to save the images or videos. If the user agrees to save the images or videos, this API returns a list of URIs that have been created and granted save permissions (this list is permanent), and the application can use these URIs to write the images or videos. If the user declines to save the images or videos, this API returns an empty list.The dialog box must display the application name, but this cannot be directly obtained. Therefore, before calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is not affected by the **icon** item in the **abilities** tag and cannot be modified.
 
-The dialog box must display the application name, but this cannot be directly obtained. Therefore, before calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is not affected by the **icon** item in the **abilities** tag and cannot be modified.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the passed URI is a sandbox path, images or videos can be saved but cannot be previewed.
 
 **Since:** 26.0.0
@@ -2398,15 +2372,12 @@ showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<C
 
 Displays a dialog box for the user to confirm whether to save the images or videos. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - If the user agrees, the list of created URIs with the save permission granted is returned. The list is
-> permanently valid and supports image or video writing. If the user rejects, an empty list is returned.
-> 
+> permanently valid and supports image or video writing. If the user rejects, an empty list is returned.&gt;
 > - The application name and icon need to be displayed in the dialog box. The name and icon need to be configured
 > in the **label** and **icon** items in the **abilities** tag of the
-> [module.json5 configuration file](../../../quick-start/module-configuration-file.md).
-> 
+> [module.json5 configuration file](../../../quick-start/module-configuration-file.md).&gt;
 > - When the passed URI is a sandbox path, images or videos can be saved properly, but the preview is not
 > displayed.
 
@@ -2477,17 +2448,14 @@ showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSet
 
 Displays a dialog box for the user to confirm whether to save an image or video. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - If the user agrees to save the images or videos, this API returns a URI that has been created and granted
 > with the save permission (this URI is permanent), and the application can use this URI to write the image or
-> video. If the user declines to save the image or video, this API returns an empty string.
-> 
+> video. If the user declines to save the image or video, this API returns an empty string.&gt;
 > - The dialog box must display the application name, but this cannot be directly obtained. Therefore, before
 > calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the
 > [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is
-> not affected by the **icon** item in the **abilities** tag and cannot be modified.
-> 
+> not affected by the **icon** item in the **abilities** tag and cannot be modified.&gt;
 > - If the passed URI is a sandbox path, images or videos can be saved but cannot be previewed.
 
 **Since:** 26.0.0

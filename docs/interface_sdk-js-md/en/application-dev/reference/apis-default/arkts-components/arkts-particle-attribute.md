@@ -1,8 +1,6 @@
 # ParticleAttribute
 
-The ParticleAttribute.
-
-@extends CommonMethod @interface ParticleAttribute
+The ParticleAttribute.@extends CommonMethod @interface ParticleAttribute
 
 **Inheritance/Implementation:** ParticleAttribute extends CommonMethod
 

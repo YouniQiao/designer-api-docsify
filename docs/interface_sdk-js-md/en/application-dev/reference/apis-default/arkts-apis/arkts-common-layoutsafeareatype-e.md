@@ -1,8 +1,6 @@
 # LayoutSafeAreaType
 
-Describe the types for expanding the safe area in layout.
-
-@enum { number }
+Describe the types for expanding the safe area in layout.@enum { number }
 
 **Since:** 23
 

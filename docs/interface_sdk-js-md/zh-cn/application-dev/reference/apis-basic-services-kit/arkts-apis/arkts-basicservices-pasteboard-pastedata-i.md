@@ -113,7 +113,7 @@ addRecord(mimeType: string, value: ValueType): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| [12900002](../errorcode-pasteboard.md#12900002-record数量超过最大限制) | The number of records exceeds the upper limit.<br>**适用版本：** 9+ |
+| [12900002](../errorcode-pasteboard.md#12900002-record数量超过最大限制) | The number of records exceeds the upper limit.<br>**适用版本：** 9 |
 
 **示例**
 
@@ -772,7 +772,11 @@ let hasType: boolean = pasteData.hasType(pasteboard.MIMETYPE_TEXT_PLAIN);
 pasteComplete(): void
 ```
 
-通知剪贴板服务数据使用已完成，可释放跨设备通道等资源。 应在调用pasteStart之后、完成数据处理后调用，避免资源浪费。未调用可能导致跨设备通道长时间占用，影响后续跨设备粘贴操作。 pasteComplete与其他接口的使用步骤可参考： 1. getData()获取剪贴板数据 2. pasteStart()保留跨设备通道 3. 使用剪贴板数据 4. pasteComplete()释放通道
+通知剪贴板服务数据使用已完成，可释放跨设备通道等资源。 应在调用pasteStart之后、完成数据处理后调用，避免资源浪费。未调用可能导致跨设备通道长时间占用，影响后续跨设备粘贴操作。 pasteComplete与其他接口的使用步骤可参考：
+1. getData()获取剪贴板数据
+2. pasteStart()保留跨设备通道
+3. 使用剪贴板数据
+4. pasteComplete()释放通道
 
 **起始版本：** 23
 
@@ -822,8 +826,7 @@ systemPasteboard.getData((err: BusinessError | null, pasteData: pasteboard.Paste
 pasteStart(): void
 ```
 
-读取剪贴板数据前，通知剪贴板服务保留跨设备通道。访问剪贴板数据中的跨端文件数据前，通知剪贴板服务保留跨设备链路。 跨设备链路用于连接远端设备并提供传输远端设备文件到本端设备的能力，如未调用此方法则跨设备链路将在30秒后自动断开。 适用于跨设备粘贴场景。当需要确保跨设备剪贴板数据通道保持连接，以便后续读取远端设备剪贴板数据时使用。
-
+读取剪贴板数据前，通知剪贴板服务保留跨设备通道。访问剪贴板数据中的跨端文件数据前，通知剪贴板服务保留跨设备链路。 跨设备链路用于连接远端设备并提供传输远端设备文件到本端设备的能力，如未调用此方法则跨设备链路将在30秒后自动断开。 适用于跨设备粘贴场景。当需要确保跨设备剪贴板数据通道保持连接，以便后续读取远端设备剪贴板数据时使用。  
 - 必须与[pasteComplete](#pastecomplete)方法配对使用。 - 调用顺序：先调用pasteStart()通知保留通道，数据处理完成后必须调用pasteComplete()通知完成。 - 未调用pasteComplete()会导致跨设备通道未正确关闭，影响后续跨设备剪贴板操作。
 
 **起始版本：** 23

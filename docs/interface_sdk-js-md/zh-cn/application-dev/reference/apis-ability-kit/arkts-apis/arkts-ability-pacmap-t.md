@@ -12,5 +12,5 @@ export type PacMap = Record<string, int | double | string | boolean | Array<stri
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
-**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, int | double | string | boolean | Array&lt;string | int | double | boolean&gt; | null&gt;
+**属性类型：** Record&lt;string, int | double | string | boolean | Array&lt;string | int | double | boolean&gt; | null&gt;
 

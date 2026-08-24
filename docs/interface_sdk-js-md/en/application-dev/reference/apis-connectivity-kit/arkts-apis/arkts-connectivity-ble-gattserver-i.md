@@ -20,9 +20,7 @@ import { ble } from '@kit.ConnectivityKit';
 addService(service: GattService): void
 ```
 
-Adds a specified service to be hosted.
-
-The added service and its characteristics are provided by the local device.
+Adds a specified service to be hosted.The added service and its characteristics are provided by the local device.
 
 **Since:** 23
 
@@ -469,9 +467,7 @@ notifyCharacteristicChanged(
     ): void
 ```
 
-Sends a notification of a change in a specified local characteristic with a asynchronous callback.
-
-This method should be called for every BLE peripheral device that has requested notifications.
+Sends a notification of a change in a specified local characteristic with a asynchronous callback.This method should be called for every BLE peripheral device that has requested notifications.
 
 **Since:** 23
 
@@ -554,9 +550,7 @@ try {
 notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): Promise<void>
 ```
 
-Sends a notification of a change in a specified local characteristic with a asynchronous callback.
-
-This method should be called for every BLE peripheral device that has requested notifications.
+Sends a notification of a change in a specified local characteristic with a asynchronous callback.This method should be called for every BLE peripheral device that has requested notifications.
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # PlayingState
 
-The enum of a2dp playing state.
-
-@enum { number }
+The enum of a2dp playing state.@enum { number }
 
 **Since:** 9
 

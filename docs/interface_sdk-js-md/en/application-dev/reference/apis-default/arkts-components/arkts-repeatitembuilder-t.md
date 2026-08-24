@@ -11,6 +11,8 @@ Defines builder function to render one template type.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Builder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@Buildertype RepeatItemBuilder<T> = (repeatItem: RepeatItem<T>) => void--><!--Device-unnamed-@Buildertype RepeatItemBuilder<T> = (repeatItem: RepeatItem<T>) => void-End-->

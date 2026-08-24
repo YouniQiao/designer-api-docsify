@@ -1,8 +1,6 @@
 # FocusBoxStyle
 
-Focus box style.
-
-@interface FocusBoxStyle
+Focus box style.@interface FocusBoxStyle
 
 **Since:** 23
 
@@ -20,7 +18,7 @@ margin?: LengthMetrics
 
 Describes the focus-box margin.
 
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 
@@ -40,7 +38,7 @@ strokeColor?: ColorMetrics
 
 Describes the focus-box color.
 
-**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
@@ -60,7 +58,7 @@ strokeWidth?: LengthMetrics
 
 Describes the focus-box stroke width.
 
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 

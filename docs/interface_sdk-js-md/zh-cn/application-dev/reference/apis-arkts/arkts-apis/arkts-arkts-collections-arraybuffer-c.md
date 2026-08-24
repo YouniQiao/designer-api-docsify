@@ -1,13 +1,14 @@
 # ArrayBuffer
 
-ArkTS TypedArray（[Int8Array](arkts-arkts-collections-n.md)、 [Uint8Array](arkts-arkts-collections-n.md)、 [Int16Array](arkts-arkts-collections-n.md)、 [Uint16Array](arkts-arkts-collections-n.md)、 [Int32Array](arkts-arkts-collections-n.md)、 [Uint32Array](arkts-arkts-collections-n.md)、 [Uint8ClampedArray](arkts-arkts-collections-n.md)、 [Float32Array](arkts-arkts-collections-n.md)）的底层数据结构。
+ArkTS TypedArray（[Int8Array](arkts-collections.md)、 [Uint8Array](arkts-collections.md)、 [Int16Array](arkts-collections.md)、 [Uint16Array](arkts-collections.md)、 [Int32Array](arkts-collections.md)、 [Uint32Array](arkts-collections.md)、 [Uint8ClampedArray](arkts-collections.md)、 [Float32Array](arkts-collections.md)）的底层数据结构。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
 > **装饰器类型**：\@Sendable
 
 **起始版本：** 12
+
+**装饰器类型：** @Sendable
 
 <!--Device-collections-class ArrayBuffer--><!--Device-collections-class ArrayBuffer-End-->
 

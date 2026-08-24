@@ -12,7 +12,6 @@ Defines a struct for shared configurations.
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## allowList

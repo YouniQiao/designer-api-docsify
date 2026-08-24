@@ -6,7 +6,7 @@ typedef struct OH_HiDebug_ProfilingResult {...} OH_HiDebug_ProfilingResult
 
 ## Overview
 
-Encapsulates result of a single profiling request operation.It represents data delivered via OH_HiDebug_ProfilingCallback.
+Defines a struct for encapsulating the result of a single resource collection.
 
 **Since**: 24
 

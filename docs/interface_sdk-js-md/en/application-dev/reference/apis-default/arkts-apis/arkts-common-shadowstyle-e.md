@@ -1,8 +1,6 @@
 # ShadowStyle
 
-enum Shadow style
-
-@enum { number }
+enum Shadow style@enum { number }
 
 **Since:** 23
 

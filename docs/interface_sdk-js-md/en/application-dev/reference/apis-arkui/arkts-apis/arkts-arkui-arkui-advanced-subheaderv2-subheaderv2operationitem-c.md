@@ -4,6 +4,8 @@ Represents an item in the operation area.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class SubHeaderV2OperationItem--><!--Device-unnamed-export declare class SubHeaderV2OperationItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ Constructor of **SubHeaderV2OperationItem**.
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  accessibilityDescription?: ResourceStr
+accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of this text or icon.
@@ -50,6 +51,8 @@ The accessibilityDescription of this text or icon.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,17 +65,18 @@ The accessibilityDescription of this text or icon.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  accessibilityLevel?: string
+accessibilityLevel?: string
 ```
 
 The accessibilityLevel of this text or icon.
 
 **Type:** string
 
-**Default:** "auto".The options are as follows:<br/> "auto":The value is converted to "yes" or "no" based on the component. "yes": the current component is selectable for the accessibility service. "no": The current component is not selectable for the accessibility service. "no-hide-descendants":The current component and all its child components are not selectable<br/> for the accessibility service.
+**Default:** "auto".The options are as follows:<br/>"auto":The value is converted to "yes" or "no" based on the component."yes": the current component is selectable for the accessibility service."no": The current component is not selectable for the accessibility service."no-hide-descendants":The current component and all its child components are not selectable<br/> for the accessibility service.
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +89,7 @@ The accessibilityLevel of this text or icon.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  accessibilityText?: ResourceStr
+accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of this text or icon.
@@ -94,6 +97,8 @@ The accessibilityText of this text or icon.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +111,7 @@ The accessibilityText of this text or icon.
 ## action
 
 ```TypeScript
-@Trace
-  action?: SubHeaderV2OperationItemAction
+action?: SubHeaderV2OperationItemAction
 ```
 
 callback function when operate the text or icon.
@@ -115,6 +119,8 @@ callback function when operate the text or icon.
 **Type:** [SubHeaderV2OperationItemAction](../../apis-default/arkts-apis/arkts-subheaderv2operationitemaction-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,8 +133,7 @@ callback function when operate the text or icon.
 ## content
 
 ```TypeScript
-@Trace
-  content: SubHeaderV2OperationItemType
+content: SubHeaderV2OperationItemType
 ```
 
 The content of text or the address of icon.
@@ -136,6 +141,8 @@ The content of text or the address of icon.
 **Type:** [SubHeaderV2OperationItemType](../../apis-default/arkts-apis/arkts-subheaderv2operationitemtype-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,8 +155,7 @@ The content of text or the address of icon.
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  defaultFocus?: boolean
+defaultFocus?: boolean
 ```
 
 Sets the default focus state of the text or icon.
@@ -159,6 +165,8 @@ Sets the default focus state of the text or icon.
 **Default:** false
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -171,8 +179,7 @@ Sets the default focus state of the text or icon.
 ## id
 
 ```TypeScript
-@Trace
-  id?: string
+id?: string
 ```
 
 Set the id for SubHeaderV2OperationItem.
@@ -180,6 +187,8 @@ Set the id for SubHeaderV2OperationItem.
 **Type:** string
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

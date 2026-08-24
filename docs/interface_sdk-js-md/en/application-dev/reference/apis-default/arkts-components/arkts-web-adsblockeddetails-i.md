@@ -1,8 +1,6 @@
 # AdsBlockedDetails
 
-Defines the ads block details.
-
-@interface AdsBlockedDetails
+Defines the ads block details.@interface AdsBlockedDetails
 
 **Since:** 23
 

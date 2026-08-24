@@ -1,8 +1,6 @@
 # IlluminatedType（系统接口）
 
-被照亮的类型枚举。
-
-@enum { number }
+被照亮的类型枚举。@enum { number }
 
 **起始版本：** 23
 

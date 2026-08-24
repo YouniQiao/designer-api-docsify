@@ -1,8 +1,6 @@
 # DepthVector3（系统接口）
 
-深度空间中的三维向量。
-
-@interface DepthVector3
+深度空间中的三维向量。@interface DepthVector3
 
 **起始版本：** 26.0.0
 

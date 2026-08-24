@@ -4,6 +4,8 @@ Defines the segmented button with multi capsule style.
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2--><!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,8 +37,7 @@ Sets the build function of the segmented button.
 ## $selectedIndexes
 
 ```TypeScript
-@Event
-    $selectedIndexes: OnSelectedIndexesChange
+$selectedIndexes: OnSelectedIndexesChange
 ```
 
 Callback invoked when the selected item changes.
@@ -44,6 +45,8 @@ Callback invoked when the selected item changes.
 **Type:** [OnSelectedIndexesChange](arkts-arkui-onselectedindexeschange-t.md)
 
 **Since:** 18
+
+**Decorator:** @Event
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,19 +59,16 @@ Callback invoked when the selected item changes.
 ## itemBackgroundBlurStyle
 
 ```TypeScript
-@Param
-    readonly itemBackgroundBlurStyle?: BlurStyle
+readonly itemBackgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of segmented button items.
-
-Default value: **undefined**
-
-This property is read-only.
+Background blur style of segmented button items.Default value: **undefined**This property is read-only.
 
 **Type:** BlurStyle
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,19 +81,16 @@ This property is read-only.
 ## itemBackgroundBlurStyleOptions
 
 ```TypeScript
-@Param
-    readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
+readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Background blur style options of segmented button items.
-
-Default value: **undefined**
-
-This property is read-only.
+Background blur style options of segmented button items.Default value: **undefined**This property is read-only.
 
 **Type:** BackgroundBlurStyleOptions
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,21 +103,16 @@ This property is read-only.
 ## itemBackgroundColor
 
 ```TypeScript
-@Param
-    readonly itemBackgroundColor?: ColorMetrics
+readonly itemBackgroundColor?: ColorMetrics
 ```
 
-Background color of unselected segmented button items.
-
-Default value: **\$r('sys.color.segment_button_v2_multi_capsule_button_background')**
-
-If the value is **undefined**, the default value is used.
-
-This property is read-only.
+Background color of unselected segmented button items.Default value: **\$r('sys.color.segment_button_v2_multi_capsule_button_background')**If the value is **undefined**, the default value is used.This property is read-only.
 
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,19 +125,16 @@ This property is read-only.
 ## itemBackgroundEffect
 
 ```TypeScript
-@Param
-    readonly itemBackgroundEffect?: BackgroundEffectOptions
+readonly itemBackgroundEffect?: BackgroundEffectOptions
 ```
 
-Background effect of segmented button items.
-
-Default value: **undefined**
-
-This property is read-only.
+Background effect of segmented button items.Default value: **undefined**This property is read-only.
 
 **Type:** BackgroundEffectOptions
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,23 +147,16 @@ This property is read-only.
 ## itemBorderRadius
 
 ```TypeScript
-@Param
-    readonly itemBorderRadius?: LengthMetrics
+readonly itemBorderRadius?: LengthMetrics
 ```
 
-Border radius of segmented button items.
-
-Value range: [0, +∞)
-
-Default value: **\$r('sys.float.segment_button_v2_selected_corner_radius')**.
-
-If the value is out of the range, the default value is used.
-
-This property is read-only.
+Border radius of segmented button items.Value range: [0, +∞)Default value: **\$r('sys.float.segment_button_v2_selected_corner_radius')**.If the value is out of the range, the default value is used.This property is read-only.
 
 **Type:** LengthMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -187,25 +169,17 @@ This property is read-only.
 ## itemFontColor
 
 ```TypeScript
-@Param
-    readonly itemFontColor?: ColorMetrics
+readonly itemFontColor?: ColorMetrics
 ```
 
-Font color of unselected segmented button items.
-
-Default value: **\$r('sys.color.font_secondary')**
-
-If the value is **undefined**, the default value is used.
-
-**NOTE：**
-
-When **fontColor** of **textModifier** is set for **items**, **itemFontColor** has no effect.
-
-This property is read-only.
+Font color of unselected segmented button items.Default value: **\$r('sys.color.font_secondary')**If the value is **undefined**, the default value is used.  
+**NOTE：**When **fontColor** of **textModifier** is set for **items**, **itemFontColor** has no effect.This property is read-only.
 
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -218,27 +192,17 @@ This property is read-only.
 ## itemFontSize
 
 ```TypeScript
-@Param
-    readonly itemFontSize?: LengthMetrics
+readonly itemFontSize?: LengthMetrics
 ```
 
-Font size of unselected segmented button items.
-
-Value range: [0, +∞)
-
-Default value: **14fp**
-
-**NOTE：**
-
-Percentage values are not supported. If an invalid value is set, the default value is used.
-
-When **fontSize** of **textModifier** is set for **items**, **itemFontSize** has no effect.
-
-This property is read-only.
+Font size of unselected segmented button items.Value range: [0, +∞)Default value: **14fp**  
+**NOTE：**Percentage values are not supported. If an invalid value is set, the default value is used.When **fontSize** of **textModifier** is set for **items**, **itemFontSize** has no effect.This property is read-only.
 
 **Type:** LengthMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,25 +215,17 @@ This property is read-only.
 ## itemFontWeight
 
 ```TypeScript
-@Param
-    readonly itemFontWeight?: FontWeight
+readonly itemFontWeight?: FontWeight
 ```
 
-Font weight of unselected segmented button items.
-
-Default value: **FontWeight.Medium**
-
-If the value is out of the range, the default value is used.
-
-**NOTE：**
-
-When **fontWeight** of **textModifier** is set for **items**, **itemFontWeight** has no effect.
-
-This property is read-only.
+Font weight of unselected segmented button items.Default value: **FontWeight.Medium**If the value is out of the range, the default value is used.  
+**NOTE：**When **fontWeight** of **textModifier** is set for **items**, **itemFontWeight** has no effect.This property is read-only.
 
 **Type:** FontWeight
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,25 +238,17 @@ This property is read-only.
 ## itemIconFillColor
 
 ```TypeScript
-@Param
-    readonly itemIconFillColor?: ColorMetrics
+readonly itemIconFillColor?: ColorMetrics
 ```
 
-Icon color of unselected segmented button items.
-
-Default value: **\$r('sys.color.font_secondary')**
-
-If the value is **undefined**, the default value is used.
-
-**NOTE：**
-
-When **fillColor** of **iconModifier** is set for **items**, **itemIconFillColor** has no effect.
-
-This property is read-only.
+Icon color of unselected segmented button items.Default value: **\$r('sys.color.font_secondary')**If the value is **undefined**, the default value is used.  
+**NOTE：**When **fillColor** of **iconModifier** is set for **items**, **itemIconFillColor** has no effect.This property is read-only.
 
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -313,27 +261,17 @@ This property is read-only.
 ## itemIconSize
 
 ```TypeScript
-@Param
-    readonly itemIconSize?: SizeT<LengthMetrics>
+readonly itemIconSize?: SizeT<LengthMetrics>
 ```
 
-Image-type icon size of segmented button items.
-
-Value range: [0, +∞)
-
-Default value: **{ width: LengthMetrics.vp(24), height: LengthMetrics.vp(24) }**.
-
-If the value is out of the range, the default value is used.
-
-**NOTE：**
-
-When **width** and **height** of **iconModifier** are set for **items**, **itemIconSize** has no effect.
-
-This property is read-only.
+Image-type icon size of segmented button items.Value range: [0, +∞)Default value: **{ width: LengthMetrics.vp(24), height: LengthMetrics.vp(24) }**.If the value is out of the range, the default value is used.  
+**NOTE：**When **width** and **height** of **iconModifier** are set for **items**, **itemIconSize** has no effect.This property is read-only.
 
 **Type:** SizeT&lt;LengthMetrics&gt;
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -346,25 +284,17 @@ This property is read-only.
 ## itemMaxFontScale
 
 ```TypeScript
-@Param
-    readonly itemMaxFontScale?: number | Resource
+readonly itemMaxFontScale?: number | Resource
 ```
 
-Maximum font scale factor of the segmented button item text.
-
-Value range: [1, 2]
-
-Default value: **1**
-
-**NOTE：**
-
-A value less than 1 is treated as **1**. A value greater than 2 is treated as **2**. Abnormal values are ineffective by default.
-
-This property is read-only.
+Maximum font scale factor of the segmented button item text.Value range: [1, 2]Default value: **1**  
+**NOTE：**A value less than 1 is treated as **1**. A value greater than 2 is treated as **2**. Abnormal values are ineffective by default.This property is read-only.
 
 **Type:** number \| Resource
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -377,25 +307,17 @@ This property is read-only.
 ## itemMinFontScale
 
 ```TypeScript
-@Param
-    readonly itemMinFontScale?: number | Resource
+readonly itemMinFontScale?: number | Resource
 ```
 
-Minimum font scale factor of the segmented button item text.
-
-Value range: [0, 1]
-
-Default value: **0**
-
-**NOTE：**
-
-A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. Abnormal values are ineffective by default.
-
-This property is read-only.
+Minimum font scale factor of the segmented button item text.Value range: [0, 1]Default value: **0**  
+**NOTE：**A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. Abnormal values are ineffective by default.This property is read-only.
 
 **Type:** number \| Resource
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -408,25 +330,17 @@ This property is read-only.
 ## itemMinHeight
 
 ```TypeScript
-@Param
-    readonly itemMinHeight?: LengthMetrics
+readonly itemMinHeight?: LengthMetrics
 ```
 
-Minimum height of the segmented button item.
-
-Value range: [0, +∞)
-
-Default value:
-
-**\$r('sys.float.segment_button_v2_singleline_selected_height')** for text-only buttons and icon-only buttons, and **\$r('sys.float.segment_button_v2_doubleline_selected_height')** for buttons with both an icon and text.
-
-If the value is out of the range, the default value is used.
-
-This property is read-only.
+Minimum height of the segmented button item.Value range: [0, +∞)Default value:  
+**\$r('sys.float.segment_button_v2_singleline_selected_height')** for text-only buttons and icon-only buttons, and **\$r('sys.float.segment_button_v2_doubleline_selected_height')** for buttons with both an icon and text.If the value is out of the range, the default value is used.This property is read-only.
 
 **Type:** LengthMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -439,21 +353,16 @@ This property is read-only.
 ## itemPadding
 
 ```TypeScript
-@Param
-    readonly itemPadding?: LocalizedPadding
+readonly itemPadding?: LocalizedPadding
 ```
 
-Padding of the segmented button item.
-
-Default value: **{top: LengthMetrics.resource (\$r('sys.float.padding_level2')), bottom: LengthMetrics. resource (\$r('sys.float.padding_level2')), start: LengthMetrics.resource(\$r('sys.float.padding_level4')), end: LengthMetrics.resource(\$r('sys.float.padding_level4'))}**
-
-If the value is **undefined**, the default value is used.
-
-This property is read-only.
+Padding of the segmented button item.Default value: **{top: LengthMetrics.resource (\$r('sys.float.padding_level2')), bottom: LengthMetrics. resource (\$r('sys.float.padding_level2')), start: LengthMetrics.resource(\$r('sys.float.padding_level4')), end: LengthMetrics.resource(\$r('sys.float.padding_level4'))}**If the value is **undefined**, the default value is used.This property is read-only.
 
 **Type:** LocalizedPadding
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -466,20 +375,16 @@ This property is read-only.
 ## items
 
 ```TypeScript
-@Require
-    @Param
-    readonly items: SegmentButtonV2Items
+readonly items: SegmentButtonV2Items
 ```
 
-Items of the segmented button.
-
-If the value is **undefined**, the option information is not displayed.
-
-This property is read-only.
+Items of the segmented button.If the value is **undefined**, the option information is not displayed.This property is read-only.
 
 **Type:** [SegmentButtonV2Items](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -492,21 +397,16 @@ This property is read-only.
 ## itemSelectedBackgroundColor
 
 ```TypeScript
-@Param
-    readonly itemSelectedBackgroundColor?: ColorMetrics
+readonly itemSelectedBackgroundColor?: ColorMetrics
 ```
 
-Background color of the selected segmented button item.
-
-Default value: **\$r('sys.color.segment_button_v2_tab_selected_item_background')**
-
-If the value is **undefined**, the default value is used.
-
-This property is read-only.
+Background color of the selected segmented button item.Default value: **\$r('sys.color.segment_button_v2_tab_selected_item_background')**If the value is **undefined**, the default value is used.This property is read-only.
 
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -519,25 +419,17 @@ This property is read-only.
 ## itemSelectedFontColor
 
 ```TypeScript
-@Param
-    readonly itemSelectedFontColor?: ColorMetrics
+readonly itemSelectedFontColor?: ColorMetrics
 ```
 
-Font color of the selected segmented button item.
-
-Default value: **\$r('sys.color.font_primary')**.
-
-If the value is **undefined**, the default value is used.
-
-**NOTE：**
-
-When **fontColor** of **textModifier** is set for **items**, **itemSelectedFontColor** has no effect.
-
-This property is read-only.
+Font color of the selected segmented button item.Default value: **\$r('sys.color.font_primary')**.If the value is **undefined**, the default value is used.  
+**NOTE：**When **fontColor** of **textModifier** is set for **items**, **itemSelectedFontColor** has no effect.This property is read-only.
 
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -550,27 +442,17 @@ This property is read-only.
 ## itemSelectedFontSize
 
 ```TypeScript
-@Param
-    readonly itemSelectedFontSize?: LengthMetrics
+readonly itemSelectedFontSize?: LengthMetrics
 ```
 
-Font size of the selected segmented button item.
-
-Value range: [0, +∞)
-
-Default value: **14fp**
-
-**NOTE：**
-
-Percentage values are not supported. If an invalid value is set, the default value is used.
-
-When **fontSize** of **textModifier** is set for **items**, **itemSelectedFontSize** has no effect.
-
-This property is read-only.
+Font size of the selected segmented button item.Value range: [0, +∞)Default value: **14fp**  
+**NOTE：**Percentage values are not supported. If an invalid value is set, the default value is used.When **fontSize** of **textModifier** is set for **items**, **itemSelectedFontSize** has no effect.This property is read-only.
 
 **Type:** LengthMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -583,25 +465,17 @@ This property is read-only.
 ## itemSelectedFontWeight
 
 ```TypeScript
-@Param
-    readonly itemSelectedFontWeight?: FontWeight
+readonly itemSelectedFontWeight?: FontWeight
 ```
 
-Font weight of the selected segmented button item.
-
-Default value: **FontWeight.Medium**
-
-If the value is out of the range, the default value is used.
-
-**NOTE：**
-
-When **fontWeight** of **textModifier** is set for **items**, **itemSelectedFontWeight** has no effect.
-
-This property is read-only.
+Font weight of the selected segmented button item.Default value: **FontWeight.Medium**If the value is out of the range, the default value is used.  
+**NOTE：**When **fontWeight** of **textModifier** is set for **items**, **itemSelectedFontWeight** has no effect.This property is read-only.
 
 **Type:** FontWeight
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -614,25 +488,17 @@ This property is read-only.
 ## itemSelectedIconFillColor
 
 ```TypeScript
-@Param
-    readonly itemSelectedIconFillColor?: ColorMetrics
+readonly itemSelectedIconFillColor?: ColorMetrics
 ```
 
-Icon color of the selected segmented button item.
-
-Default value: **\$r('sys.color.font_primary')**
-
-If the value is **undefined**, the default value is used.
-
-**NOTE：**
-
-When **fillColor** of **iconModifier** is set for **items**, **itemSelectedIconFillColor** has no effect.
-
-This property is read-only.
+Icon color of the selected segmented button item.Default value: **\$r('sys.color.font_primary')**If the value is **undefined**, the default value is used.  
+**NOTE：**When **fillColor** of **iconModifier** is set for **items**, **itemSelectedIconFillColor** has no effect.This property is read-only.
 
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -645,25 +511,17 @@ This property is read-only.
 ## itemSelectedSymbolFontColor
 
 ```TypeScript
-@Param
-    readonly itemSelectedSymbolFontColor?: ColorMetrics
+readonly itemSelectedSymbolFontColor?: ColorMetrics
 ```
 
-HM Symbol icon color of the selected segmented button item.
-
-Default value: **\$r('sys.color.font_primary')**
-
-If the value is **undefined**, the default value is used.
-
-**NOTE：**
-
-When **fontColor** of **symbolModifier** is set for **items**, **itemSelectedSymbolFontColor** has no effect.
-
-This property is read-only.
+HM Symbol icon color of the selected segmented button item.Default value: **\$r('sys.color.font_primary')**If the value is **undefined**, the default value is used.  
+**NOTE：**When **fontColor** of **symbolModifier** is set for **items**, **itemSelectedSymbolFontColor** has no effect.This property is read-only.
 
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -676,25 +534,17 @@ This property is read-only.
 ## itemSpace
 
 ```TypeScript
-@Param
-    readonly itemSpace?: LengthMetrics
+readonly itemSpace?: LengthMetrics
 ```
 
-Space between segmented button items.
-
-Value range: [0, +∞)
-
-Default value: **LengthMetrics.vp(1)**
-
-**NOTE：**
-
-Percentage values are not supported. If an invalid value is set, the default value is used.
-
-This property is read-only.
+Space between segmented button items.Value range: [0, +∞)Default value: **LengthMetrics.vp(1)**  
+**NOTE：**Percentage values are not supported. If an invalid value is set, the default value is used.This property is read-only.
 
 **Type:** LengthMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -707,25 +557,17 @@ This property is read-only.
 ## itemSymbolFontColor
 
 ```TypeScript
-@Param
-    readonly itemSymbolFontColor?: ColorMetrics
+readonly itemSymbolFontColor?: ColorMetrics
 ```
 
-HM Symbol icon color of unselected segmented button items.
-
-Default value: **\$r('sys.color.font_secondary')**
-
-If the value is **undefined**, the default value is used.
-
-**NOTE：**
-
-When **fontColor** of **symbolModifier** is set for **items**, **itemSymbolFontColor** has no effect.
-
-This property is read-only.
+HM Symbol icon color of unselected segmented button items.Default value: **\$r('sys.color.font_secondary')**If the value is **undefined**, the default value is used.  
+**NOTE：**When **fontColor** of **symbolModifier** is set for **items**, **itemSymbolFontColor** has no effect.This property is read-only.
 
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -738,27 +580,17 @@ This property is read-only.
 ## itemSymbolFontSize
 
 ```TypeScript
-@Param
-    readonly itemSymbolFontSize?: LengthMetrics
+readonly itemSymbolFontSize?: LengthMetrics
 ```
 
-HM Symbol icon size of segmented button items.
-
-Value range: [0, +∞)
-
-Default value: **20fp**
-
-**NOTE：**
-
-Percentage values are not supported. If an invalid value is set, the default value is used.
-
-When **fontSize** of **symbolModifier** is set for **items**, **itemSymbolFontSize** has no effect.
-
-This property is read-only.
+HM Symbol icon size of segmented button items.Value range: [0, +∞)Default value: **20fp**  
+**NOTE：**Percentage values are not supported. If an invalid value is set, the default value is used.When **fontSize** of **symbolModifier** is set for **items**, **itemSymbolFontSize** has no effect.This property is read-only.
 
 **Type:** LengthMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -771,21 +603,16 @@ This property is read-only.
 ## languageDirection
 
 ```TypeScript
-@Param
-    readonly languageDirection?: Direction
+readonly languageDirection?: Direction
 ```
 
-Language direction of the segmented button.
-
-Default value: **Direction.Auto**
-
-If the value is out of the range, the default value is used.
-
-This property is read-only.
+Language direction of the segmented button.Default value: **Direction.Auto**If the value is out of the range, the default value is used.This property is read-only.
 
 **Type:** Direction
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -798,8 +625,7 @@ This property is read-only.
 ## onItemClicked
 
 ```TypeScript
-@Event
-    onItemClicked?: Callback<number>
+onItemClicked?: Callback<number>
 ```
 
 Callback invoked when a segmented button item is clicked.
@@ -807,6 +633,8 @@ Callback invoked when a segmented button item is clicked.
 **Type:** Callback&lt;number&gt;
 
 **Since:** 18
+
+**Decorator:** @Event
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -819,24 +647,17 @@ Callback invoked when a segmented button item is clicked.
 ## selectedIndexes
 
 ```TypeScript
-@Require
-    @Param
-    readonly selectedIndexes: number[]
+readonly selectedIndexes: number[]
 ```
 
-Array of indexes of the selected segmented button items. The index is zero-based and increments by 1.
-
-If the value is **undefined**, no item is selected.
-
-**NOTE：**
-
-Only valid button indexes are supported. An empty array [] indicates no selection.
-
-This property is read-only.
+Array of indexes of the selected segmented button items. The index is zero-based and increments by 1.If the value is **undefined**, no item is selected.  
+**NOTE：**Only valid button indexes are supported. An empty array [] indicates no selection.This property is read-only.
 
 **Type:** number[]
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

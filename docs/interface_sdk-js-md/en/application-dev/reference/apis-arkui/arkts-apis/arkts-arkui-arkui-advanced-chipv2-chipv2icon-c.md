@@ -4,6 +4,8 @@ Defines chipV2 icon.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export abstract class ChipV2Icon--><!--Device-unnamed-export abstract class ChipV2Icon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

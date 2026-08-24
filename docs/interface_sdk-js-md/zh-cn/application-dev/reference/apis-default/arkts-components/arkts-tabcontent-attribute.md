@@ -50,10 +50,9 @@ onWillHide(event: VoidCallback | undefined): this
 
 逻辑回调，TabContent将要隐藏的时候触发该回调。场景包括TabContent切换，页面切换，窗口前后台切换。取值为undefined时，不使用回调函数。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在
-> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> attributeModifier
 > 中调用。
 
 **起始版本：** 23
@@ -86,10 +85,9 @@ onWillShow(event: VoidCallback | undefined): this
 
 逻辑回调，TabContent将要显示的时候触发该回调。场景包括TabContent首次显示，TabContent切换，页面切换，窗口前后台切换。取值为undefined时，不使用回调函数。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在
-> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> attributeModifier
 > 中调用。
 
 **起始版本：** 23
@@ -136,11 +134,7 @@ setTabContentOptions(): this
 tabBar(content: ComponentContentBase | SubTabBarStyle | BottomTabBarStyle | string | Resource | CustomBuilder | TabBarOptions | undefined): this
 ```
 
-设置TabBar上显示内容。
-
-使用BottomTabBarStyle或TabBarOptions类型作为入参并设置icon，icon异常时显示灰色图块。如果icon采用svg格式图源，需删除svg图源内置的宽高属性值。否则，icon大小将使用svg图源内置的宽 高属性值。
-
-设置的内容超出TabBar页签时进行裁切。
+设置TabBar上显示内容。使用BottomTabBarStyle或TabBarOptions类型作为入参并设置icon，icon异常时显示灰色图块。如果icon采用svg格式图源，需删除svg图源内置的宽高属性值。否则，icon大小将使用svg图源内置的宽 高属性值。设置的内容超出TabBar页签时进行裁切。
 
 **起始版本：** 23
 

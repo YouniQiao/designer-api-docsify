@@ -12,9 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 ```
 
-获取当前应用的所有通知渠道。使用callback异步回调。
-
-用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。 适用于需要查看所有渠道配置的场景。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
+获取当前应用的所有通知渠道。使用callback异步回调。用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。 适用于需要查看所有渠道配置的场景。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
 
 **起始版本：** 23
 
@@ -110,9 +108,7 @@ notificationManager.getSlots().then((data: Array<notificationManager.Notificatio
 function getSlots(): Promise<Array<NotificationSlot>>
 ```
 
-获取当前应用的所有通知渠道。使用Promise异步回调。
-
-用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。 适用于需要查看所有渠道配置的场景。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
+获取当前应用的所有通知渠道。使用Promise异步回调。用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。 适用于需要查看所有渠道配置的场景。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
 
 **起始版本：** 23
 

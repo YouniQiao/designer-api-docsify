@@ -19,9 +19,7 @@ Describes the options for inverting the foreground color.
 high: number
 ```
 
-Value when the background color is less than the grayscale threshold.
-
-Value range: [0, 1].
+Value when the background color is less than the grayscale threshold.Value range: [0, 1].
 
 **Type:** number
 
@@ -41,9 +39,7 @@ Value range: [0, 1].
 low: number
 ```
 
-Value when the background color is greater than the grayscale threshold.
-
-Value range: [0, 1].
+Value when the background color is greater than the grayscale threshold.Value range: [0, 1].
 
 **Type:** number
 
@@ -63,9 +59,7 @@ Value range: [0, 1].
 threshold: number
 ```
 
-Grayscale threshold.
-
-Value range: [0, 1].
+Grayscale threshold.Value range: [0, 1].
 
 **Type:** number
 
@@ -85,13 +79,8 @@ Value range: [0, 1].
 thresholdRange: number
 ```
 
-Threshold value range.
-
-Value range: [0, 1].
-
-**NOTE：**
-
-This range defines the upper and lower bounds of the grayscale threshold. The grayscale value changes linearly from high to low within the range.
+Threshold value range.Value range: [0, 1].  
+**NOTE：**This range defines the upper and lower bounds of the grayscale threshold. The grayscale value changes linearly from high to low within the range.
 
 **Type:** number
 

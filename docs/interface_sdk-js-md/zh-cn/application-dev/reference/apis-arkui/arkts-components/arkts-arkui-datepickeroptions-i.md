@@ -2,17 +2,13 @@
 
 日期选择器组件的参数说明。
 
-> **说明：**
-> 
-> - Date的使用请参考TimePickerOptions。
-> 
-> - 在DatePicker组件滑动过程中修改DatePickerOptions中的属性，会导致这些属性无法生效。
-> 
+> **说明：**&gt;
+> - Date的使用请参考TimePickerOptions。&gt;
+> - 在DatePicker组件滑动过程中修改DatePickerOptions中的属性，会导致这些属性无法生效。&gt;
 > - 如果需要设置的起止日期范围在\[Date('1900-01-31'), Date('2100-12-31')]之外，推荐使用
 > [DatePickerComponent](../arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponent-s.md)。
 
-> **起始日期、结束日期和选中日期的异常情形说明：**
-> 
+> **起始日期、结束日期和选中日期的异常情形说明：**&gt;
 > - 起始日期晚于结束日期，选中日期未设置：起始日期、结束日期和选中日期都为默认值。
 > - 起始日期晚于结束日期，选中日期早于起始日期默认值：起始日期、结束日期都为默认值，选中日期为起始日期默认值。
 > - 起始日期晚于结束日期，选中日期晚于结束日期默认值：起始日期、结束日期都为默认值，选中日期为结束日期默认值。
@@ -27,8 +23,7 @@
 > - 起始日期与结束日期同时早于系统有效范围：起始日期与结束日期取系统有效范围最早日期。
 > - 起始日期与结束日期同时晚于系统有效范围：起始日期与结束日期取系统有效范围最晚日期。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 先处理起始日期与结束日期的异常情形，再处理选中日期的异常情形。
 
 **起始版本：** 8
@@ -54,8 +49,7 @@ end?: Date
 
 > 取值范围：[Date('1900-01-31'), Date('2100-12-31')]
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 设置了start或end且为非默认值的场景下，canLoop不生效。
 
 **类型：** Date
@@ -76,12 +70,9 @@ end?: Date
 mode?: DatePickerMode
 ```
 
-设置日期展示模式。适用于需要自定义日期展示列的场景，如仅需选择年月或月日。不传入时默认为DatePickerMode.DATE，显示年、月、日三列。
+设置日期展示模式。适用于需要自定义日期展示列的场景，如仅需选择年月或月日。不传入时默认为DatePickerMode.DATE，显示年、月、日三列。在[DatePickerDialog](arkts-arkui-datepickerdialog-c.md)中，当 [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md)的showTime设置为true时，此参数不生效，默认显示年、月、日三列。 这是为保证布局合理性，当showTime为true时会额外显示时间列。
 
-在DatePickerDialog中，当 [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md)的showTime设置为true时，此参数不生效，默认显示年、月、日三列。 这是为保证布局合理性，当showTime为true时会额外显示时间列。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 上述DatePickerDialog相关限制仅适用于DatePickerDialog组件。
 
 **类型：** [DatePickerMode](arkts-arkui-datepickermode-e.md)
@@ -137,8 +128,7 @@ start?: Date
 
 > 取值范围：[Date('1900-01-31'), Date('2100-12-31')]
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 设置了start或end且为非默认值的场景下，canLoop不生效。
 
 **类型：** Date

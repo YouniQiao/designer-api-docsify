@@ -6,6 +6,8 @@ Declare custom content dialog @struct { CustomContentDialog }
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @CustomDialog
+
 <!--Device-unnamed-export declare struct CustomContentDialog--><!--Device-unnamed-export declare struct CustomContentDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,7 +20,7 @@ Declare custom content dialog @struct { CustomContentDialog }
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -26,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,8 +80,7 @@ Sets the CustomContentDialog content area padding.
 ## contentBuilder
 
 ```TypeScript
-@BuilderParam
-  contentBuilder: () => void
+contentBuilder: () => void
 ```
 
 Sets the CustomContentDialog content.
@@ -87,6 +90,8 @@ Sets the CustomContentDialog content.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

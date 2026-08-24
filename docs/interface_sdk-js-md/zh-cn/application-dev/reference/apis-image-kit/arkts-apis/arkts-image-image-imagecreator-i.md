@@ -1,13 +1,8 @@
 # ImageCreator
 
-ImageCreator类，作为图片的生产者，用于将图片写入到Surface中。
+ImageCreator类，作为图片的生产者，用于将图片写入到Surface中。在调用以下方法前需要先通过[image.createImageCreator](arkts-image-image-createimagecreator-f.md)创建ImageCreator实例，ImageCreator不支持多线程。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](#release)方法 及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-在调用以下方法前需要先通过[image.createImageCreator](arkts-image-image-createimagecreator-f.md)创建ImageCreator实例，ImageCreator不支持多线程。
-
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](#release)方法 及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 23
@@ -405,11 +400,7 @@ queueImage(image: Image): Promise<void>
 release(callback: AsyncCallback<void>): void
 ```
 
-释放当前图像。使用callback异步回调。
-
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。
-
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放当前图像。使用callback异步回调。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 23
 
@@ -856,11 +847,7 @@ function release(pixelMap: image.PixelMap) {
 release(): Promise<void>
 ```
 
-释放当前图像。使用Promise异步回调。
-
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。
-
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放当前图像。使用Promise异步回调。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 23
 

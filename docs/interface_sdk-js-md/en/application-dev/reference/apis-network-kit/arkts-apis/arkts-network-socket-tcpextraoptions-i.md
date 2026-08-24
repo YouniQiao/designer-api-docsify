@@ -54,10 +54,8 @@ Whether to enable OOBInline. The default value is **false**. The value **true** 
 socketLinger?: {on: boolean, linger: int}
 ```
 
-Socket linger.
-
-- **on**: whether to enable socket linger. The value true means to enable socket linger and false means the opposite. - **linger**: linger time, in ms. The value ranges from **0** to **65535**.
-
+Socket linger.  
+- **on**: whether to enable socket linger. The value true means to enable socket linger and false means the opposite. - **linger**: linger time, in ms. The value ranges from **0** to **65535**.  
 Specify this parameter only when **on** is set to **true**.
 
 **Type:** {on: boolean, linger: int}
@@ -74,9 +72,7 @@ Specify this parameter only when **on** is set to **true**.
 tcpFastOpen?: boolean
 ```
 
-Whether to enable TCP Fast Open (TFO) in the TCP socket connection. This function allows the client to carry data during the first handshake, reducing the connection setup delay and improving the performance in high-frequency short connection scenarios. The default value is **false**. **true**: yes; **false**: no.
-
-Currently, this parameter can be configured only on the client.
+Whether to enable TCP Fast Open (TFO) in the TCP socket connection. This function allows the client to carry data during the first handshake, reducing the connection setup delay and improving the performance in high-frequency short connection scenarios. The default value is **false**. **true**: yes; **false**: no.Currently, this parameter can be configured only on the client.
 
 **Type:** boolean
 

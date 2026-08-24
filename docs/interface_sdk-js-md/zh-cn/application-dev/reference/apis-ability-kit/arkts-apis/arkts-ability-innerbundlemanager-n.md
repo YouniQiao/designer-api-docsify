@@ -2,11 +2,9 @@
 
 本模块提供launcher应用使用的接口。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本模块从API version 9开始不再支持。建议使用[launcherBundleManager](arkts-bundle-launcherbundlemanager.md)
-> 及[bundleMonitor](arkts-bundle-bundlemonitor.md)替代。
-> 
+> 及[bundleMonitor](arkts-bundle-bundlemonitor.md)替代。&gt;
 > 本模块为系统接口。
 
 **起始版本：** 8

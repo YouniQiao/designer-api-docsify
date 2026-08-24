@@ -12,7 +12,6 @@ Describes the audio capturer change event.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## capturerInfo

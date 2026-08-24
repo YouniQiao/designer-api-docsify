@@ -1,6 +1,6 @@
 # Panel
 
-@brief You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain the panel instance and then call the following APIs through the instance.
+You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain the panel instance and then call the following APIs through the instance.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 ```
 
-@brief Disables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -58,7 +58,7 @@ panel.off('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngin
 offSizeUpdate(callback?: SizeUpdateCallback): void
 ```
 
-@brief Unsubscribe 'sizeUpdate' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
+Unsubscribe 'sizeUpdate' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ offSizeUpdate(callback?: SizeUpdateCallback): void
 on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 ```
 
-@brief Listens for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
+Listens for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -119,7 +119,7 @@ panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine
 onSizeUpdate(callback: SizeUpdateCallback): void
 ```
 
-@brief Subscribe 'sizeUpdate' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
+Subscribe 'sizeUpdate' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
 
 **Since:** 23
 
@@ -141,7 +141,7 @@ onSizeUpdate(callback: SizeUpdateCallback): void
 setShadow(radius: double, color: string, offsetX: double, offsetY: double): void
 ```
 
-@brief Sets the shadow effect of the input method window. <br> <br>   
+Sets the shadow effect of the input method window. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > <br>

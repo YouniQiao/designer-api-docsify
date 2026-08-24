@@ -14,19 +14,15 @@ function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 
 Obtains the network handle used by the system by default, including the network ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Default network used by the system. The network must have the
-> [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.
-> 
+> [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.&gt;
 > - The return value of this interface is determined by the system and is irrelevant to whether the application
-> specifies a network.
-> 
+> specifies a network.&gt;
 > - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch)
 > Wi-Fi
 > Cellular. In special cases,
-> the actual return result prevails.
-> 
+> the actual return result prevails.&gt;
 > - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available,
 > **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more
 > network information.
@@ -89,19 +85,15 @@ function getDefaultNet(): Promise<NetHandle>
 
 Obtains the network handle used by the system by default, including the network ID. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Default network used by the system. The network must have the
-> [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.
-> 
+> [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.&gt;
 > - The return value of this interface is determined by the system and is irrelevant to whether the application
-> specifies a network.
-> 
+> specifies a network.&gt;
 > - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch)
 > Wi-Fi
 > Cellular. In special cases,
-> the actual returned result prevails.
-> 
+> the actual returned result prevails.&gt;
 > - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available,
 > **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more
 > network information.

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## createKVManager

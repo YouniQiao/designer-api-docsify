@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## uploadFile
@@ -15,8 +14,7 @@ function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncC
 
 创建并启动一个上传任务，使用callback异步回调，支持HTTP协议。通过 [on('complete'|'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) 可获取任务上传时的成功信息或错误信息。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 23
@@ -166,8 +164,7 @@ function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadT
 
 创建并启动一个上传任务，使用Promise异步回调，支持HTTP协议。通过 [on('complete'|'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) 可获取任务上传时的成功信息或错误信息。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 23

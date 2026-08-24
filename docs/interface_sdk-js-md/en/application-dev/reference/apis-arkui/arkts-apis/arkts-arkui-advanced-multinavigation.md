@@ -18,7 +18,7 @@ import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [MultiNavigation](arkts-arkui-arkui-advanced-multinavigation-multinavigation-s.md) | *MultiNavigation** is a component designed for multi-column display and routing navigation on large-screen devices. |
+| [MultiNavigation](arkts-arkui-arkui-advanced-multinavigation-multinavigation-s.md) | **MultiNavigation** is a component designed for multi-column display and routing navigation on large-screen devices. |
 
 ### Enums
 

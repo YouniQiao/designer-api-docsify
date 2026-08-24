@@ -1,8 +1,6 @@
 # SettingContent
 
-The definition of setting content
-
-@interface SettingContent
+The definition of setting content@interface SettingContent
 
 **Since:** 23
 

@@ -64,7 +64,7 @@ fileIo.closeSync(file);
 flip(): void
 ```
 
-翻转文件映射区，将写入准备状态切换为读取准备状态。调用后，limit被设置为当前position的值，position被重置为0。 推荐在一系列[write()](#write)操作完成后，调用此方法准备后续的[read()](#read)操作。
+翻转文件映射区，将写入准备状态切换为读取准备状态。调用后，limit被设置为当前position的值，position被重置为0。推荐在一系列[write()](#write)操作完成后，调用此方法准备后续的[read()](#read)操作。
 
 **起始版本：** 26.0.0
 

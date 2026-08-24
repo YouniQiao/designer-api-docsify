@@ -1,6 +1,6 @@
 # Ellipse
 
-The **Ellipse** component is used to draw an ellipse. > **Child Components** > > None
+The **Ellipse** component is used to draw an ellipse.> **Child Components**>> None
 
 ## Ellipse
 

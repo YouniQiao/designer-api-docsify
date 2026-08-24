@@ -1,8 +1,6 @@
 # TextPickerResult
 
-Defines the struct of TextPickerResult.
-
-@interface TextPickerResult
+Defines the struct of TextPickerResult.@interface TextPickerResult
 
 **Since:** 23
 

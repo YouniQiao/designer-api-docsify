@@ -6,6 +6,8 @@ The options for SegmentButton items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Observed
+
 <!--Device-unnamed-declare class SegmentButtonItemOptions--><!--Device-unnamed-declare class SegmentButtonItemOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

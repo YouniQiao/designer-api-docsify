@@ -6,6 +6,8 @@ Declare CustomDialog SelectDialog @struct { SelectDialog }
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @CustomDialog
+
 <!--Device-unnamed-export declare struct SelectDialog--><!--Device-unnamed-export declare struct SelectDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,7 +20,7 @@ Declare CustomDialog SelectDialog @struct { SelectDialog }
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -26,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

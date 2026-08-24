@@ -4,6 +4,8 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 
 **Since:** 12
 
+**Decorator:** @Sendable
+
 <!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup

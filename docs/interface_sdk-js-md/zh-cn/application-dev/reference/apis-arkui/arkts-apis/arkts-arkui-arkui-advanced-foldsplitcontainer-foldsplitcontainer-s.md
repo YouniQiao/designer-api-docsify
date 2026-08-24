@@ -2,14 +2,14 @@
 
 FoldSplitContainer分栏布局，实现折叠屏二分栏、三分栏在展开态（设备完全展开状态）、悬停态（设备半折叠状态）以及折叠态（设备完全折叠状态）的区域控制。适用于折叠屏应用的响应式布局适配场景，可帮助开发者实现多屏状态下的智 能分栏布局，提升用户体验。折叠状态详情可参考[display.FoldStatus](arkts-arkui-display-foldstatus-e.md)。
 
-> **说明：**
-> 
-> - 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
+> **说明：**&gt;
+> - 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。&gt;
 > - 窗口宽度小于等于600vp时默认使用二分栏，窗口宽度大于600vp时在上下分栏的同时可支持扩展区域，窗口宽度大于600vp且在横屏半折状态下可触发悬停态布局。悬停态布局时会增加折痕区的避让并且扩展区域不可以贯穿折痕区，悬停态可
-> 设置不展示扩展区域，详情请参考[示例](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-FoldSplitContainer.md#示例)。
+> 设置不展示扩展区域，详情请参考[示例](../../apis-default/arkts-apis/arkts-arkui-advanced-foldsplitcontainer-foldsplitcontainer-s.md)。
 
 **起始版本：** 12
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct FoldSplitContainer--><!--Device-unnamed-export declare struct FoldSplitContainer-End-->
 
@@ -24,17 +24,16 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 ## animationOptions
 
 ```TypeScript
-@Prop
-  animationOptions?: AnimateParam | null
+animationOptions?: AnimateParam | null
 ```
 
-设置动画效果相关的参数，null表示关闭动效。
-
-默认值：null
+设置动画效果相关的参数，null表示关闭动效。默认值：null
 
 **类型：** [AnimateParam](../../apis-default/arkts-apis/arkts-common-animateparam-i.md) \| null
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,8 +46,7 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 ## expandedLayoutOptions
 
 ```TypeScript
-@Prop
-  expandedLayoutOptions: ExpandedRegionLayoutOptions
+expandedLayoutOptions: ExpandedRegionLayoutOptions
 ```
 
 展开态布局信息，用于控制折叠屏展开状态下扩展区域是否贯穿、区域比例和位置等。窗口宽度大于600vp时可支持扩展区域。
@@ -56,6 +54,8 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 **类型：** [ExpandedRegionLayoutOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,8 +68,7 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 ## extra
 
 ```TypeScript
-@BuilderParam
-  extra?: Callback<void>
+extra?: Callback<void>
 ```
 
 扩展区域回调函数，用于构建扩展区域的UI内容。当需要实现三分栏布局或需要显示额外内容区域时传入此参数，不需要扩展区域时可省略此参数。回调函数无参数无返回值，不传入时没有对应区域。
@@ -77,6 +76,8 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -89,8 +90,7 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 ## foldedLayoutOptions
 
 ```TypeScript
-@Prop
-  foldedLayoutOptions: FoldedRegionLayoutOptions
+foldedLayoutOptions: FoldedRegionLayoutOptions
 ```
 
 折叠态布局信息，用于控制折叠屏折叠状态下的主要区域与次要区域的高度比例等。当设备处于折叠状态时生效，窗口宽度小于等于600vp时默认使用二分栏。
@@ -98,6 +98,8 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 **类型：** [FoldedRegionLayoutOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,8 +112,7 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 ## hoverModeLayoutOptions
 
 ```TypeScript
-@Prop
-  hoverModeLayoutOptions: HoverModeRegionLayoutOptions
+hoverModeLayoutOptions: HoverModeRegionLayoutOptions
 ```
 
 悬停态布局信息，用于控制折叠屏半折悬停状态下是否显示扩展区域、区域比例和位置等。窗口宽度大于600vp且在横屏半折状态下可触发悬停态布局。
@@ -119,6 +120,8 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 **类型：** [HoverModeRegionLayoutOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -151,8 +154,7 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 ## primary
 
 ```TypeScript
-@BuilderParam
-  primary: Callback<void>
+primary: Callback<void>
 ```
 
 主要区域回调函数，用于构建主要区域的UI内容。回调函数无参数无返回值，在组件布局时被调用。
@@ -160,6 +162,8 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -172,8 +176,7 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 ## secondary
 
 ```TypeScript
-@BuilderParam
-  secondary: Callback<void>
+secondary: Callback<void>
 ```
 
 次要区域回调函数，用于构建次要区域的UI内容。回调函数无参数无返回值，在组件布局时被调用。
@@ -181,6 +184,8 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -21,13 +21,7 @@
 defaultFocus?: boolean
 ```
 
-下拉按钮是否为默认焦点。
-
-true：下拉按钮是默认焦点。
-
-false：下拉按钮不是默认焦点。
-
-默认值：false
+下拉按钮是否为默认焦点。true：下拉按钮是默认焦点。false：下拉按钮不是默认焦点。默认值：false
 
 **类型：** boolean
 
@@ -49,9 +43,7 @@ false：下拉按钮不是默认焦点。
 id?: string
 ```
 
-下拉按钮id。需要为下拉按钮设置id的时候设置此参数，缺省时不设置此参数。
-
-默认值：undefined，表示不设置下拉按钮id。
+下拉按钮id。需要为下拉按钮设置id的时候设置此参数，缺省时不设置此参数。默认值：undefined，表示不设置下拉按钮id。
 
 **类型：** string
 
@@ -71,9 +63,7 @@ id?: string
 onSelect?: SubHeaderV2SelectOnSelect
 ```
 
-下拉菜单选中某一项的回调。
-
-默认值：undefined
+下拉菜单选中某一项的回调。默认值：undefined
 
 **类型：** [SubHeaderV2SelectOnSelect](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2selectonselect-t.md)
 
@@ -133,13 +123,7 @@ selectedContent?: ResourceStr
 selectedIndex?: int
 ```
 
-设置下拉菜单初始选项的索引。
-
-第一项的索引为0。
-
-当不设置selectedIndex属性时，
-
-默认选择值为-1，菜单项不选中。
+设置下拉菜单初始选项的索引。第一项的索引为0。当不设置selectedIndex属性时，默认选择值为-1，菜单项不选中。
 
 **类型：** int
 

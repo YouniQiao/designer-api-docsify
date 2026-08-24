@@ -14,13 +14,11 @@ function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 
 Obtains the traffic statistics of the specified application on the specified network within the specified period. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Currently, only cellular and Wi-Fi traffic usage can be obtained.
 
 > - Currently, only traffic usage within the last 31 days can be obtained. If the timestamp passed in the parameter
-> is earlier than 31 days before the current system time, error code 2103019 will be returned.
-> 
+> is earlier than 31 days before the current system time, error code 2103019 will be returned.&gt;
 > - This API may take some time to execute. Do not call it frequently.
 
 **Since:** 22

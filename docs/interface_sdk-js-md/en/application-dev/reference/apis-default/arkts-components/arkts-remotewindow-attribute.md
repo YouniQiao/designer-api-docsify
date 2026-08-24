@@ -1,8 +1,6 @@
 # RemoteWindowAttribute (System API)
 
-The RemoteWindowAttribute
-
-@extends CommonMethod @interface RemoteWindowAttribute
+The RemoteWindowAttribute@extends CommonMethod @interface RemoteWindowAttribute
 
 **Inheritance/Implementation:** RemoteWindowAttribute extends CommonMethod
 

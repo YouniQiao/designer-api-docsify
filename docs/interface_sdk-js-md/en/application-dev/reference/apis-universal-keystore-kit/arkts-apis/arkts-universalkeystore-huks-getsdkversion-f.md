@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## getSdkVersion
@@ -15,8 +14,7 @@ function getSdkVersion(options: HuksOptions): string
 
 Obtains the SDK version of the current system.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 11.
 
 **Since:** 8

@@ -1,8 +1,6 @@
 # SymbolSpan properties/events
 
-The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are not supported. Only the following attributes are supported.
-
-The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are not supported.
+The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are not supported. Only the following attributes are supported.The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are not supported.
 
 **Inheritance/Implementation:** SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
 
@@ -49,8 +47,7 @@ effectStrategy(value: SymbolEffectStrategy)
 
 Sets the symbol effect of the symbol span.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -79,8 +76,7 @@ fontColor(value: Array<ResourceColor>)
 
 Sets the color of the symbol span.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -109,8 +105,7 @@ fontSize(value: number | string | Resource)
 
 Sets the size of the symbol span. When using the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -137,12 +132,9 @@ Sets the size of the symbol span. When using the string type, numeric string val
 fontWeight(value: number | FontWeight | string)
 ```
 
-Sets the weight of the symbol span. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.
+Sets the weight of the symbol span. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
-The **sys.symbol.ohos_lungs** icon does not support font weight setting.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -198,8 +190,7 @@ renderingStrategy(value: SymbolRenderingStrategy)
 
 Sets the rendering strategy of the symbol span.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11

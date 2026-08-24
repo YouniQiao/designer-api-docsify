@@ -66,7 +66,7 @@ export function at(self: FixedArray<byte>, index: int): Byte
 
 | 类型 | 说明 |
 | --- | --- |
-| [Byte](arkts-arkts-byte-c.md) | 指定索引处的元素。 |
+| Byte | 指定索引处的元素。 |
 
 
 ## at
@@ -98,7 +98,7 @@ export function at(self: FixedArray<short>, index: int): Short
 
 | 类型 | 说明 |
 | --- | --- |
-| [Short](arkts-arkts-short-c.md) | 指定索引处的元素。 |
+| Short | 指定索引处的元素。 |
 
 
 ## at
@@ -130,7 +130,7 @@ export function at(self: FixedArray<int>, index: int): Int
 
 | 类型 | 说明 |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | 指定索引处的元素。 |
+| Int | 指定索引处的元素。 |
 
 
 ## at
@@ -162,7 +162,7 @@ export function at(self: FixedArray<long>, index: int): Long
 
 | 类型 | 说明 |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) | 指定索引处的元素。 |
+| Long | 指定索引处的元素。 |
 
 
 ## at
@@ -194,7 +194,7 @@ export function at(self: FixedArray<float>, index: int): Float
 
 | 类型 | 说明 |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) | 指定索引处的元素。 |
+| Float | 指定索引处的元素。 |
 
 
 ## at
@@ -226,7 +226,7 @@ export function at(self: FixedArray<double>, index: int): Double
 
 | 类型 | 说明 |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | 指定索引处的元素。 |
+| Double | 指定索引处的元素。 |
 
 
 ## at
@@ -258,5 +258,5 @@ export function at(self: FixedArray<char>, index: int): Char
 
 | 类型 | 说明 |
 | --- | --- |
-| [Char](arkts-arkts-char-c.md) | 指定索引处的元素。 |
+| Char | 指定索引处的元素。 |
 

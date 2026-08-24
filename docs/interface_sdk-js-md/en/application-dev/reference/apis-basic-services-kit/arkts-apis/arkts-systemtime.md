@@ -16,7 +16,6 @@ The **systemTime** module provides system time and time zone features. You can u
 
 ```TypeScript
 import { systemTime } from '@kit.BasicServicesKit';
-import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -1,8 +1,6 @@
 # HapticFeedbackMode
 
-Defines the menu haptic feedback mode.
-
-@enum { number }
+Defines the menu haptic feedback mode.@enum { number }
 
 **Since:** 23
 

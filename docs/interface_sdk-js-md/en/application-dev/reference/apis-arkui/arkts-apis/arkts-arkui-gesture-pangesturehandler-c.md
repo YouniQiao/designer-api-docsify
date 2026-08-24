@@ -1,8 +1,6 @@
 # PanGestureHandler
 
-Defines the PanGesture handler.
-
-@extends GestureHandler
+Defines the PanGesture handler.@extends GestureHandler
 
 **Inheritance/Implementation:** PanGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)
 

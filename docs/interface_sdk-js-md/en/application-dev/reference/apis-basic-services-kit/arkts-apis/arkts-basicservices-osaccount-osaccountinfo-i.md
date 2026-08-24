@@ -100,9 +100,7 @@ Whether the OS account is activated. The value **true** means the specified acco
 isActived: boolean
 ```
 
-Whether the OS account is activated. The value **true** means the specified account is activated; the value **false** means the opposite.
-
-Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isActivated** instead.
+Whether the OS account is activated. The value **true** means the specified account is activated; the value **false** means the opposite.Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isActivated** instead.
 
 **Type:** boolean
 
@@ -154,9 +152,7 @@ Whether the account is unlocked (whether the **el2/** directory is decrypted). T
 isVerified: boolean
 ```
 
-Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite.
-
-Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isUnlocked** instead.
+Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite.Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isUnlocked** instead.
 
 **Type:** boolean
 

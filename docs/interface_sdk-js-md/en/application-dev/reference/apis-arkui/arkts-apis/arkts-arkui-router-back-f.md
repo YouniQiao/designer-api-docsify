@@ -14,8 +14,7 @@ function back(options?: RouterOptions): void
 
 Returns to the previous page or a specified page, which deletes all pages between the current page and the target page.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
@@ -62,8 +61,7 @@ function back(index: number, params?: Object): void
 
 Returns to the specified page, which deletes all pages between the current page and the target page.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Since API version 12, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated

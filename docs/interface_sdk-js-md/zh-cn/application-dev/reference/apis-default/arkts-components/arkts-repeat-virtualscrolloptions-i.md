@@ -6,8 +6,7 @@
 
 当Repeat属性`.virtualScroll()`缺省时：<br> 1）ArkTS-Dyn中，默认渲染方式为全量加载，若要开启懒加载，需要设置`.virtualScroll()`属性。<br> 2）ArkTS-Sta中，默认渲染方式为懒加载。若要关闭懒加载，需要设置`.virtualScroll({ disableVirtualScroll: true })`。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 关闭懒加载后，Repeat仅有`.each()`和`.key()`属性生效，其他懒加载特有的功能（如template、totalCount、onLazyLoading等）不生效。
 
 **起始版本：** 23

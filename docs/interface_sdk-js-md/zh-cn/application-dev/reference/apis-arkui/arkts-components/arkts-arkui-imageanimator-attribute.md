@@ -1,8 +1,6 @@
 # ImageAnimator属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** ImageAnimatorAttribute extends CommonMethod<ImageAnimatorAttribute>
 
@@ -39,7 +37,7 @@ duration(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 播放时长。<br/>value为0时，不播放图片。<br/>value平均分配给单张图片的播放时长小于一帧时间，将导致播放异常。<br/>设置为负数时，取默认值1000毫秒。&lt; br/&gt;value的改变只会在下一次循环开始时生效。<br/>单位：毫秒<br/>默认值：1000 |
+| value | number | 是 | 播放时长。<br/>value为0时，不播放图片。<br/>value平均分配给单张图片的播放时长小于一帧时间，将导致播放异常。<br/>设置为负数时，取默认值1000毫秒。<br/>value的改变只会在下一次循环开始时生效。<br/>单位：毫秒<br/>默认值：1000 |
 
 ## fillMode
 
@@ -285,8 +283,7 @@ preDecode(value: number)
 
 设置预解码的图片数量。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。当前无可替代接口。
 
 **起始版本：** 7

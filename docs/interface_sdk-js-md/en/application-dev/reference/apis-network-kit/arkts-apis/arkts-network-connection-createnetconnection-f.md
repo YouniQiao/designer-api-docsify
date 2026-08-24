@@ -14,8 +14,7 @@ function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetCon
 
 Creates a **NetConnection** object, which can be used to listen for the network status. [netSpecifier](arkts-network-connection-netspecifier-i.md) specifies the network to be listened for, and **timeout** indicates the timeout duration (ms). **netSpecifier** is a mandatory parameter for **timeout**. If neither of them is present, the default network is used.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To listen for the network status, after creating a **NetConnection** object, you need to call
 > [register](arkts-network-connection-netconnection-i.md#register) to register the notification of the specified network status
 > change.

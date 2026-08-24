@@ -1,11 +1,8 @@
 # PdfData
 
-PdfData is a class used by the Web component to encapsulate the PDF data stream generated from a web page. When an app needs to save the web page content loaded by the Web component in PDF format, the [createPdf](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#createpdf) method of [WebviewController](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md) is used to convert the web page content into a PDF data stream, which is returned as a PdfData object in a callback or promise. The app then obtains the data stream in Uint8Array format through the pdfArrayBuffer method of PdfData and writes the data to a local PDF file using file I/O APIs.
+PdfData is a class used by the Web component to encapsulate the PDF data stream generated from a web page. When an app needs to save the web page content loaded by the Web component in PDF format, the [createPdf](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#createpdf) method of [WebviewController](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md) is used to convert the web page content into a PDF data stream, which is returned as a PdfData object in a callback or promise. The app then obtains the data stream in Uint8Array format through the pdfArrayBuffer method of PdfData and writes the data to a local PDF file using file I/O APIs.PdfData is applicable to scenarios such as saving web page content offline and generating web page PDF reports. Before using it, load the Web component and ensure that the web page content has been rendered, and then call createPdf to generate the PDF data stream.
 
-PdfData is applicable to scenarios such as saving web page content offline and generating web page PDF reports. Before using it, load the Web component and ensure that the web page content has been rendered, and then call createPdf to generate the PDF data stream.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When a PDF file is generated on a web page, a data stream is returned, which is encapsulated by the **PdfData**
 > class.
 

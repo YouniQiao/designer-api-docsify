@@ -1,8 +1,6 @@
 # domainName
 
-Provide domain name for query.
-
-@namespace domainName
+Provide domain name for query.@namespace domainName
 
 **Since:** 23
 
@@ -14,7 +12,6 @@ Provide domain name for query.
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
-import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -23,14 +20,14 @@ import { settingsLite } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [DEVICE_SHARED](arkts-basicservices-domainname-con.md#device_shared) | Provide the domain name for device shared Key. |
-| [USER_PROPERTY](arkts-basicservices-domainname-con.md#user_property) | Provide the domain name for user property. |
+| [DEVICE_SHARED](arkts-basicservices-domainname-con.md#device_shared) | Provide the domain name for device shared Key.<p>This constants is a domain name for device level shared key. |
+| [USER_PROPERTY](arkts-basicservices-domainname-con.md#user_property) | Provide the domain name for user property.<p>This constants is a domain name for user level key. |
 
 <!--Del-->
 ### Constants(System API)
 
 | Name | Description |
 | --- | --- |
-| [USER_SECURITY](arkts-basicservices-domainname-con-sys.md#user_security) | Provide the domain name for user security property. |
+| [USER_SECURITY](arkts-basicservices-domainname-con-sys.md#user_security) | Provide the domain name for user security property.<p>This constants is a domain name for user security level key. |
 <!--DelEnd-->
 

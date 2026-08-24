@@ -122,8 +122,7 @@ static keys(): string[]
 
 获取PersistenceV2中所有的key。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > key在Array中的顺序是无序的，与key插入到PersistenceV2中的顺序无关。
 
 **起始版本：** 26.0.0
@@ -174,8 +173,7 @@ static remove(keyOrType: string | Class): void
 
 将指定的键值对数据从PersistenceV2里面删除。如果指定的键值不存在于PersistenceV2中，将删除失败。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 删除PersistenceV2中不存在的key会打印warn日志警告。
 
 **起始版本：** 26.0.0

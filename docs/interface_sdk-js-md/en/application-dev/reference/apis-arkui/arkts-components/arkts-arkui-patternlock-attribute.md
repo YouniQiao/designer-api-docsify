@@ -1,8 +1,6 @@
 # PatternLock properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
-
-In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
 
 **Inheritance/Implementation:** PatternLockAttribute extends CommonMethod<PatternLockAttribute>
 
@@ -93,8 +91,7 @@ backgroundColor(value: ResourceColor)
 
 Sets the background color.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 9
@@ -131,7 +128,7 @@ Sets the radius of the dots in a grid. If this attribute is set to **0** or a ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Radius of the dots in a grid.<br>Default value: **6vp**<br>Value range: (0, sideLength/11 ]. If the value is less than or equal to **0**, the default value is used. If the value exceeds the maximum value, the maximum value is used. |
+| value | Length | Yes | Radius of the dots in a grid.<br>Default value: **6vp**<br>Value range: (0, sideLength/11]. If the value is less than or equal to **0**, the default value is used. If the value exceeds the maximum value, the maximum value is used. |
 
 ## onDotConnect
 
@@ -139,12 +136,9 @@ Sets the radius of the dots in a grid. If this attribute is set to **0** or a ne
 onDotConnect(callback: import('../api/@ohos.base').Callback<number>)
 ```
 
-Invoked when a grid dot is connected during pattern password input.
+Invoked when a grid dot is connected during pattern password input.The callback parameter is an array of digits, where each digit represents the index of a selected grid dot, listed in the order they were connected. Grid dots are indexed row-wise from top to bottom, left to right: The first row contains indices 0, 1, 2; the second row 3, 4, 5; and the third row 6, 7, 8.
 
-The callback parameter is an array of digits, where each digit represents the index of a selected grid dot, listed in the order they were connected. Grid dots are indexed row-wise from top to bottom, left to right: The first row contains indices 0, 1, 2; the second row 3, 4, 5; and the third row 6, 7, 8.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 11
@@ -281,8 +275,7 @@ sideLength(value: Length)
 
 Sets the width and height (same value) of the component. If this attribute is set to **0** or a negative number, the component is not displayed.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When the **PatternLock** component has the universal attribute aspectRatio set
 > and the ratio is not equal to 1 (the component is constrained to a rectangle), the nine‑grid pattern is still
 > drawn as a square, which exceeds the component's bounds.

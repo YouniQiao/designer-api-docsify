@@ -1,8 +1,6 @@
 # ButtonAttribute
 
-Defines the Button component attributes.
-
-@extends CommonMethod @interface ButtonAttribute
+Defines the Button component attributes.@extends CommonMethod @interface ButtonAttribute
 
 **Inheritance/Implementation:** ButtonAttribute extends CommonMethod
 

@@ -1,6 +1,6 @@
 # Panel
 
-@brief Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的 [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) 接口获取，使用完毕后需调用 [destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel) 销毁以释放资源。createPanel与destroyPanel必须配对调用。 <br> <br>核心功能概述： <br> <br>- 页面加载：通过[setUiContent](#setuicontent)为面板 加载键盘页面内容，支持加载普通页面和与LocalStorage关联的页面。 <br>- 显示与隐藏：通过[show](#show)显示面板，通过 [hide](#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件 监听状态变化。 <br>- 尺寸与位置调整：通过 [resize](#resize)调整面板尺寸，通过 [moveTo](#moveto)移动面板位置，通过 [startMoving](#startmoving)拖拽移动面板，通过 [adjustPanelRect](#adjustpanelrect)/ [updatePanelRect](#updatepanelrect)/ [updateRegion](#updateregion)调整面板区域。 <br>- 模式设置：通过[changeFlag](#changeflag)切换面板固定态/浮动态，通过 [setPrivacyMode](#setprivacymode)设置隐私模式，通过 [setImmersiveMode](#setimmersivemode)/ [getImmersiveMode](#getimmersivemode)设置/获取沉浸模式。 <br>- 事件监听：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。 <br> <br>面板生命周期： <br> <br>1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)中创建Panel实例并指定面板类型和标志位。 <br>2. 调用[setUiContent](#setuicontent)加载键盘页面内容。 <br>3. 调用[show](#show)显示面板，用户可交互。 <br>4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。 <br>5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁面板，释放资源。 <br> <br>下列API均需使用 [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) 获取到Panel实例后，通过实例调用。
+Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的 [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) 接口获取，使用完毕后需调用 [destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel) 销毁以释放资源。createPanel与destroyPanel必须配对调用。 <br> <br>核心功能概述： <br> <br>- 页面加载：通过[setUiContent](#setuicontent)为面板 加载键盘页面内容，支持加载普通页面和与LocalStorage关联的页面。 <br>- 显示与隐藏：通过[show](#show)显示面板，通过 [hide](#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件 监听状态变化。 <br>- 尺寸与位置调整：通过 [resize](#resize)调整面板尺寸，通过 [moveTo](#moveto)移动面板位置，通过 [startMoving](#startmoving)拖拽移动面板，通过 [adjustPanelRect](#adjustpanelrect)/ [updatePanelRect](#updatepanelrect)/ [updateRegion](#updateregion)调整面板区域。 <br>- 模式设置：通过[changeFlag](#changeflag)切换面板固定态/浮动态，通过 [setPrivacyMode](#setprivacymode)设置隐私模式，通过 [setImmersiveMode](#setimmersivemode)/ [getImmersiveMode](#getimmersivemode)设置/获取沉浸模式。 <br>- 事件监听：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。 <br> <br>面板生命周期： <br> <br>1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)中创建Panel实例并指定面板类型和标志位。 <br>2. 调用[setUiContent](#setuicontent)加载键盘页面内容。 <br>3. 调用[show](#show)显示面板，用户可交互。 <br>4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。 <br>5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁面板，释放资源。 <br> <br>下列API均需使用 [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) 获取到Panel实例后，通过实例调用。
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-@brief 预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。 <br> <br>   
+预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。 <br> <br>   
 > **说明:** &lt;br
 &gt; 
 > &lt;br
@@ -128,7 +128,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-@brief 预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。 <br> <br>   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。 <br> <br>   
 > **说明:** &lt;br
 &gt; 
 > &lt;br
@@ -190,7 +190,7 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 changeFlag(flag: PanelFlag): void
 ```
 
-@brief 将输入法应用的面板状态改变为其他[PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)形态，仅对 [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md)生效。
+将输入法应用的面板状态改变为其他[PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)形态，仅对 [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md)生效。
 
 **起始版本：** 23
 
@@ -223,7 +223,7 @@ panel.changeFlag(panelFlag);
 getDisplayId(): Promise<long>
 ```
 
-@brief 获取当前窗口的displayId，使用Promise异步回调。
+获取当前窗口的displayId，使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -276,7 +276,7 @@ panel.getDisplayId().then((result: long) => {
 getImmersiveMode(): ImmersiveMode
 ```
 
-@brief 获取输入法应用的沉浸模式。
+获取输入法应用的沉浸模式。
 
 **起始版本：** 23
 
@@ -302,7 +302,7 @@ let mode: inputMethodEngine.ImmersiveMode = panel.getImmersiveMode();
 getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 ```
 
-@brief 获取指定屏幕当前状态（例如：折叠或展开）下，当前输入法键盘状态（例如：悬浮或固定）下输入法软键盘相对系统面板的偏移区域。使用Promise异步回调。
+获取指定屏幕当前状态（例如：折叠或展开）下，当前输入法键盘状态（例如：悬浮或固定）下输入法软键盘相对系统面板的偏移区域。使用Promise异步回调。
 
 **起始版本：** 21
 
@@ -386,7 +386,7 @@ inputMethodAbility.createPanel(this.context, panelConfig).then( (panel: inputMet
 getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 ```
 
-@brief 获取指定屏幕当前状态（例如：折叠或展开）下，当前输入法键盘状态（例如：悬浮或固定）下输入法软键盘相对系统面板的偏移区域。使用Promise异步回调。
+获取指定屏幕当前状态（例如：折叠或展开）下，当前输入法键盘状态（例如：悬浮或固定）下输入法软键盘相对系统面板的偏移区域。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -424,7 +424,7 @@ getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 hide(callback: AsyncCallback<void>): void
 ```
 
-@brief 隐藏当前输入法面板，使用callback异步回调。
+隐藏当前输入法面板，使用callback异步回调。
 
 **起始版本：** 23
 
@@ -490,7 +490,7 @@ keyboardController.hide().then(() => {
 hide(): Promise<void>
 ```
 
-@brief 隐藏当前输入法面板，使用promise异步回调。
+隐藏当前输入法面板，使用promise异步回调。
 
 **起始版本：** 23
 
@@ -514,7 +514,7 @@ hide(): Promise<void>
 moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 ```
 
-@brief 移动面板位置，使用callback异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md)为固定态时，不产生实际移动效果。
+移动面板位置，使用callback异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md)为固定态时，不产生实际移动效果。
 
 **起始版本：** 23
 
@@ -568,7 +568,7 @@ panel.moveTo(300, 300).then(() => {
 moveTo(x: int, y: int): Promise<void>
 ```
 
-@brief 移动面板位置，使用promise异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md)为固定态时，不产生实际移动效果。
+移动面板位置，使用promise异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md)为固定态时，不产生实际移动效果。
 
 **起始版本：** 23
 
@@ -605,7 +605,7 @@ moveTo(x: int, y: int): Promise<void>
 off(type: 'hide', callback?: () => void): void
 ```
 
-@brief 取消监听当前面板的隐藏状态，使用callback异步回调。
+取消监听当前面板的隐藏状态，使用callback异步回调。
 
 **起始版本：** 10
 
@@ -638,7 +638,7 @@ panel.off('hide');
 off(type: 'show', callback?: () => void): void
 ```
 
-@brief 取消监听当前面板的显示状态，使用callback异步回调。
+取消监听当前面板的显示状态，使用callback异步回调。
 
 **起始版本：** 10
 
@@ -671,7 +671,7 @@ panel.off('show');
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-@brief 取消监听当前面板大小变化，使用callback异步回调。 <br> <br>   
+取消监听当前面板大小变化，使用callback异步回调。 <br> <br>   
 > **说明:** &lt;br
 &gt; 
 > &lt;br
@@ -721,7 +721,7 @@ panel.off('sizeChange', (windowSize: window.Size) => {
 offHide(callback?: Callback<void>): void
 ```
 
-@brief 取消监听当前面板隐藏状态，使用callback异步回调。
+取消监听当前面板隐藏状态，使用callback异步回调。
 
 **起始版本：** 23
 
@@ -747,7 +747,7 @@ panel.offHide();
 offShow(callback?: Callback<void>): void
 ```
 
-@brief 取消监听当前输入法面板的隐藏状态，使用callback异步回调。
+取消监听当前输入法面板的隐藏状态，使用callback异步回调。
 
 **起始版本：** 23
 
@@ -773,7 +773,7 @@ panel.offShow();
 offSizeChange(callback?: SizeChangeCallback): void
 ```
 
-@brief 取消监听当前面板大小变化，使用callback异步回调。
+取消监听当前面板大小变化，使用callback异步回调。
 
 **起始版本：** 23
 
@@ -803,7 +803,7 @@ panel.offSizeChange((windowSize: window.Size) => {
 on(type: 'hide', callback: () => void): void
 ```
 
-@brief 监听当前面板隐藏状态，使用callback异步回调。
+监听当前面板隐藏状态，使用callback异步回调。
 
 **起始版本：** 10
 
@@ -832,7 +832,7 @@ panel.on('hide', () => {
 on(type: 'show', callback: () => void): void
 ```
 
-@brief 监听当前面板显示状态，使用 callback 异步回调。
+监听当前面板显示状态，使用 callback 异步回调。
 
 **起始版本：** 10
 
@@ -861,7 +861,7 @@ panel.on('show', () => {
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-@brief 监听当前面板大小变化，使用callback异步回调。 <br> <br>   
+监听当前面板大小变化，使用callback异步回调。 <br> <br>   
 > **说明:** &lt;br
 &gt; 
 > &lt;br
@@ -918,7 +918,7 @@ panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine
 onHide(callback: Callback<void>): void
 ```
 
-@brief 监听当前面板隐藏状态，使用callback异步回调。
+监听当前面板隐藏状态，使用callback异步回调。
 
 **起始版本：** 23
 
@@ -946,7 +946,7 @@ panel!.onHide(() => {
 onShow(callback: Callback<void>): void
 ```
 
-@brief 监听当前面板显示状态，使用callback异步回调。
+监听当前面板显示状态，使用callback异步回调。
 
 **起始版本：** 23
 
@@ -974,7 +974,7 @@ panel.onShow(() => {
 onSizeChange(callback: SizeChangeCallback): void
 ```
 
-@brief 监听当前面板大小变化，使用callback异步回调。
+监听当前面板大小变化，使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1007,7 +1007,7 @@ panel.onSizeChange((windowSize: window.Size, keyboardArea: inputMethodEngine.Key
 resize(width: long, height: long, callback: AsyncCallback<void>): void
 ```
 
-@brief 改变当前输入法面板的大小，使用callback异步回调。 <br> <br>   
+改变当前输入法面板的大小，使用callback异步回调。 <br> <br>   
 > **说明：**&lt;br
 &gt; 
 > &lt;br
@@ -1070,7 +1070,7 @@ panel.resize(500, 1000).then(() => {
 resize(width: long, height: long): Promise<void>
 ```
 
-@brief 改变当前输入法面板的大小，使用Promise异步回调。 <br> <br>   
+改变当前输入法面板的大小，使用Promise异步回调。 <br> <br>   
 > **说明：**&lt;br
 &gt; 
 > &lt;br
@@ -1116,7 +1116,7 @@ resize(width: long, height: long): Promise<void>
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-@brief 设置输入法应用的沉浸效果。 <br> <br>- 只有在[启用沉浸式模式](#setimmersivemode)时，才能使用渐变模式和流光模式。 <br>- 只有在启用渐变模式时，才能使用流光模式。 <br>- 未启用渐变模式时，渐变高度必须为0px。 <br>- 只有系统应用才能设置流光模式。 <br>- 必须先调用以下任一接口，才能调用当前接口： <br> - [adjustPanelRect](#adjustpanelrect)(支持API version 12) <br> - [adjustPanelRect](#adjustpanelrect)(支持 API version 15) <br> - [resize](#resize)(支持API version 10)
+设置输入法应用的沉浸效果。 <br> <br>- 只有在[启用沉浸式模式](#setimmersivemode)时，才能使用渐变模式和流光模式。 <br>- 只有在启用渐变模式时，才能使用流光模式。 <br>- 未启用渐变模式时，渐变高度必须为0px。 <br>- 只有系统应用才能设置流光模式。 <br>- 必须先调用以下任一接口，才能调用当前接口： <br> - [adjustPanelRect](#adjustpanelrect)(支持API version 12) <br> - [adjustPanelRect](#adjustpanelrect)(支持 API version 15) <br> - [resize](#resize)(支持API version 10)
 
 **起始版本：** 23
 
@@ -1156,7 +1156,7 @@ panel.setImmersiveEffect(effect);
 setImmersiveMode(mode: ImmersiveMode): void
 ```
 
-@brief 设置输入法应用的沉浸模式。只能设置为不使用沉浸模式(NONE_IMMERSIVE)、浅色沉浸模式(LIGHT_IMMERSIVE)或深色沉浸模式(DARK_IMMERSIVE)。
+设置输入法应用的沉浸模式。只能设置为不使用沉浸模式(NONE_IMMERSIVE)、浅色沉浸模式(LIGHT_IMMERSIVE)或深色沉浸模式(DARK_IMMERSIVE)。
 
 **起始版本：** 23
 
@@ -1190,7 +1190,7 @@ panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-@brief 设置屏幕常亮。使用Promise异步回调。 <br> <br>   
+设置屏幕常亮。使用Promise异步回调。 <br> <br>   
 > **说明:** &lt;br
 &gt; 
 > &lt;br
@@ -1243,7 +1243,7 @@ panel.setKeepScreenOn(true).then(() => {
 setPrivacyMode(isPrivacyMode: boolean): void
 ```
 
-@brief 将输入法应用的面板设置为隐私模式，隐私模式不可被录屏、截屏。
+将输入法应用的面板设置为隐私模式，隐私模式不可被录屏、截屏。
 
 **起始版本：** 23
 
@@ -1279,7 +1279,7 @@ panel.setPrivacyMode(isPrivacyMode);
 setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>
 ```
 
-@brief 设置当前面板功能键颜色和功能键的背景颜色。使用Promise异步回调。
+设置当前面板功能键颜色和功能键的背景颜色。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -1326,7 +1326,7 @@ try {
 setUiContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-@brief 为当前的输入法面板加载具体页面内容，使用callback异步回调。
+为当前的输入法面板加载具体页面内容，使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1407,7 +1407,7 @@ panel.setUiContent('pages/page2/page2', storage).then(() => {
 setUiContent(path: string): Promise<void>
 ```
 
-@brief 为当前的输入法面板加载具体页面内容，使用Promise异步回调。
+为当前的输入法面板加载具体页面内容，使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -1443,7 +1443,7 @@ setUiContent(path: string): Promise<void>
 setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-@brief 为当前的输入法面板加载与LocalStorage相关联的具体页面内容，使用callback异步回调。
+为当前的输入法面板加载与LocalStorage相关联的具体页面内容，使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1475,7 +1475,7 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 setUiContent(path: string, storage: LocalStorage): Promise<void>
 ```
 
-@brief 为当前面板加载与LocalStorage相关联的具体页面内容，使用Promise异步回调。
+为当前面板加载与LocalStorage相关联的具体页面内容，使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -1512,7 +1512,7 @@ setUiContent(path: string, storage: LocalStorage): Promise<void>
 show(callback: AsyncCallback<void>): void
 ```
 
-@brief 显示当前输入法面板，使用callback异步回调。输入法应用与编辑框绑定成功后可正常调用。
+显示当前输入法面板，使用callback异步回调。输入法应用与编辑框绑定成功后可正常调用。
 
 **起始版本：** 23
 
@@ -1556,7 +1556,7 @@ panel.show().then(() => {
 show(): Promise<void>
 ```
 
-@brief 显示当前输入法面板，使用promise异步回调。输入法应用与编辑框绑定成功后可正常调用。
+显示当前输入法面板，使用promise异步回调。输入法应用与编辑框绑定成功后可正常调用。
 
 **起始版本：** 23
 
@@ -1580,7 +1580,7 @@ show(): Promise<void>
 startMoving(): void
 ```
 
-@brief 发送移动命令给窗口，使面板进入可拖动状态。不产生实际移动效果，仅在用户通过鼠标拖动面板时才会移动。
+发送移动命令给窗口，使面板进入可拖动状态。不产生实际移动效果，仅在用户通过鼠标拖动面板时才会移动。
 
 **起始版本：** 23
 
@@ -1609,7 +1609,7 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-@brief 预设置输入法应用横竖屏大小。使用Promise异步回调。 <br> <br>   
+预设置输入法应用横竖屏大小。使用Promise异步回调。 <br> <br>   
 > **说明:** &lt;br
 &gt; 
 > &lt;br
@@ -1717,7 +1717,7 @@ panel.updatePanelRect(panelFlag, panelRect);
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-@brief 预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。 <br> <br>   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。 <br> <br>   
 > **说明:** &lt;br
 &gt; 
 > &lt;br
@@ -1780,7 +1780,7 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-@brief 预设置输入法应用横竖屏大小。 <br> <br>   
+预设置输入法应用横竖屏大小。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -1888,7 +1888,7 @@ panel.updatePanelRectSync(panelFlag, panelRect);
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-@brief 预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。 <br> <br>   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -1951,7 +1951,7 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-@brief 更新当前状态下输入法面板内的热区。 <br> <br>   
+更新当前状态下输入法面板内的热区。 <br> <br>   
 > **说明:** &lt;br
 &gt; 
 > &lt;br

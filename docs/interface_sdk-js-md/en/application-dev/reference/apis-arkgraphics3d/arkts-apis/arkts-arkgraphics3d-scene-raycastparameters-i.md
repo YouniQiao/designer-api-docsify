@@ -1,8 +1,6 @@
 # RaycastParameters
 
-Describes the configuration parameters for raycasting, defining the behavior of raycasting.
-
-@interface RaycastParameters
+Describes the configuration parameters for raycasting, defining the behavior of raycasting.@interface RaycastParameters
 
 **Since:** 23
 

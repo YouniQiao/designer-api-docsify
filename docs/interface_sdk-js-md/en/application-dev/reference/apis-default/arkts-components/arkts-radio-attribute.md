@@ -1,8 +1,6 @@
 # RadioAttribute
 
-Defines the Radio component attributes.
-
-@extends CommonMethod @interface RadioAttribute
+Defines the Radio component attributes.@extends CommonMethod @interface RadioAttribute
 
 **Inheritance/Implementation:** RadioAttribute extends CommonMethod
 

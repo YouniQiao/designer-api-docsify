@@ -12,8 +12,6 @@ Represents the configuration for creating .p12 files.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## certEncParams

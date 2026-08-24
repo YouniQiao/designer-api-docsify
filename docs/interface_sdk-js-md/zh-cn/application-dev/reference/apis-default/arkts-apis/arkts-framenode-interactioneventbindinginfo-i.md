@@ -16,9 +16,7 @@
 baseEventRegistered: boolean
 ```
 
-是否以声明方式绑定事件。
-
-true表示以声明方式绑定事件，false表示没有以声明方式绑定事件。
+是否以声明方式绑定事件。true表示以声明方式绑定事件，false表示没有以声明方式绑定事件。
 
 **类型：** boolean
 
@@ -38,9 +36,7 @@ true表示以声明方式绑定事件，false表示没有以声明方式绑定�
 builtInEventRegistered: boolean
 ```
 
-组件是否绑定内置事件(组件内部定义的事件, 无需开发者手动绑定)。
-
-true表示组件绑定内置事件，false表示组件没有绑定内置事件。
+组件是否绑定内置事件(组件内部定义的事件, 无需开发者手动绑定)。true表示组件绑定内置事件，false表示组件没有绑定内置事件。
 
 **类型：** boolean
 
@@ -60,9 +56,7 @@ true表示组件绑定内置事件，false表示组件没有绑定内置事件�
 nativeEventRegistered: boolean
 ```
 
-是否以注册节点事件（ [registerNodeEvent](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#registernodeevent) ）的方式绑定事件。
-
-true表示以注册节点事件的方式绑定事件，false表示没有以注册节点事件的方式绑定事件。
+是否以注册节点事件（ registerNodeEvent ）的方式绑定事件。true表示以注册节点事件的方式绑定事件，false表示没有以注册节点事件的方式绑定事件。
 
 **类型：** boolean
 
@@ -82,9 +76,7 @@ true表示以注册节点事件的方式绑定事件，false表示没有以注�
 nodeEventRegistered: boolean
 ```
 
-是否以自定义组件节点的方式绑定事件，请参考基础事件示例
-
-true表示以自定义组件节点的方式绑定事件，false表示没有以自定义组件节点的方式绑定事件。
+是否以自定义组件节点的方式绑定事件，请参考基础事件示例true表示以自定义组件节点的方式绑定事件，false表示没有以自定义组件节点的方式绑定事件。
 
 **类型：** boolean
 

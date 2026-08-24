@@ -12,9 +12,7 @@ import { preferences } from '@kit.ArkData';
 function getPreferences(context: Context, name: string, callback: AsyncCallback<Preferences>): void
 ```
 
-获取Preferences实例，通过name进行参数设置，使用callback异步回调。
-
-应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
+获取Preferences实例，通过name进行参数设置，使用callback异步回调。应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 23
 
@@ -310,9 +308,7 @@ class EntryAbility extends UIAbility {
 function getPreferences(context: Context, options: Options, callback: AsyncCallback<Preferences>): void
 ```
 
-获取Preferences实例，通过Options进行参数设置，使用callback异步回调。
-
-应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
+获取Preferences实例，通过Options进行参数设置，使用callback异步回调。应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 23
 
@@ -351,9 +347,7 @@ function getPreferences(context: Context, options: Options, callback: AsyncCallb
 function getPreferences(context: Context, name: string): Promise<Preferences>
 ```
 
-获取Preferences实例，通过name进行参数设置，使用Promise异步回调。
-
-应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
+获取Preferences实例，通过name进行参数设置，使用Promise异步回调。应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 23
 
@@ -394,9 +388,7 @@ function getPreferences(context: Context, name: string): Promise<Preferences>
 function getPreferences(context: Context, options: Options): Promise<Preferences>
 ```
 
-获取Preferences实例，通过Options进行参数设置，使用Promise异步回调。
-
-应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
+获取Preferences实例，通过Options进行参数设置，使用Promise异步回调。应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 23
 

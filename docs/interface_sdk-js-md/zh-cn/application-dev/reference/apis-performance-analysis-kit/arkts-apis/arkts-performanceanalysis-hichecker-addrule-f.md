@@ -13,10 +13,8 @@ function addRule(rule: bigint): void
 ```
 
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[hichecker.addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md)替代。
-
 添加一条或多条规则到系统，系统根据添加的规则进行检测或反馈。
 
 **起始版本：** 8

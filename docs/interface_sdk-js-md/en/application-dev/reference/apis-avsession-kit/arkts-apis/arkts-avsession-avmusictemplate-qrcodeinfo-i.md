@@ -1,8 +1,6 @@
 # QrCodeInfo
 
-The definition of QR code Information.
-
-@interface QrCodeInfo
+The definition of QR code Information.@interface QrCodeInfo
 
 **Since:** 23
 

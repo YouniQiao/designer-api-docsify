@@ -6,7 +6,7 @@
 const CURSOR_DOWN: int
 ```
 
-@brief The caret moves downward.
+The caret moves downward.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ const CURSOR_DOWN: int
 const CURSOR_LEFT: int
 ```
 
-@brief The caret moves leftward.
+The caret moves leftward.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ const CURSOR_LEFT: int
 const CURSOR_RIGHT: int
 ```
 
-@brief The caret moves rightward.
+The caret moves rightward.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ const CURSOR_RIGHT: int
 const CURSOR_UP: int
 ```
 
-@brief The caret moves upward.
+The caret moves upward.
 
 **Since:** 23
 
@@ -62,7 +62,7 @@ const CURSOR_UP: int
 const DISPLAY_MODE_FULL: int
 ```
 
-@brief The edit box is displayed in full screen.
+The edit box is displayed in full screen.
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ const DISPLAY_MODE_FULL: int
 const DISPLAY_MODE_PART: int
 ```
 
-@brief The edit box is displayed in half-screen mode.
+The edit box is displayed in half-screen mode.
 
 **Since:** 23
 
@@ -90,7 +90,7 @@ const DISPLAY_MODE_PART: int
 const ENTER_KEY_TYPE_DONE: int
 ```
 
-@brief Key that indicates that a task or input is complete.
+Key that indicates that a task or input is complete.
 
 **Since:** 23
 
@@ -104,7 +104,7 @@ const ENTER_KEY_TYPE_DONE: int
 const ENTER_KEY_TYPE_GO: int
 ```
 
-@brief Key that executes a command or navigates to a specific location.
+Key that executes a command or navigates to a specific location.
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ const ENTER_KEY_TYPE_GO: int
 const ENTER_KEY_TYPE_NEWLINE: int
 ```
 
-@brief Key that inserts a new line.
+Key that inserts a new line.
 
 **Since:** 23
 
@@ -132,7 +132,7 @@ const ENTER_KEY_TYPE_NEWLINE: int
 const ENTER_KEY_TYPE_NEXT: int
 ```
 
-@brief Key that moves the focus to the next item in a sequence.
+Key that moves the focus to the next item in a sequence.
 
 **Since:** 23
 
@@ -146,7 +146,7 @@ const ENTER_KEY_TYPE_NEXT: int
 const ENTER_KEY_TYPE_PREVIOUS: int
 ```
 
-@brief Key that moves the focus to the previous item in a sequence.
+Key that moves the focus to the previous item in a sequence.
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ const ENTER_KEY_TYPE_PREVIOUS: int
 const ENTER_KEY_TYPE_SEARCH: int
 ```
 
-@brief Key that initiates a search operation.
+Key that initiates a search operation.
 
 **Since:** 23
 
@@ -174,7 +174,7 @@ const ENTER_KEY_TYPE_SEARCH: int
 const ENTER_KEY_TYPE_SEND: int
 ```
 
-@brief Key that sends the text to its target.
+Key that sends the text to its target.
 
 **Since:** 23
 
@@ -188,7 +188,7 @@ const ENTER_KEY_TYPE_SEND: int
 const ENTER_KEY_TYPE_UNSPECIFIED: int
 ```
 
-@brief No function is specified for the key.
+No function is specified for the key.
 
 **Since:** 23
 
@@ -202,7 +202,7 @@ const ENTER_KEY_TYPE_UNSPECIFIED: int
 const FLAG_SELECTING: int
 ```
 
-@brief The edit box is being selected.
+The edit box is being selected.
 
 **Since:** 23
 
@@ -216,7 +216,7 @@ const FLAG_SELECTING: int
 const FLAG_SINGLE_LINE: int
 ```
 
-@brief The edit box allows only single-line input.
+The edit box allows only single-line input.
 
 **Since:** 23
 
@@ -230,7 +230,7 @@ const FLAG_SINGLE_LINE: int
 const OPTION_ASCII: int
 ```
 
-@brief ASCII values are allowed.
+ASCII values are allowed.
 
 **Since:** 23
 
@@ -244,7 +244,7 @@ const OPTION_ASCII: int
 const OPTION_AUTO_CAP_CHARACTERS: int
 ```
 
-@brief Characters are allowed.
+Characters are allowed.
 
 **Since:** 23
 
@@ -258,7 +258,7 @@ const OPTION_AUTO_CAP_CHARACTERS: int
 const OPTION_AUTO_CAP_SENTENCES: int
 ```
 
-@brief Sentences are allowed.
+Sentences are allowed.
 
 **Since:** 23
 
@@ -272,7 +272,7 @@ const OPTION_AUTO_CAP_SENTENCES: int
 const OPTION_AUTO_WORDS: int
 ```
 
-@brief Words are allowed.
+Words are allowed.
 
 **Since:** 23
 
@@ -286,7 +286,7 @@ const OPTION_AUTO_WORDS: int
 const OPTION_MULTI_LINE: int
 ```
 
-@brief Multiple lines are allowed.
+Multiple lines are allowed.
 
 **Since:** 23
 
@@ -300,7 +300,7 @@ const OPTION_MULTI_LINE: int
 const OPTION_NO_FULLSCREEN: int
 ```
 
-@brief Half-screen style.
+Half-screen style.
 
 **Since:** 23
 
@@ -314,7 +314,7 @@ const OPTION_NO_FULLSCREEN: int
 const OPTION_NONE: int
 ```
 
-@brief No input attribute is specified.
+No input attribute is specified.
 
 **Since:** 23
 
@@ -328,7 +328,7 @@ const OPTION_NONE: int
 const PATTERN_DATETIME: int
 ```
 
-@brief Date edit box.
+Date edit box.
 
 **Since:** 23
 
@@ -342,7 +342,7 @@ const PATTERN_DATETIME: int
 const PATTERN_EMAIL: int
 ```
 
-@brief Email edit box.
+Email edit box.
 
 **Since:** 23
 
@@ -356,7 +356,7 @@ const PATTERN_EMAIL: int
 const PATTERN_NEW_PASSWORD: int
 ```
 
-@brief New password edit box.
+New password edit box.
 
 **Since:** 23
 
@@ -372,7 +372,7 @@ const PATTERN_NEW_PASSWORD: int
 const PATTERN_NULL: int
 ```
 
-@brief Any type of edit box.
+Any type of edit box.
 
 **Since:** 23
 
@@ -386,7 +386,7 @@ const PATTERN_NULL: int
 const PATTERN_NUMBER: int
 ```
 
-@brief Number edit box.
+Number edit box.
 
 **Since:** 23
 
@@ -400,7 +400,7 @@ const PATTERN_NUMBER: int
 const PATTERN_NUMBER_DECIMAL: int
 ```
 
-@brief Edit box for numbers with decimal points.
+Edit box for numbers with decimal points.
 
 **Since:** 23
 
@@ -416,7 +416,7 @@ const PATTERN_NUMBER_DECIMAL: int
 const PATTERN_ONE_TIME_CODE: int
 ```
 
-@brief Verification code edit box.
+Verification code edit box.
 
 **Since:** 23
 
@@ -432,7 +432,7 @@ const PATTERN_ONE_TIME_CODE: int
 const PATTERN_PASSWORD: int
 ```
 
-@brief Password edit box.
+Password edit box.
 
 **Since:** 23
 
@@ -446,7 +446,7 @@ const PATTERN_PASSWORD: int
 const PATTERN_PASSWORD_NUMBER: int
 ```
 
-@brief Numeric password edit box.
+Numeric password edit box.
 
 **Since:** 23
 
@@ -460,7 +460,7 @@ const PATTERN_PASSWORD_NUMBER: int
 const PATTERN_PASSWORD_SCREEN_LOCK: int
 ```
 
-@brief Screen lock password edit box.
+Screen lock password edit box.
 
 **Since:** 23
 
@@ -474,7 +474,7 @@ const PATTERN_PASSWORD_SCREEN_LOCK: int
 const PATTERN_PHONE: int
 ```
 
-@brief Phone number edit box.
+Phone number edit box.
 
 **Since:** 23
 
@@ -488,7 +488,7 @@ const PATTERN_PHONE: int
 const PATTERN_TEXT: int
 ```
 
-@brief Text edit box.
+Text edit box.
 
 **Since:** 23
 
@@ -502,7 +502,7 @@ const PATTERN_TEXT: int
 const PATTERN_URI: int
 ```
 
-@brief URI edit box.
+URI edit box.
 
 **Since:** 23
 
@@ -516,7 +516,7 @@ const PATTERN_URI: int
 const PATTERN_USER_NAME: int
 ```
 
-@brief User name edit box.
+User name edit box.
 
 **Since:** 23
 
@@ -532,7 +532,7 @@ const PATTERN_USER_NAME: int
 const WINDOW_TYPE_INPUT_METHOD_FLOAT: int
 ```
 
-@brief The input method is displayed in a floating window.
+The input method is displayed in a floating window.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # AttachOptions
 
-@brief 绑定输入法的附加选项。
+绑定输入法的附加选项。
 
 **起始版本：** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## requestKeyboardReason
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 requestKeyboardReason?: RequestKeyboardReason
 ```
 
-@brief 请求键盘输入的原因。
+请求键盘输入的原因。
 
 **类型：** RequestKeyboardReason
 
@@ -45,7 +40,7 @@ requestKeyboardReason?: RequestKeyboardReason
 showKeyboard?: boolean
 ```
 
-@brief 绑定输入法成功后，是否拉起输入法键盘。 <br> <br>- true表示拉起。 <br>- false表示不拉起。
+绑定输入法成功后，是否拉起输入法键盘。 <br> <br>- true表示拉起。 <br>- false表示不拉起。
 
 **类型：** boolean
 

@@ -1,11 +1,8 @@
 # AudioVolumeManager
 
-This interface implements audio volume management.
+This interface implements audio volume management.Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance.
 
-Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 23
@@ -18,7 +15,6 @@ Before calling any API in AudioVolumeManager, you must use [getVolumeManager](ar
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## forceVolumeKeyControlType
@@ -360,7 +356,7 @@ Obtains system supported volume types.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt;&gt; | Return the system volume type array. |
+| Array&lt;Readonly&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt;&gt; | Return the system volume type array. |
 
 **Error codes:**
 

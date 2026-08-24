@@ -1,8 +1,6 @@
 # CompetitionStrategy
 
-Defines whether a competition for gesture recognition results should occur between the event injector and the gesture recognizers of the target component. This strategy determines how the injected input event interacts with the target component's own gesture handling logic.
-
-@enum { number }
+Defines whether a competition for gesture recognition results should occur between the event injector and the gesture recognizers of the target component. This strategy determines how the injected input event interacts with the target component's own gesture handling logic.@enum { number }
 
 **Since:** 24
 

@@ -2,18 +2,14 @@
 
 Provides APIs for measuring text metrics, such as text height and width.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - In the following API examples, you must first use [getMeasureUtils()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getmeasureutils) in
-> **UIContext** to obtain a **MeasureUtils** instance, and then call the APIs using the obtained instance.
-> 
-> - To perform more complex text measurements, use the [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md) API.
-> 
+> **UIContext** to obtain a **MeasureUtils** instance, and then call the APIs using the obtained instance.&gt;
+> - To perform more complex text measurements, use the [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md) API.&gt;
 > - Avoid using
 > [ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale)
 > during text measurement API calls. To ensure timing correctness and the accuracy of measurement results, manually
-> listen for font scale changes.
-> 
+> listen for font scale changes.&gt;
 > - For measuring text after truncation, direct use of the string length for truncation may lead to inaccuracies.
 > This is because certain Unicode characters (for example, emojis) have code points with a length greater than 1, and
 > truncating by string length can split these multi-code-point characters, resulting in incorrect text display or
@@ -277,8 +273,7 @@ measureText(options: MeasureOptions): number
 
 Measures the single-line display width of the specified text. For multi-line text (separated by newline characters **\n**), this API returns the width of the longest line.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **measureText** always measures single-line text width. Layout constraints in **options** (**constraintWidth**,
 > **maxLines**, and more) do not affect results. For layout-constrained width measurement, use
 > [measureTextSize](../../apis-default/arkts-apis/arkts-arkui-uicontext-measureutils-c.md#measuretextsize).
@@ -342,8 +337,7 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 Measures the width and height of the given single-line text.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When calling this MPI, do not use ApplicationContext.setFontSizeScale to set the font size scaling ratio. To
 > ensure the correctness of the time sequence, you are advised to monitor the font scaling changes by yourself to
 > ensure the accuracy of the calculation result.

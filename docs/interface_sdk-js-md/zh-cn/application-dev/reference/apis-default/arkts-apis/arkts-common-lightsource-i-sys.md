@@ -1,8 +1,6 @@
 # LightSource（系统接口）
 
-一个组件支持添加1个光源。
-
-@interface LightSource
+一个组件支持添加1个光源。@interface LightSource
 
 **起始版本：** 23
 
@@ -20,9 +18,7 @@
 color?: ResourceColor
 ```
 
-光源颜色。
-
-默认值：Color.White
+光源颜色。默认值：Color.White
 
 **类型：** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
 

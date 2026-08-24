@@ -1,6 +1,6 @@
 # TextInputType
 
-@brief Enumerates the text input types.
+Enumerates the text input types.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@
 NONE = -1
 ```
 
-@brief None.
+None.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ NONE = -1
 TEXT = 0
 ```
 
-@brief Text.
+Text.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ TEXT = 0
 MULTILINE
 ```
 
-@brief Multi-line.
+Multi-line.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ MULTILINE
 NUMBER
 ```
 
-@brief Number.
+Number.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ NUMBER
 PHONE
 ```
 
-@brief Phone number.
+Phone number.
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ PHONE
 DATETIME
 ```
 
-@brief Date.
+Date.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ DATETIME
 EMAIL_ADDRESS
 ```
 
-@brief Email address.
+Email address.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ EMAIL_ADDRESS
 URL
 ```
 
-@brief URL.
+URL.
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ URL
 VISIBLE_PASSWORD
 ```
 
-@brief Password.
+Password.
 
 **Since:** 23
 
@@ -140,7 +140,7 @@ VISIBLE_PASSWORD
 NUMBER_PASSWORD
 ```
 
-@brief Numeric password.
+Numeric password.
 
 **Since:** 23
 
@@ -154,7 +154,7 @@ NUMBER_PASSWORD
 SCREEN_LOCK_PASSWORD
 ```
 
-@brief Lock screen password.
+Lock screen password.
 
 **Since:** 23
 
@@ -168,7 +168,7 @@ SCREEN_LOCK_PASSWORD
 USER_NAME
 ```
 
-@brief Username.
+Username.
 
 **Since:** 23
 
@@ -182,7 +182,7 @@ USER_NAME
 NEW_PASSWORD
 ```
 
-@brief New password.
+New password.
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ NEW_PASSWORD
 NUMBER_DECIMAL
 ```
 
-@brief Number with a decimal point.
+Number with a decimal point.
 
 **Since:** 23
 
@@ -210,7 +210,7 @@ NUMBER_DECIMAL
 ONE_TIME_CODE
 ```
 
-@brief Verification code.
+Verification code.
 
 **Since:** 23
 

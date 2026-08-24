@@ -15,8 +15,7 @@ Definition of V2 custom component class.
 ## _invokeImpl
 
 ```TypeScript
-@Builder
-  static _invokeImpl<S extends CustomComponentV2<S, S_Options>, S_Options>(
+static _invokeImpl<S extends CustomComponentV2<S, S_Options>, S_Options>(
         @Builder styles: ((instance: S) => void) | undefined,
         factory: () => S,
         initializers?: () => S_Options,
@@ -30,6 +29,8 @@ Implementation for creating a v2 custom component
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +51,7 @@ Implementation for creating a v2 custom component
 ## _invokeImpl
 
 ```TypeScript
-@Builder
-  static _invokeImpl<S extends CustomComponentV2<S, S_Options>, S_Options>(
+static _invokeImpl<S extends CustomComponentV2<S, S_Options>, S_Options>(
         @Builder styles: ((instance: S) => void) | undefined,
         factory: () => S,
         initializers?: () => S_Options,
@@ -66,6 +66,8 @@ Implementation for creating a v2 custom component
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

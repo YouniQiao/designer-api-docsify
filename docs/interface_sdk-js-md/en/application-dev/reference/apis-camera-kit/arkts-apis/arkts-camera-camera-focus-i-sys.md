@@ -1,8 +1,6 @@
 # Focus
 
-*Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md).
-
-It provides APIs related to focus operations.
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md).It provides APIs related to focus operations.
 
 **Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
 
@@ -16,7 +14,6 @@ It provides APIs related to focus operations.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getFocusAssist

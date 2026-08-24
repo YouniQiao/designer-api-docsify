@@ -21,9 +21,7 @@ Defines the options for initializing a **ToolBarV2Item** object.
 accessibilityDescription?: ResourceStr
 ```
 
-Accessible description of the toolbar item. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.
-
-Default value: **"Double-tap to activate"**
+Accessible description of the toolbar item. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.Default value: **"Double-tap to activate"**
 
 **Type:** ResourceStr
 
@@ -43,19 +41,11 @@ Default value: **"Double-tap to activate"**
 accessibilityLevel?: string
 ```
 
-Accessibility level of the toolbar item. It determines whether the component can be recognized by accessibility services.
-
-The options are as follows:
-
-**"auto"**: This option is treated as "yes" by the system for this component.
-
-**"yes"**: The component can be recognized by accessibility services.
-
-**"no"**: The component cannot be recognized by accessibility services.
-
-**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
-
-Default value: **"auto"**
+Accessibility level of the toolbar item. It determines whether the component can be recognized by accessibility services.The options are as follows:  
+**"auto"**: This option is treated as "yes" by the system for this component.  
+**"yes"**: The component can be recognized by accessibility services.  
+**"no"**: The component cannot be recognized by accessibility services.  
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.Default value: **"auto"**
 
 **Type:** string
 
@@ -77,9 +67,7 @@ Default value: **"auto"**
 accessibilityText?: ResourceStr
 ```
 
-Accessibility text, that is, accessible label name, of the toolbar item. If a component does not contain text information, it will not be announced by the screen reader when selected. In this case, the screen reader user cannot know which component is selected. To solve this problem, you can set accessibility text for components without text information. When such a component is selected, the screen reader announces the specified accessibility text, informing the user which component is selected.
-
-Default value: value of **content**
+Accessibility text, that is, accessible label name, of the toolbar item. If a component does not contain text information, it will not be announced by the screen reader when selected. In this case, the screen reader user cannot know which component is selected. To solve this problem, you can set accessibility text for components without text information. When such a component is selected, the screen reader announces the specified accessibility text, informing the user which component is selected.Default value: value of **content**
 
 **Type:** ResourceStr
 
@@ -99,9 +87,7 @@ Default value: value of **content**
 action?: ToolBarV2ItemAction
 ```
 
-Click event of the toolbar item.
-
-By default, there is no click event.
+Click event of the toolbar item.By default, there is no click event.
 
 **Type:** [ToolBarV2ItemAction](../../apis-arkui/arkts-apis/arkts-arkui-toolbarv2itemaction-t.md)
 
@@ -141,9 +127,7 @@ Text of the toolbar item.
 icon?: ToolBarV2ItemIconType
 ```
 
-Icon of the toolbar item.
-
-By default, there is no icon.
+Icon of the toolbar item.By default, there is no icon.
 
 **Type:** [ToolBarV2ItemIconType](../../apis-arkui/arkts-apis/arkts-arkui-toolbarv2itemicontype-t.md)
 
@@ -163,9 +147,7 @@ By default, there is no icon.
 state?: ToolBarV2ItemState
 ```
 
-State of the toolbar item.
-
-Default value: **ToolBarV2ItemState.ENABLE**.
+State of the toolbar item.Default value: **ToolBarV2ItemState.ENABLE**.
 
 **Type:** [ToolBarV2ItemState](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
 

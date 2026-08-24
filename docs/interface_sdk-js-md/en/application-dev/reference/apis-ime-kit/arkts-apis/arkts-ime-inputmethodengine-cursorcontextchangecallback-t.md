@@ -4,7 +4,7 @@
 export type CursorContextChangeCallback = (x: double, y: double, height: double) => void
 ```
 
-@brief The callback of 'cursorContextChange' event.
+The callback of 'cursorContextChange' event.
 
 **Since:** 23
 

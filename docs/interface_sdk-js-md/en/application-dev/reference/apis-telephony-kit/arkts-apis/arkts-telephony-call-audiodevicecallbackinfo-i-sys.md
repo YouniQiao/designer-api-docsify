@@ -58,8 +58,7 @@ Current audio device.
 isMicDisabled?: boolean
 ```
 
-Whether to disable the microphone.
-
+Whether to disable the microphone.  
 - **true**: yes. - **false**: no.
 
 **Type:** boolean

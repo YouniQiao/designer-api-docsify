@@ -1,8 +1,6 @@
 # ExpandedMenuOptions
 
-扩展下拉菜单。
-
-继承于[MenuItemOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-menuitem.md#menuitemoptions)。
+扩展下拉菜单。继承于MenuItemOptions。
 
 **继承/实现关系：** ExpandedMenuOptions extends MenuItemOptions
 

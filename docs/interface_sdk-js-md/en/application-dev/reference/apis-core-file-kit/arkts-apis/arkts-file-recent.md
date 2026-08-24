@@ -2,8 +2,7 @@
 
 The **file.recent** module provides APIs for managing the list of recently accessed files.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The initial APIs of this module are supported since API version 10. Newly added APIs will be marked with a superscript to indicate their earliest API version.
 > - The APIs provided by this module are system APIs.
 > - Currently, the APIs of this module can be called only by **FileManager**.

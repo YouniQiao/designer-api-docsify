@@ -12,8 +12,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 function requestSerialRight(portId: int): Promise<boolean>
 ```
 
-请求应用访问串口设备的权限。应用退出时自动移除对串口设备的访问权限，在应用重启后需要重新申请授权。使用Promise异步回调。通常在首次访问串口设备前、检测到无权限时调用此接口向用户申请授权，如需移除权限请调用 [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md)。
-
+请求应用访问串口设备的权限。应用退出时自动移除对串口设备的访问权限，在应用重启后需要重新申请授权。使用Promise异步回调。通常在首次访问串口设备前、检测到无权限时调用此接口向用户申请授权，如需移除权限请调用 [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md)。  
 **前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号
 
 **起始版本：** 23

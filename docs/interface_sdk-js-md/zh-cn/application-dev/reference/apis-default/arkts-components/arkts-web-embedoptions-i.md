@@ -36,7 +36,7 @@ Whether the [onNativeEmbedVisibilityChange](arkts-web-attribute.md#onnativeembed
 supportDefaultIntrinsicSize?: boolean
 ```
 
-Whether the embed element support the default intrinsic size of 300 150, expressed in CSS pixels. <br>When CSS size is set, the embed element size is CSS size, otherwise it is intrinsic size. <br>If true, then the intrinsic size is 300 150. <br>If false, the embed element will not be rendered when the CSS size is not set.
+Whether the embed element support the default intrinsic size of 300 * 150, expressed in CSS pixels. <br>When CSS size is set, the embed element size is CSS size, otherwise it is intrinsic size. <br>If true, then the intrinsic size is 300 * 150. <br>If false, the embed element will not be rendered when the CSS size is not set.
 
 **类型：** boolean
 

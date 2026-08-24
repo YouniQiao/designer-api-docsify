@@ -1,8 +1,6 @@
 # PartnerAgentExtensionAbilityDestroyReason
 
-The enum of reasons for destroying partner agent extension ability.
-
-@enum { int }
+The enum of reasons for destroying partner agent extension ability.@enum { int }
 
 **Since:** 23
 

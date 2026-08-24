@@ -6,7 +6,7 @@ typedef struct OH_HiDebug_RequestTraceConfig {...} OH_HiDebug_RequestTraceConfig
 
 ## Overview
 
-Defines trace request configuration.
+Defines a struct for the trace collection configuration.
 
 **Since**: 24
 

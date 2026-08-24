@@ -1,8 +1,6 @@
 # RowSplitModifier
 
-Defines RowSplit Modifier
-
-@implements RowSplitAttribute, AttributeModifier&lt;RowSplitAttribute&gt;
+Defines RowSplit Modifier@implements RowSplitAttribute, AttributeModifier&lt;RowSplitAttribute&gt;
 
 **Inheritance/Implementation:** RowSplitModifier implements RowSplitAttribute, AttributeModifier<RowSplitAttribute>
 

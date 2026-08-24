@@ -1,8 +1,6 @@
 # BlendMode
 
-Enum for BlendMode. Blend modes for compositing current component with overlapping content. Use overlapping content as dst, current component as src.
-
-@enum { number }
+Enum for BlendMode. Blend modes for compositing current component with overlapping content. Use overlapping content as dst, current component as src.@enum { number }
 
 **起始版本：** 23
 
@@ -90,7 +88,7 @@ r = d
 SRC_OVER = 4
 ```
 
-r = s + (1 - sa) d: The source pixels are blended based on opacity and cover the target pixels.
+r = s + (1 - sa) * d: The source pixels are blended based on opacity and cover the target pixels.
 
 **起始版本：** 23
 
@@ -108,7 +106,7 @@ r = s + (1 - sa) d: The source pixels are blended based on opacity and cover the
 DST_OVER = 5
 ```
 
-r = d + (1 - da) s: The target pixels are blended based on opacity and cover on the source pixels.
+r = d + (1 - da) * s: The target pixels are blended based on opacity and cover on the source pixels.
 
 **起始版本：** 23
 
@@ -126,7 +124,7 @@ r = d + (1 - da) s: The target pixels are blended based on opacity and cover on 
 SRC_IN = 6
 ```
 
-r = s da: Only the part of the source pixels that overlap with the target pixels is displayed.
+r = s * da: Only the part of the source pixels that overlap with the target pixels is displayed.
 
 **起始版本：** 23
 
@@ -144,7 +142,7 @@ r = s da: Only the part of the source pixels that overlap with the target pixels
 DST_IN = 7
 ```
 
-r = d sa: Only the part of the target pixels that overlap with the source pixels is displayed.
+r = d * sa: Only the part of the target pixels that overlap with the source pixels is displayed.
 
 **起始版本：** 23
 
@@ -162,7 +160,7 @@ r = d sa: Only the part of the target pixels that overlap with the source pixels
 SRC_OUT = 8
 ```
 
-r = s (1 - da)
+r = s * (1 - da)
 
 **起始版本：** 23
 
@@ -180,7 +178,7 @@ r = s (1 - da)
 DST_OUT = 9
 ```
 
-r = d (1 - sa), retains the parts of the destination pixels that do not overlap with the source.
+r = d * (1 - sa), retains the parts of the destination pixels that do not overlap with the source.
 
 **起始版本：** 23
 
@@ -198,7 +196,7 @@ r = d (1 - sa), retains the parts of the destination pixels that do not overlap 
 SRC_ATOP = 10
 ```
 
-r = s da + d (1 - sa): The part of the source pixels that overlap with the target pixels is displayed and the part of the target pixels that do not overlap with the source pixels are displayed.
+r = s * da + d * (1 - sa): The part of the source pixels that overlap with the target pixels is displayed and the part of the target pixels that do not overlap with the source pixels are displayed.
 
 **起始版本：** 23
 
@@ -216,7 +214,7 @@ r = s da + d (1 - sa): The part of the source pixels that overlap with the targe
 DST_ATOP = 11
 ```
 
-r = d sa + s (1 - da): The part of the target pixels that overlap with the source pixels and the part of the source pixels that do not overlap with the target pixels are displayed.
+r = d * sa + s * (1 - da): The part of the target pixels that overlap with the source pixels and the part of the source pixels that do not overlap with the target pixels are displayed.
 
 **起始版本：** 23
 
@@ -234,7 +232,7 @@ r = d sa + s (1 - da): The part of the target pixels that overlap with the sourc
 XOR = 12
 ```
 
-r = s (1 - da) + d (1 - sa)
+r = s * (1 - da) + d * (1 - sa)
 
 **起始版本：** 23
 
@@ -270,7 +268,7 @@ r = min(s + d, 1): New pixels resulting from adding the source pixels to the tar
 MODULATE = 14
 ```
 
-r = s d
+r = s * d
 
 **起始版本：** 23
 
@@ -288,7 +286,7 @@ r = s d
 SCREEN = 15
 ```
 
-r = s + d - s d
+r = s + d - s * d
 
 **起始版本：** 23
 
@@ -324,7 +322,7 @@ multiply or screen, depending on destination
 DARKEN = 17
 ```
 
-rc = s + d - max(s da, d sa), ra = kSrcOver
+rc = s + d - max(s * da, d * sa), ra = kSrcOver
 
 **起始版本：** 23
 
@@ -342,7 +340,7 @@ rc = s + d - max(s da, d sa), ra = kSrcOver
 LIGHTEN = 18
 ```
 
-rc = s + d - min(s da, d sa), ra = kSrcOver
+rc = s + d - min(s * da, d * sa), ra = kSrcOver
 
 **起始版本：** 23
 
@@ -432,7 +430,7 @@ The LIGHTEN or DARKEN mode is used, depending on the source pixels.
 DIFFERENCE = 23
 ```
 
-rc = s + d - 2 (min(s da, d sa)), ra = kSrcOver: The final pixel is the result of subtracting the darker of the two pixels (source and target) from the lighter one.
+rc = s + d - 2 * (min(s * da, d * sa)), ra = kSrcOver: The final pixel is the result of subtracting the darker of the two pixels (source and target) from the lighter one.
 
 **起始版本：** 23
 
@@ -450,7 +448,7 @@ rc = s + d - 2 (min(s da, d sa)), ra = kSrcOver: The final pixel is the result o
 EXCLUSION = 24
 ```
 
-rc = s + d - two(s d), ra = kSrcOver
+rc = s + d - two(s * d), ra = kSrcOver
 
 **起始版本：** 23
 
@@ -468,7 +466,7 @@ rc = s + d - two(s d), ra = kSrcOver
 MULTIPLY = 25
 ```
 
-r = s (1 - da) + d (1 - sa) + s d: The final pixel is the result of multiplying the source pixel by the target pixel.
+r = s * (1 - da) + d * (1 - sa) + s * d: The final pixel is the result of multiplying the source pixel by the target pixel.
 
 **起始版本：** 23
 

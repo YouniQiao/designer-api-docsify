@@ -1,8 +1,6 @@
 # TextMetrics
 
-文本的尺寸信息。
-
-@interface TextMetrics
+文本的尺寸信息。@interface TextMetrics
 
 **起始版本：** 23
 

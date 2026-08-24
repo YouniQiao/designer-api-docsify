@@ -1,8 +1,6 @@
 # TextEmbedding
 
-Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.
-
-@interface TextEmbedding
+Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.@interface TextEmbedding
 
 **Since:** 23
 

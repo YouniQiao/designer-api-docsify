@@ -1,8 +1,6 @@
 # AISessionEvent
 
-Custom AI session configuration object, used to define the lifecycle callbacks of an AI session, including creation, execution, and destruction.
-
-<!--no_check-->
+Custom AI session configuration object, used to define the lifecycle callbacks of an AI session, including creation, execution, and destruction.<!--no_check-->
 
 **Since:** 26.0.0
 
@@ -13,11 +11,6 @@ Custom AI session configuration object, used to define the lifecycle callbacks o
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## aiSessionType

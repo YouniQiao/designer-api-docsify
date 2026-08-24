@@ -14,8 +14,7 @@ function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetCon
 
 创建一个NetConnection对象，可用于监听网络状态。[netSpecifier](arkts-network-connection-netspecifier-i.md)表示需要监听网络的网络特征；timeout是超时时间（单位：毫秒)； netSpecifier是timeout的必要条件，两者都没有则表示关注默认网络。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 若需要监听网络状态，创建一个NetConnection对象后，还需调用[register](arkts-network-connection-netconnection-i.md#register)注册指定网络状态变化的通知。
 
 **起始版本：** 23

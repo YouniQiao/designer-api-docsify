@@ -4,7 +4,7 @@
 export type InputKeyEventCallback = (event: InputKeyEvent) => boolean
 ```
 
-@brief The callback of 'keyEvent' event.
+The callback of 'keyEvent' event.
 
 **Since:** 23
 

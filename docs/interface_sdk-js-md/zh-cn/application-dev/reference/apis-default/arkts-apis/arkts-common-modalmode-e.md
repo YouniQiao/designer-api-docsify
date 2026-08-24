@@ -1,8 +1,6 @@
 # ModalMode
 
-Define the modal mode of menu.
-
-@enum { number }
+Define the modal mode of menu.@enum { number }
 
 **起始版本：** 23
 

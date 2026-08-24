@@ -1,8 +1,6 @@
 # ProcessManager
 
-提供进程管理相关接口，包括进程 UID 判断、用户信息查询、线程优先级获取、环境变量获取、进程退出和信号发送等功能。
-
-通过 `new process.ProcessManager()` 构造 ProcessManager 对象。
+提供进程管理相关接口，包括进程 UID 判断、用户信息查询、线程优先级获取、环境变量获取、进程退出和信号发送等功能。通过 `new process.ProcessManager()` 构造 ProcessManager 对象。
 
 **起始版本：** 9
 
@@ -22,9 +20,7 @@ import { process } from '@kit.ArkTS';
 exit(code: number): void
 ```
 
-终止程序。
-
-请谨慎使用此接口，此接口调用后应用会退出，如果输入参数非0，可能会导致数据丢失或出现未定义的运行异常。
+终止程序。请谨慎使用此接口，此接口调用后应用会退出，如果输入参数非0，可能会导致数据丢失或出现未定义的运行异常。
 
 **起始版本：** 9
 

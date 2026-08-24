@@ -2,8 +2,7 @@
 
 本模块为企业MDM应用提供admin权限管理能力，包括激活/解除激活admin权限、事件订阅、委托授权等。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本模块接口仅对设备管理应用开放，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 23
@@ -35,7 +34,7 @@ import { adminManager } from '@kit.MDMKit';
 | [isByodAdmin](arkts-mdm-adminmanager-isbyodadmin-f.md) | 根据企业设备管理扩展组件查询当前应用是否被激活为BYOD设备管理应用。 |
 | [setDelegatedPolicies](arkts-mdm-adminmanager-setdelegatedpolicies-f.md) | 委托其他应用来设置设备的管控策略。被委托的其他应用需申请委托策略对应接口所需权限。 |
 | [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md) | 设备管理应用拉起BYOD管理员激活页面进行激活。 |
-| [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md) | 订阅系统管理事件。调用成功后，当已订阅的系统管理事件发生时，设备管理应用将收到相应的通知。 |
+| [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md) | 订阅系统管理事件。调用成功后，当已订阅的系统管理事件发生时，设备管理应用将收到相应的通知。从API版本26.0.0开始，非超级设备管理应用调用该接口订阅[MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md)事件时返回9200002错误码。 |
 | [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md) | 取消订阅系统管理事件。调用成功后，将不再收到已取消订阅的系统管理事件通知。 |
 
 <!--Del-->

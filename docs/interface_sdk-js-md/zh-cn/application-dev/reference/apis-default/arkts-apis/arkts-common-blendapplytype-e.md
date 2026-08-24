@@ -1,8 +1,6 @@
 # BlendApplyType
 
-Enum for BlendApplyType. Indicate how to apply specified blend mode to the view's content.
-
-@enum { number }
+Enum for BlendApplyType. Indicate how to apply specified blend mode to the view's content.@enum { number }
 
 **起始版本：** 23
 

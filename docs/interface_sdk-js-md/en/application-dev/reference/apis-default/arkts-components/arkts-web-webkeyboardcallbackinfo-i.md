@@ -1,8 +1,6 @@
 # WebKeyboardCallbackInfo
 
-Defines the web keyboard callback info related to the [onInterceptKeyboardAttach](arkts-web-attribute.md#oninterceptkeyboardattach) event.
-
-@interface WebKeyboardCallbackInfo
+Defines the web keyboard callback info related to the [onInterceptKeyboardAttach](arkts-web-attribute.md#oninterceptkeyboardattach) event.@interface WebKeyboardCallbackInfo
 
 **Since:** 23
 

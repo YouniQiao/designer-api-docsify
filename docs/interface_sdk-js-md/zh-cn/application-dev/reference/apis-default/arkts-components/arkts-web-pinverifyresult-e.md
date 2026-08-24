@@ -1,8 +1,6 @@
 # PinVerifyResult
 
-Enum type supplied to [PinVerifyResult](#pinverifyresult) when VerifyPinHandler#confirm being called.
-
-@enum { int }
+Enum type supplied to [PinVerifyResult](#pinverifyresult) when VerifyPinHandler#confirm being called.@enum { int }
 
 **起始版本：** 23
 

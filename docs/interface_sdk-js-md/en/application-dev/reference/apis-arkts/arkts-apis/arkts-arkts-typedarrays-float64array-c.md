@@ -67,7 +67,7 @@ Iterable interface implementation
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[Double](arkts-arkts-double-c.md)&gt; | iterator over all elements |
+| IterableIterator&lt;Double&gt; | iterator over all elements |
 
 ## $_set
 
@@ -2014,7 +2014,7 @@ Returns an iterator over the values of the Float64Array, in ascending order.
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[Double](arkts-arkts-double-c.md)&gt; | an iterator over all elements. |
+| IterableIterator&lt;Double&gt; | an iterator over all elements. |
 
 ## with
 

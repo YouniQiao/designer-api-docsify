@@ -290,8 +290,7 @@ Resource information of the application icon, including the bundle name, module 
 readonly installSource: string
 ```
 
-Installation source of the application. The options are as follows:
-
+Installation source of the application. The options are as follows:  
 - **pre-installed**: The application is a preset application installed at initial device startup. - **ota**: The application is a preset application added during system upgrade. - **recovery**: The preset application is uninstalled and then restored. - **bundleName**: The application corresponding to the bundle name is installed. - **unknown**: The installation source is unknown.
 
 **Type:** string

@@ -14,13 +14,11 @@ function getParams(): Object
 
 Obtains the parameters passed from the page that initiates redirection to the current page.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
-> with the current UI context.
-> 
+> with the current UI context.&gt;
 > **getParams** obtains only the parameters of the current page and does not clear the parameters associated with
 > the page.
 

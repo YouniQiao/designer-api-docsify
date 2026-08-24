@@ -1,8 +1,6 @@
 # OrderOverlayOptions
 
-使用顺序打开浮层的选项。
-
-@interface OrderOverlayOptions
+使用顺序打开浮层的选项。@interface OrderOverlayOptions
 
 **起始版本：** 26.0.0
 

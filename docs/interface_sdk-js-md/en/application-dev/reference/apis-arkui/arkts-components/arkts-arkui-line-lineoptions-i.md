@@ -1,8 +1,6 @@
 # LineOptions
 
-Defines Line constructor options.
-
-@interface LineOptions
+Defines Line constructor options.@interface LineOptions
 
 **Since:** 23
 

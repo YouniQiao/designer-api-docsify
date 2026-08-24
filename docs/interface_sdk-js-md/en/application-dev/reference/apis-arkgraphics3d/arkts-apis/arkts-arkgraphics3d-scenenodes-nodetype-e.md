@@ -1,8 +1,6 @@
 # NodeType
 
-Enumerates the node types.
-
-@enum { int }
+Enumerates the node types.@enum { int }
 
 **Since:** 23
 

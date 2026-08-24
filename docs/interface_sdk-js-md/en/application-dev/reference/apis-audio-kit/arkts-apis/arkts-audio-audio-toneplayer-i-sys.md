@@ -14,7 +14,6 @@ Provides APIs for tone playing.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## load

@@ -313,9 +313,7 @@ Create a UI instance singleton without window and get its UIContext object.
 static destroyUIContextWithoutWindow(): void
 ```
 
-Destroy the UI instance singleton without window.
-
-@static
+Destroy the UI instance singleton without window.@static
 
 **Since:** 23
 
@@ -1800,8 +1798,7 @@ Converts a value in px units to a value in vp.
 removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 ```
 
-Removes a local input event monitor.
-
+Removes a local input event monitor.  
 **Important Notes**: - Only Monitor objects returned by addLocalInputEventMonitor can be removed. - Cannot unregister a monitor by manually constructing an object. - If an invalid object is passed, the system silently ignores it.
 
 **Since:** 26.0.0
@@ -1856,9 +1853,7 @@ Require DynamicSyncScene by id.
 static resolveUIContext(): ResolvedUIContext
 ```
 
-Resolves a UIContext using priority strategy.
-
-Resolves and returns a UIContext instance following a predefined priority sequence. resolution rules in order: <br>1. the UIContext with current calling scope <br>2. Returns the unique UIContext if only one UI instance exists. <br>3. Returns the UIContext of the last focused UI instance if one exists. <br>4. Returns the UIContext of the last foregrounded UI instance if one exists. <br>5. Returns the UIContext of the most recently created UI instance if any UI instance exists. <br>6. Returns an invalid UIContext instance if none of the above conditions are met.
+Resolves a UIContext using priority strategy.Resolves and returns a UIContext instance following a predefined priority sequence. resolution rules in order: <br>1. the UIContext with current calling scope <br>2. Returns the unique UIContext if only one UI instance exists. <br>3. Returns the UIContext of the last focused UI instance if one exists. <br>4. Returns the UIContext of the last foregrounded UI instance if one exists. <br>5. Returns the UIContext of the most recently created UI instance if any UI instance exists. <br>6. Returns an invalid UIContext instance if none of the above conditions are met.
 
 **Since:** 23
 
@@ -2056,9 +2051,7 @@ Set the pixel round mode of the system. The default mode is PixelRoundMode.PIXEL
 static setResourceManagerCacheMaxCountForHSP(count: int): void
 ```
 
-Set the upper limit for the cache count of HSP resource management objects.
-
-If the upper limit of the cache is set too high, there is a risk of excessive memory overhead. It is recommended to configure it according to actual needs.
+Set the upper limit for the cache count of HSP resource management objects.If the upper limit of the cache is set too high, there is a risk of excessive memory overhead. It is recommended to configure it according to actual needs.
 
 **Since:** 26.0.0
 

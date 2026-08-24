@@ -141,7 +141,7 @@ A String value that is used in the creation of the default string description of
 readonly unscopables: unique symbol
 ```
 
-An Object whose own property names are property names that are excluded from the 'with' environment bindings of the associated objects.
+An Object whose own property names are property names that are excluded from the 'with'environment bindings of the associated objects.
 
 **Type:** unique symbol
 

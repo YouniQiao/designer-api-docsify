@@ -1,8 +1,6 @@
 # InvertOptions
 
-前景智能取反色。
-
-@interface InvertOptions
+前景智能取反色。@interface InvertOptions
 
 **起始版本：** 12
 
@@ -21,9 +19,7 @@
 high: number
 ```
 
-背景颜色灰度值小于阈值区间时的取值。
-
-取值范围：[0, 1]
+背景颜色灰度值小于阈值区间时的取值。取值范围：[0, 1]
 
 **类型：** number
 
@@ -43,9 +39,7 @@ high: number
 low: number
 ```
 
-背景颜色灰度值大于阈值区间时的取值。
-
-取值范围：[0, 1]
+背景颜色灰度值大于阈值区间时的取值。取值范围：[0, 1]
 
 **类型：** number
 
@@ -65,9 +59,7 @@ low: number
 threshold: number
 ```
 
-灰度阈值。
-
-取值范围：[0, 1]
+灰度阈值。取值范围：[0, 1]
 
 **类型：** number
 
@@ -87,13 +79,8 @@ threshold: number
 thresholdRange: number
 ```
 
-阈值范围。
-
-取值范围：[0, 1]
-
-**说明：**
-
-灰度阈值上下偏移thresholdRange构成阈值区间，背景颜色灰度值在区间内取值由high线性渐变到low。
+阈值范围。取值范围：[0, 1]  
+**说明：**灰度阈值上下偏移thresholdRange构成阈值区间，背景颜色灰度值在区间内取值由high线性渐变到low。
 
 **类型：** number
 

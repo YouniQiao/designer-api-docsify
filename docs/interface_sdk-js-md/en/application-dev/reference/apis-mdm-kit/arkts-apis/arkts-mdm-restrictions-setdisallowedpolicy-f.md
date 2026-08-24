@@ -14,8 +14,7 @@ function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): v
 
 Disallows a feature.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API applies a device-level restriction policy that affects all users of the device. To set a restriction
 > policy for a specific user, use the
 > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) API.

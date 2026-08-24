@@ -52,7 +52,10 @@ Check whether the request is for getting the main frame.
 isSameDocument: boolean
 ```
 
-Whether the navigation happened without changing document. Examples of same document navigations are: 1. reference fragment navigations. 2. pushState/replaceState. 3. same page history navigation
+Whether the navigation happened without changing document. Examples of same document navigations are:
+1. reference fragment navigations.
+2. pushState/replaceState.
+3. same page history navigation
 
 **类型：** boolean
 

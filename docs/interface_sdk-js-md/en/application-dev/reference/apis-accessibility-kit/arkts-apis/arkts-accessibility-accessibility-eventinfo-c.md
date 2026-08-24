@@ -11,11 +11,8 @@ Defines the accessibility event information, which describes UI changes or inter
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit';
-import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -158,11 +155,8 @@ Bundle name of the target app. This parameter is mandatory.
 componentType?: string
 ```
 
-It should correspond to the event source component type, and the default value is empty.
-
-Example:
-
-- Button type - &gt; 'Button' - Image type - &gt; 'Image'
+It should correspond to the event source component type, and the default value is empty.Example:  
+- Button type - &gt; 'Button'- Image type - &gt; 'Image'
 
 **Type:** string
 

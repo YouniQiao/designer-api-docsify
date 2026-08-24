@@ -1,8 +1,6 @@
 # CircleShape
 
-Defines a circle drawing class.
-
-@extends BaseShape
+Defines a circle drawing class.@extends BaseShape
 
 **Inheritance/Implementation:** CircleShape extends [BaseShape](arkts-arkui-shape-baseshape-c.md)
 

@@ -1,10 +1,6 @@
 # DatePicker properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-In addition to the universal events, the following events are supported.
-
-@extends CommonMethod [since 8 - 10] @extends CommonMethod&lt;DatePickerAttribute&gt; [since 11]
+In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.@extends CommonMethod [since 8 - 10] @extends CommonMethod&lt;DatePickerAttribute&gt; [since 11]
 
 **Inheritance/Implementation:** DatePickerAttribute extends CommonMethod<DatePickerAttribute>
 
@@ -89,7 +85,7 @@ Sets the text style for edge items (the second item above or below the selected 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{&lt;br &gt;color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | PickerTextStyle | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
 ## disappearTextStyle
 
@@ -191,9 +187,7 @@ Sets whether to display dates in lunar calendar format. Compared to [lunar](#lun
 onChange(callback: (value: DatePickerResult) => void)
 ```
 
-Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.
-
-This API is supported since API version 8 and deprecated since API version 10. You are advised to use [onDateChange](#ondatechange) instead.
+Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.This API is supported since API version 8 and deprecated since API version 10. You are advised to use [onDateChange](#ondatechange) instead.
 
 **Since:** 8
 
@@ -243,8 +237,7 @@ onDateChange(callback: Optional<Callback<Date>>)
 
 Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. Compared to [onDateChange&lt;sup&gt;10+&lt;/sup&gt;](#ondatechange), this API supports the **undefined** type for the **callback** parameter.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 18
@@ -285,7 +278,7 @@ Sets the text style for the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | Yes | Font color, font size, and font weight of the selected item.<br>Default value:&lt; br&gt;{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>} |
+| value | PickerTextStyle | Yes | Font color, font size, and font weight of the selected item.<br>Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>} |
 
 ## selectedTextStyle
 
@@ -309,7 +302,7 @@ Sets the text style for the selected item. Compared to [selectedTextStyle&lt;sup
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | Yes | Font color, font size, and font weight of the selected item.<br> Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>}&lt; br&gt;If the value of **style** is **undefined**, the default value is used. |
+| style | Optional&lt;PickerTextStyle&gt; | Yes | Font color, font size, and font weight of the selected item.<br> Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>}<br>If the value of **style** is **undefined**, the default value is used. |
 
 ## textStyle
 
@@ -333,7 +326,7 @@ Sets the text style for candidate items (the first item immediately above or bel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | Yes | Text color, font size, and font weight for candidate items.<br>Default value:&lt;br &gt;{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | PickerTextStyle | Yes | Text color, font size, and font weight for candidate items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
 ## textStyle
 

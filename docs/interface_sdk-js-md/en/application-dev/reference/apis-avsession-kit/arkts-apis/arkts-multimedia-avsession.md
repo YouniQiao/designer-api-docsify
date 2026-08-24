@@ -120,18 +120,18 @@ import { avSession } from '@kit.AVSessionKit';
 | Name | Description |
 | --- | --- |
 | [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md) | Audio capabilities. |
-| [AVCallState](arkts-avsession-avsession-avcallstate-i.md) | Used to indicate the call state of the current call. |
+| [AVCallState](arkts-avsession-avsession-avcallstate-i.md) | Used to indicate the call state of the current call.@interface AVCallState [since 11 - 11] |
 | [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | The definition of cast command to be sent to the session |
 | [AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) | AVCastController definition used to implement a remote control when a cast is connected |
 | [AVCastPickerOptions](arkts-avsession-avsession-avcastpickeroptions-i.md) | An option to make different picker usage |
-| [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | The definition of command to be sent to the session |
+| [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | The definition of command to be sent to the session@interface AVControlCommand [since 10 - 11] |
 | [AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md) | The description of the media for an item in the playlist of the session |
 | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | The metadata of the current media.Used to set the properties of the current media file |
 | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | Used to indicate the playback state of the current media. If the playback state of the media changes, it needs to be updated synchronously |
 | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | The item in the playlist of the session |
 | [AVSession](arkts-avsession-avsession-avsession-i.md) | AVSession object. |
-| [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md) | Session controller,used to control media playback and get media information |
-| [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) | The metadata of the current call. |
+| [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md) | Session controller,used to control media playback and get media information@interface AVSessionController [since 10 - 11] |
+| [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) | The metadata of the current call.@interface CallMetadata [since 11 - 11] |
 | [CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md) | Define the information for extended display screen. |
 | [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) | The definition of command information to be sent to the session |
 | [DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md) | Desktop lyric state definition. |

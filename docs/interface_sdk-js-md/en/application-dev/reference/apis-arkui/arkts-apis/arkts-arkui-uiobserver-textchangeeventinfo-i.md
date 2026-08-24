@@ -1,8 +1,6 @@
 # TextChangeEventInfo
 
-Text change event info
-
-@interface TextChangeEventInfo
+Text change event info@interface TextChangeEventInfo
 
 **Since:** 22
 

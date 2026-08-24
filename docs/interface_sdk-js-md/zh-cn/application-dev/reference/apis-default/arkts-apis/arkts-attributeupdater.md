@@ -6,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AttributeUpdater](arkts-attributeupdater-c.md) | 为AttributeModifier的实现类，开发者需要自定义class继承AttributeUpdater。 |
+| [AttributeUpdater](arkts-attributeupdater-c.md) | 为AttributeModifier的实现类，开发者需要自定义class继承AttributeUpdater。其中C代表组件的构造函数类型，比如Text组件的TextInterface，Image组件的ImageInterface等，仅在使用updateConstructorParams时才需要传递C类型。 |
 
 ### 类型
 

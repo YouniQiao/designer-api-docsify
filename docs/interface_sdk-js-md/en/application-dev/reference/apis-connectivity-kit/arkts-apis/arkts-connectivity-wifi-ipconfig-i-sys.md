@@ -1,8 +1,6 @@
 # IpConfig (System API)
 
-Wi-Fi IP configuration information.
-
-@interface IpConfig
+Wi-Fi IP configuration information.@interface IpConfig
 
 **Since:** 7
 
@@ -20,9 +18,6 @@ Wi-Fi IP configuration information.
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## dnsServers

@@ -21,9 +21,7 @@ Custom Component base class and it is migrated from class CustomComponent.
 aboutToAppear?(): void
 ```
 
-aboutToAppear Method and it is migrated from class CustomComponent.
-
-The aboutToAppear function is executed after a new instance of the custom component is created, before its build() function is executed.
+aboutToAppear Method and it is migrated from class CustomComponent.The aboutToAppear function is executed after a new instance of the custom component is created, before its build() function is executed.
 
 **Since:** 7
 
@@ -41,9 +39,7 @@ The aboutToAppear function is executed after a new instance of the custom compon
 aboutToDisappear?(): void
 ```
 
-aboutToDisappear Method and it is migrated from class CustomComponent.
-
-The aboutToDisappear function executes before a custom component is destroyed.
+aboutToDisappear Method and it is migrated from class CustomComponent.The aboutToDisappear function executes before a custom component is destroyed.
 
 **Since:** 7
 
@@ -366,9 +362,7 @@ Invoked when a user clicks the back button on a router-managed page (a custom co
 onDidBuild?(): void
 ```
 
-The callback method after the custom component is built and it is migrated from class CustomComponent.
-
-Triggered when the custom component has been built.
+The callback method after the custom component is built and it is migrated from class CustomComponent.Triggered when the custom component has been built.
 
 **Since:** 12
 
@@ -661,7 +655,7 @@ onWillApplyTheme?(theme: Theme): void
 
 Invoked before the **build()** function of a new instance of the custom component is executed, to obtain the **Theme** object of the component context. You can change state variables in **onWillApplyTheme**. The change will take effect when you execute the **build()** function next time.
 
-> Note:
+> * * Note: * *
 > Since API version 18, this API can be used in the status management V2 component.
 
 > **NOTE：**

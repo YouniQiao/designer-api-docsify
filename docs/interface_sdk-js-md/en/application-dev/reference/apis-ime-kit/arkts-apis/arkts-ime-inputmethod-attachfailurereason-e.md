@@ -1,6 +1,6 @@
 # AttachFailureReason
 
-@brief Enumerates the reasons for attachment failure.
+Enumerates the reasons for attachment failure.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@
 CALLER_NOT_FOCUSED = 0
 ```
 
-@brief The caller does not belong to the application of the focused window.
+The caller does not belong to the application of the focused window.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ CALLER_NOT_FOCUSED = 0
 IME_ABNORMAL
 ```
 
-@brief The input method application is abnormal.
+The input method application is abnormal.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ IME_ABNORMAL
 SERVICE_ABNORMAL
 ```
 
-@brief The input method framework service is abnormal.
+The input method framework service is abnormal.
 
 **Since:** 23
 

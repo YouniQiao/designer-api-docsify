@@ -1,8 +1,6 @@
 # ShowActionMenuOptions
 
-Defines the option of ShowActionMenu.
-
-@interface ShowActionMenuOptions
+Defines the option of ShowActionMenu.@interface ShowActionMenuOptions
 
 **Since:** 11
 

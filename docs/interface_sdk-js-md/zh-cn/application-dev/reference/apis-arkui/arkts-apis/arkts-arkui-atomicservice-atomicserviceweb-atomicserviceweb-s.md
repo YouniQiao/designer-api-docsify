@@ -2,13 +2,13 @@
 
 为开发者提供满足定制化诉求的Web高阶组件，屏蔽原生Web组件中无需关注的接口，并提供JS扩展能力。
 
-> **说明：**
-> 
-> - 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
+> **说明：**&gt;
+> - 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。&gt;
 > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
 
 **起始版本：** 12
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct AtomicServiceWeb--><!--Device-unnamed-export declare struct AtomicServiceWeb-End-->
 
@@ -23,8 +23,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorRecei
 ## controller
 
 ```TypeScript
-@ObjectLink
-  controller: AtomicServiceWebController
+controller: AtomicServiceWebController
 ```
 
 通过AtomicServiceWebController可以控制AtomicServiceWeb组件各种行为。
@@ -32,6 +31,8 @@ import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorRecei
 **类型：** [AtomicServiceWebController](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @ObjectLink
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,8 +43,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorRecei
 ## darkMode
 
 ```TypeScript
-@Prop
-  darkMode?: WebDarkMode
+darkMode?: WebDarkMode
 ```
 
 设置Web深色模式，默认关闭。
@@ -51,6 +51,8 @@ import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorRecei
 **类型：** WebDarkMode
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -61,8 +63,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorRecei
 ## forceDarkAccess
 
 ```TypeScript
-@Prop
-  forceDarkAccess?: boolean
+forceDarkAccess?: boolean
 ```
 
 设置网页是否开启强制深色模式。true表示设置网页开启强制深色模式，false表示设置网页不开启强制深色模式。默认值：false。 该属性仅在darkMode开启深色模式时生效。
@@ -70,6 +71,8 @@ import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorRecei
 **类型：** boolean
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -80,8 +83,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorRecei
 ## mixedMode
 
 ```TypeScript
-@Prop
-  mixedMode?: MixedMode
+mixedMode?: MixedMode
 ```
 
 设置是否允许加载超文本传输协议（HTTP）和超文本传输安全协议（HTTPS）混合内容，默认不允许加载HTTP和HTTPS混合内容。
@@ -89,6 +91,8 @@ import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorRecei
 **类型：** MixedMode
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -117,8 +121,7 @@ navPathStack?: NavPathStack
 ## nestedScroll
 
 ```TypeScript
-@Prop
-  nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
+nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 ```
 
 设置嵌套滚动选项。nestedScroll为NestedScrollOptions（向前、向后两个方向）类型时， scrollForward、scrollBackward默认滚动选项为NestedScrollMode.SELF_FIRST。 nestedScroll为NestedScrollOptionsExt（上下左右四个方向）类型时， scrollUp、scrollDown、scrollLeft、scrollRight默认滚动选项为NestedScrollMode.SELF_FIRST。
@@ -126,6 +129,8 @@ navPathStack?: NavPathStack
 **类型：** NestedScrollOptions \| NestedScrollOptionsExt
 
 **起始版本：** 15
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

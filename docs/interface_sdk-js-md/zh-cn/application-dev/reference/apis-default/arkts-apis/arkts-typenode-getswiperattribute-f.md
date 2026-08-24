@@ -22,7 +22,7 @@ export function getSwiperAttribute(node: FrameNode): SwiperAttribute | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-framenode-c.md) | 是 | 目标Swiper节点 |
+| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | 目标Swiper节点 |
 
 **返回值：**
 

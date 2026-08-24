@@ -75,11 +75,8 @@ isEnabled?: boolean
 symbolIcon?: SymbolGlyphModifier
 ```
 
-菜单栏单个选项的symbol资源（优先级高于icon）。
-
-**说明：**
-
-不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的 fontSize属性修改图标大小、effectStrategy 属性修改动效、symbolEffect属性修改动 效类型。
+菜单栏单个选项的symbol资源（优先级高于icon）。  
+**说明：**不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的 fontSize属性修改图标大小、effectStrategy 属性修改动效、symbolEffect属性修改动 效类型。
 
 **类型：** SymbolGlyphModifier
 
@@ -99,9 +96,7 @@ symbolIcon?: SymbolGlyphModifier
 value: string | Resource
 ```
 
-API version 9：显示菜单栏单个选项的文本。
-
-从API version 10开始，不显示菜单栏单个选项的文本。
+API version 9：显示菜单栏单个选项的文本。从API version 10开始，不显示菜单栏单个选项的文本。
 
 **类型：** string \| Resource
 

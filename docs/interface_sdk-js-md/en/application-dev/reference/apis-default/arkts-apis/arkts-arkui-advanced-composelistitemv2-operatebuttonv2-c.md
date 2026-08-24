@@ -6,6 +6,8 @@ Declare type OperateButtonV2
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class OperateButtonV2--><!--Device-unnamed-export declare class OperateButtonV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ The constructor of OperateButtonV2.
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of the button.
@@ -54,6 +55,8 @@ The accessibilityDescription of the button.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateButtonV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateButtonV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -63,8 +66,7 @@ The accessibilityDescription of the button.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 The accessibilityLevel of the button.
@@ -77,6 +79,8 @@ The accessibilityLevel of the button.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateButtonV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateButtonV2-@Trace  public accessibilityLevel?: string-End-->
@@ -86,8 +90,7 @@ The accessibilityLevel of the button.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of the button.
@@ -98,6 +101,8 @@ The accessibilityText of the button.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateButtonV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateButtonV2-@Trace  public accessibilityText?: ResourceStr-End-->
@@ -107,8 +112,7 @@ The accessibilityText of the button.
 ## text
 
 ```TypeScript
-@Trace
-  public text?: ResourceStr
+public text?: ResourceStr
 ```
 
 The text on the button.
@@ -118,6 +122,8 @@ The text on the button.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

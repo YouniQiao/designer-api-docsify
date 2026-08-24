@@ -1,8 +1,6 @@
 # TextSelectableMode
 
-Type of text selectable.
-
-@enum {number}
+Type of text selectable.@enum {number}
 
 **Since:** 23
 

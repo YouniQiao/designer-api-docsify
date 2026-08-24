@@ -1125,6 +1125,8 @@
   - [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md)
   - [PiPState](arkts-arkui-pipwindow-pipstate-e.md)
   - [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)
+  <!--Del-->
+  - [PiPTemplateType(系统接口)](arkts-arkui-pipwindow-piptemplatetype-e-sys.md)<!--DelEnd-->
   - [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md)
   - [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md)
   - [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md)

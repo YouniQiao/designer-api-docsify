@@ -1,8 +1,6 @@
 # AuthState (System API)
 
-Indicates the screen lock authentication state.
-
-@enum { int }
+Indicates the screen lock authentication state.@enum { int }
 
 **Since:** 23
 

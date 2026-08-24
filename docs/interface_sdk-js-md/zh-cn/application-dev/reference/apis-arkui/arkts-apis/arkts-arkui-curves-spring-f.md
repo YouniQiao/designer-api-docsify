@@ -14,8 +14,7 @@ function spring(velocity: number, mass: number, stiffness: number, damping: numb
 
 构造弹簧曲线对象。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves.springCurve](arkts-arkui-curves-springcurve-f.md)替代。
 
 **起始版本：** 7

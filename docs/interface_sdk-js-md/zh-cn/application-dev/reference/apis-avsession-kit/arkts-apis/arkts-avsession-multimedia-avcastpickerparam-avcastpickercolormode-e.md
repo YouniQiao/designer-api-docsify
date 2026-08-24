@@ -1,8 +1,6 @@
 # AVCastPickerColorMode
 
-投播组件显示模式参数选项。
-
-@enum { int }
+投播组件显示模式参数选项。@enum { int }
 
 **起始版本：** 23
 

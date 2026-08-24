@@ -1,8 +1,6 @@
 # ImageFrameInfo
 
-Defines the ImageFrameInfo Interface.
-
-@interface ImageFrameInfo
+Defines the ImageFrameInfo Interface.@interface ImageFrameInfo
 
 **Since:** 23
 

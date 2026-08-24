@@ -1,8 +1,6 @@
 # MessageHandler(定义ArkTS的EAWorker消息处理器)
 
-MessageHandler类提供EAWorker消息通信相关的类型。 MessageHandler用于定义消息（Message）的处理逻辑，不同消息可以由不同的MessageHandler处理。 MessageHandler提供消息调度和队列管理能力，包括发送消息、检查消息队列、移除待执行消息等操作。
-
-@namespace concurrency
+MessageHandler类提供EAWorker消息通信相关的类型。 MessageHandler用于定义消息（Message）的处理逻辑，不同消息可以由不同的MessageHandler处理。 MessageHandler提供消息调度和队列管理能力，包括发送消息、检查消息队列、移除待执行消息等操作。@namespace concurrency
 
 **起始版本：** 26.0.0
 

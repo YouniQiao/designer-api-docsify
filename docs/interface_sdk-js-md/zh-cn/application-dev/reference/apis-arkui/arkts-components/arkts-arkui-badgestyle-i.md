@@ -2,8 +2,7 @@
 
 Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大小。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边线。如
 > 需实现相关场景，建议使用Text组件设置outline代替Badge组件。
 
@@ -24,9 +23,7 @@ Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大
 badgeColor?: ResourceColor
 ```
 
-Badge的颜色。
-
-默认值：Color.Red
+Badge的颜色。默认值：Color.Red
 
 **类型：** ResourceColor
 
@@ -48,17 +45,11 @@ Badge的颜色。
 badgeSize?: number | ResourceStr
 ```
 
-Badge的大小。string类型支持number类型取值的字符串形式，可以附带单位，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"16"、"16fp"，不附带单位时默认单位为"fp"。
-
-默认值：16vp
-
-默认单位：fp
-
-取值范围：大于0；取值为0时不显示Badge，取值小于0时取默认值。
-
+Badge的大小。string类型支持number类型取值的字符串形式，可以附带单位，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"16"、"16fp"，不附带单位时默认单位为"fp"。默认值：16vp默认单位：fp取值范围：大于0；取值为0时不显示Badge，取值小于0时取默认值。  
 **说明：**
-
-1. 不支持设置百分比，当设置为百分比时，按照默认值处理。 2. 从API version 20开始，支持ResourceStr类型。 3. 当设置了fontSize且badgeSize小于fontSize时，badgeSize将按照fontSize生效。
+1. 不支持设置百分比，当设置为百分比时，按照默认值处理。
+2. 从API version 20开始，支持ResourceStr类型。
+3. 当设置了fontSize且badgeSize小于fontSize时，badgeSize将按照fontSize生效。
 
 **类型：** number \| ResourceStr
 
@@ -80,9 +71,7 @@ Badge的大小。string类型支持number类型取值的字符串形式，可以
 borderColor?: ResourceColor
 ```
 
-底板描边颜色。
-
-默认值：Color.Red
+底板描边颜色。默认值：Color.Red
 
 **类型：** ResourceColor
 
@@ -104,15 +93,8 @@ borderColor?: ResourceColor
 borderWidth?: Length
 ```
 
-底板描边粗细。
-
-默认值：1
-
-单位：vp
-
-**说明：**
-
-不支持设置百分比，当设置为百分比时，按照默认值处理。
+底板描边粗细。默认值：1单位：vp  
+**说明：**不支持设置百分比，当设置为百分比时，按照默认值处理。
 
 **类型：** Length
 
@@ -134,9 +116,7 @@ borderWidth?: Length
 color?: ResourceColor
 ```
 
-文本颜色。
-
-默认值：Color.White
+文本颜色。默认值：Color.White
 
 **类型：** ResourceColor
 
@@ -158,15 +138,11 @@ color?: ResourceColor
 enableAutoAvoidance?: boolean
 ```
 
-角标文本延伸显示时是否避让。
-
-true表示避让，false表示不避让。
-
-默认值：false
-
+角标文本延伸显示时是否避让。true表示避让，false表示不避让。默认值：false  
 **说明：**
-
-1. 避让效果为角标文本向组件内部延伸显示。 2. 当外描边的宽度大于0时，角标的延伸起点为外描边的内侧。 3. 当position设置为具体坐标值时，角标不进行避让处理。
+1. 避让效果为角标文本向组件内部延伸显示。
+2. 当外描边的宽度大于0时，角标的延伸起点为外描边的内侧。
+3. 当position设置为具体坐标值时，角标不进行避让处理。
 
 **类型：** boolean
 
@@ -188,17 +164,10 @@ true表示避让，false表示不避让。
 fontSize?: number | ResourceStr
 ```
 
-文本大小。string类型仅支持number类型取值的字符串形式，可以附带单位，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"10"、"10fp"，不附带单位时默认单位为"fp"。
-
-默认值：10vp
-
-默认单位：fp
-
-取值范围：大于0；取值为0时不显示文本，取值小于0时取默认值。
-
+文本大小。string类型仅支持number类型取值的字符串形式，可以附带单位，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"10"、"10fp"，不附带单位时默认单位为"fp"。默认值：10vp默认单位：fp取值范围：大于0；取值为0时不显示文本，取值小于0时取默认值。  
 **说明：**
-
-1. 不支持设置百分比，当设置为百分比时，按照默认值处理。 2. 从API version 20开始，支持ResourceStr类型。
+1. 不支持设置百分比，当设置为百分比时，按照默认值处理。
+2. 从API version 20开始，支持ResourceStr类型。
 
 **类型：** number \| ResourceStr
 
@@ -220,13 +189,8 @@ fontSize?: number | ResourceStr
 fontWeight?: number | FontWeight | ResourceStr
 ```
 
-设置文本的字体粗细。number类型取值范围：[100, 900]，取值间隔为100。取值越大，字体越粗。设置number类型在取值范围外时，按默认值400处理。string类型仅支持number类型取值的字符串形式，例如"400 "，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
-
-默认值：FontWeight.Normal
-
-**说明：**
-
-不支持设置百分比，当设置为百分比时，按照默认值处理。从API version 20开始，支持ResourceStr类型。
+设置文本的字体粗细。number类型取值范围：[100, 900]，取值间隔为100。取值越大，字体越粗。设置number类型在取值范围外时，按默认值400处理。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal  
+**说明：**不支持设置百分比，当设置为百分比时，按照默认值处理。从API version 20开始，支持ResourceStr类型。
 
 **类型：** number \| FontWeight \| ResourceStr
 
@@ -246,9 +210,7 @@ fontWeight?: number | FontWeight | ResourceStr
 outerBorderColor?: ResourceColor
 ```
 
-底板外描边颜色。
-
-默认值：Color.White
+底板外描边颜色。默认值：Color.White
 
 **类型：** ResourceColor
 
@@ -270,13 +232,7 @@ outerBorderColor?: ResourceColor
 outerBorderWidth?: LengthMetrics
 ```
 
-底板外描边粗细。
-
-默认值：0
-
-单位：vp
-
-不支持设置百分比，当设置为百分比时，按照默认值处理。
+底板外描边粗细。默认值：0单位：vp不支持设置百分比，当设置为百分比时，按照默认值处理。
 
 **类型：** LengthMetrics
 

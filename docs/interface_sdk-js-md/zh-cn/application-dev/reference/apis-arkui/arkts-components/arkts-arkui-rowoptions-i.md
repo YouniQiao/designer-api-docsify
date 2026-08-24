@@ -2,8 +2,7 @@
 
 设置Row组件的子组件间距属性。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 18
@@ -23,19 +22,8 @@
 space?: string | number
 ```
 
-横向布局元素间距。
-
-从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。
-
-默认值：0
-
-单位：vp
-
-非法值：按默认值处理。
-
-**说明：**
-
-space取值是大于等于0的数字，或者可以转换为数字的字符串。
+横向布局元素间距。从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。默认值：0单位：vp非法值：按默认值处理。  
+**说明：**space取值是大于等于0的数字，或者可以转换为数字的字符串。
 
 **类型：** string \| number
 

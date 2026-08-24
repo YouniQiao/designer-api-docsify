@@ -100,8 +100,8 @@ compare(Char, Char)按底层的char值比较两个Char。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lhs | [Char](arkts-arkts-char-c.md) | 是 | 参与比较的第一个Char。 |
-| rhs | [Char](arkts-arkts-char-c.md) | 是 | 参与比较的第二个Char。 |
+| lhs | Char | 是 | 参与比较的第一个Char。 |
+| rhs | Char | 是 | 参与比较的第二个Char。 |
 
 **返回值：**
 
@@ -131,7 +131,7 @@ public compareTo(other: Char): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Char](arkts-arkts-char-c.md) | 是 | 用于比较的Char对象。 |
+| other | Char | 是 | 用于比较的Char对象。 |
 
 **返回值：**
 
@@ -1253,7 +1253,7 @@ toLowerCase()在底层char值为大写时将其转换为小写， 否则原样�
 
 | 类型 | 说明 |
 | --- | --- |
-| [Char](arkts-arkts-char-c.md) | 由底层char值转换得到的小写char值。 |
+| Char | 由底层char值转换得到的小写char值。 |
 
 ## toShort
 
@@ -1445,7 +1445,7 @@ toUpperCase()在底层char值为小写时将其转换为大写， 否则原样�
 
 | 类型 | 说明 |
 | --- | --- |
-| [Char](arkts-arkts-char-c.md) | 由底层char值转换得到的大写char值。 |
+| Char | 由底层char值转换得到的大写char值。 |
 
 ## '\u0000'
 

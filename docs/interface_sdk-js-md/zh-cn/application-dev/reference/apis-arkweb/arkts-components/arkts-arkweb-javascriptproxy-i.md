@@ -11,11 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## asyncMethodList
@@ -114,11 +109,7 @@ object: object
 permission?: string
 ```
 
-json字符串，默认为空，通过该字符串配置JSBridge的权限管控，可以定义object、method一级的url白名单。
-
-JavaScriptProxy的permission参数支持resource/http/https协议，不支持file协议。
-
-示例请参考[前端页面调用应用侧函数](../../../web/web-in-page-app-function-invoking.md)。
+json字符串，默认为空，通过该字符串配置JSBridge的权限管控，可以定义object、method一级的url白名单。JavaScriptProxy的permission参数支持resource/http/https协议，不支持file协议。示例请参考[前端页面调用应用侧函数](../../../web/web-in-page-app-function-invoking.md)。
 
 **类型：** string
 

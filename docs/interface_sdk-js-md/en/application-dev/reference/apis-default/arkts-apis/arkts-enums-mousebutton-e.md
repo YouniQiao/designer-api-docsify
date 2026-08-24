@@ -1,8 +1,6 @@
 # MouseButton
 
-Define the button types of the mouse device.
-
-@enum { number }
+Define the button types of the mouse device.@enum { number }
 
 **Since:** 23
 

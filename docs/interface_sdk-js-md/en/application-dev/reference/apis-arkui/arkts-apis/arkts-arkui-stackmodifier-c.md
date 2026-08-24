@@ -1,8 +1,6 @@
 # StackModifier
 
-Defines Stack Modifier
-
-@implements StackAttribute, AttributeModifier&lt;StackAttribute&gt;
+Defines Stack Modifier@implements StackAttribute, AttributeModifier&lt;StackAttribute&gt;
 
 **Inheritance/Implementation:** StackModifier implements StackAttribute, AttributeModifier<StackAttribute>
 

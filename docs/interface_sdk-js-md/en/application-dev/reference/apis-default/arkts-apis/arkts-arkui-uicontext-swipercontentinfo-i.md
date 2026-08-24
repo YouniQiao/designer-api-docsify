@@ -1,8 +1,6 @@
 # SwiperContentInfo
 
-The information returned when the Swiper content changes.
-
-@interface SwiperContentInfo
+The information returned when the Swiper content changes.@interface SwiperContentInfo
 
 **Since:** 23
 

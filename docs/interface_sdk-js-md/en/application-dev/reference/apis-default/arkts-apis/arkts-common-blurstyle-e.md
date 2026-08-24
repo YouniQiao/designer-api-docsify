@@ -1,8 +1,6 @@
 # BlurStyle
 
-enum Blur style
-
-@enum { number }
+enum Blur style@enum { number }
 
 **Since:** 23
 

@@ -2,13 +2,11 @@
 
 Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offscreen onto a canvas. Rendering offscreen onto a canvas is a process where content to draw onto the canvas is first drawn in the buffer, and then converted into a picture, and finally the picture is drawn on the canvas. Since off-screen rendering utilizes the CPU, its performance is relatively slow. Therefore, it should be avoided in scenarios where drawing speed is a critical requirement.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **OffscreenCanvasRenderingContext2D** cannot be used in **ServiceExtensionAbility**. It is
 > recommended that you use the
 > [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
-> for offscreen rendering in **ServiceExtensionAbility**.
-> 
+> for offscreen rendering in **ServiceExtensionAbility**.&gt;
 > The following path-related APIs apply only to paths created within
 > **OffscreenCanvasRenderingContext2D** and do not affect paths defined in
 > [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)

@@ -18,7 +18,7 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 action: (index: int) => void
 ```
 
-@brief Mandatory. Callback invoked when the pattern option changes.
+Mandatory. Callback invoked when the pattern option changes.
 
 **Type:** (index: int) =&gt; void
 
@@ -34,7 +34,7 @@ action: (index: int) => void
 defaultSelected?: int
 ```
 
-@brief Optional. Default selected pattern.
+Optional. Default selected pattern.
 
 **Type:** int
 
@@ -50,7 +50,7 @@ defaultSelected?: int
 patterns: Array<Pattern>
 ```
 
-@brief Mandatory. Resource of the pattern option.
+Mandatory. Resource of the pattern option.
 
 **Type:** Array&lt;[Pattern](arkts-ime-inputmethodlist-pattern-i.md)&gt;
 

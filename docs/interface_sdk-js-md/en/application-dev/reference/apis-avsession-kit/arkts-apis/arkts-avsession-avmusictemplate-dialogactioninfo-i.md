@@ -1,8 +1,6 @@
 # DialogActionInfo
 
-The definition of dialog action result.
-
-@interface DialogActionInfo
+The definition of dialog action result.@interface DialogActionInfo
 
 **Since:** 23
 

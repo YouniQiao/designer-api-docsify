@@ -4051,7 +4051,7 @@ overlay(value: string | CustomBuilder | ComponentContent<Object> | undefined, op
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| [CustomBuilder](arkts-custombuilder-t.md) \| [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;Object&gt; \| undefined | 是 |  |
+| value | string \| [CustomBuilder](arkts-custombuilder-t.md) \| [ComponentContent](arkts-componentcontent-c.md)&lt;Object&gt; \| undefined | 是 |  |
 | options | [OverlayOptions](arkts-common-overlayoptions-i.md) | 否 |  |
 
 **返回值：**
@@ -4406,7 +4406,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding | undef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| paddingValue | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) \| undefined | 是 |  |
+| paddingValue | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [LengthMetrics](arkts-graphics-lengthmetrics-c.md) \| [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) \| undefined | 是 |  |
 
 **返回值：**
 

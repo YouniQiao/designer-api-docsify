@@ -1,8 +1,6 @@
 # CheckboxGroupResult
 
-Defines the options of CheckboxGroupResult.
-
-@interface CheckboxGroupResult
+Defines the options of CheckboxGroupResult.@interface CheckboxGroupResult
 
 **Since:** 23
 

@@ -12,8 +12,7 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 function unregisterTypeDescriptors(typeIds: Array<string>): Promise<void>
 ```
 
-从系统中注销一个或多个标准化数据类型。使用Promise异步回调。注销后，该数据类型将不再被系统识别，依赖该数据类型的数据可能无法正常处理，请确保在注销前已清理相关数据依赖。
-
+从系统中注销一个或多个标准化数据类型。使用Promise异步回调。注销后，该数据类型将不再被系统识别，依赖该数据类型的数据可能无法正常处理，请确保在注销前已清理相关数据依赖。  
 **配对调用：** - 注销通过registerTypeDescriptors()接口注册的标准化数据类型。 - 注销后，该类型将无法再被系统识别和使用。
 
 **起始版本：** 23

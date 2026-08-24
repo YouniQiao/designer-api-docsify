@@ -66,8 +66,7 @@ static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 
 Subscribes to data changes of the acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [ACCELEROMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 > instead. since API Version 8.
@@ -119,8 +118,7 @@ static subscribeBarometer(options: SubscribeBarometerOptions): void
 
 Subscribes to data changes of the barometer sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [BAROMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 > instead. since API Version 8.
@@ -167,8 +165,7 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 
 Subscribes to data changes of the compass sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [ORIENTATION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 > since API Version 8.
@@ -213,12 +210,9 @@ Sensor.subscribeCompass(subscribeCompassOptions);
 static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void
 ```
 
-Subscribes to data changes of the device orientation sensor.
+Subscribes to data changes of the device orientation sensor.If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
 
-If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [ORIENTATION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 > instead. since API Version 8.
@@ -266,12 +260,9 @@ Sensor.subscribeDeviceOrientation(subscribeDeviceOrientationOptions);
 static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 ```
 
-Subscribes to data changes of the gyroscope sensor.
+Subscribes to data changes of the gyroscope sensor.If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
 
-If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [GYROSCOPE](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 > instead. since API Version 8.
@@ -323,8 +314,7 @@ static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 
 Subscribes to data changes of the heart rate sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [HEART_RATE](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 > instead. since API Version 8.
@@ -373,8 +363,7 @@ static subscribeLight(options: SubscribeLightOptions): void
 
 Subscribes to data changes of the ambient light sensor. If this API is called multiple times, the last call takes effect.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [AMBIENT_LIGHT](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 > since API Version 8.
@@ -421,8 +410,7 @@ static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 
 Subscribes to wearing status changes of a wearable device. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [WEAR_DETECTION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 > instead. since API Version 8.
@@ -469,8 +457,7 @@ static subscribeProximity(options: SubscribeProximityOptions): void
 
 Subscribes to data changes of the proximity sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [PROXIMITY](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 > instead. since API Version 8.
@@ -517,8 +504,7 @@ static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 
 Subscribes to data changes of the step counter sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [PEDOMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 > instead. since API Version 8.
@@ -567,8 +553,7 @@ static unsubscribeAccelerometer(): void
 
 Unsubscribes from data changes of the acceleration sensor.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [ACCELEROMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > instead. since API Version 8.
@@ -601,8 +586,7 @@ static unsubscribeBarometer(): void
 
 Unsubscribes from data changes of the barometer sensor.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [BAROMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > instead. since API Version 8.
@@ -633,8 +617,7 @@ static unsubscribeCompass(): void
 
 Unsubscribes from data changes of the compass sensor.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [ORIENTATION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > instead.
@@ -665,8 +648,7 @@ static unsubscribeDeviceOrientation(): void
 
 Unsubscribes from data changes of the device orientation sensor.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [ORIENTATION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > instead. since API Version 8.
@@ -697,8 +679,7 @@ static unsubscribeGyroscope(): void
 
 Unsubscribes from data changes of the gyroscope sensor.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [GYROSCOPE](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > instead. since API Version 8.
@@ -731,8 +712,7 @@ static unsubscribeHeartRate(): void
 
 Unsubscribes from data changes of the heart rate sensor.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [HEART_RATE](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > instead. since API Version 8.
@@ -765,8 +745,7 @@ static unsubscribeLight(): void
 
 Unsubscribes from data changes of the ambient light sensor.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [AMBIENT_LIGHT](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > instead. since API Version 8.
@@ -797,8 +776,7 @@ static unsubscribeOnBodyState(): void
 
 Unsubscribes from wearing status changes of a wearable device.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [WEAR_DETECTION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > instead. since API Version 8.
@@ -829,8 +807,7 @@ static unsubscribeProximity(): void
 
 Unsubscribes from data changes of the proximity sensor.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [PROXIMITY](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > instead. since API Version 8.
@@ -861,8 +838,7 @@ static unsubscribeStepCounter(): void
 
 Unsubscribes from data changes of the step counter sensor.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
 > [PEDOMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > instead. since API Version 8.

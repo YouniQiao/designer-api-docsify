@@ -18,7 +18,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcButton](arkts-arkui-advanced-arcbutton-arcbutton-s.md) | ArcButton({ options: ArcButtonOptions }) |
+| [ArcButton](arkts-arkui-advanced-arcbutton-arcbutton-s.md) | ArcButton({ options: ArcButtonOptions })创建ArcButton实例，入参是弧形按钮配置选项。 |
 
 ### 接口
 

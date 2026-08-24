@@ -12,7 +12,6 @@ Describes the audio renderer change event.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## clientUid

@@ -6,7 +6,7 @@
 
 **废弃版本：** 23
 
-**替代接口：** [WebCookieManager](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md)
+**替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
 
 <!--Device-unnamed-declare class WebCookie--><!--Device-unnamed-declare class WebCookie-End-->
 
@@ -15,11 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## constructor
@@ -34,7 +29,7 @@ WebCookie的构造函数。
 
 **废弃版本：** 23
 
-**替代接口：** [WebCookieManager](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md)
+**替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +49,7 @@ saveCookie()
 
 **废弃版本：** 9
 
-**替代接口：** [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)
+**替代接口：** [saveCookieAsync](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#savecookieasync)
 
 <!--Device-WebCookie-saveCookie()--><!--Device-WebCookie-saveCookie()-End-->
 

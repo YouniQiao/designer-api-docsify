@@ -759,13 +759,13 @@ public static clz32(x: Int): Int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Int](arkts-arkts-int-c.md) | 是 | 32位整数。 |
+| x | Int | 是 | 32位整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | x的位表示中前导零位的数量。 |
+| Int | x的位表示中前导零位的数量。 |
 
 ## clz32
 
@@ -1126,7 +1126,7 @@ public static imul(a: double, b: double): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | (a b) % 2^32的结果。 |
+| double | (a * b) % 2^32的结果。 |
 
 ## log
 

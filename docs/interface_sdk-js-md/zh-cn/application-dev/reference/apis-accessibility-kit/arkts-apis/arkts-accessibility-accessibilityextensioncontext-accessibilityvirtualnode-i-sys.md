@@ -16,9 +16,7 @@
 accessibilityFocused?: boolean
 ```
 
-表示元素是否因无障碍目的获得焦点。true表示已获得焦点，false表示未获得焦点。
-
-默认值：false。
+表示元素是否因无障碍目的获得焦点。true表示已获得焦点，false表示未获得焦点。默认值：false。
 
 **类型：** boolean
 
@@ -38,9 +36,7 @@ accessibilityFocused?: boolean
 accessibilityGroup?: boolean
 ```
 
-元素是否为无障碍组。true表示元素是无障碍组，false表示元素不是无障碍组。
-
-默认值：true。
+元素是否为无障碍组。true表示元素是无障碍组，false表示元素不是无障碍组。默认值：true。
 
 **类型：** boolean
 
@@ -60,15 +56,7 @@ accessibilityGroup?: boolean
 accessibilityLevel?: string
 ```
 
-组件的无障碍级别。
-
-'auto'：当前组件由无障碍分组服务和ArkUI进行综合判断组件是否可被辅助功能识别。
-
-'yes'：当前组件可被辅助功能识别。
-
-'no'：当前组件不可被辅助功能识别。
-
-'no-hide-descendants'：当前组件及其所有子组件不可被辅助功能识别。
+组件的无障碍级别。'auto'：当前组件由无障碍分组服务和ArkUI进行综合判断组件是否可被辅助功能识别。'yes'：当前组件可被辅助功能识别。'no'：当前组件不可被辅助功能识别。'no-hide-descendants'：当前组件及其所有子组件不可被辅助功能识别。
 
 **类型：** string
 
@@ -108,9 +96,7 @@ accessibilityText?: string
 checkable?: boolean
 ```
 
-元素是否可勾选。true表示可勾选，false表示不可勾选。
-
-默认值：false。
+元素是否可勾选。true表示可勾选，false表示不可勾选。默认值：false。
 
 **类型：** boolean
 
@@ -130,9 +116,7 @@ checkable?: boolean
 checked?: boolean
 ```
 
-元素是否已勾选。true表示已勾选，false表示未勾选。
-
-默认值：false。
+元素是否已勾选。true表示已勾选，false表示未勾选。默认值：false。
 
 **类型：** boolean
 
@@ -172,9 +156,7 @@ childNodeIds?: Array<long>
 clickable?: boolean
 ```
 
-元素是否可点击。true表示可点击，false表示不可点击。
-
-默认值：false。
+元素是否可点击。true表示可点击，false表示不可点击。默认值：false。
 
 **类型：** boolean
 
@@ -214,9 +196,7 @@ customComponentType?: string
 elementId?: long
 ```
 
-元素所属组件的ID。
-
-默认值：-1。
+元素所属组件的ID。默认值：-1。
 
 **类型：** long
 
@@ -236,9 +216,7 @@ elementId?: long
 enabled?: boolean
 ```
 
-元素是否启用。true表示启用，false表示未启用。
-
-对应AccessibilityElement的isEnable属性，默认值：false。
+元素是否启用。true表示启用，false表示未启用。对应AccessibilityElement的isEnable属性，默认值：false。
 
 **类型：** boolean
 
@@ -298,9 +276,7 @@ rect?: Rect
 selected?: boolean
 ```
 
-元素是否已选中。true表示已选中，false表示未选中。
-
-默认值：false。
+元素是否已选中。true表示已选中，false表示未选中。默认值：false。
 
 **类型：** boolean
 

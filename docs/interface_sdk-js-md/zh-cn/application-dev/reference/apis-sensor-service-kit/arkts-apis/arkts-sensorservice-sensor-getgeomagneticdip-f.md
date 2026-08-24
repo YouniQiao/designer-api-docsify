@@ -14,8 +14,7 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 
 根据倾斜矩阵计算地磁倾斜角。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md)
 > 替代。
@@ -73,8 +72,7 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 
 根据倾斜矩阵计算地磁倾斜角。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md)替代。
 

@@ -1,8 +1,6 @@
 # OffscreenCanvasRenderingContext2D
 
-Draw context object for the OffscreenCanvas component.
-
-@extends CanvasRenderer
+Draw context object for the OffscreenCanvas component.@extends CanvasRenderer
 
 **Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvas-canvasrenderer-c.md)
 

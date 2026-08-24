@@ -1,8 +1,6 @@
 # FocusAxisEvent
 
-Focus axis event object description.
-
-@extends BaseEvent
+Focus axis event object description.@extends BaseEvent
 
 **Inheritance/Implementation:** FocusAxisEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 

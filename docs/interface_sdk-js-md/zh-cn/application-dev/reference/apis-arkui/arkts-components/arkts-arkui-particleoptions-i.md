@@ -19,13 +19,8 @@
 acceleration?: AccelerationOptions<ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER>
 ```
 
-粒子加速度配置。
-
-**说明：**
-
-speed表示加速度大小，angle表示加速度方向（单位为角度）。
-
-默认值：{ speed:{range:[0.0,0.0]},angle:{range:[0.0,0.0]} }
+粒子加速度配置。  
+**说明：**speed表示加速度大小，angle表示加速度方向（单位为角度）。默认值：{ speed:{range:[0.0,0.0]},angle:{range:[0.0,0.0]} }
 
 **类型：** [AccelerationOptions](arkts-arkui-accelerationoptions-i.md)&lt;ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER&gt;
 
@@ -47,11 +42,8 @@ speed表示加速度大小，angle表示加速度方向（单位为角度）。
 color?: ParticleColorPropertyOptions<COLOR_UPDATER>
 ```
 
-粒子颜色配置。
-
-**说明：**
-
-默认值：{ range:[Color.White,Color.White] } 。图片粒子不支持设置颜色。
+粒子颜色配置。  
+**说明：**默认值：{ range:[Color.White,Color.White] } 。图片粒子不支持设置颜色。
 
 **类型：** [ParticleColorPropertyOptions](arkts-arkui-particlecolorpropertyoptions-i.md)&lt;COLOR_UPDATER&gt;
 
@@ -93,9 +85,7 @@ emitter: EmitterOptions<PARTICLE>
 opacity?: ParticlePropertyOptions<number, OPACITY_UPDATER>
 ```
 
-粒子透明度配置。
-
-默认值：{ range:[1.0,1.0] }
+粒子透明度配置。默认值：{ range:[1.0,1.0] }
 
 **类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, OPACITY_UPDATER&gt;
 
@@ -117,9 +107,7 @@ opacity?: ParticlePropertyOptions<number, OPACITY_UPDATER>
 scale?: ParticlePropertyOptions<number, SCALE_UPDATER>
 ```
 
-粒子大小配置。
-
-默认值：{ range:[1.0,1.0] }
+粒子大小配置。默认值：{ range:[1.0,1.0] }
 
 **类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, SCALE_UPDATER&gt;
 
@@ -141,11 +129,7 @@ scale?: ParticlePropertyOptions<number, SCALE_UPDATER>
 spin?: ParticlePropertyOptions<number, SPIN_UPDATER>
 ```
 
-粒子自旋角度配置。
-
-默认值：{range:[0.0,0.0]}
-
-方向：正数表示顺时针旋转，负数表示逆时针旋转。
+粒子自旋角度配置。默认值：{range:[0.0,0.0]}方向：正数表示顺时针旋转，负数表示逆时针旋转。
 
 **类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, SPIN_UPDATER&gt;
 
@@ -167,13 +151,8 @@ spin?: ParticlePropertyOptions<number, SPIN_UPDATER>
 velocity?: VelocityOptions
 ```
 
-粒子速度配置。
-
-**说明：**
-
-speed表示速度大小。angle表示速度的方向（单位为角度），以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。
-
-默认值：{ speed:[0.0,0.0],angle:[0.0,0.0] }
+粒子速度配置。  
+**说明：**speed表示速度大小。angle表示速度的方向（单位为角度），以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。默认值：{ speed:[0.0,0.0],angle:[0.0,0.0] }
 
 **类型：** [VelocityOptions](arkts-arkui-velocityoptions-i.md)
 

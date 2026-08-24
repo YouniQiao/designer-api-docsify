@@ -11,11 +11,6 @@ Defines the callback information triggered when navigation is complete, includin
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## isMainFrame
@@ -24,9 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 isMainFrame?: boolean
 ```
 
-Whether the event is triggered by the main frame.
-
-The value **true** indicates that the event is triggered by the main frame, and **false** indicates the opposite.
+Whether the event is triggered by the main frame.The value **true** indicates that the event is triggered by the main frame, and **false** indicates the opposite.
 
 **Type:** boolean
 

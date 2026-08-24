@@ -14,9 +14,7 @@ function listFileExt(
 ): Promise<string[]>
 ```
 
-Lists all files in a directory. This API supports recursive listing of files and file filtering. This API uses a promise to return the result.
-
-You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
+Lists all files in a directory. This API supports recursive listing of files and file filtering. This API uses a promise to return the result.You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 26.0.0
 

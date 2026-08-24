@@ -1,8 +1,6 @@
 # BlendApplyType
 
-指示如何将指定的混合模式应用于视图的内容。
-
-@enum { number }
+指示如何将指定的混合模式应用于视图的内容。@enum { number }
 
 **起始版本：** 12
 

@@ -78,8 +78,7 @@ Dimension_4_4 = 4
 Dimension_2_1
 ```
 
-2 x 1 form。
-
+2 x 1 form。  
 **说明：** 该字段从API version 9开始支持，从API version 20开始废弃。
 
 **起始版本：** 9
@@ -98,8 +97,7 @@ Dimension_2_1
 DIMENSION_1_1 = 6
 ```
 
-1 x 1 form。
-
+1 x 1 form。  
 **说明：** 该尺寸仅在锁屏卡片上生效。
 
 **起始版本：** 23
@@ -132,9 +130,7 @@ DIMENSION_6_4 = 7
 DIMENSION_2_3 = 8
 ```
 
-2 x 3 form。
-
-该字段仅在Wearable上生效，在其他设备类型中无效果。
+2 x 3 form。该字段仅在Wearable上生效，在其他设备类型中无效果。
 
 **起始版本：** 23
 
@@ -150,9 +146,7 @@ DIMENSION_2_3 = 8
 DIMENSION_3_3 = 9
 ```
 
-3 x 3 form。
-
-该字段仅在Wearable上生效，在其他设备类型中无效果。
+3 x 3 form。该字段仅在Wearable上生效，在其他设备类型中无效果。
 
 **起始版本：** 23
 

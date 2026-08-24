@@ -27,8 +27,7 @@ addAccountImplicitly(
 
 Adds an application account implicitly based on the specified authentication type and options. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > createAccountImplicitly
 > instead.
@@ -250,8 +249,7 @@ authenticate(
 
 Authenticates an application account to obtain the OAuth token. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > auth instead.
 

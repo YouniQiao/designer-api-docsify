@@ -1,8 +1,6 @@
 # PathOptions
 
-Define options used to construct a path.
-
-@interface PathOptions
+Define options used to construct a path.@interface PathOptions
 
 **Since:** 23
 

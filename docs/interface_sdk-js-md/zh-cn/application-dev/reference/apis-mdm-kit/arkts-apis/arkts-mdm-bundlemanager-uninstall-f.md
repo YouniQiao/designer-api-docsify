@@ -14,8 +14,7 @@ function uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?
 
 卸载当前/指定用户下的指定包，选择是否保留包数据（由isKeepData指定）。使用Promise异步回调。调用成功后，应用被卸载，数据根据isKeepData参数保留或删除。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不
 > 允许卸载时，调用此接口卸载应用会返回401错误码。
 

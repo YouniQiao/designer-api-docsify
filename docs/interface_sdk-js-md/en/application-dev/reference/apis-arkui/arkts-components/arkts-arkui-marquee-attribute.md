@@ -1,8 +1,6 @@
 # Marquee properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
-
-In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
 
 **Inheritance/Implementation:** MarqueeAttribute extends CommonMethod<MarqueeAttribute>
 
@@ -239,9 +237,7 @@ Triggered when the marquee text changes or starts scrolling.
 onStop(event: Callback<void> | undefined)
 ```
 
-Called when scrolling is stopped.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If event is set to undefined, the current event will be unbound. </p>
+Called when scrolling is stopped.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If event is set to undefined, the current event will be unbound. </p>
 
 **Since:** 26.0.0
 

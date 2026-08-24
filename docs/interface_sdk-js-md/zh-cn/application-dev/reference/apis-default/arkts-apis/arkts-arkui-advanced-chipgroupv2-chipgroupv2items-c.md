@@ -8,6 +8,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipGroupV2Items--><!--Device-unnamed-export declare class ChipGroupV2Items-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

@@ -12,9 +12,7 @@ import { omapi } from '@kit.ConnectivityKit';
 function createService(): Promise<SEService>
 ```
 
-Creates an **SEService** instance for connecting to all available SEs in the system. The connection is time- consuming. Therefore, only asynchronous APIs are provided. This API uses a promise to return the result.
-
-The **SEService** object is available only when [isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected) returns **true**.
+Creates an **SEService** instance for connecting to all available SEs in the system. The connection is time- consuming. Therefore, only asynchronous APIs are provided. This API uses a promise to return the result.The **SEService** object is available only when [isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected) returns **true**.
 
 **Since:** 12
 

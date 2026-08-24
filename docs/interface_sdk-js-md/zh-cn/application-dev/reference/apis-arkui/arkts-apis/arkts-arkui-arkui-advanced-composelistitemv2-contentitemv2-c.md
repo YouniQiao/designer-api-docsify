@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ContentItemV2--><!--Device-unnamed-export declare class ContentItemV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,19 +43,16 @@ ContentItemV2的构造函数。
 ## description
 
 ```TypeScript
-@Trace
-  public description?: ResourceStr
+public description?: ResourceStr
 ```
 
-中间元素的描述内容。
-
-默认不设置或设置为undefined时，不显示描述内容。
-
-文本超长后无限换行显示。
+中间元素的描述内容。默认不设置或设置为undefined时，不显示描述内容。文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,19 +65,16 @@ ContentItemV2的构造函数。
 ## icon
 
 ```TypeScript
-@Trace
-  public icon?: ResourceStr
+public icon?: ResourceStr
 ```
 
-左侧元素的图标资源。
-
-默认不设置或设置为undefined，表示不显示icon图标资源。
-
-同时设置symbolStyle时，只显示Symbol图标。
+左侧元素的图标资源。默认不设置或设置为undefined，表示不显示icon图标资源。同时设置symbolStyle时，只显示Symbol图标。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,17 +87,16 @@ ContentItemV2的构造函数。
 ## iconStyle
 
 ```TypeScript
-@Trace
-  public iconStyle?: IconTypeV2
+public iconStyle?: IconTypeV2
 ```
 
-左侧元素的图标类型。
-
-默认不设置或设置为undefined，表示不显示icon图标资源。
+左侧元素的图标类型。默认不设置或设置为undefined，表示不显示icon图标资源。
 
 **类型：** [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,19 +109,16 @@ ContentItemV2的构造函数。
 ## primaryText
 
 ```TypeScript
-@Trace
-  public primaryText?: ResourceStr
+public primaryText?: ResourceStr
 ```
 
-中间元素的标题内容。
-
-默认不设置或设置为undefined时，不显示标题内容。
-
-文本超长后无限换行显示。
+中间元素的标题内容。默认不设置或设置为undefined时，不显示标题内容。文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -139,19 +131,16 @@ ContentItemV2的构造函数。
 ## secondaryText
 
 ```TypeScript
-@Trace
-  public secondaryText?: ResourceStr
+public secondaryText?: ResourceStr
 ```
 
-中间元素的副标题内容。
-
-默认不设置或设置为undefined时，不显示副标题内容。
-
-文本超长后无限换行显示。
+中间元素的副标题内容。默认不设置或设置为undefined时，不显示副标题内容。文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,17 +153,16 @@ ContentItemV2的构造函数。
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
-左侧元素的Symbol图标资源，优先级大于icon，同时设置了icon和Symbol图标，只显示Symbol图标。
-
-默认不设置或设置为undefined，Symbol图标不显示。
+左侧元素的Symbol图标资源，优先级大于icon，同时设置了icon和Symbol图标，只显示Symbol图标。默认不设置或设置为undefined，Symbol图标不显示。
 
 **类型：** SymbolGlyphModifier
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

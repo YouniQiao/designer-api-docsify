@@ -1,8 +1,6 @@
 # GradientDirection
 
-线性渐变的方向。
-
-@enum { number }
+线性渐变的方向。@enum { number }
 
 **起始版本：** 23
 

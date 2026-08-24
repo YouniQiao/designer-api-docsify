@@ -1,10 +1,6 @@
 # RdbStore
 
-Provides APIs for managing data in an RDB store.
-
-Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md) method and then call the corresponding method through the instance.
-
-In addition, use [execute](#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
+Provides APIs for managing data in an RDB store.Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md) method and then call the corresponding method through the instance.In addition, use [execute](#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
 
 **Since:** 23
 
@@ -283,11 +279,7 @@ See [backup](#backup)
 batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<long>): void
 ```
 
-Inserts a batch of data into the target table.
-
-The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.
-
-Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#on_conflict_replace) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
+Inserts a batch of data into the target table.The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#on_conflict_replace) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
 **Since:** 23
 
@@ -489,11 +481,7 @@ if (store != undefined) {
 batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>
 ```
 
-Inserts a batch of data into the target table.
-
-The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.
-
-Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#on_conflict_replace) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
+Inserts a batch of data into the target table.The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#on_conflict_replace) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
 **Since:** 23
 
@@ -549,11 +537,7 @@ See [batchInsert](#batchinsert)
 batchInsertSync(table: string, values: Array<ValuesBucket>): long
 ```
 
-Inserts a batch of data into the target table.
-
-The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.
-
-Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#on_conflict_replace) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
+Inserts a batch of data into the target table.The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#on_conflict_replace) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
 **Since:** 23
 
@@ -699,9 +683,7 @@ batchInsertWithConflictResolution(
     ): Promise<long>
 ```
 
-Inserts a batch of data into the target table.
-
-A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800000 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+Inserts a batch of data into the target table.A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800000 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 23
 
@@ -850,9 +832,7 @@ batchInsertWithConflictResolutionSync(
     ): long
 ```
 
-Inserts a batch of data into the target table.
-
-A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800000 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+Inserts a batch of data into the target table.A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800000 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 23
 
@@ -996,9 +976,7 @@ batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-Inserts a batch of data into the target table and return a resultSet of changed fields.
-
-A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800001 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+Inserts a batch of data into the target table and return a resultSet of changed fields.A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800001 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 23
 
@@ -1089,9 +1067,7 @@ batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config:
       conflict?: ConflictResolution): Result
 ```
 
-Inserts a batch of data into the target table and return a resultSet of changed fields.
-
-A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800001 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+Inserts a batch of data into the target table and return a resultSet of changed fields.A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code 14800001 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 23
 
@@ -1311,9 +1287,7 @@ if (store != undefined) {
 cleanDirtyData(table: string, cursor: long, callback: AsyncCallback<void>): void
 ```
 
-Cleans the dirty data, which is the data deleted in the cloud.
-
-Data with a cursor smaller than the specified cursor will be cleaned up.
+Cleans the dirty data, which is the data deleted in the cloud.Data with a cursor smaller than the specified cursor will be cleaned up.
 
 **Since:** 23
 
@@ -1448,9 +1422,7 @@ See [cleanDirtyData](#cleandirtydata)
 cleanDirtyData(table: string, cursor?: long): Promise<void>
 ```
 
-Cleans dirty data deleted in the cloud.
-
-If a cursor is specified, data with a cursor smaller than the specified cursor will be cleaned up. otherwise clean all.
+Cleans dirty data deleted in the cloud.If a cursor is specified, data with a cursor smaller than the specified cursor will be cleaned up. otherwise clean all.
 
 **Since:** 23
 
@@ -1724,7 +1696,7 @@ Sync data to cloud.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:    *     <br> 1. Mandatory parameters are left unspecified.   *     <br> 2. Incorrect parameter types.   *     <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:     *     <br> 1. Mandatory parameters are left unspecified.    *     <br> 2. Incorrect parameter types.    *     <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -7064,8 +7036,9 @@ syncEx(mode: SyncMode, predicates: RdbPredicates): Promise<Array<SyncResult>>
 ```
 
 Sync data between devices.
-
-1. The difference between the sync interface and the syncEx interface is that they can return more error codes, but their functionality is similar. 2. Before invoking synchronization, call setdistributedTable to set the distributed table.
+1. The difference between the sync interface and the syncEx interface is that they can return more error codes,
+but their functionality is similar.
+2. Before invoking synchronization, call setdistributedTable to set the distributed table.
 
 **Since:** 26.0.0
 

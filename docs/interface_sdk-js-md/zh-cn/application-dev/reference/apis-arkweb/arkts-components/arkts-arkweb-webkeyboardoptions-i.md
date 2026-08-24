@@ -11,11 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## customKeyboard
@@ -60,11 +55,7 @@ enterKeyType?: number
 useSystemKeyboard: boolean
 ```
 
-是否使用系统默认软键盘。
-
-true表示使用系统默认软键盘，false表示不使用系统默认软键盘。
-
-默认值：true。
+是否使用系统默认软键盘。true表示使用系统默认软键盘，false表示不使用系统默认软键盘。默认值：true。
 
 **类型：** boolean
 

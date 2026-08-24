@@ -1,8 +1,6 @@
 # TransformObject
 
-TransformObject
-
-@interface TransformObject
+TransformObject@interface TransformObject
 
 **Since:** 4
 

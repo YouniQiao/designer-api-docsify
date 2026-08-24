@@ -1,8 +1,6 @@
 # @ohos.wallpaper
 
-System wallpaper
-
-@namespace wallpaper
+System wallpaper@namespace wallpaper
 
 **Since:** 23
 
@@ -89,16 +87,16 @@ import { wallpaper } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Indicates wallpaper type. |
+| [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Indicates wallpaper type.@enum { int } WallpaperType |
 
 <!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md) | Define the folding state of wallpaper |
-| [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) | Define the rotation state of wallpaper |
-| [WallpaperResourceType](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) | Indicates the resource type of the wallpaper. |
+| [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md) | Define the folding state of wallpaper@enum { int } FoldState |
+| [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) | Define the rotation state of wallpaper@enum { int } RotateState |
+| [WallpaperResourceType](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) | Indicates the resource type of the wallpaper.@enum { int } WallpaperResourceType |
 <!--DelEnd-->
 
 ### Types

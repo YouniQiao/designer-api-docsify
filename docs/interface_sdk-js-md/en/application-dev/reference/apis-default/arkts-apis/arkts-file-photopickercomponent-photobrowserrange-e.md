@@ -1,8 +1,6 @@
 # PhotoBrowserRange
 
-PhotoBrowserRange. include ALL and SELECTED_ONLY
-
-@enum { int } PhotoBrowserRange
+PhotoBrowserRange. include ALL and SELECTED_ONLY@enum { int } PhotoBrowserRange
 
 **Since:** 26.0.0
 

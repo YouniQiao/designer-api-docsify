@@ -32,7 +32,7 @@ function allocUninitialized(size: int): Buffer
 
 | 类型 | 说明 |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 未初始化的Buffer实例。 |
+| Buffer | 未初始化的Buffer实例。 |
 
 **示例**
 

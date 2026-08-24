@@ -16,5 +16,5 @@ PositionT info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Vector2T](arkts-graphics-vector2t-i.md)&lt;T&gt;
+**Property type:** [Vector2T](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector2t-i.md)&lt;T&gt;
 

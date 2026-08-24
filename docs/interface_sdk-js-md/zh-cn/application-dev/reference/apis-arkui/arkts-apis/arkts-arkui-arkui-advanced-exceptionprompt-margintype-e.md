@@ -14,11 +14,7 @@ MarginType定义marginType的类型。
 DEFAULT_MARGIN = 0
 ```
 
-默认边距：
-
-边距1：引用ohos_id_card_margin_start。
-
-边距2：引用ohos_id_card_margin_end。
+默认边距：边距1：引用ohos_id_card_margin_start。边距2：引用ohos_id_card_margin_end。
 
 **起始版本：** 11
 
@@ -36,11 +32,7 @@ DEFAULT_MARGIN = 0
 FIT_MARGIN = 1
 ```
 
-可适配边距：
-
-边距1：引用ohos_id_max_padding_start。
-
-边距2：引用ohos_id_max_padding_end。
+可适配边距：边距1：引用ohos_id_max_padding_start。边距2：引用ohos_id_max_padding_end。
 
 **起始版本：** 11
 

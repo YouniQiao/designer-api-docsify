@@ -1,8 +1,6 @@
 # EdgeWidths
 
-Defines the border width property.
-
-@interface EdgeWidths
+Defines the border width property.@interface EdgeWidths
 
 **Since:** 23
 

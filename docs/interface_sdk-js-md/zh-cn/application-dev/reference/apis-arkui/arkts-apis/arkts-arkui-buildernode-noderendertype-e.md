@@ -2,12 +2,10 @@
 
 节点渲染类型枚举。
 
-> **说明：**
-> 
-> - RENDER_TYPE_TEXTURE类型目前仅在[BuilderNode](../../apis-default/arkts-apis/arkts-buildernode-c.md)持有组件树的根节点为自定义组件时以及
-> [XComponentNode](arkts-arkui-xcomponentnode-c.md)中设置生效。
-> 
-> - 在[BuilderNode](../../apis-default/arkts-apis/arkts-buildernode-c.md)的情况下，目前在作为根节点的自定义组件中支持纹理导出的有以下组件：Badge
+> **说明：**&gt;
+> - RENDER_TYPE_TEXTURE类型目前仅在[BuilderNode](arkts-arkui-buildernode-c.md)持有组件树的根节点为自定义组件时以及
+> [XComponentNode](arkts-arkui-xcomponentnode-c.md)中设置生效。&gt;
+> - 在[BuilderNode](arkts-arkui-buildernode-c.md)的情况下，目前在作为根节点的自定义组件中支持纹理导出的有以下组件：Badge
 > 、Blank、Button、
 > CanvasGradient、CanvasPattern、
 > CanvasRenderingContext2D、
@@ -37,8 +35,7 @@
 > TextInput、TextTimer、
 > Text、Toggle、
 > Video（不含全屏播放能力）、Web、
-> XComponent。
-> 
+> XComponent。&gt;
 > - 从API version 12开始，新增以下组件支持纹理导出：DatePicker、
 > ForEach、Grid、
 > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、
@@ -48,8 +45,7 @@
 > [@Component](../../../ui/state-management/arkts-create-custom-components.md#component)修饰的自定义组件、
 > NodeContainer以及
 > NodeContainer下挂载的FrameNode和
-> [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md)。
-> 
+> [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md)。&gt;
 > - 使用方式可参考[同层渲染绘制](../../../web/web-same-layer.md)。
 
 **起始版本：** 11

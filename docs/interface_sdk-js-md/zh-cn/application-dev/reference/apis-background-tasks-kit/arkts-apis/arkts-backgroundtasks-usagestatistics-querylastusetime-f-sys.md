@@ -28,7 +28,7 @@ function queryLastUseTime(appInfo: Record<string, Array<long>>): Promise<AppStat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appInfo | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Array&lt;long&gt;&gt; | 是 | 参数为map结构，key是bundleName，value是查询应用的index（可以有多个，通过Array传入）。 |
+| appInfo | Record&lt;string, Array&lt;long&gt;&gt; | 是 | 参数为map结构，key是bundleName，value是查询应用的index（可以有多个，通过Array传入）。 |
 
 **返回值：**
 

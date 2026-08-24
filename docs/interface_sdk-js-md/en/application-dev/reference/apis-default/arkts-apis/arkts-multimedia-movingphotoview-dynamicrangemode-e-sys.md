@@ -1,8 +1,6 @@
 # DynamicRangeMode (System API)
 
-Dynamic range mode of moving photo.
-
-@enum { number }
+Dynamic range mode of moving photo.@enum { number }
 
 **Since:** 26.0.0
 

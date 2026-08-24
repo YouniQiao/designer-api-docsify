@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 
@@ -16,8 +14,7 @@ function getTopWindow(callback: AsyncCallback<Window>): void
 
 获取当前应用内最后显示的窗口，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
 
@@ -124,8 +121,7 @@ function getTopWindow(): Promise<Window>
 
 获取当前应用内最后显示的窗口，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 6开始支持，从API version 9开始废弃，建议使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
 
 **起始版本：** 6
@@ -159,8 +155,7 @@ function getTopWindow(ctx: BaseContext): Promise<Window>
 
 获取当前应用内最后显示的窗口，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
 
 **起始版本：** 8
@@ -198,8 +193,7 @@ function getTopWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 
 获取当前应用内最后显示的窗口，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，参数ctx传入null或undefined时，可能会导致callback无法得到执行，建议使用
 > [getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
 

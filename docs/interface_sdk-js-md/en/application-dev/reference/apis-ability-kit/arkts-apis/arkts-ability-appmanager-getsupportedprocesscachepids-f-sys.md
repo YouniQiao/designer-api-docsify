@@ -14,8 +14,7 @@ function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>
 
 Obtains the PIDs of processes that support quick startup after caching in a specified application. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can only be used to obtain the PIDs of the system account to which the caller belongs.
 
 **Since:** 23

@@ -1,12 +1,12 @@
 # TipsDialogV2
 
-Declare CustomDialog TipsDialogV2
-
-@struct { TipsDialogV2 }
+Declare CustomDialog TipsDialogV2@struct { TipsDialogV2 }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct TipsDialogV2--><!--Device-unnamed-export declare struct TipsDialogV2-End-->
 
@@ -20,8 +20,7 @@ Declare CustomDialog TipsDialogV2
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +40,7 @@ The method to build component.
 ## checked
 
 ```TypeScript
-@Param
-  checked?: boolean
+checked?: boolean
 ```
 
 Sets the TipsDialogV2 checkbox check state.
@@ -51,6 +51,8 @@ Sets the TipsDialogV2 checkbox check state.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TipsDialogV2-@Param  checked?: boolean--><!--Device-TipsDialogV2-@Param  checked?: boolean-End-->
@@ -60,8 +62,7 @@ Sets the TipsDialogV2 checkbox check state.
 ## checkTips
 
 ```TypeScript
-@Param
-  checkTips?: ResourceStr
+checkTips?: ResourceStr
 ```
 
 Sets the TipsDialogV2 checkbox tips.
@@ -72,6 +73,8 @@ Sets the TipsDialogV2 checkbox tips.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TipsDialogV2-@Param  checkTips?: ResourceStr--><!--Device-TipsDialogV2-@Param  checkTips?: ResourceStr-End-->
@@ -81,8 +84,7 @@ Sets the TipsDialogV2 checkbox tips.
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
 Sets the TipsDialogV2 content.
@@ -93,6 +95,8 @@ Sets the TipsDialogV2 content.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TipsDialogV2-@Param  content?: ResourceStr--><!--Device-TipsDialogV2-@Param  content?: ResourceStr-End-->
@@ -102,17 +106,18 @@ Sets the TipsDialogV2 content.
 ## imageBorderColor
 
 ```TypeScript
-@Param
-  imageBorderColor?: ColorMetrics
+imageBorderColor?: ColorMetrics
 ```
 
 Sets the borderColor of TipsDialogV2 image.
 
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -123,17 +128,18 @@ Sets the borderColor of TipsDialogV2 image.
 ## imageBorderWidth
 
 ```TypeScript
-@Param
-  imageBorderWidth?: LengthMetrics
+imageBorderWidth?: LengthMetrics
 ```
 
 Sets the borderWidth of TipsDialogV2 image.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,9 +150,7 @@ Sets the borderWidth of TipsDialogV2 image.
 ## imageRes
 
 ```TypeScript
-@Require
-  @Param
-  imageRes: ResourceStr | PixelMap
+imageRes: ResourceStr | PixelMap
 ```
 
 Sets the TipsDialogV2 imageRes.
@@ -157,6 +161,8 @@ Sets the TipsDialogV2 imageRes.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Require, @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TipsDialogV2-@Require  @Param  imageRes: ResourceStr | PixelMap--><!--Device-TipsDialogV2-@Require  @Param  imageRes: ResourceStr | PixelMap-End-->
@@ -166,8 +172,7 @@ Sets the TipsDialogV2 imageRes.
 ## imageSize
 
 ```TypeScript
-@Param
-  imageSize?: SizeOptions
+imageSize?: SizeOptions
 ```
 
 Sets the TipsDialogV2 image size.
@@ -178,6 +183,8 @@ Sets the TipsDialogV2 image size.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TipsDialogV2-@Param  imageSize?: SizeOptions--><!--Device-TipsDialogV2-@Param  imageSize?: SizeOptions-End-->
@@ -187,8 +194,7 @@ Sets the TipsDialogV2 image size.
 ## onCheckedChange
 
 ```TypeScript
-@Param
-  onCheckedChange?: AdvancedDialogV2OnCheckedChange
+onCheckedChange?: AdvancedDialogV2OnCheckedChange
 ```
 
 Sets the TipsDialogV2 CheckBox Callback.
@@ -199,6 +205,8 @@ Sets the TipsDialogV2 CheckBox Callback.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TipsDialogV2-@Param  onCheckedChange?: AdvancedDialogV2OnCheckedChange--><!--Device-TipsDialogV2-@Param  onCheckedChange?: AdvancedDialogV2OnCheckedChange-End-->
@@ -208,8 +216,7 @@ Sets the TipsDialogV2 CheckBox Callback.
 ## primaryButton
 
 ```TypeScript
-@Param
-  primaryButton?: AdvancedDialogV2Button
+primaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the TipsDialogV2 primary button.
@@ -220,6 +227,8 @@ Sets the TipsDialogV2 primary button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TipsDialogV2-@Param  primaryButton?: AdvancedDialogV2Button--><!--Device-TipsDialogV2-@Param  primaryButton?: AdvancedDialogV2Button-End-->
@@ -229,8 +238,7 @@ Sets the TipsDialogV2 primary button.
 ## secondaryButton
 
 ```TypeScript
-@Param
-  secondaryButton?: AdvancedDialogV2Button
+secondaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the TipsDialogV2 secondary button.
@@ -241,6 +249,8 @@ Sets the TipsDialogV2 secondary button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TipsDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button--><!--Device-TipsDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button-End-->
@@ -250,8 +260,7 @@ Sets the TipsDialogV2 secondary button.
 ## title
 
 ```TypeScript
-@Param
-  title?: ResourceStr
+title?: ResourceStr
 ```
 
 Sets the TipsDialogV2 title.
@@ -261,6 +270,8 @@ Sets the TipsDialogV2 title.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

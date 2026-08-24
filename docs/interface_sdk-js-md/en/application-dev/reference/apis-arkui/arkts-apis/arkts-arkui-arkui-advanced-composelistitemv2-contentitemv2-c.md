@@ -4,6 +4,8 @@ Declare ContentItemV2
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ContentItemV2--><!--Device-unnamed-export declare class ContentItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ The constructor of ContentItemV2.
 ## description
 
 ```TypeScript
-@Trace
-  public description?: ResourceStr
+public description?: ResourceStr
 ```
 
 Sets the description.
@@ -50,6 +51,8 @@ Sets the description.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ Sets the description.
 ## icon
 
 ```TypeScript
-@Trace
-  public icon?: ResourceStr
+public icon?: ResourceStr
 ```
 
 Sets the icon.
@@ -71,6 +73,8 @@ Sets the icon.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +87,7 @@ Sets the icon.
 ## iconStyle
 
 ```TypeScript
-@Trace
-  public iconStyle?: IconTypeV2
+public iconStyle?: IconTypeV2
 ```
 
 The type of icon.
@@ -92,6 +95,8 @@ The type of icon.
 **Type:** [IconTypeV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +109,7 @@ The type of icon.
 ## primaryText
 
 ```TypeScript
-@Trace
-  public primaryText?: ResourceStr
+public primaryText?: ResourceStr
 ```
 
 Sets the primaryText.
@@ -113,6 +117,8 @@ Sets the primaryText.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +131,7 @@ Sets the primaryText.
 ## secondaryText
 
 ```TypeScript
-@Trace
-  public secondaryText?: ResourceStr
+public secondaryText?: ResourceStr
 ```
 
 Sets the secondaryText.
@@ -134,6 +139,8 @@ Sets the secondaryText.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,8 +153,7 @@ Sets the secondaryText.
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 Sets the symbol.
@@ -155,6 +161,8 @@ Sets the symbol.
 **Type:** SymbolGlyphModifier
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,6 +1,6 @@
 # ActiveStreamVolumeInfo（系统接口）
 
-用于激活音频流的音量信息。
+活动音频流的音量信息。
 
 **起始版本：** 24
 
@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## appVolume
@@ -23,7 +22,7 @@ import { audioHaptic } from '@kit.AudioKit';
 appVolume: int
 ```
 
-应用的音量。
+应用程序的音量。 取值限定为整数。
 
 **类型：** int
 
@@ -43,7 +42,7 @@ appVolume: int
 clientUid: int
 ```
 
-音频应用的Uid。
+应用程序的UID。 取值限定为整数。
 
 **类型：** int
 
@@ -63,7 +62,7 @@ clientUid: int
 volumeType: AudioVolumeType
 ```
 
-当前音频流的音量类型。
+当前流的音量类型。
 
 **类型：** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)
 

@@ -23,8 +23,7 @@ heightBreakpoint?: Bindable<HeightBreakpoint>
 
 容器的高度断点，为获取到的当前ContainerReader组件在不同高宽比阈值下对应的高度断点枚举值。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。绑定后组件高度断点值变化时，
 > heightBreakpoint绑定的变量值会自动更新。
 
@@ -48,11 +47,10 @@ size: Bindable<Size>
 
 获取到的当前ContainerReader组件的尺寸，用于布局分析和断点计算。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。绑定后组件尺寸值变化时，size绑定的变量值会自动更新。
 
-**类型：** [Bindable](arkts-common-bindable-i.md)&lt;[Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)&gt;
+**类型：** [Bindable](arkts-common-bindable-i.md)&lt;Size&gt;
 
 **起始版本：** 26.0.0
 
@@ -72,8 +70,7 @@ widthBreakpoint?: Bindable<WidthBreakpoint>
 
 容器的宽度断点，为获取到的当前ContainerReader组件的宽度断点枚举值。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。绑定后组件宽度断点值变化时，
 > widthBreakpoint绑定的变量值会自动更新。
 

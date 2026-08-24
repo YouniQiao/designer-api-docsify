@@ -14,8 +14,7 @@ function openResource(resourceId: string, params?: HuksExternalCryptoParam[]): P
 
 打开指定资源ID的资源。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 打开的资源必须使用[closeResource](arkts-universalkeystore-huksexternalcrypto-closeresource-f.md)关闭。
 
 **起始版本：** 26.0.0

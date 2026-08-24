@@ -19,11 +19,7 @@
 closeSwipeAction?: boolean
 ```
 
-系统返回键生效时是否收起ListItem的划出组件。
-
-true表示收起ListItem的划出组件；false表示不收起ListItem的划出组件。
-
-默认值：true
+系统返回键生效时是否收起ListItem的划出组件。true表示收起ListItem的划出组件；false表示不收起ListItem的划出组件。默认值：true
 
 **类型：** boolean
 

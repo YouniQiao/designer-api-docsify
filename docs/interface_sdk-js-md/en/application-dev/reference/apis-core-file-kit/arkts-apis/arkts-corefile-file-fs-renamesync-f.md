@@ -16,8 +16,7 @@ declare function renameSync(oldPath: string, newPath: string): void
 
 Renames a file or directory. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in a distributed directory.
 
 **Since:** 9

@@ -22,7 +22,7 @@ Obtains the attributes of a **Text** node. If the node is not created using ArkT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
 
 **Return value:**
@@ -95,7 +95,7 @@ Obtains the attributes of a **Column** node. If the node is not created using Ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Column' | Yes | Node type. Set to **'Column'**. |
 
 **Return value:**
@@ -167,7 +167,7 @@ Obtains the attributes of a **Row** node. If the node is not created using ArkTS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Row' | Yes | Node type. Set to **'Row'**. |
 
 **Return value:**
@@ -239,7 +239,7 @@ Obtains the attributes of a **Stack** node. If the node is not created using Ark
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Stack' | Yes | Node type. Set to **'Stack'**. |
 
 **Return value:**
@@ -311,7 +311,7 @@ Obtains the Flex node attributes. If the node is not created using ArkTS, cross-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Flex' | Yes | Flex node type. |
 
 **Return value:**
@@ -383,7 +383,7 @@ Obtains the attributes of a **Swiper** node. If the node is not created using Ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Swiper' | Yes | Node type. Set to **'Swiper'**. |
 
 **Return value:**
@@ -419,7 +419,7 @@ Obtains the attributes of a **Progress** node. If the node is not created using 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Progress' | Yes | Node type. Set to **'Progress'**. |
 
 **Return value:**
@@ -490,7 +490,7 @@ Obtains the attributes of a **Scroll** node. If the node is not created using Ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Scroll' | Yes | Node type. Set to **'Scroll'**. |
 
 **Return value:**
@@ -526,7 +526,7 @@ Obtains the attributes of a **RelativeContainer** node. If the node is not creat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'RelativeContainer' | Yes | Node type. Set to **'RelativeContainer'**. |
 
 **Return value:**
@@ -598,7 +598,7 @@ Obtains the attributes of a LoadingProgress node. If the node is not created usi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'LoadingProgress' | Yes | Node type. Set to **'LoadingProgress'**. |
 
 **Return value:**
@@ -667,7 +667,7 @@ Obtains the attributes of an **Image** node. If the node is not created using Ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Image' | Yes | Node type. Set to **'Image'**. |
 
 **Return value:**
@@ -745,7 +745,7 @@ Obtains the attributes of a **List** node. If the node is not created using ArkT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'List' | Yes | Node type. Set to **'List'**. |
 
 **Return value:**
@@ -781,7 +781,7 @@ Obtains the attributes of a **ListItem** node. If the node is not created using 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'ListItem' | Yes | Node type. Set to **'ListItem'**. |
 
 **Return value:**
@@ -817,7 +817,7 @@ Obtains the attributes of a **TextInput** node. If the node is not created using
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'TextInput' | Yes | Node type. Set to **'TextInput'**. |
 
 **Return value:**
@@ -886,7 +886,7 @@ Obtains the attributes of a **Button** node. If the node is not created using Ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Button' | Yes | Node type. Set to **'Button'**. |
 
 **Return value:**
@@ -961,7 +961,7 @@ Obtains the attributes of a **ListItemGroup** node. If the node is not created u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'ListItemGroup' | Yes | Node type. Set to **'ListItemGroup'**. |
 
 **Return value:**
@@ -999,7 +999,7 @@ Obtains the attributes of a **WaterFlow** node. If the node is not created using
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'WaterFlow' | Yes | Node type. Set to **'WaterFlow'**. |
 
 **Return value:**
@@ -1035,7 +1035,7 @@ Obtains the attributes of a **FlowItem** node. If the node is not created using 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'FlowItem' | Yes | Node type. Set to **'FlowItem'**. |
 
 **Return value:**
@@ -1071,7 +1071,7 @@ Obtain the attributes of an **XComponent** node. If the node is not created usin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
 
 **Return value:**
@@ -1109,7 +1109,7 @@ Obtains the attributes of a **Checkbox** node. If the node is not created using 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Checkbox' | Yes | Node type. Set to **'Checkbox'**. |
 
 **Return value:**
@@ -1186,7 +1186,7 @@ Obtains the attributes of a **Radio** node. If the node is not created using Ark
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Radio' | Yes | Node type. Set to **'Radio'**. |
 
 **Return value:**
@@ -1262,7 +1262,7 @@ Obtains the attributes of a **Slider** node. If the node is not created using Ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Slider' | Yes | Node type. Set to **'Slider'**. |
 
 **Return value:**
@@ -1333,7 +1333,7 @@ Obtains the attributes of a **Toggle** node. If the node is not created using Ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Toggle' | Yes | Node type. Set to **'Toggle'**. |
 
 **Return value:**
@@ -1404,7 +1404,7 @@ Obtains the attributes of a **TextArea** node. If the node is not created using 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'TextArea' | Yes | Node type. Set to **'TextArea'**. |
 
 **Return value:**
@@ -1473,7 +1473,7 @@ Obtains the attributes of a **Grid** node. If the node is not created using ArkT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'Grid' | Yes | Node type. Set to **'Grid'**. |
 
 **Return value:**
@@ -1509,7 +1509,7 @@ Obtains the attributes of a **GridItem** node. If the node is not created using 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node from which to obtain attributes. |
 | nodeType | 'GridItem' | Yes | Node type. Set to **'GridItem'**. |
 
 **Return value:**

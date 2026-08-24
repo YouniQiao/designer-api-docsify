@@ -1,10 +1,6 @@
 # TimePickerDialogOptions
 
-时间选择器弹窗选项。
-
-继承自[TimePickerOptions](arkts-timepicker-timepickeroptions-i.md)。
-
-@extends TimePickerOptions @interface TimePickerDialogOptions
+时间选择器弹窗选项。继承自[TimePickerOptions](arkts-timepicker-timepickeroptions-i.md)。@extends TimePickerOptions @interface TimePickerDialogOptions
 
 **继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-timepicker-timepickeroptions-i.md)
 
@@ -22,13 +18,12 @@
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-设置确认按钮显示样式、样式和重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
-
+设置确认按钮显示样式、样式和重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。  
 **说明：**
-
-1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效， 保持默认值false。
-
-2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形 [ROUNDED_RECTANGLE](../../../reference/apis-arkui/arkui-ts/ts-basic-components-button.md#buttontype)，呈现效果 依然是胶囊型按钮[Capsule](../../../reference/apis-arkui/arkui-ts/ts-basic-components-button.md#buttontype)。
+1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
+保持默认值false。
+2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形  
+ROUNDED_RECTANGLE，呈现效果 依然是胶囊型按钮Capsule。
 
 **类型：** [PickerDialogButtonStyle](../../apis-arkui/arkts-components/arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -48,9 +43,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 alignment?: DialogAlignment
 ```
 
-设置弹窗在垂直方向上的对齐方式。
-
-默认值：DialogAlignment.Default
+设置弹窗在垂直方向上的对齐方式。默认值：DialogAlignment.Default
 
 **类型：** [DialogAlignment](../arkts-apis/arkts-alertdialog-dialogalignment-e.md)
 
@@ -70,12 +63,8 @@ alignment?: DialogAlignment
 backgroundBlurStyle?: BlurStyle
 ```
 
-弹窗背板模糊材质。
-
-默认值：BlurStyle.COMPONENT_ULTRA_THICK
-
+弹窗背板模糊材质。默认值：BlurStyle.COMPONENT_ULTRA_THICK  
 **说明：**
-
 - 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则显示的颜色将不 符合预期效果。
 
 **类型：** [BlurStyle](../../apis-arkui/arkts-components/arkts-arkui-blurstyle-e.md)
@@ -118,12 +107,8 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-弹窗背板颜色。
-
-默认值：Color.Transparent
-
+弹窗背板颜色。默认值：Color.Transparent  
 **说明：**
-
 - 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则显示的颜色将不符合预期效果。
 
 **类型：** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
@@ -166,13 +151,12 @@ backgroundEffect?: BackgroundEffectOptions
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-设置取消按钮显示样式、样式和重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
-
+设置取消按钮显示样式、样式和重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。  
 **说明：**
-
-1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，保持 默认值false。
-
-2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形 [ROUNDED_RECTANGLE](../../../reference/apis-arkui/arkui-ts/ts-basic-components-button.md#buttontype)，呈现效果 依然是胶囊型按钮[Capsule](../../../reference/apis-arkui/arkui-ts/ts-basic-components-button.md#buttontype)。
+1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，保持
+默认值false。
+2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形  
+ROUNDED_RECTANGLE，呈现效果 依然是胶囊型按钮Capsule。
 
 **类型：** [PickerDialogButtonStyle](../../apis-arkui/arkts-components/arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -192,13 +176,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 dateTimeOptions?: DateTimeOptions
 ```
 
-设置时分是否显示前导0，目前只支持设置hour和minute参数。
-
-默认值：
-
-hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"； 12小时制默认为"numeric"，即没有前导0。
-
-minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。
+设置时分是否显示前导0，目前只支持设置hour和minute参数。默认值：hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"； 12小时制默认为"numeric"，即没有前导0。minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。
 
 **类型：** DateTimeOptions
 
@@ -218,9 +196,7 @@ minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果�
 disappearTextStyle?: PickerTextStyle
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。
-
-默认值： { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。默认值： { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
 **类型：** [PickerTextStyle](../../apis-arkui/arkts-components/arkts-arkui-pickertextstyle-i.md)
 
@@ -240,13 +216,9 @@ disappearTextStyle?: PickerTextStyle
 enableCascade?: boolean
 ```
 
-设置上午和下午的标识是否根据小时数自动切换，仅在useMilitaryTime设置为false时生效。
-
-- true：自动切换。 - false：不自动切换。
-
-默认值：false
-
-当enableCascade设置为true时，仅在loop参数同时为true时生效。
+设置上午和下午的标识是否根据小时数自动切换，仅在useMilitaryTime设置为false时生效。  
+- true：自动切换。 - false：不自动切换。  
+默认值：false当enableCascade设置为true时，仅在loop参数同时为true时生效。
 
 **类型：** boolean
 
@@ -268,15 +240,12 @@ enableCascade?: boolean
 enableHapticFeedback?: boolean
 ```
 
-设置是否开启触控反馈。
-
-- true：开启触控反馈。 - false：不开启触控反馈。
-
-默认值：true
-
+设置是否开启触控反馈。  
+- true：开启触控反馈。 - false：不开启触控反馈。  
+默认值：true  
 **说明：**
-
-1. 设置为true后，其生效情况取决于系统的硬件是否支持。 2. 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限。
+1. 设置为true后，其生效情况取决于系统的硬件是否支持。
+2. 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限。
 
 **类型：** boolean
 
@@ -298,10 +267,8 @@ enableHapticFeedback?: boolean
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态。
-
-- true：响应悬停态。 - false：不响应悬停态。
-
+是否响应悬停态。  
+- true：响应悬停态。 - false：不响应悬停态。  
 默认值：false
 
 **类型：** boolean
@@ -324,9 +291,7 @@ enableHoverMode?: boolean
 hoverModeArea?: HoverModeAreaType
 ```
 
-悬停态下弹窗默认展示区域。
-
-默认值：HoverModeAreaType.BOTTOM_SCREEN
+悬停态下弹窗默认展示区域。默认值：HoverModeAreaType.BOTTOM_SCREEN
 
 **类型：** [HoverModeAreaType](../../apis-arkui/arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
@@ -348,9 +313,7 @@ hoverModeArea?: HoverModeAreaType
 maskRect?: Rectangle
 ```
 
-弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。
-
-默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
+弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
 
 **类型：** [Rectangle](../../apis-arkui/arkts-components/arkts-arkui-rectangle-i.md)
 
@@ -370,9 +333,7 @@ maskRect?: Rectangle
 offset?: Offset
 ```
 
-设置弹窗相对alignment所在位置的偏移量。
-
-默认值：{ dx: 0, dy: 0 }
+设置弹窗相对alignment所在位置的偏移量。默认值：{ dx: 0, dy: 0 }
 
 **类型：** [Offset](../../apis-arkui/arkts-apis/arkts-arkui-offset-t.md)
 
@@ -452,11 +413,12 @@ onChange?: (value: TimePickerResult) => void
 onDidAppear?: VoidCallback
 ```
 
-弹窗弹出后的事件回调。
-
+弹窗弹出后的事件回调。  
 **说明：**
-
-1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 2. 在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。 4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
+1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+2. 在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+3. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
+4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -476,10 +438,8 @@ onDidAppear?: VoidCallback
 onDidDisappear?: VoidCallback
 ```
 
-弹窗消失后的事件回调。
-
+弹窗消失后的事件回调。  
 **说明：**
-
 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
@@ -500,10 +460,8 @@ onDidDisappear?: VoidCallback
 onEnterSelectedArea?: Callback<TimePickerResult>
 ```
 
-滑动过程中，选项进入分割线区域内，触发该回调。与onChange事件的差别在于，该事件的触发时机早于onChange事件，当当前滑动列滑动距离超过选中 项高度的一半时，选项此时已经进入分割线区域内，会触发该事件。
-
+滑动过程中，选项进入分割线区域内，触发该回调。与onChange事件的差别在于，该事件的触发时机早于onChange事件，当当前滑动列滑动距离超过选中 项高度的一半时，选项此时已经进入分割线区域内，会触发该事件。  
 **说明：**
-
 - 当enableCascade设置为true时，由于上午/下午列与小时列存在联动关系，不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节 点，而联动变化的选项并不涉及滑动，因此，回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
 **类型：** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;[TimePickerResult](arkts-timepicker-timepickerresult-i.md)&gt;
@@ -524,11 +482,10 @@ onEnterSelectedArea?: Callback<TimePickerResult>
 onWillAppear?: VoidCallback
 ```
 
-弹窗显示动效前的事件回调。
-
+弹窗显示动效前的事件回调。  
 **说明：**
-
-1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 2. 在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+2. 在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -548,11 +505,10 @@ onWillAppear?: VoidCallback
 onWillDisappear?: VoidCallback
 ```
 
-弹窗退出动效前的事件回调。
-
+弹窗退出动效前的事件回调。  
 **说明：**
-
-1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 2. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
+1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+2. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -572,9 +528,7 @@ onWillDisappear?: VoidCallback
 selectedTextStyle?: PickerTextStyle
 ```
 
-设置选中项的文本颜色、字号、字体粗细。
-
-默认值： { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } }
+设置选中项的文本颜色、字号、字体粗细。默认值： { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } }
 
 **类型：** [PickerTextStyle](../../apis-arkui/arkts-components/arkts-arkui-pickertextstyle-i.md)
 
@@ -594,10 +548,8 @@ selectedTextStyle?: PickerTextStyle
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。
-
+设置弹窗背板的阴影。  
 **说明：**
-
 - 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。
 
 **类型：** [ShadowOptions](../../apis-arkui/arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../../apis-arkui/arkts-components/arkts-arkui-shadowstyle-e.md)
@@ -638,9 +590,7 @@ systemMaterial?: SystemUiMaterial
 textStyle?: PickerTextStyle
 ```
 
-设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。
-
-默认值： { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
+设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。默认值： { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
 **类型：** [PickerTextStyle](../../apis-arkui/arkts-components/arkts-arkui-pickertextstyle-i.md)
 
@@ -660,10 +610,8 @@ textStyle?: PickerTextStyle
 useMilitaryTime?: boolean
 ```
 
-时间是否以24小时制展示。
-
-- true：时间以24小时制展示。 - false：时间以12小时制展示。
-
+时间是否以24小时制展示。  
+- true：时间以24小时制展示。 - false：时间以12小时制展示。  
 默认值：false
 
 **类型：** boolean

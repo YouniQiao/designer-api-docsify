@@ -20,7 +20,9 @@ import { connection } from '@kit.NetworkKit';
 bearerPrivateIdentifier?: string
 ```
 
-Network identifier. The identifier of the cellular network is **slot0** for SIM card 1 and **slot1** for SIM card 2. Since API version 12, you can pass the registered WLAN hotspot to the API to specify the WLAN network to be activated.
+Network identifier. The identifier of the cellular network is **slot0** for SIM card 1 and **slot1** for SIM card
+2. Since API version 12, you can pass the registered WLAN hotspot to the API to specify the WLAN network to be
+activated.
 
 **Type:** string
 

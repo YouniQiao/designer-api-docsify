@@ -15,6 +15,8 @@ export declare function TextPicker(
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function TextPicker(    options?: TextPickerOptions): TextPickerAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function TextPicker(    options?: TextPickerOptions): TextPickerAttribute-End-->

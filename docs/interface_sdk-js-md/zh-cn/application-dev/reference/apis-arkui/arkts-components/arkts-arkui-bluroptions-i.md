@@ -1,8 +1,6 @@
 # BlurOptions
 
-灰阶模糊参数。
-
-@interface BlurOptions
+灰阶模糊参数。@interface BlurOptions
 
 **起始版本：** 12
 

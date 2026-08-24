@@ -1,6 +1,6 @@
 # Column
 
-The **Column** component lays out child components vertically. > **NOTE** > > If no height or width is set for the **Column** component, the component automatically adapts to the size of its > child components in the main axis and cross axis respectively. > > **Child Components** > > Supported
+The **Column** component lays out child components vertically.> **NOTE**>> If no height or width is set for the **Column** component, the component automatically adapts to the size of its> child components in the main axis and cross axis respectively.>> **Child Components**>> Supported
 
 ## Column
 
@@ -10,8 +10,7 @@ Column(options?: ColumnOptions)
 
 Creates a vertical linear layout container. You can set the spacing between child components.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant
 > performance overhead. For performance purposes, you are advised to remove redundant nodes to simplify the
 > component tree, use layout boundaries to reduce redundant layout calculations, properly apply rendering control

@@ -4,9 +4,7 @@
 export type DrawingColorFilter = drawing.ColorFilter
 ```
 
-type DrawingColorFilter = drawing.ColorFilter
-
-颜色滤波器对象。
+type DrawingColorFilter = drawing.ColorFilter颜色滤波器对象。
 
 **起始版本：** 23
 

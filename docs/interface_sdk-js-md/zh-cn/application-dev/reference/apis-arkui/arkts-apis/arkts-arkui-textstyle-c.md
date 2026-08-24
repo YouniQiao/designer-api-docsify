@@ -63,9 +63,7 @@ readonly fontColor?: ResourceColor
 readonly fontConfigs?: FontConfigs
 ```
 
-获取属性字符串的字体配置。
-
-默认返回undefined，表示未设置fontConfigs。
+获取属性字符串的字体配置。默认返回undefined，表示未设置fontConfigs。
 
 **类型：** FontConfigs
 
@@ -85,9 +83,7 @@ readonly fontConfigs?: FontConfigs
 readonly fontFamily?: string
 ```
 
-获取属性字符串的文本字体。
-
-默认返回undefined。
+获取属性字符串的文本字体。默认返回undefined。
 
 **类型：** string
 
@@ -107,9 +103,7 @@ readonly fontFamily?: string
 readonly fontSize?: number
 ```
 
-获取属性字符串的文本字体大小。
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 
+获取属性字符串的文本字体大小。单位：vp 
 
 **类型：** number
 
@@ -149,9 +143,7 @@ readonly fontStyle?: FontStyle
 readonly fontVariations?: Array<FontVariation>
 ```
 
-获取可变字体的属性数组。
-
-默认值：undefined，表示未设置可变字体的属性。
+获取可变字体的属性数组。默认值：undefined，表示未设置可变字体的属性。
 
 **类型：** Array&lt;FontVariation&gt;
 
@@ -171,13 +163,8 @@ readonly fontVariations?: Array<FontVariation>
 readonly fontWeight?: number
 ```
 
-获取属性字符串的文本字体粗细。
-
-默认值：400
-
-**说明：**
-
-返回值为string类型，具体返回值和设置值关系参见下方表格。
+获取属性字符串的文本字体粗细。默认值：400  
+**说明：**返回值为string类型，具体返回值和设置值关系参见下方表格。
 
 **类型：** number
 
@@ -197,9 +184,7 @@ readonly fontWeight?: number
 readonly strokeColor?: ResourceColor
 ```
 
-获取属性字符串的文本描边颜色。
-
-默认返回字体颜色。
+获取属性字符串的文本描边颜色。默认返回字体颜色。
 
 **类型：** ResourceColor
 
@@ -219,9 +204,7 @@ readonly strokeColor?: ResourceColor
 readonly strokeJoinStyle?: StrokeJoinStyle
 ```
 
-获取属性字符串的文本描边拐角样式。
-
-默认值：StrokeJoinStyle.MITER_JOIN。
+获取属性字符串的文本描边拐角样式。默认值：StrokeJoinStyle.MITER_JOIN。
 
 **类型：** StrokeJoinStyle
 
@@ -241,9 +224,7 @@ readonly strokeJoinStyle?: StrokeJoinStyle
 readonly strokeWidth?: number
 ```
 
-获取属性字符串的文本描边宽度。
-
-默认返回0，单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
+获取属性字符串的文本描边宽度。默认返回0，单位为vp。
 
 **类型：** number
 
@@ -263,9 +244,7 @@ readonly strokeWidth?: number
 readonly superscript?: SuperscriptStyle
 ```
 
-获取属性字符串的文本上下角标。
-
-默认值：SuperscriptStyle.NORMAL。
+获取属性字符串的文本上下角标。默认值：SuperscriptStyle.NORMAL。
 
 **类型：** SuperscriptStyle
 

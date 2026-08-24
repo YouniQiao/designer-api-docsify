@@ -5,7 +5,6 @@ The **hardwareManager** module provides the capability of controlling distribute
 > **NOTE：**
 
 > The APIs provided by this module are system APIs.
-
 @namespace hardwareManager
 
 **Since:** 23

@@ -1,8 +1,6 @@
 # CommonState
 
-自定义弹窗的状态。
-
-@enum { number }
+自定义弹窗的状态。@enum { number }
 
 **起始版本：** 23
 

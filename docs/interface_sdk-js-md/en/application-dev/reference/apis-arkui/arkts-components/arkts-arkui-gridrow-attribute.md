@@ -50,8 +50,7 @@ onBreakpointChange(callback: (breakpoints: string) => void)
 Triggered when the breakpoint changes.
 
 > **NOTE：**
-> 
-> 
+> &gt;
 > When [breakpointsreference](#breakpointsreference) is set to **BreakpointsReference.ComponentSize**, you are not
 > advised to dynamically change the padding or margin
 > attribute value of the **GridRow** component in the **onBreakpointChange** callback.

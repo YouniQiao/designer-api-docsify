@@ -1,8 +1,7 @@
 # InstallErrorCode
 
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[包管理子系统通用错误码](../errorcode-bundle.md)
 > 替代。
 

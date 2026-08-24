@@ -1,16 +1,11 @@
 # WindowExtensionContext (System API)
 
-The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
+The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md), including starting the ability.
 
-The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md), including starting the ability.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This module is deprecated since API version 21. You are advised to use
-> [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) instead.
-> 
-> - The APIs provided by this module are system APIs.
-> 
+> [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) instead.&gt;
+> - The APIs provided by this module are system APIs.&gt;
 > - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** WindowExtensionContext extends ExtensionContext

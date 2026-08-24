@@ -1,12 +1,6 @@
 # AudioVolumeManager
 
-音量管理。
-
-在使用AudioVolumeManager的接口之前，需先通过[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
+音量管理。在使用AudioVolumeManager的接口前，需要使用 [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
 
 **起始版本：** 23
 
@@ -18,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getAppVolumePercentage
@@ -221,7 +214,7 @@ getVolumeGroupManager(groupId: int, callback: AsyncCallback<AudioVolumeGroupMana
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | groupId | int | 是 | 音量组id，默认使用DEFAULT_VOLUME_GROUP_ID。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | 是 | 回调函数。当获取音频组音量管理器实例成功，err为undefined，data为获取到的音频组音量管理器 实例；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | 是 | 回调函数。当获取音频组音量管理器实例成功，err为undefined，data为获取到的音频组音量管理器实例；否则为错 误对象。 |
 
 **示例**
 
@@ -486,6 +479,11 @@ off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
 
 取消监听系统音量变化事件。使用callback异步回调。
 
+> **说明：**
+> 
+> 从API version 12开始支持，从API version 20开始废弃，建议使用
+> [off('streamVolumeChange')](#offstreamvolumechange)替代。
+
 **起始版本：** 12
 
 **废弃版本：** 20
@@ -516,7 +514,7 @@ off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
 offAppVolumeChange(callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes to the app volume change events.
+取消监听当前应用的应用级音量变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -528,7 +526,7 @@ Unsubscribes to the app volume change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -558,7 +556,7 @@ audioVolumeManager.offAppVolumeChange(appVolumeChangeCallback);
 offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void
 ```
 
-Unsubscribes to the stream volume change events.
+取消监听系统音频流音量变化事件（当系统音频流音量发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -570,7 +568,7 @@ Unsubscribes to the stream volume change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. If there is no callback parameter, all callbacks will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 否 | 回调函数，返回变化后的音量信息。 |
 
 **示例**
 
@@ -651,6 +649,11 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 
 监听系统音量变化事件（当系统音量发生变化时触发）。使用callback异步回调。
 
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [on('streamVolumeChange')](#onstreamvolumechange)替代。
+
 **起始版本：** 9
 
 **废弃版本：** 20
@@ -681,7 +684,7 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 onAppVolumeChange(callback: Callback<VolumeEvent>): void
 ```
 
-Listens for app volume change events. The app volume may changed by your called [setAppVolumePercentage](#setappvolumepercentage) or other system settings.
+监听当前应用的应用级音量变化事件（当应用级音量发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -693,7 +696,7 @@ Listens for app volume change events. The app volume may changed by your called 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -715,7 +718,7 @@ audioVolumeManager.onAppVolumeChange((volumeEvent: audio.VolumeEvent) => {
 onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void
 ```
 
-Listens for stream volume change events. This method uses a callback to get volume change events.
+监听系统音频流音量变化事件（当系统音频流音量发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -727,8 +730,8 @@ Listens for stream volume change events. This method uses a callback to get volu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | StreamUsage to be listened. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 是 | Callback used to get the stream volume change event. |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 是 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 

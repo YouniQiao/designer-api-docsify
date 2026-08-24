@@ -2,14 +2,12 @@
 
 网格布局算法类。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > GridLayoutAlgorithm类对象可以作为
-> [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
-
+> [DynamicLayout](arkts-arkui-components-arkdynamiclayout-dynamiclayout-f.md)组件的入参指定布局算法。
 @implements LayoutAlgorithm
 
-**继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-layoutalgorithm-i.md)
+**继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md)
 
 **起始版本：** 24
 
@@ -39,7 +37,7 @@ constructor(option?: GridLayoutAlgorithmOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [GridLayoutAlgorithmOptions](arkts-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 否 | 网格布局算法的构造入参， 设置网格布局的列数、列间距、行间距。 |
+| option | [GridLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 否 | 网格布局算法的构造入参， 设置网格布局的列数、列间距、行间距。 |
 
 ## columnsGap
 
@@ -49,7 +47,7 @@ public columnsGap?: LengthMetrics
 
 列与列之间的间距。 非法值：按默认值处理。
 
-**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
@@ -89,7 +87,7 @@ public rowsGap?: LengthMetrics
 
 行与行之间的间距。 非法值：按默认值处理。
 
-**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 

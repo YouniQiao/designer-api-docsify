@@ -6,6 +6,8 @@ Defines chip options class.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export class ChipV2Options--><!--Device-unnamed-export class ChipV2Options-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ The constructor of ChipV2Options
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 Set accessibility description for Chip.
@@ -54,6 +55,8 @@ Set accessibility description for Chip.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-ChipV2Options-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -63,8 +66,7 @@ Set accessibility description for Chip.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 Set accessibility level for Chip.
@@ -75,6 +77,8 @@ Set accessibility level for Chip.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public accessibilityLevel?: string--><!--Device-ChipV2Options-@Trace  public accessibilityLevel?: string-End-->
@@ -84,8 +88,7 @@ Set accessibility level for Chip.
 ## accessibilitySelectedType
 
 ```TypeScript
-@Trace
-  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType
+public accessibilitySelectedType?: ChipV2AccessibilitySelectedType
 ```
 
 Set accessibility selected type for Chip.
@@ -96,6 +99,8 @@ Set accessibility selected type for Chip.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType--><!--Device-ChipV2Options-@Trace  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType-End-->
@@ -105,8 +110,7 @@ Set accessibility selected type for Chip.
 ## activated
 
 ```TypeScript
-@Trace
-  public activated?: boolean
+public activated?: boolean
 ```
 
 Set whether chip is active or not.
@@ -117,6 +121,8 @@ Set whether chip is active or not.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public activated?: boolean--><!--Device-ChipV2Options-@Trace  public activated?: boolean-End-->
@@ -126,8 +132,7 @@ Set whether chip is active or not.
 ## activatedBackgroundColor
 
 ```TypeScript
-@Trace
-  public activatedBackgroundColor?: ColorMetrics
+public activatedBackgroundColor?: ColorMetrics
 ```
 
 Chip background color when chip is activated.
@@ -138,6 +143,8 @@ Chip background color when chip is activated.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public activatedBackgroundColor?: ColorMetrics--><!--Device-ChipV2Options-@Trace  public activatedBackgroundColor?: ColorMetrics-End-->
@@ -147,8 +154,7 @@ Chip background color when chip is activated.
 ## activatedBackgroundSystemMaterial
 
 ```TypeScript
-@Trace
-  public activatedBackgroundSystemMaterial?: uiMaterial.Material
+public activatedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component which is activated. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -159,6 +165,8 @@ Set system-styled materials for the component which is activated. Different mate
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public activatedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-@Trace  public activatedBackgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -168,8 +176,7 @@ Set system-styled materials for the component which is activated. Different mate
 ## allowClose
 
 ```TypeScript
-@Trace
-  public allowClose?: boolean
+public allowClose?: boolean
 ```
 
 Show close icon.
@@ -180,6 +187,8 @@ Show close icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public allowClose?: boolean--><!--Device-ChipV2Options-@Trace  public allowClose?: boolean-End-->
@@ -189,8 +198,7 @@ Show close icon.
 ## backgroundColor
 
 ```TypeScript
-@Trace
-  public backgroundColor?: ColorMetrics
+public backgroundColor?: ColorMetrics
 ```
 
 Chip background color.
@@ -201,6 +209,8 @@ Chip background color.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public backgroundColor?: ColorMetrics--><!--Device-ChipV2Options-@Trace  public backgroundColor?: ColorMetrics-End-->
@@ -210,8 +220,7 @@ Chip background color.
 ## backgroundSystemMaterial
 
 ```TypeScript
-@Trace
-  public backgroundSystemMaterial?: uiMaterial.Material
+public backgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -222,6 +231,8 @@ Set system-styled materials for the component. Different materials have differen
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-@Trace  public backgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -231,8 +242,7 @@ Set system-styled materials for the component. Different materials have differen
 ## borderRadius
 
 ```TypeScript
-@Trace
-  public borderRadius?: LengthMetrics
+public borderRadius?: LengthMetrics
 ```
 
 Chip radius.
@@ -243,6 +253,8 @@ Chip radius.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public borderRadius?: LengthMetrics--><!--Device-ChipV2Options-@Trace  public borderRadius?: LengthMetrics-End-->
@@ -252,8 +264,7 @@ Chip radius.
 ## closeIcon
 
 ```TypeScript
-@Trace
-  public closeIcon?: ChipV2CloseIcon
+public closeIcon?: ChipV2CloseIcon
 ```
 
 Set config for default close icon when 'allowClose' is true.
@@ -264,6 +275,8 @@ Set config for default close icon when 'allowClose' is true.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public closeIcon?: ChipV2CloseIcon--><!--Device-ChipV2Options-@Trace  public closeIcon?: ChipV2CloseIcon-End-->
@@ -273,8 +286,7 @@ Set config for default close icon when 'allowClose' is true.
 ## direction
 
 ```TypeScript
-@Trace
-  public direction?: Direction
+public direction?: Direction
 ```
 
 Indicates the attribute of the current chip direction.
@@ -285,6 +297,8 @@ Indicates the attribute of the current chip direction.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public direction?: Direction--><!--Device-ChipV2Options-@Trace  public direction?: Direction-End-->
@@ -294,8 +308,7 @@ Indicates the attribute of the current chip direction.
 ## enabled
 
 ```TypeScript
-@Trace
-  public enabled?: boolean
+public enabled?: boolean
 ```
 
 Enable chip.
@@ -306,6 +319,8 @@ Enable chip.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public enabled?: boolean--><!--Device-ChipV2Options-@Trace  public enabled?: boolean-End-->
@@ -315,8 +330,7 @@ Enable chip.
 ## fontSize
 
 ```TypeScript
-@Trace
-  public fontSize?: LengthMetrics
+public fontSize?: LengthMetrics
 ```
 
 Set font size for the label text and the close icon.
@@ -327,6 +341,8 @@ Set font size for the label text and the close icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public fontSize?: LengthMetrics--><!--Device-ChipV2Options-@Trace  public fontSize?: LengthMetrics-End-->
@@ -336,8 +352,7 @@ Set font size for the label text and the close icon.
 ## label
 
 ```TypeScript
-@Trace
-  public label: ChipV2Label
+public label: ChipV2Label
 ```
 
 Chip label.
@@ -348,6 +363,8 @@ Chip label.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public label: ChipV2Label--><!--Device-ChipV2Options-@Trace  public label: ChipV2Label-End-->
@@ -357,8 +374,7 @@ Chip label.
 ## maxFontScale
 
 ```TypeScript
-@Trace
-  public maxFontScale?: double | Resource
+public maxFontScale?: double | Resource
 ```
 
 Maximum font scale for Chip.
@@ -369,6 +385,8 @@ Maximum font scale for Chip.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public maxFontScale?: double | Resource--><!--Device-ChipV2Options-@Trace  public maxFontScale?: double | Resource-End-->
@@ -378,8 +396,7 @@ Maximum font scale for Chip.
 ## minFontScale
 
 ```TypeScript
-@Trace
-  public minFontScale?: double | Resource
+public minFontScale?: double | Resource
 ```
 
 Minimum font scale for Chip.
@@ -389,6 +406,8 @@ Minimum font scale for Chip.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -439,8 +458,7 @@ On close action.
 ## padding
 
 ```TypeScript
-@Trace
-  public padding?: LocalizedPadding
+public padding?: LocalizedPadding
 ```
 
 Chip padding.
@@ -451,6 +469,8 @@ Chip padding.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public padding?: LocalizedPadding--><!--Device-ChipV2Options-@Trace  public padding?: LocalizedPadding-End-->
@@ -460,8 +480,7 @@ Chip padding.
 ## prefixIcon
 
 ```TypeScript
-@Trace
-  public prefixIcon?: ChipV2Icon
+public prefixIcon?: ChipV2Icon
 ```
 
 Chip prefix icon.
@@ -472,6 +491,8 @@ Chip prefix icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public prefixIcon?: ChipV2Icon--><!--Device-ChipV2Options-@Trace  public prefixIcon?: ChipV2Icon-End-->
@@ -481,8 +502,7 @@ Chip prefix icon.
 ## size
 
 ```TypeScript
-@Trace
-  public size?: ChipV2Size | SizeT<LengthMetrics>
+public size?: ChipV2Size | SizeT<LengthMetrics>
 ```
 
 Chip size.
@@ -493,6 +513,8 @@ Chip size.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Options-@Trace  public size?: ChipV2Size | SizeT<LengthMetrics>--><!--Device-ChipV2Options-@Trace  public size?: ChipV2Size | SizeT<LengthMetrics>-End-->
@@ -502,8 +524,7 @@ Chip size.
 ## suffixIcon
 
 ```TypeScript
-@Trace
-  public suffixIcon?: ChipV2Icon
+public suffixIcon?: ChipV2Icon
 ```
 
 Chip suffix icon.
@@ -513,6 +534,8 @@ Chip suffix icon.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

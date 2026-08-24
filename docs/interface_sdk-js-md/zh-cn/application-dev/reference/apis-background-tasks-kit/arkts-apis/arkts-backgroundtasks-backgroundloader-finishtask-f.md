@@ -36,5 +36,5 @@ function finishTask(taskInfo: TaskInfo): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 后台加载任务信息。 |
 | [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
-| [9700004](../errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on taskInfo failed. |
+| [9700004](../errorcode-workScheduler.md#9700004-参数校验失败) | Check on taskInfo failed. |
 

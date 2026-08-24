@@ -12,8 +12,7 @@ import { netFirewall } from '@kit.NetworkKit';
 function removeNetFirewallRule(userId: int, ruleId: int): Promise<void>
 ```
 
-Deletes a specified firewall rule of a system user ID. This API uses a promise to return the result.
-
+Deletes a specified firewall rule of a system user ID. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.MANAGE_NET_FIREWALL
 
 **Since:** 15

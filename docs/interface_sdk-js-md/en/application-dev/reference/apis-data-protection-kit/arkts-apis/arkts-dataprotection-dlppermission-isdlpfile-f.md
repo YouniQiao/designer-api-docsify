@@ -12,9 +12,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function isDLPFile(fd: number): Promise<boolean>
 ```
 
-Checks whether a file is a DLP file based on the FD. This API uses a promise to return the result.
-
-During file processing, the system checks whether the file is a DLP file and then determines the subsequent processing policy. For example, whether to open the file in a DLP sandbox.
+Checks whether a file is a DLP file based on the FD. This API uses a promise to return the result.During file processing, the system checks whether the file is a DLP file and then determines the subsequent processing policy. For example, whether to open the file in a DLP sandbox.
 
 **Since:** 10
 
@@ -97,9 +95,7 @@ try {
 function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a file is a DLP file based on the FD. After the API is successfully called, a result is returned. The value **true** means the file is a DLP file; the value **false** means the opposite. This API uses an asynchronous callback to return the result.
-
-During file processing, the system checks whether the file is a DLP file and then determines the subsequent processing policy. For example, whether to open the file in a DLP sandbox.
+Checks whether a file is a DLP file based on the FD. After the API is successfully called, a result is returned. The value **true** means the file is a DLP file; the value **false** means the opposite. This API uses an asynchronous callback to return the result.During file processing, the system checks whether the file is a DLP file and then determines the subsequent processing policy. For example, whether to open the file in a DLP sandbox.
 
 **Since:** 10
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## update
@@ -13,12 +12,9 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function update(handle: number, token?: Uint8Array, options: HuksOptions, callback: AsyncCallback<HuksResult>): void
 ```
 
-update操作密钥接口。使用callback异步回调。
+update操作密钥接口。使用callback异步回调。huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
-huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [huks.updateSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-updatesession-f.md)
 > 替代。
@@ -49,12 +45,9 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 function update(handle: number, token?: Uint8Array, options: HuksOptions): Promise<HuksResult>
 ```
 
-update操作密钥接口。使用Promise异步回调。
+update操作密钥接口。使用Promise异步回调。huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
-huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [huks.updateSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-updatesession-f.md)
 > 替代。

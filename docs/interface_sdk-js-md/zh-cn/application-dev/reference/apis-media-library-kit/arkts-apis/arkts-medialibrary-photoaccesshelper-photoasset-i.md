@@ -34,7 +34,7 @@ clone(title: string): Promise<PhotoAsset>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| title | string | 是 | 克隆后资产的标题。参数规格为： <br>- 不应包含扩展名。 <br>- 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。 <br>- 不允许出现的非法英文字符，包括：. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
+| title | string | 是 | 克隆后资产的标题。参数规格为： <br>- 不应包含扩展名。 <br>- 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。 <br>- 不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **返回值：**
 
@@ -272,7 +272,7 @@ commitModify(callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| 13900012 | Permission denied<br>**适用版本：** 10+ |
+| 13900012 | Permission denied<br>**适用版本：** 10 |
 | 13900020 | Invalid argument |
 | 14000001 | Invalid display name |
 | 14000011 | System inner fail |
@@ -435,7 +435,7 @@ commitModify(): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| 13900012 | Permission denied<br>**适用版本：** 10+ |
+| 13900012 | Permission denied<br>**适用版本：** 10 |
 | 13900020 | Invalid argument |
 | 14000001 | Invalid display name |
 | 14000011 | System inner fail |
@@ -511,9 +511,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getReadOnlyFd(callback: AsyncCallback<number>): void
 ```
 
-以只读方式打开当前文件。使用callback异步回调。
-
-使用完毕后调用close释放文件描述符。
+以只读方式打开当前文件。使用callback异步回调。使用完毕后调用close释放文件描述符。
 
 **起始版本：** 10
 
@@ -609,9 +607,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getReadOnlyFd(): Promise<number>
 ```
 
-以只读方式打开当前文件。使用promise异步回调。
-
-返回的文件描述符在使用完毕后需要调用close进行释放。
+以只读方式打开当前文件。使用promise异步回调。返回的文件描述符在使用完毕后需要调用close进行释放。
 
 **起始版本：** 10
 
@@ -860,8 +856,8 @@ set(member: string, value: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| member | string | 是 | 成员参数名称例如： [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md) .TITLE。字符串长度的取值范围为[1, 255]。 |
-| value | string | 是 | 设置成员参数名称，只能修改 [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE的值。title的参数规格为： <br>- 不应包含扩展名。 <br>- 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。 <br>- 不允许出现的非法英文字符，包括：. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
+| member | string | 是 | 成员参数名称例如： [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE。字符串长度的取值范围为[1, 255]。 |
+| value | string | 是 | 设置成员参数名称，只能修改 [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE的值。title的参数规格为： <br>- 不应包含扩展名。 <br>- 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。 <br>- 不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **错误码：**
 

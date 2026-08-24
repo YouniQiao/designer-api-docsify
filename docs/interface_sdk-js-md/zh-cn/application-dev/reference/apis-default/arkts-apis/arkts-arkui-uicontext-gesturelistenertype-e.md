@@ -1,8 +1,6 @@
 # GestureListenerType
 
-表示需要监听的手势类型的枚举。
-
-@enum { number } GestureListenerType
+表示需要监听的手势类型的枚举。@enum { number } GestureListenerType
 
 **起始版本：** 26.0.0
 

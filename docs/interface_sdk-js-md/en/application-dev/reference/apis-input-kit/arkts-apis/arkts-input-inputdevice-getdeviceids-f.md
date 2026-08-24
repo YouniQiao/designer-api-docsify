@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
-import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## getDeviceIds
@@ -15,8 +14,7 @@ function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 
 Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
 
@@ -93,8 +91,7 @@ function getDeviceIds(): Promise<Array<number>>
 
 Obtains the IDs of all input devices. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
 

@@ -1,8 +1,6 @@
 # TouchPoint
 
-Defines TouchPoint
-
-@interface TouchPoint
+Defines TouchPoint@interface TouchPoint
 
 **Since:** 23
 

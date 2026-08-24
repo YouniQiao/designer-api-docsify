@@ -12,7 +12,6 @@ ChipGroupPaddingOptions定义了ChipGroup的上下内边距，用于控制其整
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## bottom
@@ -21,15 +20,7 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 bottom: Length
 ```
 
-ChipGroup的下方内边距（不支持百分比）。
-
-传入负数、百分比或无效字符串格式时，使用默认值。
-
-默认值：14
-
-单位：vp
-
-值为undefined时，按默认值处理。
+ChipGroup的下方内边距（不支持百分比）。传入负数、百分比或无效字符串格式时，使用默认值。默认值：14单位：vp值为undefined时，按默认值处理。
 
 **类型：** Length
 
@@ -49,15 +40,7 @@ ChipGroup的下方内边距（不支持百分比）。
 top: Length
 ```
 
-ChipGroup的上方内边距（不支持百分比）。
-
-传入负数、百分比或无效字符串格式时，使用默认值。
-
-默认值：14
-
-单位：vp
-
-值为undefined时，按默认值处理。
+ChipGroup的上方内边距（不支持百分比）。传入负数、百分比或无效字符串格式时，使用默认值。默认值：14单位：vp值为undefined时，按默认值处理。
 
 **类型：** Length
 

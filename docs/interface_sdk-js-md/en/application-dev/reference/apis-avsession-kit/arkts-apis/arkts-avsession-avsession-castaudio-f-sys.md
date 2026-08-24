@@ -30,7 +30,7 @@ Cast Audio to the remote devices or cast back local device
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) \| 'all' | Yes | Specifies the sessionId which to send to remote. |
 | audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | Yes | Specifies the audio devices to cast. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully 'all' means cast all the media audio of this device to remote. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully'all' means cast all the media audio of this device to remote. |
 
 **Error codes:**
 
@@ -122,7 +122,7 @@ Cast Audio to the remote devices or cast back local device
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully 'all' means cast all the media audio of this device to remote. |
+| Promise&lt;void&gt; | void promise when executed successfully'all' means cast all the media audio of this device to remote. |
 
 **Error codes:**
 

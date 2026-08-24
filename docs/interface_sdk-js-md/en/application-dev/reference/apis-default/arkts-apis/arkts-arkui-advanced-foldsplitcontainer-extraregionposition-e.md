@@ -1,8 +1,6 @@
 # ExtraRegionPosition
 
-Position enum of the extra region
-
-@enum { int }
+Position enum of the extra region@enum { int }
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # Key
 
-Defines a key.
-
-@interface Key [since 9 - 11]
+Defines a key.@interface Key [since 9 - 11]
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # EffectType
 
-Enum of using the effects template mode.
-
-@enum { number }
+Enum of using the effects template mode.@enum { number }
 
 **Since:** 23
 

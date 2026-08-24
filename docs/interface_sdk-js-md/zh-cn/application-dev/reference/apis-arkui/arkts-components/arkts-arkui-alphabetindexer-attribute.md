@@ -1,14 +1,7 @@
 # AlphabetIndexer属性/事件
 
-width属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
-
-padding属性默认为4vp。
-
-文本最大的字体缩放倍数maxFontScale和最小的字体缩放倍数minFontScale 皆为1，不跟随系统字体大小调节变化。
-
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+width属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。  
+padding属性默认为4vp。文本最大的字体缩放倍数maxFontScale和最小的字体缩放倍数minFontScale 皆为1，不跟随系统字体大小调节变化。除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
 
@@ -52,11 +45,7 @@ alignStyle(value: IndexerAlign, offset?: Length)
 autoCollapse(value: boolean)
 ```
 
-设置是否使用自适应折叠模式。
-
-如果索引项第一项为“#”，当除去第一项后剩余索引项数量 &lt;= 9时，选择全显示模式（所有索引项完整显示）；9 &lt; 剩余索引项数量 &lt;= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式； 剩余索引项数量 &gt; 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
-
-如果索引项第一项不为“#”，当所有索引项数量 &lt;= 9时，选择全显示模式（所有索引项完整显示）；9 < 所有索引项数量 <= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式； 所有索引项数量 > 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
+设置是否使用自适应折叠模式。如果索引项第一项为“#”，当除去第一项后剩余索引项数量 &lt;= 9时，选择全显示模式（所有索引项完整显示）；9 &lt; 剩余索引项数量 &lt;= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式； 剩余索引项数量 &gt; 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。如果索引项第一项不为“#”，当所有索引项数量 &lt;= 9时，选择全显示模式（所有索引项完整显示）；9 < 所有索引项数量 <= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式； 所有索引项数量 > 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
 
 > **说明：**
 
@@ -122,7 +111,7 @@ enableHapticFeedback(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否支持触控反馈。<br/>true：支持触控反馈。<br/>false：不支持触控反馈。<br/>默认值：true<br/>开启触控反馈时，需要在工程的 [module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配置如下：<br/>" requestPermissions": [{"name": "ohos.permission.VIBRATE"}] |
+| value | boolean | 是 | 是否支持触控反馈。<br/>true：支持触控反馈。<br/>false：不支持触控反馈。<br/>默认值：true<br/>开启触控反馈时，需要在工程的 [module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配置如下：<br/>"requestPermissions": [{"name": "ohos.permission.VIBRATE"}] |
 
 ## font
 
@@ -144,7 +133,7 @@ font(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Font | 是 | 未选中索引项文本样式。<br/>默认值：<br/>API version 11及以前：<br/>{<br/>size:'12.0fp',<br/> style: FontStyle.Normal,<br/> weight:FontWeight.Regular,<br/> family:'HarmonyOS Sans'<br/>}<br/>API version 12及以后：&lt;br/ &gt;{<br/>size:'10.0vp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Medium,<br/> family:'HarmonyOS Sans'&lt; br/&gt;} |
+| value | Font | 是 | 未选中索引项文本样式。<br/>默认值：<br/>API version 11及以前：<br/>{<br/>size:'12.0fp',<br/> style: FontStyle.Normal,<br/> weight:FontWeight.Regular,<br/> family:'HarmonyOS Sans'<br/>}<br/>API version 12及以后：<br/>{<br/>size:'10.0vp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Medium,<br/> family:'HarmonyOS Sans'<br/>} |
 
 ## itemBorderRadius
 
@@ -292,15 +281,7 @@ onSelected(callback: (index: number) => void)
 popupBackground(value: ResourceColor)
 ```
 
-设置提示弹窗背景颜色。
-
-该接口未被主动调用或参数value传入undefined时：
-
-API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，显示为白色。
-
-对于API version 12至API version 24版本，默认为#66808080，显示为半透明的灰色。
-
-从API版本26.0.0开始，如果[popupBackground](#popupbackground) [popupBackgroundBlurStyle](#popupbackgroundblurstyle)均未被主动调用或 参数value传入undefined，高档、中档算力设备默认显示为沉浸式材质 [ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)的THIN样式，低档算力设备默认显示为白色背景。
+设置提示弹窗背景颜色。该接口未被主动调用或参数value传入undefined时：API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，显示为白色。对于API version 12至API version 24版本，默认为#66808080，显示为半透明的灰色。从API版本26.0.0开始，如果[popupBackground](#popupbackground) [popupBackgroundBlurStyle](#popupbackgroundblurstyle)均未被主动调用或 参数value传入undefined，高档、中档算力设备默认显示为沉浸式材质 ImmersiveStyle的THIN样式，低档算力设备默认显示为白色背景。
 
 **起始版本：** 7
 
@@ -322,7 +303,7 @@ API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，�
 popupBackgroundBlurStyle(value: BlurStyle)
 ```
 
-设置提示弹窗的背景模糊材质。API版本26.0.0之前版本，未通过该接口设置时，默认为组件普通材质模糊，对应取值为BlurStyle中的COMPONENT_REGULAR。从API版本26.0.0开始， [popupBackground](#popupbackground)和popupBackgroundBlurStyle均未被主动调用或者传入undefined时，在高档 、中档算力设备默认显示为沉浸式材质[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)的THIN样式，低档 算力设备默认显示为白色背景。
+设置提示弹窗的背景模糊材质。API版本26.0.0之前版本，未通过该接口设置时，默认为组件普通材质模糊，对应取值为BlurStyle中的COMPONENT_REGULAR。从API版本26.0.0开始， [popupBackground](#popupbackground)和popupBackgroundBlurStyle均未被主动调用或者传入undefined时，在高档 、中档算力设备默认显示为沉浸式材质ImmersiveStyle的THIN样式，低档 算力设备默认显示为白色背景。
 
 **起始版本：** 12
 
@@ -556,9 +537,7 @@ popupUnselectedColor(value: ResourceColor)
 selected(index: number)
 ```
 
-设置选中项索引值。与[AlphabetIndexerOptions](#alphabetindexeroptions18对象说明)中的selected同时设置时，该属性的优先级更高。
-
-从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+设置选中项索引值。与[AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md)中的selected同时设置时，该属性的优先级更高。从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **起始版本：** 8
 
@@ -638,7 +617,7 @@ selectedFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Font | 是 | 选中项文本样式。<br/>默认值：<br/>API version 11及以前：<br/>{<br/>size:'12.0fp',<br/> style: FontStyle.Normal,<br/> weight:FontWeight.Regular,<br/> family:'HarmonyOS Sans'<br/>}<br/>API version 12及以后：&lt;br/ &gt;{<br/>size:'10.0vp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Medium,<br/> family:'HarmonyOS Sans'&lt; br/&gt;} |
+| value | Font | 是 | 选中项文本样式。<br/>默认值：<br/>API version 11及以前：<br/>{<br/>size:'12.0fp',<br/> style: FontStyle.Normal,<br/> weight:FontWeight.Regular,<br/> family:'HarmonyOS Sans'<br/>}<br/>API version 12及以后：<br/>{<br/>size:'10.0vp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Medium,<br/> family:'HarmonyOS Sans'<br/>} |
 
 ## usingPopup
 

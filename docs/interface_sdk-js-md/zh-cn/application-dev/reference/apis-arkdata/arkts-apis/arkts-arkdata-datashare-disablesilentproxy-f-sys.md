@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## disableSilentProxy
@@ -13,10 +12,7 @@ import { dataSharePredicates } from '@kit.ArkData';
 function disableSilentProxy(context: Context, uri?: string): Promise<void>
 ```
 
-关闭静默访问。使用Promise异步回调。
-
-使用规则：
-
+关闭静默访问。使用Promise异步回调。使用规则：  
 - 数据提供方调用此接口，来关闭静默访问功能。 - 此接口设置的关闭结果在校验的时候是搭配data_share_config.json文件中isSilentProxyEnable字段进行工作的。支持的配置可参考 [data_share_config.json配置](../../../database/share-data-by-datashareextensionability-sys.md)。 - 此接口生效在调用datashareHelper相关接口过程中，如果此接口有关闭过相关uri，那么会按照此接口的配置来关闭静默访问。如果此接口未调用过，则会读取data_share_config.json中的配置来校验 Datashare的关闭状态。
 
 **起始版本：** 23
@@ -34,7 +30,7 @@ function disableSilentProxy(context: Context, uri?: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用的上下文环境。 |
-| uri | string | 否 | 要关闭的数据提供方的数据路径。&lt;br /&gt;1、全局开关状态：入参不带uri、uri为undefined、uri为null，会清空掉之前设置的uri开关状态，关闭数据提供方静默访问。&lt; br /&gt;2、精准开关状态：uri的入参为固定的值，仅关闭该uri对应的静默访问。&lt;br /&gt;在调用datashareHelper相关接口时，优先精准匹配uri的开关状态。如果匹配不到，继续匹配全局的开关状态。&lt;br /&gt; uri格式：datashare:///{bundleName}/{moduleName}/{storeName}/{tableName} |
+| uri | string | 否 | 要关闭的数据提供方的数据路径。&lt;br /&gt;1、全局开关状态：入参不带uri、uri为undefined、uri为null，会清空掉之前设置的uri开关状态，关闭数据提供方静默访问。&lt;br /&gt;2、精准开关状态：uri的入参为固定的值，仅关闭该uri对应的静默访问。&lt;br /&gt;在调用datashareHelper相关接口时，优先精准匹配uri的开关状态。如果匹配不到，继续匹配全局的开关状态。&lt;br /&gt; uri格式：datashare:///{bundleName}/{moduleName}/{storeName}/{tableName} |
 
 **返回值：**
 

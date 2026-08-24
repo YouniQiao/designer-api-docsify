@@ -1,11 +1,8 @@
 # AudioVolumeGroupManager
 
-This interface implements volume management for an audio group.
+This interface implements volume management for an audio group.Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) to obtain an AudioVolumeGroupManager instance.
 
-Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) to obtain an AudioVolumeGroupManager instance.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 23
@@ -18,7 +15,6 @@ Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupM
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## adjustSystemVolumeByStep

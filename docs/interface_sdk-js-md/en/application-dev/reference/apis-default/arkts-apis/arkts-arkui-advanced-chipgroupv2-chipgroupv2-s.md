@@ -6,6 +6,8 @@ Defines chipGroupV2.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ChipGroupV2--><!--Device-unnamed-export declare struct ChipGroupV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Defines chipGroupV2.
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 Build function for ChipGroupV2
@@ -27,6 +28,8 @@ Build function for ChipGroupV2
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ Build function for ChipGroupV2
 ## $items
 
 ```TypeScript
-@Event
-  $items?: Callback<ChipGroupV2Items>
+$items?: Callback<ChipGroupV2Items>
 ```
 
 Two-way binding callback method for ChipV2 item.
@@ -49,6 +51,8 @@ Two-way binding callback method for ChipV2 item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2-@Event  $items?: Callback<ChipGroupV2Items>--><!--Device-ChipGroupV2-@Event  $items?: Callback<ChipGroupV2Items>-End-->
@@ -58,8 +62,7 @@ Two-way binding callback method for ChipV2 item.
 ## $selectedIndexes
 
 ```TypeScript
-@Event
-  $selectedIndexes?: Callback<Array<int>>
+$selectedIndexes?: Callback<Array<int>>
 ```
 
 Two-way binding callback method for selected ChipV2 item indexes.
@@ -70,6 +73,8 @@ Two-way binding callback method for selected ChipV2 item indexes.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2-@Event  $selectedIndexes?: Callback<Array<int>>--><!--Device-ChipGroupV2-@Event  $selectedIndexes?: Callback<Array<int>>-End-->
@@ -79,8 +84,7 @@ Two-way binding callback method for selected ChipV2 item indexes.
 ## chipGroupPadding
 
 ```TypeScript
-@Param
-  chipGroupPadding?: ChipGroupV2Padding
+chipGroupPadding?: ChipGroupV2Padding
 ```
 
 ChipGroupV2 padding (only support top and bottom).
@@ -91,6 +95,8 @@ ChipGroupV2 padding (only support top and bottom).
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2-@Param  chipGroupPadding?: ChipGroupV2Padding--><!--Device-ChipGroupV2-@Param  chipGroupPadding?: ChipGroupV2Padding-End-->
@@ -100,8 +106,7 @@ ChipGroupV2 padding (only support top and bottom).
 ## chipGroupSpace
 
 ```TypeScript
-@Param
-  chipGroupSpace?: ChipGroupV2Space
+chipGroupSpace?: ChipGroupV2Space
 ```
 
 Left and right inner margins and spacing between ChipV2
@@ -112,6 +117,8 @@ Left and right inner margins and spacing between ChipV2
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2-@Param  chipGroupSpace?: ChipGroupV2Space--><!--Device-ChipGroupV2-@Param  chipGroupSpace?: ChipGroupV2Space-End-->
@@ -121,9 +128,7 @@ Left and right inner margins and spacing between ChipV2
 ## items
 
 ```TypeScript
-@Require
-  @Param
-  items: ChipGroupV2Items
+items: ChipGroupV2Items
 ```
 
 ChipV2 item.
@@ -134,6 +139,8 @@ ChipV2 item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Require, @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2-@Require  @Param  items: ChipGroupV2Items--><!--Device-ChipGroupV2-@Require  @Param  items: ChipGroupV2Items-End-->
@@ -143,8 +150,7 @@ ChipV2 item.
 ## itemStyle
 
 ```TypeScript
-@Param
-  itemStyle?: ChipGroupV2ItemStyle
+itemStyle?: ChipGroupV2ItemStyle
 ```
 
 ChipV2 item style.
@@ -155,6 +161,8 @@ ChipV2 item style.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2-@Param  itemStyle?: ChipGroupV2ItemStyle--><!--Device-ChipGroupV2-@Param  itemStyle?: ChipGroupV2ItemStyle-End-->
@@ -164,8 +172,7 @@ ChipV2 item style.
 ## multiple
 
 ```TypeScript
-@Param
-  multiple?: boolean
+multiple?: boolean
 ```
 
 Whether to select multiple ChipV2 items
@@ -176,6 +183,8 @@ Whether to select multiple ChipV2 items
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2-@Param  multiple?: boolean--><!--Device-ChipGroupV2-@Param  multiple?: boolean-End-->
@@ -185,8 +194,7 @@ Whether to select multiple ChipV2 items
 ## onChange
 
 ```TypeScript
-@Event
-  onChange?: Callback<Array<int>>
+onChange?: Callback<Array<int>>
 ```
 
 Chip group callback. when chipV2 status is changed, this onChange is called.
@@ -197,6 +205,8 @@ Chip group callback. when chipV2 status is changed, this onChange is called.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2-@Event  onChange?: Callback<Array<int>>--><!--Device-ChipGroupV2-@Event  onChange?: Callback<Array<int>>-End-->
@@ -206,8 +216,7 @@ Chip group callback. when chipV2 status is changed, this onChange is called.
 ## selectedIndexes
 
 ```TypeScript
-@Param
-  selectedIndexes?: Array<int>
+selectedIndexes?: Array<int>
 ```
 
 Selected ChipV2 item indexes.
@@ -218,6 +227,8 @@ Selected ChipV2 item indexes.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2-@Param  selectedIndexes?: Array<int>--><!--Device-ChipGroupV2-@Param  selectedIndexes?: Array<int>-End-->
@@ -227,8 +238,7 @@ Selected ChipV2 item indexes.
 ## suffix
 
 ```TypeScript
-@BuilderParam
-  suffix?: ChipGroupV2SuffixBuilder
+suffix?: ChipGroupV2SuffixBuilder
 ```
 
 The builder function which will be rendered in the suffix of ChipGroupV2.
@@ -238,6 +248,8 @@ The builder function which will be rendered in the suffix of ChipGroupV2.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

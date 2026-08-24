@@ -20,9 +20,7 @@ import { tag } from '@kit.ConnectivityKit';
 supportedProfiles: number[]
 ```
 
-Supported profiles.
-
-Note: This parameter is supported since API version 7 and deprecated since API version 9. Use **[tag.TagInfo#technology](#taginfo)** instead.
+Supported profiles.Note: This parameter is supported since API version 7 and deprecated since API version 9. Use **[tag.TagInfo#technology](#taginfo)** instead.
 
 **Type:** number[]
 

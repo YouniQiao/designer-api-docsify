@@ -1,8 +1,6 @@
 # EffectEdge
 
-Enumerates the effective edge of the edge effect.
-
-@enum { int }
+Enumerates the effective edge of the edge effect.@enum { int }
 
 **起始版本：** 23
 

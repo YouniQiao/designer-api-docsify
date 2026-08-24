@@ -1,8 +1,6 @@
 # AnimateStyle
 
-AnimateStyle
-
-@interface AnimateStyle
+AnimateStyle@interface AnimateStyle
 
 **Since:** 4
 

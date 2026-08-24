@@ -20,7 +20,7 @@ import { drm } from '@kit.DrmKit';
 name: string
 ```
 
-Name of DRM plugin.
+插件名称，用于标识DRM插件的名称字符串。通常由DRM方案提供商定义。
 
 **类型：** string
 
@@ -38,7 +38,7 @@ Name of DRM plugin.
 uuid: string
 ```
 
-UUID supported by DRM plugin.
+插件唯一标识码，必须为有效的UUID格式。传入无效UUID时，接口返回失败。
 
 **类型：** string
 

@@ -1,8 +1,6 @@
 # LocalizedAlignment
 
-LocalizedAlignment enumeration description.
-
-@enum { string }
+LocalizedAlignment enumeration description.@enum { string }
 
 **Since:** 20
 

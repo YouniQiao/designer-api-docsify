@@ -16,11 +16,7 @@
 offsetX?: double
 ```
 
-Surface显示区域相对于XComponent组件左上角的x轴坐标。
-
-未设置时默认按照居中显示。
-
-单位：px。
+Surface显示区域相对于XComponent组件左上角的x轴坐标。未设置时默认按照居中显示。单位：px。
 
 **类型：** double
 
@@ -40,11 +36,7 @@ Surface显示区域相对于XComponent组件左上角的x轴坐标。
 offsetY?: double
 ```
 
-Surface显示区域相对于XComponent组件左上角的y轴坐标。
-
-未设置时默认按照居中显示。
-
-单位：px。
+Surface显示区域相对于XComponent组件左上角的y轴坐标。未设置时默认按照居中显示。单位：px。
 
 **类型：** double
 
@@ -64,9 +56,7 @@ Surface显示区域相对于XComponent组件左上角的y轴坐标。
 surfaceHeight: double
 ```
 
-Surface显示区域的高度。
-
-单位：px。
+Surface显示区域的高度。单位：px。
 
 **类型：** double
 
@@ -86,9 +76,7 @@ Surface显示区域的高度。
 surfaceWidth: double
 ```
 
-Surface显示区域的宽度。
-
-单位：px。
+Surface显示区域的宽度。单位：px。
 
 **类型：** double
 

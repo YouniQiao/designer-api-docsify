@@ -52,9 +52,7 @@ onDidBuild(): void
 default
 ```
 
-The callback method after the custom component is built.
-
-Triggered when the custom component has been built.
+The callback method after the custom component is built.Triggered when the custom component has been built.
 
 **Since:** 23
 

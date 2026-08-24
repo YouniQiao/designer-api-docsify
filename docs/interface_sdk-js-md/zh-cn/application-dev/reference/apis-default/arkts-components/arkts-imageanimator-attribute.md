@@ -1,10 +1,6 @@
 # ImageAnimatorAttribute
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
-
-@extends CommonMethod @interface ImageAnimatorAttribute
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：@extends CommonMethod @interface ImageAnimatorAttribute
 
 **继承/实现关系：** ImageAnimatorAttribute extends CommonMethod
 

@@ -1,8 +1,6 @@
 # DataShareResultSet (System API)
 
-Provides APIs for accessing the result sets returned.
-
-The column or key names are returned as a string array, in which the strings are in the same order as the columns or keys in the result set.
+Provides APIs for accessing the result sets returned.The column or key names are returned as a string array, in which the strings are in the same order as the columns or keys in the result set.
 
 **Since:** 23
 
@@ -23,9 +21,7 @@ The column or key names are returned as a string array, in which the strings are
 close(): void
 ```
 
-Closes this result set.
-
-Calling this API will invalidate the result set and release all its resources.
+Closes this result set.Calling this API will invalidate the result set and release all its resources.
 
 **Since:** 23
 
@@ -51,9 +47,7 @@ if (resultSet != undefined) {
 getBlob(columnIndex: int): Uint8Array
 ```
 
-Obtains the value in the form of a byte array based on the specified column and the current row.
-
-If the specified column or key is empty or the value is not of the Blob type, you need to determine whether to throw an exception.
+Obtains the value in the form of a byte array based on the specified column and the current row.If the specified column or key is empty or the value is not of the Blob type, you need to determine whether to throw an exception.
 
 **Since:** 23
 
@@ -98,9 +92,7 @@ if (resultSet != undefined) {
 getColumnIndex(columnName: string): int
 ```
 
-Obtains the column index based on a column name.
-
-The column name is passed in as an input parameter.
+Obtains the column index based on a column name.The column name is passed in as an input parameter.
 
 **Since:** 23
 
@@ -140,9 +132,7 @@ if (resultSet != undefined) {
 getColumnName(columnIndex: int): string
 ```
 
-Obtains the column name based on a column index.
-
-The column index is passed in as an input parameter.
+Obtains the column name based on a column index.The column index is passed in as an input parameter.
 
 **Since:** 23
 
@@ -182,9 +172,7 @@ if (resultSet != undefined) {
 getDataType(columnIndex: int): DataType
 ```
 
-Obtains the data type based on the specified column index.
-
-If the specified column or key is empty or the value is not of the DataType type, you need to determine whether to throw an exception.
+Obtains the data type based on the specified column index.If the specified column or key is empty or the value is not of the DataType type, you need to determine whether to throw an exception.
 
 **Since:** 23
 
@@ -224,9 +212,7 @@ if (resultSet != undefined) {
 getDouble(columnIndex: int): double
 ```
 
-Obtains the value in the form of a double-precision floating-point number based on the specified column and the current row.
-
-If the specified column or key is empty or the value is not of the double type, you need to determine whether to throw an exception.
+Obtains the value in the form of a double-precision floating-point number based on the specified column and the current row.If the specified column or key is empty or the value is not of the double type, you need to determine whether to throw an exception.
 
 **Since:** 23
 
@@ -267,9 +253,7 @@ if (resultSet != undefined) {
 getLong(columnIndex: int): long
 ```
 
-Obtains the value in the form of a long integer based on the specified column and the current row.
-
-If the specified column or key is empty or the value is not of the long type, you need to determine whether to throw an exception.
+Obtains the value in the form of a long integer based on the specified column and the current row.If the specified column or key is empty or the value is not of the long type, you need to determine whether to throw an exception.
 
 **Since:** 23
 
@@ -310,9 +294,7 @@ if (resultSet != undefined) {
 getString(columnIndex: int): string
 ```
 
-Obtains the value in the form of a string based on the specified column and the current row.
-
-If the specified column or key is empty or the value is not of the string type, you need to determine whether to throw an exception.
+Obtains the value in the form of a string based on the specified column and the current row.If the specified column or key is empty or the value is not of the string type, you need to determine whether to throw an exception.
 
 **Since:** 23
 

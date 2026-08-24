@@ -1,8 +1,6 @@
 # CommonArcButtonOptions
 
-Defines the arc button options.
-
-@interface CommonArcButtonOptions
+Defines the arc button options.@interface CommonArcButtonOptions
 
 **Since:** 23
 

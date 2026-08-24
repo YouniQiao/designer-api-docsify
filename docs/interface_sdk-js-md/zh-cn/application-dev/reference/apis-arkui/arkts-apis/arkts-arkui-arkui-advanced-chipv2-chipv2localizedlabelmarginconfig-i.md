@@ -20,25 +20,7 @@ import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, Chi
 end?: LengthMetrics
 ```
 
-文本与结束侧图标之间间距，不支持百分比。传入百分比时按默认值处理。
-
-默认值：
-
-size为ChipV2Size.SMALL时，end默认值：
-
-`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`。
-
-size为ChipV2Size.NORMAL时，end默认值：
-
-`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`。
-
-单位：vp
-
-取值范围：[0, +∞)
-
-超出取值范围按默认值处理。
-
-值为undefined时，按默认值处理。
+文本与结束侧图标之间间距，不支持百分比。传入百分比时按默认值处理。默认值：size为ChipV2Size.SMALL时，end默认值：`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`。size为ChipV2Size.NORMAL时，end默认值：`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`。单位：vp取值范围：[0, +∞)超出取值范围按默认值处理。值为undefined时，按默认值处理。
 
 **类型：** LengthMetrics
 
@@ -58,25 +40,7 @@ size为ChipV2Size.NORMAL时，end默认值：
 start?: LengthMetrics
 ```
 
-文本与起始侧图标之间间距，不支持百分比。传入百分比时按默认值处理。
-
-默认值：
-
-size为ChipV2Size.SMALL时，start默认值：
-
-`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`。
-
-size为ChipV2Size.NORMAL时，start默认值：
-
-`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`。
-
-单位：vp
-
-取值范围：[0, +∞)
-
-超出取值范围按默认值处理。
-
-值为undefined时，按默认值处理。
+文本与起始侧图标之间间距，不支持百分比。传入百分比时按默认值处理。默认值：size为ChipV2Size.SMALL时，start默认值：`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`。size为ChipV2Size.NORMAL时，start默认值：`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`。单位：vp取值范围：[0, +∞)超出取值范围按默认值处理。值为undefined时，按默认值处理。
 
 **类型：** LengthMetrics
 

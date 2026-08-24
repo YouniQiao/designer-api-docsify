@@ -1,8 +1,6 @@
 # KeyboardAvoidMode
 
-Enum of KeyBoardAvoidMethodType
-
-@enum { number } KeyBoardAvoidMethodType
+Enum of KeyBoardAvoidMethodType@enum { number } KeyBoardAvoidMethodType
 
 **Since:** 23
 

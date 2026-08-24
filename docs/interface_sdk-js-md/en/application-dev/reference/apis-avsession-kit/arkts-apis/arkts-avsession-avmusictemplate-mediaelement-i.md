@@ -1,8 +1,6 @@
 # MediaElement
 
-The definition of Singer/Radio/Banner.
-
-@extends MediaEntity @interface MediaElement
+The definition of Singer/Radio/Banner.@extends MediaEntity @interface MediaElement
 
 **Inheritance/Implementation:** MediaElement extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 

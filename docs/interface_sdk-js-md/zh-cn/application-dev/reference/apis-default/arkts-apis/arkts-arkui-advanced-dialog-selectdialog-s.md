@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @CustomDialog
+
 <!--Device-unnamed-export declare struct SelectDialog--><!--Device-unnamed-export declare struct SelectDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,7 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -26,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,9 +63,7 @@ confirm?: ButtonOptions
 content?: ResourceStr
 ```
 
-选择弹出框内容。
-
-默认不设置或设置为undefined，弹出框内容不显示。
+选择弹出框内容。默认不设置或设置为undefined，弹出框内容不显示。
 
 **类型：** ResourceStr
 
@@ -81,8 +83,7 @@ content?: ResourceStr
 controller: CustomDialogController
 ```
 
-选择弹出框控制器。
-
+选择弹出框控制器。  
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
@@ -123,11 +124,7 @@ radioContent: Array<SheetInfo>
 selectedIndex?: int
 ```
 
-选择弹出框的选中项。
-
-取值范围：大于等于-1的整数。
-
-默认值：-1，没有选中项。若设置数值小于-1，按没有选中项处理。
+选择弹出框的选中项。取值范围：大于等于-1的整数。默认值：-1，没有选中项。若设置数值小于-1，按没有选中项处理。
 
 **类型：** int
 
@@ -167,9 +164,7 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 
@@ -189,8 +184,7 @@ themeColorMode?: ThemeColorMode
 title: ResourceStr
 ```
 
-选择弹出框标题。
-
+选择弹出框标题。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr

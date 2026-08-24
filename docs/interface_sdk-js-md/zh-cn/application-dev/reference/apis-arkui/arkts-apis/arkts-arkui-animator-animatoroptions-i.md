@@ -22,9 +22,7 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 begin: double
 ```
 
-动画插值起点。
-
-默认值：0
+动画插值起点。默认值：0
 
 **类型：** double
 

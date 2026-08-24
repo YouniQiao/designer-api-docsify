@@ -4,6 +4,8 @@ Declaration of the left icon configuration.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class EditableLeftIconV2--><!--Device-unnamed-export declare class EditableLeftIconV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ Constructor of EditableLeftIconV2.
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  public defaultFocus: boolean
+public defaultFocus: boolean
 ```
 
 Whether to get focus by default.
@@ -52,6 +53,8 @@ Whether to get focus by default.
 **Default:** false
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,8 +67,7 @@ Whether to get focus by default.
 ## iconType
 
 ```TypeScript
-@Trace
-  public iconType: EditableLeftIconTypeV2
+public iconType: EditableLeftIconTypeV2
 ```
 
 Icon type, Back or Cancel.
@@ -75,6 +77,8 @@ Icon type, Back or Cancel.
 **Default:** EditableLeftIconTypeV2.Back
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,8 +91,7 @@ Icon type, Back or Cancel.
 ## onAction
 
 ```TypeScript
-@Trace
-  public onAction?: OnActionCallback
+public onAction?: OnActionCallback
 ```
 
 Callback function when click on the left icon.
@@ -96,6 +99,8 @@ Callback function when click on the left icon.
 **Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

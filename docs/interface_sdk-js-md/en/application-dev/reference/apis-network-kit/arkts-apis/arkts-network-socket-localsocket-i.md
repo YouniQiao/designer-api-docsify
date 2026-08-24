@@ -22,10 +22,8 @@ bind(address: LocalAddress): Promise<void>
 
 Binds the address of a local socket file. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> This API explicitly binds the client to a local socket file based on the specified address.
-> 
+> **NOTE：**&gt;
+> This API explicitly binds the client to a local socket file based on the specified address.&gt;
 > It is not mandatory in local socket communication.
 
 **Since:** 11
@@ -515,8 +513,7 @@ connect(options: LocalConnectOptions): Promise<void>
 
 Connects to the specified socket file. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API allows you to connect to the TCP server without first executing **localsocket.bind**.
 
 **Since:** 11
@@ -998,8 +995,7 @@ getExtraOptions(): Promise<ExtraOptionsBase>
 
 Obtains the socket properties of the **LocalSocket** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** or **connect** is successfully called.
 
 **Since:** 11
@@ -1082,8 +1078,7 @@ getLocalAddress(): Promise<string>
 
 Obtains the local socket address of a **LocalSocket** connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** is successfully called.
 
 **Since:** 12
@@ -1362,12 +1357,9 @@ getSocketFd(): Promise<int>
 
 Obtains the file descriptor of the **LocalSocket** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - This API can be called only after **bind** or **connect** is successfully called.
-> 
-> - The file descriptor is allocated by the system kernel to uniquely identify the local socket in use.
-> 
+> **NOTE：**&gt;
+> - This API can be called only after **bind** or **connect** is successfully called.&gt;
+> - The file descriptor is allocated by the system kernel to uniquely identify the local socket in use.&gt;
 > - The lifecycle of the file descriptor is managed by the system. The application can use the
 > [close](#close) method to close the socket connection, instead of directly operating
 > the file descriptor.
@@ -1705,8 +1697,7 @@ getState(): Promise<SocketStateBase>
 
 Obtains the local socket connection status. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** or **connect** is successfully called.
 
 **Since:** 11
@@ -2386,8 +2377,7 @@ send(options: LocalSendOptions): Promise<void>
 
 Sends data over a local socket connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **connect** is successfully called.
 
 **Since:** 11
@@ -2818,8 +2808,7 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 
 Sets the properties of the **LocalSocket** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** or **connect** is successfully called.
 
 **Since:** 11

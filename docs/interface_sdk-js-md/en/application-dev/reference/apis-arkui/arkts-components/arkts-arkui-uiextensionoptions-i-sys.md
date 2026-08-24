@@ -41,9 +41,7 @@ Placeholder for size changes, displayed when the UIExtensionComponent's size cha
 dpiFollowStrategy?: DpiFollowStrategy
 ```
 
-Whether the DPI settings follow the host or UIExtensionAbility.
-
-Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**
+Whether the DPI settings follow the host or UIExtensionAbility.Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**
 
 **Type:** [DpiFollowStrategy](arkts-arkui-dpifollowstrategy-e-sys.md)
 
@@ -65,9 +63,7 @@ Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**
 isTransferringCaller?: boolean
 ```
 
-Whether the **UIExtensionComponent** forwards the upper-level caller information when it is used for nesting.
-
-Default value: **false**
+Whether the **UIExtensionComponent** forwards the upper-level caller information when it is used for nesting.Default value: **false**
 
 **Type:** boolean
 
@@ -109,9 +105,7 @@ Placeholder to be displayed before the UIExtensionComponent establishes a connec
 windowModeFollowStrategy?: WindowModeFollowStrategy
 ```
 
-Following strategy of the window mode.
-
-Default value: **FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE**
+Following strategy of the window mode.Default value: **FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE**
 
 **Type:** [WindowModeFollowStrategy](arkts-arkui-windowmodefollowstrategy-e-sys.md)
 

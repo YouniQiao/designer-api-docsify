@@ -14,9 +14,7 @@ Defines **Params** (specifying the action that can be performed) in the Want.
 ABILITY_BACK_TO_OTHER_MISSION_STACK = 'ability.params.backToOtherMissionStack'
 ```
 
-Whether redirection back across mission stacks is supported.
-
-This parameter controls the redirection-back logic across applications, altering the application transition behavior when the user presses the back button. For example, if UIAbility A is currently displayed and UIAbility B is launched with this parameter set to **true**, exiting UIAbility B will return to UIAbility A. If this parameter is not set, the system defaults to returning to the home screen. Note that this parameter is only supported for system applications and does not take effect for third-party applications.
+Whether redirection back across mission stacks is supported.This parameter controls the redirection-back logic across applications, altering the application transition behavior when the user presses the back button. For example, if UIAbility A is currently displayed and UIAbility B is launched with this parameter set to **true**, exiting UIAbility B will return to UIAbility A. If this parameter is not set, the system defaults to returning to the home screen. Note that this parameter is only supported for system applications and does not take effect for third-party applications.
 
 **Since:** 23
 
@@ -48,9 +46,7 @@ Whether the ability has been restarted due to a fault.
 CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 ```
 
-Title for sharing in an atomic service.
-
-You can set the sharing title using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
+Title for sharing in an atomic service.You can set the sharing title using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 23
 
@@ -66,9 +62,7 @@ You can set the sharing title using this field in the [onShare](arkts-ability-ap
 SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 ```
 
-Content abstract for sharing in an atomic service.
-
-You can set the sharing abstract using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
+Content abstract for sharing in an atomic service.You can set the sharing abstract using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 23
 
@@ -84,9 +78,7 @@ You can set the sharing abstract using this field in the [onShare](arkts-ability
 SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 ```
 
-URL link for sharing in an atomic service.
-
-You can set the URL link using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
+URL link for sharing in an atomic service.You can set the URL link using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 23
 
@@ -182,9 +174,7 @@ Index of an application clone.
 CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
 ```
 
-Request code
-
-that uniquely identifies the caller of startAbilityForResult or [openLink](arkts-ability-uiabilitycontext-c.md#openlink). When either of the APIs is called to start an ability, the target ability returns the result to the caller based on the request code.
+Request code that uniquely identifies the caller of startAbilityForResult or [openLink](arkts-ability-uiabilitycontext-c.md#openlink). When either of the APIs is called to start an ability, the target ability returns the result to the caller based on the request code.
 
 **Since:** 23
 
@@ -200,9 +190,7 @@ that uniquely identifies the caller of startAbilityForResult or [openLink](arkts
 PAGE_PATH = 'ohos.param.atomicservice.pagePath'
 ```
 
-Page path for an atomic service.
-
-If page redirection in an atomic service is implemented using [router](../../../ui/arkts-routing.md), you can use this parameter to specify the target page, for example, **library/ets/pages/menu**.
+Page path for an atomic service.If page redirection in an atomic service is implemented using [router](../../../ui/arkts-routing.md), you can use this parameter to specify the target page, for example, **library/ets/pages/menu**.
 
 **Since:** 23
 
@@ -218,9 +206,7 @@ If page redirection in an atomic service is implemented using [router](../../../
 ROUTER_NAME = 'ohos.param.atomicservice.routerName'
 ```
 
-Router name for page redirection in an atomic service.
-
-If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
+Router name for page redirection in an atomic service.If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 23
 
@@ -236,9 +222,7 @@ If page redirection in an atomic service is implemented using [Navigation](../..
 PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'
 ```
 
-Source file for the page in an atomic service.
-
-If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
+Source file for the page in an atomic service.If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 23
 
@@ -254,9 +238,7 @@ If page redirection in an atomic service is implemented using [Navigation](../..
 BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'
 ```
 
-Build function for the page in an atomic service.
-
-If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
+Build function for the page in an atomic service.If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 23
 
@@ -272,9 +254,7 @@ If page redirection in an atomic service is implemented using [Navigation](../..
 SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'
 ```
 
-Sub-package name for an atomic service. Application packages can be developed with multiple modules, and each package may include one or multiple HAPs or HSPs. To enhance the launch speed, atomic services restrict the size of HAP and HSP files and optimize the startup process. This modular development approach is known as sub- packaging.
-
-When you open an atomic service, you can use this parameter to activate the specific sub-package.
+Sub-package name for an atomic service. Application packages can be developed with multiple modules, and each package may include one or multiple HAPs or HSPs. To enhance the launch speed, atomic services restrict the size of HAP and HSP files and optimize the startup process. This modular development approach is known as sub- packaging.When you open an atomic service, you can use this parameter to activate the specific sub-package.
 
 **Since:** 23
 
@@ -290,9 +270,7 @@ When you open an atomic service, you can use this parameter to activate the spec
 APP_INSTANCE_KEY = 'ohos.extra.param.key.appInstance'
 ```
 
-Specific application instance.
-
-When you create [multiple instances](../../../quick-start/multiInstance.md) of an application, the system assigns a unique ID to each instance. During application transitions, you can use this parameter to specify which created application instance you want to transition to.
+Specific application instance.When you create [multiple instances](../../../quick-start/multiInstance.md) of an application, the system assigns a unique ID to each instance. During application transitions, you can use this parameter to specify which created application instance you want to transition to.
 
 **Since:** 23
 
@@ -306,9 +284,7 @@ When you create [multiple instances](../../../quick-start/multiInstance.md) of a
 CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'
 ```
 
-Whether to create an application instance. The default value is **false**, indicating that no new application instance is created.
-
-You can set this parameter to **true** to launch a new application instance. Note that the application to be launched must support multiple instances. For details, see [Creating an Application Multi-Instance](../../../quick-start/multiInstance.md).
+Whether to create an application instance. The default value is **false**, indicating that no new application instance is created.You can set this parameter to **true** to launch a new application instance. Note that the application to be launched must support multiple instances. For details, see [Creating an Application Multi-Instance](../../../quick-start/multiInstance.md).
 
 **Since:** 23
 
@@ -350,9 +326,7 @@ The target ability is a plugin ability.
 APP_LAUNCH_TRUSTLIST = 'ohos.params.appLaunchTrustList'
 ```
 
-Filter list of applications for implicit launch.
-
-Only applications in the list are matched during implicit launch. The value is an array of AppIdentifier of the string type. The filter list supports a maximum of 50 applications. Passing an empty array will have no effect.
+Filter list of applications for implicit launch.Only applications in the list are matched during implicit launch. The value is an array of AppIdentifier of the string type. The filter list supports a maximum of 50 applications. Passing an empty array will have no effect.
 
 **Since:** 23
 
@@ -368,9 +342,7 @@ Only applications in the list are matched during implicit launch. The value is a
 ATOMIC_SERVICE_SHARE_ROUTER = 'ohos.params.atomicservice.shareRouter'
 ```
 
-Page stack information of the atomic service being launched. This parameter takes effect only when the caller is a UIAbilityContext and the callee is an atomic service.
-
-For example, if an atomic service contains a home page and a second page, and you want to directly launch the second page, you can pass the page stack information of the second page through this field when launching the atomic service.
+Page stack information of the atomic service being launched. This parameter takes effect only when the caller is a UIAbilityContext and the callee is an atomic service.For example, if an atomic service contains a home page and a second page, and you want to directly launch the second page, you can pass the page stack information of the second page through this field when launching the atomic service.
 
 **Since:** 23
 
@@ -386,14 +358,9 @@ For example, if an atomic service contains a home page and a second page, and yo
 LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'
 ```
 
-Reason for launching the application.
-
-The caller must be a system application and must request the ohos.permission.SET_LAUNCH_REASON_MESSAGE permission. The following values are supported:
-
-**ReasonMessage_SystemShare**: The application is launched through system sharing.
-
-**ReasonMessage_DesktopShortcut**: The application is launched through a home screen shortcut.
-
+Reason for launching the application.The caller must be a system application and must request the ohos.permission.SET_LAUNCH_REASON_MESSAGE permission. The following values are supported:  
+**ReasonMessage_SystemShare**: The application is launched through system sharing.  
+**ReasonMessage_DesktopShortcut**: The application is launched through a home screen shortcut.  
 **ReasonMessage_Notification**: The application is launched through a notification.
 
 **Since:** 23
@@ -410,9 +377,7 @@ The caller must be a system application and must request the ohos.permission.SET
 ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md). This field can only be set by system applications, but third-party applications can read it.
-
-If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md) or [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
+Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md). This field can only be set by system applications, but third-party applications can read it.If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md) or [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
 
 **Since:** 23
 

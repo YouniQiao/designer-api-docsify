@@ -1,12 +1,6 @@
 # AudioVolumeGroupManager
 
-管理音频组音量。
-
-在使用AudioVolumeGroupManager的接口之前，需先通过 [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) 获取AudioVolumeGroupManager实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
+管理音频组音量。在调用AudioVolumeGroupManager的接口前，需要先通过 [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) 创建实例。
 
 **起始版本：** 23
 
@@ -18,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getMaxAmplitudeForInputDevice
@@ -139,6 +132,11 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void
 
 获取指定流的最大音量等级。使用callback异步回调。
 
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)替代。
+
 **起始版本：** 23
 
 **废弃版本：** 20
@@ -210,6 +208,11 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<int>
 
 获取指定流的最大音量等级。使用Promise异步回调。
 
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)替代。
+
 **起始版本：** 23
 
 **废弃版本：** 20
@@ -243,6 +246,11 @@ getMaxVolumeSync(volumeType: AudioVolumeType): int
 ```
 
 获取指定流的最大音量等级。同步返回结果。
+
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 20开始废弃，建议使用
+> [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)替代。
 
 **起始版本：** 23
 
@@ -294,6 +302,11 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void
 ```
 
 获取指定流的最小音量等级。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)替代。
 
 **起始版本：** 23
 
@@ -366,6 +379,11 @@ getMinVolume(volumeType: AudioVolumeType): Promise<int>
 
 获取指定流的最小音量等级。使用Promise异步回调。
 
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)替代。
+
 **起始版本：** 23
 
 **废弃版本：** 20
@@ -399,6 +417,11 @@ getMinVolumeSync(volumeType: AudioVolumeType): int
 ```
 
 获取指定流的最小音量等级。同步返回结果。
+
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 20开始废弃，建议使用
+> [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)替代。
 
 **起始版本：** 23
 
@@ -575,6 +598,12 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: Devic
 
 获取音量增益dB值。使用callback异步回调。
 
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 20开始废弃，建议使用
+> [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
+> 替代。
+
 **起始版本：** 23
 
 **废弃版本：** 20
@@ -634,6 +663,12 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: Devic
 
 获取音量增益dB值。使用Promise异步回调。
 
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 20开始废弃，建议使用
+> [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
+> 替代。
+
 **起始版本：** 23
 
 **废弃版本：** 20
@@ -677,6 +712,12 @@ getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: int, device: D
 ```
 
 获取音量增益dB值。同步返回结果。
+
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 20开始废弃，建议使用
+> [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
+> 替代。
 
 **起始版本：** 23
 
@@ -730,6 +771,11 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void
 ```
 
 获取指定流的音量等级。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)替代。
 
 **起始版本：** 23
 
@@ -814,6 +860,11 @@ getVolume(volumeType: AudioVolumeType): Promise<int>
 
 获取指定流的音量等级。使用Promise异步回调。
 
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)替代。
+
 **起始版本：** 23
 
 **废弃版本：** 20
@@ -847,6 +898,11 @@ getVolumeSync(volumeType: AudioVolumeType): int
 ```
 
 获取指定流的音量等级。同步返回结果。
+
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 20开始废弃，建议使用
+> [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)替代。
 
 **起始版本：** 23
 
@@ -1023,6 +1079,11 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 获取指定音量流静音状态。使用callback异步回调。
 
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)替代。
+
 **起始版本：** 23
 
 **废弃版本：** 20
@@ -1094,6 +1155,11 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 
 获取指定音量流是否被静音。使用Promise异步回调。
 
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 20开始废弃，建议使用
+> [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)替代。
+
 **起始版本：** 23
 
 **废弃版本：** 20
@@ -1127,6 +1193,11 @@ isMuteSync(volumeType: AudioVolumeType): boolean
 ```
 
 获取指定音量流是否被静音。同步返回结果。
+
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 20开始废弃，建议使用
+> [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)替代。
 
 **起始版本：** 23
 
@@ -1259,7 +1330,7 @@ off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 offMicStateChange(callback?: Callback<MicStateChangeEvent>): void
 ```
 
-Unsubscribes to the microphone state change events.
+取消监听系统麦克风状态更改事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1271,7 +1342,7 @@ Unsubscribes to the microphone state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 否 | Callback used to get the system microphone state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 否 | 回调函数，返回变更后的麦克风状态。 |
 
 **错误码：**
 
@@ -1301,7 +1372,7 @@ audioVolumeGroupManager.offMicStateChange(micStateChangeCallback);
 offRingerModeChange(callback?: Callback<AudioRingMode>): void
 ```
 
-Unsubscribes to the ringer mode state change events.
+取消监听铃声模式变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1313,7 +1384,7 @@ Unsubscribes to the ringer mode state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 否 | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 否 | 回调函数，返回变化后的铃音模式。 |
 
 **错误码：**
 
@@ -1343,9 +1414,7 @@ audioVolumeGroupManager.offRingerModeChange(ringerModeChangeCallback);
 on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 ```
 
-监听系统麦克风状态更改事件（当检测到系统麦克风状态发生改变时触发）。使用callback异步回调。
-
-目前此订阅接口在单进程多AudioManager实例的使用场景下，仅最后一个实例的订阅生效，其他实例的订阅会被覆盖（即使最后一个实例没有进行订阅）。因此，推荐使用单一AudioManager实例进行开发。
+监听系统麦克风状态更改事件（当检测到系统麦克风状态发生改变时触发）。使用callback异步回调。 目前此订阅接口在单进程多AudioManager实例的使用场景下，仅最后一个实例的订阅生效，其他实例的订阅会被覆盖（即使最后一个实例没有进行订阅）。因此，推荐使用单一AudioManager实例进行开发。
 
 **起始版本：** 9
 
@@ -1401,7 +1470,7 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 onMicStateChange(callback: Callback<MicStateChangeEvent>): void
 ```
 
-Listens for system microphone state change events. This method uses a callback to get microphone change events.
+监听系统麦克风状态更改事件（当检测到系统麦克风状态发生改变时触发）。使用callback异步回调。 目前此订阅接口在单进程多AudioManager实例的使用场景下，仅最后一个实例的订阅生效，其他实例的订阅会被覆盖（即使最后一个实例没有进行订阅）。因此，推荐使用单一AudioManager实例进行开发。
 
 **起始版本：** 23
 
@@ -1413,7 +1482,7 @@ Listens for system microphone state change events. This method uses a callback t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 是 | Callback used to get the system microphone state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 是 | 回调函数，返回变更后的麦克风状态。 |
 
 **错误码：**
 
@@ -1435,7 +1504,7 @@ audioVolumeGroupManager.onMicStateChange((micStateChange: audio.MicStateChangeEv
 onRingerModeChange(callback: Callback<AudioRingMode>): void
 ```
 
-Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
+监听铃声模式变化事件（当[AudioRingMode](arkts-audio-audio-audioringmode-e.md)发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1447,7 +1516,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | 回调函数，返回变化后的铃音模式。 |
 
 **错误码：**
 
@@ -1471,8 +1540,7 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 
 设置麦克风静音状态。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。
 
 **起始版本：** 9
@@ -1546,8 +1614,7 @@ setMicrophoneMute(mute: boolean): Promise<void>
 
 设置麦克风静音状态。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。
 
 **起始版本：** 9

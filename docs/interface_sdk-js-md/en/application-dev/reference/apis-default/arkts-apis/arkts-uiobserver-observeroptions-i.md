@@ -1,8 +1,6 @@
 # ObserverOptions
 
-observer options.
-
-@interface ObserverOptions
+observer options.@interface ObserverOptions
 
 **Since:** 23
 

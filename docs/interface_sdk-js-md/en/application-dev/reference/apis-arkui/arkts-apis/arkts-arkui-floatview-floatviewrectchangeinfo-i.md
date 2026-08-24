@@ -20,12 +20,9 @@ import { floatView } from '@kit.ArkUI';
 reason: string
 ```
 
-Reason for the change of the rectangle area of the float view. The reasons and their meanings are as follows:
-
-**"POSITION_CHANGE"**: The position changes.
-
-**"SIZE_CHANGE"**: The size changes.
-
+Reason for the change of the rectangle area of the float view. The reasons and their meanings are as follows:  
+**"POSITION_CHANGE"**: The position changes.  
+**"SIZE_CHANGE"**: The size changes.  
 **"RECT_CHANGE"**: Both the position and size change.
 
 **Type:** string

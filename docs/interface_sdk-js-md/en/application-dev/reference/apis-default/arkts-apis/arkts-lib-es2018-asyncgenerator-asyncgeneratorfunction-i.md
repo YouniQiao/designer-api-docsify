@@ -89,7 +89,7 @@ readonly prototype: AsyncGenerator
 
 A reference to the prototype.
 
-**Type:** [AsyncGenerator](arkts-lib-es2018-asyncgenerator-asyncgenerator-i.md)
+**Type:** AsyncGenerator
 
 **Since:** -1
 

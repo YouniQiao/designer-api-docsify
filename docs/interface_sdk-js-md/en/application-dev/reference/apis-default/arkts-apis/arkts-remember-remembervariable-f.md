@@ -13,6 +13,8 @@ Create variable within @Builder functions or build().
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Builder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@Builderexport declare function rememberVariable<T>(initialValue: RememberInitialType<T>): MutableVariable<T>--><!--Device-unnamed-@Builderexport declare function rememberVariable<T>(initialValue: RememberInitialType<T>): MutableVariable<T>-End-->

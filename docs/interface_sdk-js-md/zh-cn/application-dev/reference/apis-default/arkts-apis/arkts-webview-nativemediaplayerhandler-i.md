@@ -2,10 +2,8 @@
 
 [CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback) 回调函数的参数。应用通过该对象，将播放器的状态通知给 ArkWeb 内核。
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 12开始支持。
-> 
+> **说明：**&gt;
+> - 本Interface首批接口从API version 12开始支持。&gt;
 > - 示例效果请以真机运行为准。
 
 **起始版本：** 23
@@ -101,7 +99,7 @@ handleError(error: MediaError, errorMessage: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| error | [MediaError](arkts-webview-mediaerror-e.md) | 是 | 错误类型。 |
+| error | [MediaError](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediaerror-e.md) | 是 | 错误类型。 |
 | errorMessage | string | 是 | 错误的详细描述。 |
 
 ## handleFullscreenChanged
@@ -212,7 +210,7 @@ handleReadyStateChanged(state: ReadyState): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [ReadyState](arkts-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
+| state | [ReadyState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
 
 ## handleSeekFinished
 
@@ -266,7 +264,7 @@ handleStatusChanged(status: PlaybackStatus): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| status | [PlaybackStatus](arkts-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
+| status | [PlaybackStatus](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
 
 ## handleTimeUpdate
 

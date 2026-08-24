@@ -1,8 +1,6 @@
 # SliderModifier
 
-Defines Slider Modifier
-
-@implements { SliderAttribute, AttributeModifier&lt;SliderAttribute&gt; }
+Defines Slider Modifier@implements { SliderAttribute, AttributeModifier&lt;SliderAttribute&gt; }
 
 **Inheritance/Implementation:** SliderModifier implements SliderAttribute, AttributeModifier<SliderAttribute>
 

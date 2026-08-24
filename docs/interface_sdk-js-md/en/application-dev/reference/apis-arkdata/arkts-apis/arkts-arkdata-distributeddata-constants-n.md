@@ -15,7 +15,6 @@ Defines the KV store constants.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## Summary

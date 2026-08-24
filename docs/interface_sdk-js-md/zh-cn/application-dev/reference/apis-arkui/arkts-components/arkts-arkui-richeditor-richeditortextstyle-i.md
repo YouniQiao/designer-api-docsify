@@ -156,11 +156,7 @@ fontWeight?: int | FontWeight | string
 halfLeading?: boolean
 ```
 
-文本是否将行间距平分至行的顶部与底部。
-
-true表示将行间距平分至行的顶部与底部，false则不平分。
-
-默认值：false。
+文本是否将行间距平分至行的顶部与底部。true表示将行间距平分至行的顶部与底部，false则不平分。默认值：false。
 
 **类型：** boolean
 
@@ -220,11 +216,7 @@ lineHeight?: double | string | Resource
 strokeColor?: ResourceColor
 ```
 
-文本描边颜色。
-
-默认值：跟随字体颜色。
-
-设置异常值时跟随字体颜色。
+文本描边颜色。默认值：跟随字体颜色。设置异常值时跟随字体颜色。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -244,10 +236,7 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-文本描边拐角样式。
-
-默认值：StrokeJoinStyle.MITER_JOIN。
-
+文本描边拐角样式。默认值：StrokeJoinStyle.MITER_JOIN。  
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** [StrokeJoinStyle](../arkts-apis/arkts-arkui-textcommon-strokejoinstyle-e.md)
@@ -268,19 +257,10 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: LengthMetrics | double
 ```
 
-文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md)，当前设置不生效，作为0处理。
-
-值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。
-
-默认值：0vp。
-
-单位：LengthMetrics类型时跟随LengthMetrics，number或double类型时是vp。
-
-取值范围：(-∞, +∞)
-
+文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../../apis-default/arkts-apis/arkts-graphics-lengthunit-e.md)，当前设置不生效，作为0处理。值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。默认值：0vp。单位：LengthMetrics类型时跟随LengthMetrics，number或double类型时是vp。取值范围：(-∞, +∞)  
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| double
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| double
 
 **起始版本：** 23
 
@@ -318,11 +298,8 @@ textBackgroundStyle?: TextBackgroundStyle
 textShadow?: ShadowOptions | Array<ShadowOptions>
 ```
 
-文字阴影效果。
-
-**说明：**
-
-仅支持查询阴影模糊半径、颜色和偏移量。
+文字阴影效果。  
+**说明：**仅支持查询阴影模糊半径、颜色和偏移量。
 
 **类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 

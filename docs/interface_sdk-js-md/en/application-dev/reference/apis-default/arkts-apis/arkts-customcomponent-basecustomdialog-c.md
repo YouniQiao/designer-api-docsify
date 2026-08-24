@@ -15,8 +15,7 @@ Definition of base custom dialog class.
 ## _invokeImpl
 
 ```TypeScript
-@Builder
-  static _invokeImpl<S extends BaseCustomDialog<S, S_Options>, S_Options>(
+static _invokeImpl<S extends BaseCustomDialog<S, S_Options>, S_Options>(
         factory: () => S,
         initializers?: () => S_Options,
         content?: CustomBuilder
@@ -28,6 +27,8 @@ Implementation for creating a custom dialog
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

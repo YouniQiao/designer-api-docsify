@@ -1,11 +1,8 @@
 # MediaAlbumChangeRequest
 
-MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).
+MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).相册变更请求。
 
-相册变更请求。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Class首批接口从API version 11开始支持。
 
 **继承/实现关系：** MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
@@ -310,8 +307,7 @@ getAlbum(): Album
 
 获取当前相册变更请求中的相册。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 对于创建相册的变更请求，在调用接口
 > 
 > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)
@@ -522,14 +518,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setAlbumName(name: string): void
 ```
 
-设置相册名称。
-
-相册名参数规格：
-
-- 相册名字符串长度为1~255。 - 不允许出现的非法英文字符，包括：
-
-. \ / : ? " ' ` &lt; &gt; | { } [ ]
-
+设置相册名称。相册名参数规格：  
+- 相册名字符串长度为1~255。 - 不允许出现的非法英文字符，包括：  
+. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - 英文字符大小写不敏感。 - 相册名不允许重名。
 
 **起始版本：** 23

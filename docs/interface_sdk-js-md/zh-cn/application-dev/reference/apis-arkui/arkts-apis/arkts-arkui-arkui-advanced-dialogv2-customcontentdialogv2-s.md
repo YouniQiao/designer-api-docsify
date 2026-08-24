@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct CustomContentDialogV2--><!--Device-unnamed-export declare struct CustomContentDialogV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,17 +19,16 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## buttons
 
 ```TypeScript
-@Param
-  buttons?: AdvancedDialogV2Button[]
+buttons?: AdvancedDialogV2Button[]
 ```
 
-弹出框操作区按钮，最多支持4个按钮。
-
-默认不显示。
+弹出框操作区按钮，最多支持4个按钮。默认不显示。
 
 **类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)[]
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,17 +41,16 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## contentAreaPadding
 
 ```TypeScript
-@Param
-  contentAreaPadding?: LocalizedPadding
+contentAreaPadding?: LocalizedPadding
 ```
 
-弹出框内容区内边距。
-
-默认不显示。
+弹出框内容区内边距。默认不显示。
 
 **类型：** LocalizedPadding
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,8 +63,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## contentBuilder
 
 ```TypeScript
-@BuilderParam
-  contentBuilder: CustomBuilder
+contentBuilder: CustomBuilder
 ```
 
 弹出框内容。
@@ -72,6 +71,8 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 **类型：** CustomBuilder
 
 **起始版本：** 18
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,19 +85,17 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## primaryTitle
 
 ```TypeScript
-@Param
-  primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
-弹出框标题。
-
-默认不显示。
-
+弹出框标题。默认不显示。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -109,19 +108,17 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## secondaryTitle
 
 ```TypeScript
-@Param
-  secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
-弹出框辅助文本。
-
-默认不显示。
-
+弹出框辅助文本。默认不显示。  
 **说明：** 辅助文本超过两行会显示“...”。
 
 **类型：** ResourceStr
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

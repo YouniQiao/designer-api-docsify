@@ -1,8 +1,6 @@
 # PolygonModifier
 
-Defines Polygon Modifier
-
-@implements PolygonAttribute, AttributeModifier&lt;PolygonAttribute&gt;
+Defines Polygon Modifier@implements PolygonAttribute, AttributeModifier&lt;PolygonAttribute&gt;
 
 **Inheritance/Implementation:** PolygonModifier implements PolygonAttribute, AttributeModifier<PolygonAttribute>
 

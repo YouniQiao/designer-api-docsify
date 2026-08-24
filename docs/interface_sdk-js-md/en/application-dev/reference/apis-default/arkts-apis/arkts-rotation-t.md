@@ -16,5 +16,5 @@ Rotation info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Vector3](arkts-graphics-vector3-i.md)
+**Property type:** [Vector3](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector3-i.md)
 

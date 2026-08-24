@@ -19,9 +19,7 @@ Color of the navigation divider and the upper and lower margins of the **Navigat
 color?: ResourceColor
 ```
 
-Color of the divider.
-
-Default value: **#33000000**, indicating gray
+Color of the divider.Default value: **#33000000**, indicating gray
 
 **Type:** ResourceColor
 
@@ -41,13 +39,7 @@ Default value: **#33000000**, indicating gray
 endMargin?: Length
 ```
 
-Distance between the divider and the bottom of the sidebar.
-
-Default value: **0**
-
-Unit: vp
-
-Value range: [0, +��)
+Distance between the divider and the bottom of the sidebar.Default value: **0**Unit: vp Value range: [0, +��)
 
 **Type:** Length
 
@@ -67,13 +59,7 @@ Value range: [0, +��)
 startMargin?: Length
 ```
 
-Distance between the divider and the top of the sidebar.
-
-Default value: **0**
-
-Unit: vp
-
-Value range: [0, +��)
+Distance between the divider and the top of the sidebar.Default value: **0**Unit: vp Value range: [0, +��)
 
 **Type:** Length
 

@@ -14,7 +14,6 @@ This interface is used to notify the listener of personalized spatialization ena
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## deviceDescriptor

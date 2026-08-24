@@ -11,11 +11,6 @@ Provides the result details when a blank screen is detected, including the numbe
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## detectedContentfulNodesCount
@@ -24,9 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 detectedContentfulNodesCount?: number
 ```
 
-This attribute may exist when the contentful node detection policy is used and the threshold for the number of detected nodes is set. Otherwise, this attribute does not exist.
-
-Number of contentful nodes that are detected.
+This attribute may exist when the contentful node detection policy is used and the threshold for the number of detected nodes is set. Otherwise, this attribute does not exist.Number of contentful nodes that are detected.
 
 **Type:** number
 

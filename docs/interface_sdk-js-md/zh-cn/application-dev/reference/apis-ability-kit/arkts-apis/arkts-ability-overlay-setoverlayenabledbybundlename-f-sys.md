@@ -12,9 +12,7 @@ import { overlay } from '@kit.AbilityKit';
 function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用的overlay module的禁用使能状态。使用callback异步回调。
-
-指定应用是调用方自身时不需要权限。
+设置指定应用的overlay module的禁用使能状态。使用callback异步回调。指定应用是调用方自身时不需要权限。
 
 **起始版本：** 23
 
@@ -130,9 +128,7 @@ try {
 function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean): Promise<void>
 ```
 
-设置指定应用的overlay module的禁用使能状态。使用Promise异步回调。
-
-指定应用是调用方自身时不需要权限。
+设置指定应用的overlay module的禁用使能状态。使用Promise异步回调。指定应用是调用方自身时不需要权限。
 
 **起始版本：** 23
 

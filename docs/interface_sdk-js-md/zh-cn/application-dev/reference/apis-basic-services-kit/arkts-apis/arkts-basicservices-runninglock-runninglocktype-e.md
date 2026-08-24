@@ -14,8 +14,7 @@ RunningLock锁的类型。
 BACKGROUND = 1
 ```
 
-阻止系统睡眠的锁。
-
+阻止系统睡眠的锁。  
 **说明：** 从API version 7开始支持，从API version 10开始废弃。
 
 **起始版本：** 23

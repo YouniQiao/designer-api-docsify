@@ -15,8 +15,7 @@ Defines the Extendable Button.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableButton>(
+static $_instantiate<T extends ExtendableButton>(
         factory: ConstructorT<T>, 
         label: ResourceStr, 
         options?: ButtonOptions, 
@@ -29,6 +28,8 @@ Constructor of Extendable Button.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,8 +55,7 @@ Constructor of Extendable Button.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableButton>(
+static $_instantiate<T extends ExtendableButton>(
         factory: ConstructorT<T>, 
         options?: ButtonOptions,
         content_?: CustomBuilder
@@ -67,6 +67,8 @@ Constructor of Extendable Button.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,8 +93,7 @@ Constructor of Extendable Button.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-    static _instantiateImpl<T extends ExtendableButton>(
+static _instantiateImpl<T extends ExtendableButton>(
         styles: CustomBuilderT<T>, 
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -104,6 +105,8 @@ Entry of Extendable Button.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

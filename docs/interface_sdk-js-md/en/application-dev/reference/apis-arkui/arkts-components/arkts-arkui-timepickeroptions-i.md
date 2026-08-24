@@ -1,17 +1,8 @@
 # TimePickerOptions
 
-Describes the parameters of the time picker.
-
-Property modifications made to **TimePickerOptions** during the **TimePicker** scrolling process may not take effect.
-
-The **Date** object is used to handle dates and time. It can be used in the following ways:
-
-**Method 1**: new Date()
-
-Obtains the current system date and time.
-
-**Method 2**: new Date(value: number | string)
-
+Describes the parameters of the time picker.Property modifications made to **TimePickerOptions** during the **TimePicker** scrolling process may not take effect.The **Date** object is used to handle dates and time. It can be used in the following ways:  
+**Method 1**: new Date()Obtains the current system date and time.  
+**Method 2**: new Date(value: number | string)  
 **Method 3**: new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number)
 
 **Since:** 8
@@ -31,13 +22,10 @@ Obtains the current system date and time.
 end?: Date
 ```
 
-End time of the time picker.
-
-Default value: **Date(0, 0, 0, 23, 59, 59)**.
-
+End time of the time picker.Default value: **Date(0, 0, 0, 23, 59, 59)**.  
 **NOTE：**
-
-1. Only the hour and minute values take effect. 2. If **end** is set and is not the default value, **loop** does not take effect.
+1. Only the hour and minute values take effect.
+2. If **end** is set and is not the default value, **loop** does not take effect.
 
 **Type:** Date
 
@@ -57,9 +45,7 @@ Default value: **Date(0, 0, 0, 23, 59, 59)**.
 format?: TimePickerFormat
 ```
 
-Time format.
-
-Default value: **TimePickerFormat.HOUR_MINUTE**
+Time format.Default value: **TimePickerFormat.HOUR_MINUTE**
 
 **Type:** [TimePickerFormat](arkts-arkui-timepickerformat-e.md)
 
@@ -81,11 +67,7 @@ Default value: **TimePickerFormat.HOUR_MINUTE**
 selected?: Date
 ```
 
-Time of the selected item.
-
-Default value: current system time
-
-Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Time of the selected item.Default value: current system time Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** Date
 
@@ -103,13 +85,10 @@ Since API version 10, this parameter supports two-way binding through [\$\$](../
 start?: Date
 ```
 
-Start time of the time picker.
-
-Default value: **Date(0, 0, 0, 0, 0, 0)**
-
+Start time of the time picker.Default value: **Date(0, 0, 0, 0, 0, 0)**  
 **NOTE：**
-
-1. Only the hour and minute values take effect. 2. If **start** is set and is not the default value, **loop** does not take effect.
+1. Only the hour and minute values take effect.
+2. If **start** is set and is not the default value, **loop** does not take effect.
 
 **Type:** Date
 

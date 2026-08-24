@@ -12,8 +12,6 @@
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## getCertIssuer
@@ -24,8 +22,7 @@ getCertIssuer(): DataBlob
 
 表示获取被吊销证书的颁发者名称。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 获取到的被吊销证书的颁发者名称数据带字符串结束符。
 
 **起始版本：** 23

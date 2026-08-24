@@ -97,9 +97,7 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>
 ```
 
-提供一个自定义样式的对话框，其中包含所提供的内容。
-
-content参数通过联合类型接受CustomBuilder或ComponentContent： -CustomBuilder：自定义对话框内容的生成器函数。 - ComponentContent：支持状态驱动更新的ComponentContent。
+提供一个自定义样式的对话框，其中包含所提供的内容。content参数通过联合类型接受CustomBuilder或ComponentContent： -CustomBuilder：自定义对话框内容的生成器函数。 - ComponentContent：支持状态驱动更新的ComponentContent。
 
 > **说明：**
 > isModal = true和showInSubWindow = true不能同时使用。

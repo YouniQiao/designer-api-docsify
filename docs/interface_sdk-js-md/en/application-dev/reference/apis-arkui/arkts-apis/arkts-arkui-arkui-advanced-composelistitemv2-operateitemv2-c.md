@@ -4,6 +4,8 @@ Declare OperateItemV2
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class OperateItemV2--><!--Device-unnamed-export declare class OperateItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ The constructor of OperateItemV2.
 ## arrow
 
 ```TypeScript
-@Trace
-  public arrow?: OperateIconV2
+public arrow?: OperateIconV2
 ```
 
 Sets the arrow.
@@ -50,6 +51,8 @@ Sets the arrow.
 **Type:** [OperateIconV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ Sets the arrow.
 ## button
 
 ```TypeScript
-@Trace
-  public button?: OperateButtonV2
+public button?: OperateButtonV2
 ```
 
 Sets the button.
@@ -71,6 +73,8 @@ Sets the button.
 **Type:** [OperateButtonV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +87,7 @@ Sets the button.
 ## checkbox
 
 ```TypeScript
-@Trace
-  public checkbox?: OperateCheckV2
+public checkbox?: OperateCheckV2
 ```
 
 Sets the checkBox.
@@ -92,6 +95,8 @@ Sets the checkBox.
 **Type:** [OperateCheckV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +109,7 @@ Sets the checkBox.
 ## icon
 
 ```TypeScript
-@Trace
-  public icon?: OperateIconV2
+public icon?: OperateIconV2
 ```
 
 Sets the icon.
@@ -113,6 +117,8 @@ Sets the icon.
 **Type:** [OperateIconV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +131,7 @@ Sets the icon.
 ## image
 
 ```TypeScript
-@Trace
-  public image?: ResourceStr
+public image?: ResourceStr
 ```
 
 Sets the image.
@@ -134,6 +139,8 @@ Sets the image.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,8 +153,7 @@ Sets the image.
 ## radio
 
 ```TypeScript
-@Trace
-  public radio?: OperateCheckV2
+public radio?: OperateCheckV2
 ```
 
 Sets the radio.
@@ -155,6 +161,8 @@ Sets the radio.
 **Type:** [OperateCheckV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,8 +175,7 @@ Sets the radio.
 ## subIcon
 
 ```TypeScript
-@Trace
-  public subIcon?: OperateIconV2
+public subIcon?: OperateIconV2
 ```
 
 Sets the subIcon.
@@ -176,6 +183,8 @@ Sets the subIcon.
 **Type:** [OperateIconV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +197,7 @@ Sets the subIcon.
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 Sets the symbolStyle.
@@ -197,6 +205,8 @@ Sets the symbolStyle.
 **Type:** SymbolGlyphModifier
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -209,8 +219,7 @@ Sets the symbolStyle.
 ## text
 
 ```TypeScript
-@Trace
-  public text?: ResourceStr
+public text?: ResourceStr
 ```
 
 Sets the text.
@@ -218,6 +227,8 @@ Sets the text.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,8 +241,7 @@ Sets the text.
 ## toggle
 
 ```TypeScript
-@Trace
-  public toggle?: OperateCheckV2
+public toggle?: OperateCheckV2
 ```
 
 Sets the toggle.
@@ -239,6 +249,8 @@ Sets the toggle.
 **Type:** [OperateCheckV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

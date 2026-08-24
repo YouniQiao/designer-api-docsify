@@ -1,8 +1,6 @@
 # SceneType
 
-Enumeration type of scene.
-
-@enum { int } SceneType
+Enumeration type of scene.@enum { int } SceneType
 
 **Since:** 26.0.0
 

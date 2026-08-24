@@ -1,8 +1,6 @@
 # SliderModifier
 
-Defines Slider Modifier
-
-@extends SliderAttribute @implements AttributeModifier&lt;SliderAttribute&gt;
+Defines Slider Modifier@extends SliderAttribute @implements AttributeModifier&lt;SliderAttribute&gt;
 
 **Inheritance/Implementation:** SliderModifier extends SliderAttribute and implements AttributeModifier<SliderAttribute>
 

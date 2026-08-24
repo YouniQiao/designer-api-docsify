@@ -1,8 +1,6 @@
 # DialogInfo
 
-对话框信息的定义。
-
-@interface DialogInfo
+对话框信息的定义。@interface DialogInfo
 
 **起始版本：** 23
 
@@ -94,9 +92,7 @@ dialogType: DialogType
 qrCodes?: QrCodeInfo[]
 ```
 
-对话框二维码的数组。
-
-当设置了二维码信息时，此对话框将被识别为二维码对话框，并将优先显示二维码信息。最多可以设置两个。
+对话框二维码的数组。当设置了二维码信息时，此对话框将被识别为二维码对话框，并将优先显示二维码信息。最多可以设置两个。
 
 **类型：** [QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]
 

@@ -23,7 +23,7 @@
     }
 ```
 
-Returns an object whose properties have the value 'true' when they will be absent when used in a 'with' statement.
+Returns an object whose properties have the value 'true'when they will be absent when used in a 'with' statement.
 
 **Since:** -1
 

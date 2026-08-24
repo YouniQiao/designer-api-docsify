@@ -15,8 +15,7 @@ Defines the Extendable Grid.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-  static $_instantiate<T extends ExtendableGrid>(
+static $_instantiate<T extends ExtendableGrid>(
     factory: ConstructorT<T>, 
     scroller?: Scroller, 
     layoutOptions?: GridLayoutOptions, 
@@ -29,6 +28,8 @@ Constructor of Extendable Grid.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +55,7 @@ Constructor of Extendable Grid.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-  static _instantiateImpl<T extends ExtendableGrid>(
+static _instantiateImpl<T extends ExtendableGrid>(
     styles: CustomBuilderT<T>, 
     factory: ConstructorT<T>, 
     content_?: CustomBuilder
@@ -67,6 +67,8 @@ Entry of Extendable Grid.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

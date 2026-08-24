@@ -14,7 +14,6 @@ VPN 配置参数。
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
-import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## addresses

@@ -1,8 +1,6 @@
 # AnimatedDrawableDescriptor
 
-使用Image组件播放PixelMap数组或动图资源时传入 AnimatedDrawableDescriptor对象，该对象继承自[DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
-
-@extends DrawableDescriptor
+使用Image组件播放PixelMap数组或动图资源时传入 AnimatedDrawableDescriptor对象，该对象继承自[DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。@extends DrawableDescriptor
 
 **继承/实现关系：** AnimatedDrawableDescriptor extends [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 

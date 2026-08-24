@@ -1,8 +1,6 @@
 # GenerateImageTaskPartialResult (System API)
 
-Configuration stream result for AI-generated image tasks.
-
-@interface GenerateImageTaskPartialResult
+Configuration stream result for AI-generated image tasks.@interface GenerateImageTaskPartialResult
 
 **Since:** 23
 

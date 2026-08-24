@@ -14,7 +14,6 @@ Wi-Fi station information.
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## ipAddress

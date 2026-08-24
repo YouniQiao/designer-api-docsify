@@ -22,7 +22,7 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 | --- | --- |
 | [off_userAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) | Disables the age group detection function. |
 | [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) | Unsubscribe to age group detection feature. |
-| [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | Enables the age group detection function. |
+| [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | Enables the age group detection function.When the function is enabled, the application can recommend content based on the age group detection result. |
 | [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | Subscribe to age group detection feature. |
 
 <!--Del-->

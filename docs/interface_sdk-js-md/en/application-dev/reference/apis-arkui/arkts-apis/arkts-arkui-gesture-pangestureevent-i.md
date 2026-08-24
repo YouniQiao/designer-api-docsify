@@ -1,8 +1,6 @@
 # PanGestureEvent
 
-Defines event info for pan gesture.
-
-@extends BaseGestureEvent @interface PanGestureEvent
+Defines event info for pan gesture.@extends BaseGestureEvent @interface PanGestureEvent
 
 **Inheritance/Implementation:** PanGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md)
 

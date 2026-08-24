@@ -20,9 +20,7 @@ import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescript
 imageHeight: number
 ```
 
-Image height.
-
-Unit: px.
+Image height.Unit: px.
 
 **Type:** number
 
@@ -42,9 +40,7 @@ Unit: px.
 imageWidth: number
 ```
 
-Image width.
-
-Unit: px.
+Image width.Unit: px.
 
 **Type:** number
 

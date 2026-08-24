@@ -1,8 +1,6 @@
 # Hyperlink属性/事件
 
-除支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)外，还支持以下属性。
-
-支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)。
+除支持通用属性外，还支持以下属性。支持通用事件。
 
 **继承/实现关系：** HyperlinkAttribute extends CommonMethod<HyperlinkAttribute>
 

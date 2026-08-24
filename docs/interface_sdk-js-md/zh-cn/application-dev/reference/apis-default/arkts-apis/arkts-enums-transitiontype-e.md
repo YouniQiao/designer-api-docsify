@@ -1,8 +1,6 @@
 # TransitionType
 
-指定该转场样式生效的场景。
-
-@enum { number }
+指定该转场样式生效的场景。@enum { number }
 
 **起始版本：** 23
 

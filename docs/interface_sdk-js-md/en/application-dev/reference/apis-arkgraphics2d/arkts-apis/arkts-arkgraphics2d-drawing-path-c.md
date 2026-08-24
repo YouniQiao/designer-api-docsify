@@ -2,10 +2,8 @@
 
 A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -28,8 +26,9 @@ addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void
 ```
 
 Adds an arc to this path. When **startAngle** and **sweepAngle** meet the following conditions, an oval instead of an arc is added:
-
-1. The result of **startAngle** modulo 90 is close to 0. 2. The value of **sweepAngle** is not in the range of (-360, 360). In other cases, this API adds an arc by applying the result of **sweepAngle** modulo 360 to the path.
+1. The result of **startAngle** modulo 90 is close to 0.
+2. The value of **sweepAngle** is not in the range of (-360, 360).
+In other cases, this API adds an arc by applying the result of **sweepAngle** modulo 360 to the path.
 
 **Since:** 23
 
@@ -306,14 +305,11 @@ approximate(acceptableError: number): Array<number>
 
 Converts the existing path into an approximate path consisting of consecutive line segments.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting
-> performance and memory usage.
-> 
+> performance and memory usage.&gt;
 > - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially
-> distorting the original shape.
-> 
+> distorting the original shape.&gt;
 > - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies
 > them to polygons by keeping just the start and end points of their Bezier curve segments.
 
@@ -511,7 +507,7 @@ path.close();
 conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void
 ```
 
-Draws a conic curve from the last point of this path to the target point. If the path is empty, the start point ( 0, 0) is used.
+Draws a conic curve from the last point of this path to the target point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 23
 
@@ -2259,7 +2255,7 @@ console.info('empty : ', empty);
 rLineTo(dx: double, dy: double): void
 ```
 
-Draws a line segment from the last point of this path to a point relative to the last point. If the path is empty , the start point (0, 0) is used.
+Draws a line segment from the last point of this path to a point relative to the last point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 23
 

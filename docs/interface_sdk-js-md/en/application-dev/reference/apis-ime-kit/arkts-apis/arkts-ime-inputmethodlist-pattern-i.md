@@ -18,7 +18,7 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 icon: Resource
 ```
 
-@brief Mandatory. Default icon.
+Mandatory. Default icon.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -34,7 +34,7 @@ icon: Resource
 selectedIcon: Resource
 ```
 
-@brief Mandatory. Icon for the selected option.
+Mandatory. Icon for the selected option.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 

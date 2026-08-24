@@ -1,8 +1,6 @@
 # TimePickerDialogOptions
 
-时间选择器弹窗选项。
-
-继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。
+时间选择器弹窗选项。继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。
 
 **继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md)
 
@@ -27,11 +25,9 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 > 默认值：请参考PickerDialogButtonStyle。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
-> 保持默认值false。
-> 
+> 保持默认值false。&gt;
 > 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
 > ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
@@ -53,9 +49,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 alignment?: DialogAlignment
 ```
 
-设置弹窗在垂直方向上的对齐方式。
-
-默认值：DialogAlignment.Default
+设置弹窗在垂直方向上的对齐方式。默认值：DialogAlignment.Default
 
 **类型：** DialogAlignment
 
@@ -75,12 +69,9 @@ alignment?: DialogAlignment
 backgroundBlurStyle?: BlurStyle
 ```
 
-弹窗背板模糊材质。
+弹窗背板模糊材质。默认值：BlurStyle.COMPONENT_ULTRA_THICK
 
-默认值：BlurStyle.COMPONENT_ULTRA_THICK
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
 > 否则显示的颜色将不符合预期效果。
 > 2. 从API版本26.0.0开始，设置systemMaterial后，backgroundBlurStyle不生效。
@@ -107,8 +98,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 背景模糊效果参数，用于自定义弹窗背景模糊的显示样式，支持配置颜色模式、自适应颜色、缩放比例等属性，实现不同的背景模糊视觉效果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 未设置时沿用
 > backgroundBlurStyle
 > 的默认效果（BlurStyle.COMPONENT_ULTRA_THICK）。
@@ -131,12 +121,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-弹窗背板颜色。
+弹窗背板颜色。默认值：Color.Transparent
 
-默认值：Color.Transparent
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则显示的颜色将不符合预期效果。
 > 2. 从API版本26.0.0开始，设置systemMaterial后，backgroundColor不生效。
 
@@ -162,8 +149,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 未设置时不生效，此时弹窗背景模糊效果由
 > backgroundBlurStyle
 > 决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
@@ -191,11 +177,9 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 > 默认值：请参考PickerDialogButtonStyle。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
-> 保持默认值false。
-> 
+> 保持默认值false。&gt;
 > 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
 > ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
@@ -219,11 +203,9 @@ dateTimeOptions?: DateTimeOptions
 
 设置时分是否显示前导0，目前只支持设置hour和minute参数，设置其他参数不生效。
 
-> 默认值：
-> 
+> 默认值：&gt;
 > - hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"；
-> 12小时制默认为"numeric"，即没有前导0。
-> 
+> 12小时制默认为"numeric"，即没有前导0。&gt;
 > - minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。
 
 **类型：** [DateTimeOptions](arkts-arkui-datetimeoptions-t.md)
@@ -244,11 +226,7 @@ dateTimeOptions?: DateTimeOptions
 disappearTextStyle?: PickerTextStyle
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。
-
-默认值：
-
-<br>{ <br>color: '#ff182431', <br>font: { <br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>}
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>}
 
 **类型：** PickerTextStyle
 
@@ -268,13 +246,9 @@ disappearTextStyle?: PickerTextStyle
 enableCascade?: boolean
 ```
 
-设置上午和下午的标识是否根据小时数自动切换，仅在useMilitaryTime设置为false时生效。
-
-- true：自动切换。 - false：不自动切换。
-
-默认值：false
-
-当enableCascade设置为true时，需要loop参数同时为true才能生效。loop用于控制选择器是否循环滚动。
+设置上午和下午的标识是否根据小时数自动切换，仅在useMilitaryTime设置为false时生效。  
+- true：自动切换。 - false：不自动切换。  
+默认值：false当enableCascade设置为true时，需要loop参数同时为true才能生效。loop用于控制选择器是否循环滚动。
 
 **类型：** boolean
 
@@ -296,17 +270,13 @@ enableCascade?: boolean
 enableHapticFeedback?: boolean
 ```
 
-设置是否开启触控反馈。
-
-- true：开启触控反馈。 - false：不开启触控反馈。
-
+设置是否开启触控反馈。  
+- true：开启触控反馈。 - false：不开启触控反馈。  
 默认值：true
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 设置为true后，其生效情况取决于系统的硬件是否支持。
-> 2. 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
-> 
+> 2. 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：&gt;
 > "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **类型：** boolean
@@ -329,10 +299,8 @@ enableHapticFeedback?: boolean
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态。悬停态指折叠屏等设备处于悬停折叠状态时的交互模式，而非鼠标悬停。
-
-- true：响应悬停态。 - false：不响应悬停态。
-
+是否响应悬停态。悬停态指折叠屏等设备处于悬停折叠状态时的交互模式，而非鼠标悬停。  
+- true：响应悬停态。 - false：不响应悬停态。  
 默认值：false
 
 **类型：** boolean
@@ -355,9 +323,7 @@ enableHoverMode?: boolean
 hoverModeArea?: HoverModeAreaType
 ```
 
-悬停态下弹窗默认展示区域。仅在enableHoverMode为true时生效。
-
-默认值：HoverModeAreaType.BOTTOM_SCREEN
+悬停态下弹窗默认展示区域。仅在enableHoverMode为true时生效。默认值：HoverModeAreaType.BOTTOM_SCREEN
 
 **类型：** HoverModeAreaType
 
@@ -379,9 +345,7 @@ hoverModeArea?: HoverModeAreaType
 maskRect?: Rectangle
 ```
 
-弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。
-
-默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
+弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
 
 **类型：** Rectangle
 
@@ -401,9 +365,7 @@ maskRect?: Rectangle
 offset?: Offset
 ```
 
-设置弹窗相对alignment所在位置的偏移量。
-
-默认值：{ dx: 0 , dy: 0 }
+设置弹窗相对alignment所在位置的偏移量。默认值：{ dx: 0 , dy: 0 }
 
 **类型：** Offset
 
@@ -479,14 +441,10 @@ onDidAppear?: () => void
 
 弹窗弹出后的事件回调。
 
-> **说明：**
-> 
-> 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
-> 
-> 2. 在onDidAppear内设置改变弹窗显示效果的回调事件，下次弹窗弹出时生效。
-> 
-> 3. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
-> 
+> **说明：**&gt;
+> 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。&gt;
+> 2. 在onDidAppear内设置改变弹窗显示效果的回调事件，下次弹窗弹出时生效。&gt;
+> 3. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。&gt;
 > 4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
 
 **类型：** () =&gt; void
@@ -509,8 +467,7 @@ onDidDisappear?: () => void
 
 弹窗消失后的事件回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **类型：** () =&gt; void
@@ -533,8 +490,7 @@ onEnterSelectedArea?: Callback<TimePickerResult>
 
 滑动过程中，当前滑动列滑动距离超过选中项高度的一半，选项进入分割线区域内，触发该回调。与onChange事件的差别在于，该事件在滑动过程中实时触发， 适合需要实时监听滑动场景；onChange在选项归位至选中项位置后触发，适合需要确认最终选中值的场景。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当enableCascade设置为true时，由于上午/下午列与小时列存在联动关系，不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节点，
 > 而联动变化的选项并不涉及滑动，因此，回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
@@ -558,10 +514,8 @@ onWillAppear?: () => void
 
 弹窗显示动效前的事件回调。
 
-> **说明：**
-> 
-> 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
-> 
+> **说明：**&gt;
+> 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。&gt;
 > 2. 在onWillAppear内设置改变弹窗显示效果的回调事件，下次弹窗弹出时生效。
 
 **类型：** () =&gt; void
@@ -584,10 +538,8 @@ onWillDisappear?: () => void
 
 弹窗退出动效前的事件回调。
 
-> **说明：**
-> 
-> 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
-> 
+> **说明：**&gt;
+> 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。&gt;
 > 2. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
 
 **类型：** () =&gt; void
@@ -610,8 +562,7 @@ selectedTextStyle?: PickerTextStyle
 
 设置选中项的文本颜色、字号、字体粗细。
 
-> 默认值：
-> 
+> 默认值：&gt;
 > <br>{
 > <br>color: '#ff007dff',
 > <br>font: {
@@ -638,12 +589,9 @@ selectedTextStyle?: PickerTextStyle
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。
+设置弹窗背板的阴影。当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API版本26.0.0开始，设置systemMaterial后，shadow不生效。
 
 **类型：** ShadowOptions \| ShadowStyle
@@ -666,8 +614,7 @@ systemMaterial?: SystemUiMaterial
 
 设置弹窗的系统材质。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 默认值：[ImmersiveOptions](../../apis-default/arkts-apis/arkts-uimaterial-immersiveoptions-i.md)的style为ImmersiveStyle.ULTRA_THICK的
 > [ImmersiveMaterial](../../apis-default/arkts-apis/arkts-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。
 > - 不同的材质具有不同的效果，该接口影响背景色backgroundColor、
@@ -697,8 +644,7 @@ textStyle?: PickerTextStyle
 
 设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。
 
-> 默认值：
-> 
+> 默认值：&gt;
 > <br>{
 > <br>color: '#ff182431',
 > <br>font: {
@@ -725,10 +671,8 @@ textStyle?: PickerTextStyle
 useMilitaryTime?: boolean
 ```
 
-时间是否以24小时制展示。
-
-- true：时间以24小时制展示。 - false：时间以12小时制展示。
-
+时间是否以24小时制展示。  
+- true：时间以24小时制展示。 - false：时间以12小时制展示。  
 默认值：false
 
 > **说明：** 当设置为false时，enableCascade参数才能生效。

@@ -35,5 +35,5 @@ Called to return the specified status. Its parameters are passed in by connectDf
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Network ID of the device. |
-| status | number | Yes | Status code of the distributed file system. The status code is the error code returned by **onStatus** invoked by **connectDfs**. If the device is abnormal when **connectDfs()** is called, **onStatus** will be called to return the error code:<br>- [13900046](../errorcode-filemanagement.md#13900046-connection-interrupted-by-software) : The connection is interrupted by software. |
+| status | number | Yes | Status code of the distributed file system. The status code is the error code returned by **onStatus** invoked by **connectDfs**. If the device is abnormal when **connectDfs()** is called, **onStatus** will be called to return the error code:<br>- [13900046](../errorcode-filemanagement.md#13900046-connection-interrupted-by-software): The connection is interrupted by software. |
 

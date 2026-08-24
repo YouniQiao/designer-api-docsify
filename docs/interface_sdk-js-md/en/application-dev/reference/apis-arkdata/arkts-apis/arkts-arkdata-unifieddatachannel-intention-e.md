@@ -32,8 +32,7 @@ Public data channel.
 SYSTEM_SHARE = 'SystemShare'
 ```
 
-Data channel of the system sharing type.
-
+Data channel of the system sharing type.  
 **Use scenario**: This API is used to share data across applications in system sharing scenarios.
 
 **Since:** 23
@@ -50,8 +49,7 @@ Data channel of the system sharing type.
 PICKER = 'Picker'
 ```
 
-Data channel of the picker type.
-
+Data channel of the picker type.  
 **Use scenario**: This API is used to share data across applications in the scenarios where a picker is used.
 
 **Since:** 23
@@ -68,8 +66,7 @@ Data channel of the picker type.
 MENU = 'Menu'
 ```
 
-Data channel of the menu type.
-
+Data channel of the menu type.  
 **Use scenario**: This API is used to share data across applications in the shortcut menu.
 
 **Since:** 23

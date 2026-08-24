@@ -1,8 +1,6 @@
 # SliderShowStepOptions
 
-Defines the accessibility information of slider step point.
-
-@interface SliderShowStepOptions
+Defines the accessibility information of slider step point.@interface SliderShowStepOptions
 
 **Since:** 23
 

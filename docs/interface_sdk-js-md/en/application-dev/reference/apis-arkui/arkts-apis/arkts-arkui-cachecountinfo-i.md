@@ -1,8 +1,6 @@
 # CacheCountInfo
 
-Define cache count information.
-
-@interface CacheCountInfo
+Define cache count information.@interface CacheCountInfo
 
 **Since:** 22
 

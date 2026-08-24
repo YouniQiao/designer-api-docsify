@@ -14,7 +14,6 @@ Describes audio interrupt operation results.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## interruptNode

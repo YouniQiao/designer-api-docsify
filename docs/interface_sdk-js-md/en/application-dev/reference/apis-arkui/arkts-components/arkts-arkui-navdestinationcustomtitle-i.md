@@ -37,9 +37,7 @@ Content of the title bar.
 height: TitleHeight | Length
 ```
 
-Height of the title bar.
-
-Value range: [0, +��)
+Height of the title bar.Value range: [0, +��)
 
 **Type:** TitleHeight \| Length
 

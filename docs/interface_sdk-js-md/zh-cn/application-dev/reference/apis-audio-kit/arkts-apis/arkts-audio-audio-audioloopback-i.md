@@ -1,15 +1,9 @@
 # AudioLoopback
 
-提供音频返听的相关接口。
-
-在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md)获取AudioLoopback实例。
-
-当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与 [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md)相匹配。
-
-输入\输出设备由系统自动选择。如果当前输入\输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入\输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。
+提供音频返听的相关接口。 在使用AudioLoopback的接口之前，需先通过 [audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md)获取 AudioLoopback实例。 当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与 [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)相匹配。对于采集器，其音频焦点策略与 [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md)相匹配。 输入/输出设备由系统自动选择。如果当前输入/输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入/输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。
 
 > **说明：**
-> 
+
 > - 本Interface首批接口从API version 20开始支持。
 
 **起始版本：** 23
@@ -22,7 +16,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## enable
@@ -45,7 +38,7 @@ enable(enable: boolean): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 表示是否启用音频返听器。true表示启用，false表示不启用。 |
+| enable | boolean | 是 | 表示是否启用音频返听器。true表示启用，false表示禁用。 |
 
 **返回值：**
 
@@ -78,7 +71,7 @@ getEqualizerPreset(): AudioLoopbackEqualizerPreset
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 返回当前音频返听器的均衡器类型。 <br>在没有被修改的情况下，默认的均衡器类型是FULL。 |
+| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 返回当前音频返听器的均衡器类型。 |
 
 ## getPreferredDevicePair
 
@@ -100,7 +93,7 @@ getPreferredDevicePair(): AudioDevicePair | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) \| null | 返回系统推荐的音频输入输出设备组合。 <br>如果没有可用的输入输出设备组合，则返回null。 |
+| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) \| null | 返回系统推荐的音频输入输出设备组合。 |
 
 ## getReverbPreset
 
@@ -120,7 +113,7 @@ getReverbPreset(): AudioLoopbackReverbPreset
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 返回当前音频返听器的混响模式。 <br>在没有被修改的情况下，默认的混响模式是THEATER。 |
+| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 返回当前音频返听器的混响模式。 |
 
 ## getStatus
 
@@ -162,7 +155,7 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md)&gt; | 返回支持返听的音频输入输出设备数组。 <br>如果没有可用的输入输出设备组合，则返回空数组。 |
+| Array&lt;[AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md)&gt; | 返回支持返听的音频输入输出设备数组。 |
 
 ## getVolume
 
@@ -250,7 +243,7 @@ audioVolumeGroupManager.getVolume(audio.AudioVolumeType.MEDIA).then((volume) => 
 off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 ```
 
-取消监听音频状态事件。使用callback异步回调。
+取消监听音频返听状态变化事件。
 
 **起始版本：** 20
 
@@ -262,7 +255,7 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当取消监听音频状态事件时，触发该事件。 |
+| type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 | 回调函数，返回当前音频返听的状态。 |
 
 **错误码：**
@@ -277,7 +270,7 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 offStatusChange(callback?: Callback<AudioLoopbackStatus>): void
 ```
 
-Unsubscribes audio loopback status change event callback.
+取消监听音频返听状态变化事件。
 
 **起始版本：** 23
 
@@ -289,7 +282,7 @@ Unsubscribes audio loopback status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 | Callback used to listen for the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 | 回调函数，返回当前音频返听的状态。 |
 
 **错误码：**
 
@@ -330,7 +323,7 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 onStatusChange(callback: Callback<AudioLoopbackStatus>): void
 ```
 
-Subscribes to audio loopback status changes.
+监听返听状态变化事件（当AudioLoopback的状态发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -342,7 +335,7 @@ Subscribes to audio loopback status changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 | Callback used to return the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 | 回调函数，返回当前音频返听的状态。 |
 
 **错误码：**
 

@@ -41,7 +41,7 @@ import { sim } from '@kit.TelephonyKit';
 | [getOpNameSync](arkts-telephony-sim-getopnamesync-f.md) | 获取指定卡槽中SIM卡的OpName。 |
 | [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md) | 获取SIM卡账户信息。使用callback异步回调。 |
 | [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md) | 获取SIM卡账户信息。使用Promise异步回调。 |
-| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md) | 查看卡槽ID和SIM卡的对应关系： |
+| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md) | 查看卡槽ID和SIM卡的对应关系：  - 卡槽1对应SIM卡1或SIM卡2 - 卡槽2对应SIM卡2或ESIMX |
 | [getSimLabel](arkts-telephony-sim-getsimlabel-f.md) | 获取SIM卡的标签信息。使用Promise异步回调。 |
 | [getSimLabelSync](arkts-telephony-sim-getsimlabelsync-f.md) | 通过传入SIM卡槽的ID，获取对应的SIM卡标签。 |
 | [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md) | 获取指定卡槽SIM卡的归属PLMN(Public Land Mobile Network)号。使用callback异步回调。 |
@@ -96,8 +96,8 @@ import { sim } from '@kit.TelephonyKit';
 | [getSimAuthentication](arkts-telephony-sim-getsimauthentication-f-sys.md) | Performs SIM card authentication. |
 | [getSimGid1](arkts-telephony-sim-getsimgid1-f-sys.md) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot. The GID1 is recorded in the EFGID1 file of the SIM card. |
 | [getSimGid1](arkts-telephony-sim-getsimgid1-f-sys.md) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot. The GID1 is recorded in the EFGID1 file of the SIM card. |
-| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md) | Obtains the ICCID of the SIM card in a specified slot. |
-| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md) | Obtains the ICCID of the SIM card in a specified slot. |
+| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md) | Obtains the ICCID of the SIM card in a specified slot.<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card. |
+| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md) | Obtains the ICCID of the SIM card in a specified slot.<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card. |
 | [getSimTelephoneNumber](arkts-telephony-sim-getsimtelephonenumber-f-sys.md) | Obtains the MSISDN of the SIM card in a specified slot. The MSISDN is recorded in the EFMSISDN file of the SIM card. |
 | [getSimTelephoneNumber](arkts-telephony-sim-getsimtelephonenumber-f-sys.md) | Obtains the MSISDN of the SIM card in a specified slot. The MSISDN is recorded in the EFMSISDN file of the SIM card. |
 | [getVoiceMailIdentifier](arkts-telephony-sim-getvoicemailidentifier-f-sys.md) | Obtains the alpha identifier of the voice mailbox of the SIM card in a specified slot. |

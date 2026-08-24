@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [PathModifier](arkts-arkui-pathmodifier-c.md) | Defines Path Modifier |
+| [PathModifier](arkts-arkui-pathmodifier-c.md) | Defines Path Modifier@implements PathAttribute, AttributeModifier&lt;PathAttribute&gt; |
 

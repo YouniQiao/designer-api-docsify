@@ -1,8 +1,6 @@
 # SearchPlayInfo
 
-搜播信息的定义。
-
-@interface SearchPlayInfo
+搜播信息的定义。@interface SearchPlayInfo
 
 **起始版本：** 23
 

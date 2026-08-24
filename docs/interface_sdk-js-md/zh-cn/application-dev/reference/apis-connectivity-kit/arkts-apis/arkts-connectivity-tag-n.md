@@ -2,12 +2,10 @@
 
 本模块主要用于操作及管理NFC Tag，提供后台读卡和前台应用优先分发两种读卡模式。 后台读卡是指不需要打开应用程序，电子设备通过NFC读取标签卡片后，根据标签卡片的类型匹配到一个或多个应用程序。如果仅匹配到一个，则直接拉起应用程序的读卡页面；如果是多个则弹出应用选择器，让用户选择指定的读卡应用。后台读卡不涉及tag相 关接口，示例参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md#后台读取标签)。 前台读卡是指提前打开应用程序，并进入对应的NFC读卡页面后读卡，只会把读到的标签卡片信息分发给前台应用程序。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 2. 从API版本26.0.0开始请使用[canIUse("SystemCapability.Communication.NFC.Tag")](../../../reference/common/init.md#caniuse)
 > && [nfcController.isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md)共同判断设备是否支持NFC能力更加准确，否则可能导
-> 致应用运行稳定性问题，参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。
-> 
+> 致应用运行稳定性问题，参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。&gt;
 > 3. 导入tag模块编辑器报错，在某个具体设备型号上能力可能超出工程默认设备定义的能力集范围，如需要使用此部分能力需额外配置自定义syscap，参考
 > [syscap开发指南](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/syscap)。
 
@@ -55,7 +53,7 @@ import { tag } from '@kit.ConnectivityKit';
 | [onReaderMode](arkts-connectivity-tag-onreadermode-f.md) | Set reader mode enabled when the specific application is foreground. Dispatches to this application only if a tag discovered. |
 | [off_readerMode](arkts-connectivity-tag-offreadermode-f.md) | 取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过 [tag.on](arkts-connectivity-tag-onreadermode-f.md) 设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用off进行取消。 |
 | [offReaderMode](arkts-connectivity-tag-offreadermode-f.md) | Disable foreground reader mode settings explicitly. |
-| [on_readerModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md) | 订阅NFC Tag读卡事件，实现前台应用优先分发，并支持卡在位检测间隔设置。使用callback异步回调。 |
+| [on_readerModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md) | 订阅NFC Tag读卡事件，实现前台应用优先分发，并支持卡在位检测间隔设置。使用callback异步回调。  - 设备会进入读卡器模式，同时关闭卡模拟。 - 通过discTech设置支持的读卡技术类型，通过callback方式获取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信息，通过interval设置卡在位检测间隔。 - 需要与取消读卡器模式的 [tag.off](arkts-connectivity-tag-offreadermode-f.md)成对使 用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用 [tag.off](arkts-connectivity-tag-offreadermode-f.md)。 - 与注册读卡器模式的 [tag.on](arkts-connectivity-tag-onreadermode-f.md) 互斥使用。 |
 | [onReaderModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md) | Set reader mode enabled when the specific application is on foreground and set card presence interval. Tag infomation will be dispatched to the application only if a NFC tag is discovered. |
 | [off_readerModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md) | 取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过 [tag.on](arkts-connectivity-tag-onreadermode-f.md) 设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用 [tag.off](arkts-connectivity-tag-offreadermode-f.md)进行取 消。使用callback异步回调。 |
 | [offReaderModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md) | Disable foreground reader mode settings explicitly. |
@@ -100,7 +98,7 @@ import { tag } from '@kit.ConnectivityKit';
 | [MifareUltralightTag](arkts-connectivity-tag-mifareultralighttag-t.md) | 获取MifareUltralightTag。 |
 | [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md) | 获取NdefFormatableTag。 |
 | [NdefMessage](arkts-connectivity-tag-ndefmessage-t.md) | 获取NdefMessage。 |
-| [TagSession](arkts-connectivity-tag-tagsession-t.md) | 获取TagSession。 |
+| [TagSession](arkts-connectivity-tag-tagsession-t.md) | 获取TagSession。<!--no_check--> |
 | [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) | 获取BarcodeTag。 |
 
 ### 常量

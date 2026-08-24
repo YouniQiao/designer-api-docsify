@@ -1,8 +1,6 @@
 # Radio属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** RadioAttribute extends CommonMethod<RadioAttribute>
 
@@ -23,11 +21,7 @@
 checked(value: boolean)
 ```
 
-设置单选框的选中状态。
-
-从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-
-从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置单选框的选中状态。从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 8
 
@@ -51,9 +45,7 @@ checked(value: boolean)
 checked(isChecked: Optional<boolean>)
 ```
 
-设置单选框的选中状态。与[checked](#checked)相比，isChecked参数新增了对undefined类型的支持。
-
-该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、 [!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置单选框的选中状态。与[checked](#checked)相比，isChecked参数新增了对undefined类型的支持。该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、 [!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 18
 
@@ -103,7 +95,7 @@ contentModifier(modifier: ContentModifier<RadioConfiguration>)
 contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>)
 ```
 
-定制Radio内容区的方法。与 [contentModifier](#contentmodifier)&lt;sup&gt;12+&lt;/sup &gt;相比，modifier参数新增了对undefined类型的支持。
+定制Radio内容区的方法。与 [contentModifier](#contentmodifier)&lt;sup&gt;12+&lt;/sup&gt;相比，modifier参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -177,9 +169,7 @@ onChange(callback: Optional<OnRadioChangeCallback>)
 radioStyle(value?: RadioStyle)
 ```
 
-设置单选框选中状态和非选中状态的样式。
-
-从API version 10开始，该接口支持在ArkTS组件中使用。
+设置单选框选中状态和非选中状态的样式。从API version 10开始，该接口支持在ArkTS组件中使用。
 
 **起始版本：** 10
 

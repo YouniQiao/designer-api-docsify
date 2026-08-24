@@ -1,8 +1,6 @@
 # PopoverDialogV2Options
 
-Defines PopoverDialogV2 Options
-
-@interface PopoverDialogV2Options @extends CustomPopupOptions
+Defines PopoverDialogV2 Options@interface PopoverDialogV2Options @extends CustomPopupOptions
 
 **Inheritance/Implementation:** PopoverDialogV2Options extends CustomPopupOptions
 

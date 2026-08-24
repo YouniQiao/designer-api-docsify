@@ -1,8 +1,6 @@
 # TextPickerRangeContent
 
-Define the contents of each selector item.
-
-@interface TextPickerRangeContent
+Define the contents of each selector item.@interface TextPickerRangeContent
 
 **Since:** 23
 
@@ -38,9 +36,7 @@ Image resource. If the value is a string, such as **"/common/hello.png"**, it re
 text?: string | Resource
 ```
 
-Text information.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the text length exceeds the column width, the text will be truncated. </p>
+Text information.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the text length exceeds the column width, the text will be truncated. </p>
 
 **Type:** string \| [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md)
 

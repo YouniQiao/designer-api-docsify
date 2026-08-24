@@ -1,8 +1,6 @@
 # HistoryItem
 
-页面历史记录项。
-
-@interface HistoryItem [since 9 - 11]
+页面历史记录项。@interface HistoryItem [since 9 - 11]
 
 **起始版本：** 9
 

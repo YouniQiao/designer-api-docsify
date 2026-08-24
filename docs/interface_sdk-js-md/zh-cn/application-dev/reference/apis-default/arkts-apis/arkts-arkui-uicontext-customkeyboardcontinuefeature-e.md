@@ -1,8 +1,6 @@
 # CustomKeyboardContinueFeature
 
-自定义键盘接续特性的枚举。
-
-@enum { int } CustomKeyboardContinueFeature
+自定义键盘接续特性的枚举。@enum { int } CustomKeyboardContinueFeature
 
 **起始版本：** 23
 

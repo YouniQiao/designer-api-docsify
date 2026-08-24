@@ -354,15 +354,12 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 设置是否隐藏不安全窗口，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 不安全窗口是指可能遮挡EmbeddedComponent（或
 > UIExtensionComponent）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口
-> （不包括系统应用创建的上述类型窗口）。
-> 
+> （不包括系统应用创建的上述类型窗口）。&gt;
 > - 当EmbeddedComponent（或UIExtensionComponent）组件被用来显示敏感操作提示内容时，可以选择隐藏不安全窗口，保护敏感操作提示内容不会被遮挡。当EmbeddedComponent（或
-> UIExtensionComponent）组件不显示或销毁时，不安全窗口会重新显示。
-> 
+> UIExtensionComponent）组件不显示或销毁时，不安全窗口会重新显示。&gt;
 > - 针对PC/2in1设备，当调用hideNonSecureWindows(true)时，不安全窗口中的全局悬浮窗不会被隐藏。
 
 **起始版本：** 23
@@ -469,8 +466,7 @@ hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 
 设置UIExtension组件在非系统截图时的隐私内容保护开关，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 开启截图隐私内容保护后，使用窗口截图[window.snapshot](../../../reference/apis-arkui/arkts-apis-window-Window.md#snapshot9)或者组件截图
 > [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot)
 > 将无法截取到当前组件的内容（不包括该组件下创建的子窗）。
@@ -941,8 +937,7 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 为当前窗口添加或删除安全水印标志，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 添加安全水印标志后，窗口在前台时会将当前全屏幕覆盖水印。全屏、悬浮窗、分屏等场景下只要有添加了安全水印标志的窗口在前台，就会显示全屏水印。
 
 **起始版本：** 23
@@ -1041,8 +1036,7 @@ export default class EntryAbility extends UIExtensionAbility {
 properties: UIExtensionHostWindowProxyProperties
 ```
 
-UIExtensionComponent组件以及宿主窗口的信息。
-
+UIExtensionComponent组件以及宿主窗口的信息。  
 **约束：** 由于架构约束，不建议在 [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)阶段同步获取该值，建议在收到 [on('windowSizeChange')](#onavoidareachange) 回调之后获取。
 
 **类型：** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)

@@ -1,8 +1,6 @@
 # FormRenderingMode (System API)
 
-Defines the FormRenderingMode enum.
-
-@enum { int }
+Defines the FormRenderingMode enum.@enum { int }
 
 **Since:** 23
 

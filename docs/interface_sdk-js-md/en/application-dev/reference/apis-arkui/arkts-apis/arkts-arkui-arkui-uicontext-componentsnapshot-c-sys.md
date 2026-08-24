@@ -2,13 +2,10 @@
 
 Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 12.&gt;
 > - In the following API examples, you must first use [getComponentSnapshot()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.
-> 
+> in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.&gt;
 > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the
 > target component. Applying these transformation properties directly to the target component itself has no effect;
 > the snapshot will still display the component as it appears before any transformations are applied.
@@ -37,8 +34,7 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 
 Captures a snapshot of the area between two specified components. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The components corresponding to **start** and **end** must belong to the same component tree, and the **start**
 > component must be an ancestor of the **end** component.
 

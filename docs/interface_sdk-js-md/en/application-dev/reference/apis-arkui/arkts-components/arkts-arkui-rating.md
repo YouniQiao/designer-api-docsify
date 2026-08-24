@@ -1,10 +1,8 @@
 # Rating
 
 The **Rating** component provides a rating bar.
-
 > **NOTE**
-
-> - If the parent node of the **Rating** component has fixed dimensions, you must also specify the width and height > for the **Rating** component, or set its parent node's clip > attribute to **true**.
+> - If the parent node of the **Rating** component has fixed dimensions, you must also specify the width and height> for the **Rating** component, or set its parent node's clip> attribute to **true**.
 
 ## Child Components
 

@@ -15,8 +15,7 @@ V2自定义组件类的定义。
 ## _invokeImpl
 
 ```TypeScript
-@Builder
-  static _invokeImpl<S extends CustomComponentV2<S, S_Options>, S_Options>(
+static _invokeImpl<S extends CustomComponentV2<S, S_Options>, S_Options>(
         @Builder styles: ((instance: S) => void) | undefined,
         factory: () => S,
         initializers?: () => S_Options,
@@ -30,6 +29,8 @@ Implementation for creating a v2 custom component
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,8 +51,7 @@ Implementation for creating a v2 custom component
 ## _invokeImpl
 
 ```TypeScript
-@Builder
-  static _invokeImpl<S extends CustomComponentV2<S, S_Options>, S_Options>(
+static _invokeImpl<S extends CustomComponentV2<S, S_Options>, S_Options>(
         @Builder styles: ((instance: S) => void) | undefined,
         factory: () => S,
         initializers?: () => S_Options,
@@ -66,6 +66,8 @@ Implementation for creating a v2 custom component
 **起始版本：** 24
 
 **ArkTS模式：** ArkTS-Sta起始版本为24。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

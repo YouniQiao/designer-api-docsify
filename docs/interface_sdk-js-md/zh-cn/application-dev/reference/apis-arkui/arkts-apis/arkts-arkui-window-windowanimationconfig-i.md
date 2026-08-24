@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 
@@ -40,11 +38,7 @@ curve: WindowAnimationCurve
 duration?: long
 ```
 
-动画播放的时长，单位毫秒（ms）。
-
-默认值：0，最大值：3000。
-
-根据动画曲线类型决定是否必填。
+动画播放的时长，单位毫秒（ms）。默认值：0，最大值：3000。根据动画曲线类型决定是否必填。
 
 **类型：** long
 

@@ -14,8 +14,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<
 
 取消订阅环境光传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
 > [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
 > 替代。

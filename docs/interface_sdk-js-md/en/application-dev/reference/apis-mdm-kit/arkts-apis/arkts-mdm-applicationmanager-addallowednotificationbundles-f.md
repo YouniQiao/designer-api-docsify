@@ -14,8 +14,7 @@ function addAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, 
 
 Adds applications to the notification trustlist. After the notification trustlist is set, applications not in the trustlist cannot send notifications.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. If both the Kiosk mode and the notification trustlist policy are set, applications in the Kiosk mode and those
 > in the notification trustlist can send notifications.
 

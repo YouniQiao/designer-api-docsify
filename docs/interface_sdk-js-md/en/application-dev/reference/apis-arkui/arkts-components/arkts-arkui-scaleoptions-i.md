@@ -19,9 +19,7 @@ Defines the options of scale.
 centerX?: number | string
 ```
 
-X coordinate of the transformation center point (anchor). The value can be of the string type, for example, **'50'** and **'50%'**.
-
-Unit: vp
+X coordinate of the transformation center point (anchor). The value can be of the string type, for example, **'50'** and **'50%'**.Unit: vp
 
 **Type:** number \| string
 
@@ -41,9 +39,7 @@ Unit: vp
 centerY?: number | string
 ```
 
-Y coordinate of the transformation center point (anchor). The value can be of the string type, for example, **'50'** and **'50%'**.
-
-Unit: vp
+Y coordinate of the transformation center point (anchor). The value can be of the string type, for example, **'50'** and **'50%'**.Unit: vp
 
 **Type:** number \| string
 

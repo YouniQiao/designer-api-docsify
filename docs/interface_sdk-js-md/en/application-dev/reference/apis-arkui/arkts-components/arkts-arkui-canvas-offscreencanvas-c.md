@@ -58,7 +58,7 @@ Creates the context from the current OffscreenCanvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextType | '2d' | Yes | The context type, only '2d' be supported now. '2d': Creates a [OffscreenCanvasRenderingContext2D](arkts-arkui-canvas-offscreencanvasrenderingcontext2d-c.md) object representing a two-dimensional rendering context. |
+| contextType | '2d' | Yes | The context type, only '2d' be supported now.'2d': Creates a [OffscreenCanvasRenderingContext2D](arkts-arkui-canvas-offscreencanvasrenderingcontext2d-c.md) object representing a two-dimensional rendering context. |
 | options | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Drawing attribute. For details, see [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md). |
 
 **Return value:**

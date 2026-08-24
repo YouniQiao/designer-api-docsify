@@ -1,8 +1,6 @@
 # NavDestination属性/事件
 
-支持通用属性。
-
-除支持通用事件外，还支持如下事件：
+支持通用属性。除支持通用事件外，还支持如下事件：
 
 **继承/实现关系：** NavDestinationAttribute extends CommonMethod<NavDestinationAttribute>
 
@@ -27,8 +25,7 @@ backButtonIcon(value: ResourceStr | PixelMap | SymbolGlyphModifier)
 
 > **说明：**
 
-> - 从API version 12开始，该接口支持在attributeModifier中调用。
-> 
+> - 从API version 12开始，该接口支持在attributeModifier中调用。&gt;
 > - 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、symbolEffect属性修改动效类型。
 
 **起始版本：** 11
@@ -57,8 +54,7 @@ backButtonIcon(icon: ResourceStr | PixelMap | SymbolGlyphModifier, accessibility
 
 > **说明：**
 
-> - 该接口不支持在attributeModifier中调用。
-> 
+> - 该接口不支持在attributeModifier中调用。&gt;
 > - 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、symbolEffect属性修改动效类型。
 
 **起始版本：** 19
@@ -88,11 +84,9 @@ bindToNestedScrollable(scrollInfos: Array<NestedScrollInfo>)
 
 > **说明：**
 
-> - 只有NavDestination的标题栏或工具栏设置为可见时，联动效果才会生效。
-> 
+> - 只有NavDestination的标题栏或工具栏设置为可见时，联动效果才会生效。&gt;
 > - 当多个可滚动容器组件绑定了同一个NavDestination组件时，滚动任何一个容器都会触发标题栏和工具栏的显示或隐藏效果。且当任何一个可滚动容器组件滑动到底部或顶部位置时，会立即触发标题栏和工具栏的显示动效。因此，为了获
-> 得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。
-> 
+> 得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。&gt;
 > - 从API version 22开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 14
@@ -121,11 +115,9 @@ bindToScrollable(scrollers: Array<Scroller>)
 
 > **说明：**
 
-> - 只有NavDestination的标题栏或工具栏设置为可见时，联动效果才会生效。
-> 
+> - 只有NavDestination的标题栏或工具栏设置为可见时，联动效果才会生效。&gt;
 > - 当多个可滚动容器组件绑定了同一个NavDestination组件时，滚动任何一个容器都会触发标题栏和工具栏的显示或隐藏效果。且当任何一个可滚动容器组件滑动到底部或顶部位置时，会立即触发标题栏和工具栏的显示动效。因此，为了获
-> 得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。
-> 
+> 得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。&gt;
 > - 从API version 22开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 14
@@ -154,8 +146,7 @@ customTransition(delegate: NavDestinationTransitionDelegate)
 
 > **说明：**
 
-> - 该接口不支持在attributeModifier中调用。
-> 
+> - 该接口不支持在attributeModifier中调用。&gt;
 > - 该属性与[systemTransition](#systemtransition)同时设置时，后设置的属性生效。
 
 **起始版本：** 15
@@ -187,7 +178,7 @@ enableNavigationIndicator(enabled: Optional<boolean>)
 > 该属性满足如下全部条件时才生效：
 
 > 设置系统导航条的实际效果依赖于具体的设备支持情况，具体参考窗口的
-> [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled)
+> [setSpecificSystemBarEnabled](../arkts-apis/arkts-arkui-window-window-i.md#setspecificsystembarenabled)
 > 接口。
 
 **起始版本：** 19
@@ -224,10 +215,9 @@ enableStatusBar(enabled: Optional<boolean>, animated?: boolean)
 > 
 > 3. NavDestination的大小占满整个Navigation组件；
 > 
-> 4. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD。
-> 
+> 4. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD。&gt;
 > - 设置系统状态栏的实际效果依赖于具体的设备支持情况，具体参考窗口的
-> [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled)
+> [setSpecificSystemBarEnabled](../arkts-apis/arkts-arkui-window-window-i.md#setspecificsystembarenabled)
 > 接口。
 
 **起始版本：** 19
@@ -253,9 +243,7 @@ enableStatusBar(enabled: Optional<boolean>, animated?: boolean)
 fullScreenOverlay(fullScreenOverlay: Optional<boolean>)
 ```
 
-设置NavDestination是否以全屏覆盖模式显示。
-
-当参数设置为true时，在Navigation分栏模式下，当前页面会覆盖整个Navigation容器，包括NavBar和内容区。该配置作用于当前NavDestination的所有实例；当路由栈中已有页面以全屏覆盖模式显示时，其后入 栈的[DIALOG](arkts-arkui-navdestinationmode-e.md)页面与未将fullScreenOverlay为false的[STANDARD](arkts-arkui-navdestinationmode-e.md)页面也会继承为全屏覆盖显 示。未通过该接口设置时，NavDestination默认是普通显示模式，遵循Navigation分栏显示规则。
+设置NavDestination是否以全屏覆盖模式显示。当参数设置为true时，在Navigation分栏模式下，当前页面会覆盖整个Navigation容器，包括NavBar和内容区。该配置作用于当前NavDestination的所有实例；当路由栈中已有页面以全屏覆盖模式显示时，其后入 栈的[DIALOG](arkts-arkui-navdestinationmode-e.md)页面与未将fullScreenOverlay为false的[STANDARD](arkts-arkui-navdestinationmode-e.md)页面也会继承为全屏覆盖显 示。未通过该接口设置时，NavDestination默认是普通显示模式，遵循Navigation分栏显示规则。
 
 **起始版本：** 26.0.0
 
@@ -379,10 +367,8 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 > **说明：**
 
-> - 组件设置ignoreLayoutSafeArea生效条件：设置LayoutSafeAreaType.SYSTEM时，若组件边界与非安全区域重合，组件可延伸到非安全区域内。
-> 
-> - 若组件扩展到非安全区域内，此时在非安全区域里触发的事件（例如：点击事件）等可能会被系统拦截，优先响应状态栏等系统组件。
-> 
+> - 组件设置ignoreLayoutSafeArea生效条件：设置LayoutSafeAreaType.SYSTEM时，若组件边界与非安全区域重合，组件可延伸到非安全区域内。&gt;
+> - 若组件扩展到非安全区域内，此时在非安全区域里触发的事件（例如：点击事件）等可能会被系统拦截，优先响应状态栏等系统组件。&gt;
 > - 组件想要扩展到非安全区域内，需隐藏或者设置标题栏和工具栏为STACK模式。
 
 **起始版本：** 12
@@ -412,8 +398,7 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 
 &gt; **说明：**
 
-> - 从API version 14开始，该接口支持在attributeModifier中调用。
-> 
+> - 从API version 14开始，该接口支持在attributeModifier中调用。&gt;
 > - 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、symbolEffect属性修改动效类型。
 
 **起始版本：** 12
@@ -438,12 +423,11 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenuOptions)
 ```
 
-设置页面右上角菜单。不设置时不显示菜单项。与 [menus](#menus)相比，新增菜单选项。使用Array&lt; NavigationMenuItem&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
+设置页面右上角菜单。不设置时不显示菜单项。与 [menus](#menus)相比，新增菜单选项。使用Array&lt;NavigationMenuItem&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
 
 &gt; **说明：**
 
-> - 该接口不支持在attributeModifier中调用。
-> 
+> - 该接口不支持在attributeModifier中调用。&gt;
 > - 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、symbolEffect属性修改动效类型。
 
 **起始版本：** 19
@@ -606,8 +590,7 @@ onNewParam(callback: Optional<Callback<ESObject>>)
 > **说明：**
 
 > - replacePath、
-> replaceDestination不会触发该回调。
-> 
+> replaceDestination不会触发该回调。&gt;
 > - 从API version 22开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 19
@@ -660,9 +643,7 @@ onReady(callback: import('../api/@ohos.base').Callback<NavDestinationContext>)
 onRestoreState(callback: Optional<RestoreStateCallback>)
 ```
 
-设置自定义页面状态恢复回调。
-
-当页面重构时触发。由onSaveState保存的自定义状态将传递给此回调。 如果没有保存自定义状态，则传递Null。
+设置自定义页面状态恢复回调。当页面重构时触发。由onSaveState保存的自定义状态将传递给此回调。 如果没有保存自定义状态，则传递Null。
 
 **起始版本：** 26.0.0
 
@@ -714,9 +695,7 @@ NavDestination返回时触发该回调。
 onSaveState(callback: Optional<SaveStateCallback>)
 ```
 
-设置自定义页面状态保存回调。
-
-当页面被隐藏时触发。保存自定义页面状态以备恢复。 用于创建页面的初始参数由导航单独保留。 状态对象必须是可序列化的。
+设置自定义页面状态保存回调。当页面被隐藏时触发。保存自定义页面状态以备恢复。 用于创建页面的初始参数由导航单独保留。 状态对象必须是可序列化的。
 
 **起始版本：** 26.0.0
 
@@ -886,10 +865,9 @@ preferredOrientation(orientation: Optional<Orientation>)
 > 
 > 2. NavDestination所属的Navigation的大小占满整个应用页面；
 > 
-> 3. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD。
-> 
+> 3. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD。&gt;
 > - 设置显示方向的实际效果依赖于具体的设备支持情况，具体参考窗口的
-> [setPreferredOrientation](../../../reference/apis-arkui/arkts-apis-window-Window.md#setpreferredorientation9-1)接
+> [setPreferredOrientation](../arkts-apis/arkts-arkui-window-window-i.md#setpreferredorientation)接
 > 口。
 
 **起始版本：** 19
@@ -944,10 +922,8 @@ systemBarStyle(style: Optional<SystemBarStyle>)
 
 > **说明：**
 
-> - 必须配合Navigation使用，作为其Navigation目的页面的根节点时才能生效。
-> 
-> - 其他使用限制请参考Navigation对应的systemBarStyle属性说明。
-> 
+> - 必须配合Navigation使用，作为其Navigation目的页面的根节点时才能生效。&gt;
+> - 其他使用限制请参考Navigation对应的systemBarStyle属性说明。&gt;
 > - 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -1028,8 +1004,7 @@ toolbarConfiguration(toolbarParam: Array<ToolbarItem> | CustomBuilder, options?:
 
 > **说明：**
 
-> - 从API version 20开始，该接口支持在attributeModifier中调用。
-> 
+> - 从API version 20开始，该接口支持在attributeModifier中调用。&gt;
 > - 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、symbolEffect属性修改动效类型。
 
 **起始版本：** 13
@@ -1046,6 +1021,6 @@ toolbarConfiguration(toolbarParam: Array<ToolbarItem> | CustomBuilder, options?:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| toolbarParam | Array&lt;ToolbarItem&gt; \| CustomBuilder | 是 | 工具栏内容。<br/>使用Array&lt;ToolbarItem&gt;写法 设置的工具栏有如下特性：<br/>-底部工具栏的每个选项均分宽度，用于显示文本和图标。<br/>-竖屏模式最多支持显示5个图标，多余的图标会被放入自动生成的更多图标中，点击更多图标可以展示剩余内容。横屏模式 时，如果为Split模式，仍按照竖屏模式显示，如果为Stack模式需配合 [menus](#menus)属性的Array&lt; NavigationMenuItem&gt;使用，底部工具栏会自动隐藏，同时底部工具栏所有选项移动至页面右上角菜单。<br/>使用 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)写法为用户自定义工具栏选项，不具备以上功能。 |
+| toolbarParam | Array&lt;ToolbarItem&gt; \| CustomBuilder | 是 | 工具栏内容。<br/>使用Array&lt;ToolbarItem&gt;写法 设置的工具栏有如下特性：<br/>-底部工具栏的每个选项均分宽度，用于显示文本和图标。<br/>-竖屏模式最多支持显示5个图标，多余的图标会被放入自动生成的更多图标中，点击更多图标可以展示剩余内容。横屏模式 时，如果为Split模式，仍按照竖屏模式显示，如果为Stack模式需配合 [menus](#menus)属性的Array&lt;NavigationMenuItem&gt;使用，底部工具栏会自动隐藏，同时底部工具栏所有选项移动至页面右上角菜单。<br/>使用 CustomBuilder写法为用户自定义工具栏选项，不具备以上功能。 |
 | options | NavigationToolbarOptions | 否 | 工具栏选项，用于自定义工具栏显示样式。包含工具栏背景颜色、工具栏背景模糊样式及模糊选项、工具栏背景属性、工具栏布局方式、 是否隐藏工具栏的文本、工具栏更多图标的菜单选项。当需要自定义工具栏样式时传入，不传入时使用默认工具栏样式。 |
 

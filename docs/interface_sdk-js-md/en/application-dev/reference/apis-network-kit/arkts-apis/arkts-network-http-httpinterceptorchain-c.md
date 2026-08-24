@@ -22,8 +22,7 @@ public addChain(chain: HttpInterceptor[]): boolean
 
 Adds an interceptor to the HTTP client.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > An interceptor chain cannot contain interceptor instances of the same type. If interceptors of the same type
 > are passed in, the error code **2300802** (Duplicated interceptor type in the chain) is reported.
 
@@ -147,8 +146,7 @@ public apply(httpRequest: HttpRequest): boolean
 
 Adds an interceptor chain to the target HTTP request. Each HTTP request instance can have only one interceptor chain attached.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > After an interceptor chain is attached to an [HttpRequest](arkts-network-http-httprequest-i.md) instance, when the instance
 > initiates an HTTP request, interceptors of the corresponding type in the attached interceptor chain are
 > triggered.

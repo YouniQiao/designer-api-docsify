@@ -61,7 +61,7 @@ currency?: string
 currencyDisplay?: string
 ```
 
-指定货币在格式化结果字符串中的显示方式。 取值："code"（ISO货币代码，如"USD"）、"symbol"（货币符号，如"\$"）、 "narrowSymbol"（窄符号，如"\$100"）或"name"（全称，如"US dollar"）。
+指定货币在格式化结果字符串中的显示方式。 取值："code"（ISO货币代码，如"USD"）、"symbol"（货币符号，如"\$"）、"narrowSymbol"（窄符号，如"\$100"）或"name"（全称，如"US dollar"）。
 
 **类型：** string
 
@@ -201,7 +201,7 @@ minimumSignificantDigits?: double
 notation?: string
 ```
 
-显示数值时使用的计数法格式。 取值："standard"（默认，如"1000"）、"scientific"（如"1e3"）、 "engineering"（如"1E3"）或"compact"（如1000显示为"1K"）。
+显示数值时使用的计数法格式。 取值："standard"（默认，如"1000"）、"scientific"（如"1e3"）、"engineering"（如"1E3"）或"compact"（如1000显示为"1K"）。
 
 **类型：** string
 

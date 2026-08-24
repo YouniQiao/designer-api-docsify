@@ -80,8 +80,7 @@ NO_HIDE_SENSITIVE_TYPE = 3
 DEFAULT = 4
 ```
 
-根据 [ohos.permission.MEDIA_LOCATION](../../../security/AccessToken/permissions-for-all-user.md#ohospermissionmedia_location) 权限进行脱敏。规格为：
-
+根据 [ohos.permission.MEDIA_LOCATION](../../../security/AccessToken/permissions-for-all-user.md#ohospermissionmedia_location) 权限进行脱敏。规格为：  
 - 有ohos.permission.MEDIA_LOCATION权限：不脱敏。 - 无ohos.permission.MEDIA_LOCATION权限：脱敏地理位置信息。
 
 **起始版本：** 23

@@ -25,9 +25,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 brightThreshold?: number
 ```
 
-浅色亮度阈值：[0, 255]内的整数，设置的深色亮度阈值应小于浅色亮度阈值。
-
-默认值：220
+浅色亮度阈值：[0, 255]内的整数，设置的深色亮度阈值应小于浅色亮度阈值。默认值：220
 
 **类型：** number
 
@@ -49,9 +47,7 @@ brightThreshold?: number
 darkThreshold?: number
 ```
 
-深色亮度阈值：[0, 255]内的整数，设置的深色亮度阈值应小于浅色亮度阈值。
-
-默认值：150
+深色亮度阈值：[0, 255]内的整数，设置的深色亮度阈值应小于浅色亮度阈值。默认值：150
 
 **类型：** number
 
@@ -73,9 +69,7 @@ darkThreshold?: number
 region?: Edges<LengthMetrics>
 ```
 
-相对组件的取色区域偏移，以组件自身的左上点为基准进行偏移计算。
-
-默认使用组件自身区域
+相对组件的取色区域偏移，以组件自身的左上点为基准进行偏移计算。默认使用组件自身区域
 
 **类型：** Edges&lt;LengthMetrics&gt;
 
@@ -95,9 +89,7 @@ region?: Edges<LengthMetrics>
 samplingInterval?: number
 ```
 
-取色间隔，单位为毫秒，最小值180ms。
-
-默认值：500
+取色间隔，单位为毫秒，最小值180ms。默认值：500
 
 **类型：** number
 

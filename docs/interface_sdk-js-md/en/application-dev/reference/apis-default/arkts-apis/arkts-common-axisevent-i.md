@@ -1,8 +1,6 @@
 # AxisEvent
 
-The axis event triggers this method invocation.
-
-@extends BaseEvent
+The axis event triggers this method invocation.@extends BaseEvent
 
 **Inheritance/Implementation:** AxisEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 
@@ -294,7 +292,7 @@ Y coordinate of the point relative to the global display.
 scrollStep?: int
 ```
 
-Scroll step configuration which is only mouse wheel has.
+Scroll step configuration which is only mouse wheel has. *
 
 **Type:** int
 

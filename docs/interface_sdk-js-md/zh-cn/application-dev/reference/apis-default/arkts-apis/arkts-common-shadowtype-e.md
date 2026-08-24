@@ -1,8 +1,6 @@
 # ShadowType
 
-Define the type of shadow
-
-@enum { number }
+Define the type of shadow@enum { number }
 
 **起始版本：** 23
 

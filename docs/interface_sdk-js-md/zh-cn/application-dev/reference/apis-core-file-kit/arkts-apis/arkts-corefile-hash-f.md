@@ -14,8 +14,7 @@ function hash(path: string, algorithm: string): Promise<string>
 
 计算文件的哈希值，基于指定算法对文件完整内容进行哈希摘要计算。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口会读取整个文件内容并计算哈希值，适用于中小文件。对于大文件处理，建议使用HashStream流式计算。
 
 **起始版本：** 23
@@ -80,8 +79,7 @@ function hash(path: string, algorithm: string, callback: AsyncCallback<string>):
 
 计算文件的哈希值，基于指定算法对文件完整内容进行哈希摘要计算。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口会读取整个文件内容并计算哈希值，适用于中小文件。对于大文件处理，建议使用HashStream流式计算。
 
 **起始版本：** 23

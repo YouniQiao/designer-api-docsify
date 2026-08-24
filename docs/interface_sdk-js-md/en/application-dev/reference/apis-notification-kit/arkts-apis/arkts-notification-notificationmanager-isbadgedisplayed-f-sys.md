@@ -105,7 +105,7 @@ Checks whether the notification badge is enabled for a specified application. Th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the badge is enabled , and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the badge is enabled, and **false** means the opposite. |
 
 **Error codes:**
 

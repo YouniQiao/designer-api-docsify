@@ -1,8 +1,6 @@
 # LocalizedBarrierDirection
 
-定义支持镜像模式的屏障线的方向。
-
-@enum { number }
+定义支持镜像模式的屏障线的方向。@enum { number }
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # DismissDialogAction
 
-Provides information about the action to dismiss the dialog box.
-
-@interface DismissDialogAction
+Provides information about the action to dismiss the dialog box.@interface DismissDialogAction
 
 **Since:** 23
 

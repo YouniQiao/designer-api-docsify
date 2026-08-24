@@ -24,7 +24,7 @@ Obtains the serial port device list, including the device name and port number.
 
 | Type | Description |
 | --- | --- |
-| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;SerialPort&gt;[] | Serial port information list. |
+| Readonly&lt;SerialPort&gt;[] | Serial port information list. |
 
 **Examples**
 

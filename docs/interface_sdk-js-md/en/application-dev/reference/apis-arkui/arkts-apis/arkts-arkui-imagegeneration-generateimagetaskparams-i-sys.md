@@ -1,8 +1,6 @@
 # GenerateImageTaskParams (System API)
 
-Configuration parameter options for AI-generated image tasks.
-
-@interface GenerateImageTaskParams
+Configuration parameter options for AI-generated image tasks.@interface GenerateImageTaskParams
 
 **Since:** 23
 

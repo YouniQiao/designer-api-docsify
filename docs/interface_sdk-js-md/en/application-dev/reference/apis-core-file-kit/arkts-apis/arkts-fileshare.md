@@ -1,8 +1,6 @@
 # @ohos.fileshare
 
-Provides fileshare APIS
-
-@namespace fileShare
+Provides fileshare APIS@namespace fileShare
 
 **Since:** 23
 
@@ -49,9 +47,9 @@ import { fileShare } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md) | Policy information to manager permissions on a path. |
-| [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md) | Failed policy result on URI. |
-| [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md) | Policy information to manager permissions on a URI. |
+| [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md) | Policy information to manager permissions on a path.@interface PathPolicyInfo |
+| [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md) | Failed policy result on URI.@interface { object } |
+| [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md) | Policy information to manager permissions on a URI.@interface PolicyInfo |
 
 <!--Del-->
 ### Interfaces(System API)
@@ -65,7 +63,7 @@ import { fileShare } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [OperationMode](arkts-corefile-fileshare-operationmode-e.md) | Enumerates the uri operate mode types. |
-| [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md) | Enumerates the error code of the permission policy for the URI operation. |
-| [PolicyType](arkts-corefile-fileshare-policytype-e.md) | Indicates the policy type of the path. |
+| [OperationMode](arkts-corefile-fileshare-operationmode-e.md) | Enumerates the uri operate mode types.@enum { int } OperationMode |
+| [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md) | Enumerates the error code of the permission policy for the URI operation.@enum { int } PolicyErrorCode |
+| [PolicyType](arkts-corefile-fileshare-policytype-e.md) | Indicates the policy type of the path.@enum { int } policyType |
 

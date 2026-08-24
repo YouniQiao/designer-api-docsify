@@ -1,8 +1,6 @@
 # TimePickerAttribute
 
-Defines the TimePicker component attributes.
-
-@extends CommonMethod @interface TimePickerAttribute
+Defines the TimePicker component attributes.@extends CommonMethod @interface TimePickerAttribute
 
 **Inheritance/Implementation:** TimePickerAttribute extends CommonMethod
 

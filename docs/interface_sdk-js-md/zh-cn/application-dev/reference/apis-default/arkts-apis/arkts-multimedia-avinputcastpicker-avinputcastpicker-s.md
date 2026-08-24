@@ -1,14 +1,12 @@
 # AVInputCastPicker
 
-录音设备选择组件，可用于切换音频输入设备。
-
-该组件为自定义组件，开发者在使用前需要先了解[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)。
-
-@struct { AVInputCastPicker }
+录音设备选择组件，可用于切换音频输入设备。该组件为自定义组件，开发者在使用前需要先了解[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)。@struct { AVInputCastPicker }
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct AVInputCastPicker--><!--Device-unnamed-export declare struct AVInputCastPicker-End-->
 
@@ -22,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 构造组件。
@@ -32,6 +29,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Builder
+
 <!--Device-AVInputCastPicker-@Builder  build(): void--><!--Device-AVInputCastPicker-@Builder  build(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
@@ -39,19 +38,18 @@
 ## customPicker
 
 ```TypeScript
-@BuilderParam
-  customPicker?: CustomBuilder
+customPicker?: CustomBuilder
 ```
 
-自定义样式。建议开发者自定义组件样式，可有效提升组件渲染性能。
-
-If not set, system will show the default appearance for different device type.
+自定义样式。建议开发者自定义组件样式，可有效提升组件渲染性能。If not set, system will show the default appearance for different device type.
 
 **类型：** [CustomBuilder](arkts-custombuilder-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @BuilderParam
 
 <!--Device-AVInputCastPicker-@BuilderParam  customPicker?: CustomBuilder--><!--Device-AVInputCastPicker-@BuilderParam  customPicker?: CustomBuilder-End-->
 

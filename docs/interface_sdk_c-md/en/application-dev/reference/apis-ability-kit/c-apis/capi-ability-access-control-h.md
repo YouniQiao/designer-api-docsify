@@ -38,7 +38,7 @@ Checks whether a permission is granted to this application.
 
 | Parameter | Description |
 | -- | -- |
-| const char *permission | - Pointer to the permission to check. For details about the permission,see [the application permission list](docroot://security/AccessToken/app-permissions.md). |
+| const char *permission | - Pointer to the permission to check. |
 
 **Returns**:
 

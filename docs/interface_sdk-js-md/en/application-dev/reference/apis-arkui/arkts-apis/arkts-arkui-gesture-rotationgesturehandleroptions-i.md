@@ -1,8 +1,6 @@
 # RotationGestureHandlerOptions
 
-Defines the RotationGestureHandler options.
-
-@extends BaseHandlerOptions @interface RotationGestureHandlerOptions
+Defines the RotationGestureHandler options.@extends BaseHandlerOptions @interface RotationGestureHandlerOptions
 
 **Inheritance/Implementation:** RotationGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)
 

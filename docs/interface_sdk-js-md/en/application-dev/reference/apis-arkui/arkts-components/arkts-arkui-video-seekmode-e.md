@@ -1,8 +1,6 @@
 # SeekMode
 
-Seek mode.
-
-@enum { number }
+Seek mode.@enum { number }
 
 **Since:** 23
 

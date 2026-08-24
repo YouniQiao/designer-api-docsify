@@ -14,7 +14,6 @@ Provides APIs to implement device-cloud sync of media assets in **Gallery**. Bef
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -499,8 +498,7 @@ stop(): Promise<void>
 
 Stops device-cloud sync. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Calling **stop** will stop the sync process. To resume the sync, call
 > [start](#start).
 
@@ -650,8 +648,7 @@ stop(callback: AsyncCallback<void>): void
 
 Stops device-cloud sync. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Calling **stop** will stop the sync process. To resume the sync, call
 > [start](#start).
 

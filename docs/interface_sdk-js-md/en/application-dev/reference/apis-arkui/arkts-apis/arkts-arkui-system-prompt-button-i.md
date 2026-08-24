@@ -1,8 +1,6 @@
 # Button
 
-Defines the prompt info of button.
-
-@interface Button
+Defines the prompt info of button.@interface Button
 
 **Since:** 11
 

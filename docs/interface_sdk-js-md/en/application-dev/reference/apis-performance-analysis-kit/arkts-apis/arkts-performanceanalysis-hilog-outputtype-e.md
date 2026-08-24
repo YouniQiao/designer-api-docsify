@@ -1,8 +1,6 @@
 # OutputType
 
-Enumerates output type of hilog.
-
-@enum { int }
+Enumerates output type of hilog.@enum { int }
 
 **Since:** 26.0.0
 

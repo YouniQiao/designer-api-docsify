@@ -1,8 +1,6 @@
 # TransitionEdge
 
-Defines the Edge object.
-
-@enum { number }
+Defines the Edge object.@enum { number }
 
 **Since:** 23
 

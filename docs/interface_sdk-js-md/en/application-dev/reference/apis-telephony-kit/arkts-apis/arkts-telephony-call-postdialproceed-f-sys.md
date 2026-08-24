@@ -12,9 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function postDialProceed(callId: int, proceed: boolean, callback: AsyncCallback<void>): void
 ```
 
-Continues a call by playing a post-dial DTMF string. This API uses an asynchronous callback to return the result.
-
-If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
+Continues a call by playing a post-dial DTMF string. This API uses an asynchronous callback to return the result.If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
 
 **Since:** 23
 
@@ -73,9 +71,7 @@ call.postDialProceed(1, true).then(() => {
 function postDialProceed(callId: int, proceed: boolean): Promise<void>
 ```
 
-Continues a call by playing a post-dial DTMF string. This API uses a promise to return the result.
-
-If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
+Continues a call by playing a post-dial DTMF string. This API uses a promise to return the result.If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
 
 **Since:** 23
 

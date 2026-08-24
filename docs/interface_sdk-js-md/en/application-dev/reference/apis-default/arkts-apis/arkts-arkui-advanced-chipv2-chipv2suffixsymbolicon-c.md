@@ -8,6 +8,8 @@ Defines accessibility of suffix symbol.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2SuffixSymbolIcon--><!--Device-unnamed-export declare class ChipV2SuffixSymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -44,8 +46,7 @@ The constructor of ChipV2SuffixSymbolIcon
 ## action
 
 ```TypeScript
-@Trace
-  public action?: VoidCallback
+public action?: VoidCallback
 ```
 
 Called when suffix symbol is clicked.
@@ -56,6 +57,8 @@ Called when suffix symbol is clicked.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2SuffixSymbolIcon-@Trace  public action?: VoidCallback--><!--Device-ChipV2SuffixSymbolIcon-@Trace  public action?: VoidCallback-End-->
@@ -65,8 +68,7 @@ Called when suffix symbol is clicked.
 ## activatedAccessibility
 
 ```TypeScript
-@Trace
-  public activatedAccessibility?: ChipV2Accessibility
+public activatedAccessibility?: ChipV2Accessibility
 ```
 
 Set activated accessibility config for suffix symbol.
@@ -77,6 +79,8 @@ Set activated accessibility config for suffix symbol.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2SuffixSymbolIcon-@Trace  public activatedAccessibility?: ChipV2Accessibility--><!--Device-ChipV2SuffixSymbolIcon-@Trace  public activatedAccessibility?: ChipV2Accessibility-End-->
@@ -86,8 +90,7 @@ Set activated accessibility config for suffix symbol.
 ## normalAccessibility
 
 ```TypeScript
-@Trace
-  public normalAccessibility?: ChipV2Accessibility
+public normalAccessibility?: ChipV2Accessibility
 ```
 
 Set normal accessibility config for suffix symbol.
@@ -97,6 +100,8 @@ Set normal accessibility config for suffix symbol.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

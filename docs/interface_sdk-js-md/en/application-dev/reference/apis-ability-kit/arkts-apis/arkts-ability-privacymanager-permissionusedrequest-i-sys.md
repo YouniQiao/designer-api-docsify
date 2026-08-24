@@ -42,9 +42,7 @@ Start time of the query. Unit: milliseconds. Default value: **0**, indicating no
 bundleName?: string
 ```
 
-Bundle name of the target application.
-
-Default value: queries all applications.
+Bundle name of the target application.Default value: queries all applications.
 
 **Type:** string
 
@@ -62,9 +60,7 @@ Default value: queries all applications.
 deviceId?: string
 ```
 
-ID of the device where the target application is located.
-
-Default value: local device ID.
+ID of the device where the target application is located.Default value: local device ID.
 
 **Type:** string
 
@@ -120,9 +116,7 @@ Used to specify the query mode. When set to **FLAG_PERMISSION_USAGE_SUMMARY**, s
 isRemote?: boolean
 ```
 
-Used to specify whether to query remote devices. The value **false** means to query the permission usage records of the local device, and **true** means to query the records of remote devices.
-
-Default value: **false**.
+Used to specify whether to query remote devices. The value **false** means to query the permission usage records of the local device, and **true** means to query the records of remote devices.Default value: **false**.
 
 **Type:** boolean
 
@@ -160,9 +154,7 @@ Set of permissions to query. Default value: Empty string. Means querying usage r
 tokenId?: int
 ```
 
-Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field of ApplicationInfo.
-
-Default value: **0**, queries all applications.
+Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field of ApplicationInfo.Default value: **0**, queries all applications.
 
 **Type:** int
 

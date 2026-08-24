@@ -1,7 +1,6 @@
 # DynamicComponent(System API) (System API)
 
-*DynamicComponent** is designed to support the embedding and display of UIs provided by independent .abc files within the current page, with the displayed content running in a worker thread.
-
+**DynamicComponent** is designed to support the embedding and display of UIs provided by independent .abc files within the current page, with the displayed content running in a worker thread.
 It is typically used in modular development scenarios where .abc pages are dynamically loaded.
 
 ## Child Components

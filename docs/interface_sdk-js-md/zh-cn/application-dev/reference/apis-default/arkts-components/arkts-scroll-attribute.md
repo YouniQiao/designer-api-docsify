@@ -1,6 +1,6 @@
 # ScrollAttribute
 
-除支持通用属性和[滚动组件通用属性](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还支持 以下属性：
+除支持通用属性和滚动组件通用属性外，还支持 以下属性：
 
 **继承/实现关系：** ScrollAttribute extends ScrollableCommonMethod
 

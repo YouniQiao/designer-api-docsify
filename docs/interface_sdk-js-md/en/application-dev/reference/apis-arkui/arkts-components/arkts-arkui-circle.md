@@ -1,6 +1,6 @@
 # Circle
 
-The **Circle** component is used to draw a circle. > **Child Components** > > None.
+The **Circle** component is used to draw a circle.> **Child Components**>> None.
 
 ## Circle
 

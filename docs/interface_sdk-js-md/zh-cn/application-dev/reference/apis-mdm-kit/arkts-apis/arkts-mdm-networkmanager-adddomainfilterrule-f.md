@@ -12,20 +12,12 @@ import { networkManager } from '@kit.MDMKit';
 function addDomainFilterRule(admin: Want, domainFilterRule: DomainFilterRule): void
 ```
 
-为设备添加域名过滤规则。
+为设备添加域名过滤规则。API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
 
-API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
-
-从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
-
-> **说明：**
-> 
-> - 添加[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW规则后会自动添加默认DENY规则，不在ALLOW规则之内的域名解析数据包将被丢弃或拦截。
-> 
-> - 添加的规则在设备重启后会被清空。
-> 
-> - 为避免DNS缓存导致拦截规则失效，建议系统启动后立即配置域名过滤规则。若已因DNS缓存导致拦截失效，重启系统可清除缓存，恢复拦截功能。
-> 
+> **说明：**&gt;
+> - 添加[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW规则后会自动添加默认DENY规则，不在ALLOW规则之内的域名解析数据包将被丢弃或拦截。&gt;
+> - 添加的规则在设备重启后会被清空。&gt;
+> - 为避免DNS缓存导致拦截规则失效，建议系统启动后立即配置域名过滤规则。若已因DNS缓存导致拦截失效，重启系统可清除缓存，恢复拦截功能。&gt;
 > - 规则匹配顺序：先匹配本接口添加的域名过滤规则，再匹配IP防火墙规则（由[addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md)添加）；在域名规则或IP规则中，均按
 > [Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
 

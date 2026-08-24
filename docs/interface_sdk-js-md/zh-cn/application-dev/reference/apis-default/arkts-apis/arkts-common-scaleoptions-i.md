@@ -1,8 +1,7 @@
 # ScaleOptions
 
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当组件同时设置了[rotate](arkts-common-commonmethod-i.md#rotate)和[scale](arkts-common-commonmethod-i.md#scale)属性时，centerX和centerY的取值会发生冲突，此时centerX和
 > centerY的值以最后设定的属性的值为准。
 
@@ -20,11 +19,7 @@
 centerX?: double | string
 ```
 
-变换中心点x轴坐标。表示组件变换中心点（即锚点）的x方向坐标。取值可为string类型，如'50'，'50%'。
-
-单位：vp
-
-默认值：'50%'
+变换中心点x轴坐标。表示组件变换中心点（即锚点）的x方向坐标。取值可为string类型，如'50'，'50%'。单位：vp默认值：'50%'
 
 **类型：** double \| string
 
@@ -44,11 +39,7 @@ centerX?: double | string
 centerY?: double | string
 ```
 
-变换中心点y轴坐标。表示组件变换中心点（即锚点）的y方向坐标。取值可为string类型，如'50'，'50%'。
-
-单位：vp
-
-默认值：'50%'
+变换中心点y轴坐标。表示组件变换中心点（即锚点）的y方向坐标。取值可为string类型，如'50'，'50%'。单位：vp默认值：'50%'
 
 **类型：** double \| string
 

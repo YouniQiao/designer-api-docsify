@@ -1,12 +1,12 @@
 # RecentPhotoComponent
 
-Declare struct RecentPhotoComponent
-
-@struct { RecentPhotoComponent }
+Declare struct RecentPhotoComponent@struct { RecentPhotoComponent }
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct RecentPhotoComponent--><!--Device-unnamed-export declare struct RecentPhotoComponent-End-->
 
@@ -20,8 +20,7 @@ Declare struct RecentPhotoComponent
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 Build function of RecentPhotoComponent
@@ -29,6 +28,8 @@ Build function of RecentPhotoComponent
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

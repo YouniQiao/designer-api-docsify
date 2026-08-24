@@ -39,9 +39,7 @@ ID of the display to which the coordinate point belongs. The value is an integer
 x: int
 ```
 
-Horizontal coordinate of a coordinate point, in pixels. The value is an integer greater than or equal to 0.
-
-@readonly [since 9-19]
+Horizontal coordinate of a coordinate point, in pixels. The value is an integer greater than or equal to 0.@readonly [since 9-19]
 
 **Type:** int
 
@@ -59,9 +57,7 @@ Horizontal coordinate of a coordinate point, in pixels. The value is an integer 
 y: int
 ```
 
-Vertical coordinate of a coordinate point, in pixels. The value is an integer greater than or equal to 0.
-
-@readonly [since 9-19]
+Vertical coordinate of a coordinate point, in pixels. The value is an integer greater than or equal to 0.@readonly [since 9-19]
 
 **Type:** int
 

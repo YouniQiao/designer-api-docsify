@@ -14,8 +14,7 @@ function createWebSocketServer(): WebSocketServer
 
 Creates a **WebSocketServer** object, which provides methods to start or stop the WebSocketServer service, send data over the connection, close the connection, list all connections, and enable or disable listening for the **open**, **close**, **message**, and **error** events.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Supported on all devices since API version 23. In earlier versions, this method is supported only on TV devices.
 
 **Since:** 23

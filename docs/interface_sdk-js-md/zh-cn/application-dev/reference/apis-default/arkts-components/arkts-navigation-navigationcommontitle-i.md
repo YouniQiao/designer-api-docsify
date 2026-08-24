@@ -16,9 +16,7 @@ Navigation通用标题。
 main: string | Resource | undefined
 ```
 
-设置主标题。
-
-取值为undefined时，不显示主标题。
+设置主标题。取值为undefined时，不显示主标题。
 
 **类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined
 
@@ -38,9 +36,7 @@ main: string | Resource | undefined
 sub: string | Resource | undefined
 ```
 
-设置副标题。
-
-取值为undefined时，不显示副标题。
+设置副标题。取值为undefined时，不显示副标题。
 
 **类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined
 

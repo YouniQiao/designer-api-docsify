@@ -24,7 +24,7 @@ businessParams: Record<string, RecordData>
 
 业务参数，由业务方根据请求协议自定义。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

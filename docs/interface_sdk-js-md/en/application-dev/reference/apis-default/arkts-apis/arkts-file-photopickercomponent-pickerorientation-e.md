@@ -1,8 +1,6 @@
 # PickerOrientation
 
-PickerOrientation. include VERTICAL and HORIZONTAL
-
-@enum { int } PickerOrientation
+PickerOrientation. include VERTICAL and HORIZONTAL@enum { int } PickerOrientation
 
 **Since:** 26.0.0
 

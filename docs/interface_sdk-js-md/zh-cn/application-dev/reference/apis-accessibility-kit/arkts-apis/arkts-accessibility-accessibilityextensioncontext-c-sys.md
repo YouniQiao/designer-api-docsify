@@ -115,9 +115,7 @@ export default class AccessibilityManager {
 getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 ```
 
-获取当前获得无障碍焦点的元素。使用Promise异步回调。
-
-无障碍焦点是指无障碍服务当前聚焦的节点，与输入焦点不同。
+获取当前获得无障碍焦点的元素。使用Promise异步回调。无障碍焦点是指无障碍服务当前聚焦的节点，与输入焦点不同。
 
 **起始版本：** 23
 
@@ -280,9 +278,7 @@ export default class AccessibilityManager {
 getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>
 ```
 
-查询应用自定义设置的默认焦点元素ID列表。使用Promise异步回调。
-
-默认焦点是指窗口打开时无障碍服务优先聚焦的元素。
+查询应用自定义设置的默认焦点元素ID列表。使用Promise异步回调。默认焦点是指窗口打开时无障碍服务优先聚焦的元素。
 
 **起始版本：** 23
 
@@ -543,9 +539,7 @@ export default class AccessibilityManager {
 getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>
 ```
 
-获取当前活动窗口的无障碍节点树根元素。使用Promise异步回调。
-
-活动窗口是指当前获得焦点的前台应用窗口。
+获取当前活动窗口的无障碍节点树根元素。使用Promise异步回调。活动窗口是指当前获得焦点的前台应用窗口。
 
 **起始版本：** 23
 
@@ -745,9 +739,7 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-通知无障碍服务可以关闭该辅助功能扩展服务。
-
-此函数需要与注册预关闭接口 [on('preDisconnect')](#onpredisconnect)配合使用， 如果没有调用过注册预关闭函数，直接调用此函数不生效。
+通知无障碍服务可以关闭该辅助功能扩展服务。此函数需要与注册预关闭接口 [on('preDisconnect')](#onpredisconnect)配合使用， 如果没有调用过注册预关闭函数，直接调用此函数不生效。
 
 **起始版本：** 23
 
@@ -964,9 +956,7 @@ export default class AccessibilityManager {
 on(type: 'preDisconnect', callback: Callback<void>): void
 ```
 
-向无障碍服务注册回调函数，在无障碍服务关闭该辅助功能扩展服务前会执行该回调函数。使用callback异步回调。
-
-此注册函数需要与[notifyDisconnect](#notifydisconnect)配合使用，如果不调用 [notifyDisconnect](#notifydisconnect)，则默认等待30秒后，辅助功能扩展服务会自动关闭。
+向无障碍服务注册回调函数，在无障碍服务关闭该辅助功能扩展服务前会执行该回调函数。使用callback异步回调。此注册函数需要与[notifyDisconnect](#notifydisconnect)配合使用，如果不调用 [notifyDisconnect](#notifydisconnect)，则默认等待30秒后，辅助功能扩展服务会自动关闭。
 
 **起始版本：** 20
 

@@ -40,13 +40,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 controller?: RichEditorController
 ```
 
-扩展下拉菜单。
-
-expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。
-
-expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。
-
-controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
+扩展下拉菜单。expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
 
 **类型：** [RichEditorController](../arkts-components/arkts-arkui-richeditor-richeditorcontroller-c.md)
 
@@ -66,13 +60,7 @@ controller为空时不显示更多按钮，expandedMenuOptions参数不为空则
 editorMenuOptions?: Array<EditorMenuOptions>
 ```
 
-编辑菜单。
-
-editorMenuOptions未配置时，不显示编辑菜单。
-
-同时配置EditorMenuOptions中action和builder时，点击图标会同时响应。
-
-点击编辑菜单图标默认不关闭整个菜单，应用可以通过action接口配置RichEditorController的closeSelectionMenu主动关闭菜单。
+编辑菜单。editorMenuOptions未配置时，不显示编辑菜单。同时配置EditorMenuOptions中action和builder时，点击图标会同时响应。点击编辑菜单图标默认不关闭整个菜单，应用可以通过action接口配置RichEditorController的closeSelectionMenu主动关闭菜单。
 
 **类型：** Array&lt;[EditorMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-editormenuoptions-i.md)&gt;
 
@@ -92,13 +80,7 @@ editorMenuOptions未配置时，不显示编辑菜单。
 expandedMenuOptions?: Array<ExpandedMenuOptions>
 ```
 
-扩展下拉菜单。
-
-expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。
-
-expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。
-
-controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
+扩展下拉菜单。expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
 
 **类型：** Array&lt;[ExpandedMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md)&gt;
 
@@ -118,13 +100,8 @@ controller为空时不显示更多按钮，expandedMenuOptions参数不为空则
 onCopy?: (event?: EditorEventInfo) => void
 ```
 
-替代内置系统菜单复制项的事件回调。
-
-生效前提是一定要有controller参数，有系统默认菜单才能替换内置复制功能。
-
-**说明：**
-
-event为返回信息。
+替代内置系统菜单复制项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置复制功能。  
+**说明：**event为返回信息。
 
 **类型：** (event?: EditorEventInfo) =&gt; void
 
@@ -144,13 +121,8 @@ event为返回信息。
 onCut?: (event?: EditorEventInfo) => void
 ```
 
-替代内置系统菜单剪切项的事件回调。
-
-生效前提是一定要有controller参数，有系统默认菜单才能替换内置剪切功能。
-
-**说明：**
-
-event为返回信息。
+替代内置系统菜单剪切项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置剪切功能。  
+**说明：**event为返回信息。
 
 **类型：** (event?: EditorEventInfo) =&gt; void
 
@@ -170,13 +142,8 @@ event为返回信息。
 onPaste?: (event?: EditorEventInfo) => void
 ```
 
-替代内置系统菜单粘贴项的事件回调。
-
-生效前提是一定要有controller参数，有系统默认菜单才能替换内置粘贴功能。
-
-**说明：**
-
-event为返回信息。
+替代内置系统菜单粘贴项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置粘贴功能。  
+**说明：**event为返回信息。
 
 **类型：** (event?: EditorEventInfo) =&gt; void
 
@@ -196,13 +163,8 @@ event为返回信息。
 onSelectAll?: (event?: EditorEventInfo) => void
 ```
 
-替代内置系统菜单全选项的事件回调。
-
-生效前提是一定要有controller参数，有系统默认菜单才能替换内置全选功能。
-
-**说明：**
-
-event为返回信息。
+替代内置系统菜单全选项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置全选功能。  
+**说明：**event为返回信息。
 
 **类型：** (event?: EditorEventInfo) =&gt; void
 

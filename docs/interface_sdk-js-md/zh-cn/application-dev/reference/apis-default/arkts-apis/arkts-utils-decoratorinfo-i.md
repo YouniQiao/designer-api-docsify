@@ -16,25 +16,7 @@
 decoratorName: string
 ```
 
-当对象被@Observed装饰时，值为对象关联的装饰器名称。
-
-当对象属性使用@Track时，值为：`@Track`。
-
-当对象属性使用@Trace时，值为：`@Trace`。
-
-当对象经过makeObserved转换时，值为： `MakeObserved`。
-
-当对象为被V1装饰器装饰的built-in类型时，值为对象关联的装饰器名称。
-
-当对象为被V1装饰器装饰的interface字面量时，值为对象关联的装饰器名称。
-
-当对象被@Observed装饰且使用在V2组件中时，值为：`@Observed(mix used in V2)`。
-
-当对象为被V1装饰器装饰的built-in类型且使用在V2组件中时，值为：`V1 Decorated BuiltInType(mix used in V2)`。
-
-当对象为被V1装饰器装饰的interface字面量且使用在V2组件中时，值为：`V1 Decorated ObjectLiteral(mix used in V2)`。
-
-当对象为被V2装饰器装饰的built-in类型时，值为：`V2 Decorated BuiltInType`。
+当对象被@Observed装饰时，值为对象关联的装饰器名称。当对象属性使用@Track时，值为：`@Track`。当对象属性使用@Trace时，值为：`@Trace`。当对象经过makeObserved转换时，值为： `MakeObserved`。当对象为被V1装饰器装饰的built-in类型时，值为对象关联的装饰器名称。当对象为被V1装饰器装饰的interface字面量时，值为对象关联的装饰器名称。当对象被@Observed装饰且使用在V2组件中时，值为：`@Observed(mix used in V2)`。当对象为被V1装饰器装饰的built-in类型且使用在V2组件中时，值为：`V1 Decorated BuiltInType(mix used in V2)`。当对象为被V1装饰器装饰的interface字面量且使用在V2组件中时，值为：`V1 Decorated ObjectLiteral(mix used in V2)`。当对象为被V2装饰器装饰的built-in类型时，值为：`V2 Decorated BuiltInType`。
 
 **类型：** string
 
@@ -74,9 +56,7 @@ dependentInfo: ElementInfo[]
 owningComponentId: int
 ```
 
-在V1组件中被状态管理V1装饰器装饰的@Observed装饰的对象、interface字面量和built-in类型对象返回V1组件ID。
-
-其余情况返回-1。
+在V1组件中被状态管理V1装饰器装饰的@Observed装饰的对象、interface字面量和built-in类型对象返回V1组件ID。其余情况返回-1。
 
 **类型：** int
 
@@ -96,13 +76,7 @@ owningComponentId: int
 owningComponentOrClassName: string
 ```
 
-在V1组件中被状态管理V1装饰器装饰的@Observed装饰的对象、interface字面量和built-in类型对象返回V1组件名称。
-
-使用@Track装饰器、@Trace装饰器时返回对象名称。
-
-使用V2装饰器装饰或makeObserved转换的built-in对象时，返回对象名称。
-
-使用makeObserved转换的interface字面量时，返回字面量的定义名称。
+在V1组件中被状态管理V1装饰器装饰的@Observed装饰的对象、interface字面量和built-in类型对象返回V1组件名称。使用@Track装饰器、@Trace装饰器时返回对象名称。使用V2装饰器装饰或makeObserved转换的built-in对象时，返回对象名称。使用makeObserved转换的interface字面量时，返回字面量的定义名称。
 
 **类型：** string
 
@@ -122,15 +96,7 @@ owningComponentOrClassName: string
 stateVariableName: string
 ```
 
-被装饰器装饰的属性名称。
-
-在V1组件中被状态管理V1装饰器装饰的@Observed装饰的对象、interface字面量和built-in类型对象返回V1装饰器的名称。
-
-使用@Track装饰器、@Trace装饰器时返回属性名。
-
-使用V2装饰器装饰或makeObserved转换的built-in对象时，返回可观测属性的名称。常见的框架内置可观察属性见下表。
-
-makeObserved转换的interface字面量返回`Any Object Literal Property`。
+被装饰器装饰的属性名称。在V1组件中被状态管理V1装饰器装饰的@Observed装饰的对象、interface字面量和built-in类型对象返回V1装饰器的名称。使用@Track装饰器、@Trace装饰器时返回属性名。使用V2装饰器装饰或makeObserved转换的built-in对象时，返回可观测属性的名称。常见的框架内置可观察属性见下表。makeObserved转换的interface字面量返回`Any Object Literal Property`。
 
 **类型：** string
 

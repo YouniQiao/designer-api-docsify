@@ -1,8 +1,6 @@
 # WifiDeviceConfig
 
-Wi-Fi device configuration information.
-
-@interface WifiDeviceConfig
+Wi-Fi device configuration information.@interface WifiDeviceConfig
 
 **Since:** 6
 
@@ -18,9 +16,6 @@ Wi-Fi device configuration information.
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## bssid

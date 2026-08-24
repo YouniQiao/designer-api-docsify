@@ -1,10 +1,6 @@
 # TimePickerDialogOptions
 
-时间选择器弹窗选项。
-
-继承自[TimePickerOptions](arkts-timepicker-timepickeroptions-i.md)。
-
-@extends TimePickerOptions @interface TimePickerDialogOptions
+时间选择器弹窗选项。继承自[TimePickerOptions](arkts-timepicker-timepickeroptions-i.md)。@extends TimePickerOptions @interface TimePickerDialogOptions
 
 **继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-timepicker-timepickeroptions-i.md)
 

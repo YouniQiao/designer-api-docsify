@@ -1,6 +1,6 @@
 # DrawingRenderingContext
 
-*DrawingRenderingContext** provides a rendering context for drawing rectangles, text, images, and other objects on a canvas.
+**DrawingRenderingContext** provides a rendering context for drawing rectangles, text, images, and other objects on a canvas.
 
 **Since:** 12
 

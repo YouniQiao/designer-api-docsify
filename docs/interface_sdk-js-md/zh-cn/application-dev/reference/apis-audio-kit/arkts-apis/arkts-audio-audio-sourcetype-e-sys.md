@@ -1,6 +1,6 @@
 # SourceType
 
-表示录制音频流类型的枚举。
+枚举，音源类型。
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@
 SOURCE_TYPE_WAKEUP = 3
 ```
 
-Wakeup source type. Permission ohos.permission.MANAGE_INTELLIGENT_VOICE is needed when calling createAudioCapturer with this type.
+语音唤醒音频流录制音频源。ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 **起始版本：** 23
 
@@ -30,7 +30,7 @@ Wakeup source type. Permission ohos.permission.MANAGE_INTELLIGENT_VOICE is neede
 SOURCE_TYPE_VOICE_CALL = 4
 ```
 
-Voice call source type. Permission ohos.permission.RECORD_VOICE_CALL is needed when calling createAudioCapturer with this type.
+通话录音的音频源。ohos.permission.RECORD_VOICE_CALL
 
 **起始版本：** 23
 
@@ -46,7 +46,7 @@ Voice call source type. Permission ohos.permission.RECORD_VOICE_CALL is needed w
 SOURCE_TYPE_VOICE_TRANSCRIPTION = 12
 ```
 
-Source type for voice transcription and processing.
+语音转写音频源。
 
 **起始版本：** 23
 
@@ -62,7 +62,7 @@ Source type for voice transcription and processing.
 SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT = 19
 ```
 
-Unprocessed voice assistant source type.
+未处理的语音助手音频源。此接口仅可在Stage模型下使用。
 
 **起始版本：** 23
 

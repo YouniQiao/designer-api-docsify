@@ -40,7 +40,7 @@ For details about the sample code, see [removeProxyOverride](./arkts-apis-webvie
 clearImplicitRules(): void
 ```
 
-Overrides the default behavior and forcibly sends the local host address or local IP address through the proxy. ( By default, if host names are local IP addresses or local host addresses, they bypass the proxy.)
+Overrides the default behavior and forcibly sends the local host address or local IP address through the proxy. (By default, if host names are local IP addresses or local host addresses, they bypass the proxy.)
 
 **Since:** 15
 
@@ -178,8 +178,7 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 Inserts a direct rule, specifying that URLs matching the schemeFilter condition will directly connect to the server.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Both [insertBypassRule](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#insertbypassrule) and
 > [bypassHostnamesWithoutPeriod](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#bypasshostnameswithoutperiod) can also implement
 > direct URL connection. The difference lies in the matching dimension: this method matches by protocol type
@@ -217,18 +216,7 @@ For details about the sample code, see [removeProxyOverride](./arkts-apis-webvie
 insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 ```
 
-Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. If the schemeFilter parameter is not specified, the default value MATCH_ALL_SCHEMES will be used, and all URLs will use the specified proxy.
-
-The proxy format is [scheme://]host[:port].
-
-The scheme is optional and must be HTTP, HTTPS, or SOCKS. The default value of scheme is HTTP.
-
-The host is a bracketed IPv6 literal, an IPv4 literal, or one or more labels separated by dots.
-
-The port number is optional. The default port is 80 for HTTP, 443 for HTTPS, and 1080 for SOCKS.
-
-For example:
-
+Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. If the schemeFilter parameter is not specified, the default value MATCH_ALL_SCHEMES will be used, and all URLs will use the specified proxy.The proxy format is [scheme://]host[:port].The scheme is optional and must be HTTP, HTTPS, or SOCKS. The default value of scheme is HTTP.The host is a bracketed IPv6 literal, an IPv4 literal, or one or more labels separated by dots.The port number is optional. The default port is 80 for HTTP, 443 for HTTPS, and 1080 for SOCKS.For example:  
 - example.com host: example.com - https://example.com scheme: https host: example.com - example.com:8888 host: example.com port: 8888 - https://example.com:8888 scheme: https host: example.com port: 8888 - 192.168.1.1 host: 192.168.1.1 - 192.168.1.1:8888 host: 192.168.1.1 port: 8888 - [10:20:30:40:50:60:70:80]
 
 **Since:** 15

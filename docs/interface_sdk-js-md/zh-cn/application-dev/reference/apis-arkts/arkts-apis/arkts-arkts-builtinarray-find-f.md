@@ -68,7 +68,7 @@ export function find(self: FixedArray<byte>, predicate: (value: byte, index: int
 
 | 类型 | 说明 |
 | --- | --- |
-| [Byte](arkts-arkts-byte-c.md) \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
+| Byte \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
 
 
 ## find
@@ -101,7 +101,7 @@ export function find(self: FixedArray<short>, predicate: (value: short, index: i
 
 | 类型 | 说明 |
 | --- | --- |
-| [Short](arkts-arkts-short-c.md) \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
+| Short \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
 
 
 ## find
@@ -134,7 +134,7 @@ export function find(self: FixedArray<int>, predicate: (value: int, index: int, 
 
 | 类型 | 说明 |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
+| Int \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
 
 
 ## find
@@ -167,7 +167,7 @@ export function find(self: FixedArray<long>, predicate: (value: long, index: int
 
 | 类型 | 说明 |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
+| Long \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
 
 
 ## find
@@ -200,7 +200,7 @@ export function find(self: FixedArray<float>, predicate: (value: float, index: i
 
 | 类型 | 说明 |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
+| Float \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
 
 
 ## find
@@ -233,7 +233,7 @@ export function find(self: FixedArray<double>, predicate: (value: double, index:
 
 | 类型 | 说明 |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
+| Double \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
 
 
 ## find
@@ -266,5 +266,5 @@ export function find(self: FixedArray<char>, predicate: (value: char, index: int
 
 | 类型 | 说明 |
 | --- | --- |
-| [Char](arkts-arkts-char-c.md) \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
+| Char \| undefined | 第一个满足指定测试函数的元素的值； 若不存在则返回undefined。 |
 

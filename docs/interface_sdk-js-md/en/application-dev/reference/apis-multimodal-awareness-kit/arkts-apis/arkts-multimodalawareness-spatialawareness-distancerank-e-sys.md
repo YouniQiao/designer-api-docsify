@@ -1,8 +1,6 @@
 # DistanceRank (System API)
 
-Enum for distance rank.
-
-@enum { string } DistanceRank
+Enum for distance rank.@enum { string } DistanceRank
 
 **Since:** 23
 

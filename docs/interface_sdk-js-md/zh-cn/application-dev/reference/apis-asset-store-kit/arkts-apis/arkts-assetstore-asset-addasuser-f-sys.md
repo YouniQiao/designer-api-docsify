@@ -12,9 +12,7 @@ import { asset } from '@kit.AssetStoreKit';
 function addAsUser(userId: number, attributes: AssetMap): Promise<void>
 ```
 
-在指定用户空间中新增一条关键资产。使用Promise异步回调。
-
-设置[Tag.IS_PERSISTENT](arkts-assetstore-asset-tagtype-e.md)属性，需申请ohos.permission.STORE_PERSISTENT_DATA权限， 申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
+在指定用户空间中新增一条关键资产。使用Promise异步回调。设置[Tag.IS_PERSISTENT](arkts-assetstore-asset-tagtype-e.md)属性，需申请ohos.permission.STORE_PERSISTENT_DATA权限， 申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
 **起始版本：** 12
 

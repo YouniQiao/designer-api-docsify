@@ -1,8 +1,6 @@
 # BatteryPluggedType
 
-表示连接的充电器类型的枚举。
-
-@enum { int }
+表示连接的充电器类型的枚举。@enum { int }
 
 **起始版本：** 23
 

@@ -11,11 +11,8 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit';
-import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## off('enableChange')
@@ -244,10 +241,8 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 
 监听字幕配置启用状态变化事件。使用callback异步回调。
 
-> **说明：**
-> 
-> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
-> 
+> **说明：**&gt;
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。&gt;
 > - 调用此方法后，务必在组件实例销毁前（如aboutToDisappear生命周期中）使用
 > [off('enableChange')](#offenablechange)
 > 取消监听，否则可能会导致崩溃。
@@ -306,10 +301,8 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 
 监听字幕风格变化事件。使用callback异步回调。
 
-> **说明：**
-> 
-> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
-> 
+> **说明：**&gt;
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。&gt;
 > - 调用此方法后，务必在组件实例销毁前（如aboutToDisappear生命周期中）使用
 > [off('styleChange')](#offenablechange)
 > 取消监听，否则可能会导致崩溃。

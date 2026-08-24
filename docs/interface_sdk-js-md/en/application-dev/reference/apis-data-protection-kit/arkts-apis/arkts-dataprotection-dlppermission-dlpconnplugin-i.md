@@ -2,8 +2,7 @@
 
 Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin) requires identical parameters to this API.
 > [connectServer](#connectserver) is called by the SA and the parameters are
 > returned through the callback.
@@ -26,12 +25,9 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 connectServer(requestId: string, requestData: string, callback: Callback<string>): void
 ```
 
-This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback.
+This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback.This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server.
 
-This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **connectServer** indicates a call from the system capability side to the frontend.
 
 **Since:** 21

@@ -6,6 +6,8 @@ Defines segmented button item.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class SegmentButtonV2Item--><!--Device-unnamed-export declare class SegmentButtonV2Item-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,17 +44,18 @@ constructor(options: SegmentButtonV2ItemOptions)
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  accessibilityDescription?: ResourceStr
+accessibilityDescription?: ResourceStr
 ```
 
-分段按钮选项的无障碍说明 accessibilityDescription。 默认值："" 值为undefined时，按默认值处理。
+分段按钮选项的无障碍说明 accessibilityDescription。 默认值：""值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,17 +66,18 @@ constructor(options: SegmentButtonV2ItemOptions)
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  accessibilityLevel?: string
+accessibilityLevel?: string
 ```
 
-分段按钮选项的无障碍重要性 accessibilityLevel。 默认值："auto" 值为undefined时，按默认值处理。
+分段按钮选项的无障碍重要性 accessibilityLevel。 默认值："auto"值为undefined时，按默认值处理。
 
 **类型：** string
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,17 +88,18 @@ constructor(options: SegmentButtonV2ItemOptions)
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  accessibilityText?: ResourceStr
+accessibilityText?: ResourceStr
 ```
 
-分段按钮选项的无障碍文本 accessibilityText。 默认值："" 值为undefined时，按默认值处理。
+分段按钮选项的无障碍文本 accessibilityText。 默认值：""值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -105,25 +110,18 @@ constructor(options: SegmentButtonV2ItemOptions)
 ## enabled
 
 ```TypeScript
-@Trace
-  enabled: boolean
+enabled: boolean
 ```
 
-分段按钮选项是否可用。
-
-默认值：true
-
-true：可用；false：不可用。
-
-不支持设置undefined
-
-装饰器类型：@Trace
+分段按钮选项是否可用。默认值：true true：可用；false：不可用。不支持设置undefined装饰器类型：@Trace
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,8 +132,7 @@ true：可用；false：不可用。
 ## icon
 
 ```TypeScript
-@Trace
-  icon?: ResourceStr
+icon?: ResourceStr
 ```
 
 分段按钮选项图片类型图标。 默认值：undefined 装饰器类型：@Trace 。
@@ -146,6 +143,8 @@ true：可用；false：不可用。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SegmentButtonV2Item-@Trace  icon?: ResourceStr--><!--Device-SegmentButtonV2Item-@Trace  icon?: ResourceStr-End-->
@@ -155,8 +154,7 @@ true：可用；false：不可用。
 ## iconModifier
 
 ```TypeScript
-@Trace
-  iconModifier?: ImageModifier
+iconModifier?: ImageModifier
 ```
 
 分段按钮选项图片类型图标属性的样式修改器。 默认值：undefined 装饰器类型：@Trace 。
@@ -167,6 +165,8 @@ true：可用；false：不可用。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SegmentButtonV2Item-@Trace  iconModifier?: ImageModifier--><!--Device-SegmentButtonV2Item-@Trace  iconModifier?: ImageModifier-End-->
@@ -176,8 +176,7 @@ true：可用；false：不可用。
 ## symbol
 
 ```TypeScript
-@Trace
-  symbol?: Resource
+symbol?: Resource
 ```
 
 分段按钮选项的HM Symbol类型图标。 默认值：undefined 装饰器类型：@Trace 。
@@ -188,6 +187,8 @@ true：可用；false：不可用。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SegmentButtonV2Item-@Trace  symbol?: Resource--><!--Device-SegmentButtonV2Item-@Trace  symbol?: Resource-End-->
@@ -197,8 +198,7 @@ true：可用；false：不可用。
 ## symbolModifier
 
 ```TypeScript
-@Trace
-  symbolModifier?: SymbolGlyphModifier
+symbolModifier?: SymbolGlyphModifier
 ```
 
 分段按钮选项HM Symbol类型图标属性样式修改器。 默认值：undefined 装饰器类型：@Trace 。
@@ -209,6 +209,8 @@ true：可用；false：不可用。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SegmentButtonV2Item-@Trace  symbolModifier?: SymbolGlyphModifier--><!--Device-SegmentButtonV2Item-@Trace  symbolModifier?: SymbolGlyphModifier-End-->
@@ -218,8 +220,7 @@ true：可用；false：不可用。
 ## text
 
 ```TypeScript
-@Trace
-  text?: ResourceStr
+text?: ResourceStr
 ```
 
 分段按钮选项文本。 默认值：undefined 装饰器类型：@Trace 。
@@ -230,6 +231,8 @@ true：可用；false：不可用。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SegmentButtonV2Item-@Trace  text?: ResourceStr--><!--Device-SegmentButtonV2Item-@Trace  text?: ResourceStr-End-->
@@ -239,8 +242,7 @@ true：可用；false：不可用。
 ## textModifier
 
 ```TypeScript
-@Trace
-  textModifier?: TextModifier
+textModifier?: TextModifier
 ```
 
 分段按钮选项文本属性样式修改器。 默认值：undefined 装饰器类型：@Trace 。
@@ -250,6 +252,8 @@ true：可用；false：不可用。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

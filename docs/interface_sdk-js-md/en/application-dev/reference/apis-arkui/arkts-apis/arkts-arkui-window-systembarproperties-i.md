@@ -11,8 +11,6 @@ Describes the properties of the status bar<!--Del--> and three-button navigation
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 
@@ -22,9 +20,7 @@ import { window } from '@kit.ArkUI';
 enableNavigationBarAnimation?: boolean
 ```
 
-Whether to enable animation for a three-button navigation bar property change. **true** to enable, **false** otherwise. The default value is **false**.
-
-<!--RP13--><!--RP13End-->
+Whether to enable animation for a three-button navigation bar property change. **true** to enable, **false** otherwise. The default value is **false**.<!--RP13--><!--RP13End-->
 
 **Type:** boolean
 
@@ -60,9 +56,7 @@ Whether to enable animation for a status bar property change. **true** to enable
 isNavigationBarLightIcon?: boolean
 ```
 
-Whether any icon on the three-button navigation bar is highlighted. **true** if highlighted, **false** otherwise. The default value is **false**.
-
-<!--RP13--><!--RP13End-->
+Whether any icon on the three-button navigation bar is highlighted. **true** if highlighted, **false** otherwise. The default value is **false**.<!--RP13--><!--RP13End-->
 
 **Type:** boolean
 
@@ -98,9 +92,7 @@ Whether any icon on the status bar is highlighted. **true** if highlighted, **fa
 navigationBarColor?: string
 ```
 
-Background color of the three-button navigation bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**.
-
-<!--RP13--><!--RP13End-->
+Background color of the three-button navigation bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**.<!--RP13--><!--RP13End-->
 
 **Type:** string
 
@@ -118,9 +110,7 @@ Background color of the three-button navigation bar. The value is a hexadecimal 
 navigationBarContentColor?: string
 ```
 
-Color of the text on the three-button navigation bar. After this property is set, the setting of **isNavigationBarLightIcon** is invalid. The default value is **'#E5FFFFFF'**.
-
-<!--RP13--><!--RP13End-->
+Color of the text on the three-button navigation bar. After this property is set, the setting of **isNavigationBarLightIcon** is invalid. The default value is **'#E5FFFFFF'**.<!--RP13--><!--RP13End-->
 
 **Type:** string
 

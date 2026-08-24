@@ -6,6 +6,8 @@ Inherits from Array&lt;[ToolBarOption](arkts-arkui-arkui-advanced-toolbar-toolba
 
 **Since:** 10
 
+**Decorator:** @Observed
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -18,6 +20,5 @@ Inherits from Array&lt;[ToolBarOption](arkts-arkui-arkui-advanced-toolbar-toolba
 
 ```TypeScript
 import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
 ```
 

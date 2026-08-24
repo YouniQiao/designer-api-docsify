@@ -11,11 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## detectedContentfulNodesCount
@@ -24,9 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 detectedContentfulNodesCount?: number
 ```
 
-在使用到检测有内容的节点检测策略时，且开发者自己设置了检测到节点数量阈值时，可能包含该属性。否则没有该属性。
-
-表示当前命中了多少有内容的节点。
+在使用到检测有内容的节点检测策略时，且开发者自己设置了检测到节点数量阈值时，可能包含该属性。否则没有该属性。表示当前命中了多少有内容的节点。
 
 **类型：** number
 

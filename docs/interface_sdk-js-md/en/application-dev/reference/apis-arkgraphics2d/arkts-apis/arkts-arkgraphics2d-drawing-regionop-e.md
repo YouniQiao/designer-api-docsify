@@ -2,8 +2,7 @@
 
 Enumerates the operations for combining two regions.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The schematic diagram shows the result obtained by combining a red region with a blue region at different
 > operation mode. The green region is the region obtained.
 

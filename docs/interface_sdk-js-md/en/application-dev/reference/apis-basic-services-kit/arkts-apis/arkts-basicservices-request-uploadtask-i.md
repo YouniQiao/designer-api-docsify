@@ -1,6 +1,6 @@
 # UploadTask
 
-Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md) .
+Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md).
 
 **Since:** 23
 
@@ -12,7 +12,6 @@ Implements file uploads. Before using any APIs of this class, you must obtain an
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## delete
@@ -23,8 +22,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 Deletes the upload task. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -123,8 +121,7 @@ delete(): Promise<boolean>
 
 Deletes the upload task. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -540,8 +537,7 @@ on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): v
 
 Subscribes to upload progress events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To maintain a balance between power consumption and performance, this API cannot be called when the application
 > is running in the background.
 

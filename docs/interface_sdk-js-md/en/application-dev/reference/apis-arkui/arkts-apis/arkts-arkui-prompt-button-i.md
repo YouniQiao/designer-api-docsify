@@ -1,8 +1,6 @@
 # Button
 
-Defines the prompt info of button.
-
-@interface Button
+Defines the prompt info of button.@interface Button
 
 **Since:** 8
 
@@ -18,7 +16,6 @@ Defines the prompt info of button.
 
 ```TypeScript
 import { prompt } from '@kit.ArkUI';
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## color

@@ -4,6 +4,8 @@ Defines chipGroupV2.
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ChipGroupV2--><!--Device-unnamed-export declare struct ChipGroupV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,8 +37,7 @@ Build function for ChipGroupV2
 ## $items
 
 ```TypeScript
-@Event
-    $items?: Callback<ChipGroupV2Items>
+$items?: Callback<ChipGroupV2Items>
 ```
 
 Two-way binding callback method for ChipV2 item.
@@ -44,6 +45,8 @@ Two-way binding callback method for ChipV2 item.
 **Type:** Callback&lt;[ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Event
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,8 +59,7 @@ Two-way binding callback method for ChipV2 item.
 ## $selectedIndexes
 
 ```TypeScript
-@Event
-    $selectedIndexes?: Callback<Array<number>>
+$selectedIndexes?: Callback<Array<number>>
 ```
 
 Two-way binding callback method for selected ChipV2 item indexes.
@@ -65,6 +67,8 @@ Two-way binding callback method for selected ChipV2 item indexes.
 **Type:** Callback&lt;Array&lt;number&gt;&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Event
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,8 +81,7 @@ Two-way binding callback method for selected ChipV2 item indexes.
 ## chipGroupPadding
 
 ```TypeScript
-@Param
-     chipGroupPadding?: ChipGroupV2Padding
+chipGroupPadding?: ChipGroupV2Padding
 ```
 
 ChipGroupV2 padding (only support top and bottom).
@@ -86,6 +89,8 @@ ChipGroupV2 padding (only support top and bottom).
 **Type:** [ChipGroupV2Padding](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +103,7 @@ ChipGroupV2 padding (only support top and bottom).
 ## chipGroupSpace
 
 ```TypeScript
-@Param
-    chipGroupSpace?: ChipGroupV2Space
+chipGroupSpace?: ChipGroupV2Space
 ```
 
 Left and right inner margins and spacing between ChipV2.
@@ -107,6 +111,8 @@ Left and right inner margins and spacing between ChipV2.
 **Type:** [ChipGroupV2Space](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,9 +125,7 @@ Left and right inner margins and spacing between ChipV2.
 ## items
 
 ```TypeScript
-@Require
-    @Param
-    items: ChipGroupV2Items
+items: ChipGroupV2Items
 ```
 
 ChipV2 item.
@@ -129,6 +133,8 @@ ChipV2 item.
 **Type:** [ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,8 +147,7 @@ ChipV2 item.
 ## itemStyle
 
 ```TypeScript
-@Param
-    itemStyle?: ChipGroupV2ItemStyle
+itemStyle?: ChipGroupV2ItemStyle
 ```
 
 ChipV2 item style.
@@ -150,6 +155,8 @@ ChipV2 item style.
 **Type:** [ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,8 +169,7 @@ ChipV2 item style.
 ## multiple
 
 ```TypeScript
-@Param
-    multiple?: boolean
+multiple?: boolean
 ```
 
 Support multiple ChipV2 item selection.
@@ -171,6 +177,8 @@ Support multiple ChipV2 item selection.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -183,8 +191,7 @@ Support multiple ChipV2 item selection.
 ## onChange
 
 ```TypeScript
-@Event
-    onChange?: Callback<Array<number>>
+onChange?: Callback<Array<number>>
 ```
 
 Callback method when the chipV2 status changes
@@ -192,6 +199,8 @@ Callback method when the chipV2 status changes
 **Type:** Callback&lt;Array&lt;number&gt;&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Event
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,8 +213,7 @@ Callback method when the chipV2 status changes
 ## selectedIndexes
 
 ```TypeScript
-@Param
-    selectedIndexes?: Array<number>
+selectedIndexes?: Array<number>
 ```
 
 Selected ChipV2 item indexes.
@@ -213,6 +221,8 @@ Selected ChipV2 item indexes.
 **Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -225,8 +235,7 @@ Selected ChipV2 item indexes.
 ## suffix
 
 ```TypeScript
-@BuilderParam
-    suffix?: Callback<void>
+suffix?: Callback<void>
 ```
 
 The builder function which will be rendered in the suffix of ChipGroupV2.
@@ -234,6 +243,8 @@ The builder function which will be rendered in the suffix of ChipGroupV2.
 **Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

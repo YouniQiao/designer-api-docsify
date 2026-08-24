@@ -10,6 +10,8 @@ The **ArcButton** component offers various button styles, such as emphasized, no
 
 **Since:** 18
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -23,8 +25,7 @@ import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition
 ## options
 
 ```TypeScript
-@Require
-    readonly options: ArcButtonOptions
+readonly options: ArcButtonOptions
 ```
 
 Text, background color, shadow, and other parameters of the **ArcButton** component.
@@ -32,6 +33,8 @@ Text, background color, shadow, and other parameters of the **ArcButton** compon
 **Type:** [ArcButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **Since:** 18
+
+**Decorator:** @Require
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

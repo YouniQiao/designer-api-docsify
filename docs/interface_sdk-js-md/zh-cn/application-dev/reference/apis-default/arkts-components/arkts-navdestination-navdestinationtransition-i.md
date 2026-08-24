@@ -76,7 +76,7 @@ duration?: int
 event: VoidCallback
 ```
 
-指定转场动效的闭包函数，系统会根据闭包中对组件UI状态的修改，生成对应的过渡动画。参见 [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)中的event。
+指定转场动效的闭包函数，系统会根据闭包中对组件UI状态的修改，生成对应的过渡动画。参见 animateTo中的event。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 

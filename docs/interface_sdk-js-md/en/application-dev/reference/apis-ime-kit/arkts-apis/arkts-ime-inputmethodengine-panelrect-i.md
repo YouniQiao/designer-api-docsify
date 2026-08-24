@@ -1,6 +1,6 @@
 # PanelRect
 
-@brief Represents the size of the input method panel.
+Represents the size of the input method panel.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 landscapeRect: window.Rect
 ```
 
-@brief Size of the input method panel window in landscape mode.
+Size of the input method panel window in landscape mode.
 
 **Type:** window.Rect
 
@@ -36,7 +36,7 @@ landscapeRect: window.Rect
 portraitRect: window.Rect
 ```
 
-@brief Size of the input method panel window in portrait mode.
+Size of the input method panel window in portrait mode.
 
 **Type:** window.Rect
 

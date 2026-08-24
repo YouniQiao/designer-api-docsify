@@ -1,8 +1,6 @@
 # AgentHostProxy
 
-The proxy object of the connected party for the AgentExtensionAbility, used to send messages to the connected party, etc.
-
-@interface AgentHostProxy
+The proxy object of the connected party for the AgentExtensionAbility, used to send messages to the connected party, etc.@interface AgentHostProxy
 
 **Since:** 24
 

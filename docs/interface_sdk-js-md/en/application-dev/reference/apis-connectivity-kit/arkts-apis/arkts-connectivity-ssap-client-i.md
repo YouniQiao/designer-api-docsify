@@ -1,10 +1,6 @@
 # Client
 
-Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.
-
-Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.
-
-An app only needs to create one [Client](#client) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
+Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.An app only needs to create one [Client](#client) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
 
 **Since:** 26.0.0
 
@@ -212,9 +208,7 @@ Unsubscribes from the property change event. This API uses an asynchronous callb
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-Subscribes to the connection status change event. This API uses an asynchronous callback to return the result.
-
-The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the connection status change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -236,9 +230,7 @@ The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive 
 onMtuChange(callback: Callback<int>): void
 ```
 
-Subscribes to the MTU change event. This API uses an asynchronous callback to return the result.
-
-The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the MTU change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -260,9 +252,7 @@ The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive 
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-Subscribes to the property change event. This API uses an asynchronous callback to return the result.
-
-The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the property change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 

@@ -1,10 +1,6 @@
 # ImageCompleteEvent
 
-图片数据加载成功和解码成功时触发回调的返回对象。
-
-当组件的参数类型为[AnimatedDrawableDescriptor] AnimatedDrawableDescriptor时该事件不触发。
-
-@interface ImageCompleteEvent
+图片数据加载成功和解码成功时触发回调的返回对象。当组件的参数类型为[AnimatedDrawableDescriptor] AnimatedDrawableDescriptor时该事件不触发。@interface ImageCompleteEvent
 
 **起始版本：** 23
 
@@ -20,9 +16,7 @@
 componentHeight: int
 ```
 
-组件的高。
-
-单位：像素
+组件的高。单位：像素
 
 **类型：** int
 
@@ -42,9 +36,7 @@ componentHeight: int
 componentWidth: int
 ```
 
-组件的宽。
-
-单位：像素
+组件的宽。单位：像素
 
 **类型：** int
 
@@ -64,13 +56,8 @@ componentWidth: int
 contentHeight: int
 ```
 
-图片实际绘制的高度。
-
-单位：像素
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+图片实际绘制的高度。单位：像素  
+**说明：**仅在loadingStatus返回1时有效。
 
 **类型：** int
 
@@ -90,13 +77,8 @@ contentHeight: int
 contentOffsetX: int
 ```
 
-实际绘制内容相对于组件自身的x轴偏移。
-
-单位：像素
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+实际绘制内容相对于组件自身的x轴偏移。单位：像素  
+**说明：**仅在loadingStatus返回1时有效。
 
 **类型：** int
 
@@ -116,13 +98,8 @@ contentOffsetX: int
 contentOffsetY: int
 ```
 
-实际绘制内容相对于组件自身的y轴偏移。
-
-单位：像素
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+实际绘制内容相对于组件自身的y轴偏移。单位：像素  
+**说明：**仅在loadingStatus返回1时有效。
 
 **类型：** int
 
@@ -142,13 +119,8 @@ contentOffsetY: int
 contentWidth: int
 ```
 
-图片实际绘制的宽度。
-
-单位：像素
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+图片实际绘制的宽度。单位：像素  
+**说明：**仅在loadingStatus返回1时有效。
 
 **类型：** int
 
@@ -168,9 +140,7 @@ contentWidth: int
 height: int
 ```
 
-图片的高。
-
-单位：像素
+图片的高。单位：像素
 
 **类型：** int
 
@@ -190,11 +160,8 @@ height: int
 loadingStatus: int
 ```
 
-图片加载成功的状态值。
-
-**说明：**
-
-返回的状态值为0时，表示图片数据加载成功。返回的状态值为1时，表示图片解码成功。
+图片加载成功的状态值。  
+**说明：**返回的状态值为0时，表示图片数据加载成功。返回的状态值为1时，表示图片解码成功。
 
 **类型：** int
 
@@ -214,9 +181,7 @@ loadingStatus: int
 width: int
 ```
 
-图片的宽。
-
-单位：像素
+图片的宽。单位：像素
 
 **类型：** int
 

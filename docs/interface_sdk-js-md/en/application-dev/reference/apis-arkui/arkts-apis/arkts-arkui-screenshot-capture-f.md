@@ -12,9 +12,7 @@ import { screenshot } from '@kit.ArkUI';
 function capture(options?: CaptureOption): Promise<image.PixelMap>
 ```
 
-Takes a screenshot of the entire screen. This API uses a promise to return the result.
-
-This API allows you to take screenshots of different screens by setting various **displayId** values, but only full -screen captures are supported. The [pick](arkts-arkui-screenshot-pick-f.md) API allows you to take screenshots of a specified region.
+Takes a screenshot of the entire screen. This API uses a promise to return the result.This API allows you to take screenshots of different screens by setting various **displayId** values, but only full -screen captures are supported. The [pick](arkts-arkui-screenshot-pick-f.md) API allows you to take screenshots of a specified region.
 
 **Since:** 23
 

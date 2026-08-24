@@ -36,12 +36,9 @@ constructor(value: CustomDialogControllerOptions)
 
 自定义弹窗的构造器。
 
-> **说明：**
-> 
-> 自定义弹窗的所有参数，不支持动态刷新，但可以通过设置customStyle为true，并在自定义组件上设置 [backgroundColor](ts-universal-attributes-background.md#backgroundcolor)、 [backgroundBlurStyle](ts-universal-attributes-background.md#backgroundblurstyle9)、 [尺寸设置](ts-universal-attributes-size.md)等属性，通过属性绑定的状态变量来实现动态刷新的效果。
-> 
-> 在CustomDialogController作为全局变量以实现全局自定义弹窗的场景下，若对controller重新赋值，则无法通过其关闭之前的弹窗。建议在重新赋值前先关闭弹窗。
-> 
+> **说明：**&gt;
+> 自定义弹窗的所有参数，不支持动态刷新，但可以通过设置customStyle为true，并在自定义组件上设置 [backgroundColor](ts-universal-attributes-background.md#backgroundcolor)、 [backgroundBlurStyle](ts-universal-attributes-background.md#backgroundblurstyle9)、 [尺寸设置](ts-universal-attributes-size.md)等属性，通过属性绑定的状态变量来实现动态刷新的效果。&gt;
+> 在CustomDialogController作为全局变量以实现全局自定义弹窗的场景下，若对controller重新赋值，则无法通过其关闭之前的弹窗。建议在重新赋值前先关闭弹窗。&gt;
 > 在自定义弹窗内拉起另一个自定义弹窗时，不建议直接关闭拉起方。
 
 **起始版本：** 23
@@ -116,8 +113,7 @@ open(): void
 
 显示自定义弹窗内容，允许多次使用。如果弹框为SubWindow模式，弹窗可以显示在主窗口之外，此时弹框不允许再弹出SubWindow弹框。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 不支持在输入法类型窗口中使用子窗（showInSubwindow为true）的CustomDialog，详情见输入法框架的约束与限制说明 createPanel。
 
 **起始版本：** 23

@@ -1,6 +1,6 @@
 # KeyboardArea
 
-@brief Represents the keyboard area on the panel.
+Represents the keyboard area on the panel.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 bottom: int
 ```
 
-@brief Distance between the lower boundary of the keyboard area and the lower boundary of the panel area, in pixels. The value is an integer.
+Distance between the lower boundary of the keyboard area and the lower boundary of the panel area, in pixels. The value is an integer.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ bottom: int
 left: int
 ```
 
-@brief Distance between the left boundary of the keyboard area and the left boundary of the panel area, in pixels. The value is an integer.
+Distance between the left boundary of the keyboard area and the left boundary of the panel area, in pixels. The value is an integer.
 
 **Type:** int
 
@@ -52,7 +52,7 @@ left: int
 right: int
 ```
 
-@brief Distance between the right border of the keyboard area and the right border of the panel area, in pixels. The value is an integer.
+Distance between the right border of the keyboard area and the right border of the panel area, in pixels. The value is an integer.
 
 **Type:** int
 
@@ -68,7 +68,7 @@ right: int
 top: int
 ```
 
-@brief Distance between the upper boundary of the keyboard area and the upper boundary of the panel area, in pixels. The value is an integer.
+Distance between the upper boundary of the keyboard area and the upper boundary of the panel area, in pixels. The value is an integer.
 
 **Type:** int
 

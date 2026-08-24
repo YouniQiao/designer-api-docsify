@@ -1,8 +1,6 @@
 # MissionCallback（系统接口）
 
-任务回调已注册
-
-@interface MissionCallback
+任务回调已注册@interface MissionCallback
 
 **起始版本：** 23
 

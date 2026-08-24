@@ -14,7 +14,6 @@ The module implements basic screen management. You can use the APIs of this modu
 
 ```TypeScript
 import { screen } from '@kit.ArkUI';
-import { screenshot } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -75,7 +74,7 @@ import { screenshot } from '@kit.ArkUI';
 | [MultiScreenPositionOptions](arkts-arkui-screen-multiscreenpositionoptions-i-sys.md) | Describes the screen position information. |
 | [OrientationOptions](arkts-arkui-screen-orientationoptions-i-sys.md) | The parameters for setting orientation |
 | [Rect](arkts-arkui-screen-rect-i-sys.md) | Describes the rectangle information. |
-| [Screen](arkts-arkui-screen-screen-i-sys.md) | Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance. |
+| [Screen](arkts-arkui-screen-screen-i-sys.md) | Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance.Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md) to obtain a Screen instance. |
 | [ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md) | Defines the screen mode information. |
 | [VirtualScreenOption](arkts-arkui-screen-virtualscreenoption-i-sys.md) | Defines virtual screen parameters. |
 <!--DelEnd-->

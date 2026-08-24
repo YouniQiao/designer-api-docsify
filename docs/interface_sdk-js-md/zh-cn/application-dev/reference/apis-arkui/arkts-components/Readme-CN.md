@@ -991,6 +991,10 @@
 - [Marquee](arkts-arkui-marquee.md)
   - [Marquee属性/事件](arkts-arkui-marquee-attribute.md)
   - [MarqueeOptions](arkts-arkui-marqueeoptions-i.md)
+- [MediaCachedImage](arkts-arkui-mediacachedimage-sys.md)
+  - [MediaCachedImage属性/事件](arkts-arkui-mediacachedimage-attribute.md)
+  <!--Del-->
+  - [ASTCResource(系统接口)](arkts-arkui-astcresource-i-sys.md)<!--DelEnd-->
 - [Menu](arkts-arkui-menu.md)
   - [Menu属性/事件](arkts-arkui-menu-attribute.md)
   - [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md)

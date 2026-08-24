@@ -16,7 +16,6 @@ PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEf
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## off('error')

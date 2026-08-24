@@ -479,9 +479,7 @@ Whether to display in the sub window.
 systemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
-
-Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
+Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
 
 **Type:** uiMaterial.Material
 

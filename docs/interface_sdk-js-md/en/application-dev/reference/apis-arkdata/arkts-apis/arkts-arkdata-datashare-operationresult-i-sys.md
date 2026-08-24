@@ -14,7 +14,6 @@ Defines the result of the operation for subscribing to or unsubscribing from the
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## key

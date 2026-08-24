@@ -21,11 +21,7 @@ ChipGroupPaddingOptions定义了ChipGroup的上下内边距，用于控制其整
 bottom: Length
 ```
 
-ChipGroup的下方内边距（不支持百分比）。 单位：vp
-
-默认值：14
-
-为undefined时，bottom取默认值。
+ChipGroup的下方内边距（不支持百分比）。 单位：vp默认值：14为undefined时，bottom取默认值。
 
 **类型：** Length
 
@@ -45,11 +41,7 @@ ChipGroup的下方内边距（不支持百分比）。 单位：vp
 top: Length
 ```
 
-ChipGroup的上方内边距（不支持百分比）。 单位：vp
-
-默认值：14
-
-为undefined时，top取默认值。
+ChipGroup的上方内边距（不支持百分比）。 单位：vp默认值：14为undefined时，top取默认值。
 
 **类型：** Length
 

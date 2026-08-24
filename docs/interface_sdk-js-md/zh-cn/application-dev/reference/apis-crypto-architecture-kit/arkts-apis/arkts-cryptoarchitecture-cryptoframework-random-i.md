@@ -318,9 +318,7 @@ generateRandom(len: int): Promise<DataBlob>
 generateRandomSync(len: int): DataBlob
 ```
 
-同步生成指定长度的随机数。
-
-<br><br>**说明：** <br>建议优先使用异步API，[generateRandom](#generaterandom)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+同步生成指定长度的随机数。<br><br>**说明：** <br>建议优先使用异步API，[generateRandom](#generaterandom)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 

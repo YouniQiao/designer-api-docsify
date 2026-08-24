@@ -98,9 +98,7 @@ Offset of the shadow along the y-axis. Unit is px. Default value is 0.
 radius: double | Resource | undefined
 ```
 
-Blur radius of the shadow. Default value: 0px.
-
-undefined means setting to default value.
+Blur radius of the shadow. Default value: 0px.undefined means setting to default value.
 
 **类型：** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined
 

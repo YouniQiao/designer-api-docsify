@@ -34,7 +34,7 @@ Accessibility description of the hyperlink text.
 accessibilityLevel: string
 ```
 
-Accessibility level of the hyperlink text. 'auto': whether the text can be identified by accessibility is determined by the system; 'yes': can be identified by accessibility; 'no': cannot be identified by accessibility; ' no-hide-descendants': the current text and its child content cannot be identified by accessibility.
+Accessibility level of the hyperlink text. 'auto': whether the text can be identified by accessibility is determined by the system; 'yes': can be identified by accessibility; 'no': cannot be identified by accessibility; 'no-hide-descendants': the current text and its child content cannot be identified by accessibility.
 
 **Type:** string
 

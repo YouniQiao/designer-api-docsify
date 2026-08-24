@@ -4,9 +4,7 @@
 export type TextPickerScrollStopCallback = (value: string | string[], index: int | int[]) => void
 ```
 
-定义触发onScrollStop事件的回调类型。
-
-当显示文本或图片加文本列表时，value值为选中项中的文本值，当显示图片列表时，value值为空。
+定义触发onScrollStop事件的回调类型。当显示文本或图片加文本列表时，value值为选中项中的文本值，当显示图片列表时，value值为空。
 
 **起始版本：** 23
 

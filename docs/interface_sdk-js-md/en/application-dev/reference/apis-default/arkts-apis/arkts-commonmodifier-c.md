@@ -1,8 +1,6 @@
 # CommonModifier
 
-Defines Common Modifier
-
-@implements { CommonAttribute, AttributeModifier&lt;CommonAttribute&gt; }
+Defines Common Modifier@implements { CommonAttribute, AttributeModifier&lt;CommonAttribute&gt; }
 
 **Inheritance/Implementation:** CommonModifier implements CommonAttribute, AttributeModifier<CommonAttribute>
 

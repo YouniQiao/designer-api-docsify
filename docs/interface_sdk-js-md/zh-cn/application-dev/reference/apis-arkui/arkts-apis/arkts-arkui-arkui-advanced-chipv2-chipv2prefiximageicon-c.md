@@ -1,12 +1,12 @@
 # ChipV2PrefixImageIcon
 
-ChipV2PrefixImageIcon定义前缀图标类。
-
-继承自[ChipV2ImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2imageicon-c.md)。
+ChipV2PrefixImageIcon定义前缀图标类。继承自[ChipV2ImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2imageicon-c.md)。
 
 **继承/实现关系：** ChipV2PrefixImageIcon extends [ChipV2ImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2imageicon-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @ObservedV2
 
 <!--Device-unnamed-export declare class ChipV2PrefixImageIcon--><!--Device-unnamed-export declare class ChipV2PrefixImageIcon-End-->
 

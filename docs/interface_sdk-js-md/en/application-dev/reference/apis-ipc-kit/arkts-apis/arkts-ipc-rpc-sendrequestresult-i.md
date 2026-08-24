@@ -44,7 +44,7 @@ Message code.
 data: MessageParcel
 ```
 
-*MessageParcel** object sent to the remote process.
+**MessageParcel** object sent to the remote process.
 
 **Type:** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 
@@ -84,7 +84,7 @@ Error code.
 reply: MessageParcel
 ```
 
-*MessageParcel** object returned by the remote process.
+**MessageParcel** object returned by the remote process.
 
 **Type:** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 

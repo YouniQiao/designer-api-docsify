@@ -1,8 +1,6 @@
 # LazyVWaterFlowLayoutAttribute
 
-定义懒加载垂直瀑布流布局属性。
-
-@extends LazyWaterFlowLayoutAttribute&lt;LazyVWaterFlowLayoutAttribute&gt;
+定义懒加载垂直瀑布流布局属性。@extends LazyWaterFlowLayoutAttribute&lt;LazyVWaterFlowLayoutAttribute&gt;
 
 **继承/实现关系：** LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>
 

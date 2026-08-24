@@ -40,7 +40,7 @@ Compact display format. The value can be "long" or "short". The default value is
 currency?: string
 ```
 
-Currency unit. The value must comply with the [ISO-4217 standard](https://www.iso.org/iso-4217-currency-codes.html), for example, "EUR", "CNY", and "USD". From API version 12, a three-digit number is supported, for example, "978", "156", or "840".
+Currency unit. The value must comply with the [ISO-4217 standard](https://www.iso.org/iso-4217-currency-codes.html), for example, "EUR", "CNY", and "USD". From API version 12, a three-digit number is supported, for example, "978","156", or "840".
 
 **Type:** string
 
@@ -238,7 +238,7 @@ Number notation. The value can be: "standard", "scientific", "engineering", or "
 numberingSystem?: string
 ```
 
-Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", or "wcho".
+Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks","brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp","java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl","mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng","newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund","takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", or "wcho".
 
 **Type:** string
 
@@ -274,7 +274,7 @@ Rounding increment. The value can be: 1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 50
 roundingMode?: string
 ```
 
-Rounding mode. The value can be: "ceil": rounding up. "floor": rounding down. "expand": rounding away from 0. "trunc": rounding toward 0. "halfCeil": half-rounding up; that is, rounding up when the decimal number is greater than or equal to half of the increment, and rounding down otherwise. "halfFloor": half-rounding down; that is, rounding up when the decimal number is greater than half of the increment, and rounding down otherwise. "halfExpand": half-rounding away from 0; that is, rounding away from 0 when the decimal number is greater than or equal to half of the increment, and rounding toward 0 otherwise. "halfTrunc": half-rounding toward 0; that is, rounding away from 0 when the decimal number is greater than half of the increment, and rounding toward 0 otherwise. "halfEven": half-rounding to the nearest even number; that is, rounding away from 0 when the decimal number is greater than half of the increment, rounding toward 0 when the decimal number is less than half of the increment, and rounding to the nearest even number when the decimal number is exactly half of the increment. The default value is "halfExpand".
+Rounding mode. The value can be:"ceil": rounding up."floor": rounding down."expand": rounding away from 0."trunc": rounding toward 0."halfCeil": half-rounding up; that is, rounding up when the decimal number is greater than or equal to half of the increment, and rounding down otherwise."halfFloor": half-rounding down; that is, rounding up when the decimal number is greater than half of the increment, and rounding down otherwise."halfExpand": half-rounding away from 0; that is, rounding away from 0 when the decimal number is greater than or equal to half of the increment, and rounding toward 0 otherwise."halfTrunc": half-rounding toward 0; that is, rounding away from 0 when the decimal number is greater than half of the increment, and rounding toward 0 otherwise."halfEven": half-rounding to the nearest even number; that is, rounding away from 0 when the decimal number is greater than half of the increment, rounding toward 0 when the decimal number is less than half of the increment, and rounding to the nearest even number when the decimal number is exactly half of the increment. The default value is "halfExpand".
 
 **Type:** string
 
@@ -310,7 +310,7 @@ Rounding priority used when both the maximum number of fraction digits and the m
 signDisplay?: string
 ```
 
-Number sign display format. The value can be: "auto": automatically determines whether to display the plus or minus sign. "never": do not display the plus or minus sign. "always": always displays the plus or minus sign. "exceptZero": displays the plus or minus sign for all values except 0. Default value: "auto".
+Number sign display format. The value can be:"auto": automatically determines whether to display the plus or minus sign."never": do not display the plus or minus sign."always": always displays the plus or minus sign."exceptZero": displays the plus or minus sign for all values except 0. Default value: "auto".
 
 **Type:** string
 
@@ -346,7 +346,7 @@ Number display format. The value can be "decimal", "currency", "percent", or "un
 unit?: string
 ```
 
-Unit name, for example, "meter", "inch", or "hectare". The combination units supported since API version 18 are as follows: "beat-per-minute", "body-weight-per-second", "breath-per-minute", "foot-per-hour", "jump-rope-per-minute", "meter-per-hour", "milliliter-per-minute-per-kilogram", "rotation-per-minute", "step-per-minute", and "stroke-per-minute".
+Unit name, for example, "meter", "inch", or "hectare". The combination units supported since API version 18 are as follows: "beat-per-minute", "body-weight-per-second", "breath-per-minute", "foot-per-hour","jump-rope-per-minute", "meter-per-hour", "milliliter-per-minute-per-kilogram", "rotation-per-minute","step-per-minute", and "stroke-per-minute".
 
 **Type:** string
 
@@ -382,7 +382,7 @@ Display format of units. The value can be "long", "short", or "narrow". The defa
 unitUsage?: string
 ```
 
-Application scenario of units. The value can be any of the following: "default", "area-land-agricult", "area-land-commercl", "area-land-residntl", "length-person", "length-person-small", "length-rainfall", "length-road", "length-road-small", "length-snowfall", "length-vehicle", "length-visiblty", "length-visiblty-small", "length-person-informal", "length-person-small-informal", "length-road-informal", "speed-road-travel", "speed-wind", "temperature-person", "temperature-weather", "volume-vehicle-fuel", "elapsed-time-second", "size-file-byte", or "size-shortfile-byte". The default value is "default".
+Application scenario of units. The value can be any of the following: "default", "area-land-agricult","area-land-commercl", "area-land-residntl", "length-person", "length-person-small", "length-rainfall","length-road", "length-road-small", "length-snowfall", "length-vehicle", "length-visiblty","length-visiblty-small", "length-person-informal", "length-person-small-informal", "length-road-informal","speed-road-travel", "speed-wind", "temperature-person", "temperature-weather", "volume-vehicle-fuel","elapsed-time-second", "size-file-byte", or "size-shortfile-byte". The default value is "default".
 
 **Type:** string
 
@@ -400,7 +400,7 @@ Application scenario of units. The value can be any of the following: "default",
 useGrouping?: boolean
 ```
 
-Whether to enable grouping for display. The value "true" means to enable grouping for display, and the value "false" means the opposite. The default value is "true".
+Whether to enable grouping for display. The value "true" means to enable grouping for display, and the value"false" means the opposite. The default value is "true".
 
 **Type:** boolean
 

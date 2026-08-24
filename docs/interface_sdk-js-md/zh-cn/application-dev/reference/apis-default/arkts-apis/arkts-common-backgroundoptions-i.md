@@ -16,9 +16,7 @@ Defines background options.
 align?: Alignment
 ```
 
-Set the alignment of the custom background and component.
-
-Anonymous Object Rectification.
+Set the alignment of the custom background and component.Anonymous Object Rectification.
 
 **类型：** [Alignment](../../apis-arkui/arkts-apis/arkts-arkui-alignment-e.md)
 

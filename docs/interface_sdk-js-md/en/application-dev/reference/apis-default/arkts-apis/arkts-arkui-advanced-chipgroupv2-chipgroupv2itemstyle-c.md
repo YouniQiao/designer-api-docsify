@@ -6,6 +6,8 @@ Defines chip group item style.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipGroupV2ItemStyle--><!--Device-unnamed-export declare class ChipGroupV2ItemStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ The constructor of ChipGroupV2ItemStyle
 ## backgroundColor
 
 ```TypeScript
-@Trace
-  public backgroundColor?: ColorMetrics
+public backgroundColor?: ColorMetrics
 ```
 
 ChipItem background color.
@@ -54,6 +55,8 @@ ChipItem background color.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public backgroundColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace  public backgroundColor?: ColorMetrics-End-->
@@ -63,8 +66,7 @@ ChipItem background color.
 ## backgroundSystemMaterial
 
 ```TypeScript
-@Trace
-  public backgroundSystemMaterial?: uiMaterial.Material
+public backgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -75,6 +77,8 @@ Set system-styled materials for the component. Different materials have differen
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2ItemStyle-@Trace  public backgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -84,8 +88,7 @@ Set system-styled materials for the component. Different materials have differen
 ## fontColor
 
 ```TypeScript
-@Trace
-  public fontColor?: ColorMetrics
+public fontColor?: ColorMetrics
 ```
 
 Text font color.
@@ -96,6 +99,8 @@ Text font color.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public fontColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace  public fontColor?: ColorMetrics-End-->
@@ -105,8 +110,7 @@ Text font color.
 ## selectedBackgroundColor
 
 ```TypeScript
-@Trace
-  public selectedBackgroundColor?: ColorMetrics
+public selectedBackgroundColor?: ColorMetrics
 ```
 
 Selected chip item background color.
@@ -117,6 +121,8 @@ Selected chip item background color.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public selectedBackgroundColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace  public selectedBackgroundColor?: ColorMetrics-End-->
@@ -126,8 +132,7 @@ Selected chip item background color.
 ## selectedBackgroundSystemMaterial
 
 ```TypeScript
-@Trace
-  public selectedBackgroundSystemMaterial?: uiMaterial.Material
+public selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component when selected. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -138,6 +143,8 @@ Set system-styled materials for the component when selected. Different materials
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public selectedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2ItemStyle-@Trace  public selectedBackgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -147,8 +154,7 @@ Set system-styled materials for the component when selected. Different materials
 ## selectedFontColor
 
 ```TypeScript
-@Trace
-  public selectedFontColor?: ColorMetrics
+public selectedFontColor?: ColorMetrics
 ```
 
 Selected Text font color.
@@ -159,6 +165,8 @@ Selected Text font color.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public selectedFontColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace  public selectedFontColor?: ColorMetrics-End-->
@@ -168,8 +176,7 @@ Selected Text font color.
 ## size
 
 ```TypeScript
-@Trace
-  public size?: ChipV2Size | SizeT<LengthMetrics>
+public size?: ChipV2Size | SizeT<LengthMetrics>
 ```
 
 ChipV2 size.
@@ -179,6 +186,8 @@ ChipV2 size.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

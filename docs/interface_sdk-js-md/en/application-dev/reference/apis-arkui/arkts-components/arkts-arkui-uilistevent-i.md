@@ -21,9 +21,7 @@ Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-Sets the callback for the [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.
-
-If the input parameter is **undefined**, the event callback is reset.
+Sets the callback for the [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
@@ -47,9 +45,7 @@ If the input parameter is **undefined**, the event callback is reset.
 setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void
 ```
 
-Sets the callback of the [onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#onscrollindex) event.
-
-If the input parameter is **undefined**, the event callback is reset.
+Sets the callback of the [onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#onscrollindex) event.If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
@@ -73,9 +69,7 @@ If the input parameter is **undefined**, the event callback is reset.
 setOnScrollVisibleContentChange(callback: OnScrollVisibleContentChangeCallback | undefined): void
 ```
 
-Sets the callback of the [onScrollVisibleContentChange](arkts-arkui-list-attribute.md#onscrollvisiblecontentchange) event.
-
-If the input parameter is **undefined**, the event callback is reset.
+Sets the callback of the [onScrollVisibleContentChange](arkts-arkui-list-attribute.md#onscrollvisiblecontentchange) event.If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
@@ -99,9 +93,7 @@ If the input parameter is **undefined**, the event callback is reset.
 setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 ```
 
-Sets the callback for the [onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.
-
-If the input parameter is **undefined**, the event callback is reset.
+Sets the callback for the [onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 

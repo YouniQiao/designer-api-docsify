@@ -10,7 +10,6 @@
 
 ```TypeScript
 import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from '@kit.ArkUI';
-import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, EditableLeftIconV2Options, EditableTitleV2, EditableTitleV2Options, EditableTitleBarItemV2, EditableTitleBarItemV2Options, EditableTitleBarMenuItemV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2, EditableSaveButtonV2Options, EditableTitleBarStyleV2, EditableTitleBarStyleV2Options } from '@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle
@@ -19,9 +18,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式。
-
-默认值：BlurStyle.NONE
+标题栏背景模糊样式。默认值：BlurStyle.NONE
 
 **类型：** [BlurStyle](../../apis-default/arkts-apis/arkts-common-blurstyle-e.md)
 
@@ -41,9 +38,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundColor?: ResourceColor
 ```
 
-标题栏背景色。
-
-默认值：'#00000000'
+标题栏背景色。默认值：'#00000000'
 
 **类型：** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
@@ -63,9 +58,7 @@ backgroundColor?: ResourceColor
 safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-配置扩展安全区域的方向。
-
-默认值：[SafeAreaEdge.TOP]
+配置扩展安全区域的方向。默认值：[SafeAreaEdge.TOP]
 
 **类型：** Array&lt;[SafeAreaEdge](../../apis-default/arkts-apis/arkts-common-safeareaedge-e.md)&gt;
 
@@ -85,9 +78,7 @@ safeAreaEdges?: Array<SafeAreaEdge>
 safeAreaTypes?: Array<SafeAreaType>
 ```
 
-配置扩展安全区域的类型。
-
-默认值：[SafeAreaType.SYSTEM]
+配置扩展安全区域的类型。默认值：[SafeAreaType.SYSTEM]
 
 **类型：** Array&lt;[SafeAreaType](../../apis-default/arkts-apis/arkts-common-safeareatype-e.md)&gt;
 

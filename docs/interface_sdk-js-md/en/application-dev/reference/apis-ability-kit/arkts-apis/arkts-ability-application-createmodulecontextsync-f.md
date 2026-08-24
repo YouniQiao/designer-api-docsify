@@ -14,8 +14,7 @@ export function createModuleContextSync(context: Context, moduleName: string): C
 
 Creates the context for a module. The [resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-configuration-c.md) in the created module context inherits from the input context, making it convenient for you to access [application resources across HAP/HSP packages](../../../quick-start/resource-categories-and-access.md#cross-haphsp-resources)
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Creating a module context involves resource querying and initialization, which can be time-consuming. In
 > scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
 > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.

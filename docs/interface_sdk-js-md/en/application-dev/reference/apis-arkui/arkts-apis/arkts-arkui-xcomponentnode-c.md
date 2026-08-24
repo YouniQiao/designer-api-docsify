@@ -1,8 +1,6 @@
 # XComponentNode
 
-Defines XComponent Node.
-
-@extends FrameNode
+Defines XComponent Node.@extends FrameNode
 
 **Inheritance/Implementation:** XComponentNode extends FrameNode
 
@@ -40,7 +38,7 @@ Set the render type of the builderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [NodeRenderType](../../apis-default/arkts-apis/arkts-buildernode-noderendertype-e.md) | Yes | render type |
+| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Yes | render type |
 
 **Return value:**
 
@@ -74,7 +72,7 @@ constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UIContext used to create the FrameNode |
-| options | [RenderOptions](../../apis-default/arkts-apis/arkts-buildernode-renderoptions-i.md) | Yes | Render options of the Builder Node |
+| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Yes | Render options of the Builder Node |
 | id | string | Yes | XComponent id defined by the application |
 | type | XComponentType | Yes | XComponent type |
 | libraryName | string | No | The name of the library to be loaded by XComponent |

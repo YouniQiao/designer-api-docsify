@@ -1,11 +1,8 @@
 # CounterV2Component
 
-CounterV2组件用于精确调节数值。
+CounterV2组件用于精确调节数值。该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于 [状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组 件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制Counter的数据和状态，实现更高效的用户界面刷新。
 
-该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于 [状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组 件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制Counter的数据和状态，实现更高效的用户界面刷新。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 如果CounterV2设置通用属性和
 > 通用事件，编译工具链会额外生成节点__Common__，并将通用属性
 > 或通用事件挂载在__Common__上，而不是直接应用到CounterV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议CounterV2设置通用属性和通用事件。
@@ -13,6 +10,8 @@ CounterV2组件用于精确调节数值。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @ComponentV2
 
 <!--Device-unnamed-declare struct CounterV2Component--><!--Device-unnamed-declare struct CounterV2Component-End-->
 
@@ -26,17 +25,17 @@ CounterV2组件用于精确调节数值。
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
-build函数用于构造CounterV2高级组件。
-
+build函数用于构造CounterV2高级组件。  
 **ArkTS模式：** 该接口仅适用于ArkTS-Sta。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,8 +46,7 @@ build函数用于构造CounterV2高级组件。
 ## options
 
 ```TypeScript
-@Param
-  options: CounterV2Options
+options: CounterV2Options
 ```
 
 定义CounterV2组件的类型。
@@ -58,6 +56,8 @@ build函数用于构造CounterV2高级组件。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

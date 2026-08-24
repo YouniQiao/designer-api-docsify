@@ -1,8 +1,6 @@
 # CanvasRenderer
 
-Canvas renderer for drawing shapes, text, images and other objects
-
-@extends CanvasPath
+Canvas renderer for drawing shapes, text, images and other objects@extends CanvasPath
 
 **Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvas-canvaspath-c.md)
 
@@ -257,7 +255,7 @@ Creates a template object using the specified image
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) | Yes | Objects as duplicate image sources |
-| repetition | string \| null | Yes | Specifies how to repeat images. The following four modes are supported: "repeat": Repeated images in both X and Y directions "repeat-x": Repeated images in the X-axis direction but not in the Y-axis direction "repeat-y": Repeated images in the Y axis direction, but not in the X axis direction. "no-repeat": Non-repeating images in both X and Y directions "clamp": Replicate the edge color if the shader draws outside of its original bounds. "mirror": Repeat the shader's image horizontally and vertically, alternating mirror images so that adjacent images always seam. |
+| repetition | string \| null | Yes | Specifies how to repeat images. The following four modes are supported:"repeat": Repeated images in both X and Y directions"repeat-x": Repeated images in the X-axis direction but not in the Y-axis direction"repeat-y": Repeated images in the Y axis direction, but not in the X axis direction."no-repeat": Non-repeating images in both X and Y directions"clamp": Replicate the edge color if the shader draws outside of its original bounds."mirror": Repeat the shader's image horizontally and vertically, alternating mirror images so that adjacent images always seam. |
 
 **Return value:**
 
@@ -785,7 +783,7 @@ Adds the effect of a rotation
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | double | Yes | The radian of clockwise rotation, which can be converted to an angle value using the formula: degree Math.PI / 180. |
+| angle | double | Yes | The radian of clockwise rotation, which can be converted to an angle value using the formula: degree * Math.PI / 180. |
 
 ## save
 

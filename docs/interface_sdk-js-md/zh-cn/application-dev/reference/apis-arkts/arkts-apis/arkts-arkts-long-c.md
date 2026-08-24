@@ -39,13 +39,13 @@ public add(other: Long): Long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | 是 | 加法运算的右操作数。 |
+| other | Long | 是 | 加法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) | 加法运算的结果。 |
+| Long | 加法运算的结果。 |
 
 ## compareTo
 
@@ -69,7 +69,7 @@ public compareTo(other: Long): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | 是 | 用于比较的Long对象。 |
+| other | Long | 是 | 用于比较的Long对象。 |
 
 **返回值：**
 
@@ -141,13 +141,13 @@ public div(other: Long): Long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | 是 | 除法运算的右操作数。 |
+| other | Long | 是 | 除法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) | 除法运算的结果。 |
+| Long | 除法运算的结果。 |
 
 ## equals
 
@@ -201,7 +201,7 @@ public isGreaterEqualThan(other: Long): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | 是 | 比较运算的右操作数。 |
+| other | Long | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -231,7 +231,7 @@ public isGreaterThan(other: Long): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | 是 | 比较运算的右操作数。 |
+| other | Long | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -261,7 +261,7 @@ public isLessEqualThan(other: Long): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | 是 | 比较运算的右操作数。 |
+| other | Long | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -291,7 +291,7 @@ public isLessThan(other: Long): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | 是 | 比较运算的右操作数。 |
+| other | Long | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -321,13 +321,13 @@ public mul(other: Long): Long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | 是 | 乘法运算的右操作数。 |
+| other | Long | 是 | 乘法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) | 乘法运算的结果。 |
+| Long | 乘法运算的结果。 |
 
 ## parseInt
 
@@ -382,13 +382,13 @@ public sub(other: Long): Long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | 是 | 减法运算的右操作数。 |
+| other | Long | 是 | 减法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) | 减法运算的结果。 |
+| Long | 减法运算的结果。 |
 
 ## toByte
 

@@ -1,8 +1,6 @@
 # GetItemsInShapePathParams (System API)
 
-Image options setted when need to get the image objects.
-
-@interface GetItemsInShapePathParams
+Image options setted when need to get the image objects.@interface GetItemsInShapePathParams
 
 **Since:** 23
 

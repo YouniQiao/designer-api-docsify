@@ -6,6 +6,8 @@ A picker view to show availale input device list. @struct { AVInputCastPicker }
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct AVInputCastPicker--><!--Device-unnamed-export declare struct AVInputCastPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVInputCast
@@ -18,8 +20,7 @@ A picker view to show availale input device list. @struct { AVInputCastPicker }
 ## build
 
 ```TypeScript
-@Builder
-   build(): void
+build(): void
 ```
 
 The method to build component.
@@ -28,6 +29,8 @@ The method to build component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Builder
+
 <!--Device-AVInputCastPicker-@Builder   build(): void--><!--Device-AVInputCastPicker-@Builder   build(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVInputCast
@@ -35,8 +38,7 @@ The method to build component.
 ## customPicker
 
 ```TypeScript
-@BuilderParam
-  customPicker?: CustomBuilder
+customPicker?: CustomBuilder
 ```
 
 Set the custom builder for the picker appearance. If not set, system will show the default appearance for different device type.
@@ -46,6 +48,8 @@ Set the custom builder for the picker appearance. If not set, system will show t
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @BuilderParam
 
 <!--Device-AVInputCastPicker-@BuilderParam  customPicker?: CustomBuilder--><!--Device-AVInputCastPicker-@BuilderParam  customPicker?: CustomBuilder-End-->
 

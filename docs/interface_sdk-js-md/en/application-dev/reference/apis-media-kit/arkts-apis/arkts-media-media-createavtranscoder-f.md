@@ -14,8 +14,7 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 Creates an AVTranscoder instance. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > A maximum of 2 AVTranscoder instances can be created.
 
 **Since:** 12
@@ -63,11 +62,8 @@ media.createAVTranscoder().then((transcoder: media.AVTranscoder) => {
 function createAVTranscoder(): Promise<AVTranscoder | undefined>
 ```
 
-Creates an **AVTranscoder** instance. This API uses a promise to return the result.
-
-**NOTE：**
-
-A maximum of 2 **AVTranscoder** instances can be created.
+Creates an **AVTranscoder** instance. This API uses a promise to return the result.  
+**NOTE：**A maximum of 2 **AVTranscoder** instances can be created.
 
 **Since:** 23
 

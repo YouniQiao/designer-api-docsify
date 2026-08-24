@@ -1,6 +1,6 @@
 # JsMessageType
 
-Enum type supplied to [runJavaScriptExt](arkts-webview-webviewcontroller-c.md#runjavascriptext) for indicating the result of JavaScript code execution. @enum {number}
+Enum type supplied to [runJavaScriptExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext) for indicating the result of JavaScript code execution. @enum {number}
 
 **起始版本：** 23
 

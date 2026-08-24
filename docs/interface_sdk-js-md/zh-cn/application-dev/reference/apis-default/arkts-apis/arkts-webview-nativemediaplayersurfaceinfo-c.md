@@ -2,12 +2,9 @@
 
 [应用接管网页媒体播放功能](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12) 中用于同层渲染的 surface 信息。
 
-> **说明：**
-> 
-> - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
-> 
-> - 本Class首批接口从API version 12开始支持。
-> 
+> **说明：**&gt;
+> - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。&gt;
+> - 本Class首批接口从API version 12开始支持。&gt;
 > - 示例效果请以真机运行为准。
 
 **起始版本：** 23
@@ -29,9 +26,7 @@
 id: string
 ```
 
-surface的id，用于同层渲染的NativeImage的surfaceId。
-
-详见[NativeEmbedDataInfo](../../apis-arkweb/arkts-components/arkts-arkweb-nativeembeddatainfo-i.md)。
+surface的id，用于同层渲染的NativeImage的surfaceId。详见[NativeEmbedDataInfo](../../apis-arkweb/arkts-components/arkts-arkweb-nativeembeddatainfo-i.md)。
 
 **类型：** string
 
@@ -51,7 +46,7 @@ rect: RectEvent
 
 surface的位置信息。
 
-**类型：** [RectEvent](arkts-webview-rectevent-i.md)
+**类型：** [RectEvent](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-rectevent-i.md)
 
 **起始版本：** 23
 

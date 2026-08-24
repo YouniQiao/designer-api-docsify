@@ -62,9 +62,7 @@ CAMERA_POSITION_FRONT = 2
 CAMERA_POSITION_FOLD_INNER = 3
 ```
 
-折叠态相机。
-
-从API version 11开始支持，从API version 12开始废弃。
+折叠态相机。从API version 11开始支持，从API version 12开始废弃。
 
 **起始版本：** 11
 

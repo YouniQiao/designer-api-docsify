@@ -1,6 +1,6 @@
 # InputMethodInputType (System API)
 
-@brief Enumerates input types, which are used to identify the input modes supported by the system panel. Different input types correspond to different input scenarios and panel layouts.
+Enumerates input types, which are used to identify the input modes supported by the system panel. Different input types correspond to different input scenarios and panel layouts.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 NONE = -1
 ```
 
-@brief No input.
+No input.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ NONE = -1
 CAMERA_INPUT = 0
 ```
 
-@brief Camera input, indicating that the system is in camera input mode. This type is typically used for capture input scenarios.
+Camera input, indicating that the system is in camera input mode. This type is typically used for capture input scenarios.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ CAMERA_INPUT = 0
 SECURITY_INPUT = 1
 ```
 
-@brief Security input, indicating that the system panel is in secure input mode. This type is used for entering sensitive information such as passwords.
+Security input, indicating that the system panel is in secure input mode. This type is used for entering sensitive information such as passwords.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ SECURITY_INPUT = 1
 VOICE_INPUT = 2
 ```
 
-@brief Voice input, indicating that the system panel is in voice input mode. This type is used for voice-to-text input.
+Voice input, indicating that the system panel is in voice input mode. This type is used for voice-to-text input.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ VOICE_INPUT = 2
 FLOATING_VOICE_INPUT = 3
 ```
 
-@brief Floating voice input, indicating that the system panel is in floating voice input mode and provides the voice input function in a floating window.
+Floating voice input, indicating that the system panel is in floating voice input mode and provides the voice input function in a floating window.
 
 **Since:** 26.0.0
 

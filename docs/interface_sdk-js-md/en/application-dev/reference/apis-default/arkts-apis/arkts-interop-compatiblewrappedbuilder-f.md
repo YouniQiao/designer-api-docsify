@@ -13,6 +13,8 @@ Obtains the compatible WrappedBuilder.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Builder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@Builderexport declare function compatibleWrappedBuilder(builder: Any, ...args: FixedArray<ESValue>): void--><!--Device-unnamed-@Builderexport declare function compatibleWrappedBuilder(builder: Any, ...args: FixedArray<ESValue>): void-End-->

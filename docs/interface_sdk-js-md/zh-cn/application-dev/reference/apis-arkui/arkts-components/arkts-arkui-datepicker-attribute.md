@@ -1,10 +1,6 @@
 # DatePicker属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
-
-@extends CommonMethod [since 8 - 10] @extends CommonMethod&lt;DatePickerAttribute&gt; [since 11]
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：@extends CommonMethod [since 8 - 10] @extends CommonMethod&lt;DatePickerAttribute&gt; [since 11]
 
 **继承/实现关系：** DatePickerAttribute extends CommonMethod<DatePickerAttribute>
 
@@ -89,7 +85,7 @@ disappearTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 边缘项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff182431', <br>font: { <br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} |
+| value | PickerTextStyle | 是 | 边缘项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} |
 
 ## disappearTextStyle
 
@@ -113,7 +109,7 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff182431', <br>font: { <br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
+| style | Optional&lt;PickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
 
 ## enableHapticFeedback
 
@@ -147,8 +143,7 @@ lunar(value: boolean)
 
 设置日期是否显示为农历。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 仅在简体中文和繁体中文语言环境下生效，其他语言环境下设置该属性无效果。
 
 **起始版本：** 8
@@ -173,8 +168,7 @@ lunar(isLunar: Optional<boolean>)
 
 设置日期是否显示为农历。与[lunar](#lunar)相比， isLunar参数新增了对undefined类型的支持。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 仅在简体中文和繁体中文语言环境下生效，其他语言环境下设置该属性无效果。
 
 **起始版本：** 18
@@ -199,9 +193,7 @@ lunar(isLunar: Optional<boolean>)
 onChange(callback: (value: DatePickerResult) => void)
 ```
 
-滑动DatePicker文本内容后，选项完全归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。
-
-从API version 8开始支持，从API version 10开始废弃，建议使用 [onDateChange](#ondatechange)替代。
+滑动DatePicker文本内容后，选项完全归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。从API version 8开始支持，从API version 10开始废弃，建议使用 [onDateChange](#ondatechange)替代。
 
 **起始版本：** 8
 
@@ -251,8 +243,7 @@ onDateChange(callback: Optional<Callback<Date>>)
 
 滑动DatePicker文本内容后，选项完全归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。与 [onDateChange&lt;sup&gt;10+&lt;/sup&gt;](#ondatechange)相比， callback参数新增了对undefined类型的支持。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 18
@@ -293,7 +284,7 @@ selectedTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 选中项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff007dff', <br>font: { <br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} |
+| value | PickerTextStyle | 是 | 选中项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} |
 
 ## selectedTextStyle
 
@@ -317,7 +308,7 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff007dff', <br>font: { <br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
+| style | Optional&lt;PickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
 
 ## textStyle
 
@@ -341,7 +332,7 @@ textStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 待选项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff182431', <br>font: { <br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
+| value | PickerTextStyle | 是 | 待选项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
 
 ## textStyle
 
@@ -365,5 +356,5 @@ textStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff182431', <br>font: { <br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
+| style | Optional&lt;PickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
 

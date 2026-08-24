@@ -2,12 +2,9 @@
 
 Implements an image filter.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 12.&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -245,7 +242,7 @@ let composedImageFilter = drawing.ImageFilter.createComposeImageFilter(colorFilt
 static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): ImageFilter | undefined
 ```
 
-Makes an ImageFilter object that combines the "inner" and "outer" filters, allowing the output of the "inner" filter to serve as the input source bitmap for the "outer" filter.
+Makes an ImageFilter object that combines the "inner" and "outer" filters, allowing the output of the "inner"filter to serve as the input source bitmap for the "outer" filter.
 
 **Since:** 24
 
@@ -257,7 +254,7 @@ Makes an ImageFilter object that combines the "inner" and "outer" filters, allow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cOuter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Yes | Indicates the instance to apply its effects to the output of the 'inner' filter. |
+| cOuter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Yes | Indicates the instance to apply its effects to the output of the 'inner'filter. |
 | cInner | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Yes | Indicates the output as input for "outer" filters. |
 
 **Return value:**

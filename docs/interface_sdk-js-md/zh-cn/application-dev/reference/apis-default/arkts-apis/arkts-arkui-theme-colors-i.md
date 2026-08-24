@@ -321,7 +321,7 @@ compBackgroundSecondary: ResourceColor
 compBackgroundTertiary: ResourceColor
 ```
 
-三级背景。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar-editabletitlebar-s.md)、 Progress、 AlphabetIndexer、&lt;/br&gt; Button、Select、 Toggle、&lt;/br&gt;Chip、 TextInput、Search。从API版本26 .0.0开始，新增UIPickerComponent、 TextPicker。
+三级背景。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar-editabletitlebar-s.md)、 Progress、 AlphabetIndexer、&lt;/br&gt; Button、Select、 Toggle、&lt;/br&gt;Chip、 TextInput、Search。从API版本26.0.0开始，新增UIPickerComponent、 TextPicker。
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 

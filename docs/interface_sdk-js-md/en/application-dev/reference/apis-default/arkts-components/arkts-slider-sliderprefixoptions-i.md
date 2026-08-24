@@ -1,8 +1,6 @@
 # SliderPrefixOptions
 
-Options used for customizing the prefix part of the slider. It extends the SliderCustomContentOptions to inherit accessibility customization options.
-
-@extends SliderCustomContentOptions @interface SliderPrefixOptions
+Options used for customizing the prefix part of the slider. It extends the SliderCustomContentOptions to inherit accessibility customization options.@extends SliderCustomContentOptions @interface SliderPrefixOptions
 
 **Inheritance/Implementation:** SliderPrefixOptions extends [SliderCustomContentOptions](arkts-slider-slidercustomcontentoptions-i.md)
 

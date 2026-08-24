@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2--><!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -35,17 +37,16 @@ Sets the build function of the segmented button.
 ## $selectedIndexes
 
 ```TypeScript
-@Event
-  $selectedIndexes: OnSelectedIndexesChange
+$selectedIndexes: OnSelectedIndexesChange
 ```
 
-配置分段按钮选中项变更时触发的回调函数。
-
-默认值：undefined，未设置时不触发回调。
+配置分段按钮选中项变更时触发的回调函数。默认值：undefined，未设置时不触发回调。
 
 **类型：** [OnSelectedIndexesChange](../../apis-default/arkts-apis/arkts-onselectedindexeschange-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Event
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,19 +59,16 @@ Sets the build function of the segmented button.
 ## itemBackgroundBlurStyle
 
 ```TypeScript
-@Param
-  readonly itemBackgroundBlurStyle?: BlurStyle
+readonly itemBackgroundBlurStyle?: BlurStyle
 ```
 
-配置分段按钮选项的模糊材质。
-
-默认值：undefined
-
-该成员只读，不支持更改。
+配置分段按钮选项的模糊材质。默认值：undefined该成员只读，不支持更改。
 
 **类型：** BlurStyle
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,19 +81,16 @@ Sets the build function of the segmented button.
 ## itemBackgroundBlurStyleOptions
 
 ```TypeScript
-@Param
-  readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
+readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-配置分段按钮选项的模糊材质配置参数。
-
-默认值：undefined
-
-该成员只读，不支持更改。
+配置分段按钮选项的模糊材质配置参数。默认值：undefined该成员只读，不支持更改。
 
 **类型：** BackgroundBlurStyleOptions
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,21 +103,16 @@ Sets the build function of the segmented button.
 ## itemBackgroundColor
 
 ```TypeScript
-@Param
-  readonly itemBackgroundColor?: ColorMetrics
+readonly itemBackgroundColor?: ColorMetrics
 ```
 
-配置分段按钮非选中的选项背板颜色。
-
-默认值：`\$r('sys.color.segment_button_v2_multi_capsule_button_background')`
-
-值为undefined时，按默认值处理。
-
-该成员只读，不支持更改。
+配置分段按钮非选中的选项背板颜色。默认值：`\$r('sys.color.segment_button_v2_multi_capsule_button_background')`值为undefined时，按默认值处理。该成员只读，不支持更改。
 
 **类型：** ColorMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -135,19 +125,16 @@ Sets the build function of the segmented button.
 ## itemBackgroundEffect
 
 ```TypeScript
-@Param
-  readonly itemBackgroundEffect?: BackgroundEffectOptions
+readonly itemBackgroundEffect?: BackgroundEffectOptions
 ```
 
-配置分段按钮选项的背板效果。
-
-默认值：undefined
-
-该成员只读，不支持更改。
+配置分段按钮选项的背板效果。默认值：undefined该成员只读，不支持更改。
 
 **类型：** BackgroundEffectOptions
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,23 +147,16 @@ Sets the build function of the segmented button.
 ## itemBorderRadius
 
 ```TypeScript
-@Param
-  readonly itemBorderRadius?: LengthMetrics
+readonly itemBorderRadius?: LengthMetrics
 ```
 
-配置分段按钮选项的圆角大小。
-
-取值范围：[0, +∞)
-
-默认值：`\$r('sys.float.segment_button_v2_selected_corner_radius')`
-
-超出取值范围按默认值处理。
-
-该成员只读，不支持更改。
+配置分段按钮选项的圆角大小。取值范围：[0, +∞)默认值：`\$r('sys.float.segment_button_v2_selected_corner_radius')`超出取值范围按默认值处理。该成员只读，不支持更改。
 
 **类型：** LengthMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -189,25 +169,17 @@ Sets the build function of the segmented button.
 ## itemFontColor
 
 ```TypeScript
-@Param
-  readonly itemFontColor?: ColorMetrics
+readonly itemFontColor?: ColorMetrics
 ```
 
-配置分段按钮非选中的选项字体颜色。
-
-默认值：`\$r('sys.color.font_secondary')`
-
-值为undefined时，按默认值处理。
-
-**说明：**
-
-items设置textModifier/fontColor属性值时，itemFontColor不生效。
-
-该成员只读，不支持更改。
+配置分段按钮非选中的选项字体颜色。默认值：`\$r('sys.color.font_secondary')`值为undefined时，按默认值处理。  
+**说明：**items设置textModifier/fontColor属性值时，itemFontColor不生效。该成员只读，不支持更改。
 
 **类型：** ColorMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -220,27 +192,17 @@ items设置textModifier/fontColor属性值时，itemFontColor不生效。
 ## itemFontSize
 
 ```TypeScript
-@Param
-  readonly itemFontSize?: LengthMetrics
+readonly itemFontSize?: LengthMetrics
 ```
 
-配置分段按钮非选中的选项字体大小。
-
-取值范围：[0, +∞)
-
-默认值：`14fp`
-
-**说明：**
-
-不支持设置百分比类型，异常值按默认值处理。
-
-items设置textModifier/fontSize属性值时，itemFontSize不生效。
-
-该成员只读，不支持更改。
+配置分段按钮非选中的选项字体大小。取值范围：[0, +∞)默认值：`14fp`  
+**说明：**不支持设置百分比类型，异常值按默认值处理。items设置textModifier/fontSize属性值时，itemFontSize不生效。该成员只读，不支持更改。
 
 **类型：** LengthMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -253,25 +215,17 @@ items设置textModifier/fontSize属性值时，itemFontSize不生效。
 ## itemFontWeight
 
 ```TypeScript
-@Param
-  readonly itemFontWeight?: FontWeight
+readonly itemFontWeight?: FontWeight
 ```
 
-配置分段按钮非选中选项的字体字重。
-
-默认值：FontWeight.Medium
-
-超出取值范围按默认值处理。
-
-**说明：**
-
-items设置textModifier/fontWeight属性值时，itemFontWeight不生效。
-
-该成员只读，不支持更改。
+配置分段按钮非选中选项的字体字重。默认值：FontWeight.Medium超出取值范围按默认值处理。  
+**说明：**items设置textModifier/fontWeight属性值时，itemFontWeight不生效。该成员只读，不支持更改。
 
 **类型：** FontWeight
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -284,27 +238,17 @@ items设置textModifier/fontWeight属性值时，itemFontWeight不生效。
 ## itemIconFillColor
 
 ```TypeScript
-@Param
-  readonly itemIconFillColor?: ColorMetrics
+readonly itemIconFillColor?: ColorMetrics
 ```
 
-配置分段按钮非选中的选项图标颜色。
-
-默认值：`\$r('sys.color.font_secondary')`
-
-值为undefined时，按默认值处理。
-
-**说明：**
-
-items设置iconModifier/fillColor属性值时，itemIconFillColor不生效。
-
-backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
-
-该成员只读，不支持更改。
+配置分段按钮非选中的选项图标颜色。默认值：`\$r('sys.color.font_secondary')`值为undefined时，按默认值处理。  
+**说明：**items设置iconModifier/fillColor属性值时，itemIconFillColor不生效。backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。该成员只读，不支持更改。
 
 **类型：** ColorMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -317,27 +261,17 @@ backgroundSystemMaterial设置自动反色的系统材质时，该属性使用�
 ## itemIconSize
 
 ```TypeScript
-@Param
-  readonly itemIconSize?: SizeT<LengthMetrics>
+readonly itemIconSize?: SizeT<LengthMetrics>
 ```
 
-配置分段按钮选项中Image类型的图标大小。
-
-取值范围：[0, +∞)
-
-默认值：`{ width: LengthMetrics.vp(24), height: LengthMetrics.vp(24) }`
-
-超出取值范围按默认值处理。
-
-**说明：**
-
-items设置iconModifier/width、height属性值时，itemIconSize不生效。
-
-该成员只读，不支持更改。
+配置分段按钮选项中Image类型的图标大小。取值范围：[0, +∞)默认值：`{ width: LengthMetrics.vp(24), height: LengthMetrics.vp(24) }`超出取值范围按默认值处理。  
+**说明：**items设置iconModifier/width、height属性值时，itemIconSize不生效。该成员只读，不支持更改。
 
 **类型：** SizeT&lt;LengthMetrics&gt;
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -350,25 +284,17 @@ items设置iconModifier/width、height属性值时，itemIconSize不生效。
 ## itemMaxFontScale
 
 ```TypeScript
-@Param
-  readonly itemMaxFontScale?: number | Resource
+readonly itemMaxFontScale?: number | Resource
 ```
 
-配置分段按钮选项文字大小的最大字体缩放倍数。
-
-取值范围：[1, 2]
-
-默认值：1
-
-**说明：**
-
-设置的值小于 1 时，按值为 1 处理，设置的值大于 2，按值为 2 处理，异常值默认不生效。
-
-该成员只读，不支持更改。
+配置分段按钮选项文字大小的最大字体缩放倍数。取值范围：[1, 2]默认值：1  
+**说明：**设置的值小于 1 时，按值为 1 处理，设置的值大于 2，按值为 2 处理，异常值默认不生效。该成员只读，不支持更改。
 
 **类型：** number \| Resource
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -381,25 +307,17 @@ items设置iconModifier/width、height属性值时，itemIconSize不生效。
 ## itemMinFontScale
 
 ```TypeScript
-@Param
-  readonly itemMinFontScale?: number | Resource
+readonly itemMinFontScale?: number | Resource
 ```
 
-配置分段按钮选项文字大小的最小字体缩放倍数。
-
-取值范围：[0, 1]
-
-默认值：0
-
-**说明：**
-
-设置的最小字体缩放值小于 0 时，按值为 0 处理，设置的最小字体缩放值大于 1 时，按值为 1 处理，异常值默认不生效。
-
-该成员只读，不支持更改。
+配置分段按钮选项文字大小的最小字体缩放倍数。取值范围：[0, 1]默认值：0  
+**说明：**设置的最小字体缩放值小于 0 时，按值为 0 处理，设置的最小字体缩放值大于 1 时，按值为 1 处理，异常值默认不生效。该成员只读，不支持更改。
 
 **类型：** number \| Resource
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -412,25 +330,16 @@ items设置iconModifier/width、height属性值时，itemIconSize不生效。
 ## itemMinHeight
 
 ```TypeScript
-@Param
-  readonly itemMinHeight?: LengthMetrics
+readonly itemMinHeight?: LengthMetrics
 ```
 
-配置分段按钮选项最小高度。
-
-取值范围：[0, +∞)
-
-默认值：
-
-只有纯文本或者纯图标选项时：`\$r('sys.float.segment_button_v2_singleline_selected_height')`；有图文混合的选项时： `\$r('sys.float.segment_button_v2_doubleline_selected_height')`
-
-超出取值范围按默认值处理。
-
-该成员只读，不支持更改。
+配置分段按钮选项最小高度。取值范围：[0, +∞)默认值：只有纯文本或者纯图标选项时：`\$r('sys.float.segment_button_v2_singleline_selected_height')`；有图文混合的选项时： `\$r('sys.float.segment_button_v2_doubleline_selected_height')`超出取值范围按默认值处理。该成员只读，不支持更改。
 
 **类型：** LengthMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -443,21 +352,16 @@ items设置iconModifier/width、height属性值时，itemIconSize不生效。
 ## itemPadding
 
 ```TypeScript
-@Param
-  readonly itemPadding?: LocalizedPadding
+readonly itemPadding?: LocalizedPadding
 ```
 
-配置分段按钮选项内边距。
-
-默认值： `{ top: LengthMetrics.resource(\$r('sys.float.padding_level2')), bottom: LengthMetrics.resource(\$r('sys.float.padding_level2')), start: LengthMetrics.resource(\$r('sys.float.padding_level4')), end: LengthMetrics.resource(\$r('sys.float.padding_level4')) }`
-
-值为undefined时，按默认值处理。
-
-该成员只读，不支持更改。
+配置分段按钮选项内边距。默认值： `{ top: LengthMetrics.resource(\$r('sys.float.padding_level2')), bottom: LengthMetrics.resource(\$r('sys.float.padding_level2')), start: LengthMetrics.resource(\$r('sys.float.padding_level4')), end: LengthMetrics.resource(\$r('sys.float.padding_level4')) }`值为undefined时，按默认值处理。该成员只读，不支持更改。
 
 **类型：** LocalizedPadding
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -470,20 +374,16 @@ items设置iconModifier/width、height属性值时，itemIconSize不生效。
 ## items
 
 ```TypeScript
-@Require
-  @Param
-  readonly items: SegmentButtonV2Items
+readonly items: SegmentButtonV2Items
 ```
 
-配置分段按钮的选项集合信息。
-
-值为undefined时，不显示选项信息。
-
-该成员只读，不支持更改。
+配置分段按钮的选项集合信息。值为undefined时，不显示选项信息。该成员只读，不支持更改。
 
 **类型：** [SegmentButtonV2Items](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -496,21 +396,16 @@ items设置iconModifier/width、height属性值时，itemIconSize不生效。
 ## itemSelectedBackgroundColor
 
 ```TypeScript
-@Param
-  readonly itemSelectedBackgroundColor?: ColorMetrics
+readonly itemSelectedBackgroundColor?: ColorMetrics
 ```
 
-配置分段按钮选中的选项背景颜色。
-
-默认值：`\$r('sys.color.segment_button_v2_tab_selected_item_background')`
-
-值为undefined时，按默认值处理。
-
-该成员只读，不支持更改。
+配置分段按钮选中的选项背景颜色。默认值：`\$r('sys.color.segment_button_v2_tab_selected_item_background')`值为undefined时，按默认值处理。该成员只读，不支持更改。
 
 **类型：** ColorMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -523,27 +418,17 @@ items设置iconModifier/width、height属性值时，itemIconSize不生效。
 ## itemSelectedFontColor
 
 ```TypeScript
-@Param
-  readonly itemSelectedFontColor?: ColorMetrics
+readonly itemSelectedFontColor?: ColorMetrics
 ```
 
-配置分段按钮非选中选项的字体颜色。
-
-默认值：`\$r('sys.color.font_secondary')`
-
-值为undefined时，按默认值处理。
-
-**说明：**
-
-items设置textModifier/fontColor属性值时，itemFontColor不生效。
-
-backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
-
-该成员只读，不支持更改。
+配置分段按钮非选中选项的字体颜色。默认值：`\$r('sys.color.font_secondary')`值为undefined时，按默认值处理。  
+**说明：**items设置textModifier/fontColor属性值时，itemFontColor不生效。backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。该成员只读，不支持更改。
 
 **类型：** ColorMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -556,27 +441,17 @@ backgroundSystemMaterial设置自动反色的系统材质时，该属性使用�
 ## itemSelectedFontSize
 
 ```TypeScript
-@Param
-  readonly itemSelectedFontSize?: LengthMetrics
+readonly itemSelectedFontSize?: LengthMetrics
 ```
 
-配置分段按钮选中的选项字体大小。
-
-取值范围：[0, +∞)
-
-默认值：`14fp`
-
-**说明：**
-
-不支持设置百分比类型，异常值按默认值处理。
-
-items设置textModifier/fontSize属性值时，itemSelectedFontSize不生效。
-
-该成员只读，不支持更改。
+配置分段按钮选中的选项字体大小。取值范围：[0, +∞)默认值：`14fp`  
+**说明：**不支持设置百分比类型，异常值按默认值处理。items设置textModifier/fontSize属性值时，itemSelectedFontSize不生效。该成员只读，不支持更改。
 
 **类型：** LengthMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -589,25 +464,17 @@ items设置textModifier/fontSize属性值时，itemSelectedFontSize不生效。
 ## itemSelectedFontWeight
 
 ```TypeScript
-@Param
-  readonly itemSelectedFontWeight?: FontWeight
+readonly itemSelectedFontWeight?: FontWeight
 ```
 
-配置分段按钮选中项的字体字重。
-
-默认值：FontWeight.Medium
-
-超出取值范围按默认值处理。
-
-**说明：**
-
-items设置textModifier/fontWeight属性值时，itemSelectedFontWeight不生效。
-
-该成员只读，不支持更改。
+配置分段按钮选中项的字体字重。默认值：FontWeight.Medium超出取值范围按默认值处理。  
+**说明：**items设置textModifier/fontWeight属性值时，itemSelectedFontWeight不生效。该成员只读，不支持更改。
 
 **类型：** FontWeight
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -620,27 +487,17 @@ items设置textModifier/fontWeight属性值时，itemSelectedFontWeight不生效
 ## itemSelectedIconFillColor
 
 ```TypeScript
-@Param
-  readonly itemSelectedIconFillColor?: ColorMetrics
+readonly itemSelectedIconFillColor?: ColorMetrics
 ```
 
-配置分段按钮选中的选项图标颜色。
-
-默认值：`\$r('sys.color.font_primary')`
-
-值为undefined时，按默认值处理。
-
-**说明：**
-
-items设置iconModifier/fillColor属性值时，itemSelectedIconFillColor不生效。
-
-backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
-
-该成员只读，不支持更改。
+配置分段按钮选中的选项图标颜色。默认值：`\$r('sys.color.font_primary')`值为undefined时，按默认值处理。  
+**说明：**items设置iconModifier/fillColor属性值时，itemSelectedIconFillColor不生效。backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。该成员只读，不支持更改。
 
 **类型：** ColorMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -653,27 +510,17 @@ backgroundSystemMaterial设置自动反色的系统材质时，该属性使用�
 ## itemSelectedSymbolFontColor
 
 ```TypeScript
-@Param
-  readonly itemSelectedSymbolFontColor?: ColorMetrics
+readonly itemSelectedSymbolFontColor?: ColorMetrics
 ```
 
-配置分段按钮选中选项的HM Symbol类型图标颜色。
-
-默认值：`\$r('sys.color.font_primary')`
-
-值为undefined时，按默认值处理。
-
-**说明：**
-
-items设置symbolModifier/fontColor属性值时，itemSelectedSymbolFontColor不生效。
-
-backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
-
-该成员只读，不支持更改。
+配置分段按钮选中选项的HM Symbol类型图标颜色。默认值：`\$r('sys.color.font_primary')`值为undefined时，按默认值处理。  
+**说明：**items设置symbolModifier/fontColor属性值时，itemSelectedSymbolFontColor不生效。backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。该成员只读，不支持更改。
 
 **类型：** ColorMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -686,25 +533,17 @@ backgroundSystemMaterial设置自动反色的系统材质时，该属性使用�
 ## itemSpace
 
 ```TypeScript
-@Param
-  readonly itemSpace?: LengthMetrics
+readonly itemSpace?: LengthMetrics
 ```
 
-配置分段按钮选项之间的间隔。
-
-取值范围：[0, +∞)
-
-默认值：`LengthMetrics.vp(1)`
-
-**说明：**
-
-不支持设置百分比类型，异常值按默认值处理。
-
-该成员只读，不支持更改。
+配置分段按钮选项之间的间隔。取值范围：[0, +∞)默认值：`LengthMetrics.vp(1)`  
+**说明：**不支持设置百分比类型，异常值按默认值处理。该成员只读，不支持更改。
 
 **类型：** LengthMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -717,27 +556,17 @@ backgroundSystemMaterial设置自动反色的系统材质时，该属性使用�
 ## itemSymbolFontColor
 
 ```TypeScript
-@Param
-  readonly itemSymbolFontColor?: ColorMetrics
+readonly itemSymbolFontColor?: ColorMetrics
 ```
 
-配置分段按钮非选中选项HM Symbol类型图标的颜色。
-
-默认值：`\$r('sys.color.font_secondary')`
-
-值为undefined时，按默认值处理。
-
-**说明：**
-
-items设置symbolModifier/fontColor属性值时，itemSymbolFontColor不生效。
-
-backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
-
-该成员只读，不支持更改。
+配置分段按钮非选中选项HM Symbol类型图标的颜色。默认值：`\$r('sys.color.font_secondary')`值为undefined时，按默认值处理。  
+**说明：**items设置symbolModifier/fontColor属性值时，itemSymbolFontColor不生效。backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。该成员只读，不支持更改。
 
 **类型：** ColorMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -750,27 +579,17 @@ backgroundSystemMaterial设置自动反色的系统材质时，该属性使用�
 ## itemSymbolFontSize
 
 ```TypeScript
-@Param
-  readonly itemSymbolFontSize?: LengthMetrics
+readonly itemSymbolFontSize?: LengthMetrics
 ```
 
-配置分段按钮选项中HM Symbol类型图标大小。
-
-取值范围：[0, +∞)
-
-默认值：`20fp`
-
-**说明：**
-
-不支持设置百分比类型，异常值按默认值处理。
-
-items设置symbolModifier/fontSize属性值时，itemSymbolFontSize不生效。
-
-该成员只读，不支持更改。
+配置分段按钮选项中HM Symbol类型图标大小。取值范围：[0, +∞)默认值：`20fp`  
+**说明：**不支持设置百分比类型，异常值按默认值处理。items设置symbolModifier/fontSize属性值时，itemSymbolFontSize不生效。该成员只读，不支持更改。
 
 **类型：** LengthMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -783,21 +602,16 @@ items设置symbolModifier/fontSize属性值时，itemSymbolFontSize不生效。
 ## languageDirection
 
 ```TypeScript
-@Param
-  readonly languageDirection?: Direction
+readonly languageDirection?: Direction
 ```
 
-配置分段按钮的布局方向。
-
-默认值：Direction.Auto
-
-超出取值范围按默认值处理。
-
-该成员只读，不支持更改。
+配置分段按钮的布局方向。默认值：Direction.Auto超出取值范围按默认值处理。该成员只读，不支持更改。
 
 **类型：** Direction
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -810,17 +624,16 @@ items设置symbolModifier/fontSize属性值时，itemSymbolFontSize不生效。
 ## onItemClicked
 
 ```TypeScript
-@Event
-  onItemClicked?: Callback<number>
+onItemClicked?: Callback<number>
 ```
 
-配置分段按钮选项被单击时触发的回调函数。回调参数为number类型，表示被单击选项的下标，第一项编号为0，之后按顺序递增。
-
-默认值：undefined，未设置时不触发回调。
+配置分段按钮选项被单击时触发的回调函数。回调参数为number类型，表示被单击选项的下标，第一项编号为0，之后按顺序递增。默认值：undefined，未设置时不触发回调。
 
 **类型：** Callback&lt;number&gt;
 
 **起始版本：** 18
+
+**装饰器类型：** @Event
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -833,24 +646,17 @@ items设置symbolModifier/fontSize属性值时，itemSymbolFontSize不生效。
 ## selectedIndexes
 
 ```TypeScript
-@Require
-  @Param
-  readonly selectedIndexes: number[]
+readonly selectedIndexes: number[]
 ```
 
-配置分段按钮被选中的选项下标集合，第一项的编号为0，之后顺序增加。
-
-值为undefined时，不选中任何选项。
-
-**说明：**
-
-仅支持有效的按钮编号（第一个按钮编号为0，之后按顺序累加，取值范围：[0, items长度-1]），如没有选中项可传入空数组`[]`。传入无效编号（小于0或大于items长度-1）时，该编号不选中对应选项。
-
-该成员只读，不支持更改。
+配置分段按钮被选中的选项下标集合，第一项的编号为0，之后顺序增加。值为undefined时，不选中任何选项。  
+**说明：**仅支持有效的按钮编号（第一个按钮编号为0，之后按顺序累加，取值范围：[0, items长度-1]），如没有选中项可传入空数组`[]`。传入无效编号（小于0或大于items长度-1）时，该编号不选中对应选项。该成员只读，不支持更改。
 
 **类型：** number[]
 
 **起始版本：** 18
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

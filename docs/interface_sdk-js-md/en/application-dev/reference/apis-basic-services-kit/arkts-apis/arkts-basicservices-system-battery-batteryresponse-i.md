@@ -22,9 +22,7 @@ import { Battery, BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKi
 charging: boolean
 ```
 
-Whether the battery is being charged. The value **true** indicates that the battery is being charged; **false** indicates the opposite. The default value is **false**.
-
-Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use batteryInfo.chargingStatus instead.
+Whether the battery is being charged. The value **true** indicates that the battery is being charged; **false** indicates the opposite. The default value is **false**.Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use batteryInfo.chargingStatus instead.
 
 **Type:** boolean
 
@@ -44,9 +42,7 @@ Note: This API is no longer maintained since API version 6 except for lite weara
 level: number
 ```
 
-Current battery level in percent, which ranges from **0.00** to **1.00**.
-
-Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use batteryInfo.batterySOC instead.
+Current battery level in percent, which ranges from **0.00** to **1.00**.Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use batteryInfo.batterySOC instead.
 
 **Type:** number
 

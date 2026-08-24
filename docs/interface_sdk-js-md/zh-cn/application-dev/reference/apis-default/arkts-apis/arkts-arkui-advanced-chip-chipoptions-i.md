@@ -2,19 +2,14 @@
 
 ChipOptions定义Chip的样式及具体式样参数。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 当`suffixSymbol`有传入参数时，`suffixIcon`和`allowClose`不生效；当`suffixSymbol`没有传入参数而`suffixIcon`有传入参数时，`allowClose`不生效；当
-> `suffixSymbol`和`suffixIcon`都没有传入参数时，`allowClose`决定是否显示删除图标。
-> 
-> 2. `backgroundColor`和`activatedBackgroundColor`赋值为`undefined`时，显示默认背景颜色；赋值为非法值时，背景颜色透明。
-> 
+> `suffixSymbol`和`suffixIcon`都没有传入参数时，`allowClose`决定是否显示删除图标。&gt;
+> 2. `backgroundColor`和`activatedBackgroundColor`赋值为`undefined`时，显示默认背景颜色；赋值为非法值时，背景颜色透明。&gt;
 > 3. prefixSymbol/suffixSymbol的fontColor默认值为：normalFontColor: `[\$r('sys.color.ohos_id_color_primary')]`、
-> activatedFontColor: `[\$r('sys.color.ohos_id_color_text_primary_contrary')]`。fontColor默认值为16。
-> 
+> activatedFontColor: `[\$r('sys.color.ohos_id_color_text_primary_contrary')]`。fontColor默认值为16。&gt;
 > 4. prefixIcon的fillColor默认值为：`\$r('sys.color.ohos_id_color_secondary')`，suffixIcon的fillColor默认值为：
-> `\$r('sys.color.ohos_id_color_primary')`。fillColor对颜色的解析与Image组件保持一致。
-> 
+> `\$r('sys.color.ohos_id_color_primary')`。fillColor对颜色的解析与Image组件保持一致。&gt;
 > 5. prefixIcon和suffixIcon的activatedFillColor默认值均为：`\$r('sys.color.ohos_id_color_text_primary_contrary')`。
 > activatedFillColor对颜色的解析与Image组件保持一致。
 
@@ -37,11 +32,7 @@ ChipOptions定义Chip的样式及具体式样参数。
 accessibilityDescription?: ResourceStr
 ```
 
-Chip组件的无障碍描述。此描述用于向用户详细解释当前组件，开发人员应为组件的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的结果。特别是当这些结果无法仅从组件的属性和无障碍文本中直接获知时。如果组件同时 具备文本属性和无障碍说明属性，当组件被选中时，系统将首先播报组件的文本属性，随后播报无障碍说明属性的内容。
-
-默认值：空字符串。
-
-值为undefined时，按默认值处理。
+Chip组件的无障碍描述。此描述用于向用户详细解释当前组件，开发人员应为组件的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的结果。特别是当这些结果无法仅从组件的属性和无障碍文本中直接获知时。如果组件同时 具备文本属性和无障碍说明属性，当组件被选中时，系统将首先播报组件的文本属性，随后播报无障碍说明属性的内容。默认值：空字符串。值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 
@@ -61,21 +52,7 @@ Chip组件的无障碍描述。此描述用于向用户详细解释当前组件�
 accessibilityLevel?: string
 ```
 
-Chip组件无障碍重要性。用于控制后缀图标是否可被无障碍辅助服务所识别。
-
-支持的值为:
-
-"auto"：当前组件会转化为"yes"。
-
-"yes"：当前组件可被无障碍辅助服务所识别。
-
-"no"：当前组件不可被无障碍辅助服务所识别。
-
-"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。
-
-默认值："auto"。
-
-值为undefined时，按默认值处理。
+Chip组件无障碍重要性。用于控制后缀图标是否可被无障碍辅助服务所识别。支持的值为:"auto"：当前组件会转化为"yes"。"yes"：当前组件可被无障碍辅助服务所识别。"no"：当前组件不可被无障碍辅助服务所识别。"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。默认值："auto"。值为undefined时，按默认值处理。
 
 **类型：** string
 
@@ -97,11 +74,7 @@ Chip组件无障碍重要性。用于控制后缀图标是否可被无障碍辅�
 accessibilitySelectedType?: AccessibilitySelectedType
 ```
 
-Chip组件选中态类型。
-
-默认值：当设置了activated属性但未指定accessibilitySelectedType时，默认使用CHECKED类型。当未设置activated属性时，默认使用CLICKED类型。
-
-值为undefined时，按默认值处理。
+Chip组件选中态类型。默认值：当设置了activated属性但未指定accessibilitySelectedType时，默认使用CHECKED类型。当未设置activated属性时，默认使用CLICKED类型。值为undefined时，按默认值处理。
 
 **类型：** [AccessibilitySelectedType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-accessibilityselectedtype-e.md)
 
@@ -121,13 +94,7 @@ Chip组件选中态类型。
 activated?: boolean
 ```
 
-Chip是否为激活态。
-
-默认值：false。
-
-true：操作块为激活态；false：操作块为非激活态。
-
-值为undefined时，按默认值处理。
+Chip是否为激活态。默认值：false。true：操作块为激活态；false：操作块为非激活态。值为undefined时，按默认值处理。
 
 **类型：** boolean
 
@@ -147,11 +114,7 @@ true：操作块为激活态；false：操作块为非激活态。
 activatedBackgroundColor?: ResourceColor
 ```
 
-Chip激活时的背景颜色。
-
-默认值：\$r('sys.color.ohos_id_color_emphasize')。
-
-值为undefined时，按默认值处理。
+Chip激活时的背景颜色。默认值：\$r('sys.color.ohos_id_color_emphasize')。值为undefined时，按默认值处理。
 
 **类型：** ResourceColor
 
@@ -191,13 +154,7 @@ activatedBackgroundSystemMaterial?: uiMaterial.Material
 allowClose?: boolean
 ```
 
-关闭图标是否显示。
-
-默认值：true
-
-true：删除图标显示；false：删除图标不显示。
-
-值为undefined时，按默认值处理。
+关闭图标是否显示。默认值：true true：删除图标显示；false：删除图标不显示。值为undefined时，按默认值处理。
 
 **类型：** boolean
 
@@ -217,11 +174,7 @@ true：删除图标显示；false：删除图标不显示。
 backgroundColor?: ResourceColor
 ```
 
-Chip背景颜色。
-
-默认值：\$r('sys.color.ohos_id_color_button_normal')。
-
-值为undefined时，按默认值处理。
+Chip背景颜色。默认值：\$r('sys.color.ohos_id_color_button_normal')。值为undefined时，按默认值处理。
 
 **类型：** ResourceColor
 
@@ -241,11 +194,7 @@ Chip背景颜色。
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Chip背景颜色。
-
-默认值：\$r('sys.color.ohos_id_color_button_normal')。
-
-值为undefined时，按默认值处理。
+Chip背景颜色。默认值：\$r('sys.color.ohos_id_color_button_normal')。值为undefined时，按默认值处理。
 
 **类型：** uiMaterial.Material
 
@@ -265,11 +214,7 @@ Chip背景颜色。
 borderRadius?: Dimension
 ```
 
-Chip背景圆角半径大小，不支持百分比。
-
-默认值：\$r('sys.float.ohos_id_corner_radius_button')。
-
-值为undefined时，按默认值处理。
+Chip背景圆角半径大小，不支持百分比。默认值：\$r('sys.float.ohos_id_corner_radius_button')。值为undefined时，按默认值处理。
 
 **类型：** Dimension
 
@@ -289,9 +234,7 @@ Chip背景圆角半径大小，不支持百分比。
 closeOptions?: CloseOptions
 ```
 
-默认关闭图标的无障碍朗读功能属性。
-
-值为undefined时，按默认值处理。
+默认关闭图标的无障碍朗读功能属性。值为undefined时，按默认值处理。
 
 **类型：** [CloseOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-closeoptions-i.md)
 
@@ -311,11 +254,7 @@ closeOptions?: CloseOptions
 direction?: Direction
 ```
 
-布局方向。
-
-默认值：Direction.Auto。
-
-值为undefined时，按默认值处理。
+布局方向。默认值：Direction.Auto。值为undefined时，按默认值处理。
 
 **类型：** Direction
 
@@ -335,13 +274,7 @@ direction?: Direction
 enabled?: boolean
 ```
 
-Chip是否可选中。
-
-默认值：true。
-
-true：操作块可选中；false：操作块不可选中。
-
-值为undefined时，按默认值处理。
+Chip是否可选中。默认值：true。true：操作块可选中；false：操作块不可选中。值为undefined时，按默认值处理。
 
 **类型：** boolean
 
@@ -361,14 +294,8 @@ true：操作块可选中；false：操作块不可选中。
 fontSize?: Dimension
 ```
 
-统一设置Chip组件的文本与图标的字体大小，不支持百分比。
-
-该fontSize的优先级低于prefixSymbol、label、suffixSymbol和closeOptions中的fontSize属性。
-
-默认值：
-
-- size为ChipSize.SMALL时，文本默认值：`\$r('sys.float.chip_small_font_size')`；图标默认值：`\$r('sys.float.chip_small_icon_size')` - 其他情况下，文本默认值：`\$r('sys.float.chip_normal_font_size')`；图标默认值：`\$r('sys.float.chip_normal_icon_size')`
-
+统一设置Chip组件的文本与图标的字体大小，不支持百分比。该fontSize的优先级低于prefixSymbol、label、suffixSymbol和closeOptions中的fontSize属性。默认值：  
+- size为ChipSize.SMALL时，文本默认值：`\$r('sys.float.chip_small_font_size')`；图标默认值：`\$r('sys.float.chip_small_icon_size')` - 其他情况下，文本默认值：`\$r('sys.float.chip_normal_font_size')`；图标默认值：`\$r('sys.float.chip_normal_icon_size')`  
 值为undefined时，按默认值处理。
 
 **类型：** Dimension
@@ -409,11 +336,7 @@ label: LabelOptions
 maxFontScale?: double | Resource
 ```
 
-Chip组件文本与图标的最大的字体缩放倍数。
-
-取值范围：[1, +∞)
-
-设置的值小于1时，按值为1处理。异常值默认不生效。
+Chip组件文本与图标的最大的字体缩放倍数。取值范围：[1, +∞)设置的值小于1时，按值为1处理。异常值默认不生效。
 
 **类型：** double \| Resource
 
@@ -433,11 +356,7 @@ Chip组件文本与图标的最大的字体缩放倍数。
 minFontScale?: double | Resource
 ```
 
-Chip组件文本与图标的最小的字体缩放倍数。
-
-取值范围：[0, 1]
-
-设置的值小于0时，按值为0处理。设置的值大于1时，按值为1处理。异常值默认不生效。
+Chip组件文本与图标的最小的字体缩放倍数。取值范围：[0, 1]设置的值小于0时，按值为0处理。设置的值大于1时，按值为1处理。异常值默认不生效。
 
 **类型：** double \| Resource
 
@@ -457,9 +376,7 @@ Chip组件文本与图标的最小的字体缩放倍数。
 onClicked?: VoidCallback
 ```
 
-Chip点击事件。
-
-值为undefined时，Chip不能被点击。
+Chip点击事件。值为undefined时，Chip不能被点击。
 
 **类型：** VoidCallback
 
@@ -479,9 +396,7 @@ Chip点击事件。
 onClose?: VoidCallback
 ```
 
-默认关闭图标点击事件。
-
-值为undefined时，关闭图标点击事件。
+默认关闭图标点击事件。值为undefined时，关闭图标点击事件。
 
 **类型：** VoidCallback
 
@@ -501,18 +416,11 @@ onClose?: VoidCallback
 padding?: LocalizedPadding
 ```
 
-Chip组件的内边距。
-
-默认值：
-
-- size为ChipSize.SMALL并且activated为true时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`
-
-- size为ChipSize.SMALL并且activated为false时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`
-
-- size不为ChipSize.SMALL并且activated为true时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`
-
-- size不为ChipSize.SMALL并且activated为false时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`
-
+Chip组件的内边距。默认值：  
+- size为ChipSize.SMALL并且activated为true时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
+- size为ChipSize.SMALL并且activated为false时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
+- size不为ChipSize.SMALL并且activated为true时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
+- size不为ChipSize.SMALL并且activated为false时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
 值为undefined时，按默认值处理。
 
 **类型：** LocalizedPadding
@@ -533,13 +441,7 @@ Chip组件的内边距。
 prefixIcon?: PrefixIconOptions
 ```
 
-前缀图标属性。
-
-默认值：不显示前缀图标。
-
-值为undefined时，按默认值处理。
-
-prefixIcon和prefixSymbol同时设置时，显示prefixSymbol的效果，prefixIcon无效。
+前缀图标属性。默认值：不显示前缀图标。值为undefined时，按默认值处理。prefixIcon和prefixSymbol同时设置时，显示prefixSymbol的效果，prefixIcon无效。
 
 **类型：** [PrefixIconOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-prefixiconoptions-i.md)
 
@@ -559,13 +461,7 @@ prefixIcon和prefixSymbol同时设置时，显示prefixSymbol的效果，prefixI
 prefixSymbol?: ChipSymbolGlyphOptions
 ```
 
-前缀图标属性，symbol类型。
-
-默认值：不显示前缀图标。
-
-值为undefined时，按默认值处理。
-
-prefixIcon和prefixSymbol同时设置时，显示prefixSymbol的效果，prefixIcon无效。
+前缀图标属性，symbol类型。默认值：不显示前缀图标。值为undefined时，按默认值处理。prefixIcon和prefixSymbol同时设置时，显示prefixSymbol的效果，prefixIcon无效。
 
 **类型：** [ChipSymbolGlyphOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-chipsymbolglyphoptions-i.md)
 
@@ -585,12 +481,7 @@ prefixIcon和prefixSymbol同时设置时，显示prefixSymbol的效果，prefixI
 size?: ChipSize | SizeOptions
 ```
 
-Chip尺寸。
-
-默认值：ChipSize.NORMAL
-
-SizeOptions类型参数不支持百分比设置，异常值按默认值处理。
-
+Chip尺寸。默认值：ChipSize.NORMAL SizeOptions类型参数不支持百分比设置，异常值按默认值处理。  
 **说明：**[适老化](../../../ui/arkui-support-for-aging-adaptation.md)在size指定具体宽高时不生效，size设置为{ height: 0, width: 0 }除外。
 
 **类型：** [ChipSize](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
@@ -611,13 +502,7 @@ SizeOptions类型参数不支持百分比设置，异常值按默认值处理。
 suffixIcon?: SuffixIconOptions
 ```
 
-后缀图标属性。
-
-默认值：不显示后缀图标。
-
-值为undefined时，按默认值处理。
-
-suffixIcon和suffixSymbol同时设置时，显示suffixSymbol的效果，suffixIcon无效。
+后缀图标属性。默认值：不显示后缀图标。值为undefined时，按默认值处理。suffixIcon和suffixSymbol同时设置时，显示suffixSymbol的效果，suffixIcon无效。
 
 **类型：** [SuffixIconOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-suffixiconoptions-i.md)
 
@@ -637,13 +522,7 @@ suffixIcon和suffixSymbol同时设置时，显示suffixSymbol的效果，suffixI
 suffixSymbol?: ChipSymbolGlyphOptions
 ```
 
-后缀图标属性，symbol类型。
-
-默认值：不显示后缀图标。
-
-值为undefined时，按默认值处理。
-
-suffixIcon和suffixSymbol同时设置时，显示suffixSymbol的效果，suffixIcon无效。
+后缀图标属性，symbol类型。默认值：不显示后缀图标。值为undefined时，按默认值处理。suffixIcon和suffixSymbol同时设置时，显示suffixSymbol的效果，suffixIcon无效。
 
 **类型：** [ChipSymbolGlyphOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-chipsymbolglyphoptions-i.md)
 
@@ -663,11 +542,7 @@ suffixIcon和suffixSymbol同时设置时，显示suffixSymbol的效果，suffixI
 suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions
 ```
 
-symbol类型后缀图标属性的无障碍朗读功能属性。
-
-默认值：不显示后缀图标。
-
-值为undefined时，按默认值处理。
+symbol类型后缀图标属性的无障碍朗读功能属性。默认值：不显示后缀图标。值为undefined时，按默认值处理。
 
 **类型：** [ChipSuffixSymbolGlyphOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-chipsuffixsymbolglyphoptions-i.md)
 

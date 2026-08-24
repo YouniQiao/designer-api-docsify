@@ -1,8 +1,6 @@
 # MediaTabContent
 
-The definition of the tab page content.
-
-@extends OperResult @interface MediaTabContent
+The definition of the tab page content.@extends OperResult @interface MediaTabContent
 
 **Inheritance/Implementation:** MediaTabContent extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 

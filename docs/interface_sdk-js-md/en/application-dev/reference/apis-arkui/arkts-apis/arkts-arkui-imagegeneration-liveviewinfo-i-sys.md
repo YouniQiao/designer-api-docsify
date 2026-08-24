@@ -1,8 +1,6 @@
 # LiveViewInfo (System API)
 
-Information for LiveView in AI image generation.
-
-@interface LiveViewInfo
+Information for LiveView in AI image generation.@interface LiveViewInfo
 
 **Since:** 26.0.0
 

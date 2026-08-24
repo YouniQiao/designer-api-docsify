@@ -1,8 +1,6 @@
 # StationInfo (System API)
 
-Wi-Fi station information.
-
-@interface StationInfo
+Wi-Fi station information.@interface StationInfo
 
 **Since:** 7
 
@@ -20,9 +18,6 @@ Wi-Fi station information.
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## ipAddress

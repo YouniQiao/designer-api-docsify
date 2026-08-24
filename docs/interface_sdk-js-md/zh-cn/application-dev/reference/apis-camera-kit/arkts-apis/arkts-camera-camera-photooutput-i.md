@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## capture
@@ -285,9 +284,7 @@ function enableAutoExtendedGainmapDelivery(photoOutput: camera.PhotoOutput): voi
 enableMirror(enabled: boolean): void
 ```
 
-是否启用动态照片镜像拍照。
-
-调用该接口前，需要通过[isMovingPhotoSupported](#ismovingphotosupported)查询是否支持动态照片拍摄功能以及通过 [isMirrorSupported](#ismirrorsupported)查询是否支持镜像拍照功能。
+是否启用动态照片镜像拍照。调用该接口前，需要通过[isMovingPhotoSupported](#ismovingphotosupported)查询是否支持动态照片拍摄功能以及通过 [isMirrorSupported](#ismirrorsupported)查询是否支持镜像拍照功能。
 
 **起始版本：** 23
 
@@ -474,8 +471,7 @@ function testGetActiveProfile(videoOutput: camera.VideoOutput): camera.Profile |
 getPhotoRotation(deviceDegree?: int): ImageRotation
 ```
 
-获取拍照旋转角度。
-
+获取拍照旋转角度。  
 - 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖屏（充电口向下）。 - 相机镜头角度：值等于相机图像顺时针旋转到设备自然方向的角度。例如，直板机后置相机传感器是横屏安装的，所以需要顺时针旋转90度到设备自然方向。
 
 **起始版本：** 23
@@ -811,10 +807,8 @@ off(type: 'captureStart', callback?: AsyncCallback<number>): void
 
 注销拍照开始的监听。
 
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
-> 
+> **说明：**&gt;
+> 从 API version 10开始支持，从API version 11开始废弃。&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
@@ -1236,8 +1230,7 @@ on(type: 'captureEnd', callback: AsyncCallback<CaptureEndInfo>): void
 
 监听拍照结束，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
@@ -1263,8 +1256,7 @@ on(type: 'captureReady', callback: AsyncCallback<void>): void
 
 监听可拍下一张，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 12
@@ -1290,10 +1282,8 @@ on(type: 'captureStart', callback: AsyncCallback<number>): void
 
 监听拍照开始，通过注册回调函数获取Capture ID。使用callback异步回调。
 
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
-> 
+> **说明：**&gt;
+> 从 API version 10开始支持，从API version 11开始废弃。&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
@@ -1321,8 +1311,7 @@ on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): voi
 
 监听拍照开始，通过注册回调函数获取[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 11
@@ -1348,8 +1337,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 监听拍照输出发生错误，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
@@ -1375,8 +1363,7 @@ on(type: 'estimatedCaptureDuration', callback: AsyncCallback<double>): void
 
 监听预估的拍照时间，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 12
@@ -1425,8 +1412,7 @@ on(type: 'frameShutterEnd', callback: AsyncCallback<FrameShutterEndInfo>): void
 
 监听拍照曝光结束捕获，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 12
@@ -1452,8 +1438,7 @@ on(type: 'photoAssetAvailable', callback: AsyncCallback<photoAccessHelper.PhotoA
 
 注册监听photoAsset上报。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 12
@@ -1479,8 +1464,7 @@ on(type: 'photoAvailable', callback: AsyncCallback<Photo>): void
 
 注册监听拍照返回照片上报事件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 11
@@ -1526,12 +1510,10 @@ onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 
 注册监听全质量图和未压缩图。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 注册监听接口时，不支持在该接口监听的回调方法里调用
 > [offCapturePhotoAvailable](#offcapturephotoavailable)
-> 注销回调。
-> 
+> 注销回调。&gt;
 > - 拍摄未压缩图（YUV）格式图片时，仅支持使用此接口注册监听。
 
 **起始版本：** 23
@@ -1717,9 +1699,7 @@ Subscribes frame shutter end event callback.
 onPhotoAssetAvailable(callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to photo asset event callback.
-
-This API processes deferred photo delivery data by quickly displaying low-quality images to give users the impression of faster photo capture, while also generating high-quality images to maintain the final output quality. For details about the design specifications, see [Optimizing Deferred Photo Delivery](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-camera-shot2see).
+Subscribes to photo asset event callback.This API processes deferred photo delivery data by quickly displaying low-quality images to give users the impression of faster photo capture, while also generating high-quality images to maintain the final output quality. For details about the design specifications, see [Optimizing Deferred Photo Delivery](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-camera-shot2see).
 
 **起始版本：** 23
 
@@ -1795,9 +1775,7 @@ function setMovingPhotoVideoCodecTypes(photoOutput: camera.PhotoOutput, videoCod
 setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization): void
 ```
 
-设置拍照画质优先策略。
-
-设置之前，可先使用方法 [isPhotoQualityPrioritizationSupported](#isphotoqualityprioritizationsupported)对设备是否支持指定的 拍照画质优先策略进行检查。
+设置拍照画质优先策略。设置之前，可先使用方法 [isPhotoQualityPrioritizationSupported](#isphotoqualityprioritizationsupported)对设备是否支持指定的 拍照画质优先策略进行检查。
 
 **起始版本：** 24
 

@@ -1,6 +1,6 @@
 # ToolBarModifier
 
-Provides APIs for setting the height (**height**), background color (**backgroundColor**), left and right padding ( **padding**, which only takes effect when there are fewer than five items) of the toolbar, and whether to display the pressed state effect (**stateEffect**).
+Provides APIs for setting the height (**height**), background color (**backgroundColor**), left and right padding (**padding**, which only takes effect when there are fewer than five items) of the toolbar, and whether to display the pressed state effect (**stateEffect**).
 
 **Since:** 23
 

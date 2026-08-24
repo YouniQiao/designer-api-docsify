@@ -4,6 +4,8 @@ Declare type ToolBarV2Item
 
 **起始版本：** 18
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2Item--><!--Device-unnamed-export declare class ToolBarV2Item-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ ToolBarV2Item的构造函数。
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  accessibilityDescription?: ResourceStr
+accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of item.
@@ -50,6 +51,8 @@ The accessibilityDescription of item.
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,8 +65,7 @@ The accessibilityDescription of item.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  accessibilityLevel?: string
+accessibilityLevel?: string
 ```
 
 The accessibilityLevel of item.
@@ -73,6 +75,8 @@ The accessibilityLevel of item.
 **默认值：** "auto"
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,8 +89,7 @@ The accessibilityLevel of item.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  accessibilityText?: ResourceStr
+accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of item.
@@ -94,6 +97,8 @@ The accessibilityText of item.
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,8 +111,7 @@ The accessibilityText of item.
 ## action
 
 ```TypeScript
-@Trace
-  action?: ToolBarV2ItemAction
+action?: ToolBarV2ItemAction
 ```
 
 Define the action event.
@@ -115,6 +119,8 @@ Define the action event.
 **类型：** [ToolBarV2ItemAction](../../apis-default/arkts-apis/arkts-toolbarv2itemaction-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,8 +133,7 @@ Define the action event.
 ## content
 
 ```TypeScript
-@Trace
-  content: ToolBarV2ItemText
+content: ToolBarV2ItemText
 ```
 
 Define text content.
@@ -136,6 +141,8 @@ Define text content.
 **类型：** [ToolBarV2ItemText](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2itemtext-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,8 +155,7 @@ Define text content.
 ## icon
 
 ```TypeScript
-@Trace
-  icon?: ToolBarV2ItemIconType
+icon?: ToolBarV2ItemIconType
 ```
 
 Define icon resource.
@@ -157,6 +163,8 @@ Define icon resource.
 **类型：** [ToolBarV2ItemIconType](../../apis-default/arkts-apis/arkts-toolbarv2itemicontype-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -169,8 +177,7 @@ Define icon resource.
 ## state
 
 ```TypeScript
-@Trace
-  state?: ToolBarV2ItemState
+state?: ToolBarV2ItemState
 ```
 
 Define item type.
@@ -178,6 +185,8 @@ Define item type.
 **类型：** [ToolBarV2ItemState](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

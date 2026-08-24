@@ -1,6 +1,6 @@
 # Movement
 
-@brief 选中文本时，光标移动的方向
+选中文本时，光标移动的方向
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 direction: Direction
 ```
 
-@brief 选中文本时，光标的移动方向。
+选中文本时，光标的移动方向。
 
 **类型：** Direction
 

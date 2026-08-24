@@ -4,7 +4,7 @@
 export type GetTextCallback = (length: int) => string
 ```
 
-@brief The callback of 'getLeftTextOfCursor' or 'getRightTextOfCursor' event.
+The callback of 'getLeftTextOfCursor' or 'getRightTextOfCursor' event.
 
 **Since:** 23
 

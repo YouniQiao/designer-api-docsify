@@ -1,8 +1,6 @@
 # BorderOptions
 
-边框属性集合，用于描述边框相关信息。
-
-@interface BorderOptions
+边框属性集合，用于描述边框相关信息。@interface BorderOptions
 
 **起始版本：** 23
 
@@ -38,9 +36,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 dashGap?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 ```
 
-设置虚线的线段间距，仅在边框样式为虚线时生效。
-
-不支持设置百分比。
+设置虚线的线段间距，仅在边框样式为虚线时生效。不支持设置百分比。
 
 **类型：** [EdgeWidths](arkts-units-edgewidths-i.md) \| [LengthMetrics](arkts-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-units-localizededgewidths-i.md)
 
@@ -60,9 +56,7 @@ dashGap?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 dashWidth?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 ```
 
-设置虚线的线段长度，仅在边框样式为虚线时生效。
-
-不支持设置百分比。
+设置虚线的线段长度，仅在边框样式为虚线时生效。不支持设置百分比。
 
 **类型：** [EdgeWidths](arkts-units-edgewidths-i.md) \| [LengthMetrics](arkts-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-units-localizededgewidths-i.md)
 

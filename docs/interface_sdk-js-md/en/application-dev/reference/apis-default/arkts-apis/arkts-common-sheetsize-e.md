@@ -1,8 +1,6 @@
 # SheetSize
 
-Defines sheet size type.
-
-@enum { number }
+Defines sheet size type.@enum { number }
 
 **Since:** 23
 

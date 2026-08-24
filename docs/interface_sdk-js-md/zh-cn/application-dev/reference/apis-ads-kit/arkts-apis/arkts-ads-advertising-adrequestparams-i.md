@@ -11,9 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit';
-import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
-import { AutoAdComponent } from '@kit.AdsKit';
 import { advertising } from '@kit.AdsKit';
 ```
 
@@ -59,9 +56,7 @@ adHeight?: number
 adId: string
 ```
 
-广告位ID。
-
-说明：getAdRequestBody接口可以不传该参数。
+广告位ID。说明：getAdRequestBody接口可以不传该参数。
 
 **类型：** string
 
@@ -79,9 +74,7 @@ adId: string
 adSearchKeyword?: string
 ```
 
-广告关键字。不填默认""。
-
-说明：暂不支持使用。
+广告关键字。不填默认""。说明：暂不支持使用。
 
 **类型：** string
 
@@ -99,10 +92,8 @@ adSearchKeyword?: string
 adType?: number
 ```
 
-请求的广告类型。
-
-- 1：开屏广告。 - 3：原生广告。 - 7：激励广告。 - 8：横幅广告。 - 12：插屏广告。 - 60：贴片广告。
-
+请求的广告类型。  
+- 1：开屏广告。 - 3：原生广告。 - 7：激励广告。 - 8：横幅广告。 - 12：插屏广告。 - 60：贴片广告。  
 不填默认为原生广告类型。
 
 **类型：** number

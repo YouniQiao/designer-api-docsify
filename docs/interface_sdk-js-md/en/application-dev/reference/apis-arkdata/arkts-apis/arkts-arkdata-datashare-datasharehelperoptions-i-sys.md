@@ -14,7 +14,6 @@ Represents the optional parameters of [DataShareHelper](#datasharehelperoptions-
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## isProxy
@@ -23,9 +22,7 @@ import { dataSharePredicates } from '@kit.ArkData';
 isProxy?: boolean
 ```
 
-Whether the [DataShareHelper](#datasharehelperoptions-system-api) is in proxy mode. The default value is **false**.
-
-If the value is **true**, the [DataShareHelper](#datasharehelperoptions-system-api) to be created is in proxy mode, and all operations will not open the data provider application unless the database does not exist. If the database does not exist, [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) will start the data provider to create a database.
+Whether the [DataShareHelper](#datasharehelperoptions-system-api) is in proxy mode. The default value is **false**.If the value is **true**, the [DataShareHelper](#datasharehelperoptions-system-api) to be created is in proxy mode, and all operations will not open the data provider application unless the database does not exist. If the database does not exist, [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) will start the data provider to create a database.
 
 **Type:** boolean
 

@@ -1,8 +1,6 @@
 # ToggleAttribute
 
-Defines the Toggle component attributes.
-
-@extends CommonMethod @interface ToggleAttribute
+Defines the Toggle component attributes.@extends CommonMethod @interface ToggleAttribute
 
 **Inheritance/Implementation:** ToggleAttribute extends CommonMethod
 

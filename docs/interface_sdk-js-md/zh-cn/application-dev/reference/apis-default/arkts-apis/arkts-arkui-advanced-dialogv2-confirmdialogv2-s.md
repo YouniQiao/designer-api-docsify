@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct ConfirmDialogV2--><!--Device-unnamed-export declare struct ConfirmDialogV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,19 +40,18 @@ The method to build component.
 ## checked
 
 ```TypeScript
-@Param
-  checked?: boolean
+checked?: boolean
 ```
 
-checked为true时，表示checkbox已选中，为false时，表示未选中。
-
-默认值：false
+checked为true时，表示checkbox已选中，为false时，表示未选中。默认值：false
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,19 +62,18 @@ checked为true时，表示checkbox已选中，为false时，表示未选中。
 ## checkTips
 
 ```TypeScript
-@Param
-  checkTips?: ResourceStr
+checkTips?: ResourceStr
 ```
 
-checkbox的提示内容。
-
-默认不显示。
+checkbox的提示内容。默认不显示。
 
 **类型：** ResourceStr
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,19 +84,18 @@ checkbox的提示内容。
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
-确认弹出框内容。
-
-默认不显示。
+确认弹出框内容。默认不显示。
 
 **类型：** ResourceStr
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,19 +106,18 @@ checkbox的提示内容。
 ## onCheckedChange
 
 ```TypeScript
-@Param
-  onCheckedChange?: AdvancedDialogV2OnCheckedChange
+onCheckedChange?: AdvancedDialogV2OnCheckedChange
 ```
 
-checkbox的选中状态改变事件。
-
-默认无事件。
+checkbox的选中状态改变事件。默认无事件。
 
 **类型：** [AdvancedDialogV2OnCheckedChange](../../apis-arkui/arkts-apis/arkts-arkui-advanceddialogv2oncheckedchange-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,19 +128,18 @@ checkbox的选中状态改变事件。
 ## primaryButton
 
 ```TypeScript
-@Param
-  primaryButton?: AdvancedDialogV2Button
+primaryButton?: AdvancedDialogV2Button
 ```
 
-确认弹出框左侧按钮。
-
-默认不显示。
+确认弹出框左侧按钮。默认不显示。
 
 **类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -152,19 +150,18 @@ checkbox的选中状态改变事件。
 ## secondaryButton
 
 ```TypeScript
-@Param
-  secondaryButton?: AdvancedDialogV2Button
+secondaryButton?: AdvancedDialogV2Button
 ```
 
-确认弹出框右侧按钮。
-
-默认不显示。
+确认弹出框右侧按钮。默认不显示。
 
 **类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -175,13 +172,10 @@ checkbox的选中状态改变事件。
 ## title
 
 ```TypeScript
-@Require
-  @Param
-  title: ResourceStr
+title: ResourceStr
 ```
 
-确认弹出框标题。
-
+确认弹出框标题。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -189,6 +183,8 @@ checkbox的选中状态改变事件。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

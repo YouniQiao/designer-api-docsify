@@ -14,7 +14,6 @@ Describes the focus tracking information, which is obtained by calling VideoSess
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## trackingMode

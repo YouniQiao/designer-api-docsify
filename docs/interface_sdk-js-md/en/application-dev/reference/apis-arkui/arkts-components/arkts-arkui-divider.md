@@ -1,6 +1,6 @@
 # Divider
 
-The **Divider** component is used to separate content blocks and content elements. > **NOTE** > > If the divider appears with inconsistent thickness or becomes invisible, follow the instructions in > [FAQs](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-pixelRoundForComponent.md#faqs). > > **Child Components** > > Not supported
+The **Divider** component is used to separate content blocks and content elements.> **NOTE**>> If the divider appears with inconsistent thickness or becomes invisible, follow the instructions in> [FAQs](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-pixelRoundForComponent.md#faqs).>> **Child Components**>> Not supported
 
 ## Divider
 

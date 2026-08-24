@@ -12,12 +12,10 @@ import { sim } from '@kit.TelephonyKit';
 function getSimAccountInfo(slotId: int, callback: AsyncCallback<IccAccountInfo>): void
 ```
 
-Obtains SIM card account information. This API uses an asynchronous callback to return the result.
-
+Obtains SIM card account information. This API uses an asynchronous callback to return the result.  
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
 > sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
 > are empty.
@@ -79,12 +77,10 @@ sim.getSimAccountInfo(0).then((data: sim.IccAccountInfo) => {
 function getSimAccountInfo(slotId: int): Promise<IccAccountInfo>
 ```
 
-Obtains SIM card account information. This API uses a promise to return the result.
-
+Obtains SIM card account information. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
 > sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
 > are empty.

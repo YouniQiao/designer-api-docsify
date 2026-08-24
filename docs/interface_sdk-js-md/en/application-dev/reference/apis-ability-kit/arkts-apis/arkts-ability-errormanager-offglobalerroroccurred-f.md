@@ -12,9 +12,7 @@ import { errorManager } from '@kit.AbilityKit';
 function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void
 ```
 
-Unregisters a global error observer. Once unregistered, global listening cannot be implemented.
-
-If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
+Unregisters a global error observer. Once unregistered, global listening cannot be implemented.If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
 
 **Since:** 18
 

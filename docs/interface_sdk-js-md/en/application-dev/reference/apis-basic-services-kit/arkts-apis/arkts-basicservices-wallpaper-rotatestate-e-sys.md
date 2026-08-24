@@ -1,8 +1,6 @@
 # RotateState (System API)
 
-Define the rotation state of wallpaper
-
-@enum { int } RotateState
+Define the rotation state of wallpaper@enum { int } RotateState
 
 **Since:** 23
 

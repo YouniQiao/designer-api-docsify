@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2--><!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 build函数用于构造TabSegmentButtonV2高级组件。
@@ -27,6 +28,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +40,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## $selectedIndexes
 
 ```TypeScript
-@Event
-  readonly $selectedIndexes?: OnSelectedIndexesChange
+readonly $selectedIndexes?: OnSelectedIndexesChange
 ```
 
 配置分段按钮选中项变更时的回调函数。
@@ -49,6 +51,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Event
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Event  readonly $selectedIndexes?: OnSelectedIndexesChange--><!--Device-MultiCapsuleSegmentButtonV2-@Event  readonly $selectedIndexes?: OnSelectedIndexesChange-End-->
@@ -58,21 +62,18 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemBackgroundBlurStyle
 
 ```TypeScript
-@Param
-  readonly itemBackgroundBlurStyle?: BlurStyle
+readonly itemBackgroundBlurStyle?: BlurStyle
 ```
 
-配置分段按钮背板模糊材质。
-
-默认值：undefined
-
-该成员只读，不支持更改。
+配置分段按钮背板模糊材质。默认值：undefined该成员只读，不支持更改。
 
 **类型：** BlurStyle
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,21 +84,18 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemBackgroundBlurStyleOptions
 
 ```TypeScript
-@Param
-  readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
+readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-配置分段按钮选项的模糊材质配置参数。
-
-默认值：undefined
-
-该成员只读，不支持更改。
+配置分段按钮选项的模糊材质配置参数。默认值：undefined该成员只读，不支持更改。
 
 **类型：** BackgroundBlurStyleOptions
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,23 +106,18 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemBackgroundColor
 
 ```TypeScript
-@Param
-  readonly itemBackgroundColor?: ColorMetrics
+readonly itemBackgroundColor?: ColorMetrics
 ```
 
-配置分段按钮非选中的选项背板颜色。
-
-默认值：`ColorMetrics.resourceColor(\$r('sys.color.segment_button_v2_multi_capsule_button_background'))`
-
-值为undefined时，按默认值处理。
-
-该成员只读，不支持更改。
+配置分段按钮非选中的选项背板颜色。默认值：`ColorMetrics.resourceColor(\$r('sys.color.segment_button_v2_multi_capsule_button_background'))`值为undefined时，按默认值处理。该成员只读，不支持更改。
 
 **类型：** ColorMetrics
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -135,21 +128,18 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemBackgroundEffect
 
 ```TypeScript
-@Param
-  readonly itemBackgroundEffect?: BackgroundEffectOptions
+readonly itemBackgroundEffect?: BackgroundEffectOptions
 ```
 
-配置分段按钮非选中的选项背板效果。
-
-默认值：undefined
-
-该成员只读，不支持更改。
+配置分段按钮非选中的选项背板效果。默认值：undefined该成员只读，不支持更改。
 
 **类型：** BackgroundEffectOptions
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,8 +150,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemBorderRadius
 
 ```TypeScript
-@Param
-  readonly itemBorderRadius?: LengthMetrics
+readonly itemBorderRadius?: LengthMetrics
 ```
 
 配置分段按钮选项的圆角大小。 默认值：`\$r('sys。
@@ -172,6 +161,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBorderRadius?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBorderRadius?: LengthMetrics-End-->
@@ -181,8 +172,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemFontColor
 
 ```TypeScript
-@Param
-  readonly itemFontColor?: ColorMetrics
+readonly itemFontColor?: ColorMetrics
 ```
 
 配置分段按钮非选中的选项字体颜色。 默认值：`ColorMetrics。
@@ -193,6 +183,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontColor?: ColorMetrics-End-->
@@ -202,8 +194,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemFontSize
 
 ```TypeScript
-@Param
-  readonly itemFontSize?: LengthMetrics
+readonly itemFontSize?: LengthMetrics
 ```
 
 配置分段按钮非选中选项的字体大小。 默认值：`14fp` **说明：** 不支持设置百分比类型，异常值按默认值处理。
@@ -214,6 +205,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontSize?: LengthMetrics-End-->
@@ -223,8 +216,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemFontWeight
 
 ```TypeScript
-@Param
-  readonly itemFontWeight?: FontWeight
+readonly itemFontWeight?: FontWeight
 ```
 
 配置分段按钮非选中选项的字体字重。 默认值：FontWeight。
@@ -235,6 +227,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontWeight?: FontWeight--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontWeight?: FontWeight-End-->
@@ -244,8 +238,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemIconFillColor
 
 ```TypeScript
-@Param
-  readonly itemIconFillColor?: ColorMetrics
+readonly itemIconFillColor?: ColorMetrics
 ```
 
 配置分段按钮非选中的选项图标颜色。 默认值：`ColorMetrics。
@@ -256,6 +249,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemIconFillColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemIconFillColor?: ColorMetrics-End-->
@@ -265,8 +260,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemIconSize
 
 ```TypeScript
-@Param
-  readonly itemIconSize?: SizeT<LengthMetrics>
+readonly itemIconSize?: SizeT<LengthMetrics>
 ```
 
 配置分段按钮选项中Image类型的图标大小。 默认值：`{ width: LengthMetrics。
@@ -277,6 +271,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemIconSize?: SizeT<LengthMetrics>--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemIconSize?: SizeT<LengthMetrics>-End-->
@@ -286,8 +282,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemMaxFontScale
 
 ```TypeScript
-@Param
-  readonly itemMaxFontScale?: double | Resource
+readonly itemMaxFontScale?: double | Resource
 ```
 
 配置分段按钮选项文字大小的最大放大倍数。 默认值：1 **说明：** 设置的值小于1时，按值为1处理，设置的值大于2，按值为2处理，异常值默认不生效。
@@ -298,6 +293,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMaxFontScale?: double | Resource--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMaxFontScale?: double | Resource-End-->
@@ -307,8 +304,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemMinFontScale
 
 ```TypeScript
-@Param
-  readonly itemMinFontScale?: double | Resource
+readonly itemMinFontScale?: double | Resource
 ```
 
 配置分段按钮选项文字大小的最小字体缩放倍数。 默认值：0 **说明：** 设置的值小于0时，按值为0处理，设置的值大于1，按值为1处理，异常值默认不生效。
@@ -319,6 +315,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMinFontScale?: double | Resource--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMinFontScale?: double | Resource-End-->
@@ -328,8 +326,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemMinHeight
 
 ```TypeScript
-@Param
-  readonly itemMinHeight?: LengthMetrics
+readonly itemMinHeight?: LengthMetrics
 ```
 
 配置分段按钮选项最小高度。 默认值：只有纯文本或者纯图标选项时：`\$r('sys。
@@ -340,6 +337,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMinHeight?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMinHeight?: LengthMetrics-End-->
@@ -349,8 +348,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemPadding
 
 ```TypeScript
-@Param
-  readonly itemPadding?: LocalizedPadding
+readonly itemPadding?: LocalizedPadding
 ```
 
 配置分段按钮选项内边距。 默认值：`{ top: LengthMetrics。
@@ -361,6 +359,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemPadding?: LocalizedPadding--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemPadding?: LocalizedPadding-End-->
@@ -370,20 +370,18 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## items
 
 ```TypeScript
-@Require
-  @Param
-  readonly items: SegmentButtonV2Items
+readonly items: SegmentButtonV2Items
 ```
 
-配置分段按钮的选项集合信息。不支持设置undefined
-
-该成员只读，不支持更改。
+配置分段按钮的选项集合信息。不支持设置undefined该成员只读，不支持更改。
 
 **类型：** [SegmentButtonV2Items](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -394,8 +392,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemSelectedBackgroundColor
 
 ```TypeScript
-@Param
-  readonly itemSelectedBackgroundColor?: ColorMetrics
+readonly itemSelectedBackgroundColor?: ColorMetrics
 ```
 
 配置分段按钮选中的选项背景颜色。 默认值：`ColorMetrics。
@@ -406,6 +403,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedBackgroundColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedBackgroundColor?: ColorMetrics-End-->
@@ -415,8 +414,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemSelectedFontColor
 
 ```TypeScript
-@Param
-  readonly itemSelectedFontColor?: ColorMetrics
+readonly itemSelectedFontColor?: ColorMetrics
 ```
 
 配置分段按钮选中项的字体颜色。 默认值：`ColorMetrics。
@@ -427,6 +425,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontColor?: ColorMetrics-End-->
@@ -436,8 +436,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemSelectedFontSize
 
 ```TypeScript
-@Param
-  readonly itemSelectedFontSize?: LengthMetrics
+readonly itemSelectedFontSize?: LengthMetrics
 ```
 
 配置分段按钮选中项的字体大小。 默认值：`14fp` **说明：** 不支持设置百分比类型，异常值按默认值处理。
@@ -448,6 +447,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontSize?: LengthMetrics-End-->
@@ -457,8 +458,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemSelectedFontWeight
 
 ```TypeScript
-@Param
-  readonly itemSelectedFontWeight?: FontWeight
+readonly itemSelectedFontWeight?: FontWeight
 ```
 
 配置分段按钮选中项的字体字重。 默认值：FontWeight。
@@ -469,6 +469,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontWeight?: FontWeight--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontWeight?: FontWeight-End-->
@@ -478,8 +480,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemSelectedIconFillColor
 
 ```TypeScript
-@Param
-  readonly itemSelectedIconFillColor?: ColorMetrics
+readonly itemSelectedIconFillColor?: ColorMetrics
 ```
 
 配置分段按钮选中的选项图标颜色。 默认值：`ColorMetrics。
@@ -490,6 +491,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedIconFillColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedIconFillColor?: ColorMetrics-End-->
@@ -499,8 +502,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemSelectedSymbolFontColor
 
 ```TypeScript
-@Param
-  readonly itemSelectedSymbolFontColor?: ColorMetrics
+readonly itemSelectedSymbolFontColor?: ColorMetrics
 ```
 
 配置分段按钮选中选项的HM Symbol类型图标颜色。 默认值：`ColorMetrics。
@@ -511,6 +513,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedSymbolFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedSymbolFontColor?: ColorMetrics-End-->
@@ -520,8 +524,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemSpace
 
 ```TypeScript
-@Param
-  readonly itemSpace?: LengthMetrics
+readonly itemSpace?: LengthMetrics
 ```
 
 配置分段按钮选项之间的间隔。 默认值：`LengthMetrics。
@@ -532,6 +535,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSpace?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSpace?: LengthMetrics-End-->
@@ -541,8 +546,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemSymbolFontColor
 
 ```TypeScript
-@Param
-  readonly itemSymbolFontColor?: ColorMetrics
+readonly itemSymbolFontColor?: ColorMetrics
 ```
 
 配置分段按钮非选中选项HM Symbol类型图标的颜色。 默认值：`ColorMetrics。
@@ -553,6 +557,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSymbolFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSymbolFontColor?: ColorMetrics-End-->
@@ -562,8 +568,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## itemSymbolFontSize
 
 ```TypeScript
-@Param
-  readonly itemSymbolFontSize?: LengthMetrics
+readonly itemSymbolFontSize?: LengthMetrics
 ```
 
 配置分段按钮选项中HM Symbol类型图标大小。 默认值：`20fp` **说明：** 不支持设置百分比类型，异常值按默认值处理。
@@ -574,6 +579,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSymbolFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSymbolFontSize?: LengthMetrics-End-->
@@ -583,8 +590,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## languageDirection
 
 ```TypeScript
-@Param
-  readonly languageDirection?: Direction
+readonly languageDirection?: Direction
 ```
 
 配置分段按钮的布局方向。 默认值：Direction。
@@ -595,6 +601,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly languageDirection?: Direction--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly languageDirection?: Direction-End-->
@@ -604,8 +612,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## onItemClicked
 
 ```TypeScript
-@Event
-  readonly onItemClicked?: Callback<int>
+readonly onItemClicked?: Callback<int>
 ```
 
 配置分段按钮选项被单击时触发的回调函数。
@@ -616,6 +623,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Event
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Event  readonly onItemClicked?: Callback<int>--><!--Device-MultiCapsuleSegmentButtonV2-@Event  readonly onItemClicked?: Callback<int>-End-->
@@ -625,9 +634,7 @@ build函数用于构造TabSegmentButtonV2高级组件。
 ## selectedIndexes
 
 ```TypeScript
-@Require
-  @Param
-  readonly selectedIndexes: int[]
+readonly selectedIndexes: int[]
 ```
 
 配置分段按钮被选中的选项下标集合，第一项的编号为0，之后顺序增加。 不支持设置undefined **说明：** 仅支持有效的按钮编号（第一个按钮编号为0，之后按顺序累加），如没有选中项可传入空数组`[]`。 该成员只读，不支持更改。
@@ -637,6 +644,8 @@ build函数用于构造TabSegmentButtonV2高级组件。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

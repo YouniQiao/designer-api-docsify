@@ -1,8 +1,6 @@
 # PasteButtonOnClickResult
 
-Enumerates the click event results of the paste button.
-
-@enum { int }
+Enumerates the click event results of the paste button.@enum { int }
 
 **Since:** 23
 

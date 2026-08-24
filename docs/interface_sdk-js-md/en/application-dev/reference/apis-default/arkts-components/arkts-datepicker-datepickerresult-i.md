@@ -1,8 +1,6 @@
 # DatePickerResult
 
-Defines the struct of DatePickerResult.
-
-@interface DatePickerResult
+Defines the struct of DatePickerResult.@interface DatePickerResult
 
 **Since:** 23
 
@@ -18,9 +16,7 @@ Defines the struct of DatePickerResult.
 day?: int
 ```
 
-Day of the selected date.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Value range: depends on start and end. If start and end are not set, the default range is [1, 31]. </p>
+Day of the selected date.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Value range: depends on start and end. If start and end are not set, the default range is [1, 31]. </p>
 
 **Type:** int
 
@@ -40,9 +36,7 @@ Day of the selected date.
 month?: int
 ```
 
-Month index of the selected date. The index is zero-based. 0 indicates January, and 11 indicates December.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Value range: depends on start and end. If start and end are not set, the default range is [0, 11]. </p>
+Month index of the selected date. The index is zero-based. 0 indicates January, and 11 indicates December.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Value range: depends on start and end. If start and end are not set, the default range is [0, 11]. </p>
 
 **Type:** int
 
@@ -62,9 +56,7 @@ Month index of the selected date. The index is zero-based. 0 indicates January, 
 year?: int
 ```
 
-Year of the selected date.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Value range: depends on start and end. If start and end are not set, the default range is [1970, 2100]. </p>
+Year of the selected date.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Value range: depends on start and end. If start and end are not set, the default range is [1970, 2100]. </p>
 
 **Type:** int
 

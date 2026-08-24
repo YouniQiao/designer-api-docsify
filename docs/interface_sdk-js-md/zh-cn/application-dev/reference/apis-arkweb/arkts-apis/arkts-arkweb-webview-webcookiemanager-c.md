@@ -1,11 +1,8 @@
 # WebCookieManager
 
-WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的全局管理能力。开发者通过该类可以实现cookie的获取、设置、保存、清除以及权限控制等操作。该类的所有方法均为静态方法，应用中的所有 Web组件共享一个WebCookieManager实例。cookie的格式遵循[RFC6265](https://www.rfc-editor.org/info/rfc6265/)标准。
+WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的全局管理能力。开发者通过该类可以实现cookie的获取、设置、保存、清除以及权限控制等操作。该类的所有方法均为静态方法，应用中的所有 Web组件共享一个WebCookieManager实例。cookie的格式遵循[RFC6265](https://www.rfc-editor.org/info/rfc6265/)标准。使用隐私模式浏览网页时，cookie、缓存等数据不会写入本地持久化存储；隐私模式的Web组件销毁后，这些数据将被清除，不会保留。
 
-使用隐私模式浏览网页时，cookie、缓存等数据不会写入本地持久化存储；隐私模式的Web组件销毁后，这些数据将被清除，不会保留。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 静态方法必须在用户界面（UI）线程上使用。
 
 **起始版本：** 9
@@ -26,7 +23,7 @@ import { webview } from '@kit.ArkWeb';
 static clearAllCookies(): Promise<void>
 ```
 
-清除所有cookie（包括会话cookie和持久化cookie），使用Promise异步回调。如需仅清除会话cookie，请使用 [clearSessionCookie](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#clearsessioncookie)。
+清除所有cookie（包括会话cookie和持久化cookie），使用Promise异步回调。如需仅清除会话cookie，请使用 [clearSessionCookie](#clearsessioncookie)。
 
 **起始版本：** 11
 
@@ -182,7 +179,7 @@ struct WebComponent {
 static clearAllCookies(callback: AsyncCallback<void>): void
 ```
 
-清除所有cookie（包括会话cookie和持久化cookie），使用callback异步回调。如需仅清除会话cookie，请使用 [clearSessionCookie](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#clearsessioncookie)。
+清除所有cookie（包括会话cookie和持久化cookie），使用callback异步回调。如需仅清除会话cookie，请使用 [clearSessionCookie](#clearsessioncookie)。
 
 **起始版本：** 11
 
@@ -214,7 +211,7 @@ static clearAllCookies(callback: AsyncCallback<void>): void
 static clearAllCookiesSync(incognito?: boolean): void
 ```
 
-清除所有cookie（包括会话cookie和持久化cookie）。如需仅清除会话cookie，请使用 [clearSessionCookieSync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#clearsessioncookiesync)。
+清除所有cookie（包括会话cookie和持久化cookie）。如需仅清除会话cookie，请使用 [clearSessionCookieSync](#clearsessioncookiesync)。
 
 **起始版本：** 11
 
@@ -550,21 +547,14 @@ static configCookie(url: string, value: string): Promise<void>
 
 为指定url设置单个cookie的值。使用Promise异步回调。
 
-> **说明：**
-> 
-> - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
-> 
+> **说明：**&gt;
+> - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。&gt;
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)进行强制落盘。
-> 
-> - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
-> 
-> - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。
-> 
-> - 若通过configCookie进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。
-> 
-> - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。
-> 
+> [saveCookieAsync](#savecookieasync)进行强制落盘。&gt;
+> - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。&gt;
+> - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。&gt;
+> - 若通过configCookie进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。&gt;
+> - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。&gt;
 > - 如果要覆盖HttpOnly的cookies，需要在value中指定HttpOnly属性。
 
 **起始版本：** 11
@@ -809,19 +799,13 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 
 为指定url设置单个cookie的值。使用Promise异步回调。
 
-> **说明：**
-> 
-> - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
-> 
+> **说明：**&gt;
+> - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。&gt;
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)进行强制落盘。
-> 
-> - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
-> 
-> - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。
-> 
-> - 若通过configCookie进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。
-> 
+> [saveCookieAsync](#savecookieasync)进行强制落盘。&gt;
+> - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。&gt;
+> - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。&gt;
+> - 若通过configCookie进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。&gt;
 > - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。
 
 **起始版本：** 14
@@ -865,21 +849,14 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 
 为指定url设置单个cookie的值。使用callback异步回调。
 
-> **说明：**
-> 
-> - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
-> 
+> **说明：**&gt;
+> - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。&gt;
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)进行强制落盘。
-> 
-> - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
-> 
-> - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。
-> 
-> - 若通过configCookie进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。
-> 
-> - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。
-> 
+> [saveCookieAsync](#savecookieasync)进行强制落盘。&gt;
+> - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。&gt;
+> - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。&gt;
+> - 若通过configCookie进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。&gt;
+> - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。&gt;
 > - 如果要覆盖HttpOnly的cookies，需要在value中指定HttpOnly属性。
 
 **起始版本：** 11
@@ -918,21 +895,14 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 
 为指定url设置单个cookie的值。
 
-> **说明：**
-> 
-> - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
-> 
+> **说明：**&gt;
+> - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。&gt;
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)进行强制落盘。
-> 
-> - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
-> 
-> - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。
-> 
-> - 若通过configCookieSync进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。
-> 
-> - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。
-> 
+> [saveCookieAsync](#savecookieasync)进行强制落盘。&gt;
+> - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。&gt;
+> - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。&gt;
+> - 若通过configCookieSync进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。&gt;
+> - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。&gt;
 > - 如果要覆盖HttpOnly的cookies，需要在value中指定HttpOnly属性。
 
 **起始版本：** 11
@@ -1087,19 +1057,13 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 
 为指定url设置单个cookie的值。
 
-> **说明：**
-> 
-> - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
-> 
+> **说明：**&gt;
+> - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。&gt;
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)进行强制落盘。
-> 
-> - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
-> 
-> - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。
-> 
-> - 若通过configCookieSync进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。
-> 
+> [saveCookieAsync](#savecookieasync)进行强制落盘。&gt;
+> - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。&gt;
+> - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。&gt;
+> - 若通过configCookieSync进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。&gt;
 > - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。
 
 **起始版本：** 14
@@ -1141,7 +1105,7 @@ static deleteEntireCookie(): void
 
 **废弃版本：** 11
 
-**替代接口：** [clearAllCookiesSync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#clearallcookiessync)
+**替代接口：** [clearAllCookiesSync](#clearallcookiessync)
 
 <!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
 
@@ -1182,7 +1146,7 @@ static deleteSessionCookie(): void
 
 **废弃版本：** 11
 
-**替代接口：** [clearSessionCookieSync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#clearsessioncookiesync)
+**替代接口：** [clearSessionCookieSync](#clearsessioncookiesync)
 
 <!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
 
@@ -1315,7 +1279,7 @@ static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[WebHttpCookie](../../apis-default/arkts-apis/arkts-webview-webhttpcookie-i.md)&gt;&gt; | Promise对象，用于获取所有cookie及其对应的字段值。 |
+| Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | Promise对象，用于获取所有cookie及其对应的字段值。 |
 
 **示例**
 
@@ -1764,7 +1728,6 @@ static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: b
 ```
 
 获取指定url对应的cookies，可以通过参数incognito指定是否获取隐私模式下的cookies，也可以通过参数includePartitionedCookies指定是否获取第一方partitioned cookie。 使用Promise异步回调。
-
 26.0.0
 
 **起始版本：** 26.0.0
@@ -1841,12 +1804,9 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 
 获取指定url对应cookie的值。
 
-> **说明：**
-> 
-> - 系统会自动清理过期的cookie，对于同名key的数据，新数据将会覆盖前一个数据。
-> 
-> - 为了获取可正常使用的cookie值，fetchCookieSync建议传入完整链接。
-> 
+> **说明：**&gt;
+> - 系统会自动清理过期的cookie，对于同名key的数据，新数据将会覆盖前一个数据。&gt;
+> - 为了获取可正常使用的cookie值，fetchCookieSync建议传入完整链接。&gt;
 > - fetchCookieSync用于获取所有的cookie值，每条cookie值之间会通过"; "进行分隔，但无法单独获取某一条特定的cookie值。
 
 **起始版本：** 11
@@ -2006,12 +1966,9 @@ static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCooki
 
 获取指定url对应的cookies，可以通过可选参数incognito指定是否获取隐私模式下的cookies，也可以通过可选参数includePartitionedCookies指定是否获取第一方partitioned cookie。
 
-> **说明：**
-> 
-> - 系统会自动清理过期的cookie，对于同名key的数据，新数据将会覆盖前一个数据。
-> 
-> - 为了获取可正常使用的cookie值，fetchCookieSync需传入完整链接。
-> 
+> **说明：**&gt;
+> - 系统会自动清理过期的cookie，对于同名key的数据，新数据将会覆盖前一个数据。&gt;
+> - 为了获取可正常使用的cookie值，fetchCookieSync需传入完整链接。&gt;
 > - fetchCookieSync用于获取所有的cookie值，每条cookie值之间会通过"; "进行分隔，但无法单独获取某一条特定的cookie值。
 
 **起始版本：** 26.0.0
@@ -2058,7 +2015,7 @@ static getCookie(url: string): string
 
 **废弃版本：** 11
 
-**替代接口：** [fetchCookieSync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#fetchcookiesync)
+**替代接口：** [fetchCookieSync](#fetchcookiesync)
 
 <!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
 
@@ -2442,8 +2399,7 @@ static saveCookieAsync(): Promise<void>
 
 将当前可通过fetchCookie获取到的所有需要持久化的cookie保存到磁盘中。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - saveCookieAsync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieAsync，也不会将session
 > cookie写入磁盘。
 
@@ -2611,8 +2567,7 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 
 将当前可通过fetchCookie获取到的所有需要持久化的cookie异步保存到磁盘中。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - saveCookieAsync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieAsync，也不会将session
 > cookie写入磁盘。
 
@@ -2648,11 +2603,9 @@ static saveCookieSync(): void
 
 将当前可通过fetchCookie获取到的所有需要持久化的cookie同步保存到磁盘中。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - saveCookieSync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieSync，也不会将session
-> cookie写入磁盘。
-> 
+> cookie写入磁盘。&gt;
 > - saveCookieSync将阻塞调用者直到操作完成，期间可能会执行I/O操作。
 
 **起始版本：** 15
@@ -2732,7 +2685,7 @@ static setCookie(url: string, value: string): void
 
 **废弃版本：** 11
 
-**替代接口：** [configCookieSync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#configcookiesync)
+**替代接口：** [configCookieSync](#configcookiesync)
 
 <!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
 
@@ -2789,10 +2742,8 @@ static setLazyInitializeWebEngine(lazy: boolean): void
 
 设置是否延后初始化ArkWeb内核，不调用该方法时，默认不延后初始化ArkWeb内核。
 
-> **说明：**
-> 
-> - 该接口是全局静态方法，须在使用ArkWeb组件和初始化ArkWeb内核前调用，否则该设置无效。
-> 
+> **说明：**&gt;
+> - 该接口是全局静态方法，须在使用ArkWeb组件和初始化ArkWeb内核前调用，否则该设置无效。&gt;
 > - 该接口仅适用于调用后会初始化CookieManager的接口，比如本类WebCookieManager的其他接口。调用本接口设置为true后，再调用适用的接口，会在初始化CookieManager时跳过初始化
 > ArkWeb内核，后续需自行初始化ArkWeb内核。
 

@@ -14,9 +14,7 @@ Enumerates the sensor types.
 ACCELEROMETER = 1
 ```
 
-Acceleration sensor.
-
-This API can be used in atomic services since API version 11.
+Acceleration sensor.This API can be used in atomic services since API version 11.
 
 **Since:** 23
 
@@ -32,9 +30,7 @@ This API can be used in atomic services since API version 11.
 GYROSCOPE = 2
 ```
 
-Gyroscope sensor.
-
-This API can be used in atomic services since API version 11.
+Gyroscope sensor.This API can be used in atomic services since API version 11.
 
 **Since:** 23
 
@@ -134,9 +130,7 @@ Humidity sensor.
 ORIENTATION = 256
 ```
 
-Orientation sensor.
-
-This API can be used in atomic services since API version 11.
+Orientation sensor.This API can be used in atomic services since API version 11.
 
 **Since:** 23
 
@@ -320,9 +314,7 @@ Uncalibrated acceleration sensor.
 FUSION_PRESSURE = 283
 ```
 
-Fused pressure sensor.
-
-This sensor is available only on smart watches.
+Fused pressure sensor.This sensor is available only on smart watches.
 
 **Since:** 23
 

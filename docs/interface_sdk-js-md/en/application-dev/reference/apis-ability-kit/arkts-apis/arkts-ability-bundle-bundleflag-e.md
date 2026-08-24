@@ -1,16 +1,10 @@
 # BundleFlag
 
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
 > [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md) instead.
-
-Enumerates the bundle flags, which indicate the type of bundle information to obtain.
-
-If an API does not match the flag, the flag is ignored. For example, using **GET_ABILITY_INFO_WITH_PERMISSION** to obtain the application information does not affect the result.
-
-Flags can be used together. For example, you can use the combination of **GET_APPLICATION_INFO_WITH_PERMISSION** and **GET_APPLICATION_INFO_WITH_DISABLE** to obtain the result that contains both application permission information and disabled application information.
+Enumerates the bundle flags, which indicate the type of bundle information to obtain.If an API does not match the flag, the flag is ignored. For example, using **GET_ABILITY_INFO_WITH_PERMISSION** to obtain the application information does not affect the result.Flags can be used together. For example, you can use the combination of **GET_APPLICATION_INFO_WITH_PERMISSION** and **GET_APPLICATION_INFO_WITH_DISABLE** to obtain the result that contains both application permission information and disabled application information.
 
 **Since:** 7
 

@@ -10,13 +10,13 @@ export declare function Button(
 ): ButtonAttribute
 ```
 
-使用文本内容创建相应的按钮组件，此时Button无法包含子组件。
-
-文本内容默认单行显示。
+使用文本内容创建相应的按钮组件，此时Button无法包含子组件。文本内容默认单行显示。
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,6 +54,8 @@ Defines Button Component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

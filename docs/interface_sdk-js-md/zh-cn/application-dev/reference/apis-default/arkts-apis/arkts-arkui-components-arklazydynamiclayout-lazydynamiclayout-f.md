@@ -21,6 +21,8 @@ export declare function LazyDynamicLayout (
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function LazyDynamicLayout (    algorithm: LazyLayoutAlgorithm,    content_: CustomBuilder,): LazyDynamicLayoutAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function LazyDynamicLayout (    algorithm: LazyLayoutAlgorithm,    content_: CustomBuilder,): LazyDynamicLayoutAttribute-End-->
@@ -56,6 +58,8 @@ export declare function LazyDynamicLayout(
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

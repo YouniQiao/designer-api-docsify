@@ -28,7 +28,7 @@ export function arr_sort_stable(arr: FixedArray<Byte>, startIndex: int, endIndex
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;[Byte](arkts-arkts-byte-c.md)&gt; | 是 | 待排序的数组。 |
+| arr | FixedArray&lt;Byte&gt; | 是 | 待排序的数组。 |
 | startIndex | int | 是 | 开始排序的索引。 <br>取值约束：应为整数。 |
 | endIndex | int | 是 | 结束排序的索引。 <br>取值约束：应为整数。 |
 | comp | (lhs: byte, rhs: byte) =&gt; int | 是 | 比较函数。 |
@@ -57,7 +57,7 @@ export function arr_sort_stable(arr: FixedArray<Short>, startIndex: int, endInde
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;[Short](arkts-arkts-short-c.md)&gt; | 是 | 待排序的数组。 |
+| arr | FixedArray&lt;Short&gt; | 是 | 待排序的数组。 |
 | startIndex | int | 是 | 开始排序的索引。 <br>取值约束：应为整数。 |
 | endIndex | int | 是 | 结束排序的索引。 <br>取值约束：应为整数。 |
 | comp | (lhs: short, rhs: short) =&gt; int | 是 | 比较函数。 |
@@ -86,7 +86,7 @@ export function arr_sort_stable(arr: FixedArray<Int>, startIndex: int, endIndex:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;[Int](arkts-arkts-int-c.md)&gt; | 是 | 待排序的数组。 |
+| arr | FixedArray&lt;Int&gt; | 是 | 待排序的数组。 |
 | startIndex | int | 是 | 开始排序的索引。 <br>取值约束：应为整数。 |
 | endIndex | int | 是 | 结束排序的索引。 <br>取值约束：应为整数。 |
 | comp | (lhs: int, rhs: int) =&gt; int | 是 | 比较函数。 |
@@ -115,7 +115,7 @@ export function arr_sort_stable(arr: FixedArray<Long>, startIndex: int, endIndex
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;[Long](arkts-arkts-long-c.md)&gt; | 是 | 待排序的数组。 |
+| arr | FixedArray&lt;Long&gt; | 是 | 待排序的数组。 |
 | startIndex | int | 是 | 开始排序的索引。 <br>取值约束：应为整数。 |
 | endIndex | int | 是 | 结束排序的索引。 <br>取值约束：应为整数。 |
 | comp | (lhs: long, rhs: long) =&gt; int | 是 | 比较函数。 |
@@ -144,7 +144,7 @@ export function arr_sort_stable(arr: FixedArray<Float>, startIndex: int, endInde
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;[Float](arkts-arkts-float-c.md)&gt; | 是 | 待排序的数组。 |
+| arr | FixedArray&lt;Float&gt; | 是 | 待排序的数组。 |
 | startIndex | int | 是 | 开始排序的索引。 <br>取值约束：应为整数。 |
 | endIndex | int | 是 | 结束排序的索引。 <br>取值约束：应为整数。 |
 | comp | (lhs: float, rhs: float) =&gt; int | 是 | 比较函数。 |
@@ -173,7 +173,7 @@ export function arr_sort_stable(arr: FixedArray<Double>, startIndex: int, endInd
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;[Double](arkts-arkts-double-c.md)&gt; | 是 | 待排序的数组。 |
+| arr | FixedArray&lt;Double&gt; | 是 | 待排序的数组。 |
 | startIndex | int | 是 | 开始排序的索引。 <br>取值约束：应为整数。 |
 | endIndex | int | 是 | 结束排序的索引。 <br>取值约束：应为整数。 |
 | comp | (lhs: double, rhs: double) =&gt; int | 是 | 比较函数。 |

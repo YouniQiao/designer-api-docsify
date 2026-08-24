@@ -12,9 +12,7 @@ import { formHost } from '@kit.FormKit';
 function onFormUninstall(callback: Callback<string>): void
 ```
 
-Listens to the event of uninstall form.
-
-You can use this method to listen to the event of uninstall form.
+Listens to the event of uninstall form.You can use this method to listen to the event of uninstall form.
 
 **起始版本：** 23
 

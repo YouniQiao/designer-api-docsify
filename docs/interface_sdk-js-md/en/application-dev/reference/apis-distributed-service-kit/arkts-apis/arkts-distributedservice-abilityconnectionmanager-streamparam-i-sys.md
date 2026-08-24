@@ -1,8 +1,6 @@
 # StreamParam (System API)
 
-Streaming configuration parameters.
-
-@interface StreamParam
+Streaming configuration parameters.@interface StreamParam
 
 **Since:** 23
 

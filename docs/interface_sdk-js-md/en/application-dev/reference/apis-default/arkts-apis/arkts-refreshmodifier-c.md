@@ -1,8 +1,6 @@
 # RefreshModifier
 
-Defines Refresh Modifier
-
-@implements { RefreshAttribute, AttributeModifier&lt;RefreshAttribute&gt; }
+Defines Refresh Modifier@implements { RefreshAttribute, AttributeModifier&lt;RefreshAttribute&gt; }
 
 **Inheritance/Implementation:** RefreshModifier implements RefreshAttribute, AttributeModifier<RefreshAttribute>
 

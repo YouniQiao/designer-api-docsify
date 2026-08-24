@@ -1,12 +1,12 @@
 # ArcButton
 
-Declare Component ArcButton
-
-@struct { ArcButton }
+Declare Component ArcButton@struct { ArcButton }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
 
@@ -20,8 +20,7 @@ Declare Component ArcButton
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -30,6 +29,8 @@ The method to build component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Builder
+
 <!--Device-ArcButton-@Builder  build(): void--><!--Device-ArcButton-@Builder  build(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -37,9 +38,7 @@ The method to build component.
 ## options
 
 ```TypeScript
-@Require
-  @Param
-  readonly options: ArcButtonOptions
+readonly options: ArcButtonOptions
 ```
 
 Describes the arc button options.
@@ -49,6 +48,8 @@ Describes the arc button options.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Require, @Param
 
 <!--Device-ArcButton-@Require  @Param  readonly options: ArcButtonOptions--><!--Device-ArcButton-@Require  @Param  readonly options: ArcButtonOptions-End-->
 

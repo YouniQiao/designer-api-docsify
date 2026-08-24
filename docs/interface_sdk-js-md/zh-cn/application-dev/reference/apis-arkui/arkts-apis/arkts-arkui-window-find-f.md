@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 
@@ -16,8 +14,7 @@ function find(id: string, callback: AsyncCallback<Window>): void
 
 查找id所对应的窗口，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md)替代。
 
 **起始版本：** 7
@@ -76,8 +73,7 @@ function find(id: string): Promise<Window>
 
 查找id所对应的窗口，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md)替代。
 
 **起始版本：** 7

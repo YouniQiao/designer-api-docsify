@@ -12,7 +12,6 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -483,9 +482,7 @@ See [start](#start)
 stop(): Promise<void>
 ```
 
-Stops device-cloud sync of a file. This API uses a promise to return the result.
-
-Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
+Stops device-cloud sync of a file. This API uses a promise to return the result.Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
 
 **Since:** 23
 
@@ -626,9 +623,7 @@ download.stop(uri, (err: BusinessError) => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops device-cloud sync of a file. This API uses an asynchronous callback to return the result.
-
-Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
+Stops device-cloud sync of a file. This API uses an asynchronous callback to return the result.Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
 
 **Since:** 23
 

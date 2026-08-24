@@ -2,8 +2,7 @@
 
 表示查询图片属性的索引。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)代替。
 
 **起始版本：** 7

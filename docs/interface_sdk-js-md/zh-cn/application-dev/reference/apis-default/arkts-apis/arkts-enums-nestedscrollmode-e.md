@@ -1,6 +1,6 @@
 # NestedScrollMode
 
-Nested scroll nested mode @enum { number } NestedScrollMode
+Nested scroll nested mode@enum { number } NestedScrollMode
 
 **起始版本：** 23
 

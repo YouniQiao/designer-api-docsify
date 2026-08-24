@@ -1,8 +1,6 @@
 # PasteButtonOptions
 
-Declares the interface for setting the paste button options.
-
-@interface PasteButtonOptions
+Declares the interface for setting the paste button options.@interface PasteButtonOptions
 
 **Since:** 23
 

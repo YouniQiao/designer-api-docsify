@@ -1,8 +1,6 @@
 # MenuItemConfiguration
 
-MenuItemConfiguration used by menu item content modifier.
-
-@extends CommonConfiguration&lt;MenuItemConfiguration&gt; @interface MenuItemConfiguration
+MenuItemConfiguration used by menu item content modifier.@extends CommonConfiguration&lt;MenuItemConfiguration&gt; @interface MenuItemConfiguration
 
 **Inheritance/Implementation:** MenuItemConfiguration extends CommonConfiguration<MenuItemConfiguration>
 

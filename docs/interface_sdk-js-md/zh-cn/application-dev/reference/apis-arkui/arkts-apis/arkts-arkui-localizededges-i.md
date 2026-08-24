@@ -1,8 +1,6 @@
 # LocalizedEdges
 
-Defines the LocalizedEdges.
-
-@interface LocalizedEdges
+Defines the LocalizedEdges.@interface LocalizedEdges
 
 **起始版本：** 12
 

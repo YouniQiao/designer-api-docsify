@@ -8,6 +8,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2SuffixImageIcon--><!--Device-unnamed-export declare class ChipV2SuffixImageIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -44,8 +46,7 @@ ChipV2SuffixImageIcon的构造函数
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 设置无障碍功能描述。
@@ -56,6 +57,8 @@ ChipV2SuffixImageIcon的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -65,8 +68,7 @@ ChipV2SuffixImageIcon的构造函数
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 设置无障碍级别。
@@ -79,6 +81,8 @@ ChipV2SuffixImageIcon的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityLevel?: string--><!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityLevel?: string-End-->
@@ -88,8 +92,7 @@ ChipV2SuffixImageIcon的构造函数
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
 设置无障碍功能文本。
@@ -100,6 +103,8 @@ ChipV2SuffixImageIcon的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityText?: ResourceStr--><!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityText?: ResourceStr-End-->
@@ -109,8 +114,7 @@ ChipV2SuffixImageIcon的构造函数
 ## action
 
 ```TypeScript
-@Trace
-  public action?: VoidCallback
+public action?: VoidCallback
 ```
 
 当单击后缀图标时调用的回调。
@@ -120,6 +124,8 @@ ChipV2SuffixImageIcon的构造函数
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

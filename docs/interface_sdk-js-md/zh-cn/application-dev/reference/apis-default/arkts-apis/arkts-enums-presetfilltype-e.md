@@ -1,8 +1,6 @@
 # PresetFillType
 
-Specify the number of columns for different responsive breakpoints.
-
-@enum { int }
+Specify the number of columns for different responsive breakpoints.@enum { int }
 
 **起始版本：** 23
 

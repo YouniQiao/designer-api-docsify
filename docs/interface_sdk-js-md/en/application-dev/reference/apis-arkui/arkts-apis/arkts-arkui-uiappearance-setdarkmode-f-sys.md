@@ -12,8 +12,7 @@ import { uiAppearance } from '@kit.ArkUI';
 function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 ```
 
-Sets the system color mode. This API uses an asynchronous callback to return the result.
-
+Sets the system color mode. This API uses an asynchronous callback to return the result.  
 **Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 10
@@ -84,8 +83,7 @@ try {
 function setDarkMode(mode: DarkMode): Promise<void>
 ```
 
-Sets the system color mode. This API uses a promise to return the result.
-
+Sets the system color mode. This API uses a promise to return the result.  
 **Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 10

@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class SubHeaderV2Select--><!--Device-unnamed-export declare class SubHeaderV2Select-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,23 +43,18 @@ select内容以及事件构造函数。
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  defaultFocus?: boolean
+defaultFocus?: boolean
 ```
 
-下拉按钮是否为默认焦点。
-
-true：下拉按钮是默认焦点。
-
-false：下拉按钮不是默认焦点。
-
-默认值：false
+下拉按钮是否为默认焦点。true：下拉按钮是默认焦点。false：下拉按钮不是默认焦点。默认值：false
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,17 +67,16 @@ false：下拉按钮不是默认焦点。
 ## id
 
 ```TypeScript
-@Trace
-  id?: string
+id?: string
 ```
 
-下拉按钮id。需要为下拉按钮设置id的时候设置此参数，缺省时不设置此参数。
-
-默认值：undefined，表示不设置下拉按钮id。
+下拉按钮id。需要为下拉按钮设置id的时候设置此参数，缺省时不设置此参数。默认值：undefined，表示不设置下拉按钮id。
 
 **类型：** string
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,8 +89,7 @@ false：下拉按钮不是默认焦点。
 ## onSelect
 
 ```TypeScript
-@Trace
-  onSelect?: SubHeaderV2SelectOnSelect
+onSelect?: SubHeaderV2SelectOnSelect
 ```
 
 Sets the onSelect of the SubHeaderV2SelectOptions.
@@ -102,6 +97,8 @@ Sets the onSelect of the SubHeaderV2SelectOptions.
 **类型：** [SubHeaderV2SelectOnSelect](arkts-arkui-subheaderv2selectonselect-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,8 +111,7 @@ Sets the onSelect of the SubHeaderV2SelectOptions.
 ## options
 
 ```TypeScript
-@Trace
-  options: SelectOption[]
+options: SelectOption[]
 ```
 
 Sets the options of the SubHeaderV2SelectOptions.
@@ -123,6 +119,8 @@ Sets the options of the SubHeaderV2SelectOptions.
 **类型：** [SelectOption](../../apis-default/arkts-components/arkts-select-selectoption-i.md)[]
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,13 +132,11 @@ Sets the options of the SubHeaderV2SelectOptions.
 
 ## selectedContent
 
-```TypeScript
-@Trace selectedContent?: ResourceStr
-```
-
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 20
+
+**装饰器类型：** @Trace
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -151,8 +147,7 @@ Sets the options of the SubHeaderV2SelectOptions.
 ## selectedIndex
 
 ```TypeScript
-@Trace
-  selectedIndex?: number
+selectedIndex?: number
 ```
 
 Sets the selected index of the SubHeaderV2SelectOptions.
@@ -160,6 +155,8 @@ Sets the selected index of the SubHeaderV2SelectOptions.
 **类型：** number
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

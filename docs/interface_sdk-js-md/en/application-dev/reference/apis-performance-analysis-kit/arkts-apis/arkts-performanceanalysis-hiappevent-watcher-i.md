@@ -2,8 +2,7 @@
 
 Defines parameters for a **Watcher** object. This API is used to configure and manage event watchers to subscribe to and process specified events.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You are not advised to call [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md) in the callback. Once a watcher is
 > removed, the subscription callback of the watcher becomes invalid, and the callback may not be triggered when an
 > event occurs.
@@ -62,11 +61,7 @@ Unique name of a watcher. The value contains a maximum of 32 characters, includi
 onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void
 ```
 
-Real-time subscription callback. Only this callback function is triggered if it is passed together with **onTrigger**. The input arguments are described as follows:
-
-domain: domain name.
-
-appEventGroups: event group.
+Real-time subscription callback. Only this callback function is triggered if it is passed together with **onTrigger**. The input arguments are described as follows:domain: domain name.appEventGroups: event group.
 
 **Type:** (domain: string, appEventGroups: Array&lt;[AppEventGroup](arkts-performanceanalysis-hiappevent-appeventgroup-i.md)&gt;) =&gt; void
 
@@ -84,12 +79,9 @@ appEventGroups: event group.
 onTrigger?: (curRow: int, curSize: int, holder: AppEventPackageHolder) => void
 ```
 
-Subscription callback. This parameter takes effect only when it is passed together with **triggerCondition**. The input arguments are described as follows:
-
-**curRow**: total number of subscription events when the callback is triggered.
-
-**curSize**: total size of subscribed events when the callback is triggered, in bytes.
-
+Subscription callback. This parameter takes effect only when it is passed together with **triggerCondition**. The input arguments are described as follows:  
+**curRow**: total number of subscription events when the callback is triggered.  
+**curSize**: total size of subscribed events when the callback is triggered, in bytes.  
 **holder**: subscription data holder, which can be used to process subscribed events.
 
 **Type:** (curRow: int, curSize: int, holder: AppEventPackageHolder) =&gt; void

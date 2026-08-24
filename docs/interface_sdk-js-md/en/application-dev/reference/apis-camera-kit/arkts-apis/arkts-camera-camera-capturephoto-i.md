@@ -1,6 +1,6 @@
 # CapturePhoto
 
-*CapturePhoto** provides APIs for obtaining the objects of the full-quality image and the uncompressed image.
+**CapturePhoto** provides APIs for obtaining the objects of the full-quality image and the uncompressed image.
 
 **Since:** 23
 
@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## release

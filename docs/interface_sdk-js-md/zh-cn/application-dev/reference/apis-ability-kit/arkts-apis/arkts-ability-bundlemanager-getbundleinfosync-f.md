@@ -12,9 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getBundleInfoSync(bundleName: string, bundleFlags: int, userId: int): BundleInfo
 ```
 
-以同步方法根据给定的bundleName、bundleFlags和userId获取BundleInfo。
-
-获取调用方自身的信息时不需要权限。
+以同步方法根据给定的bundleName、bundleFlags和userId获取BundleInfo。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -91,9 +89,7 @@ try {
 function getBundleInfoSync(bundleName: string, bundleFlags: int): BundleInfo
 ```
 
-以同步方法根据给定的bundleName、bundleFlags获取调用方所在用户下的BundleInfo。
-
-获取调用方自身的信息时不需要权限。
+以同步方法根据给定的bundleName、bundleFlags获取调用方所在用户下的BundleInfo。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 

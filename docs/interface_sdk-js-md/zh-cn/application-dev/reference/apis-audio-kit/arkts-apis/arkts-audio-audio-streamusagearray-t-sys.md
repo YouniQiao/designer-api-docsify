@@ -4,7 +4,7 @@
 type StreamUsageArray = Array<StreamUsage>
 ```
 
-Array of StreamUsages.
+音频类型数组
 
 **起始版本：** 23
 

@@ -26,8 +26,8 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buf1 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
-| buf2 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
+| buf1 | Buffer \| Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
+| buf2 | Buffer \| Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
 
 **返回值：**
 
@@ -108,8 +108,8 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buf1 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
-| buf2 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
+| buf1 | Buffer \| Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
+| buf2 | Buffer \| Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
 
 **返回值：**
 

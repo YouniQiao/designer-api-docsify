@@ -2,8 +2,7 @@
 
 Defines a **TLSSocketConnection** object, that is, the connection between the TLSSocket client and the server. Before calling TLSSocketConnection APIs, you need to obtain a **TLSSocketConnection** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The TLSSocket client can call related APIs through the **TLSSocketConnection** object only after a connection is
 > successfully established between the TLSSocket client and the server.
 
@@ -562,8 +561,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **TLSSocketConnection** connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Call this API only after the **TLSSocketServer** connection is successfully established.
 
 **Since:** 12
@@ -1429,13 +1427,10 @@ getSocketFd(): Promise<int>
 
 Obtains the file descriptor of a TLSSocketConnection connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - Call this API only after the **TLSSocketServer** connection is successfully established.
-> 
+> **NOTE：**&gt;
+> - Call this API only after the **TLSSocketServer** connection is successfully established.&gt;
 > - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the
-> close API is called).
-> 
+> close API is called).&gt;
 > - The lifecycle of the file descriptor is managed by the system. The application can use the
 > [close](arkts-network-socket-tcpsocketconnection-i.md#close) method to close the socket
 > connection, instead of directly operating the file descriptor.

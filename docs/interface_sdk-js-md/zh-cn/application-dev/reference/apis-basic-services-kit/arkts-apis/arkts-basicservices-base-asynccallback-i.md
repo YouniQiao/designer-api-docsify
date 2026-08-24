@@ -1,10 +1,6 @@
 # AsyncCallback
 
-通用回调函数，携带错误参数和异步返回值，用于在异步操作完成时同时回传错误信息或成功数据。
-
-错误参数为[BusinessError](arkts-basicservices-base-businesserror-i.md)类型。
-
-异步返回值的类型由开发者自定义，回调将返回对应类型的信息。
+通用回调函数，携带错误参数和异步返回值，用于在异步操作完成时同时回传错误信息或成功数据。错误参数为[BusinessError](arkts-basicservices-base-businesserror-i.md)类型。异步返回值的类型由开发者自定义，回调将返回对应类型的信息。
 
 **起始版本：** 6
 

@@ -11,8 +11,6 @@ Defines the parameters for creating a child window or system window.
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 

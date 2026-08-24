@@ -1,8 +1,6 @@
 # @ohos.promptAction
 
-Defines promptAction
-
-@namespace promptAction
+Defines promptAction@namespace promptAction
 
 ## Modules to Import
 
@@ -15,7 +13,7 @@ Defines promptAction
 
 | Name | Description |
 | --- | --- |
-| [promptAction](arkts-promptaction-n.md) | Defines promptAction |
+| [promptAction](arkts-promptaction-n.md) | Defines promptAction@namespace promptAction |
 
 ### Classes
 
@@ -27,6 +25,6 @@ Defines promptAction
 
 | Name | Description |
 | --- | --- |
-| [ImmersiveMode](arkts-promptaction-immersivemode-e.md) | Define the immersive mode of all kind of dialog |
-| [LevelMode](arkts-promptaction-levelmode-e.md) | Define the display mode of all kind of dialog |
+| [ImmersiveMode](arkts-promptaction-immersivemode-e.md) | Define the immersive mode of all kind of dialog@enum { number } |
+| [LevelMode](arkts-promptaction-levelmode-e.md) | Define the display mode of all kind of dialog@enum { number } |
 

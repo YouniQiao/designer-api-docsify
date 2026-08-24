@@ -1,16 +1,6 @@
 # Tokenizer
 
-描述fts（全文搜索）场景下使用的分词器枚举。请使用枚举名称而非枚举值。
-
-在使用不同的分词器时，使用的建表语句会有所区别。
-
-示例代码中this.context定义见Stage模型的应用Context。
-
-使用ICU_TOKENIZER分词器时，创建表的示例：
-
-使用CUSTOM_TOKENIZER分词器时，创建表的示例：
-
-使用CUSTOM_TOKENIZER分词器，并指定分词模式时，创建表的示例：
+描述fts（全文搜索）场景下使用的分词器枚举。请使用枚举名称而非枚举值。在使用不同的分词器时，使用的建表语句会有所区别。示例代码中this.context定义见Stage模型的应用Context。使用ICU_TOKENIZER分词器时，创建表的示例：使用CUSTOM_TOKENIZER分词器时，创建表的示例：使用CUSTOM_TOKENIZER分词器，并指定分词模式时，创建表的示例：
 
 **起始版本：** 23
 

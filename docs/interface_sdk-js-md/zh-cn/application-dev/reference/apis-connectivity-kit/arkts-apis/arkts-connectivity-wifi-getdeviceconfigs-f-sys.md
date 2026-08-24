@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceConfigs
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function getDeviceConfigs(): Array<WifiDeviceConfig>
 ```
 
-获取网络配置。
-
-<p>只能获取本应用创建的网络配置。
+获取网络配置。<p>只能获取本应用创建的网络配置。
 
 **起始版本：** 7
 

@@ -1,8 +1,6 @@
 # Path2D
 
-2D path object for path drawing
-
-@extends CanvasPath
+2D path object for path drawing@extends CanvasPath
 
 **继承/实现关系：** Path2D extends [CanvasPath](arkts-canvas-canvaspath-c.md)
 

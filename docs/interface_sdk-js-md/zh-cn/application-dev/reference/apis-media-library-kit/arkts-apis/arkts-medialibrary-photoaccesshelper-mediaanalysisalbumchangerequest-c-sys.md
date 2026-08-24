@@ -249,13 +249,10 @@ static createAnalysisAlbumRequest(
 
 创建智慧相册的变更请求。
 
-> **说明：**
-> 
-> 相册名的参数规格如下：
-> 
-> - 相册名字符串长度的取值范围为[1, 255]。
-> 
-> - 不允许出现非法英文字符，包括：. .. \ / : ? " ' ` &lt;
+> **说明：**&gt;
+> 相册名的参数规格如下：&gt;
+> - 相册名字符串长度的取值范围为[1, 255]。&gt;
+> - 不允许出现非法英文字符，包括：. .. \ / : * ? " ' ` &lt;
 &gt; | { } [ ]
 
 **起始版本：** 23
@@ -458,9 +455,7 @@ async function example(context: Context) {
 setRelationship(relationship: string): Promise<void>
 ```
 
-设置人像相册中的人物关系。
-
-支持的人物关系名称范围： | 唯一标识 | 含义 | | ---------- | ------- | | me | 我 | | son | 儿子 | | daughter | 女儿 | | wife | 妻子 | | husband | 丈夫 | | father | 爸爸 | | mother | 妈妈 | | colleague | 同事 | | friend | 朋友 | | classmate | 同学 | | best_friend_female | 闺蜜 | | boyfriend | 男朋友 | | girlfriend | 女朋友 | | family | 家人 | | maternal_grandfather | 外公 | | maternal_grandmother | 外婆 | | paternal_grandfather | 爷爷 | | paternal_grandmother | 奶奶 | | older_brother | 哥哥 | | older_sister | 姐姐 | | younger_brother | 弟弟 | | younger_sister | 妹妹 | | relative | 亲戚 | | other | 其他 |
+设置人像相册中的人物关系。支持的人物关系名称范围： | 唯一标识 | 含义 | | ---------- | ------- | | me | 我 | | son | 儿子 | | daughter | 女儿 | | wife | 妻子 | | husband | 丈夫 | | father | 爸爸 | | mother | 妈妈 | | colleague | 同事 | | friend | 朋友 | | classmate | 同学 | | best_friend_female | 闺蜜 | | boyfriend | 男朋友 | | girlfriend | 女朋友 | | family | 家人 | | maternal_grandfather | 外公 | | maternal_grandmother | 外婆 | | paternal_grandfather | 爷爷 | | paternal_grandmother | 奶奶 | | older_brother | 哥哥 | | older_sister | 姐姐 | | younger_brother | 弟弟 | | younger_sister | 妹妹 | | relative | 亲戚 | | other | 其他 |
 
 **起始版本：** 26.0.0
 

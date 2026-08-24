@@ -6,6 +6,8 @@ Defines IconGroupSuffix.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct IconGroupSuffix--><!--Device-unnamed-export declare struct IconGroupSuffix-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Defines IconGroupSuffix.
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## iconBackgroundSystemMaterial
 
 ```TypeScript
-@PropRef
-  iconBackgroundSystemMaterial?: uiMaterial.Material
+iconBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -49,6 +51,8 @@ Set system-styled materials for the component. Different materials have differen
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IconGroupSuffix-@PropRef  iconBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-IconGroupSuffix-@PropRef  iconBackgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -58,9 +62,7 @@ Set system-styled materials for the component. Different materials have differen
 ## items
 
 ```TypeScript
-@Require
-  @PropRef
-  items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>
+items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>
 ```
 
 Suffix item.
@@ -70,6 +72,8 @@ Suffix item.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Require, @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

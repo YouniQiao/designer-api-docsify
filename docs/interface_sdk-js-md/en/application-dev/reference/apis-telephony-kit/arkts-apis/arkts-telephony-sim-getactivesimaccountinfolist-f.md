@@ -12,12 +12,10 @@ import { sim } from '@kit.TelephonyKit';
 function getActiveSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void
 ```
 
-Obtains the list of activated SIM card accounts. This API uses an asynchronous callback to return the result.
-
+Obtains the list of activated SIM card accounts. This API uses an asynchronous callback to return the result.  
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
 > sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
 > are empty.
@@ -76,12 +74,10 @@ sim.getActiveSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
 function getActiveSimAccountInfoList(): Promise<Array<IccAccountInfo>>
 ```
 
-Obtains the list of activated SIM card accounts. This API uses a promise to return the result.
-
+Obtains the list of activated SIM card accounts. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
 > sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
 > are empty.

@@ -1,8 +1,6 @@
 # GuideLinePosition
 
-Specifies the position of guideLine
-
-@interface GuideLinePosition
+Specifies the position of guideLine@interface GuideLinePosition
 
 **Since:** 23
 

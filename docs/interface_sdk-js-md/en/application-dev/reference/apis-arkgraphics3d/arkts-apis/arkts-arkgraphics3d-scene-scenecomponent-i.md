@@ -1,8 +1,6 @@
 # SceneComponent
 
-Represents a basic scene component, which is used to describe the component information of a scene node, including the component name and its properties.
-
-@interface SceneComponent
+Represents a basic scene component, which is used to describe the component information of a scene node, including the component name and its properties.@interface SceneComponent
 
 **Since:** 23
 

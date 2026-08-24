@@ -576,8 +576,7 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records that are in the given range in the specified column.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation (
 > such as full query, update, or deletion) is performed on all data. Before calling this API, check whether the
 > **value** array is empty to avoid misoperations.
@@ -650,8 +649,7 @@ inDevices(devices: Array<string>): RdbPredicates
 
 Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]
 > [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync).
 > When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used,

@@ -1,8 +1,6 @@
 # LayoutAlgorithm
 
-Defines layout algorithm.
-
-@interface LayoutAlgorithm
+Defines layout algorithm.@interface LayoutAlgorithm
 
 **Since:** 24
 

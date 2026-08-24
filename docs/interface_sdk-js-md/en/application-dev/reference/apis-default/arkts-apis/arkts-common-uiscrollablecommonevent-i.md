@@ -1,8 +1,6 @@
 # UIScrollableCommonEvent
 
-Defines a UIScrollableCommonEvent which is used to set event to target component.
-
-@extends UICommonEvent
+Defines a UIScrollableCommonEvent which is used to set event to target component.@extends UICommonEvent
 
 **Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-common-uicommonevent-i.md)
 

@@ -1,10 +1,6 @@
 # ImageSpan属性/事件
 
-属性继承自BaseSpan，通用属性方法支持尺寸设置、背景设置、边框设置。
-
-通用事件仅支持点击控制事件。还支持以下事件：
-
-@extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
+属性继承自BaseSpan，通用属性方法支持尺寸设置、背景设置、边框设置。通用事件仅支持点击控制事件。还支持以下事件：@extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
 
 **继承/实现关系：** ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
 
@@ -145,9 +141,7 @@ onError(callback: ImageErrorCallback)
 supportSvg2(enable: Optional<boolean>)
 ```
 
-开启或关闭[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)，开启后支持SVG解析新能力，适用于需要使用 SVG新特性的场景；关闭则保持原有SVG解析能力，适用于兼容旧版本SVG图片显示的场景。未通过该接口设置时，默认保持原有SVG解析能力。
-
-ImageSpan组件创建后，不支持动态修改该属性的值。
+开启或关闭SVG标签解析能力增强功能，开启后支持SVG解析新能力，适用于需要使用 SVG新特性的场景；关闭则保持原有SVG解析能力，适用于兼容旧版本SVG图片显示的场景。未通过该接口设置时，默认保持原有SVG解析能力。ImageSpan组件创建后，不支持动态修改该属性的值。
 
 **起始版本：** 22
 
@@ -163,7 +157,7 @@ ImageSpan组件创建后，不支持动态修改该属性的值。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | 是 | 控制是否开启 [SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。 <br>true：支持SVG解析新能力；false：保持原有SVG解析能力。 |
+| enable | Optional&lt;boolean&gt; | 是 | 控制是否开启 SVG标签解析能力增强功能。 <br>true：支持SVG解析新能力；false：保持原有SVG解析能力。 |
 
 ## verticalAlign
 

@@ -16,9 +16,7 @@ Navigation module info.
 isUserCreateStack?: boolean
 ```
 
-Whether the stack of navigation is created by user
-
-Default value: false
+Whether the stack of navigation is created by user Default value: false
 
 **Type:** boolean
 

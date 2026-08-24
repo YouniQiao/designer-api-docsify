@@ -1,8 +1,6 @@
 # DragStatus
 
-Defines the Drag Status.
-
-@enum { number }
+Defines the Drag Status.@enum { number }
 
 **Since:** 23
 

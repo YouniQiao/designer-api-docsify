@@ -1,8 +1,6 @@
 # AVCallState
 
-通话状态相关属性。
-
-@interface AVCallState [since 11 - 11]
+通话状态相关属性。@interface AVCallState [since 11 - 11]
 
 **起始版本：** 23
 

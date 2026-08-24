@@ -759,13 +759,13 @@ Returns the number of leading zero bits in the 32-bit representation of x.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Int](arkts-arkts-int-c.md) | Yes | 32-bit integer. |
+| x | Int | Yes | 32-bit integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | Number of leading zero bits in bit representation of x. |
+| Int | Number of leading zero bits in bit representation of x. |
 
 ## clz32
 
@@ -1126,7 +1126,7 @@ Returns the result of the C-like 32-bit multiplication of the two parameters.
 
 | Type | Description |
 | --- | --- |
-| double | The result of (a b) % 2^32. |
+| double | The result of (a * b) % 2^32. |
 
 ## log
 

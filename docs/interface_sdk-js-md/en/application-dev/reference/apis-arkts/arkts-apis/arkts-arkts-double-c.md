@@ -39,7 +39,7 @@ Creates a new instance of a Double
 
 | Type | Description |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | A new Double instance |
+| Double | A new Double instance |
 
 ## $_invoke
 
@@ -63,13 +63,13 @@ Creates a new instance of a Double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [Double](arkts-arkts-double-c.md) \| BigInt \| undefined \| null | Yes | The value to be converted to a number. Can be a string, number, or BigInt (optional). |
+| value | string \| Double \| BigInt \| undefined \| null | Yes | The value to be converted to a number. Can be a string, number, or BigInt (optional). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | A new Double instance |
+| Double | A new Double instance |
 
 ## add
 
@@ -93,13 +93,13 @@ Performs floating point addition of this instance with provided one, returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | Yes | Right hand side of the addition. |
+| other | Double | Yes | Right hand side of the addition. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | Result of the addition |
+| Double | Result of the addition |
 
 ## bitCastFromLong
 
@@ -214,7 +214,7 @@ Compares this instance to other Double object The result is less than 0 if this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | Yes | Double object to compare with. |
+| other | Double | Yes | Double object to compare with. |
 
 **Return value:**
 
@@ -334,13 +334,13 @@ Performs floating point division of this instance with provided one, returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | Yes | Right hand side of the division. |
+| other | Double | Yes | Right hand side of the division. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | Result of the division |
+| Double | Result of the division |
 
 ## equals
 
@@ -448,7 +448,7 @@ Checks if this instance value is greater than or equal to value of provided inst
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | Yes | Right hand side of the comparison. |
+| other | Double | Yes | Right hand side of the comparison. |
 
 **Return value:**
 
@@ -478,7 +478,7 @@ Checks if this instance value is greater than value of provided instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | Yes | Right hand side of the comparison. |
+| other | Double | Yes | Right hand side of the comparison. |
 
 **Return value:**
 
@@ -562,7 +562,7 @@ Checks if this instance value is less than or equal to value of provided instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | Yes | Right hand side of the comparison. |
+| other | Double | Yes | Right hand side of the comparison. |
 
 **Return value:**
 
@@ -592,7 +592,7 @@ Checks if this instance value is less than value of provided instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | Yes | Right hand side of the comparison. |
+| other | Double | Yes | Right hand side of the comparison. |
 
 **Return value:**
 
@@ -730,13 +730,13 @@ Performs floating point multiplication of this instance with provided one, retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | Yes | Right hand side of the multiplication. |
+| other | Double | Yes | Right hand side of the multiplication. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | Result of the multiplication |
+| Double | Result of the multiplication |
 
 ## parseFloat
 
@@ -882,13 +882,13 @@ Performs floating point subtraction of this instance with provided one, returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | Yes | Right hand side of the subtraction. |
+| other | Double | Yes | Right hand side of the subtraction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | Result of the subtraction |
+| Double | Result of the subtraction |
 
 ## toByte
 
@@ -1058,7 +1058,7 @@ toExponential() returns std.core.String representing the underlying double in ex
 public toExponentialWithNoDigit(): string
 ```
 
-toExponential(double) returns std.core.string representing the underlying double in exponential notation If d = new Double(0.25); d.toExponential(2) -&gt; '2.50e-1' If d = new Double(0.25); d.toExponential(2.5) -&gt; '2.50e-1' If d = new Double(0.25); d.toExponential(1) -&gt; '2.5e-1' If d = new Double(12345.01); d.toExponential(10) -&gt; '1.2345010000e+4' If d = new Double(NaN); d.toExponential(10) -&gt; 'NaN'; If d = new Double(Double.POSITIVE_INFINITY); d.toExponential(10) -&gt; 'Infinity'; '-Infinity' for negative
+toExponential(double) returns std.core.string representing the underlying double in exponential notation If d = new Double(0.25); d.toExponential(2) -&gt; '2.50e-1'If d = new Double(0.25); d.toExponential(2.5) -&gt; '2.50e-1'If d = new Double(0.25); d.toExponential(1) -&gt; '2.5e-1'If d = new Double(12345.01); d.toExponential(10) -&gt; '1.2345010000e+4'If d = new Double(NaN); d.toExponential(10) -&gt; 'NaN'; If d = new Double(Double.POSITIVE_INFINITY); d.toExponential(10) -&gt; 'Infinity';'-Infinity' for negative
 
 **Since:** 26.0.0
 
@@ -1136,7 +1136,7 @@ toFixed(double) returns std.core.string representing the underlying double using
 public toFixedImpl(d: double): string
 ```
 
-toFixed(double) returns std.core.string representing the underlying double using fixed-point notation If d = new Double(0.1); d.toFixed(0) -&gt; '0' If d = new Double(0.7); d.toFixed(0) -&gt; '1' If d = new Double(0.12345); d.toFixed(1) -&gt; '0.1' If d = new Double(0.12345); d.toFixed(3) -&gt; '0.123' If d = new Double(Double.POSITIVE_INFINITY); d.toFixed(3) -&gt; 'Infinity' If d = new Double(Double.NaN); d.toFixed(3) -&gt; 'NaN' If d = new Double(0.25); d.toFixed(200) -&gt; thrown ArgumentOutOfRangeError
+toFixed(double) returns std.core.string representing the underlying double using fixed-point notation If d = new Double(0.1); d.toFixed(0) -&gt; '0'If d = new Double(0.7); d.toFixed(0) -&gt; '1'If d = new Double(0.12345); d.toFixed(1) -&gt; '0.1'If d = new Double(0.12345); d.toFixed(3) -&gt; '0.123'If d = new Double(Double.POSITIVE_INFINITY); d.toFixed(3) -&gt; 'Infinity'If d = new Double(Double.NaN); d.toFixed(3) -&gt; 'NaN'If d = new Double(0.25); d.toFixed(200) -&gt; thrown ArgumentOutOfRangeError
 
 **Since:** 26.0.0
 
@@ -1390,7 +1390,7 @@ Returns the primitive as long value
 public toPrecision(d: double): string
 ```
 
-toPrecision(double) returns std.core.string representing the underlying double on the specified precision If d = new Double(0.25); d.toPrecision(4) -&gt; '0.2500' If d = new Double(1.01); d.toPrecision(4.7) -&gt; '1.010' If d = new Double(0.25); d.toPrecision(0) -&gt; thrown ArgumentOutOfRangeError If d = new Double(12345.123455); d.toPrecision(10) -&gt; '12345.12346'
+toPrecision(double) returns std.core.string representing the underlying double on the specified precision If d = new Double(0.25); d.toPrecision(4) -&gt; '0.2500'If d = new Double(1.01); d.toPrecision(4.7) -&gt; '1.010'If d = new Double(0.25); d.toPrecision(0) -&gt; thrown ArgumentOutOfRangeError If d = new Double(12345.123455); d.toPrecision(10) -&gt; '12345.12346'
 
 **Since:** 26.0.0
 

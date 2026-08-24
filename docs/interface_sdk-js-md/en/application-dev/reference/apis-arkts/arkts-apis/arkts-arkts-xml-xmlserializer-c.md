@@ -81,7 +81,7 @@ A constructor used to create an XmlSerializer instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| DataView | Yes | ArrayBuffer or DataView for storing the XML information to set. |
-| encoding | string | No | Encoding format. The default value is 'utf-8' (the only format currently supported ). |
+| encoding | string | No | Encoding format. The default value is 'utf-8' (the only format currently supported). |
 
 **Examples**
 

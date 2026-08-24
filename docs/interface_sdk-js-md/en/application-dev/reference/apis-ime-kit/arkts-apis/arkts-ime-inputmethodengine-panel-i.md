@@ -1,6 +1,6 @@
 # Panel
 
-@brief You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain the panel instance and then call the following APIs through the instance.
+You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain the panel instance and then call the following APIs through the instance.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-@brief Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete. <br> <br>   
+Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -118,7 +118,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-@brief Adjusts the panel rectangle, and customizes the avoid area and touch area. <br> <br>   
+Adjusts the panel rectangle, and customizes the avoid area and touch area. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -164,7 +164,7 @@ See [adjustPanelRect](#adjustpanelrect)
 changeFlag(flag: PanelFlag): void
 ```
 
-@brief Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panels.
+Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panels.
 
 **Since:** 23
 
@@ -197,7 +197,7 @@ panel.changeFlag(panelFlag);
 getDisplayId(): Promise<long>
 ```
 
-@brief Obtains the window ID. This API uses a promise to return the result.
+Obtains the window ID. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -236,7 +236,7 @@ panel.getDisplayId().then((result: number) => {
 getImmersiveMode(): ImmersiveMode
 ```
 
-@brief Obtains the immersive mode of the input method application.
+Obtains the immersive mode of the input method application.
 
 **Since:** 23
 
@@ -262,7 +262,7 @@ let mode: inputMethodEngine.ImmersiveMode = panel.getImmersiveMode();
 getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 ```
 
-@brief Obtains the offset area of the soft keyboard relative to the system panel under the current state of the specified screen (for example, folded or unfolded) and the current state of the input method keyboard (for example, floating or fixed). This API uses a promise to return the result.
+Obtains the offset area of the soft keyboard relative to the system panel under the current state of the specified screen (for example, folded or unfolded) and the current state of the input method keyboard (for example, floating or fixed). This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -319,7 +319,7 @@ inputMethodAbility.createPanel(this.context, panelConfig).then( (panel: inputMet
 getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 ```
 
-@brief Get the current insets of the system panel of a specified display. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED or FLG_FLOATING.</p> <br><p>This interface only supports obtaining the current insets values of a display. When the display undergoes orientation changes, or is folded or unfolded, it is necessary to reinvoke this interface to get the latest values.</p>
+Get the current insets of the system panel of a specified display. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED or FLG_FLOATING.</p> <br><p>This interface only supports obtaining the current insets values of a display. When the display undergoes orientation changes, or is folded or unfolded, it is necessary to reinvoke this interface to get the latest values.</p>
 
 **Since:** 23
 
@@ -357,7 +357,7 @@ See [getSystemPanelCurrentInsets](#getsystempanelcurrentinsets)
 hide(callback: AsyncCallback<void>): void
 ```
 
-@brief Hides this panel. This API uses an asynchronous callback to return the result.
+Hides this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -423,7 +423,7 @@ keyboardController.hide().then(() => {
 hide(): Promise<void>
 ```
 
-@brief Hides this panel. This API uses a promise to return the result.
+Hides this panel. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -447,7 +447,7 @@ See [hide](#hide)
 moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 ```
 
-@brief Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
+Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
 
 **Since:** 23
 
@@ -499,7 +499,7 @@ panel.moveTo(300, 300).then(() => {
 moveTo(x: int, y: int): Promise<void>
 ```
 
-@brief Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
+Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
 
 **Since:** 23
 
@@ -536,7 +536,7 @@ See [moveTo](#moveto)
 off(type: 'hide', callback?: () => void): void
 ```
 
-@brief Disables listening for the hide event of this panel. This API uses an asynchronous callback to return the result.
+Disables listening for the hide event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -569,7 +569,7 @@ panel.off('hide');
 off(type: 'show', callback?: () => void): void
 ```
 
-@brief Disables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
+Disables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -602,7 +602,7 @@ panel.off('show');
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-@brief Disables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -646,7 +646,7 @@ panel.off('sizeChange', (windowSize: window.Size) => {
 offHide(callback?: Callback<void>): void
 ```
 
-@brief Unregisters panel hide event.
+Unregisters panel hide event.
 
 **Since:** 23
 
@@ -686,7 +686,7 @@ Unregisters panel show event.
 offSizeChange(callback?: SizeChangeCallback): void
 ```
 
-@brief Unsubscribe 'sizeChange' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
+Unsubscribe 'sizeChange' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
 
 **Since:** 23
 
@@ -706,7 +706,7 @@ offSizeChange(callback?: SizeChangeCallback): void
 on(type: 'hide', callback: () => void): void
 ```
 
-@brief Enables listening for the hide event of this panel. This API uses an asynchronous callback to return the result.
+Enables listening for the hide event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -735,7 +735,7 @@ panel.on('hide', () => {
 on(type: 'show', callback: () => void): void
 ```
 
-@brief Enables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
+Enables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -764,7 +764,7 @@ panel.on('show', () => {
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-@brief Enables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
+Enables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -835,7 +835,7 @@ Registers panel hide event. <br> <br><p>The "hide" events are triggered when the
 onShow(callback: Callback<void>): void
 ```
 
-@brief Registers panel show event. <br> <br><p>The "show" events are triggered when the panel is shown.</p>
+Registers panel show event. <br> <br><p>The "show" events are triggered when the panel is shown.</p>
 
 **Since:** 23
 
@@ -855,7 +855,7 @@ onShow(callback: Callback<void>): void
 onSizeChange(callback: SizeChangeCallback): void
 ```
 
-@brief Subscribe 'sizeChange' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
+Subscribe 'sizeChange' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
 
 **Since:** 23
 
@@ -875,7 +875,7 @@ onSizeChange(callback: SizeChangeCallback): void
 resize(width: long, height: long, callback: AsyncCallback<void>): void
 ```
 
-@brief Resizes this input method panel. This API uses an asynchronous callback to return the result. <br> <br>   
+Resizes this input method panel. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -936,7 +936,7 @@ panel.resize(500, 1000).then(() => {
 resize(width: long, height: long): Promise<void>
 ```
 
-@brief Resizes this input method panel. This API uses a promise to return the result. <br> <br>   
+Resizes this input method panel. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -982,7 +982,7 @@ See [resize](#resize)
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-@brief Sets the immersive effect of the input method application. <br> <br>- Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. <br>- The fluid light mode can be used only when the gradient mode is enabled. <br>- If the gradient mode is disabled, the gradient height must be 0 px. <br>- Only system applications can set the fluid light mode. <br>- The current API can be called only after any of the following APIs is called: <br> - [adjustPanelRect](#adjustpanelrect) (available since API version 12) <br> - [adjustPanelRect](#adjustpanelrect) ( available since API version 15) <br> - [resize](#resize) ( available since API version 10)
+Sets the immersive effect of the input method application. <br> <br>- Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. <br>- The fluid light mode can be used only when the gradient mode is enabled. <br>- If the gradient mode is disabled, the gradient height must be 0 px. <br>- Only system applications can set the fluid light mode. <br>- The current API can be called only after any of the following APIs is called: <br> - [adjustPanelRect](#adjustpanelrect) (available since API version 12) <br> - [adjustPanelRect](#adjustpanelrect) (available since API version 15) <br> - [resize](#resize) (available since API version 10)
 
 **Since:** 23
 
@@ -1022,7 +1022,7 @@ panel.setImmersiveEffect(effect);
 setImmersiveMode(mode: ImmersiveMode): void
 ```
 
-@brief Sets the immersive mode of the input method application. You can only set the immersion mode to **NONE_IMMERSIVE**, **LIGHT_IMMERSIVE**, or **DARK_IMMERSIVE**. **IMMERSIVE** cannot be set.
+Sets the immersive mode of the input method application. You can only set the immersion mode to **NONE_IMMERSIVE**, **LIGHT_IMMERSIVE**, or **DARK_IMMERSIVE**. **IMMERSIVE** cannot be set.
 
 **Since:** 23
 
@@ -1056,7 +1056,7 @@ panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-@brief Sets to keep the screen always on. This API uses a promise to return the result. <br> <br>   
+Sets to keep the screen always on. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -1109,7 +1109,7 @@ panel.setKeepScreenOn(true).then(() => {
 setPrivacyMode(isPrivacyMode: boolean): void
 ```
 
-@brief Sets the input method panel to privacy mode. In privacy mode, screenshot and screen recording are blocked.
+Sets the input method panel to privacy mode. In privacy mode, screenshot and screen recording are blocked.
 
 **Since:** 23
 
@@ -1145,7 +1145,7 @@ panel.setPrivacyMode(isPrivacyMode);
 setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>
 ```
 
-@brief Sets the color of the function buttons and their background color on the current panel. This API uses a promise to return the result.
+Sets the color of the function buttons and their background color on the current panel. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1191,7 +1191,7 @@ try {
 setUiContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-@brief Loads content from a page to this input method panel. This API uses an asynchronous callback to return the result.
+Loads content from a page to this input method panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1268,7 +1268,7 @@ panel.setUiContent('pages/page2/page2', storage).then(() => {
 setUiContent(path: string): Promise<void>
 ```
 
-@brief Loads content from a page to this input method panel. This API uses a promise to return the result.
+Loads content from a page to this input method panel. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1304,7 +1304,7 @@ See [setUiContent](#setuicontent)
 setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-@brief Loads content from a page linked to LocalStorage to this input method panel. This API uses an asynchronous callback to return the result.
+Loads content from a page linked to LocalStorage to this input method panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1336,7 +1336,7 @@ See [setUiContent](#setuicontent)
 setUiContent(path: string, storage: LocalStorage): Promise<void>
 ```
 
-@brief Loads content from a page linked to LocalStorage to this panel. This API uses a promise to return the result.
+Loads content from a page linked to LocalStorage to this panel. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1373,7 +1373,7 @@ See [setUiContent](#setuicontent)
 show(callback: AsyncCallback<void>): void
 ```
 
-@brief Shows this input method panel. This API uses an asynchronous callback to return the result. It can be called when the input method is bound to the edit box.
+Shows this input method panel. This API uses an asynchronous callback to return the result. It can be called when the input method is bound to the edit box.
 
 **Since:** 23
 
@@ -1417,7 +1417,7 @@ panel.show().then(() => {
 show(): Promise<void>
 ```
 
-@brief Shows this input method panel. This API uses a promise to return the result. It can be called when the input method is bound to the edit box.
+Shows this input method panel. This API uses a promise to return the result. It can be called when the input method is bound to the edit box.
 
 **Since:** 23
 
@@ -1441,7 +1441,7 @@ See [show](#show)
 startMoving(): void
 ```
 
-@brief Sends a command to start moving the window. The window can be moved only when the mouse is clicked.
+Sends a command to start moving the window. The window can be moved only when the mouse is clicked.
 
 **Since:** 23
 
@@ -1470,7 +1470,7 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-@brief Update the panel rectangle. This API uses a promise to return the result. <br>   
+Update the panel rectangle. This API uses a promise to return the result. <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -1514,7 +1514,7 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-@brief Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result. <br>   
+Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result. <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -1559,7 +1559,7 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-@brief Update the panel rectangle. <br>   
+Update the panel rectangle. <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -1597,7 +1597,7 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-@brief Update the panel rectangle, and customizes the avoid area and touch area. <br>   
+Update the panel rectangle, and customizes the avoid area and touch area. <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -1636,7 +1636,7 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-@brief Updates the hot zone on the input method panel in the current state. <br> <br>   
+Updates the hot zone on the input method panel in the current state. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br

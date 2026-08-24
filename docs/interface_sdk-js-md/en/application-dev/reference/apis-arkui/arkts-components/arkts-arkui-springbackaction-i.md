@@ -1,8 +1,6 @@
 # SpringBackAction
 
-Defines sheet spring back action
-
-@interface SpringBackAction
+Defines sheet spring back action@interface SpringBackAction
 
 **Since:** 12
 

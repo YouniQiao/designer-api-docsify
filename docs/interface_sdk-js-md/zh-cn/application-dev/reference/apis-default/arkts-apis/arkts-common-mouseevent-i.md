@@ -1,8 +1,6 @@
 # MouseEvent
 
-The mouse click action triggers this method invocation.
-
-@extends BaseEvent
+The mouse click action triggers this method invocation.@extends BaseEvent
 
 **继承/实现关系：** MouseEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 

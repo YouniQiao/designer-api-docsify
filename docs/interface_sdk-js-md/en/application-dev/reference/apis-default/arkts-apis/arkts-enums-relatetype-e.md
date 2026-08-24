@@ -1,8 +1,6 @@
 # RelateType
 
-RelateType enumeration description
-
-@enum { number }
+RelateType enumeration description@enum { number }
 
 **Since:** 23
 

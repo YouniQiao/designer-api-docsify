@@ -40,11 +40,10 @@ assetCompatibleCapability?: AssetCompatibleCapability
 assetFilter?: Array<OperationItem>
 ```
 
-媒体资产过滤器，长度限制为50个，超出取前50个。
-
+媒体资产过滤器，长度限制为50个，超出取前50个。  
 **注意：**
-
-1. 当使用该过滤器时，其他过滤器会失效。 2. 当配置多个条件时，过滤条件前后需要配置英文括号，否则可能和内部过滤项冲突。
+1. 当使用该过滤器时，其他过滤器会失效。
+2. 当配置多个条件时，过滤条件前后需要配置英文括号，否则可能和内部过滤项冲突。
 
 **类型：** Array&lt;[OperationItem](arkts-medialibrary-photoaccesshelper-operationitem-c.md)&gt;
 
@@ -84,20 +83,9 @@ autoPlayScenes?: Array<AutoPlayScene>
 combinedMediaTypeFilter?: Array<string>
 ```
 
-将过滤条件配置为字符串数组，支持多种类型组合。
-
-字符串格式如下：`photoType | photoSubType1,photoSubType2, … | mimeType1,mimeType2, …`。
-
-- 第1段指定1个photoType，固定为image（图片）或video（视频）。 - 第2段指定1~N个photoSubType，多个photoSubType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N目前支持最大为1；可选的PhotoSubType包括movingPhoto或“*”（忽略）。 - 第3段指定1~N个mimeType，多个mimeType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N最大为10，格式类似于 [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)。
-
-三段过滤的组合取交集处理。
-
-支持“非”的逻辑。对于需要排除的类型，进行加括号的方式进行标识；一个string最多可使用1个括号。
-
-当应用配置的过滤条件string不满足上述规格时，过滤结果为空。
-
-配置该参数时，仅取数组前三个参数进行处理，MIMEType、mimeTypeFilter参数自动失效。
-
+将过滤条件配置为字符串数组，支持多种类型组合。字符串格式如下：`photoType | photoSubType1,photoSubType2, … | mimeType1,mimeType2, …`。  
+- 第1段指定1个photoType，固定为image（图片）或video（视频）。 - 第2段指定1~N个photoSubType，多个photoSubType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N目前支持最大为1；可选的PhotoSubType包括movingPhoto或“*”（忽略）。 - 第3段指定1~N个mimeType，多个mimeType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N最大为10，格式类似于 [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)。  
+三段过滤的组合取交集处理。支持“非”的逻辑。对于需要排除的类型，进行加括号的方式进行标识；一个string最多可使用1个括号。当应用配置的过滤条件string不满足上述规格时，过滤结果为空。配置该参数时，仅取数组前三个参数进行处理，MIMEType、mimeTypeFilter参数自动失效。  
 **原子化服务API：** 从API version 20开始支持在原子化服务中使用。
 
 **类型：** Array&lt;string&gt;
@@ -116,9 +104,7 @@ combinedMediaTypeFilter?: Array<string>
 fileSizeFilter?: FileSizeFilter
 ```
 
-可选择媒体文件大小的过滤配置。
-
-配置该参数时，仅显示配置文件大小范围的媒体文件，建议提示用户仅支持选择指定大小的图片/视频。
+可选择媒体文件大小的过滤配置。配置该参数时，仅显示配置文件大小范围的媒体文件，建议提示用户仅支持选择指定大小的图片/视频。
 
 **类型：** [FileSizeFilter](arkts-medialibrary-photoaccesshelper-filesizefilter-c.md)
 
@@ -176,10 +162,7 @@ picker内宫格捏合模式。
 isMovingPhotoBadgeShown?: boolean
 ```
 
-是否在大图浏览模式下展示动态照片图标，true表示展示，false表示不展示，默认为false。
-
-若设置为true，[Photoselectresult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)返回movingPhotoBadgeStates数组，动态照片默认返回状态为 [MOVING_PHOTO_ENABLED](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)。
-
+是否在大图浏览模式下展示动态照片图标，true表示展示，false表示不展示，默认为false。若设置为true，[Photoselectresult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)返回movingPhotoBadgeStates数组，动态照片默认返回状态为 [MOVING_PHOTO_ENABLED](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)。  
 **注意：** 必须同时使用isMovingPhotoBadgeShown和MovingPhotoBadgeStateType判断照片是否是动态照片。
 
 **类型：** boolean
@@ -288,11 +271,7 @@ MIMEType?: PhotoViewMIMETypes
 mimeTypeFilter?: MimeTypeFilter
 ```
 
-文件类型的过滤配置，支持指定多个类型过滤。
-
-当配置mimeTypeFilter参数时，MIMEType的配置自动失效。
-
-配置该参数时，仅显示配置过滤类型对应的媒体文件，建议提示用户仅支持选择指定类型的图片/视频。
+文件类型的过滤配置，支持指定多个类型过滤。当配置mimeTypeFilter参数时，MIMEType的配置自动失效。配置该参数时，仅显示配置过滤类型对应的媒体文件，建议提示用户仅支持选择指定类型的图片/视频。
 
 **类型：** [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)
 
@@ -310,9 +289,7 @@ mimeTypeFilter?: MimeTypeFilter
 photoViewMimeTypeFileSizeFilters?: Array<PhotoViewMimeTypeFileSizeFilter>
 ```
 
-指定媒体文件类型和文件大小进行过滤。
-
-配置该参数时，仅取数组前三个参数进行处理，MIMETypes和fileSizeFilter自动失效。
+指定媒体文件类型和文件大小进行过滤。配置该参数时，仅取数组前三个参数进行处理，MIMETypes和fileSizeFilter自动失效。
 
 **类型：** Array&lt;[PhotoViewMimeTypeFileSizeFilter](arkts-medialibrary-photoaccesshelper-photoviewmimetypefilesizefilter-c.md)&gt;
 
@@ -424,9 +401,7 @@ singleSelectionMode?: SingleSelectionMode
 videoDurationFilter?: VideoDurationFilter
 ```
 
-可选择媒体文件视频时长的过滤配置。
-
-配置该参数时，仅显示配置视频时长范围的媒体文件，建议提示用户仅支持选择指定时长视频。
+可选择媒体文件视频时长的过滤配置。配置该参数时，仅显示配置视频时长范围的媒体文件，建议提示用户仅支持选择指定时长视频。
 
 **类型：** [VideoDurationFilter](arkts-medialibrary-photoaccesshelper-videodurationfilter-c.md)
 

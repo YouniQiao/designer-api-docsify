@@ -1,8 +1,6 @@
 # SeekMode
 
-视频跳转模式选项。
-
-@enum { number }
+视频跳转模式选项。@enum { number }
 
 **起始版本：** 23
 

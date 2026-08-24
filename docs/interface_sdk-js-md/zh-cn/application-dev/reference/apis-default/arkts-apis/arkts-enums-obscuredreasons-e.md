@@ -1,8 +1,6 @@
 # ObscuredReasons
 
-ObscuredReasons.
-
-@enum { number }
+ObscuredReasons.@enum { number }
 
 **起始版本：** 23
 

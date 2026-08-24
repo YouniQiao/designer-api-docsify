@@ -22,12 +22,8 @@ import { errorManager } from '@kit.AbilityKit';
 instanceName: string
 ```
 
-Name of a VM instance.
-
-**NOTE：**
-
-Rules for the **instanceName** field in exceptions in the TaskPool thread:
-
+Name of a VM instance.  
+**NOTE：**Rules for the **instanceName** field in exceptions in the TaskPool thread:
 - **globalErrorOccurred** events: identified as "TaskPool Thread + method name". - **globalUnhandledRejectionDetected** events: identified as "TaskPool Thread + task name". - If identified as "TaskPool Thread" only, the exception occurs within an asynchronous callback.
 
 **Type:** string

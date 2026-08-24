@@ -11,11 +11,6 @@ Return value of the callback that intercepts the soft keyboard started from edit
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## customKeyboard
@@ -60,11 +55,7 @@ Type of the **Enter** key on the system soft keyboard. For details about the val
 useSystemKeyboard: boolean
 ```
 
-Whether to use the system's default soft keyboard.
-
-The value **true** means to use the system's default soft keyboard, and **false** means the opposite.
-
-Default value: **true**.
+Whether to use the system's default soft keyboard.The value **true** means to use the system's default soft keyboard, and **false** means the opposite.Default value: **true**.
 
 **Type:** boolean
 

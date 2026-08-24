@@ -1,8 +1,6 @@
 # Placement
 
-Placement enumeration description
-
-@enum { number }
+Placement enumeration description@enum { number }
 
 **Since:** 23
 

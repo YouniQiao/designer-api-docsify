@@ -24,7 +24,7 @@ Obtains the system time zone in synchronous mode.
 
 | Type | Description |
 | --- | --- |
-| string | System time zone. For details, see Supported System Time Zones . |
+| string | System time zone. For details, see Supported System Time Zones. |
 
 **Examples**
 

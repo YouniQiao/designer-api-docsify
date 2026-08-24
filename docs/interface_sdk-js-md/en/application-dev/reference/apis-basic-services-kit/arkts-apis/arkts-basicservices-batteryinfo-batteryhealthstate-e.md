@@ -1,8 +1,6 @@
 # BatteryHealthState
 
-Enumerates battery health states.
-
-@enum { int }
+Enumerates battery health states.@enum { int }
 
 **Since:** 23
 

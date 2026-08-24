@@ -11,9 +11,7 @@
 export declare function sendMouseEvent(event: MouseEvent): boolean
 ```
 
-发送鼠标事件。
-
-此接口仅用于对应用的测试。由于耗时长，不建议使用。
+发送鼠标事件。此接口仅用于对应用的测试。由于耗时长，不建议使用。
 
 **起始版本：** 23
 

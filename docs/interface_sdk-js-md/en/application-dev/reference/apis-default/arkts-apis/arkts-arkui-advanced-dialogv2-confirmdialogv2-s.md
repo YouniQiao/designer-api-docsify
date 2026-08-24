@@ -1,12 +1,12 @@
 # ConfirmDialogV2
 
-Declare CustomDialog ConfirmDialogV2
-
-@struct { ConfirmDialogV2 }
+Declare CustomDialog ConfirmDialogV2@struct { ConfirmDialogV2 }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct ConfirmDialogV2--><!--Device-unnamed-export declare struct ConfirmDialogV2-End-->
 
@@ -20,8 +20,7 @@ Declare CustomDialog ConfirmDialogV2
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +40,7 @@ The method to build component.
 ## checked
 
 ```TypeScript
-@Param
-  checked?: boolean
+checked?: boolean
 ```
 
 Sets the ConfirmDialogV2 checkbox state.
@@ -51,6 +51,8 @@ Sets the ConfirmDialogV2 checkbox state.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConfirmDialogV2-@Param  checked?: boolean--><!--Device-ConfirmDialogV2-@Param  checked?: boolean-End-->
@@ -60,8 +62,7 @@ Sets the ConfirmDialogV2 checkbox state.
 ## checkTips
 
 ```TypeScript
-@Param
-  checkTips?: ResourceStr
+checkTips?: ResourceStr
 ```
 
 Sets the ConfirmDialogV2 checkbox tips.
@@ -72,6 +73,8 @@ Sets the ConfirmDialogV2 checkbox tips.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConfirmDialogV2-@Param  checkTips?: ResourceStr--><!--Device-ConfirmDialogV2-@Param  checkTips?: ResourceStr-End-->
@@ -81,8 +84,7 @@ Sets the ConfirmDialogV2 checkbox tips.
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
 Sets the ConfirmDialogV2 content.
@@ -93,6 +95,8 @@ Sets the ConfirmDialogV2 content.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConfirmDialogV2-@Param  content?: ResourceStr--><!--Device-ConfirmDialogV2-@Param  content?: ResourceStr-End-->
@@ -102,8 +106,7 @@ Sets the ConfirmDialogV2 content.
 ## onCheckedChange
 
 ```TypeScript
-@Param
-  onCheckedChange?: AdvancedDialogV2OnCheckedChange
+onCheckedChange?: AdvancedDialogV2OnCheckedChange
 ```
 
 Sets the ConfirmDialogV2 CheckBox Callback.
@@ -114,6 +117,8 @@ Sets the ConfirmDialogV2 CheckBox Callback.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConfirmDialogV2-@Param  onCheckedChange?: AdvancedDialogV2OnCheckedChange--><!--Device-ConfirmDialogV2-@Param  onCheckedChange?: AdvancedDialogV2OnCheckedChange-End-->
@@ -123,8 +128,7 @@ Sets the ConfirmDialogV2 CheckBox Callback.
 ## primaryButton
 
 ```TypeScript
-@Param
-  primaryButton?: AdvancedDialogV2Button
+primaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the ConfirmDialogV2 primary button.
@@ -135,6 +139,8 @@ Sets the ConfirmDialogV2 primary button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConfirmDialogV2-@Param  primaryButton?: AdvancedDialogV2Button--><!--Device-ConfirmDialogV2-@Param  primaryButton?: AdvancedDialogV2Button-End-->
@@ -144,8 +150,7 @@ Sets the ConfirmDialogV2 primary button.
 ## secondaryButton
 
 ```TypeScript
-@Param
-  secondaryButton?: AdvancedDialogV2Button
+secondaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the ConfirmDialogV2 secondary button.
@@ -156,6 +161,8 @@ Sets the ConfirmDialogV2 secondary button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConfirmDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button--><!--Device-ConfirmDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button-End-->
@@ -165,9 +172,7 @@ Sets the ConfirmDialogV2 secondary button.
 ## title
 
 ```TypeScript
-@Require
-  @Param
-  title: ResourceStr
+title: ResourceStr
 ```
 
 Sets the ConfirmDialogV2 title.
@@ -177,6 +182,8 @@ Sets the ConfirmDialogV2 title.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

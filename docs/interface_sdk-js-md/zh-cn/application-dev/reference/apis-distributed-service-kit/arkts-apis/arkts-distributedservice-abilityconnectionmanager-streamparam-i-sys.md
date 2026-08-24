@@ -1,8 +1,6 @@
 # StreamParam（系统接口）
 
-Streaming configuration parameters.
-
-@interface StreamParam
+Streaming configuration parameters.@interface StreamParam
 
 **起始版本：** 23
 

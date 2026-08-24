@@ -1,8 +1,6 @@
 # EncodeIntoUint8ArrayInfo
 
-Return encoded text.
-
-@interface EncodeIntoUint8ArrayInfo
+Return encoded text.@interface EncodeIntoUint8ArrayInfo
 
 **Since:** 23
 

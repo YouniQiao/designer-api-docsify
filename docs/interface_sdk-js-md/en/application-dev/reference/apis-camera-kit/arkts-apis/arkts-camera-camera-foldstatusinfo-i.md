@@ -12,7 +12,6 @@ Describes the fold state information about a foldable device.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## foldStatus

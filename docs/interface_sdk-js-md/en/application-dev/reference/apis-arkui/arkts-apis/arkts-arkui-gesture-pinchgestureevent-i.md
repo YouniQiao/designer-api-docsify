@@ -1,8 +1,6 @@
 # PinchGestureEvent
 
-Defines event info for pinch gesture.
-
-@extends BaseGestureEvent @interface PinchGestureEvent
+Defines event info for pinch gesture.@extends BaseGestureEvent @interface PinchGestureEvent
 
 **Inheritance/Implementation:** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md)
 

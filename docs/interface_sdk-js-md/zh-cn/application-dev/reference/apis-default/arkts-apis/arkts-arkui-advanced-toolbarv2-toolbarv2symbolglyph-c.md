@@ -6,6 +6,8 @@ ToolBarV2SymbolGlyph定义Symbol图标的属性。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2SymbolGlyph--><!--Device-unnamed-export declare class ToolBarV2SymbolGlyph-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,19 +44,18 @@ ToolBarV2SymbolGlyph的构造函数。
 ## activated
 
 ```TypeScript
-@Trace
-  public activated?: SymbolGlyphModifier
+public activated?: SymbolGlyphModifier
 ```
 
-工具栏symbol图标激活态样式。
-
-默认值：fontColor：\$r('sys.color.icon_emphasize')，fontSize：24vp。
+工具栏symbol图标激活态样式。默认值：fontColor：\$r('sys.color.icon_emphasize')，fontSize：24vp。
 
 **类型：** [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +66,7 @@ ToolBarV2SymbolGlyph的构造函数。
 ## normal
 
 ```TypeScript
-@Trace
-  public normal: SymbolGlyphModifier
+public normal: SymbolGlyphModifier
 ```
 
 工具栏symbol图标普通态样式。
@@ -76,6 +76,8 @@ ToolBarV2SymbolGlyph的构造函数。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

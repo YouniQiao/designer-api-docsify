@@ -2,12 +2,9 @@
 
 Describes a region, which is used to describe the region where the shape can be drawn.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 12.&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -261,7 +258,7 @@ Constructs a rectangular region.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | left | int | Yes | Left position of the rectangle (X coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| top | int | Yes | Top position of the rectangle (Y coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin , while a negative value places the point above the coordinate origin. |
+| top | int | Yes | Top position of the rectangle (Y coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 | right | int | Yes | Right position of the rectangle (X coordinate of the lower right corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
 | bottom | int | Yes | Bottom position of the rectangle (Y coordinate of the lower right corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 
@@ -976,7 +973,7 @@ Checks whether this region is the same as a single rectangle and contains the sp
 | left | int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 | top | int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 | right | int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| bottom | int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
+| bottom | int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 
 **Return value:**
 
@@ -1038,7 +1035,7 @@ Checks whether a rectangle do not intersect with this region. Actually, this API
 | left | int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 | top | int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 | right | int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| bottom | int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
+| bottom | int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 
 **Return value:**
 
@@ -1266,7 +1263,7 @@ Sets a rectangle.
 | left | int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 | top | int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 | right | int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| bottom | int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
+| bottom | int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 
 **Return value:**
 

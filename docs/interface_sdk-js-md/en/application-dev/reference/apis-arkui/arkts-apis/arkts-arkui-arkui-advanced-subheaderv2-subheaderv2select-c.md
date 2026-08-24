@@ -4,6 +4,8 @@ Defines the content and events for selection.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class SubHeaderV2Select--><!--Device-unnamed-export declare class SubHeaderV2Select-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,25 +43,20 @@ A constructor used to create a **SubHeaderV2SelectOptions** object.
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  defaultFocus?: boolean
+defaultFocus?: boolean
 ```
 
-Whether the drop-down button is the default focus.
-
-**true**: The drop-down button is the default focus.
-
-**false**: The drop-down button is not the default focus.
-
-Default value: **false**
-
-Decorator: @Trace
+Whether the drop-down button is the default focus.  
+**true**: The drop-down button is the default focus.  
+**false**: The drop-down button is not the default focus.Default value: **false**Decorator: @Trace
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +69,7 @@ Decorator: @Trace
 ## id
 
 ```TypeScript
-@Trace
-  id?: string
+id?: string
 ```
 
 Set the id for the SubHeaderV2Select.
@@ -81,6 +77,8 @@ Set the id for the SubHeaderV2Select.
 **Type:** string
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,8 +91,7 @@ Set the id for the SubHeaderV2Select.
 ## onSelect
 
 ```TypeScript
-@Trace
-  onSelect?: SubHeaderV2SelectOnSelect
+onSelect?: SubHeaderV2SelectOnSelect
 ```
 
 Sets the onSelect of the SubHeaderV2SelectOptions.
@@ -102,6 +99,8 @@ Sets the onSelect of the SubHeaderV2SelectOptions.
 **Type:** [SubHeaderV2SelectOnSelect](../../apis-default/arkts-apis/arkts-subheaderv2selectonselect-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,8 +113,7 @@ Sets the onSelect of the SubHeaderV2SelectOptions.
 ## options
 
 ```TypeScript
-@Trace
-  options: SelectOption[]
+options: SelectOption[]
 ```
 
 Sets the options of the SubHeaderV2SelectOptions.
@@ -123,6 +121,8 @@ Sets the options of the SubHeaderV2SelectOptions.
 **Type:** SelectOption[]
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -135,8 +135,7 @@ Sets the options of the SubHeaderV2SelectOptions.
 ## selectedContent
 
 ```TypeScript
-@Trace
-  selectedContent?: ResourceStr
+selectedContent?: ResourceStr
 ```
 
 Sets the selected content of the SubHeaderV2SelectOptions.
@@ -144,6 +143,8 @@ Sets the selected content of the SubHeaderV2SelectOptions.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,8 +157,7 @@ Sets the selected content of the SubHeaderV2SelectOptions.
 ## selectedIndex
 
 ```TypeScript
-@Trace
-  selectedIndex?: number
+selectedIndex?: number
 ```
 
 Sets the selected index of the SubHeaderV2SelectOptions.
@@ -165,6 +165,8 @@ Sets the selected index of the SubHeaderV2SelectOptions.
 **Type:** number
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,7 +12,6 @@ Defines a struct for notifying subscribers of the shared configuration changes, 
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## type

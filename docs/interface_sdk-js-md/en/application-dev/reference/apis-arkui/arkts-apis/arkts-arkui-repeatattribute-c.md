@@ -23,13 +23,10 @@ each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>
 
 Component generator. When the return value of [.templateId()](#templateid) does not match any [.template()](#template) type (that is, the current item does not match any defined template style), the data item is processed using **.each()**.
 
-> **NOTE：**
-> 
-> - The **each** property is mandatory. If it is omitted, runtime errors will occur.
-> 
+> **NOTE：**&gt;
+> - The **each** property is mandatory. If it is omitted, runtime errors will occur.&gt;
 > - The **itemGenerator** parameter is of the **RepeatItem** type, which combines **item** and **index**. Do not
-> destructure **RepeatItem**.
-> 
+> destructure **RepeatItem**.&gt;
 > - This API cannot be called within attributeModifier.
 
 **Since:** 12
@@ -72,8 +69,7 @@ key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>
 
 Key generator.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API cannot be called within attributeModifier.
 
 **Since:** 12
@@ -118,8 +114,7 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 
 Renders the corresponding template child component based on the template type.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API cannot be called within attributeModifier.
 
 **Since:** 12
@@ -168,8 +163,7 @@ templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>
 
 Assigns a template type for this data item.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API cannot be called within attributeModifier.
 
 **Since:** 12
@@ -218,8 +212,7 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>
 
 Enables virtual scrolling for **Repeat**.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API cannot be called within attributeModifier.
 
 **Since:** 12

@@ -4,6 +4,8 @@ Defines the title settings for the subheader.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class SubHeaderV2Title--><!--Device-unnamed-export declare class SubHeaderV2Title-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ A constructor used to create a **SubHeaderV2Title** object.
 ## id
 
 ```TypeScript
-@Trace
-  id?: string
+id?: string
 ```
 
 Set the id of the title.
@@ -50,6 +51,8 @@ Set the id of the title.
 **Type:** string
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ Set the id of the title.
 ## primaryTitle
 
 ```TypeScript
-@Trace
-  primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
 The first line text of content area.
@@ -71,6 +73,8 @@ The first line text of content area.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +87,7 @@ The first line text of content area.
 ## primaryTitleModifier
 
 ```TypeScript
-@Trace
-  primaryTitleModifier?: TextModifier
+primaryTitleModifier?: TextModifier
 ```
 
 Text modifier for primary title.
@@ -92,6 +95,8 @@ Text modifier for primary title.
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +109,7 @@ Text modifier for primary title.
 ## secondaryTitle
 
 ```TypeScript
-@Trace
-  secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
 The secondary line text of content area.
@@ -113,6 +117,8 @@ The secondary line text of content area.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +131,7 @@ The secondary line text of content area.
 ## secondaryTitleModifier
 
 ```TypeScript
-@Trace
-  secondaryTitleModifier?: TextModifier
+secondaryTitleModifier?: TextModifier
 ```
 
 Text modifier for secondary title.
@@ -134,6 +139,8 @@ Text modifier for secondary title.
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,21 +153,16 @@ Text modifier for secondary title.
 ## titleAccessibilityText
 
 ```TypeScript
-@Trace
-  titleAccessibilityText?: ResourceStr
+titleAccessibilityText?: ResourceStr
 ```
 
-Customized content to be read in the title.
-
-Default value: **undefined**
-
-If the value is **undefined**, the title content displayed by the component is read by default.
-
-Decorator: @Trace
+Customized content to be read in the title.Default value: **undefined**If the value is **undefined**, the title content displayed by the component is read by default.Decorator: @Trace
 
 **Type:** ResourceStr
 
 **Since:** 23
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,8 +1,6 @@
 # FormColorMode (System API)
 
-Form color mode.
-
-@enum { int }
+Form color mode.@enum { int }
 
 **Since:** 23
 

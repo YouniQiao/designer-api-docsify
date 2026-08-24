@@ -20,9 +20,7 @@ import { continueManager } from '@kit.AbilityKit';
 resultInfo?: string
 ```
 
-操作结果的说明。
-
-此接口仅可在Stage模型下使用。
+操作结果的说明。此接口仅可在Stage模型下使用。
 
 **类型：** string
 

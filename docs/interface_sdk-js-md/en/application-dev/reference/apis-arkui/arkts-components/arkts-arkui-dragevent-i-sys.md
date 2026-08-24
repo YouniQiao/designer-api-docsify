@@ -53,11 +53,9 @@ executeFollowHandMorphDropAnimation(onAnimationFinished: Callback<void>, animati
 
 Sets a callback to be executed after the follow-hand morph drop animation is completed. This callback is triggered by the system after the drag framework animation ends. This callback uses an asynchronous callback.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. This API takes effect only when [dragAnimationType](#draganimationtype) is
-> set to **DragAnimationType.FOLLOW_HAND_MORPH**.
-> 
+> set to **DragAnimationType.FOLLOW_HAND_MORPH**.&gt;
 > 2. Do not implement logic unrelated to the animation in the callback to avoid affecting execution efficiency.
 
 **Since:** 26.0.0
@@ -83,10 +81,7 @@ Sets a callback to be executed after the follow-hand morph drop animation is com
 dragAnimationType?: DragAnimationType
 ```
 
-Sets the drag animation type. This attribute can only be set during the [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) phase and can be obtained in the [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart), [onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter), [onDragMove](arkts-arkui-commonmethod-c.md#ondragmove), [onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave), onDrop, and [onDragEnd](arkts-arkui-commonmethod-c.md#ondragend) callbacks.
-
-Default value: **DEFAULT**
-
+Sets the drag animation type. This attribute can only be set during the [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) phase and can be obtained in the [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart), [onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter), [onDragMove](arkts-arkui-commonmethod-c.md#ondragmove), [onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave), onDrop, and [onDragEnd](arkts-arkui-commonmethod-c.md#ondragend) callbacks.Default value: **DEFAULT**  
 **System API:** This is a system API.
 
 **Type:** [DragAnimationType](arkts-arkui-draganimationtype-e-sys.md)

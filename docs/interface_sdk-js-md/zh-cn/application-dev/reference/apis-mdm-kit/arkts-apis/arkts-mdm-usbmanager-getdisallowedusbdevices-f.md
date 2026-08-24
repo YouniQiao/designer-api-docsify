@@ -12,10 +12,8 @@ import { usbManager } from '@kit.MDMKit';
 function getDisallowedUsbDevices(admin: Want): Array<UsbDeviceType>
 ```
 
-获取禁止使用的USB设备类型。
-
-**使用场景**：
-
+获取禁止使用的USB设备类型。  
+**使用场景**：  
 - 设备管理员需要查看当前禁止使用的USB设备类型列表 - 在修改禁用名单前，需要先获取现有名单进行比对 - 管理界面需要展示当前的USB设备类型禁用策略配置
 
 **起始版本：** 14
@@ -87,10 +85,8 @@ try {
 function getDisallowedUsbDevices(admin: Want | null): Array<UsbDeviceType>
 ```
 
-获取禁止使用的USB设备类型。
-
-**使用场景**：
-
+获取禁止使用的USB设备类型。  
+**使用场景**：  
 - 设备管理员需要查看当前禁止使用的USB设备类型列表 - 在修改禁用名单前，需要先获取现有名单进行比对 - 管理界面需要展示当前的USB设备类型禁用策略配置
 
 **起始版本：** 26.0.0

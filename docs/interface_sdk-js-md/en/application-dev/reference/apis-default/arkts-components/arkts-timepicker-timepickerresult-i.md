@@ -1,8 +1,6 @@
 # TimePickerResult
 
-Defines the struct of TimePickerResult.
-
-@interface TimePickerResult
+Defines the struct of TimePickerResult.@interface TimePickerResult
 
 **Since:** 23
 

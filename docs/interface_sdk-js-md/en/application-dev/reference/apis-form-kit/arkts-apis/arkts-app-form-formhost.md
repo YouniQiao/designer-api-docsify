@@ -27,7 +27,7 @@ import { formHost } from '@kit.FormKit';
 | [acquireFormData](arkts-form-formhost-acquireformdata-f-sys.md) | Requests data from the widget provider. This API uses a promise to return the result. |
 | [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md) | Obtains the widget state. This API uses an asynchronous callback to return the result. |
 | [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md) | Obtains the widget state. This API uses a promise to return the result. |
-| [addForm](arkts-form-formhost-addform-f-sys.md) | Add a form. |
+| [addForm](arkts-form-formhost-addform-f-sys.md) | Add a form.You can use this method to create a theme form. |
 | [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md) | Converts a temporary widget to a normal one. This API uses an asynchronous callback to return the result. |
 | [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md) | Converts a temporary widget to a normal one. This API uses a promise to return the result. |
 | [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md) | Clears the router proxy set for widgets. This API uses an asynchronous callback to return the result. |
@@ -66,11 +66,11 @@ import { formHost } from '@kit.FormKit';
 | [off_formUninstall](arkts-form-formhost-offformuninstall-f-sys.md) | Unsubscribes from widget uninstall events. This API uses an asynchronous callback to return the result. |
 | [off_getFormRect](arkts-form-formhost-offgetformrect-f-sys.md) | Unsubscribes from the event of requesting widget position and dimension. This API uses an asynchronous callback to return the result. |
 | [off_getLiveFormStatus](arkts-form-formhost-offgetliveformstatus-f-sys.md) | Cancels Listening to the event of get live form status. |
-| [offChangeSceneAnimationState](arkts-form-formhost-offchangesceneanimationstate-f-sys.md) | Cancels listening to the event of change scene animation state. |
+| [offChangeSceneAnimationState](arkts-form-formhost-offchangesceneanimationstate-f-sys.md) | Cancels listening to the event of change scene animation state.You can use this method to cancel listening to the event of change scene animation state. |
 | [offDeleteFormsCallback](arkts-form-formhost-offdeleteformscallback-f-sys.md) | Unregister the callback for deleting forms. |
-| [offFormOverflow](arkts-form-formhost-offformoverflow-f-sys.md) | Cancels listening to the event of formOverflow. |
-| [offFormUninstall](arkts-form-formhost-offformuninstall-f-sys.md) | Cancels listening to the event of uninstall form. |
-| [offGetFormRect](arkts-form-formhost-offgetformrect-f-sys.md) | Cancels listening to the event of get form rect. |
+| [offFormOverflow](arkts-form-formhost-offformoverflow-f-sys.md) | Cancels listening to the event of formOverflow.You can use this method to cancel listening to the event of formOverflow. |
+| [offFormUninstall](arkts-form-formhost-offformuninstall-f-sys.md) | Cancels listening to the event of uninstall form.You can use this method to cancel listening to the event of uninstall form. |
+| [offGetFormRect](arkts-form-formhost-offgetformrect-f-sys.md) | Cancels listening to the event of get form rect.You can use this method to cancel listening to the event of get form rect. |
 | [offGetLiveFormStatus](arkts-form-formhost-offgetliveformstatus-f-sys.md) | Cancels Listening to the event of get live form status. |
 | [offGetWantParamsCallback](arkts-form-formhost-offgetwantparamscallback-f-sys.md) | Unregister callback of getting the want parameters of the form. |
 | [offTemplateFormDetailInfoChange](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md) | Unsubscribes from changes in the static configuration information of template widgets. This API uses an asynchronous callback to return the result. |
@@ -80,11 +80,11 @@ import { formHost } from '@kit.FormKit';
 | [on_formUninstall](arkts-form-formhost-onformuninstall-f-sys.md) | Subscribes to widget uninstall events. This API uses an asynchronous callback to return the result. |
 | [on_getFormRect](arkts-form-formhost-ongetformrect-f-sys.md) | Subscribes to the event of requesting widget position and dimension. This API uses an asynchronous callback to return the result. |
 | [on_getLiveFormStatus](arkts-form-formhost-ongetliveformstatus-f-sys.md) | Listens to the event of get live form status. |
-| [onChangeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) | Listens to the event of change scene animation state. |
+| [onChangeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) | Listens to the event of change scene animation state.You can use this method to listen to the event of change scene animation state. |
 | [onDeleteFormsCallback](arkts-form-formhost-ondeleteformscallback-f-sys.md) | Register the callback for deleting forms. |
-| [onFormOverflow](arkts-form-formhost-onformoverflow-f-sys.md) | Listens to the event of formOverflow. |
-| [onFormUninstall](arkts-form-formhost-onformuninstall-f-sys.md) | Listens to the event of uninstall form. |
-| [onGetFormRect](arkts-form-formhost-ongetformrect-f-sys.md) | Listens to the event of get form rect. |
+| [onFormOverflow](arkts-form-formhost-onformoverflow-f-sys.md) | Listens to the event of formOverflow.You can use this method to listen to the event of formOverflow. |
+| [onFormUninstall](arkts-form-formhost-onformuninstall-f-sys.md) | Listens to the event of uninstall form.You can use this method to listen to the event of uninstall form. |
+| [onGetFormRect](arkts-form-formhost-ongetformrect-f-sys.md) | Listens to the event of get form rect.You can use this method to listen to the event of get form rect. |
 | [onGetLiveFormStatus](arkts-form-formhost-ongetliveformstatus-f-sys.md) | Listens to the event of get live form status. |
 | [onGetWantParamsCallback](arkts-form-formhost-ongetwantparamscallback-f-sys.md) | Register callback of getting the want parameters of the form. |
 | [onTemplateFormDetailInfoChange](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md) | Subscribes to changes in the static configuration information of template widgets. This API uses an asynchronous callback to return the result. |

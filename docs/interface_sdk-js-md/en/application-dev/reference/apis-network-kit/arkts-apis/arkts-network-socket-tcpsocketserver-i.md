@@ -22,8 +22,7 @@ close(): Promise<void>
 
 Stops listening for events of the **TCPSocketServer** object and releases the port bound by [listen](#listen). If [listen](#listen) has been called for multiple times, all listening ports of the **TCPSocketServer** object are released when this API is called. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API does not close existing connections. To close connections, call the
 > [close](arkts-network-socket-tcpsocketconnection-i.md#close) API of
 > [TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md).
@@ -360,8 +359,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **TCPSocketServer** connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 12
@@ -640,16 +638,13 @@ getSocketFd(): Promise<int>
 
 Obtains the file descriptor bound to the TCPSocketServer listening port. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This method can be called only after the
 > [listen](#listen) method is
 > successfully called. When listen is called for multiple times, the file descriptor bound to the latest
-> listening port is obtained.
-> 
+> listening port is obtained.&gt;
 > - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after
-> close is called).
-> 
+> close is called).&gt;
 > - The lifecycle of the file descriptor is managed by the system. The application can use the
 > [close](#close) method to close the socket connection, instead of directly
 > operating the file descriptor.
@@ -995,8 +990,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 Obtains the status of a TCP socket server connection. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -1355,8 +1349,7 @@ getState(): Promise<SocketStateBase>
 
 Obtains the status of a TCP socket server connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -1393,8 +1386,7 @@ listen(address: NetAddress, callback: AsyncCallback<void>): void
 
 Binds the IP address and port number. The port number can be specified or randomly allocated by the system. The server listens to and accepts TCP socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The server uses this API to perform the **bind**, **listen**, and **accept** operations. If the **bind**
 > operation fails, the system randomly allocates a port number.
 
@@ -1552,8 +1544,7 @@ listen(address: NetAddress): Promise<void>
 
 Binds the IP address and port number. The port number can be specified or randomly allocated by the system. The server listens to and accepts TCP socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The server uses this API to perform the **bind**, **listen**, and **accept** operations. If the **bind**
 > operation fails, the system randomly allocates a port number.
 
@@ -1713,8 +1704,7 @@ on(type: 'connect', callback: Callback<TCPSocketConnection>): void
 
 Subscribes to **connect** events of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -1769,8 +1759,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to **error** events of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -1825,8 +1814,7 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 
 Sets other properties of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -2343,8 +2331,7 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 Sets other properties of the **TCPSocketServer** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10

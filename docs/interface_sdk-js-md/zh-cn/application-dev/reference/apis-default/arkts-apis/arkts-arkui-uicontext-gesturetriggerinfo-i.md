@@ -1,8 +1,6 @@
 # GestureTriggerInfo
 
-特定手势回调函数触发时的信息。
-
-@interface GestureTriggerInfo
+特定手势回调函数触发时的信息。@interface GestureTriggerInfo
 
 **起始版本：** 26.0.0
 

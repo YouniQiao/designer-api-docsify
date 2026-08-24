@@ -1,8 +1,6 @@
 # ReminderMode
 
-ReminderMode, include NONE, TOAST and MASK
-
-@enum { int } ReminderMode
+ReminderMode, include NONE, TOAST and MASK@enum { int } ReminderMode
 
 **Since:** 26.0.0
 

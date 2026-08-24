@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## attestKeyItem
@@ -13,11 +12,8 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-Attests a key. This API uses an asynchronous callback to return the result.
-
-<!--RP6-->   
-> **NOTE：**
-> 
+Attests a key. This API uses an asynchronous callback to return the result.<!--RP6-->  
+> **NOTE：**&gt;
 > The certificate chain generated during non-anonymous certificate key attestation may contain the device
 > identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
 > determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention
@@ -244,11 +240,8 @@ async function attestKey() {
 function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Attests a key. This API uses a promise to return the result.
-
-<!--RP6-->   
-> **NOTE：**
-> 
+Attests a key. This API uses a promise to return the result.<!--RP6-->  
+> **NOTE：**&gt;
 > The certificate chain generated during non-anonymous certificate key attestation may contain the device
 > identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
 > determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention

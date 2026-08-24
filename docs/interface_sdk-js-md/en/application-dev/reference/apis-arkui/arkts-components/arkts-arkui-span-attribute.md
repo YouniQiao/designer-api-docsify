@@ -1,10 +1,6 @@
 # Span properties/events
 
-Inherited from [BaseSpan](arkts-arkui-basespan-c.md).
-
-Among universal events, only onClick click events and onHover hover events are supported.
-
-@extends CommonMethod&lt;SpanAttribute&gt; [since 7 - 10] @extends BaseSpan&lt;SpanAttribute&gt; [since 11]
+Inherited from [BaseSpan](arkts-arkui-basespan-c.md).Among universal events, only onClick click events and onHover hover events are supported.@extends CommonMethod&lt;SpanAttribute&gt; [since 7 - 10] @extends BaseSpan&lt;SpanAttribute&gt; [since 11]
 
 **Inheritance/Implementation:** SpanAttribute extends BaseSpan<SpanAttribute>
 

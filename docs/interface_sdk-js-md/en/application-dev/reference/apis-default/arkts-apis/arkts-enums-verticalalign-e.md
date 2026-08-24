@@ -1,8 +1,6 @@
 # VerticalAlign
 
-VerticalAlign enumeration description
-
-@enum { number }
+VerticalAlign enumeration description@enum { number }
 
 **Since:** 23
 

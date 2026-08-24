@@ -1,8 +1,6 @@
 # PartnerAgentExtensionContext
 
-Class for the context of the PartnerAgentExtensionAbility.
-
-@extends ExtensionContext
+Class for the context of the PartnerAgentExtensionAbility.@extends ExtensionContext
 
 **Inheritance/Implementation:** PartnerAgentExtensionContext extends ExtensionContext
 

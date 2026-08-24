@@ -2,8 +2,7 @@
 
 The module provides the capability to manage startup tasks in [AppStartup](../../../application-models/app-startup.md). The APIs of this module can be called only on the main thread.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This module supports .so file preloading since API version 18.
 
 **Since:** 23
@@ -30,7 +29,7 @@ import { startupManager } from '@kit.AbilityKit';
 | [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md) | Obtains specific startup task result. |
 | [isStartupTaskInitialized](arkts-ability-startupmanager-isstartuptaskinitialized-f.md) | Checks whether a startup task or .so file preloading task is initialized. |
 | [removeAllStartupTaskResults](arkts-ability-startupmanager-removeallstartuptaskresults-f.md) | Removes all startup task results. If there are preloading tasks for .so files, the corresponding .so files is set to the unloaded state. However, .so files that have already been loaded in the cache will not be removed. |
-| [removeStartupTaskResult](arkts-ability-startupmanager-removestartuptaskresult-f.md) | Removes the initialization result of a startup task or .so file preloading task. |
+| [removeStartupTaskResult](arkts-ability-startupmanager-removestartuptaskresult-f.md) | Removes the initialization result of a startup task or .so file preloading task.  - If a startup task name is passed, the initialization result of that startup task is removed. - If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not removed. |
 | [run](arkts-ability-startupmanager-run-f.md) | Runs startup tasks or loads .so files. |
 | [run](arkts-ability-startupmanager-run-f.md) | Runs startup tasks or loads .so files. You can specify [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) for loading startup tasks. This API uses a promise to return the result. |
 

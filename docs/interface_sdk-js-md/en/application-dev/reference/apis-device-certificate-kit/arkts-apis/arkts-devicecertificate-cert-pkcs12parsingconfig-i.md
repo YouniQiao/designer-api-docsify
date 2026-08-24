@@ -12,8 +12,6 @@ Represents the configuration for parsing P12.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## needsCert
@@ -62,8 +60,7 @@ Whether to obtain other certificates. The default value is **false**. **true**: 
 needsPrivateKey?: boolean
 ```
 
-Whether to obtain the private key. The default value is **true**.
-
+Whether to obtain the private key. The default value is **true**.  
 **true**: To obtain the private key in PKCS #8 format; **false**: Not to obtain the private key.
 
 **Type:** boolean
@@ -104,8 +101,7 @@ privateKeyFormat?: EncodingBaseFormat
 
 Format of the private key to be obtained. Currently, the PEM and DER formats are supported. If this parameter is not specified, the PEM format is used by default.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This parameter is valid only when **needsPrivateKey** is set to **true**.
 
 **Type:** [EncodingBaseFormat](arkts-devicecertificate-cert-encodingbaseformat-e.md)

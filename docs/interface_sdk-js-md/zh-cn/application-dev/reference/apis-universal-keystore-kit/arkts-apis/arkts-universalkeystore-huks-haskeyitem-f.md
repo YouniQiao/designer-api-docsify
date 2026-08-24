@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## hasKeyItem
@@ -13,9 +12,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void
 ```
 
-判断密钥是否存在。使用callback异步回调。
-
-若密钥不存在，则通过callback返回false。
+判断密钥是否存在。使用callback异步回调。若密钥不存在，则通过callback返回false。
 
 **起始版本：** 11
 
@@ -97,9 +94,7 @@ huks.hasKeyItem(keyAlias, emptyOptions).then((data) => {
 function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 ```
 
-判断密钥是否存在。使用Promise异步回调。
-
-若密钥不存在，则通过Promise返回false。
+判断密钥是否存在。使用Promise异步回调。若密钥不存在，则通过Promise返回false。
 
 **起始版本：** 11
 

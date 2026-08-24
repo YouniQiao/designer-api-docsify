@@ -22,8 +22,7 @@ static create(options: AnimatorOptions): AnimatorResult
 
 Creates an **AnimatorResult** object for animations.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md), which ensures that the object is created in the intended UI instance.

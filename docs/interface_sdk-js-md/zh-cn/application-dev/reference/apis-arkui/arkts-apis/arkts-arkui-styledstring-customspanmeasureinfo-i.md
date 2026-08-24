@@ -16,9 +16,7 @@
 fontSize: double
 ```
 
-设置文本字体大小。
-
-单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+设置文本字体大小。单位：fp
 
 **类型：** double
 

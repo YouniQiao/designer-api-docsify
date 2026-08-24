@@ -1,8 +1,6 @@
 # ModifierKey
 
-Modifier key for hot key.
-
-@enum { number }
+Modifier key for hot key.@enum { number }
 
 **Since:** 23
 

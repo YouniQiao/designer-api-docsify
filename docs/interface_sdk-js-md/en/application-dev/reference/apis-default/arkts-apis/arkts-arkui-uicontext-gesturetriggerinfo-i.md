@@ -1,8 +1,6 @@
 # GestureTriggerInfo
 
-The information when one gesture specific callback is triggered.
-
-@interface GestureTriggerInfo
+The information when one gesture specific callback is triggered.@interface GestureTriggerInfo
 
 **Since:** 26.0.0
 

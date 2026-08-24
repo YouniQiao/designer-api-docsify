@@ -1,8 +1,6 @@
 # GeoCodeRequest
 
-Configuring parameters in geocode requests
-
-@interface GeoCodeRequest
+Configuring parameters in geocode requests@interface GeoCodeRequest
 
 **Since:** 7
 

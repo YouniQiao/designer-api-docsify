@@ -1,8 +1,6 @@
 # Marquee属性/事件
 
-除支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)外，还支持以下属性。
-
-除支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)外，还支持以下事件。
+除支持通用属性外，还支持以下属性。除支持通用事件外，还支持以下事件。
 
 **继承/实现关系：** MarqueeAttribute extends CommonMethod<MarqueeAttribute>
 
@@ -143,10 +141,7 @@ fontWeight(value: number | FontWeight | string)
 marqueeUpdateStrategy(value: MarqueeUpdateStrategy)
 ```
 
-跑马灯组件属性更新后，跑马灯的滚动策略。(当跑马灯为播放状态，且文本内容宽度大于等于跑马灯组件宽度时，该属性生效。)未通过该接口设置时，默认使用MarqueeUpdateStrategy.DEFAULT。
-
-使用场景：
-
+跑马灯组件属性更新后，跑马灯的滚动策略。(当跑马灯为播放状态，且文本内容宽度大于等于跑马灯组件宽度时，该属性生效。)未通过该接口设置时，默认使用MarqueeUpdateStrategy.DEFAULT。使用场景：  
 - MarqueeUpdateStrategy.DEFAULT：适用于内容更新后希望以默认策略重新开始滚动展示的场景。 - MarqueeUpdateStrategy.PRESERVE_POSITION：适用于内容动态更新时希望保持当前滚动位置继续滚动的场景，如实时时钟、股价等动态内容展示。
 
 **起始版本：** 12
@@ -243,9 +238,7 @@ onStart(event: () => void)
 onStop(event: Callback<void> | undefined)
 ```
 
-跑马灯滚动结束或停止时触发回调。
-
-跑马灯停止表示跑马灯将从开始位置，重新开始循环，不包含暂停场景，暂停不会触发该回调。
+跑马灯滚动结束或停止时触发回调。跑马灯停止表示跑马灯将从开始位置，重新开始循环，不包含暂停场景，暂停不会触发该回调。
 
 **起始版本：** 26.0.0
 

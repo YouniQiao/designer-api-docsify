@@ -6,6 +6,8 @@ Declare type OperateIconV2
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class OperateIconV2--><!--Device-unnamed-export declare class OperateIconV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ The constructor of OperateIconV2.
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of the icon.
@@ -54,6 +55,8 @@ The accessibilityDescription of the icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateIconV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateIconV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -63,8 +66,7 @@ The accessibilityDescription of the icon.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 The accessibilityLevel of the icon.
@@ -77,6 +79,8 @@ The accessibilityLevel of the icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateIconV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateIconV2-@Trace  public accessibilityLevel?: string-End-->
@@ -86,8 +90,7 @@ The accessibilityLevel of the icon.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of the icon.
@@ -98,6 +101,8 @@ The accessibilityText of the icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateIconV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateIconV2-@Trace  public accessibilityText?: ResourceStr-End-->
@@ -107,8 +112,7 @@ The accessibilityText of the icon.
 ## action
 
 ```TypeScript
-@Trace
-  public action?: OnActionCallback
+public action?: OnActionCallback
 ```
 
 Callback function when operate the icon.
@@ -119,6 +123,8 @@ Callback function when operate the icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateIconV2-@Trace  public action?: OnActionCallback--><!--Device-OperateIconV2-@Trace  public action?: OnActionCallback-End-->
@@ -128,8 +134,7 @@ Callback function when operate the icon.
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 The content of text or the address of symbol.
@@ -140,6 +145,8 @@ The content of text or the address of symbol.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateIconV2-@Trace  public symbolStyle?: SymbolGlyphModifier--><!--Device-OperateIconV2-@Trace  public symbolStyle?: SymbolGlyphModifier-End-->
@@ -149,8 +156,7 @@ The content of text or the address of symbol.
 ## value
 
 ```TypeScript
-@Trace
-  public value: ResourceStr
+public value: ResourceStr
 ```
 
 The content of text or the address of icon.
@@ -160,6 +166,8 @@ The content of text or the address of icon.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

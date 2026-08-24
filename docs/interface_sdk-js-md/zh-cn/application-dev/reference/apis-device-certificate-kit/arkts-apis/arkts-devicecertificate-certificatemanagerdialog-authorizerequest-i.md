@@ -56,12 +56,7 @@ certTypes: Array<CertificateType>
 issuers?: Array<Uint8Array>
 ```
 
-表示以DER格式编码的证书颁发者，用于筛选凭据授权对话框中的证书列表，仅显示匹配的证书。
-
-如果issuers数组中存在长度为0的元素，则issuers筛选器不会生效。
-
-数组最大长度为20。
-
+表示以DER格式编码的证书颁发者，用于筛选凭据授权对话框中的证书列表，仅显示匹配的证书。如果issuers数组中存在长度为0的元素，则issuers筛选器不会生效。数组最大长度为20。
 26.0.0
 
 **类型：** Array&lt;Uint8Array&gt;

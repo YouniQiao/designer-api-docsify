@@ -1,8 +1,6 @@
 # SaveDescription
 
-Enumerates the text that can be displayed on the save button.
-
-@enum { int }
+Enumerates the text that can be displayed on the save button.@enum { int }
 
 **Since:** 23
 

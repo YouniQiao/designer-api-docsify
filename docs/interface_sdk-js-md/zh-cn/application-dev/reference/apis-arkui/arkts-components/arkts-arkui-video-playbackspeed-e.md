@@ -1,8 +1,6 @@
 # PlaybackSpeed
 
-视频播放倍速选项。
-
-@enum { string }
+视频播放倍速选项。@enum { string }
 
 **起始版本：** 23
 

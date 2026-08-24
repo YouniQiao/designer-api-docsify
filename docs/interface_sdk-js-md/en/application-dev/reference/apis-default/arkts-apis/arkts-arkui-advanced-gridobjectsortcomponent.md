@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [GridObjectSortComponent](arkts-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponent-s.md) | *GridObjectSortComponent** is a grid object organizer that you can use to edit, drag to sort, add, and delete grid objects. |
+| [GridObjectSortComponent](arkts-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponent-s.md) | **GridObjectSortComponent** is a grid object organizer that you can use to edit, drag to sort, add, and delete grid objects. |
 
 ### Interfaces
 

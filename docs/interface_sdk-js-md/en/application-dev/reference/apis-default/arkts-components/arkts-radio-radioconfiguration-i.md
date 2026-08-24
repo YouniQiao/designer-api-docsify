@@ -1,8 +1,6 @@
 # RadioConfiguration
 
-RadioConfiguration used by radio Configuration
-
-@extends CommonConfiguration&lt;RadioConfiguration&gt; @interface RadioConfiguration
+RadioConfiguration used by radio Configuration@extends CommonConfiguration&lt;RadioConfiguration&gt; @interface RadioConfiguration
 
 **Inheritance/Implementation:** RadioConfiguration extends CommonConfiguration<RadioConfiguration>
 

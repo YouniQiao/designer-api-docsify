@@ -41,9 +41,7 @@ dateOptions?: DateOptions
 displayMode?: DisplayMode
 ```
 
-选择器的显示模式。
-
-默认值：DisplayMode.DATE
+选择器的显示模式。默认值：DisplayMode.DATE
 
 **类型：** [DisplayMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
 

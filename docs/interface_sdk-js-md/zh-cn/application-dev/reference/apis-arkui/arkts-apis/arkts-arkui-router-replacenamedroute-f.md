@@ -14,16 +14,14 @@ function replaceNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<
 
 用指定的命名路由页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../../ui/arkts-navigation-architecture.md)。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
 > [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)
 > 替代。replaceNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
-> 
+> [getRouter](arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter)获取
+> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。&gt;
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [getRouter](arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter)方法获取当前UI上下文关联的
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
@@ -162,16 +160,14 @@ function replaceNamedRoute(options: NamedRouterOptions): Promise<void>
 
 用指定的命名路由页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../../ui/arkts-navigation-architecture.md)。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
 > [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)替代。
 > replaceNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
-> 
+> [getRouter](arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter)获取
+> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。&gt;
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [getRouter](arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter)方法获取当前UI上下文关联的
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
@@ -221,16 +217,14 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode, callba
 
 用指定的命名路由页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../../ui/arkts-navigation-architecture.md)。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
 > [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)
 > 替代。replaceNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
-> 
+> [getRouter](arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter)获取
+> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。&gt;
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [getRouter](arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter)方法获取当前UI上下文关联的
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
@@ -276,16 +270,14 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promi
 
 用指定的命名路由页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../../ui/arkts-navigation-architecture.md)。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
 > [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)
 > 替代。replaceNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
-> 
+> [getRouter](arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter)获取
+> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。&gt;
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [getRouter](arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter)方法获取当前UI上下文关联的
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10

@@ -21,12 +21,7 @@
 displayX?: number
 ```
 
-鼠标光标或手写笔位置在当前应用屏幕坐标系中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
+鼠标光标或手写笔位置在当前应用屏幕坐标系中的X坐标。单位：vp取值范围：[0, +∞)  
 **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
@@ -47,12 +42,7 @@ displayX?: number
 displayY?: number
 ```
 
-鼠标光标或手写笔位置在当前应用屏幕坐标系中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
+鼠标光标或手写笔位置在当前应用屏幕坐标系中的Y坐标。单位：vp取值范围：[0, +∞)  
 **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
@@ -73,11 +63,7 @@ displayY?: number
 globalDisplayX?: number
 ```
 
-鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。单位：vp取值范围：[0, +∞)
 
 **类型：** number
 
@@ -97,11 +83,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。单位：vp取值范围：[0, +∞)
 
 **类型：** number
 
@@ -121,8 +103,7 @@ globalDisplayY?: number
 stopPropagation: () => void
 ```
 
-阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
-
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。  
 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** () =&gt; void
@@ -143,12 +124,7 @@ stopPropagation: () => void
 windowX?: number
 ```
 
-鼠标光标或手写笔位置在当前应用窗口坐标系中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
+鼠标光标或手写笔位置在当前应用窗口坐标系中的X坐标。单位：vp取值范围：[0, +∞)  
 **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
@@ -169,12 +145,7 @@ windowX?: number
 windowY?: number
 ```
 
-鼠标光标或手写笔位置在当前应用窗口坐标系中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
+鼠标光标或手写笔位置在当前应用窗口坐标系中的Y坐标。单位：vp取值范围：[0, +∞)  
 **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
@@ -195,12 +166,7 @@ windowY?: number
 x?: number
 ```
 
-鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
+鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。单位：vp取值范围：[0, +∞)  
 **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number
@@ -221,12 +187,7 @@ x?: number
 y?: number
 ```
 
-鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
-
+鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。单位：vp取值范围：[0, +∞)  
 **原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** number

@@ -1,8 +1,6 @@
 # BarrierStyle
 
-barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件。
-
-@interface BarrierStyle
+barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件。@interface BarrierStyle
 
 **起始版本：** 23
 

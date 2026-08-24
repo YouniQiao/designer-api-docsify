@@ -1,8 +1,6 @@
 # LayerMask
 
-Defines the layer mask of a node.
-
-@interface LayerMask
+Defines the layer mask of a node.@interface LayerMask
 
 **Since:** 23
 

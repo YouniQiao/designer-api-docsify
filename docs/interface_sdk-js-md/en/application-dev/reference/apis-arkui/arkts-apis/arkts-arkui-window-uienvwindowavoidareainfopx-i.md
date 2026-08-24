@@ -11,8 +11,6 @@ Describes [environment variable](../../../ui/arkts-env-system-property.md) data 
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 

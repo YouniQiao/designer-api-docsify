@@ -278,9 +278,7 @@ See [convertKey](#convertkey)
 convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 ```
 
-Converts data into an asymmetric key pair. This API returns the result synchronously.
-
-<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Converts data into an asymmetric key pair. This API returns the result synchronously.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -365,8 +363,7 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 Converts data into an asymmetric key pair. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
 > the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
 > encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM
@@ -489,8 +486,7 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
 > the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
 > encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM
@@ -549,7 +545,6 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 > the description of
 > [convertPemKey](#convertpemkey)
 > .
-
 <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
@@ -674,7 +669,6 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 > The precautions for using **convertPemKeySync** are the same as those for
 > [convertPemKey](#convertpemkey)
 > .
-
 <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
@@ -895,9 +889,7 @@ See [generateKeyPair](#generatekeypair)
 generateKeyPairSync(): KeyPair
 ```
 
-Generates a random key pair using this asymmetric key generator. This API returns the result synchronously.
-
-<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a random key pair using this asymmetric key generator. This API returns the result synchronously.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 

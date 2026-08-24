@@ -1,8 +1,6 @@
 # DividerStyleOptions
 
-分割线样式属性集合, 用于描述分割线相关信息。
-
-@interface DividerStyleOptions
+分割线样式属性集合, 用于描述分割线相关信息。@interface DividerStyleOptions
 
 **起始版本：** 23
 

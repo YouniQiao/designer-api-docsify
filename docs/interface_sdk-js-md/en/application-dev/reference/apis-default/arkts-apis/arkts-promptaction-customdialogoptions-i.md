@@ -1,8 +1,6 @@
 # CustomDialogOptions
 
-Dialog's custom content options
-
-@extends BaseDialogOptions @interface CustomDialogOptions
+Dialog's custom content options@extends BaseDialogOptions @interface CustomDialogOptions
 
 **Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-basedialogoptions-i.md)
 

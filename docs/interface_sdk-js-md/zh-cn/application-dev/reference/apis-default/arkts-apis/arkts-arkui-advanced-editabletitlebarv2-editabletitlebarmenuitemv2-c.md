@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class EditableTitleBarMenuItemV2--><!--Device-unnamed-export declare class EditableTitleBarMenuItemV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,19 +44,18 @@ EditableTitleBarMenuItemV2的构造函数。
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
-可访问性描述。此描述用于向用户详细解释当前组件，开发人员应为组件的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的后果。如果组件同时具备文本属性和无障碍说明属性，当组件被选中时，系统将首先播报组件的文本属 性，随后播报无障碍说明属性的内容。
-
-默认值："单指双击即可执行"。
+可访问性描述。此描述用于向用户详细解释当前组件，开发人员应为组件的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的后果。如果组件同时具备文本属性和无障碍说明属性，当组件被选中时，系统将首先播报组件的文本属 性，随后播报无障碍说明属性的内容。默认值："单指双击即可执行"。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,23 +66,10 @@ EditableTitleBarMenuItemV2的构造函数。
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel: string
+public accessibilityLevel: string
 ```
 
-可访问性级别，用于控制当前项是否可被无障碍辅助服务所识别。
-
-支持的值为：
-
-"auto"：当前组件会转换为"yes"。
-
-"yes"：当前组件可被无障碍辅助服务所识别。
-
-"no"：当前组件不可被无障碍辅助服务所识别。
-
-"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。
-
-默认值："auto"
+可访问性级别，用于控制当前项是否可被无障碍辅助服务所识别。支持的值为："auto"：当前组件会转换为"yes"。"yes"：当前组件可被无障碍辅助服务所识别。"no"：当前组件不可被无障碍辅助服务所识别。"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。默认值："auto"
 
 **类型：** string
 
@@ -90,6 +78,8 @@ EditableTitleBarMenuItemV2的构造函数。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -100,19 +90,18 @@ EditableTitleBarMenuItemV2的构造函数。
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
-屏幕阅读器的可访问性文本。当组件不包含文本属性时，屏幕朗读选中此组件时不播报，使用者无法清楚地知道当前选中了什么组件。为了解决此场景，开发人员可为不包含文字信息的组件设置无障碍文本，当屏幕朗读选中此组件时播报无障碍文本的内容。
-
-默认值：有label时默认值为当前项label属性内容，没有设置label时，默认值为" "。
+屏幕阅读器的可访问性文本。当组件不包含文本属性时，屏幕朗读选中此组件时不播报，使用者无法清楚地知道当前选中了什么组件。为了解决此场景，开发人员可为不包含文字信息的组件设置无障碍文本，当屏幕朗读选中此组件时播报无障碍文本的内容。默认值：有label时默认值为当前项label属性内容，没有设置label时，默认值为" "。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -123,8 +112,7 @@ EditableTitleBarMenuItemV2的构造函数。
 ## action
 
 ```TypeScript
-@Trace
-  public action?: OnActionCallback
+public action?: OnActionCallback
 ```
 
 点击菜单项的回调函数。
@@ -135,6 +123,8 @@ EditableTitleBarMenuItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public action?: OnActionCallback--><!--Device-EditableTitleBarMenuItemV2-@Trace  public action?: OnActionCallback-End-->
@@ -144,17 +134,10 @@ EditableTitleBarMenuItemV2的构造函数。
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  public defaultFocus: boolean
+public defaultFocus: boolean
 ```
 
-是否默认获取焦点。
-
-true：获焦。
-
-false：不获焦。
-
-默认值：false。
+是否默认获取焦点。true：获焦。false：不获焦。默认值：false。
 
 **类型：** boolean
 
@@ -163,6 +146,8 @@ false：不获焦。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -173,15 +158,10 @@ false：不获焦。
 ## isEnabled
 
 ```TypeScript
-@Trace
-  public isEnabled: boolean
+public isEnabled: boolean
 ```
 
-是否启用。
-
-默认值：true，表示启用。
-
-isEnabled为false时，表示禁用。
+是否启用。默认值：true，表示启用。isEnabled为false时，表示禁用。
 
 **类型：** boolean
 
@@ -190,6 +170,8 @@ isEnabled为false时，表示禁用。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,8 +182,7 @@ isEnabled为false时，表示禁用。
 ## label
 
 ```TypeScript
-@Trace
-  public label?: ResourceStr
+public label?: ResourceStr
 ```
 
 长按对话框的标签文本。
@@ -212,6 +193,8 @@ isEnabled为false时，表示禁用。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public label?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-@Trace  public label?: ResourceStr-End-->
@@ -221,8 +204,7 @@ isEnabled为false时，表示禁用。
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 Symbol图标样式修饰器，优先级大于value。
@@ -233,6 +215,8 @@ Symbol图标样式修饰器，优先级大于value。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier--><!--Device-EditableTitleBarMenuItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier-End-->
@@ -242,13 +226,10 @@ Symbol图标样式修饰器，优先级大于value。
 ## value
 
 ```TypeScript
-@Trace
-  public value: ResourceStr
+public value: ResourceStr
 ```
 
-图标资源，支持Symbol或Image。
-
-默认值：''。
+图标资源，支持Symbol或Image。默认值：''。
 
 **类型：** ResourceStr
 
@@ -257,6 +238,8 @@ Symbol图标样式修饰器，优先级大于value。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

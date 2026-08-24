@@ -2,8 +2,7 @@
 
 The **brightness** module provides an API for setting the screen brightness.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The APIs provided by this module are system APIs.
 
 **Since:** 23

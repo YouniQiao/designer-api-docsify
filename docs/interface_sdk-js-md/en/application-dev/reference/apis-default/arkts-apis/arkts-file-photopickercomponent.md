@@ -16,12 +16,12 @@
 | [BaseItemInfo](arkts-file-photopickercomponent-baseiteminfo-c.md) | BaseItemInfo |
 | [ClickResult](arkts-file-photopickercomponent-clickresult-c.md) | ClickResult |
 | [CompletedResult](arkts-file-photopickercomponent-completedresult-c.md) | CompletedResult |
-| [ItemInfo](arkts-file-photopickercomponent-iteminfo-c.md) | ItemInfo |
+| [ItemInfo](arkts-file-photopickercomponent-iteminfo-c.md) | ItemInfo@extends BaseItemInfo |
 | [MaxSelected](arkts-file-photopickercomponent-maxselected-c.md) | MaxSelected |
 | [PhotoBrowserInfo](arkts-file-photopickercomponent-photobrowserinfo-c.md) | PhotoBrowserInfo |
 | [PickerController](arkts-file-photopickercomponent-pickercontroller-c.md) | The class for PickerController |
 | [PickerError](arkts-file-photopickercomponent-pickererror-c.md) | PickerError |
-| [PickerOptions](arkts-file-photopickercomponent-pickeroptions-c.md) | PickerOptions Object |
+| [PickerOptions](arkts-file-photopickercomponent-pickeroptions-c.md) | PickerOptions Object@extends photoAccessHelper.BaseSelectOptions |
 | [PreselectedInfo](arkts-file-photopickercomponent-preselectedinfo-c.md) | PreselectedInfo |
 | [SingleLineConfig](arkts-file-photopickercomponent-singlelineconfig-c.md) | Single-Line display mode. |
 | [UpdatablePickerConfigs](arkts-file-photopickercomponent-updatablepickerconfigs-c.md) | UpdatablePickerConfigs |
@@ -30,26 +30,26 @@
 
 | Name | Description |
 | --- | --- |
-| [PhotoPickerComponent](arkts-file-photopickercomponent-photopickercomponent-s.md) | Declare struct PhotoPickerComponent |
+| [PhotoPickerComponent](arkts-file-photopickercomponent-photopickercomponent-s.md) | Declare struct PhotoPickerComponent@struct { PhotoPickerComponent } |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [BadgeType](arkts-file-photopickercomponent-badgetype-e.md) | BadgeType. |
-| [ClickType](arkts-file-photopickercomponent-clicktype-e.md) | ClickType. include SELECTED and DESELECTED |
-| [DataType](arkts-file-photopickercomponent-datatype-e.md) | DataType represents the type of the data set to picker component |
-| [ItemDisplayRatio](arkts-file-photopickercomponent-itemdisplayratio-e.md) | Enumerates the aspect ratios of the grid item display, including 1:1 and the original image's aspect ratio. |
-| [ItemType](arkts-file-photopickercomponent-itemtype-e.md) | ItemType. include CAMERA and THUMBNAIL |
-| [MaxCountType](arkts-file-photopickercomponent-maxcounttype-e.md) | MaxCountType. include TOTAL_MAX_COUNT, PHOTO_MAX_COUNT and VIDEO_MAX_COUNT |
-| [PhotoBrowserRange](arkts-file-photopickercomponent-photobrowserrange-e.md) | PhotoBrowserRange. include ALL and SELECTED_ONLY |
-| [PhotoBrowserUIElement](arkts-file-photopickercomponent-photobrowseruielement-e.md) | PhotoBrowserUIElement. include CHECKBOX and BACK_BUTTON |
-| [PickerColorMode](arkts-file-photopickercomponent-pickercolormode-e.md) | PickerColorMode. include AUTO, LIGHT and DARK |
-| [PickerOrientation](arkts-file-photopickercomponent-pickerorientation-e.md) | PickerOrientation. include VERTICAL and HORIZONTAL |
-| [ReminderMode](arkts-file-photopickercomponent-remindermode-e.md) | ReminderMode, include NONE, TOAST and MASK |
-| [SaveMode](arkts-file-photopickercomponent-savemode-e.md) | Enumeration type of save mode. |
-| [SelectMode](arkts-file-photopickercomponent-selectmode-e.md) | SelectMode. include SINGLE_SELECT and MULTI_SELECT |
-| [VideoPlayerState](arkts-file-photopickercomponent-videoplayerstate-e.md) | VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH |
+| [BadgeType](arkts-file-photopickercomponent-badgetype-e.md) | BadgeType.@enum { int } BadgeType |
+| [ClickType](arkts-file-photopickercomponent-clicktype-e.md) | ClickType. include SELECTED and DESELECTED@enum { int } ClickType |
+| [DataType](arkts-file-photopickercomponent-datatype-e.md) | DataType represents the type of the data set to picker component@enum { int } DataType |
+| [ItemDisplayRatio](arkts-file-photopickercomponent-itemdisplayratio-e.md) | Enumerates the aspect ratios of the grid item display, including 1:1 and the original image's aspect ratio.@enum { int } Grid item display aspect ratio. |
+| [ItemType](arkts-file-photopickercomponent-itemtype-e.md) | ItemType. include CAMERA and THUMBNAIL@enum { int } ItemType |
+| [MaxCountType](arkts-file-photopickercomponent-maxcounttype-e.md) | MaxCountType. include TOTAL_MAX_COUNT, PHOTO_MAX_COUNT and VIDEO_MAX_COUNT@enum { int } MaxCountType |
+| [PhotoBrowserRange](arkts-file-photopickercomponent-photobrowserrange-e.md) | PhotoBrowserRange. include ALL and SELECTED_ONLY@enum { int } PhotoBrowserRange |
+| [PhotoBrowserUIElement](arkts-file-photopickercomponent-photobrowseruielement-e.md) | PhotoBrowserUIElement. include CHECKBOX and BACK_BUTTON@enum { int } PhotoBrowserUIElement |
+| [PickerColorMode](arkts-file-photopickercomponent-pickercolormode-e.md) | PickerColorMode. include AUTO, LIGHT and DARK@enum { int } PickerColorMode |
+| [PickerOrientation](arkts-file-photopickercomponent-pickerorientation-e.md) | PickerOrientation. include VERTICAL and HORIZONTAL@enum { int } PickerOrientation |
+| [ReminderMode](arkts-file-photopickercomponent-remindermode-e.md) | ReminderMode, include NONE, TOAST and MASK@enum { int } ReminderMode |
+| [SaveMode](arkts-file-photopickercomponent-savemode-e.md) | Enumeration type of save mode.@enum { int } SaveMode |
+| [SelectMode](arkts-file-photopickercomponent-selectmode-e.md) | SelectMode. include SINGLE_SELECT and MULTI_SELECT@enum { int } SelectMode |
+| [VideoPlayerState](arkts-file-photopickercomponent-videoplayerstate-e.md) | VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH@enum { int } VideoPlayerState |
 
 ### Types
 

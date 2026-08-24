@@ -1,8 +1,6 @@
 # ClickEvent
 
-The tap action triggers this method invocation.
-
-@extends BaseEvent
+The tap action triggers this method invocation.@extends BaseEvent
 
 **继承/实现关系：** ClickEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 

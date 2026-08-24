@@ -43,9 +43,7 @@ editable(value: boolean | EditMode)
 onSelect(event: (isSelected: boolean) => void)
 ```
 
-ListItem元素被鼠标框选的状态改变时触发回调。
-
-外层List组件设置multiSelectable为true开启鼠标框选，且当前ListItem的 [selectable](#selectable)属性为true时，触发该回调。
+ListItem元素被鼠标框选的状态改变时触发回调。外层List组件设置multiSelectable为true开启鼠标框选，且当前ListItem的 [selectable](#selectable)属性为true时，触发该回调。
 
 **起始版本：** 8
 
@@ -121,8 +119,7 @@ sticky(value: Sticky)
 
 设置ListItem吸顶效果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7

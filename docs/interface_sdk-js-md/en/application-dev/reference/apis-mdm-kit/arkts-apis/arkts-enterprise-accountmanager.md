@@ -2,8 +2,7 @@
 
 This module provides device account management capabilities, including forbidding the creation of local accounts.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
@@ -29,7 +28,7 @@ import { accountManager } from '@kit.MDMKit';
 | --- | --- |
 | [activateOsAccount](arkts-mdm-accountmanager-activateosaccount-f.md) | Switches the system account. Currently, this API is supported only on phones and tablets, and can only switch between normal system accounts created via [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md) and the default system account (ID: 100). |
 | [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md) | Adds an account in the background. This API uses a promise to return the result. This API is applicable to scenarios where enterprises need to create accounts in batches or remotely manage accounts. Accounts can be created without user interaction, improving management efficiency. |
-| [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md) | Creates a normal system account. A maximum of two normal system accounts ( [osAccount.OsAccountType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md)) can be created. |
+| [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md) | Creates a normal system account. A maximum of two normal system accounts ([osAccount.OsAccountType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md)) can be created. |
 | [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md) | Users are not allowed to add accounts. After the API is successfully called, the system forbids the specified user or all users from adding new accounts. This API is applicable to enterprise device management scenarios, such as preventing employees from creating local accounts and enhancing device security management. |
 | [getDomainAccountPolicy](arkts-mdm-accountmanager-getdomainaccountpolicy-f.md) | Obtains the domain account policy. This API is applicable to enterprise management scenarios, such as querying the current domain account policy configuration and auditing policy compliance. |
 | [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md) | Queries whether a user is not allowed to add an account. |

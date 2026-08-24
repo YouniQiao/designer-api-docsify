@@ -6,6 +6,8 @@ Declare component SwipeRefresher @struct { SwipeRefresher }
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct SwipeRefresher--><!--Device-unnamed-export declare struct SwipeRefresher-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declare component SwipeRefresher @struct { SwipeRefresher }
 ## build
 
 ```TypeScript
-@Builder
-    build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## content
 
 ```TypeScript
-@PropRef
-    content?: ResourceStr
+content?: ResourceStr
 ```
 
 Sets the content when loading.
@@ -49,6 +51,8 @@ Sets the content when loading.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SwipeRefresher-@PropRef    content?: ResourceStr--><!--Device-SwipeRefresher-@PropRef    content?: ResourceStr-End-->
@@ -58,8 +62,7 @@ Sets the content when loading.
 ## isLoading
 
 ```TypeScript
-@PropRef
-    isLoading: boolean
+isLoading: boolean
 ```
 
 Whether the component is loading.
@@ -69,6 +72,8 @@ Whether the component is loading.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

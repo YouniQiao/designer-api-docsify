@@ -2,10 +2,8 @@
 
 Provides the capability to set cursor styles.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 12.&gt;
 > - In the following API examples, you must first use [getCursorController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcursorcontroller) in
 > **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
 
@@ -80,8 +78,7 @@ setCursor(value: PointerStyle): void
 
 Sets the cursor style.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
 **Since:** 12
@@ -137,8 +134,7 @@ setCustomCursor(value: image.PixelMap, focusX?: int, focusY?: int): void
 
 Sets the custom cursor style.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
 **Since:** 26.0.0

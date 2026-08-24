@@ -13,8 +13,7 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 
 获取壁纸图片的像素图。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
@@ -71,8 +70,7 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 
 获取壁纸图片的像素图。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7

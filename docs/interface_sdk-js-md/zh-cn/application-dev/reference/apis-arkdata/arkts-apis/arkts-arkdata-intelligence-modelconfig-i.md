@@ -1,8 +1,6 @@
 # ModelConfig
 
-管理嵌入模型的配置信息。
-
-@interface ModelConfig
+管理嵌入模型的配置信息。@interface ModelConfig
 
 **起始版本：** 23
 

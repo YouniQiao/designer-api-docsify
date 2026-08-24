@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ListItemGroupModifier](arkts-listitemgroupmodifier-c.md) | Defines ListItemGroup Modifier |
+| [ListItemGroupModifier](arkts-listitemgroupmodifier-c.md) | Defines ListItemGroup Modifier@implements { ListItemGroupAttribute, AttributeModifier&lt;ListItemGroupAttribute&gt; } |
 

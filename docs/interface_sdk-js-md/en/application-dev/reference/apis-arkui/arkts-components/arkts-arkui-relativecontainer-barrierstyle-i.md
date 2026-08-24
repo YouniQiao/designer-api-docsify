@@ -1,8 +1,6 @@
 # BarrierStyle
 
-Specifies the BarrierStyle of relative container
-
-@interface BarrierStyle
+Specifies the BarrierStyle of relative container@interface BarrierStyle
 
 **Since:** 23
 

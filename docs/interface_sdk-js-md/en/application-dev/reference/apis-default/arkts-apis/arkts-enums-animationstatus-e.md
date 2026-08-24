@@ -1,8 +1,6 @@
 # AnimationStatus
 
-Animation status.
-
-@enum { number }
+Animation status.@enum { number }
 
 **Since:** 23
 

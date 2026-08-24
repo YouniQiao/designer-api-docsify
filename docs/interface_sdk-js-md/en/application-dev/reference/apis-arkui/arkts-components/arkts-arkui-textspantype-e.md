@@ -2,9 +2,8 @@
 
 Provides the span type information.
 
-> **NOTE：**
-> 
-> The system follows the priority order below when determining the menu type to display during text interactions: &gt;
+> **NOTE：**&gt;
+> The system follows the priority order below when determining the menu type to display during text interactions:&gt;
 
 **Since:** 11
 

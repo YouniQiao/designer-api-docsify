@@ -14,8 +14,7 @@ function getGlobalProxyForAccount(admin: Want | null, accountId: number): connec
 
 Obtains the network proxy for a specified user. This API is suitable for network management scenarios in enterprise environments with multiple users, such as auditing user-level network proxy configurations, verifying user network access policies, and troubleshooting user network access issues. It helps enterprises check and verify user-level network management policies.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is used to obtain the proxy configuration of a specified user set by the **setGlobalProxyForAccount**
 > API. To obtain the global proxy configuration that applies to all users, you are advised to use the
 > [getGlobalProxySync](arkts-mdm-networkmanager-getglobalproxysync-f.md) API.

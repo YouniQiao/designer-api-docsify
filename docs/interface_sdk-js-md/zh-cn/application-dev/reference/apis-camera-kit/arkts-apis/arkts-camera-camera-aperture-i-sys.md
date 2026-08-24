@@ -1,8 +1,6 @@
 # Aperture（系统接口）
 
-物理光圈对象。
-
-Aperture继承自ApertureQuery。
+物理光圈对象。Aperture继承自ApertureQuery。
 
 **继承/实现关系：** Aperture extends [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md)
 
@@ -18,7 +16,6 @@ Aperture继承自ApertureQuery。
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getPhysicalAperture

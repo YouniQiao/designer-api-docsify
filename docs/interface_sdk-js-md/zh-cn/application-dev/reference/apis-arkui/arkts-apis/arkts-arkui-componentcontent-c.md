@@ -1,15 +1,9 @@
 # ComponentContent
 
-有两种创建实体封装组件的方式。ComponentContent需要通过update接口手动更新内容，主要适用于弹窗等解耦封装场景；ReactiveComponentContent支持响应式数据自动更新、完整生命周期管理和组件复用，适用 于长列表等高性能渲染场景。开发者可根据实际需求从以下方式中选择。
+有两种创建实体封装组件的方式。ComponentContent需要通过update接口手动更新内容，主要适用于弹窗等解耦封装场景；ReactiveComponentContent支持响应式数据自动更新、完整生命周期管理和组件复用，适用 于长列表等高性能渲染场景。开发者可根据实际需求从以下方式中选择。ComponentContent表示组件内容的实体封装，其对象支持在非UI组件中创建与传递，便于开发者对弹窗类组件进行解耦封装。其底层使用了BuilderNode，具体使用规格参考 BuilderNode。ReactiveComponentContent表示组件内容的实体封装，其对象支持在非UI组件中创建与传递。它支持响应式数据自动更新、完整的生命周期管理和组件复用，适用于长列表等需要高性能渲染的场景。其底层使用了 ReactiveBuilderNode，具体使用规格参考[ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md)。
 
-ComponentContent表示组件内容的实体封装，其对象支持在非UI组件中创建与传递，便于开发者对弹窗类组件进行解耦封装。其底层使用了BuilderNode，具体使用规格参考 BuilderNode。
-
-ReactiveComponentContent表示组件内容的实体封装，其对象支持在非UI组件中创建与传递。它支持响应式数据自动更新、完整的生命周期管理和组件复用，适用于长列表等需要高性能渲染的场景。其底层使用了 ReactiveBuilderNode，具体使用规格参考[ReactiveBuilderNode](../../apis-default/arkts-apis/arkts-buildernode-reactivebuildernode-c.md)。
-
-> **说明：**
-> 
-> - 当前不支持在预览器中使用ComponentContent和ReactiveComponentContent。
-> 
+> **说明：**&gt;
+> - 当前不支持在预览器中使用ComponentContent和ReactiveComponentContent。&gt;
 > - ComponentContent对象不支持使用JSON序列化。
 
 **继承/实现关系：** ComponentContent extends Content
@@ -264,7 +258,7 @@ ComponentContent的构造函数。
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
 | builder | WrappedBuilder&lt;[T]&gt; | 是 | 封装带参builder函数的WrappedBuilder对象。 |
 | args | T | 是 | WrappedBuilder对象封装的builder函数的参数，类型T需与`WrappedBuilder&lt;[T]&gt;`中指定的参数类型保持一致，用于将外部数据传递给builder函数以构建UI 内容。 |
-| options | [BuildOptions](../../apis-default/arkts-apis/arkts-buildernode-buildoptions-i.md) | 是 | 构建配置参数，用于配置Builder的构建行为，BuildOptions中所有属性都是可选的。 |
+| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 | 构建配置参数，用于配置Builder的构建行为，BuildOptions中所有属性都是可选的。 |
 
 **示例**
 
@@ -278,10 +272,9 @@ dispose(): void
 
 立即释放当前ComponentContent对象对[基本概念：实体节点](../../../ui/arkts-user-defined-node.md#基本概念)的引用关系。关于ComponentContent的解绑场景请参见 [解除实体节点引用关系](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当ComponentContent对象调用dispose之后，会与后端实体节点解除引用关系。调用dispose后再次调用该对象的其他接口可能会出现crash或返回默认值，建议在操作节点前通过
-> [isDisposed](#isdisposed)接口检查其有效性。若前端对象ComponentContent无法释放，容易导致内存泄漏。建议在不再需要操作该
+> [isDisposed](../../apis-default/arkts-apis/arkts-componentcontent-c.md#isdisposed)接口检查其有效性。若前端对象ComponentContent无法释放，容易导致内存泄漏。建议在不再需要操作该
 > ComponentContent对象时，开发者主动调用dispose释放后端节点，以减少引用关系的复杂性，降低内存泄漏的风险。
 
 **起始版本：** 12
@@ -466,8 +459,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 设置当前ComponentContent对象是否继承父组件中自定义组件的冻结策略。冻结策略用于控制组件在不活跃状态下是否暂停状态刷新。如果设置继承状态为false，则ComponentContent对象的冻结策略为false。适用 于多页面导航（Navigation）等需要对不活跃组件进行冻结管理的场景。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > ComponentContent设置inheritFreezeOptions为true，且父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或
 > ReactiveComponentContent时，会继承父组件的冻结策略。当子组件为自定义组件时，ComponentContent的冻结策略不会传递给该子组件。
 
@@ -1083,7 +1075,7 @@ struct Index {
 isTransferred(): boolean
 ```
 
-判断ComponentContent是否通过transfer.transferStatic或者transfer.transferDynamic方法创建。如果通过上述两个接口创建，则不支持以下方法： [update](#update)，[dispose](#dispose)， [updateConfiguration](#updateconfiguration)， [inheritFreezeOptions](#inheritfreezeoptions)。
+判断ComponentContent是否通过transfer.transferStatic或者transfer.transferDynamic方法创建。如果通过上述两个接口创建，则不支持以下方法： [update](../../apis-default/arkts-apis/arkts-componentcontent-c.md#update)，[dispose](../../apis-default/arkts-apis/arkts-componentcontent-c.md#dispose)， [updateConfiguration](../../apis-default/arkts-apis/arkts-componentcontent-c.md#updateconfiguration)， [inheritFreezeOptions](#inheritfreezeoptions)。
 
 **起始版本：** 24
 
@@ -1550,7 +1542,7 @@ struct Index {
 reuse(param?: Object): void
 ```
 
-触发ComponentContent中的自定义组件的复用。组件复用请参见[@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。关于 ComponentContent的解绑场景请参见[解除实体节点引用关系](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。 ComponentContent通过reuse和[recycle](#recycle)接口完成其内外自定义组件之间的复用事件传递，具体使用场景请参见 [BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。 从API版本26.0.0开始，ComponentContent中的自定义组件支持V2组件复用，请参见 [@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。
+触发ComponentContent中的自定义组件的复用。组件复用请参见[@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。关于 ComponentContent的解绑场景请参见[解除实体节点引用关系](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。 ComponentContent通过reuse和[recycle](../../apis-default/arkts-apis/arkts-componentcontent-c.md#recycle)接口完成其内外自定义组件之间的复用事件传递，具体使用场景请参见 [BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。 从API版本26.0.0开始，ComponentContent中的自定义组件支持V2组件复用，请参见 [@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。
 
 **起始版本：** 12
 
@@ -1566,7 +1558,7 @@ reuse(param?: Object): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | Object | 否 | 用于复用ComponentContent的参数。该参数将直接用于ComponentContent中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则 会导致未定义行为。调用此方法将同步触发内部自定义组件的 [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)生命周期回调，并 将该参数作为回调的入参。默认值为undefined，此时ComponentContent中的自定义组件将直接使用构造时的数据源。 |
+| param | Object | 否 | 用于复用ComponentContent的参数。该参数将直接用于ComponentContent中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则 会导致未定义行为。调用此方法将同步触发内部自定义组件的 aboutToReuse生命周期回调，并 将该参数作为回调的入参。默认值为undefined，此时ComponentContent中的自定义组件将直接使用构造时的数据源。 |
 
 **示例**
 
@@ -1656,8 +1648,7 @@ updateConfiguration(): void
 
 传递系统环境变化事件，触发节点的全量更新。适用于系统深浅色模式切换、语言变更、字体大小调整等需要节点响应系统配置变化的场景。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > updateConfiguration接口用于通知对象更新当前的系统环境变化。
 
 **起始版本：** 12

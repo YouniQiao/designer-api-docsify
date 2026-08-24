@@ -12,7 +12,6 @@ Defines the data structure of the task information for query. The fields availab
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## bundle

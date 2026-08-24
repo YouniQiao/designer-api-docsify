@@ -12,7 +12,6 @@ Defines the download task configuration.
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## background
@@ -55,8 +54,7 @@ enableMetered?: boolean
 
 Whether download is allowed on a metered connection. The value **true** means the download is allowed, and **false** means the opposite. The default value is **false**.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > In general cases, a mobile data connection is metered, while a Wi-Fi connection is not.
 
 **Type:** boolean
@@ -89,8 +87,7 @@ Whether download is allowed on a roaming network. The value **true** means the d
 filePath?: string
 ```
 
-Path where the downloaded file is stored. The default value is the cache directory of the caller (that is, the input **context**). The default file name is the part truncated from the last slash (/) in the URL.
-
+Path where the downloaded file is stored. The default value is the cache directory of the caller (that is, the input **context**). The default file name is the part truncated from the last slash (/) in the URL.  
 - In the FA model, use the Context.getCacheDir method to obtain the application storage path. - In the Stage model, use the **AbilityContext** class in [Context (Context Base Class of the Stage Model)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) to obtain the file path.
 
 **Type:** string
@@ -123,8 +120,7 @@ Adds an HTTP or HTTPS header to be included with the download request.
 networkType?: int
 ```
 
-Network type that can be used for download. The allowed network type is determined by bitwise operation of [network type constants](arkts-basicservices-request-n.md#constants) . The following settings are supported:
-
+Network type that can be used for download. The allowed network type is determined by bitwise operation of [network type constants](arkts-basicservices-request-n.md#constants). The following settings are supported:  
 - Only the cellular network is supported. The parameter is **NETWORK_MOBILE** or **0x00000001**. - Only WLAN is supported. The parameter is **NETWORK_WIFI** or **0x00010000**. - Both cellular network and WLAN are supported, which is the default settings. The parameter is **NETWORK_MOBILE **
 
 **Type:** int

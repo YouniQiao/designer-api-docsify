@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 
@@ -40,8 +38,7 @@ brightness: double
 dimBehindValue: number
 ```
 
-下层窗口的暗度值。该参数为浮点数，取值范围为[0.0, 1.0]，其取1.0表示最暗。
-
+下层窗口的暗度值。该参数为浮点数，取值范围为[0.0, 1.0]，其取1.0表示最暗。  
 **说明：** 从API version 7开始支持，从API version 9开始废弃，当前无可替代接口。
 
 **类型：** number
@@ -184,11 +181,7 @@ isKeepScreenOn: boolean
 isLayoutFullScreen: boolean
 ```
 
-对于子窗，如果设置了[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)，返回值为true。
-
-对于主窗，如果设置了[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)且处于全屏模式，返回值为true。
-
-其他情况下均返回false
+对于子窗，如果设置了[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)，返回值为true。对于主窗，如果设置了[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)且处于全屏模式，返回值为true。其他情况下均返回false
 
 **类型：** boolean
 
@@ -224,8 +217,7 @@ isPrivacyMode: boolean
 isRoundCorner: boolean
 ```
 
-窗口是否为圆角。true表示窗口为圆角；false表示窗口为非圆角。
-
+窗口是否为圆角。true表示窗口为圆角；false表示窗口为非圆角。  
 **说明：** 从API version 7开始支持，从API version 9开始废弃，当前无可替代接口。
 
 **类型：** boolean
@@ -298,9 +290,7 @@ touchable: boolean
 type: WindowType
 ```
 
-窗口类型。
-
-当前存在主窗使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)接口返回type不准确的问题，开发者在创建窗口时已指明窗 口类型，无需通过getWindowProperties()接口获取窗口类型。
+窗口类型。当前存在主窗使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)接口返回type不准确的问题，开发者在创建窗口时已指明窗 口类型，无需通过getWindowProperties()接口获取窗口类型。
 
 **类型：** WindowType
 

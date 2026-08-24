@@ -34,9 +34,7 @@ No alignment. This is the default value.
 START = 1
 ```
 
-The first item in the view is aligned at the start of the list.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>When the list hits the end, the items at the end must be completely displayed. In this case, the items at the start may not be aligned. </p>
+The first item in the view is aligned at the start of the list.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>When the list hits the end, the items at the end must be completely displayed. In this case, the items at the start may not be aligned. </p>
 
 **Since:** 23
 
@@ -54,9 +52,7 @@ The first item in the view is aligned at the start of the list.
 CENTER = 2
 ```
 
-The middle items in the view are aligned in the center of the list.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>The top and end items can be aligned in the center of the list. In this case, a blank area may result, and the first or last item is aligned to the center of the list. &lt;/pr&gt;
+The middle items in the view are aligned in the center of the list.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>The top and end items can be aligned in the center of the list. In this case, a blank area may result, and the first or last item is aligned to the center of the list. &lt;/pr&gt;
 
 **Since:** 23
 
@@ -74,9 +70,7 @@ The middle items in the view are aligned in the center of the list.
 END = 3
 ```
 
-The last item in the view is aligned at the end of the list.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>When the list hits the start, the items at the start must be completely displayed. In this case, the items at the end may not be aligned. </p>
+The last item in the view is aligned at the end of the list.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>When the list hits the start, the items at the start must be completely displayed. In this case, the items at the end may not be aligned. </p>
 
 **Since:** 23
 

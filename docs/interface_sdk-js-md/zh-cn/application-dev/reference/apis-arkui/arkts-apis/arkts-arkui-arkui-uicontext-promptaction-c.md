@@ -2,12 +2,9 @@
 
 创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。
 
-> **说明：**
-> 
-> - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
-> - 本Class首批接口从API version 10开始支持。
-> 
+> **说明：**&gt;
+> - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。&gt;
+> - 本Class首批接口从API version 10开始支持。&gt;
 > - 以下API需先使用UIContext中的[getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到 PromptAction对象，再通过该对象调用对应方法。
 
 **起始版本：** 10
@@ -483,9 +480,7 @@ struct Index {
 getTopOrder(): LevelOrder
 ```
 
-返回最顶层显示的弹窗的顺序。
-
-获取最顶层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。
+返回最顶层显示的弹窗的顺序。获取最顶层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。
 
 **起始版本：** 18
 
@@ -823,9 +818,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
     options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。
-
-通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示，即相当于customDialog设置customStyle为true时的显示效果。
+创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示，即相当于customDialog设置customStyle为true时的显示效果。
 
 **起始版本：** 18
 
@@ -933,14 +926,10 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。
 
-> **说明：**
-> 
-> - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。
-> 
-> - 由于[updateMenu](#updatemenu)和[closeMenu](#closemenu)依赖content去更新或者关闭指定的menu弹窗，开发者需自行维护传入的content。
-> 
-> - 如果在wrapBuilder中包含其他组件（例如：Popup、 Chip组件），则 [ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor， 其中options参数应传递{ nestingBuilderSupported: true }。
-> 
+> **说明：**&gt;
+> - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。&gt;
+> - 由于[updateMenu](#updatemenu)和[closeMenu](#closemenu)依赖content去更新或者关闭指定的menu弹窗，开发者需自行维护传入的content。&gt;
+> - 如果在wrapBuilder中包含其他组件（例如：Popup、 Chip组件），则 [ComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-c.md)应采用带有四个参数的构造函数constructor， 其中options参数应传递{ nestingBuilderSupported: true }。&gt;
 > - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](#openmenu)设置了showInSubWindow为true时，则不能再弹出另一个设置了 showInSubWindow为true的弹窗。
 
 **起始版本：** 18
@@ -1038,13 +1027,10 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 创建并弹出以content作为内容的Popup弹窗，使用Promise异步回调。
 
-> **说明：**
-> 
-> - 使用该接口时，若未传入有效的target，则无法弹出popup弹窗。
-> 
-> - 由于[updatePopup](#updatepopup)和[closePopup](#closepopup)依赖content去更新或者关闭指定的popup弹窗，开发者需自行维护传入的content。
-> 
-> - 如果在wrapBuilder中包含其他组件（例如：Popup、Chip组件），则[ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
+> **说明：**&gt;
+> - 使用该接口时，若未传入有效的target，则无法弹出popup弹窗。&gt;
+> - 由于[updatePopup](#updatepopup)和[closePopup](#closepopup)依赖content去更新或者关闭指定的popup弹窗，开发者需自行维护传入的content。&gt;
+> - 如果在wrapBuilder中包含其他组件（例如：Popup、Chip组件），则[ComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
 
 **起始版本：** 18
 
@@ -1256,9 +1242,7 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
     options?: promptAction.DialogOptions): Promise<number>
 ```
 
-创建并弹出自定义弹窗。使用Promise异步回调返回对话框的id，可供closeCustomDialog使用。
-
-支持在自定义弹窗内容中持有弹窗ID进行对应操作。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。
+创建并弹出自定义弹窗。使用Promise异步回调返回对话框的id，可供closeCustomDialog使用。支持在自定义弹窗内容中持有弹窗ID进行对应操作。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。
 
 **起始版本：** 18
 
@@ -1942,11 +1926,9 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 更新content对应的Menu弹窗的样式。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、
-> aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。
-> 
+> aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。&gt;
 > - 支持mask通过设置MenuMaskType实现更新蒙层样式，不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。
 
 **起始版本：** 18
@@ -2047,8 +2029,7 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 更新content对应的Popup弹窗的样式，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。
 
 **起始版本：** 18

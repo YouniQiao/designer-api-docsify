@@ -12,7 +12,6 @@ Provides hot swap information about an input device.
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
-import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## deviceId

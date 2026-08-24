@@ -1,8 +1,6 @@
 # TextChangeEventInfo
 
-文本更改事件信息
-
-@interface TextChangeEventInfo
+文本更改事件信息@interface TextChangeEventInfo
 
 **起始版本：** 24
 

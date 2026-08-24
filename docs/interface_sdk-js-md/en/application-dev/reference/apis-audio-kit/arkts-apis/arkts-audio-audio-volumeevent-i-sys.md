@@ -12,7 +12,6 @@ Describes the event received by the application when the volume is changed.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## networkId

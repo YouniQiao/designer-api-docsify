@@ -1,8 +1,6 @@
 # DataType
 
-DataType represents the type of the data set to picker component
-
-@enum { int } DataType
+DataType represents the type of the data set to picker component@enum { int } DataType
 
 **Since:** 26.0.0
 

@@ -319,13 +319,11 @@ connect(url: string, callback: AsyncCallback<boolean>): void
 
 根据URL地址，建立一个WebSocket连接，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
 > [on('open')](#onopen)订阅open事件。
 > 
-> **注意：**
-> 
+> **注意：**&gt;
 > URL地址长度不能超过1024个字符，否则会连接失败。从API version 15开始，URL地址长度限制由1024修改为2048。从API version 26开始，URL地址长度限制由2048修改为8196。
 
 **起始版本：** 23
@@ -481,13 +479,11 @@ connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<b
 
 根据URL地址，建立一个WebSocket连接，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
 > [on('open')](#onopen)订阅open事件。
 > 
-> **注意：**
-> 
+> **注意：**&gt;
 > URL地址长度不能超过1024个字符，否则会连接失败。从API version 15开始，URL地址长度限制由1024修改为2048。从API version 26开始，URL地址长度限制由2048修改为8196。
 
 **起始版本：** 23
@@ -532,13 +528,11 @@ connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>
 
 根据URL地址和header，建立一个WebSocket连接。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
 > [on('open')](#onopen)订阅open事件。
 > 
-> **注意：**
-> 
+> **注意：**&gt;
 > URL地址长度不能超过1024个字符，否则会连接失败。从API version 15开始，URL地址长度限制由1024修改为2048。从API version 26开始，URL地址长度限制由2048修改为8196。
 
 **起始版本：** 23
@@ -588,8 +582,7 @@ off(type: 'close', callback?: AsyncCallback<CloseResult>): void
 
 取消订阅WebSocket的关闭事件，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 6
@@ -624,8 +617,7 @@ off(type: 'dataEnd', callback?: Callback<void>): void
 
 取消订阅WebSocket的数据接收结束事件，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 11
@@ -658,8 +650,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 取消订阅WebSocket的Error事件，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 6
@@ -694,8 +685,7 @@ off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void
 
 取消订阅HTTP Response Header事件，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 12
@@ -728,10 +718,8 @@ off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void
 
 取消订阅WebSocket的接收服务器消息事件，使用callback异步回调。
 
-> **说明：**
-> 
-> AsyncCallback中的数据可以是字符串(API 6)或ArrayBuffer(API 8)。
-> 
+> **说明：**&gt;
+> AsyncCallback中的数据可以是字符串(API 6)或ArrayBuffer(API 8)。&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 6
@@ -766,8 +754,7 @@ off(type: 'open', callback?: AsyncCallback<Object>): void
 
 取消订阅WebSocket的打开事件，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 6
@@ -812,8 +799,7 @@ off(type: 'openInfo', callback?: AsyncCallback<WebSocketOpenInfo>): void
 
 取消订阅WebSocket的打开信息事件，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 26.0.0
@@ -1123,9 +1109,7 @@ ws.on('dataEnd', () => {
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-订阅WebSocket的Error事件，使用callback异步回调。
-
-关于[error](#onopen)事件回调的错误码说明：WebSocket的本质是HTTP协议升级，若 服务器同意升级，服务器会返回101。状态码表示协议从HTTP切换为WebSocket协议（触发open回调），而如果服务器拒绝了升级或出现其他异常，则返回200，表示服务器只是将请求当作普通的HTTP请求来处理。
+订阅WebSocket的Error事件，使用callback异步回调。关于[error](#onopen)事件回调的错误码说明：WebSocket的本质是HTTP协议升级，若 服务器同意升级，服务器会返回101。状态码表示协议从HTTP切换为WebSocket协议（触发open回调），而如果服务器拒绝了升级或出现其他异常，则返回200，表示服务器只是将请求当作普通的HTTP请求来处理。
 
 **起始版本：** 6
 
@@ -1194,8 +1178,7 @@ on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void
 
 订阅WebSocket的接收服务器消息事件，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > AsyncCallback中的数据可以是字符串（API version 6开始支持）或ArrayBuffer（API version 8开始支持）。
 
 **起始版本：** 6
@@ -1519,7 +1502,7 @@ send(data: string | ArrayBuffer, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | 发送的数据。 <br>API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 1024 1024 - 16)，超过该大小会返回401 错误码。 |
+| data | string \| ArrayBuffer | 是 | 发送的数据。 <br>API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 * 1024 * 1024 - 16)，超过该大小会返回401 错误码。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:发送请求创建成功；false:发送请求创建失败。 |
 
 **错误码：**
@@ -1752,7 +1735,7 @@ send(data: string | ArrayBuffer): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | 发送的数据。 <br>API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 1024 1024 - 16)，超过该大小会返回401 错误码。 |
+| data | string \| ArrayBuffer | 是 | 发送的数据。 <br>API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 * 1024 * 1024 - 16)，超过该大小会返回401 错误码。 |
 
 **返回值：**
 

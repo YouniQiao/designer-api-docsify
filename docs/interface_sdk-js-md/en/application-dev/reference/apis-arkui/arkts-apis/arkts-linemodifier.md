@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [LineModifier](arkts-arkui-linemodifier-c.md) | Defines Line Modifier |
+| [LineModifier](arkts-arkui-linemodifier-c.md) | Defines Line Modifier@implements LineAttribute, AttributeModifier&lt;LineAttribute&gt; |
 

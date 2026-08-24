@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Component
+
 <!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 构建组件的方法。
@@ -27,6 +28,8 @@
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,8 +60,7 @@ contentFormData: uniformDataStruct.ContentForm
 ## formHeight
 
 ```TypeScript
-@PropRef
-  formHeight?: double
+formHeight?: double
 ```
 
 卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。
@@ -69,6 +71,8 @@ contentFormData: uniformDataStruct.ContentForm
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentFormCard-@PropRef  formHeight?: double--><!--Device-ContentFormCard-@PropRef  formHeight?: double-End-->
@@ -78,8 +82,7 @@ contentFormData: uniformDataStruct.ContentForm
 ## formType
 
 ```TypeScript
-@PropRef
-  formType: FormType
+formType: FormType
 ```
 
 内容卡片类型，影响内容卡片的大小。
@@ -90,6 +93,8 @@ contentFormData: uniformDataStruct.ContentForm
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentFormCard-@PropRef  formType: FormType--><!--Device-ContentFormCard-@PropRef  formType: FormType-End-->
@@ -99,8 +104,7 @@ contentFormData: uniformDataStruct.ContentForm
 ## formWidth
 
 ```TypeScript
-@PropRef
-  formWidth?: double
+formWidth?: double
 ```
 
 卡片宽度，其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。
@@ -110,6 +114,8 @@ contentFormData: uniformDataStruct.ContentForm
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @PropRef
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

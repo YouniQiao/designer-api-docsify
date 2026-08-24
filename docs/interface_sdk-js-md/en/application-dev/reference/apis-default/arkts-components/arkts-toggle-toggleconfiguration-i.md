@@ -1,8 +1,6 @@
 # ToggleConfiguration
 
-ToggleConfiguration used by toggle Modifier
-
-@extends CommonConfiguration&lt;ToggleConfiguration&gt; @interface ToggleConfiguration
+ToggleConfiguration used by toggle Modifier@extends CommonConfiguration&lt;ToggleConfiguration&gt; @interface ToggleConfiguration
 
 **Inheritance/Implementation:** ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>
 

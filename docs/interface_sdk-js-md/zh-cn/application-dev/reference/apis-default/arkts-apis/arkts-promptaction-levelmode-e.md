@@ -1,8 +1,6 @@
 # LevelMode
 
-弹窗显示层级模式。
-
-@enum { number }
+弹窗显示层级模式。@enum { number }
 
 **起始版本：** 23
 

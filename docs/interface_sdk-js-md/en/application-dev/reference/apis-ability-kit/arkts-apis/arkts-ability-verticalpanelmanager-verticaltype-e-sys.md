@@ -1,8 +1,6 @@
 # VerticalType (System API)
 
-Provides vertical type definition.
-
-@enum { string } VerticalType
+Provides vertical type definition.@enum { string } VerticalType
 
 **Since:** 23
 

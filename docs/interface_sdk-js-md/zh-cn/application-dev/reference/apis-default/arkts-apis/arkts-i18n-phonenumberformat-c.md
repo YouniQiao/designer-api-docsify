@@ -48,8 +48,7 @@ format(phoneNumber: string): string
 
 对电话号码进行格式化。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 12开始，支持对拨号中的电话号码进行格式化。
 
 **起始版本：** 23
@@ -82,8 +81,7 @@ getLocationName(phoneNumber: string, locale: string): string
 
 获取电话号码归属地。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 23开始，支持对拨号中的电话号码实时获取归属地。
 
 **起始版本：** 23

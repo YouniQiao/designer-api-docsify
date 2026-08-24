@@ -1,8 +1,6 @@
 # RotateOption
 
-Set Rotation Parameters.
-
-@interface RotateOption
+Set Rotation Parameters.@interface RotateOption
 
 **Since:** 23
 

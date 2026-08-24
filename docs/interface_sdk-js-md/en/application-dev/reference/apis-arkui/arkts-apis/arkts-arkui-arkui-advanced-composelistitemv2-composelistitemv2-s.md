@@ -4,6 +4,8 @@ Declare ComposeListItemV2
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ComposeListItemV2--><!--Device-unnamed-export declare struct ComposeListItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,8 +19,7 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 ## contentItemV2
 
 ```TypeScript
-@Param
-  contentItemV2?: ContentItemV2
+contentItemV2?: ContentItemV2
 ```
 
 The ContentItem.
@@ -26,6 +27,8 @@ The ContentItem.
 **Type:** [ContentItemV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-contentitemv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +41,7 @@ The ContentItem.
 ## operateItemV2
 
 ```TypeScript
-@Param
-  operateItemV2?: OperateItemV2
+operateItemV2?: OperateItemV2
 ```
 
 The OperateItem.
@@ -47,6 +49,8 @@ The OperateItem.
 **Type:** [OperateItemV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateitemv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

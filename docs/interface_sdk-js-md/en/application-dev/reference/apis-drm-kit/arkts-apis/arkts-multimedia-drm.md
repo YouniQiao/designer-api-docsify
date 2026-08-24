@@ -1,7 +1,6 @@
 # @ohos.multimedia.drm(Defines the DRM capability.)
 
-The Digital Rights Management (DRM) framework enables you to develop digital rights management features for audio and video services. By calling the DRM plugins provided by the system, you can achieve the following:
-
+The Digital Rights Management (DRM) framework enables you to develop digital rights management features for audio and video services. By calling the DRM plugins provided by the system, you can achieve the following:  
 - DRM certificate management: Generate certificate requests and handle certificate responses to facilitate certificate provisioning (downloading). - DRM media key management: Generate media key requests, manage media key responses, and handle offline media keys. - DRM content authorization: Allow DRM plugins to authorize content based on media key permissions. - DRM content decryption: Decrypt DRM content to support media playback functionality.
 
 **Since:** 23

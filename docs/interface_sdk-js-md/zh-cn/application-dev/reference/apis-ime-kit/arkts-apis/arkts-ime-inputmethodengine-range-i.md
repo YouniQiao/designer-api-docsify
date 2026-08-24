@@ -1,6 +1,6 @@
 # Range
 
-@brief 选中的文本范围。
+选中的文本范围。
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 end: int
 ```
 
-@brief 选中文本的末字符在编辑框的索引值。
+选中文本的末字符在编辑框的索引值。
 
 **类型：** int
 
@@ -36,7 +36,7 @@ end: int
 start: int
 ```
 
-@brief 选中文本的首字符在编辑框的索引值。
+选中文本的首字符在编辑框的索引值。
 
 **类型：** int
 

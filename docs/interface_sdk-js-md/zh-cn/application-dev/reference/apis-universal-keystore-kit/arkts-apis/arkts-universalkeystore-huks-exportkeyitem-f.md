@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## exportKeyItem
@@ -15,8 +14,7 @@ function exportKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 
 导出密钥。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 导出[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别公钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
@@ -104,8 +102,7 @@ function exportKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 
 导出密钥。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 导出[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别公钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9

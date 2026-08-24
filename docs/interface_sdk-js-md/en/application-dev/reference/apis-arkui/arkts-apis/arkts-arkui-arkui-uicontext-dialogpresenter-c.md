@@ -97,11 +97,7 @@ Presents a fixed-style dialog box.
 present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>
 ```
 
-Presents a custom-style dialog box with the provided content.
-
-The content parameter accepts CustomBuilder or ComponentContent via union type: - CustomBuilder: Builder function for custom dialog content. - ComponentContent: ComponentContent supporting state-driven updates.
-
-isModal = true and showInSubWindow = true cannot be used at the same time.
+Presents a custom-style dialog box with the provided content.The content parameter accepts CustomBuilder or ComponentContent via union type: - CustomBuilder: Builder function for custom dialog content. - ComponentContent: ComponentContent supporting state-driven updates.isModal = true and showInSubWindow = true cannot be used at the same time.
 
 **Since:** 26.1.0
 

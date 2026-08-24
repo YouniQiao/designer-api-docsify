@@ -340,9 +340,7 @@ off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
 off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-注销密钥请求事件监听。使用callback异步回调。
-
-该接口用于注销已在on('keyRequired')中注册的监听，当播放DRM节目需要获取媒体密钥时触发的事件。
+注销密钥请求事件监听。使用callback异步回调。该接口用于注销已在on('keyRequired')中注册的监听，当播放DRM节目需要获取媒体密钥时触发的事件。
 
 **起始版本：** 11
 
@@ -432,7 +430,7 @@ off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
 offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister expirationUpdate event.
+注销过期更新事件监听。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -444,7 +442,7 @@ Unregister expirationUpdate event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | Used to listen for expiration update event. |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -458,7 +456,7 @@ Unregister expirationUpdate event.
 offKeyExpired(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister keyExpired event.
+注销密钥过期事件监听。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -470,7 +468,7 @@ Unregister keyExpired event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | Used to listen for the key required event. |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -484,7 +482,7 @@ Unregister keyExpired event.
 offKeyRequired(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister keyRequired event.
+注销密钥请求事件监听。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -496,7 +494,7 @@ Unregister keyRequired event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | used to listen for the key required event. |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -510,7 +508,7 @@ Unregister keyRequired event.
 offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
 ```
 
-Unregister keysChange event.
+注销密钥变化事件监听。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -522,7 +520,7 @@ Unregister keysChange event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 否 | Used to listen for keys change event. |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 否 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -536,7 +534,7 @@ Unregister keysChange event.
 offVendorDefined(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister vendorDefined event.
+注销DRM解决方案自定义事件监听。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -548,7 +546,7 @@ Unregister vendorDefined event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | Used to listen for the vendor defined event. |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -712,7 +710,7 @@ on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
 onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register expirationUpdate event.
+监听密钥过期更新事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -724,7 +722,7 @@ Register expirationUpdate event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | Used to listen for expiration update event. |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
@@ -738,7 +736,7 @@ Register expirationUpdate event.
 onKeyExpired(callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register keyExpired event.
+监听密钥过期事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -750,7 +748,7 @@ Register keyExpired event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | Used to listen for the key required event. |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
@@ -764,7 +762,7 @@ Register keyExpired event.
 onKeyRequired(callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register keyRequired event.
+监听密钥请求事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -776,7 +774,7 @@ Register keyRequired event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | used to listen for the key required event. |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
@@ -790,7 +788,7 @@ Register keyRequired event.
 onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
 ```
 
-Register keysChange event.
+监听密钥变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -802,7 +800,7 @@ Register keysChange event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 是 | Used to listen for keys change event. |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 是 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。 |
 
 **错误码：**
 
@@ -816,7 +814,7 @@ Register keysChange event.
 onVendorDefined(callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register vendorDefined event.
+监听DRM解决方案自定义事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -828,7 +826,7 @@ Register vendorDefined event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | Used to listen for the vendor defined event. |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
@@ -892,9 +890,7 @@ mediaKeySession.processMediaKeyResponse(mediaKeyResponse).then((mediaKeyId: Uint
 processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void>
 ```
 
-处理离线媒体密钥释放响应。使用Promise异步回调。
-
-如果设备上的DRM解决方案不支持离线媒体密钥释放，将抛出错误码24700101。
+处理离线媒体密钥释放响应。使用Promise异步回调。如果设备上的DRM解决方案不支持离线媒体密钥释放，将抛出错误码24700101。
 
 **起始版本：** 23
 

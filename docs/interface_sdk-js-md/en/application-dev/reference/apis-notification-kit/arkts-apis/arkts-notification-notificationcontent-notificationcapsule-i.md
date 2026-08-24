@@ -2,8 +2,7 @@
 
 Describes the notification capsule, which is used to display the capsule form in the live view.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Since:** 23

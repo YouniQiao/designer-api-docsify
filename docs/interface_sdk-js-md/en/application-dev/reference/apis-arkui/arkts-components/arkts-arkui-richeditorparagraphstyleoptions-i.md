@@ -1,11 +1,8 @@
 # RichEditorParagraphStyleOptions
 
-Defines the paragraph style options.
+Defines the paragraph style options.Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md).
 
-Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Applicable scope of the API: spans involved in the specified range.
 
 **Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md)

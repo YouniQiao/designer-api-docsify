@@ -1,8 +1,6 @@
 # LocalizedVerticalAlignParam
 
-Defines the localized vertical align param of relative container.
-
-@interface LocalizedVerticalAlignParam
+Defines the localized vertical align param of relative container.@interface LocalizedVerticalAlignParam
 
 **Since:** 12
 

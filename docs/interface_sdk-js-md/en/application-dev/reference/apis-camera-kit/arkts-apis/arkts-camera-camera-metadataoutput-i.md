@@ -14,7 +14,6 @@ MetadataOutput implements metadata streams. It inherits from [CameraOutput](arkt
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## isLockMetadataObjectTrackingSupported
@@ -49,11 +48,9 @@ lockMetadataObjectTracking(point: Point): void
 
 Locks a metadata object (such as a cat or dog face) for tracking.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This function tracks the object pointed to by **point**. If such object does not exist, this function does
-> not take effect.
-> 
+> not take effect.&gt;
 > - Locking for tracking is automatically canceled when the tracked object has left the viewfinder range for more
 > than three seconds or the object is unlocked.
 
@@ -174,8 +171,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to metadata error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
@@ -201,8 +197,7 @@ on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObjec
 
 Subscribes to events indicating available metadata objects. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10

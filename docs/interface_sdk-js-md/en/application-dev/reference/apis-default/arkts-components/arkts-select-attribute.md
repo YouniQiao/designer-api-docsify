@@ -1,8 +1,6 @@
 # SelectAttribute
 
-Defines the Select component attributes.
-
-@extends CommonMethod @interface SelectAttribute
+Defines the Select component attributes.@extends CommonMethod @interface SelectAttribute
 
 **Inheritance/Implementation:** SelectAttribute extends CommonMethod
 
@@ -472,7 +470,7 @@ minKeyboardAvoidDistance(distance: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distance | [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
+| distance | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

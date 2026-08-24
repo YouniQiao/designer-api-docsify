@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct ChipGroupV2--><!--Device-unnamed-export declare struct ChipGroupV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 ChipGroupV2的build函数
@@ -27,6 +28,8 @@ ChipGroupV2的build函数
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +40,7 @@ ChipGroupV2的build函数
 ## $items
 
 ```TypeScript
-@Event
-  $items?: Callback<ChipGroupV2Items>
+$items?: Callback<ChipGroupV2Items>
 ```
 
 ChipV2项目的双向绑定回调方法。
@@ -49,6 +51,8 @@ ChipV2项目的双向绑定回调方法。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Event
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2-@Event  $items?: Callback<ChipGroupV2Items>--><!--Device-ChipGroupV2-@Event  $items?: Callback<ChipGroupV2Items>-End-->
@@ -58,8 +62,7 @@ ChipV2项目的双向绑定回调方法。
 ## $selectedIndexes
 
 ```TypeScript
-@Event
-  $selectedIndexes?: Callback<Array<int>>
+$selectedIndexes?: Callback<Array<int>>
 ```
 
 双向绑定回调方法，为选中的ChipV2项目索引。
@@ -70,6 +73,8 @@ ChipV2项目的双向绑定回调方法。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Event
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2-@Event  $selectedIndexes?: Callback<Array<int>>--><!--Device-ChipGroupV2-@Event  $selectedIndexes?: Callback<Array<int>>-End-->
@@ -79,8 +84,7 @@ ChipV2项目的双向绑定回调方法。
 ## chipGroupPadding
 
 ```TypeScript
-@Param
-  chipGroupPadding?: ChipGroupV2Padding
+chipGroupPadding?: ChipGroupV2Padding
 ```
 
 设置ChipGroupV2的上下内边距
@@ -91,6 +95,8 @@ ChipV2项目的双向绑定回调方法。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2-@Param  chipGroupPadding?: ChipGroupV2Padding--><!--Device-ChipGroupV2-@Param  chipGroupPadding?: ChipGroupV2Padding-End-->
@@ -100,8 +106,7 @@ ChipV2项目的双向绑定回调方法。
 ## chipGroupSpace
 
 ```TypeScript
-@Param
-  chipGroupSpace?: ChipGroupV2Space
+chipGroupSpace?: ChipGroupV2Space
 ```
 
 左右内边距及ChipV2之间间距
@@ -112,6 +117,8 @@ ChipV2项目的双向绑定回调方法。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2-@Param  chipGroupSpace?: ChipGroupV2Space--><!--Device-ChipGroupV2-@Param  chipGroupSpace?: ChipGroupV2Space-End-->
@@ -121,9 +128,7 @@ ChipV2项目的双向绑定回调方法。
 ## items
 
 ```TypeScript
-@Require
-  @Param
-  items: ChipGroupV2Items
+items: ChipGroupV2Items
 ```
 
 每个ChipV2的特定属性
@@ -134,6 +139,8 @@ ChipV2项目的双向绑定回调方法。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Require、@Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2-@Require  @Param  items: ChipGroupV2Items--><!--Device-ChipGroupV2-@Require  @Param  items: ChipGroupV2Items-End-->
@@ -143,8 +150,7 @@ ChipV2项目的双向绑定回调方法。
 ## itemStyle
 
 ```TypeScript
-@Param
-  itemStyle?: ChipGroupV2ItemStyle
+itemStyle?: ChipGroupV2ItemStyle
 ```
 
 ChipV2项样式。
@@ -155,6 +161,8 @@ ChipV2项样式。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2-@Param  itemStyle?: ChipGroupV2ItemStyle--><!--Device-ChipGroupV2-@Param  itemStyle?: ChipGroupV2ItemStyle-End-->
@@ -164,8 +172,7 @@ ChipV2项样式。
 ## multiple
 
 ```TypeScript
-@Param
-  multiple?: boolean
+multiple?: boolean
 ```
 
 是否选中多个ChipV2
@@ -176,6 +183,8 @@ ChipV2项样式。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2-@Param  multiple?: boolean--><!--Device-ChipGroupV2-@Param  multiple?: boolean-End-->
@@ -185,8 +194,7 @@ ChipV2项样式。
 ## onChange
 
 ```TypeScript
-@Event
-  onChange?: Callback<Array<int>>
+onChange?: Callback<Array<int>>
 ```
 
 ChipV2状态改变时的回调方法
@@ -197,6 +205,8 @@ ChipV2状态改变时的回调方法
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Event
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2-@Event  onChange?: Callback<Array<int>>--><!--Device-ChipGroupV2-@Event  onChange?: Callback<Array<int>>-End-->
@@ -206,8 +216,7 @@ ChipV2状态改变时的回调方法
 ## selectedIndexes
 
 ```TypeScript
-@Param
-  selectedIndexes?: Array<int>
+selectedIndexes?: Array<int>
 ```
 
 选择的ChipV2索引。
@@ -218,6 +227,8 @@ ChipV2状态改变时的回调方法
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2-@Param  selectedIndexes?: Array<int>--><!--Device-ChipGroupV2-@Param  selectedIndexes?: Array<int>-End-->
@@ -227,8 +238,7 @@ ChipV2状态改变时的回调方法
 ## suffix
 
 ```TypeScript
-@BuilderParam
-  suffix?: ChipGroupV2SuffixBuilder
+suffix?: ChipGroupV2SuffixBuilder
 ```
 
 将在ChipGroupV2的后缀中渲染的构建器函数。
@@ -238,6 +248,8 @@ ChipV2状态改变时的回调方法
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

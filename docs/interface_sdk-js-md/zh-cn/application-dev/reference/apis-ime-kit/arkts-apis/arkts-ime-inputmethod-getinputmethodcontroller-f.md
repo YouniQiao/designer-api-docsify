@@ -4,11 +4,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## getInputMethodController
@@ -17,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getInputMethodController(): InputMethodController
 ```
 
-@brief 获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。
+获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。
 
 **起始版本：** 6
 

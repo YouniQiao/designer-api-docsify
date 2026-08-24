@@ -1,8 +1,7 @@
 # TextInput
 
 The **TextInput** component provides single-line text input.
-
-> **NOTE** > > This component supports plain text only. For rich text, use the RichEditor component.
+> **NOTE**>> This component supports plain text only. For rich text, use the RichEditor component.
 
 ## Child Components
 

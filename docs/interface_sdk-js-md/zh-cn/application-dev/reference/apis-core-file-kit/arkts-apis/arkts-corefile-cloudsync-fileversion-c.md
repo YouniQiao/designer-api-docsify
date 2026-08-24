@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## clearFileConflict
@@ -257,11 +256,7 @@ fileVersion.downloadHistoryVersion(uri, versionId, callback).then<string>((fileU
 getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>
 ```
 
-获取历史版本列表，返回内容按修改时间排序，修改时间越早，位置越靠后。使用Promise异步回调。
-
-当云上版本数量小于传入的长度限制时，按照实际版本数量返回历史版本列表。
-
-当云上版本数量大于等于传入的长度限制时，则返回最新的versionNumLimit个版本。
+获取历史版本列表，返回内容按修改时间排序，修改时间越早，位置越靠后。使用Promise异步回调。当云上版本数量小于传入的长度限制时，按照实际版本数量返回历史版本列表。当云上版本数量大于等于传入的长度限制时，则返回最新的versionNumLimit个版本。
 
 **起始版本：** 23
 
@@ -343,9 +338,7 @@ fileVersion.getHistoryVersionList(uri, limit).then<Array<cloudSync.HistoryVersio
 isFileConflict(uri: string): Promise<boolean>
 ```
 
-获取本地文件版本冲突标志。使用Promise异步回调。此方法只有应用在配置手动解冲突后才会生效，否则默认自动解冲突，返回值为false，由同步流程自动完成解冲突；
-
-当应用配置手动解冲突后，调用此方法会返回当前文件是否与云侧文件产生冲突，并且由应用提示用户对冲突进行处理，在冲突解决前不会再自动同步上云。当处理完冲突后，需要调用 [clearFileConflict](#clearfileconflict)方法来清除冲突标志，后续才会继续触发同步，与云端保持一致。
+获取本地文件版本冲突标志。使用Promise异步回调。此方法只有应用在配置手动解冲突后才会生效，否则默认自动解冲突，返回值为false，由同步流程自动完成解冲突；当应用配置手动解冲突后，调用此方法会返回当前文件是否与云侧文件产生冲突，并且由应用提示用户对冲突进行处理，在冲突解决前不会再自动同步上云。当处理完冲突后，需要调用 [clearFileConflict](#clearfileconflict)方法来清除冲突标志，后续才会继续触发同步，与云端保持一致。
 
 **起始版本：** 23
 

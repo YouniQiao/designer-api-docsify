@@ -1,8 +1,6 @@
 # DecodeToStringOptions
 
-Defines the decode with stream related options parameters.
-
-@interface DecodeToStringOptions
+Defines the decode with stream related options parameters.@interface DecodeToStringOptions
 
 **Since:** 23
 

@@ -1,10 +1,10 @@
 # ProgressButtonV2Color
 
-下载按钮颜色选项。
-
-设备行为差异：该接口在Wearable设备上使用时，应用程序运行异常，异常信息中提示接口未定义，在其他设备中可正常调用。
+下载按钮颜色选项。设备行为差异：该接口在Wearable设备上使用时，应用程序运行异常，异常信息中提示接口未定义，在其他设备中可正常调用。
 
 **起始版本：** 18
+
+**装饰器类型：** @ObservedV2
 
 <!--Device-unnamed-export declare class ProgressButtonV2Color--><!--Device-unnamed-export declare class ProgressButtonV2Color-End-->
 
@@ -22,9 +22,7 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 constructor(options: ProgressButtonV2ColorOptions)
 ```
 
-下载按钮颜色选项构造函数。
-
-设备行为差异：该接口在Wearable设备上使用时，应用程序运行异常，异常信息中提示接口未定义，在其他设备中可正常调用。
+下载按钮颜色选项构造函数。设备行为差异：该接口在Wearable设备上使用时，应用程序运行异常，异常信息中提示接口未定义，在其他设备中可正常调用。
 
 **起始版本：** 18
 
@@ -44,15 +42,13 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 ## backgroundColor
 
-```TypeScript
-@Trace public backgroundColor?: ColorMetrics
-```
-
 按钮背景颜色。<br/>默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,15 +60,13 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 ## borderColor
 
-```TypeScript
-@Trace public borderColor?: ColorMetrics
-```
-
 按钮描边颜色。<br/>默认值：#330A59F7<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,15 +78,13 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 ## progressColor
 
-```TypeScript
-@Trace public progressColor?: ColorMetrics
-```
-
 进度条颜色。<br/>默认值：#330A59F7<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,15 +96,13 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 ## textColor
 
-```TypeScript
-@Trace public textColor?: ColorMetrics
-```
-
 按钮文本颜色。<br/>默认值：系统默认值，#CE000000<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,8 +1,6 @@
 # LayeredDrawableDescriptor
 
-Use the LayeredDrawableDescriptor class to get the foreground, the background and the mask DrawableDescriptor.
-
-@extends DrawableDescriptor
+Use the LayeredDrawableDescriptor class to get the foreground, the background and the mask DrawableDescriptor.@extends DrawableDescriptor
 
 **Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-drawabledescriptor-c.md)
 

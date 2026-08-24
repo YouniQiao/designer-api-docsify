@@ -1,8 +1,6 @@
 # BorderOptions
 
-Defines the options of border.
-
-@interface BorderOptions
+Defines the options of border.@interface BorderOptions
 
 **起始版本：** 12
 

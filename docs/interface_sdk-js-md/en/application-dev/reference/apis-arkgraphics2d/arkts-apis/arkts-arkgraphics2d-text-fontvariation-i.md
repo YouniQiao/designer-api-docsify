@@ -20,7 +20,7 @@ import { text } from '@kit.ArkGraphics2D';
 axis: string
 ```
 
-Keyword identifier in the variable font property key-value pair, such as 'wght' (weight), 'wdth' (width), and ' ital' (italic).
+Keyword identifier in the variable font property key-value pair, such as 'wght' (weight), 'wdth' (width), and 'ital' (italic).
 
 **Type:** string
 

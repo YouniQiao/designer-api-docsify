@@ -1,8 +1,6 @@
 # MemoryLimit
 
-Defines the memory limit of the application process.
-
-@interface MemoryLimit
+Defines the memory limit of the application process.@interface MemoryLimit
 
 **Since:** 23
 

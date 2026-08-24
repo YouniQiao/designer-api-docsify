@@ -1,8 +1,6 @@
 # Curve
 
-enum Curve.
-
-@enum { number }
+enum Curve.@enum { number }
 
 **Since:** 23
 

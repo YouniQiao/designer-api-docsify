@@ -43,9 +43,7 @@ A constructor used to create a text baseline offset style.
 readonly baselineOffset: number
 ```
 
-Text baseline offset.
-
-Unit: vp
+Text baseline offset.Unit: vp
 
 **Type:** number
 

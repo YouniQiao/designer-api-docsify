@@ -14,8 +14,7 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 
 Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent)
 > instead.
@@ -50,8 +49,7 @@ function off(type: 'BundleStatusChange'): Promise<string>
 
 Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent)
 > instead.

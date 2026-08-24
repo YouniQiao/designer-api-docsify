@@ -269,7 +269,7 @@ public static parseJsonRecord(text: string, options?: jsonx.ParseOptions): Recor
 
 | 类型 | 说明 |
 | --- | --- |
-| [Record](arkts-arkts-map-record-c.md)&lt;string, [JsonRecordType](arkts-arkts-jsonrecordtype-t.md)&gt; | 解析得到的Record对象。 |
+| Record&lt;string, [JsonRecordType](arkts-arkts-jsonrecordtype-t.md)&gt; | 解析得到的Record对象。 |
 
 ## parseUpdate
 
@@ -902,7 +902,7 @@ stringify(d: Array<Double>): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| d | Array&lt;[Double](arkts-arkts-double-c.md)&gt; | 是 | 待转换的Double数组。 |
+| d | Array&lt;Double&gt; | 是 | 待转换的Double数组。 |
 
 **返回值：**
 
@@ -932,7 +932,7 @@ stringify(d: ArrayLike<Double>): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| d | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;[Double](arkts-arkts-double-c.md)&gt; | 是 | 待转换的Double ArrayLike对象。 |
+| d | ArrayLike&lt;Double&gt; | 是 | 待转换的Double ArrayLike对象。 |
 
 **返回值：**
 

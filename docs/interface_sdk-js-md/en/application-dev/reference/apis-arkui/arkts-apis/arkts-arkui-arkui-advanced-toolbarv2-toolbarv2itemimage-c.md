@@ -4,6 +4,8 @@ Declare type ToolBarV2ItemImage
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2ItemImage--><!--Device-unnamed-export declare class ToolBarV2ItemImage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,15 +43,16 @@ The constructor used to create a ToolBarV2ItemImage object.
 ## activatedColor
 
 ```TypeScript
-@Trace
-  activatedColor?: ColorMetrics
+activatedColor?: ColorMetrics
 ```
 
 Icon fillColor when the item is activated.
 
-**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,15 +65,16 @@ Icon fillColor when the item is activated.
 ## color
 
 ```TypeScript
-@Trace
-  color?: ColorMetrics
+color?: ColorMetrics
 ```
 
 Define icon fillColor.
 
-**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +87,7 @@ Define icon fillColor.
 ## src
 
 ```TypeScript
-@Trace
-  src: ResourceStr
+src: ResourceStr
 ```
 
 Define icon resource.
@@ -92,6 +95,8 @@ Define icon resource.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

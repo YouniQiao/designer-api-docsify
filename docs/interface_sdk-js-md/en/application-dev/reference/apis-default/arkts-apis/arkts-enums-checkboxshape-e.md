@@ -1,8 +1,6 @@
 # CheckBoxShape
 
-common enum of the checkbox shape
-
-@enum { number }
+common enum of the checkbox shape@enum { number }
 
 **Since:** 23
 

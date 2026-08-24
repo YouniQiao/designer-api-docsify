@@ -1,8 +1,6 @@
 # ImageSourceSize
 
-Defines source size of image.
-
-@interface ImageSourceSize
+Defines source size of image.@interface ImageSourceSize
 
 **Since:** 23
 

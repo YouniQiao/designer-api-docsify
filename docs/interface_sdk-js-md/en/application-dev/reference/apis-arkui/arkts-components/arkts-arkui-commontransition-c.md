@@ -77,7 +77,7 @@ Sets the scaling effect for page transitions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ScaleOptions | Yes | Scaling effect for page transitions, specifying the start value for entrance and the end value for exit.<br>- **x**: scale factor along the x-axis.<br>- **y**: scale factor along the y-axis.&lt; br&gt;- **z**: scale factor along the z-axis.<br>- **centerX** and **centerY**: scaling center. The default values are both **"50%"**, meaning the center of the page is used as the scaling center by default.<br>- If the center point is (0, 0), it refers to the upper left corner of the component.<br>**Since:** 18 |
+| value | ScaleOptions | Yes | Scaling effect for page transitions, specifying the start value for entrance and the end value for exit.<br>- **x**: scale factor along the x-axis.<br>- **y**: scale factor along the y-axis.<br>- **z**: scale factor along the z-axis.<br>- **centerX** and **centerY**: scaling center. The default values are both **"50%"**, meaning the center of the page is used as the scaling center by default.<br>- If the center point is (0, 0), it refers to the upper left corner of the component.<br>**Since:** 18 |
 
 **Return value:**
 

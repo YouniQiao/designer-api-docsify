@@ -4,6 +4,8 @@ Defines Counter Component.
 
 **Since:** 11
 
+**Decorator:** @Component
+
 <!--Device-unnamed-declare struct CounterComponent--><!--Device-unnamed-declare struct CounterComponent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -12,14 +14,12 @@ Defines Counter Component.
 
 ```TypeScript
 import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
 ## options
 
 ```TypeScript
-@Prop
-  options: CounterOptions
+options: CounterOptions
 ```
 
 The options of a counter component.
@@ -27,6 +27,8 @@ The options of a counter component.
 **Type:** [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md)
 
 **Since:** 11
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

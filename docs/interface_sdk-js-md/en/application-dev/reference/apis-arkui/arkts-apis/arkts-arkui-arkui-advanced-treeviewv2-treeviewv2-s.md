@@ -4,6 +4,8 @@ Declare TreeViewV2 Component
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct TreeViewV2--><!--Device-unnamed-export declare struct TreeViewV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,8 +19,7 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 ## treeControllerV2
 
 ```TypeScript
-@Param
-  treeControllerV2: TreeControllerV2
+treeControllerV2: TreeControllerV2
 ```
 
 Node data source of TreeViewV2.
@@ -26,6 +27,8 @@ Node data source of TreeViewV2.
 **Type:** [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

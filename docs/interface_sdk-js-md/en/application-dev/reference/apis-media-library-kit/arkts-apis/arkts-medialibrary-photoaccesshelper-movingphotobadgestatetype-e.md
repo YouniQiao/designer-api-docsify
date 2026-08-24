@@ -1,8 +1,6 @@
 # MovingPhotoBadgeStateType
 
-Enumerates the types of the moving photo badge.
-
-@enum { int } MovingPhotoBadgeStateType
+Enumerates the types of the moving photo badge.@enum { int } MovingPhotoBadgeStateType
 
 **Since:** 26.0.0
 

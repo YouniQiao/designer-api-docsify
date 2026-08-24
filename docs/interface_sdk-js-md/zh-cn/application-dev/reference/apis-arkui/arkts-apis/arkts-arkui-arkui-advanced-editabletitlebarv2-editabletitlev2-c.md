@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class EditableTitleV2--><!--Device-unnamed-export declare class EditableTitleV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,19 +43,18 @@ EditableTitleV2的构造函数。
 ## mainTitle
 
 ```TypeScript
-@Trace
-  public mainTitle: ResourceStr
+public mainTitle: ResourceStr
 ```
 
-主标题内容。
-
-默认值：''，表示标题内容为空。
+主标题内容。默认值：''，表示标题内容为空。
 
 **类型：** ResourceStr
 
 **默认值：** ''
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,8 +67,7 @@ EditableTitleV2的构造函数。
 ## subTitle
 
 ```TypeScript
-@Trace
-  public subTitle?: ResourceStr
+public subTitle?: ResourceStr
 ```
 
 副标题内容。需要在标题下方显示补充说明信息时传入此参数。
@@ -75,6 +75,8 @@ EditableTitleV2的构造函数。
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

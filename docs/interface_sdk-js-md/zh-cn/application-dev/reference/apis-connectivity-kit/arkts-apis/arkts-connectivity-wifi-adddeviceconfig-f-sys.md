@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## addDeviceConfig
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 ```
 
-添加网络配置，使用Promise异步回调。
-
-<p>添加配置后，配置将被更新。</p>
+添加网络配置，使用Promise异步回调。<p>添加配置后，配置将被更新。</p>
 
 **起始版本：** 6
 
@@ -116,9 +111,7 @@ try {
 function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
 ```
 
-添加网络配置，使用callback异步回调。
-
-<p>添加配置后，配置将被更新。</p>
+添加网络配置，使用callback异步回调。<p>添加配置后，配置将被更新。</p>
 
 **起始版本：** 6
 

@@ -12,8 +12,6 @@ Provides APIs for X.509 CRL operations.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## getEncoded
@@ -985,8 +983,7 @@ getIssuerName(): DataBlob
 
 Obtains the issuer of the X.509 CRL.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The obtained X.509 CRL issuer name contains a string terminator.
 
 **Since:** 23

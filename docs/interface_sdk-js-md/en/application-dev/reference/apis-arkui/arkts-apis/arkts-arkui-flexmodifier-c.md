@@ -1,8 +1,6 @@
 # FlexModifier
 
-Defines Flex Modifier
-
-@implements FlexAttribute, AttributeModifier&lt;FlexAttribute&gt;
+Defines Flex Modifier@implements FlexAttribute, AttributeModifier&lt;FlexAttribute&gt;
 
 **Inheritance/Implementation:** FlexModifier implements FlexAttribute, AttributeModifier<FlexAttribute>
 

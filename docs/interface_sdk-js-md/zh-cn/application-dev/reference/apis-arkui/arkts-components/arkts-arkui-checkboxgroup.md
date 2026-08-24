@@ -1,7 +1,6 @@
 # CheckboxGroup
 
 多选框群组，用于控制多选框全选或取消全选状态。适用于需要批量管理多个Checkbox选择状态的场景，如列表项批量选择、表单全选等，可简化用户操作，提升交互体验。
-
 > **说明：**
 
 ## 子组件
@@ -14,9 +13,7 @@
 CheckboxGroup(options?: CheckboxGroupOptions)
 ```
 
-创建多选框群组，用于控制群组内Checkbox的全选或取消全选状态，具有相同group值的Checkbox和CheckboxGroup属于同一群组。
-
-在结合带缓存功能的组件使用时（如List），未被创建的Checkbox选中状态需要应用手动控制。详细示例请参考 [示例4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-checkboxgroup.md#示例4设置全选)。
+创建多选框群组，用于控制群组内Checkbox的全选或取消全选状态，具有相同group值的Checkbox和CheckboxGroup属于同一群组。在结合带缓存功能的组件使用时（如List），未被创建的Checkbox选中状态需要应用手动控制。详细示例请参考 示例4。
 
 **起始版本：** 8
 

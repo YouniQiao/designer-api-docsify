@@ -1,6 +1,6 @@
 # Polygon
 
-The **Polygon** component is used to draw a polygon. > **NOTE** > > This component supports dynamic constructor parameter updates using the > updateConstructorParams API of the > AttributeUpdater class since API version 20. > > **Child Components** > > None
+The **Polygon** component is used to draw a polygon.> **NOTE**>> This component supports dynamic constructor parameter updates using the> updateConstructorParams API of the> AttributeUpdater class since API version 20.>> **Child Components**>> None
 
 ## Polygon
 

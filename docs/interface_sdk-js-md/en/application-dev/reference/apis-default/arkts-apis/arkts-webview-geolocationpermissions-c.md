@@ -1,8 +1,6 @@
 # GeolocationPermissions
 
-Implements a GeolocationPermissions object.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in GeolocationPermissions. </p>
+Implements a GeolocationPermissions object.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in GeolocationPermissions. </p>
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # ItemInfo
 
-ItemInfo
-
-@extends BaseItemInfo
+ItemInfo@extends BaseItemInfo
 
 **Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](arkts-file-photopickercomponent-baseiteminfo-c.md)
 

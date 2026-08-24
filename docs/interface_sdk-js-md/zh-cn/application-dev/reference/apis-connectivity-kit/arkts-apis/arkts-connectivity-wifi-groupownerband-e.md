@@ -1,8 +1,6 @@
 # GroupOwnerBand
 
-P2P群组所有者频段。
-
-@enum { number } GroupOwnerBand
+P2P群组所有者频段。@enum { number } GroupOwnerBand
 
 **起始版本：** 8
 

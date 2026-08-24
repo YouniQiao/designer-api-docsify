@@ -121,9 +121,7 @@ static getDateOrder(locale: string): string
 static getThreeLetterLanguage(locale: string): string
 ```
 
-将语言代码由二字母转换为三字母。二字母和三字母语言代码的规格参考[ISO 639](https://www.iso.org/iso-639-language-code)。
-
-例如，中文的二字母语言代码是zh，对应的三字母语言代码是zho。
+将语言代码由二字母转换为三字母。二字母和三字母语言代码的规格参考[ISO 639](https://www.iso.org/iso-639-language-code)。例如，中文的二字母语言代码是zh，对应的三字母语言代码是zho。
 
 **起始版本：** 23
 
@@ -160,9 +158,7 @@ static getThreeLetterLanguage(locale: string): string
 static getThreeLetterRegion(locale: string): string
 ```
 
-将地区代码由二字母转换为三字母。二字母和三字母地区代码的规格参考[ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
-
-例如，中国的二字母地区代码是CN, 三字母是CHN。
+将地区代码由二字母转换为三字母。二字母和三字母地区代码的规格参考[ISO 3166](https://www.iso.org/iso-3166-country-codes.html)例如，中国的二字母地区代码是CN, 三字母是CHN。
 
 **起始版本：** 23
 
@@ -237,9 +233,7 @@ static getTimePeriodName(hour:int, locale?: string): string
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string
 ```
 
-对文件路径进行本地化处理。
-
-例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
+对文件路径进行本地化处理。例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
 
 **起始版本：** 23
 
@@ -279,8 +273,7 @@ static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): s
 
 设置整段文本中部分文本方向，包括RTL、LTR。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 在强字符（指具有明确书写方向的字符）中不生效。
 
 **起始版本：** 26.0.0

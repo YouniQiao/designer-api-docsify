@@ -39,13 +39,13 @@ public add(other: Int): Int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | 是 | 加法运算的右操作数。 |
+| other | Int | 是 | 加法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | 加法运算的结果。 |
+| Int | 加法运算的结果。 |
 
 ## compareTo
 
@@ -69,7 +69,7 @@ public compareTo(other: Int): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | 是 | 用于比较的Int对象。 |
+| other | Int | 是 | 用于比较的Int对象。 |
 
 **返回值：**
 
@@ -141,13 +141,13 @@ public div(other: Int): Int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | 是 | 除法运算的右操作数。 |
+| other | Int | 是 | 除法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | 除法运算的结果。 |
+| Int | 除法运算的结果。 |
 
 ## equals
 
@@ -201,7 +201,7 @@ public isGreaterEqualThan(other: Int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | 是 | 比较运算的右操作数。 |
+| other | Int | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -231,7 +231,7 @@ public isGreaterThan(other: Int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | 是 | 比较运算的右操作数。 |
+| other | Int | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -261,7 +261,7 @@ public isLessEqualThan(other: Int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | 是 | 比较运算的右操作数。 |
+| other | Int | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -291,7 +291,7 @@ public isLessThan(other: Int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | 是 | 比较运算的右操作数。 |
+| other | Int | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -321,13 +321,13 @@ public mul(other: Int): Int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | 是 | 乘法运算的右操作数。 |
+| other | Int | 是 | 乘法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | 乘法运算的结果。 |
+| Int | 乘法运算的结果。 |
 
 ## parseInt
 
@@ -382,13 +382,13 @@ public sub(other: Int): Int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | 是 | 减法运算的右操作数。 |
+| other | Int | 是 | 减法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | 减法运算的结果。 |
+| Int | 减法运算的结果。 |
 
 ## toByte
 

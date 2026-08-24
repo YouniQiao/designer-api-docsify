@@ -14,11 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>
 ```
 
-拷贝文件或目录。使用Promise异步回调。
-
-支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。
-
-跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
+拷贝文件或目录。使用Promise异步回调。支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
 
 **起始版本：** 11
 
@@ -254,11 +250,7 @@ try {
 declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void
 ```
 
-拷贝文件或者目录。使用callback异步回调。
-
-支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。
-
-跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
+拷贝文件或者目录。使用callback异步回调。支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
 
 **起始版本：** 11
 
@@ -315,11 +307,7 @@ declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<v
 declare function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void
 ```
 
-拷贝文件或者目录。使用callback异步回调。
-
-支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。
-
-跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
+拷贝文件或者目录。使用callback异步回调。支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
 
 **起始版本：** 11
 

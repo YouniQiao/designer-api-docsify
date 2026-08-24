@@ -4,6 +4,8 @@ Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts.
 
 **Since:** 22
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct SplitLayout--><!--Device-unnamed-export declare struct SplitLayout-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,13 @@ import { SplitLayout } from '@kit.ArkUI';
 
 ## container
 
-```TypeScript
-@BuilderParam container: () => void
-```
-
 Container in the user-defined splitlayout display area.
 
 **Type:** () =&gt; void
 
 **Since:** 22
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,15 +36,13 @@ Container in the user-defined splitlayout display area.
 
 ## mainImage
 
-```TypeScript
-@State mainImage: ResourceStr
-```
-
 Image in the layout.
 
 **Type:** ResourceStr
 
 **Since:** 22
+
+**Decorator:** @State
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,15 +54,13 @@ Image in the layout.
 
 ## primaryText
 
-```TypeScript
-@Prop primaryText: ResourceStr
-```
-
 Title text in the layout.
 
 **Type:** ResourceStr
 
 **Since:** 22
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,15 +72,13 @@ Title text in the layout.
 
 ## secondaryText
 
-```TypeScript
-@Prop secondaryText?: ResourceStr
-```
-
 Description text in the layout.
 
 **Type:** ResourceStr
 
 **Since:** 22
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,15 +90,13 @@ Description text in the layout.
 
 ## tertiaryText
 
-```TypeScript
-@Prop tertiaryText?: ResourceStr
-```
-
 Auxiliary text in the layout.
 
 **Type:** ResourceStr
 
 **Since:** 22
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

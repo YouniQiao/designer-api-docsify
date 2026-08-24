@@ -1,8 +1,6 @@
 # ScrollBarMargin
 
-滚动条边距。
-
-@interface ScrollBarMargin
+滚动条边距。@interface ScrollBarMargin
 
 **起始版本：** 26.0.0
 
@@ -18,9 +16,7 @@
 end?: LengthMetrics
 ```
 
-滚动条末尾边距。
-
-默认值：0，单位：vp
+滚动条末尾边距。默认值：0，单位：vp
 
 **类型：** [LengthMetrics](arkts-lengthmetrics-t.md)
 
@@ -40,9 +36,7 @@ end?: LengthMetrics
 start?: LengthMetrics
 ```
 
-滚动条起始边距。
-
-默认值：0，单位：vp
+滚动条起始边距。默认值：0，单位：vp
 
 **类型：** [LengthMetrics](arkts-lengthmetrics-t.md)
 

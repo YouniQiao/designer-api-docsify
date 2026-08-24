@@ -1,8 +1,6 @@
 # SwiperDynamicSyncSceneType
 
-Enum of SwiperDynamicSyncSceneType
-
-@enum { number } SwiperDynamicSyncSceneType
+Enum of SwiperDynamicSyncSceneType@enum { number } SwiperDynamicSyncSceneType
 
 **起始版本：** 23
 

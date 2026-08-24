@@ -4,6 +4,8 @@ Defines the style of the arc slider.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-declare class ArcSliderStyleOptions--><!--Device-unnamed-declare class ArcSliderStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -39,23 +41,18 @@ A constructor used to create an **ArcSliderStyleOptions** instance.
 ## activeTrackThickness
 
 ```TypeScript
-@Trace
-  activeTrackThickness?: number
+activeTrackThickness?: number
 ```
 
-Stroke width of the arc slider when it is in an enlarged state, in vp.
-
-Default value: **24**
-
-Value range: [24, 36]. If the value is invalid, the default value is used.
-
-@Trace
+Stroke width of the arc slider when it is in an enlarged state, in vp.Default value: **24**Value range: [24, 36]. If the value is invalid, the default value is used.@Trace
 
 **Type:** number
 
 **Default:** 24
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -66,21 +63,18 @@ Value range: [24, 36]. If the value is invalid, the default value is used.
 ## selectedColor
 
 ```TypeScript
-@Trace
-  selectedColor?: string
+selectedColor?: string
 ```
 
-Highlight color of the stroke.
-
-Default value: **#FF5EA1FF**
-
-@Trace
+Highlight color of the stroke.Default value: **#FF5EA1FF**@Trace
 
 **Type:** string
 
 **Default:** #FF5EA1FF
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -91,23 +85,18 @@ Default value: **#FF5EA1FF**
 ## trackBlur
 
 ```TypeScript
-@Trace
-  trackBlur?: number
+trackBlur?: number
 ```
 
-Blur effect applied to the stroke background, in vp.
-
-Default value: **20**
-
-If a value less than 0 is set, the default is used.
-
-@Trace
+Blur effect applied to the stroke background, in vp.Default value: **20**If a value less than 0 is set, the default is used.@Trace
 
 **Type:** number
 
 **Default:** 20
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -118,21 +107,18 @@ If a value less than 0 is set, the default is used.
 ## trackColor
 
 ```TypeScript
-@Trace
-  trackColor?: string
+trackColor?: string
 ```
 
-Background color of the stroke.
-
-Default value: **#33FFFFFF**
-
-@Trace
+Background color of the stroke.Default value: **#33FFFFFF**@Trace
 
 **Type:** string
 
 **Default:** #33FFFFFF
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -143,23 +129,18 @@ Default value: **#33FFFFFF**
 ## trackThickness
 
 ```TypeScript
-@Trace
-  trackThickness?: number
+trackThickness?: number
 ```
 
-Stroke width of the arc slider in the normal state, in vp.
-
-Default value: **5**
-
-Value range: [5, 16]. If the value is invalid, the default value is used.
-
-@Trace
+Stroke width of the arc slider in the normal state, in vp.Default value: **5**Value range: [5, 16]. If the value is invalid, the default value is used.@Trace
 
 **Type:** number
 
 **Default:** 5
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

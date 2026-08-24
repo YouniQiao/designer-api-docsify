@@ -1,12 +1,12 @@
 # ChipV2SuffixSymbolIcon
 
-ChipV2SuffixSymbolIcon定义后缀Symbol图标类。
-
-继承自[ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md)。
+ChipV2SuffixSymbolIcon定义后缀Symbol图标类。继承自[ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md)。
 
 **继承/实现关系：** ChipV2SuffixSymbolIcon extends [ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @ObservedV2
 
 <!--Device-unnamed-export declare class ChipV2SuffixSymbolIcon--><!--Device-unnamed-export declare class ChipV2SuffixSymbolIcon-End-->
 
@@ -45,19 +45,16 @@ ChipV2SuffixSymbolIcon的构造函数。
 ## action
 
 ```TypeScript
-@Trace
-  public action?: VoidCallback
+public action?: VoidCallback
 ```
 
-后缀图标点击事件回调函数。点击后缀图标时调用此回调函数。
-
-默认值：不设定后缀图标事件。
-
-值为undefined时，按默认值处理。
+后缀图标点击事件回调函数。点击后缀图标时调用此回调函数。默认值：不设定后缀图标事件。值为undefined时，按默认值处理。
 
 **类型：** VoidCallback
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,17 +67,16 @@ ChipV2SuffixSymbolIcon的构造函数。
 ## activatedAccessibility
 
 ```TypeScript
-@Trace
-  public activatedAccessibility?: ChipV2Accessibility
+public activatedAccessibility?: ChipV2Accessibility
 ```
 
-激活态无障碍朗读功能属性。
-
-默认值：undefined，无朗读内容。
+激活态无障碍朗读功能属性。默认值：undefined，无朗读内容。
 
 **类型：** [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,17 +89,16 @@ ChipV2SuffixSymbolIcon的构造函数。
 ## normalAccessibility
 
 ```TypeScript
-@Trace
-  public normalAccessibility?: ChipV2Accessibility
+public normalAccessibility?: ChipV2Accessibility
 ```
 
-非激活态无障碍朗读功能属性。
-
-默认值：undefined，无朗读内容。
+非激活态无障碍朗读功能属性。默认值：undefined，无朗读内容。
 
 **类型：** [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

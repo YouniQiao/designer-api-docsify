@@ -1,8 +1,6 @@
 # LineCapStyle
 
-LineCapStyle enumeration description
-
-@enum { number }
+LineCapStyle enumeration description@enum { number }
 
 **起始版本：** 11
 

@@ -1,8 +1,6 @@
 # PowerMode
 
-The power Mode enumeration.
-
-@enum { number } PowerMode
+The power Mode enumeration.@enum { number } PowerMode
 
 **Since:** 9
 

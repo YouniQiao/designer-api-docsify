@@ -8,6 +8,8 @@ Defines chip symbol icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export abstract class ChipV2SymbolIcon--><!--Device-unnamed-export abstract class ChipV2SymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -44,8 +46,7 @@ The constructor of ChipV2SymbolIcon
 ## activated
 
 ```TypeScript
-@Trace
-  public activated?: SymbolGlyphModifier
+public activated?: SymbolGlyphModifier
 ```
 
 Symbol activated.
@@ -56,6 +57,8 @@ Symbol activated.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2SymbolIcon-@Trace  public activated?: SymbolGlyphModifier--><!--Device-ChipV2SymbolIcon-@Trace  public activated?: SymbolGlyphModifier-End-->
@@ -65,8 +68,7 @@ Symbol activated.
 ## normal
 
 ```TypeScript
-@Trace
-  public normal?: SymbolGlyphModifier
+public normal?: SymbolGlyphModifier
 ```
 
 Symbol normal.
@@ -76,6 +78,8 @@ Symbol normal.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

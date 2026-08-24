@@ -36,9 +36,7 @@ action?: () => void
 icon?: string | Resource
 ```
 
-API version 9：显示菜单栏单个选项的文本。
-
-从API version 10开始，不显示菜单栏单个选项的文本。
+API version 9：显示菜单栏单个选项的文本。从API version 10开始，不显示菜单栏单个选项的文本。
 
 **类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -78,7 +76,7 @@ isEnabled?: boolean
 symbolIcon?: SymbolGlyphModifier
 ```
 
-菜单栏单个选项的symbol资源（优先级高于icon）。 **说明：** 不支持通过[SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的 [fontSize](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#fontsize)属性修改图标大小、 [effectStrategy](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#effectstrategy)属性修改动效 、[symbolEffect](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#symboleffect12)属性修改动效类 型。
+菜单栏单个选项的symbol资源（优先级高于icon）。 **说明：** 不支持通过[SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的 fontSize属性修改图标大小、 effectStrategy属性修改动效 、symbolEffect属性修改动效类 型。
 
 **类型：** [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)
 
@@ -98,9 +96,7 @@ symbolIcon?: SymbolGlyphModifier
 value: string | Resource
 ```
 
-API version 9：显示菜单栏单个选项的文本。
-
-从API version 10开始，不显示菜单栏单个选项的文本。
+API version 9：显示菜单栏单个选项的文本。从API version 10开始，不显示菜单栏单个选项的文本。
 
 **类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 

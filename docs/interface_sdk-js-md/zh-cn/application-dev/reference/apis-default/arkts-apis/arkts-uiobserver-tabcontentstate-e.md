@@ -1,8 +1,6 @@
 # TabContentState
 
-TabContent组件的状态。
-
-@enum { number }
+TabContent组件的状态。@enum { number }
 
 **起始版本：** 23
 

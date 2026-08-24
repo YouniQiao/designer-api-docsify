@@ -1,8 +1,6 @@
 # OutlineStyle
 
-Outline Style
-
-@enum { number }
+Outline Style@enum { number }
 
 **Since:** 23
 

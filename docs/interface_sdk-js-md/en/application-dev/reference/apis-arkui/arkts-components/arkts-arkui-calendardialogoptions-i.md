@@ -1,11 +1,8 @@
 # CalendarDialogOptions
 
-Defines the configuration options of the calendar picker dialog box.
+Defines the configuration options of the calendar picker dialog box.Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 
-Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When the application window is resized, the width of the dialog box is continuously compressed. If the window width
 > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the
 > content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
@@ -29,11 +26,8 @@ Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the accept button.
-
-**NOTE：**
-
-In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
+Style of the accept button.  
+**NOTE：**In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
 
 **Type:** PickerDialogButtonStyle
 
@@ -53,13 +47,8 @@ In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one 
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box.
-
-Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
-
-**NOTE：**
-
-Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
+Background blur style of the dialog box.Default value: **BlurStyle.COMPONENT_ULTRA_THICK**  
+**NOTE：**Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** BlurStyle
 
@@ -101,13 +90,8 @@ Options for customizing the background blur style.
 backgroundColor?: ResourceColor
 ```
 
-Backplane color of the dialog box.
-
-Default value: **Color.Transparent**
-
-**NOTE：**
-
-When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
+Backplane color of the dialog box.Default value: **Color.Transparent**  
+**NOTE：**When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
 **Type:** ResourceColor
 
@@ -149,11 +133,8 @@ Options for customizing the background effect.
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the cancel button.
-
-**NOTE：**
-
-In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
+Style of the cancel button.  
+**NOTE：**In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
 
 **Type:** PickerDialogButtonStyle
 
@@ -173,10 +154,8 @@ In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one 
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode.
-
-- **true**: Respond when the device is in semi-folded mode. - **false**: Do not respond when the device is in semi-folded mode.
-
+Whether to respond when the device is in semi-folded mode.  
+- **true**: Respond when the device is in semi-folded mode. - **false**: Do not respond when the device is in semi-folded mode.  
 Default value: **false**.
 
 **Type:** boolean
@@ -199,9 +178,7 @@ Default value: **false**.
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box when the device is in semi-folded mode.
-
-Default value: **HoverModeAreaType.BOTTOM_SCREEN**
+Display area of the dialog box when the device is in semi-folded mode.Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Type:** HoverModeAreaType
 
@@ -223,10 +200,8 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 markToday?: boolean
 ```
 
-Whether to highlight the current system date.
-
-- **true**: Highlight the current system date. - **false**: Do not highlight the current system date.
-
+Whether to highlight the current system date.  
+- **true**: Highlight the current system date. - **false**: Do not highlight the current system date.  
 Default value: **false**.
 
 **Type:** boolean
@@ -249,9 +224,7 @@ Default value: **false**.
 onAccept?: Callback<Date>
 ```
 
-Triggered when the OK button in the dialog box is clicked.
-
-The callback parameter represents the selected date value.
+Triggered when the OK button in the dialog box is clicked.The callback parameter represents the selected date value.
 
 **Type:** Callback&lt;Date&gt;
 
@@ -291,9 +264,7 @@ Triggered when the Cancel button in the dialog box is clicked.
 onChange?: Callback<Date>
 ```
 
-Triggered when the selection in the picker changes the selected date.
-
-The callback parameter represents the selected date value.
+Triggered when the selection in the picker changes the selected date.The callback parameter represents the selected date value.
 
 **Type:** Callback&lt;Date&gt;
 
@@ -313,11 +284,15 @@ The callback parameter represents the selected date value.
 onDidAppear?: VoidCallback
 ```
 
-Event callback after the dialog box appears.
-
+Event callback after the dialog box appears.  
 **NOTE：**
-
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. 4. If the dialog box is dismissed before its entrance animation is finished, this callback is not invoked.
+1. The normal timing sequence is as follows:
+onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
+2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.
+The settings take effect next time the dialog box appears.
+3. If the user dismisses the dialog box immediately after it appears,  
+**onWillDisappear** is invoked before **onDidAppear**.
+4. If the dialog box is dismissed before its entrance animation is finished, this callback is not invoked.
 
 **Type:** VoidCallback
 
@@ -337,11 +312,10 @@ Event callback after the dialog box appears.
 onDidDisappear?: VoidCallback
 ```
 
-Event callback after the dialog box disappears.
-
+Event callback after the dialog box disappears.  
 **NOTE：**
-
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
+1. The normal timing sequence is as follows:
+onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
 
 **Type:** VoidCallback
 
@@ -361,11 +335,12 @@ Event callback after the dialog box disappears.
 onWillAppear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to appear.
-
+Event callback when the dialog box is about to appear.  
 **NOTE：**
-
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+1. The normal timing sequence is as follows:
+onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
+2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.
+The settings take effect next time the dialog box appears.
 
 **Type:** VoidCallback
 
@@ -385,11 +360,12 @@ Event callback when the dialog box is about to appear.
 onWillDisappear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to disappear.
-
+Event callback when the dialog box is about to disappear.  
 **NOTE：**
-
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear. 2. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
+1. The normal timing sequence is as follows:
+onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
+2. If the user closes the dialog box immediately after it appears,  
+**onWillDisappear** is invoked before **onDidAppear**.
 
 **Type:** VoidCallback
 
@@ -409,9 +385,7 @@ Event callback when the dialog box is about to disappear.
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box.
-
-Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
+Shadow of the dialog box.Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
 **Type:** ShadowOptions \| ShadowStyle
 

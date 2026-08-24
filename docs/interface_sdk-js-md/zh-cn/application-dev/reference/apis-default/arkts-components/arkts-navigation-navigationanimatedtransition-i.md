@@ -38,9 +38,7 @@ isInteractive?: boolean
 onTransitionEnd?: (success: boolean) => void
 ```
 
-转场完成回调。
-
-success：转场是否成功。
+转场完成回调。success：转场是否成功。
 
 **类型：** (success: boolean) =&gt; void
 
@@ -80,9 +78,7 @@ timeout?: int
 transition: (transitionProxy: NavigationTransitionProxy) => void
 ```
 
-自定义转场动画执行回调。
-
-transitionProxy：自定义转场动画代理对象。
+自定义转场动画执行回调。transitionProxy：自定义转场动画代理对象。
 
 **类型：** (transitionProxy: NavigationTransitionProxy) =&gt; void
 

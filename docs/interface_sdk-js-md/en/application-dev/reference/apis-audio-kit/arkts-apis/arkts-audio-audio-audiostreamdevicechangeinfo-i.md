@@ -12,7 +12,6 @@ Describes the event received by the application when the audio stream device is 
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## changeReason

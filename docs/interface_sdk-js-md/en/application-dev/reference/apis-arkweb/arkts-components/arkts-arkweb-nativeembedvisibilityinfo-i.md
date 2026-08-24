@@ -11,11 +11,6 @@ Provides visibility information about the same-layer tag, including the visibili
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## embedId
@@ -40,9 +35,7 @@ ID of the same-layer rendered tag.
 visibility: boolean
 ```
 
-Whether the same-layer tag is visible.
-
-The value **true** indicates that the same-layer tag is visible, and **false** indicates the opposite.
+Whether the same-layer tag is visible.The value **true** indicates that the same-layer tag is visible, and **false** indicates the opposite.
 
 **Type:** boolean
 

@@ -1,8 +1,6 @@
 # FieldRegion
 
-Defines particle field region params.
-
-@interface FieldRegion
+Defines particle field region params.@interface FieldRegion
 
 **Since:** 24
 
@@ -20,7 +18,7 @@ position?: PositionT<double>
 
 The coordinates of the center position of the field. The top-left corner of the component is the origin of the coordinate system. The coordinate unit is vp.
 
-**Type:** [PositionT](../arkts-apis/arkts-positiont-t.md)&lt;double&gt;
+**Type:** [PositionT](../../apis-arkui/arkts-apis/arkts-arkui-positiont-t.md)&lt;double&gt;
 
 **Default:** {x:0,y:0}
 
@@ -64,7 +62,7 @@ size?: SizeT<double>
 
 The size of the field. The unit of value is vp.
 
-**Type:** [SizeT](../arkts-apis/arkts-graphics-sizet-i.md)&lt;double&gt;
+**Type:** [SizeT](../../apis-arkui/arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;double&gt;
 
 **Default:** {width:0,height:0}
 

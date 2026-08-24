@@ -13,7 +13,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespons
     options?: Options): void
 ```
 
-Subscribes to data changes of the Hall effect sensor. If this API is called multiple times for the same application , the last call takes effect.
+Subscribes to data changes of the Hall effect sensor. If this API is called multiple times for the same application, the last call takes effect.
 
 **Since:** 8
 

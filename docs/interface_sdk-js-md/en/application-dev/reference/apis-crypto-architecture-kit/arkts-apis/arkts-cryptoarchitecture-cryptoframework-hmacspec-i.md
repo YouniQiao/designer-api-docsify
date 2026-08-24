@@ -2,8 +2,7 @@
 
 Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md). It is used as an input parameter for HMAC computation.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **mdName** specifies the HMAC message digest algorithm. It is mandatory.
 
 **Inheritance/Implementation:** HmacSpec extends [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)

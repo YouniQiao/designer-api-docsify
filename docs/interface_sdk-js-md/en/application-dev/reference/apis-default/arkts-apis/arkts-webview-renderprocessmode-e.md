@@ -1,8 +1,6 @@
 # RenderProcessMode
 
-Defines the render process mode.
-
-@enum {number}
+Defines the render process mode.@enum {number}
 
 **Since:** 23
 

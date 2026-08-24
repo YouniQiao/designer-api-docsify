@@ -1,8 +1,6 @@
 # SourceTool
 
-Defines the event tool type.
-
-@enum { number }
+Defines the event tool type.@enum { number }
 
 **起始版本：** 23
 

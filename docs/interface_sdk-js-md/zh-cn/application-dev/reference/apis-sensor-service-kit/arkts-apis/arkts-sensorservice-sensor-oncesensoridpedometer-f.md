@@ -14,8 +14,7 @@ function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): 
 
 获取一次计步器传感器数据。计步传感器数据上报有一定延迟，延迟时间由具体的实现产品决定。适用于仅需一次性获取当前步数的场景。调用后，callback仅触发一次，自动取消订阅。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 计步器传感器数据仅在设备重启时清零，不会每天清零，重启前上报的步数数据为累加值。
 
 **起始版本：** 9

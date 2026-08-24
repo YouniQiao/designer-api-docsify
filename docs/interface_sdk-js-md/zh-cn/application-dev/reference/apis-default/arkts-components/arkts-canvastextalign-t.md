@@ -4,7 +4,7 @@
 export type CanvasTextAlign = 'center' | 'end' | 'left' | 'right' | 'start'
 ```
 
-定义文本对齐方式的类型。ltr布局模式下'start'和'left'一致，rtl布局模式下'start'和'right'一致。 'center': 文本居中对齐。 'start': 文本对齐界线开始的地方。 'end': 文本对齐界线结束的地方。 'left': 文本左对齐。 'right': 文本右对齐。
+定义文本对齐方式的类型。ltr布局模式下'start'和'left'一致，rtl布局模式下'start'和'right'一致。'center': 文本居中对齐。'start': 文本对齐界线开始的地方。'end': 文本对齐界线结束的地方。'left': 文本左对齐。'right': 文本右对齐。
 
 **起始版本：** 23
 

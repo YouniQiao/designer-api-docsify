@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function offSystemPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
 ```
 
-@brief Unsubscribes from events that the system-default input method application sends a private data command.
+Unsubscribes from events that the system-default input method application sends a private data command.
 
 **Since:** 26.0.0
 

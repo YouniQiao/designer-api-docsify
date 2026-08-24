@@ -1,6 +1,6 @@
 # FadingEdgeOptions
 
-[fadingEdge](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#fadingedge14)属性边缘渐隐参数对象。
+fadingEdge属性边缘渐隐参数对象。
 
 **起始版本：** 14
 

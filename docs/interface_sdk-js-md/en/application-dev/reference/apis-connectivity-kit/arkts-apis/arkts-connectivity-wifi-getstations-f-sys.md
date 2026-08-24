@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getStations
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function getStations(): Array<StationInfo>
 ```
 
-Obtains the list of clients that are connected to a Wi-Fi hotspot.
-
-<p>This method can only be used on a device that serves as a Wi-Fi hotspot.
+Obtains the list of clients that are connected to a Wi-Fi hotspot.<p>This method can only be used on a device that serves as a Wi-Fi hotspot.
 
 **Since:** 7
 

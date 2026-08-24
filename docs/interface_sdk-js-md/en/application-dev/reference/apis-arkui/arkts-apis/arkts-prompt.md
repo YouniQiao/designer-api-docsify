@@ -16,7 +16,6 @@
 
 ```TypeScript
 import { prompt } from '@kit.ArkUI';
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -35,10 +34,10 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Defines the option of ShowActionMenu. |
-| [ActionMenuSuccessResponse](arkts-arkui-prompt-actionmenusuccessresponse-i.md) | Defines the response of ShowActionMenu. |
-| [Button](arkts-arkui-prompt-button-i.md) | Defines the prompt info of button. |
-| [ShowDialogOptions](arkts-arkui-prompt-showdialogoptions-i.md) | Defines the option of show dialog. |
-| [ShowDialogSuccessResponse](arkts-arkui-prompt-showdialogsuccessresponse-i.md) | Defines the response of ShowDialog. |
-| [ShowToastOptions](arkts-arkui-prompt-showtoastoptions-i.md) | Defines the options of ShowToast. |
+| [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Defines the option of ShowActionMenu.@interface ActionMenuOptions |
+| [ActionMenuSuccessResponse](arkts-arkui-prompt-actionmenusuccessresponse-i.md) | Defines the response of ShowActionMenu.@interface ActionMenuSuccessResponse |
+| [Button](arkts-arkui-prompt-button-i.md) | Defines the prompt info of button.@interface Button |
+| [ShowDialogOptions](arkts-arkui-prompt-showdialogoptions-i.md) | Defines the option of show dialog.@interface ShowDialogOptions |
+| [ShowDialogSuccessResponse](arkts-arkui-prompt-showdialogsuccessresponse-i.md) | Defines the response of ShowDialog.@interface ShowDialogSuccessResponse |
+| [ShowToastOptions](arkts-arkui-prompt-showtoastoptions-i.md) | Defines the options of ShowToast.@interface ShowToastOptions |
 

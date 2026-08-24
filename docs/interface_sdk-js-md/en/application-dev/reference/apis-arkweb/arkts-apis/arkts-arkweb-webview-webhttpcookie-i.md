@@ -52,9 +52,7 @@ Expiration time of the cookie. For details about the time format, see [Date](htt
 isHttpOnly: boolean
 ```
 
-Whether the cookie can be accessed only through HTTP requests.
-
-The value **true** means the cookie can be accessed only through HTTP, not through JavaScript; **false** means the cookie can be accessed through JavaScript.
+Whether the cookie can be accessed only through HTTP requests.The value **true** means the cookie can be accessed only through HTTP, not through JavaScript; **false** means the cookie can be accessed through JavaScript.
 
 **Type:** boolean
 
@@ -70,9 +68,7 @@ The value **true** means the cookie can be accessed only through HTTP, not throu
 isSecure: boolean
 ```
 
-Whether the cookie can be sent only through HTTPS.
-
-The value **true** means the cookie can be sent only through HTTPS, not through HTTP; **false** means the cookie can be sent through HTTP.
+Whether the cookie can be sent only through HTTPS.The value **true** means the cookie can be sent only through HTTPS, not through HTTP; **false** means the cookie can be sent through HTTP.
 
 **Type:** boolean
 
@@ -88,9 +84,7 @@ The value **true** means the cookie can be sent only through HTTPS, not through 
 isSessionCookie: boolean
 ```
 
-Whether the cookie is a session cookie.
-
-The value **true** indicates that the cookie is a session cookie, and **false** indicates the opposite.
+Whether the cookie is a session cookie.The value **true** indicates that the cookie is a session cookie, and **false** indicates the opposite.
 
 **Type:** boolean
 

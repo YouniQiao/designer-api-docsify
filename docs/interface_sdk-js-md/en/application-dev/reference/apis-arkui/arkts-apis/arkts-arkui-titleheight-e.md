@@ -1,8 +1,6 @@
 # TitleHeight
 
-Title height.
-
-@enum { number }
+Title height.@enum { number }
 
 **Since:** 9
 

@@ -1,8 +1,6 @@
 # ObscuredReasons
 
-ObscuredReasons.
-
-@enum { number }
+ObscuredReasons.@enum { number }
 
 **Since:** 23
 

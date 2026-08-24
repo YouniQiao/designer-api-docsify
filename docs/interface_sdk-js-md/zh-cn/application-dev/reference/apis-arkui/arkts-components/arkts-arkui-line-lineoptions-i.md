@@ -1,8 +1,6 @@
 # LineOptions
 
-用于描述Line组件绘制属性。
-
-@interface LineOptions
+用于描述Line组件绘制属性。@interface LineOptions
 
 **起始版本：** 23
 

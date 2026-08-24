@@ -1,8 +1,6 @@
 # BorderOptions
 
-Defines the options of border.
-
-@interface BorderOptions
+Defines the options of border.@interface BorderOptions
 
 **Since:** 23
 

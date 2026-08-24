@@ -1,8 +1,6 @@
 # ControlSize
 
-Enum for Control Size.
-
-@enum { string }
+Enum for Control Size.@enum { string }
 
 **Since:** 23
 

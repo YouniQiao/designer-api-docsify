@@ -1,8 +1,6 @@
 # RenderFit
 
-表示宽高动画过程中组件内容的填充方式。
-
-@enum { number } RenderFit
+表示宽高动画过程中组件内容的填充方式。@enum { number } RenderFit
 
 **起始版本：** 23
 

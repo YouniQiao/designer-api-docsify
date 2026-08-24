@@ -128,12 +128,10 @@ function requestEnableNotification(context: UIAbilityContext, callback: AsyncCal
 
 Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API can be called only after the application UI is loaded (that is,
 > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is
-> successfully called).
-> 
+> successfully called).&gt;
 > - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization
 > and the user rejects the authorization, the application cannot use this API to open the dialog box again. However
 > , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)
@@ -225,12 +223,10 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 
 Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API can be called only after the application UI is loaded (that is,
 > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is
-> successfully called).
-> 
+> successfully called).&gt;
 > - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization
 > and the user rejects the authorization, the application cannot use this API to open the dialog box again. However
 > , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)

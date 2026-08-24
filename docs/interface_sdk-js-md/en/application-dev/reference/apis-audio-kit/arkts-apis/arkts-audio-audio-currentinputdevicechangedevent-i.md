@@ -12,7 +12,6 @@ Describes the event indicating that the input device changes.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## changeReason

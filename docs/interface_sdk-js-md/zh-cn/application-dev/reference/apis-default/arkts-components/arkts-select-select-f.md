@@ -16,6 +16,8 @@ Defines Select Component.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Select(    options: Array<SelectOption>,    content_?: CustomBuilder,): SelectAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Select(    options: Array<SelectOption>,    content_?: CustomBuilder,): SelectAttribute-End-->

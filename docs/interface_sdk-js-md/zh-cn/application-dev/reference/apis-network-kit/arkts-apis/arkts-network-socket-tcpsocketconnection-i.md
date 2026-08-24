@@ -2,8 +2,7 @@
 
 TCPSocketConnection连接，即TCPSocket客户端与服务端的连接。在调用TCPSocketConnection的方法前，需要先获取TCPSocketConnection对象。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 客户端与服务端成功建立连接后，才能通过返回的TCPSocketConnection对象调用相应的接口。
 
 **起始版本：** 10
@@ -668,8 +667,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 获取对端Socket地址。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 与客户端建立连接后，才可调用此方法。
 
 **起始版本：** 10
@@ -889,8 +887,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 获取对端Socket地址。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 与客户端建立连接后，才可调用此方法。
 
 **起始版本：** 10
@@ -927,12 +924,9 @@ getSocketFd(): Promise<int>
 
 获取TCPSocketConnection连接的文件描述符。使用Promise异步回调。
 
-> **说明：**
-> 
-> - 与客户端建立连接后，才可调用此方法。
-> 
-> - 连接断开、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
-> 
+> **说明：**&gt;
+> - 与客户端建立连接后，才可调用此方法。&gt;
+> - 连接断开、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。&gt;
 > - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭
 > Socket连接，避免直接操作文件描述符进行关闭。
 
@@ -1551,8 +1545,7 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 
 通过TCPSocketConnection连接发送数据。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 与客户端建立连接后，才可调用此方法。
 
 **起始版本：** 10
@@ -1981,8 +1974,7 @@ send(options: TCPSendOptions): Promise<void>
 
 通过TCPSocketConnection连接发送数据。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 与客户端建立连接后，才可调用此方法。
 
 **起始版本：** 10

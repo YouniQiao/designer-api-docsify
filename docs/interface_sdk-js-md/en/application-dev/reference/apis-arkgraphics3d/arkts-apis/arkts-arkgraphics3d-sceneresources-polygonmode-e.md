@@ -1,8 +1,6 @@
 # PolygonMode
 
-Enumerates the polygon drawing mode.
-
-@enum { int }
+Enumerates the polygon drawing mode.@enum { int }
 
 **Since:** 23
 

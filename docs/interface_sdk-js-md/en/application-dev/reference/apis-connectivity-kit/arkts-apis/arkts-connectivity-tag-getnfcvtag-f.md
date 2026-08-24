@@ -14,8 +14,7 @@ function getNfcVTag(tagInfo: TagInfo): NfcVTag
 
 Obtains an **NfcVTag** object, which allows access to the tags that use the NFC-V technology.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tag.getNfcV](arkts-connectivity-tag-getnfcv-f.md) instead.
 

@@ -1,8 +1,6 @@
 # Stack属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-支持通用事件。
+除支持通用属性外，还支持以下属性：支持通用事件。
 
 **继承/实现关系：** StackAttribute extends CommonMethod<StackAttribute>
 

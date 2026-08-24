@@ -6,6 +6,8 @@ The class for ArcButtonOptions.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcButtonOptions--><!--Device-unnamed-export declare class ArcButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -40,8 +42,7 @@ Constructor of the CommonArcButtonOptions.
 ## backgroundBlurStyle
 
 ```TypeScript
-@Trace
-  public backgroundBlurStyle: BlurStyle
+public backgroundBlurStyle: BlurStyle
 ```
 
 Describe the blurred background style of the arc-shaped button.
@@ -52,6 +53,8 @@ Describe the blurred background style of the arc-shaped button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public backgroundBlurStyle: BlurStyle--><!--Device-ArcButtonOptions-@Trace  public backgroundBlurStyle: BlurStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -59,8 +62,7 @@ Describe the blurred background style of the arc-shaped button.
 ## backgroundColor
 
 ```TypeScript
-@Trace
-  public backgroundColor: ColorMetrics
+public backgroundColor: ColorMetrics
 ```
 
 Describes the arc button background color.
@@ -71,6 +73,8 @@ Describes the arc button background color.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public backgroundColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public backgroundColor: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -78,8 +82,7 @@ Describes the arc button background color.
 ## fontColor
 
 ```TypeScript
-@Trace
-  public fontColor: ColorMetrics
+public fontColor: ColorMetrics
 ```
 
 Describes the arc button text color.
@@ -90,6 +93,8 @@ Describes the arc button text color.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public fontColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public fontColor: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -97,8 +102,7 @@ Describes the arc button text color.
 ## fontFamily
 
 ```TypeScript
-@Trace
-  public fontFamily: string | Resource
+public fontFamily: string | Resource
 ```
 
 Describes the arc button text family.
@@ -109,6 +113,8 @@ Describes the arc button text family.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public fontFamily: string | Resource--><!--Device-ArcButtonOptions-@Trace  public fontFamily: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -116,8 +122,7 @@ Describes the arc button text family.
 ## fontMargin
 
 ```TypeScript
-@Trace
-  public fontMargin: LocalizedMargin
+public fontMargin: LocalizedMargin
 ```
 
 Describes the arc button text margin.
@@ -128,6 +133,8 @@ Describes the arc button text margin.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public fontMargin: LocalizedMargin--><!--Device-ArcButtonOptions-@Trace  public fontMargin: LocalizedMargin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -135,8 +142,7 @@ Describes the arc button text margin.
 ## fontSize
 
 ```TypeScript
-@Trace
-  public fontSize: LengthMetrics
+public fontSize: LengthMetrics
 ```
 
 Describes the arc button text size.
@@ -147,6 +153,8 @@ Describes the arc button text size.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public fontSize: LengthMetrics--><!--Device-ArcButtonOptions-@Trace  public fontSize: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -154,8 +162,7 @@ Describes the arc button text size.
 ## fontStyle
 
 ```TypeScript
-@Trace
-  public fontStyle: FontStyle
+public fontStyle: FontStyle
 ```
 
 Describes the arc button text style.
@@ -166,6 +173,8 @@ Describes the arc button text style.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public fontStyle: FontStyle--><!--Device-ArcButtonOptions-@Trace  public fontStyle: FontStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -173,8 +182,7 @@ Describes the arc button text style.
 ## label
 
 ```TypeScript
-@Trace
-  public label: ResourceStr
+public label: ResourceStr
 ```
 
 Describes the arc button displays text.
@@ -185,6 +193,8 @@ Describes the arc button displays text.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public label: ResourceStr--><!--Device-ArcButtonOptions-@Trace  public label: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -192,8 +202,7 @@ Describes the arc button displays text.
 ## onClick
 
 ```TypeScript
-@Trace
-  public onClick?: Callback<ClickEvent>
+public onClick?: Callback<ClickEvent>
 ```
 
 Describes the arc button click event.
@@ -204,6 +213,8 @@ Describes the arc button click event.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public onClick?: Callback<ClickEvent>--><!--Device-ArcButtonOptions-@Trace  public onClick?: Callback<ClickEvent>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -211,8 +222,7 @@ Describes the arc button click event.
 ## onTouch
 
 ```TypeScript
-@Trace
-  public onTouch?: Callback<TouchEvent>
+public onTouch?: Callback<TouchEvent>
 ```
 
 Describes the arc button touch event.
@@ -223,6 +233,8 @@ Describes the arc button touch event.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public onTouch?: Callback<TouchEvent>--><!--Device-ArcButtonOptions-@Trace  public onTouch?: Callback<TouchEvent>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -230,8 +242,7 @@ Describes the arc button touch event.
 ## position
 
 ```TypeScript
-@Trace
-  public position: ArcButtonPosition
+public position: ArcButtonPosition
 ```
 
 Describes the position of button on screen.
@@ -242,6 +253,8 @@ Describes the position of button on screen.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public position: ArcButtonPosition--><!--Device-ArcButtonOptions-@Trace  public position: ArcButtonPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -249,8 +262,7 @@ Describes the position of button on screen.
 ## pressedFontColor
 
 ```TypeScript
-@Trace
-  public pressedFontColor: ColorMetrics
+public pressedFontColor: ColorMetrics
 ```
 
 Describes the arc button pressed text color.
@@ -261,6 +273,8 @@ Describes the arc button pressed text color.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public pressedFontColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public pressedFontColor: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -268,8 +282,7 @@ Describes the arc button pressed text color.
 ## progressConfig
 
 ```TypeScript
-@Trace
-  public progressConfig?: ArcButtonProgressConfig
+public progressConfig?: ArcButtonProgressConfig
 ```
 
 Sets the ArcButton progress bar parameters. When not set, the button style is used. When set, the progress style is used.
@@ -280,6 +293,8 @@ Sets the ArcButton progress bar parameters. When not set, the button style is us
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ArcButtonOptions-@Trace  public progressConfig?: ArcButtonProgressConfig--><!--Device-ArcButtonOptions-@Trace  public progressConfig?: ArcButtonProgressConfig-End-->
@@ -289,8 +304,7 @@ Sets the ArcButton progress bar parameters. When not set, the button style is us
 ## shadowColor
 
 ```TypeScript
-@Trace
-  public shadowColor: ColorMetrics
+public shadowColor: ColorMetrics
 ```
 
 Describes the arc button shadow color.
@@ -301,6 +315,8 @@ Describes the arc button shadow color.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public shadowColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public shadowColor: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -308,8 +324,7 @@ Describes the arc button shadow color.
 ## shadowEnabled
 
 ```TypeScript
-@Trace
-  public shadowEnabled: boolean
+public shadowEnabled: boolean
 ```
 
 Describes the arc button shadow switch.
@@ -320,6 +335,8 @@ Describes the arc button shadow switch.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public shadowEnabled: boolean--><!--Device-ArcButtonOptions-@Trace  public shadowEnabled: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -327,8 +344,7 @@ Describes the arc button shadow switch.
 ## status
 
 ```TypeScript
-@Trace
-  public status: ArcButtonStatus
+public status: ArcButtonStatus
 ```
 
 Describes the arc button status.
@@ -339,6 +355,8 @@ Describes the arc button status.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public status: ArcButtonStatus--><!--Device-ArcButtonOptions-@Trace  public status: ArcButtonStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -346,8 +364,7 @@ Describes the arc button status.
 ## styleMode
 
 ```TypeScript
-@Trace
-  public styleMode: ArcButtonStyleMode
+public styleMode: ArcButtonStyleMode
 ```
 
 Describes the arc button style mode.
@@ -357,6 +374,8 @@ Describes the arc button style mode.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 <!--Device-ArcButtonOptions-@Trace  public styleMode: ArcButtonStyleMode--><!--Device-ArcButtonOptions-@Trace  public styleMode: ArcButtonStyleMode-End-->
 

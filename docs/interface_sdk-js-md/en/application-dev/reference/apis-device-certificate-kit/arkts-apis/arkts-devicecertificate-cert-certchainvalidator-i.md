@@ -12,8 +12,6 @@ Provides APIs for certificate chain validator operations.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## validate
@@ -22,9 +20,7 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 ```
 
-Validates an X.509 certificate chain. This API uses an asynchronous callback to return the result.
-
-<br>Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications) .
+Validates an X.509 certificate chain. This API uses an asynchronous callback to return the result.<br>Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
 
 **Since:** 23
 
@@ -464,9 +460,7 @@ cert.createX509CertChain(encodingBlob, (err, certChain) => {
 validate(certChain: CertChainData): Promise<void>
 ```
 
-Validates an X.509 certificate chain. This API uses a promise to return the result.
-
-<br>Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications) .
+Validates an X.509 certificate chain. This API uses a promise to return the result.<br>Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
 
 **Since:** 23
 
@@ -513,9 +507,17 @@ See [validate](#validate)
 validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidationResult>
 ```
 
-Validates a certificate by building and verifying its certificate chain. This API uses a promise to return the result.
-
-<br>The certificate chain construction process complies with the following rules: 1. Trusted anchor source: The trusted certificate list (trustedCerts) is always used as the trust anchor source. The preconfigured certificate is used as the trust anchor source only when trustSystemCa is set to true. 2. Issuer search sequence: The system searches for the issuer from the trust anchor source first. If the issuer cannot be found, the system searches for the issuer in the untrusted certificate list (untrustedCerts). The intermediate CA certificate downloaded online is an untrusted certificate. 3. Trust anchor locking: Once the issuer is found in the trust anchor source, the subsequent lookup process does not roll back to the untrusted certificate, that is, the subsequent certificates must come from the trust anchor source. 4. Construction completion conditions: If partialChain is false (default value), the build is complete only when the root certificate (self-signed certificate) is found. If partialChain is true, the first time the issuer is found in the trust anchor source, the build is complete. 5. Follow-up verification: After the certificate chain is constructed, perform other verification operations, such as certificate signature verification and certificate revocation check.
+Validates a certificate by building and verifying its certificate chain. This API uses a promise to return the result.<br>The certificate chain construction process complies with the following rules:
+1. Trusted anchor source: The trusted certificate list (trustedCerts) is always used as the trust anchor source.
+The preconfigured certificate is used as the trust anchor source only when trustSystemCa is set to true.
+2. Issuer search sequence: The system searches for the issuer from the trust anchor source first. If the issuer
+cannot be found, the system searches for the issuer in the untrusted certificate list (untrustedCerts). The intermediate CA certificate downloaded online is an untrusted certificate.
+3. Trust anchor locking: Once the issuer is found in the trust anchor source, the subsequent lookup process does
+not roll back to the untrusted certificate, that is, the subsequent certificates must come from the trust anchor source.
+4. Construction completion conditions:
+If partialChain is false (default value), the build is complete only when the root certificate (self-signed certificate) is found. If partialChain is true, the first time the issuer is found in the trust anchor source, the build is complete.
+5. Follow-up verification: After the certificate chain is constructed, perform other verification operations,
+such as certificate signature verification and certificate revocation check.
 
 **Since:** 26.0.0
 

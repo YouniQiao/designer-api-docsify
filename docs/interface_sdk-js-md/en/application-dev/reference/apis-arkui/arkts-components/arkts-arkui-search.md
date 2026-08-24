@@ -1,8 +1,7 @@
 # Search
 
 The **Search** component provides an area for users to enter search queries.
-
-> **NOTE** > > This component supports plain text only. For rich text, use the RichEditor component.
+> **NOTE**>> This component supports plain text only. For rich text, use the RichEditor component.
 
 ## Child Components
 

@@ -1,8 +1,6 @@
 # AlertDialogTextStyleOptions
 
-Defines TextStyle in the AlertDialog.
-
-@interface AlertDialogTextStyleOptions
+Defines TextStyle in the AlertDialog.@interface AlertDialogTextStyleOptions
 
 **Since:** 23
 

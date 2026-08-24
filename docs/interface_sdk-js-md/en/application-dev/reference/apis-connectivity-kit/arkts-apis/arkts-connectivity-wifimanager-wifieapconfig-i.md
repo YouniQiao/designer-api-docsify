@@ -12,7 +12,6 @@ Wi-Fi EAP config.
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## altSubjectMatch

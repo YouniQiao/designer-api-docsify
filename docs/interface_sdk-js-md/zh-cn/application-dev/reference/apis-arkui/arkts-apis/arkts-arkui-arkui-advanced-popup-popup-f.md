@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from '@kit.ArkUI';
-import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 ```
 
 ## Popup
@@ -15,6 +14,8 @@ export declare function Popup(options: PopupOptions): void
 ```
 
 **起始版本：** 11
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

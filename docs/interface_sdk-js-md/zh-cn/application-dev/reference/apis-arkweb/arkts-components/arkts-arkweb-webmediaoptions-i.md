@@ -11,11 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## audioExclusive
@@ -24,11 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 audioExclusive?: boolean
 ```
 
-应用内多个Web实例的音频是否独占。
-
-true表示应用内多个Web实例的音频独占，false表示不独占。
-
-默认值：true。
+应用内多个Web实例的音频是否独占。true表示应用内多个Web实例的音频独占，false表示不独占。默认值：true。
 
 **类型：** boolean
 
@@ -62,13 +53,8 @@ audioSessionType?: AudioSessionType
 resumeInterval?: number
 ```
 
-被其他应用暂停的Web音视频能够自动续播的有效期，单位：秒。取值范围：[-2147483648, 2147483647]。值为0时，不自动续播；大于0时，将在该时间内尝试续播；小于0时，将在无限时间内尝试续播。由于近似值原因，该有 效期可能存在一秒内的误差。
-
-**说明：**
-
-HLS视频被打断后，回到前台将自动续播，不受该时间控制。
-
-默认值：0。
+被其他应用暂停的Web音视频能够自动续播的有效期，单位：秒。取值范围：[-2147483648, 2147483647]。值为0时，不自动续播；大于0时，将在该时间内尝试续播；小于0时，将在无限时间内尝试续播。由于近似值原因，该有 效期可能存在一秒内的误差。  
+**说明：**HLS视频被打断后，回到前台将自动续播，不受该时间控制。默认值：0。
 
 **类型：** number
 

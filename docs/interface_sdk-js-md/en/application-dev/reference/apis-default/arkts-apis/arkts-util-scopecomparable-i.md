@@ -1,8 +1,6 @@
 # ScopeComparable
 
-The ScopeComparable contains comparison methods.
-
-@interface ScopeComparable
+The ScopeComparable contains comparison methods.@interface ScopeComparable
 
 **Since:** 23
 

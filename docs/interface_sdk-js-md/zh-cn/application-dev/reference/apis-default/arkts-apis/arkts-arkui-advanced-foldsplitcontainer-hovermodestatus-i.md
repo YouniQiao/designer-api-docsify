@@ -1,8 +1,6 @@
 # HoverModeStatus
 
-设备或应用的折叠、旋转、窗口状态信息。
-
-@interface HoverModeStatus
+设备或应用的折叠、旋转、窗口状态信息。@interface HoverModeStatus
 
 **起始版本：** 23
 

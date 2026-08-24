@@ -1,8 +1,6 @@
 # ResolveStrategy
 
-UIContext解析策略枚举
-
-@enum { number } strategy of resolved UIContext.
+UIContext解析策略枚举@enum { number } strategy of resolved UIContext.
 
 **起始版本：** 23
 

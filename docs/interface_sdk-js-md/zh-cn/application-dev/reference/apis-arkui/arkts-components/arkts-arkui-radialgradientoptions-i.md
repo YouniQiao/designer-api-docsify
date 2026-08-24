@@ -2,8 +2,7 @@
 
 径向渐变参数。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 18
@@ -23,9 +22,7 @@
 center: [Length, Length]
 ```
 
-Defines center point for radial gradient.
-
-Anonymous Object Rectification.
+Defines center point for radial gradient.Anonymous Object Rectification.
 
 **类型：** [Length, Length]
 
@@ -45,9 +42,7 @@ Anonymous Object Rectification.
 colors: Array<[ResourceColor, number]>
 ```
 
-Defines color description for gradients.
-
-Anonymous Object Rectification.
+Defines color description for gradients.Anonymous Object Rectification.
 
 **类型：** Array&lt;[ResourceColor, number]&gt;
 
@@ -67,9 +62,7 @@ Anonymous Object Rectification.
 radius: Length
 ```
 
-Defines radius of the radial gradient.
-
-Anonymous Object Rectification.
+Defines radius of the radial gradient.Anonymous Object Rectification.
 
 **类型：** Length
 
@@ -89,9 +82,7 @@ Anonymous Object Rectification.
 repeating?: boolean
 ```
 
-Defines gradient colors with repeated coloring.
-
-Anonymous Object Rectification.
+Defines gradient colors with repeated coloring.Anonymous Object Rectification.
 
 **类型：** boolean
 

@@ -1,6 +1,6 @@
 # MessageHandler
 
-@brief Represents a custom communication object. <br> <br>   
+Represents a custom communication object. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -25,11 +25,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## onMessage
@@ -38,7 +33,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-@brief This method is called when a custom message is received.
+This method is called when a custom message is received.
 
 **Since:** 15
 
@@ -75,7 +70,7 @@ inputMethodController.recvMessage(messageHandler);
 onTerminated(): void
 ```
 
-@brief This method is called when a new message handler is set.
+This method is called when a new message handler is set.
 
 **Since:** 15
 
@@ -105,7 +100,7 @@ inputMethodController.recvMessage(messageHandler);
 onMessage: OnMessageCallback
 ```
 
-@brief Receives custom data sent by the input method application. <br> <br>   
+Receives custom data sent by the input method application. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -130,7 +125,7 @@ onMessage: OnMessageCallback
 onTerminated: Callback<void>
 ```
 
-@brief Listens for MessageHandler termination. <br> <br>   
+Listens for MessageHandler termination. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br

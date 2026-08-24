@@ -1,8 +1,6 @@
 # IpConfig（系统接口）
 
-WLAN IP配置信息。
-
-@interface IpConfig
+WLAN IP配置信息。@interface IpConfig
 
 **起始版本：** 7
 
@@ -20,9 +18,6 @@ WLAN IP配置信息。
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## dnsServers

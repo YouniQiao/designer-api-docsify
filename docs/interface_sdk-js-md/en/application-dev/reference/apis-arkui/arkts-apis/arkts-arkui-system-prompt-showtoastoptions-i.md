@@ -1,8 +1,6 @@
 # ShowToastOptions
 
-Defines the options of ShowToast.
-
-@interface ShowToastOptions
+Defines the options of ShowToast.@interface ShowToastOptions
 
 **Since:** 3
 

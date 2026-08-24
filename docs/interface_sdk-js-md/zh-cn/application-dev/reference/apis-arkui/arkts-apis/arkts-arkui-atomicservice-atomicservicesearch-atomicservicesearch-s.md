@@ -2,11 +2,12 @@
 
 AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包括默认显示的搜索区、可自定义的选择区和功能区（最多两个）。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该组件从API version 18开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 18
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct AtomicServiceSearch--><!--Device-unnamed-export declare struct AtomicServiceSearch-End-->
 
@@ -57,8 +58,7 @@ operation?: OperationParams
 ## placeholder
 
 ```TypeScript
-@Prop
-  placeholder?: ResourceStr
+placeholder?: ResourceStr
 ```
 
 搜索框内默认显示的提示文本。默认值为Search。
@@ -66,6 +66,8 @@ operation?: OperationParams
 **类型：** ResourceStr
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -76,8 +78,7 @@ operation?: OperationParams
 ## search
 
 ```TypeScript
-@Prop
-  search?: SearchParams
+search?: SearchParams
 ```
 
 search搜索区可支持的事件及样式。默认值为undefined。
@@ -85,6 +86,8 @@ search搜索区可支持的事件及样式。默认值为undefined。
 **类型：** [SearchParams](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -95,8 +98,7 @@ search搜索区可支持的事件及样式。默认值为undefined。
 ## select
 
 ```TypeScript
-@Prop
-  select?: SelectParams
+select?: SelectParams
 ```
 
 select选择区的内容、事件及样式。默认值为undefined。
@@ -104,6 +106,8 @@ select选择区的内容、事件及样式。默认值为undefined。
 **类型：** [SelectParams](arkts-arkui-atomicservice-atomicservicesearch-selectparams-i.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -114,8 +118,7 @@ select选择区的内容、事件及样式。默认值为undefined。
 ## value
 
 ```TypeScript
-@Prop
-  value?: ResourceStr
+value?: ResourceStr
 ```
 
 设置当前显示的搜索文本内容。默认值为空字符串。
@@ -123,6 +126,8 @@ select选择区的内容、事件及样式。默认值为undefined。
 **类型：** ResourceStr
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

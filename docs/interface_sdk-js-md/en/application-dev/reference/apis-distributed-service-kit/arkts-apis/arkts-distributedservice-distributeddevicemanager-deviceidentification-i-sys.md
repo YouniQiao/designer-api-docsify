@@ -1,8 +1,6 @@
 # DeviceIdentification (System API)
 
-Struct for distributed device identification.
-
-@interface DeviceIdentification
+Struct for distributed device identification.@interface DeviceIdentification
 
 **Since:** 24
 

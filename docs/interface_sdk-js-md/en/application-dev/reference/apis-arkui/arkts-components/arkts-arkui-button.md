@@ -1,7 +1,6 @@
 # Button
 
 The **Button** component can be used to create different types of buttons.
-
 > **NOTE**
 
 ## Child Components
@@ -56,9 +55,7 @@ Creates a button that can contain a single child component.
 Button(label: ResourceStr, options?: ButtonOptions)
 ```
 
-Creates a button based on text content. In this case, the component cannot contain child components.
-
-By default, the text content is displayed in a one line.
+Creates a button based on text content. In this case, the component cannot contain child components.By default, the text content is displayed in a one line.
 
 **Since:** 7
 

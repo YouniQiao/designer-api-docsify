@@ -12,7 +12,6 @@ PopupOptions定义Popup的具体样式参数。
 
 ```TypeScript
 import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from '@kit.ArkUI';
-import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 ```
 
 ## buttons
@@ -21,9 +20,7 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 buttons?: [PopupButtonOptions?, PopupButtonOptions?]
 ```
 
-设置Popup操作按钮，按钮最多设置两个。
-
-默认不显示按钮。
+设置Popup操作按钮，按钮最多设置两个。默认不显示按钮。
 
 **类型：** [PopupButtonOptions?, PopupButtonOptions?]
 
@@ -43,9 +40,7 @@ buttons?: [PopupButtonOptions?, PopupButtonOptions?]
 direction?: Direction
 ```
 
-设置Popup内容的布局方向，可用枚举值见[Direction](ts-appendix-enums.md#direction)。
-
-默认值：Direction.Auto
+设置Popup内容的布局方向，可用枚举值见Direction。默认值：Direction.Auto
 
 **类型：** Direction
 
@@ -65,13 +60,8 @@ direction?: Direction
 icon?: PopupIconOptions
 ```
 
-设置Popup图标。
-
-**说明：**
-
-当width和height设置异常值或0时不显示。
-
-默认不显示图标。
+设置Popup图标。  
+**说明：**当width和height设置异常值或0时不显示。默认不显示图标。
 
 **类型：** [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
 
@@ -91,12 +81,11 @@ icon?: PopupIconOptions
 maxWidth?: Dimension
 ```
 
-设置Popup的最大宽度，支持自定义宽度显示。
-
+设置Popup的最大宽度，支持自定义宽度显示。  
 **说明：**
-
-1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。 2. maxWidth是数字类型，支持float和integer，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。 3. 当类型为Resource时，如果未设置单位，默认单位为px。
-
+1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。
+2. maxWidth是数字类型，支持float和integer，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。
+3. 当类型为Resource时，如果未设置单位，默认单位为px。
 默认值：400vp
 
 **类型：** Dimension
@@ -117,13 +106,8 @@ maxWidth?: Dimension
 message: PopupTextOptions
 ```
 
-设置Popup内容文本。
-
-**说明：**
-
-message不支持设置fontWeight。
-
-默认不显示内容文本。
+设置Popup内容文本。  
+**说明：**message不支持设置fontWeight。默认不显示内容文本。
 
 **类型：** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
@@ -143,9 +127,7 @@ message不支持设置fontWeight。
 onClose?: () => void
 ```
 
-设置Popup关闭按钮回调函数。
-
-默认不设置关闭按钮回调函数。
+设置Popup关闭按钮回调函数。默认不设置关闭按钮回调函数。
 
 **类型：** () =&gt; void
 
@@ -165,13 +147,7 @@ onClose?: () => void
 showClose?: boolean | Resource
 ```
 
-设置Popup关闭按钮。
-
-true：显示关闭按钮；false：不显示关闭按钮。
-
-Resource：显示对应的图标。
-
-默认值：true
+设置Popup关闭按钮。true：显示关闭按钮；false：不显示关闭按钮。Resource：显示对应的图标。默认值：true
 
 **类型：** boolean \| Resource
 
@@ -191,9 +167,7 @@ Resource：显示对应的图标。
 title?: PopupTextOptions
 ```
 
-设置Popup标题文本。
-
-默认不显示标题文本。
+设置Popup标题文本。默认不显示标题文本。
 
 **类型：** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 

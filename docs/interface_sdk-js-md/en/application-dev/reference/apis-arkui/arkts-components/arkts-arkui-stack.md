@@ -1,6 +1,6 @@
 # Stack
 
-The **Stack** component provides a stack container where child components are successively stacked and the latter one overwrites the previous one. > **NOTE** > > - The general attribute align supports the mirroring capability on this component. > > **Child Components** > > Supported
+The **Stack** component provides a stack container where child components are successively stacked and the latter one overwrites the previous one.> **NOTE**>> - The general attribute align supports the mirroring capability on this component.>> **Child Components**>> Supported
 
 ## Stack
 
@@ -9,8 +9,7 @@ Stack(options?: StackOptions)
 ```
 
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Excessive component nesting can lead to performance degradation. In some scenarios, using component attributes
 > directly or leveraging system APIs can achieve the same effect as the stack container, reducing the number of
 > nested components and optimizing performance. For best practices, see

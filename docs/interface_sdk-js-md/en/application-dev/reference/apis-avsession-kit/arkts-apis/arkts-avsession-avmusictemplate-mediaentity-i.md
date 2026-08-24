@@ -1,8 +1,6 @@
 # MediaEntity
 
-The definition of MediaEntity.
-
-@interface MediaEntity
+The definition of MediaEntity.@interface MediaEntity
 
 **Since:** 23
 

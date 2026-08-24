@@ -408,7 +408,7 @@ scrollBarColor(color: ColorMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md) \| undefined | Yes |  |
+| color | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -430,7 +430,7 @@ scrollBarWidth(width: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
+| width | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -474,7 +474,7 @@ space(space: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
+| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

@@ -1,8 +1,6 @@
 # OutlineRadiuses
 
-引用该对象时，至少传入一个参数。
-
-@interface OutlineRadiuses
+引用该对象时，至少传入一个参数。@interface OutlineRadiuses
 
 **起始版本：** 23
 

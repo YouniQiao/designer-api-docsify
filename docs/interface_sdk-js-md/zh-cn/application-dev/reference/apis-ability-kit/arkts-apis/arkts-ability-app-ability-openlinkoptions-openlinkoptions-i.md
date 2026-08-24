@@ -20,10 +20,8 @@ import { OpenLinkOptions } from '@kit.AbilityKit';
 appLinkingOnly?: boolean
 ```
 
-表示是否必须以<!--RP1-->[AppLinking](../../../application-models/app-linking-startup.md)<!--RP1End-->的方式启动UIAbility。
-
-- 取值为true时，如果不存在与AppLinking相匹配的UIAbility，直接返回。 - 取值为false时，如果不存在与AppLinking相匹配的UIAbility，AppLinking会退化为 [DeepLinking](../../../application-models/deep-linking-startup.md)。默认值为false。
-
+表示是否必须以<!--RP1-->[AppLinking](../../../application-models/app-linking-startup.md)<!--RP1End-->的方式启动UIAbility。  
+- 取值为true时，如果不存在与AppLinking相匹配的UIAbility，直接返回。 - 取值为false时，如果不存在与AppLinking相匹配的UIAbility，AppLinking会退化为 [DeepLinking](../../../application-models/deep-linking-startup.md)。默认值为false。  
 aa命令隐式拉起Ability时可以通过设置"--pb appLinkingOnly true/false"以AppLinking的方式进行启动。
 
 **类型：** boolean
@@ -64,10 +62,8 @@ completionHandler?: CompletionHandler
 hideFailureTipDialog?: boolean
 ```
 
-表示[Deep Linking](../../../application-models/deep-linking-startup.md)找不到应用时是否显示“暂无可用打开方式”的弹窗。
-
-- 取值为true时，不显示“暂无可用打开方式”的弹窗。 - 取值为false时，显示“暂无可用打开方式”的弹窗。默认值为false。
-
+表示[Deep Linking](../../../application-models/deep-linking-startup.md)找不到应用时是否显示“暂无可用打开方式”的弹窗。  
+- 取值为true时，不显示“暂无可用打开方式”的弹窗。 - 取值为false时，显示“暂无可用打开方式”的弹窗。默认值为false。  
 **说明：**appLinkingOnly字段为true时不会触发Deep Linking流程，该字段不会生效。
 
 **类型：** boolean
@@ -92,7 +88,7 @@ parameters?: Record<string, RecordData>
 
 表示WantParams参数。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

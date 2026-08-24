@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @Sendable
+
 <!--Device-locks-class ConditionVariable--><!--Device-locks-class ConditionVariable-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

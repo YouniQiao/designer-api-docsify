@@ -1,8 +1,6 @@
 # AccessibilityActionOptions
 
-Defines the struct of AccessibilityActionOptions that can affect operation under accessibility.
-
-@interface AccessibilityActionOptions
+Defines the struct of AccessibilityActionOptions that can affect operation under accessibility.@interface AccessibilityActionOptions
 
 **Since:** 23
 

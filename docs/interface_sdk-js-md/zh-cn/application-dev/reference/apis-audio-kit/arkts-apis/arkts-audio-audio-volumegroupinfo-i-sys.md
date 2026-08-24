@@ -1,6 +1,6 @@
 # VolumeGroupInfo（系统接口）
 
-Describes an audio volume group.
+音量组信息。
 
 **起始版本：** 23
 
@@ -14,7 +14,6 @@ Describes an audio volume group.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## groupId
@@ -23,7 +22,7 @@ import { audioHaptic } from '@kit.AudioKit';
 readonly groupId: int
 ```
 
-Volume group id.
+组设备组id。
 
 **类型：** int
 
@@ -41,7 +40,7 @@ Volume group id.
 readonly groupName: string
 ```
 
-Volume group name.
+组名。
 
 **类型：** string
 
@@ -59,7 +58,7 @@ Volume group name.
 readonly mappingId: int
 ```
 
-Volume mapping group id.
+组映射id。
 
 **类型：** int
 
@@ -77,7 +76,7 @@ Volume mapping group id.
 readonly networkId: string
 ```
 
-Device network id.
+组网络id。
 
 **类型：** string
 
@@ -95,7 +94,7 @@ Device network id.
 readonly type: ConnectType
 ```
 
-Connect type of device for this group.
+连接设备类型。
 
 **类型：** [ConnectType](arkts-audio-audio-connecttype-e-sys.md)
 

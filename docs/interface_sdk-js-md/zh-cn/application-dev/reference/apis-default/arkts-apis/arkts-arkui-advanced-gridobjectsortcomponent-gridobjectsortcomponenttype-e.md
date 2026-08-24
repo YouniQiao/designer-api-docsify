@@ -1,9 +1,7 @@
 # GridObjectSortComponentType
 
-配置网格对象排序组件节点的类型，配置名称 IMAGE_TEXT 为图片文字类型，TEXT 为文字类型。
-
-**ArkTS-Dyn起始版本：** 11
-
+配置网格对象排序组件节点的类型，配置名称 IMAGE_TEXT 为图片文字类型，TEXT 为文字类型。  
+**ArkTS-Dyn起始版本：** 11  
 **ArkTS-Sta起始版本：** 23
 
 **起始版本：** 23

@@ -39,13 +39,13 @@ Performs integral addition of this instance with provided one, returns the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | Yes | Right hand side of the addition. |
+| other | Long | Yes | Right hand side of the addition. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) | Result of the addition. |
+| Long | Result of the addition. |
 
 ## compareTo
 
@@ -69,7 +69,7 @@ Compares this instance to other Long object. The result is less than 0 if this i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | Yes | Long object to compare with. |
+| other | Long | Yes | Long object to compare with. |
 
 **Return value:**
 
@@ -141,13 +141,13 @@ Performs integral division of this instance with provided one, returns the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | Yes | Right hand side of the division. |
+| other | Long | Yes | Right hand side of the division. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) | Result of the division. |
+| Long | Result of the division. |
 
 ## equals
 
@@ -201,7 +201,7 @@ Checks if this instance value is greater than or equal to value of provided inst
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | Yes | Right hand side of the comparison. |
+| other | Long | Yes | Right hand side of the comparison. |
 
 **Return value:**
 
@@ -231,7 +231,7 @@ Checks if this instance value is greater than value of provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | Yes | Right hand side of the comparison. |
+| other | Long | Yes | Right hand side of the comparison. |
 
 **Return value:**
 
@@ -261,7 +261,7 @@ Checks if this instance value is less than or equal to value of provided instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | Yes | Right hand side of the comparison. |
+| other | Long | Yes | Right hand side of the comparison. |
 
 **Return value:**
 
@@ -291,7 +291,7 @@ Checks if this instance value is less than value of provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | Yes | Right hand side of the comparison. |
+| other | Long | Yes | Right hand side of the comparison. |
 
 **Return value:**
 
@@ -321,13 +321,13 @@ Performs integral multiplication of this instance with provided one, returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | Yes | Right hand side of the multiplication. |
+| other | Long | Yes | Right hand side of the multiplication. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) | Result of the multiplication. |
+| Long | Result of the multiplication. |
 
 ## parseInt
 
@@ -382,13 +382,13 @@ Performs integral subtraction of this instance with provided one, returns the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Long](arkts-arkts-long-c.md) | Yes | Right hand side of the subtraction. |
+| other | Long | Yes | Right hand side of the subtraction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) | Result of the subtraction. |
+| Long | Result of the subtraction. |
 
 ## toByte
 

@@ -128,9 +128,7 @@ function open(path: string, callback: AsyncCallback<File>): void
 function open(path: string, mode: int, callback: AsyncCallback<File>): void
 ```
 
-打开文件或目录，可设置打开文件的选项。使用callback异步回调。
-
-支持使用URI打开文件。
+打开文件或目录，可设置打开文件的选项。使用callback异步回调。支持使用URI打开文件。
 
 **起始版本：** 23
 

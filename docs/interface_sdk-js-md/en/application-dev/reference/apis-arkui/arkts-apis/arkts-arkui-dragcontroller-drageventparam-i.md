@@ -1,8 +1,6 @@
 # DragEventParam
 
-Define the drag event parameters
-
-@interface DragEventParam
+Define the drag event parameters@interface DragEventParam
 
 **Since:** 23
 

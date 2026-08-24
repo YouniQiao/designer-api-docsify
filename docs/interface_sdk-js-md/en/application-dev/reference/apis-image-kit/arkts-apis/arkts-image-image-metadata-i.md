@@ -191,9 +191,7 @@ See [clone](#clone)
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and values from the image's metadata. This API uses a promise to return the result.
-
-For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+Obtains all properties and values from the image's metadata. This API uses a promise to return the result.For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
 
 **Since:** 13
 
@@ -763,9 +761,7 @@ async function heifsMetadataSetBlob(context: Context) {
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of properties for the image's metadata. This API uses a promise to return the result.
-
-For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+Sets the values of properties for the image's metadata. This API uses a promise to return the result.For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
 
 **Since:** 23
 

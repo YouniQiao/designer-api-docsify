@@ -1,8 +1,6 @@
 # MenuOptions
 
-Defines the menu options.
-
-@extends ContextMenuOptions
+Defines the menu options.@extends ContextMenuOptions
 
 **Inheritance/Implementation:** MenuOptions extends [ContextMenuOptions](arkts-common-contextmenuoptions-i.md)
 

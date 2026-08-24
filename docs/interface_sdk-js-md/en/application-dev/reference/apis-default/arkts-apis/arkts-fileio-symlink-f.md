@@ -62,8 +62,7 @@ function symlink(target: string, srcPath: string, callback: AsyncCallback<void>)
 
 Creates a symbolic link based on a file path. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 23

@@ -6,6 +6,8 @@ Declare ProgressButtonV2 Color.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ProgressButtonV2Color--><!--Device-unnamed-export declare class ProgressButtonV2Color-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,17 +44,18 @@ The constructor of ProgressButtonV2
 ## backgroundColor
 
 ```TypeScript
-@Trace
-  public backgroundColor?: ColorMetrics
+public backgroundColor?: ColorMetrics
 ```
 
 Set background color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,17 +66,18 @@ Set background color of the ProgressButtonV2.
 ## borderColor
 
 ```TypeScript
-@Trace
-  public borderColor?: ColorMetrics
+public borderColor?: ColorMetrics
 ```
 
 Set border color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,17 +88,18 @@ Set border color of the ProgressButtonV2.
 ## progressColor
 
 ```TypeScript
-@Trace
-  public progressColor?: ColorMetrics
+public progressColor?: ColorMetrics
 ```
 
 Set progress color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,17 +110,18 @@ Set progress color of the ProgressButtonV2.
 ## textColor
 
 ```TypeScript
-@Trace
-  public textColor?: ColorMetrics
+public textColor?: ColorMetrics
 ```
 
 Set text color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

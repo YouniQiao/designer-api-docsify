@@ -1,8 +1,6 @@
 # Album
 
-专辑的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。
-
-@extends MediaEntity @interface Album
+专辑的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。@extends MediaEntity @interface Album
 
 **继承/实现关系：** Album extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 

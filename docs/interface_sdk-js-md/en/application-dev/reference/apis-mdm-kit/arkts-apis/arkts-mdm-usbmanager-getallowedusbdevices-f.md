@@ -71,10 +71,7 @@ try {
 function getAllowedUsbDevices(admin: Want | null): Array<UsbDeviceId>
 ```
 
-Obtains allowed USB devices.
-
-Use cases:
-
+Obtains allowed USB devices.Use cases:  
 - Retrieve the existing policy for evaluation before making any modifications. - Display the current USB storage device access control status on the management page.
 
 **Since:** 26.0.0

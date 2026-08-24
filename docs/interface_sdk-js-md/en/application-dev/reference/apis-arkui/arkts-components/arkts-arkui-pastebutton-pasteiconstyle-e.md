@@ -1,8 +1,6 @@
 # PasteIconStyle
 
-Enumerates the icon styles.
-
-@enum { int }
+Enumerates the icon styles.@enum { int }
 
 **Since:** 23
 

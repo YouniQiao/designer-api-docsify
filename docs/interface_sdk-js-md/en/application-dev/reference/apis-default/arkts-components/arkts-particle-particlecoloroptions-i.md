@@ -16,9 +16,7 @@ Defines the particle color options.
 a: ParticleTuple<int, int>
 ```
 
-Opacity component of particle color.
-
-Anonymous Object Rectification.
+Opacity component of particle color.Anonymous Object Rectification.
 
 **Type:** [ParticleTuple](arkts-particletuple-t.md)&lt;int, int&gt;
 
@@ -38,9 +36,7 @@ Anonymous Object Rectification.
 b: ParticleTuple<int, int>
 ```
 
-Blue component of particle color.
-
-Anonymous Object Rectification.
+Blue component of particle color.Anonymous Object Rectification.
 
 **Type:** [ParticleTuple](arkts-particletuple-t.md)&lt;int, int&gt;
 
@@ -60,9 +56,7 @@ Anonymous Object Rectification.
 g: ParticleTuple<int, int>
 ```
 
-Green component of particle color.
-
-Anonymous Object Rectification.
+Green component of particle color.Anonymous Object Rectification.
 
 **Type:** [ParticleTuple](arkts-particletuple-t.md)&lt;int, int&gt;
 
@@ -82,9 +76,7 @@ Anonymous Object Rectification.
 r: ParticleTuple<int, int>
 ```
 
-Red component of particle color.
-
-Anonymous Object Rectification.
+Red component of particle color.Anonymous Object Rectification.
 
 **Type:** [ParticleTuple](arkts-particletuple-t.md)&lt;int, int&gt;
 

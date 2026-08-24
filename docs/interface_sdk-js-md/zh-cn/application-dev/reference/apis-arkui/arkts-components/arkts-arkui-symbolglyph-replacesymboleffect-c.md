@@ -43,9 +43,7 @@ ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换�
 replaceType?: ReplaceEffectType
 ```
 
-替换动效类型。
-
-默认值：ReplaceEffectType.SEQUENTIAL
+替换动效类型。默认值：ReplaceEffectType.SEQUENTIAL
 
 **类型：** [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md)
 
@@ -65,9 +63,7 @@ replaceType?: ReplaceEffectType
 scope?: EffectScope
 ```
 
-动效范围。
-
-默认值：EffectScope.LAYER
+动效范围。默认值：EffectScope.LAYER
 
 **类型：** [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md)
 

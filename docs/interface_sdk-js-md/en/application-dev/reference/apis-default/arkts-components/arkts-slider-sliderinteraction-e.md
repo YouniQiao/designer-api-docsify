@@ -1,8 +1,6 @@
 # SliderInteraction
 
-Interaction mode between the user and the slider.
-
-@enum { number }
+Interaction mode between the user and the slider.@enum { number }
 
 **Since:** 23
 

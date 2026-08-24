@@ -1,8 +1,6 @@
 # MessageLevel
 
-Enum type supplied to [getMessageLevel](arkts-web-consolemessage-c.md#getmessagelevel) for receiving the console log level of JavaScript.
-
-@enum { number }
+Enum type supplied to [getMessageLevel](arkts-web-consolemessage-c.md#getmessagelevel) for receiving the console log level of JavaScript.@enum { number }
 
 **起始版本：** 23
 

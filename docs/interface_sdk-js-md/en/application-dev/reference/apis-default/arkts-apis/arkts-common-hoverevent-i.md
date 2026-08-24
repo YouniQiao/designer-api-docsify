@@ -1,8 +1,6 @@
 # HoverEvent
 
-The hover action triggers this method invocation.
-
-@extends BaseEvent
+The hover action triggers this method invocation.@extends BaseEvent
 
 **Inheritance/Implementation:** HoverEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 

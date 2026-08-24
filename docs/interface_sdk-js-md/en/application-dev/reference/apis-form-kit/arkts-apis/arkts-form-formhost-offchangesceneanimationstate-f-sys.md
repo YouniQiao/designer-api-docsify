@@ -12,9 +12,7 @@ import { formHost } from '@kit.FormKit';
 function offChangeSceneAnimationState(callback?: Callback<formInfo.ChangeSceneAnimationStateRequest>): void
 ```
 
-Cancels listening to the event of change scene animation state.
-
-You can use this method to cancel listening to the event of change scene animation state.
+Cancels listening to the event of change scene animation state.You can use this method to cancel listening to the event of change scene animation state.
 
 **Since:** 23
 

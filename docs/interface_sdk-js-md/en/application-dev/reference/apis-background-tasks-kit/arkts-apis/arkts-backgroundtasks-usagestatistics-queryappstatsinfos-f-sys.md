@@ -12,9 +12,7 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>
 ```
 
-Queries usage information about each application within a specified period.
-
-This method queries usage information at the BY_OPTIMIZED interval by default.
+Queries usage information about each application within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **Since:** 23
 

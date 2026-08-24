@@ -39,13 +39,13 @@ Performs integral addition with provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | Yes | right hand side of the addition. |
+| other | Int | Yes | right hand side of the addition. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | result of the addition. |
+| Int | result of the addition. |
 
 ## compareTo
 
@@ -69,7 +69,7 @@ Compares this instance to other Int object. The result is less than 0 if this in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | Yes | Int object to compare with. |
+| other | Int | Yes | Int object to compare with. |
 
 **Return value:**
 
@@ -141,13 +141,13 @@ Performs integral division with provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | Yes | right hand side of the division. |
+| other | Int | Yes | right hand side of the division. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | result of the division. |
+| Int | result of the division. |
 
 ## equals
 
@@ -201,7 +201,7 @@ Checks if this instance value is greater than or equal to value of provided inst
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | Yes | right hand side of the comparison. |
+| other | Int | Yes | right hand side of the comparison. |
 
 **Return value:**
 
@@ -231,7 +231,7 @@ Checks if this instance value is greater than value of provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | Yes | right hand side of the comparison. |
+| other | Int | Yes | right hand side of the comparison. |
 
 **Return value:**
 
@@ -261,7 +261,7 @@ Checks if this instance value is less than or equal to value of provided instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | Yes | right hand side of the comparison. |
+| other | Int | Yes | right hand side of the comparison. |
 
 **Return value:**
 
@@ -291,7 +291,7 @@ Checks if this instance value is less than value of provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | Yes | right hand side of the comparison. |
+| other | Int | Yes | right hand side of the comparison. |
 
 **Return value:**
 
@@ -321,13 +321,13 @@ Performs integral multiplication with provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | Yes | right hand side of the multiplication. |
+| other | Int | Yes | right hand side of the multiplication. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | result of the multiplication. |
+| Int | result of the multiplication. |
 
 ## parseInt
 
@@ -382,13 +382,13 @@ Performs integral subtraction with provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Int](arkts-arkts-int-c.md) | Yes | right hand side of the subtraction. |
+| other | Int | Yes | right hand side of the subtraction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | result of the subtraction. |
+| Int | result of the subtraction. |
 
 ## toByte
 

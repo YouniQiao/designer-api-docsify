@@ -22,8 +22,7 @@ import { call } from '@kit.TelephonyKit';
 accountId?: int
 ```
 
-帐户Id。
-
+帐户Id。  
 - 0：卡槽1。 - 1：卡槽2。
 
 **类型：** int
@@ -80,7 +79,7 @@ extraParams?: Record<string, Object>
 
 Indicates the extra call parameters.
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 23
 
@@ -114,8 +113,7 @@ videoState?: VideoStateType
 xCallType?: XCallType
 ```
 
-XCALL类型。
-
+XCALL类型。  
 **起始版本:** 26.0.0
 
 **类型：** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)

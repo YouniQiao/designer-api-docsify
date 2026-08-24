@@ -8,6 +8,8 @@ Defines the prefix image icon class.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2PrefixImageIcon--><!--Device-unnamed-export declare class ChipV2PrefixImageIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

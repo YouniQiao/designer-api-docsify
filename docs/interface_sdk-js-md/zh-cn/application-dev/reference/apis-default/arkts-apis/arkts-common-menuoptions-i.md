@@ -1,8 +1,6 @@
 # MenuOptions
 
-Defines the menu options.
-
-@extends ContextMenuOptions
+Defines the menu options.@extends ContextMenuOptions
 
 **继承/实现关系：** MenuOptions extends [ContextMenuOptions](arkts-common-contextmenuoptions-i.md)
 

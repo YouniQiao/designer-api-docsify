@@ -8,6 +8,8 @@ The class for SegmentButton item options array.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Observed
+
 <!--Device-unnamed-declare class SegmentButtonItemOptionsArray--><!--Device-unnamed-declare class SegmentButtonItemOptionsArray-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

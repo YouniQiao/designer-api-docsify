@@ -1,8 +1,6 @@
 # CommonState
 
-Enum for state.
-
-@enum { number }
+Enum for state.@enum { number }
 
 **Since:** 23
 

@@ -2,19 +2,14 @@
 
 Provides the capability to draw overlays.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 12.&gt;
 > - In the following API examples, you must first use [getOverlayManager()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getoverlaymanager) in
-> **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance.
-> 
+> **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance.&gt;
 > - The nodes on **OverlayManager** are above the page level, but below such components as created through
-> **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, and **Toast**.
-> 
+> **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, and **Toast**.&gt;
 > - The drawing method inside and outside the safe area of nodes on **OverlayManager** is consistent with that of the
-> page, and the keyboard avoidance method is also the same as that of the page.
-> 
+> page, and the keyboard avoidance method is also the same as that of the page.&gt;
 > - For properties related to **OverlayManager**, you are advised to use AppStorage for global storage across the
 > application to prevent changes in property values when switching pages, which could lead to service errors.
 
@@ -158,9 +153,7 @@ struct OverlayExample {
 addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void
 ```
 
-Creates an overlay node with the specified display order.
-
-This API allows you to define the stacking order of the nodes when they are created.
+Creates an overlay node with the specified display order.This API allows you to define the stacking order of the nodes when they are created.
 
 **Since:** 18
 

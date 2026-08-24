@@ -16,9 +16,7 @@ Defines the align rule options of relative container.
 align: VerticalAlign
 ```
 
-Sets the vertical alignment relative to the anchor component.
-
-Anonymous Object Rectification
+Sets the vertical alignment relative to the anchor component.Anonymous Object Rectification
 
 **Type:** [VerticalAlign](../../apis-arkui/arkts-apis/arkts-arkui-verticalalign-e.md)
 
@@ -38,9 +36,7 @@ Anonymous Object Rectification
 anchor: string
 ```
 
-Specifies the anchor component
-
-Anonymous Object Rectification
+Specifies the anchor component Anonymous Object Rectification
 
 **Type:** string
 

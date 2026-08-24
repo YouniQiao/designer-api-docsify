@@ -1,8 +1,6 @@
 # ResizableOptions
 
-Image resizable options
-
-@interface ResizableOptions
+Image resizable options@interface ResizableOptions
 
 **Since:** 23
 

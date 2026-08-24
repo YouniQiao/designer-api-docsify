@@ -15,8 +15,7 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo,
 
 Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Since API version 11, you can use the [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [DragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md) object
 > associated with the current UI context.
@@ -249,8 +248,7 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Since API version 11, you can use the [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [DragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md) object
 > associated with the current UI context.

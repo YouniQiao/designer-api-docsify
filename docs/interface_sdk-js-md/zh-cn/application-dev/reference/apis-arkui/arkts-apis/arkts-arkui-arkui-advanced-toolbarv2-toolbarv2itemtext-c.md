@@ -4,6 +4,8 @@ Declare type ToolBarV2ItemText
 
 **起始版本：** 18
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2ItemText--><!--Device-unnamed-export declare class ToolBarV2ItemText-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,15 +43,16 @@ The constructor used to create a ToolBarV2ItemText object.
 ## activatedColor
 
 ```TypeScript
-@Trace
-  activatedColor?: ColorMetrics
+activatedColor?: ColorMetrics
 ```
 
 Text fontColor when the item is activated.
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,15 +65,16 @@ Text fontColor when the item is activated.
 ## color
 
 ```TypeScript
-@Trace
-  color?: ColorMetrics
+color?: ColorMetrics
 ```
 
 Define text fontColor.
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,8 +87,7 @@ Define text fontColor.
 ## text
 
 ```TypeScript
-@Trace
-  text: ResourceStr
+text: ResourceStr
 ```
 
 Define text content.
@@ -92,6 +95,8 @@ Define text content.
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

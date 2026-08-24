@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class SubHeaderV2OperationItem--><!--Device-unnamed-export declare class SubHeaderV2OperationItem-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ constructor(options: SubHeaderV2OperationItemOptions)
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  accessibilityDescription?: ResourceStr
+accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of this text or icon.
@@ -50,6 +51,8 @@ The accessibilityDescription of this text or icon.
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,17 +65,18 @@ The accessibilityDescription of this text or icon.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  accessibilityLevel?: string
+accessibilityLevel?: string
 ```
 
 The accessibilityLevel of this text or icon.
 
 **类型：** string
 
-**默认值：** "auto".The options are as follows:<br/> "auto":The value is converted to "yes" or "no" based on the component. "yes": the current component is selectable for the accessibility service. "no": The current component is not selectable for the accessibility service. "no-hide-descendants":The current component and all its child components are not selectable<br/> for the accessibility service.
+**默认值：** "auto".The options are as follows:<br/>"auto":The value is converted to "yes" or "no" based on the component."yes": the current component is selectable for the accessibility service."no": The current component is not selectable for the accessibility service."no-hide-descendants":The current component and all its child components are not selectable<br/> for the accessibility service.
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,8 +89,7 @@ The accessibilityLevel of this text or icon.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  accessibilityText?: ResourceStr
+accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of this text or icon.
@@ -94,6 +97,8 @@ The accessibilityText of this text or icon.
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,8 +111,7 @@ The accessibilityText of this text or icon.
 ## action
 
 ```TypeScript
-@Trace
-  action?: SubHeaderV2OperationItemAction
+action?: SubHeaderV2OperationItemAction
 ```
 
 callback function when operate the text or icon.
@@ -115,6 +119,8 @@ callback function when operate the text or icon.
 **类型：** [SubHeaderV2OperationItemAction](arkts-arkui-subheaderv2operationitemaction-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,8 +133,7 @@ callback function when operate the text or icon.
 ## content
 
 ```TypeScript
-@Trace
-  content: SubHeaderV2OperationItemType
+content: SubHeaderV2OperationItemType
 ```
 
 The content of text or the address of icon.
@@ -136,6 +141,8 @@ The content of text or the address of icon.
 **类型：** [SubHeaderV2OperationItemType](arkts-arkui-subheaderv2operationitemtype-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,8 +155,7 @@ The content of text or the address of icon.
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  defaultFocus?: boolean
+defaultFocus?: boolean
 ```
 
 Sets the default focus state of the text or icon.
@@ -159,6 +165,8 @@ Sets the default focus state of the text or icon.
 **默认值：** false
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -171,17 +179,16 @@ Sets the default focus state of the text or icon.
 ## id
 
 ```TypeScript
-@Trace
-  id?: string
+id?: string
 ```
 
-子标题右侧操作项id。需要为子标题右侧操作项设置id的时候设置此参数，缺省时不设置此参数。
-
-默认值：undefined，表示不设置子标题右侧操作项id。
+子标题右侧操作项id。需要为子标题右侧操作项设置id的时候设置此参数，缺省时不设置此参数。默认值：undefined，表示不设置子标题右侧操作项id。
 
 **类型：** string
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

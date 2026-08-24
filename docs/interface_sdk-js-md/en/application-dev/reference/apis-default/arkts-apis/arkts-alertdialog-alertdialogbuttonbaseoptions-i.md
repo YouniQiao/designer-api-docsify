@@ -1,8 +1,6 @@
 # AlertDialogButtonBaseOptions
 
-Base button param.
-
-@interface AlertDialogButtonBaseOptions
+Base button param.@interface AlertDialogButtonBaseOptions
 
 **Since:** 23
 

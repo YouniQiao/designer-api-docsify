@@ -1,8 +1,6 @@
 # HoverEventParam
 
-当前设备与悬停状态相关的参数，包括设备的折叠状态、悬停状态、应用方向以及窗口模式枚举。
-
-@interface HoverEventParam
+当前设备与悬停状态相关的参数，包括设备的折叠状态、悬停状态、应用方向以及窗口模式枚举。@interface HoverEventParam
 
 **起始版本：** 23
 

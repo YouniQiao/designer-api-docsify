@@ -1,8 +1,6 @@
 # BreakpointsReference
 
-设置栅格容器组件的断点参照物。
-
-@enum { int }
+设置栅格容器组件的断点参照物。@enum { int }
 
 **起始版本：** 23
 

@@ -26,8 +26,7 @@ static vibrate(options?: VibrateOptions): void
 
 Triggers device vibration.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Except for lite wearables. You are advised to use
 > [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md) since API version 8.
 

@@ -50,7 +50,7 @@ import { resourceManager } from '@kit.LocalizationKit';
 | Name | Description |
 | --- | --- |
 | [ColorMode](arkts-localization-resourcemanager-colormode-e.md) | Defines the color mode of the current device. |
-| [DeviceType](arkts-localization-resourcemanager-devicetype-e.md) | Enumerates the device types. |
+| [DeviceType](arkts-localization-resourcemanager-devicetype-e.md) | Enumerates the device types.<!--RP1--><!--RP1End--> |
 | [Direction](arkts-localization-resourcemanager-direction-e.md) | Enumerates the screen directions. |
 | [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md) | Enumerates the screen density types. |
 

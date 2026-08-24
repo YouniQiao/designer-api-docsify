@@ -1,8 +1,6 @@
 # TranslateOptions
 
-Defines the options of translate.
-
-@interface TranslateOptions
+Defines the options of translate.@interface TranslateOptions
 
 **起始版本：** 7
 

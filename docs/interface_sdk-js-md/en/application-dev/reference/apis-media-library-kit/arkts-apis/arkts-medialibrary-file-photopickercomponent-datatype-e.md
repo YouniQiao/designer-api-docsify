@@ -14,9 +14,7 @@ Enumerates the types of data sent from **PickerController** to the **PhotoPicker
 SET_SELECTED_URIS = 1
 ```
 
-Sends a list of selected items to instruct the **PhotoPickerComponent** to refresh the selection status. A string array needs to be passed in.
-
-For example, after an image is deleted from an application's page, the application calls **setData()** to notify the **PhotoPickerComponent** of the remaining selected items. Then, the **PhotoPickerComponent** refreshes the check box status.
+Sends a list of selected items to instruct the **PhotoPickerComponent** to refresh the selection status. A string array needs to be passed in.For example, after an image is deleted from an application's page, the application calls **setData()** to notify the **PhotoPickerComponent** of the remaining selected items. Then, the **PhotoPickerComponent** refreshes the check box status.
 
 **Since:** 12
 
@@ -32,9 +30,7 @@ For example, after an image is deleted from an application's page, the applicati
 SET_ALBUM_URI = 2
 ```
 
-Sends the selected album to instruct the **PhotoPickerComponent** to refresh the album data. A string array needs to be passed in.
-
-For example, after an album is selected from an application's page, the application calls **setData** to notify the **PhotoPickerComponent** of the URI of the selected album. Then, the **PhotoPickerComponent** refreshes the album data.
+Sends the selected album to instruct the **PhotoPickerComponent** to refresh the album data. A string array needs to be passed in.For example, after an album is selected from an application's page, the application calls **setData** to notify the **PhotoPickerComponent** of the URI of the selected album. Then, the **PhotoPickerComponent** refreshes the album data.
 
 **Since:** 12
 

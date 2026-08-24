@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## allowList
@@ -93,7 +92,10 @@ uri: string
 value?: ValueType
 ```
 
-共享配置的值。不填则为空字符串。 **说明：** 1. API版本26.0.0之前，字符串长度不超过4096个字节；从API版本26.0.0开始，默认允许的字符串最大长度为4096字节，可以在 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中配置maxValueLength将最大长度扩展到102400字节。 2. 当首次发布共享配置时，如果未填写，将默认设置为空字符串。在更新共享配置时，如果未填写，共享配置的值将不会被更新。
+共享配置的值。不填则为空字符串。 **说明：**
+1. API版本26.0.0之前，字符串长度不超过4096个字节；从API版本26.0.0开始，默认允许的字符串最大长度为4096字节，可以在  
+[DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中配置maxValueLength将最大长度扩展到102400字节。
+2. 当首次发布共享配置时，如果未填写，将默认设置为空字符串。在更新共享配置时，如果未填写，共享配置的值将不会被更新。
 
 **类型：** [ValueType](arkts-arkdata-valuetype-t.md)
 
@@ -113,7 +115,7 @@ values?: Record<int, ValueType>
 
 多值类型取值。**Record**中的第一个参数为key，key由用户指定，必须唯一。第二个参数为key对应的value。单个应用在单个URI下最多支持添加10个value，每个value最大长度为4096字节。同时，所有va lue的总长度受参数值[maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxvaluelength)]限制。该参数仅在[isMultiValues](#ismultivalues)}设置为true时生效。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
+**类型：** Record&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
 
 **起始版本：** 26.0.0
 

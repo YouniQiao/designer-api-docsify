@@ -40,7 +40,7 @@ Description of the volume.
 diskId: string
 ```
 
-ID of the disk to which the volume belongs. A disk can have one or more volumes. The disk ID is in the disk-{ Primary device ID}-{Secondary device ID} format, which is similar to the volume ID.
+ID of the disk to which the volume belongs. A disk can have one or more volumes. The disk ID is in the disk-{Primary device ID}-{Secondary device ID} format, which is similar to the volume ID.
 
 **Type:** string
 
@@ -170,14 +170,10 @@ Whether the volume can be removed. Currently, only removable storage devices are
 state: int
 ```
 
-Volume status.
-
-**0**: The volume is unmounted.
-
-**1**: The volume is being checked.
-
-**2**: The volume is mounted.
-
+Volume status.  
+**0**: The volume is unmounted.  
+**1**: The volume is being checked.  
+**2**: The volume is mounted.  
 **3**: The volume is being ejected.
 
 **Type:** int

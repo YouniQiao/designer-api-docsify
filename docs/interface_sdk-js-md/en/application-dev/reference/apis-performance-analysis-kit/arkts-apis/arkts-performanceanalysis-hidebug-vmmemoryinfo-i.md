@@ -1,8 +1,6 @@
 # VMMemoryInfo
 
-Describes the VM memory information.
-
-@interface VMMemoryInfo
+Describes the VM memory information.@interface VMMemoryInfo
 
 **Since:** 23
 

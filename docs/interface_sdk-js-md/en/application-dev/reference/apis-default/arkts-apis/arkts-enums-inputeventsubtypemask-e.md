@@ -1,8 +1,6 @@
 # InputEventSubTypeMask
 
-Defines the input event subtype mask for monitoring.
-
-@enum { number }
+Defines the input event subtype mask for monitoring.@enum { number }
 
 **Since:** 26.0.0
 

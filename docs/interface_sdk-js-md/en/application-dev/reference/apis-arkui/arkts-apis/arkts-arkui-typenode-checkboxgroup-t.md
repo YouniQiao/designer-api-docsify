@@ -16,5 +16,5 @@ Represents a FrameNode of the **CheckboxGroup** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;CheckboxGroupInterface, CheckboxGroupAttribute&gt;
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;CheckboxGroupInterface, CheckboxGroupAttribute&gt;
 

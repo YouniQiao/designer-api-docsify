@@ -1,8 +1,6 @@
 # ArcAlphabetIndexerAttribute
 
-In addition to the universal attributes, the following attributes are supported.
-
-In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>
 
@@ -94,7 +92,7 @@ Sets the default font style of the index items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | Yes | Default font style of the index items.<br>Default value:<br>{<br>size:'13.0fp',&lt;br &gt; style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
+| font | Optional&lt;Font&gt; | Yes | Default font style of the index items.<br>Default value:<br>{<br>size:'13.0fp',<br> style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
 
 **Return value:**
 

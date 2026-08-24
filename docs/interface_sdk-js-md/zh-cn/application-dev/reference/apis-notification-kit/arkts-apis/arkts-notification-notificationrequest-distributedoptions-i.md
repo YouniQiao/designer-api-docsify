@@ -14,8 +14,7 @@
 isDistributed?: boolean
 ```
 
-是否支持跨设备协同通知。默认为true。
-
+是否支持跨设备协同通知。默认为true。  
 - true：支持跨设备协同通知。 - false：不支持跨设备协同通知。
 
 **类型：** boolean

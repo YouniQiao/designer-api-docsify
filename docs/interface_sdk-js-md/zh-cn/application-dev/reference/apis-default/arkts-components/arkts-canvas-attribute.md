@@ -1,8 +1,6 @@
 # CanvasAttribute
 
-提供画布组件，用于自定义绘制图形。
-
-@extends CommonMethod @interface CanvasAttribute
+提供画布组件，用于自定义绘制图形。@extends CommonMethod @interface CanvasAttribute
 
 **继承/实现关系：** CanvasAttribute extends CommonMethod
 

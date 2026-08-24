@@ -440,7 +440,7 @@ Offset of the dialog box based on the **alignment** settings. <br>Default value:
 onDidAppear?: () => void
 ```
 
-Event callback after the dialog box appears. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. <br>3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. <br>4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
+Event callback after the dialog box appears. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange)&gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. <br>3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. <br>4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
 
 **Type:** () =&gt; void
 
@@ -460,7 +460,7 @@ Event callback after the dialog box appears. <br>**NOTE：**<br>1. The normal ti
 onDidDisappear?: () => void
 ```
 
-Event callback after the dialog box disappears. <br>**NOTE：**<br>The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
+Event callback after the dialog box disappears. <br>**NOTE：**<br>The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange)&gt; onWillDisappear &gt; onDidDisappear. <br>This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
 
 **Type:** () =&gt; void
 
@@ -480,7 +480,7 @@ Event callback after the dialog box disappears. <br>**NOTE：**<br>The normal ti
 onWillAppear?: () => void
 ```
 
-Event callback when the dialog box is about to appear. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+Event callback when the dialog box is about to appear. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange)&gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
 **Type:** () =&gt; void
 
@@ -500,7 +500,7 @@ Event callback when the dialog box is about to appear. <br>**NOTE：**<br>1. The
 onWillDisappear?: () => void
 ```
 
-Event callback when the dialog box is about to disappear. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
+Event callback when the dialog box is about to disappear. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange)&gt; onWillDisappear &gt; onDidDisappear. <br>2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
 
 **Type:** () =&gt; void
 

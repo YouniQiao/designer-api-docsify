@@ -16,5 +16,5 @@ GridRow类型的FrameNode节点类型。只允许添加GridCol类型子组件。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;GridRowInterface, GridRowAttribute&gt;
+**属性类型：** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;GridRowInterface, GridRowAttribute&gt;
 

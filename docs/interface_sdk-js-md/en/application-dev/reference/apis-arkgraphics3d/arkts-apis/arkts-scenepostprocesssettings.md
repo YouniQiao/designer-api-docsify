@@ -16,5 +16,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ToneMappingType](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingtype-e.md) | Enumerates the tone mapping types. |
+| [ToneMappingType](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingtype-e.md) | Enumerates the tone mapping types.@enum { int } |
 

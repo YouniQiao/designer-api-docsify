@@ -12,9 +12,7 @@ import { image } from '@kit.ImageKit';
 function createPixelMapFromPixelsSync(pixels: ArrayBuffer, param: InitializationOptions): PixelMap
 ```
 
-Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap.
-
-The following pixel formats are not supported for PixelMap creation: RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4.
+Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap.The following pixel formats are not supported for PixelMap creation: RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4.
 
 **起始版本：** 26.0.0
 
@@ -32,7 +30,7 @@ The following pixel formats are not supported for PixelMap creation: RGBA_101010
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixels | ArrayBuffer | 是 | The pixel data buffer used to initialize the PixelMap. The format of the pixel data can be specified by InitializationOptions.srcPixelFormat. The size of the buffer should be: image width image height bytes per pixel. |
+| pixels | ArrayBuffer | 是 | The pixel data buffer used to initialize the PixelMap. The format of the pixel data can be specified by InitializationOptions.srcPixelFormat. The size of the buffer should be: image width * image height * bytes per pixel. |
 | param | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | 是 | Initialization options for the PixelMap. If InitializationOptions.pixelFormat is set to ASTC_4x4, it will be reset to the default value RGBA_8888. If InitializationOptions.srcPixelFormat is set to ASTC_4x4, it will be reset to the default value BGRA_8888. |
 
 **返回值：**

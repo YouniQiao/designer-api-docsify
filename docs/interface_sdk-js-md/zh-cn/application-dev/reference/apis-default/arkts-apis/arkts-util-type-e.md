@@ -1,8 +1,6 @@
 # Type
 
-Type表示base64的四种不同编码格式。
-
-@enum { number } Type
+Type表示base64的四种不同编码格式。@enum { number } Type
 
 **起始版本：** 23
 

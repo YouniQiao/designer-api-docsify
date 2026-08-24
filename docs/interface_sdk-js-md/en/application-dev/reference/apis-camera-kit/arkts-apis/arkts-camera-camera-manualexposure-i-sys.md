@@ -16,7 +16,6 @@ ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposureq
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getExposure

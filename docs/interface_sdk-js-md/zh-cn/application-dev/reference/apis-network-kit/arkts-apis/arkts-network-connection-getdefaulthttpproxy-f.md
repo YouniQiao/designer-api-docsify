@@ -14,10 +14,8 @@ function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 
 获取网络的默认代理配置信息。使用callback异步回调。
 
-> **说明：**
-> 
-> - 如果设置了全局代理，则返回全局代理配置信息。
-> 
+> **说明：**&gt;
+> - 如果设置了全局代理，则返回全局代理配置信息。&gt;
 > - 如果进程使用[setAppNet](arkts-network-connection-setappnet-f.md)绑定到指定[NetHandle](arkts-network-connection-nethandle-i.md)对应的网络，则返回
 > [NetHandle](arkts-network-connection-nethandle-i.md)对应网络的代理配置信息。在其它情况下，将返回默认网络的代理配置信息。
 
@@ -108,10 +106,8 @@ function getDefaultHttpProxy(): Promise<HttpProxy>
 
 获取网络默认的代理配置信息。使用Promise异步回调。
 
-> **说明：**
-> 
-> - 如果设置了全局代理，则返回全局代理配置信息。
-> 
+> **说明：**&gt;
+> - 如果设置了全局代理，则返回全局代理配置信息。&gt;
 > - 如果进程使用[setAppNet](arkts-network-connection-setappnet-f.md)绑定到指定[NetHandle](arkts-network-connection-nethandle-i.md)对应的网络，则返回
 > [NetHandle](arkts-network-connection-nethandle-i.md)对应网络的代理配置信息。在其它情况下，将返回默认网络的代理配置信息。
 

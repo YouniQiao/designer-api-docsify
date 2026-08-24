@@ -11,9 +11,7 @@
 export declare function sendKeyEvent(event: KeyEvent): boolean
 ```
 
-发送按键事件。
-
-此接口仅用于对应用的测试。由于耗时长，不建议使用。
+发送按键事件。此接口仅用于对应用的测试。由于耗时长，不建议使用。
 
 **起始版本：** 23
 

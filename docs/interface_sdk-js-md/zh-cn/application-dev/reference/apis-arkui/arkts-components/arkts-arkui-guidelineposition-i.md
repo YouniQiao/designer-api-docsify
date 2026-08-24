@@ -39,9 +39,7 @@ guideLine距离容器右侧或者底部的距离。单位：vp。与start二选�
 start? : Dimension
 ```
 
-guideLine距离容器左侧或者顶部的距离。单位：vp。
-
-默认值：0。与end二选一，若同时声明则仅start生效。若容器的width被声明为"auto"，则Axis.Vertical类型的guideLine只能使用start方式声明（不允许使用百分比）；若容器的height被声明为" auto"，则Axis.Horizontal类型的guideLine只能使用start方式声明（不允许使用百分比）。
+guideLine距离容器左侧或者顶部的距离。单位：vp。默认值：0。与end二选一，若同时声明则仅start生效。若容器的width被声明为"auto"，则Axis.Vertical类型的guideLine只能使用start方式声明（不允许使用百分比）；若容器的height被声明为"auto"，则Axis.Horizontal类型的guideLine只能使用start方式声明（不允许使用百分比）。
 
 **类型：** Dimension
 

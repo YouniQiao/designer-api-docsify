@@ -6,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-storageproperty-abstractproperty-i.md) | Define AbstractProperty&lt;T&gt; interface. |
+| [AbstractProperty](arkts-arkui-storageproperty-abstractproperty-i.md) | Define AbstractProperty&lt;T&gt; interface.AbstractProperty can be understood as a handler or an alias to a property inside LocalStorage / AppStorage singleton allows to read the value with |
 | [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md) | 继承自[AbstractProperty&lt;T&gt;](arkts-arkui-storageproperty-abstractproperty-i.md)。 |
 
 ### 枚举

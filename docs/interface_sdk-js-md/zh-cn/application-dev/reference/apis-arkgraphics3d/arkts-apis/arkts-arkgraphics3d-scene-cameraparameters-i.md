@@ -1,8 +1,6 @@
 # CameraParameters
 
-相机创建参数配置，用于定义相机创建的额外选项。
-
-@interface CameraParameters
+相机创建参数配置，用于定义相机创建的额外选项。@interface CameraParameters
 
 **起始版本：** 23
 

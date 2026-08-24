@@ -1,8 +1,6 @@
 # EdgeEffect
 
-Sliding effect
-
-@enum { number }
+Sliding effect@enum { number }
 
 **起始版本：** 23
 

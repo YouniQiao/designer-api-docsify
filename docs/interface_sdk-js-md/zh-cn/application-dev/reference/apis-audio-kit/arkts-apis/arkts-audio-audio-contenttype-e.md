@@ -2,6 +2,10 @@
 
 表示音频内容类型的枚举。
 
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 10开始废弃，建议使用[StreamUsage](arkts-audio-audio-streamusage-e.md)替代。
+
 **起始版本：** 7
 
 **废弃版本：** 10

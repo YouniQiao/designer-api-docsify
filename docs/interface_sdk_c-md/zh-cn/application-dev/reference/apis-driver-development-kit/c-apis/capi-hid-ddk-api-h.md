@@ -87,7 +87,7 @@ int32_t OH_Hid_EmitEvent(int32_t deviceId, const Hid_EmitItem items[], uint16_t 
 | 参数项 | 描述 |
 | -- | -- |
 | int32_t deviceId | 设备ID，必须是当前调用者通过[OH_Hid_CreateDevice](capi-hid-ddk-api-h.md#oh_hid_createdevice)创建的设备，取值为非负数。 |
-| [const Hid_EmitItem](capi-hidddk-hid-emititem.md) items[] | 发送的事件列表，事件包括类型（取值来源事件类型Hid_EventType）、编码（取值来源同步事件编码Hid_SynEvent、键值编码Hid_KeyCode、绝对坐标编码Hid_AbsAxes、相对坐标编码Hid_RelAxes、其他类型的输入事件编码Hid_MscEvent）、值（根据实际设备输入决定）。发送的事件将被注入到指定设备，模拟设备产生相应的输入行为 |
+| [const Hid_EmitItem](capi-hidddk-hid-emititem.md) items[] | 发送的事件列表，事件包括类型（取值来源事件类型Hid_EventType）、编码（取值来源同步事件编码Hid_SynEvent、键值编码Hid_KeyCode、绝对坐标编码Hid_AbsAxes、相对坐标编码Hid_RelAxes、其他类型的输入事件编码Hid_MscEvent）、值（根据实际设备输入决定）。发送的事件将被注入到指定设备，模拟设备产生相应的输入行为。 |
 | uint16_t length | 发送事件列表长度（一次发送事件个数），取值范围为[1, 7]。 |
 
 **返回：**
@@ -188,7 +188,7 @@ int32_t OH_Hid_Open(uint64_t deviceId, uint8_t interfaceIndex, Hid_DeviceHandle 
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode) 操作成功。      <br>[HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode) 权限校验失败。请确保应用已声明ohos.permission.ACCESS_DDK_HID权限。      <br>[HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) DDK未初始化，请确保已调用[OH_Hid_Init](capi-hid-ddk-api-h.md#oh_hid_init)完成初始化。      <br>[HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) 与DDK服务通信失败。可能原因：服务内部错误。请检查当前操作和设备状态。      <br>[HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) dev内存申请失败。      <br>[HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) I/O操作失败。可能原因：设备状态异常、数据传输错误等。请检查设备状态和参数。      <br>[HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode) dev为空或dev为空。      <br>[HID_DDK_DEVICE_NOT_FOUND](capi-hid-ddk-types-h.md#hid_ddkerrcode) 根据deviceId和interfaceIndex找不到设备。 |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode) 操作成功。      <br>[HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode) 权限校验失败。请确保应用已声明ohos.permission.ACCESS_DDK_HID权限。      <br>[HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) DDK未初始化，请确保已调用[OH_Hid_Init](capi-hid-ddk-api-h.md#oh_hid_init)完成初始化。      <br>[HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) 与DDK服务通信失败。可能原因：服务内部错误。请检查当前操作和设备状态。      <br>[HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) dev内存申请失败。      <br>[HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) I/O操作失败。可能原因：设备状态异常、数据传输错误等。请检查设备状态和参数。      <br>[HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode) dev为空或\dev为空。      <br>[HID_DDK_DEVICE_NOT_FOUND](capi-hid-ddk-types-h.md#hid_ddkerrcode) 根据deviceId和interfaceIndex找不到设备。 |
 
 ### OH_Hid_Close()
 
@@ -214,7 +214,7 @@ int32_t OH_Hid_Close(Hid_DeviceHandle **dev)
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode) 操作成功。      <br>[HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode) 权限校验失败。请确保应用已声明ohos.permission.ACCESS_DDK_HID权限。      <br>[HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) DDK未初始化，请确保已调用[OH_Hid_Init](capi-hid-ddk-api-h.md#oh_hid_init)完成初始化。      <br>[HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) 与DDK服务通信失败。可能原因：服务内部错误。请检查当前操作和设备状态。      <br>[HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) I/O操作失败。可能原因：设备状态异常、数据传输错误等。请检查设备状态和参数。      <br>[HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode) dev为空或dev为空。 |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode) 操作成功。      <br>[HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode) 权限校验失败。请确保应用已声明ohos.permission.ACCESS_DDK_HID权限。      <br>[HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) DDK未初始化，请确保已调用[OH_Hid_Init](capi-hid-ddk-api-h.md#oh_hid_init)完成初始化。      <br>[HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) 与DDK服务通信失败。可能原因：服务内部错误。请检查当前操作和设备状态。      <br>[HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode) I/O操作失败。可能原因：设备状态异常、数据传输错误等。请检查设备状态和参数。      <br>[HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode) dev为空或\dev为空。 |
 
 ### OH_Hid_Write()
 

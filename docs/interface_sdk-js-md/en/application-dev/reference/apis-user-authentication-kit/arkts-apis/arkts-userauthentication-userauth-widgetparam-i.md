@@ -12,7 +12,6 @@ Represents the information presented on the user authentication page. This API i
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## navigationButtonText
@@ -57,8 +56,7 @@ Title of the user authentication page, which cannot be empty or exceed 500 chara
 uiContext?: Context
 ```
 
-Used to display an application modal dialog for authentication. Since API version 18, this parameter is supported on 2-in-1 devices. When a valid **uiContext** is passed, the authentication dialog box is displayed as an application modal dialog. After the authentication result is returned, the application must first obtain the widget release message (subscribe to [on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#onresult) and wait for the callback where **authTipInfo.tipCode** is **WIDGET_RELEASED**) before displaying other windows. If this parameter is not provided or if the device is of another type, the authentication dialog box is displayed as a system modal dialog. In this case, the application can directly perform follow-up procedures after the widget is released.
-
+Used to display an application modal dialog for authentication. Since API version 18, this parameter is supported on 2-in-1 devices. When a valid **uiContext** is passed, the authentication dialog box is displayed as an application modal dialog. After the authentication result is returned, the application must first obtain the widget release message (subscribe to [on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#onresult) and wait for the callback where **authTipInfo.tipCode** is **WIDGET_RELEASED**) before displaying other windows. If this parameter is not provided or if the device is of another type, the authentication dialog box is displayed as a system modal dialog. In this case, the application can directly perform follow-up procedures after the widget is released.  
 **Default value:** The authentication dialog box is displayed as a system modal dialog.
 
 **Type:** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)

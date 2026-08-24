@@ -13,10 +13,10 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 | Name | Description |
 | --- | --- |
 | [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md) | CommonOptions defines common options for the date time picker. |
-| [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md) | DateOptions defines options for the date picker. |
+| [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md) | DateOptions defines options for the date picker.Inherits from [CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-commonoptions-c.md). |
 | [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) | DatePickerComponentOptions defines options for the date time picker component. |
 | [DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md) | DatePickerComponentResult defines the selection result of the date time picker. |
-| [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md) | TimeOptions defines options for the time picker. |
+| [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md) | TimeOptions defines options for the time picker.Inherits from [CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-commonoptions-c.md). |
 
 ### Structs
 

@@ -16,5 +16,5 @@ BorderRadiuses info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Corners](arkts-graphics-corners-i.md)&lt;double&gt;
+**Property type:** [Corners](../../apis-arkui/arkts-apis/arkts-arkui-graphics-corners-i.md)&lt;double&gt;
 

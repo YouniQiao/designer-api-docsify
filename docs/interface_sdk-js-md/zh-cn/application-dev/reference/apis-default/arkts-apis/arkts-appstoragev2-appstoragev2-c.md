@@ -21,10 +21,8 @@ public static connect<T extends object>(ttype: Class, key: string,
 
 > **说明：**
 
-> - 如果数据已存储在AppStorageV2中，可省略默认构造器，获取存储的数据；否则必须指定默认构造器，不指定将导致应用异常。
-> 
-> - key相同，connect类型不同的数据会导致应用异常，开发者需要确保类型匹配。
-> 
+> - 如果数据已存储在AppStorageV2中，可省略默认构造器，获取存储的数据；否则必须指定默认构造器，不指定将导致应用异常。&gt;
+> - key相同，connect类型不同的数据会导致应用异常，开发者需要确保类型匹配。&gt;
 > - 建议key使用有意义的值，可由字母、数字和下划线组成，长度不超过255字符，避免使用非法字符或空字符。
 
 **起始版本：** 26.0.0
@@ -61,10 +59,8 @@ public static connect<T extends object>(ttype: Class, defaultCreator?: StorageDe
 
 > **说明：**
 
-> - ttype使用Class.from\&lt;classname\&gt;()方法获得。
-> 
-> - 未传入key时，默认使用ttype的name作为key。
-> 
+> - ttype使用Class.from\&lt;classname\&gt;()方法获得。&gt;
+> - 未传入key时，默认使用ttype的name作为key。&gt;
 > - 如果数据已存储在AppStorageV2中，可省略默认构造器，获取存储的数据；否则必须指定默认构造器，不指定将导致应用异常。
 
 **起始版本：** 26.0.0

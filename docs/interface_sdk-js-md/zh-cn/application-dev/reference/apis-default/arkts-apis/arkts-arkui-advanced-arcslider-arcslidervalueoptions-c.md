@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcSliderValueOptions--><!--Device-unnamed-export declare class ArcSliderValueOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -40,19 +42,11 @@ ArcSliderValueOptions的构造函数。
 ## max
 
 ```TypeScript
-@Trace
-  max?: double
+max?: double
 ```
 
-设置最大值。
-
-默认值：100
-
-**说明：**
-
-当出现异常情况min &gt;= max时，min取默认值0，max取默认值100。
-
-progress不在[min, max]范围之内，取min或者max，靠近min取min，靠近max取max。
+设置最大值。默认值：100  
+**说明：**当出现异常情况min &gt;= max时，min取默认值0，max取默认值100。progress不在[min, max]范围之内，取min或者max，靠近min取min，靠近max取max。
 
 **类型：** double
 
@@ -62,6 +56,8 @@ progress不在[min, max]范围之内，取min或者max，靠近min取min，靠�
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcSliderValueOptions-@Trace  max?: double--><!--Device-ArcSliderValueOptions-@Trace  max?: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -69,13 +65,10 @@ progress不在[min, max]范围之内，取min或者max，靠近min取min，靠�
 ## min
 
 ```TypeScript
-@Trace
-  min?: double
+min?: double
 ```
 
-设置最小值。
-
-默认值：0
+设置最小值。默认值：0
 
 **类型：** double
 
@@ -85,6 +78,8 @@ progress不在[min, max]范围之内，取min或者max，靠近min取min，靠�
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcSliderValueOptions-@Trace  min?: double--><!--Device-ArcSliderValueOptions-@Trace  min?: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -92,19 +87,18 @@ progress不在[min, max]范围之内，取min或者max，靠近min取min，靠�
 ## progress
 
 ```TypeScript
-@Trace
-  progress?: double
+progress?: double
 ```
 
-设置当前进度值。
-
-默认值：与参数min的取值一致。
+设置当前进度值。默认值：与参数min的取值一致。
 
 **类型：** double
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 <!--Device-ArcSliderValueOptions-@Trace  progress?: double--><!--Device-ArcSliderValueOptions-@Trace  progress?: double-End-->
 

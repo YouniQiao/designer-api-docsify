@@ -1,8 +1,6 @@
 # PathShape
 
-Defines a path drawing class.
-
-@extends CommonShapeMethod
+Defines a path drawing class.@extends CommonShapeMethod
 
 **Inheritance/Implementation:** PathShape extends [CommonShapeMethod](arkts-arkui-shape-commonshapemethod-c.md)
 

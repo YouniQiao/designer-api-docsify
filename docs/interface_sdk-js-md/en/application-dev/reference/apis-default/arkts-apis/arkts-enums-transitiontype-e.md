@@ -1,8 +1,6 @@
 # TransitionType
 
-TransitionType enumeration description.
-
-@enum { number }
+TransitionType enumeration description.@enum { number }
 
 **Since:** 23
 

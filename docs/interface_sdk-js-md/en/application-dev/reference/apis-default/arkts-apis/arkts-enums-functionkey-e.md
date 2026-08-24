@@ -1,8 +1,6 @@
 # FunctionKey
 
-Function key for hot key.
-
-@enum { number }
+Function key for hot key.@enum { number }
 
 **Since:** 23
 

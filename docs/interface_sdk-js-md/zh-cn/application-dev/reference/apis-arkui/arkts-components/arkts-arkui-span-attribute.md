@@ -1,10 +1,6 @@
 # Span属性/事件
 
-属性继承自[BaseSpan](arkts-arkui-basespan-c.md)。
-
-通用事件支持点击事件onClick、 悬浮事件onHover。
-
-@extends CommonMethod&lt;SpanAttribute&gt; [since 7 - 10] @extends BaseSpan&lt;SpanAttribute&gt; [since 11]
+属性继承自[BaseSpan](arkts-arkui-basespan-c.md)。通用事件支持点击事件onClick、 悬浮事件onHover。@extends CommonMethod&lt;SpanAttribute&gt; [since 7 - 10] @extends BaseSpan&lt;SpanAttribute&gt; [since 11]
 
 **继承/实现关系：** SpanAttribute extends BaseSpan<SpanAttribute>
 
@@ -51,8 +47,7 @@ font(value: Font)
 
 设置文本样式。包括字体大小、字体粗细、字体族和字体风格。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > fontWeight设置过大可能会在不同字体下有截断。
 
 **起始版本：** 10
@@ -224,8 +219,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 设置文本的字体粗细，设置过大可能会在不同字体下有截断。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对应数值400）。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当同时设置[fontVariations属性](#fontvariations)时，fontVariations属性的优先级更高。
 
 **起始版本：** 7
@@ -252,8 +246,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWe
 
 设置文本的字体粗细。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对应数值400）。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当同时设置fontVariations属性时，fontVariations属性的优先级更高。
 
 **起始版本：** 24
@@ -281,7 +274,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWe
 letterSpacing(value: number | ResourceStr)
 ```
 
-设置文本字符间距。取值小于0，字符聚集重叠，取值大于0且随着数值变大，字符间距越来越大，稀疏分布。适用于标题排版、标签文字等需要调整字符紧凑度或稀疏度的场景。string类型支持number类型取值的字符串形式，可以附带单位，例如 "10"、"10fp"。
+设置文本字符间距。取值小于0，字符聚集重叠，取值大于0且随着数值变大，字符间距越来越大，稀疏分布。适用于标题排版、标签文字等需要调整字符紧凑度或稀疏度的场景。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。
 
 **起始版本：** 7
 
@@ -297,7 +290,7 @@ letterSpacing(value: number | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| ResourceStr | 是 | 文本字符间距。 <br>单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) <br>从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| value | number \| ResourceStr | 是 | 文本字符间距。 <br>单位：fp <br>从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
 
 ## lineHeight
 

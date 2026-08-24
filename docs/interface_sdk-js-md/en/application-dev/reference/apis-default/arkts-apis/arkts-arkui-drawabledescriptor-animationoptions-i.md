@@ -1,8 +1,6 @@
 # AnimationOptions
 
-Animation control options
-
-@interface AnimationOptions
+Animation control options@interface AnimationOptions
 
 **Since:** 23
 

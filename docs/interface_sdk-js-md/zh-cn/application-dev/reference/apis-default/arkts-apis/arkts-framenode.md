@@ -33,7 +33,7 @@
 | --- | --- |
 | [ChildrenCountMode](arkts-framenode-childrencountmode-e.md) | 子节点计数模式枚举。用于指定获取子节点数量时的计数方式。 |
 | [ExpandMode](arkts-framenode-expandmode-e.md) | 子节点展开模式枚举。 |
-| [UIState](arkts-framenode-uistate-e.md) | 多态样式状态枚举，用于处理多态样式。 |
+| [UIState](arkts-framenode-uistate-e.md) | 多态样式状态枚举，用于处理多态样式。.0.0 |
 
 ### 类型
 

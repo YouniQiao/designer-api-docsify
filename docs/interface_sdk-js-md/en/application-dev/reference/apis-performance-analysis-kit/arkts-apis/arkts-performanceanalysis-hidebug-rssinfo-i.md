@@ -1,8 +1,6 @@
 # RssInfo
 
-Describes the physical memory information of the application process.
-
-@interface RssInfo
+Describes the physical memory information of the application process.@interface RssInfo
 
 **Since:** 24
 

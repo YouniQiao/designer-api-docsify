@@ -12,7 +12,6 @@ Describes the configuration of an upload task.
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## begins

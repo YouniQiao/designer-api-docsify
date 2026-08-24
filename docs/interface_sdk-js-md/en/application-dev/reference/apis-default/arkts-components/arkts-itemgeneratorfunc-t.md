@@ -11,6 +11,8 @@ Defines item generator function.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Builder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@Builderdeclare type ItemGeneratorFunc<T> = (item: T, index: int) => void--><!--Device-unnamed-@Builderdeclare type ItemGeneratorFunc<T> = (item: T, index: int) => void-End-->

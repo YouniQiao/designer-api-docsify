@@ -1,6 +1,6 @@
 # Path
 
-The **Path** component is used to draw a custom closed shape based on a specified drawing path. > **Note** > > This component supports dynamic constructor parameter updates using the > updateConstructorParams API of the > AttributeUpdater class since API version 20. > > **Child Components** > > None
+The **Path** component is used to draw a custom closed shape based on a specified drawing path.> **Note**>> This component supports dynamic constructor parameter updates using the> updateConstructorParams API of the> AttributeUpdater class since API version 20.>> **Child Components**>> None
 
 ## Path
 

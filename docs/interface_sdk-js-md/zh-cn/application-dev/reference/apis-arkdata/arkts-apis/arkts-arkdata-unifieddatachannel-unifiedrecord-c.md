@@ -235,11 +235,7 @@ let pixelMapRecord =
 constructor(type: string, value: ValueType)
 ```
 
-用于创建指定类型和值的数据记录。调用成功后，返回包含指定类型和值的UnifiedRecord对象。
-
-当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中 OPENHARMONY_PIXEL_MAP的值；
-
-当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中OPENHARMONY_WANT的 值。
+用于创建指定类型和值的数据记录。调用成功后，返回包含指定类型和值的UnifiedRecord对象。当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中 OPENHARMONY_PIXEL_MAP的值；当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中OPENHARMONY_WANT的 值。
 
 **起始版本：** 23
 
@@ -255,7 +251,7 @@ constructor(type: string, value: ValueType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要创建的数据记录的类型，用于标识数据记录的具体类型。取值见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)，如 'general.plain-text'、'general.hyperlink'等。 |
+| type | string | 是 | 要创建的数据记录的类型，用于标识数据记录的具体类型。取值见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)，如'general.plain-text'、'general.hyperlink'等。 |
 | value | ValueType | 是 | 要创建的数据记录的值。 |
 
 **错误码：**
@@ -290,7 +286,7 @@ getEntries(): Record<string, ValueType>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, ValueType&gt; | 当前数据记录对应的类型和内容。 |
+| Record&lt;string, ValueType&gt; | 当前数据记录对应的类型和内容。 |
 
 **示例**
 

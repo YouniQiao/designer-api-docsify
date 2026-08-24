@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## hasKeyItemAsUser
@@ -37,7 +36,7 @@ Checks whether a key exists for the specified user. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the key exists, **true** is returned. Otherwise , **false** is returned. |
+| Promise&lt;boolean&gt; | Promise used to return the result. If the key exists, **true** is returned. Otherwise, **false** is returned. |
 
 **Error codes:**
 

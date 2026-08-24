@@ -1,10 +1,6 @@
 # @ohos.wifiext
 
-Provides extended methods to operate or manage Wi-Fi.
-
-<p>The APIs involved in this file are non-general APIs. These extended APIs are only used by some product types, such as routers. Common products should not use these APIs.</p>
-
-@namespace wifiext
+Provides extended methods to operate or manage Wi-Fi.<p>The APIs involved in this file are non-general APIs. These extended APIs are only used by some product types, such as routers. Common products should not use these APIs.</p>@namespace wifiext
 
 **Since:** 8
 
@@ -36,5 +32,5 @@ import { wifiext } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [PowerModel](arkts-connectivity-wifiext-powermodel-e.md) | The power model enumeration. |
+| [PowerModel](arkts-connectivity-wifiext-powermodel-e.md) | The power model enumeration.@enum { number } PowerModel |
 

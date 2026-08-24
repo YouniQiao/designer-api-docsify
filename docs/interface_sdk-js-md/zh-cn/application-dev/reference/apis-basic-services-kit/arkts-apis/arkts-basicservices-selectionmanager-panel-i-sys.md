@@ -81,8 +81,7 @@ moveTo(x: int, y: int): Promise<void>
 
 移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md)获取到Panel实例后调用。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始支持，从API version 24开始废弃。
 
 **起始版本：** 20

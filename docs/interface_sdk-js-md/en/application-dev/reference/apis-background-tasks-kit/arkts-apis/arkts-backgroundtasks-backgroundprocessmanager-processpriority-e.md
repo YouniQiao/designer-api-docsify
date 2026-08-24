@@ -28,7 +28,7 @@ Compared with **PROCESS_INACTIVE**, **PROCESS_LOWER** has a more significant sup
 PROCESS_INACTIVE = 2
 ```
 
-You are advised to set this priority when executing background child processes that can be perceived by users , such as audio playback and navigation.
+You are advised to set this priority when executing background child processes that can be perceived by users, such as audio playback and navigation.
 
 **Since:** 23
 

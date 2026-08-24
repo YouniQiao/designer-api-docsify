@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**装饰器类型：** @CustomDialog
+
 <!--Device-unnamed-export declare struct ConfirmDialog--><!--Device-unnamed-export declare struct ConfirmDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -12,7 +14,6 @@
 
 ```TypeScript
 import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
-import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUI';
 ```
 
 ## checkTips
@@ -21,9 +22,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 checkTips?: ResourceStr
 ```
 
-checkbox的提示内容。
-
-默认不设置或设置为undefined，checkbox的提示内容不显示。
+checkbox的提示内容。默认不设置或设置为undefined，checkbox的提示内容不显示。
 
 **类型：** ResourceStr
 
@@ -43,9 +42,7 @@ checkbox的提示内容。
 content?: ResourceStr
 ```
 
-确认弹出框内容。
-
-默认不设置或设置为undefined，确认弹出框内容不显示。
+确认弹出框内容。默认不设置或设置为undefined，确认弹出框内容不显示。
 
 **类型：** ResourceStr
 
@@ -65,8 +62,7 @@ content?: ResourceStr
 controller: CustomDialogController
 ```
 
-确认弹出框控制器，用于控制弹出框的显示和隐藏。
-
+确认弹出框控制器，用于控制弹出框的显示和隐藏。  
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
@@ -83,17 +79,13 @@ controller: CustomDialogController
 
 ## isChecked
 
-```TypeScript
-@Prop isChecked?: boolean
-```
-
-value为true时，表示checkbox已选中，value为false时，表示未选中。
-
-默认值：false
+value为true时，表示checkbox已选中，value为false时，表示未选中。默认值：false
 
 **类型：** boolean
 
 **起始版本：** 10
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,9 +121,7 @@ checkbox的选中状态改变事件回调。回调参数类型为boolean，true�
 primaryButton?: ButtonOptions
 ```
 
-确认弹出框左侧按钮。
-
-默认不设置或设置为undefined，确认弹出框左侧按钮不显示。
+确认弹出框左侧按钮。默认不设置或设置为undefined，确认弹出框左侧按钮不显示。
 
 **类型：** [ButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-buttonoptions-c.md)
 
@@ -151,9 +141,7 @@ primaryButton?: ButtonOptions
 secondaryButton?: ButtonOptions
 ```
 
-确认弹出框右侧按钮。
-
-默认不设置或设置为undefined，确认弹出框右侧按钮不显示。
+确认弹出框右侧按钮。默认不设置或设置为undefined，确认弹出框右侧按钮不显示。
 
 **类型：** [ButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-buttonoptions-c.md)
 
@@ -193,9 +181,7 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 
@@ -215,8 +201,7 @@ themeColorMode?: ThemeColorMode
 title: ResourceStr
 ```
 
-确认弹出框标题。
-
+确认弹出框标题。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr

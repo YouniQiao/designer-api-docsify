@@ -593,7 +593,7 @@ Drags from the start coordinate point to the target coordinate point. This metho
 | starty | int | Yes | Vertical coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. |
 | endx | int | Yes | Horizontal coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
 | endy | int | Yes | Vertical coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
-| speed | int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
+| speed | int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -642,7 +642,7 @@ Drags from the start point to the target point. You can specify the drag speed a
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. <br> **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
+| speed | int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
 | duration | int | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -1038,7 +1038,7 @@ Simulates a fling operation. This API uses a promise to return the result.
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the point where the finger touches the screen. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the point where the finger leaves the screen. |
 | stepLen | int | Yes | Sliding step length, in pixels. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. <br>Unit: px |
-| speed | int | Yes | Fling speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
+| speed | int | Yes | Fling speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -1174,8 +1174,7 @@ getDisplayDensity(): Promise<Point>
 
 Obtains the display density of the current device. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This method can only be used to obtain the display density of the home screen. To obtain the display density
 > of a specified screen, use [getDisplayDensity](#getdisplaydensity)(displayId: number).
 
@@ -1268,8 +1267,7 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 Obtains the display rotation of the current device. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation
 > of a specified screen, use [getDisplayRotation](#getdisplayrotation)(displayId: number).
 
@@ -1362,8 +1360,7 @@ getDisplaySize(): Promise<Point>
 
 Obtains the display size of the current device. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This method can only be used to obtain the display size of the home screen. To obtain the display size of a
 > specified screen, use [getDisplaySize](#getdisplaysize)(displayId: number).
 
@@ -1379,7 +1376,7 @@ Obtains the display size of the current device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise used to return the **Point** object. The size of the current device screen is **Point.x Point.y**. |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise used to return the **Point** object. The size of the current device screen is **Point.x * Point.y**. |
 
 **Error codes:**
 
@@ -1435,7 +1432,7 @@ Obtains the size of the specified display on the current device. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise used to return the **Point** object. The size of the specified display is **Point.x Point.y**. |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise used to return the **Point** object. The size of the specified display is **Point.x * Point.y**. |
 
 **Error codes:**
 
@@ -1456,8 +1453,7 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 
 Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
 
 **Since:** 23
@@ -1472,7 +1468,7 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory.  **Note：**: Currently, only the single-finger operation is supported. The value of **fingers** in **PointerMatrix** must be set to **1**. |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory.   **Note：**: Currently, only the single-finger operation is supported. The value of **fingers** in **PointerMatrix** must be set to **1**. |
 | speed | int | No | Knuckle pointer action speed. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
 
 **Return value:**
@@ -1746,7 +1742,7 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md). **NOTE：**  If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md).paste. |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md). **NOTE：**If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md).paste. |
 
 **Return value:**
 
@@ -1924,8 +1920,7 @@ knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 
 Simulates a knuckle knock on the display. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
 
 **Since:** 23
@@ -2440,7 +2435,7 @@ async function demo() {
 mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>
 ```
 
-Injects a mouse long-click action at the specified coordinates, with the optional key or key combination and the specified duration. This API uses a promise to return the result. For example, if the key code value is **2072** , the **Ctrl** button is pressed with the long-click.
+Injects a mouse long-click action at the specified coordinates, with the optional key or key combination and the specified duration. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the long-click.
 
 **Since:** 23
 
@@ -2878,8 +2873,7 @@ pressBack(): Promise<void>
 
 Simulates pressing the Back button. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button
 > on a specified screen, use pressBack(displayId: number).
 
@@ -3341,7 +3335,7 @@ Swipes from the start coordinate point to the target coordinate point. This meth
 | starty | int | Yes | Vertical coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
 | endx | int | Yes | Horizontal coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
 | endy | int | Yes | Vertical coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
-| speed | int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
+| speed | int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -3400,7 +3394,7 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. <br> **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
+| speed | int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -3782,10 +3776,7 @@ See [triggerKey](#triggerkey)
 triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>
 ```
 
-Trigger pen key operation.
-
-Supported combinations:
-
+Trigger pen key operation.Supported combinations:  
 - HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation. - AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options), HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation. Other combinations will result in a BusinessError 17000007.
 
 **Since:** 26.0.0

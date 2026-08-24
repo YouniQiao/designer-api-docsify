@@ -4,6 +4,8 @@ Declaration of the editable title bar.
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct EditableTitleBarV2--><!--Device-unnamed-export declare struct EditableTitleBarV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,8 +19,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 ## imageItem
 
 ```TypeScript
-@Param
-  imageItem?: EditableTitleBarItemV2
+imageItem?: EditableTitleBarItemV2
 ```
 
 Image item configuration, displayed on the left side of the title.
@@ -26,6 +27,8 @@ Image item configuration, displayed on the left side of the title.
 **Type:** [EditableTitleBarItemV2](arkts-arkui-editabletitlebaritemv2-t.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +41,7 @@ Image item configuration, displayed on the left side of the title.
 ## leftIcon
 
 ```TypeScript
-@Param
-  leftIcon?: EditableLeftIconV2
+leftIcon?: EditableLeftIconV2
 ```
 
 Left icon configuration.
@@ -47,6 +49,8 @@ Left icon configuration.
 **Type:** [EditableLeftIconV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,8 +63,7 @@ Left icon configuration.
 ## menuItems
 
 ```TypeScript
-@Param
-  menuItems?: Array<EditableTitleBarMenuItemV2>
+menuItems?: Array<EditableTitleBarMenuItemV2>
 ```
 
 Custom menu items array, maximum 2-3 items.
@@ -68,6 +71,8 @@ Custom menu items array, maximum 2-3 items.
 **Type:** Array&lt;[EditableTitleBarMenuItemV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2-c.md)&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +85,7 @@ Custom menu items array, maximum 2-3 items.
 ## options
 
 ```TypeScript
-@Param
-  options: EditableTitleBarStyleV2
+options: EditableTitleBarStyleV2
 ```
 
 Style and layout configuration.
@@ -89,6 +93,8 @@ Style and layout configuration.
 **Type:** [EditableTitleBarStyleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,8 +107,7 @@ Style and layout configuration.
 ## saveButton
 
 ```TypeScript
-@Param
-  saveButton?: EditableSaveButtonV2
+saveButton?: EditableSaveButtonV2
 ```
 
 Save button configuration.
@@ -110,6 +115,8 @@ Save button configuration.
 **Type:** [EditableSaveButtonV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,8 +129,7 @@ Save button configuration.
 ## title
 
 ```TypeScript
-@Param
-  title: ResourceStr | EditableTitleV2
+title: ResourceStr | EditableTitleV2
 ```
 
 Title configuration, supports string or object form.
@@ -131,6 +137,8 @@ Title configuration, supports string or object form.
 **Type:** ResourceStr \| [EditableTitleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

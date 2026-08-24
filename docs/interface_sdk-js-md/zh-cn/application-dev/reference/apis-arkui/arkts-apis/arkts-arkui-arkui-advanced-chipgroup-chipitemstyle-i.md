@@ -2,12 +2,9 @@
 
 ChipItemStyle定义了Chip的通用属性。
 
-> **说明：**
-> 
-> 1. Chip的大小有两种类型，一种是ChipSize，提供NORMAL和SMALL两种尺寸供选择；另一种是SizeOptions。
-> 
-> 2. backgroundColor、selectedBackgroundColor传入undefined时，显示默认背景颜色，传入非法值时，背景色透明。
-> 
+> **说明：**&gt;
+> 1. Chip的大小有两种类型，一种是ChipSize，提供NORMAL和SMALL两种尺寸供选择；另一种是SizeOptions。&gt;
+> 2. backgroundColor、selectedBackgroundColor传入undefined时，显示默认背景颜色，传入非法值时，背景色透明。&gt;
 > 3. 从API版本26.0.0开始，backgroundSystemMaterial设置自动反色的系统材质时，fontColor使用系统预定义的可反色颜色资源（如`\$r('sys.color.font_primary')`），颜色
 > 自动适配到材质背景色的反色。
 
@@ -21,7 +18,6 @@ ChipItemStyle定义了Chip的通用属性。
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -30,13 +26,8 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 backgroundColor?: ResourceColor
 ```
 
-Chip背景颜色。
-
-默认值：\$r('sys.color.ohos_id_color_button_normal')
-
-**说明：**从API版本26.0.0开始，当设置backgroundSystemMaterial时，应将backgroundColor设为Color.Transparent，否则会与系统材质冲突；当 backgroundSystemMaterial为undefined时，backgroundColor属性生效。
-
-为undefined时，backgroundColor走默认值。
+Chip背景颜色。默认值：\$r('sys.color.ohos_id_color_button_normal')  
+**说明：**从API版本26.0.0开始，当设置backgroundSystemMaterial时，应将backgroundColor设为Color.Transparent，否则会与系统材质冲突；当 backgroundSystemMaterial为undefined时，backgroundColor属性生效。为undefined时，backgroundColor走默认值。
 
 **类型：** ResourceColor
 
@@ -56,13 +47,8 @@ Chip背景颜色。
 fontColor?: ResourceColor
 ```
 
-Chip文字颜色。
-
-默认值：\$r('sys.color.ohos_id_color_text_primary')
-
-**说明：**从API版本26.0.0开始，backgroundSystemMaterial设置自动反色的系统材质时，fontColor使用系统预定义的可反色颜色资源，文字颜色自动适配到材质背景色的反色。
-
-为undefined时，fontColor走默认值。
+Chip文字颜色。默认值：\$r('sys.color.ohos_id_color_text_primary')  
+**说明：**从API版本26.0.0开始，backgroundSystemMaterial设置自动反色的系统材质时，fontColor使用系统预定义的可反色颜色资源，文字颜色自动适配到材质背景色的反色。为undefined时，fontColor走默认值。
 
 **类型：** ResourceColor
 
@@ -82,13 +68,8 @@ Chip文字颜色。
 selectedBackgroundColor?: ResourceColor
 ```
 
-Chip激活时的背景颜色。
-
-默认值：\$r('sys.color.ohos_id_color_emphasize')
-
-**说明：**从API版本26.0.0开始，当设置selectedBackgroundSystemMaterial时，应将selectedBackgroundColor设为Color.Transparent，否则会与系统材质冲突； 当selectedBackgroundSystemMaterial为undefined时，selectedBackgroundColor属性生效。
-
-为undefined时，selectedBackgroundColor走默认值。
+Chip激活时的背景颜色。默认值：\$r('sys.color.ohos_id_color_emphasize')  
+**说明：**从API版本26.0.0开始，当设置selectedBackgroundSystemMaterial时，应将selectedBackgroundColor设为Color.Transparent，否则会与系统材质冲突； 当selectedBackgroundSystemMaterial为undefined时，selectedBackgroundColor属性生效。为undefined时，selectedBackgroundColor走默认值。
 
 **类型：** ResourceColor
 
@@ -108,13 +89,8 @@ Chip激活时的背景颜色。
 selectedFontColor?: ResourceColor
 ```
 
-Chip激活时的文字颜色。
-
-默认值：\$r('sys.color.ohos_id_color_text_primary_contrary')
-
-**说明：**从API版本26.0.0开始，selectedBackgroundSystemMaterial设置自动反色的系统材质时，selectedFontColor使用系统预定义的可反色颜色资源（如 `\$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。
-
-为undefined时，selectedFontColor走默认值。
+Chip激活时的文字颜色。默认值：\$r('sys.color.ohos_id_color_text_primary_contrary')  
+**说明：**从API版本26.0.0开始，selectedBackgroundSystemMaterial设置自动反色的系统材质时，selectedFontColor使用系统预定义的可反色颜色资源（如 `\$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。为undefined时，selectedFontColor走默认值。
 
 **类型：** ResourceColor
 
@@ -134,11 +110,7 @@ Chip激活时的文字颜色。
 size?: ChipSize | SizeOptions
 ```
 
-Chip尺寸，使用时需要从Chip组件引入ChipSize类型。
-
-默认值：ChipSize.NORMAL或{ height: 0, width: 0 }
-
-为undefined时，使用默认值。
+Chip尺寸，使用时需要从Chip组件引入ChipSize类型。默认值：ChipSize.NORMAL或{ height: 0, width: 0 }为undefined时，使用默认值。
 
 **类型：** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
 

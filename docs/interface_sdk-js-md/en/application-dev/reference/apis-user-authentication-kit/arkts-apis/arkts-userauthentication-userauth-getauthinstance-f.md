@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## getAuthInstance
@@ -15,8 +14,7 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 
 Obtains an **AuthInstance** instance for user authentication.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new
 > **AuthInstance**.
 

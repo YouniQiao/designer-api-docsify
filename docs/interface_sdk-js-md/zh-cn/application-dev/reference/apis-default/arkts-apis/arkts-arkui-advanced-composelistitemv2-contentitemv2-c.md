@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ContentItemV2--><!--Device-unnamed-export declare class ContentItemV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ ContentItemV2的构造函数。
 ## description
 
 ```TypeScript
-@Trace
-  public description?: ResourceStr
+public description?: ResourceStr
 ```
 
 设置描述内容。
@@ -54,6 +55,8 @@ ContentItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentItemV2-@Trace  public description?: ResourceStr--><!--Device-ContentItemV2-@Trace  public description?: ResourceStr-End-->
@@ -63,8 +66,7 @@ ContentItemV2的构造函数。
 ## icon
 
 ```TypeScript
-@Trace
-  public icon?: ResourceStr
+public icon?: ResourceStr
 ```
 
 设置图标
@@ -75,6 +77,8 @@ ContentItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentItemV2-@Trace  public icon?: ResourceStr--><!--Device-ContentItemV2-@Trace  public icon?: ResourceStr-End-->
@@ -84,8 +88,7 @@ ContentItemV2的构造函数。
 ## iconStyle
 
 ```TypeScript
-@Trace
-  public iconStyle?: IconTypeV2
+public iconStyle?: IconTypeV2
 ```
 
 图标样式。
@@ -96,6 +99,8 @@ ContentItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentItemV2-@Trace  public iconStyle?: IconTypeV2--><!--Device-ContentItemV2-@Trace  public iconStyle?: IconTypeV2-End-->
@@ -105,8 +110,7 @@ ContentItemV2的构造函数。
 ## primaryText
 
 ```TypeScript
-@Trace
-  public primaryText?: ResourceStr
+public primaryText?: ResourceStr
 ```
 
 设置标题内容。
@@ -117,6 +121,8 @@ ContentItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentItemV2-@Trace  public primaryText?: ResourceStr--><!--Device-ContentItemV2-@Trace  public primaryText?: ResourceStr-End-->
@@ -126,8 +132,7 @@ ContentItemV2的构造函数。
 ## secondaryText
 
 ```TypeScript
-@Trace
-  public secondaryText?: ResourceStr
+public secondaryText?: ResourceStr
 ```
 
 设置副标题内容。
@@ -138,6 +143,8 @@ ContentItemV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentItemV2-@Trace  public secondaryText?: ResourceStr--><!--Device-ContentItemV2-@Trace  public secondaryText?: ResourceStr-End-->
@@ -147,8 +154,7 @@ ContentItemV2的构造函数。
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 设置Symbol图标。
@@ -158,6 +164,8 @@ ContentItemV2的构造函数。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

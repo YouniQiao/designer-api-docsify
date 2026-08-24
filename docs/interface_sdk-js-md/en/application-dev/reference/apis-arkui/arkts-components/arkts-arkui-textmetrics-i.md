@@ -219,11 +219,7 @@ Distance from the horizontal line specified by the [CanvasRenderingContext2D.tex
 readonly height: number
 ```
 
-Height of the text. Read-only.
-
-Default unit: vp.
-
-If the unit mode of the **CanvasRenderingContext2D** object is set to px, the unit is px.
+Height of the text. Read-only.Default unit: vp.If the unit mode of the **CanvasRenderingContext2D** object is set to px, the unit is px.
 
 **Type:** number
 
@@ -263,11 +259,7 @@ Distance from the horizontal line specified by the [CanvasRenderingContext2D.tex
 readonly width: number
 ```
 
-Width of the text. Read-only.
-
-Default unit: vp.
-
-If the unit mode of the **CanvasRenderingContext2D** object is set to px, the unit is px.
+Width of the text. Read-only.Default unit: vp.If the unit mode of the **CanvasRenderingContext2D** object is set to px, the unit is px.
 
 **Type:** number
 

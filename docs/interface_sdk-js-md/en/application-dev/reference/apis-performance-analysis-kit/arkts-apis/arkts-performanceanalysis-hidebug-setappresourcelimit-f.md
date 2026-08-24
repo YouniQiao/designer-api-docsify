@@ -14,8 +14,7 @@ function setAppResourceLimit(type: string, value: int, enableDebugLog: boolean):
 
 Sets the number of FDs, number of threads, JS memory, or native memory limit of the application.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Enable **System resource leak log** in **Developer options** and restart the device for the API to take effect.
 
 **Since:** 12

@@ -2,8 +2,7 @@
 
 Defines the DNS information of a firewall rule.
 
-> **Description**
-> 
+> **Description**&gt;
 > This parameter cannot be empty when **rule.type** of [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md)
 > is set to RULE_DNS.
 

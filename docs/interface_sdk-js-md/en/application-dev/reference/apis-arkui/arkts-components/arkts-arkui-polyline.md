@@ -1,6 +1,6 @@
 # Polyline
 
-The **Polyline** component is used to draw a polyline. > **NOTE** > > This component supports dynamic constructor parameter updates using the > updateConstructorParams API of the > AttributeUpdater class since API version 20. > > **Child Components** > > None
+The **Polyline** component is used to draw a polyline.> **NOTE**>> This component supports dynamic constructor parameter updates using the> updateConstructorParams API of the> AttributeUpdater class since API version 20.>> **Child Components**>> None
 
 ## Polyline
 

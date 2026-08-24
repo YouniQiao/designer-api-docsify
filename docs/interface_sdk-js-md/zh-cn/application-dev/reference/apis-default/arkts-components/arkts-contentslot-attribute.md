@@ -1,8 +1,6 @@
 # ContentSlotAttribute
 
-定义ContentSlot属性，防止不当递归使用ContentSlot
-
-@interface ContentSlotAttribute
+定义ContentSlot属性，防止不当递归使用ContentSlot@interface ContentSlotAttribute
 
 **起始版本：** 23
 

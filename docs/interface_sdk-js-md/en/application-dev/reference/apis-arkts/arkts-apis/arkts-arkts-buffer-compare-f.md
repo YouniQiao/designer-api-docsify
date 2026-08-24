@@ -26,8 +26,8 @@ Compares two **Buffer** objects. This API is used for sorting **Buffer** objects
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf1 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Buffer** object to compare. |
-| buf2 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Buffer** object to compare. |
+| buf1 | Buffer \| Uint8Array | Yes | Buffer** object to compare. |
+| buf2 | Buffer \| Uint8Array | Yes | Buffer** object to compare. |
 
 **Return value:**
 
@@ -83,8 +83,8 @@ Compares buf1 to buf2
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf1 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | First buffer for comparison |
-| buf2 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Second buffer for comparison |
+| buf1 | Buffer \| Uint8Array | Yes | First buffer for comparison |
+| buf2 | Buffer \| Uint8Array | Yes | Second buffer for comparison |
 
 **Return value:**
 

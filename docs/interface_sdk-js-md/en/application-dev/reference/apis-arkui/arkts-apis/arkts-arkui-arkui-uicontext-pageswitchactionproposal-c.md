@@ -120,11 +120,7 @@ struct Index {
 pageCount: int
 ```
 
-Number of pages to switch in the smart gesture.
-
-Value range: [0, +∞). Values less than 0 are treated as 0.
-
-Unit: pages.
+Number of pages to switch in the smart gesture.Value range: [0, +∞). Values less than 0 are treated as 0.Unit: pages.
 
 **Type:** int
 

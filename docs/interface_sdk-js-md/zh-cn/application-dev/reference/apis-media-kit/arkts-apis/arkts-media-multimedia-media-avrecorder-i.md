@@ -1,11 +1,8 @@
 # AVRecorder
 
-AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。 适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。 在调用AVRecorder的方法前，需要先调用 [createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。 典型录制流程： [createAVRecorder](arkts-media-media-createavrecorder-f.md) → prepare → getInputSurface（纯视频/音视频录制时） → start → pause/ resume → stop → release。
+AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。 适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。 在调用AVRecorder的方法前，需要先调用 [createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。 典型录制流程： [createAVRecorder](arkts-media-media-createavrecorder-f.md) → prepare → getInputSurface（纯视频/音视频录制时） → start → pause/ resume → stop → release。音视频录制示例可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、 [视频录制开发指导](../../../media/media/video-recording.md)。
 
-音视频录制示例可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、 [视频录制开发指导](../../../media/media/video-recording.md)。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > - 本Interface首批接口从API version 9开始支持。
 > - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)。
@@ -187,11 +184,7 @@ async function test() {
 getAudioCapturerMaxAmplitude(callback: AsyncCallback<int>): void
 ```
 
-获取当前音频最大振幅。使用callback异步回调。
-
-在prepare接口成功调用后，才能调用此接 口。在stop接口成功调用后，调用此接口会报错。
-
-调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间里面的最大值。
+获取当前音频最大振幅。使用callback异步回调。在prepare接口成功调用后，才能调用此接 口。在stop接口成功调用后，调用此接口会报错。调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间里面的最大值。
 
 **起始版本：** 23
 
@@ -249,11 +242,7 @@ avRecorder.getAudioCapturerMaxAmplitude().then((amplitude: number) => {
 getAudioCapturerMaxAmplitude(): Promise<int>
 ```
 
-获取当前音频最大振幅。使用Promise异步回调。
-
-在prepare接口成功调用后，才能调用此接 口。在stop接口成功调用后，调用此接口会报错。
-
-调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间里面的最大值。
+获取当前音频最大振幅。使用Promise异步回调。在prepare接口成功调用后，才能调用此接 口。在stop接口成功调用后，调用此接口会报错。调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间里面的最大值。
 
 **起始版本：** 23
 
@@ -381,9 +370,7 @@ getAvailableEncoder(): Promise<Array<EncoderInfo>>
 getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 ```
 
-获取实时的配置参数。使用callback异步回调。
-
-只能在prepare接口调用成功后调用。
+获取实时的配置参数。使用callback异步回调。只能在prepare接口调用成功后调用。
 
 **起始版本：** 11
 
@@ -442,9 +429,7 @@ avRecorder.getAVRecorderConfig().then((config: media.AVRecorderConfig) => {
 getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig | undefined>): void
 ```
 
-获取实时的配置参数。使用callback异步回调。
-
-只能在prepare()接口调用成功后调用。
+获取实时的配置参数。使用callback异步回调。只能在prepare()接口调用成功后调用。
 
 **起始版本：** 23
 
@@ -476,9 +461,7 @@ getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig | undefined>): void
 getAVRecorderConfig(): Promise<AVRecorderConfig>
 ```
 
-获取实时的配置参数。使用Promise异步回调。
-
-只能在prepare接口调用成功后调用。
+获取实时的配置参数。使用Promise异步回调。只能在prepare接口调用成功后调用。
 
 **起始版本：** 11
 
@@ -510,9 +493,7 @@ getAVRecorderConfig(): Promise<AVRecorderConfig>
 getAVRecorderConfig(): Promise<AVRecorderConfig | undefined>
 ```
 
-获取实时的配置参数。使用Promise异步回调。
-
-只能在prepare()接口调用成功后调用。
+获取实时的配置参数。使用Promise异步回调。只能在prepare()接口调用成功后调用。
 
 **起始版本：** 23
 
@@ -544,9 +525,7 @@ getAVRecorderConfig(): Promise<AVRecorderConfig | undefined>
 getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInfo>): void
 ```
 
-获取当前音频采集参数。使用callback异步回调。
-
-在prepare接口成功调用后，才能调用此接 口。在stop接口成功调用后，调用此接口会报错。
+获取当前音频采集参数。使用callback异步回调。在prepare接口成功调用后，才能调用此接 口。在stop接口成功调用后，调用此接口会报错。
 
 **起始版本：** 11
 
@@ -607,9 +586,7 @@ avRecorder.getCurrentAudioCapturerInfo().then((capturerInfo: audio.AudioCapturer
 getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInfo | undefined>): void
 ```
 
-获取当前音频采集参数。使用callback异步回调。
-
-只能在prepare()接口调用成功后调用。在stop()接口成功调用后调用此接口会报错。
+获取当前音频采集参数。使用callback异步回调。只能在prepare()接口调用成功后调用。在stop()接口成功调用后调用此接口会报错。
 
 **起始版本：** 23
 
@@ -641,9 +618,7 @@ getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInf
 getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 ```
 
-获取当前音频采集参数。使用Promise异步回调。
-
-在prepare接口成功调用后，才能调用此接 口。在stop接口成功调用后，调用此接口会报错。
+获取当前音频采集参数。使用Promise异步回调。在prepare接口成功调用后，才能调用此接 口。在stop接口成功调用后，调用此接口会报错。
 
 **起始版本：** 11
 
@@ -675,9 +650,7 @@ getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo | undefined>
 ```
 
-获取当前音频采集参数。使用Promise异步回调。
-
-只能在prepare()接口调用成功后调用。在stop()接口成功调用后调用此接口会报错。
+获取当前音频采集参数。使用Promise异步回调。只能在prepare()接口调用成功后调用。在stop()接口成功调用后调用此接口会报错。
 
 **起始版本：** 23
 
@@ -709,13 +682,7 @@ getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo | undefined
 getInputSurface(callback: AsyncCallback<string>): void
 ```
 
-获取录制需要的surface。使用callback异步回调。
-
-开发者从此surface中获取surfaceBuffer，填入相应的视频数据。
-
-应当注意，填入的视频数据需要携带时间戳（单位ns）和buffersize。时间戳的起始时间请以系统启动时间为基准。
-
-需在prepare接口成功调用后，才能调用 getInputSurface接口。
+获取录制需要的surface。使用callback异步回调。开发者从此surface中获取surfaceBuffer，填入相应的视频数据。应当注意，填入的视频数据需要携带时间戳（单位ns）和buffersize。时间戳的起始时间请以系统启动时间为基准。需在prepare接口成功调用后，才能调用 getInputSurface接口。
 
 **起始版本：** 9
 
@@ -802,13 +769,7 @@ avRecorder.getInputSurface().then((surfaceId: string) => {
 getInputSurface(callback: AsyncCallback<string | undefined>): void
 ```
 
-获取录制需要的surface。使用callback异步回调。
-
-开发者从此surface中获取surfaceBuffer，填入相应的视频数据。
-
-应当注意，填入的视频数据需要携带时间戳（单位ns）和buffersize。时间戳的起始时间请以系统启动时间为基准。
-
-只能在prepare()接口调用成功后调用getInputSurface接口。
+获取录制需要的surface。使用callback异步回调。开发者从此surface中获取surfaceBuffer，填入相应的视频数据。应当注意，填入的视频数据需要携带时间戳（单位ns）和buffersize。时间戳的起始时间请以系统启动时间为基准。只能在prepare()接口调用成功后调用getInputSurface接口。
 
 **起始版本：** 23
 
@@ -840,13 +801,7 @@ getInputSurface(callback: AsyncCallback<string | undefined>): void
 getInputSurface(): Promise<string>
 ```
 
-获取录制需要的surface。使用Promise异步回调。
-
-开发者从此surface中获取surfaceBuffer，填入相应的视频数据。
-
-应当注意，填入的视频数据需要携带时间戳（单位ns）和buffersize。时间戳的起始时间请以系统启动时间为基准。
-
-需在prepare接口成功调用后，才能调用getInputSurface接口。
+获取录制需要的surface。使用Promise异步回调。开发者从此surface中获取surfaceBuffer，填入相应的视频数据。应当注意，填入的视频数据需要携带时间戳（单位ns）和buffersize。时间戳的起始时间请以系统启动时间为基准。需在prepare接口成功调用后，才能调用getInputSurface接口。
 
 **起始版本：** 9
 
@@ -878,13 +833,7 @@ getInputSurface(): Promise<string>
 getInputSurface(): Promise<string | undefined>
 ```
 
-获取录制需要的surface。使用Promise异步回调。
-
-开发者从此surface中获取surfaceBuffer，填入相应的视频数据。
-
-应当注意，填入的视频数据需要携带时间戳（单位ns）和buffersize。时间戳的起始时间请以系统启动时间为基准。
-
-只能在prepare()接口调用成功后调用getInputSurface接口。
+获取录制需要的surface。使用Promise异步回调。开发者从此surface中获取surfaceBuffer，填入相应的视频数据。应当注意，填入的视频数据需要携带时间戳（单位ns）和buffersize。时间戳的起始时间请以系统启动时间为基准。只能在prepare()接口调用成功后调用getInputSurface接口。
 
 **起始版本：** 23
 
@@ -1124,9 +1073,7 @@ avScreenCaptureRecorder.offStateChange();
 on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo>): void
 ```
 
-订阅录音配置变化的回调，任意录音配置的变化会触发变化后的录音配置全量信息回调。使用callback异步回调。
-
-当用户重复订阅时，以最后一次订阅的回调接口为准。
+订阅录音配置变化的回调，任意录音配置的变化会触发变化后的录音配置全量信息回调。使用callback异步回调。当用户重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 11
 
@@ -1153,9 +1100,7 @@ on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-订阅AVRecorder的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。如果此时 AVRecorderState也切换至error状态，用户需要通过 reset或者 release接口退出录制操作。使用callback异步回调。
-
-用户只能订阅一个错误事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
+订阅AVRecorder的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。如果此时 AVRecorderState也切换至error状态，用户需要通过 reset或者 release接口退出录制操作。使用callback异步回调。用户只能订阅一个错误事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 9
 
@@ -1193,9 +1138,7 @@ on(type: 'error', callback: ErrorCallback): void
 on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>): void
 ```
 
-订阅媒体资源回调事件，当FileGenerationMode枚举设置为系统创建媒体文件时，会在 stop操作结束后把 [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)对象回调给应用。使用callback异步回调。
-
-当用户重复订阅时，以最后一次订阅的回调接口为准。
+订阅媒体资源回调事件，当FileGenerationMode枚举设置为系统创建媒体文件时，会在 stop操作结束后把 [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)对象回调给应用。使用callback异步回调。当用户重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 12
 
@@ -1253,9 +1196,7 @@ on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void
 onAudioCapturerChange(callback: Callback<audio.AudioCapturerChangeInfo>): void
 ```
 
-Subscribes to audio capturer configuration changes. Any configuration change triggers the callback that returns the entire configuration information.
-
-When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to audio capturer configuration changes. Any configuration change triggers the callback that returns the entire configuration information.When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **起始版本：** 23
 
@@ -1294,9 +1235,7 @@ avRecorder.onAudioCapturerChange((audioCapturerChangeInfo: audio.AudioCapturerCh
 onError(callback: ErrorCallback): void
 ```
 
-Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the AVRecorderState is also switched to error, call reset() or release() to exit the recording.
-
-An application can subscribe to only one AVRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied. This event is triggered when an error occurs during recording.
+Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the AVRecorderState is also switched to error, call reset() or release() to exit the recording.An application can subscribe to only one AVRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied. This event is triggered when an error occurs during recording.
 
 **起始版本：** 23
 
@@ -1355,9 +1294,7 @@ avTranscoder.onError((err: BusinessError) => {
 onPhotoAssetAvailable(callback: Callback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to media asset callback events. When FileGenerationMode is used during media file creation, the PhotoAsset object is called back to the application after the stop operation is complete.
-
-When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when a photo asset is available.
+Subscribes to media asset callback events. When FileGenerationMode is used during media file creation, the PhotoAsset object is called back to the application after the stop operation is complete.When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when a photo asset is available.
 
 **起始版本：** 23
 
@@ -1438,9 +1375,7 @@ avScreenCaptureRecorder.onStateChange((state: media.AVScreenCaptureStateCode) =>
 pause(callback: AsyncCallback<void>): void
 ```
 
-暂停视频录制。使用callback异步回调。
-
-需要start接口成功调用后，才能调用pause接口，可以通过调用 resume接口来恢复录制。
+暂停视频录制。使用callback异步回调。需要start接口成功调用后，才能调用pause接口，可以通过调用 resume接口来恢复录制。
 
 **起始版本：** 23
 
@@ -1598,9 +1533,7 @@ videoPlayer.pause().then(() => {
 pause(): Promise<void>
 ```
 
-暂停视频录制。使用Promise异步回调。
-
-需要start接口成功调用后，才能调用pause接口，可以通过调用resume接口来恢复 录制。
+暂停视频录制。使用Promise异步回调。需要start接口成功调用后，才能调用pause接口，可以通过调用resume接口来恢复 录制。
 
 **起始版本：** 23
 
@@ -1948,9 +1881,7 @@ prepare(config: AVRecorderConfig): Promise<void>
 release(callback: AsyncCallback<void>): void
 ```
 
-释放音视频录制资源。使用callback异步回调。
-
-释放音视频录制资源之后，该AVRecorder实例不能再进行任何操作。
+释放音视频录制资源。使用callback异步回调。释放音视频录制资源之后，该AVRecorder实例不能再进行任何操作。
 
 **起始版本：** 23
 
@@ -2206,9 +2137,7 @@ videoPlayer.release().then(() => {
 release(): Promise<void>
 ```
 
-释放音视频录制资源。使用Promise异步回调。
-
-释放音视频录制资源之后，该AVRecorder实例不能再进行任何操作。
+释放音视频录制资源。使用Promise异步回调。释放音视频录制资源之后，该AVRecorder实例不能再进行任何操作。
 
 **起始版本：** 23
 
@@ -2240,9 +2169,7 @@ release(): Promise<void>
 reset(callback: AsyncCallback<void>): void
 ```
 
-重置音视频录制。使用callback异步回调。
-
-纯音频录制时，需要重新调用prepare接口 才能重新录制。纯视频录制，音视频录制时，需要重新调用 prepare和 getInputSurface接口才能重新录制。
+重置音视频录制。使用callback异步回调。纯音频录制时，需要重新调用prepare接口 才能重新录制。纯视频录制，音视频录制时，需要重新调用 prepare和 getInputSurface接口才能重新录制。
 
 **起始版本：** 23
 
@@ -2384,9 +2311,7 @@ videoPlayer.reset().then(() => {
 reset(): Promise<void>
 ```
 
-重置音视频录制。使用Promise异步回调。
-
-纯音频录制时，需要重新调用prepare接口才能重新录制。纯视频录制，音视频录制时，需要重新调用 prepare和 getInputSurface接口才能重新录制。
+重置音视频录制。使用Promise异步回调。纯音频录制时，需要重新调用prepare接口才能重新录制。纯视频录制，音视频录制时，需要重新调用 prepare和 getInputSurface接口才能重新录制。
 
 **起始版本：** 23
 
@@ -2417,9 +2342,7 @@ reset(): Promise<void>
 resume(callback: AsyncCallback<void>): void
 ```
 
-恢复视频录制。使用callback异步回调。
-
-需要在pause接口成功调用后，才能调用resume接口。
+恢复视频录制。使用callback异步回调。需要在pause接口成功调用后，才能调用resume接口。
 
 **起始版本：** 23
 
@@ -2518,9 +2441,7 @@ async function test() {
 resume(): Promise<void>
 ```
 
-恢复视频录制。使用Promise异步回调。
-
-需要在pause接口成功调用后，才能调用resume接口。
+恢复视频录制。使用Promise异步回调。需要在pause接口成功调用后，才能调用resume接口。
 
 **起始版本：** 23
 
@@ -2600,9 +2521,7 @@ avRecorder.setWillMuteWhenInterrupted(true).then(() => {
 start(callback: AsyncCallback<void>): void
 ```
 
-开始视频录制。使用callback异步回调。
-
-纯音频录制需在prepare接口成功调用后， 才能调用start接口。纯视频录制，音视频录制需在 getInputSurface接口成功调用后，才能调用start接口。
+开始视频录制。使用callback异步回调。纯音频录制需在prepare接口成功调用后， 才能调用start接口。纯视频录制，音视频录制需在 getInputSurface接口成功调用后，才能调用start接口。
 
 **起始版本：** 23
 
@@ -2701,9 +2620,7 @@ async function test() {
 start(): Promise<void>
 ```
 
-开始视频录制。使用Promise异步回调。
-
-纯音频录制需在prepare接口成功调用后，才能调用start接口。纯视频录制，音视频录制需在 getInputSurface接口成功调用后，才能调用start接口。
+开始视频录制。使用Promise异步回调。纯音频录制需在prepare接口成功调用后，才能调用start接口。纯视频录制，音视频录制需在 getInputSurface接口成功调用后，才能调用start接口。
 
 **起始版本：** 23
 
@@ -2737,11 +2654,7 @@ start(): Promise<void>
 stop(callback: AsyncCallback<void>): void
 ```
 
-停止视频录制。使用callback异步回调。
-
-需要在start或 pause接口成功调用后，才能调用stop接口。
-
-纯音频录制时，需要重新调用prepare接口 才能重新录制。纯视频录制，音视频录制时，需要重新调用 prepare和 getInputSurface接口才能重新录制。
+停止视频录制。使用callback异步回调。需要在start或 pause接口成功调用后，才能调用stop接口。纯音频录制时，需要重新调用prepare接口 才能重新录制。纯视频录制，音视频录制时，需要重新调用 prepare和 getInputSurface接口才能重新录制。
 
 **起始版本：** 23
 
@@ -2884,11 +2797,7 @@ videoPlayer.stop().then(() => {
 stop(): Promise<void>
 ```
 
-停止视频录制。使用Promise异步回调。
-
-需要在start或pause接口成功调用后，才能调用stop接口。
-
-纯音频录制时，需要重新调用prepare接口才能重新录制。纯视频录制，音视频录制时，需要重新调用 prepare和 getInputSurface接口才能重新录制。
+停止视频录制。使用Promise异步回调。需要在start或pause接口成功调用后，才能调用stop接口。纯音频录制时，需要重新调用prepare接口才能重新录制。纯视频录制，音视频录制时，需要重新调用 prepare和 getInputSurface接口才能重新录制。
 
 **起始版本：** 23
 
@@ -2922,9 +2831,7 @@ stop(): Promise<void>
 updateRotation(rotation: int): Promise<void>
 ```
 
-更新视频旋转角度。使用Promise异步回调。
-
-当且仅当prepare接口成功调用后，且在 start接口之前，才能调用updateRotation接口。
+更新视频旋转角度。使用Promise异步回调。当且仅当prepare接口成功调用后，且在 start接口之前，才能调用updateRotation接口。
 
 **起始版本：** 23
 
@@ -2974,8 +2881,7 @@ avRecorder.updateRotation(rotation).then(() => {
 readonly state: AVRecorderState
 ```
 
-音视频录制的状态。
-
+音视频录制的状态。  
 **原子化服务API：** 从API version 12 开始，该接口支持在原子化服务中使用。
 
 **类型：** [AVRecorderState](arkts-media-avrecorderstate-t.md)

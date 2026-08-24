@@ -71,7 +71,7 @@ Sets the icon size of the **SaveButton** component.
 onClick(event: SaveButtonCallback)
 ```
 
-Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the [SaveButton](../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1) constructor. Authorization fails if the user declines authorization or closes the dialog box.
+Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the SaveButton constructor. Authorization fails if the user declines authorization or closes the dialog box.
 
 **Since:** 10
 
@@ -173,8 +173,7 @@ Sets the press effect of the **SaveButton** component.
 symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 ```
 
-Sets the font weight of the symbol icon for the save button.
-
+Sets the font weight of the symbol icon for the save button.  
 - Before calling this method, you need to call [setIcon](#seticon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.*xxx*')**). - If no symbol icon is configured, the font weight setting will not apply.
 
 **Since:** 26.0.0
@@ -201,8 +200,7 @@ Sets the font weight of the symbol icon for the save button.
 symbolIconColor(color: Array<ResourceColor>)
 ```
 
-Sets the color of the symbol icon for the save button.
-
+Sets the color of the symbol icon for the save button.  
 - Before calling this method, you need to call [setIcon](#seticon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.xxx')**). - If no symbol icon is set, the color set via this method does not take effect. - It is recommended that you use this API together with [symbolRenderingStrategy](#symbolrenderingstrategy) to achieve different rendering effects.
 
 **Since:** 26.0.0
@@ -229,8 +227,7 @@ Sets the color of the symbol icon for the save button.
 symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 ```
 
-Sets the rendering strategy for the symbol icon of the save button.
-
+Sets the rendering strategy for the symbol icon of the save button.  
 - Before calling this method, you need to call [setIcon](#seticon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.*xxx*')**). - The configured rendering strategy will not apply if no symbol icon is set. - When this parameter is used together with [symbolIconColor](#symboliconcolor), the rendering strategy determines how the color array is applied.
 
 **Since:** 26.0.0

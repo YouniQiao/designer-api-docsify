@@ -1,8 +1,6 @@
 # EdgeStyles
 
-Defines the border style property.
-
-@interface EdgeStyles
+Defines the border style property.@interface EdgeStyles
 
 **Since:** 23
 

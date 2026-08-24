@@ -68,7 +68,7 @@ Iterates the array in reverse order and returns the value of the first element t
 
 | Type | Description |
 | --- | --- |
-| [Byte](arkts-arkts-byte-c.md) \| undefined | The value of the element if found; otherwise, undefined. |
+| Byte \| undefined | The value of the element if found; otherwise, undefined. |
 
 
 ## findLast
@@ -101,7 +101,7 @@ Iterates the array in reverse order and returns the value of the first element t
 
 | Type | Description |
 | --- | --- |
-| [Short](arkts-arkts-short-c.md) \| undefined | The value of the element if found; otherwise, undefined. |
+| Short \| undefined | The value of the element if found; otherwise, undefined. |
 
 
 ## findLast
@@ -134,7 +134,7 @@ Iterates the array in reverse order and returns the value of the first element t
 
 | Type | Description |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) \| undefined | The value of the element if found; otherwise, undefined. |
+| Int \| undefined | The value of the element if found; otherwise, undefined. |
 
 
 ## findLast
@@ -167,7 +167,7 @@ Iterates the array in reverse order and returns the value of the first element t
 
 | Type | Description |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) \| undefined | The value of the element if found; otherwise, undefined. |
+| Long \| undefined | The value of the element if found; otherwise, undefined. |
 
 
 ## findLast
@@ -200,7 +200,7 @@ Iterates the array in reverse order and returns the value of the first element t
 
 | Type | Description |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) \| undefined | The value of the element if found; otherwise, undefined. |
+| Float \| undefined | The value of the element if found; otherwise, undefined. |
 
 
 ## findLast
@@ -233,7 +233,7 @@ Iterates the array in reverse order and returns the value of the first element t
 
 | Type | Description |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) \| undefined | The value of the element if found; otherwise, undefined. |
+| Double \| undefined | The value of the element if found; otherwise, undefined. |
 
 
 ## findLast
@@ -266,5 +266,5 @@ Iterates the array in reverse order and returns the value of the first element t
 
 | Type | Description |
 | --- | --- |
-| [Char](arkts-arkts-char-c.md) \| undefined | The value of the element if found; otherwise, undefined. |
+| Char \| undefined | The value of the element if found; otherwise, undefined. |
 

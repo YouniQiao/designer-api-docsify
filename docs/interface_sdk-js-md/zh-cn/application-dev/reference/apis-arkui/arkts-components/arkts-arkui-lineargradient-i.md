@@ -1,8 +1,6 @@
 # LinearGradient
 
-Linear Gradient Interface
-
-@interface LinearGradient
+Linear Gradient Interface@interface LinearGradient
 
 **起始版本：** 11
 

@@ -11,11 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## certChainData
@@ -76,9 +71,7 @@ handler: SslErrorHandler
 isFatalError: boolean
 ```
 
-是否是致命错误。致命错误会导致页面无法正常加载和渲染（如证书验证失败、协议错误），非致命错误只影响部分资源的加载（如图片加载失败）。
-
-true表示致命错误，false表示非致命错误。
+是否是致命错误。致命错误会导致页面无法正常加载和渲染（如证书验证失败、协议错误），非致命错误只影响部分资源的加载（如图片加载失败）。true表示致命错误，false表示非致命错误。
 
 **类型：** boolean
 
@@ -96,9 +89,7 @@ true表示致命错误，false表示非致命错误。
 isMainFrame: boolean
 ```
 
-是否是主资源。
-
-true表示主资源，false表示非主资源。
+是否是主资源。true表示主资源，false表示非主资源。
 
 **类型：** boolean
 

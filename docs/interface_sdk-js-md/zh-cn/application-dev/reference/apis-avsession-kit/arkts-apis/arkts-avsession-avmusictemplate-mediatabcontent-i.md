@@ -1,8 +1,6 @@
 # MediaTabContent
 
-媒体标签页内容的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
-
-@extends OperResult @interface MediaTabContent
+媒体标签页内容的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。@extends OperResult @interface MediaTabContent
 
 **继承/实现关系：** MediaTabContent extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 

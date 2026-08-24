@@ -12,5 +12,5 @@ type GcStats = Record<string, long>
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, long&gt;
+**属性类型：** Record&lt;string, long&gt;
 

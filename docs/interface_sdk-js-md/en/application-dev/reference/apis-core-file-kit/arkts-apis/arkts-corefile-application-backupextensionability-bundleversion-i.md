@@ -1,8 +1,6 @@
 # BundleVersion
 
-Describe bundle version
-
-@interface BundleVersion
+Describe bundle version@interface BundleVersion
 
 **Since:** 23
 

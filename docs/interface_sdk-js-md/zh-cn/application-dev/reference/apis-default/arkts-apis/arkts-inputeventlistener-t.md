@@ -6,11 +6,7 @@ export declare type InputEventListener = (
 ) => InputEventInterceptResult
 ```
 
-Defines the input event listener callback function type.
-
-Performance Warning: Do not perform time-consuming operations in the callback, otherwise it may cause the application to freeze.
-
-The listener executes synchronously in the UI thread and will directly block the event processing flow. It is recommended to only perform simple judgments and calculations, avoiding: - Synchronous I/O operations - Complex data processing - Network requests - Massive log output
+Defines the input event listener callback function type.Performance Warning: Do not perform time-consuming operations in the callback, otherwise it may cause the application to freeze.The listener executes synchronously in the UI thread and will directly block the event processing flow. It is recommended to only perform simple judgments and calculations, avoiding: - Synchronous I/O operations - Complex data processing - Network requests - Massive log output
 
 **起始版本：** 26.0.0
 

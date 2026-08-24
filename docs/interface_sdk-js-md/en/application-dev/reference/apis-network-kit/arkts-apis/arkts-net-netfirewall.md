@@ -21,12 +21,12 @@ import { netFirewall } from '@kit.NetworkKit';
 | Name | Description |
 | --- | --- |
 | [addNetFirewallRule(Network Firewall)](arkts-network-netfirewall-addnetfirewallrule-f.md) | Adds a firewall rule for the system user ID. The supported rule types are IP, Domain, and DNS. This API uses a promise to return the result. |
-| [getNetFirewallPolicy(Network Firewall)](arkts-network-netfirewall-getnetfirewallpolicy-f.md) | Queries the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). This API uses a promise to return the result. |
-| [getNetFirewallRule(Network Firewall)](arkts-network-netfirewall-getnetfirewallrule-f.md) | Obtains a firewall rule based on the specified user ID and rule ID. This API uses a promise to return the result. |
-| [getNetFirewallRules(Network Firewall)](arkts-network-netfirewall-getnetfirewallrules-f.md) | Obtains firewall rules by user ID. You need to specify the pagination query parameter when calling this API. Currently, firewall rules can be sorted by name. This API uses a promise to return the result. |
-| [removeNetFirewallRule(Network Firewall)](arkts-network-netfirewall-removenetfirewallrule-f.md) | Deletes a specified firewall rule of a system user ID. This API uses a promise to return the result. |
+| [getNetFirewallPolicy(Network Firewall)](arkts-network-netfirewall-getnetfirewallpolicy-f.md) | Queries the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NET_FIREWALL |
+| [getNetFirewallRule(Network Firewall)](arkts-network-netfirewall-getnetfirewallrule-f.md) | Obtains a firewall rule based on the specified user ID and rule ID. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NET_FIREWALL |
+| [getNetFirewallRules(Network Firewall)](arkts-network-netfirewall-getnetfirewallrules-f.md) | Obtains firewall rules by user ID. You need to specify the pagination query parameter when calling this API. Currently, firewall rules can be sorted by name. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NET_FIREWALL |
+| [removeNetFirewallRule(Network Firewall)](arkts-network-netfirewall-removenetfirewallrule-f.md) | Deletes a specified firewall rule of a system user ID. This API uses a promise to return the result.  **Required permission**: ohos.permission.MANAGE_NET_FIREWALL |
 | [setNetFirewallPolicy(Network Firewall)](arkts-network-netfirewall-setnetfirewallpolicy-f.md) | Sets the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). Different firewall policies can be configured for different system user IDs. This API uses a promise to return the result. |
-| [updateNetFirewallRule(Network Firewall)](arkts-network-netfirewall-updatenetfirewallrule-f.md) | Updates a firewall rule. This API uses a promise to return the result. |
+| [updateNetFirewallRule(Network Firewall)](arkts-network-netfirewall-updatenetfirewallrule-f.md) | Updates a firewall rule. This API uses a promise to return the result.  **Required permission**: ohos.permission.MANAGE_NET_FIREWALL |
 
 <!--Del-->
 ### Functions(System API)

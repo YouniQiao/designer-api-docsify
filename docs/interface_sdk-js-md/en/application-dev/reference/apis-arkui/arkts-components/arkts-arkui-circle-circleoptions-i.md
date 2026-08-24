@@ -1,8 +1,6 @@
 # CircleOptions
 
-Defines circle options for Circle component.
-
-@interface CircleOptions
+Defines circle options for Circle component.@interface CircleOptions
 
 **Since:** 23
 

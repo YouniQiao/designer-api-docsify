@@ -1,8 +1,6 @@
 # ChainStyle
 
-Enumerates the chain styles in relative container.
-
-@enum { number }
+Enumerates the chain styles in relative container.@enum { number }
 
 **起始版本：** 23
 

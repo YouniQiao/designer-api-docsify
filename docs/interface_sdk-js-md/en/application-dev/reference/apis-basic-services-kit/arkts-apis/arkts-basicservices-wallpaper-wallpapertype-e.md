@@ -1,8 +1,6 @@
 # WallpaperType
 
-Indicates wallpaper type.
-
-@enum { int } WallpaperType
+Indicates wallpaper type.@enum { int } WallpaperType
 
 **Since:** 23
 

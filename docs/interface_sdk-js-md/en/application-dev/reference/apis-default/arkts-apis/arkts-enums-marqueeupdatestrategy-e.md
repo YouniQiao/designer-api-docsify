@@ -1,8 +1,6 @@
 # MarqueeUpdateStrategy
 
-Marquee scrolling strategy after text update
-
-@enum { number }
+Marquee scrolling strategy after text update@enum { number }
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # SwitchStyle
 
-Defines the switch style.
-
-@interface SwitchStyle
+Defines the switch style.@interface SwitchStyle
 
 **Since:** 23
 

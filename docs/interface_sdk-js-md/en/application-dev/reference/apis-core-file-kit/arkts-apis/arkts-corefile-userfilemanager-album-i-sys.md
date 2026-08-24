@@ -344,8 +344,7 @@ deletePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 
 Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.
 
@@ -445,8 +444,7 @@ deletePhotoAssets(assets: Array<FileAsset>): Promise<void>
 
 Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.
 

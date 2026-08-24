@@ -16,8 +16,7 @@ Describes the configuration options for notification voice broadcast.
 enabled?: boolean
 ```
 
-Whether to subscribe to the voice broadcast content of a notification.
-
+Whether to subscribe to the voice broadcast content of a notification.  
 - **true**: yes. - **false**: no. The default value is **false**.
 
 **Type:** boolean

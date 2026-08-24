@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## setCertificateStatus
@@ -32,7 +31,7 @@ Sets the status of a CA certificate. Currently, only the status of a user's CA c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | certUri | string | Yes | Unique identifier of the certificate. Currently, only user CA certificates are supported. |
-| certType | CertType | Yes | Certificate type. Currently, only the status of user CA certificates ( **CA_CERT_USER**) can be set. |
+| certType | CertType | Yes | Certificate type. Currently, only the status of user CA certificates (**CA_CERT_USER**) can be set. |
 | enabled | boolean | Yes | Whether the certificate is enabled. **true**: enabled; **false**: disabled. |
 
 **Return value:**

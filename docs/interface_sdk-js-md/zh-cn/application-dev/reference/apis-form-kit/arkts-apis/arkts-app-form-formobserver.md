@@ -2,8 +2,7 @@
 
 formObserver模块提供了卡片监听方相关接口的能力，包括对同一用户下安装的卡片新增、删除、可见性变化事件的订阅和取消订阅，获取正在运行的卡片信息等。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本模块接口均为系统接口。
 
 **起始版本：** 23
@@ -59,10 +58,10 @@ import { formObserver } from '@kit.FormKit';
 | [on_formRemove](arkts-form-formobserver-onformremove-f-sys.md) | 订阅卡片删除事件。使用callback异步回调，返回指定卡片使用方应用被删除卡片的信息。 |
 | [on_message](arkts-form-formobserver-onmessage-f-sys.md) | 订阅卡片message事件。使用callback异步回调，返回触发message事件的卡片信息。 |
 | [on_message](arkts-form-formobserver-onmessage-f-sys.md) | 订阅指定卡片使用方的卡片message事件。使用callback异步回调，返回触发message事件的卡片信息。 |
-| [on_notifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | 订阅通知卡片不可见的事件。使用callback异步回调。 |
-| [on_notifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | 订阅通知卡片不可见的事件。使用callback异步回调。 |
-| [on_notifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | 订阅通知卡片可见的事件。使用callback异步回调。 |
-| [on_notifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | 订阅通知卡片可见的事件。使用callback异步回调。 |
+| [on_notifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | 订阅通知卡片不可见的事件。使用callback异步回调。​触发通知卡片不可见场景为：调用[notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md)接口通知对应卡片可见性变更为不可 见状态。 |
+| [on_notifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | 订阅通知卡片不可见的事件。使用callback异步回调。​触发通知卡片不可见场景为：调用[notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md)接口通知对应卡片可见性变更为不可 见状态。 |
+| [on_notifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | 订阅通知卡片可见的事件。使用callback异步回调。​触发通知卡片可见场景为：调用[notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md)接口通知对应卡片可见性变更为可见状态。 |
+| [on_notifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | 订阅通知卡片可见的事件。使用callback异步回调。​触发通知卡片可见场景为：调用[notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md)接口通知对应卡片可见性变更为可见状态。 |
 | [on_router](arkts-form-formobserver-onrouter-f-sys.md) | 订阅卡片router事件。使用callback异步回调，返回触发router事件的卡片信息。 |
 | [on_router](arkts-form-formobserver-onrouter-f-sys.md) | 订阅指定卡片使用方的卡片router事件。使用callback异步回调，返回触发router事件的卡片信息。 |
 | [onCall](arkts-form-formobserver-oncall-f-sys.md) | Call event listening in registered form. <p>This interface requires permission to receive callback.</p> |

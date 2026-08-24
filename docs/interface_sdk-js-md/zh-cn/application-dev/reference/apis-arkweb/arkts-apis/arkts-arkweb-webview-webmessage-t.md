@@ -4,7 +4,7 @@
 type WebMessage = ArrayBuffer | string
 ```
 
-用于描述[WebMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md)所支持的数据类型。
+用于描述[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)所支持的数据类型。
 
 **起始版本：** 9
 

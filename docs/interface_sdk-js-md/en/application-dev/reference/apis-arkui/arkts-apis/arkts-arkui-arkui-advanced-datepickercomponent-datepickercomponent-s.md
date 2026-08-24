@@ -8,6 +8,8 @@ None
 
 **Since:** 26.0.0
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct DatePickerComponent--><!--Device-unnamed-export declare struct DatePickerComponent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,8 +23,7 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 ## options
 
 ```TypeScript
-@Prop
-  options: DatePickerComponentOptions
+options: DatePickerComponentOptions
 ```
 
 Defines options for the date time picker component.
@@ -30,6 +31,8 @@ Defines options for the date time picker component.
 **Type:** [DatePickerComponentOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

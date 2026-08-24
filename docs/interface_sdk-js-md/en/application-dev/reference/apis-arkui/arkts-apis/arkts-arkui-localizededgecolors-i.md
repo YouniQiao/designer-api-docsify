@@ -1,8 +1,6 @@
 # LocalizedEdgeColors
 
-Defines the localized border color property.
-
-@interface LocalizedEdgeColors
+Defines the localized border color property.@interface LocalizedEdgeColors
 
 **Since:** 12
 

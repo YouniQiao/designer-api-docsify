@@ -20,8 +20,7 @@ import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColor
 static setDefaultTheme(theme: CustomTheme): void
 ```
 
-Sets the default Theme:
-
+Sets the default Theme:  
 - for whole Ability when invoked from the Ability level code. - for the ArkUI page and for later opened pages when invoked at the ArkUI page level.
 
 **Since:** 12

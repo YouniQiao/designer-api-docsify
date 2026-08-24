@@ -1,8 +1,6 @@
 # PinchGestureHandlerOptions
 
-Defines the PinchGestureHandler options.
-
-@extends BaseHandlerOptions @interface PinchGestureHandlerOptions
+Defines the PinchGestureHandler options.@extends BaseHandlerOptions @interface PinchGestureHandlerOptions
 
 **Inheritance/Implementation:** PinchGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)
 

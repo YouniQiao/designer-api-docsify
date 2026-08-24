@@ -1,8 +1,6 @@
 # StartAnimationSystemParams（系统接口）
 
-启动动画配置，仅对全屏应用生效。
-
-不同应用间跳转场景不生效，仍保持系统默认动效。
+启动动画配置，仅对全屏应用生效。不同应用间跳转场景不生效，仍保持系统默认动效。
 
 **起始版本：** 23
 
@@ -15,8 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 

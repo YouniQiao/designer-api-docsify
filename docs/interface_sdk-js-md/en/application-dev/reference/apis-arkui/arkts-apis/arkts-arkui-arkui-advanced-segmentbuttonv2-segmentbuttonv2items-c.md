@@ -1,12 +1,12 @@
 # SegmentButtonV2Items
 
-Represents items of the **SegmentButtonV2** component.
-
-This parameter is inherited from Array\&lt;[SegmentButtonV2Item](#segmentbuttonv2items)&gt;.
+Represents items of the **SegmentButtonV2** component.This parameter is inherited from Array\&lt;[SegmentButtonV2Item](#segmentbuttonv2items)&gt;.
 
 **Inheritance/Implementation:** SegmentButtonV2Items extends Array<SegmentButtonV2Item>
 
 **Since:** 18
+
+**Decorator:** @ObservedV2
 
 <!--Device-unnamed-export declare class SegmentButtonV2Items--><!--Device-unnamed-export declare class SegmentButtonV2Items-End-->
 

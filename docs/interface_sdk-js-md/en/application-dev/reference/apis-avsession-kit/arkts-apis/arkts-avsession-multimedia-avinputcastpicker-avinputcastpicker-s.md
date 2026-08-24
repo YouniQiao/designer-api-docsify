@@ -4,6 +4,8 @@ Picker used to show available input devices. @struct { AVInputCastPicker }
 
 **Since:** 20
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct AVInputCastPicker--><!--Device-unnamed-export declare struct AVInputCastPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVInputCast
@@ -17,8 +19,7 @@ import { AVInputCastPicker } from '@kit.AVSessionKit';
 ## customPicker
 
 ```TypeScript
-@Prop
-  customPicker?: CustomBuilder
+customPicker?: CustomBuilder
 ```
 
 Custom picker.
@@ -26,6 +27,8 @@ Custom picker.
 **Type:** [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md)
 
 **Since:** 20
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

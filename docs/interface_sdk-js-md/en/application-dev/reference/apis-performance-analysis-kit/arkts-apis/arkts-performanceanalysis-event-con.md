@@ -6,8 +6,7 @@
 const ADDRESS_SANITIZER: string
 ```
 
-Application address sanitizer event. This is a system event name constant.
-
+Application address sanitizer event. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
@@ -24,8 +23,7 @@ Application address sanitizer event. This is a system event name constant.
 const APP_CRASH: string
 ```
 
-Application crash event. This is a system event name constant.
-
+Application crash event. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Since:** 23
@@ -42,8 +40,7 @@ Application crash event. This is a system event name constant.
 const APP_FREEZE: string
 ```
 
-Application freeze event. This is a system event name constant.
-
+Application freeze event. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Since:** 23
@@ -60,8 +57,7 @@ Application freeze event. This is a system event name constant.
 const APP_HICOLLIE: string
 ```
 
-Application task execution timeout event. This is a system event name constant.
-
+Application task execution timeout event. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 21.
 
 **Since:** 23
@@ -78,8 +74,7 @@ Application task execution timeout event. This is a system event name constant.
 const APP_KILLED: string
 ```
 
-Application killed event. This is a system event name constant.
-
+Application killed event. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 20.
 
 **Since:** 23
@@ -96,8 +91,7 @@ Application killed event. This is a system event name constant.
 const APP_LAUNCH: string
 ```
 
-Event indicating the application launch duration. This is a system event name constant.
-
+Event indicating the application launch duration. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
@@ -114,8 +108,7 @@ Event indicating the application launch duration. This is a system event name co
 const appFreezeWarning: string
 ```
 
-Application freeze warning event. This is a system event name constant.
-
+Application freeze warning event. This is a system event name constant.  
 **Model restriction**: This API can be used only in the stage model. **Atomic service API**: This parameter can be used in atomic services since API version 26.0.0.
 
 **Since:** 26.0.0
@@ -134,8 +127,7 @@ Application freeze warning event. This is a system event name constant.
 const AUDIO_JANK_FRAME: string
 ```
 
-Audio jank event. This is a system event name constant.
-
+Audio jank event. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 21.
 
 **Since:** 23
@@ -152,8 +144,7 @@ Audio jank event. This is a system event name constant.
 const BATTERY_USAGE: string
 ```
 
-Event indicating battery usage statistics. This is a system event name constant.
-
+Event indicating battery usage statistics. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
@@ -170,8 +161,7 @@ Event indicating battery usage statistics. This is a system event name constant.
 const CPU_USAGE_HIGH: string
 ```
 
-Event indicating a high CPU usage. This is a system event name constant.
-
+Event indicating a high CPU usage. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
@@ -188,8 +178,7 @@ Event indicating a high CPU usage. This is a system event name constant.
 const DISTRIBUTED_SERVICE_START: string
 ```
 
-Distributed service startup event. This is a reserved application event name constant.
-
+Distributed service startup event. This is a reserved application event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Since:** 23
@@ -206,8 +195,7 @@ Distributed service startup event. This is a reserved application event name con
 const MAIN_THREAD_JANK: string
 ```
 
-Main thread jank event. This is a system event name constant.
-
+Main thread jank event. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
@@ -224,8 +212,7 @@ Main thread jank event. This is a system event name constant.
 const RESOURCE_OVERLIMIT: string
 ```
 
-Application resource leak event. This is a system event name constant.
-
+Application resource leak event. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
@@ -242,8 +229,7 @@ Application resource leak event. This is a system event name constant.
 const SCROLL_ARKWEB_FLING_JANK: string
 ```
 
-ArkWeb fling jank event. This is a system event name constant.
-
+ArkWeb fling jank event. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 23.
 
 **Since:** 23
@@ -260,8 +246,7 @@ ArkWeb fling jank event. This is a system event name constant.
 const SCROLL_JANK: string
 ```
 
-Event indicating frame loss during swiping. This is a system event name constant.
-
+Event indicating frame loss during swiping. This is a system event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
@@ -278,8 +263,7 @@ Event indicating frame loss during swiping. This is a system event name constant
 const USER_LOGIN: string
 ```
 
-User login event. This is a reserved application event name constant.
-
+User login event. This is a reserved application event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Since:** 23
@@ -296,8 +280,7 @@ User login event. This is a reserved application event name constant.
 const USER_LOGOUT: string
 ```
 
-User logout event. This is a reserved application event name constant.
-
+User logout event. This is a reserved application event name constant.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Since:** 23

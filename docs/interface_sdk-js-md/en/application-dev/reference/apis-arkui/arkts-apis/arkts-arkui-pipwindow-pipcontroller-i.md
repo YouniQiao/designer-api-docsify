@@ -1,8 +1,6 @@
 # PiPController
 
-Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
-
-Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md) to create a PiPController instance.
+Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md) to create a PiPController instance.
 
 **Since:** 26.0.0
 
@@ -784,9 +782,7 @@ Register picture-in-picture control state change listener.
 setAutoStartEnabled(enable: boolean): void
 ```
 
-Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started.
-
-If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management , the system caches the top stack information with the specified navigation ID upon the first call of **setAutoStartEnabled(true)**.
+Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started.If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management, the system caches the top stack information with the specified navigation ID upon the first call of **setAutoStartEnabled(true)**.
 
 **Since:** 26.0.0
 
@@ -830,7 +826,7 @@ Sets the enabled status for a component displayed on the PiP controller.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | controlType | [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | Yes | Type of the component displayed on the PiP controller. |
-| enabled | boolean | Yes | Enabled status of the component displayed on the PiP controller. **true** if enabled , **false** otherwise. |
+| enabled | boolean | Yes | Enabled status of the component displayed on the PiP controller. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 

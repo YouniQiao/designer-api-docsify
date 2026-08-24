@@ -1,8 +1,6 @@
 # ResponseRegionSupportedTool
 
-Defines the event tool type that support response region settings.
-
-@enum { number }
+Defines the event tool type that support response region settings.@enum { number }
 
 **Since:** 23
 

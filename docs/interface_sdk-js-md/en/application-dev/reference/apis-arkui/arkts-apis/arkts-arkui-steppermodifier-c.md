@@ -1,8 +1,6 @@
 # StepperModifier
 
-Defines Stepper Modifier
-
-@extends StepperAttribute @implements AttributeModifier&lt;StepperAttribute&gt;
+Defines Stepper Modifier@extends StepperAttribute @implements AttributeModifier&lt;StepperAttribute&gt;
 
 **Inheritance/Implementation:** StepperModifier extends [StepperAttribute](../arkts-components/arkts-arkui-stepper-attribute.md#stepperattribute) and implements AttributeModifier<StepperAttribute>
 
@@ -10,7 +8,7 @@ Defines Stepper Modifier
 
 **Deprecated since:** 22
 
-**Substitutes:** [SwiperModifier](arkts-arkui-swipermodifier-c.md)
+**Substitutes:** [SwiperModifier](../../apis-default/arkts-apis/arkts-swipermodifier-c.md)
 
 <!--Device-unnamed-export declare class StepperModifier--><!--Device-unnamed-export declare class StepperModifier-End-->
 

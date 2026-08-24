@@ -29,13 +29,13 @@ import { ssap } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i.md) | Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server. |
+| [Client](arkts-connectivity-ssap-client-i.md) | Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.An app only needs to create one [Client](arkts-connectivity-ssap-client-i.md) instance for a remote device. Repeated creation will increase unnecessary resource overhead. |
 | [ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md) | Defines the connection status reporting parameters. |
 | [Property](arkts-connectivity-ssap-property-i.md) | Represents a service Property. |
 | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Defines the descriptor of a property. |
 | [PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md) | Represents the Property read request parameter of the client. |
 | [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md) | Define a client property write request. |
-| [Server](arkts-connectivity-ssap-server-i.md) | Represents a SSAP server class, which provides APIs for connecting to and exchanging data with the client. |
+| [Server](arkts-connectivity-ssap-server-i.md) | Represents a SSAP server class, which provides APIs for connecting to and exchanging data with the client.Before using the methods of this class, you need to call [ssap.createServer](arkts-connectivity-ssap-createserver-f.md) to create an instance of this class.An app only needs to create one [Server](arkts-connectivity-ssap-server-i.md) instance. Repeated creation will increase unnecessary resource overhead. |
 | [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Defines a response to a client request. |
 | [Service](arkts-connectivity-ssap-service-i.md) | Represents the NearLink service. |
 
@@ -44,7 +44,7 @@ import { ssap } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i-sys.md) | Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server. |
+| [Client](arkts-connectivity-ssap-client-i-sys.md) | Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.An app only needs to create one [Client](arkts-connectivity-ssap-client-i.md) instance for a remote device. Repeated creation will increase unnecessary resource overhead. |
 | [Event](arkts-connectivity-ssap-event-i-sys.md) | Represents a service event. |
 | [Method](arkts-connectivity-ssap-method-i-sys.md) | Represents a method of the service. |
 | [Service](arkts-connectivity-ssap-service-i-sys.md) | Represents the NearLink service. |

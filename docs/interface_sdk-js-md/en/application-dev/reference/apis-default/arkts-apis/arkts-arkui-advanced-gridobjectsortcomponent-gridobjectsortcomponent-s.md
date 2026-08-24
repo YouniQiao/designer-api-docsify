@@ -1,9 +1,8 @@
 # GridObjectSortComponent
 
-*GridObjectSortComponent** is a grid object organizer that you can use to edit, drag to sort, add, and delete grid objects.
+**GridObjectSortComponent** is a grid object organizer that you can use to edit, drag to sort, add, and delete grid objects.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - If the **GridObjectSortComponent** component has universal attributes
 > and universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -14,6 +13,8 @@
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct GridObjectSortComponent--><!--Device-unnamed-export declare struct GridObjectSortComponent-End-->
 
@@ -27,8 +28,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 Build function of GridObjectSortComponent.
@@ -36,6 +36,8 @@ Build function of GridObjectSortComponent.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +108,7 @@ Callback invoked when changes are saved. The data after the changes is returned.
 ## options
 
 ```TypeScript
-@PropRef
-  options: GridObjectSortComponentOptions
+options: GridObjectSortComponentOptions
 ```
 
 Component configuration.
@@ -117,6 +118,8 @@ Component configuration.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

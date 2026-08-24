@@ -2,8 +2,7 @@
 
 UIServiceProxy提供代理能力，可以从UIServiceExtension客户端发送数据到服务端。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
 
 **起始版本：** 23
@@ -20,8 +19,7 @@ sendData(data: Record<string, Object>): void
 
 给UIServiceExtension服务端发送数据。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 14
@@ -38,7 +36,7 @@ sendData(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 待发送给UIServiceExtension服务端的数据。 |
+| data | Record&lt;string, Object&gt; | 是 | 待发送给UIServiceExtension服务端的数据。 |
 
 **错误码：**
 
@@ -229,8 +227,7 @@ sendData(data: Record<string, RecordData>): void
 
 给UIServiceExtension服务端发送数据。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 23
@@ -245,7 +242,7 @@ sendData(data: Record<string, RecordData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 待发送给UIServiceExtension服务端的数据。 |
+| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 待发送给UIServiceExtension服务端的数据。 |
 
 **错误码：**
 

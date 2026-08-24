@@ -17,7 +17,6 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## closeResultSet
@@ -1681,10 +1680,8 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 删除指定设备的数据，使用callback异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -1817,10 +1814,8 @@ removeDeviceData(deviceId: string): Promise<void>
 
 删除指定设备的数据，使用Promise异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -1947,8 +1942,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 
 在手动同步方式下，触发数据库同步。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 其中deviceIds为<!--RP2-->[DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)中的
 > networkId, 通过调用
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)

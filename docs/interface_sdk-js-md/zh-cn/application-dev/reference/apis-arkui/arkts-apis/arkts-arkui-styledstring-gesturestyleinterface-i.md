@@ -56,9 +56,7 @@ onLongPress?: Callback<GestureEvent>
 onTouch?: Callback<TouchEvent>
 ```
 
-设置触摸事件。
-
-取值为undefined时，不使用回调函数。
+设置触摸事件。取值为undefined时，不使用回调函数。
 
 **类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md)&gt;
 

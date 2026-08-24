@@ -562,14 +562,9 @@ filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP)
 hdrBrightnessRatio(ratio: double): Filter
 ```
 
-Adds an HDR (High Dynamic Range) brightening effect to the component content. Nesting is not recommended, as forced nesting may cause overexposure.
+Adds an HDR (High Dynamic Range) brightening effect to the component content. Nesting is not recommended, as forced nesting may cause overexposure.The brightening effect requires the HDR rendering pipeline to be enabled to take effect. In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline, for example, when the device hardware specifications do not support HDR.The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance.
 
-The brightening effect requires the HDR rendering pipeline to be enabled to take effect. In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline, for example, when the device hardware specifications do not support HDR.
-
-The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Using the HDR brightening effect incurs certain performance and power consumption overhead.
 > It is recommended to use it in scenarios where HDR images or videos already exist.
 
@@ -727,9 +722,7 @@ struct MaskDispersion {
 maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter
 ```
 
-Provides a Mask-based transition effect for the component content, which can be used for page transition animations, scene transition effects, etc.
-
-It is not recommended to use this effect during screen size changes, such as screen rotation, foldable screen opening/closing, etc.
+Provides a Mask-based transition effect for the component content, which can be used for page transition animations, scene transition effects, etc.It is not recommended to use this effect during screen size changes, such as screen rotation, foldable screen opening/closing, etc.
 
 **Since:** 23
 

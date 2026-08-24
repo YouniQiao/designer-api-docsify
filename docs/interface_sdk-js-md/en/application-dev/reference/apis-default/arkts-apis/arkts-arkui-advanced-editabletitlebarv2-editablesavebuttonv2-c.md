@@ -6,6 +6,8 @@ Declaration of the save button configuration.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class EditableSaveButtonV2--><!--Device-unnamed-export declare class EditableSaveButtonV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ Constructor of EditableSaveButtonV2.
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  public defaultFocus: boolean
+public defaultFocus: boolean
 ```
 
 Whether to get focus by default.
@@ -56,6 +57,8 @@ Whether to get focus by default.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableSaveButtonV2-@Trace  public defaultFocus: boolean--><!--Device-EditableSaveButtonV2-@Trace  public defaultFocus: boolean-End-->
@@ -65,8 +68,7 @@ Whether to get focus by default.
 ## isRequired
 
 ```TypeScript
-@Trace
-  public isRequired: boolean
+public isRequired: boolean
 ```
 
 Whether to show the save button.
@@ -79,6 +81,8 @@ Whether to show the save button.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableSaveButtonV2-@Trace  public isRequired: boolean--><!--Device-EditableSaveButtonV2-@Trace  public isRequired: boolean-End-->
@@ -88,8 +92,7 @@ Whether to show the save button.
 ## onAction
 
 ```TypeScript
-@Trace
-  public onAction?: OnActionCallback
+public onAction?: OnActionCallback
 ```
 
 Callback function when click on the save button.
@@ -99,6 +102,8 @@ Callback function when click on the save button.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

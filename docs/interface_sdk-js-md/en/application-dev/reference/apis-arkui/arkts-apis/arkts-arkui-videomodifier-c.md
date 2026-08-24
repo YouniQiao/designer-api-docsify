@@ -1,8 +1,6 @@
 # VideoModifier
 
-Defines Video Modifier
-
-@implements VideoAttribute, AttributeModifier&lt;VideoAttribute&gt;
+Defines Video Modifier@implements VideoAttribute, AttributeModifier&lt;VideoAttribute&gt;
 
 **Inheritance/Implementation:** VideoModifier implements VideoAttribute, AttributeModifier<VideoAttribute>
 

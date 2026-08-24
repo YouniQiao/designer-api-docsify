@@ -20,9 +20,7 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 action?: Callback<void>
 ```
 
-设置按钮点击回调。
-
-默认不执行任何操作。
+设置按钮点击回调。默认不执行任何操作。
 
 **类型：** Callback&lt;void&gt;
 

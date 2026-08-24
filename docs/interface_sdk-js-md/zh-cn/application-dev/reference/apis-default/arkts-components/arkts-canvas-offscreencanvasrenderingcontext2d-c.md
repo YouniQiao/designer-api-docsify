@@ -1,8 +1,6 @@
 # OffscreenCanvasRenderingContext2D
 
-使用OffscreenCanvasRenderingContext2D在Canvas上进行离屏绘制， 绘制对象可以是形状、文本、图片等。离屏绘制是指将需要绘制的内容先绘制在缓存区， 然后将其转换成图片，一次性绘制到Canvas上。离屏绘制使用CPU进行绘制， 绘制速度较慢，对绘制速度有要求的场景应避免使用离屏绘制。
-
-@extends CanvasRenderer
+使用OffscreenCanvasRenderingContext2D在Canvas上进行离屏绘制， 绘制对象可以是形状、文本、图片等。离屏绘制是指将需要绘制的内容先绘制在缓存区， 然后将其转换成图片，一次性绘制到Canvas上。离屏绘制使用CPU进行绘制， 绘制速度较慢，对绘制速度有要求的场景应避免使用离屏绘制。@extends CanvasRenderer
 
 **继承/实现关系：** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-canvas-canvasrenderer-c.md)
 
@@ -63,7 +61,7 @@ toDataURL(type?: string, quality?: double): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 否 | 用于指定图像格式。可选参数为："image/png"，"image/jpeg"， "image/webp"。异常值undefined或null按默认值处理。默认值：image/png。 |
+| type | string | 否 | 用于指定图像格式。可选参数为："image/png"，"image/jpeg"，"image/webp"。异常值undefined或null按默认值处理。默认值：image/png。 |
 | quality | double | 否 | 在指定图片格式为image/jpeg或image/webp的情况下， 可以从0到1的区间内选择图片的质量。如果超出取值范围， 将会使用默认值0.92。异常值undefined、null、NaN和Infinity按默认值处理。 默认值：0.92。 |
 
 **返回值：**

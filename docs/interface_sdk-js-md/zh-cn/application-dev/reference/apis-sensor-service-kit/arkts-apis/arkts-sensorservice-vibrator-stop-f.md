@@ -14,8 +14,7 @@ function stop(stopMode: VibratorStopMode): Promise<void>
 
 按照指定模式停止马达的振动。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)替代。
 
@@ -96,8 +95,7 @@ function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void
 
 按照指定模式停止马达的振动。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)
 > 替代。

@@ -14,7 +14,6 @@ Describes an audio volume group.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## groupId

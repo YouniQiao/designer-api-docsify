@@ -12,10 +12,7 @@ import { usbManager } from '@kit.MDMKit';
 function removeAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>): void
 ```
 
-Removes allowed USB devices.
-
-Use cases:
-
+Removes allowed USB devices.Use cases:  
 - Revoke access permissions for certain USB devices in enterprise security management scenarios. - Enable device administrators to dynamically adjust the list of allowed USB devices. - Remove USB devices from the trustlist when they are no longer needed or pose a security risk.
 
 **Since:** 12

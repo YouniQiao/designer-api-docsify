@@ -902,7 +902,7 @@ Converts Array of Double to JSON format
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | Array&lt;[Double](arkts-arkts-double-c.md)&gt; | Yes | Array of Double to be converted |
+| d | Array&lt;Double&gt; | Yes | Array of Double to be converted |
 
 **Return value:**
 
@@ -932,7 +932,7 @@ Converts ArrayLike of Double to JSON format
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | ArrayLike&lt;[Double](arkts-arkts-double-c.md)&gt; | Yes | ArrayLike of Double to be converted |
+| d | ArrayLike&lt;Double&gt; | Yes | ArrayLike of Double to be converted |
 
 **Return value:**
 

@@ -12,9 +12,7 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void
 ```
 
-标记一个异步跟踪耗时任务的结束，分级控制跟踪输出。
-
-finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md)对应参数值一致。
+标记一个异步跟踪耗时任务的结束，分级控制跟踪输出。finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md)对应参数值一致。
 
 **起始版本：** 23
 

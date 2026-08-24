@@ -267,7 +267,7 @@ Checks whether a given date is a weekend in this Calendar object.
 
 | Type | Description |
 | --- | --- |
-| boolean | The value "true" indicates that the specified date is a weekend, and the value "false" indicates the opposite. |
+| boolean | The value "true" indicates that the specified date is a weekend, and the value "false"indicates the opposite. |
 
 ## set
 

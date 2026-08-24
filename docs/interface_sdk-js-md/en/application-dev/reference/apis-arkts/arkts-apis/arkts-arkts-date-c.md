@@ -657,9 +657,7 @@ The `now()` static method returns the number of milliseconds elapsed since the e
 static parse(dateStr: string): long
 ```
 
-Parses a string representation of a date, and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC or throws `RangeError` if the string is unrecognized or, in some cases, contains illegal date values (e.g. 2015-02-31).
-
-(YYYY-MM-DDTHH:mm:ss.sssZ) is explicitly specified to be supported. Other formats are implementation-defined and may not work across all browsers (targets). A library can help if many different formats are to be accommodated.
+Parses a string representation of a date, and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC or throws `RangeError` if the string is unrecognized or, in some cases, contains illegal date values (e.g. 2015-02-31).(YYYY-MM-DDTHH:mm:ss.sssZ) is explicitly specified to be supported. Other formats are implementation-defined and may not work across all browsers (targets). A library can help if many different formats are to be accommodated.
 
 **Since:** 24
 

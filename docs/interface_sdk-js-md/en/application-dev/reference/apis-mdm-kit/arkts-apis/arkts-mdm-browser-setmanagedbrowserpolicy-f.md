@@ -14,8 +14,7 @@ function setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: st
 
 Sets a browser policy for a specified browser. This API is applicable to scenarios where an enterprise needs to manage employees' browser behavior in a unified manner, such as configuring browser security policies. After the setting is successful, the system common event [COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_managed_browser_policy_changed) is released.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > In multi-MDM application scenarios, once a policy for a specific browser is configured and takes effect by the
 > first admin, it can no longer be configured by other admins.
 

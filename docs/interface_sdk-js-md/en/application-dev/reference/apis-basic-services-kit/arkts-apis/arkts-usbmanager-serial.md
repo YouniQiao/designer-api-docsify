@@ -38,7 +38,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [addSerialRight](arkts-basicservices-serialmanager-addserialright-f-sys.md) | Adds the permission to an application for accessing the serial port device. serialManager.requestSerialRight triggers a dialog box to request user authorization. addSerialRight does not trigger a dialog box but directly adds the device access permission for the application. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted , you need to request the permission again. |
+| [addSerialRight](arkts-basicservices-serialmanager-addserialright-f-sys.md) | Adds the permission to an application for accessing the serial port device. serialManager.requestSerialRight triggers a dialog box to request user authorization. addSerialRight does not trigger a dialog box but directly adds the device access permission for the application. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. |
 <!--DelEnd-->
 
 ### Interfaces

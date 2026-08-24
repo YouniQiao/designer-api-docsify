@@ -1,8 +1,6 @@
 # HoverModeAreaType
 
-Enumerates the type of area in hover mode.
-
-@enum { number }
+Enumerates the type of area in hover mode.@enum { number }
 
 **Since:** 23
 

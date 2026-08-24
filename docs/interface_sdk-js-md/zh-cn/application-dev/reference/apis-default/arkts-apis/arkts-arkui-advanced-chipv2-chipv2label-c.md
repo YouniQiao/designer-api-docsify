@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2Label--><!--Device-unnamed-export declare class ChipV2Label-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ ChipV2Label的构造函数
 ## activatedFontColor
 
 ```TypeScript
-@Trace
-  public activatedFontColor?: ColorMetrics
+public activatedFontColor?: ColorMetrics
 ```
 
 ChipV2激活时的文本字体颜色。
@@ -54,6 +55,8 @@ ChipV2激活时的文本字体颜色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Label-@Trace  public activatedFontColor?: ColorMetrics--><!--Device-ChipV2Label-@Trace  public activatedFontColor?: ColorMetrics-End-->
@@ -63,8 +66,7 @@ ChipV2激活时的文本字体颜色。
 ## fontColor
 
 ```TypeScript
-@Trace
-  public fontColor?: ColorMetrics
+public fontColor?: ColorMetrics
 ```
 
 文本字体颜色。
@@ -75,6 +77,8 @@ ChipV2激活时的文本字体颜色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Label-@Trace  public fontColor?: ColorMetrics--><!--Device-ChipV2Label-@Trace  public fontColor?: ColorMetrics-End-->
@@ -84,8 +88,7 @@ ChipV2激活时的文本字体颜色。
 ## fontFamily
 
 ```TypeScript
-@Trace
-  public fontFamily?: string
+public fontFamily?: string
 ```
 
 文本字体系列。
@@ -96,6 +99,8 @@ ChipV2激活时的文本字体颜色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Label-@Trace  public fontFamily?: string--><!--Device-ChipV2Label-@Trace  public fontFamily?: string-End-->
@@ -105,8 +110,7 @@ ChipV2激活时的文本字体颜色。
 ## fontSize
 
 ```TypeScript
-@Trace
-  public fontSize?: LengthMetrics
+public fontSize?: LengthMetrics
 ```
 
 文本字体大小。
@@ -117,6 +121,8 @@ ChipV2激活时的文本字体颜色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Label-@Trace  public fontSize?: LengthMetrics--><!--Device-ChipV2Label-@Trace  public fontSize?: LengthMetrics-End-->
@@ -126,8 +132,7 @@ ChipV2激活时的文本字体颜色。
 ## labelMargin
 
 ```TypeScript
-@Trace
-  public labelMargin?: ChipV2LabelMarginConfig
+public labelMargin?: ChipV2LabelMarginConfig
 ```
 
 标签边距。
@@ -138,6 +143,8 @@ ChipV2激活时的文本字体颜色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Label-@Trace  public labelMargin?: ChipV2LabelMarginConfig--><!--Device-ChipV2Label-@Trace  public labelMargin?: ChipV2LabelMarginConfig-End-->
@@ -147,8 +154,7 @@ ChipV2激活时的文本字体颜色。
 ## localizedLabelMargin
 
 ```TypeScript
-@Trace
-  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
+public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
 ```
 
 标签边距。
@@ -159,6 +165,8 @@ ChipV2激活时的文本字体颜色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Label-@Trace  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig--><!--Device-ChipV2Label-@Trace  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig-End-->
@@ -168,8 +176,7 @@ ChipV2激活时的文本字体颜色。
 ## modifier
 
 ```TypeScript
-@Trace
-  public modifier?: TextModifier
+public modifier?: TextModifier
 ```
 
 标签文本的修饰器。
@@ -180,6 +187,8 @@ ChipV2激活时的文本字体颜色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Label-@Trace  public modifier?: TextModifier--><!--Device-ChipV2Label-@Trace  public modifier?: TextModifier-End-->
@@ -189,8 +198,7 @@ ChipV2激活时的文本字体颜色。
 ## text
 
 ```TypeScript
-@Trace
-  public text: string
+public text: string
 ```
 
 文本内容。
@@ -200,6 +208,8 @@ ChipV2激活时的文本字体颜色。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

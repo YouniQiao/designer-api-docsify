@@ -36,7 +36,7 @@ Web原生消息连接建立时回调此方法。在此回调中，可以获取�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
+| info | [ConnectionInfo](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
 
 **示例**
 
@@ -137,7 +137,7 @@ Web原生消息连接断开时回调此方法。在此回调中，可以释放�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
+| info | [ConnectionInfo](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
 
 **示例**
 

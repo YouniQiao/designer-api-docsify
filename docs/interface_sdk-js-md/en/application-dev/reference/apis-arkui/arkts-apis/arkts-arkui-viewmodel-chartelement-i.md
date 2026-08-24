@@ -1,8 +1,6 @@
 # ChartElement
 
-The &lt;chart&gt; component displays line charts, gauge charts, and bar charts.
-
-@extends Element @interface ChartElement
+The &lt;chart&gt; component displays line charts, gauge charts, and bar charts.@extends Element @interface ChartElement
 
 **Inheritance/Implementation:** ChartElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 

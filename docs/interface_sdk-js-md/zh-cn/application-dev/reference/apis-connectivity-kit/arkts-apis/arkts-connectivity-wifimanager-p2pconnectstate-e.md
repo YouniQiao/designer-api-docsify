@@ -1,8 +1,6 @@
 # P2pConnectState
 
-P2P连接状态。
-
-@enum { int }
+P2P连接状态。@enum { int }
 
 **起始版本：** 23
 

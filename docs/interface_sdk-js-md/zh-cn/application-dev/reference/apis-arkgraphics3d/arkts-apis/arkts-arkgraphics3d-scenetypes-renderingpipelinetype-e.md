@@ -1,8 +1,6 @@
 # RenderingPipelineType
 
-渲染管线类型枚举。
-
-@enum { int }
+渲染管线类型枚举。@enum { int }
 
 **起始版本：** 23
 

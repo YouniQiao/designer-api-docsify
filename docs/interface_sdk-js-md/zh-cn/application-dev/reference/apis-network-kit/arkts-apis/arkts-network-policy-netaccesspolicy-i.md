@@ -20,11 +20,7 @@ import { policy } from '@kit.NetworkKit';
 allowCellular: boolean
 ```
 
-是否允许使用蜂窝网络上网。
-
-true：允许使用蜂窝网络上网。
-
-false： 不允许使用蜂窝网络上网。
+是否允许使用蜂窝网络上网。true：允许使用蜂窝网络上网。false： 不允许使用蜂窝网络上网。
 
 **类型：** boolean
 
@@ -42,11 +38,7 @@ false： 不允许使用蜂窝网络上网。
 allowWiFi: boolean
 ```
 
-是否允许使用Wi-Fi网络上网。
-
-true：允许使用Wi-Fi网络上网。
-
-false： 不允许使用Wi-Fi网络上网。
+是否允许使用Wi-Fi网络上网。true：允许使用Wi-Fi网络上网。false： 不允许使用Wi-Fi网络上网。
 
 **类型：** boolean
 

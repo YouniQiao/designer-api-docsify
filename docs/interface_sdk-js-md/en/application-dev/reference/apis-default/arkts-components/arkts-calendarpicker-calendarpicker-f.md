@@ -15,6 +15,8 @@ Defines CalendarPicker Component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function CalendarPicker(    options?: CalendarOptions): CalendarPickerAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function CalendarPicker(    options?: CalendarOptions): CalendarPickerAttribute-End-->
@@ -46,6 +48,8 @@ Defines the CalendarPicker component. It requires call setCalendarPickerOptions 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

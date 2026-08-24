@@ -2,8 +2,7 @@
 
 粒子速度配置。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 18
@@ -23,9 +22,7 @@
 angle: ParticleTuple<number, number>
 ```
 
-表示速度的方向（单位为角度）。以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。
-
-默认值：[0.0,0.0]
+表示速度的方向（单位为角度）。以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。默认值：[0.0,0.0]
 
 **类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
@@ -45,9 +42,7 @@ angle: ParticleTuple<number, number>
 speed: ParticleTuple<number, number>
 ```
 
-表示速度大小。
-
-默认值：[0.0,0.0]
+表示速度大小。默认值：[0.0,0.0]
 
 **类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 

@@ -14,7 +14,6 @@ VideoOutput implements output information used in a video session. It inherits f
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## attachMetaSurface
@@ -113,8 +112,7 @@ Enable auto frame rate for video capture.
 enableMirror(enabled: boolean): void
 ```
 
-Enables or disables mirror recording.
-
+Enables or disables mirror recording.  
 - Before calling this API, check whether mirror recording is supported by using [isMirrorSupported](#ismirrorsupported). - After enabling or disabling mirror recording, call [getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation) to obtain the rotation angle and [updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md#updaterotation) to update the rotation angle.
 
 **Since:** 23

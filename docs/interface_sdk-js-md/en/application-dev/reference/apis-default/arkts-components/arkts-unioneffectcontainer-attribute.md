@@ -1,8 +1,6 @@
 # UnionEffectContainerAttribute (System API)
 
-Defines the UnionEffectContainer attribute functions.
-
-@extends CommonMethod @interface UnionEffectContainerAttribute
+Defines the UnionEffectContainer attribute functions.@extends CommonMethod @interface UnionEffectContainerAttribute
 
 **Inheritance/Implementation:** UnionEffectContainerAttribute extends CommonMethod
 

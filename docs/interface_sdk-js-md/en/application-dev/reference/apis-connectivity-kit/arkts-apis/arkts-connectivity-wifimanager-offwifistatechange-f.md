@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## offWifiStateChange
@@ -13,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function offWifiStateChange(callback?: Callback<int>): void
 ```
 
-Unsubscribe Wi-Fi status change events.
-
-All callback functions will be deregistered If there is no specific callback parameter.
+Unsubscribe Wi-Fi status change events.All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 23
 

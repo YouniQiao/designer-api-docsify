@@ -1,8 +1,6 @@
 # GestureCollectIntervention
 
-Define the gesture and events collection intervention operations.
-
-@enum {number}
+Define the gesture and events collection intervention operations.@enum {number}
 
 **Since:** 26.0.0
 

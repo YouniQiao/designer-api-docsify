@@ -2,8 +2,7 @@
 
 设置对应的按键对应的走焦目的组件，缺省则遵循默认走焦规则。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 直接使用focusControl可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取
 > [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)实例，并使用
 > [getFocusController](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller)获取绑定实例的focusControl。
@@ -25,9 +24,7 @@
 backward?: string
 ```
 
-通过shift+tab键走焦到组件的id。
-
-默认值为重置backward为空。
+通过shift+tab键走焦到组件的id。默认值为重置backward为空。
 
 **类型：** string
 
@@ -47,9 +44,7 @@ backward?: string
 down?: string
 ```
 
-通过方向键下键走焦到组件的id。
-
-默认值为重置down为空。
+通过方向键下键走焦到组件的id。默认值为重置down为空。
 
 **类型：** string
 
@@ -69,9 +64,7 @@ down?: string
 forward?: string
 ```
 
-通过tab键走焦到组件的id。
-
-默认值为重置forward为空。
+通过tab键走焦到组件的id。默认值为重置forward为空。
 
 **类型：** string
 
@@ -91,9 +84,7 @@ forward?: string
 left?: string
 ```
 
-通过方向键左键走焦到组件的id。
-
-默认值为重置left为空。
+通过方向键左键走焦到组件的id。默认值为重置left为空。
 
 **类型：** string
 
@@ -113,9 +104,7 @@ left?: string
 right?: string
 ```
 
-通过方向键右键走焦到组件的id。
-
-默认值为重置right为空。
+通过方向键右键走焦到组件的id。默认值为重置right为空。
 
 **类型：** string
 
@@ -135,9 +124,7 @@ right?: string
 up?: string
 ```
 
-通过方向键上键走焦到组件的id。
-
-默认值为重置up为空。
+通过方向键上键走焦到组件的id。默认值为重置up为空。
 
 **类型：** string
 

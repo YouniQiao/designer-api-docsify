@@ -15,6 +15,8 @@ export declare function NodeContainer(
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function NodeContainer(    controller: NodeController): NodeContainerAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function NodeContainer(    controller: NodeController): NodeContainerAttribute-End-->
@@ -25,7 +27,7 @@ export declare function NodeContainer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [NodeController](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md) | 是 | 一个NodeController对象，其用于控制NodeContainer中的节点的上树和下树，反映NodeContainer容器的生命周期。 |
+| controller | [NodeController](../arkts-apis/arkts-nodecontroller-c.md) | 是 | 一个NodeController对象，其用于控制NodeContainer中的节点的上树和下树，反映NodeContainer容器的生命周期。 |
 
 **返回值：**
 
@@ -48,6 +50,8 @@ export declare function NodeContainer(
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

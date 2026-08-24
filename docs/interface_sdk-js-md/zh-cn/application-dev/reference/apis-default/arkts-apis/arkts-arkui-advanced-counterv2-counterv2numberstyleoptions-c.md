@@ -1,8 +1,6 @@
 # CounterV2NumberStyleOptions
 
-CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和事件。
-
-继承于[CounterV2InlineStyleOptions](arkts-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)。
+CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和事件。继承于[CounterV2InlineStyleOptions](arkts-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)。
 
 **继承/实现关系：** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)
 
@@ -25,11 +23,7 @@ CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和�
 label?: ResourceStr
 ```
 
-设置CounterV2的说明文本。
-
-默认值：' '
-
-值为undefined时，按默认值处理。
+设置CounterV2的说明文本。默认值：' '值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 
@@ -49,9 +43,7 @@ label?: ResourceStr
 onBlurDecrease?: VoidCallback
 ```
 
-当CounterV2组件的"减小按钮"失去焦点时，触发该回调。
-
-默认值：undefined，表示不触发该回调。
+当CounterV2组件的"减小按钮"失去焦点时，触发该回调。默认值：undefined，表示不触发该回调。
 
 **类型：** VoidCallback
 
@@ -71,9 +63,7 @@ onBlurDecrease?: VoidCallback
 onBlurIncrease?: VoidCallback
 ```
 
-当CounterV2组件的"增加按钮"失去焦点时，触发该回调。
-
-默认值：undefined，表示不触发该回调。
+当CounterV2组件的"增加按钮"失去焦点时，触发该回调。默认值：undefined，表示不触发该回调。
 
 **类型：** VoidCallback
 
@@ -93,9 +83,7 @@ onBlurIncrease?: VoidCallback
 onFocusDecrease?: VoidCallback
 ```
 
-当CounterV2组件的"减小按钮"获取焦点时，触发该回调。
-
-默认值：undefined，表示不触发该回调。
+当CounterV2组件的"减小按钮"获取焦点时，触发该回调。默认值：undefined，表示不触发该回调。
 
 **类型：** VoidCallback
 
@@ -115,9 +103,7 @@ onFocusDecrease?: VoidCallback
 onFocusIncrease?: VoidCallback
 ```
 
-当CounterV2组件的"增加按钮"获取焦点时，触发该回调。
-
-默认值：undefined，表示不触发该回调。
+当CounterV2组件的"增加按钮"获取焦点时，触发该回调。默认值：undefined，表示不触发该回调。
 
 **类型：** VoidCallback
 

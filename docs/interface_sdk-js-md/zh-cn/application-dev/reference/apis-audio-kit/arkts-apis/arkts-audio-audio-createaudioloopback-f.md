@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createAudioLoopback
@@ -13,9 +12,7 @@ import { audioHaptic } from '@kit.AudioKit';
 function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 ```
 
-创建音频返听器。使用Promise异步回调。
-
-在使用createAudioLoopback接口之前，需先通过[isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported)查 询系统返听能力。
+创建音频返听器。使用Promise异步回调。 在使用createAudioLoopback接口之前，需先通过 [isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported)查询系统返听能力。
 
 **起始版本：** 26.0.0
 
@@ -81,7 +78,7 @@ audio.createAudioLoopback(audio.AudioLoopbackMode.HARDWARE).then((data) => {
 function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback | null>
 ```
 
-Creates an &lt;b&gt;AudioLoopback&lt;/b&gt; instance, which provides low-latency in-ear monitoring using a fast capturer and renderer.
+创建一个&lt;b&gt;AudioLoopback&lt;/b&gt;实例，该实例使用快速采集器和渲染器，实现低延迟的入耳监听。
 
 **起始版本：** 26.0.0
 
@@ -93,13 +90,13 @@ Creates an &lt;b&gt;AudioLoopback&lt;/b&gt; instance, which provides low-latency
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | 是 | Audio loopback mode. |
+| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | 是 | 音频返听模式。<br>**起始版本：** 23 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null&gt; | Promise used to return the &lt;b&gt;AudioLoopback&lt;/b&gt; instance, or null when an error happens. |
+| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null&gt; | Promise 过去用于返回 &lt;b&gt;AudioLoopback&lt;/b&gt; 实例，或在发生错误时返回 null。<br>**适用版本：** 23+ |
 
 **错误码：**
 

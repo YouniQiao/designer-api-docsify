@@ -1,8 +1,6 @@
 # AudioManager
 
-This interface implements audio volume and device management.
-
-Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) to obtain an AudioManager instance.
+This interface implements audio volume and device management.Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) to obtain an AudioManager instance.
 
 **Since:** 23
 
@@ -14,7 +12,6 @@ Before calling any API in AudioManager, you must use [getAudioManager](arkts-aud
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## disableSafeMediaVolume

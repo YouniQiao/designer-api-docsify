@@ -23,8 +23,7 @@ filter(name: string): boolean
 
 用于[listFileExt](arkts-fileio-listfileext-f.md)或[listFileExtSync](arkts-fileio-listfileextsync-f.md)接口的文件过滤， 判断指定文件名是否应包含在返回的文件列表中。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该函数调用频率较高，请避免执行耗时操作，如文件I/O、网络请求等。
 
 **起始版本：** 26.0.0

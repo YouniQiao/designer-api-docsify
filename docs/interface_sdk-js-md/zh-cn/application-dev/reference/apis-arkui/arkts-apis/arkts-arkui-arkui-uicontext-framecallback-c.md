@@ -2,8 +2,7 @@
 
 用于定义帧回调任务，可在下一帧渲染阶段或帧渲染任务结束后的空闲阶段执行。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 以下API需要配合[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)和
 > [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback)使用。开发者需要继承该类并重写
 > [onFrame](#onframe)或[onIdle](#onidle)方法，实现具体的业务逻辑。

@@ -1,8 +1,6 @@
 # SliderBlockType
 
-Enumerates the types of the slider in the block direction.
-
-@enum { number }
+Enumerates the types of the slider in the block direction.@enum { number }
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # SettingItem
 
-设置项的定义。
-
-@interface SettingItem
+设置项的定义。@interface SettingItem
 
 **起始版本：** 23
 
@@ -58,9 +56,7 @@ id: string
 mediaId: string
 ```
 
-与当前设置关联的媒体ID。
-
-如果设置与当前媒体信息相关联，需要设置mediaId；否则，不需要设置mediaId。
+与当前设置关联的媒体ID。如果设置与当前媒体信息相关联，需要设置mediaId；否则，不需要设置mediaId。
 
 **类型：** string
 
@@ -96,8 +92,7 @@ settingType?: SettingType
 settingValue?: string | boolean | SettingContent[] | WantAgent
 ```
 
-设置项的值。
-
+设置项的值。  
 - 当settingType为SettingType.SWITCH时，该值为boolean类型。 - 当settingType为SettingType.LIST时，该值为SettingContent数组。 - 当settingType为SettingType.JUMP时，该值为string类型。
 
 **类型：** string \| boolean \| [SettingContent](arkts-avsession-avmusictemplate-settingcontent-i.md)[] \| [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)

@@ -2,8 +2,7 @@
 
 Defines the network connection properties.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The values of **linkAddresses**, **routes**, and **dnses** may be empty. You need to protect the empty values.
 > You are advised to check whether the objects exist before using the values.
 

@@ -12,9 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function postDialProceed(callId: int, proceed: boolean, callback: AsyncCallback<void>): void
 ```
 
-继续进行通话。使用callback异步回调。
-
-当用户呼叫号码为：“普通电话号码”+“;”+"DTMF字符"(例如：“400xxxxxxx;123”)，并且已经订阅了通话后延迟事件，电话接通后，系统将上报通话后延迟事件，应用可以调用此接口选择是否发送DTMF音。
+继续进行通话。使用callback异步回调。当用户呼叫号码为：“普通电话号码”+“;”+"DTMF字符"(例如：“400xxxxxxx;123”)，并且已经订阅了通话后延迟事件，电话接通后，系统将上报通话后延迟事件，应用可以调用此接口选择是否发送DTMF音。
 
 **起始版本：** 23
 
@@ -73,9 +71,7 @@ call.postDialProceed(1, true).then(() => {
 function postDialProceed(callId: int, proceed: boolean): Promise<void>
 ```
 
-继续进行通话。使用Promise异步回调。
-
-当用户呼叫号码为：“普通电话号码”+“;”+"DTMF字符"(例如：“400xxxxxxx;123”)，并且已经订阅了通话后延迟事件，电话接通后，系统将上报通话后延迟事件，应用可以调用此接口选择是否发送DTMF音。
+继续进行通话。使用Promise异步回调。当用户呼叫号码为：“普通电话号码”+“;”+"DTMF字符"(例如：“400xxxxxxx;123”)，并且已经订阅了通话后延迟事件，电话接通后，系统将上报通话后延迟事件，应用可以调用此接口选择是否发送DTMF音。
 
 **起始版本：** 23
 

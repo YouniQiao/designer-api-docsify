@@ -1,15 +1,8 @@
 # AVPlayer
 
-播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过 [createAVPlayer()](arkts-media-media-createavplayer-f.md)构建一个 AVPlayer实例。
+播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过 [createAVPlayer()](arkts-media-media-createavplayer-f.md)构建一个 AVPlayer实例。在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。 on('stateChange')：监听播放状态机 AVPlayerState切换。on('error')：监听错误事件。应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、 [视频播放开发指导](../../../media/media/video-playback.md)。
 
-在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。 on('stateChange')：监听播放状态机 AVPlayerState切换。on('error')：监听错误事件。
-
-应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。
-
-Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、 [视频播放开发指导](../../../media/media/video-playback.md)。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 23
@@ -188,10 +181,8 @@ getLoadedTimeRanges(): Promise<Array<Range>>
 
 获取已加载的时间区间段的列表。使用Promise异步回调。
 
-> **说明：**
-> 
-> - 对于本地媒体资源，返回的时间区间为0到整个媒体时长。
-> 
+> **说明：**&gt;
+> - 对于本地媒体资源，返回的时间区间为0到整个媒体时长。&gt;
 > - 对于网络媒体资源，返回本地已缓存的时间区间段的列表。
 
 **起始版本：** 26.0.0
@@ -352,10 +343,8 @@ getSeekableTimeRanges(): Promise<Array<Range>>
 
 获取可跳转的时间区间段的列表。使用Promise异步回调。
 
-> **说明：**
-> 
-> - 对于本地媒体资源及支持分段请求的媒体资源，返回的时间区间为0到整个媒体时长。
-> 
+> **说明：**&gt;
+> - 对于本地媒体资源及支持分段请求的媒体资源，返回的时间区间为0到整个媒体时长。&gt;
 > - 对于仅支持分块传输的媒体资源，没有可跳转的时间范围。
 
 **起始版本：** 26.0.0
@@ -1197,9 +1186,7 @@ videoPlayer.prepare().then(() => {
 prepare(): Promise<void>
 ```
 
-准备播放音频/视频，需在stateChange事件成 功触发至initialized状态后，才能调用。使用Promise异步回调。
-
-如果应用使用到多个短视频频繁切换的场景，为了提升切换性能，可以考虑创建多个AVPlayer对象，提前准备下一个视频，详情参见 [在线短视频流畅切换](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-smooth-switching)。
+准备播放音频/视频，需在stateChange事件成 功触发至initialized状态后，才能调用。使用Promise异步回调。如果应用使用到多个短视频频繁切换的场景，为了提升切换性能，可以考虑创建多个AVPlayer对象，提前准备下一个视频，详情参见 [在线短视频流畅切换](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-smooth-switching)。
 
 **起始版本：** 23
 
@@ -1699,8 +1686,7 @@ seek(timeMs: int, mode?: SeekMode): void
 
 跳转到指定播放位置，只能在prepared/playing/paused/completed状态调用，可以通过 on('seekDone')事件确认是否生效。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 从API版本26.0.0开始，直播场景支持seek。
 
 **起始版本：** 23
@@ -1939,9 +1925,7 @@ async function  test(){
 setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 ```
 
-设置音频静音/取消音频静音，从API version 20开始，增加支持设置画面显示/不显示。使用Promise异步回调。
-
-只能在prepared/playing/paused/completed状态下调用。
+设置音频静音/取消音频静音，从API version 20开始，增加支持设置画面显示/不显示。使用Promise异步回调。只能在prepared/playing/paused/completed状态下调用。
 
 **起始版本：** 23
 

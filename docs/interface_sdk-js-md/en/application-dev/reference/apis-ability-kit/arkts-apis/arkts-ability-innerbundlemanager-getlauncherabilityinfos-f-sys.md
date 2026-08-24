@@ -15,8 +15,7 @@ function getLauncherAbilityInfos(bundleName: string,
 
 Obtains an array of the launcher ability information based on a given bundle name. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
 > instead.
@@ -52,8 +51,7 @@ function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Ar
 
 Obtains an array of the launcher ability information based on a given bundle name. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
 > instead.

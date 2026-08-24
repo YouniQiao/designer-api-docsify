@@ -16,11 +16,7 @@ Environment具体使用说明，详见[Environment(设备环境查询)](../../..
 static envProp<T>(key: string, value: T): boolean
 ```
 
-将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key 存入AppStorage中。 如果系统中未查询到Environment环境变量key的值，则使用默认值value，存入成功，返回true。如果AppStorage中已经有对应的key，则返回false。
-
-所以建议在程序启动的时候调用该接口。
-
-在没有调用envProp的情况下，就使用AppStorage读取环境变量是错误的。
+将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key 存入AppStorage中。 如果系统中未查询到Environment环境变量key的值，则使用默认值value，存入成功，返回true。如果AppStorage中已经有对应的key，则返回false。所以建议在程序启动的时候调用该接口。在没有调用envProp的情况下，就使用AppStorage读取环境变量是错误的。
 
 **起始版本：** 23
 

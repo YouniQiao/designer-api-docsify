@@ -1,8 +1,6 @@
 # PageTransitionOptions
 
-Defines pageTransition constructor parameters.
-
-@interface PageTransitionOptions
+Defines pageTransition constructor parameters.@interface PageTransitionOptions
 
 **Since:** 23
 

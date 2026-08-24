@@ -1,13 +1,9 @@
 # @ohos.distributedDeviceManager
 
-本模块提供分布式设备管理能力，包括设备的发现、认证、状态监听和信息查询等功能。设备管理基于设备信任模型， 通过发现周边设备并进行认证绑定来建立可信连接，已认证的可信设备可用于分布式业务。
-
-应用可调用接口实现如下功能：
-
+本模块提供分布式设备管理能力，包括设备的发现、认证、状态监听和信息查询等功能。设备管理基于设备信任模型， 通过发现周边设备并进行认证绑定来建立可信连接，已认证的可信设备可用于分布式业务。应用可调用接口实现如下功能：  
 - 注册和解除注册设备上下线变化监听。 - 发现周边不可信设备。 - 认证和取消认证设备。 - 查询可信设备列表。 - 查询本地设备信息，包括设备名称，设备类型和设备标识等。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 23
@@ -35,7 +31,7 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md) | 认证设备结果信息。 |
+| [BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md) | 认证设备结果信息。@interface BindTargetResult |
 | [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md) | 分布式设备基本信息。 |
 | [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | 设备管理实例，是分布式设备管理方法的调用入口，提供设备发现、设备认证、状态监听和信息查询等能力。 在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。 |
 | [DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md) | 设备名字改变结果信息。 |

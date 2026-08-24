@@ -1,8 +1,6 @@
 # TextDecorationStyle
 
-Type of text decoration line style.
-
-@enum {number}
+Type of text decoration line style.@enum {number}
 
 **Since:** 23
 

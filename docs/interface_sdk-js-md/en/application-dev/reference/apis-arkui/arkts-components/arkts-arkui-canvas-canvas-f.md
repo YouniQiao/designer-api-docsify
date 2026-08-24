@@ -15,6 +15,8 @@ Canvas is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Canvas(  context?: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions?: ImageAIOptions): CanvasAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Canvas(  context?: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions?: ImageAIOptions): CanvasAttribute-End-->
@@ -50,6 +52,8 @@ Create a canvas component using { @link CanvasParams }. This canvas component wi
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Canvas(  params: CanvasParams): CanvasAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Canvas(  params: CanvasParams): CanvasAttribute-End-->
@@ -83,6 +87,8 @@ Defines Canvas Component.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

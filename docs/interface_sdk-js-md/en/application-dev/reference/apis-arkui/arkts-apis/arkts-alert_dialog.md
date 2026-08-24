@@ -21,7 +21,7 @@
 | [AlertDialogButtonOptions(AlertDialog)](arkts-arkui-alertdialogbuttonoptions-i.md) | Inherits from [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md). |
 | [AlertDialogParam(AlertDialog)](arkts-arkui-alertdialogparam-i.md) | Enumerates the alert dialog box styles. |
 | [AlertDialogParamWithButtons(AlertDialog)](arkts-arkui-alertdialogparamwithbuttons-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). |
-| [AlertDialogParamWithConfirm(AlertDialog)](arkts-arkui-alertdialogparamwithconfirm-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). |
+| [AlertDialogParamWithConfirm(AlertDialog)](arkts-arkui-alertdialogparamwithconfirm-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).Priorities of the **confirm** parameters: **fontColor** and **backgroundColor**  > **style** > **defaultFocus** |
 | [AlertDialogParamWithOptions(AlertDialog)](arkts-arkui-alertdialogparamwithoptions-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). |
 | [DismissDialogAction(AlertDialog)](arkts-arkui-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
 | [TextStyle(AlertDialog)](arkts-arkui-textstyle-i.md) | Describes the word break rule of the message in the dialog box. |

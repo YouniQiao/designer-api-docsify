@@ -21,6 +21,8 @@ Defines the MovingPhotoView component.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function MovingPhotoView(    options: MovingPhotoViewOptions,     content_?: CustomBuilder,): MovingPhotoViewAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function MovingPhotoView(    options: MovingPhotoViewOptions,     content_?: CustomBuilder,): MovingPhotoViewAttribute-End-->

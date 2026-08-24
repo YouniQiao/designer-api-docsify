@@ -1,8 +1,6 @@
 # Storage
 
-提供获取和修改存储数据的接口。
-
-下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md)或 [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md)获取到Storage实例，再通过此实例调用对应接口。
+提供获取和修改存储数据的接口。下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md)或 [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md)获取到Storage实例，再通过此实例调用对应接口。
 
 **起始版本：** 6
 

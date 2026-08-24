@@ -1,8 +1,6 @@
 # GridContainer properties/events
 
-Defines the grid container attribute from inheritance Column
-
-@extends ColumnAttribute
+Defines the grid container attribute from inheritance Column@extends ColumnAttribute
 
 **Inheritance/Implementation:** GridContainerAttribute extends ColumnAttribute
 

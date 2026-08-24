@@ -1,8 +1,6 @@
 # AlertDialogParam
 
-Base param used for AlertDialog.show method.
-
-@interface AlertDialogParam
+Base param used for AlertDialog.show method.@interface AlertDialogParam
 
 **Since:** 23
 
@@ -656,9 +654,7 @@ Subtitle Properties
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
-
-Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
+Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
 
 **Type:** [SystemUiMaterial](../../apis-arkui/arkts-components/arkts-arkui-systemuimaterial-t-sys.md)
 

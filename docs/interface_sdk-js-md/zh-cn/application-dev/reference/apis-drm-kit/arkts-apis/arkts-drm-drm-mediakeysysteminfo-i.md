@@ -20,7 +20,7 @@ import { drm } from '@kit.DrmKit';
 pssh: Uint8Array
 ```
 
-PSSH(protection scheme specific header) contain drm info.
+DRM内容保护系统专用头，包含DRM相关的元数据和初始化数据的字节数组。具体结构由DRM方案定义。
 
 **类型：** Uint8Array
 
@@ -38,7 +38,7 @@ PSSH(protection scheme specific header) contain drm info.
 uuid: string
 ```
 
-Drm system ID.
+DRM内容保护系统的唯一标识，必须为有效的UUID格式。传入无效UUID时，接口返回失败。
 
 **类型：** string
 

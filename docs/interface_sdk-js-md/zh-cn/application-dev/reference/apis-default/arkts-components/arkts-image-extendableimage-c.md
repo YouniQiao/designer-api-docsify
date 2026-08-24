@@ -1,8 +1,6 @@
 # ExtendableImage
 
-扩展图像组件定义
-
-@implements ImageAttribute
+扩展图像组件定义@implements ImageAttribute
 
 **继承/实现关系：** ExtendableImage implements [ImageAttribute](arkts-image-attribute.md#imageattribute)
 
@@ -17,8 +15,7 @@
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-  static $_instantiate<T extends ExtendableImage>(
+static $_instantiate<T extends ExtendableImage>(
     factory: ConstructorT<T>, 
     src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,
     imageAIOptions?: ImageAIOptions
@@ -30,6 +27,8 @@
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,8 +53,7 @@
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-  static $_instantiate<T extends ExtendableImage>(
+static $_instantiate<T extends ExtendableImage>(
     factory: ConstructorT<T>, 
     src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,
     imageAIOptions?: ImageAIOptions,
@@ -68,6 +66,8 @@
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,8 +93,7 @@
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-  static $_instantiate<T extends ExtendableImage>(
+static $_instantiate<T extends ExtendableImage>(
     factory: ConstructorT<T>, 
     src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,
     reloadKey?: string
@@ -106,6 +105,8 @@
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,8 +131,7 @@
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-  static _instantiateImpl<T extends ExtendableImage>(
+static _instantiateImpl<T extends ExtendableImage>(
     styles: CustomBuilderT<T>, 
     factory: ConstructorT<T>
   ): void
@@ -142,6 +142,8 @@
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

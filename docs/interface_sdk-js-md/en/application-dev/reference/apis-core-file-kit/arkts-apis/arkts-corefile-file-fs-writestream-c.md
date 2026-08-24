@@ -1,6 +1,6 @@
 # WriteStream
 
-Defines a writeable stream. You need to use fileIo.createWriteStream to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md) .
+Defines a writeable stream. You need to use fileIo.createWriteStream to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md).
 
 **Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md)
 

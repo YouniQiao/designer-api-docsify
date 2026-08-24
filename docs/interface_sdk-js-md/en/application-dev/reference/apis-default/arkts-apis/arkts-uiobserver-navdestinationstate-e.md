@@ -1,8 +1,6 @@
 # NavDestinationState
 
-NavDestination state.
-
-@enum { number }
+NavDestination state.@enum { number }
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # GeneratorDialogOptions (System API)
 
-Parameters used to open the ImageGeneratorDialog.
-
-@interface GeneratorDialogOptions
+Parameters used to open the ImageGeneratorDialog.@interface GeneratorDialogOptions
 
 **Since:** 23
 

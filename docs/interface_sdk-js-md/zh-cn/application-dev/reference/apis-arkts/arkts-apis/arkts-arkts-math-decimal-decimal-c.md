@@ -2456,9 +2456,7 @@ static sub(x: Value, y: Value): Decimal
 static sum(...n: Value[]): Decimal
 ```
 
-返回一个新的Decimal对象，其值为参数的和。按照precision设置有效位数，按照rounding设置舍入模式。
-
-仅对结果进行舍入，不对中间计算结果进行舍入。
+返回一个新的Decimal对象，其值为参数的和。按照precision设置有效位数，按照rounding设置舍入模式。仅对结果进行舍入，不对中间计算结果进行舍入。
 
 **起始版本：** 23
 
@@ -3598,7 +3596,7 @@ digits：表示Decimal数整数部分和小数部分的数组。
 static readonly EUCLIDEAN: int
 ```
 
-模运算下，余数始终为正。使用欧几里得除法：q = sign(x) floor(a / abs(x))。 取值为整数。
+模运算下，余数始终为正。使用欧几里得除法：q = sign(x) * floor(a / abs(x))。 取值为整数。
 
 **类型：** int
 

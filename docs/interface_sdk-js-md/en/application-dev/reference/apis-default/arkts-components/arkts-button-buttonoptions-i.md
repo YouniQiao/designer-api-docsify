@@ -1,8 +1,6 @@
 # ButtonOptions
 
-Defines the button options.
-
-@interface ButtonOptions
+Defines the button options.@interface ButtonOptions
 
 **Since:** 23
 

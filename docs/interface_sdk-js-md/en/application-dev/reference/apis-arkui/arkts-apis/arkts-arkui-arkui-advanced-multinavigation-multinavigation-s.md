@@ -1,6 +1,6 @@
 # MultiNavigation
 
-*MultiNavigation** is a component designed for multi-column display and routing navigation on large-screen devices.
+**MultiNavigation** is a component designed for multi-column display and routing navigation on large-screen devices.
 
 > **NOTE：**
 
@@ -9,10 +9,11 @@
 > **pushDestination**) may lead to unpredictable issues.
 
 > In scenarios with deep nesting, **MultiNavigation** may encounter routing animation issues.
-
 @struct { MultiNavigation }
 
 **Since:** 14
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct MultiNavigation--><!--Device-unnamed-export declare struct MultiNavigation-End-->
 
@@ -27,8 +28,7 @@ import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 ## multiStack
 
 ```TypeScript
-@State
-  multiStack: MultiNavPathStack
+multiStack: MultiNavPathStack
 ```
 
 Navigation stack.
@@ -36,6 +36,8 @@ Navigation stack.
 **Type:** [MultiNavPathStack](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-multinavpathstack-c.md)
 
 **Since:** 14
+
+**Decorator:** @State
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +50,7 @@ Navigation stack.
 ## navDestination
 
 ```TypeScript
-@BuilderParam
-  navDestination: NavDestinationBuildFunction
+navDestination: NavDestinationBuildFunction
 ```
 
 Routing rules for loading the target page.
@@ -57,6 +58,8 @@ Routing rules for loading the target page.
 **Type:** [NavDestinationBuildFunction](arkts-arkui-navdestinationbuildfunction-t.md)
 
 **Since:** 14
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

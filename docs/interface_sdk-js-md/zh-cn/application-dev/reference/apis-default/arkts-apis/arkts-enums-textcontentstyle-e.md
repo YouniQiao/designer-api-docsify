@@ -1,8 +1,6 @@
 # TextContentStyle
 
-Text content style.
-
-@enum { number }
+Text content style.@enum { number }
 
 **起始版本：** 23
 

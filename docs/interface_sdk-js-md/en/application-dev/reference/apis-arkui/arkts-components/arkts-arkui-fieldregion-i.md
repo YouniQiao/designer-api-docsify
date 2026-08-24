@@ -1,8 +1,6 @@
 # FieldRegion
 
-Defines the area information of the particle field.
-
-@interface FieldRegion
+Defines the area information of the particle field.@interface FieldRegion
 
 **Since:** 22
 

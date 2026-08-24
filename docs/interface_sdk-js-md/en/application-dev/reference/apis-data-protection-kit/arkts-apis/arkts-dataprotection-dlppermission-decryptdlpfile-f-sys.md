@@ -12,12 +12,9 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 ```
 
-Decrypts a DLP file to generate a plaintext file. This API can be called only by enterprise accounts. This API uses a promise to return the result.
+Decrypts a DLP file to generate a plaintext file. This API can be called only by enterprise accounts. This API uses a promise to return the result.This API decrypts DLP files into plaintext files, which is applicable to exporting or migrating files by users with owner permissions.
 
-This API decrypts DLP files into plaintext files, which is applicable to exporting or migrating files by users with owner permissions.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account
 > servers. The enterprise server determines whether an account is authorized to decrypt DLP files.
 
@@ -49,7 +46,7 @@ This API decrypts DLP files into plaintext files, which is applicable to exporti
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 20 |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |

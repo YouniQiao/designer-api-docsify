@@ -60,9 +60,7 @@ Set whether the scroll target position can over the boundary.
 xOffset: double | string
 ```
 
-Horizontal scrolling offset. Anonymous Object Rectification.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This parameter cannot be set in percentage. <br>If the value is less than 0, the offset will be 0 for non-animated scrolling. Animated scrolling stops at the starting position by default. By setting the &lt;em&gt;animation&lt;/em&gt; parameter, you can enable a bounce effect when the scrolling goes beyond the boundary. <br>This parameter takes effect only when the scroll axis is the x-axis. </p>
+Horizontal scrolling offset. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This parameter cannot be set in percentage. <br>If the value is less than 0, the offset will be 0 for non-animated scrolling. Animated scrolling stops at the starting position by default. By setting the &lt;em&gt;animation&lt;/em&gt; parameter, you can enable a bounce effect when the scrolling goes beyond the boundary. <br>This parameter takes effect only when the scroll axis is the x-axis. </p>
 
 **Type:** double \| string
 
@@ -82,9 +80,7 @@ Horizontal scrolling offset. Anonymous Object Rectification.
 yOffset: double | string
 ```
 
-Vertical scrolling offset. Anonymous Object Rectification.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This parameter cannot be set in percentage. <br>If the value is less than 0, the offset will be 0 for non-animated scrolling. Animated scrolling stops at the starting position by default. By setting the &lt;em&gt;animation&lt;/em&gt; parameter, you can enable a bounce effect when the scrolling goes beyond the boundary. <br>This parameter takes effect only when the scroll axis is the y-axis. </p>
+Vertical scrolling offset. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This parameter cannot be set in percentage. <br>If the value is less than 0, the offset will be 0 for non-animated scrolling. Animated scrolling stops at the starting position by default. By setting the &lt;em&gt;animation&lt;/em&gt; parameter, you can enable a bounce effect when the scrolling goes beyond the boundary. <br>This parameter takes effect only when the scroll axis is the y-axis. </p>
 
 **Type:** double \| string
 

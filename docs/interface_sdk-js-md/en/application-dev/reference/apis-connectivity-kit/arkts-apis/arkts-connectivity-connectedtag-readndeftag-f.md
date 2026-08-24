@@ -14,8 +14,7 @@ function readNdefTag(): Promise<string>
 
 Reads the content of this active tag. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
 
@@ -71,8 +70,7 @@ function readNdefTag(callback: AsyncCallback<string>): void
 
 Reads the content of this active tag. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
 

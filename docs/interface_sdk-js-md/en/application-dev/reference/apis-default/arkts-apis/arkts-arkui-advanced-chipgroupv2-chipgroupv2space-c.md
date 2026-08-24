@@ -6,6 +6,8 @@ Defines chip group space class.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipGroupV2Space--><!--Device-unnamed-export declare class ChipGroupV2Space-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ The constructor of ChipGroupV2Space
 ## endSpace
 
 ```TypeScript
-@Trace
-  public endSpace?: Length
+public endSpace?: Length
 ```
 
 End space.
@@ -54,6 +55,8 @@ End space.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2Space-@Trace  public endSpace?: Length--><!--Device-ChipGroupV2Space-@Trace  public endSpace?: Length-End-->
@@ -63,8 +66,7 @@ End space.
 ## itemSpace
 
 ```TypeScript
-@Trace
-  public itemSpace?: Length
+public itemSpace?: Length
 ```
 
 Space between items.
@@ -75,6 +77,8 @@ Space between items.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2Space-@Trace  public itemSpace?: Length--><!--Device-ChipGroupV2Space-@Trace  public itemSpace?: Length-End-->
@@ -84,8 +88,7 @@ Space between items.
 ## startSpace
 
 ```TypeScript
-@Trace
-  public startSpace?: Length
+public startSpace?: Length
 ```
 
 Start space.
@@ -95,6 +98,8 @@ Start space.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

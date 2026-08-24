@@ -1,12 +1,6 @@
 # AudioVolumeManager
 
-音量管理。
-
-在使用AudioVolumeManager的接口之前，需先通过[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
+音量管理。在使用AudioVolumeManager的接口前，需要使用 [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
 
 **起始版本：** 23
 
@@ -18,8 +12,40 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
+
+## confirmVolumeLimitExceeded
+
+```TypeScript
+confirmVolumeLimitExceeded(volumeType: AudioVolumeType, result: boolean): void
+```
+
+确认调整超出音量保护阈值的音量结果。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioVolumeManager-confirmVolumeLimitExceeded(volumeType: AudioVolumeType, result: boolean): void--><!--Device-AudioVolumeManager-confirmVolumeLimitExceeded(volumeType: AudioVolumeType, result: boolean): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型， 不同的音量类型有不同的阈值， volumeType 用于识别当前的音量类型阈值。 |
+| result | boolean | 是 | 确认音量调整已超过音量保护阈值 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. |
 
 ## forceVolumeKeyControlType
 
@@ -27,7 +53,7 @@ import { audioHaptic } from '@kit.AudioKit';
 forceVolumeKeyControlType(volumeType: AudioVolumeType, duration: int): void
 ```
 
-Interface for forcibly setting the volume type by pressing the volume key.
+设置音量键调节类型。
 
 **起始版本：** 23
 
@@ -43,8 +69,8 @@ Interface for forcibly setting the volume type by pressing the volume key.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type that the application expects to control using the volume key. |
-| duration | int | 是 | Duration for continuing to control the volume type when no key is pressed. The forced volume type setting is released when the timer expires. Unit is second, the maximum duration is 10 seconds. If the duration is set to -1, the setting is canceled. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 应用程序期望控制的音频音量类型。 |
+| duration | int | 是 | 无音量键事件时，控制音量类型的持续时间，单位为秒（s）。<br>当计时器到期时，强制音量类型设置将被取消，最大持续时间不得超过10秒。<br>如果持续时间设置为-1，则取消该设置。 |
 
 **错误码：**
 
@@ -80,7 +106,7 @@ audioVolumeManager.forceVolumeKeyControlType(volumeTypeDefault, durationToCancel
 getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray
 ```
 
-获取当前音频流的音量信息。
+获取活动音频流的音量信息。
 
 **起始版本：** 24
 
@@ -96,7 +122,7 @@ getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [ActiveStreamsVolumeInfoArray](arkts-audio-audio-activestreamsvolumeinfoarray-t-sys.md) | Returns the result. |
+| [ActiveStreamsVolumeInfoArray](arkts-audio-audio-activestreamsvolumeinfoarray-t-sys.md) | 返回结果。 |
 
 **错误码：**
 
@@ -111,7 +137,7 @@ getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray
 getAppVolumePercentageForUid(uid: int): Promise<int>
 ```
 
-Get the volume for specified app with range from 0 to 100. Applications with same uid share the same volume.
+根据应用ID获取指定应用的音量百分比（范围为0到100）。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -127,13 +153,13 @@ Get the volume for specified app with range from 0 to 100. Applications with sam
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | int | 是 | App's uid. |
+| uid | int | 是 | 表示应用ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;int&gt; | Promise used to return the result. |
+| Promise&lt;int&gt; | Promise对象，返回应用的音量百分比，范围为[0, 100]。 |
 
 **错误码：**
 
@@ -159,7 +185,7 @@ audioVolumeManager.getAppVolumePercentageForUid(20010041).then((value) => {
 getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType
 ```
 
-Obtains volume type by stream type.
+按流类型获取卷类型。
 
 **起始版本：** 23
 
@@ -173,13 +199,13 @@ Obtains volume type by stream type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | Audio stream type. |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Return the audio volume type. |
+| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 返回音频音量类型。 |
 
 **错误码：**
 
@@ -194,7 +220,7 @@ Obtains volume type by stream type.
 getMaxSystemVolume(volumeType: AudioVolumeType): int
 ```
 
-Obtains the maximum volume allowed for a volume type.
+获取音量类型允许的最大音量大小。
 
 **起始版本：** 23
 
@@ -208,13 +234,13 @@ Obtains the maximum volume allowed for a volume type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Max volume level. |
+| int | 最大音量。 |
 
 **错误码：**
 
@@ -229,7 +255,7 @@ Obtains the maximum volume allowed for a volume type.
 getMinSystemVolume(volumeType: AudioVolumeType): int
 ```
 
-Obtains the minimum volume allowed for a volume type.
+获取音量类型允许的最小音量大小。
 
 **起始版本：** 23
 
@@ -243,13 +269,13 @@ Obtains the minimum volume allowed for a volume type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Min volume level. |
+| int | 最小音量. |
 
 **错误码：**
 
@@ -264,7 +290,7 @@ Obtains the minimum volume allowed for a volume type.
 getMinSystemVolumePercentage(volumeType: AudioVolumeType): int
 ```
 
-Gets the minimum system volume percentage application can set for specified volume type.
+获取指定流的最小音量百分比。
 
 **起始版本：** 23
 
@@ -278,13 +304,13 @@ Gets the minimum system volume percentage application can set for specified volu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type to get. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量流类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Returns the volume percentage, which is an interger with the range [0, 100]. |
+| int | 音量百分比，取值范围为[0, 100]。 |
 
 **错误码：**
 
@@ -311,7 +337,7 @@ try {
 getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray
 ```
 
-Obtains stream types by volume type.
+按音量类型获取流类型。
 
 **起始版本：** 23
 
@@ -325,13 +351,13 @@ Obtains stream types by volume type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [StreamUsageArray](arkts-audio-audio-streamusagearray-t-sys.md) | Return the audio stream types. |
+| [StreamUsageArray](arkts-audio-audio-streamusagearray-t-sys.md) | 返回音频流类型。 |
 
 **错误码：**
 
@@ -346,7 +372,7 @@ Obtains stream types by volume type.
 getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>
 ```
 
-Obtains system supported volume types.
+获取系统支持的卷类型。
 
 **起始版本：** 23
 
@@ -360,7 +386,7 @@ Obtains system supported volume types.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Readonly&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt;&gt; | Return the system volume type array. |
+| Array&lt;Readonly&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt;&gt; | 返回系统音量类型数组。 |
 
 **错误码：**
 
@@ -374,7 +400,7 @@ Obtains system supported volume types.
 getSystemVolume(volumeType: AudioVolumeType): int
 ```
 
-Obtains the volume of a volume type.
+取消监听系统音量变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -388,13 +414,13 @@ Obtains the volume of a volume type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Current system volume level. |
+| int | 当前系统音量级别。 |
 
 **错误码：**
 
@@ -409,7 +435,7 @@ Obtains the volume of a volume type.
 getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: int): int
 ```
 
-Obtains the volume of streams in specific uid application.
+获取特定uid应用中的流媒体数量。
 
 **起始版本：** 23
 
@@ -423,14 +449,14 @@ Obtains the volume of streams in specific uid application.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
-| callingUid | int | 是 | Uid of the stream owner. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量类型。 |
+| callingUid | int | 是 | 流所有者的UID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Current system volume level. |
+| int | 当前系统音量级别。 |
 
 **错误码：**
 
@@ -446,7 +472,7 @@ Obtains the volume of streams in specific uid application.
 getSystemVolumePercentage(volumeType: AudioVolumeType): int
 ```
 
-Gets the current system volume percentage for specified volume type.
+获取指定流的音量百分比。
 
 **起始版本：** 23
 
@@ -460,13 +486,13 @@ Gets the current system volume percentage for specified volume type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type to get. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量流类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Returns the volume percentage, which is an integer with the range [0, 100]. |
+| int | 音量百分比，取值范围为[0, 100]。 |
 
 **错误码：**
 
@@ -493,7 +519,7 @@ try {
 getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>): void
 ```
 
-Get the volume group list for a networkId. This method uses an asynchronous callback to return the result.
+获取音量组信息列表。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -507,8 +533,8 @@ Get the volume group list for a networkId. This method uses an asynchronous call
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | string | 是 | Distributed deice net work id |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md)&gt; | 是 | Callback used to return the result. |
+| networkId | string | 是 | 设备的网络id。本地设备audio.LOCAL_NETWORK_ID。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md)&gt; | 是 | 回调函数。当获取音量组信息列表成功，err为undefined，data为获取到的音量组信息列表；否则为错误对象。 |
 
 **示例**
 
@@ -537,7 +563,7 @@ async function getVolumeGroupInfos(){
 getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>
 ```
 
-Get the volume group list for a networkId. This method uses a promise to return the result.
+获取音量组信息列表。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -551,13 +577,13 @@ Get the volume group list for a networkId. This method uses a promise to return 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | string | 是 | Distributed deice net work id |
+| networkId | string | 是 | 设备的网络id。本地设备audio.LOCAL_NETWORK_ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md)&gt; | Promise used to return the result. |
+| Promise&lt;[VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md)&gt; | Promise对象，返回音量组信息列表。 |
 
 **示例**
 
@@ -569,7 +595,7 @@ Get the volume group list for a networkId. This method uses a promise to return 
 getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos
 ```
 
-Get the volume group list for a networkId.
+获取音量组信息列表，同步返回结果。
 
 **起始版本：** 23
 
@@ -583,13 +609,13 @@ Get the volume group list for a networkId.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | string | 是 | Distributed deice net work id |
+| networkId | string | 是 | 设备的网络id。本地设备audio.LOCAL_NETWORK_ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md) | Volume group info list. |
+| [VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md) | 音量组信息列表。 |
 
 **错误码：**
 
@@ -618,7 +644,7 @@ try {
 getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double
 ```
 
-Gets the volume db value that system calculate by volume type, volume level and device type.
+获取系统根据音量类型、音量级别和设备类型计算出的音量分贝值。
 
 **起始版本：** 23
 
@@ -632,15 +658,15 @@ Gets the volume db value that system calculate by volume type, volume level and 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
-| volumeLevel | int | 是 | Volume level to set. |
-| device | DeviceType | 是 | Output device type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量类型。 |
+| volumeLevel | int | 是 | 要设置的音量级别。 |
+| device | DeviceType | 是 | 输出设备类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| double | The system volume in dB. |
+| double | 系统音量（以分贝为单位）。 |
 
 **错误码：**
 
@@ -655,7 +681,10 @@ Gets the volume db value that system calculate by volume type, volume level and 
 isAppVolumeMutedForUid(uid: int, owned: boolean): Promise<boolean>
 ```
 
-Checks whether the app volume is muted. If there are multiple callers setting muted states, only when all callers cancel muted state the volume of this app will be truly unmuted.
+根据应用ID查询应用音量是否已静音。使用Promise异步回调。
+
+> **说明：**&gt;
+> 如果有多个调用者设置了静音状态，那么只有当所有调用者都取消静音状态后，此应用才会真正取消静音。
 
 **起始版本：** 23
 
@@ -671,14 +700,14 @@ Checks whether the app volume is muted. If there are multiple callers setting mu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | int | 是 | App's uid. |
-| owned | boolean | 是 | If true is passed, the result will be indicated your owned muted state settings to this app. Otherwise if false is passed, the result will be indicated the real muted state. |
+| uid | int | 是 | 表示应用ID。 |
+| owned | boolean | 是 | 要查询的静音状态。true查询当前调用者的静音状态，false查询应用的静音状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示应用为静音状态；返回false表示应用为非静音状态。 |
 
 **错误码：**
 
@@ -704,7 +733,7 @@ audioVolumeManager.isAppVolumeMutedForUid(uid, true).then((value: boolean) => {
 isSystemMuted(volumeType: AudioVolumeType): boolean
 ```
 
-Checks whether a volume type is muted.
+检查音量类型是否被静音。
 
 **起始版本：** 23
 
@@ -718,13 +747,13 @@ Checks whether a volume type is muted.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | The mute status of the volume type. The value true means that the volume type is muted, and false means the opposite. |
+| boolean | 音量类型的静音状态。值为 true 表示该音量类型处于静音状态，false 则表示相反。 |
 
 **错误码：**
 
@@ -739,7 +768,7 @@ Checks whether a volume type is muted.
 off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
 ```
 
-取消订阅 活跃的音量类型 事件
+取消监听当前活跃流变化事件。使用callback异步回调。
 
 **起始版本：** 20
 
@@ -753,8 +782,8 @@ off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'activeVolumeTypeChange' | 是 | Type of the event to unregister. Only the activeVolumeTypeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 | Callback used to return the active volume type. |
+| type | 'activeVolumeTypeChange' | 是 | 事件回调类型，支持的事件为'activeVolumeTypeChange'，当取消监听当前活跃流变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 | 回调函数，返回变化后的活跃音频音量类型。 |
 
 **错误码：**
 
@@ -785,7 +814,7 @@ audioVolumeManager.off('activeVolumeTypeChange', activeVolumeTypeChangeCallback)
 off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes to the app volume change events..
+取消监听指定应用应用级音量变化事件。使用callback异步回调。
 
 **起始版本：** 19
 
@@ -801,8 +830,8 @@ Unsubscribes to the app volume change events..
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'appVolumeChangeForUid' | 是 | Type of the event to be unregistered. Only the appVolumeChangeForUid event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| type | 'appVolumeChangeForUid' | 是 | 事件回调类型，支持的事件为'appVolumeChangeForUid'，当取消监听指定应用应用级音量变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -836,7 +865,7 @@ audioVolumeManager.off('appVolumeChangeForUid', appVolumeChangeForUidCallback);
 off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes to the system volume change events.
+取消监听系统音量变化事件。使用callback异步回调。
 
 **起始版本：** 20
 
@@ -850,8 +879,8 @@ Unsubscribes to the system volume change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'systemVolumeChange' | 是 | Type of the event to be unregistered. Only the systemVolumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| type | 'systemVolumeChange' | 是 | 事件回调类型，支持的事件为'systemVolumeChange'，当取消监听系统音量变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -882,7 +911,7 @@ audioVolumeManager.off('systemVolumeChange', systemVolumeChangeCallback);
 offActiveVolumeTypeChange(callback?: Callback<AudioVolumeType>): void
 ```
 
-Unsubscribes from active volume type changes.
+取消监听当前活跃流变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -896,7 +925,7 @@ Unsubscribes from active volume type changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 | 回调函数，返回变化后的活跃音频音量类型。 |
 
 **错误码：**
 
@@ -927,7 +956,7 @@ audioVolumeManager.offActiveVolumeTypeChange(activeVolumeTypeChangeCallback);
 offAppVolumeChangeForUid(callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes to the app volume change events..
+取消监听指定应用应用级音量变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -943,7 +972,7 @@ Unsubscribes to the app volume change events..
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -977,7 +1006,7 @@ audioVolumeManager.offAppVolumeChangeForUid(appVolumeChangeForUidCallback);
 offSystemVolumeChange(callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes to the system volume change events.
+取消监听系统音量变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -991,7 +1020,7 @@ Unsubscribes to the system volume change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -1038,7 +1067,7 @@ offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 订阅中使用的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 订阅中使用的回调函数。 |
 
 **错误码：**
 
@@ -1047,13 +1076,44 @@ offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+## offVolumeLimitExceeded
+
+```TypeScript
+offVolumeLimitExceeded(callback?: Callback<VolumeLimitExceededEvent>): void
+```
+
+取消订阅当前音量是否超过音量保护阈值的监控。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioVolumeManager-offVolumeLimitExceeded(callback?: Callback<VolumeLimitExceededEvent>): void--><!--Device-AudioVolumeManager-offVolumeLimitExceeded(callback?: Callback<VolumeLimitExceededEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeLimitExceededEvent](arkts-audio-audio-volumelimitexceededevent-i-sys.md)&gt; | 否 | 1. 必填参数缺失；。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
 ## offVolumePercentageChange
 
 ```TypeScript
 offVolumePercentageChange(callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes from system volume percentage change events.
+取消监听系统音量变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1067,7 +1127,7 @@ Unsubscribes from system volume percentage change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -1101,7 +1161,7 @@ audioVolumeManager.offVolumePercentageChange(volumePercentageChangeCallback);
 on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
 ```
 
-订阅 活跃的音量类型 变化事件
+监听当前活跃流变化事件（当活跃流发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 20
 
@@ -1115,8 +1175,8 @@ on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'activeVolumeTypeChange' | 是 | Type of the event to listen for. Only the activeVolumeTypeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 | Callback used to return the active volume type. |
+| type | 'activeVolumeTypeChange' | 是 | 事件回调类型，支持的事件为'activeVolumeTypeChange'，当活跃流发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 | 回调函数，返回变化后的活跃音频音量类型。 |
 
 **错误码：**
 
@@ -1139,7 +1199,7 @@ audioVolumeManager.on('activeVolumeTypeChange', (volumeType: audio.AudioVolumeTy
 on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void
 ```
 
-Listens for specified app volume change events. The app volume may changed by [setAppVolumePercentageForUid](#setappvolumepercentageforuid).
+监听指定应用应用级音量变化事件（当应用级音量发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 19
 
@@ -1155,9 +1215,9 @@ Listens for specified app volume change events. The app volume may changed by [s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'appVolumeChangeForUid' | 是 | Type of the event to listen for. Only the appVolumeChangeForUid event is supported. |
-| uid | int | 是 | The app's uid. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
+| type | 'appVolumeChangeForUid' | 是 | 事件回调类型，支持的事件为'appVolumeChangeForUid'，当应用级音量发生变化时，触发该事件。 |
+| uid | int | 是 | 表示应用ID。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -1185,7 +1245,7 @@ audioVolumeManager.on('appVolumeChangeForUid', uid, (volumeEvent: audio.VolumeEv
 on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void
 ```
 
-Listens for system volume change events. This method uses a callback to get volume change events.
+监听系统音量变化事件（当系统音量发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 20
 
@@ -1199,8 +1259,8 @@ Listens for system volume change events. This method uses a callback to get volu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'systemVolumeChange' | 是 | Type of the event to listen for. Only the systemVolumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
+| type | 'systemVolumeChange' | 是 | 事件回调类型，支持的事件为'systemVolumeChange'，当系统音量发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -1223,7 +1283,7 @@ audioVolumeManager.on('systemVolumeChange', (volumeEvent: audio.VolumeEvent) => 
 onActiveVolumeTypeChange(callback: Callback<AudioVolumeType>): void
 ```
 
-Subscribes to active volume type changes.
+监听当前活跃流变化事件（当活跃流发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1237,7 +1297,7 @@ Subscribes to active volume type changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 | 回调函数，返回变化后的活跃音频音量类型。 |
 
 **错误码：**
 
@@ -1260,7 +1320,7 @@ audioVolumeManager.onActiveVolumeTypeChange((volumeType: audio.AudioVolumeType) 
 onAppVolumeChangeForUid(uid: int, callback: Callback<VolumeEvent>): void
 ```
 
-Listens for specified app volume change events. The app volume may changed by [setAppVolumePercentageForUid](#setappvolumepercentageforuid).
+L监听指定应用应用级音量变化事件（当应用级音量发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1276,8 +1336,8 @@ Listens for specified app volume change events. The app volume may changed by [s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | int | 是 | The app's uid. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
+| uid | int | 是 | The app's uid. <br>取值限定为整数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -1305,7 +1365,7 @@ audioVolumeManager.onAppVolumeChangeForUid(uid, (volumeEvent: audio.VolumeEvent)
 onSystemVolumeChange(callback: Callback<VolumeEvent>): void
 ```
 
-Listens for system volume change events. This method uses a callback to get volume change events.
+监听系统音量变化事件（当系统音量发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1319,7 +1379,7 @@ Listens for system volume change events. This method uses a callback to get volu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -1342,7 +1402,7 @@ audioVolumeManager.onSystemVolumeChange((volumeEvent: audio.VolumeEvent) => {
 onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void
 ```
 
-订阅系统音量变化事件。当系统体积为目标时 系统卷过滤器更改，已注册的客户端将收到回调。
+订阅系统音量变化事件。 当目标过滤器的系统音量发生变化时，已注册的客户端将收到回调通知。
 
 **起始版本：** 26.0.0
 
@@ -1358,8 +1418,8 @@ onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<Volu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [SystemVolumeFilter](arkts-audio-audio-systemvolumefilter-i-sys.md) | 是 | 系统音量变化的过滤器。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调用于接收系统音量的变化。 |
+| filter | [SystemVolumeFilter](arkts-audio-audio-systemvolumefilter-i-sys.md) | 是 | 用于系统音量变化的过滤器。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 订阅中使用的回调函数。 |
 
 **错误码：**
 
@@ -1368,13 +1428,44 @@ onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<Volu
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not a system app. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+## onVolumeLimitExceeded
+
+```TypeScript
+onVolumeLimitExceeded(callback: Callback<VolumeLimitExceededEvent>): void
+```
+
+监听当前音量超过音量保护阈值的事件。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioVolumeManager-onVolumeLimitExceeded(callback: Callback<VolumeLimitExceededEvent>): void--><!--Device-AudioVolumeManager-onVolumeLimitExceeded(callback: Callback<VolumeLimitExceededEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeLimitExceededEvent](arkts-audio-audio-volumelimitexceededevent-i-sys.md)&gt; | 是 | 回调函数，用于获取音量限制事件。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
 ## onVolumePercentageChange
 
 ```TypeScript
 onVolumePercentageChange(callback: Callback<VolumeEvent>): void
 ```
 
-Subscribes to system volume percentage change events.
+监听系统音量百分比变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1388,7 +1479,7 @@ Subscribes to system volume percentage change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
 
@@ -1414,7 +1505,7 @@ audioVolumeManager.onVolumePercentageChange((volumeEvent: audio.VolumeEvent) => 
 setAppVolumeMutedForUid(uid: int, muted: boolean): Promise<void>
 ```
 
-Change mute state of specified application volume. If there are multiple callers setting muted states, only when all callers cancel muted state the volume of this app will be truly unmuted.
+根据应用ID设置应用静音状态。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -1430,14 +1521,14 @@ Change mute state of specified application volume. If there are multiple callers
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | int | 是 | App's uid. |
-| muted | boolean | 是 | Muted state to set. |
+| uid | int | 是 | 表示应用ID。 |
+| muted | boolean | 是 | 设置应用的静音状态。true设置为静音，false解除静音。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1464,7 +1555,7 @@ audioVolumeManager.setAppVolumeMutedForUid(uid, true).then(() => {
 setAppVolumePercentageForUid(uid: int, volume: int): Promise<void>
 ```
 
-Sets the volume for specified app with range from 0 to 100. Applications with same uid share the same volume.
+根据应用ID设置指定应用的音量百分比（范围为[0, 100]）。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -1480,14 +1571,14 @@ Sets the volume for specified app with range from 0 to 100. Applications with sa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | int | 是 | App's uid. |
-| volume | int | 是 | Volume to set. The value range is from 0 to 100. |
+| uid | int | 是 | 表示应用ID。 |
+| volume | int | 是 | 要设置的音量百分比，范围为[0, 100]。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1515,7 +1606,7 @@ audioVolumeManager.setAppVolumePercentageForUid(uid, volume).then(() => {
 setSystemVolumeByUid(volumeType: AudioVolumeType, volume: int, callingUid: int): Promise<void>
 ```
 
-Sets the volume for specific uid application. This method uses a promise to return the result.
+为特定用户ID的应用设置音量。此方法使用Promise来返回结果。
 
 **起始版本：** 23
 
@@ -1531,15 +1622,15 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
-| volume | int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| callingUid | int | 是 | Uid of the stream owner. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量类型。 |
+| volume | int | 是 | 要设置的音量。可通过调用getMinVolume和getMaxVolume获取取值范围。 |
+| callingUid | int | 是 | 流所有者的UID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | 承诺用于返回结果。 |
 
 **错误码：**
 
@@ -1556,7 +1647,14 @@ Sets the volume for specific uid application. This method uses a promise to retu
 setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: int): Promise<void>
 ```
 
-Sets the system volume percentage, using an integer ranging from minimum system volume percentage to 100. The volume percentage corresponds to volume levels, with each level tied to a specific percentage. When the volume level changes, the volume percentage adjusts accordingly and is mapped within the range of volume levels. Zero volume is mapped to 0, and the maximum volume is mapped to 100%. Intermediate volume levels are evenly distributed between 1 and 99. When the volume percentage changes, the volume level changes accordingly.
+设置指定流的音量百分比。使用Promise异步回调。
+
+> **说明：**&gt;
+> - 设置指定流的音量百分比时需要使用整数，范围从最小系统音量百分比到100。&gt;
+> - 音量百分比与音量等级相对应，每个等级对应特定的百分比。&gt;
+> - 当音量等级发生变化时，音量百分比会相应调整，并映射在音量等级的范围内。&gt;
+> - 0等级音量映射为0%，最大音量映射为100%。中间音量等级均匀分布在1至99之间。&gt;
+> - 当音量百分比变化时，音量等级会相应调整。
 
 **起始版本：** 23
 
@@ -1572,14 +1670,14 @@ Sets the system volume percentage, using an integer ranging from minimum system 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type to set. |
-| percentage | int | 是 | Percentage to set. It must be an integer with the range from minimum value getted by [getMinSystemVolumePercentage](#getminsystemvolumepercentage) to 100. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量流类型。 |
+| percentage | int | 是 | 音量百分比，可设置范围的最小值是通过 [getMinSystemVolumePercentage](#getminsystemvolumepercentage)接口获取到的音量百分比， 最大值是100。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

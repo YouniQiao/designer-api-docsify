@@ -2,8 +2,7 @@
 
 Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-agent-create-f.md) or from a callback through [request.agent.create](arkts-basicservices-agent-create-f.md).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **Task** object and its mounting callback function are released and automatically reclaimed by the system
 > after the **remove** method is called.
 
@@ -17,7 +16,6 @@ Implements an upload or download task. Before using this API, you must obtain a 
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## off_completed
@@ -28,8 +26,7 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task completion events.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -54,7 +51,7 @@ Unsubscribes from task completion events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 
 ## off_failed
 
@@ -64,8 +61,7 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task failure events.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -90,7 +86,7 @@ Unsubscribes from task failure events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 
 ## off_faultOccur
 
@@ -100,8 +96,7 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 
 Unsubscribes from task failure events.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -133,8 +128,7 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 
 Unsubscribes from the foreground task pause event.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -166,8 +160,7 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task progress events.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -192,7 +185,7 @@ Unsubscribes from task progress events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
 
 ## off_remove
 
@@ -202,8 +195,7 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 
 Unsubscribes from the task removal event.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -235,8 +227,7 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 
 Unsubscribes from task response headers.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -270,8 +261,7 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 
 Unsubscribes from foreground task resume events.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -303,8 +293,7 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 
 Unsubscribes from task waiting events.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -516,8 +505,7 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 
 Subscribes to task completion events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -542,7 +530,7 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
 
 ## on_failed
 
@@ -552,8 +540,7 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 
 Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call [request.agent.show](arkts-basicservices-agent-show-f.md) to view the error cause.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -578,7 +565,7 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 
 ## on_faultOccur
 
@@ -588,8 +575,7 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 
 Subscribes to task failure events. This API uses a callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -621,8 +607,7 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 
 Subscribes to task pause events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -654,8 +639,7 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 
 Subscribes to task progress changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -680,7 +664,7 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
 
 ## on_remove
 
@@ -690,8 +674,7 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 
 Subscribes to task removal events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -723,8 +706,7 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 
 Subscribes to task response headers. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -758,8 +740,7 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 
 Subscribes to task resume events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -791,8 +772,7 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 
 Subscribes to task wait events. This API uses a callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -1021,7 +1001,7 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 | Error Code ID | Error Message |
 | --- | --- |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 **Examples**
@@ -1161,7 +1141,7 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 | Error Code ID | Error Message |
 | --- | --- |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 **Examples**
@@ -1196,7 +1176,7 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 **Examples**
@@ -1349,7 +1329,7 @@ Resumes a paused task. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 **Examples**
@@ -1420,14 +1400,11 @@ request.agent.create(context, config).then((task: request.agent.Task) => {
 start(callback: AsyncCallback<void>): void
 ```
 
-Starts a task. This API uses an asynchronous callback to return the result.
+Starts a task. This API uses an asynchronous callback to return the result.Tasks in the following states can be started:
+1. Task created by **request.agent.create**.
+2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-Tasks in the following states can be started:
-
-1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -1546,14 +1523,11 @@ request.agent.create(context, config).then((task: request.agent.Task) => {
 start(): Promise<void>
 ```
 
-Starts a task. This API uses a promise to return the result.
+Starts a task. This API uses a promise to return the result.Tasks in the following states can be started:
+1. Task created by **request.agent.create**.
+2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-Tasks in the following states can be started:
-
-1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .

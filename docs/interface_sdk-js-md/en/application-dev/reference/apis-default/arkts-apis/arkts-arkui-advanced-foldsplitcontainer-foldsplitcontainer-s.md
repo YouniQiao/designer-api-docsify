@@ -1,12 +1,12 @@
 # FoldSplitContainer
 
-Defines FoldSplitContainer container.
-
-@interface FoldSplitContainer
+Defines FoldSplitContainer container.@interface FoldSplitContainer
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct FoldSplitContainer--><!--Device-unnamed-export declare struct FoldSplitContainer-End-->
 
@@ -20,8 +20,7 @@ Defines FoldSplitContainer container.
 ## build
 
 ```TypeScript
-@Builder
-    build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +40,7 @@ The method to build component.
 ## animationOptions
 
 ```TypeScript
-@PropRef
-    animationOptions?: AnimateParam
+animationOptions?: AnimateParam
 ```
 
 The animation options of layout
@@ -51,6 +51,8 @@ The animation options of layout
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FoldSplitContainer-@PropRef    animationOptions?: AnimateParam--><!--Device-FoldSplitContainer-@PropRef    animationOptions?: AnimateParam-End-->
@@ -60,8 +62,7 @@ The animation options of layout
 ## expandedLayoutOptions
 
 ```TypeScript
-@PropRef
-    expandedLayoutOptions: ExpandedRegionLayoutOptions
+expandedLayoutOptions: ExpandedRegionLayoutOptions
 ```
 
 The layout options for the container when the foldable screen is expanded.
@@ -72,6 +73,8 @@ The layout options for the container when the foldable screen is expanded.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FoldSplitContainer-@PropRef    expandedLayoutOptions: ExpandedRegionLayoutOptions--><!--Device-FoldSplitContainer-@PropRef    expandedLayoutOptions: ExpandedRegionLayoutOptions-End-->
@@ -81,8 +84,7 @@ The layout options for the container when the foldable screen is expanded.
 ## extra
 
 ```TypeScript
-@BuilderParam
-    extra?: RegionBuilder
+extra?: RegionBuilder
 ```
 
 The builder function which will be rendered in the extra region of container.
@@ -93,6 +95,8 @@ The builder function which will be rendered in the extra region of container.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @BuilderParam
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FoldSplitContainer-@BuilderParam    extra?: RegionBuilder--><!--Device-FoldSplitContainer-@BuilderParam    extra?: RegionBuilder-End-->
@@ -102,8 +106,7 @@ The builder function which will be rendered in the extra region of container.
 ## foldedLayoutOptions
 
 ```TypeScript
-@PropRef
-    foldedLayoutOptions: FoldedRegionLayoutOptions
+foldedLayoutOptions: FoldedRegionLayoutOptions
 ```
 
 The layout options for the container when the foldable screen is folded.
@@ -114,6 +117,8 @@ The layout options for the container when the foldable screen is folded.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FoldSplitContainer-@PropRef    foldedLayoutOptions: FoldedRegionLayoutOptions--><!--Device-FoldSplitContainer-@PropRef    foldedLayoutOptions: FoldedRegionLayoutOptions-End-->
@@ -123,8 +128,7 @@ The layout options for the container when the foldable screen is folded.
 ## hoverModeLayoutOptions
 
 ```TypeScript
-@PropRef
-    hoverModeLayoutOptions: HoverModeRegionLayoutOptions
+hoverModeLayoutOptions: HoverModeRegionLayoutOptions
 ```
 
 The layout options for the container when the foldable screen is in hover mode.
@@ -134,6 +138,8 @@ The layout options for the container when the foldable screen is in hover mode.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,8 +170,7 @@ The callback function that is triggered when the foldable screen enters or exits
 ## primary
 
 ```TypeScript
-@BuilderParam
-    primary: RegionBuilder
+primary: RegionBuilder
 ```
 
 The builder function which will be rendered in the major region of container.
@@ -176,6 +181,8 @@ The builder function which will be rendered in the major region of container.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @BuilderParam
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FoldSplitContainer-@BuilderParam    primary: RegionBuilder--><!--Device-FoldSplitContainer-@BuilderParam    primary: RegionBuilder-End-->
@@ -185,8 +192,7 @@ The builder function which will be rendered in the major region of container.
 ## secondary
 
 ```TypeScript
-@BuilderParam
-    secondary: RegionBuilder
+secondary: RegionBuilder
 ```
 
 The builder function which will be rendered in the minor region of container.
@@ -196,6 +202,8 @@ The builder function which will be rendered in the minor region of container.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

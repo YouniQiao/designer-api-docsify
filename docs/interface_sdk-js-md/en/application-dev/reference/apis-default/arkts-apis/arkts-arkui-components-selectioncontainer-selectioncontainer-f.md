@@ -18,6 +18,8 @@ Defines SelectionContainer component.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function SelectionContainer(content_?: CustomBuilder): SelectionContainerAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function SelectionContainer(content_?: CustomBuilder): SelectionContainerAttribute-End-->
@@ -51,6 +53,8 @@ Defines SelectionContainer component. It requires calling setSelectionContainerO
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

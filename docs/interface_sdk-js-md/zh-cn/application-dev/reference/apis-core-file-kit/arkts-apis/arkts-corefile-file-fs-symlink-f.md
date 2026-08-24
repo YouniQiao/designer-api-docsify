@@ -16,8 +16,7 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 
 基于文件路径创建符号链接。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 11开始，不支持三方应用使用。
 
 **起始版本：** 9
@@ -130,8 +129,7 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 
 基于文件路径创建符号链接。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 11开始，不支持三方应用使用。
 
 **起始版本：** 9

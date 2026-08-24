@@ -71,7 +71,7 @@ iconSize(size: Dimension | SizeOptions)
 onClick(event: SaveButtonCallback)
 ```
 
-点击保存控件触发该回调。用户首次点击保存控件时会展示授权弹窗，点击允许后授权成功，应用会获取访问媒体库接口的临时授权（授权持续时间见[SaveButton](../../../reference/apis-arkui/arkui -ts/ts-security-components-savebutton.md#savebutton-1)构造函数说明）；点击拒绝或关闭弹窗则授权失败。
+点击保存控件触发该回调。用户首次点击保存控件时会展示授权弹窗，点击允许后授权成功，应用会获取访问媒体库接口的临时授权（授权持续时间见SaveButton构造函数说明）； 点击拒绝或关闭弹窗则授权失败。
 
 **起始版本：** 10
 
@@ -113,7 +113,7 @@ setIcon(icon: Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | Resource | 是 | 自定义图标资源信息，仅支持Resource类型的数据源。 <br>可支持的图片格式：png、jpg、jpeg、bmp、svg、webp、gif和heif等，支持的图片格式范围见Image。当资源为非图片资源或不支持的格式时，图标显示为空白。<br/>从API版本26.0.0开始，支持Symbol格式的Resource类型的数据源。<br/>若应用不具备ohos.permission.CUS TOMIZE_SAVE_BUTTON权限，则自定义图标设置不生效，保存控件保持默认样式。 |
+| icon | Resource | 是 | 自定义图标资源信息，仅支持Resource类型的数据源。 <br>可支持的图片格式：png、jpg、jpeg、bmp、svg、webp、gif和heif等，支持的图片格式范围见[Image]{@link./image}。当资源为非图片资源或不支持的格式时，图标显示为空白。<br/>从API版本26.0.0开始，支持Symbol格式的Resource类型的数据源。<br/>若应用不具备ohos.permission.CUS TOMIZE_SAVE_BUTTON权限，则自定义图标设置不生效，保存控件保持默认样式。 |
 
 ## setText
 
@@ -173,8 +173,7 @@ stateEffect(enabled: boolean)
 symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 ```
 
-设置保存控件Symbol图标粗细。
-
+设置保存控件Symbol图标粗细。  
 - 调用本方法前，需先调用[setIcon](#seticon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的粗细不会生效。
 
 **起始版本：** 26.0.0
@@ -201,8 +200,7 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 symbolIconColor(color: Array<ResourceColor>)
 ```
 
-设置保存控件Symbol图标颜色。
-
+设置保存控件Symbol图标颜色。  
 - 调用本方法前，需先调用[setIcon](#seticon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的颜色不会生效。 - 建议与[symbolRenderingStrategy](#symbolrenderingstrategy)配合使用，以实现不同的渲染效果。
 
 **起始版本：** 26.0.0
@@ -229,8 +227,7 @@ symbolIconColor(color: Array<ResourceColor>)
 symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 ```
 
-设置保存控件Symbol图标渲染策略。
-
+设置保存控件Symbol图标渲染策略。  
 - 调用本方法前，需先调用[setIcon](#seticon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的渲染策略不会生效。 - 与[symbolIconColor](#symboliconcolor)配合使用时，渲染策略会影响颜色数组的作用方式。
 
 **起始版本：** 26.0.0

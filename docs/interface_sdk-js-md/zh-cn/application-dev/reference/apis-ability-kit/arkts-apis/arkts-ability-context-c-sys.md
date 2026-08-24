@@ -18,8 +18,7 @@ createBundleContext(bundleName: string): Context
 
 根据Bundle名称创建安装包的上下文。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - stage模型多module的情况下可能发生资源id冲突的情况，建议使用
 > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md)替代。
 

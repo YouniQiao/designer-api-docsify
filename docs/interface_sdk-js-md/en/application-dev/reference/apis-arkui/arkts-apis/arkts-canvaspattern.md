@@ -12,5 +12,5 @@
 
 | Name | Description |
 | --- | --- |
-| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md) | Describes an opaque object of a template, which is created using the createPattern() method. |
+| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md) | Describes an opaque object of a template, which is created using the createPattern() method.@interface CanvasPattern |
 

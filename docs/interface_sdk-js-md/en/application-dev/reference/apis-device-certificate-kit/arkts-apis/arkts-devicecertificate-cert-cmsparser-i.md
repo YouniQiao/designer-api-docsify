@@ -2,8 +2,7 @@
 
 Provides APIs for parsing, verifying, and decrypting CMS messages.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7
 > supports data types including data, signed data, enveloped data, signed and enveloped data, digested
 > data, and encrypted data. It is often used to protect data integrity and confidentiality.
@@ -18,8 +17,6 @@ Provides APIs for parsing, verifying, and decrypting CMS messages.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## decryptEnvelopedData
@@ -596,8 +593,7 @@ setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 
 Set the CMS message data. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > CMS message in PEM and DER formats is supported. **string** corresponds to the PEM format, and **Uint8Array**
 > corresponds to the DER format.
 

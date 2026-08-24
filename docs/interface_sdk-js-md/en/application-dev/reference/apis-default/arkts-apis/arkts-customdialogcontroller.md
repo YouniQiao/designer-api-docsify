@@ -12,15 +12,15 @@
 
 | Name | Description |
 | --- | --- |
-| [CustomDialogControllerExternalOptions](arkts-customdialogcontroller-customdialogcontrollerexternaloptions-i.md) | Defines the external options of CustomDialogController. |
-| [CustomDialogControllerOptions](arkts-customdialogcontroller-customdialogcontrolleroptions-i.md) | Defines the options of CustomDialogController. |
+| [CustomDialogControllerExternalOptions](arkts-customdialogcontroller-customdialogcontrollerexternaloptions-i.md) | Defines the external options of CustomDialogController.@interface CustomDialogControllerExternalOptions |
+| [CustomDialogControllerOptions](arkts-customdialogcontroller-customdialogcontrolleroptions-i.md) | Defines the options of CustomDialogController.@interface CustomDialogControllerOptions |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [CustomDialogControllerOptions](arkts-customdialogcontroller-customdialogcontrolleroptions-i-sys.md) | Defines the options of CustomDialogController. |
+| [CustomDialogControllerOptions](arkts-customdialogcontroller-customdialogcontrolleroptions-i-sys.md) | Defines the options of CustomDialogController.@interface CustomDialogControllerOptions |
 <!--DelEnd-->
 
 ### Types

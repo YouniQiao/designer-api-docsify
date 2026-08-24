@@ -21,6 +21,8 @@ Defines LazyDynamicLayout Component.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function LazyDynamicLayout (    algorithm: LazyLayoutAlgorithm,    content_: CustomBuilder,): LazyDynamicLayoutAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function LazyDynamicLayout (    algorithm: LazyLayoutAlgorithm,    content_: CustomBuilder,): LazyDynamicLayoutAttribute-End-->
@@ -31,7 +33,7 @@ Defines LazyDynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
+| algorithm | [LazyLayoutAlgorithm](arkts-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
 | content_ | CustomBuilder | Yes |  |
 
 **Return value:**
@@ -56,6 +58,8 @@ Defines LazyDynamicLayout Component.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

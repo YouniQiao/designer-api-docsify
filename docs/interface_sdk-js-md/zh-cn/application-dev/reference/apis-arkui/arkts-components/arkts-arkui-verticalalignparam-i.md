@@ -1,8 +1,6 @@
 # VerticalAlignParam
 
-定义相对容器的垂直对齐规则。
-
-@interface VerticalAlignParam
+定义相对容器的垂直对齐规则。@interface VerticalAlignParam
 
 **起始版本：** 23
 
@@ -21,9 +19,7 @@
 align: VerticalAlign
 ```
 
-Sets the vertical alignment relative to the anchor component.
-
-Anonymous Object Rectification
+Sets the vertical alignment relative to the anchor component.Anonymous Object Rectification
 
 **类型：** VerticalAlign
 
@@ -43,9 +39,7 @@ Anonymous Object Rectification
 anchor: string
 ```
 
-Specifies the anchor component
-
-Anonymous Object Rectification
+Specifies the anchor component Anonymous Object Rectification
 
 **类型：** string
 

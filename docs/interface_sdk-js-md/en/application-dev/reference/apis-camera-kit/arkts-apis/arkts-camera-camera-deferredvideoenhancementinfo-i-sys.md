@@ -14,7 +14,6 @@ Deferred video enhancement info.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## isDeferredVideoEnhancementAvailable

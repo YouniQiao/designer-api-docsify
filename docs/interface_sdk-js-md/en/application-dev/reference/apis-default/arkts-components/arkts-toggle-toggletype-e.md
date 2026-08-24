@@ -1,8 +1,6 @@
 # ToggleType
 
-Declare the type of status button
-
-@enum { number }
+Declare the type of status button@enum { number }
 
 **Since:** 23
 

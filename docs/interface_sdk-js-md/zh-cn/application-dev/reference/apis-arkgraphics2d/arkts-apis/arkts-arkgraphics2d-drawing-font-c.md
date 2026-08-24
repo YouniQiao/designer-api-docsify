@@ -2,10 +2,8 @@
 
 Font类用于描述字型绘制时所使用的属性（如大小、字体、粗细、倾斜、缩放等），并支持文本测量、字形转换、路径轮廓获取、主题字体跟随等能力。
 
-> **说明：**
-> 
-> - 本模块使用屏幕物理像素单位px。
-> 
+> **说明：**&gt;
+> - 本模块使用屏幕物理像素单位px。&gt;
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
@@ -1385,8 +1383,7 @@ measureText(text: string, encoding: TextEncoding): double
 
 测量文本的宽度。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 此接口用于测量原始字符串的文本宽度，若想测量排版后的文本宽度，建议使用
 > [measure.measureText](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-measureutils-c.md#measuretext)替代。
 

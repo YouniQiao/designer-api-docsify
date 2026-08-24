@@ -1,6 +1,6 @@
 # Direction
 
-@brief Enumerates the directions of cursor movement of the input method.
+Enumerates the directions of cursor movement of the input method.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@
 CURSOR_UP = 1
 ```
 
-@brief Upward.
+Upward.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ CURSOR_UP = 1
 CURSOR_DOWN
 ```
 
-@brief Downward.
+Downward.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ CURSOR_DOWN
 CURSOR_LEFT
 ```
 
-@brief Leftward.
+Leftward.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ CURSOR_LEFT
 CURSOR_RIGHT
 ```
 
-@brief Rightward.
+Rightward.
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # FormDimension (System API)
 
-Defines the FormDimension enum.
-
-@enum { int }
+Defines the FormDimension enum.@enum { int }
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # DialogButtonDirection
 
-The arrangement of buttons in dialog.
-
-@enum { number }
+The arrangement of buttons in dialog.@enum { number }
 
 **Since:** 23
 

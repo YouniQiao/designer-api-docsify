@@ -2,8 +2,7 @@
 
 滚动到指定位置的参数选项。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 18
@@ -23,11 +22,7 @@
 animation?: ScrollAnimationOptions | boolean
 ```
 
-动画配置。
-
-<p>&lt;strong&gt;说明&lt;/strong&gt; <br>目前List、Scroll、Grid和WaterFlow支持Boolean类型和ICurve。 </p>
-
-布尔类型启用默认弹簧动效。 [since 10 - 11] 布尔类型启用默认弹簧动效。 [since 12]
+动画配置。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>目前List、Scroll、Grid和WaterFlow支持Boolean类型和ICurve。 </p>布尔类型启用默认弹簧动效。 [since 10 - 11] 布尔类型启用默认弹簧动效。 [since 12]
 
 **类型：** [ScrollAnimationOptions](arkts-arkui-scrollanimationoptions-i.md) \| boolean
 
@@ -69,9 +64,7 @@ canOverScroll?: boolean
 xOffset: number | string
 ```
 
-水平滚动偏移量。
-
-<p>&lt;strong&gt;说明&lt;/strong&gt; <br>不支持设置百分比。 <br>无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。 <br>该参数仅在滚动轴为x轴时生效。 </p>
+水平滚动偏移量。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>不支持设置百分比。 <br>无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。 <br>该参数仅在滚动轴为x轴时生效。 </p>
 
 **类型：** number \| string
 
@@ -91,9 +84,7 @@ xOffset: number | string
 yOffset: number | string
 ```
 
-竖直滚动偏移量。
-
-<p>&lt;strong&gt;说明&lt;/strong&gt; <br>不支持设置百分比。 <br>无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。 <br>该参数仅在滚动轴为y轴时生效。 </p>
+竖直滚动偏移量。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>不支持设置百分比。 <br>无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。 <br>该参数仅在滚动轴为y轴时生效。 </p>
 
 **类型：** number \| string
 

@@ -2,8 +2,7 @@
 
 音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过 [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md) 创建实例。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 在使用SoundPool实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。
 > 
 > - [on('loadComplete')](#onloadcomplete)：监听资源加载完成。建议开发者监听此回调以确
@@ -18,8 +17,7 @@
 > - [on('error')](#onloadcomplete)：监听错误事件。
 > 
 > - [on('errorOccurred')](#onloadcomplete)：监听错误事件，同时返回
-> [errorInfo](arkts-media-soundpool-errorinfo-i.md)。
-> 
+> [errorInfo](arkts-media-soundpool-errorinfo-i.md)。&gt;
 > - SoundPool目前不支持后台播放、设置音频打断等音频焦点策略和跳过音频头尾的静音帧。SoundPool低时延播放可参考
 > [使用SoundPool播放短音频(ArkTS)](../../../media/media/using-soundpool-for-playback.md)。
 
@@ -35,16 +33,10 @@
 load(uri: string, callback: AsyncCallback<int>): void
 ```
 
-加载音频资源。使用callback异步回调。
+加载音频资源。使用callback异步回调。通过callback异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。该方法不支持加载rawfile目录资源，需要通过 [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) 或者 [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) 实现。
 
-通过callback异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
-
-该方法不支持加载rawfile目录资源，需要通过 [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) 或者 [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) 实现。
-
-> **说明：**
-> 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
-> 
+> **说明：**&gt;
+> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。&gt;
 > - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
 
 **起始版本：** 23
@@ -74,16 +66,10 @@ load(uri: string, callback: AsyncCallback<int>): void
 load(uri: string): Promise<int>
 ```
 
-加载音频资源。使用Promise异步回调。
+加载音频资源。使用Promise异步回调。通过Promise异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。该方法不支持加载rawfile目录资源，需要通过 [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) 或者 [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) 实现。
 
-通过Promise异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
-
-该方法不支持加载rawfile目录资源，需要通过 [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) 或者 [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) 实现。
-
-> **说明：**
-> 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
-> 
+> **说明：**&gt;
+> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。&gt;
 > - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
 
 **起始版本：** 23
@@ -118,14 +104,10 @@ load(uri: string): Promise<int>
 load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void
 ```
 
-加载音频资源。使用callback异步回调。
+加载音频资源。使用callback异步回调。通过callback异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
 
-通过callback异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
-
-> **说明：**
-> 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
-> 
+> **说明：**&gt;
+> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。&gt;
 > - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
 
 **起始版本：** 23
@@ -157,14 +139,10 @@ load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void
 load(fd: int, offset: long, length: long): Promise<int>
 ```
 
-加载音频资源。使用Promise异步回调。
+加载音频资源。使用Promise异步回调。通过Promise异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
 
-通过Promise异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
-
-> **说明：**
-> 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
-> 
+> **说明：**&gt;
+> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。&gt;
 > - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
 
 **起始版本：** 23
@@ -462,11 +440,7 @@ on(type: 'playFinished', callback: Callback<void>): void
 on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
 ```
 
-音频池资源播放完成监听，同时返回播放结束的音频的streamId。使用callback异步回调。
-
-当仅单独注册[on('playFinished')](#onloadcomplete)事件回调或者 [on('playFinishedWithStreamId')](#onloadcomplete)事件回调 时，当音频播放完成的时候，都会触发注册的回调。
-
-当同时注册[on('playFinished')](#onloadcomplete)事件回调和 [on('playFinishedWithStreamId')](#onloadcomplete)事件回调 时，当音频播放完成的时候，仅会触发'playFinishedWithStreamId'事件回调，不会触发'playFinished'事件回调。
+音频池资源播放完成监听，同时返回播放结束的音频的streamId。使用callback异步回调。当仅单独注册[on('playFinished')](#onloadcomplete)事件回调或者 [on('playFinishedWithStreamId')](#onloadcomplete)事件回调 时，当音频播放完成的时候，都会触发注册的回调。当同时注册[on('playFinished')](#onloadcomplete)事件回调和 [on('playFinishedWithStreamId')](#onloadcomplete)事件回调 时，当音频播放完成的时候，仅会触发'playFinishedWithStreamId'事件回调，不会触发'playFinished'事件回调。
 
 **起始版本：** 18
 
@@ -567,11 +541,7 @@ Subscribes to events indicating that a sound finishes playing. This event is tri
 onPlayFinishedWithStreamId(callback: Callback<int>): void
 ```
 
-Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing.
-
-When only onPlayFinished or onPlayFinishedWithStreamId is subscribed to, the registered callback is triggered when the audio playback is complete.
-
-When both onPlayFinished and onPlayFinishedWithStreamId are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing.When only onPlayFinished or onPlayFinishedWithStreamId is subscribed to, the registered callback is triggered when the audio playback is complete.When both onPlayFinished and onPlayFinishedWithStreamId are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
 
 **起始版本：** 23
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { ProgressButton } from '@kit.ArkUI';
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -19,5 +18,5 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 
 | Name | Description |
 | --- | --- |
-| [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md) | Declare Color options of the ProgressButton. |
+| [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md) | Declare Color options of the ProgressButton.@interface ProgressButtonColorOptions |
 

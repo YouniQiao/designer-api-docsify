@@ -1,8 +1,6 @@
 # BreakPoints
 
-Defines the breakpoints of grid-row component.
-
-@interface BreakPoints
+Defines the breakpoints of grid-row component.@interface BreakPoints
 
 **Since:** 23
 

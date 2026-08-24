@@ -1,8 +1,6 @@
 # @ohos.file.fileuri
 
-Provides fileUri APIS
-
-@namespace fileUri
+Provides fileUri APIS@namespace fileUri
 
 **Since:** 23
 
@@ -28,5 +26,5 @@ import { fileUri } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri represents the uri of the file. |
+| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri represents the uri of the file.@extends uri.URI |
 

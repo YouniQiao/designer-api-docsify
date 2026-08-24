@@ -2,17 +2,13 @@
 
 Defines a touch target consisting of an input tool type, touch position, and size.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When the parent component has [clip](arkts-arkui-commonmethod-c.md#clip) set to **true**, child component
 > interaction is affected by the parent component's response region. Children outside the parent component's response
-> region won't respond to gestures or events.
-> 
-> - If the input tool type, touch position, and size are not configured for a touch target, default values are used.
-> 
+> region won't respond to gestures or events.&gt;
+> - If the input tool type, touch position, and size are not configured for a touch target, default values are used.&gt;
 > - Positive calculation results for x and y represent shifts to the right and down, respectively. Negative
-> calculation results represent shifts to the left and up, respectively.
-> 
+> calculation results represent shifts to the left and up, respectively.&gt;
 > - If the width and height are of the string type, the string must be in lowercase. Dynamic calculation with
 > **calc()** is supported. The format of the input string for **calc()** is Width/Height scaling ratio ± Width/Height
 > increment, where the scaling ratio is a percentage and the increment unit is px or vp. For example, in
@@ -38,9 +34,7 @@ Defines a touch target consisting of an input tool type, touch position, and siz
 height?: LengthMetrics | string
 ```
 
-Height of the touch target.
-
-Default value: **LengthMetrics.percent(1)**
+Height of the touch target.Default value: **LengthMetrics.percent(1)**
 
 **Type:** LengthMetrics \| string
 
@@ -62,9 +56,7 @@ Default value: **LengthMetrics.percent(1)**
 tool?: ResponseRegionSupportedTool
 ```
 
-Type of the input tool applicable to the touch target.
-
-Default value: **ResponseRegionSupportedTool.ALL**
+Type of the input tool applicable to the touch target.Default value: **ResponseRegionSupportedTool.ALL**
 
 **Type:** ResponseRegionSupportedTool
 
@@ -86,9 +78,7 @@ Default value: **ResponseRegionSupportedTool.ALL**
 width?: LengthMetrics | string
 ```
 
-Width of the touch target.
-
-Default value: **LengthMetrics.percent(1)**
+Width of the touch target.Default value: **LengthMetrics.percent(1)**
 
 **Type:** LengthMetrics \| string
 
@@ -110,9 +100,7 @@ Default value: **LengthMetrics.percent(1)**
 x?: LengthMetrics
 ```
 
-X coordinate of the touch point relative to the upper left corner of the component.
-
-Default value: **LengthMetrics.vp(0)**
+X coordinate of the touch point relative to the upper left corner of the component.Default value: **LengthMetrics.vp(0)**
 
 **Type:** LengthMetrics
 
@@ -134,9 +122,7 @@ Default value: **LengthMetrics.vp(0)**
 y?: LengthMetrics
 ```
 
-Y coordinate of the touch point relative to the upper left corner of the component.
-
-Default value: **LengthMetrics.vp(0)**
+Y coordinate of the touch point relative to the upper left corner of the component.Default value: **LengthMetrics.vp(0)**
 
 **Type:** LengthMetrics
 

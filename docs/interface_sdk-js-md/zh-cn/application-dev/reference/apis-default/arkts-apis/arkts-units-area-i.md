@@ -1,8 +1,6 @@
 # Area
 
-区域类型，用于存储元素所占的区域信息。
-
-@interface Area
+区域类型，用于存储元素所占的区域信息。@interface Area
 
 **起始版本：** 23
 
@@ -38,9 +36,7 @@ globalPosition: Position
 height: Length
 ```
 
-目标元素的高度。
-
-单位：vp
+目标元素的高度。单位：vp
 
 **类型：** [Length](arkts-length-t.md)
 
@@ -80,9 +76,7 @@ position: Position
 width: Length
 ```
 
-目标元素的宽度。
-
-单位：vp
+目标元素的宽度。单位：vp
 
 **类型：** [Length](arkts-length-t.md)
 

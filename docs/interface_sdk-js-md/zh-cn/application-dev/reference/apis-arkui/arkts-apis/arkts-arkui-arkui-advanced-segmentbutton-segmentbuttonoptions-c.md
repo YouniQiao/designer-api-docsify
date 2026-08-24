@@ -1,12 +1,13 @@
 # SegmentButtonOptions
 
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 不支持设置字体类型。
 > 分段按钮选项类用于提供初始数据和自定义属性。
 
 **起始版本：** 11
+
+**装饰器类型：** @Observed
 
 <!--Device-unnamed-declare class SegmentButtonOptions--><!--Device-unnamed-declare class SegmentButtonOptions-End-->
 
@@ -16,7 +17,6 @@
 
 ```TypeScript
 import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from '@kit.ArkUI';
-import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUI';
 ```
 
 ## capsule
@@ -109,11 +109,7 @@ static tab(options: TabSegmentButtonConstructionOptions): SegmentButtonOptions
 backgroundBlurStyle: BlurStyle
 ```
 
-背景模糊材质。
-
-默认值：BlurStyle.NONE
-
-值为undefined时，按默认值处理。
+背景模糊材质。默认值：BlurStyle.NONE值为undefined时，按默认值处理。
 
 **类型：** BlurStyle
 
@@ -133,19 +129,8 @@ backgroundBlurStyle: BlurStyle
 backgroundBorderRadius?: LengthMetrics
 ```
 
-分段按钮整体容器的边框圆角半径。
-
-**说明：**
-
-此属性仅在borderRadiusMode为BorderRadiusMode.CUSTOM时生效。
-
-对于胶囊类多选分段按钮（type为"capsule"且multiply为true），此属性不生效，需要用itemBorderRadius配置圆角。
-
-圆角大小受组件尺寸限制，最大值为组件宽或高的一半，不支持百分比设置。超出最大值时自动修正为最大值，使用百分比时按默认值处理。
-
-默认值：`\$r('sys.float.segmentbutton_container_shape')`
-
-值为undefined时，按默认值处理。
+分段按钮整体容器的边框圆角半径。  
+**说明：**此属性仅在borderRadiusMode为BorderRadiusMode.CUSTOM时生效。对于胶囊类多选分段按钮（type为"capsule"且multiply为true），此属性不生效，需要用itemBorderRadius配置圆角。圆角大小受组件尺寸限制，最大值为组件宽或高的一半，不支持百分比设置。超出最大值时自动修正为最大值，使用百分比时按默认值处理。默认值：`\$r('sys.float.segmentbutton_container_shape')`值为undefined时，按默认值处理。
 
 **类型：** LengthMetrics
 
@@ -165,9 +150,7 @@ backgroundBorderRadius?: LengthMetrics
 backgroundColor: ResourceColor
 ```
 
-分段按钮组件的背景板颜色。
-
-值为undefined时，背景板颜色为\$r('sys.color.ohos_id_color_button_normal')。
+分段按钮组件的背景板颜色。值为undefined时，背景板颜色为\$r('sys.color.ohos_id_color_button_normal')。
 
 **类型：** ResourceColor
 
@@ -187,11 +170,7 @@ backgroundColor: ResourceColor
 borderRadiusMode?: BorderRadiusMode
 ```
 
-边框圆角模式，用于控制圆角计算方式。
-
-默认值：BorderRadiusMode.DEFAULT
-
-值为undefined时，按默认值处理。
+边框圆角模式，用于控制圆角计算方式。默认值：BorderRadiusMode.DEFAULT值为undefined时，按默认值处理。
 
 **类型：** [BorderRadiusMode](arkts-arkui-arkui-advanced-segmentbutton-borderradiusmode-e.md)
 
@@ -213,13 +192,7 @@ borderRadiusMode?: BorderRadiusMode
 buttonPadding: Padding | Dimension
 ```
 
-分段按钮组件的按钮内边距。
-
-值为undefined时，仅图标按钮和仅文字按钮内边距：`{ top: 4, right: 8, bottom: 4, left: 8 }`
-
-图标+文本按钮内边距：`{ top: 6, right: 8, bottom: 6, left: 8 }`
-
-单位：vp
+分段按钮组件的按钮内边距。值为undefined时，仅图标按钮和仅文字按钮内边距：`{ top: 4, right: 8, bottom: 4, left: 8 }`图标+文本按钮内边距：`{ top: 6, right: 8, bottom: 6, left: 8 }`单位：vp
 
 **类型：** Padding \| Dimension
 
@@ -259,11 +232,7 @@ buttons: SegmentButtonItemOptionsArray
 direction?: Direction
 ```
 
-布局方向。
-
-默认值：Direction.Auto
-
-值为undefined时，按默认值处理。
+布局方向。默认值：Direction.Auto值为undefined时，按默认值处理。
 
 **类型：** Direction
 
@@ -283,11 +252,7 @@ direction?: Direction
 fontColor: ResourceColor
 ```
 
-按钮未选中态的文本颜色。
-
-默认值：\$r('sys.color.ohos_id_color_text_secondary')
-
-值为undefined时，按默认值处理。
+按钮未选中态的文本颜色。默认值：\$r('sys.color.ohos_id_color_text_secondary')值为undefined时，按默认值处理。
 
 **类型：** ResourceColor
 
@@ -307,11 +272,7 @@ fontColor: ResourceColor
 fontSize: DimensionNoPercentage
 ```
 
-分段按钮组件的按钮未选中态的字体大小，不支持百分比设置。
-
-单位：fp
-
-值为undefined时，字体大小为\$r('sys.float.ohos_id_text_size_body2')。
+分段按钮组件的按钮未选中态的字体大小，不支持百分比设置。单位：fp值为undefined时，字体大小为\$r('sys.float.ohos_id_text_size_body2')。
 
 **类型：** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
 
@@ -331,9 +292,7 @@ fontSize: DimensionNoPercentage
 fontWeight: FontWeight
 ```
 
-分段按钮组件的按钮未选中态的字体粗细。
-
-值为undefined时，字体粗细为FontWeight.Regular。
+分段按钮组件的按钮未选中态的字体粗细。值为undefined时，字体粗细为FontWeight.Regular。
 
 **类型：** FontWeight
 
@@ -353,15 +312,8 @@ fontWeight: FontWeight
 imageSize: SizeOptions
 ```
 
-分段按钮组件的图片尺寸。
-
-值为undefined时，图片尺寸为{ width: 24, height: 24 }。
-
-单位：vp
-
-**说明：**
-
-`imageSize`属性对仅图标按钮和图标+文本按钮生效，对纯文本按钮无效果。
+分段按钮组件的图片尺寸。值为undefined时，图片尺寸为{ width: 24, height: 24 }。单位：vp  
+**说明：**`imageSize`属性对仅图标按钮和图标+文本按钮生效，对纯文本按钮无效果。
 
 **类型：** SizeOptions
 
@@ -381,19 +333,8 @@ imageSize: SizeOptions
 itemBorderRadius?: LengthMetrics
 ```
 
-分段按钮中按钮项的边框圆角半径。
-
-**说明：**
-
-此属性仅在borderRadiusMode为BorderRadiusMode.CUSTOM时生效。
-
-对于胶囊类多选分段按钮（type为"capsule"且multiply为true），只能控制两端的选项圆角。
-
-圆角大小受组件尺寸限制，最大值为组件宽或高的一半，不支持百分比设置。超出最大值时自动修正为最大值，使用百分比时按默认值处理。
-
-默认值：`\$r('sys.float.segmentbutton_selected_background_shape')`
-
-值为undefined时，按默认值处理。
+分段按钮中按钮项的边框圆角半径。  
+**说明：**此属性仅在borderRadiusMode为BorderRadiusMode.CUSTOM时生效。对于胶囊类多选分段按钮（type为"capsule"且multiply为true），只能控制两端的选项圆角。圆角大小受组件尺寸限制，最大值为组件宽或高的一半，不支持百分比设置。超出最大值时自动修正为最大值，使用百分比时按默认值处理。默认值：`\$r('sys.float.segmentbutton_selected_background_shape')`值为undefined时，按默认值处理。
 
 **类型：** LengthMetrics
 
@@ -413,15 +354,7 @@ itemBorderRadius?: LengthMetrics
 localizedButtonPadding?: LocalizedPadding
 ```
 
-分段按钮组件的按钮内边距，支持随布局方向（LTR/RTL）自适应。
-
-默认值：
-
-仅图标按钮和仅文字按钮默认值： `{ top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }`
-
-图标+文本按钮默认值： `{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8) }`
-
-值为undefined时，按默认值处理。
+分段按钮组件的按钮内边距，支持随布局方向（LTR/RTL）自适应。默认值：仅图标按钮和仅文字按钮默认值： `{ top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }`图标+文本按钮默认值： `{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8) }`值为undefined时，按默认值处理。
 
 **类型：** LocalizedPadding
 
@@ -441,13 +374,7 @@ localizedButtonPadding?: LocalizedPadding
 localizedTextPadding?: LocalizedPadding
 ```
 
-文本内边距，支持随布局方向（LTR/RTL）自适应。
-
-默认值：0
-
-单位：vp
-
-值为undefined时，按默认值处理。
+文本内边距，支持随布局方向（LTR/RTL）自适应。默认值：0单位：vp值为undefined时，按默认值处理。
 
 **类型：** LocalizedPadding
 
@@ -467,15 +394,7 @@ localizedTextPadding?: LocalizedPadding
 multiply: boolean
 ```
 
-分段按钮组件是否可以多选。
-
-true：可多选；false：不可多选。
-
-页签类分段按钮（type为"tab"）时，multiply强制为false，设置true不生效。
-
-默认值： false
-
-值为undefined时，按默认值处理。
+分段按钮组件是否可以多选。true：可多选；false：不可多选。页签类分段按钮（type为"tab"）时，multiply强制为false，设置true不生效。默认值： false值为undefined时，按默认值处理。
 
 **类型：** boolean
 
@@ -495,15 +414,7 @@ true：可多选；false：不可多选。
 selectedBackgroundColor: ResourceColor
 ```
 
-按钮选中态的背景板颜色。
-
-默认值：
-
-type为"tab"时，默认值为`\$r('sys.color.segment_button_checked_foreground_color')`。
-
-type为"capsule"时，默认值为`\$r('sys.color.ohos_id_color_emphasize')`。
-
-值为undefined时，按默认值处理。
+按钮选中态的背景板颜色。默认值：type为"tab"时，默认值为`\$r('sys.color.segment_button_checked_foreground_color')`。type为"capsule"时，默认值为`\$r('sys.color.ohos_id_color_emphasize')`。值为undefined时，按默认值处理。
 
 **类型：** ResourceColor
 
@@ -523,15 +434,7 @@ type为"capsule"时，默认值为`\$r('sys.color.ohos_id_color_emphasize')`。
 selectedFontColor: ResourceColor
 ```
 
-按钮选中态的文本颜色。
-
-默认值：
-
-type为"tab"时，默认值为`\$r('sys.color.ohos_id_color_text_primary')`。
-
-type为"capsule"时，默认值为`\$r('sys.color.ohos_id_color_foreground_contrary')`。
-
-值为undefined时，按默认值处理。
+按钮选中态的文本颜色。默认值：type为"tab"时，默认值为`\$r('sys.color.ohos_id_color_text_primary')`。type为"capsule"时，默认值为`\$r('sys.color.ohos_id_color_foreground_contrary')`。值为undefined时，按默认值处理。
 
 **类型：** ResourceColor
 
@@ -551,11 +454,7 @@ type为"capsule"时，默认值为`\$r('sys.color.ohos_id_color_foreground_contr
 selectedFontSize: DimensionNoPercentage
 ```
 
-分段按钮组件的按钮选中态的字体大小，不支持百分比设置。
-
-单位：fp
-
-值为undefined时，字体大小为\$r('sys.float.ohos_id_text_size_body2')。
+分段按钮组件的按钮选中态的字体大小，不支持百分比设置。单位：fp值为undefined时，字体大小为\$r('sys.float.ohos_id_text_size_body2')。
 
 **类型：** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
 
@@ -575,9 +474,7 @@ selectedFontSize: DimensionNoPercentage
 selectedFontWeight: FontWeight
 ```
 
-分段按钮组件的按钮选中态的字体粗细。
-
-值为undefined时，字体粗细为FontWeight.Medium。
+分段按钮组件的按钮选中态的字体粗细。值为undefined时，字体粗细为FontWeight.Medium。
 
 **类型：** FontWeight
 
@@ -597,11 +494,7 @@ selectedFontWeight: FontWeight
 textPadding: Padding | Dimension
 ```
 
-分段按钮组件的文本内边距。
-
-值为undefined时，文本内边距为0。
-
-单位：vp
+分段按钮组件的文本内边距。值为undefined时，文本内边距为0。单位：vp
 
 **类型：** Padding \| Dimension
 

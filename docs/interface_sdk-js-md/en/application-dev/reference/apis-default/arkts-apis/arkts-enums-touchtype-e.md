@@ -1,8 +1,6 @@
 # TouchType
 
-Function Called by Touch
-
-@enum { number }
+Function Called by Touch@enum { number }
 
 **Since:** 23
 

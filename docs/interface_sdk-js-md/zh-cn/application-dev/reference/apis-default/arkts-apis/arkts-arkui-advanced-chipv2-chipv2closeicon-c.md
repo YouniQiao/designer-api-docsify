@@ -8,6 +8,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2CloseIcon--><!--Device-unnamed-export declare class ChipV2CloseIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -44,8 +46,7 @@ ChipV2CloseIcon的构造函数
 ## fontSize
 
 ```TypeScript
-@Trace
-  public fontSize?: LengthMetrics
+public fontSize?: LengthMetrics
 ```
 
 设置关闭图标的字体大小。
@@ -55,6 +56,8 @@ ChipV2CloseIcon的构造函数
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

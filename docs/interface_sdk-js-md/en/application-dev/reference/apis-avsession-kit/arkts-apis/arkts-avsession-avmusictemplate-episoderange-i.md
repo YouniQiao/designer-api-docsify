@@ -1,8 +1,6 @@
 # EpisodeRange
 
-The definition of EpisodeRange.
-
-@interface EpisodeRange
+The definition of EpisodeRange.@interface EpisodeRange
 
 **Since:** 23
 

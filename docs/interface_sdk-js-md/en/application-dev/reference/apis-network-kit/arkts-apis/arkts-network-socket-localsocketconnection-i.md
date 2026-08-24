@@ -2,8 +2,7 @@
 
 Defines a local socket connection, that is, the session between the local socket client and the server. Before calling LocalSocketConnection APIs, you need to obtain a **LocalSocketConnection** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The LocalSocketConnection client can call related APIs through the **LocalSocketConnection** object only after a
 > connection is successfully established between the local socket client and the server.
 
@@ -632,13 +631,10 @@ getSocketFd(): Promise<int>
 
 Obtains the file descriptor of a LocalSocketConnection connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - This method can be called only after a connection is set up.
-> 
+> **NOTE：**&gt;
+> - This method can be called only after a connection is set up.&gt;
 > - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the
-> close API is called).
-> 
+> close API is called).&gt;
 > - The lifecycle of the file descriptor is managed by the system. The application can use the
 > [close](arkts-network-socket-localsocket-i.md#close) method to close the socket connection, instead of directly operating
 > the file descriptor.
@@ -1253,8 +1249,7 @@ send(options: LocalSendOptions): Promise<void>
 
 Sends data through a local socket connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be used only after the server obtains a **LocalSocketConnection** object through the **callback**
 > of the **connect** event.
 

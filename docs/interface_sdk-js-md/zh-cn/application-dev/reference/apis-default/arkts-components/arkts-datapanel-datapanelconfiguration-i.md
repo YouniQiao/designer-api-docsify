@@ -18,13 +18,8 @@
 maxValue: double
 ```
 
-DataPanel显示的最大值。
-
-默认值：100。
-
-**说明：**
-
-如果小于或等于0，maxValue将被设为values数组中所有项的总和，并按比例显示。
+DataPanel显示的最大值。默认值：100。  
+**说明：**如果小于或等于0，maxValue将被设为values数组中所有项的总和，并按比例显示。
 
 **类型：** double
 

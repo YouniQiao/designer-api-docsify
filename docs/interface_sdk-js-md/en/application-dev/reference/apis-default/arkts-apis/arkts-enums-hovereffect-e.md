@@ -1,8 +1,6 @@
 # HoverEffect
 
-HoverEffect enumeration description
-
-@enum { number }
+HoverEffect enumeration description@enum { number }
 
 **Since:** 23
 

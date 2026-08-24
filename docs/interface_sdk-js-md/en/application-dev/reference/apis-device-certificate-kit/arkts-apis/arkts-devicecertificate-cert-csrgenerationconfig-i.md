@@ -2,15 +2,11 @@
 
 Configuration parameters for generating a CSR, including the subject name, digest algorithm, attribute, and output format.
 
-> **NOTE：**
-> 
-> - subject is an X500DistinguishedName object.
-> 
-> - mdName indicates the digest algorithm name. Currently, SHA1, SHA256, SHA384, and SHA512 are supported.
-> 
+> **NOTE：**&gt;
+> - subject is an X500DistinguishedName object.&gt;
+> - mdName indicates the digest algorithm name. Currently, SHA1, SHA256, SHA384, and SHA512 are supported.&gt;
 > - attributes is an optional parameter that specifies the attribute types and attribute values specified in
-> PKCS #9 to generate a CSR. For example, challengePassword.
-> 
+> PKCS #9 to generate a CSR. For example, challengePassword.&gt;
 > - outFormat specifies the format of the output CSR. If the format is not specified, the PEM format is used by
 > default.
 
@@ -24,8 +20,6 @@ Configuration parameters for generating a CSR, including the subject name, diges
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## attributes

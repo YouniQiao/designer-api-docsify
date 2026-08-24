@@ -4,11 +4,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## switchCurrentInputMethodSubtype
@@ -17,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function switchCurrentInputMethodSubtype(target: InputMethodSubtype, callback: AsyncCallback<boolean>): void
 ```
 
-@brief 切换当前输入法的子类型。使用callback异步回调。
+切换当前输入法的子类型。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -166,7 +161,7 @@ inputMethod.switchCurrentInputMethodSubtype({
 function switchCurrentInputMethodSubtype(target: InputMethodSubtype): Promise<boolean>
 ```
 
-@brief 切换当前输入法的子类型。使用promise异步回调。
+切换当前输入法的子类型。使用promise异步回调。
 
 **起始版本：** 23
 

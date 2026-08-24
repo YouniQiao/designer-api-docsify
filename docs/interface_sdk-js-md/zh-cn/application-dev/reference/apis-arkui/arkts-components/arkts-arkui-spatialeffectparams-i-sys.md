@@ -1,8 +1,6 @@
 # SpatialEffectParams（系统接口）
 
-空间效果选项。
-
-@interface SpatialEffectParams
+空间效果选项。@interface SpatialEffectParams
 
 **起始版本：** 26.0.0
 

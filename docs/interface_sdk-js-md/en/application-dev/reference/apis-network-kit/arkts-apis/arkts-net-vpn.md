@@ -12,7 +12,6 @@ This module is the built-in VPN function provided by the OS. It allows users to 
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
-import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## Summary

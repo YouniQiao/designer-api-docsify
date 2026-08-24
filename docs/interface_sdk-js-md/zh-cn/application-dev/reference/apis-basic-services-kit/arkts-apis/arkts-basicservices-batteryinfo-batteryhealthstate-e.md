@@ -1,8 +1,6 @@
 # BatteryHealthState
 
-表示电池健康状态的枚举。
-
-@enum { int }
+表示电池健康状态的枚举。@enum { int }
 
 **起始版本：** 23
 

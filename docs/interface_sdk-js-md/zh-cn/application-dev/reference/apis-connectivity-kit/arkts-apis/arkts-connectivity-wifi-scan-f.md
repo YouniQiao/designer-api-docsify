@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## scan
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function scan(): boolean
 ```
 
-启动WLAN扫描。
-
-<p>该接口工作在异步模式。</p>
+启动WLAN扫描。<p>该接口工作在异步模式。</p>
 
 **起始版本：** 6
 

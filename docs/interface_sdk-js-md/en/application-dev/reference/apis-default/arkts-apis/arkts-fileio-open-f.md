@@ -128,9 +128,7 @@ Opens a file or directory. This API supports the use of a URI. This API uses an 
 function open(path: string, mode: int, callback: AsyncCallback<File>): void
 ```
 
-Opens a file or directory with the specified mode. This API uses an asynchronous callback to return the result.
-
-This API supports the use of a URI.
+Opens a file or directory with the specified mode. This API uses an asynchronous callback to return the result.This API supports the use of a URI.
 
 **Since:** 23
 

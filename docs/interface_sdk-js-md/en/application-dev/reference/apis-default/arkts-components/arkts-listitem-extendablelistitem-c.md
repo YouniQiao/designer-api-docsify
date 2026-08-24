@@ -15,8 +15,7 @@ Defines the Extendable ListItem.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-  static $_instantiate<T extends ExtendableListItem>(
+static $_instantiate<T extends ExtendableListItem>(
     factory: ConstructorT<T>, 
     value?: ListItemOptions, 
     content_?: CustomBuilder
@@ -28,6 +27,8 @@ Constructor of Extendable ListItem.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +53,7 @@ Constructor of Extendable ListItem.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-  static _instantiateImpl<T extends ExtendableListItem>(
+static _instantiateImpl<T extends ExtendableListItem>(
     styles: CustomBuilderT<T>, 
     factory: ConstructorT<T>, 
     content_?: CustomBuilder
@@ -65,6 +65,8 @@ Entry of Extendable ListItem.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

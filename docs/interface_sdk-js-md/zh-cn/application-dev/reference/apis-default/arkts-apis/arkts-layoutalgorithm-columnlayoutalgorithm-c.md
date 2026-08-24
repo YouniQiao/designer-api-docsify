@@ -2,18 +2,18 @@
 
 垂直方向线性布局算法类。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > ColumnLayoutAlgorithm类对象可以作为
-> [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
-
+> [DynamicLayout](arkts-arkui-components-arkdynamiclayout-dynamiclayout-f.md)组件的入参指定布局算法。
 @implements LayoutAlgorithm
 
-**继承/实现关系：** ColumnLayoutAlgorithm implements [LayoutAlgorithm](arkts-layoutalgorithm-i.md)
+**继承/实现关系：** ColumnLayoutAlgorithm implements [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md)
 
 **起始版本：** 24
 
 **ArkTS模式：** ArkTS-Sta起始版本为24。
+
+**装饰器类型：** @ObservedV2
 
 <!--Device-unnamed-export declare class ColumnLayoutAlgorithm--><!--Device-unnamed-export declare class ColumnLayoutAlgorithm-End-->
 
@@ -39,13 +39,9 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [ColumnLayoutAlgorithmOptions](arkts-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | 否 | 垂直方向线性布局算法的构造入参， 设置布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
+| option | [ColumnLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | 否 | 垂直方向线性布局算法的构造入参， 设置布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
 
 ## alignItems
-
-```TypeScript
-@Trace public alignItems?: HorizontalAlign
-```
 
 所有子组件在水平方向上的对齐格式。 非法值：按默认值处理。
 
@@ -55,15 +51,13 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为24。
 
+**装饰器类型：** @Trace
+
 <!--Device-ColumnLayoutAlgorithm-@Trace public alignItems?: HorizontalAlign--><!--Device-ColumnLayoutAlgorithm-@Trace public alignItems?: HorizontalAlign-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## isReverse
-
-```TypeScript
-@Trace public isReverse?: boolean
-```
 
 子组件在垂直方向上的排列是否反转。 取值为true表示子组件在垂直方向上反转排列。 取值为false表示子组件在垂直方向上正序排列。 非法值：按默认值处理。
 
@@ -73,15 +67,13 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为24。
 
+**装饰器类型：** @Trace
+
 <!--Device-ColumnLayoutAlgorithm-@Trace public isReverse?: boolean--><!--Device-ColumnLayoutAlgorithm-@Trace public isReverse?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## justifyContent
-
-```TypeScript
-@Trace public justifyContent?: FlexAlign
-```
 
 所有子组件在垂直方向上的对齐格式。 非法值：按默认值处理。
 
@@ -91,23 +83,23 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为24。
 
+**装饰器类型：** @Trace
+
 <!--Device-ColumnLayoutAlgorithm-@Trace public justifyContent?: FlexAlign--><!--Device-ColumnLayoutAlgorithm-@Trace public justifyContent?: FlexAlign-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## space
 
-```TypeScript
-@Trace public space?: LengthMetrics
-```
-
 纵向布局元素垂直方向间距。 非法值：按默认值处理。
 
-**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
 
 **起始版本：** 24
 
 **ArkTS模式：** ArkTS-Sta起始版本为24。
+
+**装饰器类型：** @Trace
 
 <!--Device-ColumnLayoutAlgorithm-@Trace public space?: LengthMetrics--><!--Device-ColumnLayoutAlgorithm-@Trace public space?: LengthMetrics-End-->
 

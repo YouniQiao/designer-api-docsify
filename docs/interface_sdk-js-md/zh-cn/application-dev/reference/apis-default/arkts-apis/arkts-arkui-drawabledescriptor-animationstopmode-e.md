@@ -1,8 +1,6 @@
 # AnimationStopMode
 
-动图停止模式。
-
-@enum { number }
+动图停止模式。@enum { number }
 
 **起始版本：** 24
 

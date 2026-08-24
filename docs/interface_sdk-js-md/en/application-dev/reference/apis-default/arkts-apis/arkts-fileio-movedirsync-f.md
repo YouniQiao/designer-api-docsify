@@ -13,8 +13,7 @@ function moveDirSync(src: string, dest: string, mode?: int): void
 
 Moves the source directory and its content to the destination directory. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in a distributed directory.
 
 **Since:** 23

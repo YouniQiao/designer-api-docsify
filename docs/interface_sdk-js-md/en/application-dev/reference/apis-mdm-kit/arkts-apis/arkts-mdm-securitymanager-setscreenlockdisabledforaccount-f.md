@@ -14,15 +14,11 @@ function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void
 
 Disables or enables swipe-to-unlock for the current user. When enabled, the user must swipe on the screen after the screen is turned on to access the home screen. When disabled, the screen goes directly to the home screen after being turned on. This API is suitable for enterprise device management scenarios, such as disabling swipe-to-unlock in specific security environments to simplify operations, or enabling it in general scenarios as a basic security measure.
 
-> **NOTE：**
-> 
-> 1. This API takes effect only when no lock screen password is set on the device.
-> 
-> 2. By default, swipe-to-unlock is enabled on the device.
-> 
+> **NOTE：**&gt;
+> 1. This API takes effect only when no lock screen password is set on the device.&gt;
+> 2. By default, swipe-to-unlock is enabled on the device.&gt;
 > 3. If a lock screen password exists on the device, attempting to disable swipe-to-unlock will fail and return
-> error code 9201021.
-> 
+> error code 9201021.&gt;
 > 4. After a policy to disable swipe-to-unlock is applied, if the user subsequently sets a device password, the
 > password will take effect and the device will require password verification before entering the home screen. In
 > this case, the previously applied policy will no longer take effect.

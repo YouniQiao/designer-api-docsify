@@ -39,13 +39,13 @@ public add(other: Short): Short
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Short](arkts-arkts-short-c.md) | 是 | 加法运算的右操作数。 |
+| other | Short | 是 | 加法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Short](arkts-arkts-short-c.md) | 加法运算的结果。 |
+| Short | 加法运算的结果。 |
 
 ## compareTo
 
@@ -69,7 +69,7 @@ public compareTo(other: Short): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Short](arkts-arkts-short-c.md) | 是 | 用于比较的Short对象。 |
+| other | Short | 是 | 用于比较的Short对象。 |
 
 **返回值：**
 
@@ -141,13 +141,13 @@ public div(other: Short): Short
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Short](arkts-arkts-short-c.md) | 是 | 除法运算的右操作数。 |
+| other | Short | 是 | 除法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Short](arkts-arkts-short-c.md) | 除法运算的结果。 |
+| Short | 除法运算的结果。 |
 
 ## equals
 
@@ -201,7 +201,7 @@ public isGreaterEqualThan(other: Short): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Short](arkts-arkts-short-c.md) | 是 | 比较运算的右操作数。 |
+| other | Short | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -231,7 +231,7 @@ public isGreaterThan(other: Short): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Short](arkts-arkts-short-c.md) | 是 | 比较运算的右操作数。 |
+| other | Short | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -261,7 +261,7 @@ public isLessEqualThan(other: Short): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Short](arkts-arkts-short-c.md) | 是 | 比较运算的右操作数。 |
+| other | Short | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -291,7 +291,7 @@ public isLessThan(other: Short): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Short](arkts-arkts-short-c.md) | 是 | 比较运算的右操作数。 |
+| other | Short | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -321,13 +321,13 @@ public mul(other: Short): Short
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Short](arkts-arkts-short-c.md) | 是 | 乘法运算的右操作数。 |
+| other | Short | 是 | 乘法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Short](arkts-arkts-short-c.md) | 乘法运算的结果。 |
+| Short | 乘法运算的结果。 |
 
 ## parseInt
 
@@ -382,13 +382,13 @@ public sub(other: Short): Short
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Short](arkts-arkts-short-c.md) | 是 | 减法运算的右操作数。 |
+| other | Short | 是 | 减法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Short](arkts-arkts-short-c.md) | 减法运算的结果。 |
+| Short | 减法运算的结果。 |
 
 ## toByte
 

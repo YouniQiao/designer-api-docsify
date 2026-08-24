@@ -1,6 +1,6 @@
 # BlanklessFrameInterpolationInfo
 
-无白屏加载插帧状态信息，作为[BlanklessLoadingParam](../../apis-default/arkts-apis/arkts-webview-blanklessloadingparam-i.md)中的回调入参使用。
+无白屏加载插帧状态信息，作为[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md)中的回调入参使用。
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ import { webview } from '@kit.ArkWeb';
 key: string
 ```
 
-唯一标识插帧页面的key值。与[setBlanklessLoadingWithParams](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setblanklessloadingwithparams)的key 值相同。
+唯一标识插帧页面的key值。与[setBlanklessLoadingWithParams](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithparams)的key 值相同。
 
 **类型：** string
 
@@ -58,7 +58,7 @@ state: BlanklessFrameInterpolationState
 
 当前插帧状态。
 
-**类型：** [BlanklessFrameInterpolationState](../../apis-default/arkts-apis/arkts-webview-blanklessframeinterpolationstate-e.md)
+**类型：** [BlanklessFrameInterpolationState](arkts-arkweb-webview-blanklessframeinterpolationstate-e.md)
 
 **起始版本：** 23
 

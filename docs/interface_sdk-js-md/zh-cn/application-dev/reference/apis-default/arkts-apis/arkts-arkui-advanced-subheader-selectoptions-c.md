@@ -21,13 +21,7 @@ Declare type SelectOption
 public defaultFocus?: boolean
 ```
 
-下拉按钮是否为默认焦点。
-
-true：下拉按钮是默认焦点。
-
-false：下拉按钮不是默认焦点。
-
-默认值：false
+下拉按钮是否为默认焦点。true：下拉按钮是默认焦点。false：下拉按钮不是默认焦点。默认值：false
 
 **类型：** boolean
 
@@ -49,9 +43,7 @@ false：下拉按钮不是默认焦点。
 public id?: string
 ```
 
-下拉按钮id。需要为下拉按钮设置id的时候设置此参数，缺省时不设置此参数。
-
-默认值：undefined，表示不设置下拉按钮id。
+下拉按钮id。需要为下拉按钮设置id的时候设置此参数，缺省时不设置此参数。默认值：undefined，表示不设置下拉按钮id。
 
 **类型：** string
 
@@ -71,10 +63,8 @@ public id?: string
 public onSelect?: (index: int, value?: string) => void
 ```
 
-下拉菜单选中某一项的回调。
-
-- index：选中项的索引。
-
+下拉菜单选中某一项的回调。  
+- index：选中项的索引。  
 - value：选中项的值。
 
 **类型：** (index: int, value?: string) =&gt; void
@@ -115,15 +105,7 @@ public options: Array<SelectOption>
 public selected?: int
 ```
 
-设置下拉菜单初始选项的索引。
-
-取值范围：大于等于-1。
-
-第一项的索引为0。
-
-当不设置selected属性时，默认选择值为-1，菜单项不选中。
-
-若设置数值小于-1，按不选中处理。
+设置下拉菜单初始选项的索引。取值范围：大于等于-1。第一项的索引为0。当不设置selected属性时，默认选择值为-1，菜单项不选中。若设置数值小于-1，按不选中处理。
 
 **类型：** int
 
@@ -143,10 +125,7 @@ public selected?: int
 public value?: ResourceStr
 ```
 
-设置下拉按钮本身的文本内容。
-
-默认值：空字符串。
-
+设置下拉按钮本身的文本内容。默认值：空字符串。  
 **说明：**文本超过列宽时会被截断。从API version 20开始，支持Resource类型。
 
 **类型：** [ResourceStr](arkts-resourcestr-t.md)

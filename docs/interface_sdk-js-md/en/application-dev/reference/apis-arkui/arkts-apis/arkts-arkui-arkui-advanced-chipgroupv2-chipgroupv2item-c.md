@@ -4,6 +4,8 @@ Defines chip group item.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipGroupV2Item--><!--Device-unnamed-export declare class ChipGroupV2Item-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ The constructor of ChipGroupV2Item
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-    public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 Set accessibility description for ChipGroupV2 item.
@@ -50,6 +51,8 @@ Set accessibility description for ChipGroupV2 item.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ Set accessibility description for ChipGroupV2 item.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-    public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 Set accessibility level for ChipGroupV2 item.
@@ -73,6 +75,8 @@ Set accessibility level for ChipGroupV2 item.
 **Default:** auto
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +89,7 @@ Set accessibility level for ChipGroupV2 item.
 ## allowClose
 
 ```TypeScript
-@Trace
-    public allowClose?: boolean
+public allowClose?: boolean
 ```
 
 Allow close.
@@ -94,6 +97,8 @@ Allow close.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +111,7 @@ Allow close.
 ## closeIcon
 
 ```TypeScript
-@Trace
-    public closeIcon?: ChipV2CloseConfig
+public closeIcon?: ChipV2CloseConfig
 ```
 
 Set config for default close icon when 'allowClose' is true.
@@ -115,6 +119,8 @@ Set config for default close icon when 'allowClose' is true.
 **Type:** [ChipV2CloseConfig](arkts-arkui-arkui-advanced-chipv2-chipv2closeconfig-i.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,8 +133,7 @@ Set config for default close icon when 'allowClose' is true.
 ## label
 
 ```TypeScript
-@Trace
-    public label: ChipV2Label
+public label: ChipV2Label
 ```
 
 Chip label.
@@ -136,6 +141,8 @@ Chip label.
 **Type:** [ChipV2Label](arkts-arkui-arkui-advanced-chipv2-chipv2label-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,8 +155,7 @@ Chip label.
 ## prefixIcon
 
 ```TypeScript
-@Trace
-    public prefixIcon?: ChipV2PrefixImageIcon
+public prefixIcon?: ChipV2PrefixImageIcon
 ```
 
 Prefix icon.
@@ -157,6 +163,8 @@ Prefix icon.
 **Type:** [ChipV2PrefixImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2prefiximageicon-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -169,8 +177,7 @@ Prefix icon.
 ## prefixSymbolIcon
 
 ```TypeScript
-@Trace
-    public prefixSymbolIcon?: ChipV2PrefixSymbolIcon
+public prefixSymbolIcon?: ChipV2PrefixSymbolIcon
 ```
 
 Prefix symbol icon.
@@ -178,6 +185,8 @@ Prefix symbol icon.
 **Type:** [ChipV2PrefixSymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2prefixsymbolicon-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,8 +199,7 @@ Prefix symbol icon.
 ## suffixIcon
 
 ```TypeScript
-@Trace
-    public suffixIcon?: ChipV2SuffixImageIcon
+public suffixIcon?: ChipV2SuffixImageIcon
 ```
 
 Suffix icon.
@@ -199,6 +207,8 @@ Suffix icon.
 **Type:** [ChipV2SuffixImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2suffiximageicon-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -211,8 +221,7 @@ Suffix icon.
 ## suffixSymbolIcon
 
 ```TypeScript
-@Trace
-    public suffixSymbolIcon?: ChipV2SuffixSymbolIcon
+public suffixSymbolIcon?: ChipV2SuffixSymbolIcon
 ```
 
 Suffix symbol icon.
@@ -220,6 +229,8 @@ Suffix symbol icon.
 **Type:** [ChipV2SuffixSymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2suffixsymbolicon-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

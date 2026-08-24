@@ -1,8 +1,6 @@
 # LocationCommand
 
-Location subsystem command structure
-
-@interface LocationCommand
+Location subsystem command structure@interface LocationCommand
 
 **Since:** 8
 

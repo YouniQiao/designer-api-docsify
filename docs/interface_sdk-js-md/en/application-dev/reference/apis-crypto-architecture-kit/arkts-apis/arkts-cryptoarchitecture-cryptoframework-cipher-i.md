@@ -1,11 +1,6 @@
 # Cipher
 
-Encryption and decryption interface, defining methods for symmetric and asymmetric encryption and decryption. Before use, you must create a **Cipher** instance by using [createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md). Call the [init()](#init), [update()](#update), and [doFinal()](#dofinal) APIs in this class as needed to complete encryption or decryption operations.
-
-<br>For details about the complete encryption and decryption process, see Encryption and Decryption Overview .
-
-<br>A complete symmetric encryption/decryption process is slightly different from the asymmetric encryption/decryption process.
-
+Encryption and decryption interface, defining methods for symmetric and asymmetric encryption and decryption. Before use, you must create a **Cipher** instance by using [createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md). Call the [init()](#init), [update()](#update), and [doFinal()](#dofinal) APIs in this class as needed to complete encryption or decryption operations.<br>For details about the complete encryption and decryption process, see Encryption and Decryption Overview.<br>A complete symmetric encryption/decryption process is slightly different from the asymmetric encryption/decryption process.  
 - Symmetric encryption and decryption: **init()** and **doFinal()** are mandatory. **update()** is optional and can be called multiple times to encrypt or decrypt big data. After **doFinal()** is called to complete an encryption or decryption operation, **init()** can be called to start a new encryption or decryption operation. - RSA or SM2 asymmetric encryption and decryption: **init()** and **doFinal()** are mandatory, and **update()** is not supported. **doFinal()** can be called multiple times to encrypt or decrypt big data. **init()** cannot be called repeatedly. If the encryption/decryption mode or padding mode is changed, a new **Cipher** object must be created.
 
 **Since:** 23
@@ -107,16 +102,11 @@ async function hmacByPromise() {
 doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result.
-
-<br>(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in all the data without using **update()**. If all the data has been passed in by [update()](#update), you can pass in **null** in **data** of **doFinal()**. The output of **doFinal()** varies with the symmetric block cipher mode in use. This API uses an asynchronous callback to return the result.
-
-- In a single encryption process with GCM or CCM mode, concatenating the results of each **update()** and **doFinal()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** passed to **doFinal()** is **null**, the **doFinal()** result is only the **authTag**. During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**. - For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.
-
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result.<br>(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in all the data without using **update()**. If all the data has been passed in by [update()](#update), you can pass in **null** in **data** of **doFinal()**. The output of **doFinal()** varies with the symmetric block cipher mode in use. This API uses an asynchronous callback to return the result.  
+- In a single encryption process with GCM or CCM mode, concatenating the results of each **update()** and **doFinal()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** passed to **doFinal()** is **null**, the **doFinal()** result is only the **authTag**. During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**. - For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.  
 (2) Encrypts or decrypts the data passed in this time in RSA and SM2 asymmetric encryption or decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a large amount of data needs to be encrypted/decrypted, call **doFinal()** multiple times and concatenate the result of each **doFinal()** to obtain the complete plaintext/ciphertext.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
 > is complete and the [Cipher](#cipher) instance is cleared. When a new encryption and
 > decryption process is started, **init()** must be called with a complete parameter list for initialization.
@@ -175,8 +165,7 @@ doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void
 
 Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
 > is complete and the [Cipher](#cipher) instance is cleared. When a new encryption and
 > decryption process is started, **init()** must be called with a complete parameter list for initialization.
@@ -276,24 +265,13 @@ See [doFinal](#dofinal)
 doFinal(data: DataBlob | null): Promise<DataBlob>
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result.
-
-<br>(1) Encrypts or decrypts the remaining data (generated by the block cipher mode) and the data passed in this time to finalize the symmetric encryption or decryption. This API uses a promise to return the result.
-
-If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in data without using **update()**. If all the data has been passed in by **update()**, you can pass in **null** in **data** of **doFinal()**.
-
-The output of **doFinal()** varies with the symmetric encryption/decryption mode in use.
-
-- Symmetric encryption in GCM and CCM mode: The result consists of the ciphertext and **authTag** (the last 16 bytes for GCM and the last 12 bytes for CCM). If **data** in **doFinal** is null, the result of **doFinal** is **authTag**.
-
-During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.
-
-- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.
-
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result.<br>(1) Encrypts or decrypts the remaining data (generated by the block cipher mode) and the data passed in this time to finalize the symmetric encryption or decryption. This API uses a promise to return the result.If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in data without using **update()**. If all the data has been passed in by **update()**, you can pass in **null** in **data** of **doFinal()**.The output of **doFinal()** varies with the symmetric encryption/decryption mode in use.  
+- Symmetric encryption in GCM and CCM mode: The result consists of the ciphertext and **authTag** (the last 16 bytes for GCM and the last 12 bytes for CCM). If **data** in **doFinal** is null, the result of **doFinal** is **authTag**.  
+During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.  
+- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.  
 (2) Encrypts or decrypts the data passed in RSA and SM2 asymmetric encryption or decryption. This API uses a promise to return the encrypted or decrypted data. If a large amount of data is to be processed, call **doFinal()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
 > is complete and the [Cipher](#cipher) instance is cleared. When a new encryption and
 > decryption process is started, **init()** must be called with a complete parameter list for initialization.
@@ -327,7 +305,7 @@ During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to encrypt or decrypt. It can be **null**, but cannot be {data:Uint8Array( empty)}. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| data | DataBlob \| null | Yes | Data to encrypt or decrypt. It can be **null**, but cannot be {data:Uint8Array(empty)}. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 
 **Return value:**
 
@@ -357,8 +335,7 @@ doFinal(data: DataBlob | null): Promise<DataBlob | null>
 
 Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
 > is complete and the [Cipher](#cipher) instance is cleared. When a new encryption and
 > decryption process is started, **init()** must be called with a complete parameter list for initialization.
@@ -418,21 +395,9 @@ See [doFinal](#dofinal)
 doFinalSync(data: DataBlob | null): DataBlob
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished.
-
-<br>(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API returns the encrypted or decrypted data synchronously.
-
-If a small amount of data is to be processed, you can pass in all the data at a time in **doFinalSync()** without using **updateSync()**. If data has been passed in by using [updateSync](#updatesync) in the current encryption and decryption process, you can pass in **null** to the **data** parameter of **doFinalSync()**.
-
-The output of **doFinalSync()** varies with the symmetric block cipher mode in use.
-
-- In a single encryption process with GCM or CCM mode, concatenating the results of each **updateSync()** and **doFinalSync()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** in **doFinalSync()** is **null**, the result of **doFinalSync()** is **authTag**. - During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**. - For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **updateSync()** and **doFinalSync()** throughout the process will yield the complete plaintext or ciphertext.
-
-(2) Encrypts or decrypts the input data for RSA or SM2 asymmetric encryption/decryption. This API returns the encrypted or decrypted data synchronously. If a large amount of data is to be processed, call **doFinalSync()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
-
-<br>See **NOTE：**in [doFinal()](#dofinal) for other precautions.
-
-<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished.<br>(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API returns the encrypted or decrypted data synchronously.If a small amount of data is to be processed, you can pass in all the data at a time in **doFinalSync()** without using **updateSync()**. If data has been passed in by using [updateSync](#updatesync) in the current encryption and decryption process, you can pass in **null** to the **data** parameter of **doFinalSync()**.The output of **doFinalSync()** varies with the symmetric block cipher mode in use.  
+- In a single encryption process with GCM or CCM mode, concatenating the results of each **updateSync()** and **doFinalSync()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** in **doFinalSync()** is **null**, the result of **doFinalSync()** is **authTag**. - During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**. - For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **updateSync()** and **doFinalSync()** throughout the process will yield the complete plaintext or ciphertext.  
+(2) Encrypts or decrypts the input data for RSA or SM2 asymmetric encryption/decryption. This API returns the encrypted or decrypted data synchronously. If a large amount of data is to be processed, call **doFinalSync()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext.<br>See **NOTE：**in [doFinal()](#dofinal) for other precautions.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -491,9 +456,7 @@ function hmacBySync() {
 doFinalSync(data: DataBlob | null): DataBlob | null
 ```
 
-Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished.
-
-<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data. Data cannot be updated after the crypto operation is finished.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -587,9 +550,7 @@ function testGetCipherSpec() {
 init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<void>): void
 ```
 
-Initializes the crypto operation with the given crypto mode, key and parameters. This API uses an asynchronous callback to return the result.
-
-<br>**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
+Initializes the crypto operation with the given crypto mode, key and parameters. This API uses an asynchronous callback to return the result.<br>**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
 **Since:** 9
 
@@ -626,9 +587,7 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCallback<void>): void
 ```
 
-Initializes the [cipher](#cipher) object for encryption and decryption. This API uses an asynchronous callback to return the result.
-
-<br>**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
+Initializes the [cipher](#cipher) object for encryption and decryption. This API uses an asynchronous callback to return the result.<br>**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
 **Since:** 23
 
@@ -665,9 +624,7 @@ Initializes the [cipher](#cipher) object for encryption and decryption. This API
 init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>
 ```
 
-Initializes the crypto operation with the given crypto mode, key and parameters. This API uses a promise to return the result.
-
-<br>**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
+Initializes the crypto operation with the given crypto mode, key and parameters. This API uses a promise to return the result.<br>**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
 **Since:** 9
 
@@ -709,9 +666,7 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>
 ```
 
-Initializes the cipher object for encryption and decryption. This API uses a promise to return the result.
-
-<br>**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
+Initializes the cipher object for encryption and decryption. This API uses a promise to return the result.<br>**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
 **Since:** 23
 
@@ -753,11 +708,7 @@ Initializes the cipher object for encryption and decryption. This API uses a pro
 initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void
 ```
 
-Initializes a [cipher](#cipher) instance. This API returns the result synchronously.
-
-<br>**initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.
-
-<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Initializes a [cipher](#cipher) instance. This API returns the result synchronously.<br>**initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -838,12 +789,9 @@ function testsetCipherSpec() {
 update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 ```
 
-Updates the data to encrypt or decrypt by segment. This API uses an asynchronous callback to return the result.
+Updates the data to encrypt or decrypt by segment. This API uses an asynchronous callback to return the result.<br>This API can be called only after the [Cipher](#cipher) instance is initialized by using [init()](#init).
 
-<br>This API can be called only after the [Cipher](#cipher) instance is initialized by using [init()](#init).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
 > with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
 > results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
@@ -907,8 +855,7 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob | null>): void
 
 Updates the crypto operation with the input data, and feeds back the encrypted or decrypted data this time. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
 > with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
 > results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
@@ -968,12 +915,9 @@ Updates the crypto operation with the input data, and feeds back the encrypted o
 update(data: DataBlob): Promise<DataBlob>
 ```
 
-Updates the data to encrypt or decrypt by segment. This API uses a promise to return the result.
+Updates the data to encrypt or decrypt by segment. This API uses a promise to return the result.<br>This API can be called only after the [Cipher](#cipher) instance is initialized by using [init()](#init).
 
-<br>This API can be called only after the [Cipher](#cipher) instance is initialized by using [init()](#init).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
 > with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
 > results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
@@ -1042,8 +986,7 @@ update(data: DataBlob): Promise<DataBlob | null>
 
 Updates the crypto operation with the input data, and feeds back the encrypted or decrypted data this time. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
 > with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
 > results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
@@ -1108,13 +1051,7 @@ Updates the crypto operation with the input data, and feeds back the encrypted o
 updateSync(data: DataBlob): DataBlob
 ```
 
-Updates the data to encrypt or decrypt by segment.
-
-<br>This API can be called only after the [Cipher](#cipher) instance is initialized by using [initSync()](#initsync).
-
-<br>See **NOTE：**in **update()** for other precautions.
-
-<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Updates the data to encrypt or decrypt by segment.<br>This API can be called only after the [Cipher](#cipher) instance is initialized by using [initSync()](#initsync).<br>See **NOTE：**in **update()** for other precautions.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -1152,9 +1089,7 @@ Updates the data to encrypt or decrypt by segment.
 updateSync(data: DataBlob): DataBlob | null
 ```
 
-Updates the data to encrypt or decrypt by segment.
-
-<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Updates the data to encrypt or decrypt by segment.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 

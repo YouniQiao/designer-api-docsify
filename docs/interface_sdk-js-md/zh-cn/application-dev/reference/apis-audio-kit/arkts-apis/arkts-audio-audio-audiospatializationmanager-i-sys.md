@@ -1,12 +1,6 @@
 # AudioSpatializationManager
 
-空间音频管理。
-
-在使用AudioSpatializationManager的接口之前，需先通过 [getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager)获取AudioSpatializationManager实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 18开始支持。
+空间音频管理。在使用AudioSpatializationManager的接口前，需要使用 [getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager)获取 AudioSpatializationManager实例。
 
 **起始版本：** 23
 
@@ -18,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## downloadPersonalizedHRTF
@@ -45,13 +38,13 @@ downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hrtfDescriptor | [AudioHRTFAnonymousDescriptor](arkts-audio-audio-audiohrtfanonymousdescriptor-i-sys.md) | 是 | 要下载的个性化HRTF数据描述符。 |
+| hrtfDescriptor | [AudioHRTFAnonymousDescriptor](arkts-audio-audio-audiohrtfanonymousdescriptor-i-sys.md) | 是 | 个性化HRTF数据描述符，用于下载。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 201 - 权限被拒绝。 |
+| Promise&lt;void&gt; | Promise 对象，返回 void。 |
 
 **错误码：**
 
@@ -70,7 +63,7 @@ downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<
 getCurrentSpatialAudioSourceType(): SpatialAudioSourceType
 ```
 
-查询当前空间音频源类型。
+获取当前空间音频源类型。
 
 **起始版本：** 24
 
@@ -86,7 +79,7 @@ getCurrentSpatialAudioSourceType(): SpatialAudioSourceType
 
 | 类型 | 说明 |
 | --- | --- |
-| [SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md) | The spatial audio source type on the current device. |
+| [SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md) | 当前设备的空间音频源类型。 |
 
 **错误码：**
 
@@ -115,7 +108,7 @@ try {
 getSpatializationSceneType(): AudioSpatializationSceneType
 ```
 
-Get spatialization rendering scene type.
+查询当前空间音频渲染场景类型，同步返回结果。
 
 **起始版本：** 23
 
@@ -129,7 +122,7 @@ Get spatialization rendering scene type.
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioSpatializationSceneType](arkts-audio-audio-audiospatializationscenetype-e-sys.md) | Current spatialization rendering scene type. |
+| [AudioSpatializationSceneType](arkts-audio-audio-audiospatializationscenetype-e-sys.md) | 返回当前空间音频渲染场景类型。 |
 
 **错误码：**
 
@@ -158,7 +151,7 @@ try {
 isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean
 ```
 
-Checks whether the adaptive spatial rendering is enabled by the specified device.
+检查指定设备是否启用了自适应空间渲染。
 
 **起始版本：** 24
 
@@ -172,13 +165,13 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | The target device to be check whether the adaptive spatial rendering is enabled. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 目标设备，用于检查是否启用了自适应空间渲染。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether the adaptive spatial rendering is enabled by the specified device. |
+| boolean | 指定设备是否启用了自适应空间渲染。 |
 
 **错误码：**
 
@@ -225,7 +218,13 @@ try {
 isHeadTrackingEnabled(): boolean
 ```
 
-Checks whether the head tracking is enabled.
+获取头动跟踪是否开启，同步返回结果。
+
+> **说明：**
+> 
+> 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
+> [isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isheadtrackingenabled)
+> 替代。
 
 **起始版本：** 11
 
@@ -243,7 +242,7 @@ Checks whether the head tracking is enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether the head tracking is enabled. |
+| boolean | 返回头动跟踪是否开启，true为开启，false为未开启。 |
 
 **错误码：**
 
@@ -300,7 +299,7 @@ try {
 isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean
 ```
 
-Checks whether the head tracking is enabled by the specified device.
+获取指定设备的头动跟踪是否开启，同步返回结果。
 
 **起始版本：** 23
 
@@ -314,13 +313,13 @@ Checks whether the head tracking is enabled by the specified device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 指定设备的描述。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether the head tracking is enabled by the specified device. |
+| boolean | 返回指定设备的头动跟踪是否开启，true为开启，false为未开启。 |
 
 **错误码：**
 
@@ -340,7 +339,7 @@ Checks whether the head tracking is enabled by the specified device.
 isHeadTrackingSupported(): boolean
 ```
 
-Checks whether head tracking is supported by system.
+获取系统是否支持头动跟踪，同步返回结果。
 
 **起始版本：** 23
 
@@ -354,7 +353,7 @@ Checks whether head tracking is supported by system.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether head tracking is supported by system. |
+| boolean | 返回系统是否支持头动跟踪，true为支持，false为不支持。 |
 
 **错误码：**
 
@@ -383,7 +382,7 @@ try {
 isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean
 ```
 
-Checks whether head tracking is supported by the specified device.
+获取指定设备是否支持头动跟踪，同步返回结果。
 
 **起始版本：** 23
 
@@ -397,13 +396,13 @@ Checks whether head tracking is supported by the specified device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 指定设备的描述。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether head tracking is supported by the specified device. |
+| boolean | 返回指定设备是否支持头动跟踪，true为支持，false为不支持。 |
 
 **错误码：**
 
@@ -449,7 +448,7 @@ try {
 isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor): boolean
 ```
 
-检查指定设备是否启用了个性化空间。
+检查指定设备是否启用了个性化空间化功能。
 
 **起始版本：** 26.0.0
 
@@ -471,7 +470,7 @@ isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor):
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Returns true if the personalized spatialization is successfully enabled, otherwise returns false. |
+| boolean | 如果个性化空间化成功启用，则返回 true，否则返回 false。 |
 
 **错误码：**
 
@@ -502,7 +501,7 @@ isPersonalizedSpatializationSupported(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether personalized spatialization is supported by system. |
+| boolean | 系统是否支持个性化空间化。 |
 
 **错误码：**
 
@@ -516,7 +515,13 @@ isPersonalizedSpatializationSupported(): boolean
 isSpatializationEnabled(): boolean
 ```
 
-Checks whether the spatialization is enabled.
+获取空间音频渲染是否开启，同步返回结果。
+
+> **说明：**
+> 
+> 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
+> [isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isspatializationenabled)
+> 替代。
 
 **起始版本：** 11
 
@@ -534,7 +539,7 @@ Checks whether the spatialization is enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether the spatialization is enabled. |
+| boolean | 返回空间音频渲染是否开启，true为开启，false为未开启。 |
 
 **错误码：**
 
@@ -591,7 +596,7 @@ try {
 isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean
 ```
 
-Checks whether the spatialization is enabled by the specified device.
+获取指定设备的空间音频渲染是否开启，同步返回结果。
 
 **起始版本：** 23
 
@@ -605,13 +610,13 @@ Checks whether the spatialization is enabled by the specified device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 指定设备的描述。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether the spatialization is enabled by the specified device. |
+| boolean | 返回指定设备的空间音频渲染是否开启，true为开启，false为未开启。 |
 
 **错误码：**
 
@@ -631,7 +636,7 @@ Checks whether the spatialization is enabled by the specified device.
 isSpatializationSupported(): boolean
 ```
 
-Checks whether spatialization is supported by system.
+获取系统是否支持空间音频，同步返回结果。
 
 **起始版本：** 23
 
@@ -645,7 +650,7 @@ Checks whether spatialization is supported by system.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether spatialization is supported by system. |
+| boolean | 返回系统是否支持空间音频，true为支持，false为不支持。 |
 
 **错误码：**
 
@@ -673,7 +678,7 @@ try {
 isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean
 ```
 
-Checks whether spatialization is supported by the specified device.
+获取指定设备是否支持空间音频，同步返回结果。
 
 **起始版本：** 23
 
@@ -687,13 +692,13 @@ Checks whether spatialization is supported by the specified device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 指定设备的描述。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether spatialization is supported by the specified device. |
+| boolean | 返回指定设备是否支持空间音频，true为支持，false为不支持。 |
 
 **错误码：**
 
@@ -739,7 +744,13 @@ try {
 off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes to the head tracking enable state change events.
+取消监听头动跟踪开关状态变化事件。使用callback异步回调。
+
+> **说明：**
+> 
+> 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
+> [off('headTrackingEnabledChangeForAnyDevice')](#offheadtrackingenabledchangeforanydevice)
+> 替代。
 
 **起始版本：** 11
 
@@ -757,8 +768,8 @@ Unsubscribes to the head tracking enable state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Callback used to get the head tracking enable state. |
+| type | 'headTrackingEnabledChange' | 是 | 事件回调类型，支持的事件为'headTrackingEnabledChange'，当取消监听头动跟踪开关状态变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。返回true表示头动跟踪已打开；返回false表示头动跟踪已关闭。 |
 
 **错误码：**
 
@@ -792,7 +803,7 @@ audioSpatializationManager.off('headTrackingEnabledChange', headTrackingEnabledC
 off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Unsubscribes to the head tracking enable state change events by the specified device.
+取消监听头动跟踪开关状态变化事件。使用callback异步回调。
 
 **起始版本：** 12
 
@@ -806,8 +817,8 @@ Unsubscribes to the head tracking enable state change events by the specified de
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
+| type | 'headTrackingEnabledChangeForAnyDevice' | 是 | 事件回调类型，支持的事件为'headTrackingEnabledChangeForAnyDevice'，当取消监听头动跟踪 开关状态变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | 回调函数。返回true表示头动跟踪已打开；返回false表示头动跟踪已关闭。 |
 
 **错误码：**
 
@@ -842,7 +853,13 @@ audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice', headTrac
 off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes to the spatialization enable state change events.
+取消监听空间音频渲染开关状态变化事件。使用callback异步回调。
+
+> **说明：**
+> 
+> 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
+> [off('spatializationEnabledChangeForAnyDevice')](#offspatializationenabledchangeforanydevice)
+> 替代。
 
 **起始版本：** 11
 
@@ -860,8 +877,8 @@ Unsubscribes to the spatialization enable state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Callback used to get the spatialization enable state. |
+| type | 'spatializationEnabledChange' | 是 | 事件回调类型，支持的事件为'spatializationEnabledChange'，当取消监听空间音频渲染开关状态变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。返回true表示音频渲染已打开；返回false表示音频渲染已关闭。 |
 
 **错误码：**
 
@@ -893,7 +910,7 @@ audioSpatializationManager.off('spatializationEnabledChange', spatializationEnab
 off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Unsubscribes to the spatialization enable state change events by the specified device.
+取消监听空间音频渲染开关状态变化事件。使用callback异步回调。
 
 **起始版本：** 12
 
@@ -907,8 +924,8 @@ Unsubscribes to the spatialization enable state change events by the specified d
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
+| type | 'spatializationEnabledChangeForAnyDevice' | 是 | 事件回调类型，支持的事件为'spatializationEnabledChangeForAnyDevice'，当取消监听 空间音频渲染开关状态变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | 回调函数，返回设备信息和空间音频渲染开关状态。 |
 
 **错误码：**
 
@@ -943,7 +960,7 @@ audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice', spatia
 offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Unsubscribes to the adaptive spatial rendering enable state change events.
+取消订阅指定设备的自适应空间渲染启用状态变更事件。
 
 **起始版本：** 24
 
@@ -957,7 +974,7 @@ Unsubscribes to the adaptive spatial rendering enable state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | 回调函数，用于通过指定设备获取自适应空间渲染的启用状态。 |
 
 **错误码：**
 
@@ -991,7 +1008,7 @@ audioSpatializationManager.offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(
 offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Unsubscribes to the head tracking enable state change events by the specified device.
+取消监听头动跟踪开关状态变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1005,7 +1022,7 @@ Unsubscribes to the head tracking enable state change events by the specified de
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | 回调函数。返回true表示头动跟踪已打开；返回false表示头动跟踪已关闭。 |
 
 **错误码：**
 
@@ -1040,7 +1057,7 @@ offPersonalizedSpatializationEnabledChangeForAnyDevice(
       callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-取消订阅指定设备的个性化空间启用状态更改事件。 当状态发生变化时，已注册的客户端将收到回调。
+取消订阅由指定设备触发的个性化空间化状态变更事件。当状态发生变化时，已注册的客户端将收到回调通知。
 
 **起始版本：** 26.0.0
 
@@ -1056,7 +1073,7 @@ offPersonalizedSpatializationEnabledChangeForAnyDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 否 | 回调用于通过所述指定设备获取所述个性化空间化使能状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 否 | 回调函数， 用于获取指定设备上已启用的个性化空间化状态。 |
 
 **错误码：**
 
@@ -1070,7 +1087,7 @@ offPersonalizedSpatializationEnabledChangeForAnyDevice(
 offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void
 ```
 
-取消订阅空间音频源类型变更事件。
+取消订阅空间音频源类型更改事件。
 
 **起始版本：** 24
 
@@ -1086,7 +1103,7 @@ offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 否 | 回调用于 接收当前空间音频源类型变化 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 否 | 回调函数，用于接收当前空间音频源类型变更。 |
 
 **错误码：**
 
@@ -1117,7 +1134,7 @@ audioSpatializationManager.offSpatialAudioSourceTypeChange(spatialAudioSourceTyp
 offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Unsubscribes to the spatialization enable state change events by the specified device.
+取消监听空间音频渲染开关状态变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1131,7 +1148,7 @@ Unsubscribes to the spatialization enable state change events by the specified d
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | 回调函数，返回设备信息和空间音频渲染开关状态。 |
 
 **错误码：**
 
@@ -1163,7 +1180,13 @@ audioSpatializationManager.offSpatializationEnabledChangeForAnyDevice(spatializa
 on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the head tracking enable state change events. When the head tracking enable state changes, registered clients will receive the callback.
+监听头动跟踪开关状态变化事件（当动跟踪开关状态发生变化时触发）。使用callback异步回调。
+
+> **说明：**
+> 
+> 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
+> [on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback&lt;AudioSpatialEnabledStateForDevice\&gt;): void](#onheadtrackingenabledchangeforanydevice)
+> 替代。
 
 **起始版本：** 11
 
@@ -1181,8 +1204,8 @@ Subscribes to the head tracking enable state change events. When the head tracki
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the head tracking enable state. |
+| type | 'headTrackingEnabledChange' | 是 | 事件回调类型，支持的事件为'headTrackingEnabledChange'，当动跟踪开关状态发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示头动跟踪已打开；返回false表示头动跟踪已关闭。 |
 
 **错误码：**
 
@@ -1208,7 +1231,7 @@ audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnable
 on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
+监听头动跟踪开关状态变化事件（当动跟踪开关状态发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 12
 
@@ -1222,8 +1245,8 @@ Subscribes to the head tracking enable state change events by the specified devi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
+| type | 'headTrackingEnabledChangeForAnyDevice' | 是 | 事件回调类型，支持的事件为'headTrackingEnabledChangeForAnyDevice'，当动跟踪开关状态发 生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | 回调函数。返回true表示头动跟踪已打开；返回false表示头动跟踪已关闭。 |
 
 **错误码：**
 
@@ -1250,7 +1273,13 @@ audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpa
 on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the spatialization enable state change events. When the spatialization enable state changes, registered clients will receive the callback.
+监听空间音频渲染开关状态变化事件（当空间音频渲染开关状态发生变化时触发）。使用callback异步回调。
+
+> **说明：**
+> 
+> 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
+> [on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback&lt;AudioSpatialEnabledStateForDevice\&gt;): void](#onspatializationenabledchangeforanydevice)
+> 替代。
 
 **起始版本：** 11
 
@@ -1268,8 +1297,8 @@ Subscribes to the spatialization enable state change events. When the spatializa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the spatialization enable state. |
+| type | 'spatializationEnabledChange' | 是 | 事件回调类型，支持的事件为'spatializationEnabledChange'，当空间音频渲染开关状态发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示音频渲染已打开；返回false表示音频渲染已关闭。 |
 
 **错误码：**
 
@@ -1295,7 +1324,7 @@ audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEn
 on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
+监听空间音频渲染开关状态变化事件（当空间音频渲染开关状态发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 12
 
@@ -1309,8 +1338,8 @@ Subscribes to the spatialization enable state change events by the specified dev
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
+| type | 'spatializationEnabledChangeForAnyDevice' | 是 | 事件回调类型，支持的事件为'spatializationEnabledChangeForAnyDevice'，当空间音频 渲染开关状态发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | 回调函数，返回设备信息和空间音频渲染开关状态。 |
 
 **错误码：**
 
@@ -1337,7 +1366,7 @@ audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioS
 onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the adaptive spatial rendering enable state change events. When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
+订阅指定设备的自适应空间渲染启用状态变更事件。当自适应空间渲染启用状态发生变化时，已注册的客户端将收到回调。
 
 **起始版本：** 24
 
@@ -1351,7 +1380,7 @@ Subscribes to the adaptive spatial rendering enable state change events. When th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | 回调函数，用于通过指定设备获取自适应空间渲染的启用状态。 |
 
 **错误码：**
 
@@ -1377,7 +1406,7 @@ audioSpatializationManager.onAdaptiveSpatialRenderingEnabledChangeForAnyDevice((
 onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
+订阅指定设备的头部追踪启用状态变更事件。 当头部追踪启用状态发生变化时，已注册的客户端将收到回调。
 
 **起始版本：** 23
 
@@ -1391,7 +1420,7 @@ Subscribes to the head tracking enable state change events by the specified devi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | 回调函数用于获取指定设备的头部跟踪启用状态。 |
 
 **错误码：**
 
@@ -1416,7 +1445,7 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
       callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-指定设备订阅个性化空间化使能状态变更事件。 当状态发生变化时，已注册的客户端将收到回调。
+订阅由指定设备触发的个性化空间化状态变更事件。当状态发生变化时，已注册的客户端将收到回调通知。
 
 **起始版本：** 26.0.0
 
@@ -1432,7 +1461,7 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 是 | 回调用于 通过所述指定设备获取所述个性化空间化使能状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 是 | 回调函数， 用于获取指定设备上已启用的个性化空间化状态。 |
 
 **错误码：**
 
@@ -1446,7 +1475,7 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
 onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 ```
 
-订阅空间音源类型变化事件。当当前空间音源类型发生变化时， 注册的客户端将收到回调。
+订阅空间音频源类型更改事件。当当前空间音频源类型发生变化时，注册的客户端将收到回调通知。
 
 **起始版本：** 24
 
@@ -1462,7 +1491,7 @@ onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 是 | 回调用于 接收所述当前空间音源类型。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 是 | 回调函数，用于接收当前空间音频源类型。 |
 
 **错误码：**
 
@@ -1487,7 +1516,7 @@ audioSpatializationManager.onSpatialAudioSourceTypeChange((spatialAudioSourceTyp
 onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
+监听空间音频渲染开关状态变化事件（当空间音频渲染开关状态发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1501,7 +1530,7 @@ Subscribes to the spatialization enable state change events by the specified dev
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | 回调函数，返回设备信息和空间音频渲染开关状态。 |
 
 **错误码：**
 
@@ -1527,7 +1556,7 @@ audioSpatializationManager.onSpatializationEnabledChangeForAnyDevice((audioSpati
 setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the adaptive spatial rendering enabled or disabled by the specified device. This method uses a promise to return the result. When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
+设置指定设备是否启用自适应空间渲染。 该方法使用 Promise 返回结果。 当启用自适应空间渲染时，空间音频渲染将不会对立体声音频生效。
 
 **起始版本：** 24
 
@@ -1543,14 +1572,14 @@ Sets the adaptive spatial rendering enabled or disabled by the specified device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | The target device to be set adaptive spatial rendering enabled. |
-| enabled | boolean | 是 | Adaptive spatial rendering enable state. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 目标设备需启用自适应空间渲染功能。 |
+| enabled | boolean | 是 | 自适应空间渲染启用状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -1597,7 +1626,13 @@ audioSpatializationManager.setAdaptiveSpatialRenderingEnabled(deviceDescriptor, 
 setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets the head tracking enabled or disabled. This method uses an asynchronous callback to return the result.
+根据输入指令，开启/关闭头动跟踪效果。使用callback异步回调。
+
+> **说明：**
+> 
+> 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
+> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setheadtrackingenabled)
+> 替代。
 
 **起始版本：** 11
 
@@ -1617,8 +1652,8 @@ Sets the head tracking enabled or disabled. This method uses an asynchronous cal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | Head tracking enable state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| enable | boolean | 是 | 表示开启/关闭头动跟踪。true为开启，false为关闭。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启/关闭头动跟踪效果成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1692,7 +1727,13 @@ audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then
 setHeadTrackingEnabled(enable: boolean): Promise<void>
 ```
 
-Sets the head tracking enabled or disabled. This method uses a promise to return the result.
+根据输入指令，开启/关闭头动跟踪效果。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
+> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setheadtrackingenabled)
+> 替代。
 
 **起始版本：** 11
 
@@ -1712,13 +1753,13 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | Head tracking enable state. |
+| enable | boolean | 是 | 表示开启/关闭头动跟踪。true为开启，false为关闭。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1738,7 +1779,7 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the head tracking enabled or disabled by the specified device. This method uses a promise to return the result.
+根据输入指令，开启/关闭指定设备的头动跟踪效果。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -1754,14 +1795,14 @@ Sets the head tracking enabled or disabled by the specified device. This method 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | Audio device description. |
-| enabled | boolean | 是 | Head tracking enable state. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 设备描述符。 |
+| enabled | boolean | 是 | 表示开启/关闭头动跟踪。true为开启，false为关闭。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1783,7 +1824,7 @@ setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
       enable: boolean): Promise<void>
 ```
 
-设置由指定设备启用或禁用的个性化空间化。
+设置指定设备是否启用个性化空间化。
 
 **起始版本：** 26.0.0
 
@@ -1802,13 +1843,13 @@ setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | selectedAudioDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 音频设备描述。 |
-| enable | boolean | 是 | 是否开启个性化空间化。 |
+| enable | boolean | 是 | 是否启用个性化空间化。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise用于返回结果。 |
+| Promise&lt;void&gt; | 承诺用于返回结果。 |
 
 **错误码：**
 
@@ -1824,7 +1865,13 @@ setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
 setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets the spatialization enabled or disabled. This method uses an asynchronous callback to return the result.
+根据输入指令，开启/关闭空间音频渲染效果。使用callback异步回调。
+
+> **说明：**
+> 
+> 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
+> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setspatializationenabled)
+> 替代。
 
 **起始版本：** 11
 
@@ -1844,8 +1891,8 @@ Sets the spatialization enabled or disabled. This method uses an asynchronous ca
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | Spatialization enable state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| enable | boolean | 是 | 表示开启/关闭空间音频渲染。true为开启，false为关闭。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启/关闭空间音频渲染效果成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1919,7 +1966,13 @@ audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).t
 setSpatializationEnabled(enable: boolean): Promise<void>
 ```
 
-Sets the spatialization enabled or disabled. This method uses a promise to return the result.
+根据输入指令，开启/关闭空间音频渲染效果。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
+> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setspatializationenabled)
+> 替代。
 
 **起始版本：** 11
 
@@ -1939,13 +1992,13 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | Spatialization enable state. |
+| enable | boolean | 是 | 表示开启/关闭空间音频渲染。true为开启，false为关闭。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1965,7 +2018,7 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the spatialization enabled or disabled by the specified device. This method uses a promise to return the result.
+根据输入指令，开启/关闭指定设备的空间音频渲染效果。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -1981,14 +2034,14 @@ Sets the spatialization enabled or disabled by the specified device. This method
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | Audio device description. |
-| enabled | boolean | 是 | Spatialization enable state. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 指定设备的描述。 |
+| enabled | boolean | 是 | 表示开启/关闭空间音频渲染。true为开启，false为关闭。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2009,7 +2062,7 @@ Sets the spatialization enabled or disabled by the specified device. This method
 setSpatializationSceneType(spatializationSceneType: AudioSpatializationSceneType): void
 ```
 
-Set spatialization rendering scene type.
+设置空间音频渲染场景类型，同步返回结果。
 
 **起始版本：** 23
 
@@ -2025,7 +2078,7 @@ Set spatialization rendering scene type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spatializationSceneType | [AudioSpatializationSceneType](arkts-audio-audio-audiospatializationscenetype-e-sys.md) | 是 | Spatialization scene type. |
+| spatializationSceneType | [AudioSpatializationSceneType](arkts-audio-audio-audiospatializationscenetype-e-sys.md) | 是 | 需要设置的空间音频渲染场景类型。 |
 
 **错误码：**
 
@@ -2057,7 +2110,7 @@ try {
 updateSpatialDeviceState(spatialDeviceState: AudioSpatialDeviceState): void
 ```
 
-Updates the spatial device state.
+更新空间化设备状态，同步返回结果。
 
 **起始版本：** 23
 
@@ -2073,7 +2126,7 @@ Updates the spatial device state.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spatialDeviceState | [AudioSpatialDeviceState](arkts-audio-audio-audiospatialdevicestate-i-sys.md) | 是 | Spatial device state. |
+| spatialDeviceState | [AudioSpatialDeviceState](arkts-audio-audio-audiospatialdevicestate-i-sys.md) | 是 | 需要更新的空间化设备状态。 |
 
 **错误码：**
 

@@ -37,7 +37,7 @@ function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void
 | [9700001](../errorcode-workScheduler.md#9700001-内存操作失败) | Memory operation failed. |
 | [9700002](../errorcode-workScheduler.md#9700002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
 | [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
-| [9700004](../errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on workInfo failed. |
+| [9700004](../errorcode-workScheduler.md#9700004-参数校验失败) | Check on workInfo failed. |
 
 **示例**
 
@@ -133,7 +133,7 @@ function getWorkStatus(workId: int): Promise<WorkInfo>
 | [9700001](../errorcode-workScheduler.md#9700001-内存操作失败) | Memory operation failed. |
 | [9700002](../errorcode-workScheduler.md#9700002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
 | [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
-| [9700004](../errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on workInfo failed. |
+| [9700004](../errorcode-workScheduler.md#9700004-参数校验失败) | Check on workInfo failed. |
 
 **示例**
 

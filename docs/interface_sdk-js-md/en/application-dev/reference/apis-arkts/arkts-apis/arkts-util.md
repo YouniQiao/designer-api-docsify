@@ -11,42 +11,7 @@ The util module provides common utility functions, such as [TextEncoder](../../a
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
-import { ArrayListComparatorFn } from '@kit.ArkTS';
-import { ArrayListForEachCb } from '@kit.ArkTS';
-import { ArrayListReplaceCb } from '@kit.ArkTS';
 import { util } from '@kit.ArkTS';
-import { Deque } from '@kit.ArkTS';
-import { DequeForEachCb } from '@kit.ArkTS';
-import { HashMap } from '@kit.ArkTS';
-import { HashMapCbFn } from '@kit.ArkTS';
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
-import { LightWeightSet } from '@kit.ArkTS';
-import { LightWeightSetForEachCb } from '@kit.ArkTS';
-import { LinkedList } from '@kit.ArkTS';
-import { LinkedListForEachCb } from '@kit.ArkTS';
-import { List } from '@kit.ArkTS';
-import { ListComparatorFn } from '@kit.ArkTS';
-import { ListForEachCb } from '@kit.ArkTS';
-import { ListReplaceCb } from '@kit.ArkTS';
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
-import { Queue } from '@kit.ArkTS';
-import { QueueForEachCb } from '@kit.ArkTS';
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
-import { TreeMap } from '@kit.ArkTS';
-import { TreeMapForEachCb } from '@kit.ArkTS';
-import { TreeMapComparator } from '@kit.ArkTS';
-import { TreeSet } from '@kit.ArkTS';
-import { TreeSetForEachCb } from '@kit.ArkTS';
-import { TreeSetComparator } from '@kit.ArkTS';
-import { stream } from '@kit.ArkTS';
-import { Vector } from '@kit.ArkTS';
-import { JSON } from '@kit.ArkTS';
 ```
 
 ## Summary
@@ -83,7 +48,7 @@ import { JSON } from '@kit.ArkTS';
 | [Scope](arkts-arkts-util-scope-c.md) | The Scope interface is used to describe the valid range of a field. |
 | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Provides APIs to define the valid range of a field. The constructor of this class creates comparable objects with lower and upper limits. |
 | [StringDecoder](arkts-arkts-util-stringdecoder-c.md) | Provides the capability of decoding binary streams into strings. The following encoding types are supported: utf-8, iso-8859-2, koi8-r, macintosh, windows-1250, windows-1251, gbk, gb18030, big5, utf-16be, and UTF-16le. |
-| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | Provides APIs to decode byte arrays into strings. It supports multiple formats, including UTF-8, UTF-16LE, UTF-16BE , ISO-8859, and Windows-1251. |
+| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | Provides APIs to decode byte arrays into strings. It supports multiple formats, including UTF-8, UTF-16LE, UTF-16BE, ISO-8859, and Windows-1251. |
 | [TextEncoder](arkts-arkts-util-textencoder-c.md) | Provides APIs to encode strings into byte arrays. Multiple encoding formats are supported. When **TextEncoder** is used for encoding, the number of bytes occupied by a character varies according to the encoding format. You must explicitly specify the encoding format to obtain the required encoding result. |
 | [types](arkts-arkts-util-types-c.md) | Provides APIs to check different types of built-in objects, such as ArrayBuffer, Map, and Set, so as to avoid exceptions caused by type errors. |
 
@@ -96,7 +61,7 @@ import { JSON } from '@kit.ArkTS';
 | [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | Defines whether decoding follows data blocks. |
 | [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | Encrypted information, including the number of read characters and the number of written bytes. |
 | [HeapMemoryInfo](arkts-arkts-util-heapmemoryinfo-i.md) | Describes heap memory information of either an ArkTS-VM, or the shared heap memory of current process. |
-| [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Describes the heap memory threshold at which the registered callback is triggered after a GC. |
+| [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Describes the heap memory threshold at which the registered callback is triggered after a GC.@interface HeapMemoryThreshold |
 | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | Multi-thread detection functional parameter configuration |
 | [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | The values of the **ScopeComparable** type are used to implement the **compareTo** method. Therefore, ensure that the input parameters are comparable. |
 | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | Describes decoding-related options, which include **fatal** and **ignoreBOM**. |

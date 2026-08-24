@@ -1,8 +1,6 @@
 # Edge
 
-Edge.
-
-@enum { number }
+Edge.@enum { number }
 
 **Since:** 23
 

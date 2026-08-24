@@ -1,8 +1,6 @@
 # GuideLineStyle
 
-Specifies the GuideLineStyle of relative container
-
-@interface GuideLineStyle
+Specifies the GuideLineStyle of relative container@interface GuideLineStyle
 
 **Since:** 23
 

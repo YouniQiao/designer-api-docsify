@@ -20,8 +20,7 @@ import { tag } from '@kit.ConnectivityKit';
 extrasData: PacMap[]
 ```
 
-标签所支持技术的扩展属性值。
-
+标签所支持技术的扩展属性值。  
 **系统接口：** 此接口为系统接口。
 
 **类型：** [PacMap](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-pacmap-i.md)[]
@@ -42,8 +41,7 @@ extrasData: PacMap[]
 remoteTagService: rpc.RemoteObject
 ```
 
-NFC服务进程的远端对象，用于客户端和服务之间的接口通信。
-
+NFC服务进程的远端对象，用于客户端和服务之间的接口通信。  
 **系统接口：** 此接口为系统接口。
 
 **类型：** rpc.RemoteObject
@@ -64,8 +62,7 @@ NFC服务进程的远端对象，用于客户端和服务之间的接口通信�
 tagRfDiscId: int
 ```
 
-标签发现时分配的ID值。
-
+标签发现时分配的ID值。  
 **系统接口：** 此接口为系统接口。
 
 **类型：** int

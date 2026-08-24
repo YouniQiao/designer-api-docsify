@@ -2,10 +2,8 @@
 
 智慧手势点击动作处理。当通过[registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)的selectedProposal为该类型对象，会触发目标组件的点击操作。
 
-> **说明：**
-> 
-> - 该动作处理遵循“先选中，再点击”的处理语义。
-> 
+> **说明：**&gt;
+> - 该动作处理遵循“先选中，再点击”的处理语义。&gt;
 > - 当目标节点尚未被选中时，本次处理会优先建立选中态，而不会立即触发点击。
 
 **继承/实现关系：** ClickActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)

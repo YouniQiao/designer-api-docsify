@@ -1,8 +1,6 @@
 # HoverEvent
 
-The hover action triggers this method invocation.
-
-@extends BaseEvent
+The hover action triggers this method invocation.@extends BaseEvent
 
 **继承/实现关系：** HoverEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 

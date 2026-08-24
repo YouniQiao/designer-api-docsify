@@ -56,9 +56,7 @@ appIdentifier: string
 appIndex: number
 ```
 
-表示分身应用的索引，默认值为0。
-
-appIndex为0时，表示主应用。appIndex大于0时，表示指定的分身应用。
+表示分身应用的索引，默认值为0。appIndex为0时，表示主应用。appIndex大于0时，表示指定的分身应用。
 
 **类型：** number
 

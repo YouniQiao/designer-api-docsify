@@ -4,7 +4,7 @@
 type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult
 ```
 
-Type definition of callback function for audio renderer write data.
+音频渲染器写入数据的回调函数类型定义。
 
 **起始版本：** 23
 
@@ -16,11 +16,11 @@ Type definition of callback function for audio renderer write data.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | 是 | audio data array buffer. |
+| data | ArrayBuffer | 是 | 音频数据数组缓冲区。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) | result of callback. If AudioDataCallbackResult.VALID is returned, it indicates the data is valid and will be played. If AudioDataCallbackResult.INVALID is returned, it indicates the data is will not be played. |
+| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) | 回调结果。如果返回 AudioDataCallbackResult.VALID， 表示数据有效并将被播放。如果返回 AudioDataCallbackResult.INVALID， 表示数据将不会被播放。 |
 

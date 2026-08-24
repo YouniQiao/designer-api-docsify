@@ -6,6 +6,8 @@ Defines accessibility of suffix symbol.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2SuffixSymbolIcon--><!--Device-unnamed-export declare class ChipV2SuffixSymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -43,8 +45,7 @@ The constructor of ChipV2SuffixSymbolIcon
 ## action
 
 ```TypeScript
-@Trace
-  public action?: VoidCallback
+public action?: VoidCallback
 ```
 
 Called when suffix symbol is clicked.
@@ -52,6 +53,8 @@ Called when suffix symbol is clicked.
 **Type:** VoidCallback
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,8 +67,7 @@ Called when suffix symbol is clicked.
 ## activatedAccessibility
 
 ```TypeScript
-@Trace
-  public activatedAccessibility?: ChipV2Accessibility
+public activatedAccessibility?: ChipV2Accessibility
 ```
 
 Set activated accessibility config for suffix symbol.
@@ -73,6 +75,8 @@ Set activated accessibility config for suffix symbol.
 **Type:** [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +89,7 @@ Set activated accessibility config for suffix symbol.
 ## normalAccessibility
 
 ```TypeScript
-@Trace
-  public normalAccessibility?: ChipV2Accessibility
+public normalAccessibility?: ChipV2Accessibility
 ```
 
 Set normal accessibility config for suffix symbol.
@@ -94,6 +97,8 @@ Set normal accessibility config for suffix symbol.
 **Type:** [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -20,9 +20,7 @@ import { GridObjectSortComponentType, GridObjectSortComponentItem, GridObjectSor
 id: number | string
 ```
 
-Data ID, which must be unique.
-
-The default value is an empty string.
+Data ID, which must be unique.The default value is an empty string.
 
 **Type:** number \| string
 
@@ -42,11 +40,7 @@ The default value is an empty string.
 order: number
 ```
 
-Sequence number.
-
-The value must be greater than or equal to 0.
-
-Default value: **0**.
+Sequence number.The value must be greater than or equal to 0.Default value: **0**.
 
 **Type:** number
 

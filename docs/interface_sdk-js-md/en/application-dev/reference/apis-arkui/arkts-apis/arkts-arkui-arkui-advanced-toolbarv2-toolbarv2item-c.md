@@ -4,6 +4,8 @@ Declare type ToolBarV2Item
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2Item--><!--Device-unnamed-export declare class ToolBarV2Item-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ The constructor used to create a ToolBarV2Item object.
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  accessibilityDescription?: ResourceStr
+accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of item.
@@ -50,6 +51,8 @@ The accessibilityDescription of item.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ The accessibilityDescription of item.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  accessibilityLevel?: string
+accessibilityLevel?: string
 ```
 
 The accessibilityLevel of item.
@@ -73,6 +75,8 @@ The accessibilityLevel of item.
 **Default:** "auto"
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +89,7 @@ The accessibilityLevel of item.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  accessibilityText?: ResourceStr
+accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of item.
@@ -94,6 +97,8 @@ The accessibilityText of item.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +111,7 @@ The accessibilityText of item.
 ## action
 
 ```TypeScript
-@Trace
-  action?: ToolBarV2ItemAction
+action?: ToolBarV2ItemAction
 ```
 
 Define the action event.
@@ -115,6 +119,8 @@ Define the action event.
 **Type:** [ToolBarV2ItemAction](arkts-arkui-toolbarv2itemaction-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,8 +133,7 @@ Define the action event.
 ## content
 
 ```TypeScript
-@Trace
-  content: ToolBarV2ItemText
+content: ToolBarV2ItemText
 ```
 
 Define text content.
@@ -136,6 +141,8 @@ Define text content.
 **Type:** [ToolBarV2ItemText](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemtext-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,8 +155,7 @@ Define text content.
 ## icon
 
 ```TypeScript
-@Trace
-  icon?: ToolBarV2ItemIconType
+icon?: ToolBarV2ItemIconType
 ```
 
 Define icon resource.
@@ -157,6 +163,8 @@ Define icon resource.
 **Type:** [ToolBarV2ItemIconType](arkts-arkui-toolbarv2itemicontype-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -169,8 +177,7 @@ Define icon resource.
 ## state
 
 ```TypeScript
-@Trace
-  state?: ToolBarV2ItemState
+state?: ToolBarV2ItemState
 ```
 
 Define item type.
@@ -178,6 +185,8 @@ Define item type.
 **Type:** [ToolBarV2ItemState](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

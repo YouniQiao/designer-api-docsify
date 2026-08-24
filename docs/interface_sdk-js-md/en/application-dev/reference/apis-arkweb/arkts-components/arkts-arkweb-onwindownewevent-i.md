@@ -11,11 +11,6 @@ Defines the callback triggered when the web page requests the user to create a w
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## handler
@@ -24,7 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 handler: ControllerHandler
 ```
 
-*WebviewController** instance for setting the new window.
+**WebviewController** instance for setting the new window.
 
 **Type:** [ControllerHandler](arkts-arkweb-controllerhandler-c.md)
 

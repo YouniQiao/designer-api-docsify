@@ -66,8 +66,7 @@ readonly bundleName: string
 readonly dimension: int
 ```
 
-卡片尺寸，用于标识卡片的大小规格。取值及其对应含义请参考[FormDimension](arkts-form-forminfo-formdimension-e.md)。
-
+卡片尺寸，用于标识卡片的大小规格。取值及其对应含义请参考[FormDimension](arkts-form-forminfo-formdimension-e.md)。  
 **说明：** 取值范围[1, 9]的整数，数值5从API version 9开始支持，从API version 20开始废弃。
 
 **类型：** int
@@ -92,7 +91,7 @@ readonly extraData?: Record<string, Object>
 
 卡片的额外数据。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **默认值：** -
 

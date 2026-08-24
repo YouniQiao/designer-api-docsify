@@ -14,8 +14,7 @@ function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void
 
 Sets whether to enable nonce for OTA update (nonce is enabled by default). When nonce is enabled, the system verifies the validity of the nonce during the OTA update process to prevent replay attacks and enhance system security.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To ensure system security, it is not advised to disable nonce verification unless required by specific use cases
 > such as intranet updates.
 

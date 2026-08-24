@@ -1,6 +1,6 @@
 # InputMethodSetting
 
-@brief In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## displayOptionalInputMethod
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 displayOptionalInputMethod(callback: AsyncCallback<void>): void
 ```
 
-@brief Displays a dialog box for selecting an input method. This API uses an asynchronous callback to return the result.
+Displays a dialog box for selecting an input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -73,7 +68,7 @@ inputMethod.getSetting().displayOptionalInputMethod().then(() => {
 displayOptionalInputMethod(): Promise<void>
 ```
 
-@brief Displays a dialog box for selecting an input method. This API uses a promise to return the result.
+Displays a dialog box for selecting an input method. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -101,7 +96,7 @@ See [displayOptionalInputMethod](#displayoptionalinputmethod)
 enableInputMethod(bundleName: string, extensionName: string, enabledState: EnabledState): Promise<void>
 ```
 
-@brief Enables or disables an input method. This API uses a promise to return the result. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '
+Enables or disables an input method. This API uses a promise to return the result. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '
 
 **Since:** -1
 
@@ -166,7 +161,7 @@ enableInputMethodSafely();
 getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-@brief Obtains a list of all input methods. This API uses an asynchronous callback to return the result.
+Obtains a list of all input methods. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -217,7 +212,7 @@ inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.Inpu
 getAllInputMethods(): Promise<Array<InputMethodProperty>>
 ```
 
-@brief Obtains a list of all input methods. This API uses a promise to return the result.
+Obtains a list of all input methods. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -248,7 +243,7 @@ See [getAllInputMethods](#getallinputmethods)
 getAllInputMethodsSync(): Array<InputMethodProperty>
 ```
 
-@brief Obtains a list of all input methods. This API returns the result synchronously.
+Obtains a list of all input methods. This API returns the result synchronously.
 
 **Since:** 23
 
@@ -281,9 +276,11 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 getCursorInfo(userId?: int): CursorInfo
 ```
 
-@brief Obtains the cursor information of a specified user. If the edit box does not notify the input method service of the cursor information, all attribute values returned are **0**. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '
+Obtains the cursor information of a specified user. If the edit box does not notify the input method service of the cursor information, all attribute values returned are **0**. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '
 
 **Since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputMethodSetting-getCursorInfo(userId?: int): CursorInfo--><!--Device-InputMethodSetting-getCursorInfo(userId?: int): CursorInfo-End-->
 
@@ -318,7 +315,7 @@ getCursorInfo(userId?: int): CursorInfo
 getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-@brief Obtains a list of activated or deactivated input methods. This API uses an asynchronous callback to return the result. <br> <br>   
+Obtains a list of activated or deactivated input methods. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -380,7 +377,7 @@ inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.Inp
 getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 ```
 
-@brief Obtains a list of activated or deactivated input methods. This API uses a promise to return the result. <br> <br>   
+Obtains a list of activated or deactivated input methods. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -427,7 +424,7 @@ See [getInputMethods](#getinputmethods)
 getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 ```
 
-@brief Obtains a list of activated or deactivated input methods. This API returns the result synchronously. <br> <br>   
+Obtains a list of activated or deactivated input methods. This API returns the result synchronously. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -476,7 +473,7 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 getInputMethodState(): Promise<EnabledState>
 ```
 
-@brief Obtains the input method state. This API uses a promise to return the result.
+Obtains the input method state. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -515,7 +512,7 @@ inputMethod.getSetting().getInputMethodState().then((status: inputMethod.Enabled
 listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void
 ```
 
-@brief Obtains all subtypes of this input method. This API uses an asynchronous callback to return the result.
+Obtains all subtypes of this input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -571,7 +568,7 @@ inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethod
 listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 ```
 
-@brief Obtains all subtypes of this input method. This API uses a promise to return the result.
+Obtains all subtypes of this input method. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -602,7 +599,7 @@ See [listCurrentInputMethodSubtype](#listcurrentinputmethodsubtype)
 listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-@brief Obtains a list of installed input methods. This API uses an asynchronous callback to return the result.
+Obtains a list of installed input methods. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -650,7 +647,7 @@ inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMe
 listInputMethod(): Promise<Array<InputMethodProperty>>
 ```
 
-@brief Obtains a list of installed input methods. This API uses a promise to return the result.
+Obtains a list of installed input methods. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -681,7 +678,7 @@ listInputMethodSubtype(
     ): void
 ```
 
-@brief Obtains all subtypes of a specified input method. This API uses an asynchronous callback to return the result.
+Obtains all subtypes of a specified input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -753,7 +750,7 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array
 listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>
 ```
 
-@brief Obtains all subtypes of a specified input method. This API uses a promise to return the result.
+Obtains all subtypes of a specified input method. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -794,7 +791,7 @@ off(
     ): void
 ```
 
-@brief Disables listening for the input method and subtype change event. This API uses an asynchronous callback to return the result.
+Disables listening for the input method and subtype change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -821,7 +818,7 @@ inputMethod.getSetting().off('imeChange');
 offImeChange(callback?: ImeChangeCallback): void
 ```
 
-@brief Unsubscribe input method or subtype change.
+Unsubscribe input method or subtype change.
 
 **Since:** 23
 
@@ -877,7 +874,7 @@ inputMethod.getSetting()
 onImeChange(callback: ImeChangeCallback): void
 ```
 
-@brief Subscribe input method or subtype change.
+Subscribe input method or subtype change.
 
 **Since:** 23
 
@@ -897,7 +894,7 @@ onImeChange(callback: ImeChangeCallback): void
 showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 ```
 
-@brief Displays a dialog box for selecting an input method. This API uses an asynchronous callback to return the result.
+Displays a dialog box for selecting an input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -959,7 +956,7 @@ inputMethod.getSetting().showOptionalInputMethods().then((result: boolean) => {
 showOptionalInputMethods(): Promise<boolean>
 ```
 
-@brief Displays a dialog box for selecting an input method. This API uses a promise to return the result.
+Displays a dialog box for selecting an input method. This API uses a promise to return the result.
 
 **Since:** 9
 

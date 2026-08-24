@@ -14,7 +14,6 @@ VPN 连接对象。在调用 VpnConnection 的方法前，需要先通过[vpn.cr
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
-import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## destroy

@@ -2,10 +2,8 @@
 
 配置分段按钮选项参数。
 
-> **说明：**
-> 
-> 1. 当配置`symbol`和`icon`时，`symbol`的显示优先级更高。
-> 
+> **说明：**&gt;
+> 1. 当配置`symbol`和`icon`时，`symbol`的显示优先级更高。&gt;
 > 2. 当`symbol`和`symbolModifier`同时设置HM Symbol资源时，`symbolModifier`设置的资源具有更高的显示优先级。
 
 **起始版本：** 23
@@ -27,7 +25,7 @@
 accessibilityDescription?: ResourceStr
 ```
 
-分段按钮选项的无障碍说明 accessibilityDescription。 默认值："" 值为undefined时，按默认值处理。
+分段按钮选项的无障碍说明 accessibilityDescription。 默认值：""值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 
@@ -47,7 +45,7 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-分段按钮选项的无障碍重要性 accessibilityLevel。 默认值："auto" 值为undefined时，按默认值处理。
+分段按钮选项的无障碍重要性 accessibilityLevel。 默认值："auto"值为undefined时，按默认值处理。
 
 **类型：** string
 
@@ -67,7 +65,7 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-分段按钮选项的无障碍文本 accessibilityText。 默认值："" 值为undefined时，按默认值处理。
+分段按钮选项的无障碍文本 accessibilityText。 默认值：""值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 

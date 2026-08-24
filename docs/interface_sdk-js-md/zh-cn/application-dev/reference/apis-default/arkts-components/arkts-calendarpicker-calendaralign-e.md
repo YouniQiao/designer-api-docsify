@@ -1,8 +1,6 @@
 # CalendarAlign
 
-对齐方式类型。
-
-@enum { int }
+对齐方式类型。@enum { int }
 
 **起始版本：** 23
 

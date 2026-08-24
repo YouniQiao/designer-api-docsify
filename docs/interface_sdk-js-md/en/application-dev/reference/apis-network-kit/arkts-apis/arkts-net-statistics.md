@@ -1,7 +1,6 @@
 # @ohos.net.statistics
 
-The Traffic Management module provides the capability to obtain device network traffic data. This module supports querying packet traffic usage from multiple dimensions, for example:
-
+The Traffic Management module provides the capability to obtain device network traffic data. This module supports querying packet traffic usage from multiple dimensions, for example:  
 - Obtaining the uplink/downlink traffic data of a specified NIC. - Obtaining the total traffic data of all NICs, facilitating the viewing of overall device network usage. - Obtaining the traffic data of a specified application based on the application UID, helping you monitor the network resource consumption of applications. - Obtaining traffic statistics for a specified socket, providing a data foundation for fine-grained network performance analysis. - Obtaining the historical traffic usage of an application within a specified time period, facilitating the analysis of long-term network usage trends of the application.
 
 **Since:** 23
@@ -30,7 +29,7 @@ import { statistics } from '@kit.NetworkKit';
 | [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md) | Obtains the total downlink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses a promise to return the result. |
 | [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md) | Obtains the total uplink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. |
 | [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md) | Obtains the total uplink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses a promise to return the result. |
-| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md) | Obtains the total downlink traffic of the specified NIC from the last startup to the time when this API is called ( in bytes). This API uses an asynchronous callback to return the result. |
+| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md) | Obtains the total downlink traffic of the specified NIC from the last startup to the time when this API is called (in bytes). This API uses an asynchronous callback to return the result. |
 | [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md) | Obtains the total downlink traffic (in bytes) of the specified NIC from the last startup to the time when this API is called. This API uses a promise to return the result. |
 | [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md) | Obtains the total uplink traffic (in bytes) of the specified NIC from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. |
 | [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md) | Obtains the total uplink traffic (in bytes) of the specified NIC from the last startup to the time when this API is called. This API uses a promise to return the result. |
@@ -52,7 +51,7 @@ import { statistics } from '@kit.NetworkKit';
 | [getMonthTrafficStats](arkts-network-statistics-getmonthtrafficstats-f-sys.md) | Get this month traffic data of the cellular network. |
 | [getTrafficPlanInfo](arkts-network-statistics-gettrafficplaninfo-f-sys.md) | Get traffic plan info. |
 | [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md) | Obtains the historical data traffic of the specified NIC. This API uses an asynchronous callback to return the result. |
-| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md) | Obtains the historical data traffic of the specified NIC. This API uses a promise to return the result. |
+| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md) | Obtains the historical data traffic of the specified NIC. This API uses a promise to return the result.  \| Name \| Type \| Mandatory\| Description \| \| --------- \| ------------------------- \| ---- \| --------------------------------------------------- \| \| ifaceInfo \| [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) \| Yes \| NIC information. For details, see [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md).\| |
 | [getTrafficStatsByNetwork](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md) | Obtains the traffic statistics of all applications on the specified network within the specified period. This API uses a promise to return the result. |
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | Obtains the historical data traffic of the specified application. This API uses an asynchronous callback to return the result. |
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | Obtains the historical data traffic of the specified application. This API uses a promise to return the result. |

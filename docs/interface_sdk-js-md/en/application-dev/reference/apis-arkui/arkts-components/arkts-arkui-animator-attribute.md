@@ -1,8 +1,6 @@
 # Animator properties/events
 
-Defines AnimatorAttribute.
-
-@extends CommonMethod&lt;AnimatorAttribute&gt;
+Defines AnimatorAttribute.@extends CommonMethod&lt;AnimatorAttribute&gt;
 
 **Inheritance/Implementation:** AnimatorAttribute extends CommonMethod<AnimatorAttribute>
 
@@ -21,6 +19,5 @@ Defines AnimatorAttribute.
 ## Modules to Import
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 

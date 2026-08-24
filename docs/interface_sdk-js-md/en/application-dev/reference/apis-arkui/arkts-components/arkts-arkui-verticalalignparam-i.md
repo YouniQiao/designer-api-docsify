@@ -1,8 +1,6 @@
 # VerticalAlignParam
 
-Defines the vertical align rule of relative container.
-
-@interface VerticalAlignParam
+Defines the vertical align rule of relative container.@interface VerticalAlignParam
 
 **Since:** 23
 
@@ -21,9 +19,7 @@ Defines the vertical align rule of relative container.
 align: VerticalAlign
 ```
 
-Sets the vertical alignment relative to the anchor component.
-
-Anonymous Object Rectification
+Sets the vertical alignment relative to the anchor component.Anonymous Object Rectification
 
 **Type:** VerticalAlign
 
@@ -43,9 +39,7 @@ Anonymous Object Rectification
 anchor: string
 ```
 
-Specifies the anchor component
-
-Anonymous Object Rectification
+Specifies the anchor component Anonymous Object Rectification
 
 **Type:** string
 

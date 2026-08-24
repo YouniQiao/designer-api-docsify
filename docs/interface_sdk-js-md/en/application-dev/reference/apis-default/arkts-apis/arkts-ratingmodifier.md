@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [RatingModifier](arkts-ratingmodifier-c.md) | Defines Rating Modifier |
+| [RatingModifier](arkts-ratingmodifier-c.md) | Defines Rating Modifier@implements { RatingAttribute, AttributeModifier&lt;RatingAttribute&gt; } |
 

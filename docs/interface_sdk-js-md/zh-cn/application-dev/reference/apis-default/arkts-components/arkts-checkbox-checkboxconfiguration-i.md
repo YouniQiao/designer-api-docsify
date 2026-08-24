@@ -38,11 +38,7 @@ name: string
 selected: boolean
 ```
 
-指示多选框是否被选中，值为true时，多选框被选中。值为false时，多选框未选中。
-
-如果select属性没有设置默认值是false。
-
-如果设置select属性，此值与设置select属性的值相同。
+指示多选框是否被选中，值为true时，多选框被选中。值为false时，多选框未选中。如果select属性没有设置默认值是false。如果设置select属性，此值与设置select属性的值相同。
 
 **类型：** boolean
 

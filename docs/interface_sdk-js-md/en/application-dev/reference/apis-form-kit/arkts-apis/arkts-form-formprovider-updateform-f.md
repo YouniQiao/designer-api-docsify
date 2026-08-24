@@ -18,8 +18,7 @@ function updateForm(
 
 Updates a widget. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Starting from API version 20, when widget refresh data is updated via shared memory, the total size of the
 > refreshed data must not exceed 10 MB, and the number of refreshed images must not exceed 20. For API version 19
 > and earlier versions, the upper limit for image files is 5, with a per-image memory limit of 2 MB. Any images
@@ -108,8 +107,7 @@ function updateForm(formId: string, formBindingData: formBindingData.FormBinding
 
 Updates a widget. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Starting from API version 20, when widget refresh data is updated via shared memory, the total size of the
 > refreshed data must not exceed 10 MB, and the number of refreshed images must not exceed 20. For API version 19
 > and earlier versions, the upper limit for image files is 5, with a per-image memory limit of 2 MB. Any images

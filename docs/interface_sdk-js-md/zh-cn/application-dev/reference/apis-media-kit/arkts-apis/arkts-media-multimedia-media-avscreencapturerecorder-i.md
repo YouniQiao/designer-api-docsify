@@ -2,8 +2,7 @@
 
 屏幕录制管理类，用于进行屏幕录制。在调用AVScreenCaptureRecorder的方法前，需要先通过 [createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md)创建一个 AVScreenCaptureRecorder实例。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 23
@@ -451,10 +450,8 @@ presentPicker(): Promise<void>
 
 录屏开始后，调用该接口再次弹出Picker，可动态更新录制源（窗口、屏幕）。使用Promise异步回调。
 
-> **说明：**
-> 
-> - 更新录制源过程中，原录制流程不中断。
-> 
+> **说明：**&gt;
+> - 更新录制源过程中，原录制流程不中断。&gt;
 > - 通过picker动态更新录制源后，按照新的录制源进行录制。
 
 **起始版本：** 23
@@ -929,9 +926,7 @@ async function testSetPickerMode() {
 skipPrivacyMode(windowIDs: Array<int>): Promise<void>
 ```
 
-录屏时，应用可对本应用的隐私窗口做安全豁免。使用Promise异步回调。
-
-如录屏时，用户在本应用进行输入密码等操作，应用不会进行黑屏处理。
+录屏时，应用可对本应用的隐私窗口做安全豁免。使用Promise异步回调。如录屏时，用户在本应用进行输入密码等操作，应用不会进行黑屏处理。
 
 **起始版本：** 23
 

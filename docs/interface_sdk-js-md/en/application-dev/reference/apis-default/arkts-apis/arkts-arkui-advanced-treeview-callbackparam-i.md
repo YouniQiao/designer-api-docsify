@@ -21,11 +21,7 @@ Declare CallbackParam
 childIndex?: int
 ```
 
-Child index.
-
-The value must be greater than or equal to -1.
-
-Default value: **-1**
+Child index.The value must be greater than or equal to -1.Default value: **-1**
 
 **Type:** int
 
@@ -45,9 +41,7 @@ Default value: **-1**
 currentNodeId: int
 ```
 
-ID of the current child node.
-
-The value must be greater than or equal to 0.
+ID of the current child node.The value must be greater than or equal to 0.
 
 **Type:** int
 
@@ -67,11 +61,7 @@ The value must be greater than or equal to 0.
 parentNodeId?: int
 ```
 
-ID of the current parent node.
-
-The value must be greater than or equal to -1.
-
-Default value: **-1**
+ID of the current parent node.The value must be greater than or equal to -1.Default value: **-1**
 
 **Type:** int
 

@@ -1,8 +1,6 @@
 # FormComponentAttribute (System API)
 
-Define the attribute functions of FormComponent.
-
-@extends CommonMethod @interface FormComponentAttribute
+Define the attribute functions of FormComponent.@extends CommonMethod @interface FormComponentAttribute
 
 **Inheritance/Implementation:** FormComponentAttribute extends CommonMethod
 

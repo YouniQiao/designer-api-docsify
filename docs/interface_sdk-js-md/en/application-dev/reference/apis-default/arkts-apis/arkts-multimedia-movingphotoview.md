@@ -31,16 +31,16 @@
 
 | Name | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-multimedia-movingphotoview-movingphotoviewattribute-i.md) | Defines the moving photo view attribute functions. |
-| [MovingPhotoViewOptions](arkts-multimedia-movingphotoview-movingphotoviewoptions-i.md) | Defines the moving photo view options. |
+| [MovingPhotoViewAttribute](arkts-multimedia-movingphotoview-movingphotoviewattribute-i.md) | Defines the moving photo view attribute functions.@extends CommonMethod @interface MovingPhotoViewAttribute |
+| [MovingPhotoViewOptions](arkts-multimedia-movingphotoview-movingphotoviewoptions-i.md) | Defines the moving photo view options.@interface MovingPhotoViewOptions |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-multimedia-movingphotoview-movingphotoviewattribute-i-sys.md) | Defines the moving photo view attribute functions. |
-| [MovingPhotoViewOptions](arkts-multimedia-movingphotoview-movingphotoviewoptions-i-sys.md) | Defines the moving photo view options. |
+| [MovingPhotoViewAttribute](arkts-multimedia-movingphotoview-movingphotoviewattribute-i-sys.md) | Defines the moving photo view attribute functions.@extends CommonMethod @interface MovingPhotoViewAttribute |
+| [MovingPhotoViewOptions](arkts-multimedia-movingphotoview-movingphotoviewoptions-i-sys.md) | Defines the moving photo view options.@interface MovingPhotoViewOptions |
 <!--DelEnd-->
 
 <!--Del-->
@@ -48,8 +48,8 @@
 
 | Name | Description |
 | --- | --- |
-| [DynamicRangeMode](arkts-multimedia-movingphotoview-dynamicrangemode-e-sys.md) | Dynamic range mode of moving photo. |
-| [PixelMapFormat](arkts-multimedia-movingphotoview-pixelmapformat-e-sys.md) | Enumerates pixel map formats. |
+| [DynamicRangeMode](arkts-multimedia-movingphotoview-dynamicrangemode-e-sys.md) | Dynamic range mode of moving photo.@enum { number } |
+| [PixelMapFormat](arkts-multimedia-movingphotoview-pixelmapformat-e-sys.md) | Enumerates pixel map formats.@enum { number } |
 <!--DelEnd-->
 
 ### Types

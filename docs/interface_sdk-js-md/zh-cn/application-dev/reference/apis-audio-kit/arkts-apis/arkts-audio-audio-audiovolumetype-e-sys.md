@@ -1,6 +1,6 @@
 # AudioVolumeType
 
-表示音频音量类型的枚举。
+枚举，音频流类型。
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@
 SYSTEM = 6
 ```
 
-Audio volume for system sound.
+系统音。
 
 **起始版本：** 23
 
@@ -30,7 +30,7 @@ Audio volume for system sound.
 ULTRASONIC = 10
 ```
 
-Audio volume for ultrasonic.
+超声波。
 
 **起始版本：** 23
 
@@ -46,7 +46,7 @@ Audio volume for ultrasonic.
 NOTIFICATION = 11
 ```
 
-Audio volume type for notification.
+通知音。
 
 **起始版本：** 23
 
@@ -62,7 +62,7 @@ Audio volume type for notification.
 NAVIGATION = 12
 ```
 
-Audio volume type for navigation.
+导航。
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ Audio volume type for navigation.
 ALL = 100
 ```
 
-Audio stream for all common.
+所有公共音频流。
 
 **起始版本：** 23
 

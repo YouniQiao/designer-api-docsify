@@ -1,8 +1,7 @@
 # OverlayOptions
 
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 12.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
 > 's
@@ -24,9 +23,7 @@
 align?: Alignment
 ```
 
-Alignment of the overlay relative to the component.
-
-Default value: **TopStart**
+Alignment of the overlay relative to the component.Default value: **TopStart**
 
 **Type:** Alignment
 

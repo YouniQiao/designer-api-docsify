@@ -1,8 +1,6 @@
 # CheckboxAttribute
 
-Defines the Checkbox component attributes.
-
-@extends CommonMethod @interface CheckboxAttribute
+Defines the Checkbox component attributes.@extends CommonMethod @interface CheckboxAttribute
 
 **Inheritance/Implementation:** CheckboxAttribute extends CommonMethod
 

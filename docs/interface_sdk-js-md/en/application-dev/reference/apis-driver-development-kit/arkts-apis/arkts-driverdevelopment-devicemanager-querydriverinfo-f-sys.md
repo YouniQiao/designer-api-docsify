@@ -34,7 +34,7 @@ Obtains the list of detailed information about peripheral drivers. If the device
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md)&gt;&gt; | List of detailed information about peripheral drivers. |
+| Array&lt;Readonly&lt;[DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md)&gt;&gt; | List of detailed information about peripheral drivers. |
 
 **Error codes:**
 

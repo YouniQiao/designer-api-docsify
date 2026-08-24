@@ -1,8 +1,6 @@
 # RelativeContainerModifier
 
-Defines RelativeContainer Modifier
-
-@implements RelativeContainerAttribute, AttributeModifier&lt;RelativeContainerAttribute&gt;
+Defines RelativeContainer Modifier@implements RelativeContainerAttribute, AttributeModifier&lt;RelativeContainerAttribute&gt;
 
 **Inheritance/Implementation:** RelativeContainerModifier implements RelativeContainerAttribute, AttributeModifier<RelativeContainerAttribute>
 

@@ -14,8 +14,7 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 
 获取地球上特定位置的地磁场。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getGeomagneticInfo]
 > [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)
@@ -80,8 +79,7 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 
 获取地球上特定位置的地磁场。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)替
 > 代。

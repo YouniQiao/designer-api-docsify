@@ -1,8 +1,6 @@
 # FillMode
 
-Sets the state before and after the animation starts.
-
-@enum { number }
+Sets the state before and after the animation starts.@enum { number }
 
 **Since:** 23
 

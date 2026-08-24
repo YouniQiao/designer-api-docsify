@@ -1,8 +1,6 @@
 # LayoutSafeAreaEdge
 
-扩展安全区域的边缘。
-
-@enum { number }
+扩展安全区域的边缘。@enum { number }
 
 **起始版本：** 12
 

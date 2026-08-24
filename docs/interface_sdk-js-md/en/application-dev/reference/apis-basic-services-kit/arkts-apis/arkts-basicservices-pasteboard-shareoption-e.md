@@ -46,9 +46,7 @@ Paste is allowed in any application.
 CROSSDEVICE = 2
 ```
 
-Paste is allowed in any application across devices.
-
-This API is deprecated since API version 12 without any alternative API or method.
+Paste is allowed in any application across devices.This API is deprecated since API version 12 without any alternative API or method.
 
 **Since:** 9
 

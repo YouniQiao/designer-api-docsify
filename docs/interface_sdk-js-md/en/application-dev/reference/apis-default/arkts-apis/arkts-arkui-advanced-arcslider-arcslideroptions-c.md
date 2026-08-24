@@ -6,6 +6,8 @@ The options for ArcSlider.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcSliderOptions--><!--Device-unnamed-export declare class ArcSliderOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -40,8 +42,7 @@ The constructor used to create a ArcSliderOptions object.
 ## digitalCrownSensitivity
 
 ```TypeScript
-@Trace
-  digitalCrownSensitivity?: CrownSensitivity
+digitalCrownSensitivity?: CrownSensitivity
 ```
 
 Set the sensitivity of rotating crown.
@@ -52,6 +53,8 @@ Set the sensitivity of rotating crown.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderOptions-@Trace  digitalCrownSensitivity?: CrownSensitivity--><!--Device-ArcSliderOptions-@Trace  digitalCrownSensitivity?: CrownSensitivity-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -59,8 +62,7 @@ Set the sensitivity of rotating crown.
 ## layoutOptions
 
 ```TypeScript
-@Trace
-  layoutOptions?: ArcSliderLayoutOptions
+layoutOptions?: ArcSliderLayoutOptions
 ```
 
 Configure parameters for component.
@@ -71,6 +73,8 @@ Configure parameters for component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderOptions-@Trace  layoutOptions?: ArcSliderLayoutOptions--><!--Device-ArcSliderOptions-@Trace  layoutOptions?: ArcSliderLayoutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -78,8 +82,7 @@ Configure parameters for component.
 ## onChange
 
 ```TypeScript
-@Trace
-  onChange?: ArcSliderChangeHandler
+onChange?: ArcSliderChangeHandler
 ```
 
 Value changing triggers the callback.
@@ -90,6 +93,8 @@ Value changing triggers the callback.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderOptions-@Trace  onChange?: ArcSliderChangeHandler--><!--Device-ArcSliderOptions-@Trace  onChange?: ArcSliderChangeHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -97,8 +102,7 @@ Value changing triggers the callback.
 ## onEnlarge
 
 ```TypeScript
-@Trace
-  onEnlarge?: ArcSliderEnlargeHandler
+onEnlarge?: ArcSliderEnlargeHandler
 ```
 
 Enlarged type changing triggers the callback.
@@ -109,6 +113,8 @@ Enlarged type changing triggers the callback.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderOptions-@Trace  onEnlarge?: ArcSliderEnlargeHandler--><!--Device-ArcSliderOptions-@Trace  onEnlarge?: ArcSliderEnlargeHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -116,8 +122,7 @@ Enlarged type changing triggers the callback.
 ## onTouch
 
 ```TypeScript
-@Trace
-  onTouch?: ArcSliderTouchHandler
+onTouch?: ArcSliderTouchHandler
 ```
 
 Touching triggers the callback.
@@ -128,6 +133,8 @@ Touching triggers the callback.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderOptions-@Trace  onTouch?: ArcSliderTouchHandler--><!--Device-ArcSliderOptions-@Trace  onTouch?: ArcSliderTouchHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -135,8 +142,7 @@ Touching triggers the callback.
 ## styleOptions
 
 ```TypeScript
-@Trace
-  styleOptions?: ArcSliderStyleOptions
+styleOptions?: ArcSliderStyleOptions
 ```
 
 Configure parameters for component.
@@ -147,6 +153,8 @@ Configure parameters for component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderOptions-@Trace  styleOptions?: ArcSliderStyleOptions--><!--Device-ArcSliderOptions-@Trace  styleOptions?: ArcSliderStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -154,8 +162,7 @@ Configure parameters for component.
 ## valueOptions
 
 ```TypeScript
-@Trace
-  valueOptions?: ArcSliderValueOptions
+valueOptions?: ArcSliderValueOptions
 ```
 
 Configure parameters for component.
@@ -165,6 +172,8 @@ Configure parameters for component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 <!--Device-ArcSliderOptions-@Trace  valueOptions?: ArcSliderValueOptions--><!--Device-ArcSliderOptions-@Trace  valueOptions?: ArcSliderValueOptions-End-->
 

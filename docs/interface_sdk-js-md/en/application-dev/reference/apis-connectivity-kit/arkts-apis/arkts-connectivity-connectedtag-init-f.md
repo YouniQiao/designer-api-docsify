@@ -14,8 +14,7 @@ function init(): boolean
 
 Initializes the active tag chip.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [initialize](arkts-connectivity-connectedtag-initialize-f.md) instead.
 

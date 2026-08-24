@@ -1,8 +1,6 @@
 # ICurve
 
-Interface for curve object.
-
-@interface ICurve
+Interface for curve object.@interface ICurve
 
 **Since:** 23
 

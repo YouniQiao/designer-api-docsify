@@ -1,8 +1,6 @@
 # ExtendableRow
 
-Defines the Extendable Row.
-
-@implements RowAttribute
+Defines the Extendable Row.@implements RowAttribute
 
 **Inheritance/Implementation:** ExtendableRow implements [RowAttribute](arkts-arkui-row-attribute.md#rowattribute)
 
@@ -17,8 +15,7 @@ Defines the Extendable Row.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableRow>(
+static $_instantiate<T extends ExtendableRow>(
         factory: ConstructorT<T>, 
         options?: RowOptions | RowOptionsV2,
         content_?: CustomBuilder
@@ -30,6 +27,8 @@ Constructor of Extendable Row.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +53,7 @@ Constructor of Extendable Row.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-    static _instantiateImpl<T extends ExtendableRow>(
+static _instantiateImpl<T extends ExtendableRow>(
         styles: CustomBuilderT<T>, 
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -67,6 +65,8 @@ Entry of Extendable Row.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

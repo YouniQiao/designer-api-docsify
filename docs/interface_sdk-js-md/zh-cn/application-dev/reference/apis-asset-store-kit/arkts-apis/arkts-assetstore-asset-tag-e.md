@@ -2,8 +2,7 @@
 
 枚举，关键资产支持的属性名称类型，用作[AssetMap](arkts-assetstore-asset-assetmap-t.md)的键。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 以下为Tag类型的全量枚举值，每个接口可传的Tag枚举及对应的Value取值范围不同，详见
 > [各个场景的开发指导](../../../security/AssetStoreKit/asset-store-kit-overview.md)。
 
@@ -401,8 +400,7 @@ RETURN_LIMIT = TagType.NUMBER | 0x41
 RETURN_OFFSET = TagType.NUMBER | 0x42
 ```
 
-关键资产查询返回的结果偏移量。
-
+关键资产查询返回的结果偏移量。  
 **说明：** 用于分批查询场景，指定从第几个开始返回。
 
 **起始版本：** 11
@@ -419,8 +417,7 @@ RETURN_OFFSET = TagType.NUMBER | 0x42
 RETURN_ORDERED_BY = TagType.NUMBER | 0x43
 ```
 
-关键资产查询返回的结果排序依据，仅支持按照附属信息排序。
-
+关键资产查询返回的结果排序依据，仅支持按照附属信息排序。  
 **说明：** 默认按照关键资产新增的顺序返回。
 
 **起始版本：** 11

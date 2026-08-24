@@ -452,7 +452,7 @@ public split(str: string, limit: Int | undefined): string[]
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | str | string | 是 | 待分割的字符串。 |
-| limit | [Int](arkts-arkts-int-c.md) \| undefined | 是 | 限制返回数组的最大长度。 |
+| limit | Int \| undefined | 是 | 限制返回数组的最大长度。 |
 
 **返回值：**
 

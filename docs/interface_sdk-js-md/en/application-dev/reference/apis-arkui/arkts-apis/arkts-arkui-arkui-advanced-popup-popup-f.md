@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from '@kit.ArkUI';
-import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 ```
 
 ## Popup
@@ -15,6 +14,8 @@ export declare function Popup(options: PopupOptions): void
 ```
 
 **Since:** 11
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

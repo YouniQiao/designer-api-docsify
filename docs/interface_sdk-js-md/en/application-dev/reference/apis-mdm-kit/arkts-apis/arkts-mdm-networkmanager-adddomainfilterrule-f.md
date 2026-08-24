@@ -12,24 +12,17 @@ import { networkManager } from '@kit.MDMKit';
 function addDomainFilterRule(admin: Want, domainFilterRule: DomainFilterRule): void
 ```
 
-Adds domain name filtering rules for the device.
-
-In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
-
+Adds domain name filtering rules for the device.In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.  
 [LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - After a rule with [Action](arkts-mdm-networkmanager-action-e.md) set to **ALLOW** is added, a default **DENY** rule is
 > added automatically to discard or intercept domain name resolution packets that are not covered by the **ALLOW**
-> rule.
-> 
-> - The added rules will be cleared after the device restarts.
-> 
+> rule.&gt;
+> - The added rules will be cleared after the device restarts.&gt;
 > - To prevent interception rules from becoming ineffective due to DNS caching, it is recommended that you
 > configure domain name filtering rules immediately after the system starts up. If interception fails because of
-> DNS caching, restart the system to clear the cache and restore the interception function.
-> 
+> DNS caching, restart the system to clear the cache and restore the interception function.&gt;
 > - Rule matching order: Domain name filtering rules added by this API are matched first, followed by IP firewall
 > rules (added via [addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md)). Within both domain name rules and IP
 > rules, matching is performed in the order of ALLOW, DENY, and REJECT [actions](arkts-mdm-networkmanager-action-e.md).

@@ -1,8 +1,6 @@
 # promptAction
 
-Defines promptAction
-
-@namespace promptAction
+Defines promptAction@namespace promptAction
 
 **Since:** 23
 
@@ -33,7 +31,7 @@ Defines promptAction
 | Name | Description |
 | --- | --- |
 | [CommonController](arkts-promptaction-commoncontroller-c.md) | The class used to control common dialog. |
-| [DialogController](arkts-promptaction-dialogcontroller-c.md) | The class used to control dialog. |
+| [DialogController](arkts-promptaction-dialogcontroller-c.md) | The class used to control dialog.@extends CommonController |
 
 ### Interfaces
 
@@ -44,8 +42,8 @@ Defines promptAction
 | [ShowDialogSuccessResponse](arkts-promptaction-showdialogsuccessresponse-i.md) | Success response. |
 | [ShowDialogOptions](arkts-promptaction-showdialogoptions-i.md) | Show dialog options. |
 | [BaseDialogOptions](arkts-promptaction-basedialogoptions-i.md) | Dialog base options |
-| [CustomDialogOptions](arkts-promptaction-customdialogoptions-i.md) | Dialog's custom content options |
-| [DialogOptions](arkts-promptaction-dialogoptions-i.md) | Dialog options |
+| [CustomDialogOptions](arkts-promptaction-customdialogoptions-i.md) | Dialog's custom content options@extends BaseDialogOptions @interface CustomDialogOptions |
+| [DialogOptions](arkts-promptaction-dialogoptions-i.md) | Dialog options@extends BaseDialogOptions |
 | [ActionMenuSuccessResponse](arkts-promptaction-actionmenusuccessresponse-i.md) | Success response. |
 | [ActionMenuOptions](arkts-promptaction-actionmenuoptions-i.md) | ActionMenu options. |
 
@@ -63,15 +61,15 @@ Defines promptAction
 
 | Name | Description |
 | --- | --- |
-| [ToastShowMode](arkts-promptaction-toastshowmode-e.md) | Enum for the toast showMode. |
-| [CommonState](arkts-promptaction-commonstate-e.md) | Enum for state. |
+| [ToastShowMode](arkts-promptaction-toastshowmode-e.md) | Enum for the toast showMode.@enum { number } |
+| [CommonState](arkts-promptaction-commonstate-e.md) | Enum for state.@enum { number } |
 
 <!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [ToastShowMode](arkts-promptaction-toastshowmode-e-sys.md) | Enum for the toast showMode. |
+| [ToastShowMode](arkts-promptaction-toastshowmode-e-sys.md) | Enum for the toast showMode.@enum { number } |
 <!--DelEnd-->
 
 ### Types

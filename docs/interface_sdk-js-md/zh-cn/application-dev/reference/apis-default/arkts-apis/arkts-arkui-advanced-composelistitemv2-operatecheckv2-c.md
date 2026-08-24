@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class OperateCheckV2--><!--Device-unnamed-export declare class OperateCheckV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ OperateCheckV2的构造函数。
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 Switch/CheckBox/Radio的无障碍描述。
@@ -54,6 +55,8 @@ Switch/CheckBox/Radio的无障碍描述。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateCheckV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateCheckV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -63,8 +66,7 @@ Switch/CheckBox/Radio的无障碍描述。
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 Switch/CheckBox/Radio的无障碍重要性。
@@ -77,6 +79,8 @@ Switch/CheckBox/Radio的无障碍重要性。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateCheckV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateCheckV2-@Trace  public accessibilityLevel?: string-End-->
@@ -86,8 +90,7 @@ Switch/CheckBox/Radio的无障碍重要性。
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
 Switch/CheckBox/Radio的无障碍文本属性。
@@ -98,6 +101,8 @@ Switch/CheckBox/Radio的无障碍文本属性。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateCheckV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateCheckV2-@Trace  public accessibilityText?: ResourceStr-End-->
@@ -107,8 +112,7 @@ Switch/CheckBox/Radio的无障碍文本属性。
 ## isCheck
 
 ```TypeScript
-@Trace
-  public isCheck?: boolean
+public isCheck?: boolean
 ```
 
 是否默认选中。
@@ -119,6 +123,8 @@ Switch/CheckBox/Radio的无障碍文本属性。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateCheckV2-@Trace  public isCheck?: boolean--><!--Device-OperateCheckV2-@Trace  public isCheck?: boolean-End-->
@@ -128,8 +134,7 @@ Switch/CheckBox/Radio的无障碍文本属性。
 ## onChange
 
 ```TypeScript
-@Trace
-  public onChange?: OnChangeCallback
+public onChange?: OnChangeCallback
 ```
 
 操作checkbox/switch/radio时的回调函数。
@@ -139,6 +144,8 @@ Switch/CheckBox/Radio的无障碍文本属性。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,10 +1,10 @@
 # PopoverDialogV2
 
-Declare struct PopoverDialogV2
-
-@struct { PopoverDialogV2 }
+Declare struct PopoverDialogV2@struct { PopoverDialogV2 }
 
 **Since:** 18
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct PopoverDialogV2--><!--Device-unnamed-export declare struct PopoverDialogV2-End-->
 
@@ -19,8 +19,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## $visible
 
 ```TypeScript
-@Event
-  $visible?: PopoverDialogV2OnVisibleChange
+$visible?: PopoverDialogV2OnVisibleChange
 ```
 
 Sets the callback when visibility changed.
@@ -28,6 +27,8 @@ Sets the callback when visibility changed.
 **Type:** [PopoverDialogV2OnVisibleChange](arkts-arkui-popoverdialogv2onvisiblechange-t.md)
 
 **Since:** 18
+
+**Decorator:** @Event
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,9 +41,7 @@ Sets the callback when visibility changed.
 ## popover
 
 ```TypeScript
-@Require
-  @Param
-  popover: PopoverDialogV2Options
+popover: PopoverDialogV2Options
 ```
 
 Sets the PopoverDialogV2 options.
@@ -50,6 +49,8 @@ Sets the PopoverDialogV2 options.
 **Type:** [PopoverDialogV2Options](arkts-arkui-arkui-advanced-dialogv2-popoverdialogv2options-i.md)
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +63,7 @@ Sets the PopoverDialogV2 options.
 ## targetBuilder
 
 ```TypeScript
-@BuilderParam
-  targetBuilder: CustomBuilder
+targetBuilder: CustomBuilder
 ```
 
 Sets the targetBuilder content.
@@ -71,6 +71,8 @@ Sets the targetBuilder content.
 **Type:** CustomBuilder
 
 **Since:** 18
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,9 +85,7 @@ Sets the targetBuilder content.
 ## visible
 
 ```TypeScript
-@Require
-  @Param
-  visible: boolean
+visible: boolean
 ```
 
 Sets the PopoverDialogV2 Visible Status.
@@ -93,6 +93,8 @@ Sets the PopoverDialogV2 Visible Status.
 **Type:** boolean
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

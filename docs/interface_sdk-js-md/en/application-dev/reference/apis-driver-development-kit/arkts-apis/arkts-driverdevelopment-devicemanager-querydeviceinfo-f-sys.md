@@ -34,7 +34,7 @@ Obtains the list of detailed information about peripherals. If the device has no
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;DeviceInfo&gt;&gt; | List of detailed information about peripherals. |
+| Array&lt;Readonly&lt;DeviceInfo&gt;&gt; | List of detailed information about peripherals. |
 
 **Error codes:**
 

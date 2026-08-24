@@ -1,8 +1,6 @@
 # RouterPageState
 
-Router page state.
-
-@enum { number }
+Router page state.@enum { number }
 
 **Since:** 23
 

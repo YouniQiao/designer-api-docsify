@@ -1,8 +1,6 @@
 # ListItemModifier
 
-Defines ListItem Modifier
-
-@extends ListItemAttribute @implements AttributeModifier&lt;ListItemAttribute&gt;
+Defines ListItem Modifier@extends ListItemAttribute @implements AttributeModifier&lt;ListItemAttribute&gt;
 
 **Inheritance/Implementation:** ListItemModifier extends ListItemAttribute and implements AttributeModifier<ListItemAttribute>
 

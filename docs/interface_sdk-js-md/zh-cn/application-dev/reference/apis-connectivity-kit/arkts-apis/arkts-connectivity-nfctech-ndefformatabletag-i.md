@@ -1,12 +1,6 @@
 # NdefFormatableTag
 
-NdefFormatableTag为NDEF Formattable的标签提供格式化操作，继承自TagSession。
-
-TagSession是所有NFC Tag 技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。
-
-NdefFormatableTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。
-
-以下是NdefFormatableTag的独有接口。
+NdefFormatableTag为NDEF Formattable的标签提供格式化操作，继承自TagSession。TagSession是所有NFC Tag 技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。NdefFormatableTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。以下是NdefFormatableTag的独有接口。
 
 **继承/实现关系：** NdefFormatableTag extends TagSession
 

@@ -11,7 +11,6 @@ Sets the placeholder image.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## error

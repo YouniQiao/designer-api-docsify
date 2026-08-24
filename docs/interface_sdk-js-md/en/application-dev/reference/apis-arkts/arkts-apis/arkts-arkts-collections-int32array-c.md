@@ -2,12 +2,13 @@
 
 A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-n.md).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > **Decorator**: \@Sendable
 
 **Since:** 12
+
+**Decorator:** @Sendable
 
 <!--Device-collections-class Int32Array--><!--Device-collections-class Int32Array-End-->
 

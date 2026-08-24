@@ -16,9 +16,7 @@
 lock?: boolean
 ```
 
-Surface在屏幕旋转时是否锁定方向，未设置时默认取值为false，即不锁定方向。
-
-true：锁定方向；false：不锁定方向。
+Surface在屏幕旋转时是否锁定方向，未设置时默认取值为false，即不锁定方向。true：锁定方向；false：不锁定方向。
 
 **类型：** boolean
 

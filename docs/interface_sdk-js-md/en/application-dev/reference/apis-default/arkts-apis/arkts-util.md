@@ -1,8 +1,6 @@
 # @ohos.util
 
-The util module provides common utility functions, such as TextEncoder and TextDecoder for string encoding and decoding, RationalNumber8+ for rational number operations, LRUCache9+ for cache management, ScopeHelper9+ for range determination, Base64Helper9+ for Base64 encoding and decoding, types8+ for built-in object type check, and replacement on methods.
-
-@namespace util
+The util module provides common utility functions, such as TextEncoder and TextDecoder for string encoding and decoding, RationalNumber8+ for rational number operations, LRUCache9+ for cache management, ScopeHelper9+ for range determination, Base64Helper9+ for Base64 encoding and decoding, types8+ for built-in object type check, and replacement on methods.@namespace util
 
 **Since:** 23
 
@@ -50,16 +48,16 @@ The util module provides common utility functions, such as TextEncoder and TextD
 
 | Name | Description |
 | --- | --- |
-| [DecodeToStringOptions](arkts-util-decodetostringoptions-i.md) | Defines the decode with stream related options parameters. |
-| [EncodeIntoUint8ArrayInfo](arkts-util-encodeintouint8arrayinfo-i.md) | Return encoded text. |
-| [ScopeComparable](arkts-util-scopecomparable-i.md) | The ScopeComparable contains comparison methods. |
-| [TextDecoderOptions](arkts-util-textdecoderoptions-i.md) | Defines the TextDecoder related options parameters. |
+| [DecodeToStringOptions](arkts-util-decodetostringoptions-i.md) | Defines the decode with stream related options parameters.@interface DecodeToStringOptions |
+| [EncodeIntoUint8ArrayInfo](arkts-util-encodeintouint8arrayinfo-i.md) | Return encoded text.@interface EncodeIntoUint8ArrayInfo |
+| [ScopeComparable](arkts-util-scopecomparable-i.md) | The ScopeComparable contains comparison methods.@interface ScopeComparable |
+| [TextDecoderOptions](arkts-util-textdecoderoptions-i.md) | Defines the TextDecoder related options parameters.@interface TextDecoderOptions |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Type](arkts-util-type-e.md) | The Type represents four different encoding formats for base64 |
+| [Type](arkts-util-type-e.md) | The Type represents four different encoding formats for base64@enum { number } Type |
 
 ### Types
 

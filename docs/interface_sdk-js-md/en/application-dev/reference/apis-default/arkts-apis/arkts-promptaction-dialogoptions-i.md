@@ -1,8 +1,6 @@
 # DialogOptions
 
-Dialog options
-
-@extends BaseDialogOptions
+Dialog options@extends BaseDialogOptions
 
 **Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-basedialogoptions-i.md)
 

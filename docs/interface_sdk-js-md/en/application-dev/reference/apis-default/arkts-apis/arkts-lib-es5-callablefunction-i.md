@@ -73,7 +73,7 @@ For a given function, creates a bound function that has the same body as the ori
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | this | T | Yes |  |
-| thisArg | [ThisParameterType](arkts-thisparametertype-t.md)&lt;T&gt; | Yes |  |
+| thisArg | ThisParameterType&lt;T&gt; | Yes |  |
 
 **Return value:**
 

@@ -64,20 +64,12 @@ static keys(): Array<string>
 static persistProp<T>(key: string, defaultValue: T, toJson?: ToJSONType<T>, fromJson?: FromJSONType<T>): boolean
 ```
 
-将AppStorage中key对应的属性持久化到文件中。该接口的调用通常在访问 AppStorage之前。
-
-确定属性的类型和值的顺序如下：
-
+将AppStorage中key对应的属性持久化到文件中。该接口的调用通常在访问 AppStorage之前。确定属性的类型和值的顺序如下：
 1. 如果PersistentStorage文件中存在key对应的属性，则返回false。
-
 2. 如果PersistentStorage文件中没有查询到key对应的属性，则在AppStorage中查找key对应的属性。如果找到key对应的属性，则将该属性持久化，并返回true。
-
 3. 如果AppStorage中也没查找到key对应的属性，则在磁盘中查找key对应的属性。如果找到key对应的属性，则在AppStorage中创建和初始化key对应的属性，并将该属性持久化，最终返回true。
-
 4. 如果磁盘中不存在对应属性，则在AppStorage中创建和初始化key对应的属性，并将该属性持久化，最终返回true。
-
 根据上述的初始化流程，如果AppStorage中有该属性，则会使用其值，覆盖掉PersistentStorage文件中的值。由于AppStorage是内存内数据，该行为会导致数据丧失持久化能力。
-
 5. 对于复杂类型(联合类型都是复杂类型)，开发者必须实现toJson和fromJson才能实现持久化，只有boolean、int、double、long、string，开发者可以不传入toJson和fromJson。
 
 **起始版本：** 23

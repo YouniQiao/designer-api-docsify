@@ -1,8 +1,6 @@
 # Geometry
 
-Geometric node type that holds renderable mesh data and supports optional deformation features. It inherits from Node.
-
-@extends Node @interface Geometry
+Geometric node type that holds renderable mesh data and supports optional deformation features. It inherits from Node.@extends Node @interface Geometry
 
 **Inheritance/Implementation:** Geometry extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 

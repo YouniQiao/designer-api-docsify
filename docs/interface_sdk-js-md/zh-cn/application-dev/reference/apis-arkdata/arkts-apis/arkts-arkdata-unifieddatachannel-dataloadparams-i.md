@@ -1,8 +1,6 @@
 # DataLoadParams
 
-用于在延迟加载场景下描述发送方的数据加载策略。
-
-当同时传入loadHandler和delayedDataLoadHandler时，优先使用delayedDataLoadHandler，loadHandler不生效。
+用于在延迟加载场景下描述发送方的数据加载策略。当同时传入loadHandler和delayedDataLoadHandler时，优先使用delayedDataLoadHandler，loadHandler不生效。
 
 **起始版本：** 23
 

@@ -2,10 +2,8 @@
 
 Defines segmented button item options.
 
-> **Description**
-> 
-> 1. If both **symbol** and **icon** are configured, **symbol** takes precedence.
-> 
+> **Description**&gt;
+> 1. If both **symbol** and **icon** are configured, **symbol** takes precedence.&gt;
 > 2. If both **symbol** and **symbolModifier** are configured with HM Symbol resources, the resources specified by
 > **symbolModifier** take precedence.
 
@@ -27,13 +25,7 @@ import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesCha
 accessibilityDescription?: ResourceStr
 ```
 
-Accessibility description of the segmented button item.
-
-Default value: **""**
-
-If the value is **undefined**, the default value is used.
-
-Decorator type: @Trace
+Accessibility description of the segmented button item.Default value: **""**If the value is **undefined**, the default value is used.Decorator type: @Trace
 
 **Type:** ResourceStr
 
@@ -53,13 +45,7 @@ Decorator type: @Trace
 accessibilityLevel?: string
 ```
 
-Accessibility level of the segmented button item.
-
-Default value: **"auto"**
-
-If the value is **undefined**, the default value is used.
-
-Decorator type: @Trace
+Accessibility level of the segmented button item.Default value: **"auto"**If the value is **undefined**, the default value is used.Decorator type: @Trace
 
 **Type:** string
 
@@ -79,13 +65,7 @@ Decorator type: @Trace
 accessibilityText?: ResourceStr
 ```
 
-Accessibility text of the segmented button item.
-
-Default value: **""**
-
-If the value is **undefined**, the default value is used.
-
-Decorator type: @Trace
+Accessibility text of the segmented button item.Default value: **""**If the value is **undefined**, the default value is used.Decorator type: @Trace
 
 **Type:** ResourceStr
 
@@ -105,15 +85,8 @@ Decorator type: @Trace
 enabled?: boolean
 ```
 
-Whether the segmented button item is enabled.
-
-Default value: **true**
-
-**true**: enabled. **false**: disabled.
-
-If the value is **undefined**, the default value is used.
-
-Decorator type: @Trace
+Whether the segmented button item is enabled.Default value: **true**  
+**true**: enabled. **false**: disabled.If the value is **undefined**, the default value is used.Decorator type: @Trace
 
 **Type:** boolean
 
@@ -133,11 +106,7 @@ Decorator type: @Trace
 icon?: ResourceStr
 ```
 
-Image icon of the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+Image icon of the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** ResourceStr
 
@@ -157,11 +126,7 @@ Decorator type: @Trace
 iconModifier?: ImageModifier
 ```
 
-Image icon modifier for the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+Image icon modifier for the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** ImageModifier
 
@@ -181,11 +146,7 @@ Decorator type: @Trace
 symbol?: Resource
 ```
 
-HM Symbol icon of the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+HM Symbol icon of the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** Resource
 
@@ -205,11 +166,7 @@ Decorator type: @Trace
 symbolModifier?: SymbolGlyphModifier
 ```
 
-HM Symbol icon modifier for the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+HM Symbol icon modifier for the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** SymbolGlyphModifier
 
@@ -229,11 +186,7 @@ Decorator type: @Trace
 text?: ResourceStr
 ```
 
-Text of the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+Text of the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** ResourceStr
 
@@ -253,11 +206,7 @@ Decorator type: @Trace
 textModifier?: TextModifier
 ```
 
-Text modifier for the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+Text modifier for the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 

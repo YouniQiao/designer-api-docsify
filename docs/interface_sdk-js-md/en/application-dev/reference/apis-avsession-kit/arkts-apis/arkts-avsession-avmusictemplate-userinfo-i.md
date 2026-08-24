@@ -1,8 +1,6 @@
 # UserInfo
 
-The definition of User information.
-
-@interface UserInfo
+The definition of User information.@interface UserInfo
 
 **Since:** 23
 

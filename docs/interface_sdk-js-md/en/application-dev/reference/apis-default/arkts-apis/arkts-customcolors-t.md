@@ -16,5 +16,5 @@ Defines the struct of CustomColors.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Partial](arkts-partial-t.md)&lt;[Colors](arkts-arkui-theme-colors-i.md)&gt;
+**Property type:** Partial&lt;[Colors](arkts-arkui-theme-colors-i.md)&gt;
 

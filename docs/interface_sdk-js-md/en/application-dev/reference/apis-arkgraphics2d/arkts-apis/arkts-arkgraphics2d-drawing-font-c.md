@@ -2,10 +2,8 @@
 
 Describes the attributes used for text rendering, such as size and typeface.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -1211,8 +1209,7 @@ measureText(text: string, encoding: TextEncoding): double
 
 Measures the text width.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is used to measure the text width of the original string. To measure the text width after typesetting,
 > call [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12).
 
@@ -1599,7 +1596,7 @@ Sets whether to follow the theme font. When **followed** is set to **true**, the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| followed | boolean | Yes | Whether to follow the theme font. The value **true** means to follow the theme font , and **false** means the opposite. |
+| followed | boolean | Yes | Whether to follow the theme font. The value **true** means to follow the theme font, and **false** means the opposite. |
 
 **Error codes:**
 

@@ -1,8 +1,6 @@
 # CustomComponent
 
-Custom Component
-
-@extends CommonAttribute [since 7 - 17] @extends BaseCustomComponent [since 18]
+Custom Component@extends CommonAttribute [since 7 - 17] @extends BaseCustomComponent [since 18]
 
 **Inheritance/Implementation:** CustomComponent extends [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md)
 

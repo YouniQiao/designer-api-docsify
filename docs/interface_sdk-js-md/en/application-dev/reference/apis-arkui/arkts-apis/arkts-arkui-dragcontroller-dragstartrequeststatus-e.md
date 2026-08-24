@@ -1,8 +1,6 @@
 # DragStartRequestStatus
 
-Define the status for the application to notify the framework whether to execute drag.
-
-@enum { number }
+Define the status for the application to notify the framework whether to execute drag.@enum { number }
 
 **Since:** 23
 

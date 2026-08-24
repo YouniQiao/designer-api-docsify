@@ -35,8 +35,8 @@ Sets ProxyConfig which will be used by all Webs in the app. URLs that match patt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| proxyConfig | [ProxyConfig](arkts-webview-proxyconfig-c.md) | 是 | The proxy config. |
-| callback | [OnProxyConfigChangeCallback](arkts-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
+| proxyConfig | [ProxyConfig](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyconfig-c.md) | 是 | The proxy config. |
+| callback | [OnProxyConfigChangeCallback](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
 
 **错误码：**
 
@@ -64,7 +64,7 @@ Remove the proxy config. Requests are not guaranteed to not use the proxy; Wait 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnProxyConfigChangeCallback](arkts-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
+| callback | [OnProxyConfigChangeCallback](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
 
 **错误码：**
 

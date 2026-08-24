@@ -1,8 +1,6 @@
 # @ohos.app.businessAbilityRouter
 
-This module is used to obtain business ability information of various applications installed on the current device.
-
-@namespace businessAbilityRouter
+This module is used to obtain business ability information of various applications installed on the current device.@namespace businessAbilityRouter
 
 **Since:** 23
 
@@ -42,7 +40,7 @@ import { businessAbilityRouter } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md) | This enumeration value is used to identify various types of business ability info |
+| [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md) | This enumeration value is used to identify various types of business ability info@enum { number } |
 <!--DelEnd-->
 
 <!--Del-->

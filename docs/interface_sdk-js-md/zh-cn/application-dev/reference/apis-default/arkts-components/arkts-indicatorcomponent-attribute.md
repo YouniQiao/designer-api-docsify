@@ -18,9 +18,7 @@
 count(totalCount: int | undefined): this
 ```
 
-设置导航点总数量。
-
-单独导航点组件和Swiper绑定的时候，以Swiper的页面数量为准。
+设置导航点总数量。单独导航点组件和Swiper绑定的时候，以Swiper的页面数量为准。
 
 **起始版本：** 23
 
@@ -50,9 +48,7 @@ count(totalCount: int | undefined): this
 initialIndex(index: int | undefined): this
 ```
 
-设置首次显示时当前导航点的索引值。设置小于0或大于等于导航点数量时，按照默认值0处理。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+设置首次显示时当前导航点的索引值。设置小于0或大于等于导航点数量时，按照默认值0处理。单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **起始版本：** 23
 
@@ -82,9 +78,7 @@ initialIndex(index: int | undefined): this
 loop(isLoop: boolean | undefined): this
 ```
 
-设置是否开启循环。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+设置是否开启循环。单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **起始版本：** 23
 
@@ -196,9 +190,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator | undefined): this
 vertical(isVertical: boolean | undefined): this
 ```
 
-设置是否为纵向滑动。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+设置是否为纵向滑动。单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **起始版本：** 23
 

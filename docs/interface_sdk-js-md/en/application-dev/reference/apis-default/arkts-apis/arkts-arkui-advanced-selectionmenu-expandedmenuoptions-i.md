@@ -1,8 +1,6 @@
 # ExpandedMenuOptions
 
-Construct parameter types for ExpandedMenuOptions.
-
-@extends MenuItemOptions
+Construct parameter types for ExpandedMenuOptions.@extends MenuItemOptions
 
 **Inheritance/Implementation:** ExpandedMenuOptions extends MenuItemOptions
 

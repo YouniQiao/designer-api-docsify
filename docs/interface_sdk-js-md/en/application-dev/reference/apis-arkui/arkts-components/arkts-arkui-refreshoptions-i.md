@@ -2,23 +2,20 @@
 
 Defines the options of the **Refresh** component.
 
-> **Supplementary Notes**
-> 
+> **Supplementary Notes**&gt;
 > - If neither **builder** nor **refreshingContent** is set, the pull-down displacement effect is implemented by
 > adjusting the translate attribute of the child component.
 > During the pull-down process, the
 > onAreaChange event of the child
 > component is not triggered, and any changes made to the
 > translate attribute of the child component do not take
-> effect.
-> 
+> effect.&gt;
 > - When **builder** or **refreshingContent** is set, the pull-down displacement effect is implemented by adjusting
 > the position of the child component relative to the **Refresh** component. During the pull-down process, the
 > onAreaChange event of the child
 > component can be triggered. However, if the position attribute is set for the child
 > component, the position of the child component relative to the **Refresh** component is fixed, preventing the child
-> component from moving down with the pull gesture.
-> 
+> component from moving down with the pull gesture.&gt;
 > - If the width and height of a custom component set by **builder** are not specified, its dimensions will adapt to
 > the child components. If the width is specified but the height is not, the height of the component is automatically
 > adjusted according to the pull-down distance. If a custom component set by **refreshingContent** does not have a
@@ -64,8 +61,7 @@ Custom content in the refreshing area. NOTE In API version 10 and earlier versio
 friction?: number | string
 ```
 
-Coefficient of friction, which indicates the component's sensitivity to the pull-down gesture. The value ranges from 0 to 100. Default value: 62
-
+Coefficient of friction, which indicates the component's sensitivity to the pull-down gesture. The value ranges from 0 to 100. Default value: 62  
 - 0 indicates that the component is not sensitive to the pull-down gesture. - 100 indicates that the component is highly sensitive to the pull-down gesture. - A larger value indicates a more sensitive response of the component to the pull-down gesture.
 
 **Type:** number \| string

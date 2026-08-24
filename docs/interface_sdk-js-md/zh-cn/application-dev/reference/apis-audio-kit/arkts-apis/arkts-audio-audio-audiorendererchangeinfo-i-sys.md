@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## clientUid
@@ -21,7 +20,7 @@ import { audioHaptic } from '@kit.AudioKit';
 readonly clientUid: int
 ```
 
-Uid for audio renderer client application.
+音频渲染器客户端应用程序的Uid。
 
 **类型：** int
 
@@ -38,6 +37,8 @@ Uid for audio renderer client application.
 ```TypeScript
 readonly rendererState: AudioState
 ```
+
+音频状态。
 
 **类型：** AudioState
 

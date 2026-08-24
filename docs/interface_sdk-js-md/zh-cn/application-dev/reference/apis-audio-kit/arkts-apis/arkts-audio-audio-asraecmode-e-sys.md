@@ -1,6 +1,6 @@
 # AsrAecMode（系统接口）
 
-ASR AEC mode. @enum { int }
+枚举，自动语音识别（ASR）的声学回声消除（AEC）模式。@enum { int }
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ ASR AEC mode. @enum { int }
 BYPASS = 0
 ```
 
-Bypass AEC.
+不使用AEC。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Bypass AEC.
 STANDARD = 1
 ```
 
-Using standard AEC.
+使用标准AEC。
 
 **起始版本：** 23
 

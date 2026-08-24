@@ -65,9 +65,7 @@ Copies the source directory and its content to the destination path. You can set
 function copyDir(src: string, dest: string, callback: AsyncCallback<void>): void
 ```
 
-Copies the source directory and its content to the destination path. This API uses an asynchronous callback to return the result.
-
-An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained.
+Copies the source directory and its content to the destination path. This API uses an asynchronous callback to return the result.An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained.
 
 **Since:** 23
 

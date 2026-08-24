@@ -11,11 +11,6 @@ Represents the selection menu option extension.
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## menuType
@@ -24,11 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 menuType?: MenuType
 ```
 
-Type of the custom selection menu.
-
-Default value: **MenuType.SELECTION_MENU**
-
-Since API version 20, **MenuType.PREVIEW_MENU** supports hyperlink preview.
+Type of the custom selection menu.Default value: **MenuType.SELECTION_MENU**Since API version 20, **MenuType.PREVIEW_MENU** supports hyperlink preview.
 
 **Type:** MenuType
 

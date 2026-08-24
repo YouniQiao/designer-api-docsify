@@ -1,8 +1,6 @@
 # SourceType
 
-Defines the event source type.
-
-@enum { number }
+Defines the event source type.@enum { number }
 
 **起始版本：** 23
 

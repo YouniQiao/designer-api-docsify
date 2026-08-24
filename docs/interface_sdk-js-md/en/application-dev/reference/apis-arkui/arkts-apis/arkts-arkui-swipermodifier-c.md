@@ -1,8 +1,6 @@
 # SwiperModifier
 
-Defines Swiper Modifier
-
-@extends SwiperAttribute @implements AttributeModifier&lt;SwiperAttribute&gt;
+Defines Swiper Modifier@extends SwiperAttribute @implements AttributeModifier&lt;SwiperAttribute&gt;
 
 **Inheritance/Implementation:** SwiperModifier extends SwiperAttribute and implements AttributeModifier<SwiperAttribute>
 

@@ -1,8 +1,6 @@
 # LazyWaterFlowLayoutAttribute
 
-Defines the lazy waterflow layout attribute.
-
-@extends CommonMethod&lt;T&gt;
+Defines the lazy waterflow layout attribute.@extends CommonMethod&lt;T&gt;
 
 **Inheritance/Implementation:** LazyWaterFlowLayoutAttribute extends CommonMethod<T>
 
@@ -40,7 +38,7 @@ The spacing between columns.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between columns. <br>Default value: LengthMetrics.vp(0) |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between columns. <br>Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 
@@ -160,7 +158,7 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between rows. <br>Default value: LengthMetrics.vp(0) |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between rows. <br>Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 

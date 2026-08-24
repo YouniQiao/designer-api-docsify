@@ -13,9 +13,7 @@ function getTargetOverlayModuleInfosByBundleName(targetBundleName: string,
       callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.
-
-No permission is required when the specified application is the caller itself.
+Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.No permission is required when the specified application is the caller itself.
 
 **Since:** 23
 
@@ -120,9 +118,7 @@ try {
 function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses an asynchronous callback to return the result.
-
-No permission is required when the specified application is the caller itself.
+Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses an asynchronous callback to return the result.No permission is required when the specified application is the caller itself.
 
 **Since:** 23
 
@@ -165,9 +161,7 @@ See [getTargetOverlayModuleInfosByBundleName](#gettargetoverlaymoduleinfosbybund
 function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>
 ```
 
-Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses a promise to return the result.
-
-No permission is required when the specified application is the caller itself.
+Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses a promise to return the result.No permission is required when the specified application is the caller itself.
 
 **Since:** 23
 

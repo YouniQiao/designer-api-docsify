@@ -11,11 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## isReload
@@ -24,11 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 isReload?: boolean
 ```
 
-页面是否刷新。
-
-当页面因刷新即将离开时，isReload为true；当页面因关闭即将离开时，isReload为false。
-
-默认值：false。
+页面是否刷新。当页面因刷新即将离开时，isReload为true；当页面因关闭即将离开时，isReload为false。默认值：false。
 
 **类型：** boolean
 

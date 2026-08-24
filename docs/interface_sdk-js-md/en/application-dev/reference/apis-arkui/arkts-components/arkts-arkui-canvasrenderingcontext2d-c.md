@@ -2,28 +2,24 @@
 
 After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component.
 
-> **NOTE：**
-> 
-> It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be
+> **NOTE：**&gt;
+> * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be
 > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent
-> lifecycle between them.
-> 
-> When you call drawing APIs in this module, the commands are stored in the associated **Canvas**
+> lifecycle between them.&gt;
+> * When you call drawing APIs in this module, the commands are stored in the associated **Canvas**
 > component's command queue. These commands are only executed when the current frame enters the
 > rendering phase and the associated **Canvas** component is visible. Therefore, when the **Canvas**
 > component is invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent
 > command queue buildup and excessive memory usage. For best practices, see
-> [Controlling Canvas Rendering Based on Component Visibility](../../../ui/arkts-drawing-customization-on-canvas.md#controlling-canvas-rendering-based-on-component-visibility).
-> 
-> The following path-related APIs apply only to paths created within **CanvasRenderingContext2D**
+> [Controlling Canvas Rendering Based on Component Visibility](../../../ui/arkts-drawing-customization-on-canvas.md#controlling-canvas-rendering-based-on-component-visibility).&gt;
+> * The following path-related APIs apply only to paths created within **CanvasRenderingContext2D**
 > and do not affect paths defined in
 > [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)
 > or [Path2D](arkts-arkui-path2d-c.md):
 > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath),
 > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc),
-> [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
-> 
-> When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU
+> [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).&gt;
+> * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU
 > causes significant performance degradation.
 
 **Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
@@ -143,12 +139,10 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext** object. This **CanvasRenderingContext2D** object is bound to the same **Canvas** component as the input **DrawingRenderingContext** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The **CanvasRenderingContext2D** object obtained via this API cannot be used as a
 > parameter to create a Canvas
-> component. Otherwise, the application crashes.
-> 
+> component. Otherwise, the application crashes.&gt;
 > - If the input **DrawingRenderingContext** object is not bound to a **Canvas** component,
 > an error code is returned.
 
@@ -279,26 +273,20 @@ on(type: 'onAttach', callback: Callback<void>): void
 
 Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a **Canvas** component.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > A **CanvasRenderingContext2D** object can only be bound to one **Canvas** component
-> at a time.&lt;br
-&gt; 
+> at a time.<br>
 > When a **CanvasRenderingContext2D** object is bound to a **Canvas** component, the
 > **onAttach** callback is triggered, indicating that the
 > [canvas](#canvas)
-> object is accessible.&lt;br
-&gt; 
+> object is accessible.<br>
 > Avoid performing drawing operations in the **onAttach** callback. Make sure the
 > **Canvas** component has completed its
 > [onReady](arkts-arkui-canvas-attribute.md#onready)
-> event before performing any drawing.&lt;br
-&gt; 
-> The **onAttach** callback is triggered when:&lt;br
-&gt; 
+> event before performing any drawing.<br>
+> The **onAttach** callback is triggered when:<br>
 > 1. A **Canvas** component is created and bound to a **CanvasRenderingContext2D**
-> object.&lt;br
-&gt; 
+> object.<br>
 > 2. A **CanvasRenderingContext2D** object is bound to a new **Canvas** component.
 
 **Since:** 13
@@ -332,16 +320,12 @@ on(type: 'onDetach', callback: Callback<void>): void
 
 Subscribes to the event when a **CanvasRenderingContext2D** object is unbound from a **Canvas** component.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When a **CanvasRenderingContext2D** object is unbound from a **Canvas** component,
-> the **onDetach** callback is triggered. In this case, cease any drawing operations.&lt;br
-&gt; 
-> The **onDetach** callback is triggered when:&lt;br
-&gt; 
+> the **onDetach** callback is triggered. In this case, cease any drawing operations.<br>
+> The **onDetach** callback is triggered when:<br>
 > 1. A **Canvas** component is destroyed and unbound from a **CanvasRenderingContext2D**
-> object.&lt;br
-&gt; 
+> object.<br>
 > 2. A **CanvasRenderingContext2D** object is bound to a different **Canvas** component,
 > causing the existing binding to be released.
 
@@ -376,8 +360,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set [enableAnalyzer](arkts-arkui-canvas-attribute.md#enableanalyzer) to **true** to enable the image AI analyzer.<br>Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.<br> Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The image analysis type cannot be dynamically modified.
 > When image changes are detected, the analysis result is automatically destroyed. You can
 > call this API again to start analysis.
@@ -422,8 +405,7 @@ stopImageAnalyzer(): void
 
 Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If this API is called when the **startImageAnalyzer** API has not yet returned any result,
 > an error is reported.
 > This feature depends on device capabilities.
@@ -599,9 +581,7 @@ struct ToDataURL {
 readonly canvas: FrameNode
 ```
 
-FrameNode instance of the **Canvas** component associated with **CanvasRenderingContext2D**. It can be used to listen for the visibility status of the associated **Canvas** component.
-
-Default value: **null**
+FrameNode instance of the **Canvas** component associated with **CanvasRenderingContext2D**. It can be used to listen for the visibility status of the associated **Canvas** component.Default value: **null**
 
 **Type:** [FrameNode](arkts-arkui-framenode-t.md)
 
@@ -621,9 +601,7 @@ Default value: **null**
 readonly height: number
 ```
 
-Component height.
-
-Default unit: vp
+Component height.Default unit: vp
 
 **Type:** number
 
@@ -643,9 +621,7 @@ Default unit: vp
 readonly width: number
 ```
 
-Component width.
-
-Default unit: vp
+Component width.Default unit: vp
 
 **Type:** number
 

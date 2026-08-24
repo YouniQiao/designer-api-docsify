@@ -1,8 +1,6 @@
 # CommonEventBatteryChangedKey
 
-Enumerates keys for querying the additional information about the **COMMON_EVENT_BATTERY_CHANGED** event.
-
-@enum { string }
+Enumerates keys for querying the additional information about the **COMMON_EVENT_BATTERY_CHANGED** event.@enum { string }
 
 **Since:** 23
 

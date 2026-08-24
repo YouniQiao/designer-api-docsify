@@ -87,7 +87,7 @@ The date time separator style. The value can be: "extended": with -/:, "basic": 
 timePrecision?: 'dateOnly' | 'hours' | 'minutes' | 'seconds' | 'milliSeconds'
 ```
 
-The ISO 8601 time precision to format. The value can be: "dateOnly", "hours", "minutes", "seconds", "milliSeconds". Default value is "seconds".
+The ISO 8601 time precision to format. The value can be: "dateOnly", "hours", "minutes", "seconds","milliSeconds". Default value is "seconds".
 
 **Type:** 'dateOnly' \| 'hours' \| 'minutes' \| 'seconds' \| 'milliSeconds'
 

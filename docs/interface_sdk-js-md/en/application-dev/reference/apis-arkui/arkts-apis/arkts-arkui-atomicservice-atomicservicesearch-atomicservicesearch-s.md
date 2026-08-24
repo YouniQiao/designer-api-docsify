@@ -1,8 +1,10 @@
 # AtomicServiceSearch
 
-*AtomicServiceSearch** allows you to customize the default search area, customizable selection area, and function area (a maximum of two).
+**AtomicServiceSearch** allows you to customize the default search area, customizable selection area, and function area (a maximum of two).
 
 **Since:** 18
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct AtomicServiceSearch--><!--Device-unnamed-export declare struct AtomicServiceSearch-End-->
 
@@ -53,8 +55,7 @@ Function settings in the selection area (right).
 ## placeholder
 
 ```TypeScript
-@Prop
-  placeholder?: ResourceStr
+placeholder?: ResourceStr
 ```
 
 Indicates default prompt text displayed in the search box. The default value is Search, which supports globalization.
@@ -62,6 +63,8 @@ Indicates default prompt text displayed in the search box. The default value is 
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -72,8 +75,7 @@ Indicates default prompt text displayed in the search box. The default value is 
 ## search
 
 ```TypeScript
-@Prop
-  search?: SearchParams
+search?: SearchParams
 ```
 
 Events and styles supported by the search area.
@@ -81,6 +83,8 @@ Events and styles supported by the search area.
 **Type:** [SearchParams](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md)
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -91,8 +95,7 @@ Events and styles supported by the search area.
 ## select
 
 ```TypeScript
-@Prop
-  select?: SelectParams
+select?: SelectParams
 ```
 
 Contents, events, and styles of the select area.
@@ -100,6 +103,8 @@ Contents, events, and styles of the select area.
 **Type:** [SelectParams](arkts-arkui-atomicservice-atomicservicesearch-selectparams-i.md)
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -110,8 +115,7 @@ Contents, events, and styles of the select area.
 ## value
 
 ```TypeScript
-@Prop
-  value?: ResourceStr
+value?: ResourceStr
 ```
 
 Sets the search text content that is currently displayed.
@@ -119,6 +123,8 @@ Sets the search text content that is currently displayed.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

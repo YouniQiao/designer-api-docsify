@@ -12,7 +12,6 @@ Represents the storage information about a certificate, including the certificat
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## certAlg

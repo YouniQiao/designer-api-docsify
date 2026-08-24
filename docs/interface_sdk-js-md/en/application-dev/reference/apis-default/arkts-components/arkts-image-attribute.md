@@ -1,8 +1,6 @@
 # ImageAttribute
 
-Defines the Image component attributes.
-
-@extends CommonMethod @interface ImageAttribute
+Defines the Image component attributes.@extends CommonMethod @interface ImageAttribute
 
 **Inheritance/Implementation:** ImageAttribute extends CommonMethod
 

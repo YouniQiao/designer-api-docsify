@@ -188,8 +188,7 @@ endDocument(): void
 
 当解析器在XML文本结束解析时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](#characters)。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当可读流结束时触发此回调。在stream中调用push()，传入null值，从而触发该回调。
 
 **起始版本：** 24

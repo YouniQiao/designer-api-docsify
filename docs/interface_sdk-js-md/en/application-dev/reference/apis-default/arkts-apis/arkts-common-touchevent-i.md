@@ -1,8 +1,6 @@
 # TouchEvent
 
-Touch Action Function Parameters
-
-@extends BaseEvent
+Touch Action Function Parameters@extends BaseEvent
 
 **Inheritance/Implementation:** TouchEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 

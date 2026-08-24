@@ -1,8 +1,6 @@
 # @ohos.matrix4
 
-Used to do matrix operations
-
-@namespace matrix4
+Used to do matrix operations@namespace matrix4
 
 **Since:** 23
 
@@ -33,10 +31,10 @@ import { matrix4 } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix4Transit. |
-| [Point](arkts-arkui-matrix4-point-i.md) | Set poly to poly point. |
-| [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Set poly to poly point options. |
-| [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Set Rotation Parameters. |
-| [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Set scaling parameters |
-| [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Set translation parameters |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix4Transit.@interface Matrix4Transit |
+| [Point](arkts-arkui-matrix4-point-i.md) | Set poly to poly point.@interface Point |
+| [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Set poly to poly point options.@interface PolyToPolyOptions |
+| [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Set Rotation Parameters.@interface RotateOption |
+| [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Set scaling parameters@interface ScaleOption |
+| [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Set translation parameters@interface TranslateOption |
 

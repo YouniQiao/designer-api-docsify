@@ -2,14 +2,15 @@
 
 网格布局算法类。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的入
 > 参指定布局算法。
 
-**继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
+**继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
 **起始版本：** 24
+
+**装饰器类型：** @ObservedV2
 
 <!--Device-unnamed-export class GridLayoutAlgorithm--><!--Device-unnamed-export class GridLayoutAlgorithm-End-->
 
@@ -37,27 +38,19 @@ constructor(option?: GridLayoutAlgorithmOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [GridLayoutAlgorithmOptions](../../apis-default/arkts-apis/arkts-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 否 | 网格布局算法的构造入参，设置网格布局的列数、列间距、行间距。 |
+| option | [GridLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 否 | 网格布局算法的构造入参，设置网格布局的列数、列间距、行间距。 |
 
 ## columnsGap
 
-```TypeScript
-@Trace public columnsGap?: LengthMetrics
-```
+列与列之间的间距。默认值：LengthMetrics.vp(0)非法值：按默认值处理。装饰器类型：@Trace
 
-列与列之间的间距。
-
-默认值：LengthMetrics.vp(0)
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
-
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,23 +62,15 @@ constructor(option?: GridLayoutAlgorithmOptions)
 
 ## columnsTemplate
 
-```TypeScript
-@Trace public columnsTemplate?: string | ItemFillPolicy
-```
-
-设置当前网格布局的列数。
-
-默认值：'1fr'
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+设置当前网格布局的列数。默认值：'1fr'非法值：按默认值处理。装饰器类型：@Trace
 
 **类型：** string \| [ItemFillPolicy](../../apis-default/arkts-apis/arkts-units-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,23 +82,15 @@ constructor(option?: GridLayoutAlgorithmOptions)
 
 ## rowsGap
 
-```TypeScript
-@Trace public rowsGap?: LengthMetrics
-```
+行与行之间的间距。默认值：LengthMetrics.vp(0)非法值：按默认值处理。装饰器类型：@Trace
 
-行与行之间的间距。
-
-默认值：LengthMetrics.vp(0)
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
-
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

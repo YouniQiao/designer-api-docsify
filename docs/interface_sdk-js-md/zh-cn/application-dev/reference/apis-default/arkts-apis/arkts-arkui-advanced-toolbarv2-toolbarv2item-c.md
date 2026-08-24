@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2Item--><!--Device-unnamed-export declare class ToolBarV2Item-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ ToolBarV2Item的构造函数。
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of item.
@@ -54,6 +55,8 @@ The accessibilityDescription of item.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolBarV2Item-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-ToolBarV2Item-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -63,8 +66,7 @@ The accessibilityDescription of item.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 The accessibilityLevel of item.
@@ -77,6 +79,8 @@ The accessibilityLevel of item.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolBarV2Item-@Trace  public accessibilityLevel?: string--><!--Device-ToolBarV2Item-@Trace  public accessibilityLevel?: string-End-->
@@ -86,8 +90,7 @@ The accessibilityLevel of item.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of item.
@@ -98,6 +101,8 @@ The accessibilityText of item.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolBarV2Item-@Trace  public accessibilityText?: ResourceStr--><!--Device-ToolBarV2Item-@Trace  public accessibilityText?: ResourceStr-End-->
@@ -107,8 +112,7 @@ The accessibilityText of item.
 ## action
 
 ```TypeScript
-@Trace
-  public action?: ToolBarV2ItemAction
+public action?: ToolBarV2ItemAction
 ```
 
 Define the action event.
@@ -119,6 +123,8 @@ Define the action event.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolBarV2Item-@Trace  public action?: ToolBarV2ItemAction--><!--Device-ToolBarV2Item-@Trace  public action?: ToolBarV2ItemAction-End-->
@@ -128,8 +134,7 @@ Define the action event.
 ## content
 
 ```TypeScript
-@Trace
-  public content: ToolBarV2ItemText
+public content: ToolBarV2ItemText
 ```
 
 Define text content.
@@ -140,6 +145,8 @@ Define text content.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolBarV2Item-@Trace  public content: ToolBarV2ItemText--><!--Device-ToolBarV2Item-@Trace  public content: ToolBarV2ItemText-End-->
@@ -149,8 +156,7 @@ Define text content.
 ## icon
 
 ```TypeScript
-@Trace
-  public icon?: ToolBarV2ItemIconType
+public icon?: ToolBarV2ItemIconType
 ```
 
 Define icon resource.
@@ -161,6 +167,8 @@ Define icon resource.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolBarV2Item-@Trace  public icon?: ToolBarV2ItemIconType--><!--Device-ToolBarV2Item-@Trace  public icon?: ToolBarV2ItemIconType-End-->
@@ -170,8 +178,7 @@ Define icon resource.
 ## state
 
 ```TypeScript
-@Trace
-  public state?: ToolBarV2ItemState
+public state?: ToolBarV2ItemState
 ```
 
 Define item type.
@@ -181,6 +188,8 @@ Define item type.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

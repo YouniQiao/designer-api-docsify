@@ -1,12 +1,6 @@
 # AudioSpatializationManager
 
-空间音频管理。
-
-在使用AudioSpatializationManager的接口之前，需先通过 [getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager)获取AudioSpatializationManager实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 18开始支持。
+空间音频管理。在使用AudioSpatializationManager的接口前，需要使用 [getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager)获取 AudioSpatializationManager实例。
 
 **起始版本：** 23
 
@@ -18,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## isSpatializationEnabledForCurrentDevice
@@ -55,7 +48,7 @@ console.info(`Succeeded in checking whether spatialization is enabled for the cu
 off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void
 ```
 
-取消监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
+取消监听当前设备空间音频渲染开关状态变化事件。
 
 **起始版本：** 18
 
@@ -67,8 +60,8 @@ off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForCurrentDevice' | 是 | 事件回调类型，支持的事件为' spatializationEnabledChangeForCurrentDevice'，当取消订阅当前设备空间音频渲染开关状态变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。返回true表示打开空间音频渲染状态；返回false表示关闭空间音频渲染状态。 |
+| type | 'spatializationEnabledChangeForCurrentDevice' | 是 | 事件回调类型，支持的事件为'spatializationEnabledChangeForCurrentDevice'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 待注销的回调函数。参数为true表示打开空间音频渲染状态；参数为false表示关闭空间音频渲染状态。 |
 
 **错误码：**
 
@@ -82,7 +75,7 @@ off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boo
 offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void
 ```
 
-Unsubscribes to the spatialization enable state change events by the current device.
+取消订阅当前设备的空间化启用状态更改事件。
 
 **起始版本：** 23
 
@@ -136,8 +129,8 @@ on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boole
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForCurrentDevice' | 是 | 事件回调类型，支持的事件为' spatializationEnabledChangeForCurrentDevice'，当空间音频渲染开关状态变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示打开空间音频渲染状态；返回false表示关闭空间音频渲染状态。 |
+| type | 'spatializationEnabledChangeForCurrentDevice' | 是 | 事件回调类型，支持的事件为'spatializationEnabledChangeForCurrentDevice'，当空间音频渲染开关状态变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。参数为true表示打开空间音频渲染状态；参数为false表示关闭空间音频渲染状态。 |
 
 **错误码：**
 
@@ -151,7 +144,7 @@ on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boole
 onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void
 ```
 
-Subscribes to the spatialization enable state change events by the current device. When the spatialization enable state changes, registered clients will receive the callback.
+监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -163,7 +156,7 @@ Subscribes to the spatialization enable state change events by the current devic
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。参数为true表示打开空间音频渲染状态；参数为false表示关闭空间音频渲染状态。 |
 
 **错误码：**
 

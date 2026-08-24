@@ -1,8 +1,6 @@
 # MeasureOptions
 
-Defines the options of MeasureText.
-
-@interface MeasureOptions
+Defines the options of MeasureText.@interface MeasureOptions
 
 **Since:** 23
 

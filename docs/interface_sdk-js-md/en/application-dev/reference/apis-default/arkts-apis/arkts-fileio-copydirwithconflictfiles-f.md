@@ -12,9 +12,7 @@ function copyDirWithConflictFiles(src: string, dest: string, callback: AsyncCall
   Array<ConflictFiles>>): void
 ```
 
-Copies the source directory to the destination path. This API uses an asynchronous callback to return the result.
-
-An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt;ConflictFiles&gt; format.
+Copies the source directory to the destination path. This API uses an asynchronous callback to return the result.An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt;ConflictFiles&gt; format.
 
 **Since:** 23
 

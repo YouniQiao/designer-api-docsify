@@ -1,8 +1,6 @@
 # TipsAnchorType
 
-Tips show position type.
-
-@enum { number }
+Tips show position type.@enum { number }
 
 **起始版本：** 23
 

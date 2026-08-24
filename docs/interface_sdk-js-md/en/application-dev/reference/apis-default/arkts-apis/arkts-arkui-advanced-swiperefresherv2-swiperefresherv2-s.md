@@ -1,12 +1,12 @@
 # SwipeRefresherV2
 
-Declare component SwipeRefresherV2
-
-@struct { SwipeRefresherV2 }
+Declare component SwipeRefresherV2@struct { SwipeRefresherV2 }
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct SwipeRefresherV2--><!--Device-unnamed-export declare struct SwipeRefresherV2-End-->
 
@@ -20,8 +20,7 @@ Declare component SwipeRefresherV2
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +40,7 @@ The method to build component.
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
 Sets the content when loading.
@@ -51,6 +51,8 @@ Sets the content when loading.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SwipeRefresherV2-@Param  content?: ResourceStr--><!--Device-SwipeRefresherV2-@Param  content?: ResourceStr-End-->
@@ -60,9 +62,7 @@ Sets the content when loading.
 ## isLoading
 
 ```TypeScript
-@Require
-  @Param
-  isLoading: boolean
+isLoading: boolean
 ```
 
 Whether the component is loading.
@@ -72,6 +72,8 @@ Whether the component is loading.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

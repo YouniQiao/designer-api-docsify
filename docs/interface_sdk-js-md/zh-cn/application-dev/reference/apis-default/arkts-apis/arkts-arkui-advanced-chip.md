@@ -21,13 +21,13 @@
 | [ChipOptions](arkts-arkui-advanced-chip-chipoptions-i.md) | ChipOptions定义Chip的样式及具体式样参数。 |
 | [ChipSuffixSymbolGlyphOptions](arkts-arkui-advanced-chip-chipsuffixsymbolglyphoptions-i.md) | symbol类型后缀图标属性的无障碍朗读功能属性类型。 |
 | [ChipSymbolGlyphOptions](arkts-arkui-advanced-chip-chipsymbolglyphoptions-i.md) | ChipSymbolGlyphOptions定义前缀图标和后缀图标的属性。 |
-| [CloseOptions](arkts-arkui-advanced-chip-closeoptions-i.md) | CloseOptions用于定义Chip组件默认的关闭图标功能属性，包括无障碍功能属性，其中accessibilityText默认为"删除"。 |
+| [CloseOptions](arkts-arkui-advanced-chip-closeoptions-i.md) | CloseOptions用于定义Chip组件默认的关闭图标功能属性，包括无障碍功能属性，其中accessibilityText默认为"删除"。继承于[AccessibilityOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-accessibilityoptions-i.md)。 |
 | [IconCommonOptions](arkts-arkui-advanced-chip-iconcommonoptions-i.md) | IconCommonOptions定义图标的共通属性。 |
 | [LabelMarginOptions](arkts-arkui-advanced-chip-labelmarginoptions-i.md) | LabelMarginOptions用于定义文本与左右侧图标之间间距。 |
 | [LabelOptions](arkts-arkui-advanced-chip-labeloptions-i.md) | LabelOptions定义文本属性。 |
 | [LocalizedLabelMarginOptions](arkts-arkui-advanced-chip-localizedlabelmarginoptions-i.md) | LocalizedLabelMarginOptions用于定义本地化文本与左右侧图标之间间距。 |
-| [PrefixIconOptions](arkts-arkui-advanced-chip-prefixiconoptions-i.md) | PrefixIconOptions定义前缀图标的属性。 |
-| [SuffixIconOptions](arkts-arkui-advanced-chip-suffixiconoptions-i.md) | SuffixIconOptions定义后缀图标的属性。 |
+| [PrefixIconOptions](arkts-arkui-advanced-chip-prefixiconoptions-i.md) | PrefixIconOptions定义前缀图标的属性。继承于[IconCommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md)。 |
+| [SuffixIconOptions](arkts-arkui-advanced-chip-suffixiconoptions-i.md) | SuffixIconOptions定义后缀图标的属性。继承于[IconCommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md)。 |
 
 ### 枚举
 

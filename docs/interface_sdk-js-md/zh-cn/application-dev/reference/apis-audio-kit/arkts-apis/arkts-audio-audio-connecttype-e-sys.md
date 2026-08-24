@@ -1,6 +1,6 @@
 # ConnectType（系统接口）
 
-Connect type for device. @enum { int }
+枚举，设备连接类型。@enum { int }
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Connect type for device. @enum { int }
 CONNECT_TYPE_LOCAL = 1
 ```
 
-Connect type for local device.
+本地设备。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Connect type for local device.
 CONNECT_TYPE_DISTRIBUTED = 2
 ```
 
-Connect type for distributed device.
+分布式设备。
 
 **起始版本：** 23
 

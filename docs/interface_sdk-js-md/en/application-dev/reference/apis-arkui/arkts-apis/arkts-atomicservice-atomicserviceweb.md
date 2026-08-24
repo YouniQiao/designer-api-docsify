@@ -18,7 +18,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorRecei
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceWeb](arkts-arkui-atomicservice-atomicserviceweb-atomicserviceweb-s.md) | *AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities. |
+| [AtomicServiceWeb](arkts-arkui-atomicservice-atomicserviceweb-atomicserviceweb-s.md) | **AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities. |
 
 ### Interfaces
 

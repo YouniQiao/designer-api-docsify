@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## compressionQuality
@@ -21,9 +20,7 @@ import { cameraPicker } from '@kit.CameraKit';
 compressionQuality?: int
 ```
 
-图片压缩质量值，取值范围为(1, 100)。
-
-当compressionQuality未下发时，默认按quality生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与 compressionQuality均未下发则图片质量默认是高等。
+图片压缩质量值，取值范围为(1, 100)。当compressionQuality未下发时，默认按quality生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与 compressionQuality均未下发则图片质量默认是高等。
 
 **类型：** int
 
@@ -79,11 +76,9 @@ mirror?: boolean
 quality?: QualityLevel
 ```
 
-图片质量。
+图片质量。当quality未下发时，默认按compressionQuality下发生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与 compressionQuality均未下发则图片质量默认是高等。
 
-当quality未下发时，默认按compressionQuality下发生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与 compressionQuality均未下发则图片质量默认是高等。
-
-**类型：** [QualityLevel](arkts-camera-camera-qualitylevel-e.md)
+**类型：** QualityLevel
 
 **起始版本：** 23
 

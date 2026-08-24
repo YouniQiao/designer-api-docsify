@@ -19,15 +19,8 @@ Configures the parameters of a popup. You can use the [getPromptAction()](../../
 arrowHeight?: Dimension
 ```
 
-Arrow height.
-
-Default value: **8**
-
-Unit: vp
-
-**NOTE：**
-
-Percentage values are not supported.
+Arrow height.Default value: **8**Unit: vp  
+**NOTE：**Percentage values are not supported.
 
 **Type:** Dimension
 
@@ -49,19 +42,11 @@ Percentage values are not supported.
 arrowOffset?: Length
 ```
 
-Offset of the popup arrow relative to the popup.
-
-When the arrow is at the top or bottom of the popup: The value **0** indicates that the arrow is located on the leftmost, and any other value indicates the distance from the arrow to the leftmost; the arrow is centered by default.
-
-When the arrow is on the left or right side of the popup: The value indicates the distance from the arrow to the top; the arrow is centered by default.
-
-When the popup is displayed on either edge of the screen, it automatically adjusts horizontally. When the value is **0**, the arrow always points to the bound component.
-
-Unit: vp
-
+Offset of the popup arrow relative to the popup.When the arrow is at the top or bottom of the popup: The value **0** indicates that the arrow is located on the leftmost, and any other value indicates the distance from the arrow to the leftmost; the arrow is centered by default.When the arrow is on the left or right side of the popup: The value indicates the distance from the arrow to the top; the arrow is centered by default.When the popup is displayed on either edge of the screen, it automatically adjusts horizontally. When the value is **0**, the arrow always points to the bound component.Unit: vp  
 **NOTE：**
-
-1. If **arrowOffset** is not set, the distance between the popup arrow and the four corners must be no less than the corner radius. 2. If **arrowPointPosition** is set, **arrowOffset** does not take effect. 3. Percentage values are not supported.
+1. If **arrowOffset** is not set, the distance between the popup arrow and the four corners must be no less than the corner radius.
+2. If **arrowPointPosition** is set, **arrowOffset** does not take effect.
+3. Percentage values are not supported.
 
 **Type:** Length
 
@@ -81,9 +66,7 @@ Unit: vp
 arrowPointPosition?: ArrowPointPosition
 ```
 
-Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and **End**, in both vertical and horizontal directions. All these positions are within the parent component area.
-
-Default value: **ArrowPointPosition.CENTER**
+Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and **End**, in both vertical and horizontal directions. All these positions are within the parent component area.Default value: **ArrowPointPosition.CENTER**
 
 **Type:** ArrowPointPosition
 
@@ -103,15 +86,8 @@ Default value: **ArrowPointPosition.CENTER**
 arrowWidth?: Dimension
 ```
 
-Arrow thickness. If the arrow thickness exceeds the length of the edge minus twice the size of the popup rounded corner, the arrow is not drawn.
-
-Default value: **16**
-
-Unit: vp
-
-**NOTE：**
-
-Percentage values are not supported.
+Arrow thickness. If the arrow thickness exceeds the length of the edge minus twice the size of the popup rounded corner, the arrow is not drawn.Default value: **16**Unit: vp  
+**NOTE：**Percentage values are not supported.
 
 **Type:** Dimension
 
@@ -133,9 +109,7 @@ Percentage values are not supported.
 autoCancel?: boolean
 ```
 
-Whether to automatically dismiss the popup when there is a page operation. The value **true** means to automatically dismiss the popup when there is a page operation, and **false** means the opposite.
-
-Default value: **true**
+Whether to automatically dismiss the popup when there is a page operation. The value **true** means to automatically dismiss the popup when there is a page operation, and **false** means the opposite.Default value: **true**
 
 **Type:** boolean
 
@@ -157,9 +131,7 @@ Default value: **true**
 avoidTarget?: AvoidanceMode
 ```
 
-Whether the popup covers the pointing component during avoidance.
-
-Default value: **AvoidanceMode.COVER_TARGET**
+Whether the popup covers the pointing component during avoidance.Default value: **AvoidanceMode.COVER_TARGET**
 
 **Type:** AvoidanceMode
 
@@ -181,9 +153,7 @@ Default value: **AvoidanceMode.COVER_TARGET**
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the popup.
-
-Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
+Background blur style of the popup.Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 **Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
@@ -245,11 +215,10 @@ Defines the popup's background effect with options
 borderLinearGradient?: PopupBorderLinearGradient
 ```
 
-Linear gradient color of the inner outline of the popup.
-
+Linear gradient color of the inner outline of the popup.  
 **NOTE：**
-
-1. If **borderLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the inner outline does not take effect. 2. When **borderLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
+1. If **borderLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the inner outline does not take effect.
+2. When **borderLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
 
 **Type:** [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md)
 
@@ -269,15 +238,11 @@ Linear gradient color of the inner outline of the popup.
 borderWidth?: Dimension
 ```
 
-Width of the inner outline of the popup.
-
-Default value: **1**
-
-Unit: vp
-
+Width of the inner outline of the popup.Default value: **1**Unit: vp  
 **NOTE：**
-
-1. Percentage values are not supported. If a percentage value is set, the value **0** is used. 2. If no inner outline is set, this parameter must be used together with **borderLinearGradient**. 3. For double outlines, it is recommended that the inner outline width should not exceed 10 vp.
+1. Percentage values are not supported. If a percentage value is set, the value **0** is used.
+2. If no inner outline is set, this parameter must be used together with **borderLinearGradient**.
+3. For double outlines, it is recommended that the inner outline width should not exceed 10 vp.
 
 **Type:** Dimension
 
@@ -319,11 +284,7 @@ Define the popup theme color mode.
 enableArrow?: boolean
 ```
 
-Whether to display the arrow. The value **true** means to display the arrow, and **false** means the opposite.
-
-If the position set for the popup is not large enough, the arrow will not be displayed. For example, if **placement** is set to **Left**, and the popup height is less than the sum of the arrow width (32 vp) and twice the popup corner radius (48 vp), that is, 80 vp, the arrow will not be displayed.
-
-Default value: **true**
+Whether to display the arrow. The value **true** means to display the arrow, and **false** means the opposite.If the position set for the popup is not large enough, the arrow will not be displayed. For example, if **placement** is set to **Left**, and the popup height is less than the sum of the arrow width (32 vp) and twice the popup corner radius (48 vp), that is, 80 vp, the arrow will not be displayed.Default value: **true**
 
 **Type:** boolean
 
@@ -345,13 +306,11 @@ Default value: **true**
 enableHoverMode?: boolean
 ```
 
-Whether the popup responds when the device is in hover mode (semi-folded state), that is, whether it triggers avoidance of the crease area in hover mode.
-
-Default value: **false** (**true** for 2-in-1 devices by default). If this parameter is not set or set to an invalid value, the default value is used.
-
+Whether the popup responds when the device is in hover mode (semi-folded state), that is, whether it triggers avoidance of the crease area in hover mode.Default value: **false** (**true** for 2-in-1 devices by default). If this parameter is not set or set to an invalid value, the default value is used.  
 **NOTE：**
-
-1. If the popup position is within the crease area in hover mode, it will not respond in hover mode. 2. This parameter is supported on 2-in-1 devices since API version 20. 3. This parameter only takes effect in window waterfall mode for 2-in-1 devices.
+1. If the popup position is within the crease area in hover mode, it will not respond in hover mode.
+2. This parameter is supported on 2-in-1 devices since API version 20.
+3. This parameter only takes effect in window waterfall mode for 2-in-1 devices.
 
 **Type:** boolean
 
@@ -373,14 +332,9 @@ Default value: **false** (**true** for 2-in-1 devices by default). If this param
 focusable?: boolean
 ```
 
-Whether the popup obtains focus when displayed.
-
-**true**: The popup can obtain the focus; **false**: The popup cannot obtain the focus.
-
-Default value: **false**
-
+Whether the popup obtains focus when displayed.  
+**true**: The popup can obtain the focus; **false**: The popup cannot obtain the focus.Default value: **false**  
 **NOTE：**
-
 [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
 
 **Type:** boolean
@@ -403,11 +357,8 @@ Default value: **false**
 followTransformOfTarget?: boolean
 ```
 
-Whether the popup aligns with the transformed position of the target when the target component or its parent container has transformations (such as rotation and scaling).
-
-**true**: The popup aligns with the transformed position of the target; **false**: The popup does not track such transformations, which may result in incorrect display.
-
-Default value: **false**
+Whether the popup aligns with the transformed position of the target when the target component or its parent container has transformations (such as rotation and scaling).  
+**true**: The popup aligns with the transformed position of the target; **false**: The popup does not track such transformations, which may result in incorrect display.Default value: **false**
 
 **Type:** boolean
 
@@ -469,15 +420,8 @@ Whether to apply a mask with the specified color to the popup. The value **false
 offset?: Position
 ```
 
-Offset of the popup relative to the display position specified by **placement**.
-
-**NOTE：**
-
-Percentage values are not supported.
-
-Default value: **{x:0, y:0}**
-
-Unit: vp
+Offset of the popup relative to the display position specified by **placement**.  
+**NOTE：**Percentage values are not supported.Default value: **{x:0, y:0}**Unit: vp
 
 **Type:** Position
 
@@ -499,10 +443,8 @@ Unit: vp
 onStateChange?: PopupStateChangeCallback
 ```
 
-Represents the callback invoked when the popup state changes.
-
+Represents the callback invoked when the popup state changes.  
 **NOTE：**
-
 [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
 
 **Type:** [PopupStateChangeCallback](arkts-arkui-popupstatechangecallback-t.md)
@@ -523,13 +465,12 @@ Represents the callback invoked when the popup state changes.
 onWillDismiss?: boolean | Callback<DismissPopupAction>
 ```
 
-Interactive dismissal behavior. The default value is **true**, meaning that the popup responds to clicks, swipes ( left or right), and the back button.
-
-1. For the boolean type, if this parameter is set to **false**, the popup ignores clicks, swipes, back button, route navigation, and **Esc** key events, and can only be dismissed by setting the **show** parameter to **false**; if this parameter is set to **true**, the popup responds to dismissal events. 2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. For swipes, back button, route navigation, and the **Esc** key, the value of **reason** returned in the callback function is **PRESS_BACK**. For clicks, the value is **TOUCH_OUTSIDE**.
-
+Interactive dismissal behavior. The default value is **true**, meaning that the popup responds to clicks, swipes (left or right), and the back button.
+1. For the boolean type, if this parameter is set to **false**, the popup ignores clicks, swipes, back button, route navigation, and **Esc** key events, and can only be dismissed by setting the **show** parameter to **false**; if this parameter is set to **true**, the popup responds to dismissal events.
+2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. For swipes, back button, route navigation, and the **Esc** key, the value of **reason** returned in the callback function is **PRESS_BACK**. For clicks, the value is **TOUCH_OUTSIDE**.  
 **NOTE：**
-
-1. No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback. 2. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
+1. No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback.
+2. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
 
 **Type:** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
@@ -549,11 +490,10 @@ Interactive dismissal behavior. The default value is **true**, meaning that the 
 outlineLinearGradient?: PopupBorderLinearGradient
 ```
 
-Linear gradient color of the outer outline of the popup.
-
+Linear gradient color of the outer outline of the popup.  
 **NOTE：**
-
-1. If **outlineLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the outer outline does not take effect. 2. When **outlineLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
+1. If **outlineLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the outer outline does not take effect.
+2. When **outlineLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
 
 **Type:** [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md)
 
@@ -573,15 +513,11 @@ Linear gradient color of the outer outline of the popup.
 outlineWidth?: Dimension
 ```
 
-Width of the outer outline of the popup.
-
-Default value: **1**
-
-Unit: vp
-
+Width of the outer outline of the popup.Default value: **1**Unit: vp  
 **NOTE：**
-
-1. Percentage values are not supported. If a percentage value is set, the value **0** is used. 2. If the outer outline is not set, this parameter must be used together with **outlineLinearGradient**. 3. For double outlines, it is recommended that the outer outline width should not exceed 10 vp.
+1. Percentage values are not supported. If a percentage value is set, the value **0** is used.
+2. If the outer outline is not set, this parameter must be used together with **outlineLinearGradient**.
+3. For double outlines, it is recommended that the outer outline width should not exceed 10 vp.
 
 **Type:** Dimension
 
@@ -601,9 +537,7 @@ Unit: vp
 placement?: Placement
 ```
 
-Preferred position of the popup. If the set position is insufficient for holding the popup, it will be automatically adjusted.
-
-Default value: **Placement.Bottom**
+Preferred position of the popup. If the set position is insufficient for holding the popup, it will be automatically adjusted.Default value: **Placement.Bottom**
 
 **Type:** Placement
 
@@ -645,11 +579,7 @@ Color of the popup. To remove the background blur, set **backgroundBlurStyle** t
 radius?: Dimension
 ```
 
-Rounded corner radius of the popup.
-
-Default value: **20**
-
-Unit: vp
+Rounded corner radius of the popup.Default value: **20**Unit: vp
 
 **Type:** Dimension
 
@@ -671,9 +601,7 @@ Unit: vp
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Popup shadow.
-
-Default value: **ShadowStyle.OUTER_DEFAULT_MD**
+Popup shadow.Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 
 **Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
@@ -695,12 +623,8 @@ Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 showInSubWindow?: boolean
 ```
 
-Whether to show the popup in a subwindow. The value **true** means to show the popup in a subwindow, and **false** means to show the popup in the main window.
-
-Default value: **false**
-
+Whether to show the popup in a subwindow. The value **true** means to show the popup in a subwindow, and **false** means to show the popup in the main window.Default value: **false**  
 **NOTE：**
-
 [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
 
 **Type:** boolean
@@ -743,11 +667,7 @@ Set system-styled materials for popup. Different materials have different effect
 targetSpace?: Length
 ```
 
-Spacing between the popup and the host node. Percentage values are not supported.
-
-Default value: **8**
-
-Unit: vp
+Spacing between the popup and the host node. Percentage values are not supported.Default value: **8**Unit: vp
 
 **Type:** Length
 
@@ -767,11 +687,12 @@ Unit: vp
 transition?: TransitionEffect
 ```
 
-Transition animations for the entrance and exit of the popup.
-
+Transition animations for the entrance and exit of the popup.  
 **NOTE：**
-
-1. If this parameter is not set, the default effect is used. 2. Touching the back button during the entrance animation interrupts it and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined. 3. Touching the back button during the exit animation does not affect the animation playback; the back button is unresponsive. 4. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
+1. If this parameter is not set, the default effect is used.
+2. Touching the back button during the entrance animation interrupts it and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.
+3. Touching the back button during the exit animation does not affect the animation playback; the back button is unresponsive.
+4. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
 
 **Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 

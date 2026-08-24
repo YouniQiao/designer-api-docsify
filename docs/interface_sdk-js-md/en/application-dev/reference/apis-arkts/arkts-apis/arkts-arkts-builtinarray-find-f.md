@@ -68,7 +68,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| [Byte](arkts-arkts-byte-c.md) \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| Byte \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
 
 
 ## find
@@ -101,7 +101,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| [Short](arkts-arkts-short-c.md) \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| Short \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
 
 
 ## find
@@ -134,7 +134,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| Int \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
 
 
 ## find
@@ -167,7 +167,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| Long \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
 
 
 ## find
@@ -200,7 +200,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| Float \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
 
 
 ## find
@@ -233,7 +233,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| Double \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
 
 
 ## find
@@ -266,5 +266,5 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| [Char](arkts-arkts-char-c.md) \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| Char \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
 

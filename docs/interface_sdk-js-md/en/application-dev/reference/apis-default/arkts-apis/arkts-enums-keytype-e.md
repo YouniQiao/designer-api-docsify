@@ -1,8 +1,6 @@
 # KeyType
 
-Type of a key.
-
-@enum { number }
+Type of a key.@enum { number }
 
 **Since:** 23
 

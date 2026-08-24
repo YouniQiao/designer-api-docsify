@@ -4,6 +4,8 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 
 **起始版本：** 12
 
+**装饰器类型：** @Sendable
+
 <!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup

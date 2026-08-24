@@ -14,7 +14,6 @@ Describes the system volume filter.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## uid

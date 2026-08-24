@@ -14,7 +14,6 @@ Describes the exposure information object.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## exposureTime

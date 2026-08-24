@@ -18,7 +18,7 @@ areaChangePlaceholder?: Record<string, ComponentContentBase>
 
 设置尺寸变化占位符，在EmbeddedComponent尺寸发生变化并且内部渲染未完成时显示。<br/>key为尺寸变化场景类型（如"FOLD_TO_EXPAND"表示折叠展开场景），value为对应场景的占位符组件。 当前支持的键值包括：FOLD_TO_EXPAND。传入不支持的键值时，该占位符不生效。<br/>默认值：undefined，不设置尺寸变化占位符。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [ComponentContentBase](../arkts-apis/arkts-componentcontent-componentcontentbase-c.md)&gt;
+**类型：** Record&lt;string, [ComponentContentBase](../arkts-apis/arkts-componentcontent-componentcontentbase-c.md)&gt;
 
 **起始版本：** 26.0.0
 

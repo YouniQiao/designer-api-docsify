@@ -2,8 +2,7 @@
 
 This module provides common features related to user key management, including user key uninstallation.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This topic describes only the system APIs provided by the module.
 
 **Since:** 23

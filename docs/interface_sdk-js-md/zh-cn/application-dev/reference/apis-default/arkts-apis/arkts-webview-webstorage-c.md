@@ -1,8 +1,6 @@
 # WebStorage
 
-Implements a WebStorage object to manage the Web SQL database and HTML5 Web Storage APIs. All Web components in an application share a WebStorage object.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in WebStorage. </p>
+Implements a WebStorage object to manage the Web SQL database and HTML5 Web Storage APIs. All Web components in an application share a WebStorage object.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in WebStorage. </p>
 
 **起始版本：** 23
 
@@ -59,7 +57,7 @@ Deletes all data in the specified origin.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| origin | string | 是 | Index of the origin, which is obtained through [getOrigins](#getorigins). |
+| origin | string | 是 | Index of the origin, which is obtained through [getOrigins](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webstorage-c.md#getorigins). |
 
 **错误码：**
 
@@ -153,7 +151,7 @@ Obtains information about all origins that are currently using the Web SQL Datab
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[WebStorageOrigin](arkts-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. For details, see { |
+| Promise&lt;Array&lt;[WebStorageOrigin](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. For details, see { |
 
 **错误码：**
 
@@ -182,7 +180,7 @@ Obtains information about all origins that are currently using the Web SQL Datab
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](arkts-webview-webstorageorigin-i.md)&gt;&gt; | 是 | Callback used to return the information about the origins. For details, see [WebStorageOrigin](arkts-webview-webstorageorigin-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | 是 | Callback used to return the information about the origins. For details, see [WebStorageOrigin](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webstorageorigin-i.md). |
 
 **错误码：**
 

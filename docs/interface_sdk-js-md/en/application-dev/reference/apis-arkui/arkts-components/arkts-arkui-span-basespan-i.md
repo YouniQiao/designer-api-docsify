@@ -28,7 +28,7 @@ baselineOffset(value: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

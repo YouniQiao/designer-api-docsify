@@ -1,8 +1,6 @@
 # MediaQueryResult
 
-用于执行媒体查询操作。
-
-@interface MediaQueryResult
+用于执行媒体查询操作。@interface MediaQueryResult
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # ExtendableStack
 
-Defines the Extendable Stack.
-
-@implements StackAttribute
+Defines the Extendable Stack.@implements StackAttribute
 
 **Inheritance/Implementation:** ExtendableStack implements [StackAttribute](arkts-arkui-stack-attribute.md#stackattribute)
 
@@ -17,8 +15,7 @@ Defines the Extendable Stack.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableStack>(
+static $_instantiate<T extends ExtendableStack>(
         factory: ConstructorT<T>, 
         options?: StackOptions,
         content_?: CustomBuilder
@@ -30,6 +27,8 @@ Constructor of Extendable Stack.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +53,7 @@ Constructor of Extendable Stack.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-    static _instantiateImpl<T extends ExtendableStack>(
+static _instantiateImpl<T extends ExtendableStack>(
         styles: CustomBuilderT<T>, 
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -67,6 +65,8 @@ Entry of Extendable Stack.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

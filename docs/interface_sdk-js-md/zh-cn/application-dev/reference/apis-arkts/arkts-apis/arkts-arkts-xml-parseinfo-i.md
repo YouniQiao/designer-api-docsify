@@ -20,9 +20,7 @@ import { xml } from '@kit.ArkTS';
 getAttributeCount(): int
 ```
 
-ArkTS-Sta: getAttributeCount(): int
-
-当前开始标记的属性数量，用于遍历和处理XML属性。
+ArkTS-Sta: getAttributeCount(): int当前开始标记的属性数量，用于遍历和处理XML属性。
 
 **起始版本：** 23
 
@@ -64,9 +62,7 @@ console.info(str);
 getColumnNumber(): int
 ```
 
-ArkTS-Sta: getColumnNumber(): int
-
-获取当前列号，从1开始计数。
+ArkTS-Sta: getColumnNumber(): int获取当前列号，从1开始计数。
 
 **起始版本：** 23
 
@@ -108,12 +104,9 @@ console.info(str);
 getDepth(): int
 ```
 
-ArkTS-Sta: getDepth(): int
+ArkTS-Sta: getDepth(): int获取元素的当前深度。
 
-获取元素的当前深度。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 标签内的空白事件深度与标签的深度保持一致。
 
 **起始版本：** 23
@@ -160,9 +153,7 @@ console.info(str);
 getLineNumber(): int
 ```
 
-ArkTS-Sta: getLineNumber(): int
-
-获取当前行号，从1开始。
+ArkTS-Sta: getLineNumber(): int获取当前行号，从1开始。
 
 **起始版本：** 23
 

@@ -2,12 +2,9 @@
 
 Implements the shader effect. After a shader effect is set for a pen or brush, the shader effect instead of the color attribute is used for drawing. In this case, the alpha value set for the pen or brush still takes effect.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 12.&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 

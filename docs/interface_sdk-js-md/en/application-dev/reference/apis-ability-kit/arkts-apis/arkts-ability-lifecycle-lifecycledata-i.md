@@ -1,8 +1,6 @@
 # LifecycleData
 
-interface of data lifecycle.
-
-@interface LifecycleData
+interface of data lifecycle.@interface LifecycleData
 
 **Since:** 7
 

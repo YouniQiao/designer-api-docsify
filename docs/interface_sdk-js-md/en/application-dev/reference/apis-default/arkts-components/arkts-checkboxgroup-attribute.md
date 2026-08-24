@@ -1,8 +1,6 @@
 # CheckboxGroupAttribute
 
-Defines the CheckboxGroup component attributes.
-
-@extends CommonMethod @interface CheckboxGroupAttribute
+Defines the CheckboxGroup component attributes.@extends CommonMethod @interface CheckboxGroupAttribute
 
 **Inheritance/Implementation:** CheckboxGroupAttribute extends CommonMethod
 

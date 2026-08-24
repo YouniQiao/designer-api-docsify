@@ -29,7 +29,7 @@
 
 | Name | Description |
 | --- | --- |
-| [MarginTypeV2](arkts-arkui-advanced-exceptionpromptv2-margintypev2-e.md) | Control margin status of ExceptionPromptV2. |
+| [MarginTypeV2](arkts-arkui-advanced-exceptionpromptv2-margintypev2-e.md) | Control margin status of ExceptionPromptV2.@enum { number } |
 
 ### Types
 

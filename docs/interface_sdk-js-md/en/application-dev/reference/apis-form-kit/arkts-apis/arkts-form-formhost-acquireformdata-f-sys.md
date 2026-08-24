@@ -111,7 +111,7 @@ Requests data from the widget provider. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{ [key: string]: Object | > } The promise returned by the function.<br>**Applicable version:** 10 and later |
+| Promise&lt;{ [key: string]: Object | > } The promise returned by the function.<br>**Applicable version:** 10 |
 | Promise&lt;Record&lt;string, Object&gt;&gt; | Promise used to return the API call result and the shared data.<br>**Applicable version:** 11 and later |
 
 **Error codes:**

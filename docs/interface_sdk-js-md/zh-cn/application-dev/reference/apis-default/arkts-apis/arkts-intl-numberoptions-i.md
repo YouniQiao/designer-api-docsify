@@ -21,11 +21,7 @@
 compactDisplay?: string
 ```
 
-紧凑显示格式，取值包括："long", "short"。
-
-默认值：short。
-
-不同取值的显示效果请参考附录表18。
+紧凑显示格式，取值包括："long", "short"。默认值：short。不同取值的显示效果请参考附录表18。
 
 **类型：** string
 
@@ -43,9 +39,7 @@ compactDisplay?: string
 currency?: string
 ```
 
-货币单位（需设置style为currency）， 取值符合[ISO-4217标准](https://www.iso.org/iso-4217-currency-codes.html)，如："EUR"，"CNY"，"USD"等。
-
-从API version 12开始支持三位数字代码，如："978"，"156"，"840"等。
+货币单位（需设置style为currency）， 取值符合[ISO-4217标准](https://www.iso.org/iso-4217-currency-codes.html)，如："EUR"，"CNY"，"USD"等。从API version 12开始支持三位数字代码，如："978"，"156"，"840"等。
 
 **类型：** string
 
@@ -63,11 +57,7 @@ currency?: string
 currencyDisplay?: string
 ```
 
-货币的显示方式（需设置style为currency），取值包括："symbol", "narrowSymbol", "code", "name"。
-
-默认值：symbol。
-
-不同取值的显示效果请参考附录表20。
+货币的显示方式（需设置style为currency），取值包括："symbol", "narrowSymbol", "code", "name"。默认值：symbol。不同取值的显示效果请参考附录表20。
 
 **类型：** string
 
@@ -85,11 +75,7 @@ currencyDisplay?: string
 currencySign?: string
 ```
 
-货币单位的符号显示（需设置style为currency），取值包括： "standard"，"accounting"。
-
-默认值：standard。
-
-不同取值的显示效果请参考附录表19。
+货币单位的符号显示（需设置style为currency），取值包括： "standard"，"accounting"。默认值：standard。不同取值的显示效果请参考附录表19。
 
 **类型：** string
 
@@ -107,9 +93,7 @@ currencySign?: string
 locale?: string
 ```
 
-合法的区域ID， 如："zh-Hans-CN"。
-
-默认值：系统当前区域ID。
+合法的区域ID， 如："zh-Hans-CN"。默认值：系统当前区域ID。
 
 **类型：** string
 
@@ -127,9 +111,7 @@ locale?: string
 localeMatcher?: string
 ```
 
-要使用的区域匹配算法，取值包括："lookup", "best fit"。
-
-默认值：best fit。
+要使用的区域匹配算法，取值包括："lookup", "best fit"。默认值：best fit。
 
 **类型：** string
 
@@ -147,11 +129,7 @@ localeMatcher?: string
 maximumFractionDigits?: int
 ```
 
-表示要使用的最大分数位数，取值范围：[1, 21]。
-
-默认值：3。
-
-不同取值的显示效果请参考附录表13。
+表示要使用的最大分数位数，取值范围：[1, 21]。默认值：3。不同取值的显示效果请参考附录表13。
 
 **类型：** int
 
@@ -169,11 +147,7 @@ maximumFractionDigits?: int
 maximumSignificantDigits?: int
 ```
 
-表示要使用的最大有效位数，取值范围：[1, 21]。
-
-默认值：21。
-
-不同取值的显示效果请参考附录表15。
+表示要使用的最大有效位数，取值范围：[1, 21]。默认值：21。不同取值的显示效果请参考附录表15。
 
 **类型：** int
 
@@ -191,11 +165,7 @@ maximumSignificantDigits?: int
 minimumFractionDigits?: int
 ```
 
-表示要使用的最小分数位数，取值范围：[0, 20]。
-
-默认值：0。
-
-不同取值的显示效果请参考附录表12。
+表示要使用的最小分数位数，取值范围：[0, 20]。默认值：0。不同取值的显示效果请参考附录表12。
 
 **类型：** int
 
@@ -213,11 +183,7 @@ minimumFractionDigits?: int
 minimumIntegerDigits?: int
 ```
 
-表示要使用的最小整数位数，取值范围：[1, 21]。
-
-默认值：1。
-
-不同取值的显示效果请参考附录表11。
+表示要使用的最小整数位数，取值范围：[1, 21]。默认值：1。不同取值的显示效果请参考附录表11。
 
 **类型：** int
 
@@ -235,11 +201,7 @@ minimumIntegerDigits?: int
 minimumSignificantDigits?: int
 ```
 
-表示要使用的最小有效位数，取值范围：[1, 21]。
-
-默认值：1。
-
-不同取值的显示效果请参考附录表14。
+表示要使用的最小有效位数，取值范围：[1, 21]。默认值：1。不同取值的显示效果请参考附录表14。
 
 **类型：** int
 
@@ -257,11 +219,7 @@ minimumSignificantDigits?: int
 notation?: string
 ```
 
-数字的表示方法，取值包括："standard", "scientific", "engineering", "compact"。
-
-默认值：standard。
-
-不同取值的显示效果请参考附录表17。
+数字的表示方法，取值包括："standard", "scientific", "engineering", "compact"。默认值：standard。不同取值的显示效果请参考附录表17。
 
 **类型：** string
 
@@ -279,11 +237,7 @@ notation?: string
 numberingSystem?: string
 ```
 
-数字系统，取值包括：
-
-"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", "wcho"。
-
-默认值：区域的默认数字系统。
+数字系统，取值包括："adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。默认值：区域的默认数字系统。
 
 **类型：** string
 
@@ -301,9 +255,7 @@ numberingSystem?: string
 roundingIncrement?: int
 ```
 
-表示舍入增量，取值范围：1，2，5，10，20，25，50，100，200，250，500，1000，2000，2500，5000。
-
-默认值：1。
+表示舍入增量，取值范围：1，2，5，10，20，25，50，100，200，250，500，1000，2000，2500，5000。默认值：1。
 
 **类型：** int
 
@@ -321,27 +273,7 @@ roundingIncrement?: int
 roundingMode?: string
 ```
 
-表示舍入模式，取值包括：
-
-"ceil"：向上取整。
-
-"floor"：向下取整。
-
-"expand"：远离零取整。
-
-"trunc"：向零取整。
-
-"halfCeil"：半向上取整，大于等于增量的一半时向上取整，小于增量的一半时向下取整。
-
-"halfFloor"：半向下取整，大于增量的一半时向上取整，小于等于增量的一半时向下取整。
-
-"halfExpand"：半远离零取整，大于等于增量的一半时远离零取整，小于增量的一半时向零取整。
-
-"halfTrunc"：半向零取整，大于增量的一半时远离零取整，小于等于增量的一半时向零取整。
-
-"halfEven"：半向偶数取整，大于增量的一半时 远离零取整，小于增量的一半时向零取整，等于增量的一半时向最近的偶数位舍入。
-
-默认值：halfExpand。
+表示舍入模式，取值包括："ceil"：向上取整。"floor"：向下取整。"expand"：远离零取整。"trunc"：向零取整。"halfCeil"：半向上取整，大于等于增量的一半时向上取整，小于增量的一半时向下取整。"halfFloor"：半向下取整，大于增量的一半时向上取整，小于等于增量的一半时向下取整。"halfExpand"：半远离零取整，大于等于增量的一半时远离零取整，小于增量的一半时向零取整。"halfTrunc"：半向零取整，大于增量的一半时远离零取整，小于等于增量的一半时向零取整。"halfEven"：半向偶数取整，大于增量的一半时 远离零取整，小于增量的一半时向零取整，等于增量的一半时向最近的偶数位舍入。默认值：halfExpand。
 
 **类型：** string
 
@@ -359,9 +291,7 @@ roundingMode?: string
 roundingPriority?: string
 ```
 
-最大分数位数和最大有效位数同时设置时的舍入优先级，取值包括："auto" 选择区域默认的最大分数位数或最大有效位数，"morePrecision" 取最大分数位数，"lessPrecision" 取最大有效位数。
-
-默认值：auto。
+最大分数位数和最大有效位数同时设置时的舍入优先级，取值包括："auto" 选择区域默认的最大分数位数或最大有效位数，"morePrecision" 取最大分数位数，"lessPrecision" 取最大有效位数。默认值：auto。
 
 **类型：** string
 
@@ -379,17 +309,7 @@ roundingPriority?: string
 signDisplay?: string
 ```
 
-数字符号的显示格式，取值包括：
-
-"auto"：自动判断是否显示正负符号。
-
-"never"：不显示正负号。
-
-"always"：总是显示正负号。
-
-"exceptZero"：除了0都显示正负号。
-
-默认值："auto"。
+数字符号的显示格式，取值包括："auto"：自动判断是否显示正负符号。"never"：不显示正负号。"always"：总是显示正负号。"exceptZero"：除了0都显示正负号。默认值："auto"。
 
 **类型：** string
 
@@ -407,9 +327,7 @@ signDisplay?: string
 style?: string
 ```
 
-数字的显示格式，取值包括："decimal", "currency", "percent", "unit"。
-
-默认值：decimal。
+数字的显示格式，取值包括："decimal", "currency", "percent", "unit"。默认值：decimal。
 
 **类型：** string
 
@@ -427,9 +345,7 @@ style?: string
 unit?: string
 ```
 
-单位名称（需设置style为unit），如："meter"，"inch"，“hectare”等。
-
-从API version 18开始新增支持的组合单位有： "beat-per-minute", "body-weight-per-second", "breath-per-minute", "foot-per-hour", "jump-rope-per-minute", "meter-per-hour", "milliliter-per-minute-per-kilogram", "rotation-per-minute", "step-per-minute", "stroke-per-minute"。
+单位名称（需设置style为unit），如："meter"，"inch"，“hectare”等。从API version 18开始新增支持的组合单位有： "beat-per-minute", "body-weight-per-second", "breath-per-minute", "foot-per-hour","jump-rope-per-minute", "meter-per-hour", "milliliter-per-minute-per-kilogram", "rotation-per-minute","step-per-minute", "stroke-per-minute"。
 
 **类型：** string
 
@@ -447,11 +363,7 @@ unit?: string
 unitDisplay?: string
 ```
 
-单位的显示格式（需设置style为unit），取值包括："long", "short", "narrow"。
-
-默认值：short。
-
-不同取值的显示效果请参考附录表21。
+单位的显示格式（需设置style为unit），取值包括："long", "short", "narrow"。默认值：short。不同取值的显示效果请参考附录表21。
 
 **类型：** string
 
@@ -469,11 +381,7 @@ unitDisplay?: string
 unitUsage?: string
 ```
 
-单位的使用场景（需设置style为unit），取值包括："default", "area-land-agricult", "area-land-commercl", "area-land-residntl", "length-person", "length-person-small", "length-rainfall", "length-road", "length-road-small", "length-snowfall", "length-vehicle", "length-visiblty", "length-visiblty-small", "length-person-informal", "length-person-small-informal", "length-road-informal", "speed-road-travel", "speed-wind", "temperature-person", "temperature-weather", "volume-vehicle-fuel", "elapsed-time-second", "size-file-byte", "size-shortfile-byte"。
-
-默认值：default。
-
-不同取值的显示效果请参考附录表22。
+单位的使用场景（需设置style为unit），取值包括："default", "area-land-agricult", "area-land-commercl", "area-land-residntl","length-person", "length-person-small", "length-rainfall", "length-road", "length-road-small", "length-snowfall","length-vehicle", "length-visiblty", "length-visiblty-small", "length-person-informal", "length-person-small-informal","length-road-informal", "speed-road-travel", "speed-wind", "temperature-person", "temperature-weather","volume-vehicle-fuel", "elapsed-time-second", "size-file-byte", "size-shortfile-byte"。默认值：default。不同取值的显示效果请参考附录表22。
 
 **类型：** string
 
@@ -491,11 +399,7 @@ unitUsage?: string
 useGrouping?: boolean
 ```
 
-true表示分组显示，false表示不分组显示。
-
-默认值：true。
-
-不同取值的显示效果请参考附录表16。
+true表示分组显示，false表示不分组显示。默认值：true。不同取值的显示效果请参考附录表16。
 
 **类型：** boolean
 

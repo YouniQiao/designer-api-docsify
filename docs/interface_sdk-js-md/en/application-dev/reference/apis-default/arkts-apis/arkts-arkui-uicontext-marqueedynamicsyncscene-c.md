@@ -1,8 +1,6 @@
 # MarqueeDynamicSyncScene
 
-Represents a dynamic synchronization scene of Marquee.
-
-@extends DynamicSyncScene
+Represents a dynamic synchronization scene of Marquee.@extends DynamicSyncScene
 
 **Inheritance/Implementation:** MarqueeDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-uicontext-dynamicsyncscene-c.md)
 

@@ -2,15 +2,12 @@
 
 Describes the parameters of the date picker.
 
-> **NOTE：**
-> 
-> - For details about how to use **Date**, see TimePickerOptions.
-> 
+> **NOTE：**&gt;
+> - For details about how to use **Date**, see TimePickerOptions.&gt;
 > - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take
 > effect.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Handle exceptions for the start and end dates first, followed by exceptions for the selected date.
 
 **Since:** 8
@@ -30,11 +27,7 @@ Describes the parameters of the date picker.
 end?: Date
 ```
 
-End date of the picker.
-
-Default value: **Date('2100-12-31')**
-
-Value range: [Date('1900-01-31'), Date('2100-12-31')].
+End date of the picker.Default value: **Date('2100-12-31')**Value range: [Date('1900-01-31'), Date('2100-12-31')].
 
 **Type:** Date
 
@@ -54,11 +47,7 @@ Value range: [Date('1900-01-31'), Date('2100-12-31')].
 mode?: DatePickerMode
 ```
 
-Date display mode.
-
-Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day.
-
-In DatePickerDialog, when **showTime** in [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) is **true**, this parameter is ignored and the year, month, day columns are always shown.
+Date display mode.Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day.In DatePickerDialog, when **showTime** in [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) is **true**, this parameter is ignored and the year, month, day columns are always shown.
 
 **Type:** [DatePickerMode](arkts-arkui-datepickermode-e.md)
 
@@ -80,13 +69,7 @@ In DatePickerDialog, when **showTime** in [DatePickerDialogOptions](arkts-arkui-
 selected?: Date
 ```
 
-Date of the selected item.
-
-Default value: current system date.
-
-Value range: [Date('1900-01-31'), Date('2100-12-31')].
-
-Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Date of the selected item.Default value: current system date.Value range: [Date('1900-01-31'), Date('2100-12-31')].Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** Date
 
@@ -106,11 +89,7 @@ Since API version 10, this parameter supports two-way binding through [\$\$](../
 start?: Date
 ```
 
-Start date of the picker.
-
-Default value: **Date('1970-1-1')**
-
-Value range: [Date('1900-01-31'), Date('2100-12-31')].
+Start date of the picker.Default value: **Date('1970-1-1')**Value range: [Date('1900-01-31'), Date('2100-12-31')].
 
 **Type:** Date
 

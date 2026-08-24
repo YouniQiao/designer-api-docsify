@@ -1,8 +1,6 @@
 # Image
 
-Image resource, which inherits from SceneResource.
-
-@extends SceneResource @interface Image
+Image resource, which inherits from SceneResource.@extends SceneResource @interface Image
 
 **Inheritance/Implementation:** Image extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 

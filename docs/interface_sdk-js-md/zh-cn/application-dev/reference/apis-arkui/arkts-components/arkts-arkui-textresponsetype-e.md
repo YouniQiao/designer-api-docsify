@@ -2,16 +2,11 @@
 
 选择菜单的响应类型。
 
-> **说明：**
-> 
-> 菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找：
-> 
-> 1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG_PRESS菜单
-> 
-> 2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单
-> 
-> 3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG_PRESS菜单
-> 
+> **说明：**&gt;
+> 菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找：&gt;
+> 1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG_PRESS菜单&gt;
+> 2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单&gt;
+> 3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG_PRESS菜单&gt;
 > 4. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.DEFAULT菜单
 
 **起始版本：** 11

@@ -1,8 +1,6 @@
 # StrongAuthReasonFlags (System API)
 
-Indicates the strong authentication reason flags used to request.
-
-@enum { int }
+Indicates the strong authentication reason flags used to request.@enum { int }
 
 **Since:** 23
 

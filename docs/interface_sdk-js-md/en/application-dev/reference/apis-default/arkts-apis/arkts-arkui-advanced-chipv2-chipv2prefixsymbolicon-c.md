@@ -8,6 +8,8 @@ Defines chip prefix symbol icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon--><!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

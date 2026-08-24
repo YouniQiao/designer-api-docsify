@@ -1,8 +1,6 @@
 # Position
 
-位置类型，用于表示一个坐标点。
-
-@interface Position
+位置类型，用于表示一个坐标点。@interface Position
 
 **起始版本：** 23
 
@@ -18,9 +16,7 @@
 x?: Length
 ```
 
-x轴坐标。
-
-单位：vp
+x轴坐标。单位：vp
 
 **类型：** [Length](arkts-length-t.md)
 
@@ -40,9 +36,7 @@ x轴坐标。
 y?: Length
 ```
 
-y轴坐标。
-
-单位：vp
+y轴坐标。单位：vp
 
 **类型：** [Length](arkts-length-t.md)
 

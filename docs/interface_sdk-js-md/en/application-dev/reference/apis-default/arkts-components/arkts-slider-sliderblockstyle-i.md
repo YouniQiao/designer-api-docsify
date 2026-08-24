@@ -1,8 +1,6 @@
 # SliderBlockStyle
 
-Describes the style of the slider in the block direction.
-
-@interface SliderBlockStyle
+Describes the style of the slider in the block direction.@interface SliderBlockStyle
 
 **Since:** 23
 

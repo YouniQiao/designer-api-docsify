@@ -1,8 +1,6 @@
 # MediaQueryResult
 
-Defines the Result of mediaquery.
-
-@interface MediaQueryResult
+Defines the Result of mediaquery.@interface MediaQueryResult
 
 **Since:** 23
 

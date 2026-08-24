@@ -75,8 +75,7 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 
 Obtains the list of disallowed Bluetooth protocols for a specified user under a specified transfer policy.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. This API and
 > [getDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#getdisallowedbluetoothprotocols) are
 > overloaded APIs. This API adds the **policy** parameter to query the disallowing configuration based on the

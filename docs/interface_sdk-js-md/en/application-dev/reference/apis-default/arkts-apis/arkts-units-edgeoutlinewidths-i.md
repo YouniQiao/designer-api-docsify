@@ -1,8 +1,6 @@
 # EdgeOutlineWidths
 
-Defines the outline width property.
-
-@interface EdgeOutlineWidths
+Defines the outline width property.@interface EdgeOutlineWidths
 
 **Since:** 23
 

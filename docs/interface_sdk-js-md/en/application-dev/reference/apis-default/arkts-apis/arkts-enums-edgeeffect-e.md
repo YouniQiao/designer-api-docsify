@@ -1,8 +1,6 @@
 # EdgeEffect
 
-Sliding effect
-
-@enum { number }
+Sliding effect@enum { number }
 
 **Since:** 23
 

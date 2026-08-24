@@ -1,8 +1,6 @@
 # GridRowDirection
 
-栅格元素排列方向。
-
-@enum { int }
+栅格元素排列方向。@enum { int }
 
 **起始版本：** 23
 

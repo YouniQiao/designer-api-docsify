@@ -22,12 +22,9 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 绑定IP地址和端口，端口可以指定为0由系统随机分配或由用户指定为其它非0端口。使用callback异步回调。
 
-> **说明：**
-> 
-> bind方法如果因为端口冲突而执行失败，则会由系统随机分配端口号。
-> 
-> TCP客户端可先调用该接口(tcp.bind)显式绑定IP地址和端口号，再调用tcp.connect完成与服务端的连接；也可直接调用tcp.connect由系统自动绑定IP地址和端口号，完成与服务端的连接。
-> 
+> **说明：**&gt;
+> bind方法如果因为端口冲突而执行失败，则会由系统随机分配端口号。&gt;
+> TCP客户端可先调用该接口(tcp.bind)显式绑定IP地址和端口号，再调用tcp.connect完成与服务端的连接；也可直接调用tcp.connect由系统自动绑定IP地址和端口号，完成与服务端的连接。&gt;
 > bind的IP为'localhost'或'127.0.0.1'时，只允许本地回环接口的连接，即服务端和客户端运行在同一台机器上。
 
 **起始版本：** 7
@@ -183,12 +180,9 @@ bind(address: NetAddress): Promise<void>
 
 绑定IP地址和端口，端口可以指定为0由系统随机分配或由用户指定为其它非0端口。使用Promise异步回调。
 
-> **说明：**
-> 
-> bind方法如果因为端口冲突而执行失败，则会由系统随机分配端口号。
-> 
-> TCP客户端可先调用该接口(tcp.bind)显式绑定IP地址和端口号，再调用tcp.connect完成与服务端的连接；也可直接调用tcp.connect由系统自动绑定IP地址和端口号，完成与服务端的连接。
-> 
+> **说明：**&gt;
+> bind方法如果因为端口冲突而执行失败，则会由系统随机分配端口号。&gt;
+> TCP客户端可先调用该接口(tcp.bind)显式绑定IP地址和端口号，再调用tcp.connect完成与服务端的连接；也可直接调用tcp.connect由系统自动绑定IP地址和端口号，完成与服务端的连接。&gt;
 > bind的IP为'localhost'或'127.0.0.1'时，只允许本地回环接口的连接，即服务端和客户端运行在同一台机器上。
 
 **起始版本：** 7
@@ -593,8 +587,7 @@ connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void
 
 连接到指定的IP地址和端口。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 在没有执行tcp.bind的情况下，也可以直接调用该接口完成与TCP服务端的连接
 
 **起始版本：** 7
@@ -1078,8 +1071,7 @@ connect(options: TCPConnectOptions): Promise<void>
 
 连接到指定的IP地址和端口。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 在没有执行tcp.bind的情况下，也可以直接调用该接口完成与TCP服务端的连接。
 
 **起始版本：** 7
@@ -1129,8 +1121,7 @@ getLocalAddress(): Promise<NetAddress>
 
 获取TCPSocket的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 12
@@ -1409,8 +1400,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 获取对端Socket地址。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
@@ -1627,8 +1617,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 获取对端Socket地址。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
@@ -1663,10 +1652,8 @@ getSocketFd(callback: AsyncCallback<int>): void
 
 获取TCPSocket的文件描述符。使用callback异步回调。
 
-> **说明：**
-> 
-> - bind或connect方法调用成功后，才可调用此方法。
-> 
+> **说明：**&gt;
+> - bind或connect方法调用成功后，才可调用此方法。&gt;
 > - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close)方法关闭Socket连接，避免直接操作
 > 文件描述符进行关闭。
 
@@ -2003,10 +1990,8 @@ getSocketFd(): Promise<int>
 
 获取TCPSocket的文件描述符。使用Promise异步回调。
 
-> **说明：**
-> 
-> - bind或connect方法调用成功后，才可调用此方法。
-> 
+> **说明：**&gt;
+> - bind或connect方法调用成功后，才可调用此方法。&gt;
 > - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close)方法关闭Socket连接，避免直接操作
 > 文件描述符进行关闭。
 
@@ -2034,8 +2019,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 获取TCPSocket状态。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind或connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
@@ -2391,8 +2375,7 @@ getState(): Promise<SocketStateBase>
 
 获取TCPSocket状态。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind或connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
@@ -2713,8 +2696,7 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 
 通过TCPSocket连接发送数据。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > connect方法调用成功后，才可调用此方法。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
 
 **起始版本：** 7
@@ -3142,8 +3124,7 @@ send(options: TCPSendOptions): Promise<void>
 
 通过TCPSocket连接发送数据。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > connect方法调用成功后，才可调用此方法。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
 
 **起始版本：** 7
@@ -3185,8 +3166,7 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 
 设置TCPSocket连接的其他属性。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind或connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
@@ -3701,8 +3681,7 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 设置TCPSocket连接的其他属性。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind或connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 7

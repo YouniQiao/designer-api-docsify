@@ -15,7 +15,6 @@ Defines the KV pairs stored in the KV store.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## key

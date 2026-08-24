@@ -1,8 +1,6 @@
 # CanvasPattern
 
-一个Object对象，使用createPattern方法创建，通过指定图像和重复方式创建图片填充的模板。
-
-@interface CanvasPattern
+一个Object对象，使用createPattern方法创建，通过指定图像和重复方式创建图片填充的模板。@interface CanvasPattern
 
 **起始版本：** 23
 

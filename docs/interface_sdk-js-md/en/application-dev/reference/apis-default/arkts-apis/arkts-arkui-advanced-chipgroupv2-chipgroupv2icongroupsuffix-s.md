@@ -6,6 +6,8 @@ Defines IconGroupSuffix.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ChipGroupV2IconGroupSuffix--><!--Device-unnamed-export declare struct ChipGroupV2IconGroupSuffix-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Defines IconGroupSuffix.
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 Build function for ChipGroupV2IconGroupSuffix
@@ -27,6 +28,8 @@ Build function for ChipGroupV2IconGroupSuffix
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ Build function for ChipGroupV2IconGroupSuffix
 ## iconBackgroundSystemMaterial
 
 ```TypeScript
-@Param
-  iconBackgroundSystemMaterial?: uiMaterial.Material
+iconBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
 IconGroupSuffix background system material.
@@ -49,6 +51,8 @@ IconGroupSuffix background system material.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroupV2IconGroupSuffix-@Param  iconBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2IconGroupSuffix-@Param  iconBackgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -58,9 +62,7 @@ IconGroupSuffix background system material.
 ## items
 
 ```TypeScript
-@Require
-  @Param
-  items: Array<ChipGroupV2IconItemConfig | SymbolGlyphModifier | ChipGroupV2SymbolItemConfig>
+items: Array<ChipGroupV2IconItemConfig | SymbolGlyphModifier | ChipGroupV2SymbolItemConfig>
 ```
 
 Suffix item.
@@ -70,6 +72,8 @@ Suffix item.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

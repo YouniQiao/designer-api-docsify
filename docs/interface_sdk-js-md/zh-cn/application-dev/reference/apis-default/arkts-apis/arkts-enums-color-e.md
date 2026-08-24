@@ -1,8 +1,6 @@
 # Color
 
-common enum of color
-
-@enum { string }
+common enum of color@enum { string }
 
 **起始版本：** 23
 

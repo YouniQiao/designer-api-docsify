@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getSupportedFeatures
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function getSupportedFeatures(): number
 ```
 
-查询设备支持的特性。
-
-<p>检查设备是否支持指定特性。
+查询设备支持的特性。<p>检查设备是否支持指定特性。
 
 **起始版本：** 7
 

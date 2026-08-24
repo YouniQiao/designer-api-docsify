@@ -1,8 +1,6 @@
 # TimePicker properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** TimePickerAttribute extends CommonMethod<TimePickerAttribute>
 
@@ -39,7 +37,7 @@ Sets whether to display a leading zero for the hours, minutes, and seconds.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DateTimeOptions](arkts-arkui-datetimeoptions-t.md) | Yes | Whether to display a leading zero for the hours, minutes, and seconds.<br> Default value:<br>**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X ". For the 12-hour format, the default value is **"numeric"**, meaning no leading zero.<br>**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br>**second**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br> If **hour**, **minute**, or **second** is set to **undefined**, the display follows the default rules. |
+| value | [DateTimeOptions](arkts-arkui-datetimeoptions-t.md) | Yes | Whether to display a leading zero for the hours, minutes, and seconds.<br> Default value:<br>**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format, the default value is **"numeric"**, meaning no leading zero.<br>**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br>**second**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br> If **hour**, **minute**, or **second** is set to **undefined**, the display follows the default rules. |
 
 ## dateTimeOptions
 
@@ -63,7 +61,7 @@ Sets whether to display a leading zero for the hours, minutes, and seconds. Comp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeFormat | Optional&lt;[DateTimeOptions](arkts-arkui-datetimeoptions-t.md)&gt; | Yes | Whether to display a leading zero for the hours, minutes, and seconds. Currently only the configuration of the **hour**, **minute**, and **second** parameters is supported. Default value:<br>**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X ". For the 12-hour format, the default value is **"numeric"**, meaning no leading zero.<br>**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br>**second**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br> If **hour**, **minute**, or **second** is set to **undefined**, the display follows the default rules. |
+| timeFormat | Optional&lt;[DateTimeOptions](arkts-arkui-datetimeoptions-t.md)&gt; | Yes | Whether to display a leading zero for the hours, minutes, and seconds. Currently only the configuration of the **hour**, **minute**, and **second** parameters is supported. Default value:<br>**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format, the default value is **"numeric"**, meaning no leading zero.<br>**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br>**second**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br> If **hour**, **minute**, or **second** is set to **undefined**, the display follows the default rules. |
 
 ## digitalCrownSensitivity
 
@@ -111,7 +109,7 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{&lt;br &gt;color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | PickerTextStyle | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
 ## disappearTextStyle
 
@@ -167,12 +165,9 @@ Sets whether the AM/PM indicator automatically switches based on the hour value.
 enableHapticFeedback(enable: boolean)
 ```
 
-Sets whether to enable haptic feedback.
+Sets whether to enable haptic feedback.To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module** in **src/main/module.json5** of the project.
 
-To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module** in **src/main/module.json5** of the project.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 18.
 
 **Since:** 12
@@ -197,9 +192,7 @@ To enable haptic feedback, you must declare the following permission under **req
 enableHapticFeedback(enable: Optional<boolean>)
 ```
 
-Sets whether to enable haptic feedback. Compared with [enableHapticFeedback&lt;sup&gt;12+&lt;/sup&gt;](#enablehapticfeedback), this API supports the **undefined** type for the **enable** parameter.
-
-To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module** in **src/main/module.json5** of the project.
+Sets whether to enable haptic feedback. Compared with [enableHapticFeedback&lt;sup&gt;12+&lt;/sup&gt;](#enablehapticfeedback), this API supports the **undefined** type for the **enable** parameter.To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module** in **src/main/module.json5** of the project.
 
 **Since:** 18
 
@@ -271,9 +264,7 @@ Sets whether to enable loop scrolling. Compared with [loop&lt;sup&gt;11+&lt;/sup
 onChange(callback: (value: TimePickerResult) => void)
 ```
 
-Triggered when the time picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.
-
-This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
+Triggered when the time picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
 
 **Since:** 8
 
@@ -295,9 +286,7 @@ This callback is triggered only after the scroll animation completes. To obtain 
 onChange(callback: Optional<OnTimePickerChangeCallback>)
 ```
 
-Triggered when the time picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. Compared with [onChange](#onchange), this API supports the **undefined** type for the **callback** parameter.
-
-This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
+Triggered when the time picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. Compared with [onChange](#onchange), this API supports the **undefined** type for the **callback** parameter.This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
 
 **Since:** 18
 
@@ -321,12 +310,9 @@ This callback is triggered only after the scroll animation completes. To obtain 
 onEnterSelectedArea(callback: Callback<TimePickerResult>)
 ```
 
-Triggered during the scrolling of the time picker when an item enters the divider area.
+Triggered during the scrolling of the time picker when an item enters the divider area.Compared with the [onChange](#onchange) event, this event is triggered earlier, specifically when the scroll distance of the current column exceeds half the height of the selected item, which indicates that the item has entered the divider area. When [enableCascade](#enablecascade) is set to **true**, using this callback is not recommended due to the interdependent relationship between the AM/PM and hour columns. This callback indicates the moment an option enters the divider area during scrolling, and only the value of the currently scrolled column will change. The values of other non-scrolled columns will remain unchanged.
 
-Compared with the [onChange](#onchange) event, this event is triggered earlier, specifically when the scroll distance of the current column exceeds half the height of the selected item, which indicates that the item has entered the divider area. When [enableCascade](#enablecascade) is set to **true**, using this callback is not recommended due to the interdependent relationship between the AM/PM and hour columns. This callback indicates the moment an option enters the divider area during scrolling, and only the value of the currently scrolled column will change. The values of other non-scrolled columns will remain unchanged.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API cannot be called within attributeModifier.
 
 **Since:** 18
@@ -351,9 +337,7 @@ Compared with the [onChange](#onchange) event, this event is triggered earlier, 
 selectedTextStyle(value: PickerTextStyle)
 ```
 
-Sets the text color, font size, and font weight of the selected item.
-
-Default value: { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } }
+Sets the text color, font size, and font weight of the selected item.Default value: { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } }
 
 **Since:** 10
 

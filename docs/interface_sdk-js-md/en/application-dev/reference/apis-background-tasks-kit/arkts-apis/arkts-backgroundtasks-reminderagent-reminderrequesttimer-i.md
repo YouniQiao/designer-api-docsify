@@ -18,7 +18,6 @@ Defines a reminder for a scheduled timer.
 
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## triggerTimeInSeconds

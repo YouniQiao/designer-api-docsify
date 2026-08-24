@@ -1,8 +1,6 @@
 # MarginTypeV2
 
-Control margin status of ExceptionPromptV2.
-
-@enum { number }
+Control margin status of ExceptionPromptV2.@enum { number }
 
 **Since:** 26.0.0
 

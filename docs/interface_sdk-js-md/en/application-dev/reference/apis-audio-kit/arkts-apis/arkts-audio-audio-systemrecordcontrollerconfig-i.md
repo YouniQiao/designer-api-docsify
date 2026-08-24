@@ -12,7 +12,6 @@ Defines the configuration for the system recording controller panel.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## sourceType

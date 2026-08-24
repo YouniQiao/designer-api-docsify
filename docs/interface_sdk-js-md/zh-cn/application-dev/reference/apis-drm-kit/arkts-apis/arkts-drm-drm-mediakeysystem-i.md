@@ -114,7 +114,7 @@ let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession(
 createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined
 ```
 
-Create a MediaKeySession instance with level.
+创建指定内容保护级别的MediaKeySession实例。
 
 **起始版本：** 23
 
@@ -126,13 +126,13 @@ Create a MediaKeySession instance with level.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | 是 | Used to specify the content protection level. |
+| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | 是 | 内容保护级别。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) \| undefined | A MediaKeySession instance or undefined. |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) \| undefined | MediaKeySession实例或undefined。 |
 
 **错误码：**
 
@@ -187,7 +187,7 @@ createMediaKeySession(): MediaKeySession
 createMediaKeySession(): MediaKeySession | undefined
 ```
 
-Create a MediaKeySession instance.
+创建DRM解决方案默认内容保护级别的MediaKeySession实例。
 
 **起始版本：** 23
 
@@ -199,7 +199,7 @@ Create a MediaKeySession instance.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) \| undefined | A MediaKeySession instance or undefined. |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) \| undefined | MediaKeySession实例或undefined。 |
 
 **错误码：**
 
@@ -259,9 +259,7 @@ mediaKeySystem.destroy();
 generateKeySystemRequest(): Promise<ProvisionRequest>
 ```
 
-生成获取mediaKeySystem设备证书的请求。使用Promise异步回调。
-
-如果设备上已存在设备证书，调用此接口会返回失败。
+生成获取mediaKeySystem设备证书的请求。使用Promise异步回调。如果设备上已存在设备证书，调用此接口会返回失败。
 
 **起始版本：** 23
 
@@ -622,7 +620,7 @@ off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
 offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister keySystemRequired events.
+注销设备证书请求事件的监听。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -634,7 +632,7 @@ Unregister keySystemRequired events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | Used to listen for the key system required event. |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -678,7 +676,7 @@ on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register keySystemRequired events.
+监听设备证书请求事件，获取事件信息。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -690,7 +688,7 @@ Register keySystemRequired events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | Used to listen for the key system required event. |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。只要有该事件返回就证明需请求设备证书。 |
 
 **错误码：**
 
@@ -704,9 +702,7 @@ Register keySystemRequired events.
 processKeySystemResponse(response: Uint8Array): Promise<void>
 ```
 
-处理获得的设备证书请求的响应。使用Promise异步回调。
-
-如果设备上已存在设备证书，调用此接口会返回失败。
+处理获得的设备证书请求的响应。使用Promise异步回调。如果设备上已存在设备证书，调用此接口会返回失败。
 
 **起始版本：** 23
 

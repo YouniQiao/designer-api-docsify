@@ -1,8 +1,6 @@
 # RotationRecognizer
 
-Defines the rotation gesture recognizer.
-
-@extends GestureRecognizer
+Defines the rotation gesture recognizer.@extends GestureRecognizer
 
 **Inheritance/Implementation:** RotationRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md)
 

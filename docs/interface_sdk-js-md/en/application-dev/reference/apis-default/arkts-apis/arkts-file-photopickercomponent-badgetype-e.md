@@ -1,8 +1,6 @@
 # BadgeType
 
-BadgeType.
-
-@enum { int } BadgeType
+BadgeType.@enum { int } BadgeType
 
 **Since:** 26.1.0
 

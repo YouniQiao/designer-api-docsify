@@ -1,8 +1,6 @@
 # MediaQueryEvent
 
-Defines the MediaQuery event.
-
-@interface MediaQueryEvent
+Defines the MediaQuery event.@interface MediaQueryEvent
 
 **Since:** 23
 

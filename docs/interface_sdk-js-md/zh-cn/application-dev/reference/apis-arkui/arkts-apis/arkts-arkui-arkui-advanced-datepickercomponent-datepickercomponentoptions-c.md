@@ -44,8 +44,7 @@ displayMode?: DisplayMode
 
 > 默认值：DisplayMode.DATE
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - DATE：仅显示日期，使用dateOptions，适用于只需要用户选择日期的场景，如生日选择、日程日期设置等。
 > - TIME：仅显示时间，使用timeOptions，适用于只需要用户选择时间的场景，如闹钟设置、提醒时间设置等。
 > - DATE_TIME：同时显示日期和时间，dateOptions与timeOptions同时生效，适用于需要用户同时选择日期和时间的场景，如日程安排、会议时间设

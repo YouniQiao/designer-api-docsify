@@ -14,9 +14,7 @@ function offActiveStateChange(
     callback?: Callback<ActiveChangeResponse>): void
 ```
 
-取消订阅指定权限列表的权限使用状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变更通知。
-
-取消订阅时，若不传入回调函数，则批量删除permissionList下的所有回调函数。
+取消订阅指定权限列表的权限使用状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变更通知。取消订阅时，若不传入回调函数，则批量删除permissionList下的所有回调函数。
 
 > **说明：**
 > 该接口通常与[on](arkts-ability-privacymanager-onactivestatechange-f-sys.md)配套使用，用于取消通过on创建的监听关系。
@@ -44,7 +42,7 @@ function offActiveStateChange(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_USED_STATS". |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
 | [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The permissionList is not in the listening list. |
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is not used in pair with 'on'. |

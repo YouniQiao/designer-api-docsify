@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## privacyType
@@ -37,7 +36,7 @@ privacyType?: AudioPrivacyType
 rendererInfo: AudioRendererInfo
 ```
 
-音频渲染器信息。
+音频渲染器信息。SystemCapability.Multimedia.Audio.Renderer
 
 **类型：** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
@@ -53,7 +52,7 @@ rendererInfo: AudioRendererInfo
 streamInfo: AudioStreamInfo
 ```
 
-音频流信息。
+音频流信息。SystemCapability.Multimedia.Audio.Renderer
 
 **类型：** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 

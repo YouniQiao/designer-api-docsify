@@ -19,7 +19,7 @@
 
 | Name | Description |
 | --- | --- |
-| [AlbumPickerComponent](arkts-file-albumpickercomponent-albumpickercomponent-s.md) | AlbumPickerComponent: can select a certain album and display the images in that album through PhotoPickerComponent |
+| [AlbumPickerComponent](arkts-file-albumpickercomponent-albumpickercomponent-s.md) | AlbumPickerComponent: can select a certain album and display the images in that album through PhotoPickerComponent@struct { AlbumPickerComponent } |
 
 ### Types
 

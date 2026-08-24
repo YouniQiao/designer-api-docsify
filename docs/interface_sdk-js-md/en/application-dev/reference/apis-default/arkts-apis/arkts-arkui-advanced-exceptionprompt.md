@@ -17,7 +17,7 @@
 
 | Name | Description |
 | --- | --- |
-| [PromptOptions](arkts-arkui-advanced-exceptionprompt-promptoptions-i.md) | Configuration parameter of ExceptionPrompt. |
+| [PromptOptions](arkts-arkui-advanced-exceptionprompt-promptoptions-i.md) | Configuration parameter of ExceptionPrompt.@interface PromptOptions |
 
 ### Enums
 

@@ -18,6 +18,6 @@ import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [MediaQueryEvent](arkts-arkui-system-mediaquery-mediaqueryevent-i.md) | Defines the MediaQuery event. |
-| [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md) | Defines the MediaQuery list info. |
+| [MediaQueryEvent](arkts-arkui-system-mediaquery-mediaqueryevent-i.md) | Defines the MediaQuery event.@interface MediaQueryEvent |
+| [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md) | Defines the MediaQuery list info.@interface MediaQueryList |
 

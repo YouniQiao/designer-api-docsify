@@ -2,8 +2,7 @@
 
 提供了与设备的缩放相关的查询功能，包括获取支持的缩放比例范围。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素
 
 **起始版本：** 23
@@ -16,7 +15,6 @@
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getRAWCaptureZoomRatioRange

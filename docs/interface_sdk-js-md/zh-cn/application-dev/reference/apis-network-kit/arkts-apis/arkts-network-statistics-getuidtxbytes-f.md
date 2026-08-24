@@ -14,8 +14,7 @@ function getUidTxBytes(uid: int, callback: AsyncCallback<long>): void
 
 获取指定应用从最近一次开机开始至接口调用时刻的上行流量总和（单位：字节）。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 若重启后该应用未产生流量消耗，则会抛出2103005错误码。
 
 **起始版本：** 23
@@ -100,8 +99,7 @@ function getUidTxBytes(uid: int): Promise<long>
 
 获取指定应用从最近一次开机开始至接口调用时刻的上行流量总和（单位：字节）。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 若重启后该应用未产生流量消耗，则会抛出2103005错误码。
 
 **起始版本：** 23

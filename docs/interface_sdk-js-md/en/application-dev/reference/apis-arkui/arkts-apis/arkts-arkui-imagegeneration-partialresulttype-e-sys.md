@@ -1,8 +1,6 @@
 # PartialResultType (System API)
 
-Provides stream output result type definition.
-
-@enum { int } Constants
+Provides stream output result type definition.@enum { int } Constants
 
 **Since:** 23
 

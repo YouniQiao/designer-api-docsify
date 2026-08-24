@@ -1,8 +1,6 @@
 # WebNetErrorList
 
-Web net error list.
-
-@enum { number }
+Web net error list.@enum { number }
 
 **Since:** 23
 
@@ -1378,7 +1376,7 @@ Failed to import a client certificate from the platform store into the SSL libra
 ERR_ICANN_NAME_COLLISION = -166
 ```
 
-Resolving a hostname to an IP address list included the IPv4 address "127.0.53.53". This is a special IP address which ICANN has recommended to indicate there was a name collision, and alert admins to a potential problem.
+Resolving a hostname to an IP address list included the IPv4 address"127.0.53.53". This is a special IP address which ICANN has recommended to indicate there was a name collision, and alert admins to a potential problem.
 
 **Since:** 23
 
@@ -1666,7 +1664,14 @@ ECH was enabled, the server was unable to decrypt the encrypted ClientHello, and
 ERR_CERT_COMMON_NAME_INVALID = -200
 ```
 
-The server responded with a certificate whose common name did not match the host name. This could mean: 1. An attacker has redirected our traffic to their server and is presenting a certificate for which they know the private key. 2. The server is misconfigured and responding with the wrong cert. 3. The user is on a wireless network and is being redirected to the network's login page. 4. The OS has used a DNS search suffix and the server doesn't have a certificate for the abbreviated name in the address bar.
+The server responded with a certificate whose common name did not match the host name. This could mean:
+1. An attacker has redirected our traffic to their server and is
+presenting a certificate for which they know the private key.
+2. The server is misconfigured and responding with the wrong cert.
+3. The user is on a wireless network and is being redirected to the
+network's login page.
+4. The OS has used a DNS search suffix and the server doesn't have
+a certificate for the abbreviated name in the address bar.
 
 **Since:** 23
 
@@ -1682,7 +1687,11 @@ The server responded with a certificate whose common name did not match the host
 ERR_CERT_DATE_INVALID = -201
 ```
 
-The server responded with a certificate that, by our clock, appears to either not yet be valid or to have expired. This could mean: 1. An attacker is presenting an old certificate for which they have managed to obtain the private key. 2. The server is misconfigured and is not presenting a valid cert. 3. Our clock is wrong.
+The server responded with a certificate that, by our clock, appears to either not yet be valid or to have expired. This could mean:
+1. An attacker is presenting an old certificate for which they have
+managed to obtain the private key.
+2. The server is misconfigured and is not presenting a valid cert.
+3. Our clock is wrong.
 
 **Since:** 23
 
@@ -1698,7 +1707,13 @@ The server responded with a certificate that, by our clock, appears to either no
 ERR_CERT_AUTHORITY_INVALID = -202
 ```
 
-The server responded with a certificate that is signed by an authority we don't trust. The could mean: 1. An attacker has substituted the real certificate for a cert that contains their public key and is signed by their cousin. 2. The server operator has a legitimate certificate from a CA we don't know about, but should trust. 3. The server is presenting a self-signed certificate, providing no defense against active attackers (but foiling passive attackers).
+The server responded with a certificate that is signed by an authority we don't trust. The could mean:
+1. An attacker has substituted the real certificate for a cert that
+contains their public key and is signed by their cousin.
+2. The server operator has a legitimate certificate from a CA we don't
+know about, but should trust.
+3. The server is presenting a self-signed certificate, providing no
+defense against active attackers (but foiling passive attackers).
 
 **Since:** 23
 
@@ -1714,7 +1729,7 @@ The server responded with a certificate that is signed by an authority we don't 
 ERR_CERT_CONTAINS_ERRORS = -203
 ```
 
-The server responded with a certificate that contains errors. This error is not recoverable. MSDN describes this error as follows: "The SSL certificate contains errors." NOTE: It's unclear how this differs from ERR_CERT_INVALID. For consistency, use that code instead of this one from now on.
+The server responded with a certificate that contains errors. This error is not recoverable. MSDN describes this error as follows:"The SSL certificate contains errors."NOTE: It's unclear how this differs from ERR_CERT_INVALID. For consistency, use that code instead of this one from now on.
 
 **Since:** 23
 
@@ -1746,7 +1761,11 @@ The certificate has no mechanism for determining if it is revoked. In effect, th
 ERR_CERT_UNABLE_TO_CHECK_REVOCATION = -205
 ```
 
-Revocation information for the security certificate for this site is not available. This could mean: 1. An attacker has compromised the private key in the certificate and is blocking our attempt to find out that the cert was revoked. 2. The certificate is unrevoked, but the revocation server is busy or unavailable.
+Revocation information for the security certificate for this site is not available. This could mean:
+1. An attacker has compromised the private key in the certificate and is
+blocking our attempt to find out that the cert was revoked.
+2. The certificate is unrevoked, but the revocation server is busy or
+unavailable.
 
 **Since:** 23
 
@@ -1778,7 +1797,7 @@ The server responded with a certificate has been revoked. We have the capability
 ERR_CERT_INVALID = -207
 ```
 
-The server responded with a certificate that is invalid. This error is not recoverable. MSDN describes this error as follows: "The SSL certificate is invalid."
+The server responded with a certificate that is invalid. This error is not recoverable. MSDN describes this error as follows:"The SSL certificate is invalid."
 
 **Since:** 23
 

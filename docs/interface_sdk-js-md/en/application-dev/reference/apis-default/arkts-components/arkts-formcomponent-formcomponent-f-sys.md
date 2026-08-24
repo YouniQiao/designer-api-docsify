@@ -16,6 +16,8 @@ Defines FormComponent.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function FormComponent(    formInfo: FormInfo,     content_?: CustomBuilder,): FormComponentAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function FormComponent(    formInfo: FormInfo,     content_?: CustomBuilder,): FormComponentAttribute-End-->

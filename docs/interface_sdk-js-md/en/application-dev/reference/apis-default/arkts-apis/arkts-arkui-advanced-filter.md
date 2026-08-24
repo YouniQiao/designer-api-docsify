@@ -24,7 +24,7 @@
 
 | Name | Description |
 | --- | --- |
-| [FilterType](arkts-arkui-advanced-filter-filtertype-e.md) | Declare FilterType |
+| [FilterType](arkts-arkui-advanced-filter-filtertype-e.md) | Declare FilterType@enum { int } |
 
 ### Types
 

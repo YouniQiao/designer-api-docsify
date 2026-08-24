@@ -1,8 +1,6 @@
 # AlertDialogParamWithConfirm
 
-Defines the AlertDialog with confirm button.
-
-@extends AlertDialogParam @interface AlertDialogParamWithConfirm
+Defines the AlertDialog with confirm button.@extends AlertDialogParam @interface AlertDialogParamWithConfirm
 
 **Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-alertdialog-alertdialogparam-i.md)
 

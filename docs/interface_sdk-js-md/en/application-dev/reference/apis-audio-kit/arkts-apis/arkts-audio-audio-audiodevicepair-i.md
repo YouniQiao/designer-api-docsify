@@ -12,7 +12,6 @@ Describes an audio device pair including both input and output devices.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## inputDevice

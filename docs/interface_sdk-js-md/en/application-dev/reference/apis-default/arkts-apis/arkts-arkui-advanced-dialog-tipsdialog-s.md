@@ -6,6 +6,8 @@ Declare CustomDialog TipsDialog @struct { TipsDialog }
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @CustomDialog
+
 <!--Device-unnamed-export declare struct TipsDialog--><!--Device-unnamed-export declare struct TipsDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,7 +20,7 @@ Declare CustomDialog TipsDialog @struct { TipsDialog }
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -26,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -155,10 +159,6 @@ Sets the TipsDialog image size.
 
 ## isChecked
 
-```TypeScript
-@PropRef isChecked?: boolean
-```
-
 Sets the TipsDialog checkbox check state.
 
 **Type:** boolean
@@ -166,6 +166,8 @@ Sets the TipsDialog checkbox check state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

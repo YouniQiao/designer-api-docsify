@@ -1,8 +1,6 @@
 # RdbStore
 
-提供管理关系数据库（RDB）方法的接口。
-
-在使用以下相关接口前，请使用 [executeSql](#executesql) 接口初始化数据库表结构和相关数据。
+提供管理关系数据库（RDB）方法的接口。在使用以下相关接口前，请使用 [executeSql](#executesql) 接口初始化数据库表结构和相关数据。
 
 **起始版本：** 7
 
@@ -563,10 +561,8 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用callback异步回调。
 
-> **说明：**
-> 
-> 其中device通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中device通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 
@@ -647,10 +643,8 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用Promise异步回调。
 
-> **说明：**
-> 
-> 其中device通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中device通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 

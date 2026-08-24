@@ -2,8 +2,7 @@
 
 通知模板。用于指定通知所使用的模板类型。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 提供预定义模板支持。允许应用开发者使用系统预定义的通知模板，只需提供模板名称和相应的数据，系统会自动渲染出符合规范的通知样式。
 > 使用场景：当前仅支持上传下载场景。
 
@@ -19,11 +18,10 @@
 data: Record<string, RecordData>
 ```
 
-模板数据。
-
+模板数据。  
 - title: 表示下载标题。必填字段，值为字符串类型。 - fileName: 表示下载文件名。必填字段，值为字符串类型。 - progressValue: 表示下载进度，值为数值类型。建议取值范围为0~100， 表示百分比进度。当`progressValue`取值小于或等于0时，进度为0； 当其取值大于或等于100时，进度环消失，代表下载完成。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

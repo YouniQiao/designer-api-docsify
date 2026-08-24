@@ -1,8 +1,6 @@
 # @ohos.deviceAttest
 
-xts_device_attest authResult information
-
-@namespace deviceAttest
+xts_device_attest authResult information@namespace deviceAttest
 
 **Since:** 9
 
@@ -33,6 +31,6 @@ import { deviceAttest } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md) | Device attest result information. |
+| [AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md) | Device attest result information.@interface AttestResultInfo |
 <!--DelEnd-->
 

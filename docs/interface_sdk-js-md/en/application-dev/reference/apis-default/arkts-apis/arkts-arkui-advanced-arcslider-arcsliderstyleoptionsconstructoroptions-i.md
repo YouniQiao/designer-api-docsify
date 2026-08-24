@@ -21,9 +21,7 @@ Construct parameter types for ArcSliderStyleOptions.
 activeTrackThickness?: double
 ```
 
-Set the track thickness of the component under active status, unit is vp.
-
-Value range: [24, 36]
+Set the track thickness of the component under active status, unit is vp.Value range: [24, 36]
 
 **Type:** double
 
@@ -103,9 +101,7 @@ Set the track color of the component.
 trackThickness?: double
 ```
 
-Set the track thickness of the component under normal status, unit is vp.
-
-Value range: [5, 16]
+Set the track thickness of the component under normal status, unit is vp.Value range: [5, 16]
 
 **Type:** double
 

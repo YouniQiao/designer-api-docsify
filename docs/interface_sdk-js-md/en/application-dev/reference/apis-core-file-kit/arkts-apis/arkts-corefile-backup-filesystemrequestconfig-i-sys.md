@@ -1,8 +1,6 @@
 # FileSystemRequestConfig (System API)
 
-Parameters required to perform garbage collection (GC).
-
-@interface FileSystemRequestConfig
+Parameters required to perform garbage collection (GC).@interface FileSystemRequestConfig
 
 **Since:** 23
 

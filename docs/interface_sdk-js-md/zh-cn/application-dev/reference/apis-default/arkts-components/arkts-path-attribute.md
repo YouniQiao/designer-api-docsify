@@ -1,8 +1,6 @@
 # PathAttribute
 
-路径绘制组件属性，用于设置路径的相关属性。
-
-@extends CommonShapeMethod @interface PathAttribute
+路径绘制组件属性，用于设置路径的相关属性。@extends CommonShapeMethod @interface PathAttribute
 
 **继承/实现关系：** PathAttribute extends CommonShapeMethod
 

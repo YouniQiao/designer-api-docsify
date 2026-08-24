@@ -1,8 +1,6 @@
 # SafeAreaType
 
-The types of expanded safe areas.
-
-@enum { number }
+The types of expanded safe areas.@enum { number }
 
 **起始版本：** 23
 

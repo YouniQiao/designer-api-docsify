@@ -2,8 +2,7 @@
 
 Represents recipient information for the CMS message.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > At least one recipient needs to be set.
 
 **Since:** 23
@@ -16,8 +15,6 @@ Represents recipient information for the CMS message.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## keyAgreeInfo

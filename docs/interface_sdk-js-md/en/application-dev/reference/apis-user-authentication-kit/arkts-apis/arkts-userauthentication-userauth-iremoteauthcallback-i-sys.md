@@ -14,7 +14,6 @@ Defines the callback of remote authentication. This API is used in remote authen
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## onGetRemoteAuthWidgetParam

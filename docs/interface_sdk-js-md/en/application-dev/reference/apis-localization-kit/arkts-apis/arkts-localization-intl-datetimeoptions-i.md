@@ -94,7 +94,7 @@ Epoch display format. The value can be: "long", "short", "narrow", or "auto".
 formatMatcher?: string
 ```
 
-Format matching algorithm. The value can be: "basic": exact match. "best fit": best match.
+Format matching algorithm. The value can be:"basic": exact match."best fit": best match.
 
 **Type:** string
 
@@ -184,7 +184,7 @@ Valid locale ID, for example, "zh-Hans-CN". The default value is the current sys
 localeMatcher?: string
 ```
 
-Locale matching algorithm. The value can be: "lookup": exact match. "best fit": best match.
+Locale matching algorithm. The value can be:"lookup": exact match."best fit": best match.
 
 **Type:** string
 
@@ -238,7 +238,7 @@ Month display format. The value can be: "numeric", "2-digit", "long", "short", "
 numberingSystem?: string
 ```
 
-Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", or "wcho".
+Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks","brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp","java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl","mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng","newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund","takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", or "wcho".
 
 **Type:** string
 

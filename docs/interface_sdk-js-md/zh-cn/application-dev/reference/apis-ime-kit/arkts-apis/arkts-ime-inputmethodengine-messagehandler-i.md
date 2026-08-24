@@ -1,6 +1,6 @@
 # MessageHandler
 
-@brief 自定义通信对象。 <br> <br>   
+自定义通信对象。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -37,7 +37,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-@brief 接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。 <br> <br>   
+接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -85,7 +85,7 @@ inputMethodEngine.getInputMethodAbility()
 onTerminated(): void
 ```
 
-@brief 监听对象终止回调函数。 <br> <br>   
+监听对象终止回调函数。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -126,7 +126,7 @@ inputMethodEngine.getInputMethodAbility()
 onMessage: OnMessageCallback
 ```
 
-@brief 接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。 <br> <br>   
+接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -151,7 +151,7 @@ onMessage: OnMessageCallback
 onTerminated: Callback<void>
 ```
 
-@brief 监听对象终止回调函数。 <br> <br>   
+监听对象终止回调函数。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br

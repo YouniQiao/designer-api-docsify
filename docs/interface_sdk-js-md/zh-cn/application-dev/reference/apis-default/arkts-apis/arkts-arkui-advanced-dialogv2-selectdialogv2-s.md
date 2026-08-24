@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct SelectDialogV2--><!--Device-unnamed-export declare struct SelectDialogV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,19 +40,18 @@ The method to build component.
 ## confirm
 
 ```TypeScript
-@Param
-  confirm?: AdvancedDialogV2Button
+confirm?: AdvancedDialogV2Button
 ```
 
-选择弹出框底部按钮。
-
-默认不显示。
+选择弹出框底部按钮。默认不显示。
 
 **类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,8 +62,7 @@ The method to build component.
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
 选择弹出框内容。默认不显示。
@@ -72,6 +73,8 @@ The method to build component.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SelectDialogV2-@Param  content?: ResourceStr--><!--Device-SelectDialogV2-@Param  content?: ResourceStr-End-->
@@ -81,9 +84,7 @@ The method to build component.
 ## radioContent
 
 ```TypeScript
-@Require
-  @Param
-  radioContent: SheetInfo[]
+radioContent: SheetInfo[]
 ```
 
 选择弹出框的子项内容列表，每个选择项支持设置文本和选中的回调事件。
@@ -94,6 +95,8 @@ The method to build component.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Require、@Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SelectDialogV2-@Require  @Param  radioContent: SheetInfo[]--><!--Device-SelectDialogV2-@Require  @Param  radioContent: SheetInfo[]-End-->
@@ -103,21 +106,18 @@ The method to build component.
 ## selectedIndex
 
 ```TypeScript
-@Param
-  selectedIndex?: int
+selectedIndex?: int
 ```
 
-选择弹出框的选中项。
-
-默认值：-1，没有选中项。若设置数值不在取值范围，按没有选中项处理。
-
-取值范围：小于选择弹出框的子项内容列表长度。
+选择弹出框的选中项。默认值：-1，没有选中项。若设置数值不在取值范围，按没有选中项处理。取值范围：小于选择弹出框的子项内容列表长度。
 
 **类型：** int
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,13 +128,10 @@ The method to build component.
 ## title
 
 ```TypeScript
-@Require
-  @Param
-  title: ResourceStr
+title: ResourceStr
 ```
 
-选择弹出框标题。
-
+选择弹出框标题。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -142,6 +139,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

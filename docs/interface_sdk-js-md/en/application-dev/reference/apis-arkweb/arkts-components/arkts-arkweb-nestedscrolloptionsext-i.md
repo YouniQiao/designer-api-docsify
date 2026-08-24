@@ -11,11 +11,6 @@ Sets the nested scrolling rules of the **Web** component, supporting scrolling o
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## scrollDown
@@ -24,9 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 scrollDown?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls down.
-
-Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls down.Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** NestedScrollMode
 
@@ -42,9 +35,7 @@ Default value: **NestedScrollMode.SELF_FIRST**.
 scrollLeft?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls left.
-
-Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls left.Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** NestedScrollMode
 
@@ -60,9 +51,7 @@ Default value: **NestedScrollMode.SELF_FIRST**.
 scrollRight?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls right.
-
-Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls right.Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** NestedScrollMode
 
@@ -78,9 +67,7 @@ Default value: **NestedScrollMode.SELF_FIRST**.
 scrollUp?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls up.
-
-Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls up.Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** NestedScrollMode
 

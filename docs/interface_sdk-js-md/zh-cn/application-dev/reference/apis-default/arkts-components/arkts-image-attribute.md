@@ -1,10 +1,6 @@
 # ImageAttribute
 
-属性的详细使用指导请参考 [添加属性](../../../ui/arkts-graphics-display.md#添加属性)。除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
-
-@extends CommonMethod @interface ImageAttribute
+属性的详细使用指导请参考 [添加属性](../../../ui/arkts-graphics-display.md#添加属性)。除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：@extends CommonMethod @interface ImageAttribute
 
 **继承/实现关系：** ImageAttribute extends CommonMethod
 
@@ -786,12 +782,10 @@ default
 
 设置位图图片边缘是否开启抗锯齿。未通过该接口设置时，默认不开启抗锯齿。SVG类型图片不支持该属性。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 如果图片设置了背景色属性(backgroundColor)，
 > 图片的抗锯齿属性设置为true不会影响背景
-> 色的锯齿效果。
-> 
+> 色的锯齿效果。&gt;
 > 和[resizable](#resizable)一起使用时，该属性不生效。
 
 **起始版本：** 23

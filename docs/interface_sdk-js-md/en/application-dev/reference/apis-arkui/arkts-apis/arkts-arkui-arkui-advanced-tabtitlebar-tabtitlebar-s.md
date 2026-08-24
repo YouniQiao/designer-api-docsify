@@ -2,8 +2,7 @@
 
 The **TabTitleBar** component is a tab title bar used to switch between tabs pages. It is applicable only to level-1 pages.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - If the **TabTitleBar** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -12,6 +11,8 @@ The **TabTitleBar** component is a tab title bar used to switch between tabs pag
 > with the **TabTitleBar** component.
 
 **Since:** 10
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct TabTitleBar--><!--Device-unnamed-export declare struct TabTitleBar-End-->
 
@@ -46,8 +47,7 @@ List of menu items on the right of the title bar.
 ## swiperContent
 
 ```TypeScript
-@BuilderParam
-  swiperContent: () => void
+swiperContent: () => void
 ```
 
 Constructor for page content pertaining to the tab list.
@@ -55,6 +55,8 @@ Constructor for page content pertaining to the tab list.
 **Type:** () =&gt; void
 
 **Since:** 10
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

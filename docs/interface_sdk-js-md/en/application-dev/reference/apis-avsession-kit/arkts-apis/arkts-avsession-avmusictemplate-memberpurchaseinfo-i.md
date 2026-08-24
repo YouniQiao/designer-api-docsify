@@ -1,8 +1,6 @@
 # MemberPurchaseInfo
 
-The definition of member purchase information.
-
-@interface MemberPurchaseInfo
+The definition of member purchase information.@interface MemberPurchaseInfo
 
 **Since:** 23
 

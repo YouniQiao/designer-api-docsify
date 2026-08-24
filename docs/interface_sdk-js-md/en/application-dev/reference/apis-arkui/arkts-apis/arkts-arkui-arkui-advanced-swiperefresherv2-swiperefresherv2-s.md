@@ -1,10 +1,10 @@
 # SwipeRefresherV2
 
-Declare component SwipeRefresherV2
-
-@struct { SwipeRefresherV2 }
+Declare component SwipeRefresherV2@struct { SwipeRefresherV2 }
 
 **Since:** 26.0.0
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct SwipeRefresherV2--><!--Device-unnamed-export declare struct SwipeRefresherV2-End-->
 
@@ -19,8 +19,7 @@ import { SwipeRefresherV2 } from '@kit.ArkUI';
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
 Sets the content when loading.
@@ -28,6 +27,8 @@ Sets the content when loading.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,9 +41,7 @@ Sets the content when loading.
 ## isLoading
 
 ```TypeScript
-@Require
-  @Param
-  isLoading: boolean
+isLoading: boolean
 ```
 
 Whether the component is loading.
@@ -50,6 +49,8 @@ Whether the component is loading.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

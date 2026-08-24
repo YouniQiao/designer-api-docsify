@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## deleteKeyItem
@@ -164,8 +163,7 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 Deletes a key. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Deleting SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 

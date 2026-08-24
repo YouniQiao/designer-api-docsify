@@ -1,8 +1,6 @@
 # ObserverOptions
 
-observer options.
-
-@interface ObserverOptions
+observer options.@interface ObserverOptions
 
 **起始版本：** 23
 

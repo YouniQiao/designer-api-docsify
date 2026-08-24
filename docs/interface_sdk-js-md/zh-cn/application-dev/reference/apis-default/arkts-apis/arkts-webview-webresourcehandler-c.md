@@ -116,7 +116,7 @@ Pass response headers to intercepted requests.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| response | [WebSchemeHandlerResponse](arkts-webview-webschemehandlerresponse-c.md) | 是 | Set response header to intercept. |
+| response | [WebSchemeHandlerResponse](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webschemehandlerresponse-c.md) | 是 | Set response header to intercept. |
 
 **错误码：**
 

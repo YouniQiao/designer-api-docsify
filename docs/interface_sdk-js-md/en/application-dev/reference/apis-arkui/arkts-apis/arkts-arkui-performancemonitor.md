@@ -1,14 +1,6 @@
 # @ohos.arkui.performanceMonitor
 
-Provides interfaces to monitor a scene for performance measurement.
-
-<p>These interfaces are used to monitor the begin, end, and value changes of finger processes that last for at least 3 ms.
-
-<p>Example: import "@ohos.arkui.performanceMonitor.d.ts" To start scene monitoring that is expected to complete within 5 ms: &lt;pre&gt;{@code performanceMonitor.begin(string, ActionType, string); //scene finished performanceMonitor.end(string); }&lt;/pre&gt;
-
-<p>Each {@code begin} matches one {@code end}, and they must have the same scene id.
-
-@namespace performanceMonitor
+Provides interfaces to monitor a scene for performance measurement.<p>These interfaces are used to monitor the begin, end, and value changes of finger processes that last for at least 3 ms.<p>Example: import "@ohos.arkui.performanceMonitor.d.ts"To start scene monitoring that is expected to complete within 5 ms: &lt;pre&gt;{@code performanceMonitor.begin(string, ActionType, string); //scene finished performanceMonitor.end(string);}&lt;/pre&gt;<p>Each {@code begin} matches one {@code end}, and they must have the same scene id.@namespace performanceMonitor
 
 **Since:** 23
 
@@ -45,7 +37,7 @@ import { performanceMonitor } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | Enumerates the input event type. |
-| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | Enumerates the input source type. |
+| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | Enumerates the input event type.@enum { number } |
+| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | Enumerates the input source type.@enum { number } |
 <!--DelEnd-->
 

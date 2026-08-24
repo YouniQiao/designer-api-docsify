@@ -74,8 +74,7 @@ notificationId: int
 slotType: notificationManager.SlotType
 ```
 
-长时任务通知的渠道类型。
-
+长时任务通知的渠道类型。  
 **说明：** 长时任务申请或更新成功后不支持提示音。
 
 **类型：** notificationManager.SlotType

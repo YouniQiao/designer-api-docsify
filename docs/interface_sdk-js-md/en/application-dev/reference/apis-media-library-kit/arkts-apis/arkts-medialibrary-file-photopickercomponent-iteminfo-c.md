@@ -1,8 +1,6 @@
 # ItemInfo
 
-It inherits from [BaseItemInfo](../../apis-default/arkts-apis/arkts-file-photopickercomponent-baseiteminfo-c.md), adding the parameter **itemType**.
-
-Represents basic image and video information.
+It inherits from [BaseItemInfo](../../apis-default/arkts-apis/arkts-file-photopickercomponent-baseiteminfo-c.md), adding the parameter **itemType**.Represents basic image and video information.
 
 **Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](../../apis-default/arkts-apis/arkts-file-photopickercomponent-baseiteminfo-c.md)
 

@@ -1,8 +1,6 @@
 # ArcButtonStatus
 
-Defines an arc button status.
-
-@enum { int }
+Defines an arc button status.@enum { int }
 
 **Since:** 23
 

@@ -1,5 +1,7 @@
 # TonePlayer（系统接口）
 
+提供播放和管理DTMF（Dual Tone Multi Frequency，双音多频）音调的方法，包括各种系统监听音调、专有音调，如拨号音、通话回铃音等。 在调用TonePlayer的接口前，需要先通过 [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md)创建 实例。
+
 **起始版本：** 23
 
 <!--Device-audio-interface TonePlayer--><!--Device-audio-interface TonePlayer-End-->
@@ -12,7 +14,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## load
@@ -21,7 +22,7 @@ import { audioHaptic } from '@kit.AudioKit';
 load(type: ToneType, callback: AsyncCallback<void>): void
 ```
 
-Loads tone. This method uses an asynchronous callback to return the result.
+加载DTMF音调配置。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -35,8 +36,8 @@ Loads tone. This method uses an asynchronous callback to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [ToneType](arkts-audio-audio-tonetype-e-sys.md) | 是 | Tone type to play. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| type | [ToneType](arkts-audio-audio-tonetype-e-sys.md) | 是 | 配置的音调类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当加载DTMF音调配置成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -67,7 +68,7 @@ tonePlayer.load(audio.ToneType.TONE_TYPE_DIAL_1).then(() => {
 load(type: ToneType): Promise<void>
 ```
 
-Loads tone. This method uses a promise to return the result.
+加载DTMF音调配置。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -81,13 +82,13 @@ Loads tone. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [ToneType](arkts-audio-audio-tonetype-e-sys.md) | 是 | Tone type to play. |
+| type | [ToneType](arkts-audio-audio-tonetype-e-sys.md) | 是 | 配置的音调类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 
@@ -99,7 +100,7 @@ Loads tone. This method uses a promise to return the result.
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases the player. This method uses an asynchronous callback to return the result.
+释放与此TonePlayer对象关联的资源。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -113,7 +114,7 @@ Releases the player. This method uses an asynchronous callback to return the res
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放与此TonePlayer对象关联的资源成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -190,7 +191,7 @@ audioRenderer.release().then(() => {
 release(): Promise<void>
 ```
 
-Releases the player. This method uses a promise to return the result.
+释放与此TonePlayer对象关联的资源。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -204,7 +205,7 @@ Releases the player. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 
@@ -216,7 +217,7 @@ Releases the player. This method uses a promise to return the result.
 start(callback: AsyncCallback<void>): void
 ```
 
-Starts player. This method uses an asynchronous callback to return the result.
+启动DTMF音调播放。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -230,7 +231,7 @@ Starts player. This method uses an asynchronous callback to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动DTMF音调播放成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -308,7 +309,7 @@ audioRenderer.start().then(() => {
 start(): Promise<void>
 ```
 
-Starts player. This method uses a promise to return the result.
+启动DTMF音调播放。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -322,7 +323,7 @@ Starts player. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 
@@ -334,7 +335,7 @@ Starts player. This method uses a promise to return the result.
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops player. This method uses an asynchronous callback to return the result.
+停止当前正在播放的音调。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -348,7 +349,7 @@ Stops player. This method uses an asynchronous callback to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止当前正在播放的音调成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -426,7 +427,7 @@ audioRenderer.stop().then(() => {
 stop(): Promise<void>
 ```
 
-Stops player. This method uses a promise to return the result.
+停止当前正在播放的音调。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -440,7 +441,7 @@ Stops player. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 

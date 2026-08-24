@@ -1,8 +1,6 @@
 # FilterOperator
 
-Enumeration type of filter operator.
-
-@enum { int } FilterOperator
+Enumeration type of filter operator.@enum { int } FilterOperator
 
 **Since:** 26.0.0
 

@@ -4,6 +4,8 @@ Declare type ToolBarV2ItemText
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2ItemText--><!--Device-unnamed-export declare class ToolBarV2ItemText-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,15 +43,16 @@ The constructor used to create a ToolBarV2ItemText object.
 ## activatedColor
 
 ```TypeScript
-@Trace
-  activatedColor?: ColorMetrics
+activatedColor?: ColorMetrics
 ```
 
 Text fontColor when the item is activated.
 
-**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,15 +65,16 @@ Text fontColor when the item is activated.
 ## color
 
 ```TypeScript
-@Trace
-  color?: ColorMetrics
+color?: ColorMetrics
 ```
 
 Define text fontColor.
 
-**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +87,7 @@ Define text fontColor.
 ## text
 
 ```TypeScript
-@Trace
-  text: ResourceStr
+text: ResourceStr
 ```
 
 Define text content.
@@ -92,6 +95,8 @@ Define text content.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

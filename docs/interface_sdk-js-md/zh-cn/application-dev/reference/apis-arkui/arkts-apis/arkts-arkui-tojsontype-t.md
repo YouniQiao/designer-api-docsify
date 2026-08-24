@@ -5,8 +5,7 @@ export declare type ToJSONType<T> = (value: T) => jsonx.JsonElement
 ```
 
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 静态ArkTS序列化接口，需开发者自己实现。
 
 **起始版本：** 23

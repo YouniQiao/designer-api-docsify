@@ -2,8 +2,7 @@
 
 提供发起主动拖拽的能力，当应用接收到触摸或长按等事件时可以主动发起拖拽的动作，并在其中携带拖拽信息。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 以下API需先使用UIContext中的[getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取DragController实例，再通过此实例调用对应方法。
 
 **起始版本：** 11
@@ -60,8 +59,7 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 
 创建拖拽的Action对象，需要显式指定拖拽背板图（可多个），以及拖拽的数据，跟手点等信息；当通过一个已创建的Action对象发起的拖拽未结束时，无法再次创建新的Action对象，接口会抛出异常；当Action对象的生命周期结束 后，注册在该对象上的回调函数会失效，因此需要在一个尽量长的作用域下持有该对象，并在每次发起拖拽前通过createDragAction返回新的对象覆盖旧值。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 建议控制传递的拖拽背板数量，传递过多容易导致拖起的效率问题。
 
 **起始版本：** 11
@@ -523,7 +521,7 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. <br>- **event**: drag event information that includes only the drag result. <br>- **extraParams**: extra information about the drag event.<br>**适用版本：** 11+ |
+| Promise&lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. <br>- **event**: drag event information that includes only the drag result. <br>- **extraParams**: extra information about the drag event.<br>**适用版本：** 11 |
 | Promise&lt;dragController.DragEventParam&gt; | A Promise with the drag event information.<br>**适用版本：** 12+ |
 
 **错误码：**

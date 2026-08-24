@@ -1,8 +1,6 @@
 # SheetMode
 
-Define the display mode of the sheet.
-
-@enum { number }
+Define the display mode of the sheet.@enum { number }
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # FlexOptions
 
-设置Flex子组件的排列对齐方式。
-
-@interface FlexOptions
+设置Flex子组件的排列对齐方式。@interface FlexOptions
 
 **起始版本：** 23
 

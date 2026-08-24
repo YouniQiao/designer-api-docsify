@@ -217,15 +217,13 @@ connect(url: string, callback: AsyncCallback<boolean>): void
 
 Initiates a WebSocket request to establish a WebSocket connection to a given URL. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The boolean value returned in the callback indicates only whether the connection request is created
 > successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
 > event via [on('open')](#onopen) before
 > calling this API.
 > 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the
 > maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum
 > length of URLs is changed from 2048 characters to 8196 characters.
@@ -336,15 +334,13 @@ connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<b
 
 Initiates a WebSocket request to establish a WebSocket connection to a given URL. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The boolean value returned in the callback indicates only whether the connection request is created
 > successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
 > event via [on('open')](#onopen) before
 > calling this API.
 > 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the
 > maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum
 > length of URLs is changed from 2048 characters to 8196 characters.
@@ -391,15 +387,13 @@ connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>
 
 Establishes a WebSocket connection to a given URL. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The boolean value returned in the callback indicates only whether the connection request is created
 > successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
 > event via [on('open')](#onopen) before
 > calling this API.
 > 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the
 > maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum
 > length of URLs is changed from 2048 characters to 8196 characters.
@@ -451,8 +445,7 @@ off(type: 'close', callback?: AsyncCallback<CloseResult>): void
 
 Unsubscribes from WebSocket close events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -488,8 +481,7 @@ off(type: 'dataEnd', callback?: Callback<void>): void
 
 Unsubscribes from WebSocket data receiving end events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -523,8 +515,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 Unsubscribes from WebSocket error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -560,8 +551,7 @@ off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void
 
 Unsubscribes from HTTP response header events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -595,10 +585,8 @@ off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void
 
 Unsubscribes from WebSocket server message receiving events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8).
-> 
+> **NOTE：**&gt;
+> The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8).&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -634,8 +622,7 @@ off(type: 'open', callback?: AsyncCallback<Object>): void
 
 Unsubscribes from WebSocket open events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -894,9 +881,7 @@ ws.on('dataEnd', () => {
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to WebSocket error events. This API uses an asynchronous callback to return the result.
-
-The error code of the [error](#onopen) event callback is described as follows: WebSocket is essentially an HTTP protocol upgrade. If the server agrees to the upgrade, the server returns 101. The status code indicates that the protocol is switched from HTTP to WebSocket ( the **open** callback is triggered). If the server rejects the upgrade or other exceptions occur, the server returns 200, indicating that the server only processes the request as a common HTTP request.
+Subscribes to WebSocket error events. This API uses an asynchronous callback to return the result.The error code of the [error](#onopen) event callback is described as follows: WebSocket is essentially an HTTP protocol upgrade. If the server agrees to the upgrade, the server returns 101. The status code indicates that the protocol is switched from HTTP to WebSocket (the **open** callback is triggered). If the server rejects the upgrade or other exceptions occur, the server returns 200, indicating that the server only processes the request as a common HTTP request.
 
 **Since:** 6
 
@@ -965,8 +950,7 @@ on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void
 
 Subscribes to WebSocket server message receiving events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8).
 
 **Since:** 6

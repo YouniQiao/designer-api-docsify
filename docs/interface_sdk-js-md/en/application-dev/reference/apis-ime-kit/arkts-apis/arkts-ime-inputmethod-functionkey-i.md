@@ -1,6 +1,6 @@
 # FunctionKey
 
-@brief Describes the type of the input method function key.
+Describes the type of the input method function key.
 
 **Since:** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## enterKeyType
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 enterKeyType: EnterKeyType
 ```
 
-@brief Function type represented by the Enter key of the input method.
+Function type represented by the Enter key of the input method.
 
 **Type:** EnterKeyType
 

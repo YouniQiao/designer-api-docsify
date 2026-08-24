@@ -71,10 +71,7 @@ try {
 function getDisallowedUsbDevices(admin: Want | null): Array<UsbDeviceType>
 ```
 
-Obtains the disallowed USB device types.
-
-Use cases:
-
+Obtains the disallowed USB device types.Use cases:  
 - Retrieve the current list of disallowed USB device types for review by the device administrator. - Obtain the existing blocklist for comparison before making any modifications. - Display the current USB device type restriction policy configuration on the management page.
 
 **Since:** 26.0.0

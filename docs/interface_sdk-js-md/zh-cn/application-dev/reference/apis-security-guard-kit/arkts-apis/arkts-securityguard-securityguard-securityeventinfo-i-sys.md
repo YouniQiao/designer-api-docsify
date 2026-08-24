@@ -1,8 +1,6 @@
 # SecurityEventInfo（系统接口）
 
-调用订阅接口使用的事件信息。
-
-@interface SecurityEventInfo
+调用订阅接口使用的事件信息。@interface SecurityEventInfo
 
 **起始版本：** 12
 

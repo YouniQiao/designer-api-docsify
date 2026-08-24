@@ -2,8 +2,7 @@
 
 Implements a **NativeMediaPlayerHandler** object used as a parameter of the [CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback) callback. The application uses this object to report the player status to the ArkWeb engine.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The sample effect is subject to the actual device.
 
 **Since:** 23

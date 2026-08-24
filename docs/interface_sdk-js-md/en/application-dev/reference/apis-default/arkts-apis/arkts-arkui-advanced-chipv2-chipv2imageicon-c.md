@@ -8,6 +8,8 @@ Defining ChipV2 image icon config
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2ImageIcon--><!--Device-unnamed-export declare class ChipV2ImageIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -44,8 +46,7 @@ The constructor of ChipV2ImageIcon
 ## activatedFillColor
 
 ```TypeScript
-@Trace
-  public activatedFillColor?: ColorMetrics
+public activatedFillColor?: ColorMetrics
 ```
 
 Image filled color when chip is activated.
@@ -56,6 +57,8 @@ Image filled color when chip is activated.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2ImageIcon-@Trace  public activatedFillColor?: ColorMetrics--><!--Device-ChipV2ImageIcon-@Trace  public activatedFillColor?: ColorMetrics-End-->
@@ -65,8 +68,7 @@ Image filled color when chip is activated.
 ## fillColor
 
 ```TypeScript
-@Trace
-  public fillColor?: ColorMetrics
+public fillColor?: ColorMetrics
 ```
 
 Image filled color.
@@ -77,6 +79,8 @@ Image filled color.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2ImageIcon-@Trace  public fillColor?: ColorMetrics--><!--Device-ChipV2ImageIcon-@Trace  public fillColor?: ColorMetrics-End-->
@@ -86,8 +90,7 @@ Image filled color.
 ## modifier
 
 ```TypeScript
-@Trace
-  public modifier?: ImageModifier
+public modifier?: ImageModifier
 ```
 
 Modifier for icon.
@@ -98,6 +101,8 @@ Modifier for icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2ImageIcon-@Trace  public modifier?: ImageModifier--><!--Device-ChipV2ImageIcon-@Trace  public modifier?: ImageModifier-End-->
@@ -107,8 +112,7 @@ Modifier for icon.
 ## size
 
 ```TypeScript
-@Trace
-  public size?: SizeT<LengthMetrics>
+public size?: SizeT<LengthMetrics>
 ```
 
 Image size config.
@@ -119,6 +123,8 @@ Image size config.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2ImageIcon-@Trace  public size?: SizeT<LengthMetrics>--><!--Device-ChipV2ImageIcon-@Trace  public size?: SizeT<LengthMetrics>-End-->
@@ -128,8 +134,7 @@ Image size config.
 ## src
 
 ```TypeScript
-@Trace
-  public src: ResourceStr
+public src: ResourceStr
 ```
 
 Image resource.
@@ -139,6 +144,8 @@ Image resource.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

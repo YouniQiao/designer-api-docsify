@@ -321,7 +321,7 @@ See [deleteKVStore](#deletekvstore)
 getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
-Obtains the IDs of all distributed KV stores that are created by getKVStore and have not been deleted by [deleteKVStore](#deletekvstore) . This API uses an asynchronous callback to return the result.
+Obtains the IDs of all distributed KV stores that are created by getKVStore and have not been deleted by [deleteKVStore](#deletekvstore). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -389,7 +389,7 @@ try {
 getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
-Obtains the IDs of all distributed KV stores that are created by getKVStore and have not been deleted by [deleteKVStore](#deletekvstore) . This API uses a promise to return the result.
+Obtains the IDs of all distributed KV stores that are created by getKVStore and have not been deleted by [deleteKVStore](#deletekvstore). This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -429,8 +429,7 @@ getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): vo
 
 Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV
 > store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV
 > store instance. For important data that cannot be regenerated, you are advised to use the backup and restore
@@ -527,8 +526,7 @@ getKVStore<T>(storeId: string, options: Options): Promise<T>
 
 Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV
 > store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV
 > store instance. For important data that cannot be regenerated, you are advised to use the backup and restore

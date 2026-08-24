@@ -22,9 +22,7 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper.CreateOptions): Promise<string>
 ```
 
-Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result.
-
-If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result.If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 12
 
@@ -41,8 +39,8 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
-| extension | string | Yes | File name extension, for example, **'jpg'**. The string length ranges from 1 to 255 . |
-| options | photoAccessHelper.CreateOptions | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**. <br>The file name must not contain any invalid characters. <br>Starting from API version 18, the following characters are considered invalid: \ / : ? " &lt; &gt; \| <br>For API versions 10 to 17, the following characters are considered invalid: . .. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
+| extension | string | Yes | File name extension, for example, **'jpg'**. The string length ranges from 1 to 255. |
+| options | photoAccessHelper.CreateOptions | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**. <br>The file name must not contain any invalid characters. <br>Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; \| <br>For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Return value:**
 
@@ -123,9 +121,7 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>
 ```
 
-Obtains albums based on the specified options. This API uses a promise to return the result.
-
-Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options. This API uses a promise to return the result.Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 12
 
@@ -227,9 +223,7 @@ getAlbums(
     ): Promise<FetchResult<Album>>
 ```
 
-Obtains albums based on the specified options and album type. This API uses a promise to return the result.
-
-Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options and album type. This API uses a promise to return the result.Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 12
 

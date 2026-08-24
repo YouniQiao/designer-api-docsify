@@ -467,14 +467,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setSubTitle(subTitle: string): Promise<void>
 ```
 
-Sets the subtitle for this **Highlights** album instance.
-
-The subtitle must meet the following requirements:
-
-- The total length of the subtitle must be between 0 and 255 characters. - It must not contain any invalid characters, which are:
-
-. \ / : ? " ' ` &lt; &gt; | { } [ ]
-
+Sets the subtitle for this **Highlights** album instance.The subtitle must meet the following requirements:  
+- The total length of the subtitle must be between 0 and 255 characters. - It must not contain any invalid characters, which are:  
+. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - The characters are case insensitive.
 
 **Since:** 23

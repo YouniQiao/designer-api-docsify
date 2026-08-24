@@ -1,6 +1,6 @@
 # RectChangeOptions
 
-Provides the values and reasons returned when the rectangle (position and size) of the component ( **EmbeddedComponent** or **UIExtensionComponent**) changes.
+Provides the values and reasons returned when the rectangle (position and size) of the component (**EmbeddedComponent** or **UIExtensionComponent**) changes.
 
 **Since:** 23
 

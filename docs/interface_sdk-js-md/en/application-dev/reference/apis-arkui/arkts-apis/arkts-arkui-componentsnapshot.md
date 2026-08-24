@@ -1,8 +1,6 @@
 # @ohos.arkui.componentSnapshot
 
-This module allows developers to export snapshot image from a component or a custom builder.
-
-@namespace componentSnapshot
+This module allows developers to export snapshot image from a component or a custom builder.@namespace componentSnapshot
 
 **Since:** 23
 

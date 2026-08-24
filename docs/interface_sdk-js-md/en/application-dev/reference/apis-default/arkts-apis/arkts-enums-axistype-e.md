@@ -1,8 +1,6 @@
 # AxisType
 
-Define the axis type of axis event.
-
-@enum {number}
+Define the axis type of axis event.@enum {number}
 
 **Since:** 23
 

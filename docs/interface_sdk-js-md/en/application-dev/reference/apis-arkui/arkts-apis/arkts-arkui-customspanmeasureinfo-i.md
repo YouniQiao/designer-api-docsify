@@ -19,9 +19,7 @@ Defines the CustomSpanMeasureInfo interface.
 fontSize: number
 ```
 
-Text font size.
-
-Unit: fp
+Text font size.Unit: fp
 
 **Type:** number
 
@@ -41,11 +39,8 @@ Unit: fp
 layoutPolicy?: LayoutPolicy
 ```
 
-Width layout policy of the parent component of the custom span.
-
-**NOTE：**
-
-When the value is **null** or **undefined**, the parent component does not have a width layout policy set.
+Width layout policy of the parent component of the custom span.  
+**NOTE：**When the value is **null** or **undefined**, the parent component does not have a width layout policy set.
 
 **Type:** LayoutPolicy
 
@@ -65,9 +60,7 @@ When the value is **null** or **undefined**, the parent component does not have 
 maxWidth?: number
 ```
 
-Maximum width constraint of the custom span within the parent component's content area.
-
-Unit: px
+Maximum width constraint of the custom span within the parent component's content area.Unit: px
 
 **Type:** number
 

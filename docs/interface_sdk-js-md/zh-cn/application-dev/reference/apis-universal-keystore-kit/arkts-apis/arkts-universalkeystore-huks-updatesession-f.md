@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## updateSession
@@ -13,9 +12,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function updateSession(handle: long, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-updateSession操作密钥接口。使用callback异步回调。
-
-huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
+updateSession操作密钥接口。使用callback异步回调。huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
 
 **起始版本：** 9
 
@@ -86,7 +83,7 @@ Updates the key operation by segment. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | handle | long | 是 | Handle of the **updateSession** operation, which is of the uint64 type. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | Parameter set used for the **updateSession** operation. |
-| token | Uint8Array | 是 | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control) . |
+| token | Uint8Array | 是 | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **错误码：**
@@ -117,9 +114,7 @@ Updates the key operation by segment. This API uses an asynchronous callback to 
 function updateSession(handle: long, options: HuksOptions, token?: Uint8Array): Promise<HuksReturnResult>
 ```
 
-updateSession操作密钥接口。使用Promise异步回调。
-
-huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
+updateSession操作密钥接口。使用Promise异步回调。huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
 
 **起始版本：** 9
 

@@ -1,6 +1,9 @@
 # AudioDeviceEnhanceManager
 
-提供增强的音频设备管理能力。
+音频设备增强管理功能，用于应用级音频设备选择及流维度音频设备选择。 在使用AudioDeviceEnhanceManager的接口之前，需要先通过getDeviceEnhanceManager获取AudioDeviceEnhanceManager实例。
+
+> **说明：**&gt;
+> 应用在使用前应先调用isEnhancedRoutingSupported，确认系统是否支持音频设备增强管理功能。
 
 **起始版本：** 26.0.0
 
@@ -12,7 +15,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getSoundCardInfo
@@ -21,7 +23,7 @@ import { audioHaptic } from '@kit.AudioKit';
 getSoundCardInfo(): Promise<SoundCardInfo>
 ```
 
-获取声卡信息。该方法使用promise返回查询结果。
+获取声卡信息。此方法使用 Promise 返回查询结果。
 
 **起始版本：** 26.0.0
 
@@ -37,7 +39,7 @@ getSoundCardInfo(): Promise<SoundCardInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[SoundCardInfo](arkts-audio-audio-soundcardinfo-i-sys.md)&gt; | Promise用于返回声卡信息。 |
+| Promise&lt;[SoundCardInfo](arkts-audio-audio-soundcardinfo-i-sys.md)&gt; | Promise 过去用于返回声卡信息。 |
 
 **错误码：**
 

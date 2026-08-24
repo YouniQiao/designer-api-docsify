@@ -39,7 +39,7 @@ static all<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Arr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| promises | FixedArray&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
+| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
 
 **返回值：**
 
@@ -69,7 +69,7 @@ static all<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Array<Awaited<U>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| promises | Iterable&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
+| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
 
 **返回值：**
 
@@ -100,7 +100,7 @@ static allSettled<U>(promises: FixedArray<PromiseLike<U> | U | undefined>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| promises | FixedArray&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
+| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
 
 **返回值：**
 
@@ -130,7 +130,7 @@ static allSettled<U>(promises: Iterable<PromiseLike<U> | U>): Promise<PromiseSet
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| promises | Iterable&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
+| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
 
 **返回值：**
 
@@ -160,7 +160,7 @@ static any<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Awa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| promises | FixedArray&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
+| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
 
 **返回值：**
 
@@ -190,7 +190,7 @@ static any<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Awaited<U>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| promises | Iterable&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
+| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
 
 **返回值：**
 
@@ -335,7 +335,7 @@ static race<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Aw
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| promises | FixedArray&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
+| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
 
 **返回值：**
 
@@ -365,7 +365,7 @@ static race<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Awaited<U>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| promises | Iterable&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
+| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
 
 **返回值：**
 
@@ -473,7 +473,7 @@ static resolve<U>(value: PromiseLike<U> | U): Promise<Awaited<U>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U | 是 | 解析值。 |
+| value | PromiseLike&lt;U&gt; \| U | 是 | 解析值。 |
 
 **返回值：**
 

@@ -14,7 +14,6 @@ Describes the information about the sensitivity (ISO) settings.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## iso

@@ -1,8 +1,6 @@
 # Padding
 
-Defines the padding property.
-
-@interface Padding
+Defines the padding property.@interface Padding
 
 **Since:** 23
 

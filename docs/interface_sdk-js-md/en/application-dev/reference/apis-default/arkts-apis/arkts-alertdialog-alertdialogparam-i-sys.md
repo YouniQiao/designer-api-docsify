@@ -1,8 +1,6 @@
 # AlertDialogParam
 
-Base param used for AlertDialog.show method.
-
-@interface AlertDialogParam
+Base param used for AlertDialog.show method.@interface AlertDialogParam
 
 **Since:** 23
 

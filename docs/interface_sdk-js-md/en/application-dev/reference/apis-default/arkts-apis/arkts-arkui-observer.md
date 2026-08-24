@@ -1,8 +1,6 @@
 # @ohos.arkui.observer
 
-Register callbacks to observe ArkUI behavior.
-
-@namespace uiObserver
+Register callbacks to observe ArkUI behavior.@namespace uiObserver
 
 **Since:** 23
 
@@ -65,18 +63,18 @@ Register callbacks to observe ArkUI behavior.
 | [NavDestinationSwitchInfo](arkts-uiobserver-navdestinationswitchinfo-i.md) | NavDestination switch info |
 | [NavDestinationSwitchObserverOptions](arkts-uiobserver-navdestinationswitchobserveroptions-i.md) | Indicates the options of NavDestination switch. |
 | [NavigationInfo](arkts-uiobserver-navigationinfo-i.md) | Navigation info. |
-| [ObserverOptions](arkts-uiobserver-observeroptions-i.md) | observer options. |
-| [ScrollEventInfo](arkts-uiobserver-scrolleventinfo-i.md) | ScrollEvent info. |
+| [ObserverOptions](arkts-uiobserver-observeroptions-i.md) | observer options.@interface ObserverOptions |
+| [ScrollEventInfo](arkts-uiobserver-scrolleventinfo-i.md) | ScrollEvent info.@interface ScrollEventInfo |
 | [TabContentInfo](arkts-uiobserver-tabcontentinfo-i.md) | TabContent info. |
-| [TextChangeEventInfo](arkts-uiobserver-textchangeeventinfo-i.md) | Text change event info |
-| [WindowSizeLayoutBreakpointInfo](arkts-uiobserver-windowsizelayoutbreakpointinfo-i.md) | Defines the window size layout breakpoint information. This interface provides the current breakpoint classification of the window's width and height based on the configured breakpoint thresholds. |
+| [TextChangeEventInfo](arkts-uiobserver-textchangeeventinfo-i.md) | Text change event info@interface TextChangeEventInfo |
+| [WindowSizeLayoutBreakpointInfo](arkts-uiobserver-windowsizelayoutbreakpointinfo-i.md) | Defines the window size layout breakpoint information. This interface provides the current breakpoint classification of the window's width and height based on the configured breakpoint thresholds.@interface WindowSizeLayoutBreakpointInfo |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [NavDestinationState](arkts-uiobserver-navdestinationstate-e.md) | NavDestination state. |
-| [RouterPageState](arkts-uiobserver-routerpagestate-e.md) | Router page state. |
-| [ScrollEventType](arkts-uiobserver-scrolleventtype-e.md) | ScrollEvent type. |
-| [TabContentState](arkts-uiobserver-tabcontentstate-e.md) | TabContent state. |
+| [NavDestinationState](arkts-uiobserver-navdestinationstate-e.md) | NavDestination state.@enum { number } |
+| [RouterPageState](arkts-uiobserver-routerpagestate-e.md) | Router page state.@enum { number } |
+| [ScrollEventType](arkts-uiobserver-scrolleventtype-e.md) | ScrollEvent type.@enum { number } |
+| [TabContentState](arkts-uiobserver-tabcontentstate-e.md) | TabContent state.@enum { number } |
 

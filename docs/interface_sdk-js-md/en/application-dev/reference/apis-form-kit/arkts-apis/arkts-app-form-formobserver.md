@@ -1,8 +1,6 @@
 # @ohos.app.form.formObserver
 
-Interface of formObserver.
-
-@namespace formObserver
+Interface of formObserver.@namespace formObserver
 
 **Since:** 23
 

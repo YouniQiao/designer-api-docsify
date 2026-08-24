@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { usb } from '@kit.BasicServicesKit';
-import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## setConfiguration
@@ -14,9 +12,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number
 ```
 
-设置设备配置。
-
-需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备信息以及config；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限；调用 [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)得到devicepipe作为参数。
+设置设备配置。需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备信息以及config；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限；调用 [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)得到devicepipe作为参数。
 
 **起始版本：** 8
 

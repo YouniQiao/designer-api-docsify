@@ -14,15 +14,31 @@ Enumerates the PiP template types.
 VIDEO_DRIVE = 4
 ```
 
-Indicate the content to show in picture-in-picture window is video drive
-
-Device Behavior Differences:Only supported by car
+ * In-vehicle video template, which is loaded when a PiP window is started on cars.
 
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPTemplateType-VIDEO_DRIVE = 4--><!--Device-PiPTemplateType-VIDEO_DRIVE = 4-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**System API:** This is a system API.
+
+## VIDEO_NAVIGATION
+
+```TypeScript
+VIDEO_NAVIGATION = 5
+```
+
+In-vehicle navigation template, which is loaded when a PiP window is started on cars.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PiPTemplateType-VIDEO_NAVIGATION = 5--><!--Device-PiPTemplateType-VIDEO_NAVIGATION = 5-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

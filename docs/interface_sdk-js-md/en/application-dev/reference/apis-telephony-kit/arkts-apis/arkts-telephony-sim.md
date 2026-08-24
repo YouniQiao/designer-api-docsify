@@ -20,8 +20,8 @@ import { sim } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
-| [getActiveSimAccountInfoList](arkts-telephony-sim-getactivesimaccountinfolist-f.md) | Obtains the list of activated SIM card accounts. This API uses an asynchronous callback to return the result. |
-| [getActiveSimAccountInfoList](arkts-telephony-sim-getactivesimaccountinfolist-f.md) | Obtains the list of activated SIM card accounts. This API uses a promise to return the result. |
+| [getActiveSimAccountInfoList](arkts-telephony-sim-getactivesimaccountinfolist-f.md) | Obtains the list of activated SIM card accounts. This API uses an asynchronous callback to return the result.  **Required permission**: ohos.permission.GET_TELEPHONY_STATE |
+| [getActiveSimAccountInfoList](arkts-telephony-sim-getactivesimaccountinfolist-f.md) | Obtains the list of activated SIM card accounts. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_TELEPHONY_STATE |
 | [getCardType](arkts-telephony-sim-getcardtype-f.md) | Obtains the type of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getCardType](arkts-telephony-sim-getcardtype-f.md) | Obtains the type of the SIM card in the specified slot. This API uses a promise to return the result. |
 | [getCardTypeSync](arkts-telephony-sim-getcardtypesync-f.md) | Obtains the type of the SIM card in the specified slot. |
@@ -39,9 +39,9 @@ import { sim } from '@kit.TelephonyKit';
 | [getOpName](arkts-telephony-sim-getopname-f.md) | Obtains the OpName of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getOpName](arkts-telephony-sim-getopname-f.md) | Obtains the OpName of the SIM card in the specified slot. This API uses a promise to return the result. |
 | [getOpNameSync](arkts-telephony-sim-getopnamesync-f.md) | Obtains the OpName of the SIM card in the specified slot. |
-| [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md) | Obtains SIM card account information. This API uses an asynchronous callback to return the result. |
-| [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md) | Obtains SIM card account information. This API uses a promise to return the result. |
-| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md) | Checks the mapping between card slot IDs and SIM cards. |
+| [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md) | Obtains SIM card account information. This API uses an asynchronous callback to return the result.  **Required permission**: ohos.permission.GET_TELEPHONY_STATE |
+| [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md) | Obtains SIM card account information. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_TELEPHONY_STATE |
+| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md) | Checks the mapping between card slot IDs and SIM cards.  - Slot 1 corresponds to SIM card 1 or SIM card 2. - Slot 2 corresponds to SIM card 2 or eSIMX. |
 | [getSimLabel](arkts-telephony-sim-getsimlabel-f.md) | Obtains the SIM card label. This API uses a promise to return the result. |
 | [getSimLabelSync](arkts-telephony-sim-getsimlabelsync-f.md) | Obtains the SIM card label based on the specified SIM card slot ID. |
 | [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md) | Obtains the home public land mobile network (PLMN) ID of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
@@ -96,8 +96,8 @@ import { sim } from '@kit.TelephonyKit';
 | [getSimAuthentication](arkts-telephony-sim-getsimauthentication-f-sys.md) | Performs SIM card authentication. |
 | [getSimGid1](arkts-telephony-sim-getsimgid1-f-sys.md) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot. The GID1 is recorded in the EFGID1 file of the SIM card. |
 | [getSimGid1](arkts-telephony-sim-getsimgid1-f-sys.md) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot. The GID1 is recorded in the EFGID1 file of the SIM card. |
-| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md) | Obtains the ICCID of the SIM card in a specified slot. |
-| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md) | Obtains the ICCID of the SIM card in a specified slot. |
+| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md) | Obtains the ICCID of the SIM card in a specified slot.<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card. |
+| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md) | Obtains the ICCID of the SIM card in a specified slot.<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card. |
 | [getSimTelephoneNumber](arkts-telephony-sim-getsimtelephonenumber-f-sys.md) | Obtains the MSISDN of the SIM card in a specified slot. The MSISDN is recorded in the EFMSISDN file of the SIM card. |
 | [getSimTelephoneNumber](arkts-telephony-sim-getsimtelephonenumber-f-sys.md) | Obtains the MSISDN of the SIM card in a specified slot. The MSISDN is recorded in the EFMSISDN file of the SIM card. |
 | [getVoiceMailIdentifier](arkts-telephony-sim-getvoicemailidentifier-f-sys.md) | Obtains the alpha identifier of the voice mailbox of the SIM card in a specified slot. |

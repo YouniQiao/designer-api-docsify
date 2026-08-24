@@ -5,7 +5,7 @@ export type ImeChangeWithUserIdCallback =
       (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype, userId: int) => void
 ```
 
-@brief 输入法变更事件回调，携带发生输入法变更的用户ID。
+输入法变更事件回调，携带发生输入法变更的用户ID。
 
 **起始版本：** 26.0.0
 

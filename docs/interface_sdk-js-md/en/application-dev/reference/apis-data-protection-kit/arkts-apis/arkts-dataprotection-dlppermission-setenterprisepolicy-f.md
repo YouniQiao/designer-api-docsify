@@ -12,12 +12,9 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function setEnterprisePolicy(policy: EnterprisePolicy): void
 ```
 
-Sets the protection policy for enterprise applications. After the API is successfully called, the DLP protection for enterprise applications is implemented based on the configured policy.
+Sets the protection policy for enterprise applications. After the API is successfully called, the DLP protection for enterprise applications is implemented based on the configured policy.This API is used by the enterprise administrator to configure DLP security policies for unified management of data security protection rules.
 
-This API is used by the enterprise administrator to configure DLP security policies for unified management of data security protection rules.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only by enterprise accounts.
 
 **Since:** 21

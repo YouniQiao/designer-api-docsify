@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## autoResolved
@@ -21,11 +20,7 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 autoResolved: boolean
 ```
 
-当前版本是否为自动解决冲突的版本。
-
-应用设置手动解冲突时，默认返回false，无意义。
-
-应用设置自动解冲突时，端侧会自动解冲突，true表示当前版本存在冲突，端云服务已自动解决冲突，false表示无冲突，未自动解冲突。
+当前版本是否为自动解决冲突的版本。应用设置手动解冲突时，默认返回false，无意义。应用设置自动解冲突时，端侧会自动解冲突，true表示当前版本存在冲突，端云服务已自动解决冲突，false表示无冲突，未自动解冲突。
 
 **类型：** boolean
 

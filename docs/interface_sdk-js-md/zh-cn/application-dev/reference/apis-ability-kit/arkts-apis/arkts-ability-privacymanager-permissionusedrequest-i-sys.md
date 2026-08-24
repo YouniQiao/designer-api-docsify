@@ -42,9 +42,7 @@ beginTime?: long
 bundleName?: string
 ```
 
-目标应用的包名。
-
-默认值：查询所有应用。
+目标应用的包名。默认值：查询所有应用。
 
 **类型：** string
 
@@ -62,9 +60,7 @@ bundleName?: string
 deviceId?: string
 ```
 
-目标应用所在设备的ID。
-
-默认值：本端设备ID。
+目标应用所在设备的ID。默认值：本端设备ID。
 
 **类型：** string
 
@@ -120,9 +116,7 @@ flag: PermissionUsageFlag
 isRemote?: boolean
 ```
 
-指定是否查询远端设备。false表示查询本端设备的权限使用记录，true表示查询远端设备记录。
-
-默认值：false。
+指定是否查询远端设备。false表示查询本端设备的权限使用记录，true表示查询远端设备记录。默认值：false。
 
 **类型：** boolean
 
@@ -160,9 +154,7 @@ permissionNames?: Array<Permissions>
 tokenId?: int
 ```
 
-目标应用的身份标识。目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的 [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。
-
-默认值：0，查询所有应用。
+目标应用的身份标识。目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的 [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。默认值：0，查询所有应用。
 
 **类型：** int
 

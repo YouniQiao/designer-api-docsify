@@ -14,14 +14,12 @@ export function createModuleContext(context: Context, bundleName: string, module
 
 Creates the context for a module. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Starting from API version 18, the context can obtain the
 > [process name](arkts-ability-context-c.md) of the current
 > application. The **processName** property in the context created by **createModuleContext** is the same as the
 > **processName** property in the input parameter **Context**. The values of other properties are obtained based on
-> the input parameters **Context**, **bundleName**, and **moduleName**.
-> 
+> the input parameters **Context**, **bundleName**, and **moduleName**.&gt;
 > - Creating a module context involves resource querying and initialization, which can be time-consuming. In
 > scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
 > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.

@@ -14,7 +14,6 @@ PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-c
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## addDeferredSurface

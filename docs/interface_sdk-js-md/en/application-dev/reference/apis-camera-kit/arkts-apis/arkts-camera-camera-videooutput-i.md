@@ -14,7 +14,6 @@ VideoOutput implements output information used in a video session. It inherits f
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getActiveFrameRate
@@ -23,9 +22,7 @@ import { cameraPicker } from '@kit.CameraKit';
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range.
-
-This API is valid only after [setFrameRate](#setframerate) is called to set a frame rate range for video streams.
+Obtains the configured frame rate range.This API is valid only after [setFrameRate](#setframerate) is called to set a frame rate range for video streams.
 
 **Since:** 23
 
@@ -179,8 +176,7 @@ function getSupportedFrameRates(videoOutput: camera.VideoOutput): Array<camera.F
 getVideoRotation(deviceDegree?: int): ImageRotation
 ```
 
-Obtains the video rotation angle.
-
+Obtains the video rotation angle.  
 - Device' natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward. - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
 
 **Since:** 23
@@ -330,8 +326,7 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 
 Unsubscribes from video recording start events.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
@@ -417,8 +412,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to VideoOutput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
@@ -467,8 +461,7 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 
 Subscribes to video recording start events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
@@ -552,15 +545,11 @@ Subscribes frame start event callback.
 setFrameRate(minFps: int, maxFps: int): void
 ```
 
-Sets a frame rate range for video streams. The range must be within the supported frame rate range,
+Sets a frame rate range for video streams. The range must be within the supported frame rate range,which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates).
 
-which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or
-> [VideoSession](arkts-camera-camera-videosession-i.md) mode.
-> 
+> [VideoSession](arkts-camera-camera-videosession-i.md) mode.&gt;
 > Before calling this API, call [getActiveFrameRate](#getactiveframerate) to obtain the
 > current frame rate of the video session. If the delivered frame rate matches the current frame rate, the
 > delivered frame rate is not applied.

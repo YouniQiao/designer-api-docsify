@@ -1,6 +1,9 @@
 # AudioDeviceEnhanceManager
 
-提供增强的音频设备管理能力。
+音频设备增强管理功能，用于应用级音频设备选择及流维度音频设备选择。 在使用AudioDeviceEnhanceManager的接口之前，需要先通过getDeviceEnhanceManager获取AudioDeviceEnhanceManager实例。
+
+> **说明：**&gt;
+> 应用在使用前应先调用isEnhancedRoutingSupported，确认系统是否支持音频设备增强管理功能。
 
 **起始版本：** 26.0.0
 
@@ -12,7 +15,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## isEnhancedRoutingSupported
@@ -21,7 +23,12 @@ import { audioHaptic } from '@kit.AudioKit';
 isEnhancedRoutingSupported(): boolean
 ```
 
-查询系统是否支持该管理器提供的增强路由功能。 包括为应用程序或音频流选择输入和输出设备。 建议您的应用在使用前先调用此API确认系统支持 这些增强的路由API。即使对于相同类型的主机设备，某些型号也可能支持这些功能，而其他功能由于硬件限制可能不具备。如果系统不支持这些增强的路由功能，调用它们将不起作用，系统将选择应用程序或音频流的默认输入/输出设备。
+查询系统是否支持当前管理器提供的增强路由能力。
+
+> **说明：**&gt;
+> - 增强路由能力包括为应用或音频流选择输入输出设备。&gt;
+> - 应用在调用增强路由相关接口前，先调用本接口确认系统是否支持。即使是同一类型设备，不同机型也会因硬件限制而支持情况不同。&gt;
+> - 当系统不支持增强路由能力时，调用相关接口不会生效，并会为应用或音频流选择默认的输入输出设备。
 
 **起始版本：** 26.0.0
 
@@ -35,7 +42,7 @@ isEnhancedRoutingSupported(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | The value true indicates that the system supports enhanced routing functions. |
+| boolean | 表示系统是否支持增强路由能力。true表示支持，false表示不支持。 |
 
 ## selectInputDevice
 
@@ -43,7 +50,18 @@ isEnhancedRoutingSupported(): boolean
 selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-为您的应用程序选择输入设备。此设置适用于创建的所有录制流 在您的应用程序下，除非为特定流指定了特定输入设备 [selectInputDeviceForAudioCapturer](#selectinputdeviceforaudiocapturer).当应用程序实现 它自己的UX用于输入设备选择，它可以通过 get AvailableDevices，并使用[getPreferredInputDeviceForCapturerInfo](arkts-audio-audio-audioroutingmanager-i.md#getpreferredinputdeviceforcapturerinfo)接口获取当前 选择的输入设备。当您的应用程序退出或选择的 设备下线。在您的应用程序重新启动或设备重新联机后，您的应用程序必须重新发布选择才能使其生效。如果系统不支持该功能，它将为您的应用程序选择一个默认的输入设备。
+为应用选择输入设备。使用Promise异步回调。
+
+> **说明：**&gt;
+> - 此设置对应用下创建的所有录音流生效，除非特定流已经通过selectInputDeviceForAudioCapturer
+> 指定了专属输入设备。&gt;
+> - 当应用实现输入设备选择功能时，可以通过
+> [AudioRoutingManager.getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices)
+> 获取可用输入设备列表，并通过
+> [AudioRoutingManager.getPreferredInputDeviceForCapturerInfo](arkts-audio-audio-audioroutingmanager-i.md#getpreferredinputdeviceforcapturerinfo)
+> 获取当前首选输入设备。&gt;
+> - 当应用退出或所选设备离线时，此选择将失效。应用重启或设备重新上线后，需要重新设置才会生效。&gt;
+> - 当系统不支持此功能时，会为应用选择默认输入设备。
 
 **起始版本：** 26.0.0
 
@@ -57,13 +75,13 @@ selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | get AvailableDevices接口返回的音频设备描述数组。 |
+| inputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 输入设备描述，需从 [AudioRoutingManager.getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices) 返回的设备数组中获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -138,7 +156,13 @@ async function getRoutingManager(){
 selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-选择目标AudioCapturer的输入设备。您的应用程序必须确保指定的AudioCapturer是有效的。此选择仅适用于指定流；其他录制流您的应用程序将使用您的应用程序的强制选择或系统的默认输入设备。 当您的应用程序退出或所选设备脱机时，选择将变为无效。 应用程序重新启动或设备重新联机后，您的应用程序必须重新发出选择使其生效。如果系统不支持该功能，系统将选择捕获器的默认输入设备。
+为指定音频录制流设置首选输入设备。使用Promise异步回调。
+
+> **说明：**&gt;
+> - 应用需要确保指定的AudioCapturer实例有效。&gt;
+> - 此选择仅对指定音频流生效，应用内其他录音流会继续使用应用级选择的设备或系统默认输入设备。&gt;
+> - 当应用退出或所选设备离线时，此选择将失效。应用重启或设备重新上线后，需要重新设置才会生效。&gt;
+> - 当系统不支持此功能时，会为该音频录制流选择默认输入设备。
 
 **起始版本：** 26.0.0
 
@@ -152,14 +176,14 @@ selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDev
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | AudioCapturer的实例。 |
-| inputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | get AvailableDevices接口返回的音频设备描述数组。 |
+| capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | AudioCapturer实例。 |
+| inputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 输入设备描述，需从 [AudioRoutingManager.getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices) 返回的设备数组中获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -174,7 +198,18 @@ selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDev
 selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-选择应用程序的输出设备。此设置适用于创建的所有播放流 除非为特定流指定了特定的输出设备 [selectOutputDeviceForAudioRenderer](#selectoutputdeviceforaudiorenderer).当应用程序实现 它自己的UX用于输出设备选择，它可以通过 get AvailableDevices，并使用[getPreferOutputDeviceForRendererInfo](arkts-audio-audio-audioroutingmanager-i.md#getpreferoutputdeviceforrendererinfo)接口获取当前 选定的输出设备。当您的应用程序退出或选择的 设备下线。在您的应用程序重新启动或设备重新联机后，您的应用程序必须重新发布选择才能使其生效。如果系统不支持该功能，则会为您的应用程序选择一个默认的输出设备。
+为应用选择输出设备。使用Promise异步回调。
+
+> **说明：**&gt;
+> - 此设置对应用下创建的所有播放流生效，除非特定流已经通过selectOutputDeviceForAudioRenderer
+> 指定了专属输出设备。&gt;
+> - 当应用实现输出设备选择功能时，可以通过
+> [AudioRoutingManager.getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices)
+> 获取可用输出设备列表，并通过
+> [AudioRoutingManager.getPreferOutputDeviceForRendererInfo](arkts-audio-audio-audioroutingmanager-i.md#getpreferoutputdeviceforrendererinfo)
+> 获取当前首选输出设备。&gt;
+> - 当应用退出或所选设备离线时，此选择将失效。应用重启或设备重新上线后，需要重新设置才会生效。&gt;
+> - 当系统不支持此功能时，会为应用选择默认输出设备。
 
 **起始版本：** 26.0.0
 
@@ -188,13 +223,13 @@ selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 通过 [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices)接口返回的音频设备描述数组 |
+| outputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 输出设备描述，需从 [AudioRoutingManager.getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices) 返回的设备数组中获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -268,7 +303,13 @@ async function selectOutputDevice(){
 selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-选择目标AudioRenderer的输出设备。您的应用程序必须确保指定的AudioRenderer是有效的。此选择仅适用于指定流；其他播放流您的应用程序将使用您的应用程序的强制选择或系统的默认输出设备。 当您的应用程序退出或所选设备脱机时，选择将变为无效。 应用程序重新启动或设备重新联机后，您的应用程序必须重新发出选择使其生效。如果系统不支持该功能，系统将选择渲染器的默认输出设备。
+为指定音频播放流设置首选输出设备。使用Promise异步回调。
+
+> **说明：**&gt;
+> - 应用需要确保指定的AudioRenderer实例有效。&gt;
+> - 此选择仅对指定音频流生效，应用内其他播放流会继续使用应用级选择的设备或系统默认输出设备。&gt;
+> - 当应用退出或所选设备离线时，此选择将失效。应用重启或设备重新上线后，需要重新设置才会生效。&gt;
+> - 当系统不支持此功能时，会为该音频播放流选择默认输出设备。
 
 **起始版本：** 26.0.0
 
@@ -282,14 +323,14 @@ selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioD
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | 是 | AudioRenderer的实例。 |
-| outputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | get AvailableDevices接口返回的音频设备描述数组。 |
+| renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | 是 | AudioRenderer实例。 |
+| outputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 输出设备描述，需从 [AudioRoutingManager.getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices) 返回的设备数组中获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

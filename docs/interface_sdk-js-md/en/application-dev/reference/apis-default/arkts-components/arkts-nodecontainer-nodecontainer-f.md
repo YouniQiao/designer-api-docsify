@@ -15,6 +15,8 @@ Defines NodeContainer Component
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function NodeContainer(    controller: NodeController): NodeContainerAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function NodeContainer(    controller: NodeController): NodeContainerAttribute-End-->
@@ -25,7 +27,7 @@ Defines NodeContainer Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [NodeController](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md) | Yes | instance of NodeController. |
+| controller | [NodeController](../arkts-apis/arkts-nodecontroller-c.md) | Yes | instance of NodeController. |
 
 **Return value:**
 
@@ -48,6 +50,8 @@ Defines NodeContainer Component. It requires calling setNodeContainerOptions at 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

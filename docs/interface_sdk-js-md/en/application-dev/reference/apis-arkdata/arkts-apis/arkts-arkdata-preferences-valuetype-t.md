@@ -5,9 +5,7 @@ type ValueType = long | double | string | boolean | Array<long> | Array<double> 
     | Uint8Array | RecordData | bigint
 ```
 
-Indicates possible value types
-
-@FaAndStageModel
+Indicates possible value types@FaAndStageModel
 
 **Since:** 23
 

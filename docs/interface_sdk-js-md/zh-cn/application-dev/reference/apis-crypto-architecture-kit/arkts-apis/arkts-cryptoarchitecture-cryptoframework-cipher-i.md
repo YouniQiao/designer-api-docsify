@@ -1,11 +1,6 @@
 # Cipher
 
-加解密接口，定义对称加解密和非对称加解密方法。调用前，需通过 [createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)方法创建一个Cipher实例。 按序调用Cipher实例中的 [init()](#init)、 [update()](#update)、 [doFinal()](#dofinal)方法完成 加解密操作。
-
-<br>完整的加解密流程示例可参考[开发指南](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
-
-<br>一次完整的加/解密流程在对称加密和非对称加密中略有不同：
-
+加解密接口，定义对称加解密和非对称加解密方法。调用前，需通过 [createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)方法创建一个Cipher实例。 按序调用Cipher实例中的 [init()](#init)、 [update()](#update)、 [doFinal()](#dofinal)方法完成 加解密操作。<br>完整的加解密流程示例可参考[开发指南](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。<br>一次完整的加/解密流程在对称加密和非对称加密中略有不同：  
 - 对称加解密：init为必选，update为可选（且允许多次update加/解密大数据），doFinal为必选；doFinal结束后可以重新init开始新一轮加/解密 流程。 - RSA、SM2非对称加解密：init为必选，不支持update操作，doFinal为必选（允许连续多次doFinal加/解密大数据）；RSA不支持重复init，切换 加解密模式或填充方式时，需要重新创建Cipher对象。
 
 **起始版本：** 23
@@ -332,14 +327,9 @@ async function hmacByPromise() {
 doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Callback异步回调。
+完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Callback异步回调。<br>（1）在对称加解密中**doFinal**用于处理剩余数据和本次传入的数据，并最终结束加密或解密操作，使用callback异步回调函数获取加密或解密后的 数据。如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中已经使用**update**传入过数据， 可以在**doFinal**的data参数处传入null。根据对称加解密的模式不同，**doFinal**的输出有以下区别： - 在GCM和CCM模式的对称加密中，一次加密流程中，将每次**update**和**doFinal**的结果拼接起来，会得到“密文 + authTag”。GCM模式下， authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其余部分均为密文。如果**doFinal**的data参数传入null，则**doFinal**的 结果就是authTag。解密时，authTag需要填入[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或 [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)，密文作为解密时的data参数。 - 对于其他模式的对称加解密及GCM和CCM模式的加解密：每次加/解密流程中，**update**和**doFinal**的结果拼接起来，得到完整的明文或密文。（2）在RSA、SM2非对称加解密中，**doFinal**加密或解密本次传入的数据，使用callback异步回调函数获取加密或者解密数据。如果数据量较大， 可以多次调用**doFinal**，拼接结果得到完整的明文/密文。
 
-<br>（1）在对称加解密中**doFinal**用于处理剩余数据和本次传入的数据，并最终结束加密或解密操作，使用callback异步回调函数获取加密或解密后的 数据。如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中已经使用**update**传入过数据， 可以在**doFinal**的data参数处传入null。根据对称加解密的模式不同，**doFinal**的输出有以下区别： - 在GCM和CCM模式的对称加密中，一次加密流程中，将每次**update**和**doFinal**的结果拼接起来，会得到“密文 + authTag”。GCM模式下， authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其余部分均为密文。如果**doFinal**的data参数传入null，则**doFinal**的 结果就是authTag。解密时，authTag需要填入[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或 [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)，密文作为解密时的data参数。 - 对于其他模式的对称加解密及GCM和CCM模式的加解密：每次加/解密流程中，**update**和**doFinal**的结果拼接起来，得到完整的明文或密文。
-
-（2）在RSA、SM2非对称加解密中，**doFinal**加密或解密本次传入的数据，使用callback异步回调函数获取加密或者解密数据。如果数据量较大， 可以多次调用**doFinal**，拼接结果得到完整的明文/密文。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
 > 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
 > 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
@@ -391,8 +381,7 @@ doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void
 
 完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法再更新。使用Callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
 > 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
 > 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
@@ -484,14 +473,9 @@ doFinal(data: DataBlob): Promise<DataBlob>
 doFinal(data: DataBlob | null): Promise<DataBlob>
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Promise异步回调。
+完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Promise异步回调。<br>（1）在对称加解密中，**doFinal**加/解密（分组模式产生的）剩余数据和本次传入的数据，最后结束加密或者解密数据操作，使用Promise异步回 调获取加密或者解密数据。 如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中，已经使用**update**传入过数据， 可以在**doFinal**的data参数处传入null。 根据对称加解密的模式不同，**doFinal**的输出有如下区别： - 对于GCM和CCM模式的对称加密：一次加密流程中，如果将每一次**update**和**doFinal**的结果拼接起来，会得到“密文+authTag”，即末尾的 16字节（GCM模式）或12字节（CCM模式）是authTag，而其余部分均为密文。（也就是说，如果**doFinal**的data参数传入null，则 **doFinal**的结果就是authTag） authTag需要填入解密时的[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或 [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)；密文则作为解密时的入参data。 - 对于其他模式的对称加解密及GCM和CCM模式的对称解密：一次加解密流程中，每次**update**和**doFinal**的结果拼接起来，得到完整的明文或 密文。（2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以 多次调用**doFinal**，拼接结果以获得完整的明文或密文。
 
-<br>（1）在对称加解密中，**doFinal**加/解密（分组模式产生的）剩余数据和本次传入的数据，最后结束加密或者解密数据操作，使用Promise异步回 调获取加密或者解密数据。 如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中，已经使用**update**传入过数据， 可以在**doFinal**的data参数处传入null。 根据对称加解密的模式不同，**doFinal**的输出有如下区别： - 对于GCM和CCM模式的对称加密：一次加密流程中，如果将每一次**update**和**doFinal**的结果拼接起来，会得到“密文+authTag”，即末尾的 16字节（GCM模式）或12字节（CCM模式）是authTag，而其余部分均为密文。（也就是说，如果**doFinal**的data参数传入null，则 **doFinal**的结果就是authTag） authTag需要填入解密时的[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或 [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)；密文则作为解密时的入参data。 - 对于其他模式的对称加解密及GCM和CCM模式的对称解密：一次加解密流程中，每次**update**和**doFinal**的结果拼接起来，得到完整的明文或 密文。
-
-（2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以 多次调用**doFinal**，拼接结果以获得完整的明文或密文。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
 > 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
 > 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
@@ -548,8 +532,7 @@ doFinal(data: DataBlob | null): Promise<DataBlob | null>
 
 完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
 > 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
 > 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
@@ -602,15 +585,7 @@ doFinal(data: DataBlob | null): Promise<DataBlob | null>
 doFinalSync(data: DataBlob | null): DataBlob
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。
-
-<br>（1）在对称加解密中，**doFinal**加/解密（分组模式产生的）剩余数据和本次传入的数据，最后结束加密或者解密数据操作，使用Promise异步 回调获取加密或者解密数据。 如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中，已经使用**update**传入过数据，可以 在**doFinal**的data参数处传入null。 根据对称加解密的模式不同，**doFinal**的输出有如下区别： - 对于GCM和CCM模式的对称加密：一次加密流程中，如果将每一次**update**和**doFinal**的结果拼接起来，会得到“密文+authTag”，即末尾的 16字节（GCM模式）或12字节（CCM模式）是authTag，而其余部分均为密文。（也就是说，如果**doFinal**的data参数传入null，则 **doFinal**的结果就是authTag） authTag需要填入解密时的[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或 [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)；密文则作为解密时的入参data。 - 对于其他模式的对称加解密及GCM和CCM模式的对称解密：一次加解密流程中，每次**update**和**doFinal**的结果拼接起来，得到完整的明文或 密文。
-
-（2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以 多次调用**doFinal**，拼接结果以获得完整的明文或密文。
-
-<br>关于其他注意事项，请参见 [doFinal()](#dofinal)中的 **说明：**。
-
-<br><br>**说明：** <br>建议优先使用异步API，doFinal。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。<br>（1）在对称加解密中，**doFinal**加/解密（分组模式产生的）剩余数据和本次传入的数据，最后结束加密或者解密数据操作，使用Promise异步 回调获取加密或者解密数据。 如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中，已经使用**update**传入过数据，可以 在**doFinal**的data参数处传入null。 根据对称加解密的模式不同，**doFinal**的输出有如下区别： - 对于GCM和CCM模式的对称加密：一次加密流程中，如果将每一次**update**和**doFinal**的结果拼接起来，会得到“密文+authTag”，即末尾的 16字节（GCM模式）或12字节（CCM模式）是authTag，而其余部分均为密文。（也就是说，如果**doFinal**的data参数传入null，则 **doFinal**的结果就是authTag） authTag需要填入解密时的[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或 [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)；密文则作为解密时的入参data。 - 对于其他模式的对称加解密及GCM和CCM模式的对称解密：一次加解密流程中，每次**update**和**doFinal**的结果拼接起来，得到完整的明文或 密文。（2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以 多次调用**doFinal**，拼接结果以获得完整的明文或密文。<br>关于其他注意事项，请参见 [doFinal()](#dofinal)中的 **说明：**。<br><br>**说明：** <br>建议优先使用异步API，doFinal。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -761,9 +736,7 @@ function hmacBySync() {
 doFinalSync(data: DataBlob | null): DataBlob | null
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。
-
-<br><br>**说明：** <br>建议优先使用异步API，doFinal。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。<br><br>**说明：** <br>建议优先使用异步API，doFinal。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -857,9 +830,7 @@ function testGetCipherSpec() {
 init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<void>): void
 ```
 
-使用给定的加密模式、密钥和参数初始化加密操作。
-
-<br>init、update和doFinal必须配合使用，其中init和doFinal是必选的，update是可选的。
+使用给定的加密模式、密钥和参数初始化加密操作。<br>init、update和doFinal必须配合使用，其中init和doFinal是必选的，update是可选的。
 
 **起始版本：** 9
 
@@ -896,9 +867,7 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<v
 init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCallback<void>): void
 ```
 
-初始化加解密的[cipher](#cipher)对象，使用callback异步回调获取结果。
-
-<br>init、update、doFinal为三段式接口，需要成组使用。其中init和doFinal必选，update可选。
+初始化加解密的[cipher](#cipher)对象，使用callback异步回调获取结果。<br>init、update、doFinal为三段式接口，需要成组使用。其中init和doFinal必选，update可选。
 
 **起始版本：** 23
 
@@ -935,9 +904,7 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCal
 init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>
 ```
 
-使用给定的加密模式、密钥和参数初始化加密操作。使用Promise异步回调。
-
-<br>init、update和doFinal必须配合使用，其中init和doFinal是必选的，update是可选的。
+使用给定的加密模式、密钥和参数初始化加密操作。使用Promise异步回调。<br>init、update和doFinal必须配合使用，其中init和doFinal是必选的，update是可选的。
 
 **起始版本：** 9
 
@@ -979,9 +946,7 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>
 init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>
 ```
 
-初始化加解密的cipher对象。使用Promise异步回调。
-
-<br>init、update、doFinal为三段式接口，需要成组使用。其中init和doFinal必选，update可选。
+初始化加解密的cipher对象。使用Promise异步回调。<br>init、update、doFinal为三段式接口，需要成组使用。其中init和doFinal必选，update可选。
 
 **起始版本：** 23
 
@@ -1023,11 +988,7 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>
 initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void
 ```
 
-初始化加解密的[cipher](#cipher)对象，此API以同步方式返回结果。
-
-<br>initSync、updateSync、doFinalSync为三段式接口，需要成组使用。其中initSync和doFinalSync必选，updateSync可选。
-
-<br><br>**说明：** <br>建议优先使用异步API，init。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+初始化加解密的[cipher](#cipher)对象，此API以同步方式返回结果。<br>initSync、updateSync、doFinalSync为三段式接口，需要成组使用。其中initSync和doFinalSync必选，updateSync可选。<br><br>**说明：** <br>建议优先使用异步API，init。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -1108,12 +1069,9 @@ function testsetCipherSpec() {
 update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 ```
 
-更新要分段加密或解密的数据。使用Callback异步回调。
+更新要分段加密或解密的数据。使用Callback异步回调。<br>必须在对[Cipher](#cipher)实例使用 [init()](#init)初始化后，才能 使用本函数。
 
-<br>必须在对[Cipher](#cipher)实例使用 [init()](#init)初始化后，才能 使用本函数。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
 > 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
 > 结果。
@@ -1167,8 +1125,7 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob | null>): void
 
 使用输入数据更新加密操作，并反馈此次加密或解密的数据。此API使用异步回调来返回结果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
 > 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
 > 结果。
@@ -1218,12 +1175,9 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob | null>): void
 update(data: DataBlob): Promise<DataBlob>
 ```
 
-分段更新加密或者解密数据操作。使用Promise异步回调。
+分段更新加密或者解密数据操作。使用Promise异步回调。<br>必须在对[Cipher](#cipher)实例使用 [init()](#init)初始化后，才能 使用本函数。
 
-<br>必须在对[Cipher](#cipher)实例使用 [init()](#init)初始化后，才能 使用本函数。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
 > 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
 > 结果。
@@ -1282,8 +1236,7 @@ update(data: DataBlob): Promise<DataBlob | null>
 
 使用输入数据更新加密操作，并反馈此次加密或解密的数据。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
 > 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
 > 结果。
@@ -1338,13 +1291,7 @@ update(data: DataBlob): Promise<DataBlob | null>
 updateSync(data: DataBlob): DataBlob
 ```
 
-分段更新加密或者解密数据操作。
-
-<br>必须在对[Cipher](#cipher)实例使用[initSync()](#initsync) 初始化后，才能使用本函数。
-
-<br>其他注意事项同上异步接口说明。
-
-<br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+分段更新加密或者解密数据操作。<br>必须在对[Cipher](#cipher)实例使用[initSync()](#initsync) 初始化后，才能使用本函数。<br>其他注意事项同上异步接口说明。<br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -1382,9 +1329,7 @@ updateSync(data: DataBlob): DataBlob
 updateSync(data: DataBlob): DataBlob | null
 ```
 
-分段更新加密或者解密数据操作。
-
-<br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+分段更新加密或者解密数据操作。<br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 

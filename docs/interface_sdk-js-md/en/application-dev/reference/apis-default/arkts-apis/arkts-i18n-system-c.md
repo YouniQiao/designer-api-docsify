@@ -195,7 +195,7 @@ Obtains the list of preferred languages.
 static getSimplifiedLanguage(language?: string): string
 ```
 
-Obtains the simplified representation of a language. For example, the simplified representation of "en-Latn-US" is "en", and that of "en-Latn-GB" is "en-GB".
+Obtains the simplified representation of a language. For example, the simplified representation of "en-Latn-US"is "en", and that of "en-Latn-GB" is "en-GB".
 
 **Since:** 23
 

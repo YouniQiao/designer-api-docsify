@@ -1,8 +1,6 @@
 # BackupPriority（系统接口）
 
-控制备份和恢复的优先级顺序。
-
-@interface BackupPriority
+控制备份和恢复的优先级顺序。@interface BackupPriority
 
 **起始版本：** 23
 

@@ -405,8 +405,7 @@ setLoop(loop: boolean): Promise<void>
 
 Sets this audio-haptic player to play in a loop. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API must be called before the audio-haptic player is released.
 
 **Since:** 23
@@ -453,8 +452,7 @@ setVolume(volume: double): Promise<void>
 
 Sets the volume for this audio-haptic player. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API must be called before the audio-haptic player is released.
 
 **Since:** 23

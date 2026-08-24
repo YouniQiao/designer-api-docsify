@@ -1,8 +1,6 @@
 # RectShape
 
-Defines a rect drawing class.
-
-@extends BaseShape
+Defines a rect drawing class.@extends BaseShape
 
 **Inheritance/Implementation:** RectShape extends [BaseShape](arkts-arkui-shape-baseshape-c.md)
 

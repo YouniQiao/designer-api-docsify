@@ -1,8 +1,6 @@
 # ConnState
 
-WLAN连接状态枚举。
-
-@enum { int }
+WLAN连接状态枚举。@enum { int }
 
 **起始版本：** 23
 

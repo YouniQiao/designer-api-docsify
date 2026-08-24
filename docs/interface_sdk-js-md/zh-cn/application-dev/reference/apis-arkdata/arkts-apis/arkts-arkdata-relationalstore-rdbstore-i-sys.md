@@ -1,10 +1,6 @@
 # RdbStore
 
-提供管理关系数据库（RDB）方法的接口。
-
-在使用以下API前，请先通过[getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md)方法获取RdbStore实例，并使用该实例调用对应接口方法。
-
-在此基础上，建议优先使用[execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute)方法完成数据库表结构和初始数据的 初始化，以确保相关接口调用的前置条件已满足。
+提供管理关系数据库（RDB）方法的接口。在使用以下API前，请先通过[getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md)方法获取RdbStore实例，并使用该实例调用对应接口方法。在此基础上，建议优先使用[execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute)方法完成数据库表结构和初始数据的 初始化，以确保相关接口调用的前置条件已满足。
 
 **起始版本：** 23
 
@@ -75,10 +71,8 @@ cloudSync(
 
 手动执行按条件进行端云同步，使用callback异步回调。使用该接口需要实现云同步功能。
 
-> **说明：**
-> 
-> 从API version 18开始，手动执行端云同步时，设置谓词条件时新增支持指定资产下载能力。此时，同步模式需要设置为`relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST`。
-> 
+> **说明：**&gt;
+> 从API version 18开始，手动执行端云同步时，设置谓词条件时新增支持指定资产下载能力。此时，同步模式需要设置为`relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST`。&gt;
 > 谓词中支持使用主键（必填）和资产（可选）作为同步条件：选择资产作为同步条件时，谓词仅支持[equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)；指定资产的数量较多时（最
 > 多支持指定50个资产），建议谓词中仅使用主键作为同步条件。
 
@@ -180,10 +174,8 @@ cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<Progress
 
 手动执行按条件进行端云同步，使用Promise异步回调。使用该接口需要实现云同步功能。
 
-> **说明：**
-> 
-> 从API version 18开始，手动执行端云同步时，设置谓词条件时新增支持指定资产下载能力。此时，同步模式需要设置为`relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST`。
-> 
+> **说明：**&gt;
+> 从API version 18开始，手动执行端云同步时，设置谓词条件时新增支持指定资产下载能力。此时，同步模式需要设置为`relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST`。&gt;
 > 谓词中支持使用主键（必填）和资产（可选）作为同步条件：选择资产作为同步条件时，谓词仅支持[equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)；指定资产的数量较多时（最
 > 多支持指定50个资产），建议谓词中仅使用主键作为同步条件。
 
@@ -397,8 +389,7 @@ lockCloudContainer(): Promise<int>
 
 手动对应用云端数据库加锁，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 若手动加锁成功，则其他同账户设备的同应用禁止同步到云端。使用该接口需要实现云同步功能。
 
 **起始版本：** 23
@@ -916,20 +907,12 @@ if (store != undefined) {
 retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>
 ```
 
-保留对应[单版本表模式](../../../database/data-sync-of-rdb-store.md#数据同步存储机制)分布式数据表中对应设备同步过来的数据，删除其他设备同步过来的数据，使用Promise异步回 调。
+保留对应[单版本表模式](../../../database/data-sync-of-rdb-store.md#数据同步存储机制)分布式数据表中对应设备同步过来的数据，删除其他设备同步过来的数据，使用Promise异步回 调。不支持对[多设备协同表模式](../../../database/data-sync-of-rdb-store.md#数据同步存储机制)分布式数据表进行删除。要删除数据越多，执行所需的时间越长。
 
-不支持对[多设备协同表模式](../../../database/data-sync-of-rdb-store.md#数据同步存储机制)分布式数据表进行删除。
-
-要删除数据越多，执行所需的时间越长。
-
-> **说明：**
-> 
-> 入参允许为空，数据库表名对应的设备id列表也允许为空，但是数据库表名和设备id不允许为空字符串。
-> 
-> 入参如果为空，则删除当前数据库所有单版本分布式表中所有其他设备同步过来的数据。
-> 
-> 入参中如果数据库表名对应的设备id列表为空，则删除该表下所有其他设备同步过来的数据。
-> 
+> **说明：**&gt;
+> 入参允许为空，数据库表名对应的设备id列表也允许为空，但是数据库表名和设备id不允许为空字符串。&gt;
+> 入参如果为空，则删除当前数据库所有单版本分布式表中所有其他设备同步过来的数据。&gt;
+> 入参中如果数据库表名对应的设备id列表为空，则删除该表下所有其他设备同步过来的数据。&gt;
 > 保留本地写入以及传入设备id同步过来的数据，其他设备id同步过来的数据会被删除。
 
 **起始版本：** 24
@@ -946,7 +929,7 @@ retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| retainDevices | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Array&lt;string&gt;&gt; | 否 | 指定要保留的分布式数据库表名和对应的设备id，无默认值，不传入则删除当前数据库中所有单版本分布式表中全量同步 数据。 |
+| retainDevices | Record&lt;string, Array&lt;string&gt;&gt; | 否 | 指定要保留的分布式数据库表名和对应的设备id，无默认值，不传入则删除当前数据库中所有单版本分布式表中全量同步 数据。 |
 
 **返回值：**
 
@@ -1461,16 +1444,10 @@ update(table: string, values: ValuesBucket, predicates: dataSharePredicates.Data
 updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise<long>
 ```
 
-更新分布式信息，只支持单版本表模式，使用Promise异步回调。
+更新分布式信息，只支持单版本表模式，使用Promise异步回调。不支持对多设备协同表模式分布式数据表进行更新。要更新数据越多，执行所需的时间越长。
 
-不支持对多设备协同表模式分布式数据表进行更新。
-
-要更新数据越多，执行所需的时间越长。
-
-> **说明：**
-> 
-> 入参info中若要传入设备id信息，则设备id必须是已与当前设备建立网络连接的设备id。
-> 
+> **说明：**&gt;
+> 入参info中若要传入设备id信息，则设备id必须是已与当前设备建立网络连接的设备id。&gt;
 > 入参predicates中若要传入[ORIGIN_ORIDEVICE](arkts-arkdata-relationalstore-distributedfield-e-sys.md)，则只允许使用等于空或不等于空。
 
 **起始版本：** 24

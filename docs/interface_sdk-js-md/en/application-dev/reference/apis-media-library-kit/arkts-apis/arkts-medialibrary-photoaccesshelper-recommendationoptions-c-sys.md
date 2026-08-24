@@ -20,11 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 defaultRecommendationType?: RecommendationType
 ```
 
-Recommended tag displayed when the picker is opened. This configuration takes effect only after **recommendationTypeList** is set.
-
-If the tag exists, the tag page is displayed by default.
-
-If the tag does not exist, the All tag page is displayed by default.
+Recommended tag displayed when the picker is opened. This configuration takes effect only after **recommendationTypeList** is set.If the tag exists, the tag page is displayed by default.If the tag does not exist, the All tag page is displayed by default.
 
 **Type:** [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)
 

@@ -1,12 +1,6 @@
 # BlanklessFrameInterpolationState
 
-Enumerates the frame interpolation states.
-
-&lt;strong&gt;ArkWeb Dual Web Engine Versioning Convention&lt;/strong&gt;: <p>See [ArkWeb Dual Web Engine Versioning Convention] for switching between Legacy and Evergreen Web Engine.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
-
-@enum { number }
+Enumerates the frame interpolation states.&lt;strong&gt;ArkWeb Dual Web Engine Versioning Convention&lt;/strong&gt;: <p>See [ArkWeb Dual Web Engine Versioning Convention] for switching between Legacy and Evergreen Web Engine.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.@enum { number }
 
 **起始版本：** 23
 
@@ -22,9 +16,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 FRAME_INTERPOLATION_SUCCEEDED = 0
 ```
 
-Frame interpolation succeeded.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Frame interpolation succeeded.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **起始版本：** 23
 
@@ -42,9 +34,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 FRAME_INTERPOLATION_FAILED = 1
 ```
 
-Frame interpolation failed.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Frame interpolation failed.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **起始版本：** 23
 
@@ -62,9 +52,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 FRAME_INTERPOLATION_REMOVED = 2
 ```
 
-The frame interpolation is removed.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+The frame interpolation is removed.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # MaterialType（系统接口）
 
-系统材质类型枚举。
-
-@enum { number } [since 23 - 24]
+系统材质类型枚举。@enum { number } [since 23 - 24]
 
 **起始版本：** 23
 

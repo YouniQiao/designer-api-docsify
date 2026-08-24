@@ -12,9 +12,7 @@ import { errorManager } from '@kit.AbilityKit';
 function off(type: 'loopObserver', observer?: LoopObserver): void
 ```
 
-Unregisters an observer for the message processing duration of the main thread.
-
-This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Unregisters an observer for the message processing duration of the main thread.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 12
 

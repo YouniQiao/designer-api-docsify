@@ -4,11 +4,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## switchInputMethodWithUserId
@@ -17,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: int): Promise<void>
 ```
 
-@brief Switch input method and subtype of a specified user.
+Switch input method and subtype of a specified user.
 
 **Since:** 26.0.0
 

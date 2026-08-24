@@ -1,8 +1,6 @@
 # TextTimerConfiguration
 
-ContentModifier接口使用的TextTimer配置。
-
-开发者需要自定义class实现ContentModifier接口。
+ContentModifier接口使用的TextTimer配置。开发者需要自定义class实现ContentModifier接口。
 
 **继承/实现关系：** TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>
 
@@ -60,11 +58,7 @@ elapsedTime: long
 isCountDown: boolean
 ```
 
-是否倒计时。
-
-true：计时器开启倒计时，例如从30秒 ~ 0秒；false：计时器开始计时，例如从0秒 ~ 30秒。
-
-默认值：false。
+是否倒计时。true：计时器开启倒计时，例如从30秒 ~ 0秒；false：计时器开始计时，例如从0秒 ~ 30秒。默认值：false。
 
 **类型：** boolean
 
@@ -86,11 +80,7 @@ true：计时器开启倒计时，例如从30秒 ~ 0秒；false：计时器开�
 started: boolean
 ```
 
-是否已经开始了计时。
-
-true：开始计时；false：未开始计时。
-
-默认值：false。
+是否已经开始了计时。true：开始计时；false：未开始计时。默认值：false。
 
 **类型：** boolean
 

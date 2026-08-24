@@ -1,8 +1,6 @@
 # SecurityComponentLayoutDirection
 
-Enumerates the layout direction of the icon and text.
-
-@enum { int }
+Enumerates the layout direction of the icon and text.@enum { int }
 
 **Since:** 23
 

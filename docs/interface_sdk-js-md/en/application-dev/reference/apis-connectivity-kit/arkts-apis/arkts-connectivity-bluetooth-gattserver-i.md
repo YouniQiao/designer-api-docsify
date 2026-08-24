@@ -15,24 +15,7 @@ Manages GATT server. Before calling an Gatt server method, you must use [createG
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from '@kit.ConnectivityKit';
-import { access } from '@kit.ConnectivityKit';
-import { baseProfile } from '@kit.ConnectivityKit';
-import { ble } from '@kit.ConnectivityKit';
-import { connection } from '@kit.ConnectivityKit';
-import { constant } from '@kit.ConnectivityKit';
-import { hfp } from '@kit.ConnectivityKit';
-import { hid } from '@kit.ConnectivityKit';
-import { bas } from '@kit.ConnectivityKit';
-import { common } from '@kit.ConnectivityKit';
 import { bluetooth } from '@kit.ConnectivityKit';
-import { map } from '@kit.ConnectivityKit';
-import { pan } from '@kit.ConnectivityKit';
-import { pbap } from '@kit.ConnectivityKit';
-import { opp } from '@kit.ConnectivityKit';
-import { socket } from '@kit.ConnectivityKit';
-import { wearDetection } from '@kit.ConnectivityKit';
-import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## addService
@@ -141,9 +124,7 @@ let ret : boolean = device.close();
 notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): boolean
 ```
 
-Sends a notification of a change in a specified local characteristic.
-
-This method should be called for every BLE peripheral device that has requested notifications.
+Sends a notification of a change in a specified local characteristic.This method should be called for every BLE peripheral device that has requested notifications.
 
 **Since:** 7
 

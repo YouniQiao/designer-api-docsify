@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
-import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## isDoubleClickAppForSelf
@@ -13,7 +12,8 @@ import { settingsLite } from '@kit.BasicServicesKit';
 function isDoubleClickAppForSelf(): Promise<boolean>
 ```
 
-1. Checks whether the application started by double-pressing the Down key is the application itself. 2. This API is triggered to check whether double-pressing the Down key starts the application itself.
+1. Checks whether the application started by double-pressing the Down key is the application itself.
+2. This API is triggered to check whether double-pressing the Down key starts the application itself.
 
 **Since:** 24
 

@@ -14,8 +14,7 @@ Enumerates the data channel types supported by the UDMF. It is used to identify 
 DRAG = 'Drag'
 ```
 
-Channel in which data can be dragged and dropped.
-
+Channel in which data can be dragged and dropped.  
 **Use scenario**: This API is used to share data across applications in drag-and-drop scenarios.
 
 **Since:** 23

@@ -22,7 +22,7 @@ Get the event instance of List node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
+| node | [FrameNode](arkts-framenode-c.md) | Yes | the target FrameNode. |
 
 **Return value:**
 

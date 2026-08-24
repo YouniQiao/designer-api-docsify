@@ -61,7 +61,7 @@ The currency to use for currency formatting. Required when style is "currency". 
 currencyDisplay?: string
 ```
 
-Specifies how to display the currency in the formatted string. Valid values: "code" (ISO currency code like "USD"), "symbol" (currency symbol like "\$"), "narrowSymbol" (short symbol like "\$100"), or "name" (full name like "US dollar").
+Specifies how to display the currency in the formatted string. Valid values: "code" (ISO currency code like "USD"), "symbol" (currency symbol like "\$"),"narrowSymbol" (short symbol like "\$100"), or "name" (full name like "US dollar").
 
 **Type:** string
 
@@ -201,7 +201,7 @@ The minimum number of significant digits to display. Must be an integer between 
 notation?: string
 ```
 
-The notation format to use for displaying the number. Valid values: "standard" (default, e.g., "1000"), "scientific" (e.g., "1e3"), "engineering" (e.g., "1E3"), or "compact" (e.g., "1K" for 1000).
+The notation format to use for displaying the number. Valid values: "standard" (default, e.g., "1000"), "scientific" (e.g., "1e3"),"engineering" (e.g., "1E3"), or "compact" (e.g., "1K" for 1000).
 
 **Type:** string
 

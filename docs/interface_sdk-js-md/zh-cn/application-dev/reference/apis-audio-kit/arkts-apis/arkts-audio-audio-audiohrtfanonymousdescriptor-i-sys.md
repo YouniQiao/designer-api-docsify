@@ -1,6 +1,6 @@
 # AudioHRTFAnonymousDescriptor（系统接口）
 
-匿名的HRTF文件描述符，用于跨进程传输。
+用于跨进程传输的匿名个性化HRTF文件描述符。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## fd
@@ -23,7 +22,7 @@ import { audioHaptic } from '@kit.AudioKit';
 fd: int
 ```
 
-个人化HRTF的文件描述符。
+个性化HRTF的文件描述符。 取值限定为整数。
 
 **类型：** int
 
@@ -43,7 +42,7 @@ fd: int
 length: long
 ```
 
-个人化HRTF数据的总大小（以字节为单位）。
+个性化HRTF数据的总大小（以字节为单位）。
 
 **类型：** long
 

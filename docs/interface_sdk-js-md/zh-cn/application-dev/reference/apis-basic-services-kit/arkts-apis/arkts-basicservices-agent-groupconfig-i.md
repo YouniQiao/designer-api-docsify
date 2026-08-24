@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## gauge
@@ -21,10 +20,8 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 gauge?: boolean
 ```
 
-后台任务的进度通知策略。
-
-- true，显示进度、成功、失败通知。 - false，仅显示成功、失败通知。
-
+后台任务的进度通知策略。  
+- true，显示进度、成功、失败通知。 - false，仅显示成功、失败通知。  
 默认为false。
 
 **类型：** boolean

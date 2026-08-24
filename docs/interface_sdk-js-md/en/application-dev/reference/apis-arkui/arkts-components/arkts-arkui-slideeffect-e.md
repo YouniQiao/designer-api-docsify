@@ -1,8 +1,6 @@
 # SlideEffect
 
-Slide-in and slide-out effects for page transitions.
-
-@enum { number }
+Slide-in and slide-out effects for page transitions.@enum { number }
 
 **Since:** 7
 

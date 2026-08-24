@@ -1,8 +1,6 @@
 # ContinueCallback（系统接口）
 
-ContinueCallback registered for notify continue result.
-
-@interface ContinueCallback
+ContinueCallback registered for notify continue result.@interface ContinueCallback
 
 **起始版本：** 23
 

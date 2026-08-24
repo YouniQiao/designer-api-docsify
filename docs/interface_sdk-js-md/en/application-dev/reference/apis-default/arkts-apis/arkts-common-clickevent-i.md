@@ -1,8 +1,6 @@
 # ClickEvent
 
-The tap action triggers this method invocation.
-
-@extends BaseEvent
+The tap action triggers this method invocation.@extends BaseEvent
 
 **Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcButtonOptions--><!--Device-unnamed-export declare class ArcButtonOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -40,8 +42,7 @@ constructor(options: CommonArcButtonOptions)
 ## backgroundBlurStyle
 
 ```TypeScript
-@Trace
-  public backgroundBlurStyle: BlurStyle
+public backgroundBlurStyle: BlurStyle
 ```
 
 弧形按钮背景模糊能力。<br/>默认值：BlurStyle.NONE
@@ -52,6 +53,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public backgroundBlurStyle: BlurStyle--><!--Device-ArcButtonOptions-@Trace  public backgroundBlurStyle: BlurStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -59,8 +62,7 @@ constructor(options: CommonArcButtonOptions)
 ## backgroundColor
 
 ```TypeScript
-@Trace
-  public backgroundColor: ColorMetrics
+public backgroundColor: ColorMetrics
 ```
 
 弧形按钮背景颜色。<br/>ArcButtonStyleMode需要设置为CUSTOM。<br/>默认值：Color.Black
@@ -71,6 +73,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public backgroundColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public backgroundColor: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -78,8 +82,7 @@ constructor(options: CommonArcButtonOptions)
 ## fontColor
 
 ```TypeScript
-@Trace
-  public fontColor: ColorMetrics
+public fontColor: ColorMetrics
 ```
 
 弧形按钮文本颜色。<br/>ArcButtonStyleMode需要设置为CUSTOM。<br/>默认值：Color.White
@@ -90,6 +93,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public fontColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public fontColor: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -97,8 +102,7 @@ constructor(options: CommonArcButtonOptions)
 ## fontFamily
 
 ```TypeScript
-@Trace
-  public fontFamily: string | Resource
+public fontFamily: string | Resource
 ```
 
 弧形按钮字体名。
@@ -109,6 +113,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public fontFamily: string | Resource--><!--Device-ArcButtonOptions-@Trace  public fontFamily: string | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -116,8 +122,7 @@ constructor(options: CommonArcButtonOptions)
 ## fontMargin
 
 ```TypeScript
-@Trace
-  public fontMargin: LocalizedMargin
+public fontMargin: LocalizedMargin
 ```
 
 弧形按钮文本边距。<br/>默认值：{start:24vp, top: 10vp,end: 24vp, bottom:16vp }
@@ -128,6 +133,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public fontMargin: LocalizedMargin--><!--Device-ArcButtonOptions-@Trace  public fontMargin: LocalizedMargin-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -135,8 +142,7 @@ constructor(options: CommonArcButtonOptions)
 ## fontSize
 
 ```TypeScript
-@Trace
-  public fontSize: LengthMetrics
+public fontSize: LengthMetrics
 ```
 
 弧形按钮文本大小。<br/>默认值：19fp
@@ -147,6 +153,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public fontSize: LengthMetrics--><!--Device-ArcButtonOptions-@Trace  public fontSize: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -154,8 +162,7 @@ constructor(options: CommonArcButtonOptions)
 ## fontStyle
 
 ```TypeScript
-@Trace
-  public fontStyle: FontStyle
+public fontStyle: FontStyle
 ```
 
 弧形按钮文本样式。<br/>默认值：FontStyle.Normal
@@ -166,6 +173,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public fontStyle: FontStyle--><!--Device-ArcButtonOptions-@Trace  public fontStyle: FontStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -173,8 +182,7 @@ constructor(options: CommonArcButtonOptions)
 ## label
 
 ```TypeScript
-@Trace
-  public label: ResourceStr
+public label: ResourceStr
 ```
 
 弧形按钮显示文本。
@@ -185,6 +193,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public label: ResourceStr--><!--Device-ArcButtonOptions-@Trace  public label: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -192,8 +202,7 @@ constructor(options: CommonArcButtonOptions)
 ## onClick
 
 ```TypeScript
-@Trace
-  public onClick?: Callback<ClickEvent>
+public onClick?: Callback<ClickEvent>
 ```
 
 弧形按钮点击动作触发该回调。
@@ -204,6 +213,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public onClick?: Callback<ClickEvent>--><!--Device-ArcButtonOptions-@Trace  public onClick?: Callback<ClickEvent>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -211,8 +222,7 @@ constructor(options: CommonArcButtonOptions)
 ## onTouch
 
 ```TypeScript
-@Trace
-  public onTouch?: Callback<TouchEvent>
+public onTouch?: Callback<TouchEvent>
 ```
 
 弧形按钮手指触摸动作触发该回调。
@@ -223,6 +233,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public onTouch?: Callback<TouchEvent>--><!--Device-ArcButtonOptions-@Trace  public onTouch?: Callback<TouchEvent>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -230,8 +242,7 @@ constructor(options: CommonArcButtonOptions)
 ## position
 
 ```TypeScript
-@Trace
-  public position: ArcButtonPosition
+public position: ArcButtonPosition
 ```
 
 上下弧形按钮类型属性。<br/>默认值：ArcButtonPosition.BOTTOM_EDGE。
@@ -242,6 +253,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public position: ArcButtonPosition--><!--Device-ArcButtonOptions-@Trace  public position: ArcButtonPosition-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -249,8 +262,7 @@ constructor(options: CommonArcButtonOptions)
 ## pressedFontColor
 
 ```TypeScript
-@Trace
-  public pressedFontColor: ColorMetrics
+public pressedFontColor: ColorMetrics
 ```
 
 弧形按钮按下文本颜色。<br/>ArcButtonStyleMode需要设置为CUSTOM。<br/>默认值：Color.White
@@ -261,6 +273,8 @@ constructor(options: CommonArcButtonOptions)
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public pressedFontColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public pressedFontColor: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -268,19 +282,18 @@ constructor(options: CommonArcButtonOptions)
 ## progressConfig
 
 ```TypeScript
-@Trace
-  public progressConfig?: ArcButtonProgressConfig
+public progressConfig?: ArcButtonProgressConfig
 ```
 
-ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮样式（ 示例1），设置后表现为进度条样式（ 示例2），进度条样式不受 [ArcButtonStyleMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)属性设置影响。
-
-默认值：[ArcButtonProgressConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) 的各项子属性均取其默认值。
+ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮样式（ 示例1），设置后表现为进度条样式（ 示例2），进度条样式不受 [ArcButtonStyleMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)属性设置影响。默认值：[ArcButtonProgressConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) 的各项子属性均取其默认值。
 
 **类型：** [ArcButtonProgressConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -291,8 +304,7 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
 ## shadowColor
 
 ```TypeScript
-@Trace
-  public shadowColor: ColorMetrics
+public shadowColor: ColorMetrics
 ```
 
 弧形按钮阴影颜色。<br/>默认值：Color.Black
@@ -303,6 +315,8 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public shadowColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public shadowColor: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -310,8 +324,7 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
 ## shadowEnabled
 
 ```TypeScript
-@Trace
-  public shadowEnabled: boolean
+public shadowEnabled: boolean
 ```
 
 弧形按钮阴影开关。<br/>默认值：false<br/>值为true时，显示阴影。值为false时，不显示阴影。
@@ -322,6 +335,8 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public shadowEnabled: boolean--><!--Device-ArcButtonOptions-@Trace  public shadowEnabled: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -329,8 +344,7 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
 ## status
 
 ```TypeScript
-@Trace
-  public status: ArcButtonStatus
+public status: ArcButtonStatus
 ```
 
 弧形按钮状态。<br/>默认值：ArcButtonStatus.NORMAL
@@ -341,6 +355,8 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Trace
+
 <!--Device-ArcButtonOptions-@Trace  public status: ArcButtonStatus--><!--Device-ArcButtonOptions-@Trace  public status: ArcButtonStatus-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -348,8 +364,7 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
 ## styleMode
 
 ```TypeScript
-@Trace
-  public styleMode: ArcButtonStyleMode
+public styleMode: ArcButtonStyleMode
 ```
 
 弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)样式同时使用。<br>默认值：ArcButtonStyleMode.EMPHASIZED_LIGHT
@@ -359,6 +374,8 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 <!--Device-ArcButtonOptions-@Trace  public styleMode: ArcButtonStyleMode--><!--Device-ArcButtonOptions-@Trace  public styleMode: ArcButtonStyleMode-End-->
 

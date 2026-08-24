@@ -1,8 +1,6 @@
 # TextGenerationModel (System API)
 
-AI Text Model Abstract Interface.
-
-@interface TextGenerationModel
+AI Text Model Abstract Interface.@interface TextGenerationModel
 
 **Since:** 23
 

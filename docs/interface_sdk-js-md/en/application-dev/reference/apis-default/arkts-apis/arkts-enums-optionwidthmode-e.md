@@ -1,8 +1,6 @@
 # OptionWidthMode
 
-Decide whether the width of select menu fit the trigger or content
-
-@enum { string }
+Decide whether the width of select menu fit the trigger or content@enum { string }
 
 **Since:** 23
 

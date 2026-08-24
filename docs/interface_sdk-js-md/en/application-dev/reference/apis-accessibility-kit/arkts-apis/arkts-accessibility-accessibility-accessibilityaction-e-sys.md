@@ -1,8 +1,6 @@
 # AccessibilityAction (System API)
 
-Enumerates executable actions for accessibility node elements.
-
-An accessibility node element refers to a component on the UI that can perform accessibility operations, such as a button or text input box.
+Enumerates executable actions for accessibility node elements.An accessibility node element refers to a component on the UI that can perform accessibility operations, such as a button or text input box.
 
 **Since:** 23
 
@@ -258,8 +256,7 @@ Sets the cursor position within a component. The [Parameter](arkts-accessibility
 HOME = 15
 ```
 
-Performs the operation of returning to the home screen.
-
+Performs the operation of returning to the home screen.  
 **Usage constraint:** This operation takes effect only on the main screen in multi-screen scenarios.
 
 **Since:** 23

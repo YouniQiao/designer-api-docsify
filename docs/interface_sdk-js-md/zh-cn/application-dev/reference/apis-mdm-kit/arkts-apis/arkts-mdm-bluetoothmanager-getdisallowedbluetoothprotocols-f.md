@@ -101,8 +101,7 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 
 获取指定用户指定传输策略下已禁用的蓝牙协议列表。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 本接口与[getDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#getdisallowedbluetoothprotocols)接口为
 > 重载接口。本接口增加了policy参数，用于按传输策略查询对应的禁用配置。
 

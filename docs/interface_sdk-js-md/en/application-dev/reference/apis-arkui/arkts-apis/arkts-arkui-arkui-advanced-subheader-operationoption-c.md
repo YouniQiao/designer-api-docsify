@@ -12,7 +12,6 @@ Declare type OperationOption
 
 ```TypeScript
 import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from '@kit.ArkUI';
-import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription
@@ -21,9 +20,7 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 accessibilityDescription?: ResourceStr
 ```
 
-Accessible description. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.
-
-Default value: "Loading" when the operation type is **LOADING** and **"Double-tap to activate"** otherwise.
+Accessible description. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.Default value: "Loading" when the operation type is **LOADING** and **"Double-tap to activate"** otherwise.
 
 **Type:** ResourceStr
 
@@ -43,19 +40,11 @@ Default value: "Loading" when the operation type is **LOADING** and **"Double-ta
 accessibilityLevel?: string
 ```
 
-Accessibility level. It determines whether the component can be recognized by accessibility services.
-
-The options are as follows:
-
-**"auto"**: This option is treated as "yes" by the system for this component.
-
-**"yes"**: The component can be recognized by accessibility services.
-
-**"no"**: The component cannot be recognized by accessibility services.
-
-**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
-
-Default value: **"auto"**
+Accessibility level. It determines whether the component can be recognized by accessibility services.The options are as follows:  
+**"auto"**: This option is treated as "yes" by the system for this component.  
+**"yes"**: The component can be recognized by accessibility services.  
+**"no"**: The component cannot be recognized by accessibility services.  
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.Default value: **"auto"**
 
 **Type:** string
 
@@ -77,9 +66,7 @@ Default value: **"auto"**
 accessibilityText?: ResourceStr
 ```
 
-Accessibility text, that is, accessible label name. If a component does not contain text information, it will not be announced by the screen reader when selected. In this case, the screen reader user cannot know which component is selected. To solve this problem, you can set accessibility text for components without text information. When such a component is selected, the screen reader announces the specified accessibility text, informing the user which component is selected.
-
-Default value: value of the **value** property if the operation type is **TEXT_ARROW** or **BUTTON** and an empty string otherwise.
+Accessibility text, that is, accessible label name. If a component does not contain text information, it will not be announced by the screen reader when selected. In this case, the screen reader user cannot know which component is selected. To solve this problem, you can set accessibility text for components without text information. When such a component is selected, the screen reader announces the specified accessibility text, informing the user which component is selected.Default value: value of the **value** property if the operation type is **TEXT_ARROW** or **BUTTON** and an empty string otherwise.
 
 **Type:** ResourceStr
 
@@ -119,13 +106,9 @@ Right-side button click event.
 defaultFocus?: boolean
 ```
 
-Whether to receive default focus.
-
-**true**: Receive default focus.
-
-**false**: Do not receive default focus.
-
-Default value: **false**
+Whether to receive default focus.  
+**true**: Receive default focus.  
+**false**: Do not receive default focus.Default value: **false**
 
 **Type:** boolean
 

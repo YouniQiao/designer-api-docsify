@@ -1,8 +1,6 @@
 # WindowFeatures
 
-Defines the window features info for window.open.
-
-@interface WindowFeatures
+Defines the window features info for window.open.@interface WindowFeatures
 
 **起始版本：** 23
 

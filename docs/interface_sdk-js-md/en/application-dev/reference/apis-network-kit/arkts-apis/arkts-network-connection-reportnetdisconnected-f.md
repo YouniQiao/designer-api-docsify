@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function reportNetDisconnected(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
-Reports the network unavailability to the network management module. This API uses an asynchronous callback to return the result.
-
+Reports the network unavailability to the network management module. This API uses an asynchronous callback to return the result.  
 **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
@@ -79,8 +78,7 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function reportNetDisconnected(netHandle: NetHandle): Promise<void>
 ```
 
-Reports the network unavailability to the network management module. This API uses a promise to return the result.
-
+Reports the network unavailability to the network management module. This API uses a promise to return the result.  
 **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8

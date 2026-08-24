@@ -18,8 +18,7 @@ function addDisallowedRunningBundlesSync(
 
 Adds applications to the application running blocklist. Applications added to the blocklist are not allowed to run under the current or specified user. Since API version 21, if the application running trustlist [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) is not empty, the application running blocklist cannot be added via this API. Otherwise, the error code 9200010 is reported.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If a specified application is running, the system will immediately terminate the application process once it is
 > added to the blocklist.
 

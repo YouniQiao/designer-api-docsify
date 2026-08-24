@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct AlertDialogV2--><!--Device-unnamed-export declare struct AlertDialogV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,9 +40,7 @@ The method to build component.
 ## content
 
 ```TypeScript
-@Require
-  @Param
-  content: ResourceStr
+content: ResourceStr
 ```
 
 确认弹出框内容。
@@ -50,6 +51,8 @@ The method to build component.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Require、@Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AlertDialogV2-@Require  @Param  content: ResourceStr--><!--Device-AlertDialogV2-@Require  @Param  content: ResourceStr-End-->
@@ -59,19 +62,18 @@ The method to build component.
 ## primaryButton
 
 ```TypeScript
-@Param
-  primaryButton?: AdvancedDialogV2Button
+primaryButton?: AdvancedDialogV2Button
 ```
 
-确认弹出框左侧按钮。
-
-默认不显示。
+确认弹出框左侧按钮。默认不显示。
 
 **类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,14 +84,10 @@ The method to build component.
 ## primaryTitle
 
 ```TypeScript
-@Param
-  primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
-确认弹出框一级标题。
-
-默认不显示。
-
+确认弹出框一级标题。默认不显示。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -97,6 +95,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -107,19 +107,18 @@ The method to build component.
 ## secondaryButton
 
 ```TypeScript
-@Param
-  secondaryButton?: AdvancedDialogV2Button
+secondaryButton?: AdvancedDialogV2Button
 ```
 
-确认弹出框右侧按钮。
-
-默认不显示。
+确认弹出框右侧按钮。默认不显示。
 
 **类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,14 +129,10 @@ The method to build component.
 ## secondaryTitle
 
 ```TypeScript
-@Param
-  secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
-确认弹出框二级标题。
-
-默认不显示。
-
+确认弹出框二级标题。默认不显示。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -145,6 +140,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

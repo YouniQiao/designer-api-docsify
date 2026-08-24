@@ -1,8 +1,6 @@
 # MovingPhotoViewAttribute
 
-Defines the moving photo view attribute functions.
-
-@extends CommonMethod @interface MovingPhotoViewAttribute
+Defines the moving photo view attribute functions.@extends CommonMethod @interface MovingPhotoViewAttribute
 
 **Inheritance/Implementation:** MovingPhotoViewAttribute extends CommonMethod
 

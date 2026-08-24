@@ -1,8 +1,6 @@
 # SheetOptions
 
-Component sheet options
-
-@extends BindOptions
+Component sheet options@extends BindOptions
 
 **Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-common-bindoptions-i.md)
 
@@ -574,7 +572,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 Defines sheet radius
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md) \| [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 23
 
@@ -592,7 +590,11 @@ Defines sheet radius
 radiusRenderStrategy?: RenderStrategy
 ```
 
-Define strategy for drawing rounded corners. NOTE 1. **RenderStrategy.FAST**: The current component and its child components will be drawn directly onto the canvas with rounded corners applied. 2. **RenderStrategy.OFFSCREEN**: The current component and its child components will first be rendered onto an off-screen canvas, then undergo a rounded corner clipping, and finally be drawn onto the main canvas.
+Define strategy for drawing rounded corners. NOTE
+1. **RenderStrategy.FAST**: The current component and its child components will be drawn directly
+onto the canvas with rounded corners applied.
+2. **RenderStrategy.OFFSCREEN**: The current component and its child components will first be rendered onto
+an off-screen canvas, then undergo a rounded corner clipping, and finally be drawn onto the main canvas.
 
 **Type:** [RenderStrategy](../../apis-arkui/arkts-apis/arkts-arkui-renderstrategy-e.md)
 

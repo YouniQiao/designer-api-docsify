@@ -1,8 +1,6 @@
 # @arkts.collections(Defines the collections for ArkTS)
 
-ArkTS collections.
-
-@namespace collections
+ArkTS collections.@namespace collections
 
 **Since:** 23
 

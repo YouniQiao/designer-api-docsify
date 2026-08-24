@@ -1,8 +1,6 @@
 # ClickEffectLevel
 
-Enum of click effect level.
-
-@enum { number }
+Enum of click effect level.@enum { number }
 
 **Since:** 23
 

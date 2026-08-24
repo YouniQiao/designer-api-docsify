@@ -1,8 +1,6 @@
 # ListOptions
 
-定义List组件参数。
-
-<p>&lt;strong&gt;说明&lt;/strong&gt;: <br>- List组件通用属性clip的默认值为true。 </p>
+定义List组件参数。<p>&lt;strong&gt;说明&lt;/strong&gt;: <br>- List组件通用属性clip的默认值为true。 </p>
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # AVQueueInfo（系统接口）
 
-歌单（歌曲列表）的相关属性。
-
-@interface AVQueueInfo
+歌单（歌曲列表）的相关属性。@interface AVQueueInfo
 
 **起始版本：** 23
 

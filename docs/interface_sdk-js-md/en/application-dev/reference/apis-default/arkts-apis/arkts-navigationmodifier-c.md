@@ -1,8 +1,6 @@
 # NavigationModifier
 
-Defines Navigation Modifier
-
-@implements { NavigationAttribute, AttributeModifier&lt;NavigationAttribute&gt; }
+Defines Navigation Modifier@implements { NavigationAttribute, AttributeModifier&lt;NavigationAttribute&gt; }
 
 **Inheritance/Implementation:** NavigationModifier implements NavigationAttribute, AttributeModifier<NavigationAttribute>
 

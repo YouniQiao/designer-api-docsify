@@ -1,6 +1,6 @@
 # InputMethodSetting
 
-@brief InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能： <br> <br>- 输入法变化订阅：通过 on('imeChange') 订阅输入法及子类型变化事件，当用户切换输入法时收到通知。 <br>- 输入法列表查询：通过 [getInputMethods](#getinputmethods) 查询已激活/未激活输入法列表，通过 [getAllInputMethods](#getallinputmethods) 查询所有已安装输入法列表，通过 [listInputMethodSubtype](#listinputmethodsubtype) 查询指定输入法的子类型列表。 <br>- 面板可见性查询：通过isPanelShown查询输入法面板是否显示。 <br>- 输入法选择对话框：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。 &lt;br  
+InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能： <br> <br>- 输入法变化订阅：通过 on('imeChange') 订阅输入法及子类型变化事件，当用户切换输入法时收到通知。 <br>- 输入法列表查询：通过 [getInputMethods](#getinputmethods) 查询已激活/未激活输入法列表，通过 [getAllInputMethods](#getallinputmethods) 查询所有已安装输入法列表，通过 [listInputMethodSubtype](#listinputmethodsubtype) 查询指定输入法的子类型列表。 <br>- 面板可见性查询：通过isPanelShown查询输入法面板是否显示。 <br>- 输入法选择对话框：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。 &lt;br  
 &gt; <br>需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md)获取InputMethodSetting实例后使用。 &lt;br
 &gt; <br>下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md)获取到InputMethodSetting实例后，通过实例调用。
 
@@ -14,11 +14,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## displayOptionalInputMethod
@@ -27,7 +22,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 displayOptionalInputMethod(callback: AsyncCallback<void>): void
 ```
 
-@brief 显示输入法选择对话框。使用callback异步回调。
+显示输入法选择对话框。使用callback异步回调。
 
 **起始版本：** 8
 
@@ -75,7 +70,7 @@ inputMethod.getSetting().displayOptionalInputMethod().then(() => {
 displayOptionalInputMethod(): Promise<void>
 ```
 
-@brief 显示输入法选择对话框。使用promise异步回调。
+显示输入法选择对话框。使用promise异步回调。
 
 **起始版本：** 8
 
@@ -103,7 +98,7 @@ displayOptionalInputMethod(): Promise<void>
 getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-@brief 获取所有输入法应用列表。使用callback异步回调。
+获取所有输入法应用列表。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -186,7 +181,7 @@ inputMethodSetting.getAllInputMethods().then((data: Array<inputMethod.InputMetho
 getAllInputMethods(): Promise<Array<InputMethodProperty>>
 ```
 
-@brief 获取所有输入法应用列表。使用promise异步回调。
+获取所有输入法应用列表。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -217,7 +212,7 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 getAllInputMethodsSync(): Array<InputMethodProperty>
 ```
 
-@brief 获取所有输入法应用列表。同步接口。 <br> <br>   
+获取所有输入法应用列表。同步接口。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -267,7 +262,7 @@ try {
 getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-@brief 获取已激活/未激活的输入法应用列表。使用callback异步回调。 <br> <br>   
+获取已激活/未激活的输入法应用列表。使用callback异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -362,7 +357,7 @@ inputMethodSetting.getInputMethods(true).then((data: Array<inputMethod.InputMeth
 getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 ```
 
-@brief 获取已激活/未激活的输入法应用列表。使用promise异步回调。 <br> <br>   
+获取已激活/未激活的输入法应用列表。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -409,7 +404,7 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 ```
 
-@brief 获取已激活/未激活的输入法应用列表。同步接口。 <br> <br>   
+获取已激活/未激活的输入法应用列表。同步接口。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -474,7 +469,7 @@ try {
 getInputMethodState(): Promise<EnabledState>
 ```
 
-@brief 查询输入法的启用状态。使用promise异步回调。
+查询输入法的启用状态。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -528,7 +523,7 @@ inputMethodSetting.getInputMethodState().then((status: inputMethod.EnabledState)
 listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void
 ```
 
-@brief 查询当前输入法应用的所有子类型。使用callback异步回调。
+查询当前输入法应用的所有子类型。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -619,7 +614,7 @@ inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethod
 listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 ```
 
-@brief 查询当前输入法应用的所有子类型。使用promise异步回调。
+查询当前输入法应用的所有子类型。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -650,7 +645,7 @@ listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-@brief 查询已安装的输入法列表。使用callback异步回调。
+查询已安装的输入法列表。使用callback异步回调。
 
 **起始版本：** 8
 
@@ -698,7 +693,7 @@ inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMe
 listInputMethod(): Promise<Array<InputMethodProperty>>
 ```
 
-@brief 查询已安装的输入法列表。使用promise异步回调。
+查询已安装的输入法列表。使用promise异步回调。
 
 **起始版本：** 8
 
@@ -729,7 +724,7 @@ listInputMethodSubtype(
     ): void
 ```
 
-@brief 获取指定输入法应用的所有子类型。使用callback异步回调。
+获取指定输入法应用的所有子类型。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -843,7 +838,7 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array
 listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>
 ```
 
-@brief 获取指定输入法应用的所有子类型。使用promise异步回调。
+获取指定输入法应用的所有子类型。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -884,7 +879,7 @@ off(
     ): void
 ```
 
-@brief 取消订阅输入法及子类型变化监听事件。使用callback异步回调。
+取消订阅输入法及子类型变化监听事件。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -911,7 +906,7 @@ inputMethod.getSetting().off('imeChange');
 offImeChange(callback?: ImeChangeCallback): void
 ```
 
-@brief 取消订阅输入法及子类型变化监听事件。使用callback异步回调。
+取消订阅输入法及子类型变化监听事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -941,7 +936,7 @@ on(
     ): void
 ```
 
-@brief 订阅输入法及子类型变化监听事件。使用callback异步回调。
+订阅输入法及子类型变化监听事件。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -974,7 +969,7 @@ inputMethod.getSetting()
 onImeChange(callback: ImeChangeCallback): void
 ```
 
-@brief 订阅输入法及子类型变化监听事件。使用callback异步回调。
+订阅输入法及子类型变化监听事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1005,7 +1000,7 @@ inputMethodSetting.onImeChange((inputMethodProperty: inputMethod.InputMethodProp
 showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 ```
 
-@brief 显示输入法选择对话框。使用callback异步回调。
+显示输入法选择对话框。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -1067,7 +1062,7 @@ inputMethod.getSetting().showOptionalInputMethods().then((result: boolean) => {
 showOptionalInputMethods(): Promise<boolean>
 ```
 
-@brief 显示输入法选择对话框。使用promise异步回调。
+显示输入法选择对话框。使用promise异步回调。
 
 **起始版本：** 9
 

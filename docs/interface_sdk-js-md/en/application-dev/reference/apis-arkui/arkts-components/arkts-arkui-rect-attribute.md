@@ -13,9 +13,6 @@ In addition to the universal attributes, the following attributes are supported.
 ## Modules to Import
 
 ```TypeScript
-import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, DownloadDescription, DownloadContentOptions, DownloadStyleOptions } from '@kit.ArkUI';
-import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
-import { LazyLayoutDirection, LazyLayoutHelper, LazyCustomLayoutAlgorithmOptions, LazyCustomLayoutAlgorithm, LazyLayoutAlgorithm } from '@kit.ArkUI';
 ```
 
 ## radius
@@ -72,7 +69,7 @@ Sets the height of the rounded corner. The width and height are the same when on
 radiusWidth(value: Length)
 ```
 
-Sets the width of the rounded corner. The width and height are the same when only the width is set. This attribute can be dynamically set using attributeModifier . Invalid values are treated as the default value.
+Sets the width of the rounded corner. The width and height are the same when only the width is set. This attribute can be dynamically set using attributeModifier. Invalid values are treated as the default value.
 
 **Since:** 7
 

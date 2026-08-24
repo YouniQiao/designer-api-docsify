@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { usb } from '@kit.BasicServicesKit';
-import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## releaseInterface
@@ -14,9 +12,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-释放注册过的通信接口。
-
-需要调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md)先获取接口，才能使用此方法释放接口。
+释放注册过的通信接口。需要调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md)先获取接口，才能使用此方法释放接口。
 
 **起始版本：** 8
 

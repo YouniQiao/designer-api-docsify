@@ -1,6 +1,6 @@
 # ProcessData
 
-The module defines process data. If a lifecycle change listener is registered by calling [appManager.on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) , the onProcessCreated callback in ApplicationStateObserver is invoked when the lifecycle of an application or ability changes.
+The module defines process data. If a lifecycle change listener is registered by calling [appManager.on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate), the onProcessCreated callback in ApplicationStateObserver is invoked when the lifecycle of an application or ability changes.
 
 **Since:** 23
 
@@ -78,16 +78,11 @@ Process ID.
 state: int
 ```
 
-Application state. The options are as follows:
-
-**0**: The application process is being initialized.
-
-**1**: The application process has been initialized and is ready.
-
-**2**: The application is running in the foreground.
-
-**4**: The application is running in the background.
-
+Application state. The options are as follows:  
+**0**: The application process is being initialized.  
+**1**: The application process has been initialized and is ready.  
+**2**: The application is running in the foreground.  
+**4**: The application is running in the background.  
 **5**: The application process is terminated.
 
 **Type:** int

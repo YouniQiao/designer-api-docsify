@@ -1,8 +1,7 @@
 # RichEditor
 
-*RichEditor** is a component that supports interactive text editing and mixture of text and imagery.
-
-> **NOTE** > > This component is supported since API version 10. Updates will be marked with a superscript to indicate their > earliest API version.
+**RichEditor** is a component that supports interactive text editing and mixture of text and imagery.
+> **NOTE**>> This component is supported since API version 10. Updates will be marked with a superscript to indicate their> earliest API version.
 
 ## RichEditor
 

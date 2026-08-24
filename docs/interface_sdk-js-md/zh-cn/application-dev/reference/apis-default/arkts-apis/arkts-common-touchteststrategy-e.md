@@ -1,8 +1,6 @@
 # TouchTestStrategy
 
-Defines the touch test strategy object.
-
-@enum { number }
+Defines the touch test strategy object.@enum { number }
 
 **起始版本：** 23
 

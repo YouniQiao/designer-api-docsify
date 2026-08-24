@@ -2,8 +2,7 @@
 
 Defines authorization token information.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) instead.
 

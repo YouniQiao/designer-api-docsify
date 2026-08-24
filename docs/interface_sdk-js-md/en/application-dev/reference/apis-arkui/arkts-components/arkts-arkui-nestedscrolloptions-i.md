@@ -1,8 +1,6 @@
 # NestedScrollOptions
 
-Define nested scroll options
-
-@interface NestedScrollOptions
+Define nested scroll options@interface NestedScrollOptions
 
 **Since:** 23
 

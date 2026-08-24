@@ -4,6 +4,8 @@ Defines a content form card.
 
 **Since:** 20
 
+**Decorator:** @Component
+
 <!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -35,8 +37,7 @@ Data of the form card.
 ## formHeight
 
 ```TypeScript
-@Prop
-  formHeight?: double
+formHeight?: double
 ```
 
 Height of the content form card. The unit of measurement is vp.
@@ -44,6 +45,8 @@ Height of the content form card. The unit of measurement is vp.
 **Type:** double
 
 **Since:** 20
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +57,7 @@ Height of the content form card. The unit of measurement is vp.
 ## formType
 
 ```TypeScript
-@Prop
-  formType: FormType
+formType: FormType
 ```
 
 Type of the form card.
@@ -63,6 +65,8 @@ Type of the form card.
 **Type:** [FormType](../../apis-default/arkts-apis/arkts-data-udmfcomponents-formtype-e.md)
 
 **Since:** 20
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,8 +77,7 @@ Type of the form card.
 ## formWidth
 
 ```TypeScript
-@Prop
-  formWidth?: double
+formWidth?: double
 ```
 
 Width of the content form card. The unit of measurement is vp.
@@ -82,6 +85,8 @@ Width of the content form card. The unit of measurement is vp.
 **Type:** double
 
 **Since:** 20
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

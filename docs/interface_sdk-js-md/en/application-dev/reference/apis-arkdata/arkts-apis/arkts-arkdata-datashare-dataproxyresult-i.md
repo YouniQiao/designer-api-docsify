@@ -12,7 +12,6 @@ Defines a struct for the batch operation result of shared configuration.
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## result

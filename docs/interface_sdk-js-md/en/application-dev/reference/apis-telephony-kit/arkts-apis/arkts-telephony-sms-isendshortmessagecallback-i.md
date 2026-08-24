@@ -20,8 +20,7 @@ import { sms } from '@kit.TelephonyKit';
 isLastPart: boolean
 ```
 
-Whether this SMS message is the last part of a long SMS message. The default value is **false**.
-
+Whether this SMS message is the last part of a long SMS message. The default value is **false**.  
 - **true**: yes - **false**: no
 
 **Type:** boolean

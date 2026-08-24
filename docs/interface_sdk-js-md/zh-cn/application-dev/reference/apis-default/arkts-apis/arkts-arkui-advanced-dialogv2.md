@@ -30,7 +30,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [AdvancedDialogV2ButtonOptions](arkts-arkui-advanced-dialogv2-advanceddialogv2buttonoptions-i.md) | 用于初始化AdvancedDialogV2Button对象。 |
-| [PopoverDialogV2Options](arkts-arkui-advanced-dialogv2-popoverdialogv2options-i.md) | 跟手弹出框参数，用于设置弹出框内容、位置属性等。 |
+| [PopoverDialogV2Options](arkts-arkui-advanced-dialogv2-popoverdialogv2options-i.md) | 跟手弹出框参数，用于设置弹出框内容、位置属性等。继承自CustomPopupOptions。 |
 
 ### 类型
 

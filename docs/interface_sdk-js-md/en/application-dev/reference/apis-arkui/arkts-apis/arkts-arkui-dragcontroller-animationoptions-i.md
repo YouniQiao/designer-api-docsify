@@ -1,8 +1,6 @@
 # AnimationOptions
 
-Defines the animation options for drag preview.
-
-@interface AnimationOptions
+Defines the animation options for drag preview.@interface AnimationOptions
 
 **Since:** 23
 

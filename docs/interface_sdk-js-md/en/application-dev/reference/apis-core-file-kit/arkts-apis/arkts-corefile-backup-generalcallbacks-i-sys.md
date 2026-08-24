@@ -1,8 +1,6 @@
 # GeneralCallbacks (System API)
 
-General callbacks for both backup and restore procedure. The backup service will notify the client by these callbacks.
-
-@interface GeneralCallbacks
+General callbacks for both backup and restore procedure. The backup service will notify the client by these callbacks.@interface GeneralCallbacks
 
 **Since:** 23
 

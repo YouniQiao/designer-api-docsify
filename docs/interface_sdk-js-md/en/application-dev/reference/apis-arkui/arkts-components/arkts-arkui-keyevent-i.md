@@ -35,7 +35,7 @@ Obtains the pressed status of modifier keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl'\| 'Alt' \| 'Shift'.<br>**NOTE：**&lt; br&gt;This API is not supported in stylus scenarios. |
+| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl'\| 'Alt' \| 'Shift'.<br>**NOTE：**<br>This API is not supported in stylus scenarios. |
 
 **Return value:**
 
@@ -73,9 +73,7 @@ ID of the input device that triggers the key event.
 intentionCode: IntentionCode
 ```
 
-Intention corresponding to the key.
-
-Default value: **IntentionCode.INTENTION_UNKNOWN**.
+Intention corresponding to the key.Default value: **IntentionCode.INTENTION_UNKNOWN**.
 
 **Type:** [IntentionCode](arkts-arkui-intentioncode-t.md)
 

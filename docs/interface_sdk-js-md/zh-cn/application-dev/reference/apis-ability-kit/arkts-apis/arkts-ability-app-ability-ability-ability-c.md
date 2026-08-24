@@ -12,9 +12,6 @@ Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-abil
 
 ```TypeScript
 import { Ability } from '@kit.AbilityKit';
-import { AbilityConstant } from '@kit.AbilityKit';
-import { AbilityLifecycleCallback } from '@kit.AbilityKit';
-import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate
@@ -25,8 +22,7 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 当系统环境变量发生变化时，系统会触发该回调。开发者可以重写该回调实现对系统环境变量变化时的响应，例如当系统语言类型发生变化时，应用可以在回调中进行定制化的处理等。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口设置
 > 应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见
 > [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
@@ -68,8 +64,7 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 当整机可用内存变化到指定程度时，系统会触发该回调。开发者可以重写该回调实现对内存级别变化的响应，例如释放缓存数据等。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > onMemoryLevel回调运行在当前进程的主线程中，如果在该回调中做耗时的UI组件释放，会阻塞主线程任务，因此不建议在该回调中释放UI组件。
 
 **起始版本：** 23

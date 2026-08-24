@@ -1,8 +1,6 @@
 # ContentCoverOptions
 
-Component content cover options
-
-@extends BindOptions
+Component content cover options@extends BindOptions
 
 **Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-common-bindoptions-i.md)
 

@@ -6,6 +6,8 @@ The options for ArcSlider progress value.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcSliderValueOptions--><!--Device-unnamed-export declare class ArcSliderValueOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -40,8 +42,7 @@ The constructor used to create a ArcSliderValueOptions object.
 ## max
 
 ```TypeScript
-@Trace
-  max?: double
+max?: double
 ```
 
 Set the maximum progress value.
@@ -54,6 +55,8 @@ Set the maximum progress value.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderValueOptions-@Trace  max?: double--><!--Device-ArcSliderValueOptions-@Trace  max?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -61,8 +64,7 @@ Set the maximum progress value.
 ## min
 
 ```TypeScript
-@Trace
-  min?: double
+min?: double
 ```
 
 Set the minimum progress value.
@@ -75,6 +77,8 @@ Set the minimum progress value.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 <!--Device-ArcSliderValueOptions-@Trace  min?: double--><!--Device-ArcSliderValueOptions-@Trace  min?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -82,8 +86,7 @@ Set the minimum progress value.
 ## progress
 
 ```TypeScript
-@Trace
-  progress?: double
+progress?: double
 ```
 
 Set current progress value. The default value is consistent with the value of the parameter min.
@@ -93,6 +96,8 @@ Set current progress value. The default value is consistent with the value of th
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 <!--Device-ArcSliderValueOptions-@Trace  progress?: double--><!--Device-ArcSliderValueOptions-@Trace  progress?: double-End-->
 

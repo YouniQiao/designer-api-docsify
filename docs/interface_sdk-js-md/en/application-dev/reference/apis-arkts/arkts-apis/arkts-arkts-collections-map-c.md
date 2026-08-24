@@ -2,14 +2,14 @@
 
 A non-linear data structure.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
-
 - K: key. - V: value. The K and V types must be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Since:** 12
+
+**Decorator:** @Sendable
 
 <!--Device-collections-class Map--><!--Device-collections-class Map-End-->
 
@@ -365,8 +365,7 @@ put(key: K, value: V): V | undefined
 
 Adds or updates a key-value pair to this ArkTS map and returns the previous value associated with the key.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the
 > key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether
 > the key exists, so that you can distinguish the case of the returned **undefined**.
@@ -471,8 +470,7 @@ remove(key: K): V | undefined
 
 Removes the specified key and its corresponding value from this ArkTS map.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the
 > key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether
 > the key exists, so that you can distinguish the case of the returned **undefined**.

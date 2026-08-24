@@ -1,8 +1,6 @@
 # Flash
 
-Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
-
-闪光灯类，对设备闪光灯操作。
+Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。闪光灯类，对设备闪光灯操作。
 
 **继承/实现关系：** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
@@ -16,7 +14,6 @@ Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getFlashMode
@@ -153,11 +150,9 @@ function onFlashStateChange(photoSession: camera.PhotoSession): void {
 setFlashMode(flashMode: FlashMode): void
 ```
 
-设置闪光灯模式。
-
-进行设置之前，需要先检查：
-
-1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-flashquery-i.md#hasflash)。 2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported)。
+设置闪光灯模式。进行设置之前，需要先检查：
+1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-flashquery-i.md#hasflash)。
+2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported)。
 
 **起始版本：** 23
 

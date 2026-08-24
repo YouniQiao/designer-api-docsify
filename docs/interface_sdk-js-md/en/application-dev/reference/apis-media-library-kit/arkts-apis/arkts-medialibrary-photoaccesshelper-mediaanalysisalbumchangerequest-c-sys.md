@@ -267,13 +267,10 @@ static createAnalysisAlbumRequest(
 
 Creates a change request for the **Analysis** album.
 
-> **NOTE：**
-> 
-> The album name must meet the following requirements:
-> 
-> - The album name string length ranges from 1 to 255.
-> 
-> - The album name cannot contain any of the following characters:.. \ / : ? " ' ` &lt;
+> **NOTE：**&gt;
+> The album name must meet the following requirements:&gt;
+> - The album name string length ranges from 1 to 255.&gt;
+> - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt;
 &gt; | { } [ ]
 
 **Since:** 23
@@ -476,9 +473,7 @@ async function example(context: Context) {
 setRelationship(relationship: string): Promise<void>
 ```
 
-Sets the relationships of a person in the portrait album.
-
-The supported relationship names include: | Unique ID | Description | | ---------- | ------- | | me | Me| | son | Son| | daughter | Daughter| | wife | Wife| | husband | Husband| | father | Father| | mother | Mother| | colleague | Colleague| | friend | Friend| | classmate | Classmate| | best_friend_female | Best female friend| | boyfriend | Boyfriend| | girlfriend | Girlfriend| | family | Family| | maternal_grandfather | Maternal grandfather| | maternal_grandmother | Maternal grandmother| | paternal_grandfather | Paternal grandfather| | paternal_grandmother | Paternal grandmother| | older_brother | Older brother| | older_sister | Older sister| | younger_brother | Younger brother| | younger_sister | Younger sister| | relative | Relative| | other | Other|
+Sets the relationships of a person in the portrait album.The supported relationship names include: | Unique ID | Description | | ---------- | ------- | | me | Me| | son | Son| | daughter | Daughter| | wife | Wife| | husband | Husband| | father | Father| | mother | Mother| | colleague | Colleague| | friend | Friend| | classmate | Classmate| | best_friend_female | Best female friend| | boyfriend | Boyfriend| | girlfriend | Girlfriend| | family | Family| | maternal_grandfather | Maternal grandfather| | maternal_grandmother | Maternal grandmother| | paternal_grandfather | Paternal grandfather| | paternal_grandmother | Paternal grandmother| | older_brother | Older brother| | older_sister | Older sister| | younger_brother | Younger brother| | younger_sister | Younger sister| | relative | Relative| | other | Other|
 
 **Since:** 26.0.0
 

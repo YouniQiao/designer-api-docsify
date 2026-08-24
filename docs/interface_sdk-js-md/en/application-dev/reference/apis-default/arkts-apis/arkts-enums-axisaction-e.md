@@ -1,8 +1,6 @@
 # AxisAction
 
-Type of axis action.
-
-@enum {number}
+Type of axis action.@enum {number}
 
 **Since:** 23
 

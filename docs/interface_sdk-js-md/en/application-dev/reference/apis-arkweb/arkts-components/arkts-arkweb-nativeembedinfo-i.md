@@ -1,8 +1,6 @@
 # NativeEmbedInfo
 
-Provides detailed information about the same-layer tag, including the ID, type, size, and location. It is suitable for scenarios where obtaining same-layer element attributes is required, improving same-layer rendering customization and user experience.
-
-@interface NativeEmbedInfo [since 11 - 11]
+Provides detailed information about the same-layer tag, including the ID, type, size, and location. It is suitable for scenarios where obtaining same-layer element attributes is required, improving same-layer rendering customization and user experience.@interface NativeEmbedInfo [since 11 - 11]
 
 **Since:** 11
 
@@ -13,11 +11,6 @@ Provides detailed information about the same-layer tag, including the ID, type, 
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## height
@@ -98,7 +91,7 @@ Position of the same-layer tag relative to the upper left corner of the **Web** 
 src?: string
 ```
 
-*src** information of the same-layer tag.
+**src** information of the same-layer tag.
 
 **Type:** string
 

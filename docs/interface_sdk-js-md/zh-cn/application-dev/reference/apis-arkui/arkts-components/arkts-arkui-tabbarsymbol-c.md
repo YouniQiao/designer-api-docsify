@@ -19,15 +19,7 @@
 normal: SymbolGlyphModifier
 ```
 
-页签内symbol图标普通态样式。
-
-默认值：
-
-fontColor：#66182431
-
-renderingStrategy：SymbolRenderingStrategy.MULTIPLE_OPACITY
-
-fontSize：24vp
+页签内symbol图标普通态样式。默认值：fontColor：#66182431renderingStrategy：SymbolRenderingStrategy.MULTIPLE_OPACITY fontSize：24vp
 
 **类型：** SymbolGlyphModifier
 
@@ -47,15 +39,7 @@ fontSize：24vp
 selected?: SymbolGlyphModifier
 ```
 
-页签内symbol图标选中态样式。
-
-默认值：
-
-fontColor：#ff007dff
-
-renderingStrategy：SymbolRenderingStrategy.MULTIPLE_OPACITY
-
-fontSize：24vp
+页签内symbol图标选中态样式。默认值：fontColor：#ff007dff renderingStrategy：SymbolRenderingStrategy.MULTIPLE_OPACITY fontSize：24vp
 
 **类型：** SymbolGlyphModifier
 

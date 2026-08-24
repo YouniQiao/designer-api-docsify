@@ -1,8 +1,6 @@
 # ImageContent
 
-指定图像内容。
-
-@enum { int }
+指定图像内容。@enum { int }
 
 **起始版本：** 23
 

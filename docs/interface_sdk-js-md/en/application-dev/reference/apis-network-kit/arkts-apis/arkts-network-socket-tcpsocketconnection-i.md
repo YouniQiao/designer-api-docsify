@@ -2,8 +2,7 @@
 
 Defines a **TCPSocketConnection** object, that is, the connection between the TCPSocket client and the server. Before calling TCPSocketConnection APIs, you need to obtain a **TCPSocketConnection** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The TCPSocket client can call related APIs through the **TCPSocketConnection** object only after a connection is
 > successfully established between the TCPSocket client and the server.
 
@@ -669,8 +668,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 Obtains the remote address of a socket connection. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after a connection with the client is set up.
 
 **Since:** 10
@@ -890,8 +888,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 Obtains the remote address of a socket connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after a connection with the client is set up.
 
 **Since:** 10
@@ -928,13 +925,10 @@ getSocketFd(): Promise<int>
 
 Obtains the file descriptor of a TCPSocketConnection connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - This API can be called only after a connection with the client is set up.
-> 
+> **NOTE：**&gt;
+> - This API can be called only after a connection with the client is set up.&gt;
 > - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the
-> close API is called).
-> 
+> close API is called).&gt;
 > - The lifecycle of the file descriptor is managed by the system. The application can use the
 > [close](#close) method to close the socket
 > connection, instead of directly operating the file descriptor.
@@ -1554,8 +1548,7 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 
 Sends data over a **TCPSocketConnection** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after a connection with the client is set up.
 
 **Since:** 10
@@ -1984,8 +1977,7 @@ send(options: TCPSendOptions): Promise<void>
 
 Sends data over a **TCPSocketConnection** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after a connection with the client is set up.
 
 **Since:** 10

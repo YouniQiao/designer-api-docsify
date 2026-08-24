@@ -12,12 +12,9 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createCipher(transformation: string): Cipher
 ```
 
-Creates a **Cipher** instance.
+Creates a **Cipher** instance.<br>For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications.
 
-<br>For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding
 > length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding
 > is applied in 16-byte blocks. **NoPadding** means no padding is applied.
@@ -44,7 +41,7 @@ Creates a **Cipher** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transformation | string | Yes | Combination of the algorithm name (including the key length), encryption mode, and padding algorithm of the **Cipher** instance to create.<br>For details about the supported specifications, see Symmetric Key Encryption and Decryption Algorithm Specifications and Asymmetric Key Encryption and Decryption Algorithm Specifications . |
+| transformation | string | Yes | Combination of the algorithm name (including the key length), encryption mode, and padding algorithm of the **Cipher** instance to create.<br>For details about the supported specifications, see Symmetric Key Encryption and Decryption Algorithm Specifications and Asymmetric Key Encryption and Decryption Algorithm Specifications. |
 
 **Return value:**
 

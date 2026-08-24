@@ -92,8 +92,7 @@ artist?: string
 assetId: string
 ```
 
-媒体ID。媒体信息的唯一标识，由应用自定义。
-
+媒体ID。媒体信息的唯一标识，由应用自定义。  
 - 该属性发生变化则其他元数据属性都将被刷新。 - 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。 - 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setavmetadata)方法将失败，返回错误码6600101。
 
 **类型：** string
@@ -164,9 +163,7 @@ description?: string
 displayTags?: int
 ```
 
-媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。
-
-在使用了cast+协议的音频投播场景下，不支持使用该属性。
+媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。在使用了cast+协议的音频投播场景下，不支持使用该属性。
 
 **类型：** int
 
@@ -220,7 +217,7 @@ extras?: Record<string, Object>
 
 Any additional attributes that can be represented as key-value pairs
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 23
 
@@ -270,9 +267,7 @@ launchClientData?: string
 lyricContent?: string
 ```
 
-播放列表媒体歌词内容。
-
-字符串长度需小于40960字节。
+播放列表媒体歌词内容。字符串长度需小于40960字节。
 
 **类型：** string
 
@@ -308,14 +303,8 @@ lyricUri?: string
 mediaImage?: image.PixelMap | string
 ```
 
-设置播放列表媒体图片像素数据。
-
-在使用了cast+协议的音视频投播场景下，该字段用于给对端设备设置媒体专辑封面。
-
-当入参为string类型时：
-
-- 只支持使用网络URI设置封面，不支持本地URI。 - 其作用与albumCoverUri属性功能相同，且优先级高于albumCoverUri。
-
+设置播放列表媒体图片像素数据。在使用了cast+协议的音视频投播场景下，该字段用于给对端设备设置媒体专辑封面。当入参为string类型时：  
+- 只支持使用网络URI设置封面，不支持本地URI。 - 其作用与albumCoverUri属性功能相同，且优先级高于albumCoverUri。  
 从API version 23开始，支持入参为image.PixelMap类型给对端设备设置媒体信息。
 
 **类型：** image.PixelMap \| string

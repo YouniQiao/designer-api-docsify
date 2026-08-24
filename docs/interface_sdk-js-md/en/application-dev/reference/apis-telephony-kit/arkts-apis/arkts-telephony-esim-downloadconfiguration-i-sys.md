@@ -22,10 +22,8 @@ import { eSIM } from '@kit.TelephonyKit';
 forceDisableProfile: boolean
 ```
 
-Whether to forcibly deactivate the current profile during profile switching.
-
-**true**: The current profile is forcibly deactivated, and profile switching can be directly performed.
-
+Whether to forcibly deactivate the current profile during profile switching.  
+**true**: The current profile is forcibly deactivated, and profile switching can be directly performed.  
 **false**: An error is returned, and profile switching can be performed only after the user authorization is obtained.
 
 **Type:** boolean

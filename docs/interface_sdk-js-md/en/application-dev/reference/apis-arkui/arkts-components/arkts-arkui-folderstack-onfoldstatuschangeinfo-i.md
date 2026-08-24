@@ -1,8 +1,6 @@
 # OnFoldStatusChangeInfo
 
-Information when onFolderStateChange.
-
-@interface OnFoldStatusChangeInfo
+Information when onFolderStateChange.@interface OnFoldStatusChangeInfo
 
 **Since:** 23
 
@@ -18,9 +16,7 @@ Information when onFolderStateChange.
 foldStatus: FoldStatus
 ```
 
-Folder state.
-
-Anonymous Object Rectification
+Folder state.Anonymous Object Rectification
 
 **Type:** [FoldStatus](../arkts-apis/arkts-arkui-foldstatus-e.md)
 

@@ -22,8 +22,7 @@ create(config: VpnConfig): Promise<int>
 
 Creates a VPN based on the specified configuration. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You are advised to call [destroy()](#destroy) or
 > [destroy(vpnId: string)](#destroy) to destroy the VPN and clear
 > resources when the VPN is not needed.
@@ -247,12 +246,9 @@ See [destroy](#destroy)
 generateVpnId(): Promise<string>
 ```
 
-Generates a unique VPN ID. This API uses a promise to return the result.
+Generates a unique VPN ID. This API uses a promise to return the result.To use the multi-VPN capability of the system, you need to call this API to generate a VPN ID and configure it in **VpnConfig**.
 
-To use the multi-VPN capability of the system, you need to call this API to generate a VPN ID and configure it in **VpnConfig**.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, the multi-VPN capability of the system supports only IPv4.
 
 **Since:** 20

@@ -1,8 +1,6 @@
 # Column properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-The universal events are supported.
+In addition to the universal attributes, the following attributes are supported.The universal events are supported.
 
 **Inheritance/Implementation:** ColumnAttribute extends CommonMethod<ColumnAttribute>
 
@@ -39,7 +37,7 @@ Alignment mode of the child components in the horizontal direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | HorizontalAlign | Yes | Alignment mode of child components in the horizontal direction.<br>Default value : **HorizontalAlign.Center |
+| value | HorizontalAlign | Yes | Alignment mode of child components in the horizontal direction.<br>Default value: **HorizontalAlign.Center |
 
 ## justifyContent
 

@@ -1,7 +1,6 @@
 # XComponent
 
-*XComponent**提供用于图形绘制和媒体数据写入的[surface](../../../ui/napi-xcomponent-guidelines.md#overview)，XComponent负责将其嵌入到视图中，支持应用自定义surface的位置和大小。同时支持AI图像分析、HDR视频亮度调节、防截屏录屏隐私保护、画布自绘制等能力，适用于视频播放、相机预览、游戏渲染、图像AI识别等需要高性能自绘制和媒体内容展示的场景。具体指南请参考[自定义渲染（XComponent）文档](../../../ui/napi-xcomponent-guidelines.md)。
-
+**XComponent**提供用于图形绘制和媒体数据写入的[surface](../../../ui/napi-xcomponent-guidelines.md#overview)，XComponent负责将其嵌入到视图中，支持应用自定义surface的位置和大小。同时支持AI图像分析、HDR视频亮度调节、防截屏录屏隐私保护、画布自绘制等能力，适用于视频播放、相机预览、游戏渲染、图像AI识别等需要高性能自绘制和媒体内容展示的场景。具体指南请参考[自定义渲染（XComponent）文档](../../../ui/napi-xcomponent-guidelines.md)。
 > **说明：**
 
 ## 子组件
@@ -38,9 +37,7 @@ XComponent(value: { id: string; type: string; libraryname?: string; controller?:
 XComponent(value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 ```
 
-创建**XComponent**组件，其生命周期回调可以从native侧触发。
-
-从API版本12开始，该接口不再维护。建议使用[XComponent(options: XComponentOptions)](../../../reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12)替代。
+创建**XComponent**组件，其生命周期回调可以从native侧触发。从API版本12开始，该接口不再维护。建议使用XComponent(options: XComponentOptions)替代。
 
 **起始版本：** 10
 

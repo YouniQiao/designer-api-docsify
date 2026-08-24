@@ -12,9 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, callback: AsyncCallback<string>): void
 ```
 
-Formats a phone number based on specified formatting options. This API uses an asynchronous callback to return the result.
-
-A formatted phone number is a standard numeric string, for example, 555 0100.
+Formats a phone number based on specified formatting options. This API uses an asynchronous callback to return the result.A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Since:** 23
 
@@ -89,9 +87,7 @@ call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
 function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): Promise<string>
 ```
 
-Formats a phone number based on specified formatting options. This API uses a promise to return the result.
-
-A formatted phone number is a standard numeric string, for example, 555 0100.
+Formats a phone number based on specified formatting options. This API uses a promise to return the result.A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Since:** 23
 
@@ -133,9 +129,7 @@ See [formatPhoneNumber](#formatphonenumber)
 function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>): void
 ```
 
-Formats a phone number. This API uses an asynchronous callback to return the result.
-
-A formatted phone number is a standard numeric string, for example, 555 0100.
+Formats a phone number. This API uses an asynchronous callback to return the result.A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Since:** 23
 

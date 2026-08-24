@@ -6,6 +6,8 @@ Defines chip symbol icon.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export abstract class ChipV2SymbolIcon--><!--Device-unnamed-export abstract class ChipV2SymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -43,8 +45,7 @@ The constructor of ChipV2SymbolIcon
 ## activated
 
 ```TypeScript
-@Trace
-  public activated?: SymbolGlyphModifier
+public activated?: SymbolGlyphModifier
 ```
 
 Symbol activated.
@@ -52,6 +53,8 @@ Symbol activated.
 **Type:** SymbolGlyphModifier
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,8 +67,7 @@ Symbol activated.
 ## normal
 
 ```TypeScript
-@Trace
-  public normal?: SymbolGlyphModifier
+public normal?: SymbolGlyphModifier
 ```
 
 Symbol normal.
@@ -73,6 +75,8 @@ Symbol normal.
 **Type:** SymbolGlyphModifier
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

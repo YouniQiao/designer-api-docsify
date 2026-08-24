@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## attachMetaSurface
@@ -113,8 +112,7 @@ Enable auto frame rate for video capture.
 enableMirror(enabled: boolean): void
 ```
 
-启用/关闭镜像录像。
-
+启用/关闭镜像录像。  
 - 调用该接口前，需要通过[isMirrorSupported](#ismirrorsupported)查询是否支录像镜像功能。 - 启用/关闭录像镜像后，需要通过[getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation)获取录像旋转角度以及 updateRotation更新旋转角度。
 
 **起始版本：** 23

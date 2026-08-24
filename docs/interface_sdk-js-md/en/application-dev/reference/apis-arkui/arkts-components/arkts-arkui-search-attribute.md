@@ -1,8 +1,6 @@
 # Search properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
-
-In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
 
 **Inheritance/Implementation:** SearchAttribute extends CommonMethod<SearchAttribute>
 
@@ -47,9 +45,7 @@ Sets the text auto-capitalization mode. This API provides the capability, but ac
 cancelButton(value: CancelButtonOptions | CancelButtonSymbolOptions)
 ```
 
-Sets the style of the cancel button on the right. For details, see [Example 2: Setting Search and Delete Icons](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#example-2-setting-search-and-delete-icons) and [Example 11: Setting a Custom Symbol-Type Cancel Button](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#example-11-setting-a-custom-symbol-type-cancel-button).
-
-The default icon size on wearable devices is 18 fp.
+Sets the style of the cancel button on the right. For details, see [Example 2: Setting Search and Delete Icons](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#example-2-setting-search-and-delete-icons) and [Example 11: Setting a Custom Symbol-Type Cancel Button](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#example-11-setting-a-custom-symbol-type-cancel-button).The default icon size on wearable devices is 18 fp.
 
 **Since:** 10
 
@@ -99,10 +95,8 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 Sets whether to enable leading punctuation compression.
 
-> **NOTE：**
-> 
-> - Leading punctuation is not compressed by default.
-> 
+> **NOTE：**&gt;
+> - Leading punctuation is not compressed by default.&gt;
 > - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a
 > line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
@@ -128,9 +122,7 @@ Sets whether to enable leading punctuation compression.
 copyOption(value: CopyOptions)
 ```
 
-Sets whether the input text can be copied. If this attribute is set to **CopyOptions.None**, the **Search** component supports paste and select-all operations, while other operations such as copy, cut, translate, and share, as well as the Celia Writer assisted writing feature, are disabled.
-
-Dragging is not allowed when **CopyOptions.None** is set.
+Sets whether the input text can be copied. If this attribute is set to **CopyOptions.None**, the **Search** component supports paste and select-all operations, while other operations such as copy, cut, translate, and share, as well as the Celia Writer assisted writing feature, are disabled.Dragging is not allowed when **CopyOptions.None** is set.
 
 **Since:** 9
 
@@ -152,24 +144,9 @@ Dragging is not allowed when **CopyOptions.None** is set.
 customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions)
 ```
 
-Sets the custom keyboard.
+Sets the custom keyboard.When a custom keyboard is set, activating the text box opens the specified custom component, instead of the system input method.The custom keyboard's height can be set through the **height** attribute of the custom component's root node, and its width is fixed at the default value.The custom keyboard is presented by overlaying the original screen. It is not compressed or lifted if avoid mode is not enabled or avoidance is not needed for the text box.The custom keyboard cannot obtain focus, but it blocks gesture events.By default, the custom keyboard is closed when the input component loses focus. You can also use the [stopEditing](arkts-arkui-searchcontroller-c.md#stopediting) API to close the keyboard.When setting a custom keyboard, you can bind the onKeyPreIme event to prevent input from the physical keyboard.From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations.
 
-When a custom keyboard is set, activating the text box opens the specified custom component, instead of the system input method.
-
-The custom keyboard's height can be set through the **height** attribute of the custom component's root node, and its width is fixed at the default value.
-
-The custom keyboard is presented by overlaying the original screen. It is not compressed or lifted if avoid mode is not enabled or avoidance is not needed for the text box.
-
-The custom keyboard cannot obtain focus, but it blocks gesture events.
-
-By default, the custom keyboard is closed when the input component loses focus. You can also use the [stopEditing](arkts-arkui-searchcontroller-c.md#stopediting) API to close the keyboard.
-
-When setting a custom keyboard, you can bind the onKeyPreIme event to prevent input from the physical keyboard.
-
-From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API cannot be called within attributeModifier.
 
 **Since:** 10
@@ -243,10 +220,7 @@ Sets the color of the text box divider.
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-Sets the extended options of the custom menu, including the text content, icon, and callback.
-
-When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or
-
+Sets the extended options of the custom menu, including the text content, icon, and callback.When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or  
 [disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
 
 **Since:** 12
@@ -295,9 +269,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 enableHapticFeedback(isEnabled: boolean)
 ```
 
-Specifies whether to enable haptic feedback.
-
-To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.
+Specifies whether to enable haptic feedback.To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.
 
 **Since:** 13
 
@@ -321,9 +293,7 @@ To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** perm
 enableKeyboardOnFocus(value: boolean)
 ```
 
-Sets whether to pop up the soft keyboard when the **Search** component obtains focus in a way other than clicking.
-
-Since API version 10, the **Search** component is bound to the input method by default when it obtains focus.
+Sets whether to pop up the soft keyboard when the **Search** component obtains focus in a way other than clicking.Since API version 10, the **Search** component is bound to the input method by default when it obtains focus.
 
 **Since:** 10
 
@@ -347,9 +317,7 @@ Since API version 10, the **Search** component is bound to the input method by d
 enablePreviewText(enable: boolean)
 ```
 
-Sets whether to enable preview text.
-
-The preview content is defined as a temporary, uncommitted input state. Currently, the text interception function is not supported.
+Sets whether to enable preview text.The preview content is defined as a temporary, uncommitted input state. Currently, the text interception function is not supported.
 
 **Since:** 12
 
@@ -373,11 +341,7 @@ The preview content is defined as a temporary, uncommitted input state. Currentl
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition.
-
-When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default.
-
-This feature is only effective when CopyOptions is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
+Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition.When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default.This feature is only effective when CopyOptions is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
 **Since:** 22
 
@@ -473,15 +437,7 @@ Sets the font color of the input text. **fontSize**, **fontStyle**, **fontWeight
 fontFeature(value: string)
 ```
 
-Sets the font feature, for example, monospaced digits.
-
-Format: normal \| \&lt;feature-tag-value\&gt;
-
-Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]
-
-There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,).
-
-For example, the input format for monospaced clock fonts is "ss01" on.
+Sets the font feature, for example, monospaced digits.Format: normal \| \&lt;feature-tag-value\&gt;Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,).For example, the input format for monospaced clock fonts is "ss01" on.
 
 **Since:** 12
 
@@ -553,11 +509,7 @@ Sets whether to add spacing to the first and last lines to avoid text truncation
 inputFilter(value: ResourceStr, error?: Callback<string>)
 ```
 
-Sets the regular expression for input filtering. Only inputs that comply with the regular expression can be displayed. Other inputs are filtered out.
-
-For single-character input scenarios, only single-character matching is supported; for multi-character input scenarios (such as pasting), string matching is supported.
-
-If **inputFilter** is set and the entered characters are not null, the filtering effect attached to the text box type (specified through the **type** attribute) does not take effect.
+Sets the regular expression for input filtering. Only inputs that comply with the regular expression can be displayed. Other inputs are filtered out.For single-character input scenarios, only single-character matching is supported; for multi-character input scenarios (such as pasting), string matching is supported.If **inputFilter** is set and the entered characters are not null, the filtering effect attached to the text box type (specified through the **type** attribute) does not take effect.
 
 **Since:** 12
 
@@ -606,11 +558,7 @@ Sets the keyboard appearance for the text box. This setting takes effect only af
 letterSpacing(value: number | string | Resource)
 ```
 
-Sets the letter spacing for a text style. If the value specified is a percentage or **0**, the default value is used. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
-
-If the value specified is a negative value, the text is compressed. A negative value too small may result in the text being compressed to 0 and no content being displayed.
-
-This setting applies to every character, including those at line endings.
+Sets the letter spacing for a text style. If the value specified is a percentage or **0**, the default value is used. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.If the value specified is a negative value, the text is compressed. A negative value too small may result in the text being compressed to 0 and no content being displayed.This setting applies to every character, including those at line endings.
 
 **Since:** 12
 
@@ -682,13 +630,7 @@ Sets the maximum font scale factor for text.
 maxFontSize(value: number | string | Resource)
 ```
 
-Sets the maximum font size. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
-
-For the setting to take effect, this attribute must be used together with [minFontSize](#minfontsize) or layout constraint settings.
-
-When the adaptive font size is used, the **fontSize** settings do not take effect.
-
-If **maxFontSize** is less than or equal to 0 or **maxFontSize** is less than **minFontSize**, the adaptive font size does not take effect. In this case, the value of **size** in the [textFont](#textfont) attribute takes effect. If **size** is not set, the default value applies.
+Sets the maximum font size. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.For the setting to take effect, this attribute must be used together with [minFontSize](#minfontsize) or layout constraint settings.When the adaptive font size is used, the **fontSize** settings do not take effect.If **maxFontSize** is less than or equal to 0 or **maxFontSize** is less than **minFontSize**, the adaptive font size does not take effect. In this case, the value of **size** in the [textFont](#textfont) attribute takes effect. If **size** is not set, the default value applies.
 
 **Since:** 12
 
@@ -760,13 +702,7 @@ Sets the minimum font scale factor for text.
 minFontSize(value: number | string | Resource)
 ```
 
-Sets the minimum font size. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
-
-For the setting to take effect, this attribute must be used together with [maxFontSize](#maxfontsize) or layout constraint settings.
-
-When the adaptive font size is used, the **fontSize** settings do not take effect.
-
-If **minFontSize** is less than or equal to 0, the adaptive font size does not take effect. In this case, the value of **size** in the [textFont](#textfont) attribute takes effect. If **size** is not set, the default value applies.
+Sets the minimum font size. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.For the setting to take effect, this attribute must be used together with [maxFontSize](#maxfontsize) or layout constraint settings.When the adaptive font size is used, the **fontSize** settings do not take effect.If **minFontSize** is less than or equal to 0, the adaptive font size does not take effect. In this case, the value of **size** in the [textFont](#textfont) attribute takes effect. If **size** is not set, the default value applies.
 
 **Since:** 12
 
@@ -790,9 +726,7 @@ If **minFontSize** is less than or equal to 0, the adaptive font size does not t
 onChange(callback: EditableTextOnChangeCallback)
 ```
 
-Called when the input in the text box changes.
-
-In this callback, if caret operations are performed, you must adjust the caret logic based on the **previewText** parameter to ensure it works seamlessly within the preview display scenario.
+Called when the input in the text box changes.In this callback, if caret operations are performed, you must adjust the caret logic based on the **previewText** parameter to ensure it works seamlessly within the preview display scenario.
 
 **Since:** 8
 
@@ -1046,18 +980,10 @@ Called when the text selection changes or the caret position changes during edit
 onWillAttachIME(callback: Callback<IMEClient>)
 ```
 
-Called when the search box is about to be bound to an input method.
-
-<!--Del-->
-
-Before the search box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig) API of **UIContext** to set the keyboard style.<!--DelEnd-->
-
-From API version 22, the setExtraConfig method of IMEClient can be called to set input method extension information. After the input method is bound, it receives this extension information, which can be used to implement custom functionality.
-
+Called when the search box is about to be bound to an input method.<!--Del-->Before the search box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig) API of **UIContext** to set the keyboard style.<!--DelEnd-->From API version 22, the setExtraConfig method of IMEClient can be called to set input method extension information. After the input method is bound, it receives this extension information, which can be used to implement custom functionality.  
 **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API cannot be called within attributeModifier.
 
 **Since:** 20
@@ -1082,9 +1008,7 @@ From API version 22, the setExtraConfig method of IMEClient can be called to set
 onWillChange(callback: Callback<EditableTextChangeValue, boolean>)
 ```
 
-Called when the text content is about to change.
-
-This callback is triggered after **onWillInsert** and **onWillDelete**, but before **onDidInsert** and **onDidDelete**.
+Called when the text content is about to change.This callback is triggered after **onWillInsert** and **onWillDelete**, but before **onDidInsert** and **onDidDelete**.
 
 **Since:** 15
 
@@ -1248,11 +1172,7 @@ Placeholder text style, including the font size, font weight, font family, and f
 searchButton(value: ResourceStr, option?: SearchButtonOptions)
 ```
 
-Sets the text on the search button located next to the search text box.
-
-Clicking the search button triggers both **onSubmit** and **onClick** callbacks.
-
-The default font size on wearable devices is 18 fp.
+Sets the text on the search button located next to the search text box.Clicking the search button triggers both **onSubmit** and **onClick** callbacks.The default font size on wearable devices is 18 fp.
 
 **Since:** 8
 
@@ -1275,9 +1195,7 @@ The default font size on wearable devices is 18 fp.
 searchIcon(value: IconOptions | SymbolGlyphModifier)
 ```
 
-Sets the style of the search icon on the left.
-
-The default icon size on wearable devices is 16 vp.
+Sets the style of the search icon on the left.The default icon size on wearable devices is 16 vp.
 
 **Since:** 10
 
@@ -1485,7 +1403,7 @@ Sets the text stroke width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | Optional&lt;LengthMetrics&gt; | Yes | Text stroke width. When the unit of **LengthMetrics** is px:<br>Values &lt; 0: solid text.<br>Values &gt; 0: outlined text.<br>Default value: **0** (no stroke) |
+| width | Optional&lt;LengthMetrics&gt; | Yes | Text stroke width. When the unit of **LengthMetrics** is px:<br>Values &lt;0: solid text.<br>Values &gt; 0: outlined text.<br>Default value: **0** (no stroke) |
 
 ## textAlign
 
@@ -1539,9 +1457,7 @@ Specifies the text layout direction. If this attribute is not set, the default t
 textFont(value?: Font)
 ```
 
-Style of the text entered in the search box, including the font size, font weight, font family, and font style.
-
-The default font size on wearable devices is 18 fp.
+Style of the text entered in the search box, including the font size, font weight, font family, and font style.The default font size on wearable devices is 18 fp.
 
 **Since:** 8
 
@@ -1587,9 +1503,7 @@ Sets the indent of the first line text.
 type(value: SearchType)
 ```
 
-Sets the text box type.
-
-Different **SearchType** values trigger corresponding keyboard types and enforce input restrictions.
+Sets the text box type.Different **SearchType** values trigger corresponding keyboard types and enforce input restrictions.
 
 **Since:** 11
 

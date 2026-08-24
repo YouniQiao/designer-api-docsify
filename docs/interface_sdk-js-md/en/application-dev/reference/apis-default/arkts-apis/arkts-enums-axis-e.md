@@ -1,8 +1,6 @@
 # Axis
 
-Axis enumeration description.
-
-@enum { number }
+Axis enumeration description.@enum { number }
 
 **Since:** 23
 

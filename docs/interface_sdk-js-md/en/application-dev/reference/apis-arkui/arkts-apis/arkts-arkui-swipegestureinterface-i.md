@@ -1,6 +1,6 @@
 # SwipeGestureInterface
 
-*SwipeGesture** is used to trigger a swipe gesture. This gesture is successfully recognized when the swipe speed exceeds the specified threshold, which is 100 vp/s by default.
+**SwipeGesture** is used to trigger a swipe gesture. This gesture is successfully recognized when the swipe speed exceeds the specified threshold, which is 100 vp/s by default.
 
 **Inheritance/Implementation:** SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
 

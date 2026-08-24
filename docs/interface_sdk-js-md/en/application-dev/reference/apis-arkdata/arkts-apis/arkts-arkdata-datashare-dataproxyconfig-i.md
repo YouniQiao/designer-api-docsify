@@ -12,7 +12,6 @@ Defines a struct for the data proxy configuration.
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## maxValueLength

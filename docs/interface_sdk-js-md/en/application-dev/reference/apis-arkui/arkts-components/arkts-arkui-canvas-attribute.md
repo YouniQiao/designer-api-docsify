@@ -1,8 +1,6 @@
 # Canvas properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-The universal events are supported.
+In addition to the universal attributes, the following attributes are supported.The universal events are supported.
 
 **Inheritance/Implementation:** CanvasAttribute extends CommonMethod<CanvasAttribute>
 
@@ -23,14 +21,9 @@ The universal events are supported.
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup.
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup.For the settings to take effect, this attribute must be used together with [startImageAnalyzer](arkts-arkui-canvasrenderingcontext2d-c.md#startimageanalyzer) and [stopImageAnalyzer](arkts-arkui-canvasrenderingcontext2d-c.md#stopimageanalyzer) of CanvasRenderingContext2D.This attribute cannot be used together with the overlay attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** has no effect. This feature depends on device capabilities.
 
-For the settings to take effect, this attribute must be used together with [startImageAnalyzer](arkts-arkui-canvasrenderingcontext2d-c.md#startimageanalyzer) and [stopImageAnalyzer](arkts-arkui-canvasrenderingcontext2d-c.md#stopimageanalyzer) of CanvasRenderingContext2D.
-
-This attribute cannot be used together with the overlay attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** has no effect. This feature depends on device capabilities.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within
 > attributeModifier
 > since API version 20.
@@ -57,9 +50,7 @@ This attribute cannot be used together with the overlay attribute. If they are s
 onReady(event: VoidCallback)
 ```
 
-Triggered when the **Canvas** component is initialized or when its size changes.
-
-When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the onAreaChange event is triggered, not the **onReady** event. The onAreaChange event is triggered after the **onReady** event.
+Triggered when the **Canvas** component is initialized or when its size changes.When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the onAreaChange event is triggered, not the **onReady** event. The onAreaChange event is triggered after the **onReady** event.
 
 **Since:** 8
 
@@ -83,9 +74,7 @@ When this event is triggered, the canvas is cleared. The width and height of the
 onReady(event: Callback<DrawingRenderingContext | undefined> | undefined)
 ```
 
-Triggered when the **Canvas** component is initialized or when its size changes.
-
-When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the onAreaChange event is triggered, not the **onReady** event. The onAreaChange event is triggered after the **onReady** event.
+Triggered when the **Canvas** component is initialized or when its size changes.When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the onAreaChange event is triggered, not the **onReady** event. The onAreaChange event is triggered after the **onReady** event.
 
 **Since:** 23
 

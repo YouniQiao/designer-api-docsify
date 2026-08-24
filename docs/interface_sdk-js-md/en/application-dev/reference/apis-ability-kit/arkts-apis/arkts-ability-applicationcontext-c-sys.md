@@ -2,8 +2,7 @@
 
 ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** ApplicationContext extends Context
@@ -90,12 +89,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 preloadUIExtensionAbility(want: Want): Promise<void>
 ```
 
-Preloads a UIExtensionAbility instance. This API uses a promise to return the result.
-
-The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application.
-
-A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility.
-
+Preloads a UIExtensionAbility instance. This API uses a promise to return the result.The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application.A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility.  
 | Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
 
 **Since:** 23
@@ -179,9 +173,7 @@ export default class EntryAbility extends UIAbility {
 registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number
 ```
 
-Registers a listener to monitor the ability lifecycle of the application. This API uses an asynchronous callback to return the result.
-
-<p>**NOTE：**: <br>It can be called only by the main thread. </p>
+Registers a listener to monitor the ability lifecycle of the application. This API uses an asynchronous callback to return the result.<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 9
 
@@ -249,9 +241,7 @@ Register environment callback.
 unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void
 ```
 
-Unregisters the listener that monitors the ability lifecycle of the application. This API uses an asynchronous callback to return the result.
-
-<p>**NOTE：**: <br>It can be called only by the main thread. </p>
+Unregisters the listener that monitors the ability lifecycle of the application. This API uses an asynchronous callback to return the result.<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 9
 
@@ -280,9 +270,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 ```
 
-Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread.
-
-<p>**NOTE：**: <br>It can be called only by the main thread. </p>
+Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread.<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 9
 

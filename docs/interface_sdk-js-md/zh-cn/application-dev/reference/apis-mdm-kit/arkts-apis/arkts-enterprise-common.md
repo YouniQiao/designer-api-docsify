@@ -1,9 +1,7 @@
 # @ohos.enterprise.common
 
-本模块提供MDM Kit中常用公共能力的纯类型定义，包含枚举类型和数据结构。本模块仅导出类型声明，不包含具体实现逻辑或可执行代码。
-
-**使用场景**： 在企业设备管理应用开发中，当需要配置设备管控策略、管理应用实例、处理应用安装结果、监听策略变更等场景时，会使用本模块定义的类型。这些类型为MDM Kit中各子模块的接口提供统一的参数和返回值标准。
-
+本模块提供MDM Kit中常用公共能力的纯类型定义，包含枚举类型和数据结构。本模块仅导出类型声明，不包含具体实现逻辑或可执行代码。  
+**使用场景**： 在企业设备管理应用开发中，当需要配置设备管控策略、管理应用实例、处理应用安装结果、监听策略变更等场景时，会使用本模块定义的类型。这些类型为MDM Kit中各子模块的接口提供统一的参数和返回值标准。  
 **收益**： 通过标准化的类型定义，可以简化企业设备管理应用的开发流程，提高代码的可维护性和类型安全性，降低类型相关的运行时错误。
 
 **起始版本：** 22
@@ -26,9 +24,9 @@ import { common } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md) | 应用的实例数据。 |
-| [InstallationResult](arkts-mdm-common-installationresult-i.md) | 应用安装结果。 |
-| [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md) | 策略变更事件。 |
+| [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md) | 应用的实例数据。该接口目前在[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md)、 [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md)、 [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md)、 [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md)接口 中作为入参使用。 |
+| [InstallationResult](arkts-mdm-common-installationresult-i.md) | 应用安装结果。该对象目前在 [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult) 作为回调入参使用。 |
+| [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md) | 策略变更事件。该接口目前在 [onAdminPolicyChanged](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged) 接口中作为回调入参使用。 |
 
 ### 枚举
 

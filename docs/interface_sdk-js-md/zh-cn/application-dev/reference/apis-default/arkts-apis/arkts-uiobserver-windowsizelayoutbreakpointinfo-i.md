@@ -1,8 +1,6 @@
 # WindowSizeLayoutBreakpointInfo
 
-定义窗口大小断点信息。 这个接口定义了当前窗口长宽的断点信息，基于配置好的断点阈值。
-
-@interface WindowSizeLayoutBreakpointInfo
+定义窗口大小断点信息。 这个接口定义了当前窗口长宽的断点信息，基于配置好的断点阈值。@interface WindowSizeLayoutBreakpointInfo
 
 **起始版本：** 24
 

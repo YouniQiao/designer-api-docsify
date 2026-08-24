@@ -18,7 +18,7 @@ maxSize: Size
 
 MaxSize
 
-**Type:** [Size](arkts-graphics-size-i.md)
+**Type:** Size
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ minSize: Size
 
 MinSize
 
-**Type:** [Size](arkts-graphics-size-i.md)
+**Type:** Size
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ percentReference: Size
 
 PercentReference, if the size unit of the child nodes is percentage, then they use PercentReference to calculate the px size.
 
-**Type:** [Size](arkts-graphics-size-i.md)
+**Type:** Size
 
 **Since:** 23
 

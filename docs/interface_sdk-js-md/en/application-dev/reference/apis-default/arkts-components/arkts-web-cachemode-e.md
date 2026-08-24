@@ -1,8 +1,6 @@
 # CacheMode
 
-Enum type supplied to [cacheMode](arkts-web-attribute.md#cachemode) for setting the Web cache mode.
-
-@enum { number }
+Enum type supplied to [cacheMode](arkts-web-attribute.md#cachemode) for setting the Web cache mode.@enum { number }
 
 **Since:** 23
 

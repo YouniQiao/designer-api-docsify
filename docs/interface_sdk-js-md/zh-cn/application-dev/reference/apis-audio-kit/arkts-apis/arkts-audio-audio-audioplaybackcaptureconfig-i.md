@@ -2,6 +2,10 @@
 
 音频内录的配置信息。
 
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 12开始废弃，建议使用录屏接口AVScreenCapture替代。
+
 **起始版本：** 10
 
 **废弃版本：** 12
@@ -16,7 +20,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## filterOptions

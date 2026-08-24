@@ -1,7 +1,6 @@
 # TitlePosition
 
-Defines the vertical position of the title relative to the subtitle in the dialog box. By default, the title is above the subtitle.
-
+Defines the vertical position of the title relative to the subtitle in the dialog box. By default, the title is above the subtitle.  
 | Name| Value| Description| | - | - | - | | TOP | 0 | The title is above the subtitle.Default value.| | BOTTOM | 1 | The title is below the subtitle.|
 
 **Since:** 12

@@ -36,8 +36,7 @@ IP addresses of vNICs. Before API version 23, a maximum of 64 IP addresses are s
 blockedApplications?: Array<string>
 ```
 
-List of blocked applications, which are represented by bundle names of the string type. After such a list is configured, only applications that are not in the list can be proxied by the VPN according to the specified **routes**. Before API version 23, a maximum of 64 blocked application bundle names can be configured. Since API version 23, a maximum of 256 blocked application bundle names can be configured.
-
+List of blocked applications, which are represented by bundle names of the string type. After such a list is configured, only applications that are not in the list can be proxied by the VPN according to the specified **routes**. Before API version 23, a maximum of 64 blocked application bundle names can be configured. Since API version 23, a maximum of 256 blocked application bundle names can be configured.  
 **Note：**: Configure either **trustedApplications** or **blockedApplications** as they are mutually exclusive.
 
 **Type:** Array&lt;string&gt;
@@ -102,9 +101,7 @@ Whether the built-in VPN is supported. The value **true** indicates that the bui
 isIPv4Accepted?: boolean
 ```
 
-Whether IPv4 is supported. The value **true** indicates that the IPv4 is supported, and the value **false** indicates the opposite. The default value is **true**.
-
-Note: If the IPv4 is supported, you need to configure IPv4 addresses in **addresses**.
+Whether IPv4 is supported. The value **true** indicates that the IPv4 is supported, and the value **false** indicates the opposite. The default value is **true**.Note: If the IPv4 is supported, you need to configure IPv4 addresses in **addresses**.
 
 **Type:** boolean
 
@@ -120,9 +117,7 @@ Note: If the IPv4 is supported, you need to configure IPv4 addresses in **addres
 isIPv6Accepted?: boolean
 ```
 
-Whether IPv6 is supported. The value **true** indicates that the IPV6 is supported, and the value **false** indicates the opposite. The default value is **false**.
-
-Note: If the IPv6 is supported, you need to configure IPv6 addresses in **addresses**.
+Whether IPv6 is supported. The value **true** indicates that the IPV6 is supported, and the value **false** indicates the opposite. The default value is **false**.Note: If the IPv6 is supported, you need to configure IPv6 addresses in **addresses**.
 
 **Type:** boolean
 
@@ -186,8 +181,7 @@ List of DNS search domains.
 trustedApplications?: Array<string>
 ```
 
-List of trusted applications, which are represented by bundle names of the string type. After such a list is configured, only the applications in the list can be proxied by the VPN according to the specified **routes**. Before API version 23, a maximum of 64 trusted application bundle names can be configured. Since API version 23, a maximum of 256 trusted application bundle names can be configured.
-
+List of trusted applications, which are represented by bundle names of the string type. After such a list is configured, only the applications in the list can be proxied by the VPN according to the specified **routes**. Before API version 23, a maximum of 64 trusted application bundle names can be configured. Since API version 23, a maximum of 256 trusted application bundle names can be configured.  
 **Note：**: Configure either **trustedApplications** or **blockedApplications** as they are mutually exclusive.
 
 **Type:** Array&lt;string&gt;

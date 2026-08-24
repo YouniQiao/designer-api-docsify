@@ -1,8 +1,6 @@
 # RouterCallbackInfo (System API)
 
-Defines the RouterCallbackInfo.
-
-@interface RouterCallbackInfo
+Defines the RouterCallbackInfo.@interface RouterCallbackInfo
 
 **Since:** 23
 

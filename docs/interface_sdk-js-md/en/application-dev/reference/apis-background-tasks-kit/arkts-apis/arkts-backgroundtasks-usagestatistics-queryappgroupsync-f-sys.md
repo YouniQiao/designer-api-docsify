@@ -12,9 +12,7 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 function queryAppGroupSync(): int
 ```
 
-Queries the app group of the calling application.
-
-The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the app group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 23
 
@@ -64,9 +62,7 @@ let priorityGroup: number = usageStatistics.queryAppGroupSync("com.ohos.camera")
 function queryAppGroupSync(bundleName: string): int
 ```
 
-Queries the usage priority group by bundleName.
-
-The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the usage priority group by bundleName.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 23
 

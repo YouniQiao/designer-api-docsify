@@ -12,7 +12,6 @@ Describes the effect status information of a camera controller.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## effectType

@@ -1,8 +1,6 @@
 # WebController
 
-WebController is the controller class of the ArkWeb component, used to control various behaviors of the Web component. A WebController object can be bound to only one Web component. After binding, developers can use the controller to perform operations on the Web component, such as page navigation (forward/backward/loading), focus control, zoom adjustment, page refresh and stop, cookie management, and JavaScript injection and execution.
-
-WebController is suitable for scenarios where active control of the embedded Web component is required on the app side, such as implementing browser-like forward and backward navigation, establishing a JavaScript interaction channel between the app side and the web page side, dynamically loading web page content, or managing cookie data.
+WebController is the controller class of the ArkWeb component, used to control various behaviors of the Web component. A WebController object can be bound to only one Web component. After binding, developers can use the controller to perform operations on the Web component, such as page navigation (forward/backward/loading), focus control, zoom adjustment, page refresh and stop, cookie management, and JavaScript injection and execution.WebController is suitable for scenarios where active control of the embedded Web component is required on the app side, such as implementing browser-like forward and backward navigation, establishing a JavaScript interaction channel between the app side and the web page side, dynamically loading web page content, or managing cookie data.
 
 **Since:** 8
 
@@ -17,11 +15,6 @@ WebController is suitable for scenarios where active control of the embedded Web
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## accessBackward
@@ -447,11 +440,7 @@ struct WebComponent {
 loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })
 ```
 
-If **baseUrl** is empty, the specified character string will be loaded using the data protocol.
-
-If **baseUrl** is set to a data URL, the encoded data string will be loaded by the Web component using the data protocol.
-
-If **baseUrl** is set to an HTTP or HTTPS URL, the encoded data string will be processed by the Web component as a non-encoded string in a manner similar to **loadUrl**.
+If **baseUrl** is empty, the specified character string will be loaded using the data protocol.If **baseUrl** is set to a data URL, the encoded data string will be loaded by the Web component using the data protocol.If **baseUrl** is set to an HTTP or HTTPS URL, the encoded data string will be processed by the Web component as a non-encoded string in a manner similar to **loadUrl**.
 
 **Since:** 8
 
@@ -500,11 +489,7 @@ struct WebComponent {
 loadUrl(options: { url: string | Resource, headers?: Array<Header> })
 ```
 
-Loads the specified URL with the given HTTP headers.
-
-The object injected through **loadUrl** is valid only in the current document. It will be invalid on a new page navigated to through **loadUrl**.
-
-The object injected through **registerJavaScriptProxy** is still valid on a new page redirected through **loadUrl**.
+Loads the specified URL with the given HTTP headers.The object injected through **loadUrl** is valid only in the current document. It will be invalid on a new page navigated to through **loadUrl**.The object injected through **registerJavaScriptProxy** is still valid on a new page redirected through **loadUrl**.
 
 **Since:** 8
 

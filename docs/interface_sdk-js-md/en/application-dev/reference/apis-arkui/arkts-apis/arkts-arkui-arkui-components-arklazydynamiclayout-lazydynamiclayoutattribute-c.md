@@ -1,8 +1,6 @@
 # LazyDynamicLayoutAttribute
 
-Defines the LazyDynamicLayout attribute functions.
-
-@extends CommonMethod&lt;LazyDynamicLayoutAttribute&gt;
+Defines the LazyDynamicLayout attribute functions.@extends CommonMethod&lt;LazyDynamicLayoutAttribute&gt;
 
 **Inheritance/Implementation:** LazyDynamicLayoutAttribute extends CommonMethod<LazyDynamicLayoutAttribute>
 

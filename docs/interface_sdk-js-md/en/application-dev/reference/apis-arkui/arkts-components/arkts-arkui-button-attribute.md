@@ -1,8 +1,6 @@
 # Button properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-The universal events are supported.
+In addition to the universal attributes, the following attributes are supported.The universal events are supported.
 
 **Inheritance/Implementation:** ButtonAttribute extends CommonMethod<ButtonAttribute>
 
@@ -25,8 +23,7 @@ buttonStyle(value: ButtonStyleMode)
 
 Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](#fontcolor), and [role](#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -79,8 +76,7 @@ controlSize(value: ControlSize)
 
 Sets the size for the button.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11

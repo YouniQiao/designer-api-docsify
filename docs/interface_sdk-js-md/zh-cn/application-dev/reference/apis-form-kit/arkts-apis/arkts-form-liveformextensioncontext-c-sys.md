@@ -16,17 +16,7 @@ LiveFormExtensionContext是[LiveFormExtensionAbility](arkts-form-app-form-livefo
 public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): long
 ```
 
-将当前LiveFormExtensionAbility客户端连接到一个 [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)服务端。
-
-调用该接口前，必须实现ConnectOptions接口。
-
-通过本接口连接成功后，LiveFormExtensionAbility可以通过ConnectOptions返回的[IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md)与 ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。
-
-ServiceExtensionAbility是一类特殊的[ExtensionAbility](../../../application-models/extensionability-overview.md)组件，这类组件由系 统提供，通常用于提供指定场景后台服务能力，不支持开发者自定义。
-
-ServiceExtensionAbility提供后台服务扩展能力，支持后台运行并对外提供相应能力。三方应用可以连接该ExtensionAbility，并进行通信。
-
-通过本接口连接成功后，会启动ServiceExtensionAbility组件，具体请参考[组件启动规则](../../../application-models/component-startup-rules.md)。
+将当前LiveFormExtensionAbility客户端连接到一个 [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)服务端。调用该接口前，必须实现ConnectOptions接口。通过本接口连接成功后，LiveFormExtensionAbility可以通过ConnectOptions返回的[IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md)与 ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。ServiceExtensionAbility是一类特殊的[ExtensionAbility](../../../application-models/extensionability-overview.md)组件，这类组件由系 统提供，通常用于提供指定场景后台服务能力，不支持开发者自定义。ServiceExtensionAbility提供后台服务扩展能力，支持后台运行并对外提供相应能力。三方应用可以连接该ExtensionAbility，并进行通信。通过本接口连接成功后，会启动ServiceExtensionAbility组件，具体请参考[组件启动规则](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 23
 
@@ -146,9 +136,7 @@ struct MyLiveFormPage {
 public disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 ```
 
-断开与[ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)的连接，断开连接之后开发者需要将连接成功时返回的 IRemoteObject对象置空。使用Promise异步回调。
-
-ServiceExtensionAbility是一类特殊的[ExtensionAbility](../../../application-models/extensionability-overview.md)组件，这类组件由系 统提供，通常用于提供指定场景后台服务能力，不支持开发者自定义。ServiceExtensionAbility提供后台服务扩展能力，支持后台运行并对外提供相应能力。三方应用可以连接该ExtensionAbility，并进行通信。
+断开与[ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)的连接，断开连接之后开发者需要将连接成功时返回的 IRemoteObject对象置空。使用Promise异步回调。ServiceExtensionAbility是一类特殊的[ExtensionAbility](../../../application-models/extensionability-overview.md)组件，这类组件由系 统提供，通常用于提供指定场景后台服务能力，不支持开发者自定义。ServiceExtensionAbility提供后台服务扩展能力，支持后台运行并对外提供相应能力。三方应用可以连接该ExtensionAbility，并进行通信。
 
 **起始版本：** 23
 

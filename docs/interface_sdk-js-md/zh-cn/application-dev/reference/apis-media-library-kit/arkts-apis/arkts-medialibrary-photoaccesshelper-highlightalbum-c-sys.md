@@ -449,14 +449,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setSubTitle(subTitle: string): Promise<void>
 ```
 
-设置时刻副标题内容。
-
-副标题参数规格为：
-
-- 副标题字符串长度为0~255。 - 不允许出现的非法英文字符，包括：
-
-. \ / : ? " ' ` &lt; &gt; | { } [ ]
-
+设置时刻副标题内容。副标题参数规格为：  
+- 副标题字符串长度为0~255。 - 不允许出现的非法英文字符，包括：  
+. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - 英文字符大小写不敏感。
 
 **起始版本：** 23

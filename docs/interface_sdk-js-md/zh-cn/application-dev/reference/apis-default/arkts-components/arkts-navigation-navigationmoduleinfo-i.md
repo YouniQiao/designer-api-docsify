@@ -16,9 +16,7 @@ Navigation的模块信息。
 isUserCreateStack?: boolean
 ```
 
-导航的堆栈是否由用户创建
-
-默认值：false
+导航的堆栈是否由用户创建默认值：false
 
 **类型：** boolean
 

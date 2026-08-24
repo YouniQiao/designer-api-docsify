@@ -41,21 +41,8 @@ backgroundSystemMaterial?: uiMaterial.Material
 controller?: RichEditorController
 ```
 
-富文本控制器不为空时显示默认系统菜单（包含剪切复制粘贴等部分）且默认菜单功能内置。
-
-controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
-
-系统默认只支持复制粘贴富文本文本内容，图文混排需要应用自定义onCopy、onPaste接口。应用自行配置onCopy | onPaste接口时，系统菜单默认复制粘贴失效，调用应用自定义函数。
-
-**说明：**
-
-点击自定义文本选择菜单内置复制功能选项后，自定义菜单消失选中文本高亮保留。
-
-点击自定义文本选择菜单内置全选功能选项后，自定义菜单消失文本全选高亮。
-
-点击自定义文本选择菜单内置粘贴功能选项后，空白处粘贴或者选中文本替换粘贴均是保留被复制文本的样式。
-
-当富文本组件[RichEditor](../../../reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md)的copyOptions属性设置为 `CopyOptions.None`时，内置的复制剪切功能不会被限制。
+富文本控制器不为空时显示默认系统菜单（包含剪切复制粘贴等部分）且默认菜单功能内置。controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。系统默认只支持复制粘贴富文本文本内容，图文混排需要应用自定义onCopy、onPaste接口。应用自行配置onCopy | onPaste接口时，系统菜单默认复制粘贴失效，调用应用自定义函数。  
+**说明：**点击自定义文本选择菜单内置复制功能选项后，自定义菜单消失选中文本高亮保留。点击自定义文本选择菜单内置全选功能选项后，自定义菜单消失文本全选高亮。点击自定义文本选择菜单内置粘贴功能选项后，空白处粘贴或者选中文本替换粘贴均是保留被复制文本的样式。当富文本组件RichEditor的copyOptions属性设置为 `CopyOptions.None`时，内置的复制剪切功能不会被限制。
 
 **类型：** [RichEditorController](../../apis-arkui/arkts-components/arkts-arkui-richeditor-richeditorcontroller-c.md)
 
@@ -75,13 +62,7 @@ controller为空时不显示更多按钮，expandedMenuOptions参数不为空则
 editorMenuOptions?: Array<EditorMenuOptions>
 ```
 
-编辑菜单。
-
-editorMenuOptions未配置时，不显示编辑菜单。
-
-同时配置EditorMenuOptions中action和builder时，点击图标会同时响应。
-
-点击编辑菜单图标默认不关闭整个菜单，应用可以通过action接口配置RichEditorController的closeSelectionMenu主动关闭菜单。
+编辑菜单。editorMenuOptions未配置时，不显示编辑菜单。同时配置EditorMenuOptions中action和builder时，点击图标会同时响应。点击编辑菜单图标默认不关闭整个菜单，应用可以通过action接口配置RichEditorController的closeSelectionMenu主动关闭菜单。
 
 **类型：** Array&lt;[EditorMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-editormenuoptions-i.md)&gt;
 
@@ -101,11 +82,7 @@ editorMenuOptions未配置时，不显示编辑菜单。
 expandedMenuOptions?: Array<ExpandedMenuOptions>
 ```
 
-扩展下拉菜单。
-
-expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。
-
-expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。
+扩展下拉菜单。expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。
 
 **类型：** Array&lt;[ExpandedMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md)&gt;
 
@@ -125,13 +102,8 @@ expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起�
 onCopy?: SelectionMenuOnCopyCallback
 ```
 
-替代内置系统菜单复制项的事件回调。
-
-生效前提是一定要有controller参数，有系统默认菜单才能替换内置复制功能。
-
-**说明：**
-
-event为返回信息。
+替代内置系统菜单复制项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置复制功能。  
+**说明：**event为返回信息。
 
 **类型：** [SelectionMenuOnCopyCallback](arkts-selectionmenuoncopycallback-t.md)
 
@@ -151,13 +123,8 @@ event为返回信息。
 onCut?: SelectionMenuOnCutCallback
 ```
 
-替代内置系统菜单剪切项的事件回调。
-
-生效前提是一定要有controller参数，有系统默认菜单才能替换内置剪切功能。
-
-**说明：**
-
-event为返回信息。
+替代内置系统菜单剪切项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置剪切功能。  
+**说明：**event为返回信息。
 
 **类型：** [SelectionMenuOnCutCallback](arkts-selectionmenuoncutcallback-t.md)
 
@@ -177,13 +144,8 @@ event为返回信息。
 onPaste?: SelectionMenuOnPasteCallback
 ```
 
-替代内置系统菜单粘贴项的事件回调。
-
-生效前提是一定要有controller参数，有系统默认菜单才能替换内置粘贴功能。
-
-**说明：**
-
-event为返回信息。
+替代内置系统菜单粘贴项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置粘贴功能。  
+**说明：**event为返回信息。
 
 **类型：** [SelectionMenuOnPasteCallback](arkts-selectionmenuonpastecallback-t.md)
 
@@ -203,13 +165,8 @@ event为返回信息。
 onSelectAll?: SelectionMenuOnSelectAllCallback
 ```
 
-替代内置系统菜单全选项的事件回调。
-
-生效前提是一定要有controller参数，有系统默认菜单才能替换内置全选功能。
-
-**说明：**
-
-event为返回信息。
+替代内置系统菜单全选项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置全选功能。  
+**说明：**event为返回信息。
 
 **类型：** [SelectionMenuOnSelectAllCallback](arkts-selectionmenuonselectallcallback-t.md)
 

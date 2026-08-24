@@ -12,8 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function isCellularDataEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the cellular data service is enabled. This API uses an asynchronous callback to return the result.
-
+Checks whether the cellular data service is enabled. This API uses an asynchronous callback to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
@@ -74,8 +73,7 @@ data.isCellularDataEnabled().then((contextData: boolean) => {
 function isCellularDataEnabled(): Promise<boolean>
 ```
 
-Checks whether the cellular data service is enabled. This API uses a promise to return the result.
-
+Checks whether the cellular data service is enabled. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23

@@ -1,8 +1,6 @@
 # IpType（系统接口）
 
-WLAN IP类型枚举。
-
-@enum { int }
+WLAN IP类型枚举。@enum { int }
 
 **起始版本：** 23
 

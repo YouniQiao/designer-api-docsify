@@ -1,8 +1,6 @@
 # ContentClipMode
 
-Enum of scrollable containers' content clip mode.
-
-@enum { number }
+Enum of scrollable containers' content clip mode.@enum { number }
 
 **Since:** 23
 

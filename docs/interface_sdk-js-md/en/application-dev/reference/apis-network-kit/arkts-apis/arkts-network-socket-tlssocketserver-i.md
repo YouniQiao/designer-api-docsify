@@ -22,8 +22,7 @@ close(): Promise<void>
 
 Stops listening for events of the **TLSSocketServer** object and releases the port bound by [listen](arkts-network-socket-tcpsocketserver-i.md#listen). This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API does not close existing connections. To close the connection, call the
 > [close](arkts-network-socket-tcpsocketconnection-i.md#close) API of
 > [TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md).
@@ -360,8 +359,7 @@ getCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 Obtains the local digital certificate after a **TLSSocketServer** connection is established. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -504,8 +502,7 @@ getCertificate(): Promise<X509CertRawData>
 
 Obtains the local digital certificate after a **TLSSocketServer** connection is established. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -540,8 +537,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **TLSSocketServer** connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Call this API only after the **TLSSocketServer** connection is successfully established.
 
 **Since:** 12
@@ -820,8 +816,7 @@ getProtocol(callback: AsyncCallback<string>): void
 
 Obtains the communication protocol version after a **TLSSocketServer** connection is established. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -955,8 +950,7 @@ getProtocol(): Promise<string>
 
 Obtains the communication protocol version after a **TLSSocketServer** connection is established. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -991,15 +985,12 @@ getSocketFd(): Promise<int>
 
 Obtains the file descriptor bound to the TLSSocketServer listening port. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This method can be called only after the [listen](arkts-network-socket-tcpsocketserver-i.md#listen) method is successfully
 > called. When listen is called for multiple times, the file descriptor bound to the latest listening port is
-> obtained.
-> 
+> obtained.&gt;
 > - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after
-> close is called).
-> 
+> close is called).&gt;
 > - The lifecycle of the file descriptor is managed by the system. The application can use the
 > [close](arkts-network-socket-tcpsocketserver-i.md#close) method to close the socket connection, instead of directly
 > operating the file descriptor.
@@ -1345,8 +1336,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 Obtains the status of the TLS socket server connection upon successful listening. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -1702,8 +1692,7 @@ getState(): Promise<SocketStateBase>
 
 Obtains the status of the TLS socket server connection upon successful listening. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -1737,8 +1726,7 @@ listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 
 Listens for client connections after **bind** is successfully called to bind the IP address and port of **TLSSocketServer**. This API uses an asynchronous callback to return the result. After a connection is established, a TLS session will be created and initialized and a certificate key will be loaded and verified.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the IP address is set to 0.0.0.0, all local IP addresses can be listened on.
 
 **Since:** 10
@@ -1949,10 +1937,8 @@ off(type: 'connect', callback?: Callback<TLSSocketConnection>): void
 
 Unsubscribes from **connect** events of the **TLSSocketServer** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> This API can be called only after **listen** is successfully called.
-> 
+> **NOTE：**&gt;
+> This API can be called only after **listen** is successfully called.&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of events.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -2024,10 +2010,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 Unsubscribes from **error** events of the **TLSSocketServer** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> This API can be called only after **listen** is successfully called.
-> 
+> **NOTE：**&gt;
+> This API can be called only after **listen** is successfully called.&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of events.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -2099,8 +2083,7 @@ on(type: 'connect', callback: Callback<TLSSocketConnection>): void
 
 Subscribes to TLS socket server connection events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -2166,8 +2149,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to **error** events of the **TLSSocketServer** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -2233,8 +2215,7 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 
 Sets other properties of the **TLSSocketServer** object after **listen** is successfully called. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
@@ -2748,8 +2729,7 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 Sets other properties of the **TLSSocketServer** object after **listen** is successfully called. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10

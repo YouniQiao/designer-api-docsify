@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [SpanModifier](arkts-arkui-spanmodifier-c.md) | Defines Span Modifier |
+| [SpanModifier](arkts-arkui-spanmodifier-c.md) | Defines Span Modifier@implements { SpanAttribute, AttributeModifier&lt;SpanAttribute&gt; } |
 

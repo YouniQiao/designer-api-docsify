@@ -72,10 +72,7 @@ Desired dynamic range. The default value is **SDR**.
 format: string
 ```
 
-Format of the packed image.
-
-Currently, only the following formats are supported: image/jpeg, image/webp, image/png, image/heic (or image/heif )&lt;sup&gt;12+&lt;/sup&gt;, image/sdr_astc_4x4&lt;sup&gt;18+&lt;/sup&gt;, image/sdr_sut_superfast_4x4&lt;sup&gt;18+&lt;/sup&gt; (depending on the hardware), and image/hdr_astc_4x4&lt;sup&gt;20+&lt;/sup&gt;.
-
+Format of the packed image.Currently, only the following formats are supported: image/jpeg, image/webp, image/png, image/heic (or image/heif)&lt;sup&gt;12+&lt;/sup&gt;, image/sdr_astc_4x4&lt;sup&gt;18+&lt;/sup&gt;, image/sdr_sut_superfast_4x4&lt;sup&gt;18+&lt;/sup&gt; (depending on the hardware), and image/hdr_astc_4x4&lt;sup&gt;20+&lt;/sup&gt;.  
 **NOTE：**: The JPEG format does not support the alpha channel. If the JPEG format with the alpha channel is used for data encoding, the transparent color turns black.
 
 **Type:** string
@@ -146,13 +143,7 @@ Whether encoding image property information, for example, Exif, is required. **t
 quality: int
 ```
 
-Quality of the output image set. This parameter takes effect only for JPEG and HEIF images. The value range is [0, 100]. The value **0** means the lowest quality, and **100** means the highest quality. The higher the quality , the larger the space occupied by the generated image. WebP and PNG images are lossless.
-
-In the case of sdr_astc_4x4 encoding, the parameter can be set to **92** and **85**.
-
-In the case of sut encoding, the parameter can be set to **92**.
-
-(Available since API version 20) In the case of hdr_astc_4x4 encoding, the parameter can be set to **85**.
+Quality of the output image set. This parameter takes effect only for JPEG and HEIF images. The value range is [0, 100]. The value **0** means the lowest quality, and **100** means the highest quality. The higher the quality, the larger the space occupied by the generated image. WebP and PNG images are lossless.In the case of sdr_astc_4x4 encoding, the parameter can be set to **92** and **85**.In the case of sut encoding, the parameter can be set to **92**.(Available since API version 20) In the case of hdr_astc_4x4 encoding, the parameter can be set to **85**.
 
 **Type:** int
 

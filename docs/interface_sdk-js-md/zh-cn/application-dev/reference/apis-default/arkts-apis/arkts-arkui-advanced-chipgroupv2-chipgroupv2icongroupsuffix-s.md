@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct ChipGroupV2IconGroupSuffix--><!--Device-unnamed-export declare struct ChipGroupV2IconGroupSuffix-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 ChipGroupV2IconGroupSuffix的build函数
@@ -27,6 +28,8 @@ ChipGroupV2IconGroupSuffix的build函数
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +40,7 @@ ChipGroupV2IconGroupSuffix的build函数
 ## iconBackgroundSystemMaterial
 
 ```TypeScript
-@Param
-  iconBackgroundSystemMaterial?: uiMaterial.Material
+iconBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
 IconGroup后缀后台系统素材。
@@ -49,6 +51,8 @@ IconGroup后缀后台系统素材。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2IconGroupSuffix-@Param  iconBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2IconGroupSuffix-@Param  iconBackgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -58,9 +62,7 @@ IconGroup后缀后台系统素材。
 ## items
 
 ```TypeScript
-@Require
-  @Param
-  items: Array<ChipGroupV2IconItemConfig | SymbolGlyphModifier | ChipGroupV2SymbolItemConfig>
+items: Array<ChipGroupV2IconItemConfig | SymbolGlyphModifier | ChipGroupV2SymbolItemConfig>
 ```
 
 后缀项
@@ -70,6 +72,8 @@ IconGroup后缀后台系统素材。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

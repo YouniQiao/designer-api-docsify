@@ -12,9 +12,7 @@ import { omapi } from '@kit.ConnectivityKit';
 function on(type: 'stateChanged', callback: Callback<ServiceState>): void
 ```
 
-注册监听服务状态变化事件。
-
-调用[omapi.newSEService](arkts-connectivity-omapi-newseservice-f.md#newseserviceservicestate)或[omapi.createService](arkts-connectivity-omapi-createservice-f.md)创建服务成功后再用on接口注册回调。
+注册监听服务状态变化事件。调用[omapi.newSEService](arkts-connectivity-omapi-newseservice-f.md#newseserviceservicestate)或[omapi.createService](arkts-connectivity-omapi-createservice-f.md)创建服务成功后再用on接口注册回调。
 
 **起始版本：** 18
 

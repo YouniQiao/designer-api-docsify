@@ -1,6 +1,6 @@
 # InputMethodExtensionContext
 
-@brief The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities. <br> <br>   
+The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -27,7 +27,7 @@ import { InputMethodExtensionContext } from '@kit.IMEKit';
 destroy(callback: AsyncCallback<void>): void
 ```
 
-@brief Destroys this input method. This API uses an asynchronous callback to return the result.
+Destroys this input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -93,7 +93,7 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
 destroy(): Promise<void>
 ```
 
-@brief Destroys this input method. This API uses a promise to return the result.
+Destroys this input method. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -119,7 +119,7 @@ See [destroy](#destroy)
 startAbility(want: Want): Promise<void>
 ```
 
-@brief Starts an ability. This API uses a promise to return the result.
+Starts an ability. This API uses a promise to return the result.
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # EdgeOutlineWidths
 
-引入该对象时，至少传入一个参数。
-
-@interface EdgeOutlineWidths
+引入该对象时，至少传入一个参数。@interface EdgeOutlineWidths
 
 **起始版本：** 23
 

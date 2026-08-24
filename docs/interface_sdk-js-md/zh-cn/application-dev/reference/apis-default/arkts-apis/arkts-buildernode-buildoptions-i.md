@@ -16,9 +16,7 @@ build的可选参数。
 localStorage?: LocalStorage
 ```
 
-给当前BuilderNode设置LocalStorage，挂载在此BuilderNode下的自定义组件共享该LocalStorage。如果自定义组件构造函数同时也传入LocalStorage，优先使用构造函数中传入的 LocalStorage。
-
-默认值：undefined
+给当前BuilderNode设置LocalStorage，挂载在此BuilderNode下的自定义组件共享该LocalStorage。如果自定义组件构造函数同时也传入LocalStorage，优先使用构造函数中传入的 LocalStorage。默认值：undefined
 
 **类型：** LocalStorage
 
@@ -38,9 +36,7 @@ localStorage?: LocalStorage
 useParallel?: boolean
 ```
 
-是否开启BuilderNode并行构建。`true`表示开启，`false`表示关闭。
-
-默认值：false
+是否开启BuilderNode并行构建。`true`表示开启，`false`表示关闭。默认值：false
 
 **类型：** boolean
 

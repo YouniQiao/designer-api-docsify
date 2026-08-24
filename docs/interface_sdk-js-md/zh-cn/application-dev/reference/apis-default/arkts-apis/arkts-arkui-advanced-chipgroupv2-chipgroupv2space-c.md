@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipGroupV2Space--><!--Device-unnamed-export declare class ChipGroupV2Space-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ ChipGroupV2Space的构造函数
 ## endSpace
 
 ```TypeScript
-@Trace
-  public endSpace?: Length
+public endSpace?: Length
 ```
 
 结束间距。
@@ -54,6 +55,8 @@ ChipGroupV2Space的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2Space-@Trace  public endSpace?: Length--><!--Device-ChipGroupV2Space-@Trace  public endSpace?: Length-End-->
@@ -63,8 +66,7 @@ ChipGroupV2Space的构造函数
 ## itemSpace
 
 ```TypeScript
-@Trace
-  public itemSpace?: Length
+public itemSpace?: Length
 ```
 
 ChipV2之间的间距。
@@ -75,6 +77,8 @@ ChipV2之间的间距。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2Space-@Trace  public itemSpace?: Length--><!--Device-ChipGroupV2Space-@Trace  public itemSpace?: Length-End-->
@@ -84,8 +88,7 @@ ChipV2之间的间距。
 ## startSpace
 
 ```TypeScript
-@Trace
-  public startSpace?: Length
+public startSpace?: Length
 ```
 
 起始间距。
@@ -95,6 +98,8 @@ ChipV2之间的间距。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

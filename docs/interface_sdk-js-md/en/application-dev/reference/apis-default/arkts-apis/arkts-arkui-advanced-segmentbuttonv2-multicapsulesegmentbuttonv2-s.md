@@ -6,6 +6,8 @@ Defines the segmented button with capsule style.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2--><!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Defines the segmented button with capsule style.
 ## build
 
 ```TypeScript
-@Builder
-    build(): void
+build(): void
 ```
 
 Sets the build function of the segmented button.
@@ -27,6 +28,8 @@ Sets the build function of the segmented button.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ Sets the build function of the segmented button.
 ## $selectedIndexes
 
 ```TypeScript
-@Event
-    readonly $selectedIndexes?: OnSelectedIndexesChange
+readonly $selectedIndexes?: OnSelectedIndexesChange
 ```
 
 Sets the callback function will be invoked when the selectedInexes field of the segmented button is changed.
@@ -49,6 +51,8 @@ Sets the callback function will be invoked when the selectedInexes field of the 
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Event    readonly $selectedIndexes?: OnSelectedIndexesChange--><!--Device-MultiCapsuleSegmentButtonV2-@Event    readonly $selectedIndexes?: OnSelectedIndexesChange-End-->
@@ -58,8 +62,7 @@ Sets the callback function will be invoked when the selectedInexes field of the 
 ## itemBackgroundBlurStyle
 
 ```TypeScript
-@Param
-    readonly itemBackgroundBlurStyle?: BlurStyle
+readonly itemBackgroundBlurStyle?: BlurStyle
 ```
 
 Sets the background blur style of all segmented button items that are not selected.
@@ -70,6 +73,8 @@ Sets the background blur style of all segmented button items that are not select
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundBlurStyle?: BlurStyle--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundBlurStyle?: BlurStyle-End-->
@@ -79,8 +84,7 @@ Sets the background blur style of all segmented button items that are not select
 ## itemBackgroundBlurStyleOptions
 
 ```TypeScript
-@Param
-    readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
+readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
 Sets the background blur style options of all segmented button items that are not selected.
@@ -91,6 +95,8 @@ Sets the background blur style options of all segmented button items that are no
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
@@ -100,8 +106,7 @@ Sets the background blur style options of all segmented button items that are no
 ## itemBackgroundColor
 
 ```TypeScript
-@Param
-    readonly itemBackgroundColor?: ColorMetrics
+readonly itemBackgroundColor?: ColorMetrics
 ```
 
 Sets the background color for all segmented button items that are not selected.
@@ -112,6 +117,8 @@ Sets the background color for all segmented button items that are not selected.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundColor?: ColorMetrics-End-->
@@ -121,8 +128,7 @@ Sets the background color for all segmented button items that are not selected.
 ## itemBackgroundEffect
 
 ```TypeScript
-@Param
-    readonly itemBackgroundEffect?: BackgroundEffectOptions
+readonly itemBackgroundEffect?: BackgroundEffectOptions
 ```
 
 Sets the background effect of all segmented button items that are not selected.
@@ -133,6 +139,8 @@ Sets the background effect of all segmented button items that are not selected.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundEffect?: BackgroundEffectOptions--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundEffect?: BackgroundEffectOptions-End-->
@@ -142,8 +150,7 @@ Sets the background effect of all segmented button items that are not selected.
 ## itemBorderRadius
 
 ```TypeScript
-@Param
-    readonly itemBorderRadius?: LengthMetrics
+readonly itemBorderRadius?: LengthMetrics
 ```
 
 Sets the border radius for all segmented button items.
@@ -154,6 +161,8 @@ Sets the border radius for all segmented button items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBorderRadius?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBorderRadius?: LengthMetrics-End-->
@@ -163,8 +172,7 @@ Sets the border radius for all segmented button items.
 ## itemFontColor
 
 ```TypeScript
-@Param
-    readonly itemFontColor?: ColorMetrics
+readonly itemFontColor?: ColorMetrics
 ```
 
 Sets the font color for the text of all segmented button items that are not selected.
@@ -175,6 +183,8 @@ Sets the font color for the text of all segmented button items that are not sele
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontColor?: ColorMetrics-End-->
@@ -184,8 +194,7 @@ Sets the font color for the text of all segmented button items that are not sele
 ## itemFontSize
 
 ```TypeScript
-@Param
-    readonly itemFontSize?: LengthMetrics
+readonly itemFontSize?: LengthMetrics
 ```
 
 Sets the font size for the text of all segmented button items that are not selected.
@@ -196,6 +205,8 @@ Sets the font size for the text of all segmented button items that are not selec
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontSize?: LengthMetrics-End-->
@@ -205,8 +216,7 @@ Sets the font size for the text of all segmented button items that are not selec
 ## itemFontWeight
 
 ```TypeScript
-@Param
-    readonly itemFontWeight?: FontWeight
+readonly itemFontWeight?: FontWeight
 ```
 
 Sets the font weight for the text of all segmented button items that are not selected.
@@ -217,6 +227,8 @@ Sets the font weight for the text of all segmented button items that are not sel
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontWeight?: FontWeight--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontWeight?: FontWeight-End-->
@@ -226,8 +238,7 @@ Sets the font weight for the text of all segmented button items that are not sel
 ## itemIconFillColor
 
 ```TypeScript
-@Param
-    readonly itemIconFillColor?: ColorMetrics
+readonly itemIconFillColor?: ColorMetrics
 ```
 
 Sets the fill color for the icon of all segmented button items that are not selected.
@@ -238,6 +249,8 @@ Sets the fill color for the icon of all segmented button items that are not sele
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemIconFillColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemIconFillColor?: ColorMetrics-End-->
@@ -247,8 +260,7 @@ Sets the fill color for the icon of all segmented button items that are not sele
 ## itemIconSize
 
 ```TypeScript
-@Param
-    readonly itemIconSize?: SizeT<LengthMetrics>
+readonly itemIconSize?: SizeT<LengthMetrics>
 ```
 
 Sets the size for the icon of all segmented button items.
@@ -259,6 +271,8 @@ Sets the size for the icon of all segmented button items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemIconSize?: SizeT<LengthMetrics>--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemIconSize?: SizeT<LengthMetrics>-End-->
@@ -268,8 +282,7 @@ Sets the size for the icon of all segmented button items.
 ## itemMaxFontScale
 
 ```TypeScript
-@Param
-    readonly itemMaxFontScale?: double | Resource
+readonly itemMaxFontScale?: double | Resource
 ```
 
 Sets the max font scale for all items of the segmented button.
@@ -280,6 +293,8 @@ Sets the max font scale for all items of the segmented button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMaxFontScale?: double | Resource--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMaxFontScale?: double | Resource-End-->
@@ -289,8 +304,7 @@ Sets the max font scale for all items of the segmented button.
 ## itemMinFontScale
 
 ```TypeScript
-@Param
-    readonly itemMinFontScale?: double | Resource
+readonly itemMinFontScale?: double | Resource
 ```
 
 Sets the min font scale for all items of the segmented button.
@@ -301,6 +315,8 @@ Sets the min font scale for all items of the segmented button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMinFontScale?: double | Resource--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMinFontScale?: double | Resource-End-->
@@ -310,8 +326,7 @@ Sets the min font scale for all items of the segmented button.
 ## itemMinHeight
 
 ```TypeScript
-@Param
-    readonly itemMinHeight?: LengthMetrics
+readonly itemMinHeight?: LengthMetrics
 ```
 
 Sets the min height of all segmented button items.
@@ -322,6 +337,8 @@ Sets the min height of all segmented button items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMinHeight?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMinHeight?: LengthMetrics-End-->
@@ -331,8 +348,7 @@ Sets the min height of all segmented button items.
 ## itemPadding
 
 ```TypeScript
-@Param
-    readonly itemPadding?: LocalizedPadding
+readonly itemPadding?: LocalizedPadding
 ```
 
 Sets the padding of all segmented button items.
@@ -343,6 +359,8 @@ Sets the padding of all segmented button items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemPadding?: LocalizedPadding--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemPadding?: LocalizedPadding-End-->
@@ -352,9 +370,7 @@ Sets the padding of all segmented button items.
 ## items
 
 ```TypeScript
-@Require
-    @Param
-    readonly items: SegmentButtonV2Items
+readonly items: SegmentButtonV2Items
 ```
 
 Sets the items of the segmented button.
@@ -365,6 +381,8 @@ Sets the items of the segmented button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Require, @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Require    @Param    readonly items: SegmentButtonV2Items--><!--Device-MultiCapsuleSegmentButtonV2-@Require    @Param    readonly items: SegmentButtonV2Items-End-->
@@ -374,8 +392,7 @@ Sets the items of the segmented button.
 ## itemSelectedBackgroundColor
 
 ```TypeScript
-@Param
-    readonly itemSelectedBackgroundColor?: ColorMetrics
+readonly itemSelectedBackgroundColor?: ColorMetrics
 ```
 
 Sets the background color for all segmented button selected items.
@@ -386,6 +403,8 @@ Sets the background color for all segmented button selected items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedBackgroundColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedBackgroundColor?: ColorMetrics-End-->
@@ -395,8 +414,7 @@ Sets the background color for all segmented button selected items.
 ## itemSelectedFontColor
 
 ```TypeScript
-@Param
-    readonly itemSelectedFontColor?: ColorMetrics
+readonly itemSelectedFontColor?: ColorMetrics
 ```
 
 Sets the font color for the text of all segmented button selected items.
@@ -407,6 +425,8 @@ Sets the font color for the text of all segmented button selected items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontColor?: ColorMetrics-End-->
@@ -416,8 +436,7 @@ Sets the font color for the text of all segmented button selected items.
 ## itemSelectedFontSize
 
 ```TypeScript
-@Param
-    readonly itemSelectedFontSize?: LengthMetrics
+readonly itemSelectedFontSize?: LengthMetrics
 ```
 
 Sets the font size for the text of all segmented button selected items.
@@ -428,6 +447,8 @@ Sets the font size for the text of all segmented button selected items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontSize?: LengthMetrics-End-->
@@ -437,8 +458,7 @@ Sets the font size for the text of all segmented button selected items.
 ## itemSelectedFontWeight
 
 ```TypeScript
-@Param
-    readonly itemSelectedFontWeight?: FontWeight
+readonly itemSelectedFontWeight?: FontWeight
 ```
 
 Sets the font weight for the text of all segmented button selected items.
@@ -449,6 +469,8 @@ Sets the font weight for the text of all segmented button selected items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontWeight?: FontWeight--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontWeight?: FontWeight-End-->
@@ -458,8 +480,7 @@ Sets the font weight for the text of all segmented button selected items.
 ## itemSelectedIconFillColor
 
 ```TypeScript
-@Param
-    readonly itemSelectedIconFillColor?: ColorMetrics
+readonly itemSelectedIconFillColor?: ColorMetrics
 ```
 
 Sets the fill color for the icon of all segmented button selected items.
@@ -470,6 +491,8 @@ Sets the fill color for the icon of all segmented button selected items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedIconFillColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedIconFillColor?: ColorMetrics-End-->
@@ -479,8 +502,7 @@ Sets the fill color for the icon of all segmented button selected items.
 ## itemSelectedSymbolFontColor
 
 ```TypeScript
-@Param
-    readonly itemSelectedSymbolFontColor?: ColorMetrics
+readonly itemSelectedSymbolFontColor?: ColorMetrics
 ```
 
 Sets the font color for the symbol icon of all segmented button selected items.
@@ -491,6 +513,8 @@ Sets the font color for the symbol icon of all segmented button selected items.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedSymbolFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedSymbolFontColor?: ColorMetrics-End-->
@@ -500,8 +524,7 @@ Sets the font color for the symbol icon of all segmented button selected items.
 ## itemSpace
 
 ```TypeScript
-@Param
-    readonly itemSpace?: LengthMetrics
+readonly itemSpace?: LengthMetrics
 ```
 
 Sets the space for each item of the segmented button.
@@ -512,6 +535,8 @@ Sets the space for each item of the segmented button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSpace?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSpace?: LengthMetrics-End-->
@@ -521,8 +546,7 @@ Sets the space for each item of the segmented button.
 ## itemSymbolFontColor
 
 ```TypeScript
-@Param
-    readonly itemSymbolFontColor?: ColorMetrics
+readonly itemSymbolFontColor?: ColorMetrics
 ```
 
 Sets the font color for the symbol icon of all segmented button items that are not selected.
@@ -533,6 +557,8 @@ Sets the font color for the symbol icon of all segmented button items that are n
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSymbolFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSymbolFontColor?: ColorMetrics-End-->
@@ -542,8 +568,7 @@ Sets the font color for the symbol icon of all segmented button items that are n
 ## itemSymbolFontSize
 
 ```TypeScript
-@Param
-    readonly itemSymbolFontSize?: LengthMetrics
+readonly itemSymbolFontSize?: LengthMetrics
 ```
 
 Sets the font size for the symbol icon of all segmented button.
@@ -554,6 +579,8 @@ Sets the font size for the symbol icon of all segmented button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSymbolFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSymbolFontSize?: LengthMetrics-End-->
@@ -563,8 +590,7 @@ Sets the font size for the symbol icon of all segmented button.
 ## languageDirection
 
 ```TypeScript
-@Param
-    readonly languageDirection?: Direction
+readonly languageDirection?: Direction
 ```
 
 Sets the language direction of the segmented button.
@@ -575,6 +601,8 @@ Sets the language direction of the segmented button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly languageDirection?: Direction--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly languageDirection?: Direction-End-->
@@ -584,8 +612,7 @@ Sets the language direction of the segmented button.
 ## onItemClicked
 
 ```TypeScript
-@Event
-    readonly onItemClicked?: Callback<int>
+readonly onItemClicked?: Callback<int>
 ```
 
 Sets the callback function will be invoked when the item of the segmented button is clicked.
@@ -596,6 +623,8 @@ Sets the callback function will be invoked when the item of the segmented button
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiCapsuleSegmentButtonV2-@Event    readonly onItemClicked?: Callback<int>--><!--Device-MultiCapsuleSegmentButtonV2-@Event    readonly onItemClicked?: Callback<int>-End-->
@@ -605,9 +634,7 @@ Sets the callback function will be invoked when the item of the segmented button
 ## selectedIndexes
 
 ```TypeScript
-@Require
-    @Param
-    readonly selectedIndexes: int[]
+readonly selectedIndexes: int[]
 ```
 
 Sets the selection of the segmented button.
@@ -617,6 +644,8 @@ Sets the selection of the segmented button.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

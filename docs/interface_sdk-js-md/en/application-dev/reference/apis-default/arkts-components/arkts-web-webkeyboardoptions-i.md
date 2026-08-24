@@ -1,8 +1,6 @@
 # WebKeyboardOptions
 
-Defines the web keyboard options when onInterceptKeyboardAttach event return.
-
-@interface WebKeyboardOptions
+Defines the web keyboard options when onInterceptKeyboardAttach event return.@interface WebKeyboardOptions
 
 **Since:** 23
 

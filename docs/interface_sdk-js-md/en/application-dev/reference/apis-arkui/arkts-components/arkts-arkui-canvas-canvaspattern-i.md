@@ -1,8 +1,6 @@
 # CanvasPattern
 
-Describes an opaque object of a template, which is created using the createPattern() method.
-
-@interface CanvasPattern
+Describes an opaque object of a template, which is created using the createPattern() method.@interface CanvasPattern
 
 **Since:** 23
 

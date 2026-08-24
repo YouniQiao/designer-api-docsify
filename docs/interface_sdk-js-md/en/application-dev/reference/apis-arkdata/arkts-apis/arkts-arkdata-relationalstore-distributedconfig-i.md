@@ -74,9 +74,7 @@ Specifies the asset temp path.
 asyncDownloadAsset?: boolean
 ```
 
-Whether to download assets synchronously or asynchronously when device-cloud sync is being performed for the current RDB store. The value **true** means to use an asynchronous task to download assets after all data is downloaded; **false** means to download assets synchronously.
-
-Default value: **false**.
+Whether to download assets synchronously or asynchronously when device-cloud sync is being performed for the current RDB store. The value **true** means to use an asynchronous task to download assets after all data is downloaded; **false** means to download assets synchronously.Default value: **false**.
 
 **Type:** boolean
 

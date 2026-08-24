@@ -1,8 +1,6 @@
 # ListItemGroupModifier
 
-Defines ListItemGroup Modifier
-
-@extends ListItemGroupAttribute @implements AttributeModifier&lt;ListItemGroupAttribute&gt;
+Defines ListItemGroup Modifier@extends ListItemGroupAttribute @implements AttributeModifier&lt;ListItemGroupAttribute&gt;
 
 **Inheritance/Implementation:** ListItemGroupModifier extends ListItemGroupAttribute and implements AttributeModifier<ListItemGroupAttribute>
 

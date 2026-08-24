@@ -26,8 +26,7 @@ static back(options?: BackRouterOptions): void
 
 Returns to the previous or a specified page.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > In the example, the **uri** field indicates the page route, which is specified by the **pages** list in the
 > configuration file.
 
@@ -333,8 +332,7 @@ static push(options: RouterOptions): void
 
 Navigates to a specified page in the application.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The page routing stack supports a maximum of 32 pages.
 
 **Since:** 3

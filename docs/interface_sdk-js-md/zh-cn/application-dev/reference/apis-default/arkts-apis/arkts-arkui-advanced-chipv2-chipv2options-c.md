@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export class ChipV2Options--><!--Device-unnamed-export class ChipV2Options-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ ChipV2Options的构造函数
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 为Chip设置可访问性描述。
@@ -54,6 +55,8 @@ ChipV2Options的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-ChipV2Options-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -63,8 +66,7 @@ ChipV2Options的构造函数
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 设置Chip的无障碍级别。
@@ -75,6 +77,8 @@ ChipV2Options的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public accessibilityLevel?: string--><!--Device-ChipV2Options-@Trace  public accessibilityLevel?: string-End-->
@@ -84,8 +88,7 @@ ChipV2Options的构造函数
 ## accessibilitySelectedType
 
 ```TypeScript
-@Trace
-  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType
+public accessibilitySelectedType?: ChipV2AccessibilitySelectedType
 ```
 
 为Chip设置无障碍选择类型。
@@ -96,6 +99,8 @@ ChipV2Options的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType--><!--Device-ChipV2Options-@Trace  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType-End-->
@@ -105,8 +110,7 @@ ChipV2Options的构造函数
 ## activated
 
 ```TypeScript
-@Trace
-  public activated?: boolean
+public activated?: boolean
 ```
 
 设置Chip是否处于激活状态。
@@ -117,6 +121,8 @@ ChipV2Options的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public activated?: boolean--><!--Device-ChipV2Options-@Trace  public activated?: boolean-End-->
@@ -126,8 +132,7 @@ ChipV2Options的构造函数
 ## activatedBackgroundColor
 
 ```TypeScript
-@Trace
-  public activatedBackgroundColor?: ColorMetrics
+public activatedBackgroundColor?: ColorMetrics
 ```
 
 Chip激活时的背景色。
@@ -138,6 +143,8 @@ Chip激活时的背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public activatedBackgroundColor?: ColorMetrics--><!--Device-ChipV2Options-@Trace  public activatedBackgroundColor?: ColorMetrics-End-->
@@ -147,8 +154,7 @@ Chip激活时的背景色。
 ## activatedBackgroundSystemMaterial
 
 ```TypeScript
-@Trace
-  public activatedBackgroundSystemMaterial?: uiMaterial.Material
+public activatedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
 为激活的组件设置系统样式材质。不同的材料有不同的效果， 它可以影响组件的背景颜色、边框、阴影和其他视觉属性。
@@ -159,6 +165,8 @@ Chip激活时的背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public activatedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-@Trace  public activatedBackgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -168,8 +176,7 @@ Chip激活时的背景色。
 ## allowClose
 
 ```TypeScript
-@Trace
-  public allowClose?: boolean
+public allowClose?: boolean
 ```
 
 显示关闭图标。
@@ -180,6 +187,8 @@ Chip激活时的背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public allowClose?: boolean--><!--Device-ChipV2Options-@Trace  public allowClose?: boolean-End-->
@@ -189,8 +198,7 @@ Chip激活时的背景色。
 ## backgroundColor
 
 ```TypeScript
-@Trace
-  public backgroundColor?: ColorMetrics
+public backgroundColor?: ColorMetrics
 ```
 
 Chip背景色。
@@ -201,6 +209,8 @@ Chip背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public backgroundColor?: ColorMetrics--><!--Device-ChipV2Options-@Trace  public backgroundColor?: ColorMetrics-End-->
@@ -210,8 +220,7 @@ Chip背景色。
 ## backgroundSystemMaterial
 
 ```TypeScript
-@Trace
-  public backgroundSystemMaterial?: uiMaterial.Material
+public backgroundSystemMaterial?: uiMaterial.Material
 ```
 
 为组件设置系统样式材质。不同的材料有不同的效果，会影响 组件的背景颜色、边框、阴影和其他视觉属性。
@@ -222,6 +231,8 @@ Chip背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-@Trace  public backgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -231,8 +242,7 @@ Chip背景色。
 ## borderRadius
 
 ```TypeScript
-@Trace
-  public borderRadius?: LengthMetrics
+public borderRadius?: LengthMetrics
 ```
 
 Chip半径。
@@ -243,6 +253,8 @@ Chip半径。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public borderRadius?: LengthMetrics--><!--Device-ChipV2Options-@Trace  public borderRadius?: LengthMetrics-End-->
@@ -252,8 +264,7 @@ Chip半径。
 ## closeIcon
 
 ```TypeScript
-@Trace
-  public closeIcon?: ChipV2CloseIcon
+public closeIcon?: ChipV2CloseIcon
 ```
 
 当'allowClose'为true时，为默认关闭图标设置config。
@@ -264,6 +275,8 @@ Chip半径。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public closeIcon?: ChipV2CloseIcon--><!--Device-ChipV2Options-@Trace  public closeIcon?: ChipV2CloseIcon-End-->
@@ -273,8 +286,7 @@ Chip半径。
 ## direction
 
 ```TypeScript
-@Trace
-  public direction?: Direction
+public direction?: Direction
 ```
 
 当前Chip的方向属性。
@@ -285,6 +297,8 @@ Chip半径。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public direction?: Direction--><!--Device-ChipV2Options-@Trace  public direction?: Direction-End-->
@@ -294,8 +308,7 @@ Chip半径。
 ## enabled
 
 ```TypeScript
-@Trace
-  public enabled?: boolean
+public enabled?: boolean
 ```
 
 Chip使能。
@@ -306,6 +319,8 @@ Chip使能。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public enabled?: boolean--><!--Device-ChipV2Options-@Trace  public enabled?: boolean-End-->
@@ -315,8 +330,7 @@ Chip使能。
 ## fontSize
 
 ```TypeScript
-@Trace
-  public fontSize?: LengthMetrics
+public fontSize?: LengthMetrics
 ```
 
 设置标签文本和关闭图标的字体大小。
@@ -327,6 +341,8 @@ Chip使能。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public fontSize?: LengthMetrics--><!--Device-ChipV2Options-@Trace  public fontSize?: LengthMetrics-End-->
@@ -336,8 +352,7 @@ Chip使能。
 ## label
 
 ```TypeScript
-@Trace
-  public label: ChipV2Label
+public label: ChipV2Label
 ```
 
 Chip标签。
@@ -348,6 +363,8 @@ Chip标签。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public label: ChipV2Label--><!--Device-ChipV2Options-@Trace  public label: ChipV2Label-End-->
@@ -357,8 +374,7 @@ Chip标签。
 ## maxFontScale
 
 ```TypeScript
-@Trace
-  public maxFontScale?: double | Resource
+public maxFontScale?: double | Resource
 ```
 
 Chip的最大字体比例。
@@ -369,6 +385,8 @@ Chip的最大字体比例。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public maxFontScale?: double | Resource--><!--Device-ChipV2Options-@Trace  public maxFontScale?: double | Resource-End-->
@@ -378,8 +396,7 @@ Chip的最大字体比例。
 ## minFontScale
 
 ```TypeScript
-@Trace
-  public minFontScale?: double | Resource
+public minFontScale?: double | Resource
 ```
 
 Chip的最小字体比例。
@@ -389,6 +406,8 @@ Chip的最小字体比例。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -439,8 +458,7 @@ Chip关闭时触发的回调。
 ## padding
 
 ```TypeScript
-@Trace
-  public padding?: LocalizedPadding
+public padding?: LocalizedPadding
 ```
 
 Chip填充大小。
@@ -451,6 +469,8 @@ Chip填充大小。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public padding?: LocalizedPadding--><!--Device-ChipV2Options-@Trace  public padding?: LocalizedPadding-End-->
@@ -460,8 +480,7 @@ Chip填充大小。
 ## prefixIcon
 
 ```TypeScript
-@Trace
-  public prefixIcon?: ChipV2Icon
+public prefixIcon?: ChipV2Icon
 ```
 
 Chip前缀图标。
@@ -472,6 +491,8 @@ Chip前缀图标。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public prefixIcon?: ChipV2Icon--><!--Device-ChipV2Options-@Trace  public prefixIcon?: ChipV2Icon-End-->
@@ -481,8 +502,7 @@ Chip前缀图标。
 ## size
 
 ```TypeScript
-@Trace
-  public size?: ChipV2Size | SizeT<LengthMetrics>
+public size?: ChipV2Size | SizeT<LengthMetrics>
 ```
 
 Chip尺寸。
@@ -493,6 +513,8 @@ Chip尺寸。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2Options-@Trace  public size?: ChipV2Size | SizeT<LengthMetrics>--><!--Device-ChipV2Options-@Trace  public size?: ChipV2Size | SizeT<LengthMetrics>-End-->
@@ -502,8 +524,7 @@ Chip尺寸。
 ## suffixIcon
 
 ```TypeScript
-@Trace
-  public suffixIcon?: ChipV2Icon
+public suffixIcon?: ChipV2Icon
 ```
 
 Chip后缀图标。
@@ -513,6 +534,8 @@ Chip后缀图标。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

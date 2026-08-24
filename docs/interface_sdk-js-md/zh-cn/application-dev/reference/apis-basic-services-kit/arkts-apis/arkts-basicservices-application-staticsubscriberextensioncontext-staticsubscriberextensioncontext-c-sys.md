@@ -1,8 +1,6 @@
 # StaticSubscriberExtensionContext（系统接口）
 
-StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上下文环境，继承自ExtensionContext。
-
-StaticSubscriberExtensionContext模块提供StaticSubscriberExtensionAbility具有的接口和能力。
+StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上下文环境，继承自ExtensionContext。StaticSubscriberExtensionContext模块提供StaticSubscriberExtensionAbility具有的接口和能力。
 
 **继承/实现关系：** StaticSubscriberExtensionContext extends ExtensionContext
 

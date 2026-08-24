@@ -22,8 +22,7 @@ import { osAccount } from '@kit.BasicServicesKit';
 isReused?: boolean
 ```
 
-Whether the authorization result is reused. The default value is **undefined**.
-
+Whether the authorization result is reused. The default value is **undefined**.  
 **true**: The authorization result is reused. **false**: The authorization result is not reused.
 
 **Type:** boolean

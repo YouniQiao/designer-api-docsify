@@ -1,8 +1,6 @@
 # RatingModifier
 
-Defines Rating Modifier
-
-@extends RatingAttribute @implements AttributeModifier&lt;RatingAttribute&gt;
+Defines Rating Modifier@extends RatingAttribute @implements AttributeModifier&lt;RatingAttribute&gt;
 
 **Inheritance/Implementation:** RatingModifier extends RatingAttribute and implements AttributeModifier<RatingAttribute>
 

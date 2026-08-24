@@ -6,6 +6,8 @@ The **ArcSlider** component is designed for circular screens on wearables to qui
 
 **Since:** 18
 
+**Decorator:** @Component
+
 <!--Device-unnamed-declare struct ArcSlider--><!--Device-unnamed-declare struct ArcSlider-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -22,9 +24,7 @@ import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstru
 options: ArcSliderOptions
 ```
 
-Parameters of the arc slider.
-
-Default value: default values of all properties of [ArcSliderOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcslideroptions-c.md)
+Parameters of the arc slider.Default value: default values of all properties of [ArcSliderOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcslideroptions-c.md)
 
 **Type:** [ArcSliderOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcslideroptions-c.md)
 

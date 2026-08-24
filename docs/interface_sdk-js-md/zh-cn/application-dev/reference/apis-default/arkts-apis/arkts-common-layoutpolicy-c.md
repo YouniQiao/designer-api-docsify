@@ -16,9 +16,7 @@ Defines the policy of Layout
 static readonly fixAtIdealSize: LayoutPolicy
 ```
 
-The component fills its content which means its size is as large as its children.
-
-@readonly @static
+The component fills its content which means its size is as large as its children.@readonly @static
 
 **类型：** [LayoutPolicy](arkts-common-layoutpolicy-c.md)
 
@@ -38,9 +36,7 @@ The component fills its content which means its size is as large as its children
 static readonly matchParent: LayoutPolicy
 ```
 
-The component fills its parent which means its size is as large as its parent.
-
-@readonly @static
+The component fills its parent which means its size is as large as its parent.@readonly @static
 
 **类型：** [LayoutPolicy](arkts-common-layoutpolicy-c.md)
 
@@ -60,9 +56,7 @@ The component fills its parent which means its size is as large as its parent.
 static readonly wrapContent: LayoutPolicy
 ```
 
-The component fills its content which means its size is as large as its children but it is constained by its parent.
-
-@readonly @static
+The component fills its content which means its size is as large as its children but it is constained by its parent.@readonly @static
 
 **类型：** [LayoutPolicy](arkts-common-layoutpolicy-c.md)
 

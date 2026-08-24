@@ -12,7 +12,6 @@ Describes the flashlight status information.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## isTorchActive

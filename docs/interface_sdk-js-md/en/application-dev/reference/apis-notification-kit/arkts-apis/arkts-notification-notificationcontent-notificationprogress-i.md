@@ -2,8 +2,7 @@
 
 Describes the notification progress, which is used to display progress bar information in the live view.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Since:** 23
@@ -34,8 +33,7 @@ Current value of the progress.
 isPercentage?: boolean
 ```
 
-Whether to display the progress as a percentage. The value defaults to **false**.
-
+Whether to display the progress as a percentage. The value defaults to **false**.  
 - **true**: The progress is displayed as a percentage. - **false**: The progress is displayed as an absolute value.
 
 **Type:** boolean

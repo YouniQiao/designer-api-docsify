@@ -58,8 +58,7 @@ diskId: string
 fsType: string
 ```
 
-文件系统的类型，常见有ext2、vfat、NTFS等。
-
+文件系统的类型，常见有ext2、vfat、NTFS等。  
 **说明：**从API version 24开始，支持ISO9660、UDF。
 
 **类型：** string
@@ -132,15 +131,7 @@ removable: boolean
 state: int
 ```
 
-卷设备状态标识：
-
-0：卸载状态 UNMOUNTED。
-
-1：检查状态 CHECKING。
-
-2：挂载状态 MOUNTED。
-
-3：正在弹出状态 EJECTING。
+卷设备状态标识：0：卸载状态 UNMOUNTED。1：检查状态 CHECKING。2：挂载状态 MOUNTED。3：正在弹出状态 EJECTING。
 
 **类型：** int
 

@@ -21,9 +21,7 @@ Provides data item configuration for the **GridObjectSortComponent** component.
 id: int | string
 ```
 
-Data ID, which must be unique.
-
-The default value is an empty string.
+Data ID, which must be unique.The default value is an empty string.
 
 **Type:** int \| string
 

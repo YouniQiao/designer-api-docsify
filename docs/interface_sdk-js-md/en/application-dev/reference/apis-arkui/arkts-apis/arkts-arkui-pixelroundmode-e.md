@@ -1,8 +1,6 @@
 # PixelRoundMode
 
-Pixel Round Mode
-
-@enum { number }
+Pixel Round Mode@enum { number }
 
 **Since:** 18
 

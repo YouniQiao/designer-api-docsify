@@ -2,8 +2,7 @@
 
 应用配置的入口图标和名称信息，可以通过 [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md) 获取。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本模块为系统接口。
 
 **起始版本：** 23

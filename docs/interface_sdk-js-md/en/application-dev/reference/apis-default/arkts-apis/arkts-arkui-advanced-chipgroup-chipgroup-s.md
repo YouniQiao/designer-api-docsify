@@ -6,6 +6,8 @@ Defines chipGroup.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ChipGroup--><!--Device-unnamed-export declare struct ChipGroup-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Defines chipGroup.
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## backgroundSystemMaterial
 
 ```TypeScript
-@PropRef
-  backgroundSystemMaterial?: uiMaterial.Material
+backgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -49,6 +51,8 @@ Set system-styled materials for the component. Different materials have differen
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroup-@PropRef  backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroup-@PropRef  backgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -58,8 +62,7 @@ Set system-styled materials for the component. Different materials have differen
 ## chipGroupPadding
 
 ```TypeScript
-@PropRef
-  chipGroupPadding?: ChipGroupPaddingOptions
+chipGroupPadding?: ChipGroupPaddingOptions
 ```
 
 Chip group padding (only support top and bottom).
@@ -70,6 +73,8 @@ Chip group padding (only support top and bottom).
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroup-@PropRef  chipGroupPadding?: ChipGroupPaddingOptions--><!--Device-ChipGroup-@PropRef  chipGroupPadding?: ChipGroupPaddingOptions-End-->
@@ -79,8 +84,7 @@ Chip group padding (only support top and bottom).
 ## chipGroupSpace
 
 ```TypeScript
-@PropRef
-  chipGroupSpace?: ChipGroupSpaceOptions
+chipGroupSpace?: ChipGroupSpaceOptions
 ```
 
 Chip group space.
@@ -91,6 +95,8 @@ Chip group space.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroup-@PropRef  chipGroupSpace?: ChipGroupSpaceOptions--><!--Device-ChipGroup-@PropRef  chipGroupSpace?: ChipGroupSpaceOptions-End-->
@@ -100,9 +106,7 @@ Chip group space.
 ## items
 
 ```TypeScript
-@Require
-  @PropRef
-  items: ChipGroupItemOptions[]
+items: ChipGroupItemOptions[]
 ```
 
 Chip item.
@@ -113,6 +117,8 @@ Chip item.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Require, @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroup-@Require  @PropRef  items: ChipGroupItemOptions[]--><!--Device-ChipGroup-@Require  @PropRef  items: ChipGroupItemOptions[]-End-->
@@ -122,8 +128,7 @@ Chip item.
 ## itemStyle
 
 ```TypeScript
-@PropRef
-  itemStyle?: ChipItemStyle
+itemStyle?: ChipItemStyle
 ```
 
 Chip item style.
@@ -134,6 +139,8 @@ Chip item style.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroup-@PropRef  itemStyle?: ChipItemStyle--><!--Device-ChipGroup-@PropRef  itemStyle?: ChipItemStyle-End-->
@@ -143,8 +150,7 @@ Chip item style.
 ## multiple
 
 ```TypeScript
-@PropRef
-  multiple?: boolean
+multiple?: boolean
 ```
 
 Support multiple chip item selection.
@@ -154,6 +160,8 @@ Support multiple chip item selection.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,8 +192,7 @@ Chip group callback. when chip status is changed, this onChange is called.
 ## selectedBackgroundSystemMaterial
 
 ```TypeScript
-@PropRef
-  selectedBackgroundSystemMaterial?: uiMaterial.Material
+selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component when selected. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -196,6 +203,8 @@ Set system-styled materials for the component when selected. Different materials
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroup-@PropRef  selectedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroup-@PropRef  selectedBackgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -205,8 +214,7 @@ Set system-styled materials for the component when selected. Different materials
 ## selectedIndexes
 
 ```TypeScript
-@PropRef
-  selectedIndexes?: Array<int>
+selectedIndexes?: Array<int>
 ```
 
 Default selected chip item indexes.
@@ -217,6 +225,8 @@ Default selected chip item indexes.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipGroup-@PropRef  selectedIndexes?: Array<int>--><!--Device-ChipGroup-@PropRef  selectedIndexes?: Array<int>-End-->
@@ -226,8 +236,7 @@ Default selected chip item indexes.
 ## suffix
 
 ```TypeScript
-@BuilderParam
-  suffix?: ChipGroupSuffixBuilder
+suffix?: ChipGroupSuffixBuilder
 ```
 
 The builder function which will be rendered in the suffix of ChipGroup.
@@ -237,6 +246,8 @@ The builder function which will be rendered in the suffix of ChipGroup.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

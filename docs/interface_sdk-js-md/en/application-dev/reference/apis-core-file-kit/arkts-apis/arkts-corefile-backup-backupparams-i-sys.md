@@ -1,8 +1,6 @@
 # BackupParams (System API)
 
-Provides configuration parameters for backup and restore.
-
-@interface BackupParams
+Provides configuration parameters for backup and restore.@interface BackupParams
 
 **Since:** 23
 

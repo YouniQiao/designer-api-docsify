@@ -1,12 +1,13 @@
 # AtomicServiceWeb
 
-*AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities.
+**AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 
 **Since:** 12
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct AtomicServiceWeb--><!--Device-unnamed-export declare struct AtomicServiceWeb-End-->
 
@@ -21,8 +22,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorRecei
 ## controller
 
 ```TypeScript
-@ObjectLink
-  controller: AtomicServiceWebController
+controller: AtomicServiceWebController
 ```
 
 Sets the controller of the AtomicServiceWeb.
@@ -30,6 +30,8 @@ Sets the controller of the AtomicServiceWeb.
 **Type:** [AtomicServiceWebController](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md)
 
 **Since:** 12
+
+**Decorator:** @ObjectLink
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,8 +42,7 @@ Sets the controller of the AtomicServiceWeb.
 ## darkMode
 
 ```TypeScript
-@Prop
-  darkMode?: WebDarkMode
+darkMode?: WebDarkMode
 ```
 
 Sets the dark mode of Web.
@@ -49,6 +50,8 @@ Sets the dark mode of Web.
 **Type:** WebDarkMode
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -59,8 +62,7 @@ Sets the dark mode of Web.
 ## forceDarkAccess
 
 ```TypeScript
-@Prop
-  forceDarkAccess?: boolean
+forceDarkAccess?: boolean
 ```
 
 Sets whether to enable forced dark algorithm when the web is in dark mode.
@@ -68,6 +70,8 @@ Sets whether to enable forced dark algorithm when the web is in dark mode.
 **Type:** boolean
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,8 +82,7 @@ Sets whether to enable forced dark algorithm when the web is in dark mode.
 ## mixedMode
 
 ```TypeScript
-@Prop
-  mixedMode?: MixedMode
+mixedMode?: MixedMode
 ```
 
 Sets how to load HTTP and HTTPS content.
@@ -87,6 +90,8 @@ Sets how to load HTTP and HTTPS content.
 **Type:** MixedMode
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -115,8 +120,7 @@ The navPathStack to control page route in Navigation and NavDestination.
 ## nestedScroll
 
 ```TypeScript
-@Prop
-  nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
+nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 ```
 
 Sets the nested scroll options.
@@ -124,6 +128,8 @@ Sets the nested scroll options.
 **Type:** NestedScrollOptions \| NestedScrollOptionsExt
 
 **Since:** 15
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

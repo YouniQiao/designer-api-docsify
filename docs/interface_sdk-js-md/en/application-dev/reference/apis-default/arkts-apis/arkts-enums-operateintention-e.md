@@ -1,8 +1,6 @@
 # OperateIntention
 
-Define the smart gesture's operation intention.
-
-@enum { number }
+Define the smart gesture's operation intention.@enum { number }
 
 **Since:** 26.0.0
 

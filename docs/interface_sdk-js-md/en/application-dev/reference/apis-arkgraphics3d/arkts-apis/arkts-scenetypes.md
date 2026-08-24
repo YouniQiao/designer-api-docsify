@@ -6,12 +6,12 @@
 
 | Name | Description |
 | --- | --- |
-| [CubeGeometry](arkts-arkgraphics3d-scenetypes-cubegeometry-c.md) | A cube geometry type that inherits from GeometryDefinition. |
-| [CustomGeometry](arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | A custom geometry type that inherits from GeometryDefinition. |
+| [CubeGeometry](arkts-arkgraphics3d-scenetypes-cubegeometry-c.md) | A cube geometry type that inherits from GeometryDefinition.@extends GeometryDefinition |
+| [CustomGeometry](arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | A custom geometry type that inherits from GeometryDefinition.@extends GeometryDefinition |
 | [CylinderGeometry](arkts-arkgraphics3d-scenetypes-cylindergeometry-c.md) | A cylinder geometry type that inherits from GeometryDefinition. |
 | [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md) | An abstract class used to define the properties of specific geometry types. |
-| [PlaneGeometry](arkts-arkgraphics3d-scenetypes-planegeometry-c.md) | A plane geometry type that inherits from GeometryDefinition. |
-| [SphereGeometry](arkts-arkgraphics3d-scenetypes-spheregeometry-c.md) | A sphere geometry type that inherits from GeometryDefinition. |
+| [PlaneGeometry](arkts-arkgraphics3d-scenetypes-planegeometry-c.md) | A plane geometry type that inherits from GeometryDefinition.@extends GeometryDefinition |
+| [SphereGeometry](arkts-arkgraphics3d-scenetypes-spheregeometry-c.md) | A sphere geometry type that inherits from GeometryDefinition.@extends GeometryDefinition |
 
 ### Interfaces
 
@@ -30,9 +30,9 @@
 
 | Name | Description |
 | --- | --- |
-| [GeometryType](arkts-arkgraphics3d-scenetypes-geometrytype-e.md) | Enumerates the geometry types. |
-| [PrimitiveTopology](arkts-arkgraphics3d-scenetypes-primitivetopology-e.md) | Enumerates the vertex processing methods. |
-| [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md) | Enumerates the rendering pipeline types. |
+| [GeometryType](arkts-arkgraphics3d-scenetypes-geometrytype-e.md) | Enumerates the geometry types.@enum { int } |
+| [PrimitiveTopology](arkts-arkgraphics3d-scenetypes-primitivetopology-e.md) | Enumerates the vertex processing methods.@enum { int } |
+| [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md) | Enumerates the rendering pipeline types.@enum { int } |
 | [ShadowAlgorithmType](arkts-arkgraphics3d-scenetypes-shadowalgorithmtype-e.md) | Enumerates the types of shadow algorithms. |
 
 ### Types

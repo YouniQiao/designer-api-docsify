@@ -1,6 +1,6 @@
 # StreamUsage
 
-表示播放音频流类型的枚举。
+枚举，音频流使用类型。
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@
 STREAM_USAGE_UNKNOWN = 0
 ```
 
-未知类型。
+未知类型。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -30,9 +30,7 @@ STREAM_USAGE_UNKNOWN = 0
 STREAM_USAGE_MEDIA = 1
 ```
 
-媒体。
-
-从API version 7开始支持，从API version 10开始废弃，建议使用该枚举中的STREAM_USAGE_MUSIC、STREAM_USAGE_MOVIE、STREAM_USAGE_GAME或 STREAM_USAGE_AUDIOBOOK替代。
+媒体。从API version 7开始支持，从API version 10开始废弃，建议使用该枚举中的STREAM_USAGE_MUSIC、STREAM_USAGE_MOVIE、STREAM_USAGE_GAME或 STREAM_USAGE_AUDIOBOOK替代。
 
 **起始版本：** 7
 
@@ -50,7 +48,7 @@ STREAM_USAGE_MEDIA = 1
 STREAM_USAGE_MUSIC = 1
 ```
 
-音乐。
+音乐。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -66,7 +64,7 @@ STREAM_USAGE_MUSIC = 1
 STREAM_USAGE_VOICE_COMMUNICATION = 2
 ```
 
-VoIP语音通话（该流类型起播时，会触发开启3A算法）。
+VoIP语音通话（该流类型起播时，会触发开启3A算法）。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -82,7 +80,7 @@ VoIP语音通话（该流类型起播时，会触发开启3A算法）。
 STREAM_USAGE_VOICE_ASSISTANT = 3
 ```
 
-语音播报。
+语音播报。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -98,7 +96,7 @@ STREAM_USAGE_VOICE_ASSISTANT = 3
 STREAM_USAGE_ALARM = 4
 ```
 
-闹钟。
+闹钟。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -114,7 +112,7 @@ STREAM_USAGE_ALARM = 4
 STREAM_USAGE_VOICE_MESSAGE = 5
 ```
 
-语音消息。
+语音消息。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -130,9 +128,7 @@ STREAM_USAGE_VOICE_MESSAGE = 5
 STREAM_USAGE_NOTIFICATION_RINGTONE = 6
 ```
 
-通知铃声。
-
-从API version 7开始支持，从API version 10开始废弃，建议使用该枚举中的STREAM_USAGE_RINGTONE替代。
+通知铃声。从API version 7开始支持，从API version 10开始废弃，建议使用该枚举中的STREAM_USAGE_RINGTONE替代。
 
 **起始版本：** 7
 
@@ -150,7 +146,7 @@ STREAM_USAGE_NOTIFICATION_RINGTONE = 6
 STREAM_USAGE_RINGTONE = 6
 ```
 
-铃声。
+铃声。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -166,7 +162,7 @@ STREAM_USAGE_RINGTONE = 6
 STREAM_USAGE_NOTIFICATION = 7
 ```
 
-通知音。
+通知音。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -182,7 +178,7 @@ STREAM_USAGE_NOTIFICATION = 7
 STREAM_USAGE_ACCESSIBILITY = 8
 ```
 
-无障碍。
+无障碍。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -198,7 +194,7 @@ STREAM_USAGE_ACCESSIBILITY = 8
 STREAM_USAGE_MOVIE = 10
 ```
 
-电影或视频。
+电影或视频。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -214,7 +210,7 @@ STREAM_USAGE_MOVIE = 10
 STREAM_USAGE_GAME = 11
 ```
 
-游戏。
+游戏。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -230,7 +226,7 @@ STREAM_USAGE_GAME = 11
 STREAM_USAGE_AUDIOBOOK = 12
 ```
 
-有声读物（包括听书、相声、评书）、听新闻、播客等。
+有声读物（包括听书、相声、评书）、听新闻、播客等。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -246,7 +242,7 @@ STREAM_USAGE_AUDIOBOOK = 12
 STREAM_USAGE_NAVIGATION = 13
 ```
 
-导航。
+导航。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -262,7 +258,7 @@ STREAM_USAGE_NAVIGATION = 13
 STREAM_USAGE_VIDEO_COMMUNICATION = 17
 ```
 
-VoIP视频通话（该流类型起播时，会触发开启3A算法）。
+VoIP视频通话（该流类型起播时，会触发开启3A算法）。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 

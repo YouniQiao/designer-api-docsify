@@ -1,8 +1,6 @@
 # SymbolSpan属性/事件
 
-不支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)，支持以下属性。
-
-不支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)。
+不支持通用属性，支持以下属性。不支持通用事件。
 
 **继承/实现关系：** SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
 
@@ -47,14 +45,9 @@ attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>)
 effectStrategy(value: SymbolEffectStrategy)
 ```
 
-设置SymbolSpan动效策略。未通过该接口设置时，默认动效策略为SymbolEffectStrategy.NONE。
+设置SymbolSpan动效策略。未通过该接口设置时，默认动效策略为SymbolEffectStrategy.NONE。NONE表示无动效，适用于静态展示场景；SCALE表示整体缩放动效，适用于需要吸引用户注意力的场景，如按钮点击反馈；HIERARCHICAL表示层级动效，适用于需要突出图标层次感的场景。不同动效策略效果可以参考 [示例1（设置渲染和动效策略）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolSpan.md#示例1设置渲染和动效策略)。
 
-NONE表示无动效，适用于静态展示场景；SCALE表示整体缩放动效，适用于需要吸引用户注意力的场景，如按钮点击反馈；HIERARCHICAL表示层级动效，适用于需要突出图标层次感的场景。
-
-不同动效策略效果可以参考 [示例1（设置渲染和动效策略）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolSpan.md#示例1设置渲染和动效策略)。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -83,8 +76,7 @@ fontColor(value: Array<ResourceColor>)
 
 设置SymbolSpan组件颜色。未通过该接口设置时，默认颜色随[renderingStrategy](#renderingstrategy)变化，单色渲染策略（SINGLE）下默 认为单色；多色渲染策略（MULTIPLE_COLOR）和分层渲染策略（MULTIPLE_OPACITY）下默认取图标资源预设的多色配置。具体说明请参考 SymbolRenderingStrategy。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -113,8 +105,7 @@ fontSize(value: number | string | Resource)
 
 设置SymbolSpan组件大小。设置string类型时，支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。未通过该接口设置时，默认组件大小为16fp。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -133,7 +124,7 @@ fontSize(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | SymbolSpan组件大小。 <br>取值范围：[0, +∞) <br>单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| value | number \| string \| Resource | 是 | SymbolSpan组件大小。 <br>取值范围：0, +∞) <br>单位：[fp |
 
 ## fontWeight
 
@@ -141,12 +132,9 @@ fontSize(value: number | string | Resource)
 fontWeight(value: number | FontWeight | string)
 ```
 
-设置SymbolSpan组件字体粗细。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对应数值400）。
+设置SymbolSpan组件字体粗细。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对应数值400）。sys.symbol.ohos_lungs图标不支持设置fontWeight。
 
-sys.symbol.ohos_lungs图标不支持设置fontWeight。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -173,9 +161,7 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs)
 ```
 
-设置SymbolSpan组件字体粗细，支持通过FontWeightConfigs配置是否开启可变字重调节、是否开启随设备的字体粗细级别自动更新字重。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对 应数值400）。
-
-sys.symbol.ohos_lungs图标不支持设置fontWeight。
+设置SymbolSpan组件字体粗细，支持通过FontWeightConfigs配置是否开启可变字重调节、是否开启随设备的字体粗细级别自动更新字重。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对 应数值400）。sys.symbol.ohos_lungs图标不支持设置fontWeight。
 
 **起始版本：** 26.0.0
 
@@ -202,12 +188,9 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 renderingStrategy(value: SymbolRenderingStrategy)
 ```
 
-设置SymbolSpan渲染策略。未通过该接口设置时，默认渲染策略为SymbolRenderingStrategy.SINGLE。
+设置SymbolSpan渲染策略。未通过该接口设置时，默认渲染策略为SymbolRenderingStrategy.SINGLE。SINGLE表示单色渲染，适用于需要统一颜色的图标显示场景；MULTIPLE_COLOR表示多色渲染，适用于需要展示图标多层不同颜色的场景；MULTIPLE_OPACITY表示分层渲染，适用于需要展示图标层次效果的场景。
 
-SINGLE表示单色渲染，适用于需要统一颜色的图标显示场景；MULTIPLE_COLOR表示多色渲染，适用于需要展示图标多层不同颜色的场景；MULTIPLE_OPACITY表示分层渲染，适用于需要展示图标层次效果的场景。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11

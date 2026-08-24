@@ -1,8 +1,6 @@
 # RectOptions
 
-Define options used to construct a rectangle.
-
-@interface RectOptions
+Define options used to construct a rectangle.@interface RectOptions
 
 **Since:** 23
 

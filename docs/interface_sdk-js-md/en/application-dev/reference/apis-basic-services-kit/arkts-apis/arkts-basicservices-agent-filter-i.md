@@ -12,7 +12,6 @@ Defines the filter criteria.
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## action
@@ -21,8 +20,7 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 action?: Action
 ```
 
-Task action.
-
+Task action.  
 - **UPLOAD**: Upload tasks. - **DOWNLOAD**: Download tasks. - If this parameter is not set, all tasks are queried.
 
 **Type:** Action
@@ -71,8 +69,7 @@ Unix timestamp of the end time, in milliseconds. The default value is the invoki
 mode?: Mode
 ```
 
-Task mode.
-
+Task mode.  
 - **FOREGROUND**: foreground task. - **BACKGROUND**: background task. - If this parameter is not set, all tasks are queried.
 
 **Type:** [Mode](arkts-basicservices-agent-mode-e.md)

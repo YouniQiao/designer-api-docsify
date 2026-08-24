@@ -1,8 +1,6 @@
 # ImageSpanAlignment
 
-The alignment of ImageSpan
-
-@enum { number }
+The alignment of ImageSpan@enum { number }
 
 **起始版本：** 23
 

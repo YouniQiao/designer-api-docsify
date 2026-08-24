@@ -2,12 +2,9 @@
 
 A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md).
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 15.
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 15.&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 

@@ -1,8 +1,6 @@
 # CalendarPickerAttribute
 
-Defines the CalendarPicker component attribute functions.
-
-@extends CommonMethod @interface CalendarPickerAttribute
+Defines the CalendarPicker component attribute functions.@extends CommonMethod @interface CalendarPickerAttribute
 
 **Inheritance/Implementation:** CalendarPickerAttribute extends CommonMethod
 

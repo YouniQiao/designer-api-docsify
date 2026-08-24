@@ -1,7 +1,6 @@
 # Select
 
 The **Select** component provides a drop-down menu that allows users to select among multiple options.
-
 > **NOTE**
 
 ## Child Components

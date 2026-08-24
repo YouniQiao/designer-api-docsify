@@ -1,8 +1,6 @@
 # RadioStyle
 
-Set radio Style.
-
-@interface RadioStyle
+Set radio Style.@interface RadioStyle
 
 **Since:** 23
 

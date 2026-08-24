@@ -2,8 +2,7 @@
 
 ConsoleMessage的信息级别。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 在HTML5侧，调用console.log或console.info对应ConsoleMessage的信息级别都为MessageLevel.Info。
 
 **起始版本：** 8

@@ -1,8 +1,6 @@
 # Video properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** VideoAttribute extends CommonMethod<VideoAttribute>
 
@@ -25,8 +23,7 @@ analyzerConfig(config: ImageAnalyzerConfig)
 
 Sets the AI image analysis types, including subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 12
@@ -95,16 +92,10 @@ Sets whether to display the video playback control bar. This attribute can be dy
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier.
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier.After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.Note that if this attribute and the overlay attribute are both set, CustomBuilder specified in overlay has no effect.
 
-After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
-
-Note that if this attribute and the overlay attribute are both set, CustomBuilder specified in overlay has no effect.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 20.
-
 After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
 
 **Since:** 12
@@ -129,9 +120,7 @@ After this feature is enabled, the video automatically enters an analysis state 
 enableShortcutKey(enabled: boolean)
 ```
 
-Sets whether the component responds to keyboard shortcuts when it has focus. This attribute can be dynamically set using attributeModifier.
-
-Currently, the component can respond to the following keys when it is in focus: spacebar for playing or pausing the video, up or down arrow key for adjusting the video volume, and left or right arrow key for fast forwarding or rewinding the video.
+Sets whether the component responds to keyboard shortcuts when it has focus. This attribute can be dynamically set using attributeModifier.Currently, the component can respond to the following keys when it is in focus: spacebar for playing or pausing the video, up or down arrow key for adjusting the video volume, and left or right arrow key for fast forwarding or rewinding the video.
 
 **Since:** 15
 

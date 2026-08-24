@@ -14,8 +14,7 @@ function setPacUrl(pacUrl: string): void
 
 设置系统级代理自动配置（Proxy Auto Config，PAC）脚本地址。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 只支持设置脚本地址，不支持解析和启用代理功能，如需设置脚本并启用代理，则可调用[setPacFileUrl](arkts-network-connection-setpacfileurl-f.md)接口。
 
 **起始版本：** 15

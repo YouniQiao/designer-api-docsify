@@ -12,7 +12,6 @@ Represents detailed information about a certificate.
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## cert
@@ -117,7 +116,7 @@ Start date of a certificate. The value contains up to 32 bytes.
 serial: string
 ```
 
-Serial number of a certificate. The value contains up to 64 bytes. The value is a hexadecimal string, for example , **62C2CB4DE8405E96**.
+Serial number of a certificate. The value contains up to 64 bytes. The value is a hexadecimal string, for example, **62C2CB4DE8405E96**.
 
 **Type:** string
 

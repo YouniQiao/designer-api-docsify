@@ -1,8 +1,6 @@
 # DownloadDescription
 
-Enum for DownloadDescription
-
-@enum { int }
+Enum for DownloadDescription@enum { int }
 
 **Since:** 23
 

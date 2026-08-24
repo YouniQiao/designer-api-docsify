@@ -1,8 +1,6 @@
 # RatingConfiguration
 
-RatingConfiguration used by rating content modifier.
-
-@extends CommonConfiguration&lt;RatingConfiguration&gt; @interface RatingConfiguration
+RatingConfiguration used by rating content modifier.@extends CommonConfiguration&lt;RatingConfiguration&gt; @interface RatingConfiguration
 
 **Inheritance/Implementation:** RatingConfiguration extends CommonConfiguration<RatingConfiguration>
 

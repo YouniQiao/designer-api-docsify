@@ -1,8 +1,6 @@
 # ExtendableImage
 
-Defines the Extendable Image.
-
-@implements ImageAttribute
+Defines the Extendable Image.@implements ImageAttribute
 
 **Inheritance/Implementation:** ExtendableImage implements [ImageAttribute](arkts-image-attribute.md#imageattribute)
 
@@ -17,8 +15,7 @@ Defines the Extendable Image.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-  static $_instantiate<T extends ExtendableImage>(
+static $_instantiate<T extends ExtendableImage>(
     factory: ConstructorT<T>, 
     src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,
     imageAIOptions?: ImageAIOptions
@@ -30,6 +27,8 @@ Constructor of Extendable Image.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +53,7 @@ Constructor of Extendable Image.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-  static $_instantiate<T extends ExtendableImage>(
+static $_instantiate<T extends ExtendableImage>(
     factory: ConstructorT<T>, 
     src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,
     imageAIOptions?: ImageAIOptions,
@@ -68,6 +66,8 @@ Constructor of Extendable Image.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,8 +93,7 @@ Constructor of Extendable Image.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-  static $_instantiate<T extends ExtendableImage>(
+static $_instantiate<T extends ExtendableImage>(
     factory: ConstructorT<T>, 
     src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,
     reloadKey?: string
@@ -106,6 +105,8 @@ Constructor of Extendable Image.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,8 +131,7 @@ Constructor of Extendable Image.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-  static _instantiateImpl<T extends ExtendableImage>(
+static _instantiateImpl<T extends ExtendableImage>(
     styles: CustomBuilderT<T>, 
     factory: ConstructorT<T>
   ): void
@@ -142,6 +142,8 @@ Entry of Extendable Image.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

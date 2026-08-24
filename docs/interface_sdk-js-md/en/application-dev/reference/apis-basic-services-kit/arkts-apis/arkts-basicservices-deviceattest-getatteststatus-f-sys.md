@@ -33,7 +33,7 @@ Obtains the AttestResultInfo object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameters wrong, the number of parameters is incorrect, or the type of parameters is incorrect. |
 | [20000001](../errorcode-deviceAttest.md#20000001-system-service-abnormal) | System service exception, please try again or reboot your device. |
 
 **Examples**
@@ -110,7 +110,7 @@ Obtains the AttestResultInfo object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameters wrong, the number of parameters is incorrect, or the type of parameters is incorrect. |
 | [20000001](../errorcode-deviceAttest.md#20000001-system-service-abnormal) | System service exception, please try again or reboot your device. |
 
 **Examples**

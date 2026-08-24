@@ -12,9 +12,7 @@ import { avSession } from '@kit.AVSessionKit';
 function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>, callback: AsyncCallback<void>): void
 ```
 
-投播会话到指定设备列表。结果通过callback异步回调方式返回。
-
-需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
+投播会话到指定设备列表。结果通过callback异步回调方式返回。需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
 
 **起始版本：** 9
 
@@ -87,9 +85,7 @@ if (audioDevices !== undefined) {
 function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>): Promise<void>
 ```
 
-投播会话到指定设备列表。结果通过Promise异步回调方式返回。
-
-调用此接口之前，需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
+投播会话到指定设备列表。结果通过Promise异步回调方式返回。调用此接口之前，需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
 
 **起始版本：** 9
 

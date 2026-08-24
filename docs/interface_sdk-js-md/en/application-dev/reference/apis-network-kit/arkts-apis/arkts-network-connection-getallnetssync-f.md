@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getAllNetsSync(): Array<NetHandle>
 ```
 
-Obtains the list of all connected networks. This API returns the result synchronously.
-
+Obtains the list of all connected networks. This API returns the result synchronously.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23

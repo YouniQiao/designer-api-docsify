@@ -14,11 +14,9 @@ function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<Font
 
 Obtains an array of font descriptors by font file path. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - An empty array is returned if the font file is not found, the font file path is invalid, the font file does not
-> have the required permission, or the file is not in the font format.
-> 
+> have the required permission, or the file is not in the font format.&gt;
 > - The **weight** field in [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md) does not exactly correspond to the weight
 > value in the font file. Instead, the actual weight value in the font file is rounded off and mapped to the
 > [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md) enum value. For example, the weight value 350 in the font file is mapped to 4
@@ -36,7 +34,7 @@ Obtains an array of font descriptors by font file path. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to query. Two formats are supported:<br/>1. Absolute path of the font file starting with "file://", for example, "file:///system/fonts/test.ttf".<br/>2. File in the project's resources/rawfile directory, in the format of \\$rawfile('file name'), for example, \\$rawfile('test.ttf' ). |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to query. Two formats are supported:<br/>1. Absolute path of the font file starting with "file://", for example, "file:///system/fonts/test.ttf".<br/>2. File in the project's resources/rawfile directory, in the format of \\$rawfile('file name'), for example, \\$rawfile('test.ttf'). |
 
 **Return value:**
 

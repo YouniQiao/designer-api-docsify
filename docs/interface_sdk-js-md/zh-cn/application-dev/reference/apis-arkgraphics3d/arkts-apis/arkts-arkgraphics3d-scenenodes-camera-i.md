@@ -1,8 +1,6 @@
 # Camera
 
-相机类型，Camera继承自Node。
-
-@extends Node @interface Camera
+相机类型，Camera继承自Node。@extends Node @interface Camera
 
 **继承/实现关系：** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 

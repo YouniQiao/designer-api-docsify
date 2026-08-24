@@ -19,13 +19,7 @@ Defines the ID, direction, and position of a guideline.
 direction : Axis
 ```
 
-Direction of the guideline.
-
-A guideline in the vertical direction can only be used as the anchor of the component in the horizontal direction, and the value is **0** when it is used as the anchor in the vertical direction. A guideline in the horizontal direction can only be used as the anchor of the component in the vertical direction, and the value is **0** when it is used as the anchor in the horizontal direction.
-
-Default value: **Axis.Vertical**
-
-Invalid values are treated as the default value.
+Direction of the guideline.A guideline in the vertical direction can only be used as the anchor of the component in the horizontal direction, and the value is **0** when it is used as the anchor in the vertical direction. A guideline in the horizontal direction can only be used as the anchor of the component in the vertical direction, and the value is **0** when it is used as the anchor in the horizontal direction.Default value: **Axis.Vertical**Invalid values are treated as the default value.
 
 **Type:** Axis
 

@@ -27,7 +27,7 @@ import { batteryInfo } from '@kit.BasicServicesKit';
 | [batteryTemperature](arkts-basicservices-batteryinfo-batterytemperature-f.md) | Battery temperature of the device, in unit of 0.1°C. |
 | [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md) | Battery charging state of the current device. |
 | [healthStatus](arkts-basicservices-batteryinfo-healthstatus-f.md) | Battery health status of the device. |
-| [isBatteryPresent](arkts-basicservices-batteryinfo-isbatterypresent-f.md) | Whether the battery is supported or present. The value **true** means that the battery is supported or present; **false** means the opposite. |
+| [isBatteryPresent](arkts-basicservices-batteryinfo-isbatterypresent-f.md) | Whether the battery is supported or present. The value **true** means that the battery is supported or present; **false** means the opposite.Default value: **false**. |
 | [nowCurrent](arkts-basicservices-batteryinfo-nowcurrent-f.md) | Battery current of the device, in unit of mA. |
 | [pluggedType](arkts-basicservices-batteryinfo-pluggedtype-f.md) | Charger type of the device. |
 | [technology](arkts-basicservices-batteryinfo-technology-f.md) | Battery technology of the device. |
@@ -50,9 +50,9 @@ import { batteryInfo } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [BatteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) | Enumerates battery levels. |
-| [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) | Enumerates charging states. |
-| [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) | Enumerates battery health states. |
-| [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md) | Enumerates charger types. |
-| [CommonEventBatteryChangedKey](arkts-basicservices-batteryinfo-commoneventbatterychangedkey-e.md) | Enumerates keys for querying the additional information about the **COMMON_EVENT_BATTERY_CHANGED** event. |
+| [BatteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) | Enumerates battery levels.@enum { int } |
+| [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) | Enumerates charging states.@enum { int } |
+| [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) | Enumerates battery health states.@enum { int } |
+| [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md) | Enumerates charger types.@enum { int } |
+| [CommonEventBatteryChangedKey](arkts-basicservices-batteryinfo-commoneventbatterychangedkey-e.md) | Enumerates keys for querying the additional information about the **COMMON_EVENT_BATTERY_CHANGED** event.@enum { string } |
 

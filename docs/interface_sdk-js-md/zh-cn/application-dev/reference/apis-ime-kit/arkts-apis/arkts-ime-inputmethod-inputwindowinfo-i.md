@@ -1,6 +1,6 @@
 # InputWindowInfo
 
-@brief 输入法软键盘的窗口信息。
+输入法软键盘的窗口信息。
 
 **起始版本：** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## displayId
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 displayId?: long
 ```
 
-@brief 输入法软键盘窗口所在的屏幕ID。
+输入法软键盘窗口所在的屏幕ID。
 
 **类型：** long
 
@@ -43,7 +38,7 @@ displayId?: long
 height: long
 ```
 
-@brief 输入法窗口的高度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
+输入法窗口的高度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
 
 **类型：** long
 
@@ -59,7 +54,7 @@ height: long
 left: int
 ```
 
-@brief 输入法窗口左上顶点的横坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
+输入法窗口左上顶点的横坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
 
 **类型：** int
 
@@ -75,7 +70,7 @@ left: int
 name: string
 ```
 
-@brief 输入法窗口的名称。
+输入法窗口的名称。
 
 **类型：** string
 
@@ -91,7 +86,7 @@ name: string
 top: int
 ```
 
-@brief 输入法窗口左上顶点的纵坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
+输入法窗口左上顶点的纵坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
 
 **类型：** int
 
@@ -107,7 +102,7 @@ top: int
 width: long
 ```
 
-@brief 输入法窗口的宽度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
+输入法窗口的宽度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
 
 **类型：** long
 

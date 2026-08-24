@@ -294,9 +294,7 @@ generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>
 generateSecretSync(priKey: PriKey, pubKey: PubKey): DataBlob
 ```
 
-基于传入的私钥与公钥进行密钥协商，通过同步返回共享密钥。
-
-<br><br>**说明：** <br>建议优先使用异步API，generateSecret。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+基于传入的私钥与公钥进行密钥协商，通过同步返回共享密钥。<br><br>**说明：** <br>建议优先使用异步API，generateSecret。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 

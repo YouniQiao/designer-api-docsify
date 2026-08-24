@@ -1,8 +1,6 @@
 # ListOptions
 
-Defines the options of the &lt;em&gt;List&lt;/em&gt; component.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- The default value of the universal attribute clip is &lt;em&gt;true&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component. </p>
+Defines the options of the &lt;em&gt;List&lt;/em&gt; component.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- The default value of the universal attribute clip is &lt;em&gt;true&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component. </p>
 
 **Since:** 23
 

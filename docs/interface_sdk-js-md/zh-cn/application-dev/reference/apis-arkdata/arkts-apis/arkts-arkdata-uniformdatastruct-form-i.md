@@ -20,7 +20,7 @@ import { uniformDataStruct } from '@kit.ArkData';
 abilityName: string
 ```
 
-卡片对应的ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如 "com.example.myapplication.MainAbility"）。
+卡片对应的ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如"com.example.myapplication.MainAbility"）。
 
 **类型：** string
 
@@ -58,7 +58,7 @@ details?: Record<string, int | long | double | string | Uint8Array>
 
 字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**类型：** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **起始版本：** 23
 

@@ -21,11 +21,9 @@
 activatedColor?: ColorMetrics
 ```
 
-工具栏子项在激活态下文本的颜色。
+工具栏子项在激活态下文本的颜色。默认值：\$r('sys.color.font_emphasize')
 
-默认值：\$r('sys.color.font_emphasize')
-
-**类型：** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 
@@ -43,11 +41,9 @@ activatedColor?: ColorMetrics
 color?: ColorMetrics
 ```
 
-工具栏子项的文本的颜色。
+工具栏子项的文本的颜色。默认值：\$r('sys.color.font_primary')
 
-默认值：\$r('sys.color.font_primary')
-
-**类型：** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 

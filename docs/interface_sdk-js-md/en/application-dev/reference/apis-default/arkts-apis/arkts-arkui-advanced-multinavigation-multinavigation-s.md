@@ -6,6 +6,8 @@ Declaration struct MultiNavigation.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct MultiNavigation--><!--Device-unnamed-export declare struct MultiNavigation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declaration struct MultiNavigation.
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build multiNavigation.
@@ -27,6 +28,8 @@ The method to build multiNavigation.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build multiNavigation.
 ## multiStack
 
 ```TypeScript
-@State
-  multiStack: MultiNavPathStack
+multiStack: MultiNavPathStack
 ```
 
 MultiNavigation path stack of the MultiNavigation.
@@ -49,6 +51,8 @@ MultiNavigation path stack of the MultiNavigation.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @State
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiNavigation-@State  multiStack: MultiNavPathStack--><!--Device-MultiNavigation-@State  multiStack: MultiNavPathStack-End-->
@@ -58,8 +62,7 @@ MultiNavigation path stack of the MultiNavigation.
 ## navDestination
 
 ```TypeScript
-@BuilderParam
-  navDestination: PageMapBuilder | undefined
+navDestination: PageMapBuilder | undefined
 ```
 
 build function of NavDestination.
@@ -69,6 +72,8 @@ build function of NavDestination.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

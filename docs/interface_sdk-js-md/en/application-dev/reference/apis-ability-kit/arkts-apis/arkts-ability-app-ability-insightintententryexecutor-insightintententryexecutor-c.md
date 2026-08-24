@@ -1,8 +1,6 @@
 # InsightIntentEntryExecutor
 
-The class of insight intent entry executor.
-
-@class InsightIntentEntryExecutor&lt;T&gt;
+The class of insight intent entry executor.@class InsightIntentEntryExecutor&lt;T&gt;
 
 **Since:** 26.0.0
 

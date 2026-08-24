@@ -1,6 +1,6 @@
 # LocalStorage
 
-LocalStorage Class implements a Map of ObservableObjectBase UI state variables. Instances can be created to manage UI state within a limited "local" access, and life cycle as defined by the app. AppStorage singleton is sub-class of LocalStorage for UI state of app-wide access and same life cycle as the app.
+LocalStorage Class implements a Map of ObservableObjectBase UI state variables. Instances can be created to manage UI state within a limited "local"access, and life cycle as defined by the app. AppStorage singleton is sub-class of LocalStorage for UI state of app-wide access and same life cycle as the app.
 
 **Since:** 23
 
@@ -300,9 +300,7 @@ Like see link(), but will create and initialize a new source property in LocalSt
 public setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 ```
 
-Obtain a handler or an alias to LocalStorage property with given name.
-
-If property does not exist in LocalStorage, create it with given default value.
+Obtain a handler or an alias to LocalStorage property with given name.If property does not exist in LocalStorage, create it with given default value.
 
 **Since:** 23
 

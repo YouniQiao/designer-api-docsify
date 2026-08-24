@@ -1,8 +1,6 @@
 # DynamicLayoutAttribute
 
-The DynamicLayoutAttribute
-
-@extends CommonMethod @interface DynamicLayoutAttribute
+The DynamicLayoutAttribute@extends CommonMethod @interface DynamicLayoutAttribute
 
 **Inheritance/Implementation:** DynamicLayoutAttribute extends CommonMethod
 

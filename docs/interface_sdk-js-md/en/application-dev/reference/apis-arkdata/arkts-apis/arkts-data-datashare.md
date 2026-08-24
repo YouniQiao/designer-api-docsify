@@ -16,7 +16,6 @@ The **DataShare** module allows an application to manage its own data and share 
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -35,8 +34,8 @@ import { dataSharePredicates } from '@kit.ArkData';
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | Creates a **DataShareHelper** instance. This API uses an asynchronous callback to return the result. |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses an asynchronous callback to return the result. |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses a promise to return the result. |
-| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md) | Disables silent access. This API uses a promise to return the result. |
-| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md) | Enables silent access. This API uses a promise to return the result. |
+| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md) | Disables silent access. This API uses a promise to return the result.Observe the following when using this API:  - The data provider calls this API to disable silent access. - Whether silent access is disabled is determined based on the return value of this API and the **isSilentProxyEnable** field in the [data_share_config.json](../../../database/share-data-by-datashareextensionability-sys.md) file together. - If silent access is disabled for a URI using this API, the setting takes effect when the related **datashareHelper** API is called. Otherwise, the setting of **isSilentProxyEnable** in the **data_share_config.json** file is used to determine whether to disable silent access. |
+| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md) | Enables silent access. This API uses a promise to return the result.Observe the following when using this API:  - The data provider calls this API to enable silent access. - Whether silent access is enabled is determined based on the return value of this API and the **isSilentProxyEnable** field in the [data_share_config.json](../../../database/share-data-by-datashareextensionability-sys.md) file together. - If silent access is enabled for a URI using this API, the setting takes effect when the related **datashareHelper** API is called. Otherwise, the setting of **isSilentProxyEnable** in the **data_share_config.json** file is used to determine whether to enable silent access. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -56,7 +55,7 @@ import { dataSharePredicates } from '@kit.ArkData';
 | Name | Description |
 | --- | --- |
 | [ChangeInfo](arkts-arkdata-datashare-changeinfo-i-sys.md) | Represents the data change information, including the data change type, URI of the data changed, and changed data content. |
-| [DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md) | Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) . |
+| [DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md) | Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md). |
 | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | Represents the optional parameters of [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md). |
 | [OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md) | Defines the result of the operation for subscribing to or unsubscribing from the data changes or published data. |
 | [PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md) | Defines the subscription/unsubscription result of the changes in the published data. |

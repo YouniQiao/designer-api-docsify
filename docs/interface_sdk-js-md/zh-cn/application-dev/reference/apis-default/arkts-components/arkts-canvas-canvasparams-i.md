@@ -1,8 +1,6 @@
 # CanvasParams
 
-定义Canvas的具体配置参数。
-
-@interface CanvasParams
+定义Canvas的具体配置参数。@interface CanvasParams
 
 **起始版本：** 23
 

@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## cleanFileCache
@@ -1035,9 +1034,7 @@ start(uri: string, callback: AsyncCallback<void>): void
 startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>
 ```
 
-启动云文件批量缓存。使用Promise异步回调。
-
-不同的批量缓存任务可以通过接口返回的任务ID区分。
+启动云文件批量缓存。使用Promise异步回调。不同的批量缓存任务可以通过接口返回的任务ID区分。
 
 **起始版本：** 23
 
@@ -1121,9 +1118,7 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then<long>((do
 stop(uri: string, needClean?: boolean): Promise<void>
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
-
-When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
+Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
 
 **起始版本：** 23
 
@@ -1409,9 +1404,7 @@ download.stop(uri, (err: BusinessError<void> | null): void => {
 stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
-异步方法停止云盘文件缓存。使用callback异步回调。
-
-调用stop接口，当前文件下载流程会终止，不删除缓存文件，再次调用start接口重新启动下载。
+异步方法停止云盘文件缓存。使用callback异步回调。调用stop接口，当前文件下载流程会终止，不删除缓存文件，再次调用start接口重新启动下载。
 
 **起始版本：** 23
 
@@ -1445,9 +1438,7 @@ stop(uri: string, callback: AsyncCallback<void>): void
 stopBatch(downloadId: long, needClean?: boolean): Promise<void>
 ```
 
-停止由[startBatch](#startbatch)启动的云文件批量缓存任务。使用Promise异步回调。
-
-调用stopBatch接口会终止当前文件批量缓存流程，未下载完成的缓存文件是否删除由needClean参数决定。
+停止由[startBatch](#startbatch)启动的云文件批量缓存任务。使用Promise异步回调。调用stopBatch接口会终止当前文件批量缓存流程，未下载完成的缓存文件是否删除由needClean参数决定。
 
 **起始版本：** 23
 

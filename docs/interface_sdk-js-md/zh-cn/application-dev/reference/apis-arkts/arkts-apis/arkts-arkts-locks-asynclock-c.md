@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**装饰器类型：** @Sendable
+
 <!--Device-locks-class AsyncLock--><!--Device-locks-class AsyncLock-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

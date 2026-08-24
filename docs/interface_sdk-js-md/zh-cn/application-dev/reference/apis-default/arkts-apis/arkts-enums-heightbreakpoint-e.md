@@ -1,8 +1,6 @@
 # HeightBreakpoint
 
-Type of window height breakpoint.
-
-@enum {number}
+Type of window height breakpoint.@enum {number}
 
 **起始版本：** 23
 

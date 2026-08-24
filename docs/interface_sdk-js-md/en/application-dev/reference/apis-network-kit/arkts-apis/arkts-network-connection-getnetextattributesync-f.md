@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getNetExtAttributeSync(netHandle: NetHandle): string
 ```
 
-Obtains the extended attributes of the network specified by **netHandle** to determine its security level. This API returns the result synchronously.
-
+Obtains the extended attributes of the network specified by **netHandle** to determine its security level. This API returns the result synchronously.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 20

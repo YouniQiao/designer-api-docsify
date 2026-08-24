@@ -16,6 +16,8 @@ Grid is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Grid(    scroller?: Scroller, layoutOptions?: GridLayoutOptions,    content_?: CustomBuilder,): GridAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Grid(    scroller?: Scroller, layoutOptions?: GridLayoutOptions,    content_?: CustomBuilder,): GridAttribute-End-->
@@ -52,6 +54,8 @@ Grid is returned when the parameter is transferred.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,6 +6,8 @@ Declaration of the composable title bar. Composable title bar represents a commo
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ComposeTitleBarV2--><!--Device-unnamed-export declare struct ComposeTitleBarV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declaration of the composable title bar. Composable title bar represents a commo
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## item
 
 ```TypeScript
-@Param
-  item?: ComposeTitleBarV2MenuItem
+item?: ComposeTitleBarV2MenuItem
 ```
 
 A single menu item for the profile picture on the left.
@@ -49,6 +51,8 @@ A single menu item for the profile picture on the left.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComposeTitleBarV2-@Param  item?: ComposeTitleBarV2MenuItem--><!--Device-ComposeTitleBarV2-@Param  item?: ComposeTitleBarV2MenuItem-End-->
@@ -58,8 +62,7 @@ A single menu item for the profile picture on the left.
 ## menuItems
 
 ```TypeScript
-@Param
-  menuItems?: Array<ComposeTitleBarV2MenuItem>
+menuItems?: Array<ComposeTitleBarV2MenuItem>
 ```
 
 Menu items on the right side.
@@ -70,6 +73,8 @@ Menu items on the right side.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComposeTitleBarV2-@Param  menuItems?: Array<ComposeTitleBarV2MenuItem>--><!--Device-ComposeTitleBarV2-@Param  menuItems?: Array<ComposeTitleBarV2MenuItem>-End-->
@@ -79,8 +84,7 @@ Menu items on the right side.
 ## subtitle
 
 ```TypeScript
-@Param
-  subtitle?: ResourceStr
+subtitle?: ResourceStr
 ```
 
 Sub-title of this title bar.
@@ -91,6 +95,8 @@ Sub-title of this title bar.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComposeTitleBarV2-@Param  subtitle?: ResourceStr--><!--Device-ComposeTitleBarV2-@Param  subtitle?: ResourceStr-End-->
@@ -100,8 +106,7 @@ Sub-title of this title bar.
 ## title
 
 ```TypeScript
-@Param
-  title: ResourceStr
+title: ResourceStr
 ```
 
 Title of this title bar.
@@ -111,6 +116,8 @@ Title of this title bar.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

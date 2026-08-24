@@ -4,6 +4,8 @@ Defines chip group padding.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipGroupV2Padding--><!--Device-unnamed-export declare class ChipGroupV2Padding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ The constructor of ChipGroupV2PaddingConfig
 ## bottom
 
 ```TypeScript
-@Trace
-    public bottom: Length
+public bottom: Length
 ```
 
 Bottom of chip group padding.
@@ -50,6 +51,8 @@ Bottom of chip group padding.
 **Type:** Length
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ Bottom of chip group padding.
 ## top
 
 ```TypeScript
-@Trace
-    public top: Length
+public top: Length
 ```
 
 Top of chip group padding.
@@ -71,6 +73,8 @@ Top of chip group padding.
 **Type:** Length
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

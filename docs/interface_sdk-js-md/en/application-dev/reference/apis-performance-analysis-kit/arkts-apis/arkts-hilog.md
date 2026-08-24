@@ -21,7 +21,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 | Name | Description |
 | --- | --- |
 | [clean](arkts-performanceanalysis-hilog-clean-f.md) | Delete all hilog logs in the sandbox. |
-| [debug](arkts-performanceanalysis-hilog-debug-f.md) | Prints DEBUG logs. |
+| [debug](arkts-performanceanalysis-hilog-debug-f.md) | Prints DEBUG logs.DEBUG logs are not recorded in official versions by default. They are available in debug versions or in official versions with the debug function enabled. |
 | [debug](arkts-performanceanalysis-hilog-debug-f.md) | Prints DEBUG logs. |
 | [error](arkts-performanceanalysis-hilog-error-f.md) | Prints ERROR logs. |
 | [error](arkts-performanceanalysis-hilog-error-f.md) | Prints ERROR logs. |
@@ -34,7 +34,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 | [info](arkts-performanceanalysis-hilog-info-f.md) | Prints INFO logs. |
 | [info](arkts-performanceanalysis-hilog-info-f.md) | Prints INFO logs. |
 | [isLoggable](arkts-performanceanalysis-hilog-isloggable-f.md) | Checks whether logs are printable based on the specified service domain, log tag, and log level. |
-| [setLogLevel](arkts-performanceanalysis-hilog-setloglevel-f.md) | Sets the minimum log level of the current application process. |
+| [setLogLevel](arkts-performanceanalysis-hilog-setloglevel-f.md) | Sets the minimum log level of the current application process.You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy has the same effect as the **setMinLogLevel()** function. |
 | [setMinLogLevel](arkts-performanceanalysis-hilog-setminloglevel-f.md) | Sets the minimum log level. |
 | [setOutputType](arkts-performanceanalysis-hilog-setoutputtype-f.md) | Sets the output type of hilog. |
 | [setOutputTypeByDomainID](arkts-performanceanalysis-hilog-setoutputtypebydomainid-f.md) | Sets the output type for hilog for the domainID list. |
@@ -46,6 +46,6 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 | Name | Description |
 | --- | --- |
 | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Enumerates the log levels. |
-| [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md) | Enumerates output type of hilog. |
+| [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md) | Enumerates output type of hilog.@enum { int } |
 | [PreferStrategy](arkts-performanceanalysis-hilog-preferstrategy-e.md) | Enumerates the preference strategies. |
 

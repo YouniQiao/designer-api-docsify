@@ -18,7 +18,7 @@ height?: LengthMetrics | string
 
 Sets the height of the current touchRect.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md) \| string
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| string
 
 **Default:** LengthMetrics.percent(1)
 
@@ -62,7 +62,7 @@ width?: LengthMetrics | string
 
 Sets the width of the current touchRect.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md) \| string
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| string
 
 **Default:** LengthMetrics.percent(1)
 
@@ -84,7 +84,7 @@ x?: LengthMetrics
 
 Horizontal axis coordinate
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
@@ -106,7 +106,7 @@ y?: LengthMetrics
 
 Vertical axis coordinate.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

@@ -16,10 +16,8 @@
 LTR = 0
 ```
 
-文本排版方向从左到右。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 22开始，该接口支持在原子化服务中使用。
-
+文本排版方向从左到右。  
+**原子化服务API（仅ArkTS-Dyn）：** 从API version 22开始，该接口支持在原子化服务中使用。  
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 22开始，该接口支持在原子化服务中使用。&lt;sup&gt;23+&lt;/sup&gt;
 
 **起始版本：** 23

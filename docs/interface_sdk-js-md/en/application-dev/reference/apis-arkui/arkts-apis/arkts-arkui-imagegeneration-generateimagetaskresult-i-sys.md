@@ -1,8 +1,6 @@
 # GenerateImageTaskResult (System API)
 
-Configuration result for AI-generated image tasks.
-
-@interface GenerateImageTaskResult
+Configuration result for AI-generated image tasks.@interface GenerateImageTaskResult
 
 **Since:** 23
 

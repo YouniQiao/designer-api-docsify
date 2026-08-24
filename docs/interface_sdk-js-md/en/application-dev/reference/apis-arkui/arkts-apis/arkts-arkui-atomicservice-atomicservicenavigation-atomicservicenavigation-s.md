@@ -1,8 +1,10 @@
 # AtomicServiceNavigation
 
-*AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of NavDestination) and non-home page content through routing.
+**AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of NavDestination) and non-home page content through routing.
 
 **Since:** 12
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct AtomicServiceNavigation--><!--Device-unnamed-export declare struct AtomicServiceNavigation-End-->
 
@@ -17,8 +19,7 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 ## gradientBackground
 
 ```TypeScript
-@Prop
-  gradientBackground?: GradientBackground
+gradientBackground?: GradientBackground
 ```
 
 The background with gradient colors of Navigation.
@@ -26,6 +27,8 @@ The background with gradient colors of Navigation.
 **Type:** [GradientBackground](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md)
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -36,8 +39,7 @@ The background with gradient colors of Navigation.
 ## hideTitleBar
 
 ```TypeScript
-@Prop
-  hideTitleBar?: boolean
+hideTitleBar?: boolean
 ```
 
 Hide navigation title bar.
@@ -45,6 +47,8 @@ Hide navigation title bar.
 **Type:** boolean
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -55,8 +59,7 @@ Hide navigation title bar.
 ## menus
 
 ```TypeScript
-@BuilderParam
-  menus?: CustomBuilder | Array<NavigationMenuItem>
+menus?: CustomBuilder | Array<NavigationMenuItem>
 ```
 
 The layout style users defined and inserted.
@@ -64,6 +67,8 @@ The layout style users defined and inserted.
 **Type:** CustomBuilder \| Array&lt;NavigationMenuItem&gt;
 
 **Since:** 18
+
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -74,8 +79,7 @@ The layout style users defined and inserted.
 ## minContentWidth
 
 ```TypeScript
-@Prop
-  minContentWidth?: Dimension
+minContentWidth?: Dimension
 ```
 
 Sets the minimum width of content.
@@ -83,6 +87,8 @@ Sets the minimum width of content.
 **Type:** Dimension
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -93,8 +99,7 @@ Sets the minimum width of content.
 ## mode
 
 ```TypeScript
-@Prop
-  mode?: NavigationMode
+mode?: NavigationMode
 ```
 
 Sets the mode of navigation.
@@ -102,6 +107,8 @@ Sets the mode of navigation.
 **Type:** NavigationMode
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,8 +137,7 @@ Trigger callback when navigation mode changes.
 ## navBarWidth
 
 ```TypeScript
-@Prop
-  navBarWidth?: Length
+navBarWidth?: Length
 ```
 
 Sets the width of navigation bar.
@@ -139,6 +145,8 @@ Sets the width of navigation bar.
 **Type:** Length
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -149,8 +157,7 @@ Sets the width of navigation bar.
 ## navBarWidthRange
 
 ```TypeScript
-@Prop
-  navBarWidthRange?: [
+navBarWidthRange?: [
     Dimension,
     Dimension
   ]
@@ -162,6 +169,8 @@ Sets the minimum width and the maximum width of navigation bar.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceNavigation-@Prop  navBarWidthRange?: [    Dimension,    Dimension  ]--><!--Device-AtomicServiceNavigation-@Prop  navBarWidthRange?: [    Dimension,    Dimension  ]-End-->
@@ -171,8 +180,7 @@ Sets the minimum width and the maximum width of navigation bar.
 ## navDestinationBuilder
 
 ```TypeScript
-@BuilderParam
-  navDestinationBuilder?: NavDestinationBuilder
+navDestinationBuilder?: NavDestinationBuilder
 ```
 
 The builder of navDestination.
@@ -180,6 +188,8 @@ The builder of navDestination.
 **Type:** [NavDestinationBuilder](arkts-arkui-navdestinationbuilder-t.md)
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -190,8 +200,7 @@ The builder of navDestination.
 ## navigationContent
 
 ```TypeScript
-@BuilderParam
-  navigationContent?: Callback<void>
+navigationContent?: Callback<void>
 ```
 
 the content of Navigation.
@@ -199,6 +208,8 @@ the content of Navigation.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -209,8 +220,7 @@ the content of Navigation.
 ## navPathStack
 
 ```TypeScript
-@State
-  navPathStack?: NavPathStack
+navPathStack?: NavPathStack
 ```
 
 the information of route page.Providers methods for controlling destination page in the stack.
@@ -218,6 +228,8 @@ the information of route page.Providers methods for controlling destination page
 **Type:** NavPathStack
 
 **Since:** 12
+
+**Decorator:** @State
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -228,8 +240,7 @@ the information of route page.Providers methods for controlling destination page
 ## sideBarContent
 
 ```TypeScript
-@BuilderParam
-  sideBarContent?: Callback<void>
+sideBarContent?: Callback<void>
 ```
 
 Set side bar content.
@@ -237,6 +248,8 @@ Set side bar content.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 18
+
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -247,8 +260,7 @@ Set side bar content.
 ## sideBarOptions
 
 ```TypeScript
-@Prop
-  sideBarOptions?: SideBarOptions
+sideBarOptions?: SideBarOptions
 ```
 
 Set side bar options.
@@ -256,6 +268,8 @@ Set side bar options.
 **Type:** [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md)
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -284,8 +298,7 @@ Trigger callback when the visibility of navigation bar change.
 ## title
 
 ```TypeScript
-@Prop
-  title?: ResourceStr
+title?: ResourceStr
 ```
 
 Sets the Navigation title.
@@ -293,6 +306,8 @@ Sets the Navigation title.
 **Type:** ResourceStr
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -303,8 +318,7 @@ Sets the Navigation title.
 ## titleOptions
 
 ```TypeScript
-@Prop
-  titleOptions?: TitleOptions
+titleOptions?: TitleOptions
 ```
 
 The color of Navigation's TitleBar.
@@ -312,6 +326,8 @@ The color of Navigation's TitleBar.
 **Type:** [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

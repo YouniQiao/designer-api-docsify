@@ -1,6 +1,6 @@
 # GridCol
 
-The **GridCol** component must be used as a child component of the GridRow container. > **Child Components** > > This component can contain only one child component.
+The **GridCol** component must be used as a child component of the GridRow container.> **Child Components**>> This component can contain only one child component.
 
 ## GridCol
 

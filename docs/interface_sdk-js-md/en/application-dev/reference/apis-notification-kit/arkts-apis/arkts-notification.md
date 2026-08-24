@@ -1,6 +1,6 @@
 # @ohos.notification
 
-The **Notification** module provides notification management capabilities, covering notifications, notification slots , notification subscription, notification enabled status, and notification badge status.
+The **Notification** module provides notification management capabilities, covering notifications, notification slots, notification subscription, notification enabled status, and notification badge status.
 
 **Since:** 7
 
@@ -15,9 +15,6 @@ The **Notification** module provides notification management capabilities, cover
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
-import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## Summary

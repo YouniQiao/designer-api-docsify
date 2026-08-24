@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function isDefaultNetMetered(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the data traffic over the current default network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API uses an asynchronous callback to return the result.
-
+Checks whether the data traffic over the current default network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API uses an asynchronous callback to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 9
@@ -66,8 +65,7 @@ connection.isDefaultNetMetered().then((data: boolean) => {
 function isDefaultNetMetered(): Promise<boolean>
 ```
 
-Checks whether the data traffic over the current default network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API uses a promise to return the result.
-
+Checks whether the data traffic over the current default network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 9

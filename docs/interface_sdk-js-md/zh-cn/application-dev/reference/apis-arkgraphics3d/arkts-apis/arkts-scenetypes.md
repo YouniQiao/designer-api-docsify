@@ -6,12 +6,12 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [CubeGeometry](arkts-arkgraphics3d-scenetypes-cubegeometry-c.md) | 立方体几何类型，继承自GeometryDefinition。 |
-| [CustomGeometry](arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | 自定义几何类型，继承自GeometryDefinition。 |
+| [CubeGeometry](arkts-arkgraphics3d-scenetypes-cubegeometry-c.md) | 立方体几何类型，继承自GeometryDefinition。@extends GeometryDefinition |
+| [CustomGeometry](arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | 自定义几何类型，继承自GeometryDefinition。@extends GeometryDefinition |
 | [CylinderGeometry](arkts-arkgraphics3d-scenetypes-cylindergeometry-c.md) | 圆柱体几何类型，继承自GeometryDefinition。 |
 | [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md) | 几何类型定义抽象类，用于解释特定几何类型的属性。 |
-| [PlaneGeometry](arkts-arkgraphics3d-scenetypes-planegeometry-c.md) | 平面几何类型，继承自GeometryDefinition。 |
-| [SphereGeometry](arkts-arkgraphics3d-scenetypes-spheregeometry-c.md) | 球体几何类型，继承自GeometryDefinition。 |
+| [PlaneGeometry](arkts-arkgraphics3d-scenetypes-planegeometry-c.md) | 平面几何类型，继承自GeometryDefinition。@extends GeometryDefinition |
+| [SphereGeometry](arkts-arkgraphics3d-scenetypes-spheregeometry-c.md) | 球体几何类型，继承自GeometryDefinition。@extends GeometryDefinition |
 
 ### 接口
 
@@ -30,9 +30,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [GeometryType](arkts-arkgraphics3d-scenetypes-geometrytype-e.md) | 几何类型枚举，用于指定不同的几何类型。 |
-| [PrimitiveTopology](arkts-arkgraphics3d-scenetypes-primitivetopology-e.md) | 图元拓扑枚举，在顶点处理过程中，指定顶点的不同处理方式。 |
-| [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md) | 渲染管线类型枚举。 |
+| [GeometryType](arkts-arkgraphics3d-scenetypes-geometrytype-e.md) | 几何类型枚举，用于指定不同的几何类型。@enum { int } |
+| [PrimitiveTopology](arkts-arkgraphics3d-scenetypes-primitivetopology-e.md) | 图元拓扑枚举，在顶点处理过程中，指定顶点的不同处理方式。@enum { int } |
+| [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md) | 渲染管线类型枚举。@enum { int } |
 | [ShadowAlgorithmType](arkts-arkgraphics3d-scenetypes-shadowalgorithmtype-e.md) | 阴影算法的枚举类型。 |
 
 ### 类型

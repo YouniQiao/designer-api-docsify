@@ -14,7 +14,6 @@ Defines a VPN connection object. Before calling **VpnConnection** APIs, you need
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
-import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## destroy

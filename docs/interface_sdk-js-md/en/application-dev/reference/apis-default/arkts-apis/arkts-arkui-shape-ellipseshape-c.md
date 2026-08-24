@@ -1,8 +1,6 @@
 # EllipseShape
 
-Defines an ellipse drawing class.
-
-@extends BaseShape
+Defines an ellipse drawing class.@extends BaseShape
 
 **Inheritance/Implementation:** EllipseShape extends [BaseShape](arkts-arkui-shape-baseshape-c.md)
 

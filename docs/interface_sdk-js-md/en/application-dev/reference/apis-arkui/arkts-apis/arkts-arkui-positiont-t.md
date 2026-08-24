@@ -16,5 +16,5 @@ Sets or returns the position of the component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Vector2T](../../apis-default/arkts-apis/arkts-graphics-vector2t-i.md)&lt;T&gt;
+**Property type:** [Vector2T](arkts-arkui-graphics-vector2t-i.md)&lt;T&gt;
 

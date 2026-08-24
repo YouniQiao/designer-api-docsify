@@ -1,8 +1,6 @@
 # AttachState
 
-Device attach states.
-
-@enum { int }
+Device attach states.@enum { int }
 
 **起始版本：** 23
 

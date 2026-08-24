@@ -20,9 +20,7 @@ import { ble } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Disables a BLE peripheral device.
-
-This method unregisters the device and clears the registered callbacks and handles.
+Disables a BLE peripheral device.This method unregisters the device and clears the registered callbacks and handles.
 
 **Since:** 23
 
@@ -74,9 +72,7 @@ try {
 connect(): void
 ```
 
-Connects to a BLE peripheral device.
-
-The 'BLEConnectionStateChange' event is subscribed to return the connection state.
+Connects to a BLE peripheral device.The 'BLEConnectionStateChange' event is subscribed to return the connection state.
 
 **Since:** 23
 

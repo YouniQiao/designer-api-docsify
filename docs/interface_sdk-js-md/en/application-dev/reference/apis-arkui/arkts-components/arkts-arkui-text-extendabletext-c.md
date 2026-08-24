@@ -15,8 +15,7 @@ Defines the Extendable Text.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableText>(
+static $_instantiate<T extends ExtendableText>(
       factory: ConstructorT<T>, 
       content?: string | Resource, 
       value?: TextOptions, 
@@ -29,6 +28,8 @@ Constructor of Extendable Text.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +55,7 @@ Constructor of Extendable Text.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-    static _instantiateImpl<T extends ExtendableText>(
+static _instantiateImpl<T extends ExtendableText>(
         styles: CustomBuilderT<T>,  
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -67,6 +67,8 @@ Entry of Extendable Text.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

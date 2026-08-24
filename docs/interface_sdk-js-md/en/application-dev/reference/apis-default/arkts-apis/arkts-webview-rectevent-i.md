@@ -21,9 +21,7 @@ Defines a rectangle.
 height: double
 ```
 
-Height of the rectangle.
-
-Unit: px.
+Height of the rectangle.Unit: px.
 
 **Type:** double
 
@@ -41,9 +39,7 @@ Unit: px.
 width: double
 ```
 
-Width of the rectangle.
-
-Unit: px.
+Width of the rectangle.Unit: px.
 
 **Type:** double
 

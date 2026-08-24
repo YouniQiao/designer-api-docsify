@@ -1,8 +1,6 @@
 # LoadingProgress属性/事件
 
-除支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)外，还支持以下属性。
-
-支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)。
+除支持通用属性外，还支持以下属性。支持通用事件。
 
 **继承/实现关系：** LoadingProgressAttribute extends CommonMethod<LoadingProgressAttribute>
 
@@ -39,7 +37,7 @@ color(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor | 是 | 加载进度条的前景色。 <br>默认值： <br>API version 10及以下：'#99666666' <br>API version 11及以上：'#ff666666' |
+| value | ResourceColor | 是 | 加载进度条的前景色。 <br>默认值： <br>API version 10及以下：'#99666666'<br>API version 11及以上：'#ff666666' |
 
 ## contentModifier
 

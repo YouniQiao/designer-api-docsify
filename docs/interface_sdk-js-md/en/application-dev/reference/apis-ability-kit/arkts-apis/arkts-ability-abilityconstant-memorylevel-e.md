@@ -2,8 +2,7 @@
 
 Enumerates the memory levels of the entire device. You can use it in [onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onmemorylevel) of the UIAbility to complete different operations.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of
 > memory:
 > - When the available memory of the entire device drops to 1700 MB to 1800 MB, the **onMemoryLevel** callback

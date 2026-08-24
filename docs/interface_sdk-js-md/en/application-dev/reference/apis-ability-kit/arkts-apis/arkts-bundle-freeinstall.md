@@ -2,8 +2,7 @@
 
 The module provides APIs for setting and obtaining installation-free information and APIs for obtaining BundlePackInfo and DispatchInfo.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The APIs provided by this module are system APIs.
 
 **Since:** 23

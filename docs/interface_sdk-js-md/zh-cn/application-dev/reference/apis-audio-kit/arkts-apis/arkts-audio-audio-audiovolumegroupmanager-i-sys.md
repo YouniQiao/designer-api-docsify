@@ -1,12 +1,6 @@
 # AudioVolumeGroupManager
 
-管理音频组音量。
-
-在使用AudioVolumeGroupManager的接口之前，需先通过 [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) 获取AudioVolumeGroupManager实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
+管理音频组音量。在调用AudioVolumeGroupManager的接口前，需要先通过 [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) 创建实例。
 
 **起始版本：** 23
 
@@ -18,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## adjustSystemVolumeByStep
@@ -26,6 +19,8 @@ import { audioHaptic } from '@kit.AudioKit';
 ```TypeScript
 adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void
 ```
+
+单步设置指定流的音量。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -41,9 +36,9 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
-| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | 音量调节方向。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当单步设置指定流的音量成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -84,6 +79,8 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType): Promise<void>
 ```
 
+单步设置指定流的音量。使用Promise异步回调。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
@@ -98,14 +95,14 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
-| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | 音量调节方向。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -126,6 +123,8 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void
 ```
 
+调节当前最高优先级的流的音量，使音量值按步长加或减。使用callback异步回调。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
@@ -140,8 +139,8 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | 音量调节方向。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当调节当前最高优先级的流的音量成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -183,6 +182,8 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP).the
 adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 ```
 
+单步设置当前最高优先级的流的音量。使用Promise异步回调。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
@@ -197,13 +198,13 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | 音量调节方向。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -224,7 +225,7 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 getActiveVolumeTypeSync(uid: int): AudioVolumeType
 ```
 
-Obtains the active volume type in the calling moment. This method returns in sync mode.
+查询指定应用活跃的音频音量类型；如果将uid传入为0，则查询的是全局范围内活跃的音频音量类型。
 
 **起始版本：** 23
 
@@ -238,13 +239,13 @@ Obtains the active volume type in the calling moment. This method returns in syn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | int | 是 | The target uid's active volume type or 0 which means the global active volume type. |
+| uid | int | 是 | 应用ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Current active volume type. |
+| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 音频音量类型。 |
 
 **错误码：**
 
@@ -268,6 +269,8 @@ let value = audioVolumeGroupManager.getActiveVolumeTypeSync(uid);
 isPersistentMicMute(): boolean
 ```
 
+获取麦克风持久化静音状态。同步返回结果。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.MICROPHONE_CONTROL
@@ -282,7 +285,7 @@ isPersistentMicMute(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  |
+| boolean | 麦克风是否处于静音状态。true表示处于静音状态，false表示处于未静音状态。 |
 
 **错误码：**
 
@@ -303,6 +306,8 @@ let value: boolean = audioVolumeGroupManager.isPersistentMicMute();
 mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void
 ```
 
+设置指定音量流静音。使用callback异步回调。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
@@ -317,9 +322,9 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
-| mute | boolean | 是 | Mute status to set. The value true means to mute the stream, and false means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| mute | boolean | 是 | 静音状态，true为静音，false为非静音。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置指定音量流静音成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -369,15 +374,15 @@ audioManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
 mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 ```
 
+设置指定音量流静音。使用Promise异步回调。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
 
-**系统能力：** 
-- SystemCapability.Multimedia.Audio.Volume
-- SystemCapability.Multimedia.Audio.Volume
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
 
@@ -385,14 +390,14 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
-| mute | boolean | 是 | Mute status to set. The value true means to mute the stream, and false means the opposite. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| mute | boolean | 是 | 静音状态，true为静音，false为非静音。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 
@@ -403,6 +408,8 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 ```TypeScript
 setMicMute(mute: boolean): Promise<void>
 ```
+
+设置麦克风静音状态。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -418,13 +425,13 @@ setMicMute(mute: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mute | boolean | 是 | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
+| mute | boolean | 是 | 待设置的静音状态，true为静音，false为非静音。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -449,6 +456,8 @@ audioVolumeGroupManager.setMicMute(true).then(() => {
 setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 ```
 
+设置麦克风持久化静音状态。使用Promise异步回调。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.MICROPHONE_CONTROL
@@ -463,14 +472,14 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mute | boolean | 是 | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
-| type | PolicyType | 是 | Mute status to set. This value represents the caller's type such as EDM or privacy. |
+| mute | boolean | 是 | 待设置的静音状态，true为静音，false为非静音。 |
+| type | PolicyType | 是 | 静音策略类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -495,6 +504,8 @@ audioVolumeGroupManager.setMicMutePersistent(true, audio.PolicyType.PRIVACY).the
 setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 ```
 
+设置铃声模式。使用callback异步回调。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
@@ -509,8 +520,8 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 | Ringer mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 | 音频铃声模式。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置铃声模式成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -560,15 +571,15 @@ audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
 setRingerMode(mode: AudioRingMode): Promise<void>
 ```
 
+设置铃声模式。使用Promise异步回调。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode): Promise<void>--><!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode): Promise<void>-End-->
 
-**系统能力：** 
-- SystemCapability.Multimedia.Audio.Volume
-- SystemCapability.Multimedia.Audio.Volume
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
 
@@ -576,13 +587,13 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 | Ringer mode. |
+| mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 | 音频铃声模式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 
@@ -594,7 +605,7 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 setVolume(volumeType: AudioVolumeType, volume: int, callback: AsyncCallback<void>): void
 ```
 
-Sets the volume for a stream. This method uses an asynchronous callback to return the result.
+设置指定流的音量。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -610,9 +621,9 @@ Sets the volume for a stream. This method uses an asynchronous callback to retur
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
-| volume | int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| volume | int | 是 | 音量等级，可设置范围通过 [getMinVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getminvolume) 和 [getMaxVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getmaxvolume) 获取。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置指定流的音量成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -684,7 +695,7 @@ audioRenderer.setVolume(0.5, (err: BusinessError) => {
 setVolume(volumeType: AudioVolumeType, volume: int): Promise<void>
 ```
 
-Sets the volume for a stream. This method uses a promise to return the result.
+设置指定流的音量。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -700,14 +711,14 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
-| volume | int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| volume | int | 是 | 音量等级，可设置范围通过 [getMinVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getminvolume) 和 [getMaxVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getmaxvolume) 获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 
@@ -719,7 +730,7 @@ Sets the volume for a stream. This method uses a promise to return the result.
 setVolumeWithFlag(volumeType: AudioVolumeType, volume: int, flags: int): Promise<void>
 ```
 
-Sets the volume for a stream. This method uses a promise to return the result.
+设置指定流的音量，同时指定本次修改音量是否要显示系统音量条。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -735,15 +746,15 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
-| volume | int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| flags | int | 是 | volume flags used to enable different operations, can be union of [VolumeFlag](arkts-audio-audio-volumeflag-e-sys.md) |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| volume | int | 是 | 音量等级，可设置范围通过 [getMinVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getminvolume) 和 [getMaxVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getmaxvolume) 获取。 |
+| flags | int | 是 | 音量等级，可设置范围通过 [getMinVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getminvolume) 和 [getMaxVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getmaxvolume) 获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

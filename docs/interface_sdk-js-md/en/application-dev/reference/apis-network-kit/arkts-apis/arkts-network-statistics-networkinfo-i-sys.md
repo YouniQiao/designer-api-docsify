@@ -40,8 +40,7 @@ End timestamp, in seconds.
 simId?: int
 ```
 
-SIM card ID. The default value is the maximum value of the uint32_t type.
-
+SIM card ID. The default value is the maximum value of the uint32_t type.  
 **Note：**: If **type** is set to **cellular**, this field must be specified.
 
 **Type:** int
@@ -78,8 +77,7 @@ Start timestamp, in seconds.
 type: NetBearType
 ```
 
-Network type.
-
+Network type.  
 **Note：**: If **type** is set to **cellular**, the **simId** field must be specified.
 
 **Type:** NetBearType

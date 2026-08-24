@@ -1,8 +1,6 @@
 # RoundRectShapeOptions
 
-Interface for RectShape constructor parameters with separate radius values.
-
-@extends ShapeSize @interface RoundRectShapeOptions
+Interface for RectShape constructor parameters with separate radius values.@extends ShapeSize @interface RoundRectShapeOptions
 
 **Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](arkts-arkui-shape-shapesize-i.md)
 

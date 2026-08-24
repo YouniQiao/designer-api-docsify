@@ -1,8 +1,6 @@
 # SettingItem
 
-The definition of setting Information.
-
-@interface SettingItem
+The definition of setting Information.@interface SettingItem
 
 **Since:** 23
 

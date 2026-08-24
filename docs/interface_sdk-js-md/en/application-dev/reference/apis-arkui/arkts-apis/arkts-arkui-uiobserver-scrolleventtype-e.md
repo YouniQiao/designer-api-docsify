@@ -1,8 +1,6 @@
 # ScrollEventType
 
-ScrollEvent type.
-
-@enum { number }
+ScrollEvent type.@enum { number }
 
 **Since:** 12
 

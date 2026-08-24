@@ -14,8 +14,7 @@ function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>
 
 Obtains the information of the widget that has been added to the home screen on the device. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This field is supported since API version 18 and deprecated since API version 20. You are advised to use
 > [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md) instead.
 

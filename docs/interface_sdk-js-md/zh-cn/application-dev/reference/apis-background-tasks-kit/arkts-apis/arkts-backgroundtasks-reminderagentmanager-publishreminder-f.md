@@ -14,11 +14,10 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<i
 
 发布后台代理提醒。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口需要申请通知弹窗权限
 > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md)
-> 后调用。 &gt;
+> 后调用。&gt;
 
 **起始版本：** 23
 
@@ -133,11 +132,10 @@ function publishReminder(reminderReq: ReminderRequest): Promise<int>
 
 发布后台代理提醒。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口需要申请通知弹窗权限
 > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md)
-> 后调用。 &gt;
+> 后调用。&gt;
 
 **起始版本：** 23
 

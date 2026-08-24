@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## enableHotspot
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function enableHotspot(): boolean
 ```
 
-使能热点。
-
-<p>该方法是异步的。使能热点后，WLAN可能会被去使能。
+使能热点。<p>该方法是异步的。使能热点后，WLAN可能会被去使能。
 
 **起始版本：** 7
 

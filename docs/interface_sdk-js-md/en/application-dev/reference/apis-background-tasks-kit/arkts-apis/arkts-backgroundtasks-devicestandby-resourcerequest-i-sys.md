@@ -1,8 +1,6 @@
 # ResourceRequest (System API)
 
-The request of standby resources.
-
-@interface ResourceRequest
+The request of standby resources.@interface ResourceRequest
 
 **Since:** 23
 

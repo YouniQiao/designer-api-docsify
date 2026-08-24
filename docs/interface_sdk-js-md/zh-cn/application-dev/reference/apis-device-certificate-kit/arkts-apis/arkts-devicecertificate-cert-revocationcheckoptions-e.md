@@ -80,8 +80,7 @@ REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE = 4
 
 当ACCESS_NETWORK选项打开时有效。如果开启了该能力，对终端实体证书OCSP或CRL校验成功，则会继续校验中间证书的吊销情况。默认 关闭。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前能力与REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT不能同时开启。
 
 **起始版本：** 23
@@ -100,8 +99,7 @@ REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT = 5
 
 如果开启了该能力，则会拿本地吊销列表校验终端实体证书的吊销情况。默认关闭。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前能力与REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE不能同时开启。
 
 **起始版本：** 23

@@ -1,8 +1,6 @@
 # ImageContent
 
-Specify image's content.
-
-@enum { int }
+Specify image's content.@enum { int }
 
 **Since:** 23
 

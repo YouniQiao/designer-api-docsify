@@ -18,9 +18,7 @@ Inherits from BadgeParam and has all attributes of BadgeParam.
 count: int
 ```
 
-Number of notifications.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The value must be an integer within [-2147483648,2147483647]. Value constraint: If the value is out of the range, 4294967296 is added or subtracted to ensure that the value is still in the range. If the value is not an integer, the decimal part is rounded off and the integer part is taken. For example, 5 is taken in 5.5.
+Number of notifications.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The value must be an integer within [-2147483648,2147483647]. Value constraint: If the value is out of the range, 4294967296 is added or subtracted to ensure that the value is still in the range. If the value is not an integer, the decimal part is rounded off and the integer part is taken. For example, 5 is taken in 5.5.
 
 **Type:** int
 

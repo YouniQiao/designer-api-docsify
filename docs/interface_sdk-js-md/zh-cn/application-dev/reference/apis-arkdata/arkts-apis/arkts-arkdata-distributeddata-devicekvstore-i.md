@@ -17,7 +17,6 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## closeResultSet
@@ -151,10 +150,8 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 
 获取与指定设备ID和key匹配的string值，使用callback异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -264,10 +261,8 @@ get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Arr
 
 获取与指定设备ID和key匹配的string值，使用Promise异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -308,10 +303,8 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 
 获取与指定设备ID和key前缀匹配的所有键值对，使用callback异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -679,10 +672,8 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 获取与指定设备ID和key前缀匹配的所有键值对，使用Promise异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -786,10 +777,8 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 
 获取与指定设备ID和Query对象匹配的键值对列表，使用callback异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -825,10 +814,8 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 获取与指定设备ID和Query对象匹配的键值对列表，使用Promise异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -869,10 +856,8 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStor
 
 获取与指定设备ID和key前缀匹配的KvStoreResultSet对象，使用callback异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -1224,10 +1209,8 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>
 
 获取与指定设备ID和key前缀匹配的KvStoreResultSet对象，使用Promise异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -1331,10 +1314,8 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResu
 
 获取与指定设备ID和Query对象匹配的KvStoreResultSet对象，使用callback异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -1370,10 +1351,8 @@ getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>
 
 获取与指定设备ID和Query对象匹配的KvStoreResultSet对象，使用Promise异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -1657,10 +1636,8 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 
 获取与指定设备ID和Query对象匹配的结果数，使用callback异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -1696,10 +1673,8 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 
 获取与指定设备ID和Query对象匹配的结果数，使用Promise异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -1912,10 +1887,8 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 从当前数据库中删除指定设备的数据，使用callback异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -2048,10 +2021,8 @@ removeDeviceData(deviceId: string): Promise<void>
 
 从当前数据库中删除指定设备的数据，使用Promise异步回调。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
+> **说明：**&gt;
+> 其中deviceId通过调用<!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -2091,8 +2062,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 
 在手动同步方式下，触发数据库同步。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 其中deviceIds为<!--RP2-->[DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)中的
 > networkId, 通过调用
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)

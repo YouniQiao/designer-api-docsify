@@ -1,6 +1,6 @@
 # VolumeFlag（系统接口）
 
-Enumerates volume related operations. Flags should be powers of 2!
+枚举，音量相关操作。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Enumerates volume related operations. Flags should be powers of 2!
 FLAG_SHOW_SYSTEM_UI = 1
 ```
 
-Show system volume bar.
+拉起系统音量条。
 
 **起始版本：** 23
 

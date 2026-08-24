@@ -14,7 +14,6 @@ Describes the scene feature detection result.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## detected

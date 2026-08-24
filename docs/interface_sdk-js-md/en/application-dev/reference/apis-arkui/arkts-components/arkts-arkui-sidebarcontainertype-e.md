@@ -14,15 +14,7 @@ Enumerates the types of sidebar containers.
 Embed = 0
 ```
 
-The sidebar is embedded in the component and displayed side by side with the content area.
-
-With the overall container size unchanged, displaying the sidebar reduces the content area, and hiding the sidebar expands the content area.
-
-If the component size is less than the sum of [minContentWidth](arkts-arkui-sidebarcontainer-attribute.md#mincontentwidth) and [minSideBarWidth](arkts-arkui-sidebarcontainer-attribute.md#minsidebarwidth), and **showSideBar** is not set, the sidebar is automatically hidden.
-
-If **minSideBarWidth** or **minContentWidth** is not set, the default value will be used for calculation.
-
-The user can bring out the sidebar in Overlay mode by clicking the control button.
+The sidebar is embedded in the component and displayed side by side with the content area.With the overall container size unchanged, displaying the sidebar reduces the content area, and hiding the sidebar expands the content area.If the component size is less than the sum of [minContentWidth](arkts-arkui-sidebarcontainer-attribute.md#mincontentwidth) and [minSideBarWidth](arkts-arkui-sidebarcontainer-attribute.md#minsidebarwidth), and **showSideBar** is not set, the sidebar is automatically hidden.If **minSideBarWidth** or **minContentWidth** is not set, the default value will be used for calculation.The user can bring out the sidebar in Overlay mode by clicking the control button.
 
 **Since:** 8
 
@@ -54,11 +46,7 @@ The sidebar is overlaid on top of the content area, without affecting the size o
 AUTO = 2
 ```
 
-The sidebar is displayed in Embed mode when the component size is greater than or equal to the sum of **minSideBarWidth** and **minContentWidth**
-
-and in Overlay mode otherwise.
-
-If **minSideBarWidth** or **minContentWidth** is not set, the default value will be used for calculation. If the calculation result is less than 600 vp, 600 vp will be used as the breakpoint value for mode switching.
+The sidebar is displayed in Embed mode when the component size is greater than or equal to the sum of **minSideBarWidth** and **minContentWidth**and in Overlay mode otherwise.If **minSideBarWidth** or **minContentWidth** is not set, the default value will be used for calculation. If the calculation result is less than 600 vp, 600 vp will be used as the breakpoint value for mode switching.
 
 **Since:** 10
 

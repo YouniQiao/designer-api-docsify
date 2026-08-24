@@ -38,10 +38,8 @@ countryOrRegion: string
 dir: "ltr" | "rtl"
 ```
 
-文字布局方向。取值范围：
-
-- ltr：从左到右。
-
+文字布局方向。取值范围：  
+- ltr：从左到右。  
 - rtl：从右到左。
 
 **类型：** "ltr" \| "rtl"

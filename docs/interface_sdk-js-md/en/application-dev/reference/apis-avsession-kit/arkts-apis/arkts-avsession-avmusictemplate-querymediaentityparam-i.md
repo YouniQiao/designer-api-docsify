@@ -1,8 +1,6 @@
 # QueryMediaEntityParam
 
-The definition of QueryMediaEntityParam.
-
-@interface QueryMediaEntityParam
+The definition of QueryMediaEntityParam.@interface QueryMediaEntityParam
 
 **Since:** 23
 

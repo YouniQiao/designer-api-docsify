@@ -1,8 +1,6 @@
 # GridRowColumnOption
 
-Defines the option in int unit of grid-container component.
-
-@interface GridRowColumnOption
+Defines the option in int unit of grid-container component.@interface GridRowColumnOption
 
 **Since:** 23
 

@@ -42,9 +42,7 @@ Set one specific dynamic range mode that you want to use.
 isAuto?: boolean
 ```
 
-Indicate that if the system should decide the dynamic range mode automatically. If set this to true, the one specified by dynamicRangeMode parameter will be ignored.
-
-When setting isAuto to true, it is recommended to also set the waitUntilRenderFinished field in SnapshotOptions to true to ensure that the system can properly detect the mode being used.
+Indicate that if the system should decide the dynamic range mode automatically. If set this to true, the one specified by dynamicRangeMode parameter will be ignored.When setting isAuto to true, it is recommended to also set the waitUntilRenderFinished field in SnapshotOptions to true to ensure that the system can properly detect the mode being used.
 
 **Type:** boolean
 

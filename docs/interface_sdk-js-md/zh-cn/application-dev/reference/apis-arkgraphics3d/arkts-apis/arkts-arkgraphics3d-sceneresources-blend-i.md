@@ -1,8 +1,6 @@
 # Blend
 
-用于控制材质的透明效果。
-
-@interface Blend
+用于控制材质的透明效果。@interface Blend
 
 **起始版本：** 23
 

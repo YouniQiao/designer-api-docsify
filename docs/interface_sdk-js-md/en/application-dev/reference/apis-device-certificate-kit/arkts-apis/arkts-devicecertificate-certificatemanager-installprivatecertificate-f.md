@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## installPrivateCertificate
@@ -183,7 +182,7 @@ Installs a private credential and specifies its storage level. This API uses a p
 | --- | --- | --- | --- |
 | keystore | Uint8Array | Yes | Keystore file with a key pair and certificate. The value contains up to 20480 bytes. |
 | keystorePwd | string | Yes | Password of the keystore file.<br>The value contains up to 32 bytes. |
-| certAlias | string | Yes | Alias of the credential entered by the user. Only digits, letters, and underscores (_ ) are supported.<br>The value should contain up to 32 bytes. |
+| certAlias | string | Yes | Alias of the credential entered by the user. Only digits, letters, and underscores (_) are supported.<br>The value should contain up to 32 bytes. |
 | level | [AuthStorageLevel](arkts-devicecertificate-certificatemanager-authstoragelevel-e.md) | Yes | Credential storage level. |
 
 **Return value:**

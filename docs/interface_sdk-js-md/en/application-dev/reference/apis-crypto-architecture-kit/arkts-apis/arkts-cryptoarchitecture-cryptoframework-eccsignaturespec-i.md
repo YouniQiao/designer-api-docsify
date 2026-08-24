@@ -2,8 +2,7 @@
 
 Represents the ECC/SM2 signature data that contains (r, s).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **r** and **s** are each 256 bits long.
 
 **Since:** 23

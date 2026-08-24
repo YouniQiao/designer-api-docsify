@@ -1,8 +1,6 @@
 # CanvasRenderingContext2D
 
-CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制， 绘制对象可以是形状、文本、图片等。
-
-@extends CanvasRenderer
+CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制， 绘制对象可以是形状、文本、图片等。@extends CanvasRenderer
 
 **继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-canvas-canvasrenderer-c.md)
 
@@ -47,11 +45,9 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 从一个DrawingRenderingContext对象中获取一个CanvasRenderingContext2D对象， 该CanvasRenderingContext2D对象与入参的DrawingRenderingContext对象绑定了相同的Canvas组件。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建Canvas组件，
-> 否则会导致应用崩溃。
-> 
+> 否则会导致应用崩溃。&gt;
 > - 当入参的DrawingRenderingContext对象未绑定Canvas组件时，将返回错误码。
 
 **起始版本：** 23
@@ -151,8 +147,7 @@ onAttach(callback: VoidCallback): void
 
 订阅CanvasRenderingContext2D与Canvas组件发生绑定的场景。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > CanvasRenderingContext2D对象在同一时间只能与一个Canvas组件绑定。
 > 当CanvasRenderingContext2D对象和Canvas组件发生绑定时，会触发'onAttach'回调，
 > 表示可以获取到canvas。
@@ -191,8 +186,7 @@ onDetach(callback: VoidCallback): void
 
 订阅CanvasRenderingContext2D与Canvas组件解除绑定的场景。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当CanvasRenderingContext2D对象和Canvas组件解除绑定时，会触发'onDetach'回调，
 > 表示应停止绘制行为。
 > 触发'onDetach'回调的一般场景：
@@ -229,8 +223,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 配置并启动AI分析功能，使用Promise异步回调。 使用前需先设置enableAnalyzer为true，启用图像AI分析能力。 该方法调用时，将截取调用时刻的画面帧进行分析，使用时需注意启动分析的时机， 避免出现画面和分析内容不一致的情况。 未执行完重复调用该方法会触发错误回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 分析类型不支持动态修改。
 > 当检测到画面有变化时，分析结果将自动销毁，可重新调用本接口启动分析。
 > 该特性依赖设备能力，不支持该能力的情况下，将返回错误码。
@@ -273,8 +266,7 @@ stopImageAnalyzer(): void
 
 停止AI分析功能，AI分析展示的内容将被销毁。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 在startImageAnalyzer方法未返回结果时调用本方法，会触发其错误回调。
 > 该特性依赖设备能力。
 
@@ -310,7 +302,7 @@ toDataURL(type?: string, quality?: double): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 否 | 用于指定图像格式。可选参数为："image/png"，"image/jpeg"， "image/webp"。异常值undefined或null按默认值处理。默认值：image/png。 |
+| type | string | 否 | 用于指定图像格式。可选参数为："image/png"，"image/jpeg"，"image/webp"。异常值undefined或null按默认值处理。默认值：image/png。 |
 | quality | double | 否 | 在指定图片格式为image/jpeg或image/webp的情况下， 可以从0到1的区间内选择图片的质量。如果超出取值范围， 将会使用默认值0.92。异常值undefined、null、NaN和Infinity按默认值处理。 默认值：0.92。 |
 
 **返回值：**

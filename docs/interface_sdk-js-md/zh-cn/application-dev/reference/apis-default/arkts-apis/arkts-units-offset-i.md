@@ -1,10 +1,6 @@
 # Offset
 
-type Offset = { dx: Length; dy: Length; }
-
-相对布局完成位置坐标偏移量。
-
-@interface Offset
+type Offset = { dx: Length; dy: Length; }相对布局完成位置坐标偏移量。@interface Offset
 
 **起始版本：** 23
 

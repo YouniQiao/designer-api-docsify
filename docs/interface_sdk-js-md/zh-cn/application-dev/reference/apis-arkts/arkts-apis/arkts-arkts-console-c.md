@@ -205,7 +205,7 @@ public static getInstance(): Console
 
 | 类型 | 说明 |
 | --- | --- |
-| [Console](arkts-arkts-console-c.md) | Console的单例实例。 |
+| Console | Console的单例实例。 |
 
 ## group
 

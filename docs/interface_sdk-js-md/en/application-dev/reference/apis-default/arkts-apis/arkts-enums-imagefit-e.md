@@ -1,8 +1,6 @@
 # ImageFit
 
-Image display mode.
-
-@enum { number }
+Image display mode.@enum { number }
 
 **Since:** 23
 

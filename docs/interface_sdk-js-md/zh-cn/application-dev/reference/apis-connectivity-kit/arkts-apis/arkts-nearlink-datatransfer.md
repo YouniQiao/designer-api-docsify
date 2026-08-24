@@ -29,8 +29,8 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 | [getConnectionState](arkts-connectivity-datatransfer-getconnectionstate-f.md) | 获取与远端设备之间的端口通道连接状态。 |
 | [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md) | 取消订阅端口通道连接状态变更事件。使用callback异步回调。 |
 | [offReadData](arkts-connectivity-datatransfer-offreaddata-f.md) | 取消订阅端口通道数据接收事件。使用callback异步回调。 |
-| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md) | 订阅端口通道连接状态变更事件。使用callback异步回调。 |
-| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md) | 订阅端口通道数据接收事件。使用callback异步回调。 |
+| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md) | 订阅端口通道连接状态变更事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。 |
+| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md) | 订阅端口通道数据接收事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。 |
 | [writeData](arkts-connectivity-datatransfer-writedata-f.md) | 通过设备地址和UUID向远端设备发送数据。使用Promise异步回调。 |
 
 ### 接口

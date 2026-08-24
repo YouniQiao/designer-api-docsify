@@ -20,7 +20,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcSlider](arkts-arkui-advanced-arcslider-arcslider-s.md) | ArcSlider({ options: ArcSliderOptions }) |
+| [ArcSlider](arkts-arkui-advanced-arcslider-arcslider-s.md) | ArcSlider({ options: ArcSliderOptions })创建ArcSlider实例，入参是弧形进度条配置选项。 |
 
 ### 接口
 

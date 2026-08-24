@@ -1,11 +1,8 @@
 # ProgressAttribute
 
-除支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)外，还支持以下属性。
+除支持通用属性外，还支持以下属性。支持通用事件。
 
-支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 该组件重写了通用属性backgroundColor，直接添加在Progress组件上，设置进度条的底色。如需设
 > 置整个Progress组件的背景色，需要在外层容器上添加backgroundColor，并用该容器包裹Progress组件。
 

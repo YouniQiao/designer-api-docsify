@@ -1,8 +1,6 @@
 # Result (System API)
 
-Rotation execution results.
-
-@enum { int }
+Rotation execution results.@enum { int }
 
 **Since:** 23
 

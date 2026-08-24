@@ -14,8 +14,7 @@ function getRectangleById(id: string): ComponentInfo
 
 根据组件ID获取组件实例对象，通过组件实例对象将获取的坐标位置和大小同步返回给开发者。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils)方法获取当前UI上下
 > 文关联的[ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md)对象。在目标组件布局完成后，通过该接口能够获取组件坐标和尺寸信息。建议在

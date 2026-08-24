@@ -1,8 +1,6 @@
 # SliderStyle
 
-Style of the slider thumb and track.
-
-@enum { number }
+Style of the slider thumb and track.@enum { number }
 
 **Since:** 23
 

@@ -14,8 +14,7 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 
 Creates an AVRecorder instance. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > An application can create multiple AVRecorder instances. However, because the device shares a common audio
 > channel, only one instance can record audio at a time. Any attempt to create the second instance for audio
 > recording fails due to audio channel conflicts.
@@ -109,8 +108,7 @@ function createAVRecorder(): Promise<AVRecorder>
 
 Creates an AVRecorder instance. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > An application can create multiple AVRecorder instances. However, because the device shares a common audio
 > channel, only one instance can record audio at a time. Any attempt to create the second instance for audio
 > recording fails due to audio channel conflicts.

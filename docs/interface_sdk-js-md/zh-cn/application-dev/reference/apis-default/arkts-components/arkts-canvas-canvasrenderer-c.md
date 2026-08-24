@@ -1,8 +1,6 @@
 # CanvasRenderer
 
-Canvas渲染器，用于绘制形状、文本、图片等对象。
-
-@extends CanvasPath
+Canvas渲染器，用于绘制形状、文本、图片等对象。@extends CanvasPath
 
 **继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-canvas-canvaspath-c.md)
 
@@ -257,7 +255,7 @@ createPattern(image: ImageBitmap, repetition: string | null): CanvasPattern | nu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | image | [ImageBitmap](arkts-canvas-imagebitmap-c.md) | 是 | 图源对象。异常值undefined或null按无效值处理。 |
-| repetition | string \| null | 是 | 设置图像重复的方式： 'repeat'：沿x轴和y轴重复绘制图像； 'repeat-x'：沿x轴重复绘制图像； 'repeat-y'：沿y轴重复绘制图像； 'no-repeat'：不重复绘制图像； 'clamp'：在原始边界外绘制时，超出部分使用边缘的颜色绘制； 'mirror'：沿x轴和y轴重复翻转绘制图像。 异常值undefined或null按无效值处理。 |
+| repetition | string \| null | 是 | 设置图像重复的方式：'repeat'：沿x轴和y轴重复绘制图像；'repeat-x'：沿x轴重复绘制图像；'repeat-y'：沿y轴重复绘制图像；'no-repeat'：不重复绘制图像；'clamp'：在原始边界外绘制时，超出部分使用边缘的颜色绘制；'mirror'：沿x轴和y轴重复翻转绘制图像。 异常值undefined或null按无效值处理。 |
 
 **返回值：**
 
@@ -785,7 +783,7 @@ rotate(angle: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | double | 是 | 设置顺时针旋转的弧度值，可以通过 degree Math.PI / 180 将角度转换为弧度值。 单位：弧度 |
+| angle | double | 是 | 设置顺时针旋转的弧度值，可以通过 degree * Math.PI / 180 将角度转换为弧度值。 单位：弧度 |
 
 ## save
 

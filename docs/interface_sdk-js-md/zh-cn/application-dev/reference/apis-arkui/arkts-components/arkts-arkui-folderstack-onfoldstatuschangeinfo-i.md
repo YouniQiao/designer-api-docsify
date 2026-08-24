@@ -1,8 +1,6 @@
 # OnFoldStatusChangeInfo
 
-当折叠状态改变的时候回调，仅在横屏状态下生效。
-
-@interface OnFoldStatusChangeInfo
+当折叠状态改变的时候回调，仅在横屏状态下生效。@interface OnFoldStatusChangeInfo
 
 **起始版本：** 23
 
@@ -18,9 +16,7 @@
 foldStatus: FoldStatus
 ```
 
-当前设备的折叠状态。
-
-Anonymous Object Rectification
+当前设备的折叠状态。Anonymous Object Rectification
 
 **类型：** [FoldStatus](../arkts-apis/arkts-arkui-foldstatus-e.md)
 

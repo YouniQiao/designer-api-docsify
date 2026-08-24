@@ -1,8 +1,6 @@
 # Area
 
-Defines the area property.
-
-@interface Area
+Defines the area property.@interface Area
 
 **Since:** 23
 

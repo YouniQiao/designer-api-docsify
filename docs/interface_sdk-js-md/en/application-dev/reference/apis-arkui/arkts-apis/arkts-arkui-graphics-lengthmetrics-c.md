@@ -30,13 +30,13 @@ Sets whether the **LengthMetrics** object automatically updates with system conf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the **LengthMetrics** object constructed using [resource](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md#resource) automatically refreshes the value when the system configuration changes. <br>**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. <br>**false**: The object does not proactively listen to the system configuration changes. |
+| value | boolean | Yes | Whether the **LengthMetrics** object constructed using [resource](#resource) automatically refreshes the value when the system configuration changes. <br>**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. <br>**false**: The object does not proactively listen to the system configuration changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | LengthMetrics** object. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | LengthMetrics** object. |
 
 ## constructor
 
@@ -61,7 +61,7 @@ A constructor used to create a **LengthMetrics** instance. If the **unit** param
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Value of the length property. <br>Value range: [0, +∞). |
-| unit | [LengthUnit](../../apis-default/arkts-apis/arkts-graphics-lengthunit-e.md) | No | Unit of the length property. |
+| unit | [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | No | Unit of the length property. |
 
 ## fp
 
@@ -91,7 +91,7 @@ Creates a length property in fp.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## lpx
 
@@ -121,7 +121,7 @@ Creates a length property in lpx.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## percent
 
@@ -151,7 +151,7 @@ Creates a length property in percent. The value **1** indicates 100%.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## px
 
@@ -181,7 +181,7 @@ Creates a length property in px.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## resource
 
@@ -211,7 +211,7 @@ Represents the length of a resource of the Resource type.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 **Examples**
 
@@ -287,7 +287,7 @@ Creates a length property in vp.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## unit
 
@@ -297,7 +297,7 @@ public unit: LengthUnit
 
 Unit of the length property. The default value is VP.
 
-**Type:** [LengthUnit](../../apis-default/arkts-apis/arkts-graphics-lengthunit-e.md)
+**Type:** [LengthUnit](arkts-arkui-graphics-lengthunit-e.md)
 
 **Default:** VP
 

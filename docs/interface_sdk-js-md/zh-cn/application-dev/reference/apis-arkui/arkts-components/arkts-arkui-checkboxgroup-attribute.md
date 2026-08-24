@@ -1,8 +1,6 @@
 # CheckboxGroup属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** CheckboxGroupAttribute extends CommonMethod<CheckboxGroupAttribute>
 
@@ -49,7 +47,7 @@ checkboxShape(value: CheckBoxShape)
 checkboxShape(shape: Optional<CheckBoxShape>)
 ```
 
-设置CheckboxGroup组件形状，包括圆形和圆角方形。与[checkboxShape](#checkboxshape)&lt; sup&gt;12+&lt;/sup&gt;相比，shape参数新增了对undefined类型的支持。
+设置CheckboxGroup组件形状，包括圆形和圆角方形。与[checkboxShape](#checkboxshape)&lt;sup&gt;12+&lt;/sup&gt;相比，shape参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -77,8 +75,7 @@ contentModifier(modifier: Optional<ContentModifier<CheckBoxGroupConfiguration>>)
 
 定制CheckboxGroup内容区的方法。设置该属性时，其他属性设置会失效。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 21
@@ -201,13 +198,7 @@ CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化�
 selectAll(value: boolean)
 ```
 
-设置是否全选。若同组的Checkbox显式设置了select属性，则Checkbox的优先级高。
-
-在与带有缓存功能的组件（如List）配合使用时，未创建的Checkbox选中状态需由开发者控制。
-
-从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-
-从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置是否全选。若同组的Checkbox显式设置了select属性，则Checkbox的优先级高。在与带有缓存功能的组件（如List）配合使用时，未创建的Checkbox选中状态需由开发者控制。从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 8
 
@@ -231,11 +222,7 @@ selectAll(value: boolean)
 selectAll(isAllSelected: Optional<boolean>)
 ```
 
-设置是否全选。若同组的Checkbox显式设置了select属性，则Checkbox的优先级高。与 [selectAll](#selectall)相比，isAllSelected参数新增了对undefined类型的支持。
-
-在与带有缓存功能的组件（如List）配合使用时，未创建的Checkbox选中状态需由开发者控制。
-
-该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、 [!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置是否全选。若同组的Checkbox显式设置了select属性，则Checkbox的优先级高。与 [selectAll](#selectall)相比，isAllSelected参数新增了对undefined类型的支持。在与带有缓存功能的组件（如List）配合使用时，未创建的Checkbox选中状态需由开发者控制。该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、 [!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 18
 
@@ -303,7 +290,7 @@ selectedColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | 是 | 被选中或部分选中状态的颜色。<br/>当resColor的值为undefined时，默认值：\\$r(' sys.color.ohos_id_color_text_primary_activated')<br/>异常值按照默认值处理。 |
+| resColor | Optional&lt;ResourceColor&gt; | 是 | 被选中或部分选中状态的颜色。<br/>当resColor的值为undefined时，默认值：\\$r('sys.color.ohos_id_color_text_primary_activated')<br/>异常值按照默认值处理。 |
 
 ## unselectedColor
 
@@ -351,5 +338,5 @@ unselectedColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | 是 | 非选中状态边框颜色。<br/>当resColor的值为undefined时，默认值：\\$r(' sys.color.ohos_id_color_switch_outline_off')。 |
+| resColor | Optional&lt;ResourceColor&gt; | 是 | 非选中状态边框颜色。<br/>当resColor的值为undefined时，默认值：\\$r('sys.color.ohos_id_color_switch_outline_off')。 |
 

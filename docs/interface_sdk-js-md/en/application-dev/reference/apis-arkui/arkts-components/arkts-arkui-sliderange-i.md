@@ -2,19 +2,14 @@
 
 Defines the callback type used in **SlideRange**.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Currently, this API takes effect only when **min** ≤ **from** ≤ **to** ≤ **max** (the values of **min** and
-> **max** do not depend on the values set, but on the actual values that take effect).
-> 
-> - You can set either **from** or **to**, or you can set both **from** and **to**.
-> 
+> **max** do not depend on the values set, but on the actual values that take effect).&gt;
+> - You can set either **from** or **to**, or you can set both **from** and **to**.&gt;
 > - When the API is effective, if the set **from** value is between the adjacent multiples of **step**, then **from**
-> takes the value of the left interval multiple of **step** or **min** as the corrected value.
-> 
+> takes the value of the left interval multiple of **step** or **min** as the corrected value.&gt;
 > - When the API is effective, if the set **to** value is between the adjacent multiples of **step**, then **to**
-> takes the value of the right interval multiple of **step** or **MAX** as the corrected value.
-> 
+> takes the value of the right interval multiple of **step** or **MAX** as the corrected value.&gt;
 > - After **from** and **to** have taken their corrected values, when **value** is **undefined** or **null**, it
 > takes the same value as **from**; when **value** is a number type, and if **value** ≤ **from**, then it takes
 > **from**; if **value**

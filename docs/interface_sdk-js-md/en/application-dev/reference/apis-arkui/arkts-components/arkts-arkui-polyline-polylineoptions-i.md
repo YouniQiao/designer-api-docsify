@@ -1,8 +1,6 @@
 # PolylineOptions
 
-Define options used to construct a polyline.
-
-@interface PolylineOptions
+Define options used to construct a polyline.@interface PolylineOptions
 
 **Since:** 23
 

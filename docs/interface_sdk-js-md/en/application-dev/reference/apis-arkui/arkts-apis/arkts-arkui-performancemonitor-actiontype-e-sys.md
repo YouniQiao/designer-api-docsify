@@ -1,8 +1,6 @@
 # ActionType (System API)
 
-Enumerates the input event type.
-
-@enum { number }
+Enumerates the input event type.@enum { number }
 
 **Since:** 23
 

@@ -4,6 +4,8 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 
 **Since:** 22
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct Filter--><!--Device-unnamed-export declare struct Filter-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,13 @@ import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 
 ## additionFilters
 
-```TypeScript
-@Prop additionFilters?: FilterParams
-```
-
 FilterParams, Additional filter item parameter. The filter item name is displayed and can be deselected.
 
 **Type:** [FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md)
 
 **Since:** 22
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,15 +36,13 @@ FilterParams, Additional filter item parameter. The filter item name is displaye
 
 ## container
 
-```TypeScript
-@BuilderParam container: () => void
-```
-
 Container in the user-defined filtering result display area.
 
 **Type:** () =&gt; void
 
 **Since:** 22
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,15 +54,13 @@ Container in the user-defined filtering result display area.
 
 ## filterType
 
-```TypeScript
-@Prop filterType?: FilterType
-```
-
 FilterType, Filter display style type.
 
 **Type:** [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md)
 
 **Since:** 22
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,15 +72,13 @@ FilterType, Filter display style type.
 
 ## multiFilters
 
-```TypeScript
-@Prop multiFilters: Array<FilterParams>
-```
-
 Multi-dimensional filtering parameters.
 
 **Type:** Array&lt;[FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md)&gt;
 
 **Since:** 22
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

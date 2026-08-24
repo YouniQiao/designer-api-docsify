@@ -1,8 +1,7 @@
 # DataPanel
 
 The **DataPanel** component is used to display proportions in a chart.
-
-> **NOTE** > > - This component supports WithTheme since API version 26.0.0
+> **NOTE**>> - This component supports WithTheme since API version 26.0.0
 
 ## Child Components
 

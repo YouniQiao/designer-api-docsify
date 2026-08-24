@@ -4,7 +4,7 @@
 export type SetPreviewTextCallback = (text: string, range: Range) => void
 ```
 
-@brief Callback triggered when the input method framework needs to display the text preview.
+Callback triggered when the input method framework needs to display the text preview.
 
 **Since:** 23
 

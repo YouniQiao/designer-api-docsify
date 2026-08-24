@@ -1,8 +1,6 @@
 # GridLayoutAlgorithmOptions
 
-Sets the number of columns, column spacing, and row spacing of the grid layout algorithm.
-
-@interface GridLayoutAlgorithmOptions
+Sets the number of columns, column spacing, and row spacing of the grid layout algorithm.@interface GridLayoutAlgorithmOptions
 
 **Since:** 24
 
@@ -16,13 +14,9 @@ Sets the number of columns, column spacing, and row spacing of the grid layout a
 columnsGap?: LengthMetrics
 ```
 
-Spacing between columns.
+Spacing between columns.Default value: **LengthMetrics.vp(0)**Invalid values are treated as the default value.
 
-Default value: **LengthMetrics.vp(0)**
-
-Invalid values are treated as the default value.
-
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
@@ -42,11 +36,7 @@ Invalid values are treated as the default value.
 columnsTemplate?: string | ItemFillPolicy
 ```
 
-Number of columns in the grid layout.
-
-Default value: **'1fr'**
-
-Invalid values are treated as the default value.
+Number of columns in the grid layout.Default value: **'1fr'**Invalid values are treated as the default value.
 
 **Type:** string \| [ItemFillPolicy](../../apis-default/arkts-apis/arkts-units-itemfillpolicy-i.md)
 
@@ -68,13 +58,9 @@ Invalid values are treated as the default value.
 rowsGap?: LengthMetrics
 ```
 
-Spacing between rows.
+Spacing between rows.Default value: **LengthMetrics.vp(0)**Invalid values are treated as the default value.
 
-Default value: **LengthMetrics.vp(0)**
-
-Invalid values are treated as the default value.
-
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

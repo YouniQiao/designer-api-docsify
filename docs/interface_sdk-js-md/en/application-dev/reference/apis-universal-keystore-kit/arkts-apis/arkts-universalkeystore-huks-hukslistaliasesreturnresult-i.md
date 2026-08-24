@@ -12,7 +12,6 @@ Defines the returned key alias array.
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## keyAliases

@@ -1,10 +1,6 @@
 # ResultSet
 
-提供通过查询数据库生成的数据库结果集的访问方法。结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。
-
-ResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
-
-下列API示例中，都需先使用 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query) 、 [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql) 、 [remoteQuery](arkts-arkdata-relationalstore-rdbstore-i.md#remotequery) 、[queryLockedRow](arkts-arkdata-relationalstore-rdbstore-i.md#querylockedrow)等query类方法中任一方法获取到ResultSet实例，再通过此实例调用对应方法。
+提供通过查询数据库生成的数据库结果集的访问方法。结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。ResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。下列API示例中，都需先使用 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query) 、 [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql) 、 [remoteQuery](arkts-arkdata-relationalstore-rdbstore-i.md#remotequery) 、[queryLockedRow](arkts-arkdata-relationalstore-rdbstore-i.md#querylockedrow)等query类方法中任一方法获取到ResultSet实例，再通过此实例调用对应方法。
 
 **起始版本：** 23
 
@@ -464,9 +460,7 @@ async function getColumnNameExample(store : relationalStore.RdbStore){
 getColumnNames(): Array<string>
 ```
 
-获取结果集中所有列的名称。
-
-列名以字符串数组的形式返回，数组中字符串的顺序与结果集中列的顺序一致。
+获取结果集中所有列的名称。列名以字符串数组的形式返回，数组中字符串的顺序与结果集中列的顺序一致。
 
 **起始版本：** 23
 
@@ -1934,9 +1928,7 @@ async function isColumnNullExample(store : relationalStore.RdbStore) {
 columnCount: int
 ```
 
-columnCount: int
-
-获取结果集中列的数量。
+columnCount: int获取结果集中列的数量。
 
 **类型：** int
 
@@ -1952,9 +1944,7 @@ columnCount: int
 columnNames: Array<string>
 ```
 
-columnNames: Array\&lt;string\&gt;
-
-获取结果集中所有列的名称。当结果集中包含重名列时，获取的列名会不符合预期，建议使用[getColumnNames](#getcolumnnames)接口获取。
+columnNames: Array\&lt;string\&gt;获取结果集中所有列的名称。当结果集中包含重名列时，获取的列名会不符合预期，建议使用[getColumnNames](#getcolumnnames)接口获取。
 
 **类型：** Array&lt;string&gt;
 
@@ -1970,9 +1960,7 @@ columnNames: Array\&lt;string\&gt;
 isAtFirstRow: boolean
 ```
 
-isAtFirstRow: boolean
-
-检查结果集指针是否位于第一行（行索引为0），true表示位于第一行，false表示不位于第一行。
+isAtFirstRow: boolean检查结果集指针是否位于第一行（行索引为0），true表示位于第一行，false表示不位于第一行。
 
 **类型：** boolean
 
@@ -1988,9 +1976,7 @@ isAtFirstRow: boolean
 isAtLastRow: boolean
 ```
 
-isAtLastRow: boolean
-
-检查结果集指针是否位于最后一行，true表示位于最后一行，false表示不位于最后一行。
+isAtLastRow: boolean检查结果集指针是否位于最后一行，true表示位于最后一行，false表示不位于最后一行。
 
 **类型：** boolean
 
@@ -2006,9 +1992,7 @@ isAtLastRow: boolean
 isClosed: boolean
 ```
 
-isClosed: boolean
-
-检查当前结果集是否关闭，true表示结果集已关闭，false表示结果集未关闭。
+isClosed: boolean检查当前结果集是否关闭，true表示结果集已关闭，false表示结果集未关闭。
 
 **类型：** boolean
 
@@ -2024,9 +2008,7 @@ isClosed: boolean
 isEnded: boolean
 ```
 
-isEnded: boolean
-
-检查结果集指针是否位于最后一行之后，true表示位于最后一行之后，false表示不位于最后一行之后。
+isEnded: boolean检查结果集指针是否位于最后一行之后，true表示位于最后一行之后，false表示不位于最后一行之后。
 
 **类型：** boolean
 
@@ -2042,9 +2024,7 @@ isEnded: boolean
 isStarted: boolean
 ```
 
-isStarted: boolean
-
-检查指针是否移动过，true表示指针已移动过，false表示指针未移动过。
+isStarted: boolean检查指针是否移动过，true表示指针已移动过，false表示指针未移动过。
 
 **类型：** boolean
 
@@ -2060,9 +2040,7 @@ isStarted: boolean
 rowCount: int
 ```
 
-rowCount: int
-
-获取结果集中行的数量。
+rowCount: int获取结果集中行的数量。
 
 **类型：** int
 
@@ -2078,9 +2056,7 @@ rowCount: int
 rowIndex: int
 ```
 
-rowIndex: int
-
-获取结果集当前行的索引位置，默认值为-1。索引位置下标从0开始。
+rowIndex: int获取结果集当前行的索引位置，默认值为-1。索引位置下标从0开始。
 
 **类型：** int
 

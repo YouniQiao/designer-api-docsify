@@ -1,14 +1,10 @@
 # AeadParamsSpec
 
-Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
+Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).<br>It is applicable to the CCM and GCM modes of AES. <br>It is applicable to the GCM mode of SM4. <br>It is applicable to ChaCha20-Poly1305.
 
-<br>It is applicable to the CCM and GCM modes of AES. <br>It is applicable to the GCM mode of SM4. <br>It is applicable to ChaCha20-Poly1305.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When **AeadParamsSpec** is used for encryption in AES-CCM mode:
-> - If the tag length is specified during encryption, the same length must be passed during decryption.
-> 
+> - If the tag length is specified during encryption, the same length must be passed during decryption.&gt;
 > - In CCM mode, only one of [update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update) and
 > [doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) can be called for encryption or decryption, and each method can
 > be called only once.
@@ -79,9 +75,7 @@ Number used once.
 tagLen?: int
 ```
 
-Authentication tag length, in bytes.
-
-<br>For encryption, the tag will be added to the end of the ciphertext. <br>For decryption, the tag should be at the end of the ciphertext. <br>The value should be an integer.
+Authentication tag length, in bytes.<br>For encryption, the tag will be added to the end of the ciphertext. <br>For decryption, the tag should be at the end of the ciphertext. <br>The value should be an integer.
 
 > **NOTE：**
 > - For AES-CCM, the default value is 12. The supported values are 4, 6, 8, 10, 12, 14, and 16.

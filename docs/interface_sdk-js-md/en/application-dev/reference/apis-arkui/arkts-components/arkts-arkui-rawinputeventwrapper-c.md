@@ -1,15 +1,8 @@
 # RawInputEventWrapper
 
-Raw input event wrapper class.
+Raw input event wrapper class.Provides a unified interface to access different types of input events, ensuring type safety and backward compatibility.This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe methods for access.This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered.
 
-Provides a unified interface to access different types of input events, ensuring type safety and backward compatibility.
-
-This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe methods for access.
-
-This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Since the listener is executed before events are dispatched to specific components, some fields in the event will
 > not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md), coordinates relative to the component
 > [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition)

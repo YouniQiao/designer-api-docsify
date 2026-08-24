@@ -1,8 +1,6 @@
 # TextAlign
 
-Alignment of text.
-
-@enum { number }
+Alignment of text.@enum { number }
 
 **起始版本：** 23
 

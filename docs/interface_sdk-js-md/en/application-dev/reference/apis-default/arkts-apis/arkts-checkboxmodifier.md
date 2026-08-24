@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [CheckboxModifier](arkts-checkboxmodifier-c.md) | Defines Checkbox Modifier |
+| [CheckboxModifier](arkts-checkboxmodifier-c.md) | Defines Checkbox Modifier@implements { CheckboxAttribute, AttributeModifier&lt;CheckboxAttribute&gt; } |
 

@@ -14,9 +14,7 @@ Enumerates the constants.
 ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'
 ```
 
-Operation of adding an account implicitly.
-
-Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_CREATE_ACCOUNT_IMPLICITLY** instead.
+Operation of adding an account implicitly.Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_CREATE_ACCOUNT_IMPLICITLY** instead.
 
 **Since:** 8
 
@@ -34,9 +32,7 @@ Note: This API is supported since API version 8 and deprecated since API version
 ACTION_AUTHENTICATE = 'authenticate'
 ```
 
-Authentication operation.
-
-Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_AUTH** instead.
+Authentication operation.Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_AUTH** instead.
 
 **Since:** 8
 

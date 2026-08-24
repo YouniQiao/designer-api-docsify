@@ -12,7 +12,6 @@ Defines the minimum speed of a task. If the task speed is lower than the preset 
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## duration

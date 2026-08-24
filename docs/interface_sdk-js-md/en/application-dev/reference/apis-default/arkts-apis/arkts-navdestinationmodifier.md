@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [NavDestinationModifier](arkts-navdestinationmodifier-c.md) | Defines NavDestination Modifier |
+| [NavDestinationModifier](arkts-navdestinationmodifier-c.md) | Defines NavDestination Modifier@implements { NavDestinationAttribute, AttributeModifier&lt;NavDestinationAttribute&gt; } |
 

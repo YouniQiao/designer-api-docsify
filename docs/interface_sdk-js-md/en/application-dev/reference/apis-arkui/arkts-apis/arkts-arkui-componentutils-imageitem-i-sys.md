@@ -1,8 +1,6 @@
 # ImageItem (System API)
 
-Image object with layout information.
-
-@interface ImageItem
+Image object with layout information.@interface ImageItem
 
 **Since:** 23
 

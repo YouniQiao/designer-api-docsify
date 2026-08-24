@@ -1,8 +1,6 @@
 # DynamicLayoutAttribute
 
-动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。
-
-@extends CommonMethod @interface DynamicLayoutAttribute
+动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。@extends CommonMethod @interface DynamicLayoutAttribute
 
 **继承/实现关系：** DynamicLayoutAttribute extends CommonMethod
 

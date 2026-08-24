@@ -1,8 +1,6 @@
 # GestureGroupGestureHandlerOptions
 
-Defines the GestureGroupGestureHandler options.
-
-@interface GestureGroupGestureHandlerOptions
+Defines the GestureGroupGestureHandler options.@interface GestureGroupGestureHandlerOptions
 
 **Since:** 23
 

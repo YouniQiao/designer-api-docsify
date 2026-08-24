@@ -14,9 +14,7 @@ Defines a vector that contains the x and y coordinate values.
 x: number
 ```
 
-X coordinate value of the vector.
-
-Value range: (-∞, +∞).
+X coordinate value of the vector.Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -36,9 +34,7 @@ Value range: (-∞, +∞).
 y: number
 ```
 
-Y coordinate value of the vector.
-
-Value range: (-∞, +∞).
+Y coordinate value of the vector.Value range: (-∞, +∞).
 
 **Type:** number
 

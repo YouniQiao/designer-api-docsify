@@ -1,8 +1,6 @@
 # DialogInfo
 
-The definition of dialog information.
-
-@interface DialogInfo
+The definition of dialog information.@interface DialogInfo
 
 **Since:** 23
 

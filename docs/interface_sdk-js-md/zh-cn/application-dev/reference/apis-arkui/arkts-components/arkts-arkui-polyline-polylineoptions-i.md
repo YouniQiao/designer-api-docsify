@@ -1,8 +1,6 @@
 # PolylineOptions
 
-用于描述Polyline组件绘制属性。
-
-@interface PolylineOptions
+用于描述Polyline组件绘制属性。@interface PolylineOptions
 
 **起始版本：** 23
 

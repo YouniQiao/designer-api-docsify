@@ -2,8 +2,7 @@
 
 Custom menu extension item.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported from API version 12 and deprecated from API version 20. You are advised to use
 > [editMenuOptions](arkts-arkweb-web-attribute.md#editmenuoptions) instead.
 
@@ -20,11 +19,6 @@ Custom menu extension item.
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## action

@@ -14,7 +14,6 @@ Defines the information carried when the system recording controller state chang
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## enabled

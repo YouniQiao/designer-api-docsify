@@ -22,7 +22,7 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 readonly className: string
 ```
 
-Class name decorated by @InsightIntentEntity .
+Class name decorated by @InsightIntentEntity.
 
 **Type:** string
 
@@ -122,7 +122,7 @@ The parameters of intent entity.
 readonly parentClassName: string
 ```
 
-Parent class name decorated by @InsightIntentEntity .
+Parent class name decorated by @InsightIntentEntity.
 
 **Type:** string
 

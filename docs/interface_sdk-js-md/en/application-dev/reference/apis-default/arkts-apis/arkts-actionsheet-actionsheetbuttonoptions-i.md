@@ -1,8 +1,6 @@
 # ActionSheetButtonOptions
 
-Base button params used for ActionSheet.
-
-@interface ActionSheetButtonOptions
+Base button params used for ActionSheet.@interface ActionSheetButtonOptions
 
 **Since:** 23
 

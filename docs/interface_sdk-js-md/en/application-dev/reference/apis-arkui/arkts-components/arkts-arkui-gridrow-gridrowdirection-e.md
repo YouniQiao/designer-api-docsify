@@ -1,8 +1,6 @@
 # GridRowDirection
 
-Defines the direction of grid-container component.
-
-@enum { int }
+Defines the direction of grid-container component.@enum { int }
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # LocalizedBarrierStyle
 
-Specifies the Localized BarrierStyle of relative container
-
-@interface LocalizedBarrierStyle
+Specifies the Localized BarrierStyle of relative container@interface LocalizedBarrierStyle
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # AnimationPropertyType
 
-用于动画的属性类型。
-
-@enum { number }
+用于动画的属性类型。@enum { number }
 
 **起始版本：** 23
 

@@ -2,8 +2,7 @@
 
 在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Interface首批接口从API version 10开始支持。
 
 **起始版本：** 23

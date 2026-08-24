@@ -1,8 +1,6 @@
 # ToolEventCallback (System API)
 
-This interface is used to receive cli event when the cli tool process is running.
-
-@interface ToolEventCallback
+This interface is used to receive cli event when the cli tool process is running.@interface ToolEventCallback
 
 **Since:** 26.0.0
 

@@ -17,5 +17,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [MeasureOptions](arkts-measure-measureoptions-i.md) | 被计算文本属性。 |
+| [MeasureOptions](arkts-measure-measureoptions-i.md) | 被计算文本属性。@interface MeasureOptions |
 

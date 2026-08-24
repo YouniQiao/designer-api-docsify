@@ -12,7 +12,6 @@ Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconf
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## name

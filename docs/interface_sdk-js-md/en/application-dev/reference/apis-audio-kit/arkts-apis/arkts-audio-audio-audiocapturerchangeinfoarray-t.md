@@ -12,5 +12,5 @@ Defines an AudioCapturerChangeInfo array, which is read-only.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
-**Property type:** Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt;&gt;
+**Property type:** Array&lt;Readonly&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt;&gt;
 

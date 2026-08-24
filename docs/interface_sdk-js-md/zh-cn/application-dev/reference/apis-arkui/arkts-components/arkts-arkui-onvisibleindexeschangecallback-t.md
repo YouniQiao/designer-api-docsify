@@ -4,12 +4,10 @@
 declare type OnVisibleIndexesChangeCallback = (start: int, end: int) => void
 ```
 
-懒加载布局容器[LazyColumnLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazycolumnlayout.md)、 LazyVGridLayout、 [LazyVWaterFlowLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazyvwaterflowlayout.md)所显示的子组件索引发生变化时的回调 类型。
+懒加载布局容器[LazyColumnLayout](../arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-con.md#lazycolumnlayout)、 LazyVGridLayout、 [LazyVWaterFlowLayout](../../apis-default/arkts-apis/arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayout-f.md)所显示的子组件索引发生变化时的回调 类型。
 
-> **说明：**
-> 
-> - 当懒加载布局容器没有子组件时，start和end都返回-1。
-> 
+> **说明：**&gt;
+> - 当懒加载布局容器没有子组件时，start和end都返回-1。&gt;
 > - 当懒加载布局容器在可视区域内无子组件时，start和end都返回-1。
 
 **起始版本：** 26.0.0

@@ -300,7 +300,7 @@ Check if bit vector contains a particular bit element.
 
 | Type | Description |
 | --- | --- |
-| boolean | The boolean type, if bit vector contains the specified element, return true, |
+| boolean | The boolean type, if bit vector contains the specified element, return true, else return false. |
 
 **Error codes:**
 

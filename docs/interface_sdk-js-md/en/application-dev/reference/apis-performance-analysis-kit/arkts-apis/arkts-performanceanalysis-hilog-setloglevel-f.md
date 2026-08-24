@@ -12,12 +12,9 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 function setLogLevel(level: LogLevel, prefer: PreferStrategy): void
 ```
 
-Sets the minimum log level of the current application process.
+Sets the minimum log level of the current application process.You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy has the same effect as the **setMinLogLevel()** function.
 
-You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy has the same effect as the **setMinLogLevel()** function.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This function does not take effect for debug applications.
 
 **Since:** 23

@@ -1,8 +1,6 @@
 # PasteDescription
 
-Enumerates the text that can be displayed on the paste button.
-
-@enum { int }
+Enumerates the text that can be displayed on the paste button.@enum { int }
 
 **Since:** 23
 

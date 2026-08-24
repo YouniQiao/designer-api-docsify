@@ -1,8 +1,6 @@
 # LevelMode
 
-Define the display mode of all kind of dialog
-
-@enum { number }
+Define the display mode of all kind of dialog@enum { number }
 
 **Since:** 23
 

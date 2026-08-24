@@ -1,8 +1,6 @@
 # ScrollParam
 
-ScrollParam
-
-@interface ScrollParam
+ScrollParam@interface ScrollParam
 
 **Since:** 4
 

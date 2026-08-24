@@ -11,13 +11,6 @@ Describes the initialization options of the **Marquee** component.
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
-import { NodeRenderType, RenderOptions, BuilderNode, ReactiveBuilderNode, BuildOptions, NodeController, FrameNode, DrawContext, Size, Offset, Position, Pivot, Scale, Translation, Matrix4, Rotation, Frame, RenderNode, XComponentNode, LengthMetrics, ColorMetrics, BackgroundBlur, ContentBlur, ForegroundBlur, LengthUnit, LengthMetricsUnit, LayoutConstraint, ComponentContent, ReactiveComponentContent, NodeContent, Content, typeNode, NodeAdapter, ShapeMask, ShapeClip, Rect, RoundRect, edgeColors, edgeWidths, borderStyles, borderRadiuses, ExpandMode, ChildrenCountMode, UIState, InputEventType } from '@kit.ArkUI';
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## delay
@@ -26,11 +19,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 delay?: number
 ```
 
-Time interval between scroll movements.
-
-Default value: **0**
-
-Unit: millisecond
+Time interval between scroll movements.Default value: **0**Unit: millisecond
 
 **Type:** number
 
@@ -50,13 +39,8 @@ Unit: millisecond
 fadeout?: boolean
 ```
 
-Whether to apply a fade-out effect when the text is too long.
-
-**true** to apply a fade-out effect when the text is too long, **false** otherwise.
-
-When this parameter is set to **true**: if the text content exceeds the display range, a fade-out effect is applied to the edges of the partially visible text; if text is partially visible at both ends, the fade-out effect is applied to both ends. The **clip** attribute is automatically locked to **true** and cannot be set to **false**.
-
-Default value: **false**
+Whether to apply a fade-out effect when the text is too long.  
+**true** to apply a fade-out effect when the text is too long, **false** otherwise.When this parameter is set to **true**: if the text content exceeds the display range, a fade-out effect is applied to the edges of the partially visible text; if text is partially visible at both ends, the fade-out effect is applied to both ends. The **clip** attribute is automatically locked to **true** and cannot be set to **false**.Default value: **false**
 
 **Type:** boolean
 
@@ -76,11 +60,8 @@ Default value: **false**
 fromStart?: boolean
 ```
 
-Whether the text scrolls from the start.
-
-**true** to scroll from the start, **false** to scroll in reverse.
-
-Default value: **true**
+Whether the text scrolls from the start.  
+**true** to scroll from the start, **false** to scroll in reverse.Default value: **true**
 
 **Type:** boolean
 
@@ -100,9 +81,7 @@ Default value: **true**
 loop?: number
 ```
 
-Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.
-
-Default value: **-1**
+Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.Default value: **-1**
 
 **Type:** number
 
@@ -122,9 +101,7 @@ Default value: **-1**
 marqueeStartPolicy?: MarqueeStartPolicy
 ```
 
-Policy for starting the marquee. This attribute takes effect only when **start** is set to **true**.
-
-Default value: **MarqueeStartPolicy.DEFAULT**
+Policy for starting the marquee. This attribute takes effect only when **start** is set to **true**.Default value: **MarqueeStartPolicy.DEFAULT**
 
 **Type:** [MarqueeStartPolicy](arkts-arkui-marqueestartpolicy-e.md)
 
@@ -144,11 +121,7 @@ Default value: **MarqueeStartPolicy.DEFAULT**
 marqueeUpdatePolicy?: MarqueeUpdatePolicy
 ```
 
-Scrolling policy of the marquee after its attributes are updated.
-
-This attribute takes effect when the marquee is in the playing state and the text width exceeds the width of the marquee component.
-
-Default value: **MarqueeUpdatePolicy.DEFAULT**
+Scrolling policy of the marquee after its attributes are updated.This attribute takes effect when the marquee is in the playing state and the text width exceeds the width of the marquee component.Default value: **MarqueeUpdatePolicy.DEFAULT**
 
 **Type:** [MarqueeUpdatePolicy](arkts-arkui-marqueeupdatepolicy-e.md)
 
@@ -168,9 +141,7 @@ Default value: **MarqueeUpdatePolicy.DEFAULT**
 spacing?: LengthMetrics
 ```
 
-Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCENT**, the current setting does not take effect and the default value is used.
-
-Default value: **48.0vp**
+Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCENT**, the current setting does not take effect and the default value is used.Default value: **48.0vp**
 
 **Type:** LengthMetrics
 
@@ -190,8 +161,7 @@ Default value: **48.0vp**
 start: boolean
 ```
 
-Whether to start the marquee.
-
+Whether to start the marquee.  
 **true**: Start the marquee. **false**: Do not start the marquee.
 
 **Type:** boolean
@@ -212,9 +182,7 @@ Whether to start the marquee.
 step?: number
 ```
 
-Step length of the scrolling animation text.
-
-Default value: **4.0** (in vp)
+Step length of the scrolling animation text.Default value: **4.0** (in vp)
 
 **Type:** number
 

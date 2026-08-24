@@ -1,8 +1,6 @@
 # Point
 
-Set poly to poly point.
-
-@interface Point
+Set poly to poly point.@interface Point
 
 **Since:** 23
 

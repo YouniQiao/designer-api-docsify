@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createAsrProcessingController
@@ -13,7 +12,7 @@ import { audioHaptic } from '@kit.AudioKit';
 function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController
 ```
 
-Create ASR processing controller on one audio capturer.
+获取自动语音识别（ASR）处理控制器。
 
 **起始版本：** 12
 
@@ -27,13 +26,13 @@ Create ASR processing controller on one audio capturer.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#source_type_voice_recognition). |
+| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | 音频采集器对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AsrProcessingController](arkts-audio-audio-asrprocessingcontroller-i-sys.md) | ASR Processing Controller. |
+| [AsrProcessingController](arkts-audio-audio-asrprocessingcontroller-i-sys.md) | ASR处理控制器对象。 |
 
 **错误码：**
 
@@ -117,7 +116,7 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
 function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null
 ```
 
-Create ASR processing controller on one audio capturer.
+在一个音频捕获器上创建ASR处理控制器。
 
 **起始版本：** 23
 
@@ -131,13 +130,13 @@ Create ASR processing controller on one audio capturer.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#source_type_voice_recognition). |
+| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | 将要控制其ASR处理的音频采集器。该采集器的源类型必须为[SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#source_type_voice_recognition)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AsrProcessingController](arkts-audio-audio-asrprocessingcontroller-i-sys.md) \| null | ASR Processing Controller, or null when an error happens. |
+| [AsrProcessingController](arkts-audio-audio-asrprocessingcontroller-i-sys.md) \| null | ASR处理控制器，若发生错误则为空。 |
 
 **错误码：**
 

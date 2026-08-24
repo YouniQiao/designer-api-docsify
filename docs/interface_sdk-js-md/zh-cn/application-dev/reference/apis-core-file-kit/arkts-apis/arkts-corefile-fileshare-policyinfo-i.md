@@ -1,8 +1,6 @@
 # PolicyInfo
 
-需要授予或激活URI访问权限的策略信息。
-
-@interface PolicyInfo
+需要授予或激活URI访问权限的策略信息。@interface PolicyInfo
 
 **起始版本：** 23
 

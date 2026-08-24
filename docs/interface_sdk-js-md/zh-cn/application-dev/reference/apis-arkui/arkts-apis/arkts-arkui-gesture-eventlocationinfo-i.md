@@ -50,11 +50,7 @@ default
 displayX: double
 ```
 
-相对于屏幕的左上角X坐标。
-
-取值范围：[0, +∞)
-
-单位：vp
+相对于屏幕的左上角X坐标。取值范围：[0, +∞)单位：vp
 
 **类型：** double
 
@@ -74,11 +70,7 @@ displayX: double
 displayY: double
 ```
 
-相对于屏幕的左上角Y坐标。
-
-取值范围：[0, +∞)
-
-单位：vp
+相对于屏幕的左上角Y坐标。取值范围：[0, +∞)单位：vp
 
 **类型：** double
 
@@ -98,11 +90,7 @@ displayY: double
 globalDisplayX?: double
 ```
 
-在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
-
-取值范围：[0, +∞)
-
-单位：vp
+在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。取值范围：[0, +∞)单位：vp
 
 **类型：** double
 
@@ -122,11 +110,7 @@ globalDisplayX?: double
 globalDisplayY?: double
 ```
 
-在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
-
-取值范围：[0, +∞)
-
-单位：vp
+在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。取值范围：[0, +∞)单位：vp
 
 **类型：** double
 
@@ -146,11 +130,7 @@ globalDisplayY?: double
 windowX: double
 ```
 
-相对于窗口的左上角X坐标。
-
-取值范围：[0, +∞)
-
-单位：vp
+相对于窗口的左上角X坐标。取值范围：[0, +∞)单位：vp
 
 **类型：** double
 
@@ -170,11 +150,7 @@ windowX: double
 windowY: double
 ```
 
-相对于窗口的左上角Y坐标。
-
-取值范围：[0, +∞)
-
-单位：vp
+相对于窗口的左上角Y坐标。取值范围：[0, +∞)单位：vp
 
 **类型：** double
 
@@ -194,11 +170,7 @@ windowY: double
 x: double
 ```
 
-相对于组件左上角的X坐标。
-
-取值范围：[0, +∞)
-
-单位：vp
+相对于组件左上角的X坐标。取值范围：[0, +∞)单位：vp
 
 **类型：** double
 
@@ -218,11 +190,7 @@ x: double
 y: double
 ```
 
-相对于组件左上角的Y坐标。
-
-取值范围：[0, +∞)
-
-单位：vp
+相对于组件左上角的Y坐标。取值范围：[0, +∞)单位：vp
 
 **类型：** double
 

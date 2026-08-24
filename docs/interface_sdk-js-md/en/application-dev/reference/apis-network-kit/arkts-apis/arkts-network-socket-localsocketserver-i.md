@@ -22,8 +22,7 @@ close(): Promise<void>
 
 Stops listening for events of the **LocalSocketServer** object and releases the port bound by [listen](#listen). This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API does not close existing connections. To close the connection, call the [close] (#close11-1) API of
 > [LocalSocketConnection] (#localsocketconnection11).
 
@@ -356,8 +355,7 @@ getExtraOptions(): Promise<ExtraOptionsBase>
 
 Obtains the socket properties of the **LocalSocketServer** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 11
@@ -440,8 +438,7 @@ getLocalAddress(): Promise<string>
 
 Obtains the local socket address of a **LocalSocketServer** connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 12
@@ -720,14 +717,11 @@ getSocketFd(): Promise<int>
 
 Obtains the file descriptor bound to the LocalSocketServer listening port. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This method can be called only after the [listen](#listen) method is
-> successfully called.
-> 
+> successfully called.&gt;
 > - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after
-> close is called).
-> 
+> close is called).&gt;
 > - The lifecycle of the file descriptor is managed by the system. The application can use the
 > [close](arkts-network-socket-tcpsocketserver-i.md#close) method to close the socket connection, instead of directly
 > operating the file descriptor.
@@ -1065,8 +1059,7 @@ getState(): Promise<SocketStateBase>
 
 Obtains the status of a local socket server connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 11
@@ -1414,8 +1407,7 @@ listen(address: LocalAddress): Promise<void>
 
 Binds the address of the local socket file. The server listens to and accepts local socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The server uses this API to complete the **bind**, **listen**, and **accept** operations. If the address of the
 > local socket file is passed for binding, a socket file is automatically created when this API is called.
 
@@ -1660,8 +1652,7 @@ on(type: 'connect', callback: Callback<LocalSocketConnection>): void
 
 Subscribes to **connect** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 11
@@ -1704,8 +1695,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to **error** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 11
@@ -1746,8 +1736,7 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 
 Sets the socket properties of the **LocalSocketServer** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 11

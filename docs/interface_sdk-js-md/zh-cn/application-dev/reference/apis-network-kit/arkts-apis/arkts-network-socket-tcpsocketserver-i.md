@@ -22,8 +22,7 @@ close(): Promise<void>
 
 TCPSocketServer停止监听并释放通过 [listen](#listen)方法绑定的端口。若多次调用 [listen](#listen)方法，再调用此方法时会释放 TCPSocketServer的所有监听端口。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该方法不会关闭已有连接。如需关闭，请调用[TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md)的
 > [close](arkts-network-socket-tcpsocketconnection-i.md#close)方法。
 
@@ -359,8 +358,7 @@ getLocalAddress(): Promise<NetAddress>
 
 获取TCPSocketServer的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 12
@@ -639,13 +637,10 @@ getSocketFd(): Promise<int>
 
 获取TCPSocketServer监听端口绑定的文件描述符。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - [listen](#listen)方法调用成功后，才可调用
-> 此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。
-> 
-> - 监听异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
-> 
+> 此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。&gt;
+> - 监听异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。&gt;
 > - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 23
@@ -989,8 +984,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 获取TCPSocketServer状态。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
@@ -1349,8 +1343,7 @@ getState(): Promise<SocketStateBase>
 
 获取TCPSocketServer状态。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
@@ -1387,8 +1380,7 @@ listen(address: NetAddress, callback: AsyncCallback<void>): void
 
 绑定IP地址和端口，端口可以指定或由系统随机分配。监听并接受与此套接字建立的TCPSocket连接。该接口使用多线程并发处理客户端的数据。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 服务端使用该方法完成bind，listen，accept操作，bind方法失败会由系统随机分配端口号。
 
 **起始版本：** 10
@@ -1545,8 +1537,7 @@ listen(address: NetAddress): Promise<void>
 
 绑定IP地址和端口，端口可以指定或由系统随机分配。监听并接受与此套接字建立的TCPSocket连接。该接口使用多线程并发处理客户端的数据。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 服务端使用该方法完成bind，listen，accept操作，bind方法失败会由系统随机分配端口号。
 
 **起始版本：** 10
@@ -1705,8 +1696,7 @@ on(type: 'connect', callback: Callback<TCPSocketConnection>): void
 
 订阅TCPSocketServer的连接事件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
@@ -1761,8 +1751,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 订阅TCPSocketServer连接的error事件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
@@ -1817,8 +1806,7 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 
 设置TCPSocketServer连接的其他属性。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
@@ -2335,8 +2323,7 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 设置TCPSocketServer连接的其他属性。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10

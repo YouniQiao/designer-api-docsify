@@ -12,7 +12,6 @@ Describes the interruption event received by the application when the audio is i
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## eventType

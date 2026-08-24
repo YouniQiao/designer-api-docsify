@@ -156,13 +156,7 @@ HTML file to be loaded:
 mediaTakeOver: boolean
 ```
 
-Whether to allow pages using media takeover to enter the back-forward cache.
-
-If allowed, you need to maintain the lifecycle of system controls created for video elements to avoid resource leaks.
-
-true: allowed; false: not allowed.
-
-Default value: false.
+Whether to allow pages using media takeover to enter the back-forward cache.If allowed, you need to maintain the lifecycle of system controls created for video elements to avoid resource leaks.true: allowed; false: not allowed.Default value: false.
 
 **Type:** boolean
 
@@ -178,13 +172,7 @@ Default value: false.
 nativeEmbed: boolean
 ```
 
-Whether to allow pages using native embed to enter the back-forward cache.
-
-If allowed, you need to maintain the lifecycle of system controls created for native embed elements to avoid resource leaks.
-
-true: allowed; false: not allowed.
-
-Default value: false.
+Whether to allow pages using native embed to enter the back-forward cache.If allowed, you need to maintain the lifecycle of system controls created for native embed elements to avoid resource leaks.true: allowed; false: not allowed.Default value: false.
 
 **Type:** boolean
 

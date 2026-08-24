@@ -1,8 +1,6 @@
 # hidebug
 
-为应用提供多种调试、调优的方法，帮助开发者定位性能瓶颈、优化应用性能。主要功能包括：内存数据分析、CPU使用率监控、trace采集、profiler采集、VM堆快照转储。由于该模块的接口大多比较耗费性能，接口调用较为耗时，且基于HiDebug模块定义，该模块内的接口仅建议在应用调试、调优阶段使用。若需要在其他场景使用时，请认真评估所需调用的接口对应用性能的影响。
-
-@namespace hidebug
+为应用提供多种调试、调优的方法，帮助开发者定位性能瓶颈、优化应用性能。主要功能包括：内存数据分析、CPU使用率监控、trace采集、profiler采集、VM堆快照转储。由于该模块的接口大多比较耗费性能，接口调用较为耗时，且基于HiDebug模块定义，该模块内的接口仅建议在应用调试、调优阶段使用。若需要在其他场景使用时，请认真评估所需调用的接口对应用性能的影响。@namespace hidebug
 
 **起始版本：** 23
 
@@ -31,7 +29,7 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [getNativeHeapSize](arkts-performanceanalysis-hidebug-getnativeheapsize-f.md) | 获取内存分配器统计的进程持有的普通块所占用的总字节数。 |
 | [getNativeHeapAllocatedSize](arkts-performanceanalysis-hidebug-getnativeheapallocatedsize-f.md) | 获取内存分配器统计的进程持有的已使用的普通块所占用的总字节数。 |
 | [getNativeHeapFreeSize](arkts-performanceanalysis-hidebug-getnativeheapfreesize-f.md) | 获取内存分配器统计的进程持有的空闲的普通块所占用的总字节数。 |
-| [getVss](arkts-performanceanalysis-hidebug-getvss-f.md) | 获取应用进程占用的虚拟内存大小。接口实现方式：读取/proc/{pid}/statm节点中的size值（内存页数），vss = size 页大小（4KB/页）。 |
+| [getVss](arkts-performanceanalysis-hidebug-getvss-f.md) | 获取应用进程占用的虚拟内存大小。接口实现方式：读取/proc/{pid}/statm节点中的size值（内存页数），vss = size * 页大小（4KB/页）。 |
 | [getPss](arkts-performanceanalysis-hidebug-getpss-f.md) | 获取应用进程实际使用的物理内存大小。接口实现方式：读取/proc/{pid}/smaps_rollup节点中的Pss与SwapPss值并求和。 |
 | [getSharedDirty](arkts-performanceanalysis-hidebug-getshareddirty-f.md) | 获取进程的共享脏内存大小。接口实现方式：读取/proc/{pid}/smaps_rollup节点中的Shared_Dirty值。 |
 | [getPrivateDirty](arkts-performanceanalysis-hidebug-getprivatedirty-f.md) | 获取进程的私有脏内存大小。读取/proc/{pid}/smaps_rollup中的Private_Dirty值。 |
@@ -53,7 +51,7 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [getAppVMObjectUsedSize](arkts-performanceanalysis-hidebug-getappvmobjectusedsize-f.md) | 获取当前虚拟机中ArkTS对象所占用的内存大小。 |
 | [getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md) | 读取/proc/{pid}/smaps_rollup和/proc/{pid}/statm节点的数据以获取应用进程内存信息，使用Promise异步回调。 |
 | [getAppNativeMemInfoWithCache](arkts-performanceanalysis-hidebug-getappnativememinfowithcache-f.md) | 获取应用进程内存信息。与`getAppNativeMemInfo`接口相比，该接口使用了缓存机制，以提高性能。缓存的有效期为5分钟。 |
-| [startAppTraceCapture](arkts-performanceanalysis-hidebug-startapptracecapture-f.md) | 该接口补充了hitrace功能，开发者可通过该接口完成指定范围的trace自动化采集。由于该接口中trace采集过程中消耗的性能与需要采集的范围成正相关，建议开发者在使用该接口前，通过hitrace命令抓取应用的trace日志，从中筛选出所需trace采集的关键范围，以提高该接口性能。 `startAppTraceCapture()`方法的调用需要与`stopAppTraceCapture()`方法的调用一一对应，重复开启trace采集将导致接口调用异常，由于trace采集过程中会消耗较多性能，开发者应在完成采集后及时关闭。 应用调用startAppTraceCapture接口启动采集trace，当采集的trace大小超过了limitSize，系统将自动调用stopAppTraceCapture接口停止采集。因此limitSize大小设置不当，将导致生成trace数据不足，无法满足故障分析。所以要求开发者根据实际情况，评估limitSize大小。 评估方法：limitSize = 预期trace采集时长 trace单位流量。 预期trace采集时长：开发者根据分析的故障场景自行决定，单位秒。 trace单位流量：应用每秒产生的trace大小，系统推荐值为300KB/s，建议开发者采用自身应用的实测值，单位KB/s。 trace单位流量实测方法：limitSize设置为最大值500M，调用startAppTraceCapture接口，在应用上操作N秒后，调用stopAppTraceCapture停止采集，然后查看trace大小S（KB）。那么trace单位流量 = S/N（KB/s）。 |
+| [startAppTraceCapture](arkts-performanceanalysis-hidebug-startapptracecapture-f.md) | 该接口补充了hitrace功能，开发者可通过该接口完成指定范围的trace自动化采集。由于该接口中trace采集过程中消耗的性能与需要采集的范围成正相关，建议开发者在使用该接口前，通过hitrace命令抓取应用的trace日志，从中筛选出所需trace采集的关键范围，以提高该接口性能。 `startAppTraceCapture()`方法的调用需要与`stopAppTraceCapture()`方法的调用一一对应，重复开启trace采集将导致接口调用异常，由于trace采集过程中会消耗较多性能，开发者应在完成采集后及时关闭。 应用调用startAppTraceCapture接口启动采集trace，当采集的trace大小超过了limitSize，系统将自动调用stopAppTraceCapture接口停止采集。因此limitSize大小设置不当，将导致生成trace数据不足，无法满足故障分析。所以要求开发者根据实际情况，评估limitSize大小。 评估方法：limitSize = 预期trace采集时长 * trace单位流量。 预期trace采集时长：开发者根据分析的故障场景自行决定，单位秒。 trace单位流量：应用每秒产生的trace大小，系统推荐值为300KB/s，建议开发者采用自身应用的实测值，单位KB/s。 trace单位流量实测方法：limitSize设置为最大值500M，调用startAppTraceCapture接口，在应用上操作N秒后，调用stopAppTraceCapture停止采集，然后查看trace大小S（KB）。那么trace单位流量 = S/N（KB/s）。 |
 | [stopAppTraceCapture](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md) | 停止应用trace采集。调用前，需先调用`startAppTraceCapture()`方法开始采集。关闭前未开启或重复关闭会导致接口异常。 调用startAppTraceCapture接口，如果没有合理传入limitSize参数，生成trace的大小大于传入的limitSize大小，系统内部会自动调用stopAppTraceCapture，再次手动调用stopAppTraceCapture就会抛出错误码11400105。 |
 | [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md) | 获取当前GWP-ASan剩余使能天数。 |
 | [requestTrace](arkts-performanceanalysis-hidebug-requesttrace-f.md) | 获取当前进程的trace信息，包含应用tag、图像窗口tag、cpu调度和binder内核信息。使用Promise异步回调。 采集trace返回的.sys文件在目录下最多存储3份，数量大于等于3份时再次调用接口会抛出错误码11400120。 |
@@ -86,15 +84,15 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md) | VM内存信息。 |
 | [RequestTraceConfig](arkts-performanceanalysis-hidebug-requesttraceconfig-i.md) | 提供trace采集的参数选项。 |
 | [GraphicsMemorySummary](arkts-performanceanalysis-hidebug-graphicsmemorysummary-i.md) | 描述应用显存数据，包括gl和graph部分。 |
-| [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | GWP-ASan配置项。可用于配置是否使能、采样频率，以及最大分配的插槽数。 |
-| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | 描述应用进程的物理内存信息。 |
+| [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | GWP-ASan配置项。可用于配置是否使能、采样频率，以及最大分配的插槽数。@interface GwpAsanOptions |
+| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | 描述应用进程的物理内存信息。@interface RssInfo |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
 | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | 描述采集trace线程的类型，包括主线程和所有线程。 |
-| [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | 转储堆快照的裁剪级别的枚举。 TRIM_LEVEL_2相比TRIM_LEVEL_1，裁剪时间更长。冻屏的阈值为6秒。使用TRIM_LEVEL_1时，不会达到该阈值；切换至TRIM_LEVEL_2时，裁剪时间可能会超过6秒，触发APP_FREEZE（冻屏事件），导致应用被系统终止，此时回退至TRIM_LEVEL_1级别进行裁剪。 推荐优先使用TRIM_LEVEL_1确保应用稳定，仅在需要更彻底裁剪时尝试TRIM_LEVEL_2。 |
+| [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | 转储堆快照的裁剪级别的枚举。 TRIM_LEVEL_2相比TRIM_LEVEL_1，裁剪时间更长。冻屏的阈值为6秒。使用TRIM_LEVEL_1时，不会达到该阈值；切换至TRIM_LEVEL_2时，裁剪时间可能会超过6秒，触发APP_FREEZE（冻屏事件），导致应用被系统终止，此时回退至TRIM_LEVEL_1级别进行裁剪。 推荐优先使用TRIM_LEVEL_1确保应用稳定，仅在需要更彻底裁剪时尝试TRIM_LEVEL_2。@enum { number } |
 
 ### 类型
 

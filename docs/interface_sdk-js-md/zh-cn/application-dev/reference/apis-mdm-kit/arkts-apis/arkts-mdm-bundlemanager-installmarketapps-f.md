@@ -14,8 +14,7 @@ function installMarketApps(admin: Want, bundleNames: Array<string>): void
 
 下载并安装应用市场应用。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本接口调用成功后会在桌面上生成应用下载任务，此任务与从应用市场下载所创建任务一致。下载安装结束后，安装结果会通过回调
 > [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult)
 > 返回。

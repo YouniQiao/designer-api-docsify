@@ -1,8 +1,6 @@
 # AVSessionController
 
-Session controller,used to control media playback and get media information
-
-@interface AVSessionController [since 10 - 11]
+Session controller,used to control media playback and get media information@interface AVSessionController [since 10 - 11]
 
 **Since:** 23
 
@@ -1541,7 +1539,7 @@ Get commands supported by the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when (getValidCommands). |
 
 **Error codes:**
 

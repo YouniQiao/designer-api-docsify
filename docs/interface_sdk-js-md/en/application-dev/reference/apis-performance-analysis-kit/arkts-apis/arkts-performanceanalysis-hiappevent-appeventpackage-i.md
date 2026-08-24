@@ -20,8 +20,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 appEventInfos: Array<AppEventInfo>
 ```
 
-Event object group.
-
+Event object group.  
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Type:** Array&lt;[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)&gt;
@@ -40,8 +39,7 @@ Event object group.
 data: string[]
 ```
 
-Event data in the event package.
-
+Event data in the event package.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string[]
@@ -60,8 +58,7 @@ Event data in the event package.
 packageId: int
 ```
 
-Event package ID, which is named from **0** in ascending order.
-
+Event package ID, which is named from **0** in ascending order.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** int
@@ -80,8 +77,7 @@ Event package ID, which is named from **0** in ascending order.
 row: int
 ```
 
-Number of events in the event package.
-
+Number of events in the event package.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** int
@@ -100,8 +96,7 @@ Number of events in the event package.
 size: int
 ```
 
-Event size of the event package, in bytes.
-
+Event size of the event package, in bytes.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** int

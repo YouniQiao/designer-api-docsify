@@ -1,6 +1,6 @@
 # Range
 
-@brief Describes the range of the selected text.
+Describes the range of the selected text.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 end: int
 ```
 
-@brief Index of the last selected character in the text box.
+Index of the last selected character in the text box.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ end: int
 start: int
 ```
 
-@brief Index of the first selected character in the text box.
+Index of the first selected character in the text box.
 
 **Type:** int
 

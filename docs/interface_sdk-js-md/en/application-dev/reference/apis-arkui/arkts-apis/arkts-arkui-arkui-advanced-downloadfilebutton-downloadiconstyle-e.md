@@ -1,8 +1,6 @@
 # DownloadIconStyle
 
-Enum for DownloadIconStyle
-
-@enum { number }
+Enum for DownloadIconStyle@enum { number }
 
 **Since:** 12
 

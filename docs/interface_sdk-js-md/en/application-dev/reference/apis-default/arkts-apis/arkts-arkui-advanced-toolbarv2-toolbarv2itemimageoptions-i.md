@@ -21,11 +21,9 @@ Defines the options for initializing a **ToolBarV2ItemImage** object.
 activatedColor?: ColorMetrics
 ```
 
-Color of the icon when the toolbar item is activated.
+Color of the icon when the toolbar item is activated.Default value: **\$r('sys.color.icon_emphasize')**.
 
-Default value: **\$r('sys.color.icon_emphasize')**.
-
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
@@ -43,11 +41,9 @@ Default value: **\$r('sys.color.icon_emphasize')**.
 color?: ColorMetrics
 ```
 
-Color of the icon.
+Color of the icon.Default value: **\$r('sys.color.icon_primary')**.
 
-Default value: **\$r('sys.color.icon_primary')**.
-
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 

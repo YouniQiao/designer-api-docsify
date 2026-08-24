@@ -20,17 +20,13 @@ function queryTrafficStats(
 
 Queries the data usage of a specified application within a specified period for the current user. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The input network type (**networkInfo.type**) can only be **connection.NetBearType.BEARER_CELLULAR** or
-> **connection.NetBearType.BEARER_WIFI**. If any other value is passed, the API returns error code 9200012.
-> 
+> **connection.NetBearType.BEARER_WIFI**. If any other value is passed, the API returns error code 9200012.&gt;
 > The input start time (**networkInfo.startTime**) and end time (**networkInfo.endTime**) are second-level
 > timestamps. If the input start time and end time are negative numbers or the start time is later than the end
-> time, the API returns error code 9200012.
-> 
-> If the input user ID (**accountId**) is not the ID of the current user, the API returns error code 9200012.
-> 
+> time, the API returns error code 9200012.&gt;
+> If the input user ID (**accountId**) is not the ID of the current user, the API returns error code 9200012.&gt;
 > It is advised that the query interval (end time – start time) be 1 to 30 days. If the interval is too short, the
 > query result may be inaccurate. If the interval is too long, the query will take a long time.
 

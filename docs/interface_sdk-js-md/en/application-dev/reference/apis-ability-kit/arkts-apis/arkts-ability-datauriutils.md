@@ -2,8 +2,7 @@
 
 The DataUriUtils module provides APIs to process URI objects. You can use the APIs to attach an ID to the end of a given URI and obtain, delete, or update the ID attached to the end of a given URI.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The APIs of this module are supported since API version 7 and deprecated since API version 9. You are advised to
 > use [@ohos.app.ability.dataUriUtils](arkts-app-ability-datauriutils.md) instead. Newly added APIs
 > will be marked with a superscript to indicate their earliest API version.

@@ -1,11 +1,8 @@
 # PopoverDialogV2Options
 
-跟手弹出框参数，用于设置弹出框内容、位置属性等。
+跟手弹出框参数，用于设置弹出框内容、位置属性等。继承自CustomPopupOptions。
 
-继承自CustomPopupOptions。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > radius默认值为32vp。
 
 **继承/实现关系：** PopoverDialogV2Options extends CustomPopupOptions

@@ -4,7 +4,7 @@
 export type ImeChangeCallback = (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
 ```
 
-@brief 当输入法属性对象及子类型对象变化时的回调函数。
+当输入法属性对象及子类型对象变化时的回调函数。
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # ExifMetadata
 
-ExifMetadata implements Metadata
-
-Exchangeable Image File Format (Exif) metadata.
+ExifMetadata implements Metadata Exchangeable Image File Format (Exif) metadata.
 
 **Inheritance/Implementation:** ExifMetadata implements [Metadata](arkts-image-image-metadata-i.md)
 
@@ -480,9 +478,7 @@ async function heifsMetadataGetBlob(context: Context) {
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-Obtains the property values from image metadata. This API returns the result asynchronously through a promise.
-
-For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
+Obtains the property values from image metadata. This API returns the result asynchronously through a promise.For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
 
 **Since:** 23
 
@@ -775,9 +771,7 @@ async function heifsMetadataSetBlob(context: Context) {
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
-
-For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
 
 **Since:** 23
 
@@ -1241,7 +1235,7 @@ Date and time when the image is stored as digital data. For example, if a DSC ca
 dateTimeOriginal?: string
 ```
 
-Date and time when the original image data is generated. For a digital still camera (DSC), the date and time when a photo is taken are recorded. The value format is *YYYY :MM:DD HH:MM:SS* (24-hour clock).
+Date and time when the original image data is generated. For a digital still camera (DSC), the date and time when a photo is taken are recorded. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
 
 **Type:** string
 
@@ -2663,7 +2657,7 @@ Sensitivity of the camera or input device during image capture.
 photometricInterpretation?: int
 ```
 
-Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-difference Chroma, Red-difference Chroma) . The value range is all integers.
+Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-difference Chroma, Red-difference Chroma). The value range is all integers.
 
 **Type:** int
 

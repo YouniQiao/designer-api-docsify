@@ -39,9 +39,7 @@ layoutStyle?: RichEditorLayoutStyle
 objectFit?: ImageFit
 ```
 
-图片缩放类型。
-
-默认值：ImageFit.Cover。
+图片缩放类型。默认值：ImageFit.Cover。
 
 **类型：** ImageFit
 
@@ -81,9 +79,7 @@ size?: [Dimension, Dimension]
 verticalAlign?: ImageSpanAlignment
 ```
 
-图片垂直对齐方式。
-
-默认值：ImageSpanAlignment.BOTTOM
+图片垂直对齐方式。默认值：ImageSpanAlignment.BOTTOM
 
 **类型：** ImageSpanAlignment
 

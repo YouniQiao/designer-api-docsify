@@ -19,9 +19,7 @@ Describes the text changes of the styled string.
 previewText?: StyledString
 ```
 
-Styled string for preview content.
-
-Used to represent temporary uncommitted input content in scenarios such as voice input, camera input, and IME pre- composition.
+Styled string for preview content.Used to represent temporary uncommitted input content in scenarios such as voice input, camera input, and IME pre- composition.
 
 **Type:** StyledString
 

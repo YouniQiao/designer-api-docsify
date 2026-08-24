@@ -1,8 +1,6 @@
 # ShadowType
 
-阴影类型。
-
-@enum { number }
+阴影类型。@enum { number }
 
 **起始版本：** 11
 

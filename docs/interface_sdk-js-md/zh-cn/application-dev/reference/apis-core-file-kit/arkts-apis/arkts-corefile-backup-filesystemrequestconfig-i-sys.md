@@ -1,8 +1,6 @@
 # FileSystemRequestConfig（系统接口）
 
-配置系统执行碎片清理所需的参数。
-
-@interface FileSystemRequestConfig
+配置系统执行碎片清理所需的参数。@interface FileSystemRequestConfig
 
 **起始版本：** 23
 

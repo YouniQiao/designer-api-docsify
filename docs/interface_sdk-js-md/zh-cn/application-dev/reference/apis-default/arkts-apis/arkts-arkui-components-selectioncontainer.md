@@ -18,7 +18,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | 支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。 |
+| [SelectionContainerAttribute](arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | 支持通用属性。 |
 | [SelectionContainerEditMenuOptions](arkts-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) | SelectionContainer自定义编辑菜单选项。 |
 | [SelectionContainerMenuOptions](arkts-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) | 配置选择菜单中的选项。 |
 
@@ -26,7 +26,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SelectionContainerTextJoinStyle](arkts-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) | 文本聚合拼接方式。 |
+| [SelectionContainerTextJoinStyle](arkts-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) | 文本聚合拼接方式。  \| 名称 \| 值 \| 说明 \| \| ---- \| -- \| ---- \| \| NEWLINE \| 0 \| 不同文本节点之间使用换行符`\n`拼接。 \| \| DIRECT \| 1 \| 不同文本节点之间直接拼接，不添加分隔符。 \| |
 
 ### 类型
 

@@ -40,17 +40,17 @@ Compares this **Buffer** object with another object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Target **Buffer** object to compare. |
+| target | Buffer \| Uint8Array | Yes | Target **Buffer** object to compare. |
 | targetStart | number | No | Offset to the start of the data to compare in the target **Buffer** object. The default value is **0**. |
 | targetEnd | number | No | Offset to the end of the data to compare in the target **Buffer** object (not inclusive). The default value is the length of the target **Buffer** object. |
 | sourceStart | number | No | Offset to the start of the data to compare in this **Buffer** object. The default value is **0**. |
-| sourceEnd | number | No | Offset to the end of the data to compare in this **Buffer** object (not inclusive ). The default value is the length of this **Buffer** object. |
+| sourceEnd | number | No | Offset to the end of the data to compare in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| -1 \| 0 \| 1 | Comparison result. The value **0** is returned if the two **Buffer** objects are the same ; **1** is returned if this object comes after the target object when sorted; **-1** is returned if this object comes before the target object when sorted. |
+| -1 \| 0 \| 1 | Comparison result. The value **0** is returned if the two **Buffer** objects are the same; **1** is returned if this object comes after the target object when sorted; **-1** is returned if this object comes before the target object when sorted. |
 
 **Error codes:**
 
@@ -111,7 +111,7 @@ Compares buf with target and returns a number indicating whether buf comes befor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | The buffer to compare with this buffer |
+| target | Buffer \| Uint8Array | Yes | The buffer to compare with this buffer |
 | targetStart | int | No | targetStart [targetStart = 0] The offset within target at which to begin comparison |
 | targetEnd | int | No | targetEnd [targetEnd = target.length] The offset within target at which to end comparison (not inclusive) |
 | sourceStart | int | No | sourceStart [sourceStart = 0] The offset within buf at which to begin comparison |
@@ -153,7 +153,7 @@ Copies data at the specified position in this **Buffer** object to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Buffer** or **Uint8Array** object to which data is copied. |
+| target | Buffer \| Uint8Array | Yes | Buffer** or **Uint8Array** object to which data is copied. |
 | targetStart | int | No | Offset to the start position in the target object where data is copied. The default value is **0**. |
 | sourceStart | int | No | Offset to the start position in this **Buffer** object where data is copied. The default value is **0**. |
 | sourceEnd | int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
@@ -252,7 +252,7 @@ Checks whether this **Buffer** object is the same as another **Buffer** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| [Buffer](arkts-arkts-buffer-buffer-c.md) | Yes | Buffer** object to compare. |
+| otherBuffer | Uint8Array \| Buffer | Yes | Buffer** object to compare. |
 
 **Return value:**
 
@@ -300,7 +300,7 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array \| int \| double \| long | Yes | Value to fill.<br>**Since:** 11 |
+| value | string \| Buffer \| Uint8Array \| int \| double \| long | Yes | Value to fill.<br>**Since:** 11 |
 | offset | int | No | Offset to the start position in this **Buffer** object where data is filled. The default value is **0**. |
 | end | int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
 | encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
@@ -309,7 +309,7 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object filled with the specified value. |
+| Buffer | Buffer** object filled with the specified value. |
 
 **Error codes:**
 
@@ -347,7 +347,7 @@ Checks whether this **Buffer** object contains the specified value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| int \| double \| long \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| value | string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
 | byteOffset | int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
 | encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
@@ -389,7 +389,7 @@ Obtains the index of the first occurrence of the specified value in this **Buffe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| int \| double \| long \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| value | string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
 | byteOffset | int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
 | encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
@@ -473,7 +473,7 @@ Obtains the index of the last occurrence of the specified value in this **Buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| int \| double \| long \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| value | string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
 | byteOffset | int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is the length of this **Buffer** object. |
 | encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
@@ -527,7 +527,7 @@ Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 **Examples**
 
@@ -577,7 +577,7 @@ Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 **Examples**
 
@@ -627,7 +627,7 @@ Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 **Examples**
 
@@ -676,7 +676,7 @@ Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 **Examples**
 
@@ -726,7 +726,7 @@ Reads a 64-bit, big-endian, double-precision floating-point number from this **B
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 **Examples**
 
@@ -774,7 +774,7 @@ Reads a 64-bit, little-endian, double-precision floating-point number from this 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 **Examples**
 
@@ -822,7 +822,7 @@ Reads a 32-bit, big-endian, single-precision floating-point number from this **B
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 **Examples**
 
@@ -870,7 +870,7 @@ Reads a 32-bit, little-endian, single-precision floating-point number from this 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 **Examples**
 
@@ -918,7 +918,7 @@ Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 **Examples**
 
@@ -966,7 +966,7 @@ Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 **Examples**
 
@@ -1014,7 +1014,7 @@ Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 **Examples**
 
@@ -1062,7 +1062,7 @@ Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 **Examples**
 
@@ -1110,7 +1110,7 @@ Reads an 8-bit signed integer from this **Buffer** object at the specified offse
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 1 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 1. Received value is: [offset] |
 
 **Examples**
 
@@ -1259,7 +1259,7 @@ Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 **Examples**
 
@@ -1309,7 +1309,7 @@ Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 **Examples**
 
@@ -1359,7 +1359,7 @@ Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 **Examples**
 
@@ -1407,7 +1407,7 @@ Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 **Examples**
 
@@ -1455,7 +1455,7 @@ Reads an 8-bit unsigned integer from this **Buffer** object at the specified off
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 1 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 1. Received value is: [offset] |
 
 **Examples**
 
@@ -1598,7 +1598,7 @@ Truncates this **Buffer** object from the specified position to create a new **B
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. When the value of **start** or **end** is less than **0**, an empty buffer is returned. |
+| Buffer | Buffer** object created. When the value of **start** or **end** is less than **0**, an empty buffer is returned. |
 
 **Examples**
 
@@ -1635,7 +1635,7 @@ Converts this **Buffer** object into an array of unsigned 16-bit integers and sw
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object swapped. |
+| Buffer | Buffer** object swapped. |
 
 **Error codes:**
 
@@ -1676,7 +1676,7 @@ Converts this **Buffer** object into an array of unsigned 32-bit integers and sw
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object swapped. |
+| Buffer | Buffer** object swapped. |
 
 **Error codes:**
 
@@ -1717,7 +1717,7 @@ Converts this **Buffer** object into an array of unsigned 64-bit integers and sw
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object swapped. |
+| Buffer | Buffer** object swapped. |
 
 **Error codes:**
 
@@ -2218,7 +2218,7 @@ Writes a 64-bit, big-endian, double-precision floating-point number to this **Bu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 **Examples**
 
@@ -2264,7 +2264,7 @@ Writes a 64-bit, little-endian, double-precision floating-point number to this *
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 **Examples**
 
@@ -2310,7 +2310,7 @@ Writes a 32-bit, big-endian, single-precision floating-point number to this **Bu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 **Examples**
 
@@ -2356,7 +2356,7 @@ Writes a 32-bit, little-endian, single-precision floating-point number to this *
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 **Examples**
 
@@ -3041,7 +3041,7 @@ console.info("result = " + result);
 buffer: ArrayBuffer
 ```
 
-*ArrayBuffer** object.
+**ArrayBuffer** object.
 
 **Type:** ArrayBuffer
 

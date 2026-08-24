@@ -1,8 +1,6 @@
 # ProgressButtonColorOptions
 
-Declare Color options of the ProgressButton.
-
-@interface ProgressButtonColorOptions
+Declare Color options of the ProgressButton.@interface ProgressButtonColorOptions
 
 **Since:** 22
 
@@ -14,7 +12,6 @@ Declare Color options of the ProgressButton.
 
 ```TypeScript
 import { ProgressButton } from '@kit.ArkUI';
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUI';
 ```
 
 ## backgroundColor

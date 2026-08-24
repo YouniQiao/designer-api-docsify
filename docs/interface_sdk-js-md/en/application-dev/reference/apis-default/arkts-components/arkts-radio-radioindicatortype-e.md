@@ -1,8 +1,6 @@
 # RadioIndicatorType
 
-Defines the IndicatorType of Radio component
-
-@enum { number }
+Defines the IndicatorType of Radio component@enum { number }
 
 **Since:** 23
 

@@ -18,13 +18,13 @@
 
 | Name | Description |
 | --- | --- |
-| [RecentPhotoComponent](arkts-file-recentphotocomponent-recentphotocomponent-s.md) | Declare struct RecentPhotoComponent |
+| [RecentPhotoComponent](arkts-file-recentphotocomponent-recentphotocomponent-s.md) | Declare struct RecentPhotoComponent@struct { RecentPhotoComponent } |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PhotoSource](arkts-file-recentphotocomponent-photosource-e.md) | Enumeration of PhotoSource type |
+| [PhotoSource](arkts-file-recentphotocomponent-photosource-e.md) | Enumeration of PhotoSource type@enum { int } PhotoSource |
 
 ### Types
 

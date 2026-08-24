@@ -36,9 +36,7 @@ Action button displayed on the reminder notification.
 autoDeletedTime?: long
 ```
 
-Time when the notification is automatically cleared.
-
-The data format is timestamp, in milliseconds. For details, please refer to [NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autodeletedtime)
+Time when the notification is automatically cleared.The data format is timestamp, in milliseconds. For details, please refer to [NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autodeletedtime)
 
 **Type:** long
 
@@ -168,9 +166,7 @@ Group ID used for the reminder. If "Don't ask again" or similar information is s
 maxScreenWantAgent?: MaxScreenWantAgent
 ```
 
-Information about the ability that is started automatically and displayed in full-screen mode when the reminder arrives. If the device is in use, only a notification banner is displayed.
-
-This API is reserved.
+Information about the ability that is started automatically and displayed in full-screen mode when the reminder arrives. If the device is in use, only a notification banner is displayed.This API is reserved.
 
 **Type:** MaxScreenWantAgent
 
@@ -252,15 +248,7 @@ Audio channel of the custom prompt tone. The default channel is the alarm channe
 ringDuration?: long
 ```
 
-Ringing duration.
-
-The value ranges from 0 to1800, in seconds. The default value is **1**.
-
-If the value is **0**, the system notification tone is used.
-
-If the value is greater than 0 and [ReminderRequest.customRingUri](#reminderrequest) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](#reminderrequest). Otherwise, the custom notification tone of the agent-powered reminder is used.
-
-The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
+Ringing duration.The value ranges from 0 to1800, in seconds. The default value is **1**.If the value is **0**, the system notification tone is used.If the value is greater than 0 and [ReminderRequest.customRingUri](#reminderrequest) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](#reminderrequest). Otherwise, the custom notification tone of the agent-powered reminder is used.The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
 
 **Type:** long
 
@@ -308,7 +296,7 @@ Content to be displayed when the reminder is snoozing. (It is not applicable to 
 snoozeContentResourceId?: int
 ```
 
-Resource ID of the content to be displayed when the reminder is snoozing, which can be obtained through \$r( *resource-name*).id.
+Resource ID of the content to be displayed when the reminder is snoozing, which can be obtained through \$r(*resource-name*).id.
 
 **Type:** int
 
@@ -356,8 +344,7 @@ Number of reminder snooze times. The default value is **0**. (It is not applicab
 tapDismissed?: boolean
 ```
 
-Whether the reminder is automatically cleared. The default value is **true**. For details, see [NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapdismissed)
-
+Whether the reminder is automatically cleared. The default value is **true**. For details, see [NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapdismissed)  
 - **true** (default): The reminder is automatically cleared after the notification or button is tapped. - **false**: The reminder is retained after the notification or button is tapped.
 
 **Type:** boolean
@@ -374,9 +361,7 @@ Whether the reminder is automatically cleared. The default value is **true**. Fo
 timeInterval?: long
 ```
 
-Reminder snooze interval,
-
-in seconds. The minimum value is 30s. (It is not applicable to countdown reminders.)
+Reminder snooze interval,in seconds. The minimum value is 30s. (It is not applicable to countdown reminders.)
 
 **Type:** long
 

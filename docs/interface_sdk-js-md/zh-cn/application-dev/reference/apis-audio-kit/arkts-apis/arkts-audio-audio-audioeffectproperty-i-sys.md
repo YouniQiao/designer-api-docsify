@@ -1,5 +1,7 @@
 # AudioEffectProperty（系统接口）
 
+音效属性。
+
 **起始版本：** 23
 
 <!--Device-audio-interface AudioEffectProperty--><!--Device-audio-interface AudioEffectProperty-End-->
@@ -12,7 +14,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## category
@@ -20,6 +21,8 @@ import { audioHaptic } from '@kit.AudioKit';
 ```TypeScript
 category: string
 ```
+
+音效分类。
 
 **类型：** string
 
@@ -37,6 +40,8 @@ category: string
 flag: EffectFlag
 ```
 
+音效分类。
+
 **类型：** [EffectFlag](arkts-audio-audio-effectflag-e-sys.md)
 
 **起始版本：** 23
@@ -52,6 +57,8 @@ flag: EffectFlag
 ```TypeScript
 name: string
 ```
+
+音效名称。
 
 **类型：** string
 

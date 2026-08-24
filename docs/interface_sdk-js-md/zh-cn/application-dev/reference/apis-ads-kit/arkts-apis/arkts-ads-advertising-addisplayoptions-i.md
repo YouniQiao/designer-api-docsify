@@ -11,9 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit';
-import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
-import { AutoAdComponent } from '@kit.AdsKit';
 import { advertising } from '@kit.AdsKit';
 ```
 
@@ -23,8 +20,7 @@ import { advertising } from '@kit.AdsKit';
 audioFocusType?: number
 ```
 
-视频播放过程中获得音频焦点的场景类型。
-
+视频播放过程中获得音频焦点的场景类型。  
 - 0：视频播放静音、非静音时都获取焦点。 - 1：视频静音播放时不获取焦点。 - 2：视频播放静音、非静音时都不获取焦点。 - 该接口依赖的相关功能当前不支持使用，暂不确定默认值。
 
 **类型：** number
@@ -61,10 +57,8 @@ customData?: string
 mute?: boolean
 ```
 
-广告视频播放是否静音。
-
-- true：静音播放。 - false：非静音播放。
-
+广告视频播放是否静音。  
+- true：静音播放。 - false：非静音播放。  
 不填以业务逻辑为准。
 
 **类型：** boolean
@@ -83,8 +77,7 @@ mute?: boolean
 useMobileDataReminder?: boolean
 ```
 
-使用移动数据播放视频或下载应用时是否弹框通知用户。
-
+使用移动数据播放视频或下载应用时是否弹框通知用户。  
 - true：弹框通知。 - false：不弹框通知。 - 该参数依赖流量弹窗功能，当前不支持完整功能的使用，暂不确定默认值。
 
 **类型：** boolean

@@ -6,6 +6,8 @@ ChipV2 icon common option
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export abstract class ChipV2ImageIcon--><!--Device-unnamed-export abstract class ChipV2ImageIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -43,8 +45,7 @@ The constructor of ChipV2ImageIcon
 ## activatedFillColor
 
 ```TypeScript
-@Trace
-  public activatedFillColor?: ColorMetrics
+public activatedFillColor?: ColorMetrics
 ```
 
 Image filled color when chip is activated.
@@ -52,6 +53,8 @@ Image filled color when chip is activated.
 **Type:** ColorMetrics
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,8 +67,7 @@ Image filled color when chip is activated.
 ## fillColor
 
 ```TypeScript
-@Trace
-  public fillColor?: ColorMetrics
+public fillColor?: ColorMetrics
 ```
 
 Image filled color.
@@ -73,6 +75,8 @@ Image filled color.
 **Type:** ColorMetrics
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +89,7 @@ Image filled color.
 ## modifier
 
 ```TypeScript
-@Trace
-  public modifier?: ImageModifier
+public modifier?: ImageModifier
 ```
 
 Modifier for icon.
@@ -94,6 +97,8 @@ Modifier for icon.
 **Type:** ImageModifier
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +111,7 @@ Modifier for icon.
 ## size
 
 ```TypeScript
-@Trace
-  public size?: SizeT<LengthMetrics>
+public size?: SizeT<LengthMetrics>
 ```
 
 Image size option.
@@ -115,6 +119,8 @@ Image size option.
 **Type:** SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,8 +133,7 @@ Image size option.
 ## src
 
 ```TypeScript
-@Trace
-  public src: ResourceStr
+public src: ResourceStr
 ```
 
 Image resource.
@@ -136,6 +141,8 @@ Image resource.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

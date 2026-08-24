@@ -22,9 +22,7 @@ import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
-连接到远程服务扩展能力。
-
-此方法连接到远程设备上的服务扩展能力。 必须实现ConnectOptions接口才能获取目标的代理 连接时的服务扩展。
+连接到远程服务扩展能力。此方法连接到远程设备上的服务扩展能力。 必须实现ConnectOptions接口才能获取目标的代理 连接时的服务扩展。
 
 **起始版本：** 23
 

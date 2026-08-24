@@ -1,8 +1,6 @@
 # ButtonConfiguration
 
-ButtonConfiguration used by button content modifier.
-
-@extends CommonConfiguration&lt;ButtonConfiguration&gt; @interface ButtonConfiguration
+ButtonConfiguration used by button content modifier.@extends CommonConfiguration&lt;ButtonConfiguration&gt; @interface ButtonConfiguration
 
 **Inheritance/Implementation:** ButtonConfiguration extends CommonConfiguration<ButtonConfiguration>
 

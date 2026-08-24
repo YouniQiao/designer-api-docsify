@@ -52,8 +52,7 @@ Device type. If this parameter is not specified, the subscription defaults to no
 enableClassification?: boolean
 ```
 
-Whether to enable notification classification.
-
+Whether to enable notification classification.  
 - **true**: yes. - **false**: no. The default value is **false**.
 
 **Type:** boolean
@@ -74,8 +73,7 @@ Whether to enable notification classification.
 filterLimit?: long
 ```
 
-Notification filtering range. The default value is **0**. The options are as follows:
-
+Notification filtering range. The default value is **0**. The options are as follows:  
 - **0**: All notifications are included in the subscription. - **1**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is empty. - **2**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is not empty.
 
 **Type:** long
@@ -94,10 +92,8 @@ Notification filtering range. The default value is **0**. The options are as fol
 needSilentReplayOnSubscribe?: boolean
 ```
 
-Whether to enable silent replay upon subscription.
-
-- **true**: yes. - **false**: no. The default value is **false**.
-
+Whether to enable silent replay upon subscription.  
+- **true**: yes. - **false**: no. The default value is **false**.  
 After this feature is enabled, historical notifications are silently re-pushed upon the first subscription, without ringing or vibration reminders.
 
 **Type:** boolean

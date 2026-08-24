@@ -1,8 +1,6 @@
 # AccessRule
 
-访问规则。
-
-@interface AccessRule
+访问规则。@interface AccessRule
 
 **起始版本：** 23
 

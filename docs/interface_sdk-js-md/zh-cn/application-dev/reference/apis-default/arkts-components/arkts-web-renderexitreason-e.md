@@ -1,8 +1,6 @@
 # RenderExitReason
 
-Enum type supplied to [renderExitReason](arkts-web-onrenderexitedevent-i.md#renderexitreason) when onRenderExited being called.
-
-@enum { number }
+Enum type supplied to [renderExitReason](arkts-web-onrenderexitedevent-i.md#renderexitreason) when onRenderExited being called.@enum { number }
 
 **起始版本：** 23
 

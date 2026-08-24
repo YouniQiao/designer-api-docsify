@@ -14,8 +14,7 @@ function queryProbeResult(destination: string, duration: int): Promise<ProbeResu
 
 查询网络探测结果。若出现异常（例如断网），导致发送请求失败，则接口会立即返回，不再进行后续探测。本接口使用Promise方式作为异步方法。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 此接口用于对目标主机进行一段持续时间的网络探测，以获取丢包率和RTT信息。
 
 **起始版本：** 26.0.0

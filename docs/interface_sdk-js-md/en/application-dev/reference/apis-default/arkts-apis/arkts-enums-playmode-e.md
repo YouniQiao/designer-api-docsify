@@ -1,8 +1,6 @@
 # PlayMode
 
-Play Mode
-
-@enum { number }
+Play Mode@enum { number }
 
 **Since:** 23
 

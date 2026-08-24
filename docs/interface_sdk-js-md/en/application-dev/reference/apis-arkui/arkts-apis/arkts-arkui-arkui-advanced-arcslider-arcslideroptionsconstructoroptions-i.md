@@ -20,11 +20,7 @@ import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstru
 digitalCrownSensitivity?: CrownSensitivity
 ```
 
-Sensitivity to the digital crown rotation.
-
-Default value: **CrownSensitivity.MEDIUM**
-
-@Trace
+Sensitivity to the digital crown rotation.Default value: **CrownSensitivity.MEDIUM**@Trace
 
 **Type:** CrownSensitivity
 
@@ -42,11 +38,7 @@ Default value: **CrownSensitivity.MEDIUM**
 layoutOptions?: ArcSliderLayoutOptions
 ```
 
-Style of the arc slider.
-
-Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
-
-@Trace
+Style of the arc slider.Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)@Trace
 
 **Type:** [ArcSliderLayoutOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
@@ -64,11 +56,7 @@ Default value: default values of all properties of [ArcSliderStyleOptions](../..
 onChange?: ArcSliderChangeHandler
 ```
 
-Callback invoked to notify the application when the progress value of the arc slider changes.
-
-Default value: If this parameter is not provided, no callback will be invoked.
-
-@Trace
+Callback invoked to notify the application when the progress value of the arc slider changes.Default value: If this parameter is not provided, no callback will be invoked.@Trace
 
 **Type:** [ArcSliderChangeHandler](../../apis-default/arkts-apis/arkts-arcsliderchangehandler-t.md)
 
@@ -86,11 +74,7 @@ Default value: If this parameter is not provided, no callback will be invoked.
 onEnlarge?: ArcSliderEnlargeHandler
 ```
 
-Callback invoked to notify the application when the arc slider is enlarged or reduced.
-
-Default value: If this parameter is not provided, no callback will be invoked.
-
-@Trace
+Callback invoked to notify the application when the arc slider is enlarged or reduced.Default value: If this parameter is not provided, no callback will be invoked.@Trace
 
 **Type:** [ArcSliderEnlargeHandler](../../apis-default/arkts-apis/arkts-arcsliderenlargehandler-t.md)
 
@@ -108,11 +92,7 @@ Default value: If this parameter is not provided, no callback will be invoked.
 onTouch?: ArcSliderTouchHandler
 ```
 
-Callback invoked to notify the application when the arc slider is touched.
-
-Default value: If this parameter is not provided, no callback will be invoked.
-
-@Trace
+Callback invoked to notify the application when the arc slider is touched.Default value: If this parameter is not provided, no callback will be invoked.@Trace
 
 **Type:** [ArcSliderTouchHandler](../../apis-default/arkts-apis/arkts-arcslidertouchhandler-t.md)
 
@@ -130,11 +110,7 @@ Default value: If this parameter is not provided, no callback will be invoked.
 styleOptions?: ArcSliderStyleOptions
 ```
 
-Style of the arc slider.
-
-Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
-
-@Trace
+Style of the arc slider.Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)@Trace
 
 **Type:** [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
@@ -152,11 +128,7 @@ Default value: default values of all properties of [ArcSliderStyleOptions](../..
 valueOptions?: ArcSliderValueOptions
 ```
 
-Style of the arc slider.
-
-Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
-
-@Trace
+Style of the arc slider.Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)@Trace
 
 **Type:** [ArcSliderValueOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 

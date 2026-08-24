@@ -1,8 +1,6 @@
 # ContentSlotAttribute
 
-Define ContentSlot attribute, to prevent improper recursive usage of ContentSlot
-
-@interface ContentSlotAttribute
+Define ContentSlot attribute, to prevent improper recursive usage of ContentSlot@interface ContentSlotAttribute
 
 **Since:** 23
 

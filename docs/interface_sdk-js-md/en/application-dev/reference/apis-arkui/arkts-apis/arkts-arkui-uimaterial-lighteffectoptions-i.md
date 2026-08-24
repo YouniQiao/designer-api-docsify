@@ -20,9 +20,7 @@ import { uiMaterial } from '@kit.ArkUI';
 color?: ResourceColor
 ```
 
-Custom color of the light sensing feedback.
-
-Default value: **Color.White**
+Custom color of the light sensing feedback.Default value: **Color.White**
 
 **Type:** ResourceColor
 

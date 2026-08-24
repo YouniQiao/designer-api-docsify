@@ -1,8 +1,6 @@
 # ImageSize
 
-ImageSize enumeration description
-
-@enum { number }
+ImageSize enumeration description@enum { number }
 
 **Since:** 23
 

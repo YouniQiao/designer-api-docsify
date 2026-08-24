@@ -39,13 +39,13 @@ public add(other: Byte): Byte
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Byte](arkts-arkts-byte-c.md) | 是 | 加法运算的右操作数。 |
+| other | Byte | 是 | 加法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Byte](arkts-arkts-byte-c.md) | 加法运算的结果。 |
+| Byte | 加法运算的结果。 |
 
 ## compareTo
 
@@ -69,7 +69,7 @@ public compareTo(other: Byte): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Byte](arkts-arkts-byte-c.md) | 是 | 用于比较的Byte对象。 |
+| other | Byte | 是 | 用于比较的Byte对象。 |
 
 **返回值：**
 
@@ -141,13 +141,13 @@ public div(other: Byte): Byte
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Byte](arkts-arkts-byte-c.md) | 是 | 除法运算的右操作数。 |
+| other | Byte | 是 | 除法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Byte](arkts-arkts-byte-c.md) | 除法运算的结果。 |
+| Byte | 除法运算的结果。 |
 
 ## equals
 
@@ -201,7 +201,7 @@ public isGreaterEqualThan(other: Byte): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Byte](arkts-arkts-byte-c.md) | 是 | 比较运算的右操作数。 |
+| other | Byte | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -231,7 +231,7 @@ public isGreaterThan(other: Byte): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Byte](arkts-arkts-byte-c.md) | 是 | 比较运算的右操作数。 |
+| other | Byte | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -261,7 +261,7 @@ public isLessEqualThan(other: Byte): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Byte](arkts-arkts-byte-c.md) | 是 | 比较运算的右操作数。 |
+| other | Byte | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -291,7 +291,7 @@ public isLessThan(other: Byte): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Byte](arkts-arkts-byte-c.md) | 是 | 比较运算的右操作数。 |
+| other | Byte | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -321,13 +321,13 @@ public mul(other: Byte): Byte
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Byte](arkts-arkts-byte-c.md) | 是 | 乘法运算的右操作数。 |
+| other | Byte | 是 | 乘法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Byte](arkts-arkts-byte-c.md) | 乘法运算的结果。 |
+| Byte | 乘法运算的结果。 |
 
 ## parseInt
 
@@ -382,13 +382,13 @@ public sub(other: Byte): Byte
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Byte](arkts-arkts-byte-c.md) | 是 | 减法运算的右操作数。 |
+| other | Byte | 是 | 减法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Byte](arkts-arkts-byte-c.md) | 减法运算的结果。 |
+| Byte | 减法运算的结果。 |
 
 ## toByte
 

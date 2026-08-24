@@ -1,8 +1,6 @@
 # ImageStyle (System API)
 
-Style types supported by AI image generation models, like Graffiti, Watercolor.
-
-@interface ImageStyle
+Style types supported by AI image generation models, like Graffiti, Watercolor.@interface ImageStyle
 
 **Since:** 23
 

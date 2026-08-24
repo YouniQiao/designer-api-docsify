@@ -2,8 +2,7 @@
 
 Grid layout algorithm class.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The object of the **GridLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as the
 > input parameter of the
 > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
@@ -12,6 +11,8 @@ Grid layout algorithm class.
 **Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 
 **Since:** 24
+
+**Decorator:** @ObservedV2
 
 <!--Device-unnamed-export class GridLayoutAlgorithm--><!--Device-unnamed-export class GridLayoutAlgorithm-End-->
 
@@ -43,21 +44,15 @@ Constructs the grid layout algorithm class.
 
 ## columnsGap
 
-```TypeScript
-@Trace public columnsGap?: LengthMetrics
-```
+Spacing between columns.Default value: **LengthMetrics.vp(0)**Invalid values are treated as the default value.
 
-Spacing between columns.
-
-Default value: **LengthMetrics.vp(0)**
-
-Invalid values are treated as the default value.
-
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,21 +64,15 @@ Invalid values are treated as the default value.
 
 ## columnsTemplate
 
-```TypeScript
-@Trace public columnsTemplate?: string | ItemFillPolicy
-```
-
-Number of columns in the grid layout.
-
-Default value: **'1fr'**
-
-Invalid values are treated as the default value.
+Number of columns in the grid layout.Default value: **'1fr'**Invalid values are treated as the default value.
 
 **Type:** string \| [ItemFillPolicy](../../apis-default/arkts-apis/arkts-units-itemfillpolicy-i.md)
 
 **Default:** '1fr'
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,21 +84,15 @@ Invalid values are treated as the default value.
 
 ## rowsGap
 
-```TypeScript
-@Trace public rowsGap?: LengthMetrics
-```
+Spacing between rows.Default value: **LengthMetrics.vp(0)**Invalid values are treated as the default value.
 
-Spacing between rows.
-
-Default value: **LengthMetrics.vp(0)**
-
-Invalid values are treated as the default value.
-
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

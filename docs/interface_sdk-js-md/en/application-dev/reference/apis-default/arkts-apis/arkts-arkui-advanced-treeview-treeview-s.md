@@ -1,11 +1,8 @@
 # TreeView
 
-The **TreeView** component represents a tree view used to display a hierarchical list of items. Each item can contain subitems, which may be expanded or collapsed.
+The **TreeView** component represents a tree view used to display a hierarchical list of items. Each item can contain subitems, which may be expanded or collapsed.This component is applicable in productivity applications, such as side navigation bars in notepad, email, and Gallery applications.
 
-This component is applicable in productivity applications, such as side navigation bars in notepad, email, and Gallery applications.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - If the **TreeView** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -16,6 +13,8 @@ This component is applicable in productivity applications, such as side navigati
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct TreeView--><!--Device-unnamed-export declare struct TreeView-End-->
 
@@ -29,8 +28,7 @@ This component is applicable in productivity applications, such as side navigati
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -38,6 +36,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

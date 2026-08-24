@@ -1,8 +1,6 @@
 # NestedScrollOptions
 
-[nestedScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#nestedscroll11)属性参数对象。
-
-@interface NestedScrollOptions
+nestedScroll属性参数对象。@interface NestedScrollOptions
 
 **起始版本：** 23
 

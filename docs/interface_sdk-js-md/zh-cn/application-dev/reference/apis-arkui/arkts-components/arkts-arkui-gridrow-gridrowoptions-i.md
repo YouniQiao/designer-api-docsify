@@ -1,8 +1,6 @@
 # GridRowOptions
 
-设置栅格行布局容器的布局选项。
-
-@interface GridRowOptions
+设置栅格行布局容器的布局选项。@interface GridRowOptions
 
 **起始版本：** 23
 

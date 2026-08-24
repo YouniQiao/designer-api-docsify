@@ -1,14 +1,14 @@
 # StackLayoutAlgorithm
 
-Defines the stack layout algorithm.
-
-@implements LayoutAlgorithm
+Defines the stack layout algorithm.@implements LayoutAlgorithm
 
 **Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](arkts-layoutalgorithm-i.md)
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
+
+**Decorator:** @ObservedV2
 
 <!--Device-unnamed-export declare class StackLayoutAlgorithm--><!--Device-unnamed-export declare class StackLayoutAlgorithm-End-->
 
@@ -40,10 +40,6 @@ Constructor.
 
 ## alignContent
 
-```TypeScript
-@Trace public alignContent?: LocalizedAlignment
-```
-
 The align rules of child components in stack layout algorithm.
 
 **Type:** [LocalizedAlignment](arkts-enums-localizedalignment-e.md)
@@ -51,6 +47,8 @@ The align rules of child components in stack layout algorithm.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

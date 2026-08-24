@@ -1,14 +1,14 @@
 # RowLayoutAlgorithm
 
-Defines the row layout algorithm.
-
-@implements LayoutAlgorithm
+Defines the row layout algorithm.@implements LayoutAlgorithm
 
 **Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-layoutalgorithm-i.md)
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
+
+**Decorator:** @ObservedV2
 
 <!--Device-unnamed-export declare class RowLayoutAlgorithm--><!--Device-unnamed-export declare class RowLayoutAlgorithm-End-->
 
@@ -40,10 +40,6 @@ constructor.
 
 ## alignItems
 
-```TypeScript
-@Trace public alignItems?: VerticalAlign
-```
-
 Sets the alignment format of the subassembly in the vertical direction.
 
 **Type:** [VerticalAlign](arkts-enums-verticalalign-e.md)
@@ -51,6 +47,8 @@ Sets the alignment format of the subassembly in the vertical direction.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,10 +58,6 @@ Sets the alignment format of the subassembly in the vertical direction.
 
 ## isReverse
 
-```TypeScript
-@Trace public isReverse?: boolean
-```
-
 Whether the main axis is reversed.
 
 **Type:** boolean
@@ -71,6 +65,8 @@ Whether the main axis is reversed.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +76,6 @@ Whether the main axis is reversed.
 
 ## justifyContent
 
-```TypeScript
-@Trace public justifyContent?: FlexAlign
-```
-
 Alignment mode of the child components along the horizontal axis.
 
 **Type:** [FlexAlign](arkts-enums-flexalign-e.md)
@@ -91,6 +83,8 @@ Alignment mode of the child components along the horizontal axis.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,17 +94,15 @@ Alignment mode of the child components along the horizontal axis.
 
 ## space
 
-```TypeScript
-@Trace public space?: LengthMetrics
-```
-
 Horizontal layout element spacing.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

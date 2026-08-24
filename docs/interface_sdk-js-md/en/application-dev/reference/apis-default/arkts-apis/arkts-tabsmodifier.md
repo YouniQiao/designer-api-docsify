@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [TabsModifier](arkts-tabsmodifier-c.md) | Defines Tabs Modifier |
+| [TabsModifier](arkts-tabsmodifier-c.md) | Defines Tabs Modifier@implements { TabsAttribute, AttributeModifier&lt;TabsAttribute&gt; } |
 

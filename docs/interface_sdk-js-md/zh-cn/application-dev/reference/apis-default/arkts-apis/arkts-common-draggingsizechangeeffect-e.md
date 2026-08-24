@@ -1,8 +1,6 @@
 # DraggingSizeChangeEffect
 
-Define drag start animation effect from drag preview to the handle drag image
-
-@enum { number }
+Define drag start animation effect from drag preview to the handle drag image@enum { number }
 
 **起始版本：** 23
 

@@ -12,7 +12,6 @@ Provides methods to operate or manage Wi-Fi. @namespace wifiManager
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -73,7 +72,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | [off_wifiConnectionChange](arkts-connectivity-wifimanager-offwificonnectionchange-f.md) | Unsubscribe Wi-Fi connection change events. All callback functions will be deregistered If there is no specific callback parameter. |
 | [off_wifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md) | Unsubscribe Wi-Fi rssi change events. All callback functions will be deregistered If there is no specific callback parameter. |
 | [off_wifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md) | Unsubscribe Wi-Fi scan status change events. All callback functions will be deregistered If there is no specific callback parameter. |
-| [off_wifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | Unsubscribe Wi-Fi status change events. |
+| [off_wifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | Unsubscribe Wi-Fi status change events.All callback functions will be deregistered If there is no specific callback parameter. |
 | [offHotspotStateChange](arkts-connectivity-wifimanager-offhotspotstatechange-f.md) | Unsubscribe Wi-Fi hotspot state change events. All callback functions will be deregistered If there is no specific callback parameter. |
 | [offP2pConnectionChange](arkts-connectivity-wifimanager-offp2pconnectionchange-f.md) | Unsubscribe P2P connection change events. |
 | [offP2pDeviceChange](arkts-connectivity-wifimanager-offp2pdevicechange-f.md) | Unsubscribe P2P local device change events. |
@@ -84,7 +83,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | [offWifiConnectionChange](arkts-connectivity-wifimanager-offwificonnectionchange-f.md) | Unsubscribe Wi-Fi connection change events. All callback functions will be deregistered If there is no specific callback parameter. |
 | [offWifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md) | Unsubscribe Wi-Fi rssi change events. All callback functions will be deregistered If there is no specific callback parameter. |
 | [offWifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md) | Unsubscribe Wi-Fi scan status change events. All callback functions will be deregistered If there is no specific callback parameter. |
-| [offWifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | Unsubscribe Wi-Fi status change events. |
+| [offWifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | Unsubscribe Wi-Fi status change events.All callback functions will be deregistered If there is no specific callback parameter. |
 | [on_hotspotStateChange](arkts-connectivity-wifimanager-onhotspotstatechange-f.md) | Subscribe Wi-Fi hotspot state change events. |
 | [on_p2pConnectionChange](arkts-connectivity-wifimanager-onp2pconnectionchange-f.md) | Subscribe P2P connection change events. |
 | [on_p2pDeviceChange](arkts-connectivity-wifimanager-onp2pdevicechange-f.md) | Subscribe P2P local device change events. |
@@ -215,12 +214,12 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [ConnState](arkts-connectivity-wifimanager-connstate-e.md) | The state of Wi-Fi connection enumeration. |
+| [ConnState](arkts-connectivity-wifimanager-connstate-e.md) | The state of Wi-Fi connection enumeration.@enum { int } |
 | [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md) | Wi-Fi device address( mac / bssid ) type. @enum { int } |
 | [EapMethod](arkts-connectivity-wifimanager-eapmethod-e.md) | Wi-Fi EAP method. @enum { int } |
-| [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md) | P2P group owner band. |
-| [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md) | P2P connection status. |
-| [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md) | P2P device status. |
+| [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md) | P2P group owner band.@enum { int } |
+| [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md) | P2P connection status.@enum { int } |
+| [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md) | P2P device status.@enum { int } |
 | [Phase2Method](arkts-connectivity-wifimanager-phase2method-e.md) | Wi-Fi phase 2 method. @enum { int } |
 | [WapiPskType](arkts-connectivity-wifimanager-wapipsktype-e.md) | Describes the WAPI pre-shared key Type. @enum { int } |
 | [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | Wi-Fi band type. @enum { int } |
@@ -237,9 +236,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | Name | Description |
 | --- | --- |
 | [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) | Wi-Fi disconnected reason. @enum { int } |
-| [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md) | Wi-Fi IP type enumeration. |
+| [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md) | Wi-Fi IP type enumeration.@enum { int } |
 | [ProxyMethod](arkts-connectivity-wifimanager-proxymethod-e-sys.md) | Wi-Fi Proxy method. @enum { int } |
-| [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md) | The state of the supplicant enumeration. |
+| [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md) | The state of the supplicant enumeration.@enum { int } |
 | [WifiDetailState](arkts-connectivity-wifimanager-wifidetailstate-e-sys.md) | Wi-Fi detail state. @enum { int } WifiDetailState |
 <!--DelEnd-->
 

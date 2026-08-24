@@ -1,8 +1,6 @@
 # Window
 
-Represents a window instance, which is the basic unit managed by the window manager.
-
-In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md), [createWindow()](arkts-arkui-window-createwindow-f.md), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+Represents a window instance, which is the basic unit managed by the window manager.In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md), [createWindow()](arkts-arkui-window-createwindow-f.md), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
 **Since:** 23
 
@@ -13,8 +11,6 @@ In the following API examples, you must use [getLastWindow()](arkts-arkui-window
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 
@@ -55,9 +51,7 @@ Clear the window mask of window
 clientToGlobalDisplay(winX: int, winY: int): Position
 ```
 
-Converts relative coordinates (based on the top-left corner of the current window) into global coordinates (based on the top-left corner of the primary screen).
-
-This API is not supported in windows that are subject to display scaling, such as floating windows on phones or tablets not in free windows mode.
+Converts relative coordinates (based on the top-left corner of the current window) into global coordinates (based on the top-left corner of the primary screen).This API is not supported in windows that are subject to display scaling, such as floating windows on phones or tablets not in free windows mode.
 
 **Since:** 23
 
@@ -104,14 +98,10 @@ try {
 convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: int): int
 ```
 
-Enables conversion between window orientation, screen orientation, and screen angle.
-
-Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and the [Orientation](arkts-arkui-window-orientation-e.md) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation.   
-> **NOTE：**
-> 
+Enables conversion between window orientation, screen orientation, and screen angle.Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and the [Orientation](arkts-arkui-window-orientation-e.md) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation.  
+> **NOTE：**&gt;
 > The following figure and table show the relationship between the window orientation, screen orientation, and
-> screen angle of a bar-type device.
-> 
+> screen angle of a bar-type device.&gt;
 > 
 > | Screen Angle| Screen Orientation| Window Orientation| | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
 
@@ -127,7 +117,7 @@ Window orientation refers to the direction of the screen where the window reside
 | --- | --- | --- | --- |
 | from | [RotationInfoType](arkts-arkui-window-rotationinfotype-e.md) | Yes | Type of the value to convert. |
 | to | [RotationInfoType](arkts-arkui-window-rotationinfotype-e.md) | Yes | Type of the target value. |
-| value | int | Yes | Value to convert. The value is an integer. If a floating-point number is entered, the value is rounded down. The value range is [0, 3]. If the value is out of the range, it is an invalid parameter (error code [401](../../errorcode-universal.md#401-parameter-check-failed) is thrown) . |
+| value | int | Yes | Value to convert. The value is an integer. If a floating-point number is entered, the value is rounded down. The value range is [0, 3]. If the value is out of the range, it is an invalid parameter (error code [401](../../errorcode-universal.md#401-parameter-check-failed) is thrown). |
 
 **Return value:**
 
@@ -356,7 +346,7 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
 
 **Examples**
 
@@ -411,7 +401,7 @@ Destroys this window. This API uses a promise to return the result. It takes eff
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
 
 **Examples**
 
@@ -423,9 +413,7 @@ See [destroyWindow](#destroywindow)
 disableLandscapeMultiWindow(): Promise<void>
 ```
 
-Disables the landscape multi-window mode for the UI page that supports the horizontal layout.
-
-This API takes effect only for the main window of the application. In addition, **preferMultiWindowOrientation** must be set to **landscape_auto** in the [abilities](../../../quick-start/module-configuration-file.md#abilities) tag in the **module.json5** file.
+Disables the landscape multi-window mode for the UI page that supports the horizontal layout.This API takes effect only for the main window of the application. In addition, **preferMultiWindowOrientation** must be set to **landscape_auto** in the [abilities](../../../quick-start/module-configuration-file.md#abilities) tag in the **module.json5** file.
 
 **Since:** 26.0.0
 
@@ -485,9 +473,7 @@ export default class EntryAbility extends UIAbility {
 enableLandscapeMultiWindow(): Promise<void>
 ```
 
-Enables the landscape multi-window mode for the UI page that supports the horizontal layout. You are not advised to call this API for the UI page that adopts the vertical layout.
-
-This API takes effect only for the main window of the application. In addition, **preferMultiWindowOrientation** must be set to **landscape_auto** in the [abilities](../../../quick-start/module-configuration-file.md#abilities) tag in the **module.json5** file.
+Enables the landscape multi-window mode for the UI page that supports the horizontal layout. You are not advised to call this API for the UI page that adopts the vertical layout.This API takes effect only for the main window of the application. In addition, **preferMultiWindowOrientation** must be set to **landscape_auto** in the [abilities](../../../quick-start/module-configuration-file.md#abilities) tag in the **module.json5** file.
 
 **Since:** 26.0.0
 
@@ -547,14 +533,9 @@ export default class EntryAbility extends UIAbility {
 getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result.
-
-Main window/Child window:
-
-- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
-
-Global floating window, modal window, or system window:
-
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result.Main window/Child window:  
+- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.  
+Global floating window, modal window, or system window:  
 - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
@@ -608,14 +589,9 @@ promise.then((data) => {
 getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result.
-
-Main window/Child window:
-
-- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
-
-Global floating window, modal window, or system window:
-
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result.Main window/Child window:  
+- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.  
+Global floating window, modal window, or system window:  
 - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
@@ -770,9 +746,7 @@ try {
 getGlobalRect(): Rect
 ```
 
-Obtains the actual display area of this window on the physical screen. This API returns the result synchronously.
-
-This API can determine the actual on-screen location and size of a window that has been resized on certain devices.
+Obtains the actual display area of this window on the physical screen. This API returns the result synchronously.This API can determine the actual on-screen location and size of a window that has been resized on certain devices.
 
 **Since:** 23
 
@@ -813,11 +787,7 @@ try {
 getImmersiveModeEnabledState(): boolean
 ```
 
-Checks whether the immersive layout is enabled for this window.
-
-This API can be called only by the main window and child windows.
-
-The return value is consistent with the settings applied via [setImmersiveModeEnabledState()](#setimmersivemodeenabledstate) and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen). If neither of these APIs has been called, the default return value is **false**.
+Checks whether the immersive layout is enabled for this window.This API can be called only by the main window and child windows.The return value is consistent with the settings applied via [setImmersiveModeEnabledState()](#setimmersivemodeenabledstate) and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen). If neither of these APIs has been called, the default return value is **false**.
 
 **Since:** 23
 
@@ -1037,9 +1007,7 @@ See [getProperties](#getproperties)
 getStatusBarProperty(): StatusBarProperty
 ```
 
-Obtains the properties (for example, text color) of the status bar in the main window.
-
-Calling this API is not supported for child window and will cause error code 1300004.
+Obtains the properties (for example, text color) of the status bar in the main window.Calling this API is not supported for child window and will cause error code 1300004.
 
 **Since:** 23
 
@@ -1284,18 +1252,11 @@ export default class EntryAbility extends UIAbility {
 getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 ```
 
-Obtains the avoid area of this window.
-
-Main window/Child window:
-
-- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
-
-Global floating window, modal window, or system window:
-
-- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
-
-This API is generally applicable to the following scenarios:
-
+Obtains the avoid area of this window.Main window/Child window:  
+- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.  
+Global floating window, modal window, or system window:  
+- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.  
+This API is generally applicable to the following scenarios:  
 - In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback, this API is used to obtain the initial layout avoid area when the application starts. - This API is used when a child window needs to temporarily display content and requires layout adjustments to avoid certain areas.
 
 **Since:** 23
@@ -1342,14 +1303,9 @@ try {
 getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 ```
 
-Obtains the avoid area of this application window, even if the avoid area is invisible.
-
-Main window/Child window:
-
-- When the main window is in the free-floating window mode under a non- [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
-
-Global floating window, modal window, or system window:
-
+Obtains the avoid area of this application window, even if the avoid area is invisible.Main window/Child window:  
+- When the main window is in the free-floating window mode under a non- [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.  
+Global floating window, modal window, or system window:  
 - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 23
@@ -1639,9 +1595,7 @@ try {
 getWindowLimitsVP(): WindowLimits
 ```
 
-Obtains the size limits of this application window, in vp.
-
-For system windows and global floating windows, the default minimum width and height are set to 1 px. The 1 vp value obtained via this API represents the result after rounding calculations.
+Obtains the size limits of this application window, in vp.For system windows and global floating windows, the default minimum width and height are set to 1 px. The 1 vp value obtained via this API represents the result after rounding calculations.
 
 **Since:** 23
 
@@ -1750,8 +1704,7 @@ getWindowStatus(): WindowStatusType
 
 Obtains the mode of this window.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is
 > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on
 > tablets), the return value differs based on the
@@ -1857,9 +1810,7 @@ export default class EntryAbility extends UIAbility {
 getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAnimation | undefined
 ```
 
-Obtains the window transition animation configuration in a specific scenario.
-
-Currently, this API can be used only on the main window of an application.
+Obtains the window transition animation configuration in a specific scenario.Currently, this API can be used only on the main window of an application.
 
 **Since:** 23
 
@@ -1930,9 +1881,7 @@ export default class EntryAbility extends UIAbility {
 globalDisplayToClient(globalDisplayX: int, globalDisplayY: int): Position
 ```
 
-Converts global coordinates (based on the top-left corner of the primary screen) into relative coordinates (based on the top-left corner of the current window).
-
-This API is not supported in windows that are subject to display scaling, such as floating windows on phones or tablets not in free windows mode.
+Converts global coordinates (based on the top-left corner of the primary screen) into relative coordinates (based on the top-left corner of the current window).This API is not supported in windows that are subject to display scaling, such as floating windows on phones or tablets not in free windows mode.
 
 **Since:** 23
 
@@ -2527,9 +2476,7 @@ try {
 isWindowHighlighted(): boolean
 ```
 
-Checks whether the window is active. To obtain the active state, call this API when the [WindowEventType](arkts-arkui-window-windoweventtype-e.md) lifecycle is **WINDOW_ACTIVE**.
-
-You can use [on('windowHighlightChange')](#onrotationchange) to listen for status changes and then execute the corresponding service.
+Checks whether the window is active. To obtain the active state, call this API when the [WindowEventType](arkts-arkui-window-windoweventtype-e.md) lifecycle is **WINDOW_ACTIVE**.You can use [on('windowHighlightChange')](#onrotationchange) to listen for status changes and then execute the corresponding service.
 
 **Since:** 23
 
@@ -2763,7 +2710,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
 
 **Examples**
 
@@ -2942,7 +2889,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
 
 **Examples**
 
@@ -2983,7 +2930,7 @@ See [loadContent](#loadcontent)
 loadContent(path: string): Promise<void>
 ```
 
-Loads content from a page to this window. This API uses a promise to return the result. You are advised to call this API during UIAbility startup. If called multiple times, this API will destroy the existing page content ( UIContent) before loading the new content. Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback.
+Loads content from a page to this window. This API uses a promise to return the result. You are advised to call this API during UIAbility startup. If called multiple times, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback.
 
 **Since:** 7
 
@@ -3520,7 +3467,7 @@ export default class EntryAbility extends UIAbility {
 maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<void>
 ```
 
-Maximizes the window. The main window can use this API to maximize. For child windows, you need to set **maximizeSupported** to **true** when creating the windows and then call this API to maximize. On 2-in-1 devices with folding capabilities, you can use the **acrossDisplay** parameter to control the main window's behavior in waterfall mode when maximized in the hover state. (See [Semi-Folded State of Foldable Screens](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-folded-hover) ). This API uses a promise to return the result.
+Maximizes the window. The main window can use this API to maximize. For child windows, you need to set **maximizeSupported** to **true** when creating the windows and then call this API to maximize. On 2-in-1 devices with folding capabilities, you can use the **acrossDisplay** parameter to control the main window's behavior in waterfall mode when maximized in the hover state. (See [Semi-Folded State of Foldable Screens](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-folded-hover)). This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -3598,10 +3545,8 @@ Maximize the app window.
 minimize(callback: AsyncCallback<void>): void
 ```
 
-The behavior of this API varies based on the caller:
-
-- Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar. For 2-in-1 devices, it can be restored by calling [restore()](#restore). - Hides the child window or global floating window if the caller is a child window. The child window or floating window cannot be restored in the dock bar. It can be made visible again by calling [showWindow()](#showwindow).
-
+The behavior of this API varies based on the caller:  
+- Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar. For 2-in-1 devices, it can be restored by calling [restore()](#restore). - Hides the child window or global floating window if the caller is a child window. The child window or floating window cannot be restored in the dock bar. It can be made visible again by calling [showWindow()](#showwindow).  
 This API can be called only by the main window, child window, or global floating window. If it is called by other windows, error code 1300002 is thrown. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
@@ -3658,10 +3603,8 @@ promise.then(() => {
 minimize(): Promise<void>
 ```
 
-The behavior of this API varies based on the caller:
-
-- Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar. For 2-in-1 devices, it can be restored by calling [restore()](#restore). - Hides the child window or global floating window if the caller is a child window. The child window or floating window cannot be restored in the dock bar. It can be made visible again by calling [showWindow()](#showwindow).
-
+The behavior of this API varies based on the caller:  
+- Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar. For 2-in-1 devices, it can be restored by calling [restore()](#restore). - Hides the child window or global floating window if the caller is a child window. The child window or floating window cannot be restored in the dock bar. It can be made visible again by calling [showWindow()](#showwindow).  
 This API can be called only by the main window, child window, or global floating window. If it is called by other windows, error code 1300002 is thrown. This API uses a promise to return the result.
 
 **Since:** 23
@@ -3696,9 +3639,7 @@ See [minimize](#minimize)
 moveTo(x: number, y: number): Promise<void>
 ```
 
-Moves this window. This API uses a promise to return the result.
-
-This operation is not supported in a window in full-screen mode.
+Moves this window. This API uses a promise to return the result.This operation is not supported in a window in full-screen mode.
 
 **Since:** 7
 
@@ -3755,9 +3696,7 @@ promise.then(() => {
 moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Moves this window. This API uses an asynchronous callback to return the result.
-
-This operation is not supported in a window in full-screen mode.
+Moves this window. This API uses an asynchronous callback to return the result.This operation is not supported in a window in full-screen mode.
 
 **Since:** 7
 
@@ -3789,22 +3728,17 @@ moveWindowTo(x: int, y: int): Promise<void>
 
 Moves this window. This API uses a promise to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()](#movewindowtoasync).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API is best suited for the floating window mode (when the window mode is
 > **window.WindowStatusType.FLOATING**, which you can check using
-> [getWindowStatus()](#getwindowstatus)). You are not advised to use it in other window modes.
-> 
+> [getWindowStatus()](#getwindowstatus)). You are not advised to use it in other window modes.&gt;
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves
 > relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to
-> the upper-left corner of its parent window.
-> 
+> the upper-left corner of its parent window.&gt;
 > - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call
 > [moveWindowToGlobal()](#movewindowtoglobal)
-> .
-> 
-> - This API does not work for the main window in non-freeform window mode.
-> 
+> .&gt;
+> - This API does not work for the main window in non-freeform window mode.&gt;
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
 > the system will automatically snap the window back to ensure the title bar is visible.
@@ -3880,22 +3814,17 @@ moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void
 
 Moves this window. This API uses an asynchronous callback to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()](#movewindowtoasync).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API is best suited for the floating window mode (when the window mode is
 > **window.WindowStatusType.FLOATING**, which can obtained using
-> [getWindowStatus()](#getwindowstatus)). You are advised not to use it in other window modes.
-> 
+> [getWindowStatus()](#getwindowstatus)). You are advised not to use it in other window modes.&gt;
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves
 > relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to
-> the upper-left corner of its parent window.
-> 
+> the upper-left corner of its parent window.&gt;
 > - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call
 > [moveWindowToGlobal()](#movewindowtoglobal)
-> .
-> 
-> - This API does not work for the main window in non-freeform window mode.
-> 
+> .&gt;
+> - This API does not work for the main window in non-freeform window mode.&gt;
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
 > the system will automatically snap the window back to ensure the title bar is visible.
@@ -3934,12 +3863,9 @@ See [moveWindowTo](#movewindowto)
 moveWindowToAsync(x: int, y: int): Promise<void>
 ```
 
-Moves this window. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.
+Moves this window. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). In floating window mode, the movement behavior of different types of windows is as follows.
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). In floating window mode, the movement behavior of different types of windows is as follows.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
 > the system will automatically snap the window back to ensure the title bar is visible.
@@ -4020,14 +3946,10 @@ try {
 moveWindowToAsync(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>
 ```
 
-Moves this window to the specified position. This API uses a promise to return the result. You can use the **moveConfiguration** parameter to specify the target display ID for the window movement. A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.
-
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). In floating window mode, the movement behavior of different types of windows is as follows.
-
+Moves this window to the specified position. This API uses a promise to return the result. You can use the **moveConfiguration** parameter to specify the target display ID for the window movement. A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). In floating window mode, the movement behavior of different types of windows is as follows.  
 | Window Type| [Freeform Window](../../../windowmanager/window-terminology.md#freeform-window) State| Non-freeform Window State| |---------|---------------|-----------------| | Main window| Move relative to the screen.| API calls do not take effect or return an error.| | App subwindow/Modal window| Move relative to the screen.| Move relative to the main window.| | System window/Global floating window| Move relative to the screen.| Move relative to the screen.|
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
 > the system will automatically snap the window back to ensure the title bar is visible.
@@ -4073,15 +3995,11 @@ See [moveWindowToAsync](#movewindowtoasync)
 moveWindowToGlobal(x: int, y: int): Promise<void>
 ```
 
-Moves this window based on the coordinates. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.
+Moves this window based on the coordinates. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
-> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
-> 
+> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.&gt;
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
 > the system will automatically snap the window back to ensure the title bar is visible.
@@ -4162,15 +4080,11 @@ try {
 moveWindowToGlobal(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>
 ```
 
-Moves this window to the specified position based on the coordinates. This API uses a promise to return the result. You can use the **moveConfiguration** parameter to specify the target display ID for the window movement. A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.
+Moves this window to the specified position based on the coordinates. This API uses a promise to return the result. You can use the **moveConfiguration** parameter to specify the target display ID for the window movement. A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
-> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
-> 
+> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.&gt;
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
 > the system will automatically snap the window back to ensure the title bar is visible.
@@ -4216,18 +4130,13 @@ See [moveWindowToGlobal](#movewindowtoglobal)
 moveWindowToGlobalDisplay(x: int, y: int): Promise<void>
 ```
 
-Moves the window based on the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). This API uses a promise to return the result asynchronously.
+Moves the window based on the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). This API uses a promise to return the result asynchronously.This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
-> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
-> 
+> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.&gt;
 > - After a window is moved, if it spans multiple screens, the window will belong to the screen with which it
-> has the largest overlapping area.
-> 
+> has the largest overlapping area.&gt;
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
 > the system will automatically snap the window back to ensure the title bar is visible.
@@ -4816,9 +4725,7 @@ Unsubscribes from the event indicating changes to the area where this window can
 off(type: 'systemDensityChange', callback?: Callback<double>): void
 ```
 
-Unsubscribes from the system density change event.
-
-In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp density = px.
+Unsubscribes from the system density change event.In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp * density = px.
 
 **Since:** 15
 
@@ -5623,9 +5530,7 @@ Unsubscribes from the event indicating that the child window is closed.
 offSystemDensityChange(callback?: Callback<double>): void
 ```
 
-Unsubscribes from the system density change event.
-
-In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp density = px.
+Unsubscribes from the system density change event.In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp * density = px.
 
 **Since:** 23
 
@@ -5963,16 +5868,10 @@ Unsubscribes from the event indicating that the main window or child window will
 on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 ```
 
-Subscribes to the event indicating changes to the area where this window cannot be displayed.
-
-Main window/Child window:
-
-- When the callback is triggered in the free-floating window mode (the window mode is **window.WindowStatusType.FLOATING**) under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - When the callback is triggered in the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - When the callback is triggered in the other scenarios of the main window, the calculated avoidance area can be returned only when the window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, an empty avoidance area is returned. - When the callback is triggered for the child window in the non-freeform window state or non-free-floating window mode, the calculated avoidance area of the child window is returned only when the position and size of the child window are the same as those of the main window. Otherwise, an empty avoidance area is returned.
-
-Global floating window, modal window, or system window:
-
-- The calculated avoidance area is returned only when the callback is triggered after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, an empty avoidance area is returned.
-
+Subscribes to the event indicating changes to the area where this window cannot be displayed.Main window/Child window:  
+- When the callback is triggered in the free-floating window mode (the window mode is **window.WindowStatusType.FLOATING**) under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - When the callback is triggered in the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - When the callback is triggered in the other scenarios of the main window, the calculated avoidance area can be returned only when the window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, an empty avoidance area is returned. - When the callback is triggered for the child window in the non-freeform window state or non-free-floating window mode, the calculated avoidance area of the child window is returned only when the position and size of the child window are the same as those of the main window. Otherwise, an empty avoidance area is returned.  
+Global floating window, modal window, or system window:  
+- The calculated avoidance area is returned only when the callback is triggered after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, an empty avoidance area is returned.  
 <!--RP7-->Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.<!--RP7End-->
 
 **Since:** 9
@@ -6062,9 +5961,7 @@ Subscribes to the display change event of this window. For example, this event i
 on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 ```
 
-Subscribes to events indicating changes in window frame metrics. This API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
-
-The callback is triggered only when the client UI content is redrawn (for example, during page transitions, interactions with responsive components, setting background colors, or adjusting opacity).
+Subscribes to events indicating changes in window frame metrics. This API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.The callback is triggered only when the client UI content is redrawn (for example, during page transitions, interactions with responsive components, setting background colors, or adjusting opacity).
 
 **Since:** 22
 
@@ -6122,9 +6019,7 @@ Subscribes to the freeform window mode change event.
 on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void
 ```
 
-Subscribes to the event indicating that the hide animation of the soft keyboard in the fixed state is completed, or when the soft keyboard finishes transitioning from the fixed state to the floating state.
-
-For details about the APIs used to set the soft keyboard to the fixed or floating state, see [Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+Subscribes to the event indicating that the hide animation of the soft keyboard in the fixed state is completed, or when the soft keyboard finishes transitioning from the fixed state to the floating state.For details about the APIs used to set the soft keyboard to the fixed or floating state, see [Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag).
 
 **Since:** 18
 
@@ -6154,9 +6049,7 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void
 ```
 
-Subscribes to the event indicating that the show animation of the soft keyboard in the fixed state is completed, or when the soft keyboard finishes transitioning from the floating state to the fixed state.
-
-For details about the APIs used to set the soft keyboard to the fixed or floating state, see [Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+Subscribes to the event indicating that the show animation of the soft keyboard in the fixed state is completed, or when the soft keyboard finishes transitioning from the floating state to the fixed state.For details about the APIs used to set the soft keyboard to the fixed or floating state, see [Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag).
 
 **Since:** 18
 
@@ -6215,9 +6108,7 @@ Subscribes to the event indicating soft keyboard height changes in the fixed sta
 on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void
 ```
 
-Subscribes to the event indicating that the soft keyboard in the fixed state is about to hide, or the soft keyboard is transitioning from the fixed state to the floating state.
-
-For details about the APIs used to set the soft keyboard to the fixed or floating state, see [Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+Subscribes to the event indicating that the soft keyboard in the fixed state is about to hide, or the soft keyboard is transitioning from the fixed state to the floating state.For details about the APIs used to set the soft keyboard to the fixed or floating state, see [Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag).
 
 **Since:** 20
 
@@ -6247,9 +6138,7 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void
 ```
 
-Subscribes to the event indicating that the soft keyboard in the fixed state is about to show, or the soft keyboard is transitioning from the floating state to the fixed state.
-
-For details about the APIs used to set the soft keyboard to the fixed or floating state, see [Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+Subscribes to the event indicating that the soft keyboard in the fixed state is about to show, or the soft keyboard is transitioning from the floating state to the fixed state.For details about the APIs used to set the soft keyboard to the fixed or floating state, see [Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag).
 
 **Since:** 20
 
@@ -6312,9 +6201,8 @@ Register the callback function that has no interaction for a long time. Interact
 on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 ```
 
-Subscribes to the visibility status change event of the window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
-
-- If the shadow area of a non-main window ( [setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes. - If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible. - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
+Subscribes to the visibility status change event of the window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:  
+- If the shadow area of a non-main window ([setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes. - If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible. - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
 
 **Since:** 22
 
@@ -6372,9 +6260,7 @@ Enables the listening event for changes in the window rectangle (window position
 on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void
 ```
 
-Subscribes to the window rotation change event. If the window rotation event type in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) is **WINDOW_WILL_ROTATE**, [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) must be returned. If the window rotation event type is **WINDOW_DID_ROTATE**, [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) does not take effect.
-
-This API can be registered only on the main thread. If a window registers multiple callbacks of the same type, only the return value of the most recently registered callback will be effective. The system provides a timeout protection mechanism. If the window does not return [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) within 20 ms, the system does not process the return value.
+Subscribes to the window rotation change event. If the window rotation event type in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) is **WINDOW_WILL_ROTATE**, [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) must be returned. If the window rotation event type is **WINDOW_DID_ROTATE**, [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) does not take effect.This API can be registered only on the main thread. If a window registers multiple callbacks of the same type, only the return value of the most recently registered callback will be effective. The system provides a timeout protection mechanism. If the window does not return [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) within 20 ms, the system does not process the return value.
 
 **Since:** 19
 
@@ -6462,13 +6348,7 @@ Subscribes to the screenshot event.
 on(type: 'subWindowClose', callback: Callback<void>): void
 ```
 
-Subscribes to the event indicating that the child window is closed. This event is triggered only when the user clicks the system-provided close button in the top-right corner to close the child window. It is not triggered when the child window is closed in other ways.
-
-If the event is subscribed to multiple times, only the most recently subscribed-to event takes effect.
-
-The callback function in this API is executed synchronously. For asynchronous close events of child windows, refer to [on('windowWillClose')](#onrotationchange) .
-
-If there is an existing event subscribed to by calling [on('windowWillClose')](#onrotationchange) , only the [on('windowWillClose')](#onrotationchange) API will be responded to.
+Subscribes to the event indicating that the child window is closed. This event is triggered only when the user clicks the system-provided close button in the top-right corner to close the child window. It is not triggered when the child window is closed in other ways.If the event is subscribed to multiple times, only the most recently subscribed-to event takes effect.The callback function in this API is executed synchronously. For asynchronous close events of child windows, refer to [on('windowWillClose')](#onrotationchange).If there is an existing event subscribed to by calling [on('windowWillClose')](#onrotationchange), only the [on('windowWillClose')](#onrotationchange) API will be responded to.
 
 **Since:** 12
 
@@ -6525,9 +6405,7 @@ Subscribes to the event indicating changes to the area where this window cannot 
 on(type: 'systemDensityChange', callback: Callback<double>): void
 ```
 
-Subscribes to the system density change event, which is triggered when the system's display size scale factor changes for the screen where the window is located.
-
-In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp density = px.
+Subscribes to the system density change event, which is triggered when the system's display size scale factor changes for the screen where the window is located.In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp * density = px.
 
 **Since:** 15
 
@@ -6740,12 +6618,9 @@ Subscribes to the window size change event. This API can be called only by the m
 on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 ```
 
-Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use [on('windowStatusDidChange')](#onrotationchange) .)
+Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use [on('windowStatusDidChange')](#onrotationchange).)After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use [on('windowStatusDidChange')](#onrotationchange).
 
-After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use [on('windowStatusDidChange')](#onrotationchange) .
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is
 > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on
 > tablets), the return value differs based on the
@@ -6840,9 +6715,8 @@ Subscribes to the change event of the rectangle that holds the minimize, maximiz
 on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the visibility status change event of this window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
-
-- If the shadow area of a non-main window ( [setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes. - If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible. - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
+Subscribes to the visibility status change event of this window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:  
+- If the shadow area of a non-main window ([setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes. - If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible. - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
 
 **Since:** 11
 
@@ -6874,9 +6748,7 @@ Subscribes to the visibility status change event of this window. The visibility 
 on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void
 ```
 
-Subscribes to the event indicating that the main window or child window will be closed. This event is triggered only when the user clicks the close button in the system-provided title bar to close the window. It is not triggered when the window is closed in other ways.
-
-The callback function in this API is executed asynchronously. For synchronous close events of child windows, refer to [on('subWindowClose')](#onrotationchange). For synchronous close events of the main window, refer to [on('windowStageClose')](#onrotationchange).
+Subscribes to the event indicating that the main window or child window will be closed. This event is triggered only when the user clicks the close button in the system-provided title bar to close the window. It is not triggered when the window is closed in other ways.The callback function in this API is executed asynchronously. For synchronous close events of child windows, refer to [on('subWindowClose')](#onrotationchange). For synchronous close events of the main window, refer to [on('windowStageClose')](#onrotationchange).
 
 **Since:** 15
 
@@ -6975,9 +6847,7 @@ Subscribes to the display change event of this window. For example, this event i
 onFrameMetricsMeasured(callback: Callback<FrameMetrics>): void
 ```
 
-Subscribes to events indicating changes in window frame metrics. This API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
-
-The callback is triggered only when the client UI content is redrawn (for example, during page transitions, interactions with responsive components, setting background colors, or adjusting opacity).
+Subscribes to events indicating changes in window frame metrics. This API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.The callback is triggered only when the client UI content is redrawn (for example, during page transitions, interactions with responsive components, setting background colors, or adjusting opacity).
 
 **Since:** 23
 
@@ -7190,11 +7060,9 @@ Subscribes to non-interaction events in a window within the specified period. In
 onOcclusionStateChanged(callback: Callback<OcclusionState>): void
 ```
 
-Subscribes to the visibility status change event of the window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
-
-- If the shadow area of a non-main window ( [setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes. - If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible. - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
-
-- If the shadow area of a non-main window ( [setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes. - If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible. - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
+Subscribes to the visibility status change event of the window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:  
+- If the shadow area of a non-main window ([setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes. - If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible. - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.  
+- If the shadow area of a non-main window ([setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes. - If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible. - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
 
 **Since:** 23
 
@@ -7353,9 +7221,7 @@ Subscribes to the event indicating that the child window is closed. This event i
 onSystemDensityChange(callback: Callback<double>): void
 ```
 
-Subscribes to the system density change event, which is triggered when the system's display size scale factor changes for the screen where the window is located.
-
-In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp density = px.
+Subscribes to the system density change event, which is triggered when the system's display size scale factor changes for the screen where the window is located.In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp * density = px.
 
 **Since:** 23
 
@@ -7557,12 +7423,9 @@ Subscribes to the window size change event. This API can be called only by the m
 onWindowStatusChange(callback: Callback<WindowStatusType>): void
 ```
 
-Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use [on('windowStatusDidChange')](#onrotationchange) .)
+Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use [on('windowStatusDidChange')](#onrotationchange).)After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use [on('windowStatusDidChange')](#onrotationchange).
 
-After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use [on('windowStatusDidChange')](#onrotationchange) .
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is
 > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on
 > tablets), the return value differs based on the
@@ -7648,9 +7511,8 @@ Subscribes to the change event of the rectangle that holds the minimize, maximiz
 onWindowVisibilityChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to the visibility status change event of this window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
-
-- If the shadow area of a non-main window ( [setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes. - If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible. - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
+Subscribes to the visibility status change event of this window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:  
+- If the shadow area of a non-main window ([setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes. - If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible. - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
 
 **Since:** 23
 
@@ -7706,9 +7568,7 @@ Subscribes to the event indicating that the main window or child window will be 
 raiseToAppTop(): Promise<void>
 ```
 
-Brings a child window to the top. This action is limited to child windows of the same type under the same parent window within the current application. For child windows with a custom zLevel property, it only applies to child windows with the same zLevel value under the same parent window within the current application. This API uses a promise to return the result.
-
-Before calling this API, ensure that the child window has been created and [showWindow()](#showwindow) has been successfully executed.
+Brings a child window to the top. This action is limited to child windows of the same type under the same parent window within the current application. For child windows with a custom zLevel property, it only applies to child windows with the same zLevel value under the same parent window within the current application. This API uses a promise to return the result.Before calling this API, ensure that the child window has been created and [showWindow()](#showwindow) has been successfully executed.
 
 **Since:** 23
 
@@ -7798,7 +7658,7 @@ export default class EntryAbility extends UIAbility {
 recover(): Promise<void>
 ```
 
-Restores the main window from the full-screen, maximized, or split-screen mode to a floating window ( **window.WindowStatusType.FLOATING** mode), and restores the window size and position to those before the full- screen, maximized, or split-screen mode is entered. If the main window is already in the floating window mode, nothing will happen. This API uses a promise to return the result.
+Restores the main window from the full-screen, maximized, or split-screen mode to a floating window (**window.WindowStatusType.FLOATING** mode), and restores the window size and position to those before the full- screen, maximized, or split-screen mode is entered. If the main window is already in the floating window mode, nothing will happen. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -7902,9 +7762,7 @@ See [recover](#recover)
 resetAspectRatio(callback: AsyncCallback<void>): void
 ```
 
-Resets the aspect ratio of the window content layout. This API uses an asynchronous callback to return the result.
-
-This API is valid only for the main window. After it is called, the persistently saved aspect ratio is cleared.
+Resets the aspect ratio of the window content layout. This API uses an asynchronous callback to return the result.This API is valid only for the main window. After it is called, the persistently saved aspect ratio is cleared.
 
 **Since:** 23
 
@@ -7995,9 +7853,7 @@ export default class EntryAbility extends UIAbility {
 resetAspectRatio(): Promise<void>
 ```
 
-Resets the aspect ratio of the window content layout. This API uses a promise to return the result.
-
-This API is valid only for the main window. After it is called, the persistently saved aspect ratio is cleared.
+Resets the aspect ratio of the window content layout. This API uses a promise to return the result.This API is valid only for the main window. After it is called, the persistently saved aspect ratio is cleared.
 
 **Since:** 23
 
@@ -8030,21 +7886,7 @@ See [resetAspectRatio](#resetaspectratio)
 resetSize(width: number, height: number): Promise<void>
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.
-
-The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.
-
-The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](#getwindowlimits) to obtain size limits.
-
-The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.
-
-The new window width and height you set must meet the following limits:
-
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect.
-
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
-
-This operation is not supported in a window in full-screen mode.
+Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](#getwindowlimits) to obtain size limits.The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.The new window width and height you set must meet the following limits:If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect.If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.This operation is not supported in a window in full-screen mode.
 
 **Since:** 7
 
@@ -8101,21 +7943,7 @@ promise.then(() => {
 resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result.
-
-The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.
-
-The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](#getwindowlimits) to obtain size limits.
-
-The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.
-
-The new window width and height you set must meet the following limits:
-
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect.
-
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
-
-This operation is not supported in a window in full-screen mode.
+Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result.The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](#getwindowlimits) to obtain size limits.The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.The new window width and height you set must meet the following limits:If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect.If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.This operation is not supported in a window in full-screen mode.
 
 **Since:** 7
 
@@ -8145,22 +7973,9 @@ See [resetSize](#resetsize)
 resize(width: int, height: int): Promise<void>
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.
+Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](#resizeasync).The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits.The new window width and height you set must meet the following limits:If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions.If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). If this API is called when the window is in other window modes, error code 1300002 is reported. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](#resizeasync).
-
-The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits.
-
-The new window width and height you set must meet the following limits:
-
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions.
-
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
-
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). If this API is called when the window is in other window modes, error code 1300002 is reported. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
@@ -8233,20 +8048,9 @@ try {
 resize(width: int, height: int, callback: AsyncCallback<void>): void
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result.
+Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result.A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](#resizeasync).The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits.The new window width and height you set must meet the following limits:If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions.If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
 
-A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](#resizeasync).
-
-The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits.
-
-The new window width and height you set must meet the following limits:
-
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions.
-
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
@@ -8284,22 +8088,9 @@ See [resize](#resize)
 resizeAsync(width: int, height: int): Promise<void>
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.
+Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits.The new window width and height you set must meet the following limits:If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions.If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other scenarios, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.
-
-The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits.
-
-The new window width and height you set must meet the following limits:
-
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions.
-
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
-
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other scenarios, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > this API does not work for the main window.
 
@@ -8421,7 +8212,7 @@ export default class EntryAbility extends UIAbility {
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-Restores the main window of the current window to the foreground. If the main window is already in the foreground , the main window level is raised. This API is applicable only to [TYPE_FLOAT](arkts-arkui-window-windowtype-e.md) windows and can be called only after the DOWN event is triggered in the windows. This API uses a promise to return the result.
+Restores the main window of the current window to the foreground. If the main window is already in the foreground, the main window level is raised. This API is applicable only to [TYPE_FLOAT](arkts-arkui-window-windowtype-e.md) windows and can be called only after the DOWN event is triggered in the windows. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -8567,16 +8358,13 @@ setAspectRatio(ratio: double, callback: AsyncCallback<void>): void
 
 Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When the window size is set by using other APIs such as
 > [resize](#resize) and
-> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
-> 
+> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.&gt;
 > - This setting is available only for the main window and takes effect only in floating window mode (
 > **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the
-> setting is valid in floating window mode even after the application is closed or the device is restarted.
-> 
+> setting is valid in floating window mode even after the application is closed or the device is restarted.&gt;
 > - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent
 > main windows. If you need to set the aspect ratio for just one main window, use
 > [setContentAspectRatio](#setcontentaspectratio) instead.
@@ -8676,16 +8464,13 @@ setAspectRatio(ratio: double): Promise<void>
 
 Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When the window size is set by using other APIs such as
 > [resize](#resize) and
-> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
-> 
+> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.&gt;
 > - This setting is available only for the main window and takes effect only in floating window mode (
 > **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the
-> setting is valid in floating window mode even after the application is closed or the device is restarted.
-> 
+> setting is valid in floating window mode even after the application is closed or the device is restarted.&gt;
 > - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent
 > main windows. If you need to set the aspect ratio for just one main window, use
 > [setContentAspectRatio](#setcontentaspectratio) instead.
@@ -8815,9 +8600,7 @@ See [setBackgroundColor](#setbackgroundcolor)
 setBrightness(brightness: number): Promise<void>
 ```
 
-Sets the screen brightness for this window. This API uses a promise to return the result.
-
-When the screen brightness setting for the window takes effect, Control Panel cannot adjust the system screen brightness. It can do so only after the window screen brightness is restored to the default value.
+Sets the screen brightness for this window. This API uses a promise to return the result.When the screen brightness setting for the window takes effect, Control Panel cannot adjust the system screen brightness. It can do so only after the window screen brightness is restored to the default value.
 
 **Since:** 6
 
@@ -8875,9 +8658,7 @@ promise.then(() => {
 setBrightness(brightness: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the screen brightness for this window. This API uses an asynchronous callback to return the result.
-
-When the screen brightness setting for the window takes effect, Control Panel cannot adjust the system screen brightness. It can do so only after the window screen brightness is restored to the default value.
+Sets the screen brightness for this window. This API uses an asynchronous callback to return the result.When the screen brightness setting for the window takes effect, Control Panel cannot adjust the system screen brightness. It can do so only after the window screen brightness is restored to the default value.
 
 **Since:** 6
 
@@ -8993,19 +8774,15 @@ setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: bo
 
 Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When you adjust the window width and height using the same **ratio** parameter, the window size adapts to
-> changes in the border decoration size or visibility.
-> 
+> changes in the border decoration size or visibility.&gt;
 > - When the window title bar is set to invisible by using
 > [setWindowDecorVisible](#setwindowdecorvisible), the window content area takes over the
-> space that was previously used by the title bar.
-> 
+> space that was previously used by the title bar.&gt;
 > - When the window size is set by using other APIs such as
 > [resize](#resize) and
-> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
-> 
+> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.&gt;
 > - This setting is available only for the main window and takes effect only in floating window mode (
 > **window.WindowStatusType.FLOATING** mode).
 
@@ -9319,9 +9096,7 @@ See [setDimBehind](#setdimbehind)
 setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>
 ```
 
-Sets the keyframe policy for dragging the main window. This API uses a promise to return the result.
-
-If this API is called by a non-main window, error code 1300004 is returned.
+Sets the keyframe policy for dragging the main window. This API uses a promise to return the result.If this API is called by a non-main window, error code 1300004 is returned.
 
 **Since:** 23
 
@@ -9395,9 +9170,7 @@ export default class EntryAbility extends UIAbility {
 setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>
 ```
 
-Sets the exclusive highlight property for the window. When a window set to exclusive highlight gains focus, other windows in the current parent-child window chain that are in the highlighted state will lose their highlighted state. This API uses a promise to return the result.
-
-This API does not take effect for the main window or modal window.
+Sets the exclusive highlight property for the window. When a window set to exclusive highlight gains focus, other windows in the current parent-child window chain that are in the highlighted state will lose their highlighted state. This API uses a promise to return the result.This API does not take effect for the main window or modal window.
 
 **Since:** 23
 
@@ -9507,7 +9280,7 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in [Input Box and Input Method Interaction in Non-Focus Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md) . |
+| isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in [Input Box and Input Method Interaction in Non-Focus Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md). |
 
 **Return value:**
 
@@ -9565,7 +9338,7 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in [Input Box and Input Method Interaction in Non-Focus Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md) . |
+| isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in [Input Box and Input Method Interaction in Non-Focus Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -9578,11 +9351,7 @@ See [setFocusable](#setfocusable)
 setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>
 ```
 
-Sets whether a child window can span multiple screens and be simultaneously displayed while its parent window is being dragged or resized. This API uses a promise to return the result.
-
-By default, when a child window follows its parent window's layout changes (by using [moveWindowTo()](#movewindowto)), it does not support spanning multiple screens and being simultaneously displayed.
-
-However, calling this API on the child window enables it to span multiple screens and be simultaneously displayed during the layout adjustment process.
+Sets whether a child window can span multiple screens and be simultaneously displayed while its parent window is being dragged or resized. This API uses a promise to return the result.By default, when a child window follows its parent window's layout changes (by using [moveWindowTo()](#movewindowto)), it does not support spanning multiple screens and being simultaneously displayed.However, calling this API on the child window enables it to span multiple screens and be simultaneously displayed during the layout adjustment process.
 
 **Since:** 23
 
@@ -9640,9 +9409,10 @@ setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>
 ```
 
 Sets whether the layout information (position and size) of a child window or modal window (a window with **WindowType** set to **TYPE_DIALOG**) follows the main window. This API uses a promise to return the result.
-
-1. This API applies only to first-level child windows or modal windows of the main window. 2. Once this API is called on a child window or modal window, its layout information will immediately match the main window and remain synchronized. This effect will persist until this API is called again with **false**. 3. If this API is called on a child window or modal window, subsequent calls to APIs like **moveTo** or **resize** to modify the layout information will not take effect. 4. When a child window or modal window stops using this functionality, its layout information (position and size) may not be a specific value. The application needs to reset it.
-
+1. This API applies only to first-level child windows or modal windows of the main window.
+2. Once this API is called on a child window or modal window, its layout information will immediately match the main window and remain synchronized. This effect will persist until this API is called again with **false**.
+3. If this API is called on a child window or modal window, subsequent calls to APIs like **moveTo** or **resize** to modify the layout information will not take effect.
+4. When a child window or modal window stops using this functionality, its layout information (position and size) may not be a specific value. The application needs to reset it.
 Once this API is successfully called, the [setRelativePositionToParentWindowEnabled()](#setrelativepositiontoparentwindowenabled) API will no longer take effect.
 
 **Since:** 23
@@ -9717,14 +9487,9 @@ export default class EntryAbility extends UIAbility {
 setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the main window or the child window is in full-screen mode. This API uses an asynchronous callback to return the result.
+Sets whether the main window or the child window is in full-screen mode. This API uses an asynchronous callback to return the result.Full-screen mode means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them.Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
 
-Full-screen mode means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them.
-
-Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
 > [setWindowSystemBarEnable()](#setwindowsystembarenable)
 > and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)
@@ -9817,14 +9582,9 @@ export default class EntryAbility extends UIAbility {
 setFullScreen(isFullScreen: boolean): Promise<void>
 ```
 
-Sets whether the main window or the child window is in full-screen mode. This API uses a promise to return the result.
+Sets whether the main window or the child window is in full-screen mode. This API uses a promise to return the result.Full-screen mode means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them.Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
 
-Full-screen mode means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them.
-
-Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
 > [setWindowSystemBarEnable()](#setwindowsystembarenable)
 > and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)
@@ -9862,11 +9622,7 @@ See [setFullScreen](#setfullscreen)
 setGestureBackEnabled(enabled: boolean): Promise<void>
 ```
 
-Sets whether to enable the side-swipe gesture for back redirection in the current window. This API can be successfully called only for the main window, and error code 1300004 is returned on other windows.
-
-After being enabled, this function takes effect only when the window is in full-screen mode and in the foreground with the focus gained.
-
-After this function is disabled, the gesture hot zone of the current application is disabled, and the side-swipe for back redirection becomes invalid. After the user switches to another application or returns to the home screen, the gesture hot zone is restored, and the side-swipe for back redirection becomes normal.
+Sets whether to enable the side-swipe gesture for back redirection in the current window. This API can be successfully called only for the main window, and error code 1300004 is returned on other windows.After being enabled, this function takes effect only when the window is in full-screen mode and in the foreground with the focus gained.After this function is disabled, the gesture hot zone of the current application is disabled, and the side-swipe for back redirection becomes invalid. After the user switches to another application or returns to the home screen, the gesture hot zone is restored, and the side-swipe for back redirection becomes normal.
 
 **Since:** 23
 
@@ -9956,7 +9712,7 @@ Sets whether to enable the immersive layout for the main window. This API does n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the immersive layout.<br>**true** to enable, **false** otherwise.&lt; br&gt; |
+| enabled | boolean | Yes | Whether to enable the immersive layout.<br>**true** to enable, **false** otherwise.<br> |
 
 **Error codes:**
 
@@ -10071,11 +9827,7 @@ See [setKeepScreenOn](#setkeepscreenon)
 setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result.
-
-An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.
-
-A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
+Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result.An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
 
 **Since:** 7
 
@@ -10164,11 +9916,7 @@ export default class EntryAbility extends UIAbility {
 setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 ```
 
-Sets whether the main window layout or the child window layout is immersive. This API uses a promise to return the result.
-
-An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.
-
-A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
+Sets whether the main window layout or the child window layout is immersive. This API uses a promise to return the result.An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
 
 **Since:** 7
 
@@ -10289,11 +10037,7 @@ See [setOutsideTouchable](#setoutsidetouchable)
 setParentWindow(windowId: int): Promise<void>
 ```
 
-Sets a new parent window for this child window. The new parent window can be a main window, another child window, or a floating window in the same process. This API uses a promise to return the result.
-
-If the child window is focused and the new parent window is in the foreground, the new parent window will be raised.
-
-If the child window is focused and the new parent window has a modal child window with a higher level, the focus will be transferred to that modal child window.
+Sets a new parent window for this child window. The new parent window can be a main window, another child window, or a floating window in the same process. This API uses a promise to return the result.If the child window is focused and the new parent window is in the foreground, the new parent window will be raised.If the child window is focused and the new parent window has a modal child window with a higher level, the focus will be transferred to that modal child window.
 
 **Since:** 23
 
@@ -10351,11 +10095,7 @@ try {
 setPreferredOrientation(orientation: Orientation): Promise<void>
 ```
 
-Sets the preferred orientation for the main window. This API uses a promise to return the result. This API does not take effect when it is called by a child window.
-
-Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect.
-
-Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
+Sets the preferred orientation for the main window. This API uses a promise to return the result. This API does not take effect when it is called by a child window.Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect.Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
 
 **Since:** 23
 
@@ -10462,11 +10202,7 @@ export default class EntryAbility extends UIAbility {
 setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 ```
 
-Sets the preferred orientation for this window. This API uses an asynchronous callback to return the result. For details about the development practices of orientation, see [Display Orientation Switching](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-landscape-and-portrait-development) .
-
-Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect.
-
-Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
+Sets the preferred orientation for this window. This API uses an asynchronous callback to return the result. For details about the development practices of orientation, see [Display Orientation Switching](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-landscape-and-portrait-development).Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect.Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
 
 **Since:** 23
 
@@ -10625,11 +10361,7 @@ See [setPrivacyMode](#setprivacymode)
 setRaiseByClickEnabled(enable: boolean): Promise<void>
 ```
 
-Sets whether to enable a child window to raise itself by click. This API uses a promise to return the result.
-
-Generally, when a child window is clicked, it is brought to the forefront among sibling child windows of the same type that share the same parent window within the application. If the **enable** parameter is set to **false**, when the child window is clicked, it still stays in its existing position.
-
-Before calling this API, ensure that the child window has been created and [showWindow()](#showwindow) has been successfully executed.
+Sets whether to enable a child window to raise itself by click. This API uses a promise to return the result.Generally, when a child window is clicked, it is brought to the forefront among sibling child windows of the same type that share the same parent window within the application. If the **enable** parameter is set to **false**, when the child window is clicked, it still stays in its existing position.Before calling this API, ensure that the child window has been created and [showWindow()](#showwindow) has been successfully executed.
 
 **Since:** 23
 
@@ -10736,11 +10468,7 @@ export default class EntryAbility extends UIAbility {
 setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 ```
 
-Sets whether the current window can receive drag events. This API uses a promise to return the result.
-
-By default, the value of **enabled** is **true**, indicating that the window can receive drag events.
-
-If the value of **enabled** is **false**, the current window cannot receive drag events.
+Sets whether the current window can receive drag events. This API uses a promise to return the result.By default, the value of **enabled** is **true**, indicating that the window can receive drag events.If the value of **enabled** is **false**, the current window cannot receive drag events.
 
 **Since:** 23
 
@@ -10795,12 +10523,10 @@ setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor
         offsetX?: int, offsetY?: int): Promise<void>
 ```
 
-Sets whether a first-level child window can maintain a fixed relative position to the main window. This API works only in [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode. This API uses a promise to return the result.
-
-The relative position is defined by the offset between the anchor points of the child window and the main window. Both the child window and the main window use the same type of anchor point.
-
-1. This API applies only to level-1 child windows that are not maximized. 2. Once this API is called on a child window, its display position will immediately follow the main window and maintain a fixed relative position. This effect will persist until this API is called again with **false**. 3. If this API is called on a child window, subsequent calls to [moveWindowTo()](#movewindowto) or [maximize()](#maximize) to modify the window's position or size will not take effect.
-
+Sets whether a first-level child window can maintain a fixed relative position to the main window. This API works only in [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode. This API uses a promise to return the result.The relative position is defined by the offset between the anchor points of the child window and the main window. Both the child window and the main window use the same type of anchor point.
+1. This API applies only to level-1 child windows that are not maximized.
+2. Once this API is called on a child window, its display position will immediately follow the main window and maintain a fixed relative position. This effect will persist until this API is called again with **false**.
+3. If this API is called on a child window, subsequent calls to [moveWindowTo()](#movewindowto) or [maximize()](#maximize) to modify the window's position or size will not take effect.
 Once this API is successfully called, the [setFollowParentWindowLayoutEnabled()](#setfollowparentwindowlayoutenabled) API will no longer take effect.
 
 **Since:** 23
@@ -10979,14 +10705,9 @@ See [setResizeByDragEnabled](#setresizebydragenabled)
 setSeparationTouchEnabled(enabled: boolean): Promise<void>
 ```
 
-Sets whether the current window supports the event separation state. This API uses a promise to return the result. In the default scenario, the value of **enabled** is **true**, indicating that the event separation state is supported.
-
-When the event separation state is supported:
-
-- All events generated by finger taps are sent to the window that the finger taps hit.
-
-When the event separation state is not supported (the value of **enabled** is **false**):
-
+Sets whether the current window supports the event separation state. This API uses a promise to return the result. In the default scenario, the value of **enabled** is **true**, indicating that the event separation state is supported.When the event separation state is supported:  
+- All events generated by finger taps are sent to the window that the finger taps hit.  
+When the event separation state is not supported (the value of **enabled** is **false**):  
 - If the first finger taps the window, keeps hitting the window, and does not lift up, the events generated by subsequent taps of other fingers are distributed to the window, regardless of whether the taps of other fingers hit the window. - If the first finger taps the window and does not keep hitting the window, the events generated by subsequent taps of other fingers are not distributed to the window and are discarded by the system, even if the taps of other fingers hit the window.
 
 **Since:** 23
@@ -11041,9 +10762,7 @@ try {
 setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): Promise<void>
 ```
 
-Sets whether to show or hide the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> of the main window. This API uses a promise to return the result.
-
-The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+Sets whether to show or hide the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> of the main window. This API uses a promise to return the result.The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
 
 **Since:** 23
 
@@ -11118,9 +10837,7 @@ export default class EntryAbility extends UIAbility {
 setStatusBarColor(color: ColorMetrics): Promise<void>
 ```
 
-Sets the text color of the status bar in the main window. This API uses a promise to return the result.
-
-Setting the status bar text color is not supported for child windows. Calling this API on a child window will have no effect. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+Sets the text color of the status bar in the main window. This API uses a promise to return the result.Setting the status bar text color is not supported for child windows. Calling this API on a child window will have no effect. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
 
 **Since:** 23
 
@@ -11192,11 +10909,7 @@ export default class EntryAbility extends UIAbility {
 setSubWindowModal(isModal: boolean): Promise<void>
 ```
 
-Enables the modal property of the child window. This API uses a promise to return the result.
-
-This API must be called by a child window and the setting takes effect for the child window. After the modal property is enabled, the parent window does not respond to user interactions until the child window is closed or the child window's modal property is disabled.
-
-If this API is called by a main window, an error is reported.
+Enables the modal property of the child window. This API uses a promise to return the result.This API must be called by a child window and the setting takes effect for the child window. After the modal property is enabled, the parent window does not respond to user interactions until the child window is closed or the child window's modal property is disabled.If this API is called by a main window, an error is reported.
 
 **Since:** 23
 
@@ -11304,15 +11017,7 @@ export default class EntryAbility extends UIAbility {
 setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>
 ```
 
-Sets the modality type of the child window. This API uses a promise to return the result.
-
-When the child window is of the window-modal type, its parent window does not respond to user interactions until the child window is closed or the child window's modal property is disabled.
-
-When the child window is of the application-modal type, its parent window and the windows from other instances of the application do not respond to user interactions until the child window is closed or the child window's modal property is disabled.
-
-This API is used to set the modality type. To disable the modal property, you are advised to use [setSubWindowModal&lt;sup&gt;12+&lt;/sup&gt;](#setsubwindowmodal).
-
-If this API is called by a window other than the child window, an error is reported.
+Sets the modality type of the child window. This API uses a promise to return the result.When the child window is of the window-modal type, its parent window does not respond to user interactions until the child window is closed or the child window's modal property is disabled.When the child window is of the application-modal type, its parent window and the windows from other instances of the application do not respond to user interactions until the child window is closed or the child window's modal property is disabled.This API is used to set the modality type. To disable the modal property, you are advised to use [setSubWindowModal&lt;sup&gt;12+&lt;/sup&gt;](#setsubwindowmodal).If this API is called by a window other than the child window, an error is reported.
 
 **Since:** 23
 
@@ -11355,9 +11060,7 @@ See [setSubWindowModal](#setsubwindowmodal)
 setSubWindowZLevel(zLevel: int): Promise<void>
 ```
 
-Sets the z-level of the current child window. Child windows with modal properties are not supported. This API uses a promise to return the result.
-
-Changing the z-level of a child window using this API will not cause a focus switch. You are advised to use [shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md) for focus switching.
+Sets the z-level of the current child window. Child windows with modal properties are not supported. This API uses a promise to return the result.Changing the z-level of a child window using this API will not cause a focus switch. You are advised to use [shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md) for focus switching.
 
 **Since:** 23
 
@@ -11613,11 +11316,7 @@ export default class EntryAbility extends UIAbility {
 setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
 ```
 
-<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses an asynchronous callback to return the result.
-
-From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End-->
-
-The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses an asynchronous callback to return the result.From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End-->The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
 
 **Since:** 7
 
@@ -11708,11 +11407,7 @@ export default class EntryAbility extends UIAbility {
 setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 ```
 
-<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses a promise to return the result.
-
-From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End-->
-
-The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses a promise to return the result.From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End-->The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
 
 **Since:** 7
 
@@ -11746,9 +11441,7 @@ See [setSystemBarEnable](#setsystembarenable)
 setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
 ```
 
-Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses an asynchronous callback to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5End-->
-
-This API does not take effect when it is called by a child window. The configuration does not take effect in non- full-screen mode (such as floating window or split-screen mode).
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses an asynchronous callback to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5End-->This API does not take effect when it is called by a child window. The configuration does not take effect in non- full-screen mode (such as floating window or split-screen mode).
 
 **Since:** 6
 
@@ -11849,9 +11542,7 @@ export default class EntryAbility extends UIAbility {
 setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 ```
 
-Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses a promise to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5 End-->
-
-This API does not take effect when it is called by a child window.
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses a promise to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5 End-->This API does not take effect when it is called by a child window.
 
 **Since:** 6
 
@@ -12070,7 +11761,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
 
 **Examples**
 
@@ -12140,7 +11831,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
 
 **Examples**
 
@@ -12152,11 +11843,7 @@ See [setUIContent](#setuicontent)
 setWindowBackgroundColor(color: string | ColorMetrics): void
 ```
 
-Sets the background color for this window.
-
-If this API is not called, the default background color of the window is **'#FFF0F0F0'** in light mode and **'#FF1A1A1A'** in dark mode.
-
-In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
+Sets the background color for this window.If this API is not called, the default background color of the window is **'#FFF0F0F0'** in light mode and **'#FF1A1A1A'** in dark mode.In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
 
 **Since:** 23
 
@@ -12210,13 +11897,7 @@ windowClass.loadContent("pages/page2", storage, (err: BusinessError) => {
 setWindowBrightness(brightness: double): Promise<void>
 ```
 
-Sets the window brightness for the main window. The window brightness takes effect only when the window is in the foreground and has focus. This API uses a promise to return the result.
-
-When the setting is valid, it affects only the physical screen where the window is displayed. It does not apply to virtual displays (for example, casting/mirroring screens).
-
-If the input parameter is **-1**, the window brightness reverts to the system brightness (which can be adjusted through Control Panel or shortcut keys).
-
-When the window moves to the background, the setting becomes invalid, and brightness can be adjusted through Control Panel or shortcut keys. You are advised not to call this API consecutively or when the window transitions to the background. Otherwise, timing issues may occur.
+Sets the window brightness for the main window. The window brightness takes effect only when the window is in the foreground and has focus. This API uses a promise to return the result.When the setting is valid, it affects only the physical screen where the window is displayed. It does not apply to virtual displays (for example, casting/mirroring screens).If the input parameter is **-1**, the window brightness reverts to the system brightness (which can be adjusted through Control Panel or shortcut keys).When the window moves to the background, the setting becomes invalid, and brightness can be adjusted through Control Panel or shortcut keys. You are advised not to call this API consecutively or when the window transitions to the background. Otherwise, timing issues may occur.
 
 **Since:** 23
 
@@ -12336,13 +12017,7 @@ export default class EntryAbility extends UIAbility {
 setWindowBrightness(brightness: double, callback: AsyncCallback<void>): void
 ```
 
-Sets the window brightness for the main window. The window brightness takes effect only when the window is in the foreground and has focus. This API uses an asynchronous callback to return the result.
-
-When the setting is valid, it affects only the physical screen where the window is displayed. It does not apply to virtual displays (for example, casting/mirroring screens).
-
-If the input parameter is **-1**, the window brightness reverts to the system brightness (which can be adjusted through Control Panel or shortcut keys).
-
-When the window moves to the background, the setting becomes invalid, and brightness can be adjusted through Control Panel or shortcut keys. You are advised not to call this API consecutively or when the window transitions to the background. Otherwise, timing issues may occur.
+Sets the window brightness for the main window. The window brightness takes effect only when the window is in the foreground and has focus. This API uses an asynchronous callback to return the result.When the setting is valid, it affects only the physical screen where the window is displayed. It does not apply to virtual displays (for example, casting/mirroring screens).If the input parameter is **-1**, the window brightness reverts to the system brightness (which can be adjusted through Control Panel or shortcut keys).When the window moves to the background, the setting becomes invalid, and brightness can be adjusted through Control Panel or shortcut keys. You are advised not to call this API consecutively or when the window transitions to the background. Otherwise, timing issues may occur.
 
 **Since:** 23
 
@@ -12480,9 +12155,7 @@ See [setWindowColorSpace](#setwindowcolorspace)
 setWindowContainerColor(activeColor: string, inactiveColor: string): void
 ```
 
-Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](#loadcontent) or [setUIContent()](#setuicontent).
-
-The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
+Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](#loadcontent) or [setUIContent()](#setuicontent).The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
 
 **Since:** 23
 
@@ -12554,11 +12227,7 @@ export default class EntryAbility extends UIAbility {
 setWindowCornerRadius(cornerRadius: double): Promise<void>
 ```
 
-Sets the radius of the rounded corners for a child window or floating window. This API uses a promise to return the result.
-
-If the radius of the rounded corner is too large, it may cause the three buttons (maximize, minimize, and close) to be clipped and make their hotspots less recognizable. Set an appropriate radius based on the window size.
-
-Before calling this API, you can call [getWindowCornerRadius()](#getwindowcornerradius) to obtain the default radius of rounded corners of the window.
+Sets the radius of the rounded corners for a child window or floating window. This API uses a promise to return the result.If the radius of the rounded corner is too large, it may cause the three buttons (maximize, minimize, and close) to be clipped and make their hotspots less recognizable. Set an appropriate radius based on the window size.Before calling this API, you can call [getWindowCornerRadius()](#getwindowcornerradius) to obtain the default radius of rounded corners of the window.
 
 **Since:** 23
 
@@ -12613,11 +12282,7 @@ try {
 setWindowDecorHeight(height: int): void
 ```
 
-Sets the height of the title bar of this window. This API takes effect for the window that has a title bar and a three-button area. In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
-
-For tablets, if this API is called outside of [free windows](../../../windowmanager/window-terminology.md#free-windows) mode, the change applies once the device switches to free windows mode. If this API is called in free windows mode, the change takes effect immediately.
-
-When the main window transitions into full-screen mode, hovering the mouse over the hot zone of the window's title bar region will cause a floating title bar to appear, with a fixed height of 37 vp.
+Sets the height of the title bar of this window. This API takes effect for the window that has a title bar and a three-button area. In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.For tablets, if this API is called outside of [free windows](../../../windowmanager/window-terminology.md#free-windows) mode, the change applies once the device switches to free windows mode. If this API is called in free windows mode, the change takes effect immediately.When the main window transitions into full-screen mode, hovering the mouse over the hot zone of the window's title bar region will cause a floating title bar to appear, with a fixed height of 37 vp.
 
 **Since:** 23
 
@@ -12661,9 +12326,7 @@ windowClass.setUIContent('pages/WindowPage').then(() => {
 setWindowDecorVisible(isVisible: boolean): void
 ```
 
-Sets whether the title bar is visible in the window. This API takes effect for the window that has a title bar or a three-button area. In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
-
-When the window title bar is hidden and the main window transitions into full-screen mode, hovering the cursor over the hot zone of the top window's title bar will cause a floating title bar to appear. To prevent the floating title bar from appearing, call [setTitleAndDockHoverShown()](#settitleanddockhovershown).
+Sets whether the title bar is visible in the window. This API takes effect for the window that has a title bar or a three-button area. In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.When the window title bar is hidden and the main window transitions into full-screen mode, hovering the cursor over the hot zone of the top window's title bar will cause a floating title bar to appear. To prevent the floating title bar from appearing, call [setTitleAndDockHoverShown()](#settitleanddockhovershown).
 
 **Since:** 23
 
@@ -12717,11 +12380,7 @@ windowClass.loadContent("pages/page2", storage, (err: BusinessError) => {
 setWindowDelayRaiseOnDrag(isEnabled: boolean): void
 ```
 
-Sets whether to enable delayed raising for the window. This API takes effect only for the main window and child windows.
-
-If this API is not called or **false** is passed, the main window and child windows are raised immediately upon a left mouse button press by default.
-
-When this API is called to enable delayed raising, in cross-window drag-and-drop situations, the window that contains the draggable component does not raise until the left mouse button is released, rather than raising immediately when the button is pressed.
+Sets whether to enable delayed raising for the window. This API takes effect only for the main window and child windows.If this API is not called or **false** is passed, the main window and child windows are raised immediately upon a left mouse button press by default.When this API is called to enable delayed raising, in cross-window drag-and-drop situations, the window that contains the draggable component does not raise until the left mouse button is released, rather than raising immediately when the button is pressed.
 
 **Since:** 23
 
@@ -12760,9 +12419,7 @@ try {
 setWindowFocusable(isFocusable: boolean): Promise<void>
 ```
 
-Sets whether this window is focusable. This API uses a promise to return the result.
-
-Starting from API version 22, if a virtual screen is created by calling [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md) with **supportsFocus** set to **false**, windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
+Sets whether this window is focusable. This API uses a promise to return the result.Starting from API version 22, if a virtual screen is created by calling [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md) with **supportsFocus** set to **false**, windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
 
 **Since:** 23
 
@@ -12834,9 +12491,7 @@ try {
 setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this window is focusable. This API uses an asynchronous callback to return the result.
-
-Starting from API version 22, if a virtual screen is created by calling [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md) with **supportsFocus** set to **false**, windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
+Sets whether this window is focusable. This API uses an asynchronous callback to return the result.Starting from API version 22, if a virtual screen is created by calling [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md) with **supportsFocus** set to **false**, windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
 
 **Since:** 23
 
@@ -12935,9 +12590,7 @@ windowClass?.setUIContent('pages/Index', (error: BusinessError) => {
 setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-Sets whether to keep the screen always on. This API uses a promise to return the result.
-
-Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigation, video playback, drawing, and gaming scenarios). After exiting these scenarios, set the parameter to **false**. Do not use this API in other scenarios (such as no screen interaction or audio playback). When the system detects that the API is used in a non-standard manner, automatic screen-off may be invoked.
+Sets whether to keep the screen always on. This API uses a promise to return the result.Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigation, video playback, drawing, and gaming scenarios). After exiting these scenarios, set the parameter to **false**. Do not use this API in other scenarios (such as no screen interaction or audio playback). When the system detects that the API is used in a non-standard manner, automatic screen-off may be invoked.
 
 **Since:** 23
 
@@ -13009,9 +12662,7 @@ try {
 setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to keep the screen always on. This API uses an asynchronous callback to return the result.
-
-Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigation, video playback, drawing, and gaming scenarios). After exiting these scenarios, set the parameter to **false**. Do not use this API in other scenarios (such as no screen interaction or audio playback). When the system detects that the API is used in a non-standard manner, automatic screen-off may be invoked.
+Sets whether to keep the screen always on. This API uses an asynchronous callback to return the result.Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigation, video playback, drawing, and gaming scenarios). After exiting these scenarios, set the parameter to **false**. Do not use this API in other scenarios (such as no screen interaction or audio playback). When the system detects that the API is used in a non-standard manner, automatic screen-off may be invoked.
 
 **Since:** 23
 
@@ -13046,11 +12697,7 @@ See [setWindowKeepScreenOn](#setwindowkeepscreenon)
 setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result. It does not work when called by a system window.
-
-An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.
-
-A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
+Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result. It does not work when called by a system window.An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
 
 **Since:** 9
 
@@ -13157,11 +12804,7 @@ export default class EntryAbility extends UIAbility {
 setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 ```
 
-Sets whether the application main window layout or the application child window layout is immersive. This API uses a promise to return the result. It does not work when called by other windows, and no error is reported.
-
-An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.
-
-A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
+Sets whether the application main window layout or the application child window layout is immersive. This API uses a promise to return the result. It does not work when called by other windows, and no error is reported.An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
 
 **Since:** 23
 
@@ -13201,11 +12844,7 @@ See [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)
 setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 ```
 
-Sets the size limits for this window. This API uses a promise to return the result.
-
-By default, system size limits are provided. They are determined by the product configuration and cannot be modified.
-
-If **setWindowLimits** has not been called, you can call [getWindowLimits](#getwindowlimits) or [getWindowLimitsVP](#getwindowlimitsvp) to obtain the system size limits.
+Sets the size limits for this window. This API uses a promise to return the result.By default, system size limits are provided. They are determined by the product configuration and cannot be modified.If **setWindowLimits** has not been called, you can call [getWindowLimits](#getwindowlimits) or [getWindowLimitsVP](#getwindowlimitsvp) to obtain the system size limits.
 
 **Since:** 23
 
@@ -13285,11 +12924,7 @@ try {
 setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<WindowLimits>
 ```
 
-Sets the size limits for this window. This API uses a promise to return the result.
-
-By default, system size limits are provided. They are determined by the product configuration and cannot be modified.
-
-If **setWindowLimits** has not been called, you can call [getWindowLimits](#getwindowlimits) or [getWindowLimitsVP](#getwindowlimitsvp) to obtain the system size limits.
+Sets the size limits for this window. This API uses a promise to return the result.By default, system size limits are provided. They are determined by the product configuration and cannot be modified.If **setWindowLimits** has not been called, you can call [getWindowLimits](#getwindowlimits) or [getWindowLimitsVP](#getwindowlimitsvp) to obtain the system size limits.
 
 **Since:** 23
 
@@ -13332,11 +12967,7 @@ See [setWindowLimits](#setwindowlimits)
 setWindowMask(windowMask: Array<Array<long>>): Promise<void>
 ```
 
-Sets a mask for this window to get an irregularly shaped window. This API uses a promise to return the result. The mask is used to describe the shape of the irregularly shaped window. This API is available only for child windows and global floating windows.
-
-When the size of an irregularly shaped window changes, the actual display content is the intersection of the mask size and the window size.
-
-Error code 1300002 may be returned only when multiple threads operate the same window. Error code 401 is returned when the window is destroyed.
+Sets a mask for this window to get an irregularly shaped window. This API uses a promise to return the result. The mask is used to describe the shape of the irregularly shaped window. This API is available only for child windows and global floating windows.When the size of an irregularly shaped window changes, the actual display content is the intersection of the mask size and the window size.Error code 1300002 may be returned only when multiple threads operate the same window. Error code 401 is returned when the window is destroyed.
 
 **Since:** 23
 
@@ -13410,7 +13041,7 @@ Set the window mask using a per-pixel alpha array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowMask | Uint8Array | Yes | The windowMask contains only per-pixel alpha transparency values. Valid range: 0(full transparent) to 255(full opaque), size must equal (maskWidth maskHeight). |
+| windowMask | Uint8Array | Yes | The windowMask contains only per-pixel alpha transparency values. Valid range: 0(full transparent) to 255(full opaque), size must equal (maskWidth * maskHeight). |
 | maskWidth | int | Yes | Mask width in pixels. Must equal the target window width. |
 | maskHeight | int | Yes | Mask height in pixels. Must equal the target window height. |
 
@@ -13436,13 +13067,7 @@ Set the window mask using a per-pixel alpha array
 setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 ```
 
-Sets whether this window is in privacy mode. This API uses a promise to return the result.
-
-A window in privacy mode cannot be captured or recorded.
-
-When a window in privacy mode is moved to the background, it displays as a white overlay or privacy mask in the multi-tasking view.
-
-If this API is not called, the privacy mode is disabled by default, and the window can be captured or recorded.
+Sets whether this window is in privacy mode. This API uses a promise to return the result.A window in privacy mode cannot be captured or recorded.When a window in privacy mode is moved to the background, it displays as a white overlay or privacy mask in the multi-tasking view.If this API is not called, the privacy mode is disabled by default, and the window can be captured or recorded.
 
 **Since:** 23
 
@@ -13515,13 +13140,7 @@ try {
 setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this window is in privacy mode. This API uses an asynchronous callback to return the result.
-
-A window in privacy mode cannot be captured or recorded.
-
-When a window in privacy mode is moved to the background, it displays as a white overlay or privacy mask in the multi-tasking view.
-
-If this API is not called, the privacy mode is disabled by default, and the window can be captured or recorded.
+Sets whether this window is in privacy mode. This API uses an asynchronous callback to return the result.A window in privacy mode cannot be captured or recorded.When a window in privacy mode is moved to the background, it displays as a white overlay or privacy mask in the multi-tasking view.If this API is not called, the privacy mode is disabled by default, and the window can be captured or recorded.
 
 **Since:** 23
 
@@ -13675,11 +13294,7 @@ try {
 setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
 ```
 
-<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses an asynchronous callback to return the result.
-
-From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End-->
-
-The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses an asynchronous callback to return the result.From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End-->The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
 
 **Since:** 9
 
@@ -13788,9 +13403,7 @@ export default class EntryAbility extends UIAbility {
 setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 ```
 
-<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses a promise to return the result.
-
-The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses a promise to return the result.The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
 
 **Since:** 23
 
@@ -13830,9 +13443,7 @@ See [setWindowSystemBarEnable](#setwindowsystembarenable)
 setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
 ```
 
-Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses an asynchronous callback to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5End-->
-
-This API does not take effect when it is called by a child window.
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses an asynchronous callback to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5End-->This API does not take effect when it is called by a child window.
 
 **Since:** 9
 
@@ -13952,9 +13563,7 @@ export default class EntryAbility extends UIAbility {
 setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 ```
 
-Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses a promise to return the result.
-
-This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses a promise to return the result.This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
 
 **Since:** 23
 
@@ -14169,9 +13778,7 @@ export default class EntryAbility extends UIAbility {
 setWindowTopmost(isWindowTopmost: boolean): Promise<void>
 ```
 
-Places the main window above all the other windows of the application. This API uses a promise to return the result.
-
-Applications use custom shortcut keys to pin or unpin the main window.
+Places the main window above all the other windows of the application. This API uses a promise to return the result.Applications use custom shortcut keys to pin or unpin the main window.
 
 **Since:** 23
 
@@ -14375,9 +13982,7 @@ See [setWindowTouchable](#setwindowtouchable)
 setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: TransitionAnimation): Promise<void>
 ```
 
-Adds a transition animation to windows in specific scenarios.
-
-Currently, this API can be used only on the main window of an application.
+Adds a transition animation to windows in specific scenarios.Currently, this API can be used only on the main window of an application.
 
 **Since:** 23
 
@@ -14541,8 +14146,7 @@ showWindow(callback: AsyncCallback<void>): void
 
 Shows this window. This API uses an asynchronous callback to return the result. This API takes effect only for a system window, application child window, modal window, or global floating window. For the main window of an application, this API moves it at the top when the main window is already displayed.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
 > [setUIContent](#setuicontent). If the main window has not
@@ -14729,8 +14333,7 @@ showWindow(): Promise<void>
 
 Shows this window. This API uses a promise to return the result. This API takes effect only for a system window, application child window, modal window, or global floating window. For the main window of an application, this API moves it at the top when the main window is already displayed.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
 > [setUIContent](#setuicontent). If the main window has not
@@ -14768,12 +14371,9 @@ See [showWindow](#showwindow)
 showWindow(options: ShowWindowOptions): Promise<void>
 ```
 
-Shows this window or moves an already visible application main window to the top of the stack. You can pass options to control the window display behavior. This API uses a promise to return the result.
+Shows this window or moves an already visible application main window to the top of the stack. You can pass options to control the window display behavior. This API uses a promise to return the result.This API can be used only for application child windows, application main windows, global floating windows, and system windows, excluding windows of the TYPE_DIALOG type and modal child windows (windows that have the modal property enabled via **setSubWindowModal**).
 
-This API can be used only for application child windows, application main windows, global floating windows, and system windows, excluding windows of the TYPE_DIALOG type and modal child windows (windows that have the modal property enabled via **setSubWindowModal**).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
 > [setUIContent](#setuicontent). If the main window has not
@@ -14820,7 +14420,7 @@ See [showWindow](#showwindow)
 snapshot(callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Captures this window. This API uses an asynchronous callback to return the result. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode) ), taking a screenshot will result in a blank screen.
+Captures this window. This API uses an asynchronous callback to return the result. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)), taking a screenshot will result in a blank screen.
 
 **Since:** 23
 
@@ -14878,7 +14478,7 @@ promise.then((pixelMap: image.PixelMap) => {
 snapshot(): Promise<image.PixelMap>
 ```
 
-Captures this window. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode) ), taking a screenshot will result in a blank screen.
+Captures this window. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)), taking a screenshot will result in a blank screen.
 
 **Since:** 23
 
@@ -14910,7 +14510,7 @@ See [snapshot](#snapshot)
 snapshotIgnorePrivacy(): Promise<image.PixelMap>
 ```
 
-Captures this window. This API can be called to obtain the screenshot of the current window even if privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode) ).
+Captures this window. This API can be called to obtain the screenshot of the current window even if privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)).
 
 **Since:** 23
 
@@ -14954,9 +14554,7 @@ promise.then((pixelMap: image.PixelMap) => {
 snapshotSync(): image.PixelMap
 ```
 
-Captures this window. This API returns the result synchronously. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode) ), taking a screenshot will result in a blank screen.
-
-In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
+Captures this window. This API returns the result synchronously. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)), taking a screenshot will result in a blank screen.In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
 
 **Since:** 23
 
@@ -14999,11 +14597,7 @@ try {
 startMoving(): Promise<void>
 ```
 
-In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, this API takes effect for system windows, application main windows, application child windows, global floating windows, and modal windows. In non-freeform window mode, this API takes effect only for system windows, application child windows, global floating windows, and modal windows. Starts moving this window. This API uses a promise to return the result.
-
-The window moves along with the cursor or touch point only when this API is called in the callback function of onTouch, where the event type is **TouchType.Down**.
-
-In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is TouchType.Move (as long as **TouchType.Down** has already been triggered) to start the moving effect.
+In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, this API takes effect for system windows, application main windows, application child windows, global floating windows, and modal windows. In non-freeform window mode, this API takes effect only for system windows, application child windows, global floating windows, and modal windows. Starts moving this window. This API uses a promise to return the result.The window moves along with the cursor or touch point only when this API is called in the callback function of onTouch, where the event type is **TouchType.Down**.In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is TouchType.Move (as long as **TouchType.Down** has already been triggered) to start the moving effect.
 
 **Since:** 23
 
@@ -15131,13 +14725,7 @@ struct Index {
 startMoving(offsetX: int, offsetY: int): Promise<void>
 ```
 
-Specifies the cursor position within the window and moves the window. This API uses a promise to return the result.
-
-When windows within the same application are split or merged, and the mouse is pressed down to move the new window directly, the cursor may move outside the window if it moves too quickly. This API allows you to set the cursor position within the window during movement. It first adjusts the window to the cursor position before starting to move the window.
-
-The window moves along with the cursor only when this API is called in the callback function of onTouch, where the event type is **TouchType.Down**.
-
-In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is TouchType.Move (as long as **TouchType.Down** has already been triggered) to start the moving effect.
+Specifies the cursor position within the window and moves the window. This API uses a promise to return the result.When windows within the same application are split or merged, and the mouse is pressed down to move the new window directly, the cursor may move outside the window if it moves too quickly. This API allows you to set the cursor position within the window during movement. It first adjusts the window to the cursor position before starting to move the window.The window moves along with the cursor only when this API is called in the callback function of onTouch, where the event type is **TouchType.Down**.In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is TouchType.Move (as long as **TouchType.Down** has already been triggered) to start the moving effect.
 
 **Since:** 23
 

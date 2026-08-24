@@ -16,9 +16,7 @@
 color?: ResourceColor
 ```
 
-光标颜色。
-
-默认值：'#ff007dff'
+光标颜色。默认值：'#ff007dff'
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -38,9 +36,7 @@ color?: ResourceColor
 width?: Length
 ```
 
-光标尺寸，不支持百分比。
-
-默认值：'2vp'
+光标尺寸，不支持百分比。默认值：'2vp'
 
 **类型：** [Length](arkts-arkui-length-t.md)
 

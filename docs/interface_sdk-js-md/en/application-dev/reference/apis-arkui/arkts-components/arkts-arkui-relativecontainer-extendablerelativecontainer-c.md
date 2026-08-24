@@ -1,8 +1,6 @@
 # ExtendableRelativeContainer
 
-Defines the Extendable RelativeContainer.
-
-@implements RelativeContainerAttribute
+Defines the Extendable RelativeContainer.@implements RelativeContainerAttribute
 
 **Inheritance/Implementation:** ExtendableRelativeContainer implements [RelativeContainerAttribute](arkts-arkui-relativecontainer-attribute.md#relativecontainerattribute)
 
@@ -17,8 +15,7 @@ Defines the Extendable RelativeContainer.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-  static $_instantiate<T extends ExtendableRelativeContainer>(
+static $_instantiate<T extends ExtendableRelativeContainer>(
     factory: ConstructorT<T>,
     content_?: CustomBuilder
   ): T
@@ -29,6 +26,8 @@ Constructor of Extendable RelativeContainer.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +51,7 @@ Constructor of Extendable RelativeContainer.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-  static _instantiateImpl<T extends ExtendableRelativeContainer>(
+static _instantiateImpl<T extends ExtendableRelativeContainer>(
     styles: CustomBuilderT<T>,
     factory: ConstructorT<T>,
     content_?: CustomBuilder
@@ -65,6 +63,8 @@ Entry of Extendable RelativeContainer.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

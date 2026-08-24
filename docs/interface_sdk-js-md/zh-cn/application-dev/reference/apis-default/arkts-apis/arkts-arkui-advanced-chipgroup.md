@@ -25,7 +25,7 @@
 | [ChipItemStyle](arkts-arkui-advanced-chipgroup-chipitemstyle-i.md) | ChipItemStyle定义了Chip的共通属性。 |
 | [IconItemOptions](arkts-arkui-advanced-chipgroup-iconitemoptions-i.md) | 定义了尾部builder接口，针对背板大小及颜色设置限制。 |
 | [IconOptions](arkts-arkui-advanced-chipgroup-iconoptions-i.md) | IconOptions定义图标的共通属性。 |
-| [SuffixImageIconOptions](arkts-arkui-advanced-chipgroup-suffiximageiconoptions-i.md) | 后缀图标选项的类型。 |
+| [SuffixImageIconOptions](arkts-arkui-advanced-chipgroup-suffiximageiconoptions-i.md) | 后缀图标选项的类型。继承自[IconOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md)。 |
 | [SymbolItemOptions](arkts-arkui-advanced-chipgroup-symbolitemoptions-i.md) | ChipGroup的尾部图标选项类型。 |
 
 ### 类型

@@ -2,11 +2,9 @@
 
 提供自绘制渲染节点RenderNode，支持开发者通过C API进行开发，完成自定义绘制需求。
 
-> **说明：**
-> 
-> - 不建议对[BuilderNode](arkts-buildernode-c.md)中的RenderNode进行修改操作。BuilderNode中持有的FrameNode仅用于将该
-> BuilderNode作为子节点挂载到其他FrameNode上，对该FrameNode或对应的RenderNode进行属性设置与子节点操作可能会产生未定义行为，包括但不限于显示异常、事件异常、稳定性问题等。
-> 
+> **说明：**&gt;
+> - 不建议对[BuilderNode](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-c.md)中的RenderNode进行修改操作。BuilderNode中持有的FrameNode仅用于将该
+> BuilderNode作为子节点挂载到其他FrameNode上，对该FrameNode或对应的RenderNode进行属性设置与子节点操作可能会产生未定义行为，包括但不限于显示异常、事件异常、稳定性问题等。&gt;
 > - RenderNode对象不支持使用JSON序列化。
 
 **起始版本：** 23
@@ -107,12 +105,9 @@ dispose(): void
 draw(context: DrawContext): void
 ```
 
-绘制方法，需要开发者进行实现。该方法会在RenderNode进行绘制时被调用。
+绘制方法，需要开发者进行实现。该方法会在RenderNode进行绘制时被调用。该接口的[DrawContext](arkts-graphics-drawcontext-c.md)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见 [调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-renderNode.md#调整自定义绘制canvas的变换矩阵)。
 
-该接口的[DrawContext](../../apis-arkui/arkts-apis/arkts-arkui-graphics-drawcontext-c.md)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见 [调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-renderNode.md#调整自定义绘制canvas的变换矩阵)。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > RenderNode初始化时，会调用两次draw方法。第一次调用是在首次创建FrameNode时触发Render流程，第二次调用是在首次设置modifier时触发绘制。后续绘制流程皆由modifier触发。
 
 **起始版本：** 23
@@ -129,7 +124,7 @@ draw(context: DrawContext): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [DrawContext](../../apis-arkui/arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。 |
+| context | [DrawContext](arkts-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。 |
 
 ## getChild
 

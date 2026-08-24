@@ -20,9 +20,7 @@ import { webview } from '@kit.ArkWeb';
 id: string
 ```
 
-surface 的 id，用于同层渲染的 NativeImage 的 surfaceId。
-
-详见NativeEmbedDataInfo。
+surface 的 id，用于同层渲染的 NativeImage 的 surfaceId。详见NativeEmbedDataInfo。
 
 **类型：** string
 
@@ -42,7 +40,7 @@ rect: RectEvent
 
 surface 的位置信息，用于指定同层渲染时 surface 的显示位置和尺寸。
 
-**类型：** [RectEvent](../../apis-default/arkts-apis/arkts-webview-rectevent-i.md)
+**类型：** [RectEvent](arkts-arkweb-webview-rectevent-i.md)
 
 **起始版本：** 12
 

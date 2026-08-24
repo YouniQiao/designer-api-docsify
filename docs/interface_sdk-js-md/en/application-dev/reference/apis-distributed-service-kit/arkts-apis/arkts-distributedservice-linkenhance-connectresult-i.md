@@ -38,10 +38,8 @@ ID of the peer device. If the connection is successful, the device ID of the pee
 reason: int
 ```
 
-Number indicating the result code. If the connection is successful, **0** is returned. If the connection fails, an error code is returned:
-
-- 32390200: The client connection times out. - 32390201: The server service is not started. - 32390300: Internal error.
-
+Number indicating the result code. If the connection is successful, **0** is returned. If the connection fails, an error code is returned:  
+- 32390200: The client connection times out. - 32390201: The server service is not started. - 32390300: Internal error.  
 For details about the error codes, see [Link Enhancement Error Codes](../errorcode-link-enhance.md).
 
 **Type:** int

@@ -2,12 +2,10 @@
 
 DynamicLayout组件支持的布局算法基础类型。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该类型变量可以赋值具体的布局算法类对象，
-> 如[CustomLayoutAlgorithm](arkts-layoutalgorithm-customlayoutalgorithm-c.md)类对象、
-> [RowLayoutAlgorithm](arkts-layoutalgorithm-rowlayoutalgorithm-c.md)类对象等。
-
+> 如[CustomLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md)类对象、
+> [RowLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md)类对象等。
 @interface LayoutAlgorithm
 
 **起始版本：** 24

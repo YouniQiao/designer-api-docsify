@@ -4,7 +4,7 @@
 type CommandDataType = int | string | boolean
 ```
 
-@brief Defines the private data type, which varies depending on its function.
+Defines the private data type, which varies depending on its function.
 
 **Since:** 23
 

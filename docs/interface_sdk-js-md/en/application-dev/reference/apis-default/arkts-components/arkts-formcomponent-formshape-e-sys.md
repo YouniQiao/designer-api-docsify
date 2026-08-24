@@ -1,8 +1,6 @@
 # FormShape (System API)
 
-Defines the FormShape enum.
-
-@enum { int }
+Defines the FormShape enum.@enum { int }
 
 **Since:** 23
 

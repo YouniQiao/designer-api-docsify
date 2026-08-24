@@ -11,11 +11,6 @@ Defines the callback information triggered when the app receives a new favicon, 
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## favicon
@@ -24,7 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 favicon: PixelMap
 ```
 
-*PixelMap** object of the received favicon.
+**PixelMap** object of the received favicon.
 
 **Type:** PixelMap
 

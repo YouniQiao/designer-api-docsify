@@ -1,8 +1,6 @@
 # PlaybackSpeed
 
-playback speed.
-
-@enum { string }
+playback speed.@enum { string }
 
 **Since:** 23
 

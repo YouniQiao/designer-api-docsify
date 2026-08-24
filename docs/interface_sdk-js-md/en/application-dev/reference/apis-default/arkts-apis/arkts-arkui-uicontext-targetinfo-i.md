@@ -1,8 +1,6 @@
 # TargetInfo
 
-Defines the target info.
-
-@interface TargetInfo
+Defines the target info.@interface TargetInfo
 
 **Since:** 23
 

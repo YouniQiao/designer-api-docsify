@@ -1,8 +1,6 @@
 # ScrollableCommonMethod
 
-CommonScrollableMethod
-
-@extends CommonMethod
+CommonScrollableMethod@extends CommonMethod
 
 **Inheritance/Implementation:** ScrollableCommonMethod extends [CommonMethod](arkts-common-commonmethod-i.md)
 
@@ -560,7 +558,7 @@ scrollBarHeight(height: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](arkts-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
+| height | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

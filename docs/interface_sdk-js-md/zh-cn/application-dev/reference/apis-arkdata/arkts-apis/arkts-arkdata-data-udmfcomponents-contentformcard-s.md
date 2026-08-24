@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**装饰器类型：** @Component
+
 <!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -35,8 +37,7 @@ contentFormData: uniformDataStruct.ContentForm
 ## formHeight
 
 ```TypeScript
-@Prop
-  formHeight?: double
+formHeight?: double
 ```
 
 卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认 宽度的0.4 ~ 1.2倍之间。单位为vp。省略时使用内容卡片类型的默认高度。
@@ -44,6 +45,8 @@ contentFormData: uniformDataStruct.ContentForm
 **类型：** double
 
 **起始版本：** 20
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,8 +57,7 @@ contentFormData: uniformDataStruct.ContentForm
 ## formType
 
 ```TypeScript
-@Prop
-  formType: FormType
+formType: FormType
 ```
 
 内容卡片类型，影响内容卡片的大小。
@@ -63,6 +65,8 @@ contentFormData: uniformDataStruct.ContentForm
 **类型：** [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
 
 **起始版本：** 20
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,8 +77,7 @@ contentFormData: uniformDataStruct.ContentForm
 ## formWidth
 
 ```TypeScript
-@Prop
-  formWidth?: double
+formWidth?: double
 ```
 
 卡片宽度，其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。省略时使用内容卡片类型的默认宽度。
@@ -82,6 +85,8 @@ contentFormData: uniformDataStruct.ContentForm
 **类型：** double
 
 **起始版本：** 20
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

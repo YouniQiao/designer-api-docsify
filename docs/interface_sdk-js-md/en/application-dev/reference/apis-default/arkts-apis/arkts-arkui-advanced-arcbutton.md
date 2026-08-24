@@ -18,19 +18,19 @@
 
 | Name | Description |
 | --- | --- |
-| [ArcButton](arkts-arkui-advanced-arcbutton-arcbutton-s.md) | Declare Component ArcButton |
+| [ArcButton](arkts-arkui-advanced-arcbutton-arcbutton-s.md) | Declare Component ArcButton@struct { ArcButton } |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CommonArcButtonOptions](arkts-arkui-advanced-arcbutton-commonarcbuttonoptions-i.md) | Defines the arc button options. |
+| [CommonArcButtonOptions](arkts-arkui-advanced-arcbutton-commonarcbuttonoptions-i.md) | Defines the arc button options.@interface CommonArcButtonOptions |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ArcButtonPosition](arkts-arkui-advanced-arcbutton-arcbuttonposition-e.md) | Describes the Position of arc button. |
-| [ArcButtonStatus](arkts-arkui-advanced-arcbutton-arcbuttonstatus-e.md) | Defines an arc button status. |
-| [ArcButtonStyleMode](arkts-arkui-advanced-arcbutton-arcbuttonstylemode-e.md) | Provides an arc button style. |
+| [ArcButtonPosition](arkts-arkui-advanced-arcbutton-arcbuttonposition-e.md) | Describes the Position of arc button.@enum { int } |
+| [ArcButtonStatus](arkts-arkui-advanced-arcbutton-arcbuttonstatus-e.md) | Defines an arc button status.@enum { int } |
+| [ArcButtonStyleMode](arkts-arkui-advanced-arcbutton-arcbuttonstylemode-e.md) | Provides an arc button style.@enum { int } |
 

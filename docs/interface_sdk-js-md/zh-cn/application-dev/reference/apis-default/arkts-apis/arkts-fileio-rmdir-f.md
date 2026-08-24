@@ -13,8 +13,7 @@ function rmdir(path: string): Promise<void>
 
 删除目录及其所有子目录和文件。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口支持删除单个文件，但不推荐使用此方法删除单个文件，推荐使用unlink接口删除单个文件。
 
 **起始版本：** 23
@@ -63,8 +62,7 @@ function rmdir(path: string, callback: AsyncCallback<void>): void
 
 删除目录及其所有子目录和文件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口支持删除单个文件，但不推荐使用此方法删除单个文件，推荐使用unlink接口删除单个文件。
 
 **起始版本：** 23

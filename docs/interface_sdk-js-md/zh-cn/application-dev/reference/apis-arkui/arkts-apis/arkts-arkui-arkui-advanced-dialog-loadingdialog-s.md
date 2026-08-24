@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**装饰器类型：** @CustomDialog
+
 <!--Device-unnamed-export declare struct LoadingDialog--><!--Device-unnamed-export declare struct LoadingDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -12,7 +14,6 @@
 
 ```TypeScript
 import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
-import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUI';
 ```
 
 ## content
@@ -21,9 +22,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 content?: ResourceStr
 ```
 
-加载弹出框内容。
-
-默认不设置或设置为undefined，加载弹出框内容不显示。
+加载弹出框内容。默认不设置或设置为undefined，加载弹出框内容不显示。
 
 **类型：** ResourceStr
 
@@ -43,8 +42,7 @@ content?: ResourceStr
 Controller: CustomDialogController
 ```
 
-加载弹出框控制器，用于控制弹出框的显示和隐藏。
-
+加载弹出框控制器，用于控制弹出框的显示和隐藏。  
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
@@ -85,9 +83,7 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 

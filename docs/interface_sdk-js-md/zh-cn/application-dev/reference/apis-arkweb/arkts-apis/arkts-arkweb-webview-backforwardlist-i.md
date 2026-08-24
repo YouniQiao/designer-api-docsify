@@ -1,8 +1,6 @@
 # BackForwardList
 
-BackForwardList是ArkWeb框架中用于访问Web组件浏览历史列表的接口，通过 [getBackForwardEntries](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getbackforwardentries)方法获取。该接口提供对页面导航历史记录的只读访问能力，开发者可以获取当前历 史列表的基本信息（当前索引和历史条目总数），以及通过索引获取指定历史记录项的详细信息。
-
-@interface BackForwardList [since 9 - 11]
+BackForwardList是ArkWeb框架中用于访问Web组件浏览历史列表的接口，通过 [getBackForwardEntries](arkts-arkweb-webview-webviewcontroller-c.md#getbackforwardentries)方法获取。该接口提供对页面导航历史记录的只读访问能力，开发者可以获取当前历 史列表的基本信息（当前索引和历史条目总数），以及通过索引获取指定历史记录项的详细信息。@interface BackForwardList [since 9 - 11]
 
 **起始版本：** 9
 
@@ -22,7 +20,7 @@ import { webview } from '@kit.ArkWeb';
 getItemAtIndex(index: number): HistoryItem
 ```
 
-获取历史列表中指定索引的历史记录项信息。需先通过[getBackForwardEntries](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getbackforwardentries)方法获取 BackForwardList实例。
+获取历史列表中指定索引的历史记录项信息。需先通过[getBackForwardEntries](arkts-arkweb-webview-webviewcontroller-c.md#getbackforwardentries)方法获取 BackForwardList实例。
 
 **起始版本：** 9
 
@@ -42,7 +40,7 @@ getItemAtIndex(index: number): HistoryItem
 
 | 类型 | 说明 |
 | --- | --- |
-| [HistoryItem](../../apis-default/arkts-apis/arkts-webview-historyitem-i.md) | 历史记录项。 |
+| [HistoryItem](arkts-arkweb-webview-historyitem-i.md) | 历史记录项。 |
 
 **错误码：**
 

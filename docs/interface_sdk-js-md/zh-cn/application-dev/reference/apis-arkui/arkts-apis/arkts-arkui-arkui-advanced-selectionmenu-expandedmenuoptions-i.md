@@ -1,8 +1,6 @@
 # ExpandedMenuOptions
 
-扩展下拉菜单。
-
-继承自MenuItemOptions。
+扩展下拉菜单。继承自MenuItemOptions。
 
 **继承/实现关系：** ExpandedMenuOptions extends MenuItemOptions
 

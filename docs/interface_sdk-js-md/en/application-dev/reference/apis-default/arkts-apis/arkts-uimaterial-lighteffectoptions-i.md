@@ -21,9 +21,7 @@ Provides the light sensing interaction feedback configuration for immersive mate
 color?: ResourceColor
 ```
 
-Custom color of the light sensing feedback.
-
-Default value: **Color.White**
+Custom color of the light sensing feedback.Default value: **Color.White**
 
 **Type:** ResourceColor
 

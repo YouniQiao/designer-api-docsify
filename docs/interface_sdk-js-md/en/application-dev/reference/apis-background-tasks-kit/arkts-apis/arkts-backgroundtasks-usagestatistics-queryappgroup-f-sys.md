@@ -12,9 +12,7 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 function queryAppGroup(callback: AsyncCallback<int>): void
 ```
 
-Queries the app group of the calling application.
-
-The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the app group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 23
 
@@ -104,9 +102,7 @@ usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
 function queryAppGroup(): Promise<int>
 ```
 
-Queries the app group of the calling application.
-
-The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the app group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 23
 
@@ -150,9 +146,7 @@ See [queryAppGroup](#queryappgroup)
 function queryAppGroup(bundleName: string, callback: AsyncCallback<int>): void
 ```
 
-Queries the usage priority group by bundleName.
-
-The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the usage priority group by bundleName.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 23
 
@@ -198,9 +192,7 @@ See [queryAppGroup](#queryappgroup)
 function queryAppGroup(bundleName: string): Promise<int>
 ```
 
-Queries the usage priority group by bundleName.
-
-The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the usage priority group by bundleName.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 23
 

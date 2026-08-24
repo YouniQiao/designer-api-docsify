@@ -20,7 +20,7 @@ Defines the callback invoked when the custom tab transition animation starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | number | Yes | Index of the currently displayed tab before the animation starts. The index is zero-based.< br>Value range: [0, Index value — 1]. If the value exceeds the index value or is less than 0, no transition animation is displayed. |
+| from | number | Yes | Index of the currently displayed tab before the animation starts. The index is zero-based.<br>Value range: [0, Index value — 1]. If the value exceeds the index value or is less than 0, no transition animation is displayed. |
 | to | number | Yes | Index of the target tab before the animation starts. The index is zero-based.<br>Value range: [0, Index value — 1]. If the value exceeds the index value or is less than 0, no transition animation is displayed. |
 
 **Return value:**

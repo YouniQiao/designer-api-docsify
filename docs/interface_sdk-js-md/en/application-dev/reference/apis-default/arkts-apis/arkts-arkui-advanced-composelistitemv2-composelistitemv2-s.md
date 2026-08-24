@@ -6,6 +6,8 @@ Declare ComposeListItemV2
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ComposeListItemV2--><!--Device-unnamed-export declare struct ComposeListItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declare ComposeListItemV2
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## contentItemV2
 
 ```TypeScript
-@Param
-  contentItemV2?: ContentItemV2
+contentItemV2?: ContentItemV2
 ```
 
 The ContentItem.
@@ -49,6 +51,8 @@ The ContentItem.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComposeListItemV2-@Param  contentItemV2?: ContentItemV2--><!--Device-ComposeListItemV2-@Param  contentItemV2?: ContentItemV2-End-->
@@ -58,8 +62,7 @@ The ContentItem.
 ## operateItemV2
 
 ```TypeScript
-@Param
-  operateItemV2?: OperateItemV2
+operateItemV2?: OperateItemV2
 ```
 
 The OperateItem.
@@ -69,6 +72,8 @@ The OperateItem.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

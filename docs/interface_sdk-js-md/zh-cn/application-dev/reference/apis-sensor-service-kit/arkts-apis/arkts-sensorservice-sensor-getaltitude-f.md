@@ -14,8 +14,7 @@ function getAltitude(seaPressure: number, currentPressure: number, callback: Asy
 
 根据气压值获取设备所在的海拔高度。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)
 > 替代。
@@ -74,8 +73,7 @@ function getAltitude(seaPressure: number, currentPressure: number): Promise<numb
 
 根据气压值获取设备所在的海拔高度。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)替代。
 

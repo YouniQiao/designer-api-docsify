@@ -1,8 +1,6 @@
 # SourceType（系统接口）
 
-用户场景触发源类型枚举。
-
-@enum { number }
+用户场景触发源类型枚举。@enum { number }
 
 **起始版本：** 23
 

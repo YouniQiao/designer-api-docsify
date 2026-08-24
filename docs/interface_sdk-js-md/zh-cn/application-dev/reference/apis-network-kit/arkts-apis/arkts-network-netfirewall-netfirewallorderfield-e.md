@@ -2,8 +2,7 @@
 
 枚举类型，防火墙规则排序方法。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > [getNetFirewallRules](arkts-network-netfirewall-getnetfirewallrules-f.md)接口，仅支持ORDER_BY_RULE_NAME字段。
 
 **起始版本：** 15

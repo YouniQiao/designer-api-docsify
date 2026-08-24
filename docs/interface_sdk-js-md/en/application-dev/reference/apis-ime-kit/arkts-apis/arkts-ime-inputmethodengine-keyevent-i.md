@@ -1,6 +1,6 @@
 # KeyEvent
 
-@brief Represents the attributes of a key.
+Represents the attributes of a key.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly keyAction: int
 ```
 
-@brief Key event type. <br> <br>- **2**: keydown event. <br>- **3**: keyup event.
+Key event type. <br> <br>- **2**: keydown event. <br>- **3**: keyup event.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ readonly keyAction: int
 readonly keyCode: int
 ```
 
-@brief Key value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md).
+Key value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md).
 
 **Type:** int
 

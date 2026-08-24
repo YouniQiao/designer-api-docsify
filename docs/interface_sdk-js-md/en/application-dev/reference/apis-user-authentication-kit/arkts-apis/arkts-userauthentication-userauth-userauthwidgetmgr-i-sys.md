@@ -14,7 +14,6 @@ Defines the authentication widget manager. It is used to register the custom aut
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## off('command')

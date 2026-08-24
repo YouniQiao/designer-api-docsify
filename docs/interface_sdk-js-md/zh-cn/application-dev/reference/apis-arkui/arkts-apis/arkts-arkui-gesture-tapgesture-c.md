@@ -2,8 +2,7 @@
 
 支持单击、双击和多次点击事件的识别。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当组件同时绑定双击和单击手势且双击手势先绑定时，单击手势会有300ms的延时。
 
 **继承/实现关系：** TapGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
@@ -22,9 +21,7 @@
 static $_instantiate(factory: () => TapGesture, value?: TapGestureParameters): TapGesture
 ```
 
-创建点击手势对象。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。
-
-触发点击手势事件的设备类型为键盘或手柄时，事件的SourceTool值为Unknown，事件的SourceType值为KEY或JOYSTICK。
+创建点击手势对象。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。触发点击手势事件的设备类型为键盘或手柄时，事件的SourceTool值为Unknown，事件的SourceType值为KEY或JOYSTICK。
 
 **起始版本：** 23
 

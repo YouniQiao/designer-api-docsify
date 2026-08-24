@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<ConnectionProperties>): void
 ```
 
-Obtains the connection information of the data network specified by **NetHandle**, including the NIC name, domain name, link information, route information, network address, and maximum transmission unit. This API uses an asynchronous callback to return the result.
-
+Obtains the connection information of the data network specified by **NetHandle**, including the NIC name, domain name, link information, route information, network address, and maximum transmission unit. This API uses an asynchronous callback to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
@@ -85,8 +84,7 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>
 ```
 
-Obtains the connection information of the data network specified by **NetHandle**, including the NIC name, domain name, link information, route information, network address, and maximum transmission unit. This API uses a promise to return the result.
-
+Obtains the connection information of the data network specified by **NetHandle**, including the NIC name, domain name, link information, route information, network address, and maximum transmission unit. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23

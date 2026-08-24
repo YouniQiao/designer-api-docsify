@@ -21,13 +21,8 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 maxValue: number
 ```
 
-Maximum value displayed in the data panel.
-
-Default value: **100**
-
-**NOTE：**
-
-If the value is less than or equal to 0, **maxValue** is set to the sum of all items in the **values** array and displayed proportionally.
+Maximum value displayed in the data panel.Default value: **100**  
+**NOTE：**If the value is less than or equal to 0, **maxValue** is set to the sum of all items in the **values** array and displayed proportionally.
 
 **Type:** number
 
@@ -47,13 +42,8 @@ If the value is less than or equal to 0, **maxValue** is set to the sum of all i
 values: number[]
 ```
 
-Current values of the data panel.
-
-The length of the array should be within the range of [0, 9].
-
-**NOTE：**
-
-If the array length is greater than 9, the first nine items are used.
+Current values of the data panel.The length of the array should be within the range of [0, 9].  
+**NOTE：**If the array length is greater than 9, the first nine items are used.
 
 **Type:** number[]
 

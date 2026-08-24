@@ -12,9 +12,7 @@ import { contact } from '@kit.ContactsKit';
 function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<int>>
 ```
 
-通过UI交互批量导入多个联系人。
-
-每次最多可导入100个联系人。不支持导入联系人的头像。
+通过UI交互批量导入多个联系人。每次最多可导入100个联系人。不支持导入联系人的头像。
 
 **起始版本：** 26.0.0
 

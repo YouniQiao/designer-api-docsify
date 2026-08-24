@@ -14,8 +14,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback
 
 监听磁场传感器数据变化一次。适用于仅需一次性获取当前磁场数据的场景。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD]
 > once
 > 替代。

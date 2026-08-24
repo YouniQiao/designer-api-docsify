@@ -2,13 +2,11 @@
 
 GridLayoutAlgorithm constructor options.
 
-@interface GridLayoutAlgorithmOptions
-
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
 
-<!--Device-unnamed-interface GridLayoutAlgorithmOptions--><!--Device-unnamed-interface GridLayoutAlgorithmOptions-End-->
+<!--Device-unnamed-export declare interface GridLayoutAlgorithmOptions--><!--Device-unnamed-export declare interface GridLayoutAlgorithmOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,7 +18,7 @@ columnsGap?: LengthMetrics
 
 The spacing between columns.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
@@ -64,7 +62,7 @@ rowsGap?: LengthMetrics
 
 The spacing between rows.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

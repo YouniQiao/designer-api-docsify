@@ -1,6 +1,6 @@
 # GradientMode
 
-@brief Enumerates the gradient modes of the input method.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | NONE | 0 | The gradient mode is not used.| | LINEAR_GRADIENT | 1 | Linear gradient.|
+Enumerates the gradient modes of the input method.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | NONE | 0 | The gradient mode is not used.| | LINEAR_GRADIENT | 1 | Linear gradient.|
 
 **Since:** 23
 
@@ -14,7 +14,7 @@
 NONE = 0
 ```
 
-@brief Disable gradient mode.
+Disable gradient mode.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ NONE = 0
 LINEAR_GRADIENT = 1
 ```
 
-@brief Linear gradient mode.
+Linear gradient mode.
 
 **Since:** 23
 

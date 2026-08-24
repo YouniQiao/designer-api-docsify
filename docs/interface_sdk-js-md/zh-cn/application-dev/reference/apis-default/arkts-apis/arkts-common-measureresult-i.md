@@ -1,8 +1,6 @@
 # MeasureResult
 
-Provides the measurement result of the component.
-
-@extends SizeResult
+Provides the measurement result of the component.@extends SizeResult
 
 **继承/实现关系：** MeasureResult extends [SizeResult](arkts-common-sizeresult-i.md)
 

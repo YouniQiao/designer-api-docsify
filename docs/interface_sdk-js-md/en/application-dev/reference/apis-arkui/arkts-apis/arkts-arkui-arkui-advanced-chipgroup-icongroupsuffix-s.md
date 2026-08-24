@@ -2,12 +2,13 @@
 
 The **ChipGroup** component provides a set of chips for organizing and categorizing files or resource content.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > With **SymbolGlyphModifier**, neither modifying the animation type with **symbolEffect** nor setting the effect
 > strategy with effectStrategy is supported.
 
 **Since:** 12
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct IconGroupSuffix--><!--Device-unnamed-export declare struct IconGroupSuffix-End-->
 
@@ -17,14 +18,12 @@ The **ChipGroup** component provides a set of chips for organizing and categoriz
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## iconBackgroundSystemMaterial
 
 ```TypeScript
-@Prop
-  iconBackgroundSystemMaterial?: uiMaterial.Material
+iconBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -32,6 +31,8 @@ Set system-styled materials for the component. Different materials have differen
 **Type:** uiMaterial.Material
 
 **Since:** 26.0.0
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,9 +45,7 @@ Set system-styled materials for the component. Different materials have differen
 ## items
 
 ```TypeScript
-@Require
-  @Prop
-  items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>
+items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>
 ```
 
 Custom builder items.
@@ -54,6 +53,8 @@ Custom builder items.
 **Type:** Array&lt;[IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) \| SymbolGlyphModifier \| [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md)&gt;
 
 **Since:** 12
+
+**Decorator:** @Require, @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

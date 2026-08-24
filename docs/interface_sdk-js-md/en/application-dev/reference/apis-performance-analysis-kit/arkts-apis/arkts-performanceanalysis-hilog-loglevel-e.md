@@ -30,11 +30,7 @@ Log level used to record more detailed process information than INFO logs to hel
 INFO = 4
 ```
 
-Log level used to record key service process nodes and exceptions that occur during service running,
-
-for example, no network signal or login failure.
-
-These logs should be recorded by the dominant module in the service to avoid repeated logging conducted by multiple invoked modules or low-level functions.
+Log level used to record key service process nodes and exceptions that occur during service running,for example, no network signal or login failure.These logs should be recorded by the dominant module in the service to avoid repeated logging conducted by multiple invoked modules or low-level functions.
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # SystemSoundType
 
-枚举，表示系统音效类型。
-
-@enum { int }
+枚举，表示系统音效类型。@enum { int }
 
 **起始版本：** 23
 

@@ -6,8 +6,7 @@ declare type PointerStyle = import('../api/@ohos.multimodalInput.pointer').defau
 
 Defines the pointer style.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Directly using **cursorControl** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object using the **getUIContext()** API and then obtain the

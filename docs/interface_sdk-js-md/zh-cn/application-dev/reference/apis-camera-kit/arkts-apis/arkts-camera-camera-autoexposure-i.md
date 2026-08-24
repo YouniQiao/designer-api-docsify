@@ -1,8 +1,6 @@
 # AutoExposure
 
-AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。
-
-自动曝光类，对设备自动曝光（AE）操作。
+AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。自动曝光类，对设备自动曝光（AE）操作。
 
 **继承/实现关系：** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)
 
@@ -16,7 +14,6 @@ AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getExposureMode
@@ -27,8 +24,7 @@ getExposureMode(): ExposureMode
 
 获取当前曝光模式。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 若未通过[setExposureMode](#setexposuremode)接口进行设置，直接调用该接口查询当前曝光模式，会返回无效值。
 
 **起始版本：** 23
@@ -318,9 +314,7 @@ function registerPhotoOutputCaptureStart(captureSession: camera.PhotoSession): v
 setExposureBias(exposureBias: double): void
 ```
 
-设置曝光补偿，曝光补偿值（EV）。
-
-进行设置之前，建议先通过方法[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)查询支持的范围。
+设置曝光补偿，曝光补偿值（EV）。进行设置之前，建议先通过方法[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)查询支持的范围。
 
 **起始版本：** 23
 
@@ -465,9 +459,7 @@ function setExposureMode(captureSession: camera.CaptureSession): void {
 setMeteringPoint(point: Point): void
 ```
 
-设置曝光区域中心点，曝光点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。
-
-此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触摸点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
+设置曝光区域中心点，曝光点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触摸点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
 
 **起始版本：** 23
 

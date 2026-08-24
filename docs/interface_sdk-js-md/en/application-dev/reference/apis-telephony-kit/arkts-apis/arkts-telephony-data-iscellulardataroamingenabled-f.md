@@ -12,8 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function isCellularDataRoamingEnabled(slotId: int, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether roaming is enabled for the cellular data service. This API uses an asynchronous callback to return the result.
-
+Checks whether roaming is enabled for the cellular data service. This API uses an asynchronous callback to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
@@ -75,8 +74,7 @@ data.isCellularDataRoamingEnabled(0).then((contextData: boolean) => {
 function isCellularDataRoamingEnabled(slotId: int): Promise<boolean>
 ```
 
-Checks whether roaming is enabled for the cellular data service. This API uses a promise to return the result.
-
+Checks whether roaming is enabled for the cellular data service. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23

@@ -1,8 +1,6 @@
 # TransitionHierarchyStrategy (System API)
 
-Source and target are two matched elements during the geometry transition. The animation starts at the source and ends at the target. TransitionHierarchyStrategy enumeration defines how levels of source and target elements would be changed in the hierarchy during the geometry transition.
-
-@enum { number }
+Source and target are two matched elements during the geometry transition. The animation starts at the source and ends at the target. TransitionHierarchyStrategy enumeration defines how levels of source and target elements would be changed in the hierarchy during the geometry transition.@enum { number }
 
 **Since:** 23
 

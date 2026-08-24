@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { usb } from '@kit.BasicServicesKit';
-import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## bulkTransfer
@@ -19,9 +17,7 @@ function bulkTransfer(
   ): Promise<number>
 ```
 
-批量传输。
-
-需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备信息列表以及endpoint；再调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限； 然后调用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)接口得到返回数据devicepipe之后，再次获取接口 [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md)；再调用usb.bulkTransfer接口。
+批量传输。需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备信息列表以及endpoint；再调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限； 然后调用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)接口得到返回数据devicepipe之后，再次获取接口 [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md)；再调用usb.bulkTransfer接口。
 
 **起始版本：** 8
 

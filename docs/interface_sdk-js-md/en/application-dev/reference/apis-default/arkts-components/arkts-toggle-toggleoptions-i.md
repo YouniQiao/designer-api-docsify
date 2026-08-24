@@ -1,8 +1,6 @@
 # ToggleOptions
 
-Defines the toggle options.
-
-@interface ToggleOptions
+Defines the toggle options.@interface ToggleOptions
 
 **Since:** 23
 

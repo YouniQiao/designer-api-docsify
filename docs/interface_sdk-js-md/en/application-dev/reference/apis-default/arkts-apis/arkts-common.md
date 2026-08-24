@@ -50,15 +50,15 @@ Defines the namespace of focus controller.
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityHoverEvent](arkts-common-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation. |
+| [AccessibilityHoverEvent](arkts-common-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation.@extends BaseEvent |
 | [AlignRuleOption](arkts-common-alignruleoption-i.md) | Defines the align rule options of relative container. |
 | [AnimatableArithmetic](arkts-common-animatablearithmetic-i.md) | The **AnimatableArithmetic** API defines the animation operation rules for non-number data types. To animate non-number data (such as arrays, structs, and colors), implement the addition, subtraction, multiplication, and equality judgment functions in the **AnimatableArithmetic\&lt;T\&gt;** API. In this way, the data can be involved in an interpolation operation of the animation and identify whether the data changes, that is, the non-number data is defined as the types that implement the **AnimatableArithmetic\&lt;T\&gt;** API. |
 | [AnimateParam](arkts-common-animateparam-i.md) | Defines the animate function params. |
 | [AreaChangeOptions](arkts-common-areachangeoptions-i.md) | Defines the options about AreaChangeEvent. |
 | [AsymmetricTransitionOption](arkts-common-asymmetrictransitionoption-i.md) | Defines the option of asymmetric transition. |
 | [AttributeModifier](arkts-common-attributemodifier-i.md) | Defines the attribute modifier. |
-| [AxisEvent](arkts-common-axisevent-i.md) | The axis event triggers this method invocation. |
-| [BackgroundBlurStyleOptions](arkts-common-backgroundblurstyleoptions-i.md) | Defines the options of backgroundBlurStyle |
+| [AxisEvent](arkts-common-axisevent-i.md) | The axis event triggers this method invocation.@extends BaseEvent |
+| [BackgroundBlurStyleOptions](arkts-common-backgroundblurstyleoptions-i.md) | Defines the options of backgroundBlurStyle@extends BlurStyleOptions |
 | [BackgroundBrightnessOptions](arkts-common-backgroundbrightnessoptions-i.md) | Define BackgroundBrightness Options. |
 | [BackgroundEffectOptions](arkts-common-backgroundeffectoptions-i.md) | Defines the options of BackgroundEffect |
 | [BackgroundImageOptions](arkts-common-backgroundimageoptions-i.md) | Define the options for background image. |
@@ -71,12 +71,12 @@ Defines the namespace of focus controller.
 | [BorderImageOption](arkts-common-borderimageoption-i.md) | Border image option |
 | [CaretOffset](arkts-common-caretoffset-i.md) | CaretOffset info. |
 | [ClickEffect](arkts-common-clickeffect-i.md) | Defines the click effect. |
-| [ClickEvent](arkts-common-clickevent-i.md) | The tap action triggers this method invocation. |
+| [ClickEvent](arkts-common-clickevent-i.md) | The tap action triggers this method invocation.@extends BaseEvent |
 | [CommonConfiguration](arkts-common-commonconfiguration-i.md) | Defines the common configuration. |
 | [CommonMethod](arkts-common-commonmethod-i.md) | CommonMethod |
-| [CommonShapeMethod](arkts-common-commonshapemethod-i.md) | CommonShapeMethod |
+| [CommonShapeMethod](arkts-common-commonshapemethod-i.md) | CommonShapeMethod@extends CommonMethod |
 | [Configuration](arkts-common-configuration-i.md) | Defines the data type of the interface restriction. |
-| [ContentCoverOptions](arkts-common-contentcoveroptions-i.md) | Component content cover options |
+| [ContentCoverOptions](arkts-common-contentcoveroptions-i.md) | Component content cover options@extends BindOptions |
 | [ContentModifier](arkts-common-contentmodifier-i.md) | Defines the content modifier. |
 | [ContextMenuAnimationOptions](arkts-common-contextmenuanimationoptions-i.md) | Defines the ContextMenu's preview animator options. |
 | [ContextMenuOptions](arkts-common-contextmenuoptions-i.md) | Defines the context menu options. |
@@ -98,19 +98,19 @@ Defines the namespace of focus controller.
 | [EventTarget](arkts-common-eventtarget-i.md) | Defines the event target. |
 | [ExpectedFrameRateRange](arkts-common-expectedframeraterange-i.md) | Interface for ExpectedFrameRateRange. |
 | [FadingEdgeOptions](arkts-common-fadingedgeoptions-i.md) | Defines the fadingEdge options. |
-| [FocusAxisEvent](arkts-common-focusaxisevent-i.md) | Focus axis event object description. |
+| [FocusAxisEvent](arkts-common-focusaxisevent-i.md) | Focus axis event object description.@extends BaseEvent |
 | [FocusMovement](arkts-common-focusmovement-i.md) | Defines the next focus item. |
-| [ForegroundBlurStyleOptions](arkts-common-foregroundblurstyleoptions-i.md) | Defines the options of ForegroundBlurStyle |
+| [ForegroundBlurStyleOptions](arkts-common-foregroundblurstyleoptions-i.md) | Defines the options of ForegroundBlurStyle@extends BlurStyleOptions |
 | [ForegroundEffectOptions](arkts-common-foregroundeffectoptions-i.md) | Defines the options of ForegroundEffect |
-| [GeometryInfo](arkts-common-geometryinfo-i.md) | Sub component layout info. |
+| [GeometryInfo](arkts-common-geometryinfo-i.md) | Sub component layout info.@extends SizeResult |
 | [GeometryTransitionOptions](arkts-common-geometrytransitionoptions-i.md) | Defines the options of geometry transition. |
 | [GestureModifier](arkts-common-gesturemodifier-i.md) | Defines the gesture modifier. |
 | [HistoricalPoint](arkts-common-historicalpoint-i.md) | TouchObject getHistoricalPoints Function Parameters |
 | [HorizontalAlignParam](arkts-common-horizontalalignparam-i.md) | Defines the horizontal align rule options of relative container. |
-| [HoverEvent](arkts-common-hoverevent-i.md) | The hover action triggers this method invocation. |
+| [HoverEvent](arkts-common-hoverevent-i.md) | The hover action triggers this method invocation.@extends BaseEvent |
 | [InputCounterOptions](arkts-common-inputcounteroptions-i.md) | Define the ratio of characters entered by the the percentage of InputCounterOptions. |
 | [InputEventInterceptResult](arkts-common-inputeventinterceptresult-i.md) | Defines the input event intercept result. |
-| [InputEventMonitor](arkts-common-inputeventmonitor-i.md) | Defines the input event monitor identifier. |
+| [InputEventMonitor](arkts-common-inputeventmonitor-i.md) | Defines the input event monitor identifier.Important Notes: - This object is created and returned by the system as a unique identifier for the listener. - The object is an empty object with no accessible members. - Developers cannot actively construct this object, it can only be obtained through the registration interface. - Used for subsequent unregistration to verify identity. |
 | [InvertOptions](arkts-common-invertoptions-i.md) | Define the options of invert |
 | [ItemDragEventHandler](arkts-common-itemdrageventhandler-i.md) | Define item drag event handler. |
 | [ItemDragInfo](arkts-common-itemdraginfo-i.md) | ItemDragInfo object description |
@@ -124,20 +124,20 @@ Defines the namespace of focus controller.
 | [LocalizedHorizontalAlignParam](arkts-common-localizedhorizontalalignparam-i.md) | Defines the localized horizontal align param of relative container. |
 | [LocalizedVerticalAlignParam](arkts-common-localizedverticalalignparam-i.md) | Defines the localized vertical align param of relative container. |
 | [Measurable](arkts-common-measurable-i.md) | Sub component info passed from framework when measure happens. |
-| [MeasureResult](arkts-common-measureresult-i.md) | Provides the measurement result of the component. |
+| [MeasureResult](arkts-common-measureresult-i.md) | Provides the measurement result of the component.@extends SizeResult |
 | [MenuElement](arkts-common-menuelement-i.md) | Defines the menu element. |
 | [MenuGridStyleOptions](arkts-common-menugridstyleoptions-i.md) | Defines grid style of menu. |
 | [MenuMaskType](arkts-common-menumasktype-i.md) | Menu mask type |
-| [MenuOptions](arkts-common-menuoptions-i.md) | Defines the menu options. |
+| [MenuOptions](arkts-common-menuoptions-i.md) | Defines the menu options.@extends ContextMenuOptions |
 | [MotionBlurAnchor](arkts-common-motionbluranchor-i.md) | Define motion blur anchor coordinates. |
 | [MotionBlurOptions](arkts-common-motionbluroptions-i.md) | Define motion blur options. |
 | [MotionPathOptions](arkts-common-motionpathoptions-i.md) | Defines the motion path options. |
-| [MouseEvent](arkts-common-mouseevent-i.md) | The mouse click action triggers this method invocation. |
+| [MouseEvent](arkts-common-mouseevent-i.md) | The mouse click action triggers this method invocation.@extends BaseEvent |
 | [MouseHistoricalPoint](arkts-common-mousehistoricalpoint-i.md) | Defines the historical point information for mouse event. |
 | [MultiShadowOptions](arkts-common-multishadowoptions-i.md) | Defines the options of Shadow. |
 | [NestedScrollOptions](arkts-common-nestedscrolloptions-i.md) | Define nested scroll options |
 | [OverlayOffset](arkts-common-overlayoffset-i.md) | Defines the OverlayOffset. |
-| [OverlayOptions](arkts-common-overlayoptions-i.md) | Defines the OverlayOptions interface. |
+| [OverlayOptions](arkts-common-overlayoptions-i.md) | Defines the OverlayOptions interface.&lt;strong&gt;NOTE&lt;/strong&gt;:<br> When both align and offset are set, the effects are combined. The overlay is first aligned relative to the component and then offset from its current upper left corner. |
 | [PickerDialogButtonStyle](arkts-common-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
 | [PickerTextStyle](arkts-common-pickertextstyle-i.md) | Provide an interface for the text style of picker |
 | [PixelRoundPolicy](arkts-common-pixelroundpolicy-i.md) | Defines the direction of pixel rounding at the component level. |
@@ -158,12 +158,12 @@ Defines the namespace of focus controller.
 | [RotateAngleOptions](arkts-common-rotateangleoptions-i.md) | The rotation parameters containing multi-axis angle information. |
 | [RotateOptions](arkts-common-rotateoptions-i.md) | The param of rotate. |
 | [ScaleOptions](arkts-common-scaleoptions-i.md) | Defines the options of scale. |
-| [ScrollableCommonMethod](arkts-common-scrollablecommonmethod-i.md) | CommonScrollableMethod |
+| [ScrollableCommonMethod](arkts-common-scrollablecommonmethod-i.md) | CommonScrollableMethod@extends CommonMethod |
 | [SelectionOptions](arkts-common-selectionoptions-i.md) | Defines the selection options. |
 | [ShadowOptions](arkts-common-shadowoptions-i.md) | Define the options of shadow |
 | [sharedTransitionOptions](arkts-common-sharedtransitionoptions-i.md) | Defines the shard transition function params. |
 | [SheetDismiss](arkts-common-sheetdismiss-i.md) | Component sheet dismiss |
-| [SheetOptions](arkts-common-sheetoptions-i.md) | Component sheet options |
+| [SheetOptions](arkts-common-sheetoptions-i.md) | Component sheet options@extends BindOptions |
 | [SheetTitleOptions](arkts-common-sheettitleoptions-i.md) | Component sheet title options |
 | [SizeResult](arkts-common-sizeresult-i.md) | Provides the component size information. |
 | [SmartGestureShortcutOptions](arkts-common-smartgestureshortcutoptions-i.md) | Options for configuring smart gesture shortcuts. |
@@ -175,12 +175,12 @@ Defines the namespace of focus controller.
 | [TextContentControllerOptions](arkts-common-textcontentcontrolleroptions-i.md) | Defines the span options of TextContentController. |
 | [TextDecorationOptions](arkts-common-textdecorationoptions-i.md) | Defines the options of decoration. |
 | [TipsOptions](arkts-common-tipsoptions-i.md) | Defines the Tips options. |
-| [TouchEvent](arkts-common-touchevent-i.md) | Touch Action Function Parameters |
+| [TouchEvent](arkts-common-touchevent-i.md) | Touch Action Function Parameters@extends BaseEvent |
 | [TouchObject](arkts-common-touchobject-i.md) | Type of the touch event. |
 | [TranslateOptions](arkts-common-translateoptions-i.md) | Defines the options of translate. |
 | [UICommonEvent](arkts-common-uicommonevent-i.md) | Defines a UICommonEvent which is used to set different common event to target component. |
 | [UIGestureEvent](arkts-common-uigestureevent-i.md) | Defines a UIGestureEvent which is used to set different gestures to target component. |
-| [UIScrollableCommonEvent](arkts-common-uiscrollablecommonevent-i.md) | Defines a UIScrollableCommonEvent which is used to set event to target component. |
+| [UIScrollableCommonEvent](arkts-common-uiscrollablecommonevent-i.md) | Defines a UIScrollableCommonEvent which is used to set event to target component.@extends UICommonEvent |
 | [VerticalAlignParam](arkts-common-verticalalignparam-i.md) | Defines the align rule options of relative container. |
 | [VisibleAreaEventOptions](arkts-common-visibleareaeventoptions-i.md) | Defines the options about VisibleAreaEvent. |
 
@@ -191,7 +191,7 @@ Defines the namespace of focus controller.
 | --- | --- |
 | [BlurSnapshotOptions](arkts-common-blursnapshotoptions-i-sys.md) | Defines the options for blur snapshot optimization. Setting this object enables blur optimization. |
 | [ContextMenuOptions](arkts-common-contextmenuoptions-i-sys.md) | Defines the context menu options. |
-| [DepthColorRGB](arkts-common-depthcolorrgb-i-sys.md) | RGB color in depth space. |
+| [DepthColorRGB](arkts-common-depthcolorrgb-i-sys.md) | RGB color in depth space.@interface DepthColorRGB |
 | [DepthVector3](arkts-common-depthvector3-i-sys.md) | 3D vector in depth space. |
 | [DepthVector4](arkts-common-depthvector4-i-sys.md) | 4D vector in depth space. |
 | [DragEvent](arkts-common-dragevent-i-sys.md) | DragEvent object description |
@@ -201,7 +201,7 @@ Defines the namespace of focus controller.
 | [LightSource](arkts-common-lightsource-i-sys.md) | LightSource info |
 | [PixelMapMock](arkts-common-pixelmapmock-i-sys.md) | pixelmap object with release function. |
 | [PointLightStyle](arkts-common-pointlightstyle-i-sys.md) | PointLightStyle info |
-| [SheetOptions](arkts-common-sheetoptions-i-sys.md) | Component sheet options |
+| [SheetOptions](arkts-common-sheetoptions-i-sys.md) | Component sheet options@extends BindOptions |
 | [SpatialEffectParams](arkts-common-spatialeffectparams-i-sys.md) | Spatial effect params. |
 | [SpatialPosition](arkts-common-spatialposition-i-sys.md) | Spatial corner positions in 3D space. |
 <!--DelEnd-->
@@ -214,64 +214,64 @@ Defines the namespace of focus controller.
 | [AccessibilityActionInterceptResult](arkts-common-accessibilityactioninterceptresult-e.md) | Enum for the result of accessibility action intercept function @enum { int } |
 | [AccessibilityRoleType](arkts-common-accessibilityroletype-e.md) | Enumerates the component role types used by screen readers. @enum { int } |
 | [AccessibilitySamePageMode](arkts-common-accessibilitysamepagemode-e.md) | Enumerates the same-page modes for cross-process embedded components and their host applications. @enum { int } |
-| [AdaptiveColor](arkts-common-adaptivecolor-e.md) | Defines adaptive color |
-| [AnchoredColorMode](arkts-common-anchoredcolormode-e.md) | enum color mode of pointing popup @enum { number } |
-| [AvailableLayoutArea](arkts-common-availablelayoutarea-e.md) | Defines the available layout area. |
-| [BlendApplyType](arkts-common-blendapplytype-e.md) | Enum for BlendApplyType. Indicate how to apply specified blend mode to the view's content. |
-| [BlendMode](arkts-common-blendmode-e.md) | Enum for BlendMode. Blend modes for compositing current component with overlapping content. Use overlapping content as dst, current component as src. |
-| [BlurStyle](arkts-common-blurstyle-e.md) | enum Blur style |
-| [BlurStyleActivePolicy](arkts-common-blurstyleactivepolicy-e.md) | Enumerates the policies for activating the blur style. |
-| [ChainStyle](arkts-common-chainstyle-e.md) | Enumerates the chain styles in relative container. |
-| [ContentClipMode](arkts-common-contentclipmode-e.md) | Enum of scrollable containers' content clip mode. |
-| [DismissReason](arkts-common-dismissreason-e.md) | Dismiss reason type. |
-| [DragBehavior](arkts-common-dragbehavior-e.md) | Enum for Drag Behavior. |
-| [DraggingSizeChangeEffect](arkts-common-draggingsizechangeeffect-e.md) | Define drag start animation effect from drag preview to the handle drag image |
-| [DragPreviewMode](arkts-common-dragpreviewmode-e.md) | Defines the drag preview mode. |
-| [DragResult](arkts-common-dragresult-e.md) | Enum for Drag Result. |
-| [EffectEdge](arkts-common-effectedge-e.md) | Enumerates the effective edge of the edge effect. |
-| [EffectType](arkts-common-effecttype-e.md) | Enum of using the effects template mode. |
-| [FinishCallbackType](arkts-common-finishcallbacktype-e.md) | Enum for FinishCallbackType. |
-| [HapticFeedbackMode](arkts-common-hapticfeedbackmode-e.md) | Defines the menu haptic feedback mode. |
-| [HoverModeAreaType](arkts-common-hovermodeareatype-e.md) | Enumerates the type of area in hover mode. |
-| [KeyboardAvoidMode](arkts-common-keyboardavoidmode-e.md) | enum keyboard avoid mode |
-| [LayoutSafeAreaEdge](arkts-common-layoutsafeareaedge-e.md) | Define the edges for expanding the safe area in layout. |
-| [LayoutSafeAreaType](arkts-common-layoutsafeareatype-e.md) | Describe the types for expanding the safe area in layout. |
-| [MenuGridPosition](arkts-common-menugridposition-e.md) | Defines menu grid position. |
-| [MenuKeyboardAvoidMode](arkts-common-menukeyboardavoidmode-e.md) | Define the mode of menu how to avoid keyboard. |
-| [MenuPolicy](arkts-common-menupolicy-e.md) | Define the menu pop-up policy |
-| [MenuPreviewMode](arkts-common-menupreviewmode-e.md) | Defines the menu preview mode. |
-| [ModalMode](arkts-common-modalmode-e.md) | Define the modal mode of menu. |
-| [ModalTransition](arkts-common-modaltransition-e.md) | Defines modal transition type. |
-| [OutlineStyle](arkts-common-outlinestyle-e.md) | Outline Style |
-| [PreDragStatus](arkts-common-predragstatus-e.md) | 定义拖拽手势触发前的各阶段状态。 |
-| [PreviewScaleMode](arkts-common-previewscalemode-e.md) | Defines the scaling mode for custom preview of contextMenu. |
-| [RepeatMode](arkts-common-repeatmode-e.md) | Defines the Border Image Repeat Mode. |
-| [SafeAreaEdge](arkts-common-safeareaedge-e.md) | Enumerates the safe area edges. |
-| [SafeAreaType](arkts-common-safeareatype-e.md) | The types of expanded safe areas. |
-| [ScrollSizeMode](arkts-common-scrollsizemode-e.md) | Define the scroll size mode of the sheet. |
-| [ShadowStyle](arkts-common-shadowstyle-e.md) | enum Shadow style |
-| [ShadowType](arkts-common-shadowtype-e.md) | Define the type of shadow |
-| [SheetKeyboardAvoidMode](arkts-common-sheetkeyboardavoidmode-e.md) | Define the mode of sheet how to avoid keyboard. |
-| [SheetMode](arkts-common-sheetmode-e.md) | Define the display mode of the sheet. |
-| [SheetSize](arkts-common-sheetsize-e.md) | Defines sheet size type. |
-| [SheetType](arkts-common-sheettype-e.md) | Defines the sheet type. |
-| [SourceTool](arkts-common-sourcetool-e.md) | Defines the event tool type. |
-| [SourceType](arkts-common-sourcetype-e.md) | Defines the event source type. |
-| [ThemeColorMode](arkts-common-themecolormode-e.md) | enum color mode |
-| [TouchTestStrategy](arkts-common-touchteststrategy-e.md) | Defines the touch test strategy object. |
-| [TransitionEdge](arkts-common-transitionedge-e.md) | Defines the Edge object. |
+| [AdaptiveColor](arkts-common-adaptivecolor-e.md) | Defines adaptive color@enum { number } |
+| [AnchoredColorMode](arkts-common-anchoredcolormode-e.md) | enum color mode of pointing popup@enum { number } |
+| [AvailableLayoutArea](arkts-common-availablelayoutarea-e.md) | Defines the available layout area.@enum { number } |
+| [BlendApplyType](arkts-common-blendapplytype-e.md) | Enum for BlendApplyType. Indicate how to apply specified blend mode to the view's content.@enum { number } |
+| [BlendMode](arkts-common-blendmode-e.md) | Enum for BlendMode. Blend modes for compositing current component with overlapping content. Use overlapping content as dst, current component as src.@enum { number } |
+| [BlurStyle](arkts-common-blurstyle-e.md) | enum Blur style@enum { number } |
+| [BlurStyleActivePolicy](arkts-common-blurstyleactivepolicy-e.md) | Enumerates the policies for activating the blur style.@enum { number } |
+| [ChainStyle](arkts-common-chainstyle-e.md) | Enumerates the chain styles in relative container.@enum { number } |
+| [ContentClipMode](arkts-common-contentclipmode-e.md) | Enum of scrollable containers' content clip mode.@enum { number } |
+| [DismissReason](arkts-common-dismissreason-e.md) | Dismiss reason type.@enum { number } |
+| [DragBehavior](arkts-common-dragbehavior-e.md) | Enum for Drag Behavior.&lt;strong&gt;NOTE&lt;/strong&gt;:<br> DragBehavior serves to inform you about the intended method of data handling, whether it's a copy or a move, but it does not actually dictate the real processing of the data.@enum { number } |
+| [DraggingSizeChangeEffect](arkts-common-draggingsizechangeeffect-e.md) | Define drag start animation effect from drag preview to the handle drag image@enum { number } |
+| [DragPreviewMode](arkts-common-dragpreviewmode-e.md) | Defines the drag preview mode.@enum { number } |
+| [DragResult](arkts-common-dragresult-e.md) | Enum for Drag Result.@enum { number } |
+| [EffectEdge](arkts-common-effectedge-e.md) | Enumerates the effective edge of the edge effect.@enum { int } |
+| [EffectType](arkts-common-effecttype-e.md) | Enum of using the effects template mode.@enum { number } |
+| [FinishCallbackType](arkts-common-finishcallbacktype-e.md) | Enum for FinishCallbackType.@enum { number } |
+| [HapticFeedbackMode](arkts-common-hapticfeedbackmode-e.md) | Defines the menu haptic feedback mode.@enum { number } |
+| [HoverModeAreaType](arkts-common-hovermodeareatype-e.md) | Enumerates the type of area in hover mode.@enum { number } |
+| [KeyboardAvoidMode](arkts-common-keyboardavoidmode-e.md) | enum keyboard avoid mode@enum { number } |
+| [LayoutSafeAreaEdge](arkts-common-layoutsafeareaedge-e.md) | Define the edges for expanding the safe area in layout.@enum { number } |
+| [LayoutSafeAreaType](arkts-common-layoutsafeareatype-e.md) | Describe the types for expanding the safe area in layout.@enum { number } |
+| [MenuGridPosition](arkts-common-menugridposition-e.md) | Defines menu grid position.@enum { int } |
+| [MenuKeyboardAvoidMode](arkts-common-menukeyboardavoidmode-e.md) | Define the mode of menu how to avoid keyboard.@enum { number } |
+| [MenuPolicy](arkts-common-menupolicy-e.md) | Define the menu pop-up policy@enum { number } |
+| [MenuPreviewMode](arkts-common-menupreviewmode-e.md) | Defines the menu preview mode.@enum { number } |
+| [ModalMode](arkts-common-modalmode-e.md) | Define the modal mode of menu.@enum { number } |
+| [ModalTransition](arkts-common-modaltransition-e.md) | Defines modal transition type.@enum { number } |
+| [OutlineStyle](arkts-common-outlinestyle-e.md) | Outline Style@enum { number } |
+| [PreDragStatus](arkts-common-predragstatus-e.md) | 定义拖拽手势触发前的各阶段状态。@enum { number } |
+| [PreviewScaleMode](arkts-common-previewscalemode-e.md) | Defines the scaling mode for custom preview of contextMenu.@enum { number } |
+| [RepeatMode](arkts-common-repeatmode-e.md) | Defines the Border Image Repeat Mode.@enum { number } |
+| [SafeAreaEdge](arkts-common-safeareaedge-e.md) | Enumerates the safe area edges.@enum { number } |
+| [SafeAreaType](arkts-common-safeareatype-e.md) | The types of expanded safe areas.@enum { number } |
+| [ScrollSizeMode](arkts-common-scrollsizemode-e.md) | Define the scroll size mode of the sheet.@enum { number } |
+| [ShadowStyle](arkts-common-shadowstyle-e.md) | enum Shadow style@enum { number } |
+| [ShadowType](arkts-common-shadowtype-e.md) | Define the type of shadow@enum { number } |
+| [SheetKeyboardAvoidMode](arkts-common-sheetkeyboardavoidmode-e.md) | Define the mode of sheet how to avoid keyboard.@enum { number } |
+| [SheetMode](arkts-common-sheetmode-e.md) | Define the display mode of the sheet.@enum { number } |
+| [SheetSize](arkts-common-sheetsize-e.md) | Defines sheet size type.@enum { number } |
+| [SheetType](arkts-common-sheettype-e.md) | Defines the sheet type.@enum { number } |
+| [SourceTool](arkts-common-sourcetool-e.md) | Defines the event tool type.@enum { number } |
+| [SourceType](arkts-common-sourcetype-e.md) | Defines the event source type.@enum { number } |
+| [ThemeColorMode](arkts-common-themecolormode-e.md) | enum color mode@enum { number } |
+| [TouchTestStrategy](arkts-common-touchteststrategy-e.md) | Defines the touch test strategy object.@enum { number } |
+| [TransitionEdge](arkts-common-transitionedge-e.md) | Defines the Edge object.@enum { number } |
 
 <!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [BlendApplyType](arkts-common-blendapplytype-e-sys.md) | Enum for BlendApplyType. Indicate how to apply specified blend mode to the view's content. |
+| [BlendApplyType](arkts-common-blendapplytype-e-sys.md) | Enum for BlendApplyType. Indicate how to apply specified blend mode to the view's content.@enum { number } |
 | [DistortionMode](arkts-common-distortionmode-e-sys.md) | Enum for distortion animation mode. |
-| [DragAnimationType](arkts-common-draganimationtype-e-sys.md) | Enum for Drag Animation Type. |
+| [DragAnimationType](arkts-common-draganimationtype-e-sys.md) | Enum for Drag Animation Type.@enum { int } |
 | [EdgeLightMode](arkts-common-edgelightmode-e-sys.md) | Enum for edgeLight animation mode. |
 | [SpatialPositionMode](arkts-common-spatialpositionmode-e-sys.md) | Spatial position mode. Indicates the coordinate system used by the corner positions. |
-| [TransitionHierarchyStrategy](arkts-common-transitionhierarchystrategy-e-sys.md) | Source and target are two matched elements during the geometry transition. The animation starts at the source and ends at the target. TransitionHierarchyStrategy enumeration defines how levels of source and target elements would be changed in the hierarchy during the geometry transition. |
+| [TransitionHierarchyStrategy](arkts-common-transitionhierarchystrategy-e-sys.md) | Source and target are two matched elements during the geometry transition. The animation starts at the source and ends at the target. TransitionHierarchyStrategy enumeration defines how levels of source and target elements would be changed in the hierarchy during the geometry transition.@enum { number } |
 <!--DelEnd-->
 
 ### Types
@@ -304,7 +304,7 @@ Defines the namespace of focus controller.
 | [GestureRecognizerJudgeBeginCallback](arkts-gesturerecognizerjudgebegincallback-t.md) | Defines the callback type used in onGestureRecognizerJudgeBegin. |
 | [HoverCallback](arkts-hovercallback-t.md) | Defines the callback type used in hover events. The value of isHover indicates whether the mouse is hovering over the component. The value of event contains information about HoverEvent. |
 | [ICurve](arkts-icurve-t.md) | Interface for curve object. |
-| [InputEventListener](arkts-inputeventlistener-t.md) | Defines the input event listener callback function type. |
+| [InputEventListener](arkts-inputeventlistener-t.md) | Defines the input event listener callback function type.Performance Warning: Do not perform time-consuming operations in the callback, otherwise it may cause the application to freeze.The listener executes synchronously in the UI thread and will directly block the event processing flow. It is recommended to only perform simple judgments and calculations, avoiding: - Synchronous I/O operations - Complex data processing - Network requests - Massive log output |
 | [Matrix4Transit](arkts-matrix4transit-t.md) | Interface for matrix object. |
 | [ModifierKeyStateGetter](arkts-modifierkeystategetter-t.md) | The modifier key state query function block. |
 | [NavDestinationInfo](arkts-navdestinationinfo-t.md) | The navigation destination information. |
@@ -336,7 +336,7 @@ Defines the namespace of focus controller.
 | [TipsMessageType](arkts-tipsmessagetype-t.md) | Defines the TipsMessageType property with ResourceStr and StyledString. |
 | [TouchTestDoneCallback](arkts-touchtestdonecallback-t.md) | Defines the callback type used in onTouchTestDone. When the user touch down, the system performs hit test process to collect all gesture recognizers based on the press location, when the collection is completed, and before gesture begin to be recognizing, the callback is triggered, you can get all recognizer's information from this callback. |
 | [TransitionFinishCallback](arkts-transitionfinishcallback-t.md) | Defines the finish callback type used in transition. |
-| [TripleLengthDetents](arkts-triplelengthdetents-t.md) | Defines the detent array of a three-length. |
+| [TripleLengthDetents](arkts-triplelengthdetents-t.md) | Defines the detent array of a three-length.TripleLengthDetents |
 | [UIContext](arkts-uicontext-t.md) | UIContext. |
 | [UnifiedData](arkts-unifieddata-t.md) | Import the UnifiedData type object for ui component. |
 | [UniformDataType](arkts-uniformdatatype-t.md) | Import the UniformDataType type object for ui component. |

@@ -12,9 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createSymKeyGenerator(algName: string): SymKeyGenerator
 ```
 
-Creates a symmetric key generator instance with the specified algorithm.
-
-<br>For details about the supported specifications, see Symmetric Key Generation and Conversion Specifications .
+Creates a symmetric key generator instance with the specified algorithm.<br>For details about the supported specifications, see Symmetric Key Generation and Conversion Specifications.
 
 **Since:** 23
 
@@ -30,7 +28,7 @@ Creates a symmetric key generator instance with the specified algorithm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | Algorithm to be used by the **symKeyGenerator** instance.<br>For details, see **String Parameter** in Symmetric Key Generation and Conversion Specifications . |
+| algName | string | Yes | Algorithm to be used by the **symKeyGenerator** instance.<br>For details, see **String Parameter** in Symmetric Key Generation and Conversion Specifications. |
 
 **Return value:**
 

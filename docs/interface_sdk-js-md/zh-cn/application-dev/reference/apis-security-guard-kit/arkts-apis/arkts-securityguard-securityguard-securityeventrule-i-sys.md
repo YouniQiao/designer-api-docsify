@@ -1,8 +1,6 @@
 # SecurityEventRule（系统接口）
 
-用户获取安全数据的规则。
-
-@interface SecurityEventRule
+用户获取安全数据的规则。@interface SecurityEventRule
 
 **起始版本：** 12
 

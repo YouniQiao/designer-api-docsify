@@ -1,8 +1,6 @@
 # DismissReason
 
-Dismiss reason type.
-
-@enum { number }
+Dismiss reason type.@enum { number }
 
 **Since:** 23
 

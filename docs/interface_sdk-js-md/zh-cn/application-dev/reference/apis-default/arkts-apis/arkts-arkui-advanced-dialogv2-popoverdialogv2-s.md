@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct PopoverDialogV2--><!--Device-unnamed-export declare struct PopoverDialogV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,19 +40,18 @@ The method to build component.
 ## $visible
 
 ```TypeScript
-@Event
-  $visible?: PopoverDialogV2OnVisibleChange
+$visible?: PopoverDialogV2OnVisibleChange
 ```
 
-修改跟手弹出框的显示状态时触发的回调函数，建议在visible后使用!!语法设置双向同步。
-
-默认无事件。
+修改跟手弹出框的显示状态时触发的回调函数，建议在visible后使用!!语法设置双向同步。默认无事件。
 
 **类型：** [PopoverDialogV2OnVisibleChange](../../apis-arkui/arkts-apis/arkts-arkui-popoverdialogv2onvisiblechange-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Event
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,9 +62,7 @@ The method to build component.
 ## popover
 
 ```TypeScript
-@Require
-  @Param
-  popover: PopoverDialogV2Options
+popover: PopoverDialogV2Options
 ```
 
 配置跟手弹出框的参数。
@@ -73,6 +73,8 @@ The method to build component.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Require、@Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PopoverDialogV2-@Require  @Param  popover: PopoverDialogV2Options--><!--Device-PopoverDialogV2-@Require  @Param  popover: PopoverDialogV2Options-End-->
@@ -82,8 +84,7 @@ The method to build component.
 ## targetBuilder
 
 ```TypeScript
-@BuilderParam
-  targetBuilder: CustomBuilder
+targetBuilder: CustomBuilder
 ```
 
 跟手弹出框基于的目标组件。
@@ -94,6 +95,8 @@ The method to build component.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @BuilderParam
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PopoverDialogV2-@BuilderParam  targetBuilder: CustomBuilder--><!--Device-PopoverDialogV2-@BuilderParam  targetBuilder: CustomBuilder-End-->
@@ -103,20 +106,18 @@ The method to build component.
 ## visible
 
 ```TypeScript
-@Require
-  @Param
-  visible: boolean
+visible: boolean
 ```
 
-跟手弹出框的显示状态。
-
-值为true时跟手弹出框显示，为false时隐藏。
+跟手弹出框的显示状态。值为true时跟手弹出框显示，为false时隐藏。
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

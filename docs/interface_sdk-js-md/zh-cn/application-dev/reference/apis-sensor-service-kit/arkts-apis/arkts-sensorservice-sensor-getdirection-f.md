@@ -14,8 +14,7 @@ function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Arr
 
 根据旋转矩阵计算设备的方向。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md)
 > 替代。
@@ -79,8 +78,7 @@ function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 
 根据旋转矩阵计算设备的方向。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md)替代。
 

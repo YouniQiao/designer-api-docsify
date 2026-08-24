@@ -1,8 +1,6 @@
 # ExtendableButton
 
-Defines the Extendable Button.
-
-@implements ButtonAttribute
+Defines the Extendable Button.@implements ButtonAttribute
 
 **Inheritance/Implementation:** ExtendableButton implements [ButtonAttribute](arkts-button-attribute.md#buttonattribute)
 
@@ -17,8 +15,7 @@ Defines the Extendable Button.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableButton>(
+static $_instantiate<T extends ExtendableButton>(
         factory: ConstructorT<T>, 
         label: ResourceStr, 
         options?: ButtonOptions, 
@@ -31,6 +28,8 @@ Constructor of Extendable Button.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,8 +55,7 @@ Constructor of Extendable Button.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableButton>(
+static $_instantiate<T extends ExtendableButton>(
         factory: ConstructorT<T>, 
         options?: ButtonOptions,
         content_?: CustomBuilder
@@ -69,6 +67,8 @@ Constructor of Extendable Button.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,8 +93,7 @@ Constructor of Extendable Button.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-    static _instantiateImpl<T extends ExtendableButton>(
+static _instantiateImpl<T extends ExtendableButton>(
         styles: CustomBuilderT<T>, 
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -106,6 +105,8 @@ Entry of Extendable Button.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## off('hotspotStateChange')
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi hotspot state change events.
-
-<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
+Unsubscribe Wi-Fi hotspot state change events.<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
 
 **Since:** 7
 

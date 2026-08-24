@@ -16,6 +16,8 @@ Defines Web Component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Web(    value: WebOptions,    content_?: CustomBuilder,): WebAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Web(    value: WebOptions,    content_?: CustomBuilder,): WebAttribute-End-->

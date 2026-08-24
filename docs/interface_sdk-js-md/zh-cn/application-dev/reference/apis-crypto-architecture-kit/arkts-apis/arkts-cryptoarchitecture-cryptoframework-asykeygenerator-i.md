@@ -365,9 +365,7 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 ```
 
-同步获取指定数据生成非对称密钥。
-
-<br><br>**说明：** <br>建议优先使用异步API，convertKey。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+同步获取指定数据生成非对称密钥。<br><br>**说明：** <br>建议优先使用异步API，convertKey。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -452,8 +450,7 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 获取指定数据生成非对称密钥。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
 > 满足ASN.1语法、PKCS#8规范和PEM编码格式。
 > 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传
@@ -654,8 +651,7 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
 > 满足ASN.1语法、PKCS#8规范和PEM编码格式。
 > 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传
@@ -710,7 +706,6 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 > convertPemKeySync接口与convertPemKey接口注意事项相同，见
 > [convertPemKey](#convertpemkey)
 > 接口说明。
-
 <br><br>**说明：** <br>建议优先使用异步API，[convertPemKey](#convertpemkey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
@@ -835,7 +830,6 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 > convertPemKeySync接口与convertPemKey接口注意事项相同，见
 > [convertPemKey](#convertpemkey)
 > 接口说明。
-
 <br><br>**说明：** <br>建议优先使用异步API，[convertPemKey](#convertpemkey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
@@ -1123,9 +1117,7 @@ generateKeyPair(): Promise<KeyPair>
 generateKeyPairSync(): KeyPair
 ```
 
-同步获取非对称密钥生成器随机生成的密钥。
-
-<br><br>**说明：** <br>建议优先使用异步API，generateKeyPair。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+同步获取非对称密钥生成器随机生成的密钥。<br><br>**说明：** <br>建议优先使用异步API，generateKeyPair。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 

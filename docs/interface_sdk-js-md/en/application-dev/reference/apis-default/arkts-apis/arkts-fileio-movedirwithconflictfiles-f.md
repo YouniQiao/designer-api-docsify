@@ -12,12 +12,9 @@ function moveDirWithConflictFiles(src: string, dest: string, callback: AsyncCall
   Array<ConflictFiles>>): void
 ```
 
-Moves the source directory and its content to the destination path. This API uses an asynchronous callback to return the result.
+Moves the source directory and its content to the destination path. This API uses an asynchronous callback to return the result.An exception will be thrown if a directory conflict occurs, that is, the destination directory contains a directory with the same name as the source directory.
 
-An exception will be thrown if a directory conflict occurs, that is, the destination directory contains a directory with the same name as the source directory.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in a distributed directory.
 
 **Since:** 23

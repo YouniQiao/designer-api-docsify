@@ -1,8 +1,6 @@
 # Grid属性/事件
 
-除支持通用属性和[滚动组件通用属性](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还 支持以下属性：
-
-除支持通用事件和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还 支持以下事件：
+除支持通用属性和滚动组件通用属性外，还 支持以下属性：除支持通用事件和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还 支持以下事件：
 
 **继承/实现关系：** GridAttribute extends ScrollableCommonMethod<GridAttribute>
 
@@ -47,10 +45,7 @@ alignItems(alignment: Optional<GridItemAlignment>)
 cachedCount(value: number)
 ```
 
-设置主轴方向前后两侧分别预加载的网格行/列数，只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。<!--Del-->具体使用可参考 [减少应用白块说明](../../../performance/arkts-performance-improvement-recommendation.md#减少应用滑动白块)。<!--DelEnd-->
-
-设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。
-
+设置主轴方向前后两侧分别预加载的网格行/列数，只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。<!--Del-->具体使用可参考 [减少应用白块说明](../../../performance/arkts-performance-improvement-recommendation.md#减少应用滑动白块)。<!--DelEnd-->设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。  
 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)超出显示和缓存范围的GridItem会被释放。
 
 **起始版本：** 7
@@ -73,9 +68,7 @@ cachedCount(value: number)
 cachedCount(count: number, show: boolean)
 ```
 
-设置主轴方向前后两侧分别预加载的网格行/列数，并配置是否显示预加载节点，只在 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。
-
-设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。配合裁剪 clip或内容裁剪 [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14)属性可以显示出预加载节点。
+设置主轴方向前后两侧分别预加载的网格行/列数，并配置是否显示预加载节点，只在 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。配合裁剪 clip或内容裁剪 clipContent属性可以显示出预加载节点。
 
 **起始版本：** 14
 
@@ -102,11 +95,9 @@ cellLength(value: number)
 
 设置一行的高度或者一列的宽度。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 > 当layoutDirection是Row/RowReverse时，表示一行的高度。
-
 当layoutDirection是Column/ColumnReverse时，表示一列的宽度。
 
 **起始版本：** 8
@@ -151,23 +142,7 @@ columnsGap(value: Length)
 columnsTemplate(value: string)
 ```
 
-设置当前网格布局列的数量、固定列宽或最小列宽值，不设置时默认1列。
-
-例如，&nbsp;'1fr&nbsp;1fr&nbsp;2fr'&nbsp;是将父组件分3列，将父组件允许的宽分为4等份，第1列占1份，第2列占1份，第3列占2份。
-
-columnsTemplate('repeat(auto-fit, track-size)')是设置最小列宽值为track-size，自动计算列数和实际列宽。
-
-columnsTemplate('repeat(auto-fill, track-size)')是设置固定列宽值为track-size，自动计算列数。
-
-columnsTemplate('repeat(auto-stretch, track-size)')是设置固定列宽值为track-size，使用columnsGap作为最小列间距，自动计算列数和实际列间距。
-
-其中repeat、auto-fit、auto-fill、auto-stretch为关键字。track-size为列宽，支持的单位包括px、vp、%或有效数字，默认单位为vp，track-size至少包括一个有效列宽。
-
-auto-fit模式和auto-stretch模式只支持track-size为一个有效列宽值，并且auto-stretch模式中的track-size只支持px、vp和有效数字，不支持%。auto-fill模式支持一个或多个有效列 宽，如columnsTemplate('repeat(auto-fill, 20)')、columnsTemplate('repeat(auto-fill, 20 80px)')。
-
-使用效果可以参考[示例8](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例8设置自适应列数)。
-
-设置为'0fr'时，该列的列宽为0，不显示GridItem。设置为其他非法值时，GridItem显示为固定1列。
+设置当前网格布局列的数量、固定列宽或最小列宽值，不设置时默认1列。例如，&nbsp;'1fr&nbsp;1fr&nbsp;2fr'&nbsp;是将父组件分3列，将父组件允许的宽分为4等份，第1列占1份，第2列占1份，第3列占2份。columnsTemplate('repeat(auto-fit, track-size)')是设置最小列宽值为track-size，自动计算列数和实际列宽。columnsTemplate('repeat(auto-fill, track-size)')是设置固定列宽值为track-size，自动计算列数。columnsTemplate('repeat(auto-stretch, track-size)')是设置固定列宽值为track-size，使用columnsGap作为最小列间距，自动计算列数和实际列间距。其中repeat、auto-fit、auto-fill、auto-stretch为关键字。track-size为列宽，支持的单位包括px、vp、%或有效数字，默认单位为vp，track-size至少包括一个有效列宽。auto-fit模式和auto-stretch模式只支持track-size为一个有效列宽值，并且auto-stretch模式中的track-size只支持px、vp和有效数字，不支持%。auto-fill模式支持一个或多个有效列 宽，如columnsTemplate('repeat(auto-fill, 20)')、columnsTemplate('repeat(auto-fill, 20 80px)')。使用效果可以参考[示例8](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例8设置自适应列数)。设置为'0fr'时，该列的列宽为0，不显示GridItem。设置为其他非法值时，GridItem显示为固定1列。
 
 **起始版本：** 7
 
@@ -189,13 +164,7 @@ auto-fit模式和auto-stretch模式只支持track-size为一个有效列宽值�
 columnsTemplate(value: string | ItemFillPolicy)
 ```
 
-设置当前网格组件布局列的数量，不设置时默认1列。
-
-当value设置为string类型时，使用方法参考[columnsTemplate(value: string)](#columnstemplate)。
-
-当value设置为ItemFillPolicy类型时，将根据Grid组件宽度对应[断点类型](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)确定列数。
-
-例如，ItemFillPolicy.BREAKPOINT_DEFAULT在组件宽度属于sm及更小的断点区间时显示2列，属于md断点区间时显示3列，属于lg及更大的断点区间时显示5列，且每列均为1fr。
+设置当前网格组件布局列的数量，不设置时默认1列。当value设置为string类型时，使用方法参考[columnsTemplate(value: string)](#columnstemplate)。当value设置为ItemFillPolicy类型时，将根据Grid组件宽度对应[断点类型](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)确定列数。例如，ItemFillPolicy.BREAKPOINT_DEFAULT在组件宽度属于sm及更小的断点区间时显示2列，属于md断点区间时显示3列，属于lg及更大的断点区间时显示5列，且每列均为1fr。
 
 **起始版本：** 22
 
@@ -246,8 +215,7 @@ editMode(value: boolean)
 
 设置Grid是否进入编辑模式，进入编辑模式可以拖拽Grid组件内部GridItem。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 
 **起始版本：** 8
@@ -392,8 +360,7 @@ layoutDirection(value: GridDirection)
 
 设置布局的主轴方向。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 
 **起始版本：** 8
@@ -418,14 +385,10 @@ maxCount(value: number)
 
 设置可显示的最大行数或列数。设置为小于1的值时，按默认值显示。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 > 当layoutDirection是Row/RowReverse时，表示可显示的最大列数。
-
-当layoutDirection是Column/ColumnReverse时，表示可显示的最大行数。
-
-当maxCount小于minCount时，maxCount和minCount都按默认值处理。
+当layoutDirection是Column/ColumnReverse时，表示可显示的最大行数。当maxCount小于minCount时，maxCount和minCount都按默认值处理。
 
 **起始版本：** 8
 
@@ -449,14 +412,10 @@ minCount(value: number)
 
 设置可显示的最小行数或列数。设置为小于1的值时，按默认值显示。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 > 当layoutDirection是Row/RowReverse时，表示可显示的最小列数。
-
-当layoutDirection是Column/ColumnReverse时，表示可显示的最小行数。
-
-当minCount大于maxCount时，minCount和maxCount都按默认值处理。
+当layoutDirection是Column/ColumnReverse时，表示可显示的最小行数。当minCount大于maxCount时，minCount和maxCount都按默认值处理。
 
 **起始版本：** 8
 
@@ -500,7 +459,7 @@ multiSelectable(value: boolean)
 nestedScroll(value: NestedScrollOptions)
 ```
 
-设置嵌套滚动选项。设置前后两个方向的嵌套滚动模式，实现与父组件的滚动联动。当组件内容大小小于组件自身，且[edgeEffect](#edgeeffect)的options为{ alwaysEnabled: false }时，组件自身滑动手势不会触发，嵌套滚动属性不会生效，如果其父滚动组件有滑动手势，则会触发父组件的滑动手势。
+设置嵌套滚动选项。设置前后两个方向的嵌套滚动模式，实现与父组件的滚动联动。当组件内容大小小于组件自身，且[edgeEffect](#edgeeffect)的options为{alwaysEnabled: false }时，组件自身滑动手势不会触发，嵌套滚动属性不会生效，如果其父滚动组件有滑动手势，则会触发父组件的滑动手势。
 
 **起始版本：** 10
 
@@ -614,15 +573,7 @@ onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: numb
 onItemDragStart(event: OnItemDragStartCallback)
 ```
 
-开始拖拽GridItem时触发。
-
-手指长按GridItem时触发该事件。
-
-由于拖拽检测也需要长按，且事件处理机制优先触发子组件事件，GridItem上绑定[LongPressGesture](../arkts-apis/arkts-arkui-longpressgestureinterface-i.md)时无法触发拖拽。如有长按和拖拽同时使用的需求可以 使用通用拖拽事件。
-
-拖拽浮起的GridItem可在应用窗口内移动，若需限制移动范围，可通过自定义手势实现，具体参考 [示例16（实现GridItem自定义拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例16实现griditem自定义拖拽)。
-
-不支持拖动到Grid边缘时自动滚动，可使用通用拖拽实现，具体参考 [示例17（通过拖拽事件实现GridItem拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例17通过拖拽事件实现griditem拖拽)。从 API版本26.0.0开始，可以使用[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)、 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)的 [onMove](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-drag-sorting.md#onmove)接口实现该效果，参考 [示例22（使用OnMove进行拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例22使用onmove进行拖拽)。它同时支持跨行跨列的 GridItem的拖拽，但需注意Grid必须是可滚动的。
+开始拖拽GridItem时触发。手指长按GridItem时触发该事件。由于拖拽检测也需要长按，且事件处理机制优先触发子组件事件，GridItem上绑定[LongPressGesture](../arkts-apis/arkts-arkui-longpressgestureinterface-i.md)时无法触发拖拽。如有长按和拖拽同时使用的需求可以 使用通用拖拽事件。拖拽浮起的GridItem可在应用窗口内移动，若需限制移动范围，可通过自定义手势实现，具体参考 [示例16（实现GridItem自定义拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例16实现griditem自定义拖拽)。不支持拖动到Grid边缘时自动滚动，可使用通用拖拽实现，具体参考 [示例17（通过拖拽事件实现GridItem拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例17通过拖拽事件实现griditem拖拽)。从 API版本26.0.0开始，可以使用[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)、 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)的 onMove接口实现该效果，参考 [示例22（使用OnMove进行拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例22使用onmove进行拖拽)。它同时支持跨行跨列的 GridItem的拖拽，但需注意Grid必须是可滚动的。
 
 **起始版本：** 8
 
@@ -646,9 +597,7 @@ onItemDrop(
   )
 ```
 
-绑定该事件的网格元素可作为拖拽释放目标，当GridItem停止拖拽时触发。
-
-当拖拽释放位置在网格元素之内时，isSuccess会返回true；在网格元素之外时，isSuccess会返回false。
+绑定该事件的网格元素可作为拖拽释放目标，当GridItem停止拖拽时触发。当拖拽释放位置在网格元素之内时，isSuccess会返回true；在网格元素之外时，isSuccess会返回false。
 
 **起始版本：** 8
 
@@ -670,9 +619,7 @@ onItemDrop(
 onReachEnd(event: () => void)
 ```
 
-网格到达末尾位置时触发。当网格内容不满一屏，并且最后一个子组件末端在Grid内时触发。
-
-Grid边缘效果为弹簧效果时，滑动经过末尾位置时触发一次，回弹返回末尾位置时再触发一次。
+网格到达末尾位置时触发。当网格内容不满一屏，并且最后一个子组件末端在Grid内时触发。Grid边缘效果为弹簧效果时，滑动经过末尾位置时触发一次，回弹返回末尾位置时再触发一次。
 
 **起始版本：** 10
 
@@ -696,9 +643,7 @@ Grid边缘效果为弹簧效果时，滑动经过末尾位置时触发一次，�
 onReachStart(event: () => void)
 ```
 
-网格到达起始位置时触发。
-
-Grid初始化时会触发一次，Grid滚动到起始位置时触发一次。Grid边缘效果为弹簧效果时，滑动经过起始位置时触发一次，回弹返回起始位置时再触发一次。
+网格到达起始位置时触发。Grid初始化时会触发一次，Grid滚动到起始位置时触发一次。Grid边缘效果为弹簧效果时，滑动经过起始位置时触发一次，回弹返回起始位置时再触发一次。
 
 **起始版本：** 10
 
@@ -750,9 +695,7 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
 onScrollBarUpdate(event: (index: number, offset: number) => ComputedBarAttribute)
 ```
 
-在Grid每帧布局结束时触发，可通过该回调设置滚动条的位置及长度。
-
-该接口只用作设置Grid的滚动条位置，不建议开发者在此接口中做业务逻辑处理。
+在Grid每帧布局结束时触发，可通过该回调设置滚动条的位置及长度。该接口只用作设置Grid的滚动条位置，不建议开发者在此接口中做业务逻辑处理。
 
 **起始版本：** 10
 
@@ -776,15 +719,14 @@ onScrollBarUpdate(event: (index: number, offset: number) => ComputedBarAttribute
 onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 ```
 
-该接口回调时，事件参数传入即将发生的滑动量，事件处理函数中可根据应用场景计算实际需要的滑动量并作为事件处理函数的返回值返回，网格将按照返回值的实际滑动量进行滑动。
-
-满足以下任一条件时触发该事件：
-
-1. 用户交互（如手指滑动、键鼠操作等）触发滚动。 2. Grid惯性滚动。 3. 调用fling接口触发滚动。
-
+该接口回调时，事件参数传入即将发生的滑动量，事件处理函数中可根据应用场景计算实际需要的滑动量并作为事件处理函数的返回值返回，网格将按照返回值的实际滑动量进行滑动。满足以下任一条件时触发该事件：
+1. 用户交互（如手指滑动、键鼠操作等）触发滚动。
+2. Grid惯性滚动。
+3. 调用fling接口触发滚动。
 不触发该事件的条件：
-
-1. 调用除fling接口外的其他滚动控制接口。 2. 越界回弹。 3. 拖动滚动条。
+1. 调用除fling接口外的其他滚动控制接口。
+2. 越界回弹。
+3. 拖动滚动条。
 
 **起始版本：** 10
 
@@ -900,21 +842,7 @@ rowsGap(value: Length)
 rowsTemplate(value: string)
 ```
 
-设置当前网格布局行的数量、固定行高或最小行高值，不设置时默认1行。
-
-例如，&nbsp;'1fr&nbsp;1fr&nbsp;2fr'是将父组件分3行，将父组件允许的高分为4等份，第1行占1份，第2行占1份，第3行占2份。
-
-rowsTemplate('repeat(auto-fit, track-size)')是设置最小行高值为track-size，自动计算行数和实际行高。
-
-rowsTemplate('repeat(auto-fill, track-size)')是设置固定行高值为track-size，自动计算行数。
-
-rowsTemplate('repeat(auto-stretch, track-size)')是设置固定行高值为track-size，使用rowsGap为最小行间距，自动计算行数和实际行间距。
-
-其中repeat、auto-fit、auto-fill、auto-stretch为关键字。track-size为行高，支持的单位包括px、vp、%或有效数字，默认单位为vp，track-size至少包括一个有效行高。
-
-auto-fit模式和auto-stretch模式只支持track-size为一个有效行高值，并且auto-stretch模式中的track-size只支持px、vp和有效数字，不支持%。auto-fill模式支持一个或多个有效行 高，如rowsTemplate('repeat(auto-fill, 20)')、rowsTemplate('repeat(auto-fill, 20 80px)')。
-
-设置为'0fr'，则这一行的行高为0，这一行GridItem不显示。设置为其他非法值，按固定1行处理。
+设置当前网格布局行的数量、固定行高或最小行高值，不设置时默认1行。例如，&nbsp;'1fr&nbsp;1fr&nbsp;2fr'是将父组件分3行，将父组件允许的高分为4等份，第1行占1份，第2行占1份，第3行占2份。rowsTemplate('repeat(auto-fit, track-size)')是设置最小行高值为track-size，自动计算行数和实际行高。rowsTemplate('repeat(auto-fill, track-size)')是设置固定行高值为track-size，自动计算行数。rowsTemplate('repeat(auto-stretch, track-size)')是设置固定行高值为track-size，使用rowsGap为最小行间距，自动计算行数和实际行间距。其中repeat、auto-fit、auto-fill、auto-stretch为关键字。track-size为行高，支持的单位包括px、vp、%或有效数字，默认单位为vp，track-size至少包括一个有效行高。auto-fit模式和auto-stretch模式只支持track-size为一个有效行高值，并且auto-stretch模式中的track-size只支持px、vp和有效数字，不支持%。auto-fill模式支持一个或多个有效行 高，如rowsTemplate('repeat(auto-fill, 20)')、rowsTemplate('repeat(auto-fill, 20 80px)')。设置为'0fr'，则这一行的行高为0，这一行GridItem不显示。设置为其他非法值，按固定1行处理。
 
 **起始版本：** 7
 
@@ -1026,9 +954,7 @@ scrollBarWidth(value: number | string)
 scrollBarWidth(value: number | string | Resource)
 ```
 
-设置滚动条的宽度，不支持百分比设置。宽度设置后，滚动条正常状态和按压状态宽度均为滚动条的宽度值。如果滚动条的宽度超过Grid组件主轴方向的可视尺寸，则滚动条的宽度会变为默认值4vp。支持Resource资源类型。
-
-未通过该接口设置时，设置滚动条的宽度为4vp。
+设置滚动条的宽度，不支持百分比设置。宽度设置后，滚动条正常状态和按压状态宽度均为滚动条的宽度值。如果滚动条的宽度超过Grid组件主轴方向的可视尺寸，则滚动条的宽度会变为默认值4vp。支持Resource资源类型。未通过该接口设置时，设置滚动条的宽度为4vp。
 
 **起始版本：** 26.0.0
 
@@ -1052,11 +978,7 @@ scrollBarWidth(value: number | string | Resource)
 supportAnimation(value: boolean)
 ```
 
-设置是否支持动画。当前支持GridItem拖拽动画。仅在滚动模式下（只设置rowsTemplate、columnsTemplate其中一个）支持动画。
-
-仅在大小规则的Grid中支持拖拽动画，跨行或跨列场景不支持。
-
-supportAnimation动画效果参考[示例5（Grid拖拽场景）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例5grid拖拽场景)，其他动 画效果需要应用自定义拖拽实现。
+设置是否支持动画。当前支持GridItem拖拽动画。仅在滚动模式下（只设置rowsTemplate、columnsTemplate其中一个）支持动画。仅在大小规则的Grid中支持拖拽动画，跨行或跨列场景不支持。supportAnimation动画效果参考[示例5（Grid拖拽场景）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例5grid拖拽场景)，其他动 画效果需要应用自定义拖拽实现。
 
 **起始版本：** 8
 

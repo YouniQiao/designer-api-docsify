@@ -1,8 +1,6 @@
 # ScrollOffset
 
-ScrollOffset
-
-@interface ScrollOffset
+ScrollOffset@interface ScrollOffset
 
 **Since:** 6
 

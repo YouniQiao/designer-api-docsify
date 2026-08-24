@@ -89,9 +89,7 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
 ```
 
-将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。
-
-如果sourceEnd大于target的长度，则以target的长度为准，超出部分不会被覆盖。
+将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。如果sourceEnd大于target的长度，则以target的长度为准，超出部分不会被覆盖。
 
 **起始版本：** 20
 
@@ -296,11 +294,7 @@ console.info(filledBuffer.toString());
 includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean
 ```
 
-检查FastBuffer对象是否包含`value`值。
-
-若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。
-
-当byteOffset大于等于this.length时，返回false。当byteOffset小于等于-this.length，查找整个FastBuffer中是否存在`value`。
+检查FastBuffer对象是否包含`value`值。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。当byteOffset大于等于this.length时，返回false。当byteOffset小于等于-this.length，查找整个FastBuffer中是否存在`value`。
 
 **起始版本：** 20
 
@@ -342,11 +336,7 @@ console.info(buf.includes('be').toString());
 indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-返回当前对象中首次出现`value`的索引，如果不包含`value`，则返回-1。
-
-若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。
-
-当byteOffset大于等于this.length时，返回-1。当byteOffset小于等于-this.length，返回整个FastBuffer中首次出现`value`的索引。
+返回当前对象中首次出现`value`的索引，如果不包含`value`，则返回-1。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。当byteOffset大于等于this.length时，返回-1。当byteOffset小于等于-this.length，返回整个FastBuffer中首次出现`value`的索引。
 
 **起始版本：** 20
 
@@ -430,11 +420,7 @@ for (const key of keys) {
 lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-返回当前对象中最后一次出现`value`的索引，如果对象不包含`value`，则返回-1。
-
-若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。
-
-当byteOffset大于等于this.length时，返回整个FastBuffer中最后一次出现`value`的索引。当byteOffset小于等于-this.length时，返回-1。
+返回当前对象中最后一次出现`value`的索引，如果对象不包含`value`，则返回-1。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。当byteOffset大于等于this.length时，返回整个FastBuffer中最后一次出现`value`的索引。当byteOffset小于等于-this.length时，返回-1。
 
 **起始版本：** 20
 

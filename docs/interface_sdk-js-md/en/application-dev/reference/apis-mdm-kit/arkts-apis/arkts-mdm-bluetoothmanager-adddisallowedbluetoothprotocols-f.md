@@ -71,14 +71,11 @@ function addDisallowedBluetoothProtocols(admin: Want, accountId: number, protoco
 
 Adds disallowed Bluetooth protocols. After the setting, specified users cannot use the disallowed Bluetooth protocols based on the specified transfer policy.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and
-> system applications.
-> 
+> system applications.&gt;
 > 2. When the SPP protocol is passed, the value of the **policy** parameter can only be
-> **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
-> 
+> **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.&gt;
 > 3. This API and
 > [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#adddisallowedbluetoothprotocols) are
 > overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine-
@@ -103,7 +100,7 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;Protocol&gt; | Yes | Array of Bluetooth protocols to be added to the blocklist. |
-| policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | Yes | Transfer policy, which specifies the mode for disabling Bluetooth protocols. The options are **SEND_ONLY** (sending disabled), **RECEIVE_ONLY** (receiving disabled), and **RECEIVE_SEND** ( sending and receiving disabled). |
+| policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | Yes | Transfer policy, which specifies the mode for disabling Bluetooth protocols. The options are **SEND_ONLY** (sending disabled), **RECEIVE_ONLY** (receiving disabled), and **RECEIVE_SEND** (sending and receiving disabled). |
 
 **Error codes:**
 

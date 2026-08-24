@@ -14,8 +14,7 @@ function findProxyForUrl(url: string): string
 
 Parses the specified URL proxy address based on the configured PAC script and returns the corresponding PAC proxy information.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. You can use [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) or [setPacUrl](arkts-network-connection-setpacurl-f.md) to set
 > the PAC script.
 

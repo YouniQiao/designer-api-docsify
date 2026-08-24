@@ -1,8 +1,6 @@
 # CheckboxGroupModifier
 
-Defines CheckboxGroup Modifier
-
-@implements { CheckboxGroupAttribute, AttributeModifier&lt;CheckboxGroupAttribute&gt; }
+Defines CheckboxGroup Modifier@implements { CheckboxGroupAttribute, AttributeModifier&lt;CheckboxGroupAttribute&gt; }
 
 **Inheritance/Implementation:** CheckboxGroupModifier implements CheckboxGroupAttribute, AttributeModifier<CheckboxGroupAttribute>
 

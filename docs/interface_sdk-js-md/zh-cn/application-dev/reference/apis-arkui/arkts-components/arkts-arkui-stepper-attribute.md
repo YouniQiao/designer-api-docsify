@@ -1,8 +1,6 @@
 # Stepper属性/事件
 
-无
-
-@extends CommonMethod&lt;StepperAttribute&gt;
+无@extends CommonMethod&lt;StepperAttribute&gt;
 
 **继承/实现关系：** StepperAttribute extends CommonMethod<StepperAttribute>
 

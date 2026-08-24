@@ -14,7 +14,6 @@ Declare CallbackParam
 
 ```TypeScript
 import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUI';
 ```
 
 ## childIndex
@@ -23,11 +22,7 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 childIndex?: int
 ```
 
-返回子节点在父节点下的索引位置，用于标识子节点在父节点的子节点列表中的位置。
-
-取值范围：大于等于-1，-1表示无效索引或无子节点。
-
-默认值：-1
+返回子节点在父节点下的索引位置，用于标识子节点在父节点的子节点列表中的位置。取值范围：大于等于-1，-1表示无效索引或无子节点。默认值：-1
 
 **类型：** int
 
@@ -47,9 +42,7 @@ childIndex?: int
 currentNodeId: int
 ```
 
-返回当前子节点id。
-
-取值范围：大于等于0。
+返回当前子节点id。取值范围：大于等于0。
 
 **类型：** int
 
@@ -69,11 +62,7 @@ currentNodeId: int
 parentNodeId?: int
 ```
 
-返回当前父节点id。
-
-取值范围：大于等于-1。
-
-默认值：-1
+返回当前父节点id。取值范围：大于等于-1。默认值：-1
 
 **类型：** int
 

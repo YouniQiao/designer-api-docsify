@@ -1,8 +1,6 @@
 # HitTestMode
 
-Defines the hit test mode.
-
-@enum { number }
+Defines the hit test mode.@enum { number }
 
 **Since:** 23
 

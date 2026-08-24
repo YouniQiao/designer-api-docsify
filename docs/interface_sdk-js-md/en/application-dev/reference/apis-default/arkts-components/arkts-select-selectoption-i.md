@@ -1,8 +1,6 @@
 # SelectOption
 
-The declare of selectOption.
-
-@interface SelectOption
+The declare of selectOption.@interface SelectOption
 
 **Since:** 23
 

@@ -1,12 +1,12 @@
 # SelectDialogV2
 
-Declare CustomDialog SelectDialogV2
-
-@struct { SelectDialogV2 }
+Declare CustomDialog SelectDialogV2@struct { SelectDialogV2 }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct SelectDialogV2--><!--Device-unnamed-export declare struct SelectDialogV2-End-->
 
@@ -20,8 +20,7 @@ Declare CustomDialog SelectDialogV2
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +40,7 @@ The method to build component.
 ## confirm
 
 ```TypeScript
-@Param
-  confirm?: AdvancedDialogV2Button
+confirm?: AdvancedDialogV2Button
 ```
 
 Sets the SelectDialogV2 confirm button.
@@ -51,6 +51,8 @@ Sets the SelectDialogV2 confirm button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectDialogV2-@Param  confirm?: AdvancedDialogV2Button--><!--Device-SelectDialogV2-@Param  confirm?: AdvancedDialogV2Button-End-->
@@ -60,8 +62,7 @@ Sets the SelectDialogV2 confirm button.
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
 Sets the SelectDialogV2 content.
@@ -72,6 +73,8 @@ Sets the SelectDialogV2 content.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectDialogV2-@Param  content?: ResourceStr--><!--Device-SelectDialogV2-@Param  content?: ResourceStr-End-->
@@ -81,9 +84,7 @@ Sets the SelectDialogV2 content.
 ## radioContent
 
 ```TypeScript
-@Require
-  @Param
-  radioContent: SheetInfo[]
+radioContent: SheetInfo[]
 ```
 
 Sets the SelectDialog sheets.
@@ -94,6 +95,8 @@ Sets the SelectDialog sheets.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Require, @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectDialogV2-@Require  @Param  radioContent: SheetInfo[]--><!--Device-SelectDialogV2-@Require  @Param  radioContent: SheetInfo[]-End-->
@@ -103,8 +106,7 @@ Sets the SelectDialog sheets.
 ## selectedIndex
 
 ```TypeScript
-@Param
-  selectedIndex?: int
+selectedIndex?: int
 ```
 
 Sets the SelectDialogV2 selected index.
@@ -115,6 +117,8 @@ Sets the SelectDialogV2 selected index.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectDialogV2-@Param  selectedIndex?: int--><!--Device-SelectDialogV2-@Param  selectedIndex?: int-End-->
@@ -124,9 +128,7 @@ Sets the SelectDialogV2 selected index.
 ## title
 
 ```TypeScript
-@Require
-  @Param
-  title: ResourceStr
+title: ResourceStr
 ```
 
 Sets the SelectDialogV2 title.
@@ -136,6 +138,8 @@ Sets the SelectDialogV2 title.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

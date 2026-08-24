@@ -2,8 +2,7 @@
 
 Listener for data changes.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value
 > is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside
 > the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**,
@@ -50,8 +49,7 @@ onDataAdded(index: number): void
 
 Invoked when data is added to the position indicated by the specified index.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 7 and deprecated since API version 8. Use
 > [onDataAdd](#ondataadd) instead.
 
@@ -101,8 +99,7 @@ onDataChanged(index: number): void
 
 Invoked when data in the position indicated by the specified index is changed.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 7 and deprecated since API version 8. Use
 > [onDataChange](#ondatachange) instead.
 
@@ -130,8 +127,7 @@ onDataDelete(index: number): void
 
 Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Before **onDataDelete** is called, ensure that the corresponding data in **dataSource** has been deleted.
 > Otherwise, undefined behavior will occur during page rendering.
 
@@ -157,8 +153,7 @@ onDataDeleted(index: number): void
 
 Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 7 and deprecated since API version 8. Use
 > [onDataDelete](#ondatadelete) instead.
 
@@ -186,8 +181,7 @@ onDataMove(from: number, to: number): void
 
 Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data
 > must be called.
 
@@ -214,11 +208,9 @@ onDataMoved(from: number, to: number): void
 
 Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API is supported since API version 7 and deprecated since API version 8. Use
-> [onDataMove](#ondatamove) instead.
-> 
+> [onDataMove](#ondatamove) instead.&gt;
 > - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding
 > data must be called.
 
@@ -287,8 +279,7 @@ onDatasetChange(dataOperations: DataOperation[]): void
 
 Invoked when data is processed in batches to notify the component of refreshing.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API cannot be used together with other data operation APIs of **DataChangeListener**. For example, in the
 > same **LazyForEach**, if you have called **onDataAdd**, do not call **onDatasetChange**; if you have called
 > **onDatasetChange**, do not call **onDataAdd** or other data operation APIs. Different **LazyForEach** instances

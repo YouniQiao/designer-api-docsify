@@ -12,7 +12,7 @@ import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignPa
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceSearch](arkts-arkui-atomicservice-atomicservicesearch-atomicservicesearch-s.md) | *AtomicServiceSearch** allows you to customize the default search area, customizable selection area, and function area (a maximum of two). |
+| [AtomicServiceSearch](arkts-arkui-atomicservice-atomicservicesearch-atomicservicesearch-s.md) | **AtomicServiceSearch** allows you to customize the default search area, customizable selection area, and function area (a maximum of two). |
 
 ### Interfaces
 

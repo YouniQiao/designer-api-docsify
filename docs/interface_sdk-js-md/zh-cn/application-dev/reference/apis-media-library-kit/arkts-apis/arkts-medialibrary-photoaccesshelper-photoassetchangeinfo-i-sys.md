@@ -96,7 +96,7 @@ dateDay: string
 dateModifiedMs?: long
 ```
 
-文件修改时的Unix时间戳。 <br> 单位为毫秒。
+文件修改时的Unix时间戳。<br> 单位为毫秒。
 
 **类型：** long
 
@@ -188,7 +188,7 @@ fileId: int
 hiddenTime?: long
 ```
 
-媒体资产（图片/视频）的隐藏时间。 <br> 单位为毫秒。
+媒体资产（图片/视频）的隐藏时间。<br> 单位为毫秒。
 
 **类型：** long
 

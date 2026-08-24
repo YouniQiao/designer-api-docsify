@@ -1,8 +1,6 @@
 # RectShapeOptions
 
-Interface for RectShape constructor parameters.
-
-@extends ShapeSize @interface RectShapeOptions
+Interface for RectShape constructor parameters.@extends ShapeSize @interface RectShapeOptions
 
 **Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](arkts-arkui-shape-shapesize-i.md)
 

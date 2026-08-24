@@ -6,6 +6,8 @@ Defines a content form card.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -18,8 +20,7 @@ Defines a content form card.
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,8 +60,7 @@ Data of the form card.
 ## formHeight
 
 ```TypeScript
-@PropRef
-  formHeight?: double
+formHeight?: double
 ```
 
 Height of the content form card. The unit of measurement is vp.
@@ -69,6 +71,8 @@ Height of the content form card. The unit of measurement is vp.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContentFormCard-@PropRef  formHeight?: double--><!--Device-ContentFormCard-@PropRef  formHeight?: double-End-->
@@ -78,8 +82,7 @@ Height of the content form card. The unit of measurement is vp.
 ## formType
 
 ```TypeScript
-@PropRef
-  formType: FormType
+formType: FormType
 ```
 
 Type of the form card.
@@ -90,6 +93,8 @@ Type of the form card.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContentFormCard-@PropRef  formType: FormType--><!--Device-ContentFormCard-@PropRef  formType: FormType-End-->
@@ -99,8 +104,7 @@ Type of the form card.
 ## formWidth
 
 ```TypeScript
-@PropRef
-  formWidth?: double
+formWidth?: double
 ```
 
 Width of the content form card. The unit of measurement is vp.
@@ -110,6 +114,8 @@ Width of the content form card. The unit of measurement is vp.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -155,9 +155,7 @@ See [isDistributedEnabledByBundle](#isdistributedenabledbybundle)
 function isDistributedEnabledByBundle(bundle: BundleOption, deviceType: string): Promise<boolean>
 ```
 
-Obtains whether a specified application enables cross-device collaboration. This API uses a promise to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
+Obtains whether a specified application enables cross-device collaboration. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 23
 

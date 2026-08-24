@@ -1,8 +1,6 @@
 # GradientDirection
 
-GradientDirection enumeration description
-
-@enum { number }
+GradientDirection enumeration description@enum { number }
 
 **Since:** 23
 

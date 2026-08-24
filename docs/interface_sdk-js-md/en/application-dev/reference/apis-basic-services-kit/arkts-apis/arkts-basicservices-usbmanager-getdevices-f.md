@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## getDevices
@@ -15,8 +14,7 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 Obtains the list of USB devices connected to the host.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they
 > request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md)
 > and then initiate a control transfer to obtain it.
@@ -31,7 +29,7 @@ Obtains the list of USB devices connected to the host.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevice&gt;&gt; | USB device list. |
+| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
 
 **Error codes:**
 

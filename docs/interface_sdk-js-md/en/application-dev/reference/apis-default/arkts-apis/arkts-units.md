@@ -12,44 +12,44 @@
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityActionOptions](arkts-units-accessibilityactionoptions-i.md) | Defines the struct of AccessibilityActionOptions that can affect operation under accessibility. |
-| [AccessibilityCustomAction](arkts-units-accessibilitycustomaction-i.md) | Defines struct of AccessibilityCustomAction that can be processed in custom action processing under accessibility. |
+| [AccessibilityActionOptions](arkts-units-accessibilityactionoptions-i.md) | Defines the struct of AccessibilityActionOptions that can affect operation under accessibility.@interface AccessibilityActionOptions |
+| [AccessibilityCustomAction](arkts-units-accessibilitycustomaction-i.md) | Defines struct of AccessibilityCustomAction that can be processed in custom action processing under accessibility.@interface AccessibilityCustomAction |
 | [AccessibilityNextFocusParams](arkts-units-accessibilitynextfocusparams-i.md) | Defines struct of the parameters used to configure the next accessibility focus transition. |
-| [AccessibilityOptions](arkts-units-accessibilityoptions-i.md) | Defines the struct of AccessibilityOptions. |
-| [Area](arkts-units-area-i.md) | Defines the area property. |
-| [Bias](arkts-units-bias-i.md) | Defines the Bias. |
-| [BorderOptions](arkts-units-borderoptions-i.md) | Defines the options of border. |
-| [BorderRadiuses](arkts-units-borderradiuses-i.md) | Defines the border radius property. |
-| [CacheCountInfo](arkts-units-cachecountinfo-i.md) | Define cache count information. |
-| [ChainWeightOptions](arkts-units-chainweightoptions-i.md) | Defines the ChainWeightOptions interface. |
-| [ConstraintSizeOptions](arkts-units-constraintsizeoptions-i.md) | Defines the constrain size options. |
+| [AccessibilityOptions](arkts-units-accessibilityoptions-i.md) | Defines the struct of AccessibilityOptions.@interface AccessibilityOptions |
+| [Area](arkts-units-area-i.md) | Defines the area property.@interface Area |
+| [Bias](arkts-units-bias-i.md) | Defines the Bias.@interface Bias |
+| [BorderOptions](arkts-units-borderoptions-i.md) | Defines the options of border.@interface BorderOptions |
+| [BorderRadiuses](arkts-units-borderradiuses-i.md) | Defines the border radius property.@interface BorderRadiuses |
+| [CacheCountInfo](arkts-units-cachecountinfo-i.md) | Define cache count information.@interface CacheCountInfo |
+| [ChainWeightOptions](arkts-units-chainweightoptions-i.md) | Defines the ChainWeightOptions interface.@interface ChainWeightOptions |
+| [ConstraintSizeOptions](arkts-units-constraintsizeoptions-i.md) | Defines the constrain size options.@interface ConstraintSizeOptions |
 | [Coordinate2D](arkts-units-coordinate2d-i.md) | Describes a two-dimension coordinate. |
-| [DirectionalEdgesT](arkts-units-directionaledgest-i.md) | Defines the DirectionalEdgesT interface. |
-| [DividerStyleOptions](arkts-units-dividerstyleoptions-i.md) | Defines the struct of DividerStyleOptions. |
-| [EdgeColors](arkts-units-edgecolors-i.md) | Defines the border color property. |
-| [EdgeOutlineStyles](arkts-units-edgeoutlinestyles-i.md) | Defines the outline style property. |
-| [EdgeOutlineWidths](arkts-units-edgeoutlinewidths-i.md) | Defines the outline width property. |
-| [Edges](arkts-units-edges-i.md) | Defines the Edges. |
-| [EdgeStyles](arkts-units-edgestyles-i.md) | Defines the border style property. |
-| [EdgeWidths](arkts-units-edgewidths-i.md) | Defines the border width property. |
-| [Font](arkts-units-font-i.md) | Defines the font used for text. |
-| [ItemFillPolicy](arkts-units-itemfillpolicy-i.md) | Define a responsive item layout suitable for WaterFlow, Grid, List, and Swiper components. |
+| [DirectionalEdgesT](arkts-units-directionaledgest-i.md) | Defines the DirectionalEdgesT interface.@interface DirectionalEdgesT |
+| [DividerStyleOptions](arkts-units-dividerstyleoptions-i.md) | Defines the struct of DividerStyleOptions.@interface DividerStyleOptions |
+| [EdgeColors](arkts-units-edgecolors-i.md) | Defines the border color property.@interface EdgeColors |
+| [EdgeOutlineStyles](arkts-units-edgeoutlinestyles-i.md) | Defines the outline style property.@interface EdgeOutlineStyles |
+| [EdgeOutlineWidths](arkts-units-edgeoutlinewidths-i.md) | Defines the outline width property.@interface EdgeOutlineWidths |
+| [Edges](arkts-units-edges-i.md) | Defines the Edges.@interface Edges |
+| [EdgeStyles](arkts-units-edgestyles-i.md) | Defines the border style property.@interface EdgeStyles |
+| [EdgeWidths](arkts-units-edgewidths-i.md) | Defines the border width property.@interface EdgeWidths |
+| [Font](arkts-units-font-i.md) | Defines the font used for text.@interface Font |
+| [ItemFillPolicy](arkts-units-itemfillpolicy-i.md) | Define a responsive item layout suitable for WaterFlow, Grid, List, and Swiper components.@interface ItemFillPolicy |
 | [LengthConstrain](arkts-units-lengthconstrain-i.md) | Defines the length constrain property. |
-| [LocalizedBorderRadiuses](arkts-units-localizedborderradiuses-i.md) | Defines the localized border radius property. |
-| [LocalizedEdgeColors](arkts-units-localizededgecolors-i.md) | Defines the localized border color property. |
-| [LocalizedEdges](arkts-units-localizededges-i.md) | Defines the LocalizedEdges. |
-| [LocalizedEdgeWidths](arkts-units-localizededgewidths-i.md) | Defines the localized border width property. |
-| [LocalizedPadding](arkts-units-localizedpadding-i.md) | Defines the localized padding property. |
-| [LocalizedPosition](arkts-units-localizedposition-i.md) | Defines the LocalizedPosition. |
-| [MarkStyle](arkts-units-markstyle-i.md) | Define the style of checkbox mark. |
-| [Offset](arkts-units-offset-i.md) | Defines the offset property. |
-| [OutlineOptions](arkts-units-outlineoptions-i.md) | Defines the options of outline. |
-| [OutlineRadiuses](arkts-units-outlineradiuses-i.md) | Defines the outline radius property. |
-| [Padding](arkts-units-padding-i.md) | Defines the padding property. |
-| [Position](arkts-units-position-i.md) | Defines the position. |
-| [ScrollBarMargin](arkts-units-scrollbarmargin-i.md) | Define scrollbar margin options. |
-| [SizeOptions](arkts-units-sizeoptions-i.md) | Defines the size options. |
-| [TouchPoint](arkts-units-touchpoint-i.md) | Defines TouchPoint |
+| [LocalizedBorderRadiuses](arkts-units-localizedborderradiuses-i.md) | Defines the localized border radius property.@interface LocalizedBorderRadiuses |
+| [LocalizedEdgeColors](arkts-units-localizededgecolors-i.md) | Defines the localized border color property.@interface LocalizedEdgeColors |
+| [LocalizedEdges](arkts-units-localizededges-i.md) | Defines the LocalizedEdges.@interface LocalizedEdges |
+| [LocalizedEdgeWidths](arkts-units-localizededgewidths-i.md) | Defines the localized border width property.@interface LocalizedEdgeWidths |
+| [LocalizedPadding](arkts-units-localizedpadding-i.md) | Defines the localized padding property.@interface LocalizedPadding |
+| [LocalizedPosition](arkts-units-localizedposition-i.md) | Defines the LocalizedPosition.@interface LocalizedPosition |
+| [MarkStyle](arkts-units-markstyle-i.md) | Define the style of checkbox mark.@interface MarkStyle |
+| [Offset](arkts-units-offset-i.md) | Defines the offset property.@interface Offset |
+| [OutlineOptions](arkts-units-outlineoptions-i.md) | Defines the options of outline.@interface OutlineOptions |
+| [OutlineRadiuses](arkts-units-outlineradiuses-i.md) | Defines the outline radius property.@interface OutlineRadiuses |
+| [Padding](arkts-units-padding-i.md) | Defines the padding property.@interface Padding |
+| [Position](arkts-units-position-i.md) | Defines the position.@interface Position |
+| [ScrollBarMargin](arkts-units-scrollbarmargin-i.md) | Define scrollbar margin options.@interface ScrollBarMargin |
+| [SizeOptions](arkts-units-sizeoptions-i.md) | Defines the size options.@interface SizeOptions |
+| [TouchPoint](arkts-units-touchpoint-i.md) | Defines TouchPoint@interface TouchPoint |
 
 ### Types
 

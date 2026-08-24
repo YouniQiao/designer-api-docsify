@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Component
+
 <!--Device-unnamed-export declare struct SplitLayout--><!--Device-unnamed-export declare struct SplitLayout-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-    build(): void
+build(): void
 ```
 
 构造组件的方法。
@@ -27,6 +28,8 @@
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +40,7 @@
 ## container
 
 ```TypeScript
-@BuilderParam
-    container: () => void
+container: () => void
 ```
 
 容器内组件。
@@ -49,6 +51,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @BuilderParam
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SplitLayout-@BuilderParam    container: () => void--><!--Device-SplitLayout-@BuilderParam    container: () => void-End-->
@@ -58,8 +62,7 @@
 ## mainImage
 
 ```TypeScript
-@State
-    mainImage: ResourceStr
+mainImage: ResourceStr
 ```
 
 传入图片。
@@ -70,6 +73,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @State
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SplitLayout-@State    mainImage: ResourceStr--><!--Device-SplitLayout-@State    mainImage: ResourceStr-End-->
@@ -79,8 +84,7 @@
 ## primaryText
 
 ```TypeScript
-@PropRef
-    primaryText: ResourceStr
+primaryText: ResourceStr
 ```
 
 标题内容。
@@ -91,6 +95,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SplitLayout-@PropRef    primaryText: ResourceStr--><!--Device-SplitLayout-@PropRef    primaryText: ResourceStr-End-->
@@ -100,8 +106,7 @@
 ## secondaryText
 
 ```TypeScript
-@PropRef
-    secondaryText?: ResourceStr
+secondaryText?: ResourceStr
 ```
 
 副标题内容。当需要在标题下方显示副标题时传入，不传入时取默认值，不显示副标题。
@@ -112,6 +117,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SplitLayout-@PropRef    secondaryText?: ResourceStr--><!--Device-SplitLayout-@PropRef    secondaryText?: ResourceStr-End-->
@@ -121,8 +128,7 @@
 ## tertiaryText
 
 ```TypeScript
-@PropRef
-    tertiaryText?: ResourceStr
+tertiaryText?: ResourceStr
 ```
 
 辅助文本。当需要显示辅助文本时传入，不传入时取默认值，不显示辅助文本。
@@ -132,6 +138,8 @@
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @PropRef
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

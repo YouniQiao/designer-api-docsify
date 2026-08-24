@@ -1,8 +1,6 @@
 # CheckboxGroupOptions
 
-Defines the options of CheckboxGroup.
-
-@interface CheckboxGroupOptions
+Defines the options of CheckboxGroup.@interface CheckboxGroupOptions
 
 **Since:** 23
 

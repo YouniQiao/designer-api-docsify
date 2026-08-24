@@ -2,12 +2,9 @@
 
 Rounded rectangle.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 12.&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 

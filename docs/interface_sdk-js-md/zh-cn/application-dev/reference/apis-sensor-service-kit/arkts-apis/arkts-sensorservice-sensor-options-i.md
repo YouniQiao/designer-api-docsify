@@ -38,9 +38,7 @@ interval?: long | SensorFrequency
 sensorInfoParam?: SensorInfoParam
 ```
 
-传感器传入设置参数，可指定deviceId、sensorIndex，用于多传感器场景下选择目标传感器。
-
-从API version 19开始，该接口支持在原子化服务中使用。
+传感器传入设置参数，可指定deviceId、sensorIndex，用于多传感器场景下选择目标传感器。从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md)
 

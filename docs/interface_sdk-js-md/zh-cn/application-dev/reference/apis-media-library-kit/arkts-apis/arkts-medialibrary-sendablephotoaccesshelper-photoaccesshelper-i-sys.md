@@ -22,15 +22,9 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 createAsset(displayName: string): Promise<PhotoAsset>
 ```
 
-指定待创建的图片或者视频的文件名，创建图片或视频资源。使用Promise异步回调。
-
-待创建的文件名参数规格为：
-
-- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。
-
-API18开始，非法字符包括：\ / : ? " &lt; &gt; |
-
-API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+指定待创建的图片或者视频的文件名，创建图片或视频资源。使用Promise异步回调。待创建的文件名参数规格为：  
+- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。  
+API18开始，非法字符包括：\ / : * ? " &lt; &gt; |API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 12
 
@@ -130,15 +124,9 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>
 ```
 
-指定待创建的图片或者视频的文件名和创建选项，创建图片或视频资源。使用Promise异步回调。
-
-待创建的文件名参数规格为：
-
-- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。
-
-API18开始，非法字符包括： \ / : ? " &lt; &gt; |
-
-API10-17，非法字符包括： . .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+指定待创建的图片或者视频的文件名和创建选项，创建图片或视频资源。使用Promise异步回调。待创建的文件名参数规格为：  
+- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。  
+API18开始，非法字符包括： \ / : * ? " &lt; &gt; |API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 12
 

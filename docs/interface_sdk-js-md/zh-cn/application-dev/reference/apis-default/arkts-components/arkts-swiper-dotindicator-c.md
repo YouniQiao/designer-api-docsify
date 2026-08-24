@@ -50,11 +50,9 @@ constructor()
 
 DotIndicator的构造函数。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、
-> selectedItemHeight等参数变大而变大。
-> 
+> selectedItemHeight等参数变大而变大。&gt;
 > - 若页面数量较多、圆点导航点超出页面时，建议使用maxDisplayCount设置导航点显示个数。
 
 **起始版本：** 23
@@ -149,7 +147,7 @@ mask(value: boolean | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | 是 | 设置是否显示Swiper组件圆点导航指示器的蒙版样式。<br/>true表示显示Swiper组件圆点导航指示器的蒙版样式；false表示不显示。&lt;br/ &gt;默认值：false<br/>取值为undefined时，按默认值处理。 |
+| value | boolean \| undefined | 是 | 设置是否显示Swiper组件圆点导航指示器的蒙版样式。<br/>true表示显示Swiper组件圆点导航指示器的蒙版样式；false表示不显示。<br/>默认值：false<br/>取值为undefined时，按默认值处理。 |
 
 **返回值：**
 
@@ -179,7 +177,7 @@ maxDisplayCount(maxDisplayCount: int | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxDisplayCount | int \| undefined | 是 | 设置圆点导航点指示器样式下，导航点显示个数最大值，当实际导航点个数大于最大导航点个数时，会生效超长效果样式，样式如 [示例5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper copy.md#示例5设置圆点导航点超长显示)所示。<br/>取值范围：[6, 9]&lt;br /&gt;**说明：** <br/>1、超长显示场景，目前暂时不支持交互功能（包括：手指点击拖拽、鼠标操作等）。<br/>2、在超长显示场景下，中间页面对应的选中导航点的位置，并不是完全固定的，取决于之前的翻页操作序列。&lt;br/ &gt;3、当前仅支持displayCount为1的场景。<br/>取值为undefined时，等同于没有超长显示效果。 |
+| maxDisplayCount | int \| undefined | 是 | 设置圆点导航点指示器样式下，导航点显示个数最大值，当实际导航点个数大于最大导航点个数时，会生效超长效果样式，样式如 [示例5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper copy.md#示例5设置圆点导航点超长显示)所示。<br/>取值范围：[6, 9]&lt;br /&gt;**说明：** <br/>1、超长显示场景，目前暂时不支持交互功能（包括：手指点击拖拽、鼠标操作等）。<br/>2、在超长显示场景下，中间页面对应的选中导航点的位置，并不是完全固定的，取决于之前的翻页操作序列。<br/>3、当前仅支持displayCount为1的场景。<br/>取值为undefined时，等同于没有超长显示效果。 |
 
 **返回值：**
 

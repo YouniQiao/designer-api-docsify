@@ -1,8 +1,6 @@
 # SwiperItemInfo
 
-The information of changed SwiperItem.
-
-@interface SwiperContentInfo
+The information of changed SwiperItem.@interface SwiperContentInfo
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # MarkStyle
 
-Define the style of checkbox mark.
-
-@interface MarkStyle
+Define the style of checkbox mark.@interface MarkStyle
 
 **Since:** 23
 

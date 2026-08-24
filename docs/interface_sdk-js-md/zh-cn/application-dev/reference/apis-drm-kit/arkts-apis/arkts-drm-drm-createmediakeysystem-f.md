@@ -12,7 +12,7 @@ import { drm } from '@kit.DrmKit';
 function createMediaKeySystem(name: string): MediaKeySystem
 ```
 
-Creates a MediaKeySystem instance.
+创建MediaKeySystem实例。最多可以创建64个MediaKeySystem实例。超过上限时，会抛出错误码24700103。建议及时调用[destroy](arkts-drm-drm-mediakeysystem-i.md#destroy)接口释放不再使用的MediaKeySystem实例。
 
 **起始版本：** 11
 
@@ -26,13 +26,13 @@ Creates a MediaKeySystem instance.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | Used to point a Digital Right Management solution. |
+| name | string | 是 | DRM解决方案名称。可通过[getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md)接口获取设备支持的DRM解决方案名称，如"com.clearplay.drm"。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) | The MediaKeySystem instance. |
+| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) | MediaKeySystem实例。 |
 
 **错误码：**
 
@@ -60,7 +60,7 @@ console.info(`createMediaKeySystem success, name: ${name}`);
 function createMediaKeySystem(name: string): MediaKeySystem | undefined
 ```
 
-Creates a MediaKeySystem instance.
+创建MediaKeySystem实例。
 
 **起始版本：** 23
 
@@ -72,13 +72,13 @@ Creates a MediaKeySystem instance.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | Used to point a Digital Right Management solution. |
+| name | string | 是 | DRM解决方案名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) \| undefined | The MediaKeySystem instance or undefined. |
+| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) \| undefined | MediaKeySystem实例或undefined。 |
 
 **错误码：**
 

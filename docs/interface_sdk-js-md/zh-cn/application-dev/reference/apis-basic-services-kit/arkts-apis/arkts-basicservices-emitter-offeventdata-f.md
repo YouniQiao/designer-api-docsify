@@ -12,9 +12,7 @@ import { emitter } from '@kit.BasicServicesKit';
 function offEventData(eventId: string, callback: Callback<EventData>): void
 ```
 
-取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用 [onEventData](arkts-basicservices-emitter-oneventdata-f.md)或 [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md)接口订阅callback时，该接口才生效。
-
-使用该接口取消某个事件订阅后，已通过emit接口发布但尚未被执行的事件将被取消。
+取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用 [onEventData](arkts-basicservices-emitter-oneventdata-f.md)或 [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md)接口订阅callback时，该接口才生效。使用该接口取消某个事件订阅后，已通过emit接口发布但尚未被执行的事件将被取消。
 
 **起始版本：** 23
 

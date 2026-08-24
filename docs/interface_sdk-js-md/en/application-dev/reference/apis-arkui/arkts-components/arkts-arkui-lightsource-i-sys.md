@@ -21,9 +21,7 @@ Each component allows for one light source.
 color?: ResourceColor
 ```
 
-Light source color.
-
-Default value: **Color.White**
+Light source color.Default value: **Color.White**
 
 **Type:** ResourceColor
 

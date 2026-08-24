@@ -4,9 +4,7 @@
 export type ImageMatrix = matrix4.Matrix4Transit
 ```
 
-type ImageMatrix = matrix4.Matrix4Transit
-
-当前的矩阵对象。
+type ImageMatrix = matrix4.Matrix4Transit当前的矩阵对象。
 
 **起始版本：** 23
 

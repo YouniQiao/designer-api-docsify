@@ -4,6 +4,8 @@ Object used for thread synchronization.
 
 **Since:** 18
 
+**Decorator:** @Sendable
+
 <!--Device-locks-class ConditionVariable--><!--Device-locks-class ConditionVariable-End-->
 
 **System capability:** SystemCapability.Utils.Lang

@@ -1,8 +1,6 @@
 # MenuItemOptions
 
-Defines the option of MenuItem.
-
-@interface MenuItemOptions
+Defines the option of MenuItem.@interface MenuItemOptions
 
 **Since:** 23
 

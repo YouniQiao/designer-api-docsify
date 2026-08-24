@@ -170,12 +170,10 @@ function requestEnableNotification(context: UIAbilityContext, callback: AsyncCal
 
 应用需要获取用户授权才能发送通知。在通知发布前调用该接口，可以拉起通知授权弹窗，让用户选择是否允许发送通知。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 仅当应用界面加载完成后（即调用
 > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)成功），方可使用该接口
-> 。
-> 
+> 。&gt;
 > - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用
 > [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)二次申请授权，拉起通知管理弹窗
 > 。
@@ -266,12 +264,10 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 
 应用需要获取用户授权才能发送通知。在通知发布前调用该接口，可以拉起通知授权弹窗，让用户选择是否允许发送通知。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 仅当应用界面加载完成后（即调用
 > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)成功），方可使用该接口
-> 。
-> 
+> 。&gt;
 > - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用
 > [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)二次申请授权，拉起通知管理弹窗
 > 。

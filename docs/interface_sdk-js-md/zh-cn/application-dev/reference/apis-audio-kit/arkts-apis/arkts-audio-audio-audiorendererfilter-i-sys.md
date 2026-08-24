@@ -1,5 +1,7 @@
 # AudioRendererFilter（系统接口）
 
+音频渲染器过滤条件。
+
 **起始版本：** 23
 
 <!--Device-audio-interface AudioRendererFilter--><!--Device-audio-interface AudioRendererFilter-End-->
@@ -12,7 +14,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## rendererId
@@ -21,7 +22,7 @@ import { audioHaptic } from '@kit.AudioKit';
 rendererId?: int
 ```
 
-AudioRenderer id.
+音频流唯一id。SystemCapability.Multimedia.Audio.Renderer
 
 **类型：** int
 
@@ -39,6 +40,8 @@ AudioRenderer id.
 rendererInfo?: AudioRendererInfo
 ```
 
+表示渲染器信息。SystemCapability.Multimedia.Audio.Renderer
+
 **类型：** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
 **起始版本：** 23
@@ -55,7 +58,7 @@ rendererInfo?: AudioRendererInfo
 uid?: int
 ```
 
-Application uid.
+表示应用ID。SystemCapability.Multimedia.Audio.Core
 
 **类型：** int
 

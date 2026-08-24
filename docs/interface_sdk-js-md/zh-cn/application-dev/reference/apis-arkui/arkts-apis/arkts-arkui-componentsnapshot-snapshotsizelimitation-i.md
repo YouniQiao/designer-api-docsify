@@ -22,11 +22,7 @@ import { componentSnapshot } from '@kit.ArkUI';
 maxHeight: int
 ```
 
-组件截图的最大高度限制。
-
-取值范围：（-∞，+∞）
-
-单位：px
+组件截图的最大高度限制。取值范围：（-∞，+∞）单位：px
 
 **类型：** int
 
@@ -46,11 +42,7 @@ maxHeight: int
 maxWidth: int
 ```
 
-组件截图的最大宽度限制。
-
-取值范围：（-∞，+∞）
-
-单位：px
+组件截图的最大宽度限制。取值范围：（-∞，+∞）单位：px
 
 **类型：** int
 

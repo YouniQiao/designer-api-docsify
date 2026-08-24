@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## uploadFile
@@ -15,8 +14,7 @@ function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncC
 
 Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'|'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) to obtain the upload success or error information.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -108,8 +106,7 @@ function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadT
 
 Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'|'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) to obtain the upload success or error information.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .

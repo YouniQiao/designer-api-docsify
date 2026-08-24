@@ -1,8 +1,6 @@
 # ResultSet (System API)
 
-Defines APIs to access the result set obtained by querying the RDB store.
-
-Before calling any of the following APIs, you must use [query](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#query) to obtain a ResultSet instance.
+Defines APIs to access the result set obtained by querying the RDB store.Before calling any of the following APIs, you must use [query](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#query) to obtain a ResultSet instance.
 
 **Since:** 23
 

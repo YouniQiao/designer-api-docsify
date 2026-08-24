@@ -14,7 +14,6 @@ MetadataOutput implements metadata streams. It inherits from [CameraOutput](arkt
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## addMetadataObjectTypes

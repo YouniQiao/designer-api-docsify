@@ -1,8 +1,6 @@
 # AxisModel
 
-Type of axis.
-
-@enum {number}
+Type of axis.@enum {number}
 
 **Since:** 23
 

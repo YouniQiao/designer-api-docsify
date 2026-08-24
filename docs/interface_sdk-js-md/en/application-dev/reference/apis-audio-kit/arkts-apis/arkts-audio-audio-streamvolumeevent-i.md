@@ -12,7 +12,6 @@ Describes the event received by the application when the audio stream volume is 
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## previousVolume

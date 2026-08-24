@@ -36,9 +36,7 @@ action: VoidCallback
 icon?: string | Resource
 ```
 
-选项的图标，默认无图标显示。
-
-string格式可用于加载网络图片和本地图片，常用于加载网络图片。当使用相对路径引用本地图片时，例如Image("common/test.jpg")。
+选项的图标，默认无图标显示。string格式可用于加载网络图片和本地图片，常用于加载网络图片。当使用相对路径引用本地图片时，例如Image("common/test.jpg")。
 
 **类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -58,9 +56,7 @@ string格式可用于加载网络图片和本地图片，常用于加载网络�
 title: string | Resource
 ```
 
-选项的文本内容。
-
-文本超长时会触发滚动条。
+选项的文本内容。文本超长时会触发滚动条。
 
 **类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 

@@ -22,7 +22,7 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 | --- | --- |
 | [off_userAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) | 取消订阅年龄群组检测功能。 |
 | [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) | 取消订阅年龄群组检测功能。 |
-| [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | 订阅年龄群组检测功能。 |
+| [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | 订阅年龄群组检测功能。订阅成功后，可以获取用户年龄群组的分类结果，应用可根据此结果做相应的内容推荐。 |
 | [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | 订阅年龄群组检测功能。 |
 
 <!--Del-->

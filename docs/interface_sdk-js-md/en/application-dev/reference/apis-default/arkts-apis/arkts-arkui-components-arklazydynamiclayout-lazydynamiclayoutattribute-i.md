@@ -78,7 +78,7 @@ setLazyDynamicLayoutOptions(algorithm: LazyLayoutAlgorithm): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-i.md) | Yes |  |
+| algorithm | [LazyLayoutAlgorithm](arkts-lazylayoutalgorithm-i.md) | Yes |  |
 
 **Return value:**
 

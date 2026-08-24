@@ -681,16 +681,12 @@ static sendData(...args: Object[]): void
 
 Sends data to the host thread and triggers the registered callback. Before calling this method, you need to construct a **Task** object.
 
-> **NOTE：**
-> 
-> - The API should be called in the TaskPool thread.
-> 
-> - Do not use this API in a callback function. Otherwise, messages may fail to be passed to the host thread.
-> 
+> **NOTE：**&gt;
+> - The API should be called in the TaskPool thread.&gt;
+> - Do not use this API in a callback function. Otherwise, messages may fail to be passed to the host thread.&gt;
 > - Do not use this API in an asynchronous function. Otherwise, messages may fail to be passed to the host
 > thread. If this API is used in an asynchronous function, use **await** to ensure that the asynchronous function
-> is executed synchronously in the task.
-> 
+> is executed synchronously in the task.&gt;
 > - Before calling this API, ensure that the callback function for processing data has been registered in the
 > host thread.
 
@@ -782,8 +778,7 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 
 Sets the task clone list. Before using this method, you need to construct a **Task** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API must be used together with the
 > [@Sendable decorator](../../../arkts-utils/arkts-sendable.md#sendable-decorator). Otherwise, an exception is
 > thrown. You are advised to use this decorator to avoid exceptions.
@@ -945,8 +940,7 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 Sets the task transfer list. Before using this API, you must create a **Task** instance. If this API is not called, the ArrayBuffer in the data is transferred by default.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is used to set the task transfer list in the form of **ArrayBuffer** in the task pool. The
 > **ArrayBuffer** instance does not copy the content in the task to the worker thread during transfer. Instead,
 > it transfers the buffer control right to the worker thread. After the transfer, the **ArrayBuffer** instance
@@ -1051,7 +1045,7 @@ CPU time of the task. in ms. You are advised not to change the value.<br> This A
 function: Function
 ```
 
-Function to be passed in during task creation. For details about the supported return value types of the function , see Sequenceable Data Types.<br> This API can be used in atomic services since API version 11.
+Function to be passed in during task creation. For details about the supported return value types of the function, see Sequenceable Data Types.<br> This API can be used in atomic services since API version 11.
 
 **Type:** Function
 

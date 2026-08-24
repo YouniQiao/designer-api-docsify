@@ -1,8 +1,6 @@
 # ListModifier
 
-Defines List Modifier
-
-@implements { ListAttribute, AttributeModifier&lt;ListAttribute&gt; }
+Defines List Modifier@implements { ListAttribute, AttributeModifier&lt;ListAttribute&gt; }
 
 **Inheritance/Implementation:** ListModifier implements ListAttribute, AttributeModifier<ListAttribute>
 

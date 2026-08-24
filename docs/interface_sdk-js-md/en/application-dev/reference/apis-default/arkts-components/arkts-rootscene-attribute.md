@@ -1,8 +1,6 @@
 # RootSceneAttribute (System API)
 
-Defines the attribute functions of RootScene.
-
-@extends CommonMethod
+Defines the attribute functions of RootScene.@extends CommonMethod
 
 **Inheritance/Implementation:** RootSceneAttribute extends CommonMethod
 

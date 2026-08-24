@@ -1,8 +1,6 @@
 # ThemeColorMode
 
-enum color mode
-
-@enum { number }
+enum color mode@enum { number }
 
 **Since:** 23
 

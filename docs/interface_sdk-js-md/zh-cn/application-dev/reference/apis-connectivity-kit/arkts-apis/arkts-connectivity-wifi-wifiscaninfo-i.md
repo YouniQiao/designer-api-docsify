@@ -1,8 +1,6 @@
 # WifiScanInfo
 
-描述扫描到的WLAN信息。
-
-@interface WifiScanInfo
+描述扫描到的WLAN信息。@interface WifiScanInfo
 
 **起始版本：** 6
 
@@ -18,9 +16,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## band

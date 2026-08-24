@@ -2,8 +2,7 @@
 
 ChipSymbolGlyphOptions定义前缀图标和后缀图标的属性。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 不支持使用
 > SymbolEffect
 > 修改动效类型及effectStrategy设置动效。
@@ -27,11 +26,7 @@ ChipSymbolGlyphOptions定义前缀图标和后缀图标的属性。
 activated?: SymbolGlyphModifier
 ```
 
-激活时图标设定。
-
-默认值：不显示前缀图标或后缀图标
-
-值为undefined时，按默认值处理。
+激活时图标设定。默认值：不显示前缀图标或后缀图标值为undefined时，按默认值处理。
 
 **类型：** SymbolGlyphModifier
 
@@ -51,11 +46,7 @@ activated?: SymbolGlyphModifier
 normal?: SymbolGlyphModifier
 ```
 
-非激活时图标设定。
-
-默认值：不显示前缀图标或后缀图标
-
-值为undefined时，按默认值处理。
+非激活时图标设定。默认值：不显示前缀图标或后缀图标值为undefined时，按默认值处理。
 
 **类型：** SymbolGlyphModifier
 

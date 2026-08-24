@@ -2,16 +2,16 @@
 
 自定义内容区弹出框，同时支持定义操作区按钮样式。
 
-> **说明：**
-> 
-> 当弹框高度不足时，触发全局滚动的规格为contentBuilder被压缩，压缩至小于100vp时启动全局滚动。
-> 
+> **说明：**&gt;
+> 当弹框高度不足时，触发全局滚动的规格为contentBuilder被压缩，压缩至小于100vp时启动全局滚动。&gt;
 > CustomContentDialog内容区的滚动需由开发者自定义，内容区自定义滚动必须配合属性nestedScroll，nestedScroll({ scrollForward:
 > NestedScrollMode.PARALLEL, scrollBackward: NestedScrollMode.PARALLEL })
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @CustomDialog
 
 <!--Device-unnamed-export declare struct CustomContentDialog--><!--Device-unnamed-export declare struct CustomContentDialog-End-->
 
@@ -25,7 +25,7 @@
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -33,6 +33,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,8 +85,7 @@ contentAreaPadding?: Padding
 ## contentBuilder
 
 ```TypeScript
-@BuilderParam
-  contentBuilder: () => void
+contentBuilder: () => void
 ```
 
 弹出框内容。
@@ -94,6 +95,8 @@ contentAreaPadding?: Padding
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -107,8 +110,7 @@ contentAreaPadding?: Padding
 controller: CustomDialogController
 ```
 
-弹出框控制器。
-
+弹出框控制器。  
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
@@ -149,10 +151,7 @@ localizedContentAreaPadding?: LocalizedPadding
 primaryTitle?: ResourceStr
 ```
 
-弹出框标题。
-
-默认不设置或设置为undefined，弹出框标题不显示。
-
+弹出框标题。默认不设置或设置为undefined，弹出框标题不显示。  
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -173,10 +172,7 @@ primaryTitle?: ResourceStr
 secondaryTitle?: ResourceStr
 ```
 
-弹出框辅助文本。
-
-默认不设置或设置为undefined，弹出框辅助文本不显示。
-
+弹出框辅助文本。默认不设置或设置为undefined，弹出框辅助文本不显示。  
 **说明：** 辅助文本超过两行会显示“...”。
 
 **类型：** ResourceStr
@@ -217,9 +213,7 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 

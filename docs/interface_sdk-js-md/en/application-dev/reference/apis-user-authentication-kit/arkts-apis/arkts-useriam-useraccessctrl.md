@@ -1,9 +1,6 @@
 # @ohos.userIAM.userAccessCtrl
 
-The **userAccessCtrl** module is a core component of the OpenHarmony user identity and access management (UserIAM) system. It is dedicated to the verification and management of authentication tokens. This module provides APIs for verifying authentication tokens (**AuthToken**). It can parse and verify user authentication results and return detailed authentication information.
-
-This module applies to the following scenarios:
-
+The **userAccessCtrl** module is a core component of the OpenHarmony user identity and access management (UserIAM) system. It is dedicated to the verification and management of authentication tokens. This module provides APIs for verifying authentication tokens (**AuthToken**). It can parse and verify user authentication results and return detailed authentication information.This module applies to the following scenarios:  
 - System-level applications need to verify the validity of user authentication tokens to ensure access security. - Detailed information about the authentication token needs to be obtained, such as the authentication type, trust level, and user ID, for precise user identity identification. - Access control decisions need to be made based on the authentication result to implement fine-grained permission management.
 
 **Since:** 23
@@ -25,7 +22,7 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 
 | Name | Description |
 | --- | --- |
-| [verifyAuthToken](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md) | Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed **AuthToken** is returned. This API uses a promise to return the result. |
+| [verifyAuthToken](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md) | Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed **AuthToken** is returned. This API uses a promise to return the result.The integrity check verifies the digital signature of the **AuthToken** to ensure that the token has not been tampered with. The validity check compares the issuance time of the **AuthToken** with the current time and determines whether the token is within the validity period based on the **allowableDuration** parameter. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -1,8 +1,6 @@
 # EdgeOutlineStyles
 
-Defines the outline style property.
-
-@interface EdgeOutlineStyles
+Defines the outline style property.@interface EdgeOutlineStyles
 
 **Since:** 23
 

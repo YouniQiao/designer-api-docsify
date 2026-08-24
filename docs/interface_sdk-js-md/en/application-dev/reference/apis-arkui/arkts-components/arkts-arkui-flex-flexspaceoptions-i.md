@@ -1,8 +1,6 @@
 # FlexSpaceOptions
 
-Defines the spacing between child components along the main axis or cross axis of the Flex component.
-
-@interface FlexSpaceOptions
+Defines the spacing between child components along the main axis or cross axis of the Flex component.@interface FlexSpaceOptions
 
 **Since:** 23
 
@@ -20,7 +18,7 @@ cross?: LengthMetrics
 
 Space on the main axis of the Flex component.
 
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 
@@ -40,7 +38,7 @@ main?: LengthMetrics
 
 Space on the main axis of the Flex component.
 
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 

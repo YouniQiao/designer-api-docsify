@@ -1,8 +1,6 @@
 # Constants
 
-KVStore constants
-
-@enum { int }
+KVStore constants@enum { int }
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # TranslateOption
 
-Set translation parameters
-
-@interface TranslateOption
+Set translation parameters@interface TranslateOption
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # SearchPlayInfoType
 
-表示搜播信息类型的枚举。
-
-@enum { string }
+表示搜播信息类型的枚举。@enum { string }
 
 **起始版本：** 23
 

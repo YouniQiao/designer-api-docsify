@@ -1,8 +1,6 @@
 # SwiperElement
 
-The &lt;swiper&gt; component provides a swiper container.
-
-@interface SwiperElement
+The &lt;swiper&gt; component provides a swiper container.@interface SwiperElement
 
 **Since:** 4
 

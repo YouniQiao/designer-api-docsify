@@ -1,8 +1,6 @@
 # BarrierDirection
 
-定义屏障线的方向。
-
-@enum {number}
+定义屏障线的方向。@enum {number}
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # WebAttribute
 
-Defines the Web attribute functions.
-
-@extends CommonMethod&lt;WebAttribute&gt;
+Defines the Web attribute functions.@extends CommonMethod&lt;WebAttribute&gt;
 
 **继承/实现关系：** WebAttribute extends CommonMethod
 

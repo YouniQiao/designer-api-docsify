@@ -1,8 +1,6 @@
 # FoldedRegionLayoutOptions
 
-The layout options for the container when the foldable screen is folded.
-
-@interface FoldedRegionLayoutOptions
+The layout options for the container when the foldable screen is folded.@interface FoldedRegionLayoutOptions
 
 **Since:** 23
 

@@ -162,7 +162,7 @@ Sets the color of the selected navigation point in the arc navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ResourceColor&gt; | Yes | Color of the selected navigation point in the arc navigation indicator.&lt; br&gt;Default value: **#FF5EA1FF |
+| color | Optional&lt;ResourceColor&gt; | Yes | Color of the selected navigation point in the arc navigation indicator.<br>Default value: **#FF5EA1FF |
 
 **Return value:**
 

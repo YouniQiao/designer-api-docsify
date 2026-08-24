@@ -13,8 +13,7 @@ function on(type: 'formUninstall', callback: Callback<string>): void
 
 订阅卡片卸载事件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 卡片卸载与卡片移除不同。当应用卸载时，对应的卡片会自动卸载。
 
 **起始版本：** 8

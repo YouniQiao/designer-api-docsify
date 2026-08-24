@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## busAddress
@@ -103,7 +102,7 @@ name: string
 vendor: string
 ```
 
-声卡供应商。
+声卡厂商。
 
 **类型：** string
 

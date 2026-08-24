@@ -2,8 +2,7 @@
 
 An **ImageData** object stores pixel data rendered on a canvas.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > A constructor used to create an **ImageData** object. To ensure successful drawing,
 > make sure the object's area does not exceed 16000 x 16000, with its width and height
 > not greater than 16384 px. If the created area exceeds 536870911 px, the returned
@@ -146,9 +145,7 @@ A one-dimensional array of color values. The values range from 0 to 255.
 readonly height: number
 ```
 
-Actual height of the rectangle on the canvas.
-
-The unit is px.
+Actual height of the rectangle on the canvas.The unit is px.
 
 **Type:** number
 
@@ -168,12 +165,9 @@ The unit is px.
 readonly width: number
 ```
 
-Actual width of the rectangle on the canvas.
+Actual width of the rectangle on the canvas.The unit is px.
 
-The unit is px.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The px2vp
 > API can be used for unit conversion.
 

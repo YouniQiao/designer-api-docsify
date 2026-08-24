@@ -100,8 +100,8 @@ compare(Char, Char) compares two Chars by their underlying chars.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lhs | [Char](arkts-arkts-char-c.md) | Yes | the first Char to compare. |
-| rhs | [Char](arkts-arkts-char-c.md) | Yes | the second Char to compare. |
+| lhs | Char | Yes | the first Char to compare. |
+| rhs | Char | Yes | the second Char to compare. |
 
 **Return value:**
 
@@ -131,7 +131,7 @@ Compares this instance to other Char object. The result is less than 0 if this i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Char](arkts-arkts-char-c.md) | Yes | Char object to compare with. |
+| other | Char | Yes | Char object to compare with. |
 
 **Return value:**
 
@@ -1253,7 +1253,7 @@ toLowerCase() converts the underlying char to lower case if it is in upper case,
 
 | Type | Description |
 | --- | --- |
-| [Char](arkts-arkts-char-c.md) | the lower case char converted from the underlying char. |
+| Char | the lower case char converted from the underlying char. |
 
 ## toShort
 
@@ -1445,7 +1445,7 @@ toUpperCase() converts the underlying char to upper case if it is in lower case,
 
 | Type | Description |
 | --- | --- |
-| [Char](arkts-arkts-char-c.md) | the upper case char converted from the underlying char. |
+| Char | the upper case char converted from the underlying char. |
 
 ## '\u0000'
 

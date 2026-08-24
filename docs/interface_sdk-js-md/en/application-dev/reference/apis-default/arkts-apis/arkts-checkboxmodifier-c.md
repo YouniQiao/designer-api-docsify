@@ -1,8 +1,6 @@
 # CheckboxModifier
 
-Defines Checkbox Modifier
-
-@implements { CheckboxAttribute, AttributeModifier&lt;CheckboxAttribute&gt; }
+Defines Checkbox Modifier@implements { CheckboxAttribute, AttributeModifier&lt;CheckboxAttribute&gt; }
 
 **Inheritance/Implementation:** CheckboxModifier implements CheckboxAttribute, AttributeModifier<CheckboxAttribute>
 

@@ -1,8 +1,6 @@
 # CalendarPicker properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** CalendarPickerAttribute extends CommonMethod<CalendarPickerAttribute>
 
@@ -123,8 +121,7 @@ onChange(callback: Optional<Callback<Date>>)
 
 Triggered when a date is selected. This event cannot be triggered by two-way bound state variables. Compared with [onChange](#onchange), this API supports the **undefined** type for the **callback** parameter.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 18
@@ -165,7 +162,7 @@ Sets the font color, font size, and font weight in the entry area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | Yes | Font color, font size, and font weight in the entry area.<br>Default value:<br>{ <br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | PickerTextStyle | Yes | Font color, font size, and font weight in the entry area.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
 ## textStyle
 

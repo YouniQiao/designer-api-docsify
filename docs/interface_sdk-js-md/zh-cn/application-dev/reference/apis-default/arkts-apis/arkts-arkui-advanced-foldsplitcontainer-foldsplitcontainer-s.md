@@ -1,12 +1,12 @@
 # FoldSplitContainer
 
-实现折叠屏二分栏、三分栏在展开态、悬停态以及折叠态的区域控制的分栏布局。
-
-@interface FoldSplitContainer
+实现折叠屏二分栏、三分栏在展开态、悬停态以及折叠态的区域控制的分栏布局。@interface FoldSplitContainer
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct FoldSplitContainer--><!--Device-unnamed-export declare struct FoldSplitContainer-End-->
 
@@ -20,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-    build(): void
+build(): void
 ```
 
 构造组件的方法。
@@ -29,6 +28,8 @@
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,8 +40,7 @@
 ## animationOptions
 
 ```TypeScript
-@PropRef
-    animationOptions?: AnimateParam
+animationOptions?: AnimateParam
 ```
 
 设置动画效果相关的参数。
@@ -51,6 +51,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FoldSplitContainer-@PropRef    animationOptions?: AnimateParam--><!--Device-FoldSplitContainer-@PropRef    animationOptions?: AnimateParam-End-->
@@ -60,8 +62,7 @@
 ## expandedLayoutOptions
 
 ```TypeScript
-@PropRef
-    expandedLayoutOptions: ExpandedRegionLayoutOptions
+expandedLayoutOptions: ExpandedRegionLayoutOptions
 ```
 
 展开态布局信息。
@@ -72,6 +73,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FoldSplitContainer-@PropRef    expandedLayoutOptions: ExpandedRegionLayoutOptions--><!--Device-FoldSplitContainer-@PropRef    expandedLayoutOptions: ExpandedRegionLayoutOptions-End-->
@@ -81,8 +84,7 @@
 ## extra
 
 ```TypeScript
-@BuilderParam
-    extra?: RegionBuilder
+extra?: RegionBuilder
 ```
 
 扩展区域回调函数，不传入的情况，没有对应区域。
@@ -93,6 +95,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @BuilderParam
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FoldSplitContainer-@BuilderParam    extra?: RegionBuilder--><!--Device-FoldSplitContainer-@BuilderParam    extra?: RegionBuilder-End-->
@@ -102,8 +106,7 @@
 ## foldedLayoutOptions
 
 ```TypeScript
-@PropRef
-    foldedLayoutOptions: FoldedRegionLayoutOptions
+foldedLayoutOptions: FoldedRegionLayoutOptions
 ```
 
 折叠态布局信息。
@@ -114,6 +117,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FoldSplitContainer-@PropRef    foldedLayoutOptions: FoldedRegionLayoutOptions--><!--Device-FoldSplitContainer-@PropRef    foldedLayoutOptions: FoldedRegionLayoutOptions-End-->
@@ -123,8 +128,7 @@
 ## hoverModeLayoutOptions
 
 ```TypeScript
-@PropRef
-    hoverModeLayoutOptions: HoverModeRegionLayoutOptions
+hoverModeLayoutOptions: HoverModeRegionLayoutOptions
 ```
 
 悬停态布局信息。
@@ -134,6 +138,8 @@
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @PropRef
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,8 +170,7 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 ## primary
 
 ```TypeScript
-@BuilderParam
-    primary: RegionBuilder
+primary: RegionBuilder
 ```
 
 主要区域回调函数。
@@ -176,6 +181,8 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @BuilderParam
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FoldSplitContainer-@BuilderParam    primary: RegionBuilder--><!--Device-FoldSplitContainer-@BuilderParam    primary: RegionBuilder-End-->
@@ -185,8 +192,7 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 ## secondary
 
 ```TypeScript
-@BuilderParam
-    secondary: RegionBuilder
+secondary: RegionBuilder
 ```
 
 次要区域回调函数。
@@ -196,6 +202,8 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

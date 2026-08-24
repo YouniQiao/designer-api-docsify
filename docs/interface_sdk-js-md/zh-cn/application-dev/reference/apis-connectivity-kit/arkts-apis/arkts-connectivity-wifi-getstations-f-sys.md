@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getStations
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function getStations(): Array<StationInfo>
 ```
 
-获取连接的设备。
-
-<p>该方法只能在作为热点的设备上使用。
+获取连接的设备。<p>该方法只能在作为热点的设备上使用。
 
 **起始版本：** 7
 

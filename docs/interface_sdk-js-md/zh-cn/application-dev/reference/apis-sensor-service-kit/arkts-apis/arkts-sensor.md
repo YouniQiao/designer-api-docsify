@@ -9,9 +9,12 @@
 > 接口获取该传感器的信息，获取该传感器信息成功时可正常订阅传感器，异常情况详见
 > [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md)错误码说明。
 > 订阅传感器数据时确保on订阅和off取消订阅成对出现。sensor模块提供传感器数据订阅与查询能力，核心使用流程如下：
-
-1. 使用[sensor.getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md) 或[sensor.getSensorListSync](arkts-sensorservice-sensor-getsensorlistsync-f.md)查询传感器信息，确认设备支持目标传感器。 2. 使用sensor.on接口订阅传感器数据，持续接收数据回调。 3. 使用sensor.once接口获取一次传感器数据，适用于无需持续监听的场景。 4. 使用sensor.off接口取消订阅，确保on和off成对调用。 sensor.on与sensor.once的区别：
-
+1. 使用[sensor.getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md)
+或[sensor.getSensorListSync](arkts-sensorservice-sensor-getsensorlistsync-f.md)查询传感器信息，确认设备支持目标传感器。
+2. 使用sensor.on接口订阅传感器数据，持续接收数据回调。
+3. 使用sensor.once接口获取一次传感器数据，适用于无需持续监听的场景。
+4. 使用sensor.off接口取消订阅，确保on和off成对调用。
+sensor.on与sensor.once的区别：  
 - sensor.on持续订阅传感器数据，通过callback反复上报，适用于需要实时监测的场景。 - sensor.once仅获取一次传感器数据，callback只触发一次后自动取消订阅，适用于单次采集的场景。 注意事项： - 订阅前建议先使用getSingleSensor确认设备支持该传感器。 - on订阅和off取消订阅必须成对出现，避免资源泄漏。 - 对于需要权限的传感器（加速度、陀螺仪、心率、计步等），须先申请相应权限。
 
 **起始版本：** 23

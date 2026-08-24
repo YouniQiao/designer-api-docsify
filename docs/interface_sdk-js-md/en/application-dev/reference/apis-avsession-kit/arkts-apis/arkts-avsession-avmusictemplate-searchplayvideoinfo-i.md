@@ -1,8 +1,6 @@
 # SearchPlayVideoInfo
 
-The definition of SearchPlayVideoInfo.
-
-@interface SearchPlayVideoInfo
+The definition of SearchPlayVideoInfo.@interface SearchPlayVideoInfo
 
 **Since:** 23
 

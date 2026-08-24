@@ -20,9 +20,7 @@ import { webview } from '@kit.ArkWeb';
 height: number
 ```
 
-Height of the rectangle.
-
-Unit: px.
+Height of the rectangle.Unit: px.
 
 **Type:** number
 
@@ -38,9 +36,7 @@ Unit: px.
 width: number
 ```
 
-Width of the rectangle.
-
-Unit: px.
+Width of the rectangle.Unit: px.
 
 **Type:** number
 
@@ -56,9 +52,7 @@ Unit: px.
 x: number
 ```
 
-X-coordinate of the upper left corner of the rectangular area.
-
-Unit: px.
+X-coordinate of the upper left corner of the rectangular area.Unit: px.
 
 **Type:** number
 
@@ -74,9 +68,7 @@ Unit: px.
 y: number
 ```
 
-Y-coordinate of the upper left corner of the rectangular area.
-
-Unit: px.
+Y-coordinate of the upper left corner of the rectangular area.Unit: px.
 
 **Type:** number
 

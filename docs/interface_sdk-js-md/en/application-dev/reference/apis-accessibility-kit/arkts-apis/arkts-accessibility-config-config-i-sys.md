@@ -150,9 +150,7 @@ config.highContrastText.off((data: boolean) => {
 on(callback: Callback<T>): void
 ```
 
-Adds a listener for property changes. This API uses an asynchronous callback to return the result.
-
-This API must be used together with [off](#off_callbackt). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
+Adds a listener for property changes. This API uses an asynchronous callback to return the result.This API must be used together with [off](#off_callbackt). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 23
 

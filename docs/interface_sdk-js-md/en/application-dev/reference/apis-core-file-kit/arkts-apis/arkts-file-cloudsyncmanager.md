@@ -48,7 +48,7 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [DowngradeDownload](arkts-corefile-cloudsyncmanager-downgradedownload-c-sys.md) | Full download: provides the capability of downloading cloud data for applications. |
+| [DowngradeDownload](arkts-corefile-cloudsyncmanager-downgradedownload-c-sys.md) | Full download: provides the capability of downloading cloud data for applications.It supports the full download of cloud application files. |
 <!--DelEnd-->
 
 ### Interfaces

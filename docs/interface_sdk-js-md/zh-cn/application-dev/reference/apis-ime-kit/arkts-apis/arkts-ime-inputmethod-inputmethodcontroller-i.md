@@ -1,6 +1,6 @@
 # InputMethodController
 
-@brief 下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md)获取到InputMethodController实例，再通过实例调用对应方法。 <br> <br>InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作： <br> <br>- 绑定管理：通过 [attach](#attach) 建立与输入法的绑定，通过[detach](#detach)解除绑定。attach和 detach必须配对使用。 <br>- 键盘控制：通过[showTextInput](#showtextinput)拉起软键盘 进入编辑状态，通过[hideTextInput](#hidetextinput)隐藏软键盘 退出编辑状态。showTextInput和hideTextInput必须配对使用。 <br>- 编辑框状态同步：通过 [updateCursor](#updatecursor) 、 [changeSelection](#changeselection) 、 [updateAttribute](#updateattribute) 等接口向输入法同步光标、选区、属性等编辑框状态信息。 <br>- 事件订阅：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。 <br> <br>典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` <br> <br>   
+下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md)获取到InputMethodController实例，再通过实例调用对应方法。 <br> <br>InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作： <br> <br>- 绑定管理：通过 [attach](#attach) 建立与输入法的绑定，通过[detach](#detach)解除绑定。attach和 detach必须配对使用。 <br>- 键盘控制：通过[showTextInput](#showtextinput)拉起软键盘 进入编辑状态，通过[hideTextInput](#hidetextinput)隐藏软键盘 退出编辑状态。showTextInput和hideTextInput必须配对使用。 <br>- 编辑框状态同步：通过 [updateCursor](#updatecursor) 、 [changeSelection](#changeselection) 、 [updateAttribute](#updateattribute) 等接口向输入法同步光标、选区、属性等编辑框状态信息。 <br>- 事件订阅：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。 <br> <br>典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -17,11 +17,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## attach
@@ -30,7 +25,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void
 ```
 
-@brief 自绘控件绑定输入法。使用callback异步回调。 <br> <br>含义/功能：建立自绘控件与输入法应用之间的绑定关系，是自绘控件使用输入法功能的前提。 <br> <br>使用场景：自绘控件（非系统原生编辑框）需要与输入法交互时，必须先调用此接口建立绑定。原生编辑框获焦时系统自动绑定，无需调用此接口。 <br> <br>使用后效果：绑定成功后，自绘控件可调用showTextInput/hideTextInput控制键盘显隐、调用updateCursor/changeSelection同步编辑框状态、订阅输入法事件等。 <br> <br>前提条件/前置操作：自绘控件所在窗口需处于获焦状态，否则绑定会失败。 <br> <br>相关接口间的配合/制约关系：attach必须与detach配对使用。调用attach后才能调用showTextInput、hideTextInput、updateCursor等接口。 <br> <br>相似接口差异点及选取原则： <br> <br>- attach：不需要传入UIContext，适用于API version 10+的自绘控件绑定场景。 <br>- attachWithUIContext：需要传入UIContext，适用于API version 23+的Stage模型场景，支持更多绑定选项。 <br>- 选取原则：API version 23+的Stage模型应用优先使用attachWithUIContext，以获得更完整的绑定选项支持。 <br> <br>   
+自绘控件绑定输入法。使用callback异步回调。 <br> <br>含义/功能：建立自绘控件与输入法应用之间的绑定关系，是自绘控件使用输入法功能的前提。 <br> <br>使用场景：自绘控件（非系统原生编辑框）需要与输入法交互时，必须先调用此接口建立绑定。原生编辑框获焦时系统自动绑定，无需调用此接口。 <br> <br>使用后效果：绑定成功后，自绘控件可调用showTextInput/hideTextInput控制键盘显隐、调用updateCursor/changeSelection同步编辑框状态、订阅输入法事件等。 <br> <br>前提条件/前置操作：自绘控件所在窗口需处于获焦状态，否则绑定会失败。 <br> <br>相关接口间的配合/制约关系：attach必须与detach配对使用。调用attach后才能调用showTextInput、hideTextInput、updateCursor等接口。 <br> <br>相似接口差异点及选取原则： <br> <br>- attach：不需要传入UIContext，适用于API version 10+的自绘控件绑定场景。 <br>- attachWithUIContext：需要传入UIContext，适用于API version 23+的Stage模型场景，支持更多绑定选项。 <br>- 选取原则：API version 23+的Stage模型应用优先使用attachWithUIContext，以获得更完整的绑定选项支持。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -192,7 +187,7 @@ inputMethodController.attach(true, textConfig, requestKeyboardReason).then(() =>
 attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 ```
 
-@brief 自绘控件绑定输入法。使用promise异步回调。 <br> <br>   
+自绘控件绑定输入法。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -246,7 +241,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-@brief 自绘控件绑定输入法。使用promise异步回调。 <br> <br>   
+自绘控件绑定输入法。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -301,7 +296,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>
 ```
 
-@brief 自绘控件绑定输入法。使用promise异步回调。 <br> <br>   
+自绘控件绑定输入法。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -385,7 +380,7 @@ inputMethod.getController().attachWithUIContext(uiContext, textConfig, attachOpt
 changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void
 ```
 
-@brief 当编辑框内被选中的文本信息内容或文本范围发生变化时，可调用该接口更新文本信息，使输入法应用感知到变化。使用callback异步回调。 <br> <br>   
+当编辑框内被选中的文本信息内容或文本范围发生变化时，可调用该接口更新文本信息，使输入法应用感知到变化。使用callback异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -476,7 +471,7 @@ inputMethodController.changeSelection('test', 0, 5).then(() => {
 changeSelection(text: string, start: int, end: int): Promise<void>
 ```
 
-@brief 当编辑框内被选中的文本信息内容或文本范围发生变化时，可调用该接口更新文本信息，使输入法应用感知到变化。使用promise异步回调。 <br> <br>   
+当编辑框内被选中的文本信息内容或文本范围发生变化时，可调用该接口更新文本信息，使输入法应用感知到变化。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -522,7 +517,7 @@ changeSelection(text: string, start: int, end: int): Promise<void>
 detach(callback: AsyncCallback<void>): void
 ```
 
-@brief 自绘控件解除与输入法的绑定。使用callback异步回调。 <br> <br>含义/功能：解除自绘控件与输入法应用之间的绑定关系，释放相关资源。 <br> <br>使用场景：自绘控件不再需要与输入法交互时调用（如页面切换、编辑框被销毁等）。 <br> <br>使用后效果：解除绑定后，不能再调用showTextInput、hideTextInput、updateCursor等需要绑定状态的接口。输入法软键盘将被隐藏。 <br> <br>相关接口间的配合/制约关系：detach必须与attach配对使用。建议在hideTextInput之后调用detach，完整流程为：attach → showTextInput → hideTextInput → detach。
+自绘控件解除与输入法的绑定。使用callback异步回调。 <br> <br>含义/功能：解除自绘控件与输入法应用之间的绑定关系，释放相关资源。 <br> <br>使用场景：自绘控件不再需要与输入法交互时调用（如页面切换、编辑框被销毁等）。 <br> <br>使用后效果：解除绑定后，不能再调用showTextInput、hideTextInput、updateCursor等需要绑定状态的接口。输入法软键盘将被隐藏。 <br> <br>相关接口间的配合/制约关系：detach必须与attach配对使用。建议在hideTextInput之后调用detach，完整流程为：attach → showTextInput → hideTextInput → detach。
 
 **起始版本：** 23
 
@@ -605,7 +600,7 @@ inputMethodController.detach().then(() => {
 detach(): Promise<void>
 ```
 
-@brief 自绘控件解除与输入法的绑定。使用promise异步回调。 <br> <br>含义/功能：解除自绘控件与输入法应用之间的绑定关系，释放相关资源。 <br> <br>使用场景：自绘控件不再需要与输入法交互时调用。 <br> <br>使用后效果：解除绑定后，不能再调用需要绑定状态的接口。输入法软键盘将被隐藏。 <br> <br>相关接口间的配合/制约关系：detach必须与attach配对使用。
+自绘控件解除与输入法的绑定。使用promise异步回调。 <br> <br>含义/功能：解除自绘控件与输入法应用之间的绑定关系，释放相关资源。 <br> <br>使用场景：自绘控件不再需要与输入法交互时调用。 <br> <br>使用后效果：解除绑定后，不能再调用需要绑定状态的接口。输入法软键盘将被隐藏。 <br> <br>相关接口间的配合/制约关系：detach必须与attach配对使用。
 
 **起始版本：** 23
 
@@ -636,7 +631,7 @@ detach(): Promise<void>
 discardTypingText(): Promise<void>
 ```
 
-@brief 编辑框应用发送“清空正在输入的文字”命令到输入法。使用promise异步回调。 <br> <br>   
+编辑框应用发送“清空正在输入的文字”命令到输入法。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > <br>
@@ -695,7 +690,7 @@ inputMethod.getController().discardTypingText().then(() => {
 hideSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-@brief 隐藏输入法软键盘。使用callback异步回调。 <br> <br>含义/功能：强制隐藏当前输入法的软键盘。 <br> <br>使用场景：系统应用需要强制隐藏输入法软键盘时使用。 <br> <br>使用后效果：输入法软键盘被隐藏。 <br> <br>前提条件/前置操作：编辑框与输入法绑定时才能调用。 <br> <br>相似接口差异点及选取原则： <br> <br>- hideSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅隐藏键盘不退出编辑状态。 <br>- hideTextInput：面向自绘控件，隐藏键盘并退出编辑状态，可再次showTextInput重新进入。 <br>- 选取原则：自绘控件使用hideTextInput；系统应用且有权限时使用hideSoftKeyboard。 <br> <br>   
+隐藏输入法软键盘。使用callback异步回调。 <br> <br>含义/功能：强制隐藏当前输入法的软键盘。 <br> <br>使用场景：系统应用需要强制隐藏输入法软键盘时使用。 <br> <br>使用后效果：输入法软键盘被隐藏。 <br> <br>前提条件/前置操作：编辑框与输入法绑定时才能调用。 <br> <br>相似接口差异点及选取原则： <br> <br>- hideSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅隐藏键盘不退出编辑状态。 <br>- hideTextInput：面向自绘控件，隐藏键盘并退出编辑状态，可再次showTextInput重新进入。 <br>- 选取原则：自绘控件使用hideTextInput；系统应用且有权限时使用hideSoftKeyboard。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -810,7 +805,7 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 hideSoftKeyboard(): Promise<void>
 ```
 
-@brief 隐藏输入法软键盘。使用Promise异步回调。 <br> <br>   
+隐藏输入法软键盘。使用Promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -849,7 +844,7 @@ hideSoftKeyboard(): Promise<void>
 hideTextInput(callback: AsyncCallback<void>): void
 ```
 
-@brief 退出文本编辑状态。使用callback异步回调。 <br> <br>含义/功能：隐藏软键盘，使编辑框退出文本编辑状态。 <br> <br>使用场景：自绘控件不再需要输入时调用，如用户点击了编辑框外的区域、切换到其他页面等。 <br> <br>使用后效果：软键盘被隐藏，编辑框退出编辑状态。调用此接口不会解除与输入法的绑定，再次调用showTextInput可重新进入编辑状态。 <br> <br>前提条件/前置操作：需先调用 [attach](#attach) 完成绑定，且已调用showTextInput进入编辑状态。 <br> <br>相关接口间的配合/制约关系：hideTextInput与showTextInput必须配对使用。hideTextInput后如需再次输入，必须先调用showTextInput重新进入编辑状态，不能直接调用其他编辑操作。 <br> <br>相似接口差异点及选取原则： <br> <br>- hideTextInput：面向自绘控件，退出编辑状态但不解除绑定，可再次showTextInput重新进入。适用于自绘控件需要暂时隐藏键盘的场景。 <br>- hideSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY。仅隐藏键盘，不改变编辑状态。 <br>- 选取原则：自绘控件优先使用hideTextInput；系统应用且有特殊需求时使用hideSoftKeyboard。 <br> <br>   
+退出文本编辑状态。使用callback异步回调。 <br> <br>含义/功能：隐藏软键盘，使编辑框退出文本编辑状态。 <br> <br>使用场景：自绘控件不再需要输入时调用，如用户点击了编辑框外的区域、切换到其他页面等。 <br> <br>使用后效果：软键盘被隐藏，编辑框退出编辑状态。调用此接口不会解除与输入法的绑定，再次调用showTextInput可重新进入编辑状态。 <br> <br>前提条件/前置操作：需先调用 [attach](#attach) 完成绑定，且已调用showTextInput进入编辑状态。 <br> <br>相关接口间的配合/制约关系：hideTextInput与showTextInput必须配对使用。hideTextInput后如需再次输入，必须先调用showTextInput重新进入编辑状态，不能直接调用其他编辑操作。 <br> <br>相似接口差异点及选取原则： <br> <br>- hideTextInput：面向自绘控件，退出编辑状态但不解除绑定，可再次showTextInput重新进入。适用于自绘控件需要暂时隐藏键盘的场景。 <br>- hideSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY。仅隐藏键盘，不改变编辑状态。 <br>- 选取原则：自绘控件优先使用hideTextInput；系统应用且有特殊需求时使用hideSoftKeyboard。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -946,7 +941,7 @@ inputMethodController.hideTextInput().then(() => {
 hideTextInput(): Promise<void>
 ```
 
-@brief 退出文本编辑状态。使用promise异步回调。 <br> <br>   
+退出文本编辑状态。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -991,7 +986,7 @@ hideTextInput(): Promise<void>
 off(type: 'deleteLeft', callback?: (length: number) => void): void
 ```
 
-@brief 取消订阅输入法应用向左删除文本事件。
+取消订阅输入法应用向左删除文本事件。
 
 **起始版本：** 10
 
@@ -1026,7 +1021,7 @@ inputMethodController.off('deleteLeft');
 off(type: 'deleteRight', callback?: (length: number) => void): void
 ```
 
-@brief 取消订阅输入法应用向右删除文本事件。
+取消订阅输入法应用向右删除文本事件。
 
 **起始版本：** 10
 
@@ -1060,7 +1055,7 @@ inputMethodController.off('deleteRight');
 off(type: 'finishTextPreview', callback?: Callback<void>): void
 ```
 
-@brief 取消订阅结束文本预览事件。使用callback异步回调。
+取消订阅结束文本预览事件。使用callback异步回调。
 
 **起始版本：** 17
 
@@ -1106,7 +1101,7 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void
 ```
 
-@brief 取消订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
+取消订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -1141,7 +1136,7 @@ inputMethodController.off('getLeftTextOfCursor');
 off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void
 ```
 
-@brief 取消订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
+取消订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -1176,7 +1171,7 @@ inputMethodController.off('getRightTextOfCursor');
 off(type: 'getTextIndexAtCursor', callback?: () => number): void
 ```
 
-@brief 取消订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
+取消订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -1211,7 +1206,7 @@ inputMethodController.off('getTextIndexAtCursor');
 off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void
 ```
 
-@brief 取消订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
+取消订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -1246,7 +1241,7 @@ inputMethodController.off('handleExtendAction');
 off(type: 'insertText', callback?: (text: string) => void): void
 ```
 
-@brief 取消订阅输入法应用插入文本事件。
+取消订阅输入法应用插入文本事件。
 
 **起始版本：** 10
 
@@ -1281,7 +1276,7 @@ inputMethodController.off('insertText');
 off(type: 'moveCursor', callback?: (direction: Direction) => void): void
 ```
 
-@brief 取消订阅输入法应用移动光标事件。
+取消订阅输入法应用移动光标事件。
 
 **起始版本：** 10
 
@@ -1316,7 +1311,7 @@ inputMethodController.off('moveCursor');
 off(type: 'selectByMovement', callback?: Callback<Movement>): void
 ```
 
-@brief 取消订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
+取消订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -1351,7 +1346,7 @@ inputMethodController.off('selectByMovement');
 off(type: 'selectByRange', callback?: Callback<Range>): void
 ```
 
-@brief 取消订阅输入法应用按范围选中文本事件。使用callback异步回调。
+取消订阅输入法应用按范围选中文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -1386,7 +1381,7 @@ inputMethodController.off('selectByRange');
 off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void
 ```
 
-@brief 取消订阅输入法应用发送功能键事件。
+取消订阅输入法应用发送功能键事件。
 
 **起始版本：** 10
 
@@ -1421,7 +1416,7 @@ inputMethodController.off('sendFunctionKey');
 off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void
 ```
 
-@brief 取消订阅输入法应用发送输入法软键盘状态事件。
+取消订阅输入法应用发送输入法软键盘状态事件。
 
 **起始版本：** 10
 
@@ -1456,7 +1451,7 @@ inputMethodController.off('sendKeyboardStatus');
 off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void
 ```
 
-@brief 取消订阅输入法应用操作文本预览内容的事件。使用callback异步回调。
+取消订阅输入法应用操作文本预览内容的事件。使用callback异步回调。
 
 **起始版本：** 17
 
@@ -1503,7 +1498,7 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 offDeleteLeft(callback?: Callback<int>): void
 ```
 
-@brief 取消订阅输入法应用向左删除文本事件。
+取消订阅输入法应用向左删除文本事件。
 
 **起始版本：** 23
 
@@ -1534,7 +1529,7 @@ inputMethodController.offDeleteLeft();
 offDeleteRight(callback?: Callback<int>): void
 ```
 
-@brief 取消订阅输入法应用向右删除文本事件。
+取消订阅输入法应用向右删除文本事件。
 
 **起始版本：** 23
 
@@ -1565,7 +1560,7 @@ inputMethodController.offDeleteRight();
 offFinishTextPreview(callback?: Callback<void>): void
 ```
 
-@brief 取消订阅结束文本预览事件。使用callback异步回调。
+取消订阅结束文本预览事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1609,7 +1604,7 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 offGetLeftTextOfCursor(callback?: GetTextCallback): void
 ```
 
-@brief 取消订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
+取消订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1642,7 +1637,7 @@ inputMethodController.offGetLeftTextOfCursor();
 offGetRightTextOfCursor(callback?: GetTextCallback): void
 ```
 
-@brief 取消订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
+取消订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1675,7 +1670,7 @@ inputMethodController.offGetRightTextOfCursor();
 offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void
 ```
 
-@brief 取消订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
+取消订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1711,7 +1706,7 @@ inputMethodController.offGetTextIndexAtCursor();
 offHandleExtendAction(callback?: Callback<ExtendAction>): void
 ```
 
-@brief 取消订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
+取消订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1742,7 +1737,7 @@ inputMethodController.offHandleExtendAction();
 offInsertText(callback?: Callback<string>): void
 ```
 
-@brief 取消订阅输入法应用插入文本事件。
+取消订阅输入法应用插入文本事件。
 
 **起始版本：** 23
 
@@ -1773,7 +1768,7 @@ inputMethodController.offInsertText();
 offMoveCursor(callback?: Callback<Direction>): void
 ```
 
-@brief 取消订阅输入法应用移动光标事件。
+取消订阅输入法应用移动光标事件。
 
 **起始版本：** 23
 
@@ -1804,7 +1799,7 @@ inputMethodController.offMoveCursor();
 offSelectByMovement(callback?: Callback<Movement>): void
 ```
 
-@brief 取消订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
+取消订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1835,7 +1830,7 @@ inputMethodController.offSelectByMovement();
 offSelectByRange(callback?: Callback<Range>): void
 ```
 
-@brief 取消订阅输入法应用按范围选中文本事件。使用callback异步回调。
+取消订阅输入法应用按范围选中文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1866,7 +1861,7 @@ inputMethodController.offSelectByRange();
 offSendFunctionKey(callback?: Callback<FunctionKey>): void
 ```
 
-@brief 取消订阅输入法应用发送功能键事件。
+取消订阅输入法应用发送功能键事件。
 
 **起始版本：** 23
 
@@ -1897,7 +1892,7 @@ inputMethodController.offSendFunctionKey();
 offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void
 ```
 
-@brief 取消订阅输入法应用发送输入法软键盘状态事件。
+取消订阅输入法应用发送输入法软键盘状态事件。
 
 **起始版本：** 23
 
@@ -1928,7 +1923,7 @@ inputMethodController.offSendKeyboardStatus();
 offSetPreviewText(callback?:SetPreviewTextCallback): void
 ```
 
-@brief 取消订阅输入法应用操作文本预览内容的事件。使用callback异步回调。
+取消订阅输入法应用操作文本预览内容的事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1975,7 +1970,7 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 on(type: 'deleteLeft', callback: (length: number) => void): void
 ```
 
-@brief 订阅输入法应用向左删除文本事件。使用callback异步回调。
+订阅输入法应用向左删除文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2011,7 +2006,7 @@ inputMethod.getController().on('deleteLeft', (length: number) => {
 on(type: 'deleteRight', callback: (length: number) => void): void
 ```
 
-@brief 订阅输入法应用向右删除文本事件。使用callback异步回调。
+订阅输入法应用向右删除文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2047,7 +2042,7 @@ inputMethod.getController().on('deleteRight', (length: number) => {
 on(type: 'finishTextPreview', callback: Callback<void>): void
 ```
 
-@brief 订阅结束文本预览事件。使用callback异步回调。 <br> <br>   
+订阅结束文本预览事件。使用callback异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -2112,7 +2107,7 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void
 ```
 
-@brief 订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
+订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2150,7 +2145,7 @@ inputMethod.getController().on('getLeftTextOfCursor', (length: number) => {
 on(type: 'getRightTextOfCursor', callback: (length: number) => string): void
 ```
 
-@brief 订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
+订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2188,7 +2183,7 @@ inputMethod.getController().on('getRightTextOfCursor', (length: number) => {
 on(type: 'getTextIndexAtCursor', callback: () => number): void
 ```
 
-@brief 订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
+订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2226,7 +2221,7 @@ inputMethod.getController().on('getTextIndexAtCursor', () => {
 on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void
 ```
 
-@brief 订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
+订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2262,7 +2257,7 @@ inputMethod.getController().on('handleExtendAction', (action: inputMethod.Extend
 on(type: 'insertText', callback: (text: string) => void): void
 ```
 
-@brief 订阅输入法应用插入文本事件。使用callback异步回调。
+订阅输入法应用插入文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2311,7 +2306,7 @@ inputMethodController.off('insertText');
 on(type: 'moveCursor', callback: (direction: Direction) => void): void
 ```
 
-@brief 订阅输入法应用移动光标事件。使用callback异步回调。
+订阅输入法应用移动光标事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2347,7 +2342,7 @@ inputMethod.getController().on('moveCursor', (direction: inputMethod.Direction) 
 on(type: 'selectByMovement', callback: Callback<Movement>): void
 ```
 
-@brief 订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
+订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2382,7 +2377,7 @@ inputMethod.getController().on('selectByMovement', (movement: inputMethod.Moveme
 on(type: 'selectByRange', callback: Callback<Range>): void
 ```
 
-@brief 订阅输入法应用按范围选中文本事件。使用callback异步回调。
+订阅输入法应用按范围选中文本事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2417,7 +2412,7 @@ inputMethod.getController().on('selectByRange', (range: inputMethod.Range) => {
 on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void
 ```
 
-@brief 订阅输入法应用发送功能键事件。使用callback异步回调。
+订阅输入法应用发送功能键事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2453,7 +2448,7 @@ inputMethod.getController().on('sendFunctionKey', (functionKey: inputMethod.Func
 on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void
 ```
 
-@brief 订阅输入法应用发送输入法软键盘状态事件。使用callback异步回调。
+订阅输入法应用发送输入法软键盘状态事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -2489,7 +2484,7 @@ inputMethod.getController().on('sendKeyboardStatus', (keyboardStatus: inputMetho
 on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 ```
 
-@brief 订阅输入法应用操作文本预览内容的事件。使用callback异步回调。 <br> <br>   
+订阅输入法应用操作文本预览内容的事件。使用callback异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -2553,7 +2548,7 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 onDeleteLeft(callback: Callback<int>): void
 ```
 
-@brief 订阅输入法应用向左删除文本事件。使用callback异步回调。
+订阅输入法应用向左删除文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2588,7 +2583,7 @@ inputMethodController.onDeleteLeft((length: int) => {
 onDeleteRight(callback: Callback<int>): void
 ```
 
-@brief 订阅输入法应用向右删除文本事件。使用callback异步回调。
+订阅输入法应用向右删除文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2623,7 +2618,7 @@ inputMethodController.onDeleteRight((length: int) => {
 onFinishTextPreview(callback: Callback<void>): void
 ```
 
-@brief 订阅结束文本预览事件。使用callback异步回调。 <br> <br>   
+订阅结束文本预览事件。使用callback异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -2680,7 +2675,7 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 onGetLeftTextOfCursor(callback: GetTextCallback): void
 ```
 
-@brief 订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
+订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2717,7 +2712,7 @@ inputMethodController.onGetLeftTextOfCursor((length: int) => {
 onGetRightTextOfCursor(callback: GetTextCallback): void
 ```
 
-@brief 订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
+订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2754,7 +2749,7 @@ inputMethodController.onGetRightTextOfCursor( (length: int) => {
 onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void
 ```
 
-@brief 订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
+订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2791,7 +2786,7 @@ inputMethodController.onGetTextIndexAtCursor(():int => {
 onHandleExtendAction(callback: Callback<ExtendAction>): void
 ```
 
-@brief 订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
+订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2826,7 +2821,7 @@ inputMethodController.onHandleExtendAction((action: inputMethod.ExtendAction) =>
 onInsertText(callback: Callback<string>): void
 ```
 
-@brief 订阅输入法应用插入文本事件。使用callback异步回调。
+订阅输入法应用插入文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2870,7 +2865,7 @@ inputMethodController.offInsertText();
 onMoveCursor(callback: Callback<Direction>): void
 ```
 
-@brief 订阅输入法应用移动光标事件。使用callback异步回调。
+订阅输入法应用移动光标事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2905,7 +2900,7 @@ inputMethodController.onMoveCursor((direction: inputMethod.Direction) => {
 onSelectByMovement(callback: Callback<Movement>): void
 ```
 
-@brief 订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
+订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2934,7 +2929,7 @@ inputMethodController.onSelectByMovement((movement: inputMethod.Movement) => {
 onSelectByRange(callback: Callback<Range>): void
 ```
 
-@brief 订阅输入法应用按范围选中文本事件。使用callback异步回调。
+订阅输入法应用按范围选中文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2963,7 +2958,7 @@ inputMethodController.onSelectByRange((range: inputMethod.Range) => {
 onSendFunctionKey(callback: Callback<FunctionKey>): void
 ```
 
-@brief 订阅输入法应用发送功能键事件。使用callback异步回调。
+订阅输入法应用发送功能键事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -3033,7 +3028,7 @@ inputMethodController.onSendKeyboardStatus((keyboardStatus: inputMethod.Keyboard
 onSetPreviewText(callback: SetPreviewTextCallback): void
 ```
 
-@brief 订阅输入法应用操作文本预览内容的事件。使用callback异步回调。 <br> <br>   
+订阅输入法应用操作文本预览内容的事件。使用callback异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3083,7 +3078,7 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-@brief 注册或取消注册MessageHandler。 <br> <br>   
+注册或取消注册MessageHandler。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3159,7 +3154,7 @@ inputMethodController.recvMessage();
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-@brief 发送自定义通信至输入法应用。使用Promise异步回调。 <br> <br>   
+发送自定义通信至输入法应用。使用Promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3236,7 +3231,7 @@ inputMethodController.sendMessage(msgId, msgParam).then(() => {
 setCallingWindow(windowId: int, callback: AsyncCallback<void>): void
 ```
 
-@brief 设置要避让软键盘的窗口。使用callback异步回调。 <br> <br>   
+设置要避让软键盘的窗口。使用callback异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3334,7 +3329,7 @@ inputMethodController.setCallingWindow(windowId).then(() => {
 setCallingWindow(windowId: int): Promise<void>
 ```
 
-@brief 设置要避让软键盘的窗口。使用promise异步回调。 <br> <br>   
+设置要避让软键盘的窗口。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3378,7 +3373,7 @@ setCallingWindow(windowId: int): Promise<void>
 showSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-@brief 显示输入法软键盘。使用callback异步回调。 <br> <br>含义/功能：强制显示当前输入法的软键盘。 <br> <br>使用场景：系统应用需要强制显示输入法软键盘时使用（如设置应用测试输入法）。 <br> <br>使用后效果：输入法软键盘弹出显示。 <br> <br>前提条件/前置操作：编辑框与输入法绑定时才能调用。 <br> <br>相似接口差异点及选取原则： <br> <br>- showSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅显示键盘不改变编辑状态。 <br>- showTextInput：面向自绘控件，需先attach绑定，拉起键盘并进入编辑状态。 <br>- 选取原则：自绘控件使用showTextInput；系统应用且有权限时使用showSoftKeyboard。 <br> <br>   
+显示输入法软键盘。使用callback异步回调。 <br> <br>含义/功能：强制显示当前输入法的软键盘。 <br> <br>使用场景：系统应用需要强制显示输入法软键盘时使用（如设置应用测试输入法）。 <br> <br>使用后效果：输入法软键盘弹出显示。 <br> <br>前提条件/前置操作：编辑框与输入法绑定时才能调用。 <br> <br>相似接口差异点及选取原则： <br> <br>- showSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅显示键盘不改变编辑状态。 <br>- showTextInput：面向自绘控件，需先attach绑定，拉起键盘并进入编辑状态。 <br>- 选取原则：自绘控件使用showTextInput；系统应用且有权限时使用showSoftKeyboard。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3493,7 +3488,7 @@ inputMethod.getController().showSoftKeyboard(displayId).then(() => {
 showSoftKeyboard(): Promise<void>
 ```
 
-@brief 显示输入法软键盘。使用Promise异步回调。 <br> <br>   
+显示输入法软键盘。使用Promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3532,7 +3527,7 @@ showSoftKeyboard(): Promise<void>
 showTextInput(callback: AsyncCallback<void>): void
 ```
 
-@brief 进入文本编辑状态。使用callback异步回调。 <br> <br>含义/功能：拉起软键盘，使编辑框进入文本编辑状态。 <br> <br>使用场景：自绘控件绑定输入法后，需要显示软键盘开始文本输入时调用。 <br> <br>使用后效果：软键盘弹出，编辑框进入可输入的文本编辑状态。 <br> <br>前提条件/前置操作：需先调用 [attach](#attach) 完成绑定，否则会报12800009错误。 <br> <br>相关接口间的配合/制约关系：showTextInput与hideTextInput必须配对使用。调用hideTextInput退出编辑状态后，需再次调用showTextInput才能重新进入编辑状态。 <br> <br>相似接口差异点及选取原则： <br> <br>- showTextInput：面向自绘控件，需先attach绑定后调用。适用于自绘控件场景，是标准的键盘显示方式。 <br>- showSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY。适用于系统应用需要强制显示键盘的场景。 <br>- 选取原则：自绘控件优先使用showTextInput；系统应用且有特殊需求时使用showSoftKeyboard。 <br> <br>   
+进入文本编辑状态。使用callback异步回调。 <br> <br>含义/功能：拉起软键盘，使编辑框进入文本编辑状态。 <br> <br>使用场景：自绘控件绑定输入法后，需要显示软键盘开始文本输入时调用。 <br> <br>使用后效果：软键盘弹出，编辑框进入可输入的文本编辑状态。 <br> <br>前提条件/前置操作：需先调用 [attach](#attach) 完成绑定，否则会报12800009错误。 <br> <br>相关接口间的配合/制约关系：showTextInput与hideTextInput必须配对使用。调用hideTextInput退出编辑状态后，需再次调用showTextInput才能重新进入编辑状态。 <br> <br>相似接口差异点及选取原则： <br> <br>- showTextInput：面向自绘控件，需先attach绑定后调用。适用于自绘控件场景，是标准的键盘显示方式。 <br>- showSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY。适用于系统应用需要强制显示键盘的场景。 <br>- 选取原则：自绘控件优先使用showTextInput；系统应用且有特殊需求时使用showSoftKeyboard。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3649,7 +3644,7 @@ inputMethodController.showTextInput(requestKeyboardReason).then(() => {
 showTextInput(): Promise<void>
 ```
 
-@brief 进入文本编辑状态。使用promise异步回调。 <br> <br>   
+进入文本编辑状态。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3686,7 +3681,7 @@ showTextInput(): Promise<void>
 showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-@brief 进入文本编辑状态。使用promise异步回调。 <br> <br>   
+进入文本编辑状态。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3729,7 +3724,7 @@ showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 stopInput(callback: AsyncCallback<boolean>): void
 ```
 
-@brief 结束输入会话。使用callback异步回调。 <br> <br>   
+结束输入会话。使用callback异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3790,7 +3785,7 @@ inputMethod.getController().stopInput().then((result: boolean) => {
 stopInput(): Promise<boolean>
 ```
 
-@brief 结束输入会话。使用promise异步回调。 <br> <br>   
+结束输入会话。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3823,7 +3818,7 @@ stopInput(): Promise<boolean>
 stopInputSession(callback: AsyncCallback<boolean>): void
 ```
 
-@brief 结束输入会话。使用callback异步回调。 <br> <br>含义/功能：结束当前的输入会话，隐藏软键盘。 <br> <br>使用场景：应用需要主动结束输入会话时调用（如用户完成了输入操作）。 <br> <br>使用后效果：软键盘被隐藏，输入会话结束。 <br> <br>前提条件/前置操作：编辑框与输入法绑定时才能调用，即点击编辑控件后。 <br> <br>相关接口间的配合/制约关系：stopInputSession会隐藏软键盘并结束输入会话。如果使用自绘控件的attach/showTextInput/hideTextInput/detach流程，建议使用 hideTextInput而非stopInputSession。 <br> <br>   
+结束输入会话。使用callback异步回调。 <br> <br>含义/功能：结束当前的输入会话，隐藏软键盘。 <br> <br>使用场景：应用需要主动结束输入会话时调用（如用户完成了输入操作）。 <br> <br>使用后效果：软键盘被隐藏，输入会话结束。 <br> <br>前提条件/前置操作：编辑框与输入法绑定时才能调用，即点击编辑控件后。 <br> <br>相关接口间的配合/制约关系：stopInputSession会隐藏软键盘并结束输入会话。如果使用自绘控件的attach/showTextInput/hideTextInput/detach流程，建议使用 hideTextInput而非stopInputSession。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3924,7 +3919,7 @@ inputMethodController.stopInputSession().then((result: boolean) => {
 stopInputSession(): Promise<boolean>
 ```
 
-@brief 结束输入会话。使用promise异步回调。 <br> <br>   
+结束输入会话。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -3960,7 +3955,7 @@ stopInputSession(): Promise<boolean>
 updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void
 ```
 
-@brief 更新编辑框属性信息。使用callback异步回调。
+更新编辑框属性信息。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -4048,7 +4043,7 @@ inputMethodController.updateAttribute(inputAttribute).then(() => {
 updateAttribute(attribute: InputAttribute): Promise<void>
 ```
 
-@brief 更新编辑框属性信息。使用promise异步回调。 <br> <br>   
+更新编辑框属性信息。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -4092,7 +4087,7 @@ updateAttribute(attribute: InputAttribute): Promise<void>
 updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void
 ```
 
-@brief 当编辑框内的光标信息发生变化时，调用该接口使输入法感知到光标变化。使用callback异步回调。 <br> <br>   
+当编辑框内的光标信息发生变化时，调用该接口使输入法感知到光标变化。使用callback异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -4195,7 +4190,7 @@ inputMethodController.updateCursor(cursorInfo).then(() => {
 updateCursor(cursorInfo: CursorInfo): Promise<void>
 ```
 
-@brief 当编辑框内的光标信息发生变化时，调用该接口使输入法感知到光标变化。使用promise异步回调。 <br> <br>   
+当编辑框内的光标信息发生变化时，调用该接口使输入法感知到光标变化。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br

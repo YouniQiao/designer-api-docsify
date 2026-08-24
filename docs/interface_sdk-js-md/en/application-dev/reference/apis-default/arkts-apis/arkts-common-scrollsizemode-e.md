@@ -1,8 +1,6 @@
 # ScrollSizeMode
 
-Define the scroll size mode of the sheet.
-
-@enum { number }
+Define the scroll size mode of the sheet.@enum { number }
 
 **Since:** 23
 

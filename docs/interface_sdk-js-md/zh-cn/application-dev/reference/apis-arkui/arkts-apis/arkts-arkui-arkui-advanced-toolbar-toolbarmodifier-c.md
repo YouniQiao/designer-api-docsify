@@ -14,7 +14,6 @@ ToolBarModifier提供设置工具栏高度(height)、背景色(backgroundColor)�
 
 ```TypeScript
 import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -69,7 +68,7 @@ public height(height: LengthMetrics): ToolBarModifier
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 是 | 工具栏高度。<br/>工具栏高度默认为56vp（不包含分割线）。 |
+| height | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | 是 | 工具栏高度。<br/>工具栏高度默认为56vp（不包含分割线）。 |
 
 **返回值：**
 
@@ -99,7 +98,7 @@ public padding(padding: LengthMetrics): ToolBarModifier
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| padding | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 是 | 工具栏左右内边距，仅在子项数量小于5个时生效。<br/>工具栏默认在子项数量小于5个时padding为24vp，大于等于5个时为0vp。 |
+| padding | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | 是 | 工具栏左右内边距，仅在子项数量小于5个时生效。<br/>工具栏默认在子项数量小于5个时padding为24vp，大于等于5个时为0vp。 |
 
 **返回值：**
 

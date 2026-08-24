@@ -24,7 +24,7 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see Supported System Time Zones . |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see Supported System Time Zones. |
 
 **Examples**
 
@@ -79,7 +79,7 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the system time zone. For details, see Supported System Time Zones . |
+| Promise&lt;string&gt; | Promise used to return the system time zone. For details, see Supported System Time Zones. |
 
 **Examples**
 

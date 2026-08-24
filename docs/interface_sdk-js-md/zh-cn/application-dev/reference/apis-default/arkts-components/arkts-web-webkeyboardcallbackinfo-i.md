@@ -1,8 +1,6 @@
 # WebKeyboardCallbackInfo
 
-Defines the web keyboard callback info related to the [onInterceptKeyboardAttach](arkts-web-attribute.md#oninterceptkeyboardattach) event.
-
-@interface WebKeyboardCallbackInfo
+Defines the web keyboard callback info related to the [onInterceptKeyboardAttach](arkts-web-attribute.md#oninterceptkeyboardattach) event.@interface WebKeyboardCallbackInfo
 
 **起始版本：** 23
 
@@ -20,7 +18,7 @@ attributes: Record<string, string>
 
 The attributes of web input element.
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 23
 

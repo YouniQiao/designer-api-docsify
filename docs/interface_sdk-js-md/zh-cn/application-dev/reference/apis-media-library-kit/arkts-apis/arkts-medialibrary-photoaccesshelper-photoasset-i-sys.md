@@ -91,12 +91,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void
 ```
 
-提交编辑数据以及编辑后的图片或视频。使用callback异步回调。
+提交编辑数据以及编辑后的图片或视频。使用callback异步回调。通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考 [FileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)。
 
-通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考 [FileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)。
-
-> **注意：**
-> 
+> **注意：**&gt;
 > 新的编辑数据提交后，将覆盖掉原来的编辑数据。
 
 **起始版本：** 23
@@ -193,12 +190,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string): Promise<void>
 ```
 
-提交编辑数据以及编辑后的图片或视频。使用Promise异步回调。
+提交编辑数据以及编辑后的图片或视频。使用Promise异步回调。通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考 [FileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)。
 
-通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考 [FileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)。
-
-> **注意：**
-> 
+> **注意：**&gt;
 > 新的编辑数据提交后，将覆盖掉原来的编辑数据。
 
 **起始版本：** 23
@@ -431,9 +425,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getEditData(): Promise<MediaAssetEditData>
 ```
 
-获得资产编辑数据。使用Promise异步回调。
-
-如果资源未编辑过，则返回的编辑数据的内容为空字符串。
+获得资产编辑数据。使用Promise异步回调。如果资源未编辑过，则返回的编辑数据的内容为空字符串。
 
 **起始版本：** 23
 
@@ -492,12 +484,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(callback: AsyncCallback<string>): void
 ```
 
-读取jpg格式图片的Exif标签，并返回json格式的字符串。使用callback异步回调。
+读取jpg格式图片的Exif标签，并返回json格式的字符串。使用callback异步回调。此接口中获取的Exif标签信息是由 [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)模块提供。Exif标签详细信息请参考 [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md)。
 
-此接口中获取的Exif标签信息是由 [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)模块提供。Exif标签详细信息请参考 [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md)。
-
-> **注意：**
-> 
+> **注意：**&gt;
 > 此接口返回的是Exif标签组成的json格式的字符串，完整Exif信息由all_exif与
 > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md)组成，
 > [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns需要传入这两个字段。
@@ -595,12 +584,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(): Promise<string>
 ```
 
-读取jpg格式图片的Exif标签，并返回json格式的字符串。使用Promise异步回调。
+读取jpg格式图片的Exif标签，并返回json格式的字符串。使用Promise异步回调。此接口中获取的Exif标签信息是由[image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) 模块提供。Exif标签详细信息请参考 [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
-此接口中获取的Exif标签信息是由[image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) 模块提供。Exif标签详细信息请参考 [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
-
-> **注意：**
-> 
+> **注意：**&gt;
 > 此接口返回的是Exif标签组成的json格式的字符串，完整Exif信息由all_exif与
 > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md)组成，
 > [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns需要传入这两个字段。
@@ -972,12 +958,9 @@ isEdited(): Promise<boolean>
 open(mode: string, callback: AsyncCallback<number>): void
 ```
 
-打开当前文件。使用callback异步回调。
+打开当前文件。使用callback异步回调。该接口返回的文件描述符在使用完毕后需要调用close进行释放。
 
-该接口返回的文件描述符在使用完毕后需要调用close进行释放。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 10开始支持，从API version 11开始废弃。出于安全考量，不再提供获取正式媒体文件句柄的接口。
 
 **起始版本：** 10
@@ -1058,12 +1041,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 open(mode: string): Promise<number>
 ```
 
-打开当前文件。使用Promise异步回调。
+打开当前文件。使用Promise异步回调。该接口返回的文件描述符在使用完毕后需要调用close进行释放。
 
-该接口返回的文件描述符在使用完毕后需要调用close进行释放。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 10开始支持，从API version 11开始废弃。出于安全考量，不再提供获取正式媒体文件句柄的接口。
 
 **起始版本：** 10
@@ -1112,9 +1092,7 @@ open(mode: string): Promise<number>
 requestEditData(callback: AsyncCallback<string>): void
 ```
 
-获得图片或视频资源的编辑数据。使用callback异步回调。
-
-如果资源未编辑过，则返回一个空字符串。
+获得图片或视频资源的编辑数据。使用callback异步回调。如果资源未编辑过，则返回一个空字符串。
 
 **起始版本：** 23
 
@@ -1200,9 +1178,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestEditData(): Promise<string>
 ```
 
-获得图片或视频资源的编辑数据。使用Promise异步回调。
-
-如果资源未编辑过，则返回一个空字符串。
+获得图片或视频资源的编辑数据。使用Promise异步回调。如果资源未编辑过，则返回一个空字符串。
 
 **起始版本：** 23
 
@@ -1239,9 +1215,7 @@ requestEditData(): Promise<string>
 requestPhoto(callback: AsyncCallback<image.PixelMap>): string
 ```
 
-通过callback的形式，获取资源的快速缩略图和普通缩略图。
-
-快速缩略图尺寸为128*128，普通缩略图尺寸为256*256。应用调用接口后，callback将返回两次缩略图对象，第一次为快速缩略图， 第二次为普通缩略图。
+通过callback的形式，获取资源的快速缩略图和普通缩略图。快速缩略图尺寸为128*128，普通缩略图尺寸为256*256。应用调用接口后，callback将返回两次缩略图对象，第一次为快速缩略图， 第二次为普通缩略图。
 
 **起始版本：** 11
 
@@ -1602,8 +1576,7 @@ revertToOriginal(callback: AsyncCallback<void>): void
 
 回退到编辑前的状态。使用callback异步回调。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 调用该接口后，编辑数据和编辑后的图片或视频资源都将被删除，无法恢复，请谨慎调用。
 
 **起始版本：** 23
@@ -1696,8 +1669,7 @@ revertToOriginal(): Promise<void>
 
 回退到编辑前的状态。使用Promise异步回调。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 调用该接口后，编辑数据和编辑后的图片或视频资源都将被删除，无法恢复，请谨慎调用。
 
 **起始版本：** 23
@@ -1900,9 +1872,7 @@ setFavorite(favoriteState: boolean): Promise<void>
 setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 ```
 
-将文件设置为隐私文件。使用callback异步回调。
-
-隐私文件存在隐私相册中，用户通过隐私相册去获取隐私文件后可以通过设置hiddenState为false来从隐私相册中移除。
+将文件设置为隐私文件。使用callback异步回调。隐私文件存在隐私相册中，用户通过隐私相册去获取隐私文件后可以通过设置hiddenState为false来从隐私相册中移除。
 
 **起始版本：** 10
 
@@ -2043,9 +2013,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setHidden(hiddenState: boolean): Promise<void>
 ```
 
-将文件设置为隐私文件。使用Promise异步回调。
-
-隐私文件存在隐私相册中，用户通过隐私相册去获取隐私文件后可以通过设置hiddenState为false来从隐私相册中移除。
+将文件设置为隐私文件。使用Promise异步回调。隐私文件存在隐私相册中，用户通过隐私相册去获取隐私文件后可以通过设置hiddenState为false来从隐私相册中移除。
 
 **起始版本：** 10
 
@@ -2093,12 +2061,9 @@ setHidden(hiddenState: boolean): Promise<void>
 setPending(pendingState: boolean, callback: AsyncCallback<void>): void
 ```
 
-为图片或视频资源设置pending状态。使用callback异步回调。
+为图片或视频资源设置pending状态。使用callback异步回调。将文件通过`setPending(true)`设置为pending状态后，只能通过`setPending(false)`解除pending状态。 可以通过`photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)`的方式获取是否为pending状态，pending状态下返回true， 否则返回false。
 
-将文件通过`setPending(true)`设置为pending状态后，只能通过`setPending(false)`解除pending状态。 可以通过`photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)`的方式获取是否为pending状态，pending状态下返回true， 否则返回false。
-
-> **注意：**
-> 
+> **注意：**&gt;
 > setPending只能在文件的创建期使用，在文件的首次创建流程的close之后，无法通过setPending(true)将文件设置为pending状态。
 
 **起始版本：** 23
@@ -2179,12 +2144,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPending(pendingState: boolean): Promise<void>
 ```
 
-为图片或视频资源设置pending状态。使用Promise异步回调。
+为图片或视频资源设置pending状态。使用Promise异步回调。将文件通过`setPending(true)`设置为pending状态后，只能通过`setPending(false)`解除pending状态。 可以通过`photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)`的方式获取是否为pending状态，pending状态下返回true， 否则返回false。
 
-将文件通过`setPending(true)`设置为pending状态后，只能通过`setPending(false)`解除pending状态。 可以通过`photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)`的方式获取是否为pending状态，pending状态下返回true， 否则返回false。
-
-> **注意：**
-> 
+> **注意：**&gt;
 > setPending只能在文件的创建期使用，在文件的首次创建流程的close之后，无法通过setPending(true)将文件设置为pending状态。
 
 **起始版本：** 23

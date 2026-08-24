@@ -1,16 +1,11 @@
 # Shape
 
 绘制组件的父组件，描述所有绘制组件均支持的通用属性。
-
 Shape组件通过定义视口、填充、边框等属性，支持矢量图形的绘制和组合。Shape作为容器组件，可包含Rect、Circle、Path等绘制子组件，实现类似SVG（Scalable Vector Graphics，可缩放矢量图形）的矢 量图形绘制能力。
-
 Shape组件的两种使用方式：
-
 1、绘制组件使用Shape作为父组件，实现类似SVG的矢量图形的组合绘制。
-
 2、绘制组件单独使用，用于在页面上绘制指定的图形。
-
-> **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 该组件从API version 20开始支持使用AttributeUpdater类的 > updateConstructorParams接口更新构造参数。
+> **说明：**>> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。>> 该组件从API version 20开始支持使用AttributeUpdater类的> updateConstructorParams接口更新构造参数。
 
 ## 子组件
 
@@ -44,9 +39,7 @@ Use the new function to create Shape.
 Shape(value: PixelMap)
 ```
 
-用于绘制Shape组件的构造函数。
-
-从API version 9开始，该接口支持在ArkTS卡片中使用，卡片中不支持使用PixelMap对象。
+用于绘制Shape组件的构造函数。从API version 9开始，该接口支持在ArkTS卡片中使用，卡片中不支持使用PixelMap对象。
 
 **起始版本：** 7
 

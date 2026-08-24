@@ -1,8 +1,6 @@
 # CheckboxOptions
 
-Defines the options of Checkbox.
-
-@interface CheckboxOptions
+Defines the options of Checkbox.@interface CheckboxOptions
 
 **Since:** 23
 

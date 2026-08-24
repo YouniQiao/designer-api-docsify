@@ -1,8 +1,6 @@
 # LunarSwitchStyle
 
-Defines the style of the lunar calendar switch in the DatePickerDialog component.
-
-@interface LunarSwitchStyle
+Defines the style of the lunar calendar switch in the DatePickerDialog component.@interface LunarSwitchStyle
 
 **Since:** 23
 

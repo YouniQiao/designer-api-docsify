@@ -2,8 +2,7 @@
 
 角度渐变参数。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 18
@@ -23,9 +22,7 @@
 center: [Length, Length]
 ```
 
-Defines center point for angle gradient.
-
-Anonymous Object Rectification.
+Defines center point for angle gradient.Anonymous Object Rectification.
 
 **类型：** [Length, Length]
 
@@ -45,9 +42,7 @@ Anonymous Object Rectification.
 colors: Array<[ResourceColor, number]>
 ```
 
-Defines color description for gradients.
-
-Anonymous Object Rectification.
+Defines color description for gradients.Anonymous Object Rectification.
 
 **类型：** Array&lt;[ResourceColor, number]&gt;
 
@@ -67,9 +62,7 @@ Anonymous Object Rectification.
 end?: number | string
 ```
 
-Defines end point of angle gradient.
-
-Anonymous Object Rectification.
+Defines end point of angle gradient.Anonymous Object Rectification.
 
 **类型：** number \| string
 
@@ -111,9 +104,7 @@ Defines color description in ColorMetrics format for gradients. This parameter t
 repeating?: boolean
 ```
 
-Defines gradient colors with repeated coloring.
-
-Anonymous Object Rectification.
+Defines gradient colors with repeated coloring.Anonymous Object Rectification.
 
 **类型：** boolean
 
@@ -135,9 +126,7 @@ Anonymous Object Rectification.
 rotation?: number | string
 ```
 
-Defines the rotation angle of the gradient.
-
-Anonymous Object Rectification.
+Defines the rotation angle of the gradient.Anonymous Object Rectification.
 
 **类型：** number \| string
 
@@ -159,9 +148,7 @@ Anonymous Object Rectification.
 start?: number | string
 ```
 
-Defines the starting point of angle gradient.
-
-Anonymous Object Rectification.
+Defines the starting point of angle gradient.Anonymous Object Rectification.
 
 **类型：** number \| string
 

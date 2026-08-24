@@ -32,7 +32,7 @@ Creates a **Buffer** object of the specified size from the buffer pool, without 
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Uninitialized **Buffer** object. |
+| Buffer | Uninitialized **Buffer** object. |
 
 **Examples**
 

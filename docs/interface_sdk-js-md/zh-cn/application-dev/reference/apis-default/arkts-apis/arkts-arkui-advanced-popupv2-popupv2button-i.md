@@ -21,9 +21,7 @@ PopupV2Button定义按钮的相关属性和事件。
 action?: VoidCallback
 ```
 
-设置按钮点击回调。
-
-默认不执行任何操作。
+设置按钮点击回调。默认不执行任何操作。
 
 **类型：** VoidCallback
 

@@ -12,9 +12,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 function onPairingStateChange(callback: Callback<PairingStateParam>): void
 ```
 
-Subscribes to pairing status change events. This API uses an asynchronous callback to return the result.
-
-The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to pairing status change events. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 

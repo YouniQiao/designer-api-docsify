@@ -6,6 +6,8 @@ A picker view to show availale streaming device list. @struct { AVCastPicker }
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -18,8 +20,7 @@ A picker view to show availale streaming device list. @struct { AVCastPicker }
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -28,6 +29,8 @@ The method to build component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Builder
+
 <!--Device-AVCastPicker-@Builder  build(): void--><!--Device-AVCastPicker-@Builder  build(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -35,8 +38,7 @@ The method to build component.
 ## activeColor
 
 ```TypeScript
-@PropRef
-  activeColor?: Color | int | string
+activeColor?: Color | int | string
 ```
 
 Assigns the color of picker component at active state.
@@ -47,6 +49,8 @@ Assigns the color of picker component at active state.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 <!--Device-AVCastPicker-@PropRef  activeColor?: Color | int | string--><!--Device-AVCastPicker-@PropRef  activeColor?: Color | int | string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -54,8 +58,7 @@ Assigns the color of picker component at active state.
 ## colorMode
 
 ```TypeScript
-@PropRef
-  colorMode?: AVCastPickerColorMode
+colorMode?: AVCastPickerColorMode
 ```
 
 Set the picker color mode.
@@ -66,6 +69,8 @@ Set the picker color mode.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 <!--Device-AVCastPicker-@PropRef  colorMode?: AVCastPickerColorMode--><!--Device-AVCastPicker-@PropRef  colorMode?: AVCastPickerColorMode-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -73,8 +78,7 @@ Set the picker color mode.
 ## customPicker
 
 ```TypeScript
-@BuilderParam
-  customPicker?: CustomBuilder
+customPicker?: CustomBuilder
 ```
 
 Set the custom builder for the picker appearance. If not set, system will show the default appearance for different device type.
@@ -85,6 +89,8 @@ Set the custom builder for the picker appearance. If not set, system will show t
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @BuilderParam
+
 <!--Device-AVCastPicker-@BuilderParam  customPicker?: CustomBuilder--><!--Device-AVCastPicker-@BuilderParam  customPicker?: CustomBuilder-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -92,8 +98,7 @@ Set the custom builder for the picker appearance. If not set, system will show t
 ## normalColor
 
 ```TypeScript
-@PropRef
-  normalColor?: Color | int | string
+normalColor?: Color | int | string
 ```
 
 Assigns the color of picker component at normal state .
@@ -103,6 +108,8 @@ Assigns the color of picker component at normal state .
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 <!--Device-AVCastPicker-@PropRef  normalColor?: Color | int | string--><!--Device-AVCastPicker-@PropRef  normalColor?: Color | int | string-End-->
 
@@ -129,8 +136,7 @@ Picker state change callback.
 ## pickerStyle
 
 ```TypeScript
-@PropRef
-  pickerStyle?: AVCastPickerStyle
+pickerStyle?: AVCastPickerStyle
 ```
 
 Set the picker style.
@@ -141,6 +147,8 @@ Set the picker style.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 <!--Device-AVCastPicker-@PropRef  pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPicker-@PropRef  pickerStyle?: AVCastPickerStyle-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -148,8 +156,7 @@ Set the picker style.
 ## sessionType
 
 ```TypeScript
-@PropRef
-  sessionType?: string
+sessionType?: string
 ```
 
 Set the session type used by current picker component which can refer to AVSessionType in avSession. If not set, default value is 'audio'.
@@ -159,6 +166,8 @@ Set the session type used by current picker component which can refer to AVSessi
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 <!--Device-AVCastPicker-@PropRef  sessionType?: string--><!--Device-AVCastPicker-@PropRef  sessionType?: string-End-->
 

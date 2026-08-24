@@ -1,8 +1,6 @@
 # ArcButtonStyleMode
 
-Provides an arc button style.
-
-@enum { int }
+Provides an arc button style.@enum { int }
 
 **Since:** 23
 

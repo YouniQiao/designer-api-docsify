@@ -1,8 +1,6 @@
 # NodeType
 
-节点类型枚举。
-
-@enum { int }
+节点类型枚举。@enum { int }
 
 **起始版本：** 23
 

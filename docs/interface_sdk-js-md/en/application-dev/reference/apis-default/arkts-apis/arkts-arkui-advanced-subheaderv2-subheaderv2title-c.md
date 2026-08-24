@@ -6,6 +6,8 @@ Defines the title settings for the subheader.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class SubHeaderV2Title--><!--Device-unnamed-export declare class SubHeaderV2Title-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ A constructor used to create a **SubHeaderV2Title** object.
 ## id
 
 ```TypeScript
-@Trace
-  public id?: string
+public id?: string
 ```
 
 Set the id for the title.
@@ -54,6 +55,8 @@ Set the id for the title.
 
 **ArkTS mode:** ArkTS-Sta since version 24.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubHeaderV2Title-@Trace  public id?: string--><!--Device-SubHeaderV2Title-@Trace  public id?: string-End-->
@@ -63,23 +66,18 @@ Set the id for the title.
 ## primaryTitle
 
 ```TypeScript
-@Trace
-  public primaryTitle?: ResourceStr
+public primaryTitle?: ResourceStr
 ```
 
-Primary title.
-
-When **primaryTitle**, **secondaryTitle**, and **icon** are used simultaneously in [SubHeaderV2](arkts-arkui-advanced-subheaderv2-subheaderv2-s.md), **primaryTitle** does not take effect.
-
-Default value: **undefined**
-
-Decorator: @Trace
+Primary title.When **primaryTitle**, **secondaryTitle**, and **icon** are used simultaneously in [SubHeaderV2](arkts-arkui-advanced-subheaderv2-subheaderv2-s.md), **primaryTitle** does not take effect.Default value: **undefined**Decorator: @Trace
 
 **Type:** ResourceStr
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,21 +88,18 @@ Decorator: @Trace
 ## primaryTitleModifier
 
 ```TypeScript
-@Trace
-  public primaryTitleModifier?: TextModifier
+public primaryTitleModifier?: TextModifier
 ```
 
-Text attributes of the primary title, such as the font color, font size, and font weight.
-
-Default value: **undefined**
-
-Decorator: @Trace
+Text attributes of the primary title, such as the font color, font size, and font weight.Default value: **undefined**Decorator: @Trace
 
 **Type:** [TextModifier](../../apis-arkui/arkts-apis/arkts-arkui-textmodifier-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,21 +110,18 @@ Decorator: @Trace
 ## secondaryTitle
 
 ```TypeScript
-@Trace
-  public secondaryTitle?: ResourceStr
+public secondaryTitle?: ResourceStr
 ```
 
-Secondary title.
-
-Default value: **undefined**
-
-Decorator: @Trace
+Secondary title.Default value: **undefined**Decorator: @Trace
 
 **Type:** ResourceStr
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,21 +132,18 @@ Decorator: @Trace
 ## secondaryTitleModifier
 
 ```TypeScript
-@Trace
-  public secondaryTitleModifier?: TextModifier
+public secondaryTitleModifier?: TextModifier
 ```
 
-Text attributes of the secondary title, such as the font color, font size, and font weight.
-
-Default value: **undefined**
-
-Decorator: @Trace
+Text attributes of the secondary title, such as the font color, font size, and font weight.Default value: **undefined**Decorator: @Trace
 
 **Type:** [TextModifier](../../apis-arkui/arkts-apis/arkts-arkui-textmodifier-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,23 +154,18 @@ Decorator: @Trace
 ## titleAccessibilityText
 
 ```TypeScript
-@Trace
-  public titleAccessibilityText?: ResourceStr
+public titleAccessibilityText?: ResourceStr
 ```
 
-Customized content to be read in the title.
-
-Default value: **undefined**
-
-If the value is **undefined**, the title content displayed by the component is read by default.
-
-Decorator: @Trace
+Customized content to be read in the title.Default value: **undefined**If the value is **undefined**, the title content displayed by the component is read by default.Decorator: @Trace
 
 **Type:** ResourceStr
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

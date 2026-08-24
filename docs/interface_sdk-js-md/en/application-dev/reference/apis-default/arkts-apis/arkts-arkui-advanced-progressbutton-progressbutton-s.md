@@ -6,6 +6,8 @@ Declare Component ProgressButton @struct { ProgressButton }
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ProgressButton--><!--Device-unnamed-export declare struct ProgressButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declare Component ProgressButton @struct { ProgressButton }
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,8 +60,7 @@ Sets the ProgressButton clickCallback.
 ## colorOptions
 
 ```TypeScript
-@PropRef
-  colorOptions?: ProgressButtonColorOptions
+colorOptions?: ProgressButtonColorOptions
 ```
 
 Set Color options of the ProgressButton.
@@ -69,6 +71,8 @@ Set Color options of the ProgressButton.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProgressButton-@PropRef  colorOptions?: ProgressButtonColorOptions--><!--Device-ProgressButton-@PropRef  colorOptions?: ProgressButtonColorOptions-End-->
@@ -78,8 +82,7 @@ Set Color options of the ProgressButton.
 ## content
 
 ```TypeScript
-@PropRef
-  content: ResourceStr
+content: ResourceStr
 ```
 
 Sets the ProgressButton content.
@@ -90,6 +93,8 @@ Sets the ProgressButton content.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProgressButton-@PropRef  content: ResourceStr--><!--Device-ProgressButton-@PropRef  content: ResourceStr-End-->
@@ -99,8 +104,7 @@ Sets the ProgressButton content.
 ## enable
 
 ```TypeScript
-@PropRef
-  enable: boolean
+enable: boolean
 ```
 
 Sets the ProgressButton enable state.
@@ -111,6 +115,8 @@ Sets the ProgressButton enable state.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProgressButton-@PropRef  enable: boolean--><!--Device-ProgressButton-@PropRef  enable: boolean-End-->
@@ -120,8 +126,7 @@ Sets the ProgressButton enable state.
 ## progress
 
 ```TypeScript
-@PropRef
-  progress: double
+progress: double
 ```
 
 Sets the content when progress.
@@ -132,6 +137,8 @@ Sets the content when progress.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProgressButton-@PropRef  progress: double--><!--Device-ProgressButton-@PropRef  progress: double-End-->
@@ -141,8 +148,7 @@ Sets the content when progress.
 ## progressButtonRadius
 
 ```TypeScript
-@PropRef
-  progressButtonRadius?: LengthMetrics
+progressButtonRadius?: LengthMetrics
 ```
 
 Set border rounded corner radius of progress.
@@ -152,6 +158,8 @@ Set border rounded corner radius of progress.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

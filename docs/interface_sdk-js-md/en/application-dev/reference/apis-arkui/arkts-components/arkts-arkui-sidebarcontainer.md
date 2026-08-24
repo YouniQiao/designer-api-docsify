@@ -1,27 +1,21 @@
 # SideBarContainer
 
 The **SideBarContainer** component contains a sidebar and content area as its child components. The sidebar is the first child component and can be shown or hidden as needed. The content area is the second child component.
-
 > **NOTE**
-
-> The APIs of this module are supported since API version 8. Updates will be marked with a superscript to indicate > their
+> The APIs of this module are supported since API version 8. Updates will be marked with a superscript to indicate> their
 
 ## Child Components
 
 Supported
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Allowed child component types: built-in and custom components, excluding rendering control types (
 > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),
 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), and
-> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)).
-> 
-> - This component must contain two child components.
-> 
+> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)).&gt;
+> - This component must contain two child components.&gt;
 > - If there are three or more child components, only the first and second child components are displayed. If there
-> is only one child component, the sidebar is displayed, and the content area is blank.
-> 
+> is only one child component, the sidebar is displayed, and the content area is blank.&gt;
 > - The focus navigation is performed in the content area and then in the sidebar of the **SideBarContainer**
 > component.
 

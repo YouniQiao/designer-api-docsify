@@ -1,11 +1,8 @@
 # AVRecorder
 
-AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。 适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。 在调用AVRecorder的方法前，需要先调用 [createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。 典型录制流程： [createAVRecorder](arkts-media-media-createavrecorder-f.md) → prepare → getInputSurface（纯视频/音视频录制时） → start → pause/ resume → stop → release。
+AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。 适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。 在调用AVRecorder的方法前，需要先调用 [createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。 典型录制流程： [createAVRecorder](arkts-media-media-createavrecorder-f.md) → prepare → getInputSurface（纯视频/音视频录制时） → start → pause/ resume → stop → release。音视频录制示例可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、 [视频录制开发指导](../../../media/media/video-recording.md)。
 
-音视频录制示例可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、 [视频录制开发指导](../../../media/media/video-recording.md)。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > - 本Interface首批接口从API version 9开始支持。
 > - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)。
@@ -104,9 +101,7 @@ getInputMetaSurface(type: MetaSourceType): Promise<string | undefined>
 isWatermarkSupported(): Promise<boolean>
 ```
 
-查询设备是否支持硬件数字水印。使用Promise异步回调。
-
-可以在prepare()、start()或pause()事件触发后调用。
+查询设备是否支持硬件数字水印。使用Promise异步回调。可以在prepare()、start()或pause()事件触发后调用。
 
 **起始版本：** 23
 
@@ -140,9 +135,7 @@ avRecorder.isWatermarkSupported().then((isWatermarkSupported: boolean) => {
 setMetadata(metadata: Record<string, string>): void
 ```
 
-设置录制的元数据信息。如果这些信息的键相同，会覆盖config.metadata.customInfo（参考 prepare()和 AVRecorderConfig）中的值。
-
-该方法只能在prepare()事件成功触发后，且必须在 stop()之前调用。
+设置录制的元数据信息。如果这些信息的键相同，会覆盖config.metadata.customInfo（参考 prepare()和 AVRecorderConfig）中的值。该方法只能在prepare()事件成功触发后，且必须在 stop()之前调用。
 
 **起始版本：** 23
 
@@ -156,7 +149,7 @@ setMetadata(metadata: Record<string, string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| metadata | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt; | 是 | 录制的元数据信息。<br>格式为字符串键值对，其中，键需要以`com.openharmony.`开头，且值的长度不能超过256个字节。 |
+| metadata | Record&lt;string, string&gt; | 是 | 录制的元数据信息。<br>格式为字符串键值对，其中，键需要以`com.openharmony.`开头，且值的长度不能超过256个字节。 |
 
 **错误码：**
 
@@ -192,9 +185,7 @@ try {
 setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 ```
 
-为AVRecorder设置水印。使用Promise异步回调。
-
-只能在prepare()事件触发后且start()事件触发前调用。
+为AVRecorder设置水印。使用Promise异步回调。只能在prepare()事件触发后且start()事件触发前调用。
 
 **起始版本：** 23
 

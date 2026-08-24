@@ -65,8 +65,7 @@ forceRebuild(value: boolean)
 
 Whether to re-create the component when it is being built.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 7 and deprecated since API version 9. Whether to re-create the component
 > is automatically determined based on the component attributes and child component changes. No manual
 > configuration is required.
@@ -157,9 +156,7 @@ Sets the start row number of the component.
 selectable(value: boolean)
 ```
 
-Sets whether the grid item is selectable in the mouse selection box area. This attribute takes effect only when mouse box selection is enabled for the parent **Grid** container.
-
-This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
+Sets whether the grid item is selectable in the mouse selection box area. This attribute takes effect only when mouse box selection is enabled for the parent **Grid** container.This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
 
 **Since:** 8
 
@@ -181,9 +178,7 @@ This attribute must be used before the polymorphic style is set. Otherwise, the 
 selected(value: boolean)
 ```
 
-Sets whether the grid item is selected. This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
-
-This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
+Sets whether the grid item is selected. This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
 
 **Since:** 10
 

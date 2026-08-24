@@ -1,8 +1,6 @@
 # EffectComponentOptions (System API)
 
-Defines the Effect Component constructor options.
-
-@interface EffectComponentOptions
+Defines the Effect Component constructor options.@interface EffectComponentOptions
 
 **Since:** 23
 

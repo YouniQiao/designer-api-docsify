@@ -1,8 +1,6 @@
 # FocusPriority
 
-Focus Priority
-
-@enum { number }
+Focus Priority@enum { number }
 
 **Since:** 23
 

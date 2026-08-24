@@ -12,12 +12,9 @@ import { omapi } from '@kit.ConnectivityKit';
 function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService
 ```
 
-Creates an **SEService** instance for connecting to all available SEs in the system. The connection is time- consuming. Therefore, this API supports only the asynchronous mode. This API uses an asynchronous callback to return the result.
+Creates an **SEService** instance for connecting to all available SEs in the system. The connection is time- consuming. Therefore, this API supports only the asynchronous mode. This API uses an asynchronous callback to return the result.The returned **SEService** instance is available only when **true** is returned by the specified callback or [isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected).
 
-The returned **SEService** instance is available only when **true** is returned by the specified callback or [isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected).
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 10 and deprecated since API version 12. Use
 > [createService](arkts-connectivity-omapi-createservice-f.md) instead.
 

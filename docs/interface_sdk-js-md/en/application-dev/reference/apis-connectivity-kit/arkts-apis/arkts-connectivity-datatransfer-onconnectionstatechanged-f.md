@@ -12,9 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function onConnectionStateChanged(callback: Callback<ConnectionResult>): void
 ```
 
-Subscribes to the connection state change event of the port channel. This API uses an asynchronous callback to return the result.
-
-The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the connection state change event of the port channel. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 

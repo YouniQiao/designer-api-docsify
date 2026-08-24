@@ -1,12 +1,12 @@
 # ChipV2ImageIcon
 
-ChipV2ImageIcon定义图标图片的基类。
-
-继承自[ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)。
+ChipV2ImageIcon定义图标图片的基类。继承自[ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)。
 
 **继承/实现关系：** ChipV2ImageIcon extends [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @ObservedV2
 
 <!--Device-unnamed-export abstract class ChipV2ImageIcon--><!--Device-unnamed-export abstract class ChipV2ImageIcon-End-->
 
@@ -45,21 +45,16 @@ ChipV2ImageIcon的构造函数。
 ## activatedFillColor
 
 ```TypeScript
-@Trace
-  public activatedFillColor?: ColorMetrics
+public activatedFillColor?: ColorMetrics
 ```
 
-ChipV2激活时图标填充颜色。
-
-默认值：\$r('sys.color.chip_active_icon_color')，非SVG图片不应用默认值。
-
-值为undefined时，按默认值处理。
-
-仅在图片格式为SVG时，activatedFillColor属性才生效。
+ChipV2激活时图标填充颜色。默认值：\$r('sys.color.chip_active_icon_color')，非SVG图片不应用默认值。值为undefined时，按默认值处理。仅在图片格式为SVG时，activatedFillColor属性才生效。
 
 **类型：** ColorMetrics
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,21 +67,16 @@ ChipV2激活时图标填充颜色。
 ## fillColor
 
 ```TypeScript
-@Trace
-  public fillColor?: ColorMetrics
+public fillColor?: ColorMetrics
 ```
 
-图标填充颜色。
-
-默认值：\$r('sys.color.chip_usually_icon_color')，非SVG图片不应用默认值。
-
-值为undefined时，按默认值处理。
-
-仅在图片格式为SVG时，fillColor属性才生效。
+图标填充颜色。默认值：\$r('sys.color.chip_usually_icon_color')，非SVG图片不应用默认值。值为undefined时，按默认值处理。仅在图片格式为SVG时，fillColor属性才生效。
 
 **类型：** ColorMetrics
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,17 +89,16 @@ ChipV2激活时图标填充颜色。
 ## modifier
 
 ```TypeScript
-@Trace
-  public modifier?: ImageModifier
+public modifier?: ImageModifier
 ```
 
-图标修饰器，用于设置图标的通用属性。当需要通过modifier动态修改图标属性（如opacity、objectFit等）时传入此参数。不传入或传入undefined时，不应用修饰器，图标使用默认属性设置。
-
-默认值：undefined，不应用修饰器。
+图标修饰器，用于设置图标的通用属性。当需要通过modifier动态修改图标属性（如opacity、objectFit等）时传入此参数。不传入或传入undefined时，不应用修饰器，图标使用默认属性设置。默认值：undefined，不应用修饰器。
 
 **类型：** [ImageModifier](../arkts-components/arkts-arkui-imagemodifier-t.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,23 +111,18 @@ ChipV2激活时图标填充颜色。
 ## size
 
 ```TypeScript
-@Trace
-  public size?: SizeT<LengthMetrics>
+public size?: SizeT<LengthMetrics>
 ```
 
-图标大小，不支持百分比。传入百分比时按默认值处理。
-
-默认值：
-
-- 当ChipV2Options.size为ChipV2Size.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r(' sys.float.chip_small_icon_size')}。 - 当ChipV2Options.size为ChipV2Size.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r(' sys.float.chip_normal_icon_size')}。
-
-单位：vp
-
-值为undefined时，按默认值处理。
+图标大小，不支持百分比。传入百分比时按默认值处理。默认值：  
+- 当ChipV2Options.size为ChipV2Size.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r('sys.float.chip_small_icon_size')}。 - 当ChipV2Options.size为ChipV2Size.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}。  
+单位：vp值为undefined时，按默认值处理。
 
 **类型：** SizeT&lt;LengthMetrics&gt;
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -151,8 +135,7 @@ ChipV2激活时图标填充颜色。
 ## src
 
 ```TypeScript
-@Trace
-  public src: ResourceStr
+public src: ResourceStr
 ```
 
 图标图片或图片地址引用。
@@ -160,6 +143,8 @@ ChipV2激活时图标填充颜色。
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -22,11 +22,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 addDLPLinkFile(linkFileName: string): Promise<void>
 ```
 
-Adds a link file to the Filesystem in Userspace (FUSE). FUSE allows you to implement custom logic of the file system in user space. The link file is a virtual file in the FUSE, which is used to map to the DLP file. The read and write on the link file will be synchronized to the actual DLP file. This API uses a promise to return the result.
-
-After calling **addDLPLinkFile** to add a link file, the system needs to call [deleteDLPLinkFile](#deletedlplinkfile) to remove the DLP link file.
-
-When a DLP application needs to access a DLP file using a standard file API, it can add a link file as the virtual plaintext file to map the DLP file, and then perform read and write on the link file as it does on a common file.
+Adds a link file to the Filesystem in Userspace (FUSE). FUSE allows you to implement custom logic of the file system in user space. The link file is a virtual file in the FUSE, which is used to map to the DLP file. The read and write on the link file will be synchronized to the actual DLP file. This API uses a promise to return the result.After calling **addDLPLinkFile** to add a link file, the system needs to call [deleteDLPLinkFile](#deletedlplinkfile) to remove the DLP link file.When a DLP application needs to access a DLP file using a standard file API, it can add a link file as the virtual plaintext file to map the DLP file, and then perform read and write on the link file as it does on a common file.
 
 **Since:** 10
 
@@ -152,11 +148,7 @@ async function ExampleFunction() {
 addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 ```
 
-Adds a link file to the FUSE. This API uses an asynchronous callback to return the result. After this API is successfully called, a virtual file used to map the DLP file is created in the FUSE.
-
-After calling **addDLPLinkFile** to add a link file, the system needs to call [deleteDLPLinkFile](#deletedlplinkfile) to remove the DLP link file.
-
-This API is called when a DLP application needs to access a DLP file using a standard file API.
+Adds a link file to the FUSE. This API uses an asynchronous callback to return the result. After this API is successfully called, a virtual file used to map the DLP file is created in the FUSE.After calling **addDLPLinkFile** to add a link file, the system needs to call [deleteDLPLinkFile](#deletedlplinkfile) to remove the DLP link file.This API is called when a DLP application needs to access a DLP file using a standard file API.
 
 **Since:** 10
 
@@ -197,14 +189,9 @@ See [addDLPLinkFile](#adddlplinkfile)
 closeDLPFile(): Promise<void>
 ```
 
-Closes a **DLPFile** object. This API uses a promise to return the result.
+Closes a **DLPFile** object. This API uses a promise to return the result.After calling [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.This API is used when the file owner decides to close a DLP file.
 
-After calling [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.
-
-This API is used when the file owner decides to close a DLP file.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If a DLP file is no longer used, close the **dlpFile** object to release the memory.
 
 **Since:** 10
@@ -320,14 +307,9 @@ async function ExampleFunction() {
 closeDLPFile(callback: AsyncCallback<void>): void
 ```
 
-Closes a **DLPFile** object. This API uses an asynchronous callback to return the result.
+Closes a **DLPFile** object. This API uses an asynchronous callback to return the result.After calling **openDLPFile()** to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.This API is used when the file owner decides to close a DLP file.
 
-After calling **openDLPFile()** to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.
-
-This API is used when the file owner decides to close a DLP file.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If a DLP file is no longer used, close the **dlpFile** instance to release the memory.
 
 **Since:** 10
@@ -368,11 +350,7 @@ See [closeDLPFile](#closedlpfile)
 deleteDLPLinkFile(linkFileName: string): Promise<void>
 ```
 
-Deletes a link file from the FUSE. This API uses a promise to return the result. After the API is successfully called, the specified link file is deleted from the FUSE.
-
-Before calling **deleteDLPLinkFile**, the system must call [addDLPLinkFile](#adddlplinkfile) to add a DLP link file.
-
-This API is used to clear the link file mapping after DLP file access is complete.
+Deletes a link file from the FUSE. This API uses a promise to return the result. After the API is successfully called, the specified link file is deleted from the FUSE.Before calling **deleteDLPLinkFile**, the system must call [addDLPLinkFile](#adddlplinkfile) to add a DLP link file.This API is used to clear the link file mapping after DLP file access is complete.
 
 **Since:** 10
 
@@ -499,11 +477,7 @@ async function ExampleFunction() {
 deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a link file from the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the specified link file is deleted from the FUSE.
-
-Before calling **deleteDLPLinkFile**, the system must call [addDLPLinkFile](#adddlplinkfile) to add a DLP link file.
-
-This API is used to clear the link file mapping after DLP file access is complete.
+Deletes a link file from the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the specified link file is deleted from the FUSE.Before calling **deleteDLPLinkFile**, the system must call [addDLPLinkFile](#adddlplinkfile) to add a DLP link file.This API is used to clear the link file mapping after DLP file access is complete.
 
 **Since:** 10
 
@@ -544,9 +518,7 @@ See [deleteDLPLinkFile](#deletedlplinkfile)
 recoverDLPFile(plaintextFd: number): Promise<void>
 ```
 
-Recovers the plaintext of a DLP file. This API uses a promise to return the result.
-
-This API is used when the file owner decides to disable the DLP protection for a file and convert it into a common file for free sharing.
+Recovers the plaintext of a DLP file. This API uses a promise to return the result.This API is used when the file owner decides to disable the DLP protection for a file and convert it into a common file for free sharing.
 
 **Since:** 10
 
@@ -688,9 +660,7 @@ async function ExampleFunction() {
 recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
 ```
 
-Recovers the plaintext of a DLP file. This API uses an asynchronous callback to return the result.
-
-This API is used when the file owner decides to disable the DLP protection for a file.
+Recovers the plaintext of a DLP file. This API uses an asynchronous callback to return the result.This API is used when the file owner decides to disable the DLP protection for a file.
 
 **Since:** 10
 
@@ -737,9 +707,7 @@ See [recoverDLPFile](#recoverdlpfile)
 replaceDLPLinkFile(linkFileName: string): Promise<void>
 ```
 
-Replaces a link file. This API uses a promise to return the result. After the API is successfully called, the current link file is replaced with the new link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.
-
-When you need to access a different DLP file, you can replace the link file to change the file mapping.
+Replaces a link file. This API uses a promise to return the result. After the API is successfully called, the current link file is replaced with the new link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.When you need to access a different DLP file, you can replace the link file to change the file mapping.
 
 **Since:** 10
 
@@ -870,9 +838,7 @@ async function ExampleFunction() {
 replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 ```
 
-Replaces a link file. This API uses an asynchronous callback to return the result. After the API is successfully called, the current link file is replaced with the new link file.
-
-When you need to access a different DLP file, you can replace the link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.
+Replaces a link file. This API uses an asynchronous callback to return the result. After the API is successfully called, the current link file is replaced with the new link file.When you need to access a different DLP file, you can replace the link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.
 
 **Since:** 10
 
@@ -913,11 +879,7 @@ See [replaceDLPLinkFile](#replacedlplinkfile)
 resumeFuseLink(): Promise<void>
 ```
 
-Resumes the read and write on the FUSE. This API uses a promise to return the result. After the API is successfully called, the read and write on the link file are resumed.
-
-This API can be called to resume read and write only after [stopFuseLink](#stopfuselink) is called to stop the read and write operations.
-
-After the link file is replaced, the read and write need to be resumed for normal file access.
+Resumes the read and write on the FUSE. This API uses a promise to return the result. After the API is successfully called, the read and write on the link file are resumed.This API can be called to resume read and write only after [stopFuseLink](#stopfuselink) is called to stop the read and write operations.After the link file is replaced, the read and write need to be resumed for normal file access.
 
 **Since:** 10
 
@@ -1039,11 +1001,7 @@ async function ExampleFunction() {
 resumeFuseLink(callback: AsyncCallback<void>): void
 ```
 
-Resumes the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are resumed.
-
-This API can be called to resume read and write only after [stopFuseLink](#stopfuselink) is called to stop the read and write operations.
-
-After the link file is replaced, the read and write need to be resumed.
+Resumes the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are resumed.This API can be called to resume read and write only after [stopFuseLink](#stopfuselink) is called to stop the read and write operations.After the link file is replaced, the read and write need to be resumed.
 
 **Since:** 10
 
@@ -1083,11 +1041,7 @@ See [resumeFuseLink](#resumefuselink)
 stopFuseLink(): Promise<void>
 ```
 
-Stops the read and write on the FUSE. This API uses a promise to return the result. After the API is successfully called, the read and write on the link file are stopped.
-
-After calling **stopFuseLink** to stop the read and write operations on the FUSE, the system must call [resumeFuseLink](#resumefuselink) to resume the read and write operations.
-
-Before deleting a link file, stop the read and write to ensure secure file operations.
+Stops the read and write on the FUSE. This API uses a promise to return the result. After the API is successfully called, the read and write on the link file are stopped.After calling **stopFuseLink** to stop the read and write operations on the FUSE, the system must call [resumeFuseLink](#resumefuselink) to resume the read and write operations.Before deleting a link file, stop the read and write to ensure secure file operations.
 
 **Since:** 10
 
@@ -1207,11 +1161,7 @@ async function ExampleFunction() {
 stopFuseLink(callback: AsyncCallback<void>): void
 ```
 
-Stops the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are stopped.
-
-After calling **stopFuseLink** to stop the read and write operations on the FUSE, the system must call [resumeFuseLink](#resumefuselink) to resume the read and write operations.
-
-Before deleting a link file, stop the read and write.
+Stops the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are stopped.After calling **stopFuseLink** to stop the read and write operations on the FUSE, the system must call [resumeFuseLink](#resumefuselink) to resume the read and write operations.Before deleting a link file, stop the read and write.
 
 **Since:** 10
 

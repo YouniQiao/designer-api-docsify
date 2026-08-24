@@ -1,8 +1,6 @@
 # ExemptedAppInfo (System API)
 
-Information about an exempted application.
-
-@interface ExemptedAppInfo
+Information about an exempted application.@interface ExemptedAppInfo
 
 **Since:** 23
 

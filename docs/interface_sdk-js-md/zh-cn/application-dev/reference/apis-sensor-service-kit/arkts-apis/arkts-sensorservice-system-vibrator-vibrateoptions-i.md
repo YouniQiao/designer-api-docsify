@@ -2,8 +2,7 @@
 
 定义触发设备振动的配置参数，包括振动模式及接口调用的回调函数。开发者调用 Vibrator.vibrate()时，通过 VibrateOptions指定振动模式（短振动或长振动）以及监听振动触发成功、失败和完成的回调函数。传入VibrateOptions后，设备将按指定的mode执行相应振动模式，并在振动触发成功时回调success函数，失败时回调 fail函数，接口调用结束时回调complete函数。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 3开始支持，从API version 8开始废弃。建议使用替代类型[VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)。
 
 **起始版本：** 3
@@ -78,7 +77,7 @@ fail?: (data: string, code: number) => void
 mode?: 'long' | 'short'
 ```
 
-振动模式，指定设备振动的持续时间类型。取值范围：'long'（长振动）或'short'（短振动）。默认值：'long'。使用场景：开发者可根据实际需求选择振动模式，例如来电提醒使用'long'以持续提醒用户，按键触觉反馈使用' short'以提供即时反馈。不填写此参数时，默认执行长振动。规格限制：仅适用于Lite Wearable设备。
+振动模式，指定设备振动的持续时间类型。取值范围：'long'（长振动）或'short'（短振动）。默认值：'long'。使用场景：开发者可根据实际需求选择振动模式，例如来电提醒使用'long'以持续提醒用户，按键触觉反馈使用'short'以提供即时反馈。不填写此参数时，默认执行长振动。规格限制：仅适用于Lite Wearable设备。
 
 **类型：** 'long' \| 'short'
 

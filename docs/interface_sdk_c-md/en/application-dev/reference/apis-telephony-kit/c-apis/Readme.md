@@ -1,8 +1,6 @@
 - Header file
     - [telephony_data.h](capi-telephony-data-h.md)
-    - [telephony_radio_type.h](capi-telephony-radio-type-h.md)
-    - [telephony_radio.h](capi-telephony-radio-h.md)
 - Module
     - [Telephony](capi-telephony.md)
 - Struct
-    - [Telephony_NetworkState](capi-telephony-telephony-networkstate.md)
+    - [Telephony_NetworkState](capi--telephony-networkstate.md)

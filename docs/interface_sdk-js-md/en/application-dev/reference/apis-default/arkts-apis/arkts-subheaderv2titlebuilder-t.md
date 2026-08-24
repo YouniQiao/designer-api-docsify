@@ -11,6 +11,8 @@ Defines the callback used to customize the content of the title area.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Builder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@Builderexport type SubHeaderV2TitleBuilder = () => void--><!--Device-unnamed-@Builderexport type SubHeaderV2TitleBuilder = () => void-End-->

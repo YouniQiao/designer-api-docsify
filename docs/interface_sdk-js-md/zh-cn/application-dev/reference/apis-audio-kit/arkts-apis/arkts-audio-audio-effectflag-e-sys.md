@@ -1,6 +1,6 @@
 # EffectFlag（系统接口）
 
-Enumerates audio effect flags. @enum { int }
+枚举，音效分类。@enum { int }
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Enumerates audio effect flags. @enum { int }
 RENDER_EFFECT_FLAG = 0
 ```
 
-Audio render effect.
+下行音效类型。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Audio render effect.
 CAPTURE_EFFECT_FLAG = 1
 ```
 
-Audio capture effect.
+上行音效类型。
 
 **起始版本：** 23
 

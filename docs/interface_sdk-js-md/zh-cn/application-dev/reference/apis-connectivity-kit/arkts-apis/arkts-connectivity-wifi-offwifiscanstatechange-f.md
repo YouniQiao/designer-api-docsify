@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## off('wifiScanStateChange')
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN扫描状态改变事件。
-
-<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+取消订阅WLAN扫描状态改变事件。<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
 
 **起始版本：** 7
 

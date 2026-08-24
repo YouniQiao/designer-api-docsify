@@ -1,8 +1,6 @@
 # ColoringStrategy
 
-Common enum of color strategy
-
-@enum { string }
+Common enum of color strategy@enum { string }
 
 **Since:** 23
 

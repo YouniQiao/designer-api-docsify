@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Observed
+
 <!--Device-unnamed-export declare class ToolBarOption--><!--Device-unnamed-export declare class ToolBarOption-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,7 +16,6 @@
 
 ```TypeScript
 import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription
@@ -23,9 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 public accessibilityDescription?: ResourceStr
 ```
 
-工具栏子项的无障碍描述。用于向用户详细解释当前组件的功能和操作后果，特别是当这些信息无法仅从组件文本直接获知时。组件被选中时，将依次播报文本属性和无障碍说明属性的内容。
-
-默认值为“单指双击即可执行”。
+工具栏子项的无障碍描述。用于向用户详细解释当前组件的功能和操作后果，特别是当这些信息无法仅从组件文本直接获知时。组件被选中时，将依次播报文本属性和无障碍说明属性的内容。默认值为“单指双击即可执行”。
 
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
@@ -45,19 +44,7 @@ public accessibilityDescription?: ResourceStr
 public accessibilityLevel?: string
 ```
 
-工具栏子项无障碍重要性。用于控制当前项是否可被无障碍辅助服务所识别。
-
-支持的值为：
-
-"auto"：当前组件会转换为"yes"。
-
-"yes"：当前组件可被无障碍辅助服务所识别。
-
-"no"：当前组件不可被无障碍辅助服务所识别。
-
-"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。
-
-默认值："auto"
+工具栏子项无障碍重要性。用于控制当前项是否可被无障碍辅助服务所识别。支持的值为："auto"：当前组件会转换为"yes"。"yes"：当前组件可被无障碍辅助服务所识别。"no"：当前组件不可被无障碍辅助服务所识别。"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。默认值："auto"
 
 **类型：** string
 
@@ -79,9 +66,7 @@ public accessibilityLevel?: string
 public accessibilityText?: ResourceStr
 ```
 
-工具栏子项的无障碍文本属性。当组件不包含文本属性时，屏幕朗读选中此组件时不播报。开发人员可为不包含文字信息的组件设置无障碍文本，使屏幕朗读选中此组件时播报该文本内容。
-
-默认值为当前项content属性内容。
+工具栏子项的无障碍文本属性。当组件不包含文本属性时，屏幕朗读选中此组件时不播报。开发人员可为不包含文字信息的组件设置无障碍文本，使屏幕朗读选中此组件时播报该文本内容。默认值为当前项content属性内容。
 
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
@@ -121,11 +106,7 @@ public action?: () => void
 public activatedIconColor?: ResourceColor
 ```
 
-工具栏子项激活态的图标填充颜色。
-
-默认值为\$r('sys.color.icon_emphasize')。
-
-当设置了toolBarSymbolOptions属性时，该参数不生效。
+工具栏子项激活态的图标填充颜色。默认值为\$r('sys.color.icon_emphasize')。当设置了toolBarSymbolOptions属性时，该参数不生效。
 
 **类型：** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
@@ -145,9 +126,7 @@ public activatedIconColor?: ResourceColor
 public activatedTextColor?: ResourceColor
 ```
 
-工具栏子项激活态的文本颜色。
-
-默认值为\$r('sys.color.font_emphasize')。
+工具栏子项激活态的文本颜色。默认值为\$r('sys.color.font_emphasize')。
 
 **类型：** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
@@ -187,11 +166,7 @@ public content: ResourceStr
 public icon?: Resource
 ```
 
-工具栏子项的图标。
-
-默认不设置或者设置为undefined，图标不显示。
-
-当设置了toolBarSymbolOptions属性时，icon属性将不生效。
+工具栏子项的图标。默认不设置或者设置为undefined，图标不显示。当设置了toolBarSymbolOptions属性时，icon属性将不生效。
 
 **类型：** [Resource](../../apis-default/arkts-apis/arkts-resource-t.md)
 
@@ -211,11 +186,7 @@ public icon?: Resource
 public iconColor?: ResourceColor
 ```
 
-工具栏子项的图标填充颜色。
-
-默认值为\$r('sys.color.icon_primary')。
-
-当设置了toolBarSymbolOptions属性时，该参数不生效。
+工具栏子项的图标填充颜色。默认值为\$r('sys.color.icon_primary')。当设置了toolBarSymbolOptions属性时，该参数不生效。
 
 **类型：** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
@@ -235,9 +206,7 @@ public iconColor?: ResourceColor
 public state?: ItemState
 ```
 
-工具栏子项的状态。
-
-默认为ItemState.ENABLE。
+工具栏子项的状态。默认为ItemState.ENABLE。
 
 **类型：** [ItemState](arkts-arkui-arkui-advanced-toolbar-itemstate-e.md)
 
@@ -257,9 +226,7 @@ public state?: ItemState
 public textColor?: ResourceColor
 ```
 
-工具栏子项的文本颜色。
-
-默认值为\$r('sys.color.font_primary')。
+工具栏子项的文本颜色。默认值为\$r('sys.color.font_primary')。
 
 **类型：** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 

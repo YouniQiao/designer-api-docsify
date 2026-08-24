@@ -1,8 +1,6 @@
 # CameraInput
 
-相机设备输入对象。
-
-会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
+相机设备输入对象。会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
 
 **起始版本：** 23
 
@@ -14,7 +12,6 @@
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## close
@@ -289,8 +286,7 @@ on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 
 监听CameraInput的错误事件，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10

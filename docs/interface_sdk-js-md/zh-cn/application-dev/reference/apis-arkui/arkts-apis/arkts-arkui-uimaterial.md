@@ -1,6 +1,6 @@
 # @ohos.arkui.uiMaterial
 
-本模块提供系统材质的接口定义。不同的系统材质对应不同的UI效果，包括背景色 [backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、边框颜色 borderColor、边框宽度borderWidth、阴影 shadow效果。
+本模块提供系统材质的接口定义。不同的系统材质对应不同的UI效果，包括背景色 backgroundColor、边框颜色 borderColor、边框宽度borderWidth、阴影 shadow效果。
 
 **起始版本：** 23
 
@@ -30,7 +30,7 @@ import { uiMaterial } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 沉浸式材质类，继承自[Material](../../apis-default/arkts-apis/arkts-uimaterial-materialtype-e.md)。 |
+| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 沉浸式材质类，继承自[Material](../../apis-default/arkts-apis/arkts-uimaterial-materialtype-e.md)。沉浸式材质根据设备算力有分档表现，设备算力的高、中、低档由设备厂商决定，定义在系统配置文件中。在高档和中档算力设备上，影响材质层滤镜效果和阴影 shadow效果。在低档算力设备上，影响背景色 backgroundColor、边框 颜色borderColor、边框宽度borderWidth、阴影 shadow效果。且同一材质的效果，会受到设置应用中沉浸光感配置项的影响，不同强弱程度的沉浸光感配置 下，材质的参数和效果存在差异。 |
 
 <!--Del-->
 ### 类（系统接口）
@@ -62,13 +62,13 @@ import { uiMaterial } from '@kit.ArkUI';
 | --- | --- |
 | [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md) | 沉浸式材质样式枚举。不同的材质样式对应不同的材质参数，主要包括材质的模糊程度、高光效果等。 |
 | [MaterialState](arkts-arkui-uimaterial-materialstate-e.md) | 材质使能状态枚举，表示应用级沉浸式系统材质配置的状态。 |
-| [MaterialType](arkts-arkui-uimaterial-materialtype-e.md) | 系统材质类型枚举。 |
+| [MaterialType](arkts-arkui-uimaterial-materialtype-e.md) | 系统材质类型枚举。@enum { number } [since 23 - 24] |
 
 <!--Del-->
 ### 枚举（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [MaterialType](arkts-arkui-uimaterial-materialtype-e-sys.md) | 系统材质类型枚举。 |
+| [MaterialType](arkts-arkui-uimaterial-materialtype-e-sys.md) | 系统材质类型枚举。@enum { number } [since 23 - 24] |
 <!--DelEnd-->
 

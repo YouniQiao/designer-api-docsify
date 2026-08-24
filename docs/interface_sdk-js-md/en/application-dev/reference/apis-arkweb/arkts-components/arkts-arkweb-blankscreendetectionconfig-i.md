@@ -11,11 +11,6 @@ Provides the policy configuration options for blank screen detection, including 
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## contentfulNodesCountThreshold
@@ -24,13 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 contentfulNodesCountThreshold?: number
 ```
 
-This parameter takes effect only when the contentful node detection strategy is used.
-
-The value ranges from 0 to \${maximum nodes of the detection strategy}. If the value is less than or equal to the threshold, a near-white screen is triggered.
-
-Default value: 0.
-
-Note: The maximum nodes of the detection strategy depend on the selected detection strategy.
+This parameter takes effect only when the contentful node detection strategy is used.The value ranges from 0 to \${maximum nodes of the detection strategy}. If the value is less than or equal to the threshold, a near-white screen is triggered.Default value: 0.Note: The maximum nodes of the detection strategy depend on the selected detection strategy.
 
 **Type:** number
 
@@ -46,12 +35,9 @@ Note: The maximum nodes of the detection strategy depend on the selected detecti
 detectionMethods?: BlankScreenDetectionMethod[]
 ```
 
-Methods of the detection policy. The value is an array.
-
+Methods of the detection policy. The value is an array.  
 **NOTE：**
-
 1. Duplicate values are ignored.
-
 Default value: **[BlankScreenDetectionMethod.DETECTION_CONTENTFUL_NODES_SEVENTEEN]**.
 
 **Type:** [BlankScreenDetectionMethod](arkts-arkweb-blankscreendetectionmethod-e.md)[]
@@ -68,14 +54,9 @@ Default value: **[BlankScreenDetectionMethod.DETECTION_CONTENTFUL_NODES_SEVENTEE
 detectionTiming?: number[]
 ```
 
-Sets the timing (in seconds after loading) at which to detect whether a white screen occurs.
-
-Unit: second.
-
-Note:
-
-1. Duplicate values are ignored. 2. The value must be greater than 0. Values less than 0 are ignored.
-
+Sets the timing (in seconds after loading) at which to detect whether a white screen occurs.Unit: second.Note:
+1. Duplicate values are ignored.
+2. The value must be greater than 0. Values less than 0 are ignored.
 Default value: [1.0, 3.0, 5.0].
 
 **Type:** number[]

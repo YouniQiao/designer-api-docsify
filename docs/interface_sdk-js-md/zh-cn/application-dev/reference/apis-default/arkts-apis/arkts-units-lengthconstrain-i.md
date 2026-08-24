@@ -1,8 +1,6 @@
 # LengthConstrain
 
-type LengthConstrain = { minLength: Length; maxLength: Length; }
-
-长度约束，用于对组件最大、最小长度做限制。
+type LengthConstrain = { minLength: Length; maxLength: Length; }长度约束，用于对组件最大、最小长度做限制。
 
 **起始版本：** 23
 

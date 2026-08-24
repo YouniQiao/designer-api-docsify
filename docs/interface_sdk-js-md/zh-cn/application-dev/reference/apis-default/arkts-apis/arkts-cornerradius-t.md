@@ -16,5 +16,5 @@ export type CornerRadius = Corners<Vector2>
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [Corners](../../apis-arkui/arkts-apis/arkts-arkui-graphics-corners-i.md)&lt;[Vector2](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector2-i.md)&gt;
+**属性类型：** [Corners](arkts-graphics-corners-i.md)&lt;[Vector2](arkts-graphics-vector2-i.md)&gt;
 

@@ -1,12 +1,12 @@
 # AVVolumePanel
 
-A panel to set the system audio output volume.
-
-@struct { AVVolumePanel }
+A panel to set the system audio output volume.@struct { AVVolumePanel }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct AVVolumePanel--><!--Device-unnamed-export declare struct AVVolumePanel-End-->
 
@@ -21,8 +21,7 @@ import { AVVolumePanel, AVVolumePanelParameter } from '@kit.AudioKit';
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -31,6 +30,8 @@ The method to build component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Builder
+
 <!--Device-AVVolumePanel-@Builder  build(): void--><!--Device-AVVolumePanel-@Builder  build(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -38,8 +39,7 @@ The method to build component.
 ## volumeLevel
 
 ```TypeScript
-@PropRef
-  volumeLevel?: int
+volumeLevel?: int
 ```
 
 Sets the device volume through the volume panel. The value should be between mininum and maxinum current device volume, otherwise it will be discarded.
@@ -50,6 +50,8 @@ Sets the device volume through the volume panel. The value should be between min
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 <!--Device-AVVolumePanel-@PropRef  volumeLevel?: int--><!--Device-AVVolumePanel-@PropRef  volumeLevel?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -57,8 +59,7 @@ Sets the device volume through the volume panel. The value should be between min
 ## volumeParameter
 
 ```TypeScript
-@PropRef
-  volumeParameter?: AVVolumePanelParameter
+volumeParameter?: AVVolumePanelParameter
 ```
 
 Sets the custom parameters of volume panel.
@@ -68,6 +69,8 @@ Sets the custom parameters of volume panel.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 <!--Device-AVVolumePanel-@PropRef  volumeParameter?: AVVolumePanelParameter--><!--Device-AVVolumePanel-@PropRef  volumeParameter?: AVVolumePanelParameter-End-->
 

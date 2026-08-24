@@ -16,9 +16,7 @@ Slider组件滑块形状参数。
 image?: ResourceStr
 ```
 
-设置滑块图片资源。
-
-图片显示区域大小由blockSize属性控制，请勿输入尺寸过大的图片。
+设置滑块图片资源。图片显示区域大小由blockSize属性控制，请勿输入尺寸过大的图片。
 
 **类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -58,9 +56,7 @@ shape?: CircleShape | EllipseShape | PathShape | RectShape
 type: SliderBlockType
 ```
 
-设置滑块形状。
-
-默认值：SliderBlockType.DEFAULT，使用圆形滑块。
+设置滑块形状。默认值：SliderBlockType.DEFAULT，使用圆形滑块。
 
 **类型：** [SliderBlockType](arkts-slider-sliderblocktype-e.md)
 

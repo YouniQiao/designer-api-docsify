@@ -1,12 +1,7 @@
 # AlphabetIndexerAttribute
 
-[width](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#width)属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变 化。
-
-[padding](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#padding)属性默认为4vp。
-
-文本最大的字体缩放倍数[maxFontScale](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#maxfontscale12)和最小的字体缩放 倍数[minFontScale](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#minfontscale12)皆为1，不跟随系统字体大小调节变化 。
-
-除支持通用属性外，还支持以下属性：
+width属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变 化。  
+padding属性默认为4vp。文本最大的字体缩放倍数maxFontScale和最小的字体缩放 倍数minFontScale皆为1，不跟随系统字体大小调节变化 。除支持通用属性外，还支持以下属性：
 
 **继承/实现关系：** AlphabetIndexerAttribute extends CommonMethod
 

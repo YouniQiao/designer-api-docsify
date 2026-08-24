@@ -1,21 +1,17 @@
 # Gauge
 
 The **Gauge** component represents a gauge that displays data in a circular format.
-
-> **NOTE** > > - This component supports WithTheme since API version 26.0.0.
+> **NOTE**>> - This component supports WithTheme since API version 26.0.0.
 
 ## Child Components
 
 This component can contain only one child component.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Supported child component types: built-in and custom components, including
 > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) but excluding
-> ForEach and LazyForEach.
-> 
-> - You are advised to use the **Text** component to build the current value and auxiliary text.
-> 
+> ForEach and LazyForEach.&gt;
+> - You are advised to use the **Text** component to build the current value and auxiliary text.&gt;
 > - If the width and height of the child component are in percentage, the reference range is the rectangle that has
 > the outer ring as its inscribed circle.
 

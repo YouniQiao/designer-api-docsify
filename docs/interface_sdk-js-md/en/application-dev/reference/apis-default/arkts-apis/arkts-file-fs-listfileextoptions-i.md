@@ -61,10 +61,8 @@ Number of file names to be listed. The default value is **0**, indicating that a
 recursion?: boolean
 ```
 
-Whether to list all files in subfolders recursively. The default value is **false**.
-
-**false**: The names of files and directories that meet the filtering requirements in the current directory are returned.
-
+Whether to list all files in subfolders recursively. The default value is **false**.  
+**false**: The names of files and directories that meet the filtering requirements in the current directory are returned.  
 **true**: Relative paths (starting with /) of all files that meet the filtering requirements in the directory are returned.
 
 **Type:** boolean

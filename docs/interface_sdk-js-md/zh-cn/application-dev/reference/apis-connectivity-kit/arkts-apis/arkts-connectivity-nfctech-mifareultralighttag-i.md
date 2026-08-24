@@ -1,12 +1,6 @@
 # MifareUltralightTag
 
-MifareUltralightTag 提供对MIFARE Ultralight属性和I/O操作的访问，继承自TagSession。
-
-TagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。
-
-MifareUltralightTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。
-
-以下是MifareUltralightTag的独有接口。
+MifareUltralightTag 提供对MIFARE Ultralight属性和I/O操作的访问，继承自TagSession。TagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。MifareUltralightTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。以下是MifareUltralightTag的独有接口。
 
 **继承/实现关系：** MifareUltralightTag extends TagSession
 

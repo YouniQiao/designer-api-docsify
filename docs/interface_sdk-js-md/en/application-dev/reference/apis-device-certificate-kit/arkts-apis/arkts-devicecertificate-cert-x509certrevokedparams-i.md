@@ -12,8 +12,6 @@ Parameters for checking certificate revocation status.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadCrl
@@ -24,8 +22,7 @@ allowDownloadCrl?: boolean
 
 Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Skip download if matching CRL exists in crls.
 
 **Type:** boolean
@@ -50,8 +47,7 @@ allowOcspCheckOnline?: boolean
 
 Indicates whether to allow online OCSP check. The default value is false. - **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the certificate and send a request to obtain a response; - **false**: does not perform online OCSP check.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Skip online OCSP check if a matching OCSP response is found in ocspResponses.
 
 **Type:** boolean

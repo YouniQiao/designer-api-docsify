@@ -12,9 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function onReadData(callback: Callback<DataParams>): void
 ```
 
-订阅端口通道数据接收事件。使用callback异步回调。
-
-应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
+订阅端口通道数据接收事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 

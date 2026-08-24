@@ -1,6 +1,6 @@
 # AnchoredColorMode
 
-enum color mode of pointing popup @enum { number }
+enum color mode of pointing popup@enum { number }
 
 **起始版本：** 26.0.0
 

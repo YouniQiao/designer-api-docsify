@@ -32,8 +32,7 @@ bundleName: string
 id: long
 ```
 
-资源ID，取值如下：
-
+资源ID，取值如下：  
 - 应用资源区间：[0x01000000, 0x06FFFFFF] 和 [0x08000000, 0xFFFFFFFF]，表示应用自身的资源ID。 - 系统资源区间：[0x07000000, 0x07FFFFFF]，表示系统预置的资源ID。
 
 **类型：** long

@@ -1,8 +1,6 @@
 # ColumnOptionsV2
 
-设置Column组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。
-
-@interface ColumnOptionsV2
+设置Column组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。@interface ColumnOptionsV2
 
 **起始版本：** 23
 

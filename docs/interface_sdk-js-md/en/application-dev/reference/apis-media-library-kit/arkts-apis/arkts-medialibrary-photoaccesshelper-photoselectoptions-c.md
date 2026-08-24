@@ -22,9 +22,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 completeButtonText?: CompleteButtonText
 ```
 
-Text displayed on the complete button.
-
-The complete button is located in the lower-right corner of the page. It is used by users to signify that they have finished selecting images.
+Text displayed on the complete button.The complete button is located in the lower-right corner of the page. It is used by users to signify that they have finished selecting images.
 
 **Type:** [CompleteButtonText](arkts-medialibrary-photoaccesshelper-completebuttontext-e.md)
 
@@ -42,9 +40,7 @@ The complete button is located in the lower-right corner of the page. It is used
 contextRecoveryInfo?: ContextRecoveryInfo
 ```
 
-Information for restoring the PhotoPicker's state from the last exit.
-
-When the selection process is complete, the PhotoPicker returns **contextRecoveryInfo** to the application. The application can then use the information to restore the PhotoPicker's state and the last viewed grid interface the next time it starts the PhotoPicker.
+Information for restoring the PhotoPicker's state from the last exit.When the selection process is complete, the PhotoPicker returns **contextRecoveryInfo** to the application. The application can then use the information to restore the PhotoPicker's state and the last viewed grid interface the next time it starts the PhotoPicker.
 
 **Type:** [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
@@ -118,9 +114,7 @@ Whether to display the button for selecting the original image. **true** to disp
 isReturnToPhotoBrowserEnabled?: boolean
 ```
 
-Whether to automatically switch to the full image preview mode after a photo is taken in single-selection mode. **true** means to switch, and **false** means the opposite. The default value is **false**.
-
-Note: This parameter takes effect only when [SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md) is set to **BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and [BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md) is set to **true**.
+Whether to automatically switch to the full image preview mode after a photo is taken in single-selection mode. **true** means to switch, and **false** means the opposite. The default value is **false**.Note: This parameter takes effect only when [SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md) is set to **BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and [BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md) is set to **true**.
 
 **Type:** boolean
 
@@ -180,9 +174,7 @@ Support selection order adjustment.
 maxPhotoSelectNumber?: int
 ```
 
-Maximum number of photos that can be selected.
-
-A maximum of 500 photos can be selected. The default value is **500**.
+Maximum number of photos that can be selected.A maximum of 500 photos can be selected. The default value is **500**.
 
 **Type:** int
 
@@ -202,9 +194,7 @@ A maximum of 500 photos can be selected. The default value is **500**.
 maxVideoSelectNumber?: int
 ```
 
-Maximum number of videos that can be selected.
-
-A maximum of 500 videos can be selected. The default value is **500**.
+Maximum number of videos that can be selected.A maximum of 500 videos can be selected. The default value is **500**.
 
 **Type:** int
 

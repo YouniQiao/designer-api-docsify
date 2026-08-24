@@ -14,10 +14,8 @@ function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 
 Obtains the default HTTP proxy configuration of the network. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
-> - If the global proxy is set, the global proxy configuration is returned.
-> 
+> **NOTE：**&gt;
+> - If the global proxy is set, the global proxy configuration is returned.&gt;
 > - If [setAppNet](arkts-network-connection-setappnet-f.md) is used to bind the application to the network specified by
 > [NetHandle](arkts-network-connection-nethandle-i.md), the HTTP proxy configuration of this network is returned. In other
 > cases, the HTTP proxy configuration of the default network is returned.
@@ -76,10 +74,8 @@ function getDefaultHttpProxy(): Promise<HttpProxy>
 
 Obtains the default HTTP proxy configuration of the network. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - If the global proxy is set, the global proxy configuration is returned.
-> 
+> **NOTE：**&gt;
+> - If the global proxy is set, the global proxy configuration is returned.&gt;
 > - If [setAppNet](arkts-network-connection-setappnet-f.md) is used to bind the application to the network specified by
 > [NetHandle](arkts-network-connection-nethandle-i.md), the HTTP proxy configuration of this network is returned. In other
 > cases, the HTTP proxy configuration of the default network is returned.

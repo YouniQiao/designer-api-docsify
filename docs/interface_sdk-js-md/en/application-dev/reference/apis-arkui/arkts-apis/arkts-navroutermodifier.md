@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [NavRouterModifier](arkts-arkui-navroutermodifier-c.md) | Defines NavRouter Modifier |
+| [NavRouterModifier](arkts-arkui-navroutermodifier-c.md) | Defines NavRouter Modifier@extends NavRouterAttribute @implements AttributeModifier&lt;NavRouterAttribute&gt; |
 

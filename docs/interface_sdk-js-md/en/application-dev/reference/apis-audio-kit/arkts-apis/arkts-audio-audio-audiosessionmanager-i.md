@@ -1,11 +1,8 @@
 # AudioSessionManager
 
-This interface implements audio session management.
+This interface implements audio session management.Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager) to obtain an AudioSessionManager instance.
 
-Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager) to obtain an AudioSessionManager instance.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The initial APIs of this interface are supported since API version 12.
 
 **Since:** 23
@@ -18,7 +15,6 @@ Before calling any API in AudioSessionManager, you must use [getSessionManager](
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## activateAudioSession
@@ -157,15 +153,7 @@ audioSessionManager.deactivateAudioSession().then(() => {
 enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 ```
 
-Enables mute suggestion notifications for mixed playback.
-
-Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience.
-
-If this feature is enabled, mute and unmute suggestions will be sent through the [AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed.
-
-This feature can be used only by audio sessions for which [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) has been set and the **CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session.
-
-For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback) .
+Enables mute suggestion notifications for mixed playback.Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience.If this feature is enabled, mute and unmute suggestions will be sent through the [AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed.This feature can be used only by audio sessions for which [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) has been set and the **CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session.For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback).
 
 **Since:** 23
 
@@ -259,7 +247,7 @@ try {
 getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory
 ```
 
-Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling [setBluetoothAndNearlinkPreferredRecordCategory](#setbluetoothandnearlinkpreferredrecordcategory) .
+Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling [setBluetoothAndNearlinkPreferredRecordCategory](#setbluetoothandnearlinkpreferredrecordcategory).
 
 **Since:** 24
 
@@ -332,7 +320,7 @@ let deviceType = audioSessionManager.getDefaultOutputDevice();
 getSelectedMediaInputDevice(): AudioDeviceDescriptor
 ```
 
-Obtains the media input device set by calling [selectMediaInputDevice](#selectmediainputdevice). If no device has been specified , the device with **deviceType** set to **INVALID** is returned.
+Obtains the media input device set by calling [selectMediaInputDevice](#selectmediainputdevice). If no device has been specified, the device with **deviceType** set to **INVALID** is returned.
 
 **Since:** 24
 
@@ -990,17 +978,13 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 
 Selects a media input device. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where
-> [SourceType](arkts-audio-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.
-> 
+> [SourceType](arkts-audio-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.&gt;
 > - Before calling this API, call [getAvailableDevices](#getavailabledevices) to
-> query the list of available input devices and select an input device from the list.
-> 
+> query the list of available input devices and select an input device from the list.&gt;
 > - If there are recording streams of other applications with higher priorities in the system, the actual input
-> device used will follow the input device selected by these applications.
-> 
+> device used will follow the input device selected by these applications.&gt;
 > - Applications can listen for the
 > [currentInputDeviceChanged](#onaudiosessiondeactivated)
 > event to find out the actual input device being used.
@@ -1060,8 +1044,7 @@ setAudioSessionBehavior(behavior: int): void
 
 Sets audio session behavior parameters. (Multiple flags can be combined.)
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If this API is called while an audio session is active, you must call the
 > [activateAudioSession](#activateaudiosession) API again
 > for the settings to take effect.
@@ -1129,14 +1112,11 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 
 Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system
-> prioritizes using the device for recording when the device is connected.
-> 
+> prioritizes using the device for recording when the device is connected.&gt;
 > - If there are recording streams of other applications with higher priorities in the system, the actual input
-> device used will follow the input device selected by these applications.
-> 
+> device used will follow the input device selected by these applications.&gt;
 > - Applications can listen for the
 > [currentInputDeviceChanged](#onaudiosessiondeactivated)
 > event to find out the actual input device being used.
@@ -1221,15 +1201,13 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 Sets the default audio output device. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API applies to the following scenario: When
 > [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes
 > effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take
 > effect upon AudioSession activation. Instead, the setting applies when
 > [StreamUsage](arkts-audio-audio-streamusage-e.md) for playback is voice message, VoIP voice call,
-> or VoIP video call. Supported devices include the earpiece, speaker, and system default device.
-> 
+> or VoIP video call. Supported devices include the earpiece, speaker, and system default device.&gt;
 > - This API can be called at any time after an AudioSessionManager instance is created. The system records the
 > device set by the application. However, the setting takes effect only after the AudioSession is activated. When
 > the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected,

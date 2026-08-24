@@ -1,8 +1,6 @@
 # FocusWrapMode
 
-Focus wrap mode of a list or grid when moving focus using the arrow keys.
-
-@enum { number } FocusWrapMode
+Focus wrap mode of a list or grid when moving focus using the arrow keys.@enum { number } FocusWrapMode
 
 **Since:** 26.0.0
 

@@ -1,10 +1,10 @@
 # SelectDialogV2
 
-Declare CustomDialog SelectDialogV2
-
-@struct { SelectDialogV2 }
+Declare CustomDialog SelectDialogV2@struct { SelectDialogV2 }
 
 **Since:** 18
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct SelectDialogV2--><!--Device-unnamed-export declare struct SelectDialogV2-End-->
 
@@ -19,8 +19,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## confirm
 
 ```TypeScript
-@Param
-  confirm?: AdvancedDialogV2Button
+confirm?: AdvancedDialogV2Button
 ```
 
 Sets the SelectDialogV2 confirm button.
@@ -28,6 +27,8 @@ Sets the SelectDialogV2 confirm button.
 **Type:** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,8 +41,7 @@ Sets the SelectDialogV2 confirm button.
 ## content
 
 ```TypeScript
-@Param
-  content?: ResourceStr
+content?: ResourceStr
 ```
 
 Sets the SelectDialogV2 content.
@@ -49,6 +49,8 @@ Sets the SelectDialogV2 content.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,9 +63,7 @@ Sets the SelectDialogV2 content.
 ## radioContent
 
 ```TypeScript
-@Require
-  @Param
-  radioContent: SheetInfo[]
+radioContent: SheetInfo[]
 ```
 
 Sets the SelectDialog sheets.
@@ -71,6 +71,8 @@ Sets the SelectDialog sheets.
 **Type:** SheetInfo[]
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +85,7 @@ Sets the SelectDialog sheets.
 ## selectedIndex
 
 ```TypeScript
-@Param
-  selectedIndex?: number
+selectedIndex?: number
 ```
 
 Sets the SelectDialogV2 selected index.
@@ -92,6 +93,8 @@ Sets the SelectDialogV2 selected index.
 **Type:** number
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,9 +107,7 @@ Sets the SelectDialogV2 selected index.
 ## title
 
 ```TypeScript
-@Require
-  @Param
-  title: ResourceStr
+title: ResourceStr
 ```
 
 Sets the SelectDialogV2 title.
@@ -114,6 +115,8 @@ Sets the SelectDialogV2 title.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

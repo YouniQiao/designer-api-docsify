@@ -125,7 +125,7 @@ A parameterized constructor used to create an URLSearchParams instance. As the i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) | No | init init |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| URLSearchParams | No | init init |
 
 **Examples**
 

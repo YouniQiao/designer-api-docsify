@@ -2,8 +2,7 @@
 
 The module provides APIs for managing distributed bundles.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The APIs provided by this module are system APIs.
 
 **Since:** 23

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
-import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## openDoubleClickSettingsPage
@@ -13,7 +12,8 @@ import { settingsLite } from '@kit.BasicServicesKit';
 function openDoubleClickSettingsPage(context: Context): void
 ```
 
-1. Opens the settings page for double-pressing the Down key. 2. This API is used to set the default application started by double-pressing the Down key.
+1. Opens the settings page for double-pressing the Down key.
+2. This API is used to set the default application started by double-pressing the Down key.
 
 **Since:** 24
 

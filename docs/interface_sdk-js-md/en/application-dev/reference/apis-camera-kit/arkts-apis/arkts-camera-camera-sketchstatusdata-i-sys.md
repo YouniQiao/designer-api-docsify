@@ -14,7 +14,6 @@ Defines the PiP status data.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## centerPointOffset

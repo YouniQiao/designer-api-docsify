@@ -2,23 +2,19 @@
 
 Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative
-> development paradigm.
-> 
+> development paradigm.&gt;
 > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such
 > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.
 > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through
-> `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`.
-> 
+> `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`.&gt;
 > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with
 > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are
 > in different HAPs or HSPs, you first need to use
 > [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md) to create the context
 > of the corresponding module and then call the API with **resName** or **resId** specified. For more information,
-> see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
-> 
+> see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).&gt;
 > - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code
 > HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate-
 > code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see
@@ -44,8 +40,7 @@ addResource(path: string) : void
 
 Loads the specified overlay resource during application runtime to implement theme switching or resource overriding.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 
 **Since:** 23
@@ -1526,11 +1521,9 @@ getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<str
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).&gt;
 > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
 > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
@@ -1618,8 +1611,7 @@ getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string |
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -1666,11 +1658,9 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).&gt;
 > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
 > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
@@ -1802,11 +1792,9 @@ getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | doub
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).&gt;
 > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
 > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
@@ -1853,8 +1841,7 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -2047,7 +2034,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -2210,11 +2197,9 @@ getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).&gt;
 > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
 > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
@@ -2302,11 +2287,9 @@ getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | doubl
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).&gt;
 > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
 > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
@@ -2353,11 +2336,9 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).&gt;
 > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
 > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
@@ -2489,8 +2470,7 @@ getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]):
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -2537,8 +2517,7 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -2609,7 +2588,7 @@ Obtains the language list of an application.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Language list. The strings in the list are comprised of the language, script (optional ), and region (optional), which are connected by a hyphen (-). |
+| Array&lt;string&gt; | Language list. The strings in the list are comprised of the language, script (optional), and region (optional), which are connected by a hyphen (-). |
 
 **Error codes:**
 
@@ -3697,7 +3676,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -3790,7 +3769,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -4207,7 +4186,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -4300,7 +4279,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -4591,7 +4570,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -4730,7 +4709,7 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -5018,9 +4997,7 @@ export default class EntryAbility extends UIAbility {
 getOverrideConfiguration(): Configuration
 ```
 
-Obtains the configuration of differentiated resources. This API returns the result synchronously.
-
-For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](#getoverrideresourcemanager) API, this API returns the same configuration information.
+Obtains the configuration of differentiated resources. This API returns the result synchronously.For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](#getoverrideresourcemanager) API, this API returns the same configuration information.
 
 **Since:** 23
 
@@ -5065,9 +5042,7 @@ export default class EntryAbility extends UIAbility {
 getOverrideResourceManager(configuration?: Configuration): ResourceManager
 ```
 
-Obtains a **ResourceManager** object for loading differentiated resources. This API returns the result synchronously.
-
-The resource configuration (including the language, color mode, resolution, and orientation) obtained by a common **ResourceManager** object is determined by the system. With this API, an application can obtain resources of the specified configuration (that is, differentiated resources), for example, dark color resources in light color mode.
+Obtains a **ResourceManager** object for loading differentiated resources. This API returns the result synchronously.The resource configuration (including the language, color mode, resolution, and orientation) obtained by a common **ResourceManager** object is determined by the system. With this API, an application can obtain resources of the specified configuration (that is, differentiated resources), for example, dark color resources in light color mode.
 
 **Since:** 23
 
@@ -5126,8 +5101,7 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 
 Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -5185,8 +5159,7 @@ getPluralString(resId: number, num: number): Promise<string>
 
 Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -5225,8 +5198,7 @@ getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<str
 
 Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -5341,8 +5313,7 @@ getPluralStringByName(resName: string, num: number): Promise<string>
 
 Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -5392,8 +5363,7 @@ getPluralStringByNameSync(resName: string, num: number): string
 
 Obtains singular/plural strings based on the specified quantity and resource name. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -5478,8 +5448,7 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 
 Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -5682,8 +5651,7 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -5735,8 +5703,7 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 
 Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -5781,8 +5748,7 @@ getPluralStringValue(resId: number, num: number): Promise<string>
 
 Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -5832,8 +5798,7 @@ getPluralStringValueSync(resId: number, num: number): string
 
 Obtains singular/plural strings based on the specified resource ID and quantity. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -5961,8 +5926,7 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 Obtains singular/plural strings based on the specified quantity and resource object. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
@@ -6014,8 +5978,7 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 
 Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
 > [closeRawFd](#closerawfd)
 > to close the fd after use.
@@ -6104,8 +6067,7 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
 > [closeRawFd](#closerawfd)
 > to close the fd after use.
@@ -6149,8 +6111,7 @@ getRawFdSync(path: string): RawFileDescriptor
 
 Obtains the file descriptor (fd) of the HAP where the rawfile file in the resources/rawfile directory is located. This API is called in synchronous mode.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
 > [closeRawFd](#closerawfd)
 > to close the fd after use.
@@ -6560,8 +6521,7 @@ getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 
 Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
 > directory, the list of the folders and files is returned.
 
@@ -6637,8 +6597,7 @@ getRawFileList(path: string): Promise<Array<string>>
 
 Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
 > directory, the list of the folders and files is returned.
 
@@ -6681,8 +6640,7 @@ getRawFileListSync(path: string): Array<string>
 
 Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
 > directory, the list of the folders and files is returned.
 
@@ -8825,8 +8783,7 @@ removeResource(path: string) : void
 
 Removes the specified overlay resource during application runtime and restores the original resource before the override.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 
 **Since:** 23
@@ -8877,9 +8834,7 @@ export default class EntryAbility extends UIAbility {
 updateOverrideConfiguration(configuration: Configuration): void
 ```
 
-Updates the configuration of a differentiated resource management object.
-
-This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via [getOverrideResourceManager](#getoverrideresourcemanager).
+Updates the configuration of a differentiated resource management object.This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via [getOverrideResourceManager](#getoverrideresourcemanager).
 
 **Since:** 23
 

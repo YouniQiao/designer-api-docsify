@@ -149,7 +149,7 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 
 | Type | Description |
 | --- | --- |
-| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; | Whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates. |
+| Required&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; | Whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates. |
 
 ## lockCanvas
 
@@ -256,8 +256,7 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 Sets the options of the surface created by the **XComponent**, which determine whether the surface held by the **XComponent** is considered opaque during rendering.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API takes effect only when the type of **XComponent** is **TEXTURE** or **SURFACE**.
 
 **Since:** 22
@@ -333,9 +332,7 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
-
-Unit: px.
+Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.Unit: px.
 
 **Since:** 9
 
@@ -359,16 +356,11 @@ Unit: px.
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Starts AI image analysis in the given settings. Before calling this API, make sure the AI image analyzer is [enabled](arkts-arkui-xcomponent-attribute.md#enableanalyzer). This API uses a promise to return the result.
-
-Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.
-
-If this API is repeatedly called before the execution is complete, an error callback is triggered.
+Starts AI image analysis in the given settings. Before calling this API, make sure the AI image analyzer is [enabled](arkts-arkui-xcomponent-attribute.md#enableanalyzer). This API uses a promise to return the result.Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.If this API is repeatedly called before the execution is complete, an error callback is triggered.
 
 > **NOTE：**
 
-> The image analysis type cannot be dynamically modified.
-> 
+> The image analysis type cannot be dynamically modified.&gt;
 > This API depends on device capabilities. If it is called on an incompatible device, an error code is returned.
 
 **Since:** 12
@@ -412,8 +404,7 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 > **NOTE：**
 
 > If this API is called when the **startImageAnalyzer** API has not yet returned any result, an error callback is
-> triggered.
-> 
+> triggered.&gt;
 > This feature depends on device capabilities.
 
 **Since:** 12

@@ -1,8 +1,6 @@
 # TextPickerDialogOptionsExt
 
-Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
-
-@extends TextPickerOptions @interface TextPickerDialogOptionsExt
+Defines the TextPickerDialogOptionsExt for Text Picker Dialog.@extends TextPickerOptions @interface TextPickerDialogOptionsExt
 
 **Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-textpicker-textpickeroptions-i.md)
 

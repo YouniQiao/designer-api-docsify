@@ -1,6 +1,6 @@
 # InputClient
 
-@brief You must first use on('inputStart') to obtain a **InputClient** instance, and then use this instance to call the following APIs.
+You must first use on('inputStart') to obtain a **InputClient** instance, and then use this instance to call the following APIs.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 deleteBackward(length: int, callback: AsyncCallback<boolean>): void
 ```
 
-@brief Deletes the fixed-length text after the cursor. This API uses an asynchronous callback to return the result.
+Deletes the fixed-length text after the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -115,7 +115,7 @@ textInputClient.deleteBackward(length).then((result: boolean) => {
 deleteBackward(length: int): Promise<boolean>
 ```
 
-@brief Deletes the fixed-length text after the cursor. This API uses a promise to return the result.
+Deletes the fixed-length text after the cursor. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -153,7 +153,7 @@ See [deleteBackward](#deletebackward)
 deleteBackwardSync(length: int): void
 ```
 
-@brief Deletes the fixed-length text after the cursor.
+Deletes the fixed-length text after the cursor.
 
 **Since:** 23
 
@@ -188,7 +188,7 @@ inputClient.deleteBackwardSync(length);
 deleteForward(length: int, callback: AsyncCallback<boolean>): void
 ```
 
-@brief Deletes the fixed-length text before the cursor. This API uses an asynchronous callback to return the result.
+Deletes the fixed-length text before the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -283,7 +283,7 @@ textInputClient.deleteForward(length).then((result: boolean) => {
 deleteForward(length: int): Promise<boolean>
 ```
 
-@brief Deletes the fixed-length text before the cursor. This API uses a promise to return the result.
+Deletes the fixed-length text before the cursor. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -321,7 +321,7 @@ See [deleteForward](#deleteforward)
 deleteForwardSync(length: int): void
 ```
 
-@brief Deletes the fixed-length text before the cursor.
+Deletes the fixed-length text before the cursor.
 
 **Since:** 23
 
@@ -356,7 +356,7 @@ inputClient.deleteForwardSync(length);
 finishTextPreview(): Promise<void>
 ```
 
-@brief Finishes the text preview. This API uses a promise to return the result. <br> <br>   
+Finishes the text preview. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -400,7 +400,7 @@ inputClient.finishTextPreview().then(() => {
 finishTextPreviewSync(): void
 ```
 
-@brief Finishes the text preview. <br> <br>   
+Finishes the text preview. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -432,7 +432,7 @@ inputClient.finishTextPreviewSync();
 getAttachOptions(): AttachOptions
 ```
 
-@brief Obtains the additional options for binding an input method.
+Obtains the additional options for binding an input method.
 
 **Since:** 19
 
@@ -450,7 +450,7 @@ getAttachOptions(): AttachOptions
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 |
 
 **Examples**
 
@@ -465,7 +465,7 @@ console.info(`Succeeded in getting AttachOptions, AttachOptions is ${attachOptio
 getAttachOptions(): AttachOptions | null
 ```
 
-@brief Get input attachOptions.
+Get input attachOptions.
 
 **Since:** 23
 
@@ -489,7 +489,7 @@ See [getAttachOptions](#getattachoptions)
 getBackward(length: int, callback: AsyncCallback<string>): void
 ```
 
-@brief Obtains the specific-length text after the cursor. This API uses an asynchronous callback to return the result.
+Obtains the specific-length text after the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -568,7 +568,7 @@ textInputClient.getBackward(length).then((text: string) => {
 getBackward(length: int): Promise<string>
 ```
 
-@brief Obtains the specific-length text after the cursor. This API uses a promise to return the result.
+Obtains the specific-length text after the cursor. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -606,7 +606,7 @@ See [getBackward](#getbackward)
 getBackwardSync(length: int): string
 ```
 
-@brief Obtains the specific-length text after the cursor.
+Obtains the specific-length text after the cursor.
 
 **Since:** 23
 
@@ -648,7 +648,7 @@ console.info(`Succeeded in getting backward, text: ${text}`);
 getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
-@brief Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result. <br> <br>   
+Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -694,7 +694,7 @@ inputClient.getCallingWindowInfo().then((windowInfo: inputMethodEngine.WindowInf
 getCallingWindowInfo(): Promise<WindowInfo | null>
 ```
 
-@brief Get info of the calling window.
+Get info of the calling window.
 
 **Since:** 23
 
@@ -726,7 +726,7 @@ See [getCallingWindowInfo](#getcallingwindowinfo)
 getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```
 
-@brief Obtains the attribute of the edit box. This API uses an asynchronous callback to return the result.
+Obtains the attribute of the edit box. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -804,7 +804,7 @@ textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Ed
 getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 ```
 
-@brief Get attribute about editor.
+Get attribute about editor.
 
 **Since:** 23
 
@@ -834,7 +834,7 @@ See [getEditorAttribute](#geteditorattribute)
 getEditorAttribute(): Promise<EditorAttribute>
 ```
 
-@brief Obtains the attribute of the edit box. This API uses a promise to return the result.
+Obtains the attribute of the edit box. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -864,7 +864,7 @@ See [getEditorAttribute](#geteditorattribute)
 getEditorAttribute(): Promise<EditorAttribute | null>
 ```
 
-@brief Get attribute about editor.
+Get attribute about editor.
 
 **Since:** 23
 
@@ -894,7 +894,7 @@ See [getEditorAttribute](#geteditorattribute)
 getEditorAttributeSync(): EditorAttribute
 ```
 
-@brief Obtains the attribute of the edit box.
+Obtains the attribute of the edit box.
 
 **Since:** 10
 
@@ -928,7 +928,7 @@ console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 getEditorAttributeSync(): EditorAttribute | null
 ```
 
-@brief Get attribute about editor.
+Get attribute about editor.
 
 **Since:** 23
 
@@ -958,7 +958,7 @@ See [getEditorAttributeSync](#geteditorattributesync)
 getForward(length: int, callback: AsyncCallback<string>): void
 ```
 
-@brief Obtains the specific-length text before the cursor. This API uses an asynchronous callback to return the result.
+Obtains the specific-length text before the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1037,7 +1037,7 @@ textInputClient.getForward(length).then((text: string) => {
 getForward(length: int): Promise<string>
 ```
 
-@brief Obtains the specific-length text before the cursor. This API uses a promise to return the result.
+Obtains the specific-length text before the cursor. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1075,7 +1075,7 @@ See [getForward](#getforward)
 getForwardSync(length: int): string
 ```
 
-@brief Obtains the specific-length text before the cursor.
+Obtains the specific-length text before the cursor.
 
 **Since:** 23
 
@@ -1117,7 +1117,7 @@ console.info(`Succeeded in getting forward, text: ${text}`);
 getTextIndexAtCursor(callback: AsyncCallback<int>): void
 ```
 
-@brief Obtains the index of the text where the cursor is located. This API uses an asynchronous callback to return the result.
+Obtains the index of the text where the cursor is located. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1168,7 +1168,7 @@ inputClient.getTextIndexAtCursor().then((index: number) => {
 getTextIndexAtCursor(): Promise<int>
 ```
 
-@brief Obtains the index of the text where the cursor is located. This API uses a promise to return the result.
+Obtains the index of the text where the cursor is located. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1199,7 +1199,7 @@ See [getTextIndexAtCursor](#gettextindexatcursor)
 getTextIndexAtCursorSync(): int
 ```
 
-@brief Obtains the index of the text where the cursor is located.
+Obtains the index of the text where the cursor is located.
 
 **Since:** 23
 
@@ -1233,7 +1233,7 @@ console.info(`Succeeded in getTextIndexAtCursorSync, index: ${index}`);
 insertText(text: string, callback: AsyncCallback<boolean>): void
 ```
 
-@brief Inserts text. This API uses an asynchronous callback to return the result.
+Inserts text. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1325,7 +1325,7 @@ textInputClient.insertText('test').then((result: boolean) => {
 insertText(text: string): Promise<boolean>
 ```
 
-@brief Inserts text. This API uses a promise to return the result.
+Inserts text. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1363,7 +1363,7 @@ See [insertText](#inserttext)
 insertTextSync(text: string): void
 ```
 
-@brief Inserts text.
+Inserts text.
 
 **Since:** 23
 
@@ -1397,7 +1397,7 @@ inputClient.insertTextSync('test');
 moveCursor(direction: int, callback: AsyncCallback<void>): void
 ```
 
-@brief Moves the cursor. This API uses an asynchronous callback to return the result.
+Moves the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1449,7 +1449,7 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
 moveCursor(direction: int): Promise<void>
 ```
 
-@brief Moves the cursor. This API uses a promise to return the result.
+Moves the cursor. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1486,7 +1486,7 @@ See [moveCursor](#movecursor)
 moveCursorSync(direction: int): void
 ```
 
-@brief Moves the cursor.
+Moves the cursor.
 
 **Since:** 23
 
@@ -1519,7 +1519,7 @@ inputClient.moveCursorSync(inputMethodEngine.Direction.CURSOR_UP);
 off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 ```
 
-@brief Unsubscribes from the event indicating that additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
+Unsubscribes from the event indicating that additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 19
 
@@ -1554,7 +1554,7 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 ```
 
-@brief Unsubscribe 'attachOptionsDidChange' event.
+Unsubscribe 'attachOptionsDidChange' event.
 
 **Since:** 23
 
@@ -1574,7 +1574,7 @@ offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 ```
 
-@brief Subscribes to the event indicating that the additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
+Subscribes to the event indicating that the additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 19
 
@@ -1593,7 +1593,7 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 |
 
 **Examples**
 
@@ -1615,7 +1615,7 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
 ```
 
-@brief Subscribe 'attachOptionsDidChange' event.
+Subscribe 'attachOptionsDidChange' event.
 
 **Since:** 23
 
@@ -1635,7 +1635,7 @@ onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-@brief Registers or unregisters MessageHandler. <br> <br>   
+Registers or unregisters MessageHandler. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -1690,7 +1690,7 @@ inputMethodEngine.getInputMethodAbility()
 selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 ```
 
-@brief Selects text based on the cursor movement direction. This API uses an asynchronous callback to return the result.
+Selects text based on the cursor movement direction. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1744,7 +1744,7 @@ inputClient.selectByMovement(movement).then(() => {
 selectByMovement(movement: Movement): Promise<void>
 ```
 
-@brief Selects text based on the cursor movement direction. This API uses a promise to return the result.
+Selects text based on the cursor movement direction. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1781,7 +1781,7 @@ See [selectByMovement](#selectbymovement)
 selectByMovementSync(movement: Movement): void
 ```
 
-@brief Selects text based on the cursor movement direction.
+Selects text based on the cursor movement direction.
 
 **Since:** 23
 
@@ -1815,7 +1815,7 @@ inputClient.selectByMovementSync(movement);
 selectByRange(range: Range, callback: AsyncCallback<void>): void
 ```
 
-@brief Selects text based on the specified range. This API uses an asynchronous callback to return the result.
+Selects text based on the specified range. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1869,7 +1869,7 @@ inputClient.selectByRange(range).then(() => {
 selectByRange(range: Range): Promise<void>
 ```
 
-@brief Selects text based on the specified range. This API uses a promise to return the result.
+Selects text based on the specified range. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1906,7 +1906,7 @@ See [selectByRange](#selectbyrange)
 selectByRangeSync(range: Range): void
 ```
 
-@brief Selects text based on the specified range.
+Selects text based on the specified range.
 
 **Since:** 23
 
@@ -1940,7 +1940,7 @@ inputClient.selectByRangeSync(range);
 sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
-@brief Sends an extended edit action. This API uses an asynchronous callback to return the result. <br> <br>   
+Sends an extended edit action. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2002,7 +2002,7 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
 sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
-@brief Sends an extended edit action. This API uses a promise to return the result. <br> <br>   
+Sends an extended edit action. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2049,7 +2049,7 @@ See [sendExtendAction](#sendextendaction)
 sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void
 ```
 
-@brief Sends the function key. This API uses an asynchronous callback to return the result.
+Sends the function key. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -2144,7 +2144,7 @@ textInputClient.sendKeyFunction(action).then((result: boolean) => {
 sendKeyFunction(action: int): Promise<boolean>
 ```
 
-@brief Sends the function key. This API uses a promise to return the result.
+Sends the function key. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -2181,7 +2181,7 @@ See [sendKeyFunction](#sendkeyfunction)
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-@brief Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result. <br> <br>   
+Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2242,7 +2242,7 @@ inputClient.sendMessage(msgId, msgParam).then(() => {
 sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
-@brief Sends private data to the system component that needs to communicate with the input method application. This API uses a promise to return the result. <br> <br>   
+Sends private data to the system component that needs to communicate with the input method application. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2309,7 +2309,7 @@ inputMethodEngine.getInputMethodAbility().on('inputStart', (kbController, textIn
 setPreviewText(text: string, range: Range): Promise<void>
 ```
 
-@brief Sets the preview text. This API uses a promise to return the result.
+Sets the preview text. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -2357,7 +2357,7 @@ inputClient.setPreviewText('test', range).then(() => {
 setPreviewTextSync(text: string, range: Range): void
 ```
 
-@brief Sets the preview text.
+Sets the preview text.
 
 **Since:** 23
 

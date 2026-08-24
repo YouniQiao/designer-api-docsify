@@ -37,8 +37,7 @@ Initialize builder.
 ## builder
 
 ```TypeScript
-@Builder
-  public builder: T
+public builder: T
 ```
 
 Builder function.
@@ -48,6 +47,8 @@ Builder function.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

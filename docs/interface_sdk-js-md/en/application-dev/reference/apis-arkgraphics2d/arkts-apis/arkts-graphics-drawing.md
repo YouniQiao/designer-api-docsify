@@ -2,10 +2,8 @@
 
 During application development, you often need to draw different elements. Typically, you can use ArkUI components to draw the desired elements or effects. However, sometimes these components cannot meet the needs for custom graphics or effects. In such cases, you can turn to the Drawing module for flexible custom drawing. This module provides basic drawing capabilities, such as drawing rectangles, circles, points, straight lines, custom paths, and fonts.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -34,13 +32,13 @@ import { drawing } from '@kit.ArkGraphics2D';
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Implements an image filter. |
 | [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Lattice object. which is used to divide an image by lattice. |
 | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | Implements a mask filter. |
-| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Implements a matrix. A 3 x 3 matrix is shown as below.  Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient. If (x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;) is the source coordinate point, (x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows:  |
+| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Implements a matrix. A 3 x 3 matrix is shown as below. Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient. If (x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;) is the source coordinate point, (x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows: |
 | [Path](arkts-arkgraphics2d-drawing-path-c.md) | A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves. |
 | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Implements a path effect. |
 | [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | Implements a path operation iterator. You can read path operation instructions by traversing the iterator. |
 | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Defines a pen, which is used to describe the style and color to outline a shape. |
 | [PointUtils](arkts-arkgraphics2d-drawing-pointutils-c.md) | This class offers a comprehensive set of operations for handling common2D Point objects. |
-| [RectUtils](arkts-arkgraphics2d-drawing-rectutils-c.md) | This module provides tools for processing rectangles. Use scenarios: |
+| [RectUtils](arkts-arkgraphics2d-drawing-rectutils-c.md) | This module provides tools for processing rectangles. Use scenarios: 1. Quickly create rectangles and get their basic features, like making a new rectangle, copying one, and obtaining its width, height, and center point. 2. Calculate and adjust boundaries, such as obtaining the inclusion relationship, calculating and updating intersections and unions between rectangles, and updating boundary values. |
 | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Describes a region, which is used to describe the region where the shape can be drawn. |
 | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Rounded rectangle. |
 | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Implements sampling options. |
@@ -64,7 +62,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | Name | Description |
 | --- | --- |
 | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) | Enumerates the blend modes. A blend mode combines two colors (source color and destination color) in a specific way to create a new color. This is commonly used in graphics operations like overlaying, filtering, and masking. The blending process applies the same logic to the red, green, and blue color channels separately. The alpha channel, however, is handled according to the specific definitions of each blend mode. For brevity, the following abbreviations are used: s: source. d: destination. sa: source alpha. da: destination alpha. The following abbreviations are used in the calculation result: r: used when the calculation method is the same for the four channels (alpha, red, green, and blue channels). ra: used when only the alpha channel is manipulated. **rc**: used when the other three color channels are manipulated. The table below shows the effect of each blend mode, where the yellow rectangle is the source and the blue circle is the destination. |
-| [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | Enumerates the blur types of a mask filter. \| Name \| Value\| Description \| Diagram \| \| ------ \| - \| ------------------ \| -------- \| \| NORMAL \| 0 \| Both the outer edges and the inner solid parts are blurred.\| \| \| SOLID \| 1 \| The inner solid part remains unchanged, while only the outer edges are blurred.\| \| \| OUTER \| 2 \| Only the outer edges are blurred, with the inner solid part being fully transparent.\| \| \| INNER \| 3 \| Only the inner solid part is blurred, while the outer edges remain sharp.\| \| |
+| [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | Enumerates the blur types of a mask filter. \| Name \| Value\| Description \| Diagram \| \| ------ \| - \| ------------------ \| -------- \| \| NORMAL \| 0 \| Both the outer edges and the inner solid parts are blurred.\|\| \| SOLID \| 1 \| The inner solid part remains unchanged, while only the outer edges are blurred.\|\| \| OUTER \| 2 \| Only the outer edges are blurred, with the inner solid part being fully transparent.\|\| \| INNER \| 3 \| Only the inner solid part is blurred, while the outer edges remain sharp.\|\| |
 | [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) | Enumerates the cap styles of a pen. The cap style defines the style of both ends of a line segment drawn by the pen. |
 | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | Enumerates the canvas clipping modes. |
 | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Enumerates the corner positions of a rounded rectangle. |

@@ -1,8 +1,6 @@
 # EmitterParticleOptions
 
-Defines parameters of particles used by emitters.
-
-@interface EmitterParticleOptions
+Defines parameters of particles used by emitters.@interface EmitterParticleOptions
 
 **Since:** 23
 

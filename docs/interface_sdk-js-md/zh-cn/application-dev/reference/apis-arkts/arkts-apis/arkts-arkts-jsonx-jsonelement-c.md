@@ -355,7 +355,7 @@ constructor(elements: Record<string, JsonElement>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | [Record](arkts-arkts-map-record-c.md)&lt;string, [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | 是 | 用于创建的键值结构。 |
+| elements | Record&lt;string, [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | 是 | 用于创建的键值结构。 |
 
 ## createArray
 

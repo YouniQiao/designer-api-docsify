@@ -28,7 +28,7 @@ columnsGap(value: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
+| value | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -116,7 +116,7 @@ rowsGap(value: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
+| value | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

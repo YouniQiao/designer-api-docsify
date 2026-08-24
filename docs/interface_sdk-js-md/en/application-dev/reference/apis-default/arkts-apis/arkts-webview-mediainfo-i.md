@@ -57,9 +57,7 @@ Value of the **controlslist** attribute in **&lt;video&gt;** or **&lt;audio&gt;*
 controlsShown: boolean
 ```
 
-Whether the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**.
-
-The value **true** means that the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**, and **false** means the opposite.
+Whether the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**.The value **true** means that the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**, and **false** means the opposite.
 
 **Type:** boolean
 
@@ -149,9 +147,7 @@ Type of the media.
 muted: boolean
 ```
 
-Whether to mute the player.
-
-The value **true** means to mute the player, and **false** means the opposite.
+Whether to mute the player.The value **true** means to mute the player, and **false** means the opposite.
 
 **Type:** boolean
 

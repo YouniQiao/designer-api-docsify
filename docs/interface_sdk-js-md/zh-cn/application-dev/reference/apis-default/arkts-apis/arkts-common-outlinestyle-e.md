@@ -1,8 +1,6 @@
 # OutlineStyle
 
-Outline Style
-
-@enum { number }
+Outline Style@enum { number }
 
 **起始版本：** 23
 

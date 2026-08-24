@@ -1,8 +1,7 @@
 # ShortcutWant (System API)
 
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
 > [bundleManager-ShortcutWant](#shortcutwant-system-api) instead.
 

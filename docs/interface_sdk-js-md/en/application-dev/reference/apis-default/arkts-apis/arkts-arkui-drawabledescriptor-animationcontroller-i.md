@@ -1,8 +1,6 @@
 # AnimationController
 
-Define the data structure for PixelMap animations.
-
-@interface AnimationController
+Define the data structure for PixelMap animations.@interface AnimationController
 
 **Since:** 23
 

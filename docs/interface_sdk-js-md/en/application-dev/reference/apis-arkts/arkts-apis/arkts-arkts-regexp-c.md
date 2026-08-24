@@ -452,7 +452,7 @@ Splits the string into an array of substrings using the regular expression.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | str | string | Yes | the string to split. |
-| limit | [Int](arkts-arkts-int-c.md) \| undefined | Yes | limits the maximum length of the returned array. |
+| limit | Int \| undefined | Yes | limits the maximum length of the returned array. |
 
 **Return value:**
 

@@ -20,6 +20,8 @@ Define the WithEnv component that allows setting environment properties for chil
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function WithEnv(    content_?: CustomBuilder,): WithEnvAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function WithEnv(    content_?: CustomBuilder,): WithEnvAttribute-End-->

@@ -11,7 +11,6 @@ Defines the content for color filling.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## ORIGIN

@@ -1,8 +1,6 @@
 # ScrollBarMargin
 
-Define scrollbar margin options.
-
-@interface ScrollBarMargin
+Define scrollbar margin options.@interface ScrollBarMargin
 
 **Since:** 26.0.0
 

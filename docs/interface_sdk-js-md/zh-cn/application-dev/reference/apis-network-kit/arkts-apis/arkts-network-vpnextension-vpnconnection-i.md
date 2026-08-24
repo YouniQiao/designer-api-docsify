@@ -59,8 +59,7 @@ create(config: VpnConfig): Promise<int>
 
 使用config创建一个VPN网络。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 建议在不需要VPN网络的时候配对调用[destroy()](#destroy)或
 > [destroy(vpnId: string)](#destroy)接口销毁启动的VPN网络，并执行资源清理等操作。
 
@@ -320,12 +319,9 @@ destroy(vpnId: string): Promise<void>
 generateVpnId(): Promise<string>
 ```
 
-生成VPN唯一标识。使用Promise异步回调。
+生成VPN唯一标识。使用Promise异步回调。如需使用系统多VPN能力，需调用该接口生成vpnId，配置到VpnConfig中。
 
-如需使用系统多VPN能力，需调用该接口生成vpnId，配置到VpnConfig中。
-
-> **注意**
-> 
+> **注意**&gt;
 > 当前系统多VPN能力仅支持IPv4。
 
 **起始版本：** 20

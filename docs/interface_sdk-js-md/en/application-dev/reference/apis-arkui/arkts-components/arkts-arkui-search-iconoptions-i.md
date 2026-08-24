@@ -36,9 +36,7 @@ Set the icon color
 size?: Length
 ```
 
-Set the icon size
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. </p>
+Set the icon size<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. </p>
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

@@ -1,8 +1,6 @@
 # TextOverflow
 
-Declare how text overflows.
-
-@enum { number }
+Declare how text overflows.@enum { number }
 
 **Since:** 23
 

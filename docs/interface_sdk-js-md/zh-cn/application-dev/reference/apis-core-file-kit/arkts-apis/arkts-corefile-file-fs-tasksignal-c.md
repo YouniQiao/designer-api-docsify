@@ -126,10 +126,8 @@ onCancel(): Promise<string>
 ```
 
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 12开始支持，从API version 24开始废弃。
-
 取消拷贝事件监听。
 
 **起始版本：** 12

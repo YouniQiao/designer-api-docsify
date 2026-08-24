@@ -2,8 +2,7 @@
 
 Implements a **WebDataBase** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - You must load the **Web** component before calling the APIs in **WebDataBase**.
 
 **Since:** 9
@@ -132,7 +131,7 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Host address of the HTTP authentication credential app, in the format of ' www.example.com' or '192.168.1.1', excluding the protocol and port number. |
+| host | string | Yes | Host address of the HTTP authentication credential app, in the format of 'www.example.com' or '192.168.1.1', excluding the protocol and port number. |
 | realm | string | Yes | Authentication realm of the HTTP authentication credential app, which indicates the scope or protection area for authentication under the same host. It is usually specified by the WWW- Authenticate header returned by the server. |
 
 **Return value:**

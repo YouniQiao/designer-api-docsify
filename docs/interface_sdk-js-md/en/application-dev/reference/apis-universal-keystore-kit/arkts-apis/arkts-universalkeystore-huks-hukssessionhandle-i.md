@@ -12,7 +12,6 @@ Defines the struct for a HUKS handle.
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## challenge

@@ -1,8 +1,6 @@
 # EffectLayer (System API)
 
-Effect layer enum.
-
-@enum { number }
+Effect layer enum.@enum { number }
 
 **Since:** 23
 

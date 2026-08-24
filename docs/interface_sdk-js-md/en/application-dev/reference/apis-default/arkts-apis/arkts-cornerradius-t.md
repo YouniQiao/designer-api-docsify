@@ -16,5 +16,5 @@ Defines the Corner radius.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Corners](arkts-graphics-corners-i.md)&lt;[Vector2](arkts-graphics-vector2-i.md)&gt;
+**Property type:** [Corners](../../apis-arkui/arkts-apis/arkts-arkui-graphics-corners-i.md)&lt;[Vector2](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector2-i.md)&gt;
 

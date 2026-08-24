@@ -27,7 +27,7 @@ Calls the function with the specified object as the this value and the elements 
 | --- | --- | --- | --- |
 | target | (this: T, ...args: A) =&gt; R | Yes |  |
 | thisArgument | T | Yes |  |
-| argumentsList | [Readonly](arkts-readonly-t.md)&lt;A&gt; | Yes |  |
+| argumentsList | Readonly&lt;A&gt; | Yes |  |
 
 **Return value:**
 

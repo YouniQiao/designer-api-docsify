@@ -11,42 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
-import { ArrayListComparatorFn } from '@kit.ArkTS';
-import { ArrayListForEachCb } from '@kit.ArkTS';
-import { ArrayListReplaceCb } from '@kit.ArkTS';
 import { util } from '@kit.ArkTS';
-import { Deque } from '@kit.ArkTS';
-import { DequeForEachCb } from '@kit.ArkTS';
-import { HashMap } from '@kit.ArkTS';
-import { HashMapCbFn } from '@kit.ArkTS';
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
-import { LightWeightSet } from '@kit.ArkTS';
-import { LightWeightSetForEachCb } from '@kit.ArkTS';
-import { LinkedList } from '@kit.ArkTS';
-import { LinkedListForEachCb } from '@kit.ArkTS';
-import { List } from '@kit.ArkTS';
-import { ListComparatorFn } from '@kit.ArkTS';
-import { ListForEachCb } from '@kit.ArkTS';
-import { ListReplaceCb } from '@kit.ArkTS';
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
-import { Queue } from '@kit.ArkTS';
-import { QueueForEachCb } from '@kit.ArkTS';
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
-import { TreeMap } from '@kit.ArkTS';
-import { TreeMapForEachCb } from '@kit.ArkTS';
-import { TreeMapComparator } from '@kit.ArkTS';
-import { TreeSet } from '@kit.ArkTS';
-import { TreeSetForEachCb } from '@kit.ArkTS';
-import { TreeSetComparator } from '@kit.ArkTS';
-import { stream } from '@kit.ArkTS';
-import { Vector } from '@kit.ArkTS';
-import { JSON } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -367,10 +332,8 @@ isAsyncFunction(value: Object): boolean
 
 判断入参是否为异步函数。
 
-> **说明：**
-> 
-> 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的constructor.name属性与'AsyncGeneratorFunction'做判等的方式替代。
-> 
+> **说明：**&gt;
+> 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的constructor.name属性与'AsyncGeneratorFunction'做判等的方式替代。&gt;
 > 该接口无法对Sendable class中的async成员函数进行有效判断，无替代方案。
 
 **起始版本：** 8
@@ -514,8 +477,7 @@ isBooleanObject(value: Object): boolean
 
 判断入参是否为 Boolean 类型。
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
@@ -557,8 +519,7 @@ isBoxedPrimitive(value: Object): boolean
 
 判断入参是否为 Boolean、Number、String 或 Symbol 类型。
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
@@ -824,8 +785,7 @@ isGeneratorFunction(value: Object): boolean
 
 判断入参是否为 generator 函数。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的constructor.name属性与'AsyncGeneratorFunction'做判等的方式替代。
 
 **起始版本：** 8
@@ -1218,8 +1178,7 @@ isNumberObject(value: Object): boolean
 
 判断入参是否为 Number 类型。
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
@@ -1513,8 +1472,7 @@ isStringObject(value: Object): boolean
 
 判断入参是否为字符串对象。
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
@@ -1556,8 +1514,7 @@ isSymbolObject(value: Object): boolean
 
 判断入参是否为 symbol 对象。
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8

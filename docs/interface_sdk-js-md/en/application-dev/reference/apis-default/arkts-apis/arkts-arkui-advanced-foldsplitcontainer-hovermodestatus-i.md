@@ -1,8 +1,6 @@
 # HoverModeStatus
 
-The status of hover mode.
-
-@interface HoverStatus
+The status of hover mode.@interface HoverStatus
 
 **Since:** 23
 

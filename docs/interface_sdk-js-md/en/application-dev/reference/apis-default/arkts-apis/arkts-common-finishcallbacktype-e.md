@@ -1,8 +1,6 @@
 # FinishCallbackType
 
-Enum for FinishCallbackType.
-
-@enum { number }
+Enum for FinishCallbackType.@enum { number }
 
 **Since:** 23
 

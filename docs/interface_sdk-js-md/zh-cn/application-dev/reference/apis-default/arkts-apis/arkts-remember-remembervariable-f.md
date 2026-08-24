@@ -13,6 +13,8 @@ export declare function rememberVariable<T>(initialValue: RememberInitialType<T>
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Builder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@Builderexport declare function rememberVariable<T>(initialValue: RememberInitialType<T>): MutableVariable<T>--><!--Device-unnamed-@Builderexport declare function rememberVariable<T>(initialValue: RememberInitialType<T>): MutableVariable<T>-End-->

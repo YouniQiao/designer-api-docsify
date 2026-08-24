@@ -20,7 +20,7 @@ import { stream } from '@kit.ArkTS';
 constructor()
 ```
 
-*Writable**的构造函数。
+**Writable**的构造函数。
 
 **起始版本：** 23
 

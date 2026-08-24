@@ -19,7 +19,7 @@
 
 | Name | Description |
 | --- | --- |
-| [TreeView](arkts-arkui-advanced-treeview-treeview-s.md) | The **TreeView** component represents a tree view used to display a hierarchical list of items. Each item can contain subitems, which may be expanded or collapsed. |
+| [TreeView](arkts-arkui-advanced-treeview-treeview-s.md) | The **TreeView** component represents a tree view used to display a hierarchical list of items. Each item can contain subitems, which may be expanded or collapsed.This component is applicable in productivity applications, such as side navigation bars in notepad, email, and Gallery applications. |
 
 ### Interfaces
 

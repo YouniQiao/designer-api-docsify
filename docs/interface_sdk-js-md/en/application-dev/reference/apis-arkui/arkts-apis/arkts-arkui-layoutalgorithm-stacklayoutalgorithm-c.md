@@ -2,8 +2,7 @@
 
 Stack layout algorithm class.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The object of the **StackLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as
 > the input parameter of the
 > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
@@ -12,6 +11,8 @@ Stack layout algorithm class.
 **Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 
 **Since:** 24
+
+**Decorator:** @ObservedV2
 
 <!--Device-unnamed-export class StackLayoutAlgorithm--><!--Device-unnamed-export class StackLayoutAlgorithm-End-->
 
@@ -45,19 +46,13 @@ Constructs the stack layout algorithm class.
 
 ## alignContent
 
-```TypeScript
-@Trace public alignContent?: LocalizedAlignment
-```
-
-Alignment mode of child components in the stack layout algorithm.
-
-Default value: **LocalizedAlignment.CENTER**
-
-Invalid values are treated as the default value.
+Alignment mode of child components in the stack layout algorithm.Default value: **LocalizedAlignment.CENTER**Invalid values are treated as the default value.
 
 **Type:** [LocalizedAlignment](../../apis-default/arkts-apis/arkts-enums-localizedalignment-e.md)
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -11,11 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## isMainFrame
@@ -24,9 +19,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 isMainFrame?: boolean
 ```
 
-是否是主文档触发。
-
-true表示是主文档触发，false表示不是主文档触发。
+是否是主文档触发。true表示是主文档触发，false表示不是主文档触发。
 
 **类型：** boolean
 
@@ -42,7 +35,7 @@ true表示是主文档触发，false表示不是主文档触发。
 isRefreshed: boolean
 ```
 
-true表示该页面是被重新加载的（调用[refresh&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#refresh)接口），false表示该页 面是新加载的。
+true表示该页面是被重新加载的（调用[refresh&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)接口），false表示该页 面是新加载的。
 
 **类型：** boolean
 

@@ -22,11 +22,9 @@ convert(xml: string, options?: ConvertOptions): Object
 
 将XML文本转换为Object类型对象。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](#fastconverttojsobject)替代。
-> 
+> [fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](#fastconverttojsobject)替代。&gt;
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。本接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 8
@@ -94,11 +92,9 @@ convertToJSObject(xml: string, options?: ConvertOptions): Object
 
 将XML文本转换为Object类型对象，适用于XML配置文件解析、数据格式转换等场景。该方法将XML文本解析为层级嵌套结构，各XML组件按ConvertOptions中配置的键名映射为对象的属性。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 14开始废弃，建议使用
-> [fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](#fastconverttojsobject)替代。
-> 
+> [fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](#fastconverttojsobject)替代。&gt;
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。本接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 9
@@ -181,12 +177,10 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 将XML文本转换为Object类型对象，适用于XML配置文件解析、数据报文处理等场景。该方法将XML文本解析为层级嵌套结构，各XML组件按ConvertOptions中配置的键名映射为对象的属性。 当单元素文本内容超过10M时，建议使用[largeConvertToJSObject&lt;sup&gt;23+&lt;/sup&gt;](#largeconverttojsobject)替代。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口无法满足解析单元素文本内容超过10M的XML文件，当单元素文本内容超过10M时，会输出异常日志信息并返回一个仅包含XML声明的基础Object对象。
 > 如需解析单元素文本内容超过10M的XML文本，建议使用[largeConvertToJSObject&lt;sup&gt;23+&lt;/sup&gt;](#largeconverttojsobject)
-> 替代。
-> 
+> 替代。&gt;
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。fastConvertToJSObject接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 14
@@ -264,10 +258,8 @@ largeConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 将XML文本转换为Object类型对象，适用于XML日志文件、数据报文等大型XML解析场景。此方法支持解析单元素大小超过10M的大型XML文本，针对大文本场景进行了优化，可有效避免单元素文本过大导致的解析异常。 当[fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](#fastconverttojsobject)因单元素文本内容超过10M无法正常解析时， 可使用本方法作为替代方案。
 
-> **说明：**
-> 
-> 当传入的XML文本无法正确解析为Object类型对象时，输出异常日志信息并返回一个仅包含XML声明的基础Object对象。
-> 
+> **说明：**&gt;
+> 当传入的XML文本无法正确解析为Object类型对象时，输出异常日志信息并返回一个仅包含XML声明的基础Object对象。&gt;
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。本接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 23

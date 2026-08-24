@@ -1,8 +1,6 @@
 # TechnologyType (System API)
 
-Enum for distance measurement technology types.
-
-@enum { int } TechnologyType
+Enum for distance measurement technology types.@enum { int } TechnologyType
 
 **Since:** 23
 

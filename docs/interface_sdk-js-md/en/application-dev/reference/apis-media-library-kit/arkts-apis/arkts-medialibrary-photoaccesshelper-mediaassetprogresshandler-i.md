@@ -1,6 +1,6 @@
 # MediaAssetProgressHandler
 
-*MediaAssetProgressHandler** is used to obtain the media asset processing progress from **onProgress()**.
+**MediaAssetProgressHandler** is used to obtain the media asset processing progress from **onProgress()**.
 
 **Since:** 23
 

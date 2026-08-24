@@ -1,8 +1,6 @@
 # RatingOptions
 
-Define options used to construct a rating.
-
-@interface RatingOptions
+Define options used to construct a rating.@interface RatingOptions
 
 **Since:** 23
 

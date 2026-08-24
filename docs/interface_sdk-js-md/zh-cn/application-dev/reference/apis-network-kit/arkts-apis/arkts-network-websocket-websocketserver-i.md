@@ -247,8 +247,7 @@ listAllConnections(): WebSocketConnection[]
 
 获取与服务端连接的所有客户端信息。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口为异步调用，返回结果需通过await关键字等待异步操作完成，以确保正确获取到所有客户端连接信息。
 
 **起始版本：** 23
@@ -362,8 +361,7 @@ off(type: 'close', callback?: ClientConnectionCloseCallback): void
 
 取消订阅WebSocketServer的关闭事件，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 19
@@ -396,8 +394,7 @@ off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 
 取消订阅WebSocketServer的连接事件（客户端与服务端建链成功），使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 19
@@ -430,8 +427,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 取消订阅WebSocketServer的Error事件，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 19
@@ -464,8 +460,7 @@ off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 
 取消订阅WebSocketServer的接收到客户端消息事件，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 19
@@ -893,8 +888,7 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 
 通过WebSocket连接发送数据。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > send接口必须在监听到connect事件后才可以调用。
 
 **起始版本：** 23
@@ -909,7 +903,7 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | 服务端发送消息的数据，同时支持string（字符串）和ArrayBuffer（二进制）类型。最大支持发送5242864字节数据(即5 1024 1024 - 16)，超过该大小会返回401错误码。 |
+| data | string \| ArrayBuffer | 是 | 服务端发送消息的数据，同时支持string（字符串）和ArrayBuffer（二进制）类型。最大支持发送5242864字节数据(即5 * 1024 * 1024 - 16)，超过该大小会返回401错误码。 |
 | connection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | 是 | 发送的客户端信息。 |
 
 **返回值：**
@@ -1134,8 +1128,7 @@ start(config: WebSocketServerConfig): Promise<boolean>
 
 配置config参数，启动服务端service。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 在多次调用该接口时，应避免监听同一端口。
 
 **起始版本：** 24

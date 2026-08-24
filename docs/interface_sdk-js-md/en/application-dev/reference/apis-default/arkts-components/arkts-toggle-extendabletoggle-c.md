@@ -1,8 +1,6 @@
 # ExtendableToggle
 
-Defines the Extendable Toggle.
-
-@implements ToggleAttribute
+Defines the Extendable Toggle.@implements ToggleAttribute
 
 **Inheritance/Implementation:** ExtendableToggle implements [ToggleAttribute](arkts-toggle-attribute.md#toggleattribute)
 
@@ -17,8 +15,7 @@ Defines the Extendable Toggle.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableToggle>(
+static $_instantiate<T extends ExtendableToggle>(
         factory: ConstructorT<T>, 
         options: ToggleOptions,
         content_?: CustomBuilder
@@ -30,6 +27,8 @@ Constructor of Extendable Toggle.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +53,7 @@ Constructor of Extendable Toggle.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-    static _instantiateImpl<T extends ExtendableToggle>(
+static _instantiateImpl<T extends ExtendableToggle>(
         styles: CustomBuilderT<T>,  
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -67,6 +65,8 @@ Entry of Extendable Toggle.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

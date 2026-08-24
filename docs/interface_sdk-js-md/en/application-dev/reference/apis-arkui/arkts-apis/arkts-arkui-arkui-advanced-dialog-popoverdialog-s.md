@@ -4,6 +4,8 @@ Declare struct PopoverDialog
 
 **Since:** 14
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct PopoverDialog--><!--Device-unnamed-export declare struct PopoverDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -12,14 +14,12 @@ Declare struct PopoverDialog
 
 ```TypeScript
 import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
-import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUI';
 ```
 
 ## popover
 
 ```TypeScript
-@Require @Prop
-  popover: PopoverOptions
+popover: PopoverOptions
 ```
 
 Sets the PopoverDialog options.
@@ -27,6 +27,8 @@ Sets the PopoverDialog options.
 **Type:** [PopoverOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-popoveroptions-i.md)
 
 **Since:** 14
+
+**Decorator:** @Require, @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +41,7 @@ Sets the PopoverDialog options.
 ## targetBuilder
 
 ```TypeScript
-@Require @BuilderParam 
-  targetBuilder: Callback<void>
+targetBuilder: Callback<void>
 ```
 
 Sets the targetBuilder content.
@@ -48,6 +49,8 @@ Sets the targetBuilder content.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 14
+
+**Decorator:** @Require, @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,8 +63,7 @@ Sets the targetBuilder content.
 ## visible
 
 ```TypeScript
-@Link
-  visible: boolean
+visible: boolean
 ```
 
 Sets the PopoverDialog Visible Status.
@@ -69,6 +71,8 @@ Sets the PopoverDialog Visible Status.
 **Type:** boolean
 
 **Since:** 14
+
+**Decorator:** @Link
 
 **Model restriction:** This API can be used only in the stage model.
 

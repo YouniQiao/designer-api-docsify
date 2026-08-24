@@ -1,8 +1,6 @@
 # CustomKeyboardContinueFeature
 
-Enum of CustomKeyboardContinueFeature
-
-@enum { int } CustomKeyboardContinueFeature
+Enum of CustomKeyboardContinueFeature@enum { int } CustomKeyboardContinueFeature
 
 **Since:** 23
 

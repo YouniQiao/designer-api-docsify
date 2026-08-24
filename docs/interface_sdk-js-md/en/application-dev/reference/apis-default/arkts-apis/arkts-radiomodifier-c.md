@@ -1,8 +1,6 @@
 # RadioModifier
 
-Defines Radio Modifier
-
-@implements { RadioAttribute, AttributeModifier&lt;RadioAttribute&gt; }
+Defines Radio Modifier@implements { RadioAttribute, AttributeModifier&lt;RadioAttribute&gt; }
 
 **Inheritance/Implementation:** RadioModifier implements RadioAttribute, AttributeModifier<RadioAttribute>
 

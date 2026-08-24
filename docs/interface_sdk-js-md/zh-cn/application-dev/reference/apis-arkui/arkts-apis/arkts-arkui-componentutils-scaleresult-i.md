@@ -22,9 +22,7 @@ import { componentUtils } from '@kit.ArkUI';
 centerX: double
 ```
 
-变换中心点x轴坐标。
-
-单位: vp
+变换中心点x轴坐标。单位: vp
 
 **类型：** double
 
@@ -44,9 +42,7 @@ centerX: double
 centerY: double
 ```
 
-变换中心点y轴坐标。
-
-单位: vp
+变换中心点y轴坐标。单位: vp
 
 **类型：** double
 

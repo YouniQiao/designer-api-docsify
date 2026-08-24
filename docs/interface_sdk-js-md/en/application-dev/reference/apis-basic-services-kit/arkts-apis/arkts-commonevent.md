@@ -15,7 +15,6 @@ The **CommonEvent** module provides capabilities to publish, subscribe to, and u
 ## Modules to Import
 
 ```TypeScript
-import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

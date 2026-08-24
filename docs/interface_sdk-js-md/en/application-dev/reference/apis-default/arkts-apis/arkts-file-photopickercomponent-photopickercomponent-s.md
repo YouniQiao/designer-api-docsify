@@ -1,12 +1,12 @@
 # PhotoPickerComponent
 
-Declare struct PhotoPickerComponent
-
-@struct { PhotoPickerComponent }
+Declare struct PhotoPickerComponent@struct { PhotoPickerComponent }
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct PhotoPickerComponent--><!--Device-unnamed-export declare struct PhotoPickerComponent-End-->
 
@@ -20,8 +20,7 @@ Declare struct PhotoPickerComponent
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 Build function of PhotoPickerComponent
@@ -29,6 +28,8 @@ Build function of PhotoPickerComponent
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -419,8 +420,7 @@ Callback when the video play state changed
 ## pickerController
 
 ```TypeScript
-@ObjectLink
-  pickerController: PickerController
+pickerController: PickerController
 ```
 
 PickerController
@@ -430,6 +430,8 @@ PickerController
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ObjectLink
 
 **Model restriction:** This API can be used only in the stage model.
 

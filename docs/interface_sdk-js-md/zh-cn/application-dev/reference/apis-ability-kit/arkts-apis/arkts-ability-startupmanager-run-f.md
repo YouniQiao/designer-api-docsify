@@ -14,8 +14,7 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 执行启动框架启动任务或加载so文件。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本接口不支持执行feature类型HAP中的启动任务，如需要使用相关能力请调用
 > [startupManager.run](#run)
 > 接口。

@@ -2,16 +2,12 @@
 
 CommonOptions defines common options for the date time picker.
 
-> **Description:**
-> 
+> **Description:**&gt;
 > - For Date usage, refer to
-> [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions对象说明)。
-> 
+> [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions对象说明)。&gt;
 > - The text size of DatePickerComponent adapts between 14vp and 16vp. When the component width is too narrow,
-> text may be truncated.
-> 
-> - When parameters are omitted or set to undefined, default values are used.
-> 
+> text may be truncated.&gt;
+> - When parameters are omitted or set to undefined, default values are used.&gt;
 > - In [DateOptions](arkts-arkui-advanced-datepickercomponent-dateoptions-c.md), setting start, end, and selected only takes effect for the date part
 > (year, month, day). In [TimeOptions](arkts-arkui-advanced-datepickercomponent-timeoptions-c.md), setting start, end, and selected only takes effect for the
 > time part (hour, minute, second).
@@ -35,17 +31,12 @@ CommonOptions defines common options for the date time picker.
 enableHapticFeedback?: boolean
 ```
 
-Enables or disables haptic feedback.
-
-Default value: true
-
-- true: Enable haptic feedback. - false: Disable haptic feedback.
-
+Enables or disables haptic feedback.Default value: true  
+- true: Enable haptic feedback. - false: Disable haptic feedback.  
 **Description**:
-
-1. When set to true, its effectiveness depends on whether the system's hardware supports it. 2. To enable haptic feedback, you need to configure the requestPermissions field in the project's [module.json5](../../../quick-start/module-configuration-file.md) to enable vibration permission, as follows:
-
-"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
+1. When set to true, its effectiveness depends on whether the system's hardware supports it.
+2. To enable haptic feedback, you need to configure the requestPermissions field in the project's  
+[module.json5](../../../quick-start/module-configuration-file.md) to enable vibration permission, as follows:"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **Type:** boolean
 
@@ -67,11 +58,7 @@ Default value: true
 end?: Date
 ```
 
-End date or time of the picker.
-
-Default value: Date(2100, 12, 31, 23, 59, 59)
-
-Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+End date or time of the picker.Default value: Date(2100, 12, 31, 23, 59, 59)Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
 
 **Type:** Date
 
@@ -91,10 +78,8 @@ Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
 loop?: boolean
 ```
 
-Sets whether to enable loop mode.
-
-- true: Enable loop mode. - false: Disable loop mode.
-
+Sets whether to enable loop mode.  
+- true: Enable loop mode. - false: Disable loop mode.  
 Default value: true
 
 **Type:** boolean
@@ -179,11 +164,7 @@ Selected date. Default value is the current system date or time.
 start?: Date
 ```
 
-Start date or time of the picker.
-
-Default value: Date(1970, 0, 1, 0, 0, 0)
-
-Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+Start date or time of the picker.Default value: Date(1970, 0, 1, 0, 0, 0)Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
 
 **Type:** Date
 

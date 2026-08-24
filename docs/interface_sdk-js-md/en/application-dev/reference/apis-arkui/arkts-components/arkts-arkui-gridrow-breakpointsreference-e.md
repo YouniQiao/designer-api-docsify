@@ -1,8 +1,6 @@
 # BreakpointsReference
 
-Defines the breakpoint reference of grid-container component.
-
-@enum { int }
+Defines the breakpoint reference of grid-container component.@enum { int }
 
 **Since:** 23
 

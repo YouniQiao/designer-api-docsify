@@ -1,10 +1,6 @@
 # DatePickerDialogOptions
 
-日期选择器弹窗选项。
-
-继承自[DatePickerOptions](arkts-datepicker-datepickeroptions-i.md)。
-
-@extends DatePickerOptions @interface DatePickerDialogOptions
+日期选择器弹窗选项。继承自[DatePickerOptions](arkts-datepicker-datepickeroptions-i.md)。@extends DatePickerOptions @interface DatePickerDialogOptions
 
 **继承/实现关系：** DatePickerDialogOptions extends [DatePickerOptions](arkts-datepicker-datepickeroptions-i.md)
 

@@ -1,6 +1,6 @@
 # KeyboardStatus
 
-@brief Enumerates the soft keyboard states of the input method.
+Enumerates the soft keyboard states of the input method.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@
 NONE = 0
 ```
 
-@brief None.
+None.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ NONE = 0
 HIDE = 1
 ```
 
-@brief Hidden.
+Hidden.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ HIDE = 1
 SHOW = 2
 ```
 
-@brief Shown.
+Shown.
 
 **Since:** 23
 

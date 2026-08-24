@@ -38,7 +38,7 @@ import { performanceMonitor } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | 用户场景（通常为具有动效的场景）触发模式枚举。 |
-| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | 用户场景触发源类型枚举。 |
+| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | 用户场景（通常为具有动效的场景）触发模式枚举。@enum { number } |
+| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | 用户场景触发源类型枚举。@enum { number } |
 <!--DelEnd-->
 

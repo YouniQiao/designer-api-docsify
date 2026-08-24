@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Component
+
 <!--Device-unnamed-export declare struct PopoverDialog--><!--Device-unnamed-export declare struct PopoverDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,7 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -26,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +40,7 @@ The method to build component.
 ## popover
 
 ```TypeScript
-@Require @PropRef
-  popover: PopoverOptions
+popover: PopoverOptions
 ```
 
 配置跟手弹出框的参数。
@@ -48,6 +51,8 @@ The method to build component.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Require、@PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PopoverDialog-@Require @PropRef  popover: PopoverOptions--><!--Device-PopoverDialog-@Require @PropRef  popover: PopoverOptions-End-->
@@ -57,8 +62,7 @@ The method to build component.
 ## targetBuilder
 
 ```TypeScript
-@Require @BuilderParam
-  targetBuilder: () => void
+targetBuilder: () => void
 ```
 
 跟手弹出框基于的目标组件。
@@ -69,6 +73,8 @@ The method to build component.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Require、@BuilderParam
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PopoverDialog-@Require @BuilderParam  targetBuilder: () => void--><!--Device-PopoverDialog-@Require @BuilderParam  targetBuilder: () => void-End-->
@@ -77,19 +83,15 @@ The method to build component.
 
 ## visible
 
-```TypeScript
-@Link visible: boolean
-```
-
-跟手弹出框显示状态。visible为true时，表示显示弹出框，visible为false时，表示隐藏弹出框。
-
-默认值为false，隐藏弹出框。
+跟手弹出框显示状态。visible为true时，表示显示弹出框，visible为false时，表示隐藏弹出框。默认值为false，隐藏弹出框。
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Link
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,8 +1,6 @@
 # MemberPurchaseType
 
-Enumeration of MemberPurchaseType.
-
-@enum { string }
+Enumeration of MemberPurchaseType.@enum { string }
 
 **Since:** 23
 

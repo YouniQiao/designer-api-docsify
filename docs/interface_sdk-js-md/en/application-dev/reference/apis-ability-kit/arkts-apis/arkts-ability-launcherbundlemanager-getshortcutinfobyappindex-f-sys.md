@@ -12,9 +12,7 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function getShortcutInfoByAppIndex(bundleName: string, appIndex: int): Array<ShortcutInfo>
 ```
 
-Obtains the shortcut information of the current user based on the index of an application clone.
-
-No permission is required for obtaining the caller's own information.
+Obtains the shortcut information of the current user based on the index of an application clone.No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 

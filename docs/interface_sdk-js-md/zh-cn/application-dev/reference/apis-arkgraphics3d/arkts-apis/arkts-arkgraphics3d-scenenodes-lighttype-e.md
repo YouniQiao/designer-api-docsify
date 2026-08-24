@@ -1,8 +1,6 @@
 # LightType
 
-光源类型枚举。
-
-@enum { int }
+光源类型枚举。@enum { int }
 
 **起始版本：** 23
 

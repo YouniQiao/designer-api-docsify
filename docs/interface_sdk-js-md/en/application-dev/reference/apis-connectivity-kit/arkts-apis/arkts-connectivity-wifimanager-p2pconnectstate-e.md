@@ -1,8 +1,6 @@
 # P2pConnectState
 
-P2P connection status.
-
-@enum { int }
+P2P connection status.@enum { int }
 
 **Since:** 23
 

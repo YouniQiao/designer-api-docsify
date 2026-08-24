@@ -16,9 +16,7 @@ Defines the raw input event wrapper.
 asKeyEvent(): KeyEvent | null
 ```
 
-Attempts to get the keyboard event.
-
-Returns the event object if it is a keyboard event, otherwise returns null.
+Attempts to get the keyboard event.Returns the event object if it is a keyboard event, otherwise returns null.
 
 **Since:** 26.0.0
 
@@ -42,9 +40,7 @@ Returns the event object if it is a keyboard event, otherwise returns null.
 asMouseEvent(): MouseEvent | null
 ```
 
-Attempts to get the mouse event.
-
-Returns the event object if it is a mouse event, otherwise returns null.
+Attempts to get the mouse event.Returns the event object if it is a mouse event, otherwise returns null.
 
 **Since:** 26.0.0
 
@@ -68,9 +64,7 @@ Returns the event object if it is a mouse event, otherwise returns null.
 asTouchEvent(): TouchEvent | null
 ```
 
-Attempts to get the touch event.
-
-Returns the event object if it is a touch event, otherwise returns null.
+Attempts to get the touch event.Returns the event object if it is a touch event, otherwise returns null.
 
 **Since:** 26.0.0
 

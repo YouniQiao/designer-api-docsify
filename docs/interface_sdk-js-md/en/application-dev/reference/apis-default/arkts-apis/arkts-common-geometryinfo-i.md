@@ -1,8 +1,6 @@
 # GeometryInfo
 
-Sub component layout info.
-
-@extends SizeResult
+Sub component layout info.@extends SizeResult
 
 **Inheritance/Implementation:** GeometryInfo extends [SizeResult](arkts-common-sizeresult-i.md)
 

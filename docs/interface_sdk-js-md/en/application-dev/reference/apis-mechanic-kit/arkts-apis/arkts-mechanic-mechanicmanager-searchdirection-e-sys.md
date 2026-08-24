@@ -1,8 +1,6 @@
 # SearchDirection (System API)
 
-Search direction.
-
-@enum { int }
+Search direction.@enum { int }
 
 **Since:** 23
 

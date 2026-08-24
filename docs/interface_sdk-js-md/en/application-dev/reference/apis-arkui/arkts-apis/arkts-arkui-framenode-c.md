@@ -1,21 +1,16 @@
 # FrameNode
 
-*FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End-->
+**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](../../apis-default/arkts-apis/arkts-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End-->
 
-> **NOTE：**
-> 
-> - **FrameNode** is not available in DevEco Studio Previewer.
-> 
-> - FrameNodes cannot be dragged.
-> 
-> - FrameNode objects do not support JSON serialization.
-> 
-> - When the API of the [FrameNode](#framenode) object is invoked in the scenario of
+> **NOTE：**&gt;
+> - **FrameNode** is not available in DevEco Studio Previewer.&gt;
+> - FrameNodes cannot be dragged.&gt;
+> - FrameNode objects do not support JSON serialization.&gt;
+> - When the API of the [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) object is invoked in the scenario of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the
 > [runScopedTask](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#runscopedtask) API of
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to specify the UI context. For details, see
-> [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance).
-> 
+> [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance).&gt;
 > - In the FrameNode APIs, only the mandatory parameters of the Optional type can be set to null or
 > undefined.
 
@@ -31,7 +26,7 @@
 addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent<T>): void
 ```
 
-Adds component content. The current node must be modifiable, which means the return value of [isModifiable](#ismodifiable) must be **true**. If the node is not modifiable, an exception is thrown.
+Adds component content. The current node must be modifiable, which means the return value of [isModifiable](../../apis-default/arkts-apis/arkts-framenode-c.md#ismodifiable) must be **true**. If the node is not modifiable, an exception is thrown.
 
 **Since:** 12
 
@@ -47,7 +42,7 @@ Adds component content. The current node must be modifiable, which means the ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-reactivecomponentcontent-c.md)&lt;T&gt; | Yes | Component content to display on the FrameNode.<br>**Since:** 22 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-arkui-componentcontent-reactivecomponentcontent-c.md)&lt;T&gt; | Yes | Component content to display on the FrameNode.<br>**Since:** 22 |
 
 **Error codes:**
 
@@ -78,7 +73,7 @@ Adds the polymorphic style states supported by the component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiStates | number | Yes | UI states of the target node to be processed. <br>Multiple states can be specified simultaneously using bitwise OR operations, for example, **targetUIStates = UIState.PRESSED  \|  UIState.FOCUSED**. |
-| statesChangeHandler | [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | Yes | Callback invoked when the state changes. |
+| statesChangeHandler | [UIStatesChangeHandler](../../apis-default/arkts-apis/arkts-uistateschangehandler-t.md) | Yes | Callback invoked when the state changes. |
 | excludeInner | boolean | No | Whether to disable the default state style processing. Default value: **false**. <br> **true**: Disable default state style processing. **false**: Enable default state style processing. |
 
 **Examples**
@@ -105,7 +100,7 @@ Adopts the target node as an affiliated node. The adopted node must not have an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Node to be adopted. |
+| child | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Node to be adopted. |
 
 **Error codes:**
 
@@ -125,7 +120,7 @@ See Example of Adopting a Node as an Affiliate.
 appendChild(node: FrameNode): void
 ```
 
-Appends a child node to the end of this FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **appendChild** is called, [typeNode](arkts-arkui-typenode-n.md) validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](arkts-arkui-typenode-n.md).
+Appends a child node to the end of this FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **appendChild** is called, [typeNode](../../apis-default/arkts-apis/arkts-typenode-n.md) validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](../../apis-default/arkts-apis/arkts-typenode-n.md).
 
 **Since:** 12
 
@@ -141,14 +136,14 @@ Appends a child node to the end of this FrameNode. If this FrameNode is not modi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Child node to append. <br> The target node must not be a declaratively created node, that is, a FrameNode that is not modifiable. Only declarative nodes obtained from a BuilderNode can be used as child nodes. If the child node does not meet the specifications, an exception is thrown. <br> The FrameNode cannot have a parent node. Otherwise, an exception is thrown. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Child node to append. <br> The target node must not be a declaratively created node, that is, a FrameNode that is not modifiable. Only declarative nodes obtained from a BuilderNode can be used as child nodes. If the child node does not meet the specifications, an exception is thrown. <br> The FrameNode cannot have a parent node. Otherwise, an exception is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted. "<br>**Applicable version:** 22 and later |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted."<br>**Applicable version:** 22 and later |
 
 **Examples**
 
@@ -263,7 +258,7 @@ Converts a coordinate point from this node's coordinate system to the target nod
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | position | [Position](arkts-arkui-position-t.md) | Yes | Coordinates relative to the current node's coordinate system. |
-| targetNode | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for coordinate transformation. |
+| targetNode | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node for coordinate transformation. |
 
 **Return value:**
 
@@ -497,7 +492,7 @@ Creates a specified number of FrameNodes in batches and returns a FrameNode arra
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md)[] | Array of created FrameNodes. |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md)[] | Array of created FrameNodes. |
 
 ## dispose
 
@@ -507,14 +502,12 @@ dispose(): void
 
 Immediately releases the reference to the underlying FrameNode entity.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - After the **dispose** API is called, the FrameNode object no longer corresponds to any entity FrameNode. In
-> this case, attempts to call certain query APIs, such as [getMeasuredSize](#getmeasuredsize) and
-> [getLayoutPosition](#getlayoutposition), will result in a JS crash in the application.
-> 
+> this case, attempts to call certain query APIs, such as [getMeasuredSize](../../apis-default/arkts-apis/arkts-framenode-c.md#getmeasuredsize) and
+> [getLayoutPosition](../../apis-default/arkts-apis/arkts-framenode-c.md#getlayoutposition), will result in a JS crash in the application.&gt;
 > - To check whether the current FrameNode object corresponds to an entity FrameNode, you can use
-> [getUniqueId](#getuniqueid) API. A **UniqueId** value greater than 0 indicates that the object is
+> [getUniqueId](../../apis-default/arkts-apis/arkts-framenode-c.md#getuniqueid) API. A **UniqueId** value greater than 0 indicates that the object is
 > associated with an entity FrameNode.
 
 **Since:** 12
@@ -840,7 +833,7 @@ Obtains the child node in the specified position of this node.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | Child node obtained. If the FrameNode does not contain the specified child node, null is returned. |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | Child node obtained. If the FrameNode does not contain the specified child node, null is returned. |
 
 **Examples**
 
@@ -871,13 +864,13 @@ Obtains a child node at a specified index from this FrameNode, with optional sup
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the child node to obtain. <br>The value range of index is [0, +∞). If the current node has n child nodes, the valid value range of index is [0, n-1]. |
-| expandMode | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | No | Expansion mode of the child node. <br>Default value: **ExpandMode.EXPAND**. |
+| expandMode | [ExpandMode](../../apis-default/arkts-apis/arkts-framenode-expandmode-e.md) | No | Expansion mode of the child node. <br>Default value: **ExpandMode.EXPAND**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | Child node obtained. If the FrameNode does not contain the specified child node, null is returned. |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | Child node obtained. If the FrameNode does not contain the specified child node, null is returned. |
 
 **Examples**
 
@@ -933,7 +926,7 @@ Obtains the number of child nodes of this FrameNode based on the specified count
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | No | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
+| countMode | [ChildrenCountMode](../../apis-default/arkts-apis/arkts-framenode-childrencountmode-e.md) | No | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
 
 **Return value:**
 
@@ -967,7 +960,7 @@ Obtains the cross-language access options for this FrameNode. For example, for n
 
 | Type | Description |
 | --- | --- |
-| [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) | Cross-ArkTS language access options. |
+| [CrossLanguageOptions](../../apis-default/arkts-apis/arkts-framenode-crosslanguageoptions-i.md) | Cross-ArkTS language access options. |
 
 **Examples**
 
@@ -1029,7 +1022,7 @@ Obtains the first child node of this FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | First child node. If the FrameNode does not contain any child node, null is returned. |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | First child node. If the FrameNode does not contain any child node, null is returned. |
 
 **Examples**
 
@@ -1091,7 +1084,7 @@ Searches for all child nodes layer by layer from the current node (which is used
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | First node that matches the specified ID, which is returned by searching for all child nodes layer by layer from the current node (which is used as the root node). If no child node of the current node matches the specified ID, a null is returned. |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | First node that matches the specified ID, which is returned by searching for all child nodes layer by layer from the current node (which is used as the root node). If no child node of the current node matches the specified ID, a null is returned. |
 
 ## getFrameNodeByUniqueId
 
@@ -1099,7 +1092,7 @@ Searches for all child nodes layer by layer from the current node (which is used
 getFrameNodeByUniqueId(id: int): FrameNode | null
 ```
 
-Searches for and returns the child node with the specified unique ID (which can be obtained using the [getUniqueId](#getuniqueid) API) under the current node (which is used as the root node).
+Searches for and returns the child node with the specified unique ID (which can be obtained using the [getUniqueId](../../apis-default/arkts-apis/arkts-framenode-c.md#getuniqueid) API) under the current node (which is used as the root node).
 
 **Since:** 26.0.0
 
@@ -1121,7 +1114,7 @@ Searches for and returns the child node with the specified unique ID (which can 
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | Child node with the unique ID, which is found from the current node (which is used as the root node). If the child node with the unique ID cannot be found under the current node, a null is returned. |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | Child node with the unique ID, which is found from the current node (which is used as the root node). If the child node with the unique ID cannot be found under the current node, a null is returned. |
 
 ## getGlobalPositionOnDisplay
 
@@ -1185,10 +1178,9 @@ See Example of Node Operations.
 getInspectorInfo(): Object
 ```
 
-Obtains the structure information of the node, which is consistent with what is found in DevEco Studio's built-in &lt; !--RP1--&gt;ArkUI Inspector <!--RP1End-->tool.
+Obtains the structure information of the node, which is consistent with what is found in DevEco Studio's built-in <!--RP1-->ArkUI Inspector <!--RP1End-->tool.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **getInspectorInfo** API is designed for debugging purposes to obtain information about all nodes. Frequent
 > calls to this API may cause performance degradation.
 
@@ -1240,7 +1232,7 @@ Obtains the event binding information for the target node. Returns **undefined**
 
 | Type | Description |
 | --- | --- |
-| [InteractionEventBindingInfo](arkts-arkui-framenode-interactioneventbindinginfo-i.md) \| undefined | Returns an **InteractionEventBindingInfo** object containing event binding details if the interaction event is bound to the current node; returns **undefined** otherwise. |
+| [InteractionEventBindingInfo](../../apis-default/arkts-apis/arkts-framenode-interactioneventbindinginfo-i.md) \| undefined | Returns an **InteractionEventBindingInfo** object containing event binding details if the interaction event is bound to the current node; returns **undefined** otherwise. |
 
 **Examples**
 
@@ -1324,7 +1316,7 @@ Obtains the measured size of this FrameNode, in px.
 
 | Type | Description |
 | --- | --- |
-| [Size](../../apis-default/arkts-apis/arkts-graphics-size-i.md) | Measured size of the node, in px. |
+| Size | Measured size of the node, in px. |
 
 **Examples**
 
@@ -1352,7 +1344,7 @@ Obtains the next sibling node of this FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | Next sibling node of the current FrameNode. If the FrameNode does not have the next sibling node, null is returned. |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | Next sibling node of the current FrameNode. If the FrameNode does not have the next sibling node, null is returned. |
 
 **Examples**
 
@@ -1470,7 +1462,7 @@ Obtains the parent node of this FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | Parent node of the current FrameNode. If the FrameNode does not contain a parent node, null is returned. |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | Parent node of the current FrameNode. If the FrameNode does not contain a parent node, null is returned. |
 
 **Examples**
 
@@ -2030,7 +2022,7 @@ Obtains the previous sibling node of this FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | Previous sibling node of the current FrameNode. If the FrameNode does not have the previous sibling node, null is returned. |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | Previous sibling node of the current FrameNode. If the FrameNode does not have the previous sibling node, null is returned. |
 
 **Examples**
 
@@ -2042,7 +2034,7 @@ See Example of Node Operations.
 getRenderNode(): RenderNode | null
 ```
 
-Obtains the [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) held by the FrameNode.
+Obtains the [RenderNode](arkts-arkui-rendernode-c.md) held by the FrameNode.
 
 **Since:** 11
 
@@ -2058,7 +2050,7 @@ Obtains the [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) he
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | RenderNode** instance. If the current FrameNode does not hold any RenderNode, **null** is returned. If the current FrameNode is a node created by a declarative component, **null** is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null | RenderNode** instance. If the current FrameNode does not hold any RenderNode, **null** is returned. If the current FrameNode is a node created by a declarative component, **null** is returned. |
 
 **Examples**
 
@@ -2146,7 +2138,7 @@ Obtains the border width set by the user.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)&gt; | Border width set by the user. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Border width set by the user. |
 
 **Examples**
 
@@ -2174,7 +2166,7 @@ Obtains the margin set by the user.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)&gt; | Margin set by the user. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Margin set by the user. |
 
 **Examples**
 
@@ -2202,7 +2194,7 @@ Obtains the padding set by the user.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)&gt; | Padding set by the user. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Padding set by the user. |
 
 **Examples**
 
@@ -2230,7 +2222,7 @@ Obtains the width and height set by the user.
 
 | Type | Description |
 | --- | --- |
-| [SizeT](../../apis-default/arkts-apis/arkts-graphics-sizet-i.md)&lt;[LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)&gt; | Width and height set by the user. |
+| [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Width and height set by the user. |
 
 **Examples**
 
@@ -2258,15 +2250,15 @@ Inserts a child node after the specified child node of this FrameNode. If this F
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Child node to add. <br>The target child node must not be a declaratively created node, that is, a FrameNode that is not modifiable. Only declarative nodes obtained from a BuilderNode can be used as child nodes. If the child node does not meet the specifications, an exception is thrown. <br> The child node cannot have a parent node. Otherwise, an exception is thrown. |
-| sibling | [FrameNode](arkts-arkui-framenode-c.md) \| null | Yes | Node after which the new child node will be inserted. If this parameter is left empty, the new node is inserted before the first subnode. |
+| child | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Child node to add. <br>The target child node must not be a declaratively created node, that is, a FrameNode that is not modifiable. Only declarative nodes obtained from a BuilderNode can be used as child nodes. If the child node does not meet the specifications, an exception is thrown. <br> The child node cannot have a parent node. Otherwise, an exception is thrown. |
+| sibling | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | Yes | Node after which the new child node will be inserted. If this parameter is left empty, the new node is inserted before the first subnode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted. "<br>**Applicable version:** 22 and later |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted."<br>**Applicable version:** 22 and later |
 
 **Examples**
 
@@ -2296,11 +2288,7 @@ Invalidates this FrameNode to trigger a re-rendering of the self-drawing content
 invalidateAttributes(): void
 ```
 
-Forces immediate node property updates in this frame.
-
-By default, property modifications applied after the build phase are deferred until the next frame.
-
-This API ensures rendering synchronization by triggering immediate property updates.
+Forces immediate node property updates in this frame.By default, property modifications applied after the build phase are deferred until the next frame.This API ensures rendering synchronization by triggering immediate property updates.
 
 **Since:** 21
 
@@ -2450,7 +2438,7 @@ See Example of Node Operations.
 isClipToFrame(): boolean
 ```
 
-Checks whether the node is clipped to the component area. This API returns **true** after the [dispose](#dispose) API is called to release the reference to the FrameNode.
+Checks whether the node is clipped to the component area. This API returns **true** after the [dispose](../../apis-default/arkts-apis/arkts-framenode-c.md#dispose) API is called to release the reference to the FrameNode.
 
 **Since:** 12
 
@@ -3204,8 +3192,7 @@ isVisible(): boolean
 
 Obtains whether the node is visible.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The visibility of a node is determined by the **visibility** attribute of the component.
 
 **Since:** 12
@@ -3234,7 +3221,7 @@ See Example of Node Operations.
 layout(position: Position): void
 ```
 
-Lays out this FrameNode, specifying the layout positions for the FrameNode and its child nodes. If the layout method is overridden, the overridden method is called. It is recommended that this API be called in [onLayout](#onlayout).
+Lays out this FrameNode, specifying the layout positions for the FrameNode and its child nodes. If the layout method is overridden, the overridden method is called. It is recommended that this API be called in [onLayout](../../apis-default/arkts-apis/arkts-framenode-c.md#onlayout).
 
 **Since:** 12
 
@@ -3262,7 +3249,7 @@ See Example of Customizing a Node.
 measure(constraint: LayoutConstraint): void
 ```
 
-Measures this FrameNode and calculates its size based on the layout constraints of the parent container. If the measurement method is overridden, the overridden method is called. It is recommended that this API be called in [onMeasure](#onmeasure).
+Measures this FrameNode and calculates its size based on the layout constraints of the parent container. If the measurement method is overridden, the overridden method is called. It is recommended that this API be called in [onMeasure](../../apis-default/arkts-apis/arkts-framenode-c.md#onmeasure).
 
 **Since:** 12
 
@@ -3278,7 +3265,7 @@ Measures this FrameNode and calculates its size based on the layout constraints 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | Parent container layout constraints used for measurement. |
+| constraint | [LayoutConstraint](../../apis-default/arkts-apis/arkts-framenode-layoutconstraint-i.md) | Yes | Parent container layout constraints used for measurement. |
 
 **Examples**
 
@@ -3290,15 +3277,13 @@ See Example of Customizing a Node.
 moveTo(targetParent: FrameNode, index?: number): void
 ```
 
-Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](arkts-arkui-typenode-n.md), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](arkts-arkui-typenode-n.md).
+Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](../../apis-default/arkts-apis/arkts-typenode-n.md), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](../../apis-default/arkts-apis/arkts-typenode-n.md).
 
-> **NOTE：**
-> 
-> Currently, only the following types of [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) are supported for the movement
-> operations: [Stack](arkts-arkui-typenode-stack-t.md), [XComponent](arkts-arkui-typenode-xcomponent-t.md). This API does not work for
-> other node types.
-> 
-> This API only supports [BuilderNode](../../apis-default/arkts-apis/arkts-buildernode-c.md) with root components of these types:
+> **NOTE：**&gt;
+> Currently, only the following types of [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md) are supported for the movement
+> operations: [Stack](../../apis-default/arkts-apis/arkts-typenode-stack-t.md), [XComponent](../../apis-default/arkts-apis/arkts-typenode-xcomponent-t.md). This API does not work for
+> other node types.&gt;
+> This API only supports [BuilderNode](arkts-arkui-buildernode-c.md) with root components of these types:
 > Stack, XComponent,
 > EmbeddedComponent. This API does not work for other
 > component types.
@@ -3317,7 +3302,7 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetParent | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target parent node. <br>The target parent node must not be a declaratively created node, that is, a FrameNode that is not modifiable. If it does not meet the specifications, an exception is thrown. |
+| targetParent | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target parent node. <br>The target parent node must not be a declaratively created node, that is, a FrameNode that is not modifiable. If it does not meet the specifications, an exception is thrown. |
 | index | number | No | Index of the child node. The current FrameNode will be inserted before the child node at the specified sequence number in the target FrameNode. If the target FrameNode has *n* nodes, the value range for **index** is 0, *n*-1]. <br>If the parameter is invalid or not specified, the current FrameNode will be added to the end of the target FrameNode. <br>Default value: **-1 |
 
 **Error codes:**
@@ -3337,9 +3322,7 @@ See Example of Node Operations.
 onDraw?(context: DrawContext): void
 ```
 
-Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering.
-
-Note: The Canvas provided in the [DrawContext](../../apis-default/arkts-apis/arkts-graphics-drawcontext-c.md) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
+Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering.Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-c.md) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
 
 **Since:** 12
 
@@ -3355,7 +3338,7 @@ Note: The Canvas provided in the [DrawContext](../../apis-default/arkts-apis/ark
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](../../apis-default/arkts-apis/arkts-graphics-drawcontext-c.md) | Yes | Graphics drawing context. The self-drawing area cannot exceed the component's own size. |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | Graphics drawing context. The self-drawing area cannot exceed the component's own size. |
 
 **Examples**
 
@@ -3411,7 +3394,7 @@ Called when this FrameNode needs to determine its size. This API provides custom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | Layout constraints used by the component for measurement. |
+| constraint | [LayoutConstraint](../../apis-default/arkts-apis/arkts-framenode-layoutconstraint-i.md) | Yes | Layout constraints used by the component for measurement. |
 
 **Examples**
 
@@ -3459,7 +3442,7 @@ Removes a previously-adopted affiliated node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Node to remove. |
+| child | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Node to remove. |
 
 **Error codes:**
 
@@ -3495,7 +3478,7 @@ Deletes the specified child node from this FrameNode. If this FrameNode is not m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Child node to delete. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Child node to delete. |
 
 **Error codes:**
 
@@ -3565,19 +3548,18 @@ setCrossLanguageOptions(options: CrossLanguageOptions): void
 
 Sets the cross-language access options for this FrameNode. For example, for nodes created using ArkTS, this API can set whether non-ArkTS languages are allowed to set the attributes of these nodes. Since API version 26.0.0, this API can set whether non-ArkTS languages are allowed to perform operations on the component tree. If the current FrameNode is not modifiable or does not support setting cross-language access options, an exception will be thrown.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, the cross-ArkTS language access option can only be configured for the following components:
-> [Scroll](arkts-arkui-typenode-scroll-t.md), [Swiper](arkts-arkui-typenode-swiper-t.md), [List](arkts-arkui-typenode-list-t.md),
-> [ListItem](arkts-arkui-typenode-listitem-t.md), [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md),
-> [WaterFlow](arkts-arkui-typenode-waterflow-t.md), [FlowItem](arkts-arkui-typenode-flowitem-t.md), [Grid](arkts-arkui-typenode-grid-t.md),
-> [GridItem](arkts-arkui-typenode-griditem-t.md), [TextInput](arkts-arkui-typenode-textinput-t.md), [TextArea](arkts-arkui-typenode-textarea-t.md),
-> [Column](arkts-arkui-typenode-column-t.md), [Row](arkts-arkui-typenode-row-t.md), [Stack](arkts-arkui-typenode-stack-t.md),
-> [Flex](arkts-arkui-typenode-flex-t.md), [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md),
-> [Progress](arkts-arkui-typenode-progress-t.md), [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md),
-> [Image](arkts-arkui-typenode-image-t.md), [Button](arkts-arkui-typenode-button-t.md), [CheckBox](arkts-arkui-typenode-checkbox-t.md),
-> [Radio](arkts-arkui-typenode-radio-t.md), [Slider](arkts-arkui-typenode-slider-t.md), [Toggle](arkts-arkui-typenode-toggle-t.md), and
-> [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) of the [XComponent](arkts-arkui-typenode-xcomponent-t.md) type.
+> [Scroll](../../apis-default/arkts-apis/arkts-typenode-scroll-t.md), [Swiper](../../apis-default/arkts-apis/arkts-typenode-swiper-t.md), [List](../../apis-default/arkts-apis/arkts-typenode-list-t.md),
+> [ListItem](../../apis-default/arkts-apis/arkts-typenode-listitem-t.md), [ListItemGroup](../../apis-default/arkts-apis/arkts-typenode-listitemgroup-t.md),
+> [WaterFlow](../../apis-default/arkts-apis/arkts-typenode-waterflow-t.md), [FlowItem](../../apis-default/arkts-apis/arkts-typenode-flowitem-t.md), [Grid](../../apis-default/arkts-apis/arkts-typenode-grid-t.md),
+> [GridItem](../../apis-default/arkts-apis/arkts-typenode-griditem-t.md), [TextInput](../../apis-default/arkts-apis/arkts-typenode-textinput-t.md), [TextArea](../../apis-default/arkts-apis/arkts-typenode-textarea-t.md),
+> [Column](../../apis-default/arkts-apis/arkts-typenode-column-t.md), [Row](../../apis-default/arkts-apis/arkts-typenode-row-t.md), [Stack](../../apis-default/arkts-apis/arkts-typenode-stack-t.md),
+> [Flex](../../apis-default/arkts-apis/arkts-typenode-flex-t.md), [RelativeContainer](../../apis-default/arkts-apis/arkts-typenode-relativecontainer-t.md),
+> [Progress](../../apis-default/arkts-apis/arkts-typenode-progress-t.md), [LoadingProgress](../../apis-default/arkts-apis/arkts-typenode-loadingprogress-t.md),
+> [Image](../../apis-default/arkts-apis/arkts-typenode-image-t.md), [Button](../../apis-default/arkts-apis/arkts-typenode-button-t.md), [CheckBox](../../apis-default/arkts-apis/arkts-typenode-checkbox-t.md),
+> [Radio](../../apis-default/arkts-apis/arkts-typenode-radio-t.md), [Slider](../../apis-default/arkts-apis/arkts-typenode-slider-t.md), [Toggle](../../apis-default/arkts-apis/arkts-typenode-toggle-t.md), and
+> [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md) of the [XComponent](../../apis-default/arkts-apis/arkts-typenode-xcomponent-t.md) type.
 
 **Since:** 15
 
@@ -3593,7 +3575,7 @@ Sets the cross-language access options for this FrameNode. For example, for node
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) | Yes | Cross-ArkTS language access options. |
+| options | [CrossLanguageOptions](../../apis-default/arkts-apis/arkts-framenode-crosslanguageoptions-i.md) | Yes | Cross-ArkTS language access options. |
 
 **Error codes:**
 
@@ -3655,7 +3637,7 @@ Sets the measured size of this FrameNode. The default unit is PX. If the configu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](../../apis-default/arkts-apis/arkts-graphics-size-i.md) | Yes | Measured size of the FrameNode. |
+| size | Size | Yes | Measured size of the FrameNode. |
 
 **Examples**
 

@@ -3,8 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 
@@ -14,12 +12,9 @@ import { window } from '@kit.ArkUI';
 function shiftAppWindowFocus(sourceWindowId: int, targetWindowId: int): Promise<void>
 ```
 
-Shifts the window focus from the source window to the target window in the same application. The window focus can be shifted within the main window and child windows. This API uses a promise to return the result.
+Shifts the window focus from the source window to the target window in the same application. The window focus can be shifted within the main window and child windows. This API uses a promise to return the result.Ensure that the target window can gain focus (configurable by calling [setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)) and that [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
 
-Ensure that the target window can gain focus (configurable by calling [setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable) ) and that [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Before calling **shiftAppWindowFocus()**, ensure that the target window has called
 > [loadContent()](arkts-arkui-window-window-i.md#loadcontent)
 > or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent)

@@ -1,8 +1,6 @@
 # FolderStackOptions
 
-FolderStack constructor options.
-
-@interface FolderStackOptions
+FolderStack constructor options.@interface FolderStackOptions
 
 **Since:** 23
 
@@ -18,9 +16,7 @@ FolderStack constructor options.
 upperItems?: Array<string>
 ```
 
-Define the IDs of the sub component that will be moved to the upper half screen when hovering.
-
-Anonymous Object Rectification
+Define the IDs of the sub component that will be moved to the upper half screen when hovering.Anonymous Object Rectification
 
 **Type:** Array&lt;string&gt;
 

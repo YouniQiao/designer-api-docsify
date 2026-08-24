@@ -2,8 +2,7 @@
 
 本模块提供展示广告的能力，覆盖了原生、贴片、开屏等广告样式。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为了保证广告能正确展示，该接口必须和请求广告接口配套使用。效果和使用方法可参考
 > [原生广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-native)、
 > [贴片广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-roll)、
@@ -11,6 +10,8 @@
 > 接入和展示。
 
 **起始版本：** 11
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-declare struct AdComponent--><!--Device-unnamed-declare struct AdComponent-End-->
 
@@ -41,8 +42,7 @@ build(): void
 ## adRenderer
 
 ```TypeScript
-@BuilderParam
-  adRenderer?: () => void
+adRenderer?: () => void
 ```
 
 应用自渲染广告样式。应用自渲染广告样式为受限使用能力，具体请前往 [流量变现官网客服支持](https://developer.huawei.com/consumer/cn/doc/monetize/kefuzhichi-0000001104461922)进行咨询。
@@ -50,6 +50,8 @@ build(): void
 **类型：** () =&gt; void
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -63,9 +65,7 @@ build(): void
 ads: advertising.Advertisement[]
 ```
 
-广告对象数组。
-
-说明：非贴片广告类型，组件只展示数组第一个数据。
+广告对象数组。说明：非贴片广告类型，组件只展示数组第一个数据。
 
 **类型：** advertising.Advertisement[]
 
@@ -116,8 +116,7 @@ interactionListener: advertising.AdInteractionListener
 ## rollPlayState
 
 ```TypeScript
-@Prop
-  rollPlayState?: number
+rollPlayState?: number
 ```
 
 用于对外提供贴片广告播放状态，设置1为播放，2为暂停，默认值为2，其他值为非法值，不改变之前的播放状态。 在贴片广告所在页面需要通过@State关联属性，使用方法参考 [示例代码](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-roll#展示广告)。
@@ -125,6 +124,8 @@ interactionListener: advertising.AdInteractionListener
 **类型：** number
 
 **起始版本：** 15
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

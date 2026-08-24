@@ -69,7 +69,7 @@ Compares whether the current constructor object is equal to another constructor 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Constructor](arkts-arkts-reflectconstructor-constructor-c.md) | Yes | Another constructor object to compare with. |
+| other | Constructor | Yes | Another constructor object to compare with. |
 
 **Return value:**
 

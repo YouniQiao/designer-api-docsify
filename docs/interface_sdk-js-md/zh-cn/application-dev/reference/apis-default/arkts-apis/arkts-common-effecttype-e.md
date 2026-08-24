@@ -1,8 +1,6 @@
 # EffectType
 
-Enum of using the effects template mode.
-
-@enum { number }
+Enum of using the effects template mode.@enum { number }
 
 **起始版本：** 23
 

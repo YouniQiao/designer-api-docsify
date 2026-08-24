@@ -631,15 +631,7 @@ startDataLoading(options: DataSyncOptions): string
 autoHideComponentUniqueIds?: int | int[]
 ```
 
-设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。
-
-仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。
-
-若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。
-
-组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid) 配合[FrameNode.getUniqueId()](../../apis-default/arkts-apis/arkts-framenode-c.md#getuniqueid)获取。
-
-开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)或 onDrop中恢复组件显示状态。
+设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid) 配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)获取。开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)或 onDrop中恢复组件显示状态。
 
 **类型：** int \| int[]
 
@@ -659,9 +651,7 @@ autoHideComponentUniqueIds?: int | int[]
 dragBehavior: DragBehavior
 ```
 
-切换复制和剪贴模式的角标显示状态。
-
-默认值：DragBehavior.COPY。
+切换复制和剪贴模式的角标显示状态。默认值：DragBehavior.COPY。
 
 **类型：** [DragBehavior](arkts-arkui-dragbehavior-e.md)
 
@@ -683,15 +673,7 @@ dragBehavior: DragBehavior
 useCustomDropAnimation: boolean
 ```
 
-当拖拽结束时，是否禁用系统默认落位动效。
-
-应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。
-
-当不配置或设置为false时，系统默认落位动效生效，当[setResult](#setresult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则 为放大消失动效。
-
-当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。
-
-默认值：false
+当拖拽结束时，是否禁用系统默认落位动效。应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。当不配置或设置为false时，系统默认落位动效生效，当[setResult](#setresult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则 为放大消失动效。当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。默认值：false
 
 **类型：** boolean
 

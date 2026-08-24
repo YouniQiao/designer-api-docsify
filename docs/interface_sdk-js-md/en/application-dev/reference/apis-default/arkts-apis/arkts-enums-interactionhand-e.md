@@ -1,8 +1,6 @@
 # InteractionHand
 
-Function Called by Touch or Gesture.
-
-@enum { number }
+Function Called by Touch or Gesture.@enum { number }
 
 **Since:** 23
 

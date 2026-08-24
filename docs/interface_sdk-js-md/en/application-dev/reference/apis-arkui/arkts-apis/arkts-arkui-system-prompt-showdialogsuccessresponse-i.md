@@ -1,8 +1,6 @@
 # ShowDialogSuccessResponse
 
-Defines the response of ShowDialog.
-
-@interface ShowDialogSuccessResponse
+Defines the response of ShowDialog.@interface ShowDialogSuccessResponse
 
 **Since:** 11
 

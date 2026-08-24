@@ -1,8 +1,6 @@
 # TimePickerModifier
 
-Defines TimePicker Modifier
-
-@implements { TimePickerAttribute, AttributeModifier&lt;TimePickerAttribute&gt; }
+Defines TimePicker Modifier@implements { TimePickerAttribute, AttributeModifier&lt;TimePickerAttribute&gt; }
 
 **Inheritance/Implementation:** TimePickerModifier implements TimePickerAttribute, AttributeModifier<TimePickerAttribute>
 

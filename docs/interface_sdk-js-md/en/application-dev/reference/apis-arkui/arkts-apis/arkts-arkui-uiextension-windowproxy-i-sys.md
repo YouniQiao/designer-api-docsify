@@ -22,18 +22,15 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 Sets whether to hide non-secure windows. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - A non-secure window refers to any window that may obstruct the
 > EmbeddedComponent or
 > UIExtensionComponent, such as global floating windows
 > , host subwindows, and dialog box windows created by the host application (excluding windows of these types
-> created by system applications).
-> 
+> created by system applications).&gt;
 > - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this
 > API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear
-> when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed.
-> 
+> when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed.&gt;
 > - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when
 > **hideNonSecureWindows(true)** is called.
 
@@ -108,8 +105,7 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground
 > , regardless of whether the window is displayed in full screen, floating, and split screen mode.
 
@@ -127,7 +123,7 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to add or delete the flag. The value **true** means to add the watermark flag , and **false** means to delete the watermark flag. |
+| enable | boolean | Yes | Whether to add or delete the flag. The value **true** means to add the watermark flag, and **false** means to delete the watermark flag. |
 
 **Return value:**
 

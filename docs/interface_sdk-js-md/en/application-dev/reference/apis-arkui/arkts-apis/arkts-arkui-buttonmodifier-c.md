@@ -1,8 +1,6 @@
 # ButtonModifier
 
-Defines Button Modifier
-
-@implements { ButtonAttribute, AttributeModifier&lt;ButtonAttribute&gt; }
+Defines Button Modifier@implements { ButtonAttribute, AttributeModifier&lt;ButtonAttribute&gt; }
 
 **Inheritance/Implementation:** ButtonModifier implements ButtonAttribute, AttributeModifier<ButtonAttribute>
 

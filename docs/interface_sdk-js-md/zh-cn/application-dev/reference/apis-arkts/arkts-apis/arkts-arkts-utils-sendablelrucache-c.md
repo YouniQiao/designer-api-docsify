@@ -4,6 +4,8 @@ SendableLruCache在缓存空间不足时，会用新数据替换近期最少使�
 
 **起始版本：** 18
 
+**装饰器类型：** @Sendable
+
 <!--Device-utils-class SendableLruCache--><!--Device-utils-class SendableLruCache-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

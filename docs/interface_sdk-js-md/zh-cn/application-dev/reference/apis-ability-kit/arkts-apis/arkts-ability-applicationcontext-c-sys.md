@@ -2,8 +2,7 @@
 
 ApplicationContext作为应用上下文，继承自Context，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本模块接口仅可在Stage模型下使用。
 
 **继承/实现关系：** ApplicationContext extends Context
@@ -90,11 +89,7 @@ getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 preloadUIExtensionAbility(want: Want): Promise<void>
 ```
 
-预加载指定UIExtensionAbility实例。使用Promise异步回调。
-
-被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
-
-被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
+预加载指定UIExtensionAbility实例。使用Promise异步回调。被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
 
 **起始版本：** 23
 
@@ -223,9 +218,7 @@ export default class EntryAbility extends UIAbility {
 registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number
 ```
 
-注册监听应用内UIAbility的生命周期。使用callback异步回调。
-
-<p>**说明：**: <br>仅支持主线程调用。 </p>
+注册监听应用内UIAbility的生命周期。使用callback异步回调。<p>**说明：**: <br>仅支持主线程调用。 </p>
 
 **起始版本：** 9
 
@@ -259,9 +252,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 ```
 
-注册对系统环境变化的监听。使用callback异步回调。
-
-<p>**说明：**: <br>仅支持主线程调用。 </p>
+注册对系统环境变化的监听。使用callback异步回调。<p>**说明：**: <br>仅支持主线程调用。 </p>
 
 **起始版本：** 9
 
@@ -295,9 +286,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void
 ```
 
-取消监听应用内UIAbility的生命周期。使用callback异步回调。
-
-<p>**说明：**: <br>仅支持主线程调用。 </p>
+取消监听应用内UIAbility的生命周期。使用callback异步回调。<p>**说明：**: <br>仅支持主线程调用。 </p>
 
 **起始版本：** 9
 
@@ -326,9 +315,7 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 ```
 
-取消监听应用内UIAbility的生命周期。使用Promise异步回调。
-
-<p>**说明：**: <br>仅支持主线程调用。 </p>
+取消监听应用内UIAbility的生命周期。使用Promise异步回调。<p>**说明：**: <br>仅支持主线程调用。 </p>
 
 **起始版本：** 9
 
@@ -368,9 +355,7 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<void>): void
 ```
 
-取消对系统环境变化的监听。使用callback异步回调。
-
-<p>**说明：**: <br>仅支持主线程调用。 </p>
+取消对系统环境变化的监听。使用callback异步回调。<p>**说明：**: <br>仅支持主线程调用。 </p>
 
 **起始版本：** 9
 

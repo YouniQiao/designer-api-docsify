@@ -1,8 +1,6 @@
 # MenuKeyboardAvoidMode
 
-Define the mode of menu how to avoid keyboard.
-
-@enum { number }
+Define the mode of menu how to avoid keyboard.@enum { number }
 
 **起始版本：** 23
 

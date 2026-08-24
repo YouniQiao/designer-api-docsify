@@ -45,7 +45,7 @@ import { uiObserver } from '@kit.ArkUI';
 | [on_didLayout](arkts-arkui-uiobserver-ondidlayout-f.md#ondidlayout) | 监听每一帧布局完成情况。 |
 | [on_navDestinationSwitch](arkts-arkui-uiobserver-onnavdestinationswitch-f.md#onnavdestinationswitch) | 监听Navigation的页面切换事件。 |
 | [on_navDestinationSwitch](arkts-arkui-uiobserver-onnavdestinationswitch-f.md#onnavdestinationswitch) | 监听Navigation的页面切换事件。与[uiObserver.on](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate)相比，新增了observerOptions参数，即支持设置监听选项。 |
-| [on_navDestinationUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate) | 监听NavDestination组件的状态变化。与 [uiObserver.on](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate)相比，新增了options参数，即支持指定监听的Navigation的id。 |
+| [on_navDestinationUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate) | 监听NavDestination组件的状态变化。与 * [uiObserver.on](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate)相比，新增了options参数，即支持指定监听的Navigation的id。 |
 | [on_navDestinationUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate) | 监听NavDestination组件的状态变化。 |
 | [on_routerPageUpdate](arkts-arkui-uiobserver-onrouterpageupdate-f.md#onrouterpageupdate) | 监听router中page页面的状态变化。 |
 | [on_scrollEvent](arkts-arkui-uiobserver-onscrollevent-f.md#onscrollevent) | Registers a callback function to be called when the scroll event start or stop. |
@@ -71,9 +71,9 @@ import { uiObserver } from '@kit.ArkUI';
 | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Navigation组件页面切换事件的监听选项。 |
 | [NavigationInfo](arkts-arkui-uiobserver-navigationinfo-i.md) | Navigation组件信息。 |
 | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Observer选项。 |
-| [ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md) | ScrollEvent info. |
+| [ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md) | ScrollEvent info.@interface ScrollEventInfo |
 | [TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md) | TabContent页面的切换信息。 |
-| [TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md) | Text change event info |
+| [TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md) | Text change event info@interface TextChangeEventInfo |
 
 ### 枚举
 
@@ -81,6 +81,6 @@ import { uiObserver } from '@kit.ArkUI';
 | --- | --- |
 | [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md) | NavDestination组件状态。 |
 | [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](../../apis-default/arkts-apis/arkts-uiobserver-routerpageinfo-c.md)中，作为 [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate)无感监听的返回值。 |
-| [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md) | ScrollEvent type. |
+| [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md) | ScrollEvent type.@enum { number } |
 | [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md) | TabContent组件的状态。 |
 

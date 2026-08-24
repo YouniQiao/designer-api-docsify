@@ -1,8 +1,6 @@
 # BorderRadiuses
 
-Defines the border radius property.
-
-@interface BorderRadiuses
+Defines the border radius property.@interface BorderRadiuses
 
 **Since:** 23
 

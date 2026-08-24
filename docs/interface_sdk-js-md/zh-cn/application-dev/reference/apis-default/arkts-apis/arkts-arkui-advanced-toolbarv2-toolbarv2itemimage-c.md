@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2ItemImage--><!--Device-unnamed-export declare class ToolBarV2ItemImage-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,19 +44,18 @@ ToolBarV2ItemImage的构造函数。
 ## activatedColor
 
 ```TypeScript
-@Trace
-  public activatedColor?: ColorMetrics
+public activatedColor?: ColorMetrics
 ```
 
-工具栏子项在激活态下图标的颜色。
+工具栏子项在激活态下图标的颜色。默认值：\$r('sys.color.icon_emphasize')
 
-默认值：\$r('sys.color.icon_emphasize')
-
-**类型：** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,19 +66,18 @@ ToolBarV2ItemImage的构造函数。
 ## color
 
 ```TypeScript
-@Trace
-  public color?: ColorMetrics
+public color?: ColorMetrics
 ```
 
-工具栏子项的图标的颜色。
+工具栏子项的图标的颜色。默认值：\$r('sys.color.icon_primary')
 
-默认值：\$r('sys.color.icon_primary')
-
-**类型：** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,8 +88,7 @@ ToolBarV2ItemImage的构造函数。
 ## src
 
 ```TypeScript
-@Trace
-  public src: ResourceStr
+public src: ResourceStr
 ```
 
 工具栏子项的图标。
@@ -99,6 +98,8 @@ ToolBarV2ItemImage的构造函数。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

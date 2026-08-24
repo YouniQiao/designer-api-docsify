@@ -102,11 +102,8 @@ Module name of the application to which the intent belongs.
 userId?: int
 ```
 
-ID of the user to which the intent belongs.
-
-**NOTE：**
-
-If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
+ID of the user to which the intent belongs.  
+**NOTE：**If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
 **Type:** int
 

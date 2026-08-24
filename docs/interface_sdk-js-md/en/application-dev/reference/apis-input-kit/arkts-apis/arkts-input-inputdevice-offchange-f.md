@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
-import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## offChange

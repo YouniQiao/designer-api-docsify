@@ -1,8 +1,6 @@
 # FlexDirection
 
-FlexDirection enumeration description
-
-@enum { number }
+FlexDirection enumeration description@enum { number }
 
 **起始版本：** 23
 

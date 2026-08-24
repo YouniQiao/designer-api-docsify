@@ -1,8 +1,6 @@
 # FlexSpaceOptions
 
-设置Flex容器的子组件在主轴或交叉轴的间距。
-
-@interface FlexSpaceOptions
+设置Flex容器的子组件在主轴或交叉轴的间距。@interface FlexSpaceOptions
 
 **起始版本：** 23
 
@@ -20,7 +18,7 @@ cross?: LengthMetrics
 
 Flex容器交叉轴上的space。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -40,7 +38,7 @@ main?: LengthMetrics
 
 Flex容器主轴上的space。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 

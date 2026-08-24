@@ -18,6 +18,5 @@ Salient subject metadata detected by the camera, which is extended from [Metadat
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 

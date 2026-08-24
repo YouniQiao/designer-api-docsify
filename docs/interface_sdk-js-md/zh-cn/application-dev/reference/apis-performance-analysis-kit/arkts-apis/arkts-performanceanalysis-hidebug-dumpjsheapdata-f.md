@@ -14,8 +14,7 @@ function dumpJsHeapData(filename : string) : void
 
 虚拟机堆数据转储。
 
-> **注意**
-> 
+> **注意**&gt;
 > 由于虚拟机堆导出极其耗时，且该接口为同步接口，建议不要在上架版本中调用该接口，以避免应用冻屏，影响用户体验。
 
 **起始版本：** 26.1.0
@@ -69,8 +68,7 @@ function dumpJsHeapData(filename: string, needClean: boolean): void
 
 虚拟机堆数据转储，支持清除nodeId缓存。
 
-> **注意**
-> 
+> **注意**&gt;
 > 由于虚拟机堆导出极其耗时，且该接口为同步接口，建议不要在上架版本中调用该接口，以避免应用冻屏，影响用户体验。
 
 **起始版本：** 26.1.0

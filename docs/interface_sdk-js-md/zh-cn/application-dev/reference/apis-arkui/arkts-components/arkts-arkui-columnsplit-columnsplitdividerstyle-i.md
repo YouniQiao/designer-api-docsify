@@ -1,8 +1,6 @@
 # ColumnSplitDividerStyle
 
-设置子组件与上下分割线的距离。
-
-@interface ColumnSplitDividerStyle
+设置子组件与上下分割线的距离。@interface ColumnSplitDividerStyle
 
 **起始版本：** 23
 
@@ -18,7 +16,7 @@
 endMargin?: Dimension
 ```
 
-子组件与其下方分割线的距离。<br> 默认值：0vp<br> 非法值：按默认值处理，此时 [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9) 接口获取到的属性值为undefined。
+子组件与其下方分割线的距离。<br> 默认值：0vp<br> 非法值：按默认值处理，此时 getInspectorByKey() 接口获取到的属性值为undefined。
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -40,7 +38,7 @@ endMargin?: Dimension
 startMargin?: Dimension
 ```
 
-子组件与其上方分割线的距离。<br> 默认值：0vp<br> 非法值：按默认值处理，此时 [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9) 接口获取到的属性值为undefined。
+子组件与其上方分割线的距离。<br> 默认值：0vp<br> 非法值：按默认值处理，此时 getInspectorByKey() 接口获取到的属性值为undefined。
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

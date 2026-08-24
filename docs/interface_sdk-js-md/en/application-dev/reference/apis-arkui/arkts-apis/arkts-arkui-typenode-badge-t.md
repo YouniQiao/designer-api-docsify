@@ -16,5 +16,5 @@ Represents a FrameNode of the **Badge** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;BadgeInterface, BadgeAttribute&gt;
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;BadgeInterface, BadgeAttribute&gt;
 

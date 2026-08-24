@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## init
@@ -13,9 +12,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function init(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksHandle>): void
 ```
 
-Initializes a session for a key operation. This API uses an asynchronous callback to return the result.
-
-The **huks.init**, **huks.update**, and **huks.finish** must be used together.
+Initializes a session for a key operation. This API uses an asynchronous callback to return the result.The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Since:** 8
 
@@ -42,9 +39,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 function init(keyAlias: string, options: HuksOptions): Promise<HuksHandle>
 ```
 
-Initializes a session for a key operation. This API uses a promise to return the result.
-
-The **huks.init**, **huks.update**, and **huks.finish** must be used together.
+Initializes a session for a key operation. This API uses a promise to return the result.The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Since:** 8
 

@@ -8,6 +8,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export abstract class ChipV2SymbolIcon--><!--Device-unnamed-export abstract class ChipV2SymbolIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -44,8 +46,7 @@ ChipV2SymbolIcon的构造函数
 ## activated
 
 ```TypeScript
-@Trace
-  public activated?: SymbolGlyphModifier
+public activated?: SymbolGlyphModifier
 ```
 
 激活态Symbol
@@ -56,6 +57,8 @@ ChipV2SymbolIcon的构造函数
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipV2SymbolIcon-@Trace  public activated?: SymbolGlyphModifier--><!--Device-ChipV2SymbolIcon-@Trace  public activated?: SymbolGlyphModifier-End-->
@@ -65,8 +68,7 @@ ChipV2SymbolIcon的构造函数
 ## normal
 
 ```TypeScript
-@Trace
-  public normal?: SymbolGlyphModifier
+public normal?: SymbolGlyphModifier
 ```
 
 非激活态Symbol
@@ -76,6 +78,8 @@ ChipV2SymbolIcon的构造函数
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

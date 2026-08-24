@@ -1,8 +1,7 @@
 # BundleInfo
 
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
 > [bundleManager-BundleInfo](#bundleinfo) instead.
 
@@ -22,9 +21,7 @@
 readonly abilityInfos: Array<AbilityInfo>
 ```
 
-Ability configuration information.
-
-The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) .
+Ability configuration information.The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md).
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;
 
@@ -298,9 +295,7 @@ Bundle name.
 readonly reqPermissionDetails: Array<ReqPermissionDetail>
 ```
 
-Detailed information of the permissions to request from the system.
-
-The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) .
+Detailed information of the permissions to request from the system.The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md).
 
 **Type:** Array&lt;[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md)&gt;
 
@@ -322,9 +317,7 @@ The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bun
 readonly reqPermissions: Array<string>
 ```
 
-Permissions to request from the system for running the application.
-
-The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) .
+Permissions to request from the system for running the application.The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md).
 
 **Type:** Array&lt;string&gt;
 

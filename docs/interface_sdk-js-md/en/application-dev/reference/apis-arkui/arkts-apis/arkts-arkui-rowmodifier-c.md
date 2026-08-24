@@ -1,8 +1,6 @@
 # RowModifier
 
-Defines Row Modifier
-
-@implements RowAttribute, AttributeModifier&lt;RowAttribute&gt;
+Defines Row Modifier@implements RowAttribute, AttributeModifier&lt;RowAttribute&gt;
 
 **Inheritance/Implementation:** RowModifier implements RowAttribute, AttributeModifier<RowAttribute>
 

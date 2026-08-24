@@ -1,8 +1,6 @@
 # BlurStyleActivePolicy
 
-Enumerates the policies for activating the blur style.
-
-@enum { number }
+Enumerates the policies for activating the blur style.@enum { number }
 
 **Since:** 14
 

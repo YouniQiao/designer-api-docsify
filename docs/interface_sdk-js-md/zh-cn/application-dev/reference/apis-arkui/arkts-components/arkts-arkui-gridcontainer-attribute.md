@@ -1,8 +1,6 @@
 # GridContainer属性/事件
 
-支持通用属性和Column组件的[属性方法](../../../reference/apis-arkui/arkui-ts/ts-container-column.md#属性)。
-
-支持通用事件。
+支持通用属性和Column组件的属性方法。支持通用事件。
 
 **继承/实现关系：** GridContainerAttribute extends ColumnAttribute
 

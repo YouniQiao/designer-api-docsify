@@ -22,7 +22,7 @@ import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 onConnect(want: Want): rpc.RemoteObject
 ```
 
-Called when an AppServiceExtensionAbility instance is connected by calling [connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability) .
+Called when an AppServiceExtensionAbility instance is connected by calling [connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability).
 
 **Since:** 23
 
@@ -78,8 +78,7 @@ onCreate(want: Want): void
 
 Called when an AppServiceExtensionAbility instance is created. Applications can perform initialization operations, such as registering common event listeners, in this callback.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If an AppServiceExtensionAbility instance has already been created, the **onCreate()** callback is not invoked
 > again when the instance is started or connected.
 
@@ -186,7 +185,7 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 onRequest(want: Want, startId: int): void
 ```
 
-Called each time an AppServiceExtensionAbility instance is started by calling [startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability) .
+Called each time an AppServiceExtensionAbility instance is started by calling [startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability).
 
 **Since:** 23
 

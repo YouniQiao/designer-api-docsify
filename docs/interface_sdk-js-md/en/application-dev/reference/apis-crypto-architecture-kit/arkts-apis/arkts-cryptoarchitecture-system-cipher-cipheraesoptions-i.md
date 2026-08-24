@@ -25,8 +25,8 @@ action: string
 ```
 
 Action to perform. The options are as follows:
-
-1. **encrypt**: Encrypts data. 2. **decrypt**: Decrypts data.
+1. **encrypt**: Encrypts data.
+2. **decrypt**: Decrypts data.
 
 **Type:** string
 
@@ -186,9 +186,7 @@ Called when data is encrypted or decrypted successfully.
 text: string
 ```
 
-Text to be encrypted or decrypted.
-
-The text to be encrypted must be common text. The text to be decrypted must be a binary value encoded in Base64. The default format is used for Base64 encoding.
+Text to be encrypted or decrypted.The text to be encrypted must be common text. The text to be decrypted must be a binary value encoded in Base64. The default format is used for Base64 encoding.
 
 **Type:** string
 

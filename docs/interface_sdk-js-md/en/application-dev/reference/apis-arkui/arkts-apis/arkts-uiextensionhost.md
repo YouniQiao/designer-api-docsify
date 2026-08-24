@@ -2,11 +2,9 @@
 
 Intended only for the **UIExtensionComponent** that has process isolation requirements, the **uiExtensionHost** module provides APIs for obtaining the host application window information and information about the component itself.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > No new function will be added to this module. Related functions will be provided in the
-> [uiExtension](arkts-arkui-uiextension.md) interface.
-> 
+> [uiExtension](arkts-arkui-uiextension.md) interface.&gt;
 > The APIs provided by this module are system APIs.
 
 **Since:** 23

@@ -1,6 +1,10 @@
 # AudioRecordingManager
 
-提供录像策略管理，包括协同录音 和录制控制能力。
+录音策略管理，提供协同录音和录音控制能力。 在使用AudioRecordingManager的接口之前，需先通过 [getRecordingManager](arkts-audio-audio-audiomanager-i-sys.md#getrecordingmanager)获取AudioRecordingManager实例 。
+
+> **说明：**&gt;
+> - 本模块首批接口从API版本26.0.0开始支持。&gt;
+> - 本模块接口仅可在Stage模型下使用。
 
 **起始版本：** 26.0.0
 
@@ -12,7 +16,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## enableSystemRecordController
@@ -21,7 +24,12 @@ import { audioHaptic } from '@kit.AudioKit';
 enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig): Promise<void>
 ```
 
-启用或禁用系统录像控制器面板。 应用程序在启动录制码流之前，可以调用此接口拉起录制控制器面板。 允许用户完成录音设备或音效参数的选择。 然后可以启动录音服务，避免在 记录过程。 应用程序必须在前台才能启用面板；启用操作不生效 如果应用程序在后台。禁用面板不受应用程序的限制 前台或后台状态。 该接口使用promise返回结果。
+启用或禁用系统录音控制面板。使用Promise异步回调。
+
+> **说明：**&gt;
+> - 应用可以在开始录音之前调用此接口在控制中心拉起录音控制面板，让用户完成录音设备或音频效果参数的选择，然后再启动录音服务。&gt;
+> - 若录音过程中调用该接口，在拉起的录音控制面板中切换录音设备或音频效果参数，会导致录制的音频效果不一致。&gt;
+> - 应用必须在前台才能启用该面板，如果应用在后台，启用操作不会生效。禁用面板不受应用前台或后台状态限制。
 
 **起始版本：** 26.0.0
 
@@ -35,14 +43,14 @@ enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| show | boolean | 是 | 一个布尔值，指示是显示（true）还是隐藏(false) 系统记录控制器面板 |
-| config | [SystemRecordControllerConfig](arkts-audio-audio-systemrecordcontrollerconfig-i.md) | 是 | 系统录像控制器面板配置 |
+| show | boolean | 是 | 启用或禁用系统录音控制面板。true表示启用，false表示禁用。 |
+| config | [SystemRecordControllerConfig](arkts-audio-audio-systemrecordcontrollerconfig-i.md) | 是 | 系统录音控制面板的配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 不会返回任何值的Promise。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

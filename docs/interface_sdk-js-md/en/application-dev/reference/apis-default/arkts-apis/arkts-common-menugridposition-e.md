@@ -1,8 +1,6 @@
 # MenuGridPosition
 
-Defines menu grid position.
-
-@enum { int }
+Defines menu grid position.@enum { int }
 
 **Since:** 26.0.0
 

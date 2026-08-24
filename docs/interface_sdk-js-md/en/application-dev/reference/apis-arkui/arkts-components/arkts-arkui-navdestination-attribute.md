@@ -1,8 +1,6 @@
 # NavDestination properties/events
 
-The universal attributes are supported.
-
-In addition to the universal events, the following events are supported.
+The universal attributes are supported.In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** NavDestinationAttribute extends CommonMethod<NavDestinationAttribute>
 
@@ -27,8 +25,7 @@ Sets the icon of the back button on the title bar.
 
 > **NOTE：**
 
-> - This API can be called within attributeModifier since API version 12.
-> 
+> - This API can be called within attributeModifier since API version 12.&gt;
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
 > changing the animation effect type through the **symbolEffect** attribute.
@@ -59,8 +56,7 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 > **NOTE：**
 
-> - This API cannot be called within attributeModifier.
-> 
+> - This API cannot be called within attributeModifier.&gt;
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
 > changing the animation effect type through the **symbolEffect** attribute.
@@ -93,14 +89,12 @@ Binds the **NavDestination** component with a nested scrollable container, which
 > **NOTE：**
 
 > - The connection between the scrolling actions and the animations for showing or hiding the title bar and toolbar
-> of the **NavDestination** component takes effect only when the title bar or toolbar is visible.
-> 
+> of the **NavDestination** component takes effect only when the title bar or toolbar is visible.&gt;
 > - If a **NavDestination** component is bound to multiple scrollable containers, scrolling in any of these
 > containers triggers the display or hiding animations of the title bar and toolbar. Specifically, when any
 > scrollable container reaches either the bottom or the top, the display animation for the title bar and toolbar is
 > triggered without delay. As such, to ensure the optimal user experience, avoid triggering scroll events of
-> multiple scrollable containers simultaneously.
-> 
+> multiple scrollable containers simultaneously.&gt;
 > - This API can be called in attributeModifier since API version 22.
 
 **Since:** 14
@@ -130,14 +124,12 @@ Binds the **NavDestination** component with a scrollable container, which can be
 > **NOTE：**
 
 > - The connection between the scrolling actions and the animations for showing or hiding the title bar and toolbar
-> of the **NavDestination** component takes effect only when the title bar or toolbar is visible.
-> 
+> of the **NavDestination** component takes effect only when the title bar or toolbar is visible.&gt;
 > - If a **NavDestination** component is bound to multiple scrollable containers, scrolling in any of these
 > containers triggers the display or hiding animations of the title bar and toolbar. Specifically, when any
 > scrollable container reaches either the bottom or the top, the display animation for the title bar and toolbar is
 > triggered without delay. As such, to ensure the optimal user experience, avoid triggering scroll events of
-> multiple scrollable containers simultaneously.
-> 
+> multiple scrollable containers simultaneously.&gt;
 > - This API can be called in attributeModifier since API version 22.
 
 **Since:** 14
@@ -166,8 +158,7 @@ Sets a custom transition animation for the **NavDestination** component.
 
 > **NOTE：**
 
-> - This API cannot be called within attributeModifier.
-> 
+> - This API cannot be called within attributeModifier.&gt;
 > - If both this attribute and [systemTransition](#systemtransition) are set,
 > whichever is set later takes effect.
 
@@ -237,8 +228,7 @@ Sets whether to show or hide the system status bar when entering this **NavDesti
 > 
 > 3. The **NavDestination** component occupies the entire **Navigation** container.
 > 
-> 4. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD.
-> 
+> 4. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD.&gt;
 > - The actual effect of setting the system status bar depends on the specific device support. For details, see
 > [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled).
 
@@ -265,9 +255,7 @@ Sets whether to show or hide the system status bar when entering this **NavDesti
 fullScreenOverlay(fullScreenOverlay: Optional<boolean>)
 ```
 
-Sets whether the NavDestination should cover the entire navigation container.
-
-When set to true, in split navigation mode, the page covers both the NavBar and content area, displaying in full screen overlay mode. This setting applies to all instances of this NavDestination whenever it is pushed onto the stack, unless overridden by the fullScreen option in the push operation.
+Sets whether the NavDestination should cover the entire navigation container.When set to true, in split navigation mode, the page covers both the NavBar and content area, displaying in full screen overlay mode. This setting applies to all instances of this NavDestination whenever it is pushed onto the stack, unless overridden by the fullScreen option in the push operation.
 
 **Since:** 26.0.0
 
@@ -307,7 +295,7 @@ Sets whether to hide the back button in the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hide | Optional&lt;boolean&gt; | Yes | Whether to hide the back button in the title bar.<br>Default value: **false**.&lt; br&gt;**true**: Hide the back button in the title bar.<br>**false**: Show the back button in the title bar. |
+| hide | Optional&lt;boolean&gt; | Yes | Whether to hide the back button in the title bar.<br>Default value: **false**.<br>**true**: Hide the back button in the title bar.<br>**false**: Show the back button in the title bar. |
 
 ## hideTitleBar
 
@@ -378,7 +366,7 @@ Specifies whether to hide the toolbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hide | boolean | Yes | Whether to hide the toolbar.<br>Default value: **false**.<br>**true**: Hide the toolbar.&lt; br&gt;**false**: Show the toolbar. |
+| hide | boolean | Yes | Whether to hide the toolbar.<br>Default value: **false**.<br>**true**: Hide the toolbar.<br>**false**: Show the toolbar. |
 | animated | boolean | No | Whether to animate the visibility change of the toolbar.<br>Default value: **false**.<br>**true**: Animate the visibility change of the toolbar.<br>**false**: Do not animate the visibility change of the toolbar. |
 
 ## ignoreLayoutSafeArea
@@ -394,12 +382,10 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 > - Prerequisites for the **ignoreLayoutSafeArea** attribute to take effect:
 > 
 > When **LayoutSafeAreaType.SYSTEM** is set, the component can extend into the non-safe area if its boundaries
-> overlap with the non-safe area.
-> 
+> overlap with the non-safe area.&gt;
 > - If the component extends into the non-safe area, events triggered within that area (such as click events) might
 > be intercepted by the system. This allows the system to prioritize responses to system components such as the
-> status bar.
-> 
+> status bar.&gt;
 > - To allow a component to extend into non-safe areas, the title bar and toolbar must be hidden or set to
 > STACK mode.
 
@@ -430,8 +416,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 &gt; **NOTE：**
 
-> - This API can be called within attributeModifier since API version 14.
-> 
+> - This API can be called within attributeModifier since API version 14.&gt;
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
 > changing the animation effect type through the **symbolEffect** attribute.
@@ -458,12 +443,11 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenuOptions)
 ```
 
-Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus), this API adds menu options. When the value type is Array&lt;NavigationMenuItem&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons ( if any) placed under the automatically generated **More** icon.
+Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus), this API adds menu options. When the value type is Array&lt;NavigationMenuItem&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
 &gt; **NOTE：**
 
-> - This API cannot be called within attributeModifier.
-> 
+> - This API cannot be called within attributeModifier.&gt;
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
 > changing the animation effect type through the **symbolEffect** attribute.
@@ -547,9 +531,7 @@ Triggered when the **NavDestination** component becomes active (on top of the st
 onBackPressed(callback: () => boolean)
 ```
 
-This callback takes effect when content exists in the navigation controller bound to the **Navigation** component. Triggered when the back button is pressed.
-
-The value **true** means that the back button logic is overridden, and **false** means that the previous page is displayed.
+This callback takes effect when content exists in the navigation controller bound to the **Navigation** component. Triggered when the back button is pressed.The value **true** means that the back button logic is overridden, and **false** means that the previous page is displayed.
 
 **Since:** 10
 
@@ -589,7 +571,7 @@ Triggered when the navigation destination page is hidden. Starting from API vers
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[VisibilityChangeReason](arkts-arkui-visibilitychangereason-e.md)&gt; | Yes | Triggered when the navigation destination page is hidden.&lt;br &gt;In versions earlier than API version 21, the callback is a basic callback without parameters.<br>Since API version 21, the callback includes a **VisibilityChangeReason** parameter describing the trigger cause.<br>**Since:** 21 |
+| callback | Callback&lt;[VisibilityChangeReason](arkts-arkui-visibilitychangereason-e.md)&gt; | Yes | Triggered when the navigation destination page is hidden.<br>In versions earlier than API version 21, the callback is a basic callback without parameters.<br>Since API version 21, the callback includes a **VisibilityChangeReason** parameter describing the trigger cause.<br>**Since:** 21 |
 
 ## onInactive
 
@@ -631,8 +613,7 @@ Triggered when a **NavDestination** page that already exists in the stack is mov
 
 > - This callback is not triggered by
 > replacePath or
-> replaceDestination.
-> 
+> replaceDestination.&gt;
 > - This API can be called in attributeModifier since API version 22.
 
 **Since:** 19
@@ -685,9 +666,7 @@ Triggered when the **NavDestination** component is about to build a child compon
 onRestoreState(callback: Optional<RestoreStateCallback>)
 ```
 
-Sets custom page state restore callback.
-
-Triggered when page is reconstructed. The custom state saved by onSaveState is passed to this callback. Null is passed if no custom state was saved.
+Sets custom page state restore callback.Triggered when page is reconstructed. The custom state saved by onSaveState is passed to this callback. Null is passed if no custom state was saved.
 
 **Since:** 26.0.0
 
@@ -739,9 +718,7 @@ Triggered when the **NavDestination** component returns.
 onSaveState(callback: Optional<SaveStateCallback>)
 ```
 
-Sets custom page state save callback.
-
-Triggered when page becomes hidden. Save custom page state for potential restoration. The initial param used to create the page is preserved by Navigation separately. State object must be serializable.
+Sets custom page state save callback.Triggered when page becomes hidden. Save custom page state for potential restoration. The initial param used to create the page is preserved by Navigation separately. State object must be serializable.
 
 **Since:** 26.0.0
 
@@ -913,8 +890,7 @@ Sets the display orientation for the **NavDestination** component. After the tra
 > 2. The **Navigation** container containing the **NavDestination** component occupies the entire application
 > page area.
 > 
-> 3. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD.
-> 
+> 3. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD.&gt;
 > - The actual effect of setting the display orientation depends on the specific device support. For details, see
 > [setPreferredOrientation](../../../reference/apis-arkui/arkts-apis-window-Window.md#setpreferredorientation9-1).
 
@@ -972,11 +948,9 @@ Sets the style of the system status bar when this **NavDestination** page is dis
 > **NOTE：**
 
 > - The setting takes effect only when the **NavDestination** component is used in conjunction with the
-> **Navigation** component.
-> 
+> **Navigation** component.&gt;
 > - For other usage restrictions, see the description of systemBarStyle
-> for the **Navigation** component.
-> 
+> for the **Navigation** component.&gt;
 > - This API can be called within attributeModifier since API version 20.
 
 **Since:** 12
@@ -1057,8 +1031,7 @@ Sets the content of the toolbar. If this API is not called, the toolbar remains 
 
 > **NOTE：**
 
-> - This API can be called within attributeModifier since API version 20.
-> 
+> - This API can be called within attributeModifier since API version 20.&gt;
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
 > changing the animation effect type through the **symbolEffect** attribute.
@@ -1077,6 +1050,6 @@ Sets the content of the toolbar. If this API is not called, the toolbar remains 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| toolbarParam | Array&lt;ToolbarItem&gt; \| CustomBuilder | Yes | Content of the toolbar.<br>When configured with Array&lt; ToolbarItem&gt;, the toolbar follows the rules below:<br>- Toolbar items are evenly distributed on the bottom toolbar, with text and icons evenly spaced in each content area.<br>- In portrait mode, the toolbar shows a maximum of five icons, with any additional icons placed under an automatically generated **More** icon. In landscape mode, the behavior of the toolbar is determined by the display mode: (1) If the display mode is Split, the display will remain the same as in portrait mode. (2) If the display mode is Stack, the toolbar must be used together with Array&lt; NavigationMenuItem&gt; of the [menus](#menus) attribute; in this configuration, the bottom toolbar is automatically hidden, and all items on the toolbar are relocated to the menu in the upper right corner of the screen.<br>When configured with [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8), the toolbar does not follow the above rules. |
+| toolbarParam | Array&lt;ToolbarItem&gt; \| CustomBuilder | Yes | Content of the toolbar.<br>When configured with Array&lt;ToolbarItem&gt;, the toolbar follows the rules below:<br>- Toolbar items are evenly distributed on the bottom toolbar, with text and icons evenly spaced in each content area.<br>- In portrait mode, the toolbar shows a maximum of five icons, with any additional icons placed under an automatically generated **More** icon. In landscape mode, the behavior of the toolbar is determined by the display mode: (1) If the display mode is Split, the display will remain the same as in portrait mode. (2) If the display mode is Stack, the toolbar must be used together with Array&lt;NavigationMenuItem&gt; of the [menus](#menus) attribute; in this configuration, the bottom toolbar is automatically hidden, and all items on the toolbar are relocated to the menu in the upper right corner of the screen.<br>When configured with [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8), the toolbar does not follow the above rules. |
 | options | NavigationToolbarOptions | No | Toolbar options. Toolbar options include the background color, background blur style and blur option, background properties, layout mode of the toolbar, as well as whether to hide the toolbar text, and options for the toolbar's more button menu. |
 

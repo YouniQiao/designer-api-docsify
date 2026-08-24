@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## createCameraInput
@@ -21,9 +20,7 @@ import { cameraPicker } from '@kit.CameraKit';
 createCameraInput(camera: CameraDevice): CameraInput
 ```
 
-使用CameraDevice对象创建CameraInput实例，同步返回结果。
-
-该接口使用前首先通过[getSupportedCameras](#getsupportedcameras)接口查询当前设备支持的相机设备信息列表，开发者需要根据具体使用场景选 择符合需求的相机设备，然后使用该接口创建CameraInput实例。
+使用CameraDevice对象创建CameraInput实例，同步返回结果。该接口使用前首先通过[getSupportedCameras](#getsupportedcameras)接口查询当前设备支持的相机设备信息列表，开发者需要根据具体使用场景选 择符合需求的相机设备，然后使用该接口创建CameraInput实例。
 
 **起始版本：** 23
 
@@ -97,9 +94,7 @@ function createCameraInput(camera: camera.CameraDevice, cameraManager: camera.Ca
 createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 ```
 
-根据相机位置和类型创建CameraInput实例，同步返回结果。
-
-该接口使用前需要开发者根据应用具体使用场景自行指定相机位置和类型，例如打开前置相机进入自拍功能。
+根据相机位置和类型创建CameraInput实例，同步返回结果。该接口使用前需要开发者根据应用具体使用场景自行指定相机位置和类型，例如打开前置相机进入自拍功能。
 
 **起始版本：** 23
 
@@ -144,8 +139,7 @@ createCaptureSession(): CaptureSession
 
 创建CaptureSession实例，同步返回结果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
@@ -249,10 +243,8 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 创建拍照输出对象，同步返回结果。
 
-> **说明：**
-> 
-> - 从API version 10开始支持，从API version 11开始废弃。
-> 
+> **说明：**&gt;
+> - 从API version 10开始支持，从API version 11开始废弃。&gt;
 > - 该接口只支持创建JPEG格式的拍照输出对象。
 
 **起始版本：** 10
@@ -528,10 +520,7 @@ function createSession(cameraManager: camera.CameraManager, mode: camera.SceneMo
 createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 ```
 
-创建录像输出对象，同步返回结果。
-
-在录像模式下，使能SDR或HDR_VIVID拍摄效果时，CameraFormat与ColorSpace必须按照下列表格中的对应关系配置，若不满足表格中CameraFormat与ColorSpace配置，会导致预览异常等问题。
-
+创建录像输出对象，同步返回结果。在录像模式下，使能SDR或HDR_VIVID拍摄效果时，CameraFormat与ColorSpace必须按照下列表格中的对应关系配置，若不满足表格中CameraFormat与ColorSpace配置，会导致预览异常等问题。  
 | SDR/HDR拍摄 | CameraFormat | ColorSpace | |--------------------|--------------------------|------------------| | SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT | | HDR_VIVID | CAMERA_FORMAT_YCRCB_P010<br>CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT<br>BT2020_HLG_FULL |
 
 **起始版本：** 23
@@ -696,9 +685,7 @@ function getCameraConcurrentInfos(cameraManager: camera.CameraManager,
 getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 ```
 
-根据相机位置和相机类型查询对应相机。
-
-获取指定[CameraPosition](arkts-camera-camera-cameraposition-e.md)和[CameraType](arkts-camera-camera-cameratype-e.md)的相机镜头，如果该接口返回结果为undefined， 表示当前设备未查询到该镜头。
+根据相机位置和相机类型查询对应相机。获取指定[CameraPosition](arkts-camera-camera-cameraposition-e.md)和[CameraType](arkts-camera-camera-cameratype-e.md)的相机镜头，如果该接口返回结果为undefined， 表示当前设备未查询到该镜头。
 
 **起始版本：** 23
 
@@ -805,9 +792,7 @@ function getCameraDevices(cameraManager: camera.CameraManager, position: camera.
 getSupportedCameras(): Array<CameraDevice>
 ```
 
-获取支持的基础相机设备对象（如获取CameraType为CAMERA_TYPE_DEFAULT的默认相机），同步返回结果。
-
-如果需要获取额外的相机设备对象（如获取CameraType为CAMERA_TYPE_TELEPHOTO的长焦相机），可通过 [getCameraDevices](#getcameradevices)接口获取。
+获取支持的基础相机设备对象（如获取CameraType为CAMERA_TYPE_DEFAULT的默认相机），同步返回结果。如果需要获取额外的相机设备对象（如获取CameraType为CAMERA_TYPE_TELEPHOTO的长焦相机），可通过 [getCameraDevices](#getcameradevices)接口获取。
 
 **起始版本：** 23
 
@@ -848,8 +833,7 @@ getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraO
 
 查询指定相机在指定模式下支持的完整输出能力，包括未压缩图（YUV）、HEIF和HDR等能力。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 使用YUV，HEIF或HDR等能力前，需要先显式调用此方法确保获取完整输出能力。
 
 **起始版本：** 23
@@ -894,8 +878,7 @@ getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 
 查询相机设备支持的输出能力，同步返回结果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
@@ -1306,8 +1289,7 @@ on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 
 相机设备状态回调，通过注册回调函数获取相机的状态变化。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
@@ -1333,8 +1315,7 @@ on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 
 注册折叠设备折叠状态变化的监听。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 12
@@ -1360,8 +1341,7 @@ on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 
 手电筒状态变化回调，通过注册回调函数获取手电筒状态变化。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 11

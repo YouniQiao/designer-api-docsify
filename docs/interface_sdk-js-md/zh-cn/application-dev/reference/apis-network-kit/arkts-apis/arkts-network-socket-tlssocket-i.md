@@ -22,8 +22,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 绑定IP地址和端口。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 如果TLSSocket对象是通过TCPSocket对象升级创建的，可以不用执行bind方法。
 
 **起始版本：** 9
@@ -181,8 +180,7 @@ bind(address: NetAddress): Promise<void>
 
 绑定IP地址和端口。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 如果TLSSocket对象是通过TCPSocket对象升级创建的，可以不用执行bind方法。
 
 **起始版本：** 9
@@ -1083,7 +1081,7 @@ tlsOneWay.connect(tlsOneWayConnectOptions).then(() => {
 connect(options: TLSConnectOptions): Promise<void>
 ```
 
-在TLSSocket上bind成功之后，进行通信连接，并创建和初始化TLS会话，实现建立连接过程，启动与服务器的TLS/SSL握手，实现数据传输功能，该连接包括两种认证方式，单向认证与双向认证，使用Promise异步回调。需要 注意options入参下secureOptions内的ca在API11及之前的版本为必填项，需填入服务端的ca证书(用于认证校验服务端的数字证书)，证书内容以"-----BEGIN CERTIFICATE-----"开头，以" -----END CERTIFICATE-----"结尾，自API12开始，为非必填项。
+在TLSSocket上bind成功之后，进行通信连接，并创建和初始化TLS会话，实现建立连接过程，启动与服务器的TLS/SSL握手，实现数据传输功能，该连接包括两种认证方式，单向认证与双向认证，使用Promise异步回调。需要 注意options入参下secureOptions内的ca在API11及之前的版本为必填项，需填入服务端的ca证书(用于认证校验服务端的数字证书)，证书内容以"-----BEGIN CERTIFICATE-----"开头，以"-----END CERTIFICATE-----"结尾，自API12开始，为非必填项。
 
 **起始版本：** 9
 
@@ -1482,8 +1480,7 @@ getLocalAddress(): Promise<NetAddress>
 
 获取TLSSocket的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 在TLSSocketServer通信连接成功之后，才可调用此方法。
 
 **起始版本：** 12
@@ -2508,10 +2505,8 @@ getSocketFd(): Promise<int>
 
 获取TLSSocket的文件描述符。使用Promise异步回调。
 
-> **说明：**
-> 
-> - bind方法调用成功后，才可调用此方法。
-> 
+> **说明：**&gt;
+> - bind方法调用成功后，才可调用此方法。&gt;
 > - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭Socket连接，避免直接操作
 > 文件描述符进行关闭。
 
@@ -3403,8 +3398,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 订阅TLSSocket的连接事件或关闭事件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 9
@@ -3460,8 +3454,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 订阅TLSSocket的连接事件或关闭事件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 9
@@ -3495,8 +3488,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 订阅TLSSocket连接的error事件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 9
@@ -3549,8 +3541,7 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 
 订阅TLSSocket连接的接收消息事件。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 9

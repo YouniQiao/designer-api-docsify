@@ -1,8 +1,6 @@
 # FontWeight
 
-The font weight of the text
-
-@enum { number }
+The font weight of the text@enum { number }
 
 **起始版本：** 23
 

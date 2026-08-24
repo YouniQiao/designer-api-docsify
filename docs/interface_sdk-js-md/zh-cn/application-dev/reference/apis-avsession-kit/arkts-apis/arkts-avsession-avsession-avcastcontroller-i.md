@@ -2,8 +2,7 @@
 
 在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本Interface首批接口从API version 10开始支持。
 
 **起始版本：** 23
@@ -653,7 +652,7 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | 是 | 取消对应的监听事件，支持的事件是'customDataChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 否 | 注册监听事件时的回调函数。该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | 注册监听事件时的回调函数。该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
 
 **错误码：**
 
@@ -1164,7 +1163,7 @@ Unregister listener for custom data sent from remote device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 否 | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to retrieve custom data. |
 
 **错误码：**
 
@@ -1531,9 +1530,7 @@ avCastController.offVideoSizeChange();
 on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 ```
 
-监听投播音频渲染器的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播音频渲染器的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1565,9 +1562,7 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 on(type: 'castControlDecodingError', callback: ErrorCallback): void
 ```
 
-监听投播解码的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播解码的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1602,9 +1597,7 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 on(type: 'castControlDrmError', callback: ErrorCallback): void
 ```
 
-监听投播drm的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播drm的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1643,9 +1636,7 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 on(type: 'castControlGenericError', callback: ErrorCallback): void
 ```
 
-监听投播通用错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播通用错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1688,9 +1679,7 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 on(type: 'castControlIoError', callback: ErrorCallback): void
 ```
 
-监听投播输入/输出的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播输入/输出的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1736,9 +1725,7 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 on(type: 'castControlParsingError', callback: ErrorCallback): void
 ```
 
-监听投播解析的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播解析的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1787,7 +1774,7 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | 是 | 事件回调类型，支持'customDataChange'事件。媒体提供方发送自定义数据时触发。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
 
 **错误码：**
 
@@ -1801,9 +1788,7 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-设置播放结束的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放结束的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -1831,9 +1816,7 @@ on(type: 'endOfStream', callback: Callback<void>): void
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听远端播放器的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听远端播放器的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -1869,9 +1852,7 @@ on(type: 'error', callback: ErrorCallback): void
 on(type: 'keyRequest', callback: KeyRequestCallback): void
 ```
 
-在线DRM资源投播时，设置许可证请求的事件监听。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+在线DRM资源投播时，设置许可证请求的事件监听。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 12
 
@@ -1901,9 +1882,7 @@ on(type: 'keyRequest', callback: KeyRequestCallback): void
 on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 ```
 
-设置投播当前播放媒体内容的监听事件。使用callback异步回调。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置投播当前播放媒体内容的监听事件。使用callback异步回调。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -1933,9 +1912,7 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void
 ```
 
-设置播放状态变化的监听事件。使用callback异步回调。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放状态变化的监听事件。使用callback异步回调。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -1966,9 +1943,7 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 on(type: 'playNext', callback: Callback<void>): void
 ```
 
-设置播放下一首资源的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放下一首资源的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -1998,9 +1973,7 @@ on(type: 'playNext', callback: Callback<void>): void
 on(type: 'playPrevious', callback: Callback<void>): void
 ```
 
-设置播放上一首资源的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放上一首资源的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2030,9 +2003,7 @@ on(type: 'playPrevious', callback: Callback<void>): void
 on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 ```
 
-设置请求播放的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置请求播放的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -2060,9 +2031,7 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 on(type: 'seekDone', callback: Callback<int>): void
 ```
 
-设置seek结束的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置seek结束的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2092,9 +2061,7 @@ on(type: 'seekDone', callback: Callback<int>): void
 on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)
 ```
 
-会话支持的有效命令变化监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+会话支持的有效命令变化监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -2123,9 +2090,7 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void
 ```
 
-媒体控制器监听视频尺寸变化变化的事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+媒体控制器监听视频尺寸变化变化的事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 12
 
@@ -2428,7 +2393,7 @@ Register listener for custom data sent from remote device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
 
 **错误码：**
 
@@ -3301,7 +3266,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。 <br>服务端仅解析key：string为'customData'，且Object为string类型的对象。 |
+| data | Record&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。 <br>服务端仅解析key：string为'customData'，且Object为string类型的对象。 |
 
 **返回值：**
 
@@ -3375,8 +3340,7 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 启动播放某个媒体资源。结果通过callback异步回调方式返回。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 在音视频投播场景下，当应用程序顺序调用
 > [prepare](#prepare)和start接口，且
 > assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
@@ -3466,8 +3430,7 @@ start(item: AVQueueItem): Promise<void>
 
 启动播放某个媒体资源。结果通过Promise异步回调方式返回。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 在音视频投播场景下，当应用程序顺序调用
 > [prepare](#prepare)和start接口，且
 > assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。

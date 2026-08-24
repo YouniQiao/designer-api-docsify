@@ -14,8 +14,7 @@ function addOsAccountAsync(admin: Want, name: string, type: osAccount.OsAccountT
 
 后台添加账号。使用Promise异步回调。适用于企业批量创建账号或远程管理场景，无需用户交互即可完成账号创建，提升管理效率。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 创建账号的流程比较耗时，当调用此接口后，后续如果在应用主线程调用其他同步接口时需要等待该接口异步返回。
 
 **起始版本：** 12

@@ -1,8 +1,6 @@
 # CurrentLocationRequest
 
-Configuring parameters in current location requests
-
-@interface CurrentLocationRequest
+Configuring parameters in current location requests@interface CurrentLocationRequest
 
 **Since:** 7
 

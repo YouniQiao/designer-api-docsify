@@ -44,8 +44,8 @@ import { componentUtils } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [GetItemsInShapePathParams](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | Image options setted when need to get the image objects. |
-| [ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md) | Image object with layout information. |
+| [GetItemsInShapePathParams](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | Image options setted when need to get the image objects.@interface GetItemsInShapePathParams |
+| [ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md) | Image object with layout information.@interface ImageItem |
 | [Rotation2D](arkts-arkui-componentutils-rotation2d-i-sys.md) | Describes a rotation in 2D, which can be defined by rotation angle and rotation center. |
 <!--DelEnd-->
 

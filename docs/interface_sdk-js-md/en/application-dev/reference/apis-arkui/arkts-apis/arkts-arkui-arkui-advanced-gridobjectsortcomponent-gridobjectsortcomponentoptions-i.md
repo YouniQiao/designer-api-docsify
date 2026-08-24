@@ -20,9 +20,7 @@ import { GridObjectSortComponentType, GridObjectSortComponentItem, GridObjectSor
 addAreaTitle?: ResourceStr
 ```
 
-Second subtitle of the display area.
-
-Default value: **Tap to add**
+Second subtitle of the display area.Default value: **Tap to add**
 
 **Type:** ResourceStr
 
@@ -42,9 +40,7 @@ Default value: **Tap to add**
 editTitle?: ResourceStr
 ```
 
-Title displayed in the editing state.
-
-Default value: **Edit**
+Title displayed in the editing state.Default value: **Edit**
 
 **Type:** ResourceStr
 
@@ -64,11 +60,7 @@ Default value: **Edit**
 imageSize?: number | Resource
 ```
 
-Image size, in vp.
-
-The value must be greater than or equal to 0.
-
-Default value: **56vp**.
+Image size, in vp.The value must be greater than or equal to 0.Default value: **56vp**.
 
 **Type:** number \| Resource
 
@@ -88,9 +80,7 @@ Default value: **56vp**.
 normalTitle?: ResourceStr
 ```
 
-Title displayed in the non-editing state.
-
-Default value: **Channel**
+Title displayed in the non-editing state.Default value: **Channel**
 
 **Type:** ResourceStr
 
@@ -110,9 +100,7 @@ Default value: **Channel**
 showAreaTitle?: ResourceStr
 ```
 
-First subtitle of the display area.
-
-Default value: **Drag to sort**
+First subtitle of the display area.Default value: **Drag to sort**
 
 **Type:** ResourceStr
 
@@ -132,9 +120,7 @@ Default value: **Drag to sort**
 type?: GridObjectSortComponentType
 ```
 
-Component display type: text only or image with text
-
-Default value: **GridObjectSortComponentType.TEXT**
+Component display type: text only or image with text Default value: **GridObjectSortComponentType.TEXT**
 
 **Type:** [GridObjectSortComponentType](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponenttype-e.md)
 

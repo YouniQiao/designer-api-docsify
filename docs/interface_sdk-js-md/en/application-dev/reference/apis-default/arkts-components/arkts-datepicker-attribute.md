@@ -1,8 +1,6 @@
 # DatePickerAttribute
 
-Defines the DatePicker component attributes.
-
-@extends CommonMethod @interface DatePickerAttribute
+Defines the DatePicker component attributes.@extends CommonMethod @interface DatePickerAttribute
 
 **Inheritance/Implementation:** DatePickerAttribute extends CommonMethod
 

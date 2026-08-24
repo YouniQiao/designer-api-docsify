@@ -1,18 +1,12 @@
 # Navigation
 
 The **Navigation** component is the root view container for navigation. It typically functions as the root container of a page and includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of **Navigation**) and non-home page content (child components of NavDestination) through routing.
-
 > **NOTE**
-
-> - Since API version 11, this component supports the safe area attribute by default, with the default attribute > value being > **expandSafeArea([SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])**. > You can override this attribute to change the default behavior. In earlier versions, you need to use the > expandSafeArea attribute to implement the safe area feature. > > - When [NavBar](arkts-arkui-navbar-t.md) is nested within a **Navigation** component, the lifecycle of the inner > **NavDestination** component does not synchronize with the outer **NavDestination** component or the lifecycle of a > modal. > > - If the [title](arkts-arkui-navigation-attribute.md#title) and [subTitle](arkts-arkui-navigation-attribute.md#subtitle) are not set > and [hideBackButton](arkts-arkui-navigation-attribute.md#hidebackbutton) is set to **true**, the title bar is not displayed. > > - During subpage navigation within **Navigation**, the new page actively requests focus. > > - You are not advised to use stack operations in aboutToAppear, as the > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation > failures.
+> - Since API version 11, this component supports the safe area attribute by default, with the default attribute> value being> **expandSafeArea([SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])**.> You can override this attribute to change the default behavior. In earlier versions, you need to use the> expandSafeArea attribute to implement the safe area feature.>> - When [NavBar](arkts-arkui-navbar-t.md) is nested within a **Navigation** component, the lifecycle of the inner> **NavDestination** component does not synchronize with the outer **NavDestination** component or the lifecycle of a> modal.>> - If the [title](arkts-arkui-navigation-attribute.md#title) and [subTitle](arkts-arkui-navigation-attribute.md#subtitle) are not set> and [hideBackButton](arkts-arkui-navigation-attribute.md#hidebackbutton) is set to **true**, the title bar is not displayed.>> - During subpage navigation within **Navigation**, the new page actively requests focus.>> - You are not advised to use stack operations in aboutToAppear, as the> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation> failures.
 
 ## Child Components
 
-Supported
-
-Since API version 9, it is recommended that this component be used together with the NavRouter component.
-
-Since API version 10, it is recommended that this component be used together with the [NavPathStack](arkts-arkui-navpathstack-c.md) component and [navDestination](arkts-arkui-navigation-attribute.md#navdestination) attribute for page routing.
+Supported Since API version 9, it is recommended that this component be used together with the NavRouter component.Since API version 10, it is recommended that this component be used together with the [NavPathStack](arkts-arkui-navpathstack-c.md) component and [navDestination](arkts-arkui-navigation-attribute.md#navdestination) attribute for page routing.
 
 ## Navigation
 

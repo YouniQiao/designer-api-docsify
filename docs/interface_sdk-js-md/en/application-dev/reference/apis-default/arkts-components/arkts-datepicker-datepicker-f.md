@@ -15,6 +15,8 @@ Defines the DatePicker component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function DatePicker(    options?: DatePickerOptions): DatePickerAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function DatePicker(    options?: DatePickerOptions): DatePickerAttribute-End-->
@@ -46,6 +48,8 @@ Defines the DatePicker component. It requires call setDatePickerOptions at start
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

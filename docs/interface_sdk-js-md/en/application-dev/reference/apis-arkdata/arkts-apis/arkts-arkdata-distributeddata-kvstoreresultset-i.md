@@ -15,7 +15,6 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## getCount

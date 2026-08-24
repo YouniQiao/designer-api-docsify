@@ -35,7 +35,7 @@ new (byteLength: number): SharedArrayBuffer
 readonly prototype: SharedArrayBuffer
 ```
 
-**Type:** [SharedArrayBuffer](arkts-lib-es2017-sharedmemory-sharedarraybuffer-i.md)
+**Type:** SharedArrayBuffer
 
 **Since:** -1
 

@@ -36,8 +36,7 @@ VPN虚拟网卡的IP地址。API version 23之前，最多支持64个IP地址；
 blockedApplications?: Array<string>
 ```
 
-被阻止的应用信息列表，string类型表示的包名。当配置该列表后，该列表中的应用数据不会被VPN代理，其他应用可以根据routes配置被VPN代理。API version 23前最多可配置64个被阻止的应用包名；从API version 23开始最多可配置256个被阻止的应用包名。
-
+被阻止的应用信息列表，string类型表示的包名。当配置该列表后，该列表中的应用数据不会被VPN代理，其他应用可以根据routes配置被VPN代理。API version 23前最多可配置64个被阻止的应用包名；从API version 23开始最多可配置256个被阻止的应用包名。  
 **注意**：trustedApplications和blockedApplications列表不能同时配置。
 
 **类型：** Array&lt;string&gt;
@@ -102,8 +101,7 @@ isInternal?: boolean
 isIPv4Accepted?: boolean
 ```
 
-是否支持IPv4。true表示支持，false表示不支持, 默认值为true。
-
+是否支持IPv4。true表示支持，false表示不支持, 默认值为true。  
 **注意**：若支持IPv4功能，需要在addresses中配置IPv4类型的IP地址。
 
 **类型：** boolean
@@ -120,8 +118,7 @@ isIPv4Accepted?: boolean
 isIPv6Accepted?: boolean
 ```
 
-是否支持IPv6。true表示支持，false表示不支持, 默认值为false。
-
+是否支持IPv6。true表示支持，false表示不支持, 默认值为false。  
 **注意**：若支持IPv6功能，需要在addresses中配置IPv6类型的IP地址。
 
 **类型：** boolean
@@ -186,8 +183,7 @@ DNS的搜索域列表。
 trustedApplications?: Array<string>
 ```
 
-受信任的应用信息列表，string类型表示的包名。当配置该列表后，仅该列表中的应用数据才能根据routes被VPN代理。API version 23前最多可配置64个受信任的应用包名；从API version 23开始最多可配 置256个受信任的应用包名。
-
+受信任的应用信息列表，string类型表示的包名。当配置该列表后，仅该列表中的应用数据才能根据routes被VPN代理。API version 23前最多可配置64个受信任的应用包名；从API version 23开始最多可配 置256个受信任的应用包名。  
 **注意**：trustedApplications和blockedApplications列表不能同时配置。
 
 **类型：** Array&lt;string&gt;

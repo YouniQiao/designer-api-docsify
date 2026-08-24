@@ -21,9 +21,7 @@
 height: double
 ```
 
-矩形的高度。
-
-单位：px。
+矩形的高度。单位：px。
 
 **类型：** double
 
@@ -41,9 +39,7 @@ height: double
 width: double
 ```
 
-矩形的宽度。
-
-单位：px。
+矩形的宽度。单位：px。
 
 **类型：** double
 
@@ -61,9 +57,7 @@ width: double
 x: double
 ```
 
-矩形区域左上角x坐标。
-
-单位：px。
+矩形区域左上角x坐标。单位：px。
 
 **类型：** double
 
@@ -81,9 +75,7 @@ x: double
 y: double
 ```
 
-矩形区域左上角y坐标。
-
-单位：px。
+矩形区域左上角y坐标。单位：px。
 
 **类型：** double
 

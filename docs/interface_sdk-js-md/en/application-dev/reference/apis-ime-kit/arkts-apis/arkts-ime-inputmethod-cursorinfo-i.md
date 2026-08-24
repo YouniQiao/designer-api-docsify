@@ -1,6 +1,6 @@
 # CursorInfo
 
-@brief Represents the cursor information.
+Represents the cursor information.
 
 **Since:** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## displayId
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 displayId?: long
 ```
 
-@brief ID of the monitor where the cursor is located.
+ID of the monitor where the cursor is located.
 
 **Type:** long
 
@@ -43,7 +38,7 @@ displayId?: long
 height: double
 ```
 
-@brief Height of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
+Height of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
 
 **Type:** double
 
@@ -59,7 +54,7 @@ height: double
 left: double
 ```
 
-@brief Horizontal coordinate of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
+Horizontal coordinate of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
 
 **Type:** double
 
@@ -75,7 +70,7 @@ left: double
 top: double
 ```
 
-@brief Vertical coordinate of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
+Vertical coordinate of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
 
 **Type:** double
 
@@ -91,7 +86,7 @@ top: double
 width: double
 ```
 
-@brief Width of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
+Width of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
 
 **Type:** double
 

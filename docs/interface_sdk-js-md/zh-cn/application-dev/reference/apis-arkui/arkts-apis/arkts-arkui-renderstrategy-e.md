@@ -1,8 +1,6 @@
 # RenderStrategy
 
-RenderStrategy 的枚举。 定义图形渲染策略。
-
-@enum { number }
+RenderStrategy 的枚举。 定义图形渲染策略。@enum { number }
 
 **起始版本：** 22
 

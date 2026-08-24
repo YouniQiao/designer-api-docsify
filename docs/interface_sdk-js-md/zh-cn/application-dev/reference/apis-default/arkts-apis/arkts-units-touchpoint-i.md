@@ -1,8 +1,6 @@
 # TouchPoint
 
-配置跟手点坐标，不配置时，默认居中。
-
-@interface TouchPoint
+配置跟手点坐标，不配置时，默认居中。@interface TouchPoint
 
 **起始版本：** 23
 

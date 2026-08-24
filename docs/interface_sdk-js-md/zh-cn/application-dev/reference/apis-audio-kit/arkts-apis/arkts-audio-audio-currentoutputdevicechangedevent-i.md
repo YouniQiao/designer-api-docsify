@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## changeReason
@@ -54,6 +53,8 @@ preDevices?: AudioDeviceDescriptors
 ```
 
 应用输出设备变更前的设备信息。
+26.0.0
+此接口仅可在Stage模型下使用。
 
 **类型：** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 

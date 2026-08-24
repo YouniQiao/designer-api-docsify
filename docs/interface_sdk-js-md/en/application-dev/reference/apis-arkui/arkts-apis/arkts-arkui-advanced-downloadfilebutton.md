@@ -18,14 +18,14 @@ import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, Downloa
 
 | Name | Description |
 | --- | --- |
-| [DownloadContentOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md) | Defines the download content options. |
-| [DownloadStyleOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md) | Defines the DownloadFileButton style option. |
+| [DownloadContentOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md) | Defines the download content options.@interface DownloadContentOptions |
+| [DownloadStyleOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md) | Defines the DownloadFileButton style option.@interface DownloadStyleOptions |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DownloadDescription](arkts-arkui-arkui-advanced-downloadfilebutton-downloaddescription-e.md) | Enum for DownloadDescription |
-| [DownloadIconStyle](arkts-arkui-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md) | Enum for DownloadIconStyle |
-| [DownloadLayoutDirection](arkts-arkui-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md) | Enum for DownloadDescription |
+| [DownloadDescription](arkts-arkui-arkui-advanced-downloadfilebutton-downloaddescription-e.md) | Enum for DownloadDescription@enum { number } |
+| [DownloadIconStyle](arkts-arkui-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md) | Enum for DownloadIconStyle@enum { number } |
+| [DownloadLayoutDirection](arkts-arkui-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md) | Enum for DownloadDescription@enum { number } |
 

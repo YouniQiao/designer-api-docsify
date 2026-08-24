@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [SwipeRefresherV2](arkts-arkui-advanced-swiperefresherv2-swiperefresherv2-s.md) | Declare component SwipeRefresherV2 |
+| [SwipeRefresherV2](arkts-arkui-advanced-swiperefresherv2-swiperefresherv2-s.md) | Declare component SwipeRefresherV2@struct { SwipeRefresherV2 } |
 

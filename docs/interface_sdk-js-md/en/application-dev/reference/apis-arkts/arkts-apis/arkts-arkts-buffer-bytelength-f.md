@@ -29,7 +29,7 @@ Obtains the number of bytes of a string based on the encoding format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| string | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
+| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
 | encoding | BufferEncoding | No | Encoding format. The default value is **'utf8'**. |
 
 **Return value:**
@@ -72,7 +72,7 @@ Obtains the number of bytes of a string based on the encoding format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| doc | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| TypedArray \| DataView \| ArrayBuffer | Yes | Target string. |
+| doc | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer | Yes | Target string. |
 | encoding | BufferEncoding | No | Encoding format of the string. The default value is 'utf8'. |
 
 **Return value:**

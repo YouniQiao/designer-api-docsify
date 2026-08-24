@@ -1,8 +1,6 @@
 # ExtendableStack
 
-Defines the Extendable Stack.
-
-@implements StackAttribute
+Defines the Extendable Stack.@implements StackAttribute
 
 **继承/实现关系：** ExtendableStack implements [StackAttribute](arkts-arkui-stack-attribute.md#stackattribute)
 
@@ -17,8 +15,7 @@ Defines the Extendable Stack.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableStack>(
+static $_instantiate<T extends ExtendableStack>(
         factory: ConstructorT<T>,
         options?: StackOptions,
         content_?: CustomBuilder
@@ -30,6 +27,8 @@ Constructor of Extendable Stack.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,8 +53,7 @@ Constructor of Extendable Stack.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-    static _instantiateImpl<T extends ExtendableStack>(
+static _instantiateImpl<T extends ExtendableStack>(
         styles: CustomBuilderT<T>,
         factory: ConstructorT<T>,
         content_?: CustomBuilder
@@ -67,6 +65,8 @@ Entry of Extendable Stack.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

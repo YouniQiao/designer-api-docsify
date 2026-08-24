@@ -1,6 +1,6 @@
 # Range
 
-@brief Describes the range of the selected text.
+Describes the range of the selected text.
 
 **Since:** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## end
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 end: int
 ```
 
-@brief Index of the last selected character in the text box. The value is an integer greater than or equal to 0, and cannot exceed the actual text length. The **end** value must be greater than the **start** value.
+Index of the last selected character in the text box. The value is an integer greater than or equal to 0, and cannot exceed the actual text length. The **end** value must be greater than the **start** value.
 
 **Type:** int
 
@@ -41,7 +36,7 @@ end: int
 start: int
 ```
 
-@brief Index of the first selected character in the text box. The value is an integer greater than or equal to 0, and cannot exceed the actual text length.
+Index of the first selected character in the text box. The value is an integer greater than or equal to 0, and cannot exceed the actual text length.
 
 **Type:** int
 

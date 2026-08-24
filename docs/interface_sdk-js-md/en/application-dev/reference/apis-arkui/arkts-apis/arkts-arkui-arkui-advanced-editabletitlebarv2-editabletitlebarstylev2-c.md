@@ -4,6 +4,8 @@ Declaration of the title bar style configuration.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class EditableTitleBarStyleV2--><!--Device-unnamed-export declare class EditableTitleBarStyleV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ Constructor of EditableTitleBarStyleV2.
 ## backgroundBlurStyle
 
 ```TypeScript
-@Trace
-  public backgroundBlurStyle?: BlurStyle
+public backgroundBlurStyle?: BlurStyle
 ```
 
 Background blur style.
@@ -50,6 +51,8 @@ Background blur style.
 **Type:** BlurStyle
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ Background blur style.
 ## backgroundColor
 
 ```TypeScript
-@Trace
-  public backgroundColor?: ResourceColor
+public backgroundColor?: ResourceColor
 ```
 
 Background color.
@@ -71,6 +73,8 @@ Background color.
 **Type:** ResourceColor
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +87,7 @@ Background color.
 ## contentMargin
 
 ```TypeScript
-@Trace
-  public contentMargin?: LocalizedMargin
+public contentMargin?: LocalizedMargin
 ```
 
 Content margin, supports RTL layout.
@@ -92,6 +95,8 @@ Content margin, supports RTL layout.
 **Type:** LocalizedMargin
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +109,7 @@ Content margin, supports RTL layout.
 ## safeAreaEdges
 
 ```TypeScript
-@Trace
-  public safeAreaEdges?: Array<SafeAreaEdge>
+public safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
 Indicates the edges of the safe area.
@@ -113,6 +117,8 @@ Indicates the edges of the safe area.
 **Type:** Array&lt;SafeAreaEdge&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +131,7 @@ Indicates the edges of the safe area.
 ## safeAreaTypes
 
 ```TypeScript
-@Trace
-  public safeAreaTypes?: Array<SafeAreaType>
+public safeAreaTypes?: Array<SafeAreaType>
 ```
 
 Indicates the types of the safe area.
@@ -134,6 +139,8 @@ Indicates the types of the safe area.
 **Type:** Array&lt;SafeAreaType&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

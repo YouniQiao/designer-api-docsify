@@ -1,8 +1,6 @@
 # GuideLineStyle
 
-guideLine参数，用于定义一条guideLine的id、方向和位置。
-
-@interface GuideLineStyle
+guideLine参数，用于定义一条guideLine的id、方向和位置。@interface GuideLineStyle
 
 **起始版本：** 23
 

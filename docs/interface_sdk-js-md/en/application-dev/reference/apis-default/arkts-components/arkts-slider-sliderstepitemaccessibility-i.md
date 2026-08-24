@@ -1,8 +1,6 @@
 # SliderStepItemAccessibility
 
-Defines the accessibility information of slider step point.
-
-@interface SliderStepItemAccessibility
+Defines the accessibility information of slider step point.@interface SliderStepItemAccessibility
 
 **Since:** 23
 

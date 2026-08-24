@@ -1,8 +1,6 @@
 # BatteryCapacityLevel
 
-Enumerates battery levels.
-
-@enum { int }
+Enumerates battery levels.@enum { int }
 
 **Since:** 23
 

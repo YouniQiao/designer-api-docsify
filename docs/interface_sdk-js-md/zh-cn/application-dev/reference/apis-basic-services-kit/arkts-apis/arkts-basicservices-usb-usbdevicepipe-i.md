@@ -16,8 +16,6 @@ USB设备消息传输通道，用于确定设备。
 
 ```TypeScript
 import { usb } from '@kit.BasicServicesKit';
-import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## busNum

@@ -14,8 +14,7 @@ function addAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, 
 
 添加允许发送通知的应用名单。设置通知允许名单后，不在此名单内的应用无法发送通知。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1.如果Kiosk模式与通知允许名单策略同时设置，那么设置Kiosk模式的应用与通知允许名单中的应用都可以发送通知。
 
 > 2.当已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)设置了禁用设备通知能力时，再通

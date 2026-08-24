@@ -12,7 +12,6 @@ Describes audio capturer information.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## capturerFlags
@@ -21,9 +20,7 @@ import { audioHaptic } from '@kit.AudioKit';
 capturerFlags: int
 ```
 
-Flags that control the capturer behavior.
-
-Set this parameter to **0**.
+Flags that control the capturer behavior.Set this parameter to **0**.
 
 **Type:** int
 

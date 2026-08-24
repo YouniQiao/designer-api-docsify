@@ -402,8 +402,7 @@ isActived(): Promise<boolean>
 
 判断窗口是否为用户正在交互窗口。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](#isactive)替代。
 
 **起始版本：** 9

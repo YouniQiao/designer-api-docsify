@@ -1,8 +1,6 @@
 # MovingPhotoViewOptions
 
-Defines the moving photo view options.
-
-@interface MovingPhotoViewOptions
+Defines the moving photo view options.@interface MovingPhotoViewOptions
 
 **Since:** 26.0.0
 

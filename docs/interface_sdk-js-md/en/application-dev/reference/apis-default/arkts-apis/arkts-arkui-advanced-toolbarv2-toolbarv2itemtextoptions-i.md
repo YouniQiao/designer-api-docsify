@@ -21,11 +21,9 @@ Defines the options for initializing a **ToolBarV2ItemText** object.
 activatedColor?: ColorMetrics
 ```
 
-Font color of the toolbar item in the activated state.
+Font color of the toolbar item in the activated state.Default value: **\$r('sys.color.font_emphasize')**.
 
-Default value: **\$r('sys.color.font_emphasize')**.
-
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
@@ -43,11 +41,9 @@ Default value: **\$r('sys.color.font_emphasize')**.
 color?: ColorMetrics
 ```
 
-Font color of the toolbar item.
+Font color of the toolbar item.Default value: **\$r('sys.color.font_primary')**.
 
-Default value: **\$r('sys.color.font_primary')**.
-
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 

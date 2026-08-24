@@ -4,7 +4,6 @@
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)替代。
-
 表示音频编码格式的枚举。
 
 **起始版本：** 6
@@ -23,10 +22,7 @@
 DEFAULT = 0
 ```
 
-默认编码格式。
-
-仅做接口定义，暂不支持使用。
-
+默认编码格式。仅做接口定义，暂不支持使用。  
 **说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)中的AUDIO_AAC替代。
 
 **起始版本：** 6
@@ -43,10 +39,7 @@ DEFAULT = 0
 AMR_NB = 1
 ```
 
-AMR-NB(Adaptive Multi Rate-Narrow Band Speech Codec) 编码格式。
-
-仅做接口定义，暂不支持使用。
-
+AMR-NB(Adaptive Multi Rate-Narrow Band Speech Codec) 编码格式。仅做接口定义，暂不支持使用。  
 **说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)中的AUDIO_AMR_NB替代。
 
 **起始版本：** 6
@@ -65,10 +58,7 @@ AMR-NB(Adaptive Multi Rate-Narrow Band Speech Codec) 编码格式。
 AMR_WB = 2
 ```
 
-AMR-WB(Adaptive Multi Rate-Wide Band Speech Codec) 编码格式。
-
-仅做接口定义，暂不支持使用。
-
+AMR-WB(Adaptive Multi Rate-Wide Band Speech Codec) 编码格式。仅做接口定义，暂不支持使用。  
 **说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)中的AUDIO_AMR_WB替代。
 
 **起始版本：** 6
@@ -87,8 +77,7 @@ AMR-WB(Adaptive Multi Rate-Wide Band Speech Codec) 编码格式。
 AAC_LC = 3
 ```
 
-AAC-LC（Advanced Audio Coding Low Complexity）编码格式。
-
+AAC-LC（Advanced Audio Coding Low Complexity）编码格式。  
 **说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)中的AUDIO_AAC替代。
 
 **起始版本：** 6
@@ -107,10 +96,7 @@ AAC-LC（Advanced Audio Coding Low Complexity）编码格式。
 HE_AAC = 4
 ```
 
-HE_AAC（High-Efficiency Advanced Audio Coding）编码格式。
-
-仅做接口定义，暂不支持使用。
-
+HE_AAC（High-Efficiency Advanced Audio Coding）编码格式。仅做接口定义，暂不支持使用。  
 **说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)中的AUDIO_AAC替代。
 
 **起始版本：** 6

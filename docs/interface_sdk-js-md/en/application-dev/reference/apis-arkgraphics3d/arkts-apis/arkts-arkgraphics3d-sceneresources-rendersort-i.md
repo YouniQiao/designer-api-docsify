@@ -1,8 +1,6 @@
 # RenderSort
 
-Describes the order in which materials are rendered, controlling the sequence of drawing in the rendering pipeline.
-
-@interface RenderSort
+Describes the order in which materials are rendered, controlling the sequence of drawing in the rendering pipeline.@interface RenderSort
 
 **Since:** 23
 

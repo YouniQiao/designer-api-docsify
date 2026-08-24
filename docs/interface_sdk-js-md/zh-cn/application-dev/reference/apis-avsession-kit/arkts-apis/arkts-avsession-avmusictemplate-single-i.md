@@ -1,8 +1,6 @@
 # Single
 
-单曲的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。
-
-@extends MediaEntity @interface Single
+单曲的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。@extends MediaEntity @interface Single
 
 **继承/实现关系：** Single extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 

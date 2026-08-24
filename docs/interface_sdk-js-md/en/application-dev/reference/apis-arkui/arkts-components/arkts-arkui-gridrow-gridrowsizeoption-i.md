@@ -1,8 +1,6 @@
 # GridRowSizeOption
 
-Defines the option in length unit of grid-row component.
-
-@interface GridRowSizeOption
+Defines the option in length unit of grid-row component.@interface GridRowSizeOption
 
 **Since:** 23
 

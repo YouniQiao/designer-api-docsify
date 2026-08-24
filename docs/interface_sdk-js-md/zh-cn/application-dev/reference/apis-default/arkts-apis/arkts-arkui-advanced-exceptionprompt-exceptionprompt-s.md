@@ -2,10 +2,8 @@
 
 异常提示，适用于有异常需要提示异常内容的情况。
 
-> **说明：**
-> 
-> - 该组件仅可在Stage模型下使用。
-> 
+> **说明：**&gt;
+> - 该组件仅可在Stage模型下使用。&gt;
 > - 如果ExceptionPrompt设置通用属性和通用事件，
 > 编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ExceptionPrompt本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议
 > ExceptionPrompt设置通用属性和通用事件。
@@ -13,6 +11,8 @@
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct ExceptionPrompt--><!--Device-unnamed-export declare struct ExceptionPrompt-End-->
 
@@ -26,7 +26,7 @@
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -34,6 +34,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,10 +85,6 @@ onTipClick?: () => void
 
 ## options
 
-```TypeScript
-@PropRef options: PromptOptions
-```
-
 指定当前异常提示的配置信息。
 
 **类型：** [PromptOptions](arkts-arkui-advanced-exceptionprompt-promptoptions-i.md)
@@ -94,6 +92,8 @@ onTipClick?: () => void
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @PropRef
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

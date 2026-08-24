@@ -20,11 +20,7 @@ import { bundleManager } from '@kit.MDMKit';
 appSize: number
 ```
 
-Size of the application installation files, in bytes.
-
-Application installation file directory:
-
-/data/storage/el1/bundle
+Size of the application installation files, in bytes.Application installation file directory:/data/storage/el1/bundle
 
 **Type:** number
 
@@ -60,20 +56,7 @@ Bundle name of the application.
 dataSize: number
 ```
 
-Size of the local data, distributed data, and database data of the application, in bytes.
-
-Local file directory (parent directory of the cache file directory):
-
-/data/storage/\${el1-el5}/base
-
-Distributed file directory:
-
-/data/storage/el2/distributedfiles
-
-Database file directory:
-
-/data/storage/\${el1-el5}/database
-
+Size of the local data, distributed data, and database data of the application, in bytes.Local file directory (parent directory of the cache file directory):/data/storage/\${el1-el5}/base Distributed file directory:/data/storage/el2/distributedfiles Database file directory:/data/storage/\${el1-el5}/database  
 **Note：**: **\${el1-el5}** refers to the directories [el1, el2, el3, el4, el5](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path)
 
 **Type:** number

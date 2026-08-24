@@ -20,9 +20,7 @@ import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, Mu
 addObserver(observer: CustomComponentLifecycleObserver): void
 ```
 
-addObserver函数用于注册自定义组件生命周期监听器。调用此方法前， 需先通过[UIUtils.getLifecycle](arkts-arkui-arkui-statemanagement-uiutils-c.md#getlifecycle)获取CustomComponentLifecycle实例。 当自定义组件的生命周期发生变化时，会触发监听器中相应的生命周期回调函数。
-
-调用addObserver注册监听器后，必须在组件销毁或不再需要监听时调用[removeObserver](#removeobserver)移除监听器，两者需成对使用。 若未调用removeObserver移除监听器，可能导致监听器持续触发回调并引发内存泄漏。
+addObserver函数用于注册自定义组件生命周期监听器。调用此方法前， 需先通过[UIUtils.getLifecycle](arkts-arkui-arkui-statemanagement-uiutils-c.md#getlifecycle)获取CustomComponentLifecycle实例。 当自定义组件的生命周期发生变化时，会触发监听器中相应的生命周期回调函数。调用addObserver注册监听器后，必须在组件销毁或不再需要监听时调用[removeObserver](#removeobserver)移除监听器，两者需成对使用。 若未调用removeObserver移除监听器，可能导致监听器持续触发回调并引发内存泄漏。
 
 **起始版本：** 23
 

@@ -42,9 +42,7 @@ ORIGIN_FIELD = '#_origin'
 DELETED_FLAG_FIELD = '#_deleted_flag'
 ```
 
-用于cursor查找的结果集返回时填充的字段，表示云端删除的数据同步到本地后数据是否清理。
-
-返回的结果集中，该字段对应的value为false表示数据未清理，true表示数据已清理。
+用于cursor查找的结果集返回时填充的字段，表示云端删除的数据同步到本地后数据是否清理。返回的结果集中，该字段对应的value为false表示数据未清理，true表示数据已清理。
 
 **起始版本：** 23
 

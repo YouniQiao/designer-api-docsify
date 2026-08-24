@@ -1,8 +1,6 @@
 # Focus
 
-Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。
-
-对焦类，对设备对焦操作。
+Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。对焦类，对设备对焦操作。
 
 **继承/实现关系：** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
 
@@ -16,7 +14,6 @@ Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getFocusAssist

@@ -1,8 +1,6 @@
 # EmitterProperty
 
-Defines the emitter property.
-
-@interface EmitterProperty
+Defines the emitter property.@interface EmitterProperty
 
 **Since:** 23
 
@@ -80,7 +78,7 @@ position?: PositionT<double>
 
 Emitter emission rate. Only support double type.
 
-**Type:** [PositionT](../arkts-apis/arkts-positiont-t.md)&lt;double&gt;
+**Type:** [PositionT](../../apis-arkui/arkts-apis/arkts-arkui-positiont-t.md)&lt;double&gt;
 
 **Since:** 23
 
@@ -100,7 +98,7 @@ size?: SizeT<double>
 
 Emitter emission window size. Only support double type.
 
-**Type:** [SizeT](../arkts-apis/arkts-graphics-sizet-i.md)&lt;double&gt;
+**Type:** [SizeT](../../apis-arkui/arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;double&gt;
 
 **Since:** 23
 

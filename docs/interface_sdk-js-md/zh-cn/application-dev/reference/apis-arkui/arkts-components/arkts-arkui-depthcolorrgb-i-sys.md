@@ -1,8 +1,6 @@
 # DepthColorRGB（系统接口）
 
-深度空间中的RGB颜色。
-
-@interface DepthColorRGB
+深度空间中的RGB颜色。@interface DepthColorRGB
 
 **起始版本：** 26.0.0
 

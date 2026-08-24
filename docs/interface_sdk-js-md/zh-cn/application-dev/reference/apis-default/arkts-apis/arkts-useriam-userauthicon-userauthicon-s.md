@@ -1,16 +1,14 @@
 # UserAuthIcon
 
-*userAuthIcon**模块是OpenHarmony用户身份认证体系（UserIAM）的UI组件模块，提供了一个开箱即用的身份认证图标组件（UserAuthIcon）。该组件用于在应用UI中展示人脸认证或指纹认证的图标，支持自 定义图标颜色和尺寸，点击图标可启动系统身份认证弹窗组件。
-
-该模块主要用于以下场景：
-
-- 在应用界面中快速集成人脸或指纹认证入口。 - 需要统一风格的生物特征认证图标展示。 - 点击图标可触发系统级身份认证流程。
-
+**userAuthIcon**模块是OpenHarmony用户身份认证体系（UserIAM）的UI组件模块，提供了一个开箱即用的身份认证图标组件（UserAuthIcon）。该组件用于在应用UI中展示人脸认证或指纹认证的图标，支持自 定义图标颜色和尺寸，点击图标可启动系统身份认证弹窗组件。该模块主要用于以下场景：  
+- 在应用界面中快速集成人脸或指纹认证入口。 - 需要统一风格的生物特征认证图标展示。 - 点击图标可触发系统级身份认证流程。  
 @struct { UserAuthIcon }
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct UserAuthIcon--><!--Device-unnamed-export declare struct UserAuthIcon-End-->
 
@@ -24,8 +22,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 构造函数。
@@ -33,6 +30,8 @@
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,8 +109,7 @@ iconHeight?: Dimension
 onAuthResult: userAuth.AuthCallbackOnResultFunc
 ```
 
-认证结果回调。用户完成认证后触发此回调，回调参数包含认证结果码（result）、认证令牌（token）、认证类型（authType）等信息。应用需在此回调中处理认证结果，如认证通过时获取token用于后续安全操作，认证失败时提示用 户重新尝试。
-
+认证结果回调。用户完成认证后触发此回调，回调参数包含认证结果码（result）、认证令牌（token）、认证类型（authType）等信息。应用需在此回调中处理认证结果，如认证通过时获取token用于后续安全操作，认证失败时提示用 户重新尝试。  
 **注意：** 应用需申请`ohos.permission.ACCESS_BIOMETRIC`权限，否则应用将仅展示图标，无法正常拉起身份认证控件。
 
 **类型：** userAuth.AuthCallbackOnResultFunc

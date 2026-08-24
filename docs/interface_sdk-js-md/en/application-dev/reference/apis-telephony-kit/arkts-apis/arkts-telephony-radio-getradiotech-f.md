@@ -12,8 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function getRadioTech(slotId: int, callback: AsyncCallback<NetworkRadioTech>): void
 ```
 
-Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses an asynchronous callback to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.
-
+Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses an asynchronous callback to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
@@ -75,8 +74,7 @@ radio.getRadioTech(slotId).then((data: radio.NetworkRadioTech) => {
 function getRadioTech(slotId: int): Promise<NetworkRadioTech>
 ```
 
-Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses a promise to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.
-
+Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses a promise to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23

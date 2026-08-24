@@ -1436,18 +1436,10 @@ Audio duration, in ms.
 fdSrc: AVFileDescriptor
 ```
 
-Description of the audio file. This property is required when audio assets of an application are continuously stored in a file.
-
-Assume that a music file that stores continuous music assets consists of the following:
-
-Music 1 (address offset: 0, byte length: 100)
-
-Music 2 (address offset: 101; byte length: 50)
-
-Music 3 (address offset: 151, byte length: 150)
-
-1. To play music 1: AVFileDescriptor { fd = resource handle; offset = 0; length = 100; } 2. To play music 2: AVFileDescriptor { fd = resource handle; offset = 101; length = 50; } 3. To play music 3: AVFileDescriptor { fd = resource handle; offset = 151; length = 150; }
-
+Description of the audio file. This property is required when audio assets of an application are continuously stored in a file.Assume that a music file that stores continuous music assets consists of the following:Music 1 (address offset: 0, byte length: 100)Music 2 (address offset: 101; byte length: 50)Music 3 (address offset: 151, byte length: 150)
+1. To play music 1: AVFileDescriptor { fd = resource handle; offset = 0; length = 100; }
+2. To play music 2: AVFileDescriptor { fd = resource handle; offset = 101; length = 50; }
+3. To play music 3: AVFileDescriptor { fd = resource handle; offset = 151; length = 150; }
 To play an independent music file, use **src=fd://xx**.
 
 **Type:** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
@@ -1488,16 +1480,13 @@ Whether to loop audio playback. **true** to loop, **false** otherwise.
 src: string
 ```
 
-Audio file URI. The mainstream audio formats (M4A, AAC, MP3, OGG, WAV, and AMR) are supported.
-
+Audio file URI. The mainstream audio formats (M4A, AAC, MP3, OGG, WAV, and AMR) are supported.  
 **Example of supported URLs**:
-
 1. FD: fd://xx
 
-
-
-2. HTTP: http://xx 3. HTTPS: https://xx 4. HLS: http://xx or https://xx
-
+2. HTTP: http://xx
+3. HTTPS: https://xx
+4. HLS: http://xx or https://xx
 ohos.permission.READ_MEDIA or ohos.permission.INTERNET
 
 **Type:** string

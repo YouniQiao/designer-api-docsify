@@ -1,8 +1,6 @@
 # NativeMemInfo
 
-Describes memory information of the application process.
-
-@interface NativeMemInfo
+Describes memory information of the application process.@interface NativeMemInfo
 
 **Since:** 23
 

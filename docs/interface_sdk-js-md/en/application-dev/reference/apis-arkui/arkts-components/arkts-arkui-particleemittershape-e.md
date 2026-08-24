@@ -1,8 +1,6 @@
 # ParticleEmitterShape
 
-Enumerates the emitter shapes of a particle.
-
-@enum { string }
+Enumerates the emitter shapes of a particle.@enum { string }
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # VolumeEvent
 
-音量改变时，应用接收到的事件。
+音量改变时，应用接收的事件。
 
 **起始版本：** 23
 
@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## networkId
@@ -21,7 +20,7 @@ import { audioHaptic } from '@kit.AudioKit';
 networkId: string
 ```
 
-Device network id
+网络id。
 
 **类型：** string
 
@@ -39,7 +38,7 @@ Device network id
 percentage?: int
 ```
 
-Volume percentage, which is an integer ranging from [0, 100].
+音量百分比，取值范围为[0, 100]。 取值限定为整数。
 
 **类型：** int
 
@@ -57,7 +56,7 @@ Volume percentage, which is an integer ranging from [0, 100].
 volumeGroupId: int
 ```
 
-volumeGroup id
+音量组id，可用于getGroupManager入参。
 
 **类型：** int
 

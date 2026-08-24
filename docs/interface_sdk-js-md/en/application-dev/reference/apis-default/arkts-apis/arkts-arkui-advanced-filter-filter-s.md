@@ -6,6 +6,8 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct Filter--><!--Device-unnamed-export declare struct Filter-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 ## build
 
 ```TypeScript
-@Builder
-    build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## additionFilters
 
 ```TypeScript
-@PropRef
-    additionFilters?: FilterParams
+additionFilters?: FilterParams
 ```
 
 FilterParams, Additional filter item parameter. The filter item name is displayed and can be deselected.
@@ -49,6 +51,8 @@ FilterParams, Additional filter item parameter. The filter item name is displaye
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Filter-@PropRef    additionFilters?: FilterParams--><!--Device-Filter-@PropRef    additionFilters?: FilterParams-End-->
@@ -58,8 +62,7 @@ FilterParams, Additional filter item parameter. The filter item name is displaye
 ## container
 
 ```TypeScript
-@BuilderParam
-    container: () => void
+container: () => void
 ```
 
 Container in the user-defined filtering result display area.
@@ -70,6 +73,8 @@ Container in the user-defined filtering result display area.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @BuilderParam
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Filter-@BuilderParam    container: () => void--><!--Device-Filter-@BuilderParam    container: () => void-End-->
@@ -79,8 +84,7 @@ Container in the user-defined filtering result display area.
 ## filterType
 
 ```TypeScript
-@PropRef
-    filterType?: FilterType
+filterType?: FilterType
 ```
 
 FilterType, Filter display style type.
@@ -91,6 +95,8 @@ FilterType, Filter display style type.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Filter-@PropRef    filterType?: FilterType--><!--Device-Filter-@PropRef    filterType?: FilterType-End-->
@@ -100,8 +106,7 @@ FilterType, Filter display style type.
 ## multiFilters
 
 ```TypeScript
-@PropRef
-    multiFilters: Array<FilterParams>
+multiFilters: Array<FilterParams>
 ```
 
 Multi-dimensional filtering parameters.
@@ -111,6 +116,8 @@ Multi-dimensional filtering parameters.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -56,7 +56,7 @@ The color of the floating ball content, in hexadecimal format without opacity (e
 
 **Type:** string
 
-**Default:** Set different default values according to the 'backgroundColor'. - If 'backgroundColor' is provided, when 'backgroundColor' is light color, default value is '#99FFFFFF', otherwise is '#99000000' - If 'backgroundColor' is not provided, default value is $r('sys.color.font_secondary')
+**Default:** Set different default values according to the 'backgroundColor'. - If 'backgroundColor' is provided, when 'backgroundColor' is light color, default value is '#99FFFFFF', otherwise is '#99000000'- If 'backgroundColor' is not provided, default value is $r('sys.color.font_secondary')
 
 **Since:** 26.0.0
 
@@ -72,7 +72,7 @@ The color of the floating ball content, in hexadecimal format without opacity (e
 icon?: image.PixelMap
 ```
 
-Icon of the floating ball. The total number of bytes of the icon pixels cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)). The recommended size is 128 px 128 px. Actual display may vary based on the device capability and floating ball UI style.
+Icon of the floating ball. The total number of bytes of the icon pixels cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)). The recommended size is 128 px * 128 px. Actual display may vary based on the device capability and floating ball UI style.
 
 **Type:** image.PixelMap
 

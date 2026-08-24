@@ -12,8 +12,6 @@ Provides APIs for X.509 certificate operations.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## checkValidityWithDate
@@ -1244,8 +1242,7 @@ getIssuerAltNames(): DataArray
 
 Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The obtained IANs contain a string terminator.
 
 **Since:** 23
@@ -1334,8 +1331,7 @@ getIssuerName(): DataBlob
 
 Obtains the issuer name of this X.509 certificate.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove
 > this terminator based on your business requirements.
 > - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name
@@ -2186,8 +2182,7 @@ getSerialNumber(): number
 
 Obtains the X.509 certificate serial number.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 9 and deprecated since API version 10. Use
 > [X509Cert.getCertSerialNumber()](#getcertserialnumber) instead.
 
@@ -3026,8 +3021,7 @@ getSubjectAltNames(): DataArray
 
 Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The obtained SANs contain a string terminator.
 
 **Since:** 23
@@ -3118,8 +3112,7 @@ getSubjectName(encodingType?: EncodingType): DataBlob
 
 Obtains the subject name of this X.509 certificate.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - If the encodingType parameter is not set, the obtained certificate subject name ends with a
 > NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements.
 > - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When

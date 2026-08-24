@@ -16,9 +16,7 @@
 componentHeight: double
 ```
 
-组件的高。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+组件的高。单位：px
 
 **类型：** double
 
@@ -38,9 +36,7 @@ componentHeight: double
 componentWidth: double
 ```
 
-组件的宽。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+组件的宽。单位：px
 
 **类型：** double
 
@@ -60,13 +56,8 @@ componentWidth: double
 contentHeight: double
 ```
 
-图片实际绘制的高度。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+图片实际绘制的高度。单位：px  
+**说明：**仅在loadingStatus返回1时有效。
 
 **类型：** double
 
@@ -86,13 +77,8 @@ contentHeight: double
 contentOffsetX: double
 ```
 
-实际绘制内容相对于组件自身的x轴偏移。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+实际绘制内容相对于组件自身的x轴偏移。单位：px  
+**说明：**仅在loadingStatus返回1时有效。
 
 **类型：** double
 
@@ -112,13 +98,8 @@ contentOffsetX: double
 contentOffsetY: double
 ```
 
-实际绘制内容相对于组件自身的y轴偏移。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+实际绘制内容相对于组件自身的y轴偏移。单位：px  
+**说明：**仅在loadingStatus返回1时有效。
 
 **类型：** double
 
@@ -138,13 +119,8 @@ contentOffsetY: double
 contentWidth: double
 ```
 
-图片实际绘制的宽度。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+图片实际绘制的宽度。单位：px  
+**说明：**仅在loadingStatus返回1时有效。
 
 **类型：** double
 
@@ -164,9 +140,7 @@ contentWidth: double
 height: double
 ```
 
-图片的高。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+图片的高。单位：px
 
 **类型：** double
 
@@ -186,11 +160,8 @@ height: double
 loadingStatus: double
 ```
 
-图片加载成功的状态值。
-
-**说明：**
-
-返回的状态值为0时，表示图片数据加载成功。返回的状态值为1时，表示图片解码成功。
+图片加载成功的状态值。  
+**说明：**返回的状态值为0时，表示图片数据加载成功。返回的状态值为1时，表示图片解码成功。
 
 **类型：** double
 
@@ -210,9 +181,7 @@ loadingStatus: double
 width: double
 ```
 
-图片的宽。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+图片的宽。单位：px
 
 **类型：** double
 

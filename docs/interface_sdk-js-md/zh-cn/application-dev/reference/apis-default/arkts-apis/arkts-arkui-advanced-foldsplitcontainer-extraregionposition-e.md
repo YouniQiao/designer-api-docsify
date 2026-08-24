@@ -1,8 +1,6 @@
 # ExtraRegionPosition
 
-扩展区域位置信息。
-
-@enum { int }
+扩展区域位置信息。@enum { int }
 
 **起始版本：** 23
 

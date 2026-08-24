@@ -1,16 +1,12 @@
 # OverlayManager
 
-提供绘制浮层的能力。   
-> **说明：**
-> 
+提供绘制浮层的能力。  
+> **说明：**&gt;
 > - 本Class首批接口从API version 12开始支持。
 > - 以下API需先使用UIContext中的[getOverlayManager()](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager)方法获取到
-> OverlayManager对象，再通过该对象调用对应方法。
-> 
-> - OverlayManager上节点的层级在Page页面层级之上，在Dialog、Popup、Menu、BindSheet、BindContentCover和Toast等之下。
-> 
-> - OverlayManager上节点安全区域内外的绘制方式与Page一致，键盘避让方式与Page一致。
-> 
+> OverlayManager对象，再通过该对象调用对应方法。&gt;
+> - OverlayManager上节点的层级在Page页面层级之上，在Dialog、Popup、Menu、BindSheet、BindContentCover和Toast等之下。&gt;
+> - OverlayManager上节点安全区域内外的绘制方式与Page一致，键盘避让方式与Page一致。&gt;
 > - 与OverlayManager相关的属性推荐采用AppStorage来进行应用全局存储，以免切换页面后属性值发生变化从而导致业务错误。
 
 **起始版本：** 23

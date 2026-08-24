@@ -87,10 +87,8 @@ onCancel(): Promise<string>
 ```
 
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 12 and deprecated since API version 24.
-
 Subscribes to the event reported when a copy task is canceled.
 
 **Since:** 12

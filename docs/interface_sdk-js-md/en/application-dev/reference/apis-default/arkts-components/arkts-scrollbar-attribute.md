@@ -72,7 +72,7 @@ scrollBarColor(color: ColorMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ColorMetrics](../arkts-apis/arkts-graphics-colormetrics-c.md) \| undefined | Yes |  |
+| color | [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

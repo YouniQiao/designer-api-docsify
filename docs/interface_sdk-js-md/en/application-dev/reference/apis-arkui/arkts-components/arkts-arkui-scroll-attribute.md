@@ -228,7 +228,7 @@ Sets the nested scrolling options. You can set the nested scrolling mode in the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | NestedScrollOptions | Yes | Nested scrolling options. <br>Default value: &lt;em&gt;{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY }&lt;/em&gt; |
+| value | NestedScrollOptions | Yes | Nested scrolling options. <br>Default value: &lt;em&gt;{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY}&lt;/em&gt; |
 
 ## onDidScroll
 
@@ -236,9 +236,7 @@ Sets the nested scrolling options. You can set the nested scrolling mode in the 
 onDidScroll(handler: ScrollOnScrollCallback)
 ```
 
-Triggered when the Scroll component scrolls.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+Triggered when the Scroll component scrolls.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
 
 **Since:** 12
 
@@ -286,9 +284,7 @@ Called when the Scroll did zoom.
 onScroll(event: (xOffset: number, yOffset: number) => void)
 ```
 
-Triggered to return the horizontal and vertical offsets, in vp, during scrolling when the specified scroll event occurs.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+Triggered to return the horizontal and vertical offsets, in vp, during scrolling when the specified scroll event occurs.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
 
 **Since:** 7
 
@@ -314,9 +310,7 @@ Triggered to return the horizontal and vertical offsets, in vp, during scrolling
 onScrollEdge(event: OnScrollEdgeCallback)
 ```
 
-Triggered when scrolling reaches the edge. Anonymous Object Rectification.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling reaches the edge after being started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+Triggered when scrolling reaches the edge. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling reaches the edge after being started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
 
 **Since:** 7
 
@@ -338,9 +332,7 @@ Triggered when scrolling reaches the edge. Anonymous Object Rectification.
 onScrollEnd(event: () => void)
 ```
 
-Triggered when scrolling stops.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
+Triggered when scrolling stops.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
 
 **Since:** 7
 
@@ -364,9 +356,7 @@ Triggered when scrolling stops.
 onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 ```
 
-Triggered when each frame scrolling starts. Anonymous Object Rectification.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This event is triggered when any of the following conditions is met: <br>1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation). <br>2. The &lt;em&gt;Scroll&lt;/em&gt; component scrolls by inertia. <br>3. Scrolling is triggered by calling the &lt;em&gt;fling&lt;/em&gt; API. <br>This event is not triggered when any of the following conditions is met: <br>1. A scroll control API other than &lt;em&gt;fling&lt;/em&gt; is called. <br>2. The out-of-bounds bounce effect is active. <br>3. The scrollbar is dragged. </p>
+Triggered when each frame scrolling starts. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This event is triggered when any of the following conditions is met: <br>1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation). <br>2. The &lt;em&gt;Scroll&lt;/em&gt; component scrolls by inertia. <br>3. Scrolling is triggered by calling the &lt;em&gt;fling&lt;/em&gt; API. <br>This event is not triggered when any of the following conditions is met: <br>1. A scroll control API other than &lt;em&gt;fling&lt;/em&gt; is called. <br>2. The out-of-bounds bounce effect is active. <br>3. The scrollbar is dragged. </p>
 
 **Since:** 9
 
@@ -388,9 +378,7 @@ Triggered when each frame scrolling starts. Anonymous Object Rectification.
 onScrollStart(event: VoidCallback)
 ```
 
-Called when scrolling start. Anonymous Object Rectification.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
+Called when scrolling start. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
 
 **Since:** 9
 
@@ -412,9 +400,7 @@ Called when scrolling start. Anonymous Object Rectification.
 onScrollStop(event: VoidCallback)
 ```
 
-Called when scrolling has stopped. Anonymous Object Rectification.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
+Called when scrolling has stopped. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
 
 **Since:** 9
 
@@ -436,9 +422,7 @@ Called when scrolling has stopped. Anonymous Object Rectification.
 onWillScroll(handler: ScrollOnWillScrollCallback)
 ```
 
-Triggered before scrolling.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+Triggered before scrolling.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
 
 **Since:** 12
 

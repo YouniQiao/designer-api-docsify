@@ -1,6 +1,6 @@
 # InputWindowInfo
 
-@brief Describes the window information of the input method keyboard.
+Describes the window information of the input method keyboard.
 
 **Since:** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## userId
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 userId?: int
 ```
 
-@brief Indicates the ID of the user whose input window is shown.
+Indicates the ID of the user whose input window is shown.
 
 **Type:** int
 

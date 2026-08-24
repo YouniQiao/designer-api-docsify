@@ -1,6 +1,6 @@
 # InputMethodExtensionContext
 
-@brief @ohos.InputMethodExtensionContext模块是InputMethodExtensionAbility的上下文环境，继承于ExtensionContext，为输入法扩展能力提供上下文级别的操作接口。 <br> <br>本模块是输入法ExtensionAbility的上下文类，继承自`ExtensionContext`，作为`InputMethodExtensionAbility`实例的`context`属性提供。它承载了输入法扩展应用在其生命周期内 可使用的上下文能力，包括销毁自身和拉起其他应用。 <br> <br>本模块提供两大核心能力：1）通过`destroy()`销毁输入法ExtensionAbility自身，实现输入法应用的生命周期终止；2）通过`startAbility()`拉起目标应用，使输入法应用能够启动其他Ability进行交互， 拓展输入法功能的灵活性和可扩展性。 <br> <br>当开发输入法ExtensionAbility并需要在其生命周期内执行上下文级操作时使用本模块。典型场景包括：输入法应用在`onDestroy`回调中主动销毁自身、输入法应用需要拉起设置页面或其他辅助应用等。 <br> <br>   
+@ohos.InputMethodExtensionContext模块是InputMethodExtensionAbility的上下文环境，继承于ExtensionContext，为输入法扩展能力提供上下文级别的操作接口。 <br> <br>本模块是输入法ExtensionAbility的上下文类，继承自`ExtensionContext`，作为`InputMethodExtensionAbility`实例的`context`属性提供。它承载了输入法扩展应用在其生命周期内 可使用的上下文能力，包括销毁自身和拉起其他应用。 <br> <br>本模块提供两大核心能力：1）通过`destroy()`销毁输入法ExtensionAbility自身，实现输入法应用的生命周期终止；2）通过`startAbility()`拉起目标应用，使输入法应用能够启动其他Ability进行交互， 拓展输入法功能的灵活性和可扩展性。 <br> <br>当开发输入法ExtensionAbility并需要在其生命周期内执行上下文级操作时使用本模块。典型场景包括：输入法应用在`onDestroy`回调中主动销毁自身、输入法应用需要拉起设置页面或其他辅助应用等。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -64,7 +64,7 @@ import { InputMethodExtensionContext } from '@kit.IMEKit';
 connectAbility(want: Want, options: ConnectOptions): number
 ```
 
-@brief 将当前Ability连接到ServiceExtensionAbility。 <br> <br>   
+将当前Ability连接到ServiceExtensionAbility。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -118,7 +118,7 @@ connectAbility(want: Want, options: ConnectOptions): number
 connectAbilityWithAccount(want: Want, accountId: number): number
 ```
 
-@brief 以指定账户连接ServiceExtensionAbility。
+以指定账户连接ServiceExtensionAbility。
 
 **起始版本：** 9
 
@@ -171,7 +171,7 @@ connectAbilityWithAccount(want: Want, accountId: number): number
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 ```
 
-@brief 将当前Ability连接到ServiceExtensionAbility。 <br> <br>   
+将当前Ability连接到ServiceExtensionAbility。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -225,7 +225,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 disconnectAbility(connection: number, callback: AsyncCallback<void>): void
 ```
 
-@brief 断开与ServiceExtensionAbility的连接。使用callback异步回调。
+断开与ServiceExtensionAbility的连接。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -260,7 +260,7 @@ disconnectAbility(connection: number, callback: AsyncCallback<void>): void
 disconnectAbility(connection: number): Promise<void>
 ```
 
-@brief 断开与ServiceExtensionAbility的连接。使用Promise异步回调。
+断开与ServiceExtensionAbility的连接。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -300,7 +300,7 @@ disconnectAbility(connection: number): Promise<void>
 disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<void>): void
 ```
 
-@brief 断开与ServiceExtensionAbility的连接。使用callback异步回调。
+断开与ServiceExtensionAbility的连接。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -335,7 +335,7 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 disconnectServiceExtensionAbility(connection: number): Promise<void>
 ```
 
-@brief 断开与ServiceExtensionAbility的连接。使用Promise异步回调。 <br> <br>   
+断开与ServiceExtensionAbility的连接。使用Promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -380,7 +380,7 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void
 ```
 
-@brief 以指定账户拉起目标应用。使用callback异步回调。
+以指定账户拉起目标应用。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -433,7 +433,7 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 startAbilityWithAccount(want: Want, accountId: number): Promise<void>
 ```
 
-@brief 以指定账户拉起目标应用。使用Promise异步回调。
+以指定账户拉起目标应用。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -491,7 +491,7 @@ startAbilityWithAccount(want: Want, accountId: number): Promise<void>
 terminateSelf(callback: AsyncCallback<void>): void
 ```
 
-@brief 销毁输入法ExtensionAbility。使用callback异步回调。
+销毁输入法ExtensionAbility。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -519,7 +519,7 @@ terminateSelf(callback: AsyncCallback<void>): void
 terminateSelf(): Promise<void>
 ```
 
-@brief 销毁输入法ExtensionAbility。使用Promise异步回调。
+销毁输入法ExtensionAbility。使用Promise异步回调。
 
 **起始版本：** 9
 

@@ -1,8 +1,6 @@
 # Position
 
-定义位置。
-
-@interface Position
+定义位置。@interface Position
 
 **起始版本：** 11
 

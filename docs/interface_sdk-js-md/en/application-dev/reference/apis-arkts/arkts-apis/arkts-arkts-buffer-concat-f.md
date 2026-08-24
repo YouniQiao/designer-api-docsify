@@ -26,14 +26,14 @@ Concatenates an array of **Buffer** objects of the specified length into a new o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| list | [Buffer](arkts-arkts-buffer-buffer-c.md)[] \| Uint8Array[] | Yes | Array of objects to concatenate. |
+| list | Buffer[] \| Uint8Array[] | Yes | Array of objects to concatenate. |
 | totalLength | int | No | Total length of bytes to be copied. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
+| Buffer | Buffer** object created. |
 
 **Error codes:**
 

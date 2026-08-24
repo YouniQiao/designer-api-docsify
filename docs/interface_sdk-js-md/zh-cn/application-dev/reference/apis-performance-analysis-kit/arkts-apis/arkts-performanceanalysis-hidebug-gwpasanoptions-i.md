@@ -1,8 +1,6 @@
 # GwpAsanOptions
 
-GWP-ASan配置项。可用于配置是否使能、采样频率，以及最大分配的插槽数。
-
-@interface GwpAsanOptions
+GWP-ASan配置项。可用于配置是否使能、采样频率，以及最大分配的插槽数。@interface GwpAsanOptions
 
 **起始版本：** 23
 

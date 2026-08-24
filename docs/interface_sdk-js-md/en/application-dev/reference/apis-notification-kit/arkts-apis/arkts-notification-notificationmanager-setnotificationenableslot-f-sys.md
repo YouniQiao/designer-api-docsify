@@ -17,9 +17,7 @@ function setNotificationEnableSlot(
   ): void
 ```
 
-Sets the enabled status of a slot type for the specified application. This API uses an asynchronous callback to return the result.
-
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+Sets the enabled status of a slot type for the specified application. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 23
 
@@ -120,9 +118,7 @@ function setNotificationEnableSlot(
   ): void
 ```
 
-Sets the enabled status of a slot type for the specified application. This API uses an asynchronous callback to return the result.
-
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+Sets the enabled status of a slot type for the specified application. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 23
 
@@ -169,9 +165,7 @@ See [setNotificationEnableSlot](#setnotificationenableslot)
 function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable: boolean, isForceControl?: boolean): Promise<void>
 ```
 
-Sets the enabled status of a slot type for the specified application. This API uses a promise to return the result.
-
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+Sets the enabled status of a slot type for the specified application. This API uses a promise to return the result.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 23
 

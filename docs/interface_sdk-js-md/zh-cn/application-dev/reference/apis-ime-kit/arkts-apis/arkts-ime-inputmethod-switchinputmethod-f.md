@@ -4,11 +4,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## switchInputMethod
@@ -17,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<boolean>): void
 ```
 
-@brief 切换输入法，使用callback异步回调。 <br> <br>含义/功能：将当前输入法切换为指定的目标输入法。 <br> <br>使用场景：当前输入法应用需要切换到另一个输入法时使用（如用户在输入法设置中选择了新的输入法）。 <br> <br>使用后效果：成功时系统将当前输入法切换为目标输入法，目标输入法成为新的当前输入法；失败时当前输入法不变。
+切换输入法，使用callback异步回调。 <br> <br>含义/功能：将当前输入法切换为指定的目标输入法。 <br> <br>使用场景：当前输入法应用需要切换到另一个输入法时使用（如用户在输入法设置中选择了新的输入法）。 <br> <br>使用后效果：成功时系统将当前输入法切换为目标输入法，目标输入法成为新的当前输入法；失败时当前输入法不变。
 
 **起始版本：** 23
 
@@ -162,7 +157,7 @@ switchInputMethodWithSubtype();
 function switchInputMethod(target: InputMethodProperty): Promise<boolean>
 ```
 
-@brief 切换输入法，使用promise异步回调。 <br> <br>含义/功能：将当前输入法切换为指定的目标输入法。 <br> <br>使用场景：当前输入法应用需要切换到另一个输入法时使用。 <br> <br>使用后效果：成功时系统将当前输入法切换为目标输入法；失败时当前输入法不变。
+切换输入法，使用promise异步回调。 <br> <br>含义/功能：将当前输入法切换为指定的目标输入法。 <br> <br>使用场景：当前输入法应用需要切换到另一个输入法时使用。 <br> <br>使用后效果：成功时系统将当前输入法切换为目标输入法；失败时当前输入法不变。
 
 **起始版本：** 23
 

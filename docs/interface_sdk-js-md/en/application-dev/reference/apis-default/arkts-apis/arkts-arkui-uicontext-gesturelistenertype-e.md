@@ -1,8 +1,6 @@
 # GestureListenerType
 
-This is an enumeration type indicating what kind of gesture you want to monitor for.
-
-@enum { number } GestureListenerType
+This is an enumeration type indicating what kind of gesture you want to monitor for.@enum { number } GestureListenerType
 
 **Since:** 26.0.0
 

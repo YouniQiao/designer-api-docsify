@@ -1,8 +1,6 @@
 # @ohos.security.securityGuard
 
-提供安全事件存取、风险分析等功能。 基于事件信息，您将能够分析设备的运行状态。
-
-@namespace securityGuard
+提供安全事件存取、风险分析等功能。 基于事件信息，您将能够分析设备的运行状态。@namespace securityGuard
 
 **起始版本：** 12
 
@@ -43,10 +41,10 @@ import { securityGuard } from '@kit.SecurityGuardKit';
 | [CollectorRule](arkts-securityguard-securityguard-collectorrule-i-sys.md) | 安全事件采集规则。 |
 | [ModelResult](arkts-securityguard-securityguard-modelresult-i-sys.md) | 安全模型结果。 |
 | [ModelRule](arkts-securityguard-securityguard-modelrule-i-sys.md) | 安全模型规则。 |
-| [PolicyFile](arkts-securityguard-securityguard-policyfile-i-sys.md) | 配置文件信息。 |
-| [Querier](arkts-securityguard-securityguard-querier-i-sys.md) | 用于接收安全数据的回调函数。 |
+| [PolicyFile](arkts-securityguard-securityguard-policyfile-i-sys.md) | 配置文件信息。@interface PolicyFile |
+| [Querier](arkts-securityguard-securityguard-querier-i-sys.md) | 用于接收安全数据的回调函数。@interface Querier |
 | [SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md) | 提供SecurityEvent类型，包括事件ID、版本信息和上报内容。 |
-| [SecurityEventInfo](arkts-securityguard-securityguard-securityeventinfo-i-sys.md) | 调用订阅接口使用的事件信息。 |
-| [SecurityEventRule](arkts-securityguard-securityguard-securityeventrule-i-sys.md) | 用户获取安全数据的规则。 |
+| [SecurityEventInfo](arkts-securityguard-securityguard-securityeventinfo-i-sys.md) | 调用订阅接口使用的事件信息。@interface SecurityEventInfo |
+| [SecurityEventRule](arkts-securityguard-securityguard-securityeventrule-i-sys.md) | 用户获取安全数据的规则。@interface SecurityEventRule |
 <!--DelEnd-->
 

@@ -1,8 +1,6 @@
 # LongPressGestureHandlerOptions
 
-Defines the LongPressGestureHandler options.
-
-@extends BaseHandlerOptions @interface LongPressGestureHandlerOptions
+Defines the LongPressGestureHandler options.@extends BaseHandlerOptions @interface LongPressGestureHandlerOptions
 
 **Inheritance/Implementation:** LongPressGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)
 

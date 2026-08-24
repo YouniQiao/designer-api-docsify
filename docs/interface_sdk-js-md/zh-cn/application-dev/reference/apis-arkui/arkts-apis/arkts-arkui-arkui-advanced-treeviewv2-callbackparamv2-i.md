@@ -20,13 +20,7 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 childIndex?: number
 ```
 
-返回子索引。
-
-取值范围：大于等于-1。
-
-默认值：-1
-
-仅在节点移动事件中有效，表示移动后的位置索引。
+返回子索引。取值范围：大于等于-1。默认值：-1仅在节点移动事件中有效，表示移动后的位置索引。
 
 **类型：** number
 
@@ -46,9 +40,7 @@ childIndex?: number
 currentNodeId: number
 ```
 
-返回当前子节点id。
-
-取值范围：大于等于0。
+返回当前子节点id。取值范围：大于等于0。
 
 **类型：** number
 
@@ -68,11 +60,7 @@ currentNodeId: number
 parentNodeId?: number
 ```
 
-返回当前父节点id。
-
-取值范围：大于等于-1。
-
-默认值：-1
+返回当前父节点id。取值范围：大于等于-1。默认值：-1
 
 **类型：** number
 

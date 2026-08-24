@@ -1,9 +1,6 @@
 # @ohos.userIAM.companionDeviceAuth
 
-The **companionDeviceAuth** module is an important part of the OpenHarmony user identity and access management ( UserIAM) system. It is dedicated to companion device authentication management. This module provides the system application with capabilities such as querying and subscribing to companion devices, and managing the service scope.
-
-This module applies to the following scenarios:
-
+The **companionDeviceAuth** module is an important part of the OpenHarmony user identity and access management (UserIAM) system. It is dedicated to companion device authentication management. This module provides the system application with capabilities such as querying and subscribing to companion devices, and managing the service scope.This module applies to the following scenarios:  
 - Managing the authentication relationship between a companion device and the primary device. - Querying and subscribing to the status changes of a companion device. - Managing the service scope supported by a companion device. - Implementing continuous authentication. - Processing device selection and registration.
 
 **Since:** 23
@@ -46,7 +43,7 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 | [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md) | Defines the device service ID. It uniquely identifies a device and its user, including the device ID type, device ID, and user ID. |
 | [DeviceSelectResult](arkts-userauthentication-companiondeviceauth-deviceselectresult-i-sys.md) | Returns the result of companion device selection. It is used to return the device information and extended context selected by the user in the device selection callback. |
 | [DeviceStatus](arkts-userauthentication-companiondeviceauth-devicestatus-i-sys.md) | Defines the device status information. It describes the current status of the companion device, including the device service ID, user name, model information, device name, online status, and list of supported service IDs. |
-| [PasscodePromptParams](arkts-userauthentication-companiondeviceauth-passcodepromptparams-i-sys.md) | Params carried by the framework when prompting for a companion device passcode. |
+| [PasscodePromptParams](arkts-userauthentication-companiondeviceauth-passcodepromptparams-i-sys.md) | Params carried by the framework when prompting for a companion device passcode.@interface PasscodePromptParams |
 | [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling [getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md). |
 | [TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | Describes the complete status information about a registered companion device authentication template, including the template ID, data confirmation status, validity, user ID, time when the template is added, supported services, and associated device status. |
 <!--DelEnd-->
@@ -56,7 +53,7 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 
 | Name | Description |
 | --- | --- |
-| [BusinessId](arkts-userauthentication-companiondeviceauth-businessid-e-sys.md) | Enumerates service IDs. A service ID uniquely identifies a service scenario supported by the companion device. The service scenarios supported by different companion devices vary according to the authentication security. For example, executing voice commands without screen unlocking. |
+| [BusinessId](arkts-userauthentication-companiondeviceauth-businessid-e-sys.md) | Enumerates service IDs. A service ID uniquely identifies a service scenario supported by the companion device. The service scenarios supported by different companion devices vary according to the authentication security. For example, executing voice commands without screen unlocking.The companion device relationships of different service IDs are independent of each other and do not interfere with each other. They can be added, deleted, and authenticated independently.Currently, the services of the companion device module include the default services of OpenHarmony, screen unlocking, application unlocking, and identity authentication before voice commands are executed on the lock screen.Adding services has requirements on the scenarios supported by the server device. For example, the multi-screen collaboration service requires that the server device support the agency authentication scenario. |
 | [DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md) | Enumerates device ID types. They are used to define the device service identifier type. System-defined types and vendor-defined types are supported. |
 | [SelectPurpose](arkts-userauthentication-companiondeviceauth-selectpurpose-e-sys.md) | Selects the purpose of the companion device. |
 <!--DelEnd-->

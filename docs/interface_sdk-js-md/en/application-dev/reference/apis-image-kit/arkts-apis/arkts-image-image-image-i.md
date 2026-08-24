@@ -1,10 +1,6 @@
 # Image
 
-The **Image** class is used to obtain image content.
-
-An Image instance is returned when [readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage) and [readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage) are called.
-
-Image properties are initialized only during image creation and cannot be changed later. These properties do not affect the actual image content. You should always rely on the properties written by the image producer, that is, the content actually sent to the [ImageReceiver](arkts-image-image-imagereceiver-i.md) by the data source. Images occupy a large amount of memory. When you finish using an Image instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **Image** class is used to obtain image content.An Image instance is returned when [readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage) and [readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage) are called.Image properties are initialized only during image creation and cannot be changed later. These properties do not affect the actual image content. You should always rely on the properties written by the image producer, that is, the content actually sent to the [ImageReceiver](arkts-image-image-imagereceiver-i.md) by the data source. Images occupy a large amount of memory. When you finish using an Image instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 
@@ -26,8 +22,7 @@ getBufferData(): ImageBufferData | null
 
 Obtains ImageBufferData from an image.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **byteBuffer** in **ImageBufferData** is a shallow copy of the internal buffer. When the lifecycle of an image
 > ends, do not perform any operations on **byteBuffer**, as this may lead to undefined behavior.
 
@@ -77,7 +72,7 @@ Obtains the component buffer from the Image instance based on the color componen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | componentType | ComponentType | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -246,13 +241,7 @@ async function GetMetadata(context: Context) {
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this Image instance. This API uses an asynchronous callback to return the result.
-
-The corresponding resources must be released before another image arrives.
-
-Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly.
-
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this Image instance. This API uses an asynchronous callback to return the result.The corresponding resources must be released before another image arrives.Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 
@@ -469,13 +458,7 @@ async function Release(pixelMap:image.PixelMap) {
 release(): Promise<void>
 ```
 
-Releases this Image instance. This API uses a promise to return the result.
-
-The corresponding resources must be released before another image arrives.
-
-Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly.
-
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this Image instance. This API uses a promise to return the result.The corresponding resources must be released before another image arrives.Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 
@@ -549,15 +532,7 @@ Image format. For details, see OH_NativeBuffer_Format.
 readonly size: Size
 ```
 
-Image size.
-
-If the Image object stores camera preview stream data (YUV image data), the width and height in **size** reflect the dimensions of the YUV image.
-
-If the Image object stores camera capture stream data (JPEG image data), given that it is an encoded file, the width in **size** is the size of the JPEG file, while the height is set to **1**.
-
-The type of data stored in the Image object depends on whether the application passes the surface ID in the receiver to a previewOutput or captureOutput object of the camera.
-
-For details about the best practices of camera preview and photo capture, see [Dual-Channel Preview (ArkTS)](../../../media/camera/camera-dual-channel-preview.md) and [Photo Capture Sample (ArkTS)](../../../media/camera/camera-shooting-case.md).
+Image size.If the Image object stores camera preview stream data (YUV image data), the width and height in **size** reflect the dimensions of the YUV image.If the Image object stores camera capture stream data (JPEG image data), given that it is an encoded file, the width in **size** is the size of the JPEG file, while the height is set to **1**.The type of data stored in the Image object depends on whether the application passes the surface ID in the receiver to a previewOutput or captureOutput object of the camera.For details about the best practices of camera preview and photo capture, see [Dual-Channel Preview (ArkTS)](../../../media/camera/camera-dual-channel-preview.md) and [Photo Capture Sample (ArkTS)](../../../media/camera/camera-shooting-case.md).
 
 **Type:** Size
 

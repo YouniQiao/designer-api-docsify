@@ -15,6 +15,8 @@ Set a save button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function SaveButton(    options?: SaveButtonOptions ): SaveButtonAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function SaveButton(    options?: SaveButtonOptions ): SaveButtonAttribute-End-->

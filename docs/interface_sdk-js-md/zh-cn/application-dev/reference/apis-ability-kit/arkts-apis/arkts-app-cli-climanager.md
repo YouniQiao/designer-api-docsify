@@ -1,8 +1,6 @@
 # @ohos.app.cli.cliManager
 
-本模块提供与系统命令行工具（CLI）的交互能力，可以查询工具信息、调用并执行CLI命令，以及管理会话。会话在调用execTool接口时创建，用于跟踪CLI工具的执行状态和结果。
-
-@namespace cliManager
+本模块提供与系统命令行工具（CLI）的交互能力，可以查询工具信息、调用并执行CLI命令，以及管理会话。会话在调用execTool接口时创建，用于跟踪CLI工具的执行状态和结果。@namespace cliManager
 
 **起始版本：** 26.0.0
 

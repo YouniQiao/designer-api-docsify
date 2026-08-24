@@ -1,8 +1,6 @@
 # AlphabetIndexerModifier
 
-Defines AlphabetIndexer Modifier
-
-@implements { AlphabetIndexerAttribute, AttributeModifier&lt;AlphabetIndexerAttribute&gt; }
+Defines AlphabetIndexer Modifier@implements { AlphabetIndexerAttribute, AttributeModifier&lt;AlphabetIndexerAttribute&gt; }
 
 **Inheritance/Implementation:** AlphabetIndexerModifier implements AlphabetIndexerAttribute, AttributeModifier<AlphabetIndexerAttribute>
 

@@ -1,8 +1,6 @@
 # GridColColumnOption
 
-用于自定义指定在不同宽度设备类型上，栅格子组件占据的栅格数量单位。
-
-@interface GridColColumnOption
+用于自定义指定在不同宽度设备类型上，栅格子组件占据的栅格数量单位。@interface GridColColumnOption
 
 **起始版本：** 23
 

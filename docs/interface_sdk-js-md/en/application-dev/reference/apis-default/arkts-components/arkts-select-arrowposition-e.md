@@ -1,8 +1,6 @@
 # ArrowPosition
 
-The enum for arrow position in the select
-
-@enum { number }
+The enum for arrow position in the select@enum { number }
 
 **Since:** 23
 

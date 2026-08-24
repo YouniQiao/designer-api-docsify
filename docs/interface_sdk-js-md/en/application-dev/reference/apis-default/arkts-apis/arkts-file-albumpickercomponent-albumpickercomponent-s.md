@@ -1,12 +1,12 @@
 # AlbumPickerComponent
 
-AlbumPickerComponent: can select a certain album and display the images in that album through PhotoPickerComponent
-
-@struct { AlbumPickerComponent }
+AlbumPickerComponent: can select a certain album and display the images in that album through PhotoPickerComponent@struct { AlbumPickerComponent }
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct AlbumPickerComponent--><!--Device-unnamed-export declare struct AlbumPickerComponent-End-->
 
@@ -20,8 +20,7 @@ AlbumPickerComponent: can select a certain album and display the images in that 
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 Build function of AlbumPickerComponent
@@ -29,6 +28,8 @@ Build function of AlbumPickerComponent
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,8 +1,6 @@
 # ColoringStrategy
 
-智能取色枚举类型。
-
-@enum { string }
+智能取色枚举类型。@enum { string }
 
 **起始版本：** 23
 

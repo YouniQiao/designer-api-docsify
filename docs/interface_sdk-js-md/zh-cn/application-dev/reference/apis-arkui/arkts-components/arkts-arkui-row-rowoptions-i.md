@@ -1,8 +1,6 @@
 # RowOptions
 
-设置Row组件的子组件间距属性。
-
-@interface RowOptions
+设置Row组件的子组件间距属性。@interface RowOptions
 
 **起始版本：** 23
 
@@ -18,9 +16,7 @@
 space?: string | double
 ```
 
-横向布局元素间距。 从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、 FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。 默认值：0 单位：vp 非法值：按默认值处理。
-
-Anonymous Object Rectification
+横向布局元素间距。 从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、 FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。 默认值：0 单位：vp 非法值：按默认值处理。Anonymous Object Rectification
 
 **类型：** string \| double
 

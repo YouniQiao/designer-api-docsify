@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## disableNetwork
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function disableNetwork(netId: number): boolean
 ```
 
-去使能网络配置。
-
-<p>去使能的网络将不再被关联。
+去使能网络配置。<p>去使能的网络将不再被关联。
 
 **起始版本：** 7
 

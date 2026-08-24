@@ -12,8 +12,7 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function cancel(url: string): void
 ```
 
-根据url移除一个正在执行的缓存下载任务，已保存的内存缓存和文件缓存不会受到影响。
-
+根据url移除一个正在执行的缓存下载任务，已保存的内存缓存和文件缓存不会受到影响。  
 - 当不存在对应url的任务时无其他效果。 - 使用该方法同步执行时，不阻塞调用线程。
 
 **起始版本：** 23

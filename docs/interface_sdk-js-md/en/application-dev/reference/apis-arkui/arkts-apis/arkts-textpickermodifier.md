@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [TextPickerModifier](arkts-arkui-textpickermodifier-c.md) | Defines TextPicker Modifier |
+| [TextPickerModifier](arkts-arkui-textpickermodifier-c.md) | Defines TextPicker Modifier@implements { TextPickerAttribute, AttributeModifier&lt;TextPickerAttribute&gt; } |
 

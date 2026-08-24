@@ -5,11 +5,8 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit';
-import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## 汇总
@@ -25,7 +22,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | 表示无障碍节点元素可执行的操作枚举。 |
+| [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | 表示无障碍节点元素可执行的操作枚举。无障碍节点元素是指，UI界面上可执行无障碍操作的组件，例如：按钮、文本输入框等。 |
 | [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md) | 无障碍事件类型。 |
 | [AccessibilityFocusScene](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md) | 表示无障碍聚焦的场景参数的枚举。 |
 | [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md) | 表示无障碍节点来源类型的枚举。 |

@@ -1,6 +1,6 @@
 # Movement
 
-@brief 选中文本时，光标移动的方向。
+选中文本时，光标移动的方向。
 
 **起始版本：** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## direction
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 direction: Direction
 ```
 
-@brief 选中文本时，光标的移动方向。
+选中文本时，光标的移动方向。
 
 **类型：** Direction
 

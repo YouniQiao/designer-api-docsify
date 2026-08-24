@@ -53,9 +53,7 @@ Obtains the capacity of the file mapping area.
 flip(): void
 ```
 
-Flips the file mapping area to switch from the write-ready state to the read-ready state. After this API is called, **limit** is set to the value of **position**, and **position** is reset to **0**.
-
-It is recommended that this API be called to prepare for subsequent [read()](arkts-fileio-stream-i.md#read) operations after the[write()](arkts-fileio-stream-i.md#write) operations are complete.
+Flips the file mapping area to switch from the write-ready state to the read-ready state. After this API is called, **limit** is set to the value of **position**, and **position** is reset to **0**.It is recommended that this API be called to prepare for subsequent [read()](arkts-fileio-stream-i.md#read) operations after the[write()](arkts-fileio-stream-i.md#write) operations are complete.
 
 **Since:** 26.0.0
 
@@ -147,8 +145,7 @@ msync(): Promise<void>
 
 Synchronizes data of the entire file mapping area to the disk file synchronously. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the file is not stored on the local device, calling this API does not ensure that all changes are stored
 > persistently.
 
@@ -187,8 +184,7 @@ msync(position: int, length: int): Promise<void>
 
 Synchronizes data in the specified range of the file mapping area to the disk file synchronously. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the file is not stored on the local device, calling this API does not ensure that all changes are stored
 > persistently.
 
@@ -234,8 +230,7 @@ msyncSync(): void
 
 Synchronizes data of the entire file mapping area to the disk file synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the file is not stored on the local device, calling this API does not ensure that all changes are stored
 > persistently.
 
@@ -268,8 +263,7 @@ msyncSync(position: int, length: int): void
 
 Synchronizes data in the specified range of the file mapping area to the disk file synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the file is not stored on the local device, calling this API does not ensure that all changes are stored
 > persistently.
 

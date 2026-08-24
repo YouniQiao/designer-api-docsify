@@ -1,8 +1,6 @@
 # StartAnimationSystemParams (System API)
 
-Describes the start animation configuration. This API works only for full-screen applications.
-
-The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
+Describes the start animation configuration. This API works only for full-screen applications.The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
 
 **Since:** 23
 
@@ -15,8 +13,6 @@ The configuration does not take effect for inter-application transitions, where 
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 

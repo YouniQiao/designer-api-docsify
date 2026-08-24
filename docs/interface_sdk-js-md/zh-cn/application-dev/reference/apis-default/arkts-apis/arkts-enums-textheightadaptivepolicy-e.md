@@ -1,8 +1,6 @@
 # TextHeightAdaptivePolicy
 
-Enum of text height adaptation
-
-@enum { number }
+Enum of text height adaptation@enum { number }
 
 **起始版本：** 23
 

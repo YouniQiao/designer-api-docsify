@@ -1,8 +1,6 @@
 # ButtonType
 
-Provides a button component.
-
-@enum { number }
+Provides a button component.@enum { number }
 
 **Since:** 23
 

@@ -7,11 +7,9 @@ Describes the rectangle of the surface held by the **XComponent**.
 > The **surfaceWidth** and **surfaceHeight** attributes default to the size of the **XComponent** if the
 > [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API is not called and neither
 > [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border) nor
-> padding is set.
-> 
+> padding is set.&gt;
 > Make sure the values of **surfaceWidth** and **surfaceHeight** do not exceed 8192 px. Exceeding this limit may
-> lead to rendering issues.
-> 
+> lead to rendering issues.&gt;
 > In immersive scenarios, the default layout of **SurfaceRect** does not include the safe area. To achieve an
 > immersive effect, you must set the surface display area using the
 > [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API.
@@ -33,9 +31,7 @@ Describes the rectangle of the surface held by the **XComponent**.
 offsetX?: number
 ```
 
-X-coordinate of the surface rectangle relative to the upper-left corner of the **XComponent**.
-
-Unit: px
+X-coordinate of the surface rectangle relative to the upper-left corner of the **XComponent**.Unit: px
 
 **Type:** number
 
@@ -55,9 +51,7 @@ Unit: px
 offsetY?: number
 ```
 
-Y-coordinate of the surface rectangle relative to the upper left corner of the **XComponent**.
-
-Unit: px
+Y-coordinate of the surface rectangle relative to the upper left corner of the **XComponent**.Unit: px
 
 **Type:** number
 
@@ -77,9 +71,7 @@ Unit: px
 surfaceHeight: number
 ```
 
-Height of the surface rectangle.
-
-Unit: px.
+Height of the surface rectangle.Unit: px.
 
 **Type:** number
 
@@ -99,9 +91,7 @@ Unit: px.
 surfaceWidth: number
 ```
 
-Width of the surface rectangle.
-
-Unit: px.
+Width of the surface rectangle.Unit: px.
 
 **Type:** number
 

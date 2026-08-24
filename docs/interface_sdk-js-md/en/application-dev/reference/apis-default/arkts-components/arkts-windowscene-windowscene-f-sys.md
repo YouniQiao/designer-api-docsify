@@ -16,6 +16,8 @@ Defines the WindowScene Component.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function WindowScene(    persistentId: int,    content_?: CustomBuilder,): WindowSceneAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function WindowScene(    persistentId: int,    content_?: CustomBuilder,): WindowSceneAttribute-End-->

@@ -12,9 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Clears the bundle cache based on the given bundle name. This API uses an asynchronous callback to return the result.
-
-No permission is required when the caller clears its own cache.
+Clears the bundle cache based on the given bundle name. This API uses an asynchronous callback to return the result.No permission is required when the caller clears its own cache.
 
 **Since:** 23
 
@@ -112,9 +110,7 @@ try {
 function cleanBundleCacheFiles(bundleName: string): Promise<void>
 ```
 
-Clears the bundle cache based on the given bundle name. This API uses a promise to return the result.
-
-No permission is required when the caller clears its own cache.
+Clears the bundle cache based on the given bundle name. This API uses a promise to return the result.No permission is required when the caller clears its own cache.
 
 **Since:** 23
 
@@ -159,9 +155,7 @@ See [cleanBundleCacheFiles](#cleanbundlecachefiles)
 function cleanBundleCacheFiles(bundleName: string, appIndex: int): Promise<void>
 ```
 
-Clears the bundle cache based on the given bundle name and application index. This API uses a promise to return the result.
-
-No permission is required when the caller clears its own cache.
+Clears the bundle cache based on the given bundle name and application index. This API uses a promise to return the result.No permission is required when the caller clears its own cache.
 
 **Since:** 23
 

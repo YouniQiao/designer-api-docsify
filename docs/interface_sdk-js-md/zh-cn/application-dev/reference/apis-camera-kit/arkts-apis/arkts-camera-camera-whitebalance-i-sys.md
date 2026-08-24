@@ -1,8 +1,6 @@
 # WhiteBalance（系统接口）
 
-WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)。
-
-提供了处理设备白平衡的相关功能，包括获取和设置白平衡模式以及白平衡值。
+WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)。提供了处理设备白平衡的相关功能，包括获取和设置白平衡模式以及白平衡值。
 
 **继承/实现关系：** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)
 
@@ -18,7 +16,6 @@ WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getWhiteBalance
@@ -154,9 +151,7 @@ function getWhiteBalanceMode(session: camera.PhotoSession | camera.VideoSession)
 setWhiteBalance(whiteBalance: int): void
 ```
 
-设置手动白平衡值。
-
-设置之前需要先检查设备支持的白平衡值范围，具体方法请参考[getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i-sys.md#getwhitebalancerange)。
+设置手动白平衡值。设置之前需要先检查设备支持的白平衡值范围，具体方法请参考[getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i-sys.md#getwhitebalancerange)。
 
 **起始版本：** 23
 

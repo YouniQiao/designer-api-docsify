@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [WithThemeAttribute(Defines WithTheme component.)](arkts-arkui-withthemeattribute-c.md) | The universal attributes are not supported. |
+| [WithThemeAttribute(Defines WithTheme component.)](arkts-arkui-withthemeattribute-c.md) | The universal attributes are not supported.The universal events are not supported. |
 
 ### Interfaces
 

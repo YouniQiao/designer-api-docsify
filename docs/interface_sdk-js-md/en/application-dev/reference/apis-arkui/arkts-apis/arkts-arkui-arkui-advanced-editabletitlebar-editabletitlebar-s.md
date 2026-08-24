@@ -2,10 +2,8 @@
 
 The editable title bar is a title bar that comes with button icons, typically **Cancel** on the left and **Confirm** on the right, on a multi-select or editing page.
 
-> **NOTE：**
-> 
-> - This component can be used only in the stage model.
-> 
+> **NOTE：**&gt;
+> - This component can be used only in the stage model.&gt;
 > - If the **EditableTitleBar** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -15,6 +13,8 @@ The editable title bar is a title bar that comes with button icons, typically **
 
 **Since:** 10
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct EditableTitleBar--><!--Device-unnamed-export declare struct EditableTitleBar-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,27 +23,23 @@ The editable title bar is a title bar that comes with button icons, typically **
 
 ```TypeScript
 import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from '@kit.ArkUI';
-import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, EditableLeftIconV2Options, EditableTitleV2, EditableTitleV2Options, EditableTitleBarItemV2, EditableTitleBarItemV2Options, EditableTitleBarMenuItemV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2, EditableSaveButtonV2Options, EditableTitleBarStyleV2, EditableTitleBarStyleV2Options } from '@kit.ArkUI';
 ```
 
 ## contentMargin
 
 ```TypeScript
-@Prop
-  contentMargin?: LocalizedMargin
+contentMargin?: LocalizedMargin
 ```
 
-Content margin. Negative numbers are not supported.
-
-Default value:
-
-{start: LengthMetrics.resource(*\$r('sys.float.margin_left')*), end: LengthMetrics.resource(*\$r(' sys.float.margin_right')*)}
+Content margin. Negative numbers are not supported.Default value:{start: LengthMetrics.resource(*\$r('sys.float.margin_left')*), end: LengthMetrics.resource(*\$r('sys.float.margin_right')*)}
 
 **Type:** LocalizedMargin
 
 **Default:** {start: LengthMetrics.resource($r('sys.float.margin_left')), <br> end: LengthMetrics.resource($r('sys.float.margin_right'))}
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,11 +55,7 @@ Default value:
 imageItem?: EditableTitleBarItem
 ```
 
-A single menu item for the profile picture on the left. This parameter is required to display a profile picture on the left side of the title bar. If this parameter is not passed, the default value is used and no profile picture is displayed.
-
-Default value: **undefined**
-
-Note: Accessibility properties are not supported.
+A single menu item for the profile picture on the left. This parameter is required to display a profile picture on the left side of the title bar. If this parameter is not passed, the default value is used and no profile picture is displayed.Default value: **undefined**Note: Accessibility properties are not supported.
 
 **Type:** [EditableTitleBarItem](../../apis-default/arkts-apis/arkts-editabletitlebaritem-t.md)
 
@@ -83,13 +75,8 @@ Note: Accessibility properties are not supported.
 isSaveIconRequired: boolean
 ```
 
-Whether the save button on the right is required.
-
-Default value: **true**, indicating that the save button on the right is required.
-
-**NOTE：**
-
-If not decorated by @Require, this parameter is not subject to mandatory validation during construction.
+Whether the save button on the right is required.Default value: **true**, indicating that the save button on the right is required.  
+**NOTE：**If not decorated by @Require, this parameter is not subject to mandatory validation during construction.
 
 **Type:** boolean
 
@@ -111,9 +98,7 @@ If not decorated by @Require, this parameter is not subject to mandatory validat
 leftIconDefaultFocus?: boolean
 ```
 
-Whether the left icon is the default focus.
-
-Default value: **false**, indicating that the left icon is not the default focus.
+Whether the left icon is the default focus.Default value: **false**, indicating that the left icon is not the default focus.
 
 **Type:** boolean
 
@@ -135,9 +120,7 @@ Default value: **false**, indicating that the left icon is not the default focus
 leftIconStyle: EditableLeftIconType
 ```
 
-Type of the icon on the left.
-
-Default value: **EditableLeftIconType.Back**
+Type of the icon on the left.Default value: **EditableLeftIconType.Back**
 
 **Type:** [EditableLeftIconType](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebar-editablelefticontype-e.md)
 
@@ -157,9 +140,7 @@ Default value: **EditableLeftIconType.Back**
 menuItems?: Array<EditableTitleBarMenuItem>
 ```
 
-List of menu items on the right. This parameter is required to display custom buttons on the right of the title bar. If this parameter is not passed, the default value is used, and no menu item list is displayed on the right.
-
-Default value: **undefined**
+List of menu items on the right. This parameter is required to display custom buttons on the right of the title bar. If this parameter is not passed, the default value is used, and no menu item list is displayed on the right.Default value: **undefined**
 
 **Type:** Array&lt;[EditableTitleBarMenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)&gt;
 
@@ -179,11 +160,7 @@ Default value: **undefined**
 onCancel?: () => void
 ```
 
-Cancel action event, which is triggered when the left button is of the Cancel type. This parameter is required to customize the return or cancel operation logic. If this parameter is not specified, clicking the button on the left does not respond.
-
-Default value: **() =&gt; void**
-
-Back action event, which is triggered when the button on the left side is of the Back type, since API version 12.
+Cancel action event, which is triggered when the left button is of the Cancel type. This parameter is required to customize the return or cancel operation logic. If this parameter is not specified, clicking the button on the left does not respond.Default value: **() =&gt; void**Back action event, which is triggered when the button on the left side is of the Back type, since API version 12.
 
 **Type:** () =&gt; void
 
@@ -203,9 +180,7 @@ Back action event, which is triggered when the button on the left side is of the
 onSave?: () => void
 ```
 
-Save button click event. This parameter is required to customize the save operation logic. If this parameter is not specified, clicking the button does not respond.
-
-Default value: **() =&gt; void**
+Save button click event. This parameter is required to customize the save operation logic. If this parameter is not specified, clicking the button does not respond.Default value: **() =&gt; void**
 
 **Type:** () =&gt; void
 
@@ -225,23 +200,8 @@ Default value: **() =&gt; void**
 options: EditableTitleBarOptions
 ```
 
-Title style.
-
-Default value:
-
-{
-
-safeAreaTypes: [SafeAreaType.SYSTEM],
-
-safeAreaEdges: [SafeAreaEdge.TOP],
-
-backgroundColor: '#00000000'
-
-}
-
-**NOTE：**
-
-If not decorated by @Require, this parameter is not subject to mandatory validation during construction.
+Title style.Default value:{safeAreaTypes: [SafeAreaType.SYSTEM],safeAreaEdges: [SafeAreaEdge.TOP],backgroundColor: '#00000000'}  
+**NOTE：**If not decorated by @Require, this parameter is not subject to mandatory validation during construction.
 
 **Type:** [EditableTitleBarOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebar-editabletitlebaroptions-i.md)
 
@@ -263,9 +223,7 @@ If not decorated by @Require, this parameter is not subject to mandatory validat
 saveIconDefaultFocus?: boolean
 ```
 
-Whether the save icon is the default focus.
-
-Default value: **false**, indicating that the save icon is not the default focus.
+Whether the save icon is the default focus.Default value: **false**, indicating that the save icon is not the default focus.
 
 **Type:** boolean
 
@@ -287,9 +245,7 @@ Default value: **false**, indicating that the save icon is not the default focus
 subtitle?: ResourceStr
 ```
 
-Subtitle. This parameter is required to display a subtitle below the title bar. If this parameter is not passed, the default value is used and no subtitle is displayed.
-
-Default value: **''**, indicating that the subtitle is empty.
+Subtitle. This parameter is required to display a subtitle below the title bar. If this parameter is not passed, the default value is used and no subtitle is displayed.Default value: **''**, indicating that the subtitle is empty.
 
 **Type:** ResourceStr
 
@@ -309,9 +265,7 @@ Default value: **''**, indicating that the subtitle is empty.
 title: ResourceStr
 ```
 
-Title.
-
-Default value: **''**, indicating that the title is empty.
+Title.Default value: **''**, indicating that the title is empty.
 
 **Type:** ResourceStr
 

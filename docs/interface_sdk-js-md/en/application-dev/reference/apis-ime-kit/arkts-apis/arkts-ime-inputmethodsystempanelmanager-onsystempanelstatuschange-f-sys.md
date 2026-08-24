@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void
 ```
 
-@brief Subscribes to system panel state change events.
+Subscribes to system panel state change events.
 
 **Since:** 26.0.0
 

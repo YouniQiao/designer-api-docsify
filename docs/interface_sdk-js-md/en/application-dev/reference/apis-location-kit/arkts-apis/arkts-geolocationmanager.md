@@ -44,7 +44,7 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [getGeofenceSupportedCoordTypes](arkts-location-geolocationmanager-getgeofencesupportedcoordtypes-f.md) | Obtains the coordinate system types supported by geofence. |
 | [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md) | Obtain last known location. |
 | [getPoiInfo](arkts-location-geolocationmanager-getpoiinfo-f.md) | Obtaining POI Information. |
-| [getPostProcessingTrack](arkts-location-geolocationmanager-getpostprocessingtrack-f.md) | Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently. |
+| [getPostProcessingTrack](arkts-location-geolocationmanager-getpostprocessingtrack-f.md) | Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently.Before calling this API, you need to call [on('locationChange')](arkts-location-geolocationmanager-onlocationchange-f.md) and set the input parameter [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i-sys.md#sportstype) to the specific sport mode to start tracking.Returns data within 24 hours since tracking started; Subsequent calls return only new records. |
 | [isBeaconFenceSupported](arkts-location-geolocationmanager-isbeaconfencesupported-f.md) | Check whether the BeaconFence service is supported. |
 | [isCachedGnssServiceSupported](arkts-location-geolocationmanager-iscachedgnssservicesupported-f.md) | Check whether the cached GNSS service is supported. |
 | [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md) | Obtain geocoding service status. |

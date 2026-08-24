@@ -1,8 +1,6 @@
 # LazyColumnLayoutAttribute
 
-定义懒加载列布局属性。
-
-@extends CommonMethod&lt;LazyColumnLayoutAttribute&gt;
+定义懒加载列布局属性。@extends CommonMethod&lt;LazyColumnLayoutAttribute&gt;
 
 **继承/实现关系：** LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>
 
@@ -160,7 +158,7 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值为0。<br>范围：[0, +∞)。 |
+| space | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值为0。<br>范围：[0, +∞)。 |
 
 **返回值：**
 

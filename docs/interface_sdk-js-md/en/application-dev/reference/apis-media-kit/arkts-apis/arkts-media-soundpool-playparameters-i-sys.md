@@ -1,8 +1,6 @@
 # PlayParameters
 
-Describes the playback parameters of the sound pool.
-
-These parameters are used to control the playback volume, number of loops, and priority.
+Describes the playback parameters of the sound pool.These parameters are used to control the playback volume, number of loops, and priority.
 
 **Since:** 23
 
@@ -16,9 +14,7 @@ These parameters are used to control the playback volume, number of loops, and p
 parallelPlayFlag?: boolean
 ```
 
-Whether the sound can be played in parallel with other active audio streams, without preempting the audio focus. **true** if yes, **false** otherwise. The default value is **false**.
-
-This is a system API.
+Whether the sound can be played in parallel with other active audio streams, without preempting the audio focus. **true** if yes, **false** otherwise. The default value is **false**.This is a system API.
 
 **Type:** boolean
 

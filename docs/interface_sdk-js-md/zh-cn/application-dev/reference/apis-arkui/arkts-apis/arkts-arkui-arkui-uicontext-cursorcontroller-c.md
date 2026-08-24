@@ -2,10 +2,8 @@
 
 提供光标样式设置的能力。
 
-> **说明：**
-> 
-> - 本Class首批接口从API version 12开始支持。
-> 
+> **说明：**&gt;
+> - 本Class首批接口从API version 12开始支持。&gt;
 > - 以下API需先使用UIContext中的[getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcursorcontroller)方法获取CursorController实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
@@ -78,8 +76,7 @@ setCursor(value: PointerStyle): void
 
 更改当前的鼠标光标样式。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口调用后不会立即生效，而是在下一帧改变鼠标光标样式。
 
 **起始版本：** 12
@@ -135,8 +132,7 @@ setCustomCursor(value: image.PixelMap, focusX?: int, focusY?: int): void
 
 设置自定义鼠标光标样式。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口调用后不会立即生效，而是在下一帧改变鼠标光标样式。
 
 **起始版本：** 26.0.0

@@ -1,8 +1,6 @@
 # EapData
 
-Defines the EAP data.
-
-​
+Defines the EAP data.​
 
 **Since:** 20
 

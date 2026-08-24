@@ -1,8 +1,6 @@
 # TimePickerFormat
 
-时间选择器的数据格式。
-
-@enum {int}
+时间选择器的数据格式。@enum {int}
 
 **起始版本：** 23
 

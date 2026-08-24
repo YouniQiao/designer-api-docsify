@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct ComposeListItemV2--><!--Device-unnamed-export declare struct ComposeListItemV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 构建组件的方法。
@@ -27,6 +28,8 @@
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +40,7 @@
 ## contentItemV2
 
 ```TypeScript
-@Param
-  contentItemV2?: ContentItemV2
+contentItemV2?: ContentItemV2
 ```
 
 定义左侧以及中间元素。
@@ -49,6 +51,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Param
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ComposeListItemV2-@Param  contentItemV2?: ContentItemV2--><!--Device-ComposeListItemV2-@Param  contentItemV2?: ContentItemV2-End-->
@@ -58,8 +62,7 @@
 ## operateItemV2
 
 ```TypeScript
-@Param
-  operateItemV2?: OperateItemV2
+operateItemV2?: OperateItemV2
 ```
 
 定义右侧元素。
@@ -69,6 +72,8 @@
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

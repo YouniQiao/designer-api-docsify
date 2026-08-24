@@ -4,6 +4,8 @@ Declaration of the composable title bar. Composable title bar represents a commo
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ComposeTitleBarV2--><!--Device-unnamed-export declare struct ComposeTitleBarV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,8 +19,7 @@ import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItem
 ## item
 
 ```TypeScript
-@Param
-  item?: ComposeTitleBarV2MenuItem
+item?: ComposeTitleBarV2MenuItem
 ```
 
 A single menu item for the profile picture on the left.
@@ -26,6 +27,8 @@ A single menu item for the profile picture on the left.
 **Type:** [ComposeTitleBarV2MenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +41,7 @@ A single menu item for the profile picture on the left.
 ## menuItems
 
 ```TypeScript
-@Param
-  menuItems?: Array<ComposeTitleBarV2MenuItem>
+menuItems?: Array<ComposeTitleBarV2MenuItem>
 ```
 
 Menu items on the right side.
@@ -47,6 +49,8 @@ Menu items on the right side.
 **Type:** Array&lt;[ComposeTitleBarV2MenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,8 +63,7 @@ Menu items on the right side.
 ## subtitle
 
 ```TypeScript
-@Param
-  subtitle?: ResourceStr
+subtitle?: ResourceStr
 ```
 
 Sub-title of this title bar.
@@ -68,6 +71,8 @@ Sub-title of this title bar.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +85,7 @@ Sub-title of this title bar.
 ## title
 
 ```TypeScript
-@Param
-  title: ResourceStr
+title: ResourceStr
 ```
 
 Title of this title bar.
@@ -89,6 +93,8 @@ Title of this title bar.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,8 +1,6 @@
 # SecurityLevel
 
-Defines the security level for the page.
-
-@enum {number}
+Defines the security level for the page.@enum {number}
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # AbilityComponent (System API)
 
-*AbilityComponent** is a container for independently displaying an ability.
+**AbilityComponent** is a container for independently displaying an ability.
 
 ## AbilityComponent
 

@@ -14,8 +14,7 @@ function findProxyForUrl(url: string): string
 
 通过设置的PAC脚本，解析指定的URL代理地址，返回对应的PAC代理信息。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 1、可通过 [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) 或 [setPacUrl](arkts-network-connection-setpacurl-f.md) 设置PAC脚本。
 
 > 2、如果调用本接口前未设置PAC脚本，则返回空字符串。

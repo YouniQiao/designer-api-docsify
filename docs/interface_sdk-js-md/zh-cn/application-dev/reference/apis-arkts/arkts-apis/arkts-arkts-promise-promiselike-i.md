@@ -45,5 +45,5 @@ then<U = T, E = never>(onFulfilled: (value: T) => PromiseLike<U> | U,
 
 | 类型 | 说明 |
 | --- | --- |
-| [PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;Awaited&lt;U \| E&gt;&gt; | 回调函数结果的PromiseLike。 |
+| PromiseLike&lt;Awaited&lt;U \| E&gt;&gt; | 回调函数结果的PromiseLike。 |
 

@@ -1,8 +1,6 @@
 # SaveButtonOnClickResult
 
-Enumerates the click event results of the save button.
-
-@enum { int }
+Enumerates the click event results of the save button.@enum { int }
 
 **Since:** 23
 

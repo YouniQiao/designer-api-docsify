@@ -1,8 +1,6 @@
 # ModelVersion
 
-Version of the model.
-
-@enum { int }
+Version of the model.@enum { int }
 
 **Since:** 23
 

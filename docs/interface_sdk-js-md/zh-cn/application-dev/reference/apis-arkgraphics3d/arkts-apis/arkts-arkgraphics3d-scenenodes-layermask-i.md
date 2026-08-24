@@ -1,8 +1,6 @@
 # LayerMask
 
-用于定义节点的图层掩码。
-
-@interface LayerMask
+用于定义节点的图层掩码。@interface LayerMask
 
 **起始版本：** 23
 

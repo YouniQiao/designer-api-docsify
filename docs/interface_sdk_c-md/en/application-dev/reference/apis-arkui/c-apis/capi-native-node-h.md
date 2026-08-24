@@ -450,6 +450,7 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_IMAGE_SPAN_BASELINE_OFFSET = 3003 | Defines the baseline offset attribute of the <b>ImageSpan</b> component.This attribute can be set, reset, and obtained as required through APIs.A positive value means an upward offset, while a negative value means a downward offset.The default value is <b>0</b>, and the unit is fp. <br>*Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: baseline offset, in fp.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: baseline offset, in fp.</li></ul><br>**Since**: 13 |
 | NODE_IMAGE_SPAN_COLOR_FILTER = 3004 | Defines the color filter of the image span.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32 to .value[19].f32: filter matrix array.</li><li>.size: 5 x 4 filter array size.</li><li>.object: the pointer to OH_Drawing_ColorFilter. Either .value or .object is set.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32 to .value [19].f32: filter matrix array.</li><li>.size: 5 x 4 filter array size.</li><li>.object: the pointer to OH_Drawing_ColorFilter.</li></ul><br>**Since**: 22 |
 | NODE_IMAGE_SPAN_SUPPORT_SVG2 = 3005 | Set the range of SVG parsing capabilities supported through enable switch.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: whether color fliter support svg. The default value is <b>false</b>.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: enable switch.</li></ul><br>**Since**: 22 |
+| NODE_IMAGE_SPAN_RESIZABLE = 3006 | Resizes the image span when stretching it with array or a lattice object.This attribute can be set, reset, and obtained as required through APIs.The parameter types for setting and getting should be the same.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: width of the left edge, in vp.</li><li>.value[1].f32: width of the top edge, in vp.</li><li>.value[2].f32: width of the right edge, in vp.</li><li>.value[3].f32: width of the bottom edge, in vp.</li><li>.object: The parameter type is {@link OH_Drawing_Lattice}.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: width of the left edge, in vp.</li><li>.value[1].f32: width of the top edge, in vp.</li><li>.value[2].f32: width of the right edge, in vp.</li><li>.value[3].f32: width of the bottom edge, in vp.</li><li>.object: The parameter type is {@link OH_Drawing_Lattice}.</li></ul><br>**Since**: 26.1.0 |
 | NODE_IMAGE_SRC = MAX_NODE_SCOPE_NUM * ARKUI_NODE_IMAGE | Defines the image source of the <Image> component.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.string: image source.</li><li>.object: The parameter type is [ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md). Either .string or .object must be set.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.string: image source.</li><li>.object: The parameter type is [ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md).</li></ul> |
 | NODE_IMAGE_OBJECT_FIT | Defines how the image is resized to fit its container.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: how the image is resized to fit its container. The value is an enum of[ArkUI_ObjectFit](capi-image-h.md#arkui_objectfit).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: how the image is resized to fit its container. The value is an enum of[ArkUI_ObjectFit](capi-image-h.md#arkui_objectfit).</li></ul> |
 | NODE_IMAGE_INTERPOLATION | Defines the interpolation effect of the image.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: interpolation effect of the image. The value is an enum of[ArkUI_ImageInterpolation](capi-image-h.md#arkui_imageinterpolation).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: interpolation effect of the image. The value is an enum of[ArkUI_ImageInterpolation](capi-image-h.md#arkui_imageinterpolation).</li></ul> |
@@ -1252,7 +1253,7 @@ Obtains input event (for example, touch event) data for a component event.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_UIInputEvent*](capi-arkui-eventmodule-arkui-uiinputevent.md) | Pointer to the input event data. |
+| ArkUI_UIInputEvent* | Pointer to the input event data. |
 
 ### OH_ArkUI_NodeEvent_GetNodeComponentEvent()
 
@@ -1451,7 +1452,7 @@ Obtains the touch test information in a component event.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_TouchTestInfo*](capi-arkui-eventmodule-arkui-touchtestinfo.md) | Pointer to the [ArkUI_TouchTestInfo](capi-arkui-eventmodule-arkui-touchtestinfo.md) object. If the input parameter is invalid or is not touch test      information, null is returned. |
+| ArkUI_TouchTestInfo* | Pointer to the [ArkUI_TouchTestInfo](capi-arkui-eventmodule-arkui-touchtestinfo.md) object. If the input parameter is invalid or is not touch test      information, null is returned. |
 
 ### OH_ArkUI_NodeEvent_GetTextEditorOnWillChangeEvent()
 
@@ -2084,7 +2085,7 @@ Obtains the event type through a custom component event.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_NodeCustomEventType](capi-custom-attributes-h.md#arkui_nodecustomeventtype) | Returns the type of the custom component event. |
+| ArkUI_NodeCustomEventType | Returns the type of the custom component event. |
 
 ### OH_ArkUI_NodeCustomEvent_GetCustomSpanMeasureInfo()
 
@@ -2103,7 +2104,7 @@ Obtains the measurement information of a custom span through a custom component 
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md)* event | Indicates the pointer to the custom component event. |
-| ArkUI_CustomSpanMeasureInfo* info | Indicates the measurement information to be obtained. |
+| [ArkUI_CustomSpanMeasureInfo](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md)* info | Indicates the measurement information to be obtained. |
 
 **Returns**:
 
@@ -2128,7 +2129,7 @@ Sets the measurement metrics of a custom span through a custom component event.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md)* event | Indicates the pointer to the custom component event. |
-| ArkUI_CustomSpanMetrics* metrics | Indicates the measurement metrics to set. |
+| [ArkUI_CustomSpanMetrics](capi-arkui-nativemodule-arkui-customspanmetrics.md)* metrics | Indicates the measurement metrics to set. |
 
 **Returns**:
 
@@ -2153,7 +2154,7 @@ Obtains the drawing information of a custom span through a custom component even
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md)* event | Indicates the pointer to the custom component event. |
-| ArkUI_CustomSpanDrawInfo* info | Indicates the drawing information to obtain. |
+| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info | Indicates the drawing information to obtain. |
 
 **Returns**:
 
@@ -3262,8 +3263,8 @@ Obtains a snapshot of a given component. If the node is not in the component tre
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Target node. |
-| ArkUI_SnapshotOptions* snapshotOptions | Snapshot settings. If the value is null, the default settings are used.Snapshot settings include scaling, color space, and dynamic range configuration.Scaling: floating-point value greater than 0.Color space: <b>3</b> (DISPLAY_P3), <b>4</b> (SRGB), <b>27</b> (DISPLAY_BT2020_SRGB).Dynamic range: [ArkUI_DynamicRangeMode](capi-image-h.md#arkui_dynamicrangemode). |
-| OH_PixelmapNative** pixelmap | Pointer to the <b>Pixelmap</b> object created by the system. |
+| [ArkUI_SnapshotOptions](capi-arkui-nativemodule-arkui-snapshotoptions.md)* snapshotOptions | Snapshot settings. If the value is null, the default settings are used.Snapshot settings include scaling, color space, and dynamic range configuration.Scaling: floating-point value greater than 0.Color space: <b>3</b> (DISPLAY_P3), <b>4</b> (SRGB), <b>27</b> (DISPLAY_BT2020_SRGB).Dynamic range: [ArkUI_DynamicRangeMode](capi-image-h.md#arkui_dynamicrangemode). |
+| [OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | Pointer to the <b>Pixelmap</b> object created by the system. |
 
 **Returns**:
 
@@ -3347,7 +3348,7 @@ Adds the UI state style supported by the component. To handle states change effi
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_RemoveSupportedUIStates()
 
@@ -3372,7 +3373,7 @@ Removes registered UI states. When all states registered using **OH_ArkUI_AddSup
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_RunTaskInScope()
 
@@ -4181,7 +4182,7 @@ Set the subnode mounting policy of the target node.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Error code.      <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.      </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.      </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.      <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.      </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.      </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
 
 ### OH_ArkUI_NativeModule_GetChildMountPolicy()
 
@@ -4206,6 +4207,6 @@ Get the current child mount policy of the specified node.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Error code.      <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.      </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.      </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.      <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.      </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.      </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
 
 

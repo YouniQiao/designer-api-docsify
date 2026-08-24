@@ -1,8 +1,6 @@
 # @arkts.collections(定义ArkTS的集合)
 
-ArkTS集合。
-
-@namespace collections
+ArkTS集合。@namespace collections
 
 **起始版本：** 23
 

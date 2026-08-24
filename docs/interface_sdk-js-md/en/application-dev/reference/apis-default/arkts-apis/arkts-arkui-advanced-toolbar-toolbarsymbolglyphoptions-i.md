@@ -21,9 +21,7 @@ Defines the icon symbol options.
 activated?: SymbolGlyphModifier
 ```
 
-Icon symbol of the toolbar item in activated state.
-
-Default value: **fontColor: \$r('sys.color.icon_emphasize'), fontSize: 24vp**
+Icon symbol of the toolbar item in activated state.Default value: **fontColor: \$r('sys.color.icon_emphasize'), fontSize: 24vp**
 
 **Type:** SymbolGlyphModifier
 
@@ -43,9 +41,7 @@ Default value: **fontColor: \$r('sys.color.icon_emphasize'), fontSize: 24vp**
 normal?: SymbolGlyphModifier
 ```
 
-Icon symbol of the toolbar item in normal state.
-
-Default value: **fontColor: \$r('sys.color.icon_primary'), fontSize: 24vp**
+Icon symbol of the toolbar item in normal state.Default value: **fontColor: \$r('sys.color.icon_primary'), fontSize: 24vp**
 
 **Type:** SymbolGlyphModifier
 

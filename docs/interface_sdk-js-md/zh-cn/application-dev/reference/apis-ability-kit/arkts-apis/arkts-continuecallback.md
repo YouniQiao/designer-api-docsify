@@ -7,7 +7,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | ContinueCallback registered for notify continue result. |
+| [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | ContinueCallback registered for notify continue result.@interface ContinueCallback |
 <!--DelEnd-->
 
 <!--Del-->

@@ -1,8 +1,6 @@
 # PickerColorMode
 
-PickerColorMode. include AUTO, LIGHT and DARK
-
-@enum { int } PickerColorMode
+PickerColorMode. include AUTO, LIGHT and DARK@enum { int } PickerColorMode
 
 **Since:** 26.0.0
 

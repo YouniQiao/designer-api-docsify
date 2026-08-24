@@ -1,8 +1,6 @@
 # OrderOverlayOptions
 
-Options for opening an overlay with order.
-
-@interface OrderOverlayOptions
+Options for opening an overlay with order.@interface OrderOverlayOptions
 
 **Since:** 26.0.0
 

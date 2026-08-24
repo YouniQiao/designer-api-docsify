@@ -16,7 +16,6 @@ Define configuration of the l2tp VPN network.
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
-import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## ipsecCaCertConfig

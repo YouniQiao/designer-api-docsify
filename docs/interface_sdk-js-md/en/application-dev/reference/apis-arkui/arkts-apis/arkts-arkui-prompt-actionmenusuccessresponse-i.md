@@ -1,8 +1,6 @@
 # ActionMenuSuccessResponse
 
-Defines the response of ShowActionMenu.
-
-@interface ActionMenuSuccessResponse
+Defines the response of ShowActionMenu.@interface ActionMenuSuccessResponse
 
 **Since:** 8
 
@@ -18,7 +16,6 @@ Defines the response of ShowActionMenu.
 
 ```TypeScript
 import { prompt } from '@kit.ArkUI';
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## index

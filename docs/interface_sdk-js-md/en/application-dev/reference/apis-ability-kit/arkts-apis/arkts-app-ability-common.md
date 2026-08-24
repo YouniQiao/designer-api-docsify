@@ -25,7 +25,7 @@ import { common } from '@kit.AbilityKit';
 | --- | --- |
 | [AbilityResult](arkts-ability-common-abilityresult-t.md) | Defines the result code and data returned when a started ability is terminated. |
 | [AbilityStageContext](arkts-ability-common-abilitystagecontext-t.md) | Defines the context environment for the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md). It inherits from Context. |
-| [AbilityStartCallback](arkts-ability-common-abilitystartcallback-t.md) | Defines the callback invoked to return the UIExtensionAbility startup result. It is usually used as an input parameter in [UIAbilityContext.startAbilityByType](arkts-ability-uiabilitycontext-c.md#startabilitybytype) or [UIExtensionContext.startAbilityByType](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#startabilitybytype) . |
+| [AbilityStartCallback](arkts-ability-common-abilitystartcallback-t.md) | Defines the callback invoked to return the UIExtensionAbility startup result. It is usually used as an input parameter in [UIAbilityContext.startAbilityByType](arkts-ability-uiabilitycontext-c.md#startabilitybytype) or [UIExtensionContext.startAbilityByType](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#startabilitybytype). |
 | [AgentAppInfo](arkts-ability-common-agentappinfo-t.md) | Application-related information for the agent. |
 | [AgentCapabilities](arkts-ability-common-agentcapabilities-t.md) | Capabilities in an AgentCard represent the specific skills, services, and functions that an agent can perform or provide within the system. |
 | [AgentCard](arkts-ability-common-agentcard-t.md) | The AgentCard information describes the basic information and capabilities provided by an Agent. |
@@ -34,7 +34,7 @@ import { common } from '@kit.AbilityKit';
 | [AgentProvider](arkts-ability-common-agentprovider-t.md) | The Provider in an AgentCard refers to the organization or platform that issues and manages the agent's credentials. |
 | [AgentSkill](arkts-ability-common-agentskill-t.md) | Skills in an AgentCard represent the specific abilities, expertise, and proficiencies that an agent possesses for performing tasks or solving problems. |
 | [ApplicationContext](arkts-ability-common-applicationcontext-t.md) | Defines the application context. It inherits from Context. |
-| [AppServiceExtensionContext](arkts-ability-common-appserviceextensioncontext-t.md) | Defines the context environment for the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) . It inherits from Context. |
+| [AppServiceExtensionContext](arkts-ability-common-appserviceextensioncontext-t.md) | Defines the context environment for the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md). It inherits from Context. |
 | [BaseContext](arkts-ability-common-basecontext-t.md) | Defines the parent class of all context types. |
 | [ConnectOptions](arkts-ability-common-connectoptions-t.md) | Defines the connection options. It is used as an input parameter for connection to a background service, to receive the connection status with the background service. |
 | [Context](arkts-ability-common-context-t.md) | Defines the context base class for the [stage model](../../../application-models/ability-terminology.md#stage-model). |

@@ -14,8 +14,7 @@ function zipFile(inFile: string, outFile: string, options: Options): Promise<voi
 
 压缩接口，压缩完成后返回执行结果。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [zlib.compressFile](arkts-basicservices-zlib-compressfile-f.md)
 > 替代。

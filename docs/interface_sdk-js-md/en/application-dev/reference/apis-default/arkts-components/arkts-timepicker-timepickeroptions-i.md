@@ -1,8 +1,6 @@
 # TimePickerOptions
 
-Defines the options of TimePicker.
-
-@interface TimePickerOptions
+Defines the options of TimePicker.@interface TimePickerOptions
 
 **Since:** 23
 

@@ -4,9 +4,7 @@
 type RecordData = undefined | null | Object | Record<string, RecordData> | Array<RecordData>
 ```
 
-RecordData is used for input parameter obj of the equal function
-
-@FaAndStageModel
+RecordData is used for input parameter obj of the equal function@FaAndStageModel
 
 **起始版本：** 23
 

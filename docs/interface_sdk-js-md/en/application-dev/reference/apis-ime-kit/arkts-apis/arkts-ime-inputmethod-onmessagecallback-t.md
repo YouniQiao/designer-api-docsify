@@ -4,7 +4,7 @@
 type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void
 ```
 
-@brief Callback function on receiving a custom message.
+Callback function on receiving a custom message.
 
 **Since:** 23
 

@@ -68,7 +68,7 @@ Cropping display state, in which the part of the text that exceeds the typesetti
 OMITTED = 3
 ```
 
-Ellipsized display state, in which part of the content is replaced by specified characters (such as ellipsis '... ') when the text exceeds the typesetting area.
+Ellipsized display state, in which part of the content is replaced by specified characters (such as ellipsis '...') when the text exceeds the typesetting area.
 
 **Since:** 26.0.0
 

@@ -1,8 +1,6 @@
 # UserAuthExtensionAbility（系统接口）
 
-用户认证扩展能力组件
-
-@extends UIExtensionAbility
+用户认证扩展能力组件@extends UIExtensionAbility
 
 **继承/实现关系：** UserAuthExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 

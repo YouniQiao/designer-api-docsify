@@ -1,6 +1,6 @@
 # AsrVoiceMuteMode（系统接口）
 
-ASR voice mute mode.
+枚举，自动语音识别（ASR）的静音模式。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ ASR voice mute mode.
 OUTPUT_MUTE = 0
 ```
 
-Mute the local output stream.
+本地输出静音。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Mute the local output stream.
 INPUT_MUTE = 1
 ```
 
-Mute the local MIC input stream.
+本地的MIC输入静音。
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ Mute the local MIC input stream.
 TTS_MUTE  = 2
 ```
 
-Send tts output stream to TX and mute the local output stream.
+应用下发的媒体音频本地静音。
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ Send tts output stream to TX and mute the local output stream.
 CALL_MUTE = 3
 ```
 
-Mute the voice call stream.
+通话语音流静音。
 
 **起始版本：** 23
 
@@ -80,7 +80,7 @@ Mute the voice call stream.
 OUTPUT_MUTE_EX = 4
 ```
 
-Based on the OUTPUT_MUTE, send output stream to voice call record.
+本地输出静音，媒体音频流送给通话录音。
 
 **起始版本：** 23
 

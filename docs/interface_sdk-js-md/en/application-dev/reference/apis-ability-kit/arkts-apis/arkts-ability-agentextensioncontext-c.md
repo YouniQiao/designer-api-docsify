@@ -1,8 +1,6 @@
 # AgentExtensionContext
 
-The context of the agent service extension. It provides resources and methods that developers can access.
-
-@extends ExtensionContext
+The context of the agent service extension. It provides resources and methods that developers can access.@extends ExtensionContext
 
 **Inheritance/Implementation:** AgentExtensionContext extends ExtensionContext
 

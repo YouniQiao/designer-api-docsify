@@ -1,18 +1,16 @@
 # ProgressButton
 
-文本下载按钮，可显示具体的下载进度。
+文本下载按钮，可显示具体的下载进度。设备行为差异：该接口在Wearable设备上使用时，应用程序运行异常，异常信息中提示接口未定义，在其他设备中可正常调用。
 
-设备行为差异：该接口在Wearable设备上使用时，应用程序运行异常，异常信息中提示接口未定义，在其他设备中可正常调用。
-
-> **说明：**
-> 
-> - 如果ProgressButton设置[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)和[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ProgressButton本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议ProgressButton设置通用属性和通用事件。
-
+> **说明：**&gt;
+> - 如果ProgressButton设置通用属性和通用事件，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ProgressButton本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议ProgressButton设置通用属性和通用事件。
 @struct { ProgressButton }
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct ProgressButton--><!--Device-unnamed-export declare struct ProgressButton-End-->
 
@@ -26,8 +24,7 @@
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -35,6 +32,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +64,7 @@ clickCallback: () => void
 ## colorOptions
 
 ```TypeScript
-@PropRef
-  colorOptions?: ProgressButtonColorOptions
+colorOptions?: ProgressButtonColorOptions
 ```
 
 下载按钮颜色选项。
@@ -77,6 +75,8 @@ clickCallback: () => void
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ProgressButton-@PropRef  colorOptions?: ProgressButtonColorOptions--><!--Device-ProgressButton-@PropRef  colorOptions?: ProgressButtonColorOptions-End-->
@@ -86,8 +86,7 @@ clickCallback: () => void
 ## content
 
 ```TypeScript
-@PropRef
-  content: ResourceStr
+content: ResourceStr
 ```
 
 下载按钮的文本。
@@ -98,6 +97,8 @@ clickCallback: () => void
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ProgressButton-@PropRef  content: ResourceStr--><!--Device-ProgressButton-@PropRef  content: ResourceStr-End-->
@@ -107,8 +108,7 @@ clickCallback: () => void
 ## enable
 
 ```TypeScript
-@PropRef
-  enable: boolean
+enable: boolean
 ```
 
 下载按钮是否可以点击。<br> true：可以点击。<br> false：不可点击。
@@ -119,6 +119,8 @@ clickCallback: () => void
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ProgressButton-@PropRef  enable: boolean--><!--Device-ProgressButton-@PropRef  enable: boolean-End-->
@@ -128,8 +130,7 @@ clickCallback: () => void
 ## progress
 
 ```TypeScript
-@PropRef
-  progress: double
+progress: double
 ```
 
 下载按钮的当前进度值。<br/>取值范围：[0,100]。设置小于0的数值时置为0，设置大于100的数值置为100。<br/>默认值：0
@@ -140,6 +141,8 @@ clickCallback: () => void
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ProgressButton-@PropRef  progress: double--><!--Device-ProgressButton-@PropRef  progress: double-End-->
@@ -149,8 +152,7 @@ clickCallback: () => void
 ## progressButtonRadius
 
 ```TypeScript
-@PropRef
-  progressButtonRadius?: LengthMetrics
+progressButtonRadius?: LengthMetrics
 ```
 
 下载按钮的圆角（不支持百分比设置）。<br/>取值范围：[0, height/2]<br/>默认值：height/2<br/>设置非法数值时，按照默认值处理。
@@ -160,6 +162,8 @@ clickCallback: () => void
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @PropRef
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,12 +2,13 @@
 
 A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-n.md).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > **Decorator**: \@Sendable
 
 **Since:** 12
+
+**Decorator:** @Sendable
 
 <!--Device-collections-class Int8Array--><!--Device-collections-class Int8Array-End-->
 
@@ -789,9 +790,7 @@ Applies a callback function to each element in this ArkTS Int8Array and uses the
 static of(...items: number[]): Int8Array
 ```
 
-Creates an ArkTS Int8Array with a variable number of parameters.
-
-@static [since 18 - 21]
+Creates an ArkTS Int8Array with a variable number of parameters.@static [since 18 - 21]
 
 **Since:** 18
 

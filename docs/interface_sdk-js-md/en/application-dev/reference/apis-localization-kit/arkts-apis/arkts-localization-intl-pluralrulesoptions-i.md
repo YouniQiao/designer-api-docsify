@@ -24,9 +24,7 @@ import { intl } from '@kit.LocalizationKit';
 localeMatcher?: string
 ```
 
-Locale matching algorithm. The value can be **lookup** or **best fit**.
-
-The default value is **best fit**.
+Locale matching algorithm. The value can be **lookup** or **best fit**.The default value is **best fit**.
 
 **Type:** string
 
@@ -48,9 +46,7 @@ The default value is **best fit**.
 maximumFractionDigits?: int
 ```
 
-Maximum number of digits in the fraction part of a number. The value ranges from **1** to **21**.
-
-The default value is **3**.
+Maximum number of digits in the fraction part of a number. The value ranges from **1** to **21**.The default value is **3**.
 
 **Type:** int
 
@@ -72,9 +68,7 @@ The default value is **3**.
 maximumSignificantDigits?: int
 ```
 
-Maximum number of the least significant digits. The value ranges from **1** to **21**.
-
-The default value is **21**.
+Maximum number of the least significant digits. The value ranges from **1** to **21**.The default value is **21**.
 
 **Type:** int
 
@@ -96,9 +90,7 @@ The default value is **21**.
 minimumFractionDigits?: int
 ```
 
-Minimum number of digits in the fraction part of a number. The value ranges from **0** to **20**.
-
-The default value is **0**.
+Minimum number of digits in the fraction part of a number. The value ranges from **0** to **20**.The default value is **0**.
 
 **Type:** int
 
@@ -120,9 +112,7 @@ The default value is **0**.
 minimumIntegerDigits?: int
 ```
 
-Minimum number of digits allowed in the integer part of a number. The value ranges from **1** to **21**.
-
-The default value is **1**.
+Minimum number of digits allowed in the integer part of a number. The value ranges from **1** to **21**.The default value is **1**.
 
 **Type:** int
 
@@ -144,9 +134,7 @@ The default value is **1**.
 minimumSignificantDigits?: int
 ```
 
-Minimum number of the least significant digits. The value ranges from **1** to **21**.
-
-The default value is **1**.
+Minimum number of the least significant digits. The value ranges from **1** to **21**.The default value is **1**.
 
 **Type:** int
 
@@ -168,11 +156,7 @@ The default value is **1**.
 type?: string
 ```
 
-Collation type. The value can be **cardinal** or **ordinal**.
-
-The default value is **cardinal**.
-
-The value **cardinal** indicates a cardinal number and the value **ordinal** indicates an ordinal number.
+Collation type. The value can be **cardinal** or **ordinal**.The default value is **cardinal**.The value **cardinal** indicates a cardinal number and the value **ordinal** indicates an ordinal number.
 
 **Type:** string
 

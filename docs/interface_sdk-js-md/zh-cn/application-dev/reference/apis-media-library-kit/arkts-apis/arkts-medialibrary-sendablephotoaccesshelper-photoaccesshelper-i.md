@@ -22,9 +22,7 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper.CreateOptions): Promise<string>
 ```
 
-指定文件类型、后缀和创建选项，创建图片或视频资源。使用Promise异步回调。
-
-此接口在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+指定文件类型、后缀和创建选项，创建图片或视频资源。使用Promise异步回调。此接口在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **起始版本：** 12
 
@@ -41,8 +39,8 @@ createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | photoType | PhotoType | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
-| extension | string | 是 | 文件名后缀参数，例如：'jpg'。字符串长度的取值范围为[1, 255]。 . |
-| options | photoAccessHelper.CreateOptions | 否 | 创建选项，例如{title: 'testPhoto'}。 <br>文件名中不允许出现非法英文字符。 <br>API18开始，非法字符包括： \ / : ? " &lt; &gt; \| <br>API10-17，非法字符包括： . .. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
+| extension | string | 是 | 文件名后缀参数，例如：'jpg'。字符串长度的取值范围为[1, 255]。. |
+| options | photoAccessHelper.CreateOptions | 否 | 创建选项，例如{title: 'testPhoto'}。 <br>文件名中不允许出现非法英文字符。 <br>API18开始，非法字符包括： \ / : * ? " &lt; &gt; \| <br>API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **返回值：**
 
@@ -123,9 +121,7 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>
 ```
 
-根据检索选项获取相册。使用Promise异步回调。
-
-获取相册前需先保证相册存在。
+根据检索选项获取相册。使用Promise异步回调。获取相册前需先保证相册存在。
 
 **起始版本：** 12
 
@@ -227,9 +223,7 @@ getAlbums(
     ): Promise<FetchResult<Album>>
 ```
 
-根据检索选项和相册类型获取相册。使用Promise异步回调。
-
-获取相册前需先保证相册存在。
+根据检索选项和相册类型获取相册。使用Promise异步回调。获取相册前需先保证相册存在。
 
 **起始版本：** 12
 

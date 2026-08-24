@@ -1,8 +1,6 @@
 # ShapeModifier
 
-Defines Shape Modifier
-
-@implements ShapeAttribute, AttributeModifier&lt;ShapeAttribute&gt;
+Defines Shape Modifier@implements ShapeAttribute, AttributeModifier&lt;ShapeAttribute&gt;
 
 **Inheritance/Implementation:** ShapeModifier implements ShapeAttribute, AttributeModifier<ShapeAttribute>
 

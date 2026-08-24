@@ -1,10 +1,10 @@
 # AlertDialogV2
 
-Declare CustomDialog AlertDialogV2.
-
-@struct { AlertDialogV2 }
+Declare CustomDialog AlertDialogV2.@struct { AlertDialogV2 }
 
 **Since:** 18
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct AlertDialogV2--><!--Device-unnamed-export declare struct AlertDialogV2-End-->
 
@@ -19,9 +19,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## content
 
 ```TypeScript
-@Require
-  @Param
-  content: ResourceStr
+content: ResourceStr
 ```
 
 Sets the AlertDialogV2 content.
@@ -29,6 +27,8 @@ Sets the AlertDialogV2 content.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,8 +41,7 @@ Sets the AlertDialogV2 content.
 ## primaryButton
 
 ```TypeScript
-@Param
-  primaryButton?: AdvancedDialogV2Button
+primaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the AlertDialogV2 primary button.
@@ -50,6 +49,8 @@ Sets the AlertDialogV2 primary button.
 **Type:** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +63,7 @@ Sets the AlertDialogV2 primary button.
 ## primaryTitle
 
 ```TypeScript
-@Param
-  primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
 Sets the AlertDialogV2 title.
@@ -71,6 +71,8 @@ Sets the AlertDialogV2 title.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +85,7 @@ Sets the AlertDialogV2 title.
 ## secondaryButton
 
 ```TypeScript
-@Param
-  secondaryButton?: AdvancedDialogV2Button
+secondaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the AlertDialogV2 secondary button.
@@ -92,6 +93,8 @@ Sets the AlertDialogV2 secondary button.
 **Type:** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +107,7 @@ Sets the AlertDialogV2 secondary button.
 ## secondaryTitle
 
 ```TypeScript
-@Param
-  secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
 Sets the AlertDialogV2 secondary title.
@@ -113,6 +115,8 @@ Sets the AlertDialogV2 secondary title.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

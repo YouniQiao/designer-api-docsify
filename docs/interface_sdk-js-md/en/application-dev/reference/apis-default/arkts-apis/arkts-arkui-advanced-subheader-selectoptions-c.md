@@ -21,13 +21,9 @@ Declare type SelectOption
 public defaultFocus?: boolean
 ```
 
-Whether the drop-down button is the default focus.
-
-**true**: The drop-down button is the default focus.
-
-**false**: The drop-down button is not the default focus.
-
-Default value: **false**
+Whether the drop-down button is the default focus.  
+**true**: The drop-down button is the default focus.  
+**false**: The drop-down button is not the default focus.Default value: **false**
 
 **Type:** boolean
 
@@ -69,8 +65,7 @@ Set the id for select.
 public onSelect?: (index: int, value?: string) => void
 ```
 
-Callback invoked when an item in the drop-down list box is selected.
-
+Callback invoked when an item in the drop-down list box is selected.  
 - **index**: index of the selected option. - **value**: value of the selected option.
 
 **Type:** (index: int, value?: string) =&gt; void
@@ -111,15 +106,7 @@ Options of an item in the drop-down list box.
 public selected?: int
 ```
 
-Index of the initially selected item in the drop-down list box.
-
-The value must be greater than or equal to -1.
-
-The index of the first item is 0.
-
-If this attribute is not set, the default value **-1** is used, indicating that the option is not selected.
-
-Values less than -1 are treated as no selection.
+Index of the initially selected item in the drop-down list box.The value must be greater than or equal to -1.The index of the first item is 0.If this attribute is not set, the default value **-1** is used, indicating that the option is not selected.Values less than -1 are treated as no selection.
 
 **Type:** int
 
@@ -139,11 +126,7 @@ Values less than -1 are treated as no selection.
 public value?: ResourceStr
 ```
 
-Text content of the drop-down list button itself.
-
-The default value is an empty string.
-
-Note: If the text length exceeds the column width, it will be truncated. The Resource type is supported since API version 20.
+Text content of the drop-down list button itself.The default value is an empty string.Note: If the text length exceeds the column width, it will be truncated. The Resource type is supported since API version 20.
 
 **Type:** ResourceStr
 

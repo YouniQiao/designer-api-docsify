@@ -60,9 +60,7 @@ canOverScroll?: boolean
 xOffset: double | string
 ```
 
-水平滚动总偏移量。 匿名对象规范化。
-
-<p>&lt;strong&gt;说明&lt;/strong&gt; <br>该参数值不支持设置百分比。 <br>仅滚动轴为x轴时生效。 <br>取值范围：当值小于0时，不带动画的滚动，按0处理。带动画的滚动，默认滚动到起始位置后停止，可通过设置animation参数，使滚动在越界时启动回弹动画。 <br>参数类型为number时单位为vp。 </p>
+水平滚动总偏移量。 匿名对象规范化。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>该参数值不支持设置百分比。 <br>仅滚动轴为x轴时生效。 <br>取值范围：当值小于0时，不带动画的滚动，按0处理。带动画的滚动，默认滚动到起始位置后停止，可通过设置animation参数，使滚动在越界时启动回弹动画。 <br>参数类型为number时单位为vp。 </p>
 
 **类型：** double \| string
 
@@ -82,9 +80,7 @@ xOffset: double | string
 yOffset: double | string
 ```
 
-垂直滚动总偏移量。 匿名对象规范化。
-
-<p>&lt;strong&gt;说明&lt;/strong&gt; <br>该参数值不支持设置百分比。 <br>仅滚动轴为y轴时生效。 <br>取值范围：当值小于0时，不带动画的滚动，按0处理。带动画的滚动，默认滚动到起始位置后停止，可通过设置animation参数，使滚动在越界时启动回弹动画。 <br>参数类型为number时单位为vp。 </p>
+垂直滚动总偏移量。 匿名对象规范化。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>该参数值不支持设置百分比。 <br>仅滚动轴为y轴时生效。 <br>取值范围：当值小于0时，不带动画的滚动，按0处理。带动画的滚动，默认滚动到起始位置后停止，可通过设置animation参数，使滚动在越界时启动回弹动画。 <br>参数类型为number时单位为vp。 </p>
 
 **类型：** double \| string
 

@@ -19,9 +19,7 @@ Url信息。
 url?: ResourceStr
 ```
 
-url地址。
-
-默认值：undefined
+url地址。默认值：undefined
 
 **类型：** ResourceStr
 

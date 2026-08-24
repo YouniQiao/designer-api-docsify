@@ -108,7 +108,7 @@ levelMode?: LevelMode
 levelUniqueId?: int
 ```
 
-设置页面级菜单需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-framenode-c.md#getuniqueid)获取。 取值范围：大于等于0的数字。&lt;br /&gt;**说明：**<br/>- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面级菜单需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)获取。 取值范围：大于等于0的数字。&lt;br /&gt;**说明：**<br/>- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** int
 
@@ -208,10 +208,7 @@ onWillDisappear?: VoidCallback
 showInSubWindow?: boolean
 ```
 
-某操作菜单需要显示在主窗口之外时，是否在子窗口显示此菜单。值为true表示在子窗口显示菜单。
-
-默认值：false，在子窗口不显示菜单。
-
+某操作菜单需要显示在主窗口之外时，是否在子窗口显示此菜单。值为true表示在子窗口显示菜单。默认值：false，在子窗口不显示菜单。  
 **说明：** - showInSubWindow为true的菜单无法触发显示另一个showInSubWindow为true的菜单。 - 若在UIExtension中设置showInSubWindow为true, 菜单将基于UIExtension的宿主窗口对齐。
 
 **类型：** boolean

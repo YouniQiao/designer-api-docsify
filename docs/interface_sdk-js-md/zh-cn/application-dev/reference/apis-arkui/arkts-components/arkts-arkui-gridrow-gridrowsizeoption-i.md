@@ -1,8 +1,6 @@
 # GridRowSizeOption
 
-栅格在不同宽度设备类型下，gutter的大小。
-
-@interface GridRowSizeOption
+栅格在不同宽度设备类型下，gutter的大小。@interface GridRowSizeOption
 
 **起始版本：** 23
 

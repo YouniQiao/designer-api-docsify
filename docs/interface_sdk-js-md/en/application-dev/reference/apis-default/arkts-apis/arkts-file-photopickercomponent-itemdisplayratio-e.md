@@ -1,8 +1,6 @@
 # ItemDisplayRatio
 
-Enumerates the aspect ratios of the grid item display, including 1:1 and the original image's aspect ratio.
-
-@enum { int } Grid item display aspect ratio.
+Enumerates the aspect ratios of the grid item display, including 1:1 and the original image's aspect ratio.@enum { int } Grid item display aspect ratio.
 
 **Since:** 26.0.0
 

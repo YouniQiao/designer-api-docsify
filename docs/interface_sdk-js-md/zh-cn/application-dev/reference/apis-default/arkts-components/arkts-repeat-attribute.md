@@ -69,8 +69,7 @@ each(itemGenerator: RepeatItemBuilder<T>): this
 
 组件生成函数。当所有`.template()`的type和`.templateId()`返回值不匹配时，将使用`.each()`处理数据项。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > `each`属性必须有，否则运行时会报错。
 > 
 > `itemGenerator`的参数为`RepeatItem`，该参数将`item`和`index`结合到了一起，请勿将`RepeatItem`参数拆开使用。

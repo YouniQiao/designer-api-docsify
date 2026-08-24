@@ -1,8 +1,6 @@
 # Divider properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-The universal events are supported.
+In addition to the universal attributes, the following attributes are supported.The universal events are supported.
 
 **Inheritance/Implementation:** DividerAttribute extends CommonMethod<DividerAttribute>
 

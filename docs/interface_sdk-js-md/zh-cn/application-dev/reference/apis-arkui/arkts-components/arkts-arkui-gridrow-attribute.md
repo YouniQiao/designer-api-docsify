@@ -1,8 +1,6 @@
 # GridRow属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** GridRowAttribute extends CommonMethod<GridRowAttribute>
 
@@ -51,8 +49,7 @@ onBreakpointChange(callback: (breakpoints: string) => void)
 
 断点发生变化时触发回调。回调函数接收到的breakpoints参数表示当前断点值（取值为`"xs"`、`"sm"`、`"md"`、`"lg"`、`"xl"`、`"xxl"`），开发者可在回调中根据断点值执行相应的UI布局调整或业务 逻辑处理。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 当[断点参照物](../../../reference/apis-arkui/arkui-ts/ts-container-gridrow.md#breakpointsreference枚举说明)设置为
 > BreakpointsReference.ComponentSize时，不要在onBreakpointChange回调中动态修改GridRow组件的padding或
 > margin属性值，否则可能导致组件尺寸计算循环触发、布局抖动或渲染性能下降。

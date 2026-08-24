@@ -1,8 +1,6 @@
 # RenderMode
 
-Enumerates the rendering mode of Web components. By default, the asynchronous rendering mode is used. The asynchronous rendering mode is recommended because it has better performance and lower power consumption.
-
-@enum { number }
+Enumerates the rendering mode of Web components. By default, the asynchronous rendering mode is used. The asynchronous rendering mode is recommended because it has better performance and lower power consumption.@enum { number }
 
 **Since:** 23
 

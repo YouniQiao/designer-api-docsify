@@ -282,9 +282,7 @@ Create a UI instance singleton without window and get its UIContext object.
 static destroyUIContextWithoutWindow(): void
 ```
 
-Destroy the UI instance singleton without window.
-
-@static
+Destroy the UI instance singleton without window.@static
 
 **起始版本：** 23
 
@@ -2044,9 +2042,7 @@ setPixelRoundMode(mode: PixelRoundMode): void
 static setResourceManagerCacheMaxCountForHSP(count: int): void
 ```
 
-设置HSP资源管理对象的缓存数量上限。
-
-如果缓存上限设置过高，存在内存开销过大的风险。 建议根据实际需要进行配置。
+设置HSP资源管理对象的缓存数量上限。如果缓存上限设置过高，存在内存开销过大的风险。 建议根据实际需要进行配置。
 
 **起始版本：** 26.0.0
 

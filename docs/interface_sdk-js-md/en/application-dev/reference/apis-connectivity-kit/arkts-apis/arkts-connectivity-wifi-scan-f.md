@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## scan
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function scan(): boolean
 ```
 
-Scans Wi-Fi hotspot.
-
-<p>This API works in asynchronous mode.</p>
+Scans Wi-Fi hotspot.<p>This API works in asynchronous mode.</p>
 
 **Since:** 6
 

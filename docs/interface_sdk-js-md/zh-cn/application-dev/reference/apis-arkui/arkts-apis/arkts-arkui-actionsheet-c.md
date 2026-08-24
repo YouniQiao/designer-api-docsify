@@ -24,7 +24,6 @@ static show(value: ActionSheetOptions)
 定义列表弹窗并弹出。
 
 > **说明：**
-
 showActionSheet需先获取[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)实例后再进行调用。
 
 > 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的

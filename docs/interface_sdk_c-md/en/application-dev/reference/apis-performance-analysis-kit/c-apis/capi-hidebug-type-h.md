@@ -22,15 +22,15 @@ Defines the code of the HiDebug module.
 | [HiDebug_SystemMemInfo](capi-hidebug-hidebug-systemmeminfo.md) | HiDebug_SystemMemInfo | Defines a struct for the system memory information. |
 | [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md) | HiDebug_NativeMemInfo | Defines the struct for the local memory information of the application process. |
 | [HiDebug_MemoryLimit](capi-hidebug-hidebug-memorylimit.md) | HiDebug_MemoryLimit | Defines the struct for the memory limit of the application process. |
-| [OH_HiDebug_RequestTraceConfig](capi-hidebug-oh-hidebug-requesttraceconfig.md) | OH_HiDebug_RequestTraceConfig | Defines trace request configuration. |
+| [OH_HiDebug_RequestTraceConfig](capi-hidebug-oh-hidebug-requesttraceconfig.md) | OH_HiDebug_RequestTraceConfig | Defines a struct for the trace collection configuration. |
 | [HiDebug_MallocDispatch](capi-hidebug-hidebug-mallocdispatch.md) | HiDebug_MallocDispatch | Defines the struct types of the replaceable/restorable **HiDebug_MallocDispatch** table of the applicationprocess. |
 | [HiDebug_JsStackFrame](capi-hidebug-hidebug-jsstackframe.md) | HiDebug_JsStackFrame | Defines a struct for the JS stack frame content. |
 | [HiDebug_NativeStackFrame](capi-hidebug-hidebug-nativestackframe.md) | HiDebug_NativeStackFrame | Defines the native stack frame content. |
 | [HiDebug_StackFrame](capi-hidebug-hidebug-stackframe.md) | HiDebug_StackFrame | Defines the stack frame content. |
 | [HiDebug_GraphicsMemorySummary](capi-hidebug-hidebug-graphicsmemorysummary.md) | HiDebug_GraphicsMemorySummary | Defines a struct for the application graphics memory usage details. |
 | [HiDebug_ProcessSamplerConfig](capi-hidebug-hidebug-processsamplerconfig.md) | HiDebug_ProcessSamplerConfig | Defines a struct for sampling configuration. |
-| [OH_HiDebug_ResProfilerConfig](capi-hidebug-oh-hidebug-resprofilerconfig.md) | OH_HiDebug_ResProfilerConfig | Defines a struct for the resource profiler configuration. |
-| [OH_HiDebug_ProfilingResult](capi-hidebug-oh-hidebug-profilingresult.md) | OH_HiDebug_ProfilingResult | Encapsulates result of a single profiling request operation.It represents data delivered via OH_HiDebug_ProfilingCallback. |
+| [OH_HiDebug_ProfilingResult](capi-hidebug-oh-hidebug-profilingresult.md) | OH_HiDebug_ProfilingResult | Defines a struct for encapsulating the result of a single resource collection. |
+| [OH_HiDebug_ResProfilerConfig](capi-hidebug-oh-hidebug-resprofilerconfig.md) | OH_HiDebug_ResProfilerConfig | Defines a struct for the resource collection configurations. |
 | [HiDebug_Backtrace_Object__*](capi-hidebug-hidebug-backtrace-object--8h.md) | HiDebug_Backtrace_Object | Defines an object used for stack backtracing and stack parsing. |
 | [HiDebug_ThreadCpuUsage*](capi-hidebug-hidebug-threadcpuusage8h.md) | HiDebug_ThreadCpuUsagePtr | Defines pointer of HiDebug_ThreadCpuUsage. |
 
@@ -38,11 +38,12 @@ Defines the code of the HiDebug module.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
+| [HiDebug_ErrorCode](#hidebug_errorcode) | HiDebug_ErrorCode | Enumerates the error codes used in the HiDebug module. |
 | [HiDebug_TraceFlag](#hidebug_traceflag) | HiDebug_TraceFlag | Enumerates the thread types for trace collection. |
 | [HiDebug_StackFrameType](#hidebug_stackframetype) | HiDebug_StackFrameType | Enumerates the stack frame types. |
 | [HiDebug_CrashObjType](#hidebug_crashobjtype) | HiDebug_CrashObjType | Enumerates the data types of debugging information. |
-| [OH_HiDebug_ResourceType](#oh_hidebug_resourcetype) | OH_HiDebug_ResourceType | Defines an enum for the resource profiler types. |
-| [OH_HiDebug_MemListenerType](#oh_hidebug_memlistenertype) | OH_HiDebug_MemListenerType | Defines an enum for memory listener callbacks. |
+| [OH_HiDebug_ResourceType](#oh_hidebug_resourcetype) | OH_HiDebug_ResourceType | Enumerates the resource profiling types. |
+| [OH_HiDebug_MemListenerType](#oh_hidebug_memlistenertype) | OH_HiDebug_MemListenerType | Enumerates the memory listener callback types. You can process the related logic based on the callback type. |
 
 ### Macro
 
@@ -85,10 +86,57 @@ Defines the code of the HiDebug module.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*OH_HiDebug_RequestTraceCallback)(HiDebug_ErrorCode errorCode, const char* filePath)](#oh_hidebug_requesttracecallback) | OH_HiDebug_RequestTraceCallback | Defines callback type for trace request. |
-| [typedef void (\*OH_HiDebug_ProfilingCallback)(OH_HiDebug_ProfilingResult* result)](#oh_hidebug_profilingcallback) | OH_HiDebug_ProfilingCallback | Callback signature for the resource profiling result. |
+| [typedef void (\*OH_HiDebug_RequestTraceCallback)(HiDebug_ErrorCode errorCode, const char* filePath)](#oh_hidebug_requesttracecallback) | OH_HiDebug_RequestTraceCallback | Triggered for the trace collection request. |
+| [typedef void (\*OH_HiDebug_ProfilingCallback)(OH_HiDebug_ProfilingResult* result)](#oh_hidebug_profilingcallback) | OH_HiDebug_ProfilingCallback | Triggered for the resource profiling. |
 
 ## Enum type description
+
+### HiDebug_ErrorCode
+
+```c
+enum HiDebug_ErrorCode
+```
+
+**Description**
+
+Enumerates the error codes used in the HiDebug module.
+
+**Since**: 12
+
+| Enum item | Description |
+| -- | -- |
+| HIDEBUG_SUCCESS = 0 | Operation successful. |
+| HIDEBUG_INVALID_ARGUMENT = 401 | Invalid parameter. Possible causes: 1. The parameter value is incorrect. 2. The parameter type is incorrect. |
+| HIDEBUG_TRACE_CAPTURED_ALREADY = 11400102 | Repeated collection. |
+| HIDEBUG_NO_PERMISSION = 11400103 | No file write permission. |
+| HIDEBUG_TRACE_ABNORMAL = 11400104 | Internal system error. |
+| HIDEBUG_NO_TRACE_RUNNING = 11400105 | No trace task is running. |
+| OH_HIDEBUG_TRACE_STORAGE_LIMIT = 11400120 |  |
+| HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS = 11400200 |  |
+| HIDEBUG_NOT_SUPPORTED = 11400300 |  |
+| HIDEBUG_UNDER_SAMPLING = 11400301 |  |
+| HIDEBUG_RESOURCE_UNAVAILABLE = 11400302 |  |
+| HIDEBUG_RES_PROF_SUCCESS = 11400400 |  |
+| HIDEBUG_RES_PROF_INVALID_ARG = 11400410 |  |
+| HIDEBUG_RES_PROF_INVALID_MAX_DURATION = 11400411 |  |
+| HIDEBUG_RES_PROF_INVALID_FILTER_SIZE = 11400412 |  |
+| HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH = 11400413 |  |
+| HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL = 11400414 |  |
+| HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL = 11400415 |  |
+| HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE = 11400416 |  |
+| HIDEBUG_RES_PROF_PERMISSION_DENIED = 11400420 |  |
+| HIDEBUG_RES_PROF_ALREADY_STARTED = 11400421 |  |
+| HIDEBUG_RES_PROF_NOT_STARTED = 11400422 |  |
+| HIDEBUG_RES_PROF_PROCESS_OVERLIMIT = 11400423 |  |
+| HIDEBUG_RES_PROF_CONFLICT = 11400424 |  |
+| HIDEBUG_RES_PROF_AUTO_STOPPED_BY_DURATION = 11400425 |  |
+| HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED = 11400426 |  |
+| HIDEBUG_RES_PROF_CPU_OVERLOADED = 11400427 |  |
+| HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL = 11400428 |  |
+| HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL = 11400429 |  |
+| HIDEBUG_RES_PROF_FAILURE = 11400430 |  |
+| HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH = 11400431 | Invalid maximum asynchronous nesting depth.<br>**Since**: 26.1.0 |
+| HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH = 11400432 | Invalid maximum asynchronous task stack depth.<br>**Since**: 26.1.0 |
 
 ### HiDebug_TraceFlag
 
@@ -153,7 +201,7 @@ enum OH_HiDebug_ResourceType
 
 **Description**
 
-Defines an enum for the resource profiler types.
+Enumerates the resource profiling types.
 
 **Since**: 24
 
@@ -176,7 +224,7 @@ enum OH_HiDebug_MemListenerType
 
 **Description**
 
-Defines an enum for memory listener callbacks.
+Enumerates the memory listener callback types. You can process the related logic based on the callback type.
 
 **Since**: 26.0.0
 
@@ -197,7 +245,7 @@ typedef void (*OH_HiDebug_RequestTraceCallback)(HiDebug_ErrorCode errorCode, con
 
 **Description**
 
-Defines callback type for trace request.
+Triggered for the trace collection request.
 
 **Since**: 24
 
@@ -205,8 +253,8 @@ Defines callback type for trace request.
 
 | Parameter | Description |
 | -- | -- |
-| HiDebug_ErrorCode errorCode | Result code, see {@link HiDebug_ErrorCode}. |
-| const char\* filePath | Path of the generated trace file, may be NULL on failure. |
+| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) errorCode | Result code. For details, see [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode). |
+| const char\* filePath | Pointer to the collected trace file. If the operation fails, a null pointer may be returned. |
 
 ### OH_HiDebug_ProfilingCallback()
 
@@ -216,7 +264,7 @@ typedef void (*OH_HiDebug_ProfilingCallback)(OH_HiDebug_ProfilingResult* result)
 
 **Description**
 
-Callback signature for the resource profiling result.
+Triggered for the resource profiling.
 
 **Since**: 24
 
@@ -224,6 +272,6 @@ Callback signature for the resource profiling result.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_HiDebug_ProfilingResult](capi-hidebug-oh-hidebug-profilingresult.md)\* result | Pointer to the OH_HiDebug_ProfilingResult structure. |
+| [OH_HiDebug_ProfilingResult](capi-hidebug-oh-hidebug-profilingresult.md)\* result | Pointer to the parameters of the resource profiling callback function. |
 
 

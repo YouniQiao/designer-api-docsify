@@ -1,8 +1,6 @@
 # ImageSize
 
-ImageSize enumeration description
-
-@enum { number }
+ImageSize enumeration description@enum { number }
 
 **起始版本：** 23
 

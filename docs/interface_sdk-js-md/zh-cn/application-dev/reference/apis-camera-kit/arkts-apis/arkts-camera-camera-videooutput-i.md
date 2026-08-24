@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getActiveFrameRate
@@ -23,9 +22,7 @@ import { cameraPicker } from '@kit.CameraKit';
 getActiveFrameRate(): FrameRateRange
 ```
 
-获取已设置的帧率范围。
-
-使用[setFrameRate](#setframerate)对录像流设置过帧率后可查询。
+获取已设置的帧率范围。使用[setFrameRate](#setframerate)对录像流设置过帧率后可查询。
 
 **起始版本：** 23
 
@@ -179,8 +176,7 @@ function getSupportedFrameRates(videoOutput: camera.VideoOutput): Array<camera.F
 getVideoRotation(deviceDegree?: int): ImageRotation
 ```
 
-获取录像旋转角度。
-
+获取录像旋转角度。  
 - 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖屏（充电口向下）。 - 相机镜头角度：值等于相机图像顺时针旋转到设备自然方向的角度。例如，直板机后置相机传感器是横屏安装的，所以需要顺时针旋转90度到设备自然方向。
 
 **起始版本：** 23
@@ -330,8 +326,7 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 
 注销监听录像开始。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
@@ -431,8 +426,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 监听录像输出发生错误，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
@@ -481,8 +475,7 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 
 监听录像开始，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
@@ -592,14 +585,10 @@ Subscribes frame start event callback.
 setFrameRate(minFps: int, maxFps: int): void
 ```
 
-设置录像流帧率范围，设置的范围必须在支持的帧率范围内。
+设置录像流帧率范围，设置的范围必须在支持的帧率范围内。进行设置前，可通过[getSupportedFrameRates](#getsupportedframerates)查询支持的帧率范围。
 
-进行设置前，可通过[getSupportedFrameRates](#getsupportedframerates)查询支持的帧率范围。
-
-> **说明：**
-> 
-> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。
-> 
+> **说明：**&gt;
+> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。&gt;
 > 接口调用前，先调用[getActiveFrameRate](#getactiveframerate)接口查询当前VideoSession的帧率，若下发的帧率与当前帧率相等，则
 > 下发的帧率不会生效。
 

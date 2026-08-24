@@ -2,8 +2,7 @@
 
 网络连接管理提供管理网络一些基础能力，包括获取默认激活的网络、获取所有激活网络列表、获取网络能力信息等功能。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 无特殊说明，接口默认不支持并发。
 
 **起始版本：** 23
@@ -119,7 +118,7 @@ import { connection } from '@kit.NetworkKit';
 | [NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md) | 提供承载数据网络能力的实例。 |
 | [NetConnection](arkts-network-connection-netconnection-i.md) | 网络连接对象类型。 |
 | [NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md) | 网络连接信息。 |
-| [NetHandle](arkts-network-connection-nethandle-i.md) | 网络句柄。 |
+| [NetHandle](arkts-network-connection-nethandle-i.md) | 网络句柄。在调用NetHandle的方法之前，需要先获取NetHandle对象。例如可通过[getDefaultNet](arkts-network-connection-getdefaultnet-f.md)获取系统当前默认网络的网络句柄。 |
 | [NetIpMacInfo](arkts-network-connection-netipmacinfo-i.md) | IP邻居表条目信息。 |
 | [NetPortStatesInfo](arkts-network-connection-netportstatesinfo-i.md) | 系统当前监听的TCP、UDP端口信息。 |
 | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | 提供承载数据网络能力的实例。 |

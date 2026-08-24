@@ -2,15 +2,15 @@
 
 网格对象排序组件，用于网格对象的编辑、拖动排序、新增和删除。
 
-> **说明：**
-> 
-> - 该组件仅可在Stage模型下使用。
-> 
+> **说明：**&gt;
+> - 该组件仅可在Stage模型下使用。&gt;
 > - 如果GridObjectSortComponent设置通用属性和
 > 通用事件，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到
 > GridObjectSortComponent本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议GridObjectSortComponent设置通用属性和通用事件。
 
 **起始版本：** 11
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct GridObjectSortComponent--><!--Device-unnamed-export declare struct GridObjectSortComponent-End-->
 
@@ -103,8 +103,7 @@ onSave: (select: Array<GridObjectSortComponentItem>, unselect: Array<GridObjectS
 ## options
 
 ```TypeScript
-@Prop
-  options: GridObjectSortComponentOptions
+options: GridObjectSortComponentOptions
 ```
 
 组件配置信息。
@@ -112,6 +111,8 @@ onSave: (select: Array<GridObjectSortComponentItem>, unselect: Array<GridObjectS
 **类型：** [GridObjectSortComponentOptions](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentoptions-i.md)
 
 **起始版本：** 11
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -10,29 +10,24 @@ export declare function ColumnSplit(
 ): ColumnSplitAttribute
 ```
 
-将子组件纵向布局，并在每个子组件之间插入横向分割线。
+将子组件纵向布局，并在每个子组件之间插入横向分割线。ColumnSplit通过分割线限制子组件的高度。初始化时，分割线位置根据子组件的高度来计算。 初始化后，动态修改子组件的高度不生效，分割线位置保持不变，可通过拖动相邻分割线改变子组件高度。初始化后，动态修改 margin、 border、 padding 通用属性导致子组件尺寸大于相邻分割线间距的异常情况下，不支持拖动分割线改变子组件的高度。
 
-ColumnSplit通过分割线限制子组件的高度。初始化时，分割线位置根据子组件的高度来计算。 初始化后，动态修改子组件的高度不生效，分割线位置保持不变，可通过拖动相邻分割线改变子组件高度。
-
-初始化后，动态修改 [margin](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#margin)、 [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border)、 [padding](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#padding) 通用属性导致子组件尺寸大于相邻分割线间距的异常情况下，不支持拖动分割线改变子组件的高度。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > ColumnSplit组件
-> [形状裁剪](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md)
-> 的默认值为true。
-> 
-> 与[RowSplit](../../../reference/apis-arkui/arkui-ts/ts-container-rowsplit.md)相同，
+> 形状裁剪
+> 的默认值为true。&gt;
+> 与RowSplit相同，
 > ColumnSplit的分割线可调整上下两侧子组件的高度，
-> 子组件的高度调整范围受其最大最小高度限制。
-> 
-> 支持[clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)、
-> [margin](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#margin)
+> 子组件的高度调整范围受其最大最小高度限制。&gt;
+> 支持clip、
+> margin
 > 等通用属性，未设置clip属性时，其默认值为true。
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,6 +63,8 @@ Defines ColumnSplit Component.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

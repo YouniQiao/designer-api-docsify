@@ -32,13 +32,13 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| overlayColor | [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | 是 | 要叠加在上方的颜色对象。alpha属性决定叠加强度。1.0表示完全覆盖，0.0表示完全透明，混合结果为原色。 |
+| overlayColor | [ColorMetrics](arkts-graphics-colormetrics-c.md) | 是 | 要叠加在上方的颜色对象。alpha属性决定叠加强度。1.0表示完全覆盖，0.0表示完全透明，混合结果为原色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | 新的颜色对象，其red、green、blue和alpha通道均为当前颜色与叠加颜色混合后的结果值。 |
+| [ColorMetrics](arkts-graphics-colormetrics-c.md) | 新的颜色对象，其red、green、blue和alpha通道均为当前颜色与叠加颜色混合后的结果值。 |
 
 **错误码：**
 
@@ -68,7 +68,7 @@ static colorWithSpace(colorSpace: ColorSpace, red: double, green: double, blue: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | ColorSpace | 是 | 颜色空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用 [setWindowColorSpace](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowcolorspace9-1)接口，将当前窗 口设置为广色域模式。 |
+| colorSpace | ColorSpace | 是 | 颜色空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用 [setWindowColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowcolorspace)接口，将当前窗 口设置为广色域模式。 |
 | red | double | 是 | 颜色的R分量（红色），值是0~1的浮动数值。 |
 | green | double | 是 | 颜色的G分量（绿色），值是0~1的浮动数值。 |
 | blue | double | 是 | 颜色的B分量（蓝色），值是0~1的浮动数值。 |
@@ -78,7 +78,7 @@ static colorWithSpace(colorSpace: ColorSpace, red: double, green: double, blue: 
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics类的实例。 |
+| [ColorMetrics](arkts-graphics-colormetrics-c.md) | ColorMetrics类的实例。 |
 
 ## numeric
 
@@ -108,7 +108,7 @@ static numeric(value: int): ColorMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
 
 ## resourceColor
 
@@ -138,7 +138,7 @@ static resourceColor(color: ResourceColor): ColorMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
 
 **错误码：**
 
@@ -178,7 +178,7 @@ static rgba(red: double, green: double, blue: double, alpha?: double): ColorMetr
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
 
 ## BLACK
 

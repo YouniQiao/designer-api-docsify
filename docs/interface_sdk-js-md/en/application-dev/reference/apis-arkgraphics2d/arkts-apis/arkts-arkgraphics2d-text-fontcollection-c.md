@@ -1,6 +1,6 @@
 # FontCollection
 
-Represents a font collection, which manages the font resources required for text typesetting. FontCollection provides font matching and glyph lookup capabilities for [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md), and serves as a fundamental component of the text typesetting pipeline. It provides a global instance ( [getGlobalInstance](#getglobalinstance)) and local instances ( [getLocalInstance](#getlocalinstance)). Fonts loaded by the global instance are shared within the app, making it suitable for common app scenarios. Local instances are independent of each other, and fonts loaded by a local instance take effect only for that instance without affecting others, making them recommended for widget scenarios. Custom fonts can be loaded through [loadFontSync](#loadfontsync) or [loadFont](#loadfont).
+Represents a font collection, which manages the font resources required for text typesetting. FontCollection provides font matching and glyph lookup capabilities for [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md), and serves as a fundamental component of the text typesetting pipeline. It provides a global instance ([getGlobalInstance](#getglobalinstance)) and local instances ([getLocalInstance](#getlocalinstance)). Fonts loaded by the global instance are shared within the app, making it suitable for common app scenarios. Local instances are independent of each other, and fonts loaded by a local instance take effect only for that instance without affecting others, making them recommended for widget scenarios. Custom fonts can be loaded through [loadFontSync](#loadfontsync) or [loadFont](#loadfont).
 
 **Since:** 23
 
@@ -149,7 +149,7 @@ Loads the custom font. This API uses a promise to return the result. In this API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the font. Any string is acceptable. |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to be loaded. The path must be in the format of " **file://** + Absolute path of the font file" or **\\$rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to be loaded. The path must be in the format of "**file://** + Absolute path of the font file" or **\\$rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
 
 **Return value:**
 
@@ -213,7 +213,7 @@ Loads a custom font. This API returns the result synchronously. In this API, **n
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the font to be called after the font is loaded. |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to be imported. The path must be in the format of " **file://** + Absolute path of the font file" or **\\$rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to be imported. The path must be in the format of "**file://** + Absolute path of the font file" or **\\$rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
 
 **Examples**
 
@@ -445,12 +445,7 @@ Sets whether to enable the typesetting paragraph caching. Typesetting paragraph 
 unloadFont(name: string): Promise<void>
 ```
 
-Uninstalls a specified custom font. This API uses a promise to return the result.
-
-After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.
-
-All layout objects that use the font alias must be destroyed and recreated.
-
+Uninstalls a specified custom font. This API uses a promise to return the result.After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.All layout objects that use the font alias must be destroyed and recreated.  
 - Unloading a non-existent font alias does not produce any effect and does not throw an error. - This operation only affects future font usage. - Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs).
 
 **Since:** 23
@@ -513,12 +508,7 @@ struct UnloadFontTest {
 unloadFontSync(name: string): void
 ```
 
-Uninstalls a specified custom font. This API is synchronous.
-
-After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.
-
-All layout objects that use the font alias must be destroyed and recreated.
-
+Uninstalls a specified custom font. This API is synchronous.After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.All layout objects that use the font alias must be destroyed and recreated.  
 - Unloading a non-existent font alias does not produce any effect and does not throw an error. - This operation only affects future font usage. - Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs).
 
 **Since:** 23

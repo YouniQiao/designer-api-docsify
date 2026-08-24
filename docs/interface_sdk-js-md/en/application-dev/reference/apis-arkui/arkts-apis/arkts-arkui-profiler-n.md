@@ -1,8 +1,6 @@
 # Profiler
 
-Profiler tools for inspectors.
-
-@namespace Profiler
+Profiler tools for inspectors.@namespace Profiler
 
 **Since:** 8
 
@@ -15,7 +13,6 @@ Profiler tools for inspectors.
 ## Modules to Import
 
 ```TypeScript
-import { inspector } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -1,8 +1,6 @@
 # StackOptions
 
-Options used to construct the stack.
-
-@interface StackOptions
+Options used to construct the stack.@interface StackOptions
 
 **Since:** 23
 
@@ -18,9 +16,7 @@ Options used to construct the stack.
 alignContent?: Alignment
 ```
 
-Alignment of child components in the container.
-
-Anonymous Object Rectification
+Alignment of child components in the container.Anonymous Object Rectification
 
 **Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 

@@ -58,7 +58,10 @@ Set router page stack can be recovered after application is destroyed. When rout
 url: string
 ```
 
-URI of the destination page, which supports the following formats: 1. Absolute path of the page, which is provided by the pages list in the config.json file. Example: pages/index/index pages/detail/detail 2. Particular path. If the URI is a slash (/), the home page is displayed.
+URI of the destination page, which supports the following formats:
+1. Absolute path of the page, which is provided by the pages list in the config.json file.
+Example: pages/index/index pages/detail/detail
+2. Particular path. If the URI is a slash (/), the home page is displayed.
 
 **Type:** string
 

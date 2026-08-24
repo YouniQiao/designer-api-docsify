@@ -1,8 +1,6 @@
 # DragResult
 
-Enum for Drag Result.
-
-@enum { number }
+Enum for Drag Result.@enum { number }
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # RotationGesture
 
-Defines RotationGesture.
-
-@extends Gesture
+Defines RotationGesture.@extends Gesture
 
 **Inheritance/Implementation:** RotationGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 

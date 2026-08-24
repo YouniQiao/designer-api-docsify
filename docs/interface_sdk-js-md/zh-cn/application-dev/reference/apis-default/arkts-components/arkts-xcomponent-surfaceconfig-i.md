@@ -16,11 +16,7 @@
 isOpaque?: boolean
 ```
 
-XComponent持有的Surface在渲染时是否需要被视为不透明，未设置时默认取值为false， 即在渲染时会应用Surface中绘制内容像素的透明度。
-
-true：表示需要被视为不透明；false：表示不需要被视为不透明。
-
-默认值：false
+XComponent持有的Surface在渲染时是否需要被视为不透明，未设置时默认取值为false， 即在渲染时会应用Surface中绘制内容像素的透明度。true：表示需要被视为不透明；false：表示不需要被视为不透明。默认值：false
 
 **类型：** boolean
 

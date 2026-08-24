@@ -1,8 +1,6 @@
 # EllipseOptions
 
-用于描述Ellipse组件绘制属性。
-
-@interface EllipseOptions
+用于描述Ellipse组件绘制属性。@interface EllipseOptions
 
 **起始版本：** 23
 

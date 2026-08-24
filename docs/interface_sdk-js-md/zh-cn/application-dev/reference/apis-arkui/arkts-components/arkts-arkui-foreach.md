@@ -1,7 +1,6 @@
 # ForEach
 
 ForEach接口基于数组类型数据进行循环渲染，可基于数组数据快速生成结构相同、内容不同的子组件，适用于动态列表、批量数据展示等场景，需与容器组件配合使用。
-
 开发者指南见：[ForEach开发者指南](../../../ui/rendering-control/arkts-rendering-control-foreach.md)。
 
 ## ForEach

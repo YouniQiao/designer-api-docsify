@@ -1,8 +1,6 @@
 # AlertDialogParamWithOptions
 
-Defines the dialog param with options.
-
-@extends AlertDialogParam @interface AlertDialogParamWithOptions
+Defines the dialog param with options.@extends AlertDialogParam @interface AlertDialogParamWithOptions
 
 **Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-alertdialog-alertdialogparam-i.md)
 

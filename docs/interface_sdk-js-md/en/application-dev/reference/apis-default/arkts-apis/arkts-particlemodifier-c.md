@@ -1,8 +1,6 @@
 # ParticleModifier
 
-Defines Particle Modifier
-
-@implements { ParticleAttribute, AttributeModifier&lt;ParticleAttribute&gt; }
+Defines Particle Modifier@implements { ParticleAttribute, AttributeModifier&lt;ParticleAttribute&gt; }
 
 **Inheritance/Implementation:** ParticleModifier implements ParticleAttribute, AttributeModifier<ParticleAttribute>
 

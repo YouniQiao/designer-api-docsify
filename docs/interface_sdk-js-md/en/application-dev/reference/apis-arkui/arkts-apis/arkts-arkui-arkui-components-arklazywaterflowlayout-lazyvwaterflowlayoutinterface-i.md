@@ -1,8 +1,6 @@
 # LazyVWaterFlowLayoutInterface
 
-Defines the lazy vertical waterflow layout component.
-
-@interface LazyVWaterFlowLayoutInterface
+Defines the lazy vertical waterflow layout component.@interface LazyVWaterFlowLayoutInterface
 
 **Since:** 26.0.0
 

@@ -1,8 +1,6 @@
 # DatePickerMode
 
-Defines the mode of the date picker.
-
-@enum { int }
+Defines the mode of the date picker.@enum { int }
 
 **Since:** 23
 

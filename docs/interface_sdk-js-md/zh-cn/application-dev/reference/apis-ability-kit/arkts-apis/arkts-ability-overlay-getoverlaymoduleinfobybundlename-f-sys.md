@@ -13,9 +13,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string,
       callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-获取指定应用中所有module的OverlayModuleInfo信息。使用callback异步回调。
-
-指定应用是调用方自身时不需要权限。
+获取指定应用中所有module的OverlayModuleInfo信息。使用callback异步回调。指定应用是调用方自身时不需要权限。
 
 **起始版本：** 23
 
@@ -117,9 +115,7 @@ try {
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-获取指定应用中指定module的OverlayModuleInfo信息。使用callback异步回调。
-
-指定应用是调用方自身时不需要权限。
+获取指定应用中指定module的OverlayModuleInfo信息。使用callback异步回调。指定应用是调用方自身时不需要权限。
 
 **起始版本：** 23
 
@@ -162,9 +158,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>
 ```
 
-获取指定应用中指定module的OverlayModuleInfo信息。使用promise异步回调。
-
-指定应用是调用方自身时不需要权限。
+获取指定应用中指定module的OverlayModuleInfo信息。使用promise异步回调。指定应用是调用方自身时不需要权限。
 
 **起始版本：** 23
 
@@ -187,7 +181,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: strin
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise对象，返回&lt;Array&lt; [OverlayModuleInfo]{ |
+| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise对象，返回&lt;Array&lt;[OverlayModuleInfo]{ |
 
 **错误码：**
 

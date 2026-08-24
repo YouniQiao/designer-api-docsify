@@ -15,6 +15,8 @@ export declare function Rect(
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Rect(    options?: RectOptions | RoundedRectOptions): RectAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Rect(    options?: RectOptions | RoundedRectOptions): RectAttribute-End-->
@@ -25,7 +27,7 @@ export declare function Rect(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-rect-roundedrectoptions-i.md) | 否 | Rect绘制属性。异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-rect-roundedrectoptions-i.md) | 否 | Rect绘制属性。 异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 **返回值：**
 
@@ -48,6 +50,8 @@ Defines Rect Component.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

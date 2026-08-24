@@ -16,9 +16,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ColumnLayoutAlgorithmOptions](arkts-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | 设置垂直方向线性布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
-| [GridLayoutAlgorithmOptions](arkts-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 设置网格布局算法的列数模板、列间距、行间距。 |
+| [ColumnLayoutAlgorithmOptions](arkts-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | 设置垂直方向线性布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。@interface ColumnLayoutAlgorithmOptions |
+| [GridLayoutAlgorithmOptions](arkts-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 设置网格布局算法的列数模板、列间距、行间距。@interface GridLayoutAlgorithmOptions |
 | [LayoutAlgorithm](arkts-layoutalgorithm-i.md) | DynamicLayout组件支持的布局算法基础类型。 |
-| [RowLayoutAlgorithmOptions](arkts-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | 设置水平方向线性布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
-| [StackLayoutAlgorithmOptions](arkts-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | 设置堆叠布局算法的对齐方式。 |
+| [RowLayoutAlgorithmOptions](arkts-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | 设置水平方向线性布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。@interface RowLayoutAlgorithmOptions |
+| [StackLayoutAlgorithmOptions](arkts-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | 设置堆叠布局算法的对齐方式。@interface StackLayoutAlgorithmOptions |
 

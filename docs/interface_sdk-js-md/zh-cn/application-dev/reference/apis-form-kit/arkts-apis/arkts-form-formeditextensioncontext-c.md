@@ -16,8 +16,7 @@ FormEditExtensionContext是 [FormEditExtensionAbility](arkts-form-app-form-forme
 startSecondPage(want: Want): Promise<AbilityResult>
 ```
 
-拉起需要被编辑的卡片提供方页面。使用Promise异步回调。
-
+拉起需要被编辑的卡片提供方页面。使用Promise异步回调。  
 - 用户在卡片编辑界面点击编辑按钮，需要打开卡片提供方的编辑页面。 - 用户需要修改卡片配置或内容时，拉起卡片提供方应用进行编辑。
 
 **起始版本：** 23

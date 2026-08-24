@@ -1,8 +1,6 @@
 # LocalizedAlignRuleOptions
 
-Defines the Localized align rule options of relative container.
-
-@interface LocalizedAlignRuleOptions
+Defines the Localized align rule options of relative container.@interface LocalizedAlignRuleOptions
 
 **起始版本：** 12
 

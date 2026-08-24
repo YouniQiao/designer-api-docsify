@@ -56,7 +56,7 @@ contentColor?: string
 
 **类型：** string
 
-**默认值：** Set different default values according to the 'backgroundColor'. - If 'backgroundColor' is provided, when 'backgroundColor' is light color, default value is '#99FFFFFF', otherwise is '#99000000' - If 'backgroundColor' is not provided, default value is $r('sys.color.font_secondary')
+**默认值：** Set different default values according to the 'backgroundColor'. - If 'backgroundColor' is provided, when 'backgroundColor' is light color, default value is '#99FFFFFF', otherwise is '#99000000'- If 'backgroundColor' is not provided, default value is $r('sys.color.font_secondary')
 
 **起始版本：** 26.0.0
 

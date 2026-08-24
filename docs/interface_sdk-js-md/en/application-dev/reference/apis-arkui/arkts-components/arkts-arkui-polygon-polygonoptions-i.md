@@ -1,8 +1,6 @@
 # PolygonOptions
 
-Define options used to construct a polygon.
-
-@interface PolygonOptions
+Define options used to construct a polygon.@interface PolygonOptions
 
 **Since:** 23
 

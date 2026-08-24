@@ -59,15 +59,12 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 Preloads child nodes. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first
-> preloading in the onAppear lifecycle of **Tabs**.
-> 
+> preloading in the onAppear lifecycle of **Tabs**.&gt;
 > - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown
 > when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when
-> calling this API.
-> 
+> calling this API.&gt;
 > - When using **preloadItems** to preload tabs, you are advised to use **ComponentContent** to customize the
 > content displayed on the tab bar. For details, see
 > [Example 10](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#example-10-setting-tabbar-using-componentcontent).
@@ -108,8 +105,7 @@ setTabBarOpacity(opacity: number): void
 
 Sets the opacity of the tab bar.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When a **Tabs** component is bound to a scrollable container using APIs like
 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable)
 > or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the
@@ -141,8 +137,7 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 Sets the translation distance of the tab bar.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When a **Tabs** component is bound to a scrollable container using APIs like
 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable)
 > or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the

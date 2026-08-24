@@ -16,8 +16,6 @@ USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md)中可以�
 
 ```TypeScript
 import { usb } from '@kit.BasicServicesKit';
-import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## attributes

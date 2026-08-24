@@ -1,8 +1,6 @@
 # LazyGridLayoutAttribute
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** LazyGridLayoutAttribute extends CommonMethod<T>
 
@@ -85,10 +83,8 @@ header(builder: CustomBuilder | undefined): T
 
 设置LazyVGridLayout的头部组件。
 
-> **说明：**
-> 
-> 头部组件位于容器顶部区域，通常用于展示标题、分组说明或其他固定在内容前方的元素。
-> 
+> **说明：**&gt;
+> 头部组件位于容器顶部区域，通常用于展示标题、分组说明或其他固定在内容前方的元素。&gt;
 > 当本组件随滚动容器滚动至可视区域内，且通过[sticky](#sticky)设置了header吸顶模式时，header会吸附在滚动容器可视区域顶部。
 
 **起始版本：** 26.0.0
@@ -121,12 +117,9 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 设置onVisibleIndexesChange回调函数。当LazyVGridLayout可视区域内子组件的索引值发生变化时触发回调，返回可视区域内子组件的起始索引值和结束索引值。
 
-> **说明：**
-> 
-> 当父组件设置主轴方向尺寸时，LazyVGridLayout按照父组件可视区域进行懒加载。此时onVisibleIndexesChange回调中start返回当前可视区域起始位置子组件的索引值，end返回当前可视区域结束位置子组件的 索引值。
-> 
-> 当父组件未设置主轴方向尺寸时，LazyVGridLayout会被内容撑开，导致所有子组件都会被加载布局。此时onVisibleIndexesChange回调中start返回0，end返回数据源最后一个子组件的索引值。
-> 
+> **说明：**&gt;
+> 当父组件设置主轴方向尺寸时，LazyVGridLayout按照父组件可视区域进行懒加载。此时onVisibleIndexesChange回调中start返回当前可视区域起始位置子组件的索引值，end返回当前可视区域结束位置子组件的 索引值。&gt;
+> 当父组件未设置主轴方向尺寸时，LazyVGridLayout会被内容撑开，导致所有子组件都会被加载布局。此时onVisibleIndexesChange回调中start返回0，end返回数据源最后一个子组件的索引值。&gt;
 > 此处的父组件指最靠近当前组件的上层滚动组件，其他文档下的具体含义请参考对应内容。
 
 **起始版本：** 26.0.0

@@ -1,8 +1,6 @@
 # InputEventInterceptAction
 
-Defines the input event intercept action.
-
-@enum { number }
+Defines the input event intercept action.@enum { number }
 
 **Since:** 26.0.0
 

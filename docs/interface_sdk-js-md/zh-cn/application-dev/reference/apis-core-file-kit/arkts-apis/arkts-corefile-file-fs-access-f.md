@@ -14,9 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 ```
 
-检查文件或目录是否存在，或校验操作权限。使用Promise异步回调。
-
-校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+检查文件或目录是否存在，或校验操作权限。使用Promise异步回调。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 9
 
@@ -218,9 +216,7 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>
 ```
 
-检查文件或目录是否在本地，或校验操作权限。使用Promise异步回调。
-
-校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+检查文件或目录是否在本地，或校验操作权限。使用Promise异步回调。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 12
 

@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [CalendarPickerModifier](arkts-arkui-calendarpickermodifier-c.md) | Defines CalendarPicker Modifier |
+| [CalendarPickerModifier](arkts-arkui-calendarpickermodifier-c.md) | Defines CalendarPicker Modifier@implements { CalendarPickerAttribute, AttributeModifier&lt;CalendarPickerAttribute&gt; } |
 

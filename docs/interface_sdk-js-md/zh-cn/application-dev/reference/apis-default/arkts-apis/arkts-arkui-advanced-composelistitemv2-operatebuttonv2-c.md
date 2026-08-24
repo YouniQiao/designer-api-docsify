@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class OperateButtonV2--><!--Device-unnamed-export declare class OperateButtonV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ OperateButtonV2的构造函数。
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 按钮的无障碍描述。
@@ -54,6 +55,8 @@ OperateButtonV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateButtonV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateButtonV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -63,8 +66,7 @@ OperateButtonV2的构造函数。
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 按钮的无障碍重要性。
@@ -77,6 +79,8 @@ OperateButtonV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateButtonV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateButtonV2-@Trace  public accessibilityLevel?: string-End-->
@@ -86,8 +90,7 @@ OperateButtonV2的构造函数。
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
 按钮的无障碍文本属性。
@@ -98,6 +101,8 @@ OperateButtonV2的构造函数。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OperateButtonV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateButtonV2-@Trace  public accessibilityText?: ResourceStr-End-->
@@ -107,8 +112,7 @@ OperateButtonV2的构造函数。
 ## text
 
 ```TypeScript
-@Trace
-  public text?: ResourceStr
+public text?: ResourceStr
 ```
 
 按钮文本。
@@ -118,6 +122,8 @@ OperateButtonV2的构造函数。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

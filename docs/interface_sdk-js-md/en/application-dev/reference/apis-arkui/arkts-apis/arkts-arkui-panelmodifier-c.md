@@ -1,8 +1,6 @@
 # PanelModifier
 
-Defines Panel Modifier
-
-@extends PanelAttribute @implements AttributeModifier&lt;PanelAttribute&gt;
+Defines Panel Modifier@extends PanelAttribute @implements AttributeModifier&lt;PanelAttribute&gt;
 
 **Inheritance/Implementation:** PanelModifier extends [PanelAttribute](../arkts-components/arkts-arkui-panel-attribute.md#panelattribute) and implements AttributeModifier<PanelAttribute>
 

@@ -26,9 +26,9 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 | [offAcbStateChange](arkts-connectivity-remotedevice-offacbstatechange-f.md) | 取消订阅逻辑链路连接状态变化事件。使用callback异步回调。 |
 | [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md) | 取消订阅连接状态变化事件。使用callback异步回调。 |
 | [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md) | 取消订阅配对状态变化事件。使用callback异步回调。 |
-| [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md) | 订阅逻辑链路连接状态变化事件。使用callback异步回调。适用于需要在逻辑链路建立或断开时触发相应处理的场景，如数据传输前的链路就绪检查或断连后的资源清理。与 [remoteDevice.onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) 监听设备层级连接状态不同，本接口监听逻辑链路层级的连接状态。 |
-| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) | 订阅连接状态变化事件。使用callback异步回调。与 [remoteDevice.onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md)监听逻辑链路层级连接状态 不同，本接口监听设备层级的连接状态变化。 |
-| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md) | 订阅配对状态变化事件。使用callback异步回调。 |
+| [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md) | 订阅逻辑链路连接状态变化事件。使用callback异步回调。适用于需要在逻辑链路建立或断开时触发相应处理的场景，如数据传输前的链路就绪检查或断连后的资源清理。与 [remoteDevice.onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) 监听设备层级连接状态不同，本接口监听逻辑链路层级的连接状态。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。 |
+| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) | 订阅连接状态变化事件。使用callback异步回调。与 [remoteDevice.onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md)监听逻辑链路层级连接状态 不同，本接口监听设备层级的连接状态变化。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。 |
+| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md) | 订阅配对状态变化事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -36,7 +36,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [offPairingRequest](arkts-connectivity-remotedevice-offpairingrequest-f-sys.md) | 取消订阅来自远端星闪设备的配对请求事件。 |
-| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md) | 订阅来自远程NearLink设备的配对请求事件。 如果用户被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址 |
+| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md) | 订阅来自远程NearLink设备的配对请求事件。 如果用户被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。 |
 <!--DelEnd-->
 
 ### 接口

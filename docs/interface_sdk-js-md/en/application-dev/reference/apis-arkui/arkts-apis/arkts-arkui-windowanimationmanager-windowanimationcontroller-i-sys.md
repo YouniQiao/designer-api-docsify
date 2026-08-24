@@ -1,8 +1,6 @@
 # WindowAnimationController (System API)
 
-Window animation controller.
-
-@interface WindowAnimationController
+Window animation controller.@interface WindowAnimationController
 
 **Since:** 23
 

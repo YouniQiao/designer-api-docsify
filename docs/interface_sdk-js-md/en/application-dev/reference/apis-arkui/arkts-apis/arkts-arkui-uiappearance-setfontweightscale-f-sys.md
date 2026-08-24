@@ -12,8 +12,7 @@ import { uiAppearance } from '@kit.ArkUI';
 function setFontWeightScale(fontWeightScale: number): Promise<void>
 ```
 
-Sets the system font weight scale.
-
+Sets the system font weight scale.  
 **Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 12

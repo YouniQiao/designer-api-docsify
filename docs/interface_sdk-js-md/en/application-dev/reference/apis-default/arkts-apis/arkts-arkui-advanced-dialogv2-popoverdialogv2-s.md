@@ -1,12 +1,12 @@
 # PopoverDialogV2
 
-Declare struct PopoverDialogV2
-
-@struct { PopoverDialogV2 }
+Declare struct PopoverDialogV2@struct { PopoverDialogV2 }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct PopoverDialogV2--><!--Device-unnamed-export declare struct PopoverDialogV2-End-->
 
@@ -20,8 +20,7 @@ Declare struct PopoverDialogV2
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +40,7 @@ The method to build component.
 ## $visible
 
 ```TypeScript
-@Event
-  $visible?: PopoverDialogV2OnVisibleChange
+$visible?: PopoverDialogV2OnVisibleChange
 ```
 
 Sets the callback when visibility changed.
@@ -51,6 +51,8 @@ Sets the callback when visibility changed.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PopoverDialogV2-@Event  $visible?: PopoverDialogV2OnVisibleChange--><!--Device-PopoverDialogV2-@Event  $visible?: PopoverDialogV2OnVisibleChange-End-->
@@ -60,9 +62,7 @@ Sets the callback when visibility changed.
 ## popover
 
 ```TypeScript
-@Require
-  @Param
-  popover: PopoverDialogV2Options
+popover: PopoverDialogV2Options
 ```
 
 Sets the PopoverDialogV2 options.
@@ -73,6 +73,8 @@ Sets the PopoverDialogV2 options.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Require, @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PopoverDialogV2-@Require  @Param  popover: PopoverDialogV2Options--><!--Device-PopoverDialogV2-@Require  @Param  popover: PopoverDialogV2Options-End-->
@@ -82,8 +84,7 @@ Sets the PopoverDialogV2 options.
 ## targetBuilder
 
 ```TypeScript
-@BuilderParam
-  targetBuilder: CustomBuilder
+targetBuilder: CustomBuilder
 ```
 
 Sets the targetBuilder content.
@@ -94,6 +95,8 @@ Sets the targetBuilder content.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @BuilderParam
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PopoverDialogV2-@BuilderParam  targetBuilder: CustomBuilder--><!--Device-PopoverDialogV2-@BuilderParam  targetBuilder: CustomBuilder-End-->
@@ -103,9 +106,7 @@ Sets the targetBuilder content.
 ## visible
 
 ```TypeScript
-@Require
-  @Param
-  visible: boolean
+visible: boolean
 ```
 
 Sets the PopoverDialogV2 Visible Status.
@@ -115,6 +116,8 @@ Sets the PopoverDialogV2 Visible Status.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

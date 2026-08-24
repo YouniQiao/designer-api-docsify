@@ -21,13 +21,7 @@ ChipGroupSpaceOptions 定义了ChipGroup左右内边距，以及Chip与Chip之�
 endSpace?: Length
 ```
 
-右侧内边距（不支持百分比）。
-
-默认值：16
-
-单位：vp
-
-如果为undefined，则使用默认值。
+右侧内边距（不支持百分比）。默认值：16单位：vp如果为undefined，则使用默认值。
 
 **类型：** Length
 
@@ -47,23 +41,7 @@ endSpace?: Length
 itemSpace?: string | double
 ```
 
-Chip与Chip之间的间距（不支持百分比）。
-
-取值范围：
-
-number类型: ≥ 0 的数值（如：0、8、16、24.5）。
-
-string类型: 单位为fp|vp|px|lpx且数值部分 ≥ 0 的字符串（如："8vp"、"16fp"、"12px"、"10lpx"）。
-
-double类型: ≥ 0 的数值（如：0、8、16、24.5）。
-
-不支持: 负数、百分比单位、无效字符串格式。
-
-默认值：8
-
-单位：vp
-
-为undefined时，itemSpace采取默认值。
+Chip与Chip之间的间距（不支持百分比）。取值范围：number类型: ≥ 0 的数值（如：0、8、16、24.5）。string类型: 单位为fp|vp|px|lpx且数值部分 ≥ 0 的字符串（如："8vp"、"16fp"、"12px"、"10lpx"）。double类型: ≥ 0 的数值（如：0、8、16、24.5）。不支持: 负数、百分比单位、无效字符串格式。默认值：8单位：vp为undefined时，itemSpace采取默认值。
 
 **类型：** string \| double
 
@@ -83,13 +61,7 @@ double类型: ≥ 0 的数值（如：0、8、16、24.5）。
 startSpace?: Length
 ```
 
-左侧内边距（不支持百分比）。
-
-默认值：16
-
-单位：vp
-
-为undefined时，startSpace取默认值。
+左侧内边距（不支持百分比）。默认值：16单位：vp为undefined时，startSpace取默认值。
 
 **类型：** Length
 

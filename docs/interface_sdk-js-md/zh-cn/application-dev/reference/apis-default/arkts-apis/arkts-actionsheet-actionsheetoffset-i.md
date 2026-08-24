@@ -16,13 +16,8 @@
 dx: double | string | Resource
 ```
 
-弹出窗口相对于对齐位置dx的偏移量。
-
-需要显式指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。
-
-**说明：**
-
-不指定像素单位时，默认单位vp，如'10'，等同于10。
+弹出窗口相对于对齐位置dx的偏移量。需要显式指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。  
+**说明：**不指定像素单位时，默认单位vp，如'10'，等同于10。
 
 **类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -42,13 +37,8 @@ dx: double | string | Resource
 dy: double | string | Resource
 ```
 
-弹出窗口相对于对齐位置dy的偏移量。
-
-需要显式指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。
-
-**说明：**
-
-不指定像素单位时，默认单位vp，如'10'，等同于10。
+弹出窗口相对于对齐位置dy的偏移量。需要显式指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。  
+**说明：**不指定像素单位时，默认单位vp，如'10'，等同于10。
 
 **类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 

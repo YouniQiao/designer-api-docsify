@@ -1,8 +1,6 @@
 # InlineStyleOptions
 
-InlineStyleOptions定义了数值内联型Counter的属性和事件。
-
-继承于[CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-commonoptions-c.md)。
+InlineStyleOptions定义了数值内联型Counter的属性和事件。继承于[CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-commonoptions-c.md)。
 
 **继承/实现关系：** InlineStyleOptions extends [CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-commonoptions-c.md)
 

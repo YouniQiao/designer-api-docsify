@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## disableNetwork
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function disableNetwork(netId: number): boolean
 ```
 
-Disables a specified network.
-
-<p>The disabled network will not be associated with again.
+Disables a specified network.<p>The disabled network will not be associated with again.
 
 **Since:** 7
 

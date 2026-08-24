@@ -1,8 +1,6 @@
 # AnimatedDrawableDescriptor
 
-Define the data structure for PixelMap animations.
-
-@extends DrawableDescriptor
+Define the data structure for PixelMap animations.@extends DrawableDescriptor
 
 **Inheritance/Implementation:** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-drawabledescriptor-c.md)
 

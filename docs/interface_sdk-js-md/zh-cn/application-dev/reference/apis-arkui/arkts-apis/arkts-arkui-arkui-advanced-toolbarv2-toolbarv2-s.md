@@ -4,6 +4,8 @@ Declare Component ToolBarV2
 
 **起始版本：** 18
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct ToolBarV2--><!--Device-unnamed-export declare struct ToolBarV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,8 +19,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 ## activatedIndex
 
 ```TypeScript
-@Param
-  activatedIndex?: number
+activatedIndex?: number
 ```
 
 Define toolbarV2 activate item index, default is -1.
@@ -26,6 +27,8 @@ Define toolbarV2 activate item index, default is -1.
 **类型：** number
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +41,7 @@ Define toolbarV2 activate item index, default is -1.
 ## dividerModifier
 
 ```TypeScript
-@Param
-  dividerModifier?: DividerModifier
+dividerModifier?: DividerModifier
 ```
 
 Define divider Modifier.
@@ -47,6 +49,8 @@ Define divider Modifier.
 **类型：** DividerModifier
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,9 +63,7 @@ Define divider Modifier.
 ## toolBarList
 
 ```TypeScript
-@Require
-  @Param
-  toolBarList: ToolBarV2Item[]
+toolBarList: ToolBarV2Item[]
 ```
 
 Define toolbarV2 item list.
@@ -69,6 +71,8 @@ Define toolbarV2 item list.
 **类型：** [ToolBarV2Item](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2item-c.md)[]
 
 **起始版本：** 18
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,8 +85,7 @@ Define toolbarV2 item list.
 ## toolBarModifier
 
 ```TypeScript
-@Param
-  toolBarModifier?: ToolBarV2Modifier
+toolBarModifier?: ToolBarV2Modifier
 ```
 
 Define toolbarV2 modifier.
@@ -90,6 +93,8 @@ Define toolbarV2 modifier.
 **类型：** [ToolBarV2Modifier](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2modifier-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

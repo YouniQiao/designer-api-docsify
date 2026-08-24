@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [RefreshModifier(Refresh modifier file，defines modifier and function.)](arkts-arkui-refreshmodifier-c.md) | Defines Refresh Modifier |
+| [RefreshModifier(Refresh modifier file，defines modifier and function.)](arkts-arkui-refreshmodifier-c.md) | Defines Refresh Modifier@extends RefreshAttribute @implements AttributeModifier&lt;RefreshAttribute&gt; |
 

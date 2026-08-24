@@ -1,6 +1,6 @@
 # SystemVolumeFilter（系统接口）
 
-系统音量过滤器信息。
+描述系统音量过滤器。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## uid
@@ -23,7 +22,7 @@ import { audioHaptic } from '@kit.AudioKit';
 uid: int
 ```
 
-应用程序uid。
+应用程序的UID。
 
 **类型：** int
 

@@ -2,10 +2,8 @@
 
 Defines a pen, which is used to describe the style and color to outline a shape.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -1063,7 +1061,7 @@ Sets a color for this pen. This API provides better performance than [setColor](
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alpha | int | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
-| red | int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255 . Any passed-in floating point number is rounded down. |
+| red | int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
 | green | int | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
 | blue | int | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
 
@@ -1607,7 +1605,7 @@ Sets the stroke width for this pen. The value **0** is treated as an unusually t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | double | Yes | Stroke width. The value is a floating point number. If a value less than 1 is passed in , the value **1** is used. |
+| width | double | Yes | Stroke width. The value is a floating point number. If a value less than 1 is passed in, the value **1** is used. |
 
 **Error codes:**
 

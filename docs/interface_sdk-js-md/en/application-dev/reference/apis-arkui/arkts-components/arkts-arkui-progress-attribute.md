@@ -1,8 +1,6 @@
 # Progress properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
-
-The [universal events][universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.The [universal events][universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** ProgressAttribute extends CommonMethod<ProgressAttribute<Type>>
 
@@ -23,11 +21,7 @@ The [universal events][universal events](../../../reference/apis-arkui/arkui-ts/
 color(value: ResourceColor | LinearGradient)
 ```
 
-Sets the foreground color of the progress indicator.
-
-Since API version 10, LinearGradient can be used to set a gradient color for the ring style. Setting opacity is not recommended for the ring type. If opacity is required, use DataPanel.
-
-Since API version 23, LinearGradient can be used to set gradient colors for the linear and capsule styles. In API version 22 and earlier versions, setting gradient colors via **LinearGradient** for the **Linear** and **Capsule** styles will not render the custom colors; the system's default theme colors will be used instead.
+Sets the foreground color of the progress indicator.Since API version 10, LinearGradient can be used to set a gradient color for the ring style. Setting opacity is not recommended for the ring type. If opacity is required, use DataPanel.Since API version 23, LinearGradient can be used to set gradient colors for the linear and capsule styles. In API version 22 and earlier versions, setting gradient colors via **LinearGradient** for the **Linear** and **Capsule** styles will not render the custom colors; the system's default theme colors will be used instead.
 
 **Since:** 7
 
@@ -77,8 +71,7 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 Sets whether to enable privacy-sensitive mode.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called in attributeModifier since API version 20.
 
 **Since:** 12
@@ -121,7 +114,7 @@ Sets the component style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Style | Yes | Component style.<br>- **CapsuleStyleOptions**: capsule style.<br>- **RingStyleOptions**: ring style.<br>- **LinearStyleOptions**: linear style.<br>- **ScaleRingStyleOptions**: determinate ring style.&lt; br&gt;- **EclipseStyleOptions**: eclipse style.<br>- **ProgressStyleOptions**: **strokeWidth**, **scaleCount**, and **scaleWidth** of a progress indicator. This parameter is valid only for the progress indicator that supports these style settings. |
+| value | Style | Yes | Component style.<br>- **CapsuleStyleOptions**: capsule style.<br>- **RingStyleOptions**: ring style.<br>- **LinearStyleOptions**: linear style.<br>- **ScaleRingStyleOptions**: determinate ring style.<br>- **EclipseStyleOptions**: eclipse style.<br>- **ProgressStyleOptions**: **strokeWidth**, **scaleCount**, and **scaleWidth** of a progress indicator. This parameter is valid only for the progress indicator that supports these style settings. |
 
 ## value
 

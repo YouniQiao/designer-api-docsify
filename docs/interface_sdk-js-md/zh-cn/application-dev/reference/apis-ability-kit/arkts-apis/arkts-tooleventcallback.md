@@ -7,7 +7,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ToolEventCallback](arkts-ability-tooleventcallback-i-sys.md) | ToolEventCallback用于接收CLI工具进程运行期间产生的会话事件。 |
+| [ToolEventCallback](arkts-ability-tooleventcallback-i-sys.md) | ToolEventCallback用于接收CLI工具进程运行期间产生的会话事件。@interface ToolEventCallback |
 <!--DelEnd-->
 
 <!--Del-->

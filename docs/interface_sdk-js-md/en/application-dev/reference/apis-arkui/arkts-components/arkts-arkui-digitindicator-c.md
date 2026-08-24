@@ -2,14 +2,11 @@
 
 A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count
-> placeholder nodes.
-> 
+> placeholder nodes.&gt;
 > The maximum value of maxFontScale for the digit-style navigation indicator is
-> **2**.
-> 
+> **2**.&gt;
 > The mirror display of the page number depends on the RTL status of the system.
 
 **Inheritance/Implementation:** DigitIndicator extends Indicator<DigitIndicator>
@@ -33,13 +30,11 @@ constructor()
 
 A constructor used to create a **DotIndicator** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
 > distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
 > The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and
-> **selectedItemHeight**.
-> 
+> **selectedItemHeight**.&gt;
 > - If there are too many pages and dot-style indicators exceed the page, you are advised to use the
 > **maxDisplayCount** parameter to set the number of dots to be displayed.
 
@@ -79,7 +74,7 @@ Sets the font style of the digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | Yes | Font style of the digit-style navigation indicator.<br>Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.<br>Default value:<br>{ size:?14,?weight:?FontWeight.Normal?} |
+| value | Font | Yes | Font style of the digit-style navigation indicator.<br>Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.<br>Default value:<br>{size:?14,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 

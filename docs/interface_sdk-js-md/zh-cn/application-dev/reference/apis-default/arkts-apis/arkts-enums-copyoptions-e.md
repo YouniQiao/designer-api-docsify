@@ -1,8 +1,6 @@
 # CopyOptions
 
-Indicates the share option.
-
-@enum { number }
+Indicates the share option.@enum { number }
 
 **起始版本：** 23
 

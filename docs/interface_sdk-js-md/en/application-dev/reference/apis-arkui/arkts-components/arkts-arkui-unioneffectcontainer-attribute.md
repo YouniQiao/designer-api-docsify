@@ -2,8 +2,7 @@
 
 Universal attributes are supported. The width and height can be set.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - During the union, the container exhibits a sticky non-linear deformation effect, and its border will show a sticky
 > effect after union. Therefore, border-related capabilities will be affected. Currently, the following border-
 > related attributes support the union deformation effect:
@@ -12,8 +11,7 @@ Universal attributes are supported. The width and height can be set.
 > shadow,
 > backgroundColor, and
 > [pointLight](#pointlight). The above effects are drawn on the shape after union,
-> which is the drawing part of **UnionEffectContainer**.
-> 
+> which is the drawing part of **UnionEffectContainer**.&gt;
 > - If the attributes related to the border and supporting the union deformation effect are set on the component, the
 > drawing is displayed on the component. If the same attribute is set on the descendant component, the two attributes
 > are set independently. The drawing is performed twice, once in the drawing of the **UnionEffectContainer**

@@ -1,8 +1,6 @@
 # @ohos.screenLock
 
-systemScreenLock
-
-@namespace screenLock
+systemScreenLock@namespace screenLock
 
 **Since:** 23
 
@@ -65,8 +63,8 @@ import { screenLock } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [AuthState](arkts-basicservices-screenlock-authstate-e-sys.md) | Indicates the screen lock authentication state. |
-| [StrongAuthReasonFlags](arkts-basicservices-screenlock-strongauthreasonflags-e-sys.md) | Indicates the strong authentication reason flags used to request. |
+| [AuthState](arkts-basicservices-screenlock-authstate-e-sys.md) | Indicates the screen lock authentication state.@enum { int } |
+| [StrongAuthReasonFlags](arkts-basicservices-screenlock-strongauthreasonflags-e-sys.md) | Indicates the strong authentication reason flags used to request.@enum { int } |
 | [UnlockPolicy](arkts-basicservices-screenlock-unlockpolicy-e-sys.md) | Indicates the screen lock authentication policy used to unlock the screen. |
 <!--DelEnd-->
 

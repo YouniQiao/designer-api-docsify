@@ -1,8 +1,6 @@
 # @ohos.intelligentScene
 
-This module provides system focus modes and Do Not Disturb data access abilities.
-
-@namespace intelligentScene
+This module provides system focus modes and Do Not Disturb data access abilities.@namespace intelligentScene
 
 **Since:** 23
 

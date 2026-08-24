@@ -16,7 +16,6 @@ Provides an asynchronous callback to return the authentication event information
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## callback

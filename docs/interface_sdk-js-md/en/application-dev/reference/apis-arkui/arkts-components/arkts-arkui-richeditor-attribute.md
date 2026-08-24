@@ -1,8 +1,6 @@
 # RichEditor properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-In addition to the universal events, [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md), [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md), [StyledStringChangeValue](../arkts-apis/arkts-arkui-styledstringchangevalue-i.md), and the following events are supported.
+In addition to the universal attributes, the following attributes are supported.In addition to the universal events, [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md), [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md), [StyledStringChangeValue](../arkts-apis/arkts-arkui-styledstringchangevalue-i.md), and the following events are supported.
 
 **Inheritance/Implementation:** RichEditorAttribute extends CommonMethod<RichEditorAttribute>
 
@@ -23,9 +21,7 @@ In addition to the universal events, [OnDidChangeCallback](../arkts-apis/arkts-a
 aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 ```
 
-Triggered when content is about to be deleted in the input method.
-
-This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
+Triggered when content is about to be deleted in the input method.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
 **Since:** 10
 
@@ -41,7 +37,7 @@ This callback is not supported when the **RichEditor** component constructed wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md), boolean&gt; | Yes | [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md) indicates the text or image span where the content to be deleted is located.<br>**true**: Content is deleted.&lt; br&gt;**false**: Content is not deleted.<br>Callback invoked when content is about to be deleted in the input method. It is executed when a candidate word is touched in preview text.<br>**Since:** 12 |
+| callback | Callback&lt;[RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md), boolean&gt; | Yes | [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md) indicates the text or image span where the content to be deleted is located.<br>**true**: Content is deleted.<br>**false**: Content is not deleted.<br>Callback invoked when content is about to be deleted in the input method. It is executed when a candidate word is touched in preview text.<br>**Since:** 12 |
 
 ## aboutToIMEInput
 
@@ -49,9 +45,7 @@ This callback is not supported when the **RichEditor** component constructed wit
 aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>)
 ```
 
-Triggered when content is about to be entered in the input method.
-
-This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
+Triggered when content is about to be entered in the input method.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
 **Since:** 10
 
@@ -77,8 +71,7 @@ barState(state: BarState)
 
 Sets the display mode of the **RichEditor** scrollbar.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -159,10 +152,8 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 Sets whether to enable punctuation compression at the beginning of a line.
 
-> **NOTE：**
-> 
-> By default, the punctuation at the beginning of a line is not compressed.
-> 
+> **NOTE：**&gt;
+> By default, the punctuation at the beginning of a line is not compressed.&gt;
 > For details about the punctuation that supports compression, see the punctuation range of the line header
 > compression of [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
@@ -188,15 +179,9 @@ Sets whether to enable punctuation compression at the beginning of a line.
 copyOptions(value: CopyOptions)
 ```
 
-Specifies whether copy and paste is allowed for text content.
-
-Since API version 20, copied or cut text from the **RichEditor** component includes HTML-formatted content in the pasteboard.
-
-- Only TextSpan and ImageSpan can add HTML content to the pasteboard. Other span types (such as BuilderSpan, SymbolSpan, and CustomSpan) cannot add HTML content to the pasteboard. - For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.
-
-If copyOptions is not set to CopyOptions.None, a text selection menu will be displayed when you long-press the component content. If a custom context menu is defined through **bindSelectionMenu** or other approaches, it will be displayed.
-
-If copyOptions is set to CopyOptions.None, the copy, cut, translate, share, search, and write-aid functions are disabled, and drag-and-drop operations are not supported.
+Specifies whether copy and paste is allowed for text content.Since API version 20, copied or cut text from the **RichEditor** component includes HTML-formatted content in the pasteboard.  
+- Only TextSpan and ImageSpan can add HTML content to the pasteboard. Other span types (such as BuilderSpan, SymbolSpan, and CustomSpan) cannot add HTML content to the pasteboard. - For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.  
+If copyOptions is not set to CopyOptions.None, a text selection menu will be displayed when you long-press the component content. If a custom context menu is defined through **bindSelectionMenu** or other approaches, it will be displayed.If copyOptions is set to CopyOptions.None, the copy, cut, translate, share, search, and write-aid functions are disabled, and drag-and-drop operations are not supported.
 
 **Since:** 10
 
@@ -221,18 +206,9 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
                  options?: KeyboardOptions | undefined)
 ```
 
-Sets a custom keyboard.
+Sets a custom keyboard.When a custom keyboard is set, activating the text box opens the specified custom component, instead of the system input method.The custom keyboard's height can be set through the **height** attribute of the custom component's root node, and its width is fixed at the default value.The custom keyboard cannot obtain focus, but it blocks gesture events.By default, the custom keyboard is closed when the input component loses the focus.
 
-When a custom keyboard is set, activating the text box opens the specified custom component, instead of the system input method.
-
-The custom keyboard's height can be set through the **height** attribute of the custom component's root node, and its width is fixed at the default value.
-
-The custom keyboard cannot obtain focus, but it blocks gesture events.
-
-By default, the custom keyboard is closed when the input component loses the focus.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 23.
@@ -260,13 +236,9 @@ By default, the custom keyboard is closed when the input component loses the foc
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-Configures special entity recognition settings, including entity types to detect, display styles for detected entities, and long-press preview options.
-
-This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.
-
-When entities A and B overlap, the following rules are followed:
-
-1. If A ⊂ B, retain B. Otherwise, retain A. 2. When A ⊄ B and B ⊄ A: If A.start &lt; B.start, retain A; otherwise, retain B.
+Configures special entity recognition settings, including entity types to detect, display styles for detected entities, and long-press preview options.This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.When entities A and B overlap, the following rules are followed:
+1. If A ⊂ B, retain B. Otherwise, retain A.
+2. When A ⊄ B and B ⊄ A: If A.start &lt; B.start, retain A; otherwise, retain B.
 
 **Since:** 11
 
@@ -290,14 +262,10 @@ When entities A and B overlap, the following rules are followed:
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-Sets the extended options of the default system menu, including the text content, icon, and callback.
-
-When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or
-
+Sets the extended options of the default system menu, including the text content, icon, and callback.When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or  
 [disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems) is used to disable system service menu items in the context menu on selection, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback of **editMenuOptions**.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -340,7 +308,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.&lt; br&gt;**true** to enable, **false** otherwise.<br>Default value: **false**. |
+| enable | Optional&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.<br>**true** to enable, **false** otherwise.<br>Default value: **false**. |
 
 ## enableDataDetector
 
@@ -348,19 +316,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 enableDataDetector(enable: boolean)
 ```
 
-Enables recognition for special entities within the text.
-
-For this API to work, the target device must provide the text recognition capability.
-
-If enableDataDetector is set to true and the [dataDetectorConfig](#datadetectorconfig) attribute is not specified, the system identifies all types of entities by default, and changes the color and decoration of these entities to the preset style.
-
-Touching and right-clicking an entity opens a context menu with actions based on entity type, while left-clicking triggers the first menu option directly.
-
-This API does not work for the node text of **addBuilderSpan**.
-
-When **copyOptions** is set to **CopyOptions.None**, the menu displayed after an entity is clicked does not provide the text selection or copy functionality.
-
-<!--RP1--><!--RP1End-->
+Enables recognition for special entities within the text.For this API to work, the target device must provide the text recognition capability.If enableDataDetector is set to true and the [dataDetectorConfig](#datadetectorconfig) attribute is not specified, the system identifies all types of entities by default, and changes the color and decoration of these entities to the preset style.Touching and right-clicking an entity opens a context menu with actions based on entity type, while left-clicking triggers the first menu option directly.This API does not work for the node text of **addBuilderSpan**.When **copyOptions** is set to **CopyOptions.None**, the menu displayed after an entity is clicked does not provide the text selection or copy functionality.<!--RP1--><!--RP1End-->
 
 **Since:** 11
 
@@ -386,8 +342,7 @@ enableHapticFeedback(isEnabled: boolean)
 
 Sets whether to enable haptic feedback.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called in
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 20.
@@ -416,8 +371,7 @@ enableKeyboardOnFocus(isEnabled: boolean)
 
 Sets whether to enable the input method when the **RichEditor** component obtains focus in a way other than clicking.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -446,8 +400,7 @@ enablePreviewText(enable: boolean)
 
 Sets whether to enable preview text.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -474,15 +427,7 @@ Sets whether to enable preview text.
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-Sets whether to enable the AI menu function for text selection. After this function is enabled, the email address, phone number, website address, date, and address in the selection area can be identified, and the corresponding AI menu items can be displayed in the text selection menu. By default, the AI menu feature is enabled.
-
-When the AI menu function is enabled, after a text is selected in the component, the corresponding AI menu item is displayed in the text selection menu, including the URL (opening a connection) and email (creating an email) in [TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)., phoneNumber (call), address (navigation), and dateTime (new event).
-
-When the AI menu takes effect, the corresponding options can be displayed only when the selected scope contains only one complete AI entity. This menu item does not appear at the same time as the askAI menu item in [TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md).
-
-This function takes effect only when [copyOptions](#copyoptions) is set to CopyOptions.LocalDevice or CopyOptions.CROSS_DEVICE.
-
-This API depends on the text recognition capability at the bottom layer of the device. Otherwise, the setting does not take effect.
+Sets whether to enable the AI menu function for text selection. After this function is enabled, the email address, phone number, website address, date, and address in the selection area can be identified, and the corresponding AI menu items can be displayed in the text selection menu. By default, the AI menu feature is enabled.When the AI menu function is enabled, after a text is selected in the component, the corresponding AI menu item is displayed in the text selection menu, including the URL (opening a connection) and email (creating an email) in [TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)., phoneNumber (call), address (navigation), and dateTime (new event).When the AI menu takes effect, the corresponding options can be displayed only when the selected scope contains only one complete AI entity. This menu item does not appear at the same time as the askAI menu item in [TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md).This function takes effect only when [copyOptions](#copyoptions) is set to CopyOptions.LocalDevice or CopyOptions.CROSS_DEVICE.This API depends on the text recognition capability at the bottom layer of the device. Otherwise, the setting does not take effect.
 
 **Since:** 22
 
@@ -530,9 +475,7 @@ Sets the Enter key type of the soft keyboard.
 fallbackLineSpacing(enabled: Optional<boolean>)
 ```
 
-For multi-line text overlay, the line height can be automatically adjusted based on the actual text height. This API is not used to set the line height. By default, the line height is not automatically adjusted based on the actual text height.
-
-This API depends on the lineHeight attribute of [RichEditorTextStyle](arkts-arkui-richeditortextstyleresult-i.md). When the value of lineHeight is less than the actual height of the text rendered under the current font size, the fallbackLineSpacing property takes effect.
+For multi-line text overlay, the line height can be automatically adjusted based on the actual text height. This API is not used to set the line height. By default, the line height is not automatically adjusted based on the actual text height.This API depends on the lineHeight attribute of [RichEditorTextStyle](arkts-arkui-richeditortextstyleresult-i.md). When the value of lineHeight is less than the actual height of the text rendered under the current font size, the fallbackLineSpacing property takes effect.
 
 **Since:** 23
 
@@ -644,7 +587,7 @@ Sets the maximum length of the component content. When the total length of the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxLength | Optional&lt;number&gt; | Yes | Maximum number of characters for text input.<br>Default value: **Infinity** , which means unlimited input. The **undefined** type is supported.<br>**NOTE：**<br>If this attribute is not set or is set to an invalid value, the default value is used. If a decimal number is specified, the integer part is used. |
+| maxLength | Optional&lt;number&gt; | Yes | Maximum number of characters for text input.<br>Default value: **Infinity**, which means unlimited input. The **undefined** type is supported.<br>**NOTE：**<br>If this attribute is not set or is set to an invalid value, the default value is used. If a decimal number is specified, the integer part is used. |
 
 ## maxLines
 
@@ -676,9 +619,7 @@ Sets the maximum number of lines that the rich text can display. When **maxLines
 onCopy(callback: Callback<CopyEvent>)
 ```
 
-Triggered during copy. You can use this method to override the system's default behavior and implement the copying of text and images.
-
-The **RichEditor** component constructed using [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) supports copying of text and images by default.
+Triggered during copy. You can use this method to override the system's default behavior and implement the copying of text and images.The **RichEditor** component constructed using [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) supports copying of text and images by default.
 
 **Since:** 12
 
@@ -702,9 +643,7 @@ The **RichEditor** component constructed using [RichEditorStyledStringOptions](a
 onCut(callback: Callback<CutEvent>)
 ```
 
-Triggered during cutting. You can use this method to override the system's default behavior and implement the cutting of text and images.
-
-The **RichEditor** component constructed using [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) supports text and image cutting by default.
+Triggered during cutting. You can use this method to override the system's default behavior and implement the cutting of text and images.The **RichEditor** component constructed using [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) supports text and image cutting by default.
 
 **Since:** 12
 
@@ -728,9 +667,7 @@ The **RichEditor** component constructed using [RichEditorStyledStringOptions](a
 onDeleteComplete(callback: Callback<void>)
 ```
 
-Triggered when content is deleted in the input method.
-
-This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
+Triggered when content is deleted in the input method.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
 **Since:** 10
 
@@ -754,12 +691,9 @@ This callback is not supported when the **RichEditor** component constructed wit
 onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 ```
 
-Triggered after an addition or deletion operation is performed in the component. This callback is not executed if there is no actual addition or deletion of text.
+Triggered after an addition or deletion operation is performed in the component. This callback is not executed if there is no actual addition or deletion of text.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
-This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -786,12 +720,9 @@ This callback is not supported when the **RichEditor** component constructed wit
 onDidIMEInput(callback: Callback<TextRange>)
 ```
 
-Triggered when text input in the input method is complete.
+Triggered when text input in the input method is complete.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
-This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called in
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 20.
@@ -842,11 +773,7 @@ Triggered when the content editing state in the component changes.
 onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>)
 ```
 
-Triggered when text input in the input method is complete.
-
-This callback can return information about only one text span. If the editing operation involves returning information about multiple text spans, you are advised to use the [onDidIMEInput](#ondidimeinput) API.
-
-This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
+Triggered when text input in the input method is complete.This callback can return information about only one text span. If the editing operation involves returning information about multiple text spans, you are advised to use the [onDidIMEInput](#ondidimeinput) API.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
 **Since:** 10
 
@@ -918,15 +845,7 @@ Triggered after the **RichEditor** component is initialized.
 onSelect(callback: Callback<RichEditorSelection>)
 ```
 
-Invoked when content is selected.
-
-If a mouse device is used for selection, this callback is invoked when the left mouse button is double-clicked to select content and invoked again when the button is released.
-
-If a finger is used for selection, this callback is invoked by a long press and invoked again when the finger is released.
-
-If the selected area is continuously modified by using a finger or mouse or if the selected area is triple-clicked, the onSelect callback is not invoked.
-
-If the selection area needs to be detected in real time or the RichEditor component constructed using [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used, use the onSelectionChange API.
+Invoked when content is selected.If a mouse device is used for selection, this callback is invoked when the left mouse button is double-clicked to select content and invoked again when the button is released.If a finger is used for selection, this callback is invoked by a long press and invoked again when the finger is released.If the selected area is continuously modified by using a finger or mouse or if the selected area is triple-clicked, the onSelect callback is not invoked.If the selection area needs to be detected in real time or the RichEditor component constructed using [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used, use the onSelectionChange API.
 
 **Since:** 10
 
@@ -998,9 +917,7 @@ Triggered when the Enter key on the soft keyboard is pressed.
 onWillAttachIME(callback: Callback<IMEClient> | undefined)
 ```
 
-Triggers a callback before a component is bound to an input method.
-
-Call the [setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.md#setextraconfig) method of [IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md) to set input method extension information. After the input method is bound , it receives this extension information, which can be used to implement custom functionality.
+Triggers a callback before a component is bound to an input method.Call the [setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.md#setextraconfig) method of [IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md) to set input method extension information. After the input method is bound, it receives this extension information, which can be used to implement custom functionality.
 
 **Since:** 22
 
@@ -1024,12 +941,9 @@ Call the [setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.md#setextraconfi
 onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAttribute
 ```
 
-Invoked when any addition or deletion operation is about to be performed in the component.
+Invoked when any addition or deletion operation is about to be performed in the component.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
-This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -1080,8 +994,7 @@ placeholder(value: ResourceStr, style?: PlaceholderStyle)
 
 Sets the placeholder text, which is displayed when there is no input.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -1207,10 +1120,8 @@ singleLine(isEnable: boolean | undefined)
 
 Sets whether to enable the single-line mode. If this interface is not used, the single-line mode is disabled by default.
 
-> **NOTE：**
-> 
-> The scroll bar is not displayed in single-line mode.
-> 
+> **NOTE：**&gt;
+> The scroll bar is not displayed in single-line mode.&gt;
 > In single-line mode, the newline character is displayed as a space.
 
 **Since:** 23
@@ -1259,9 +1170,7 @@ Sets whether to prevent the back button press from being propagated to other com
 undoStyle(style: Optional<UndoStyle>)
 ```
 
-Sets whether to retain the original content style when undoing or redoing an action.
-
-When the [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used to build the RichEditor component, the original content style is retained by default during undo and redo, and is not affected by the attributes set by this API.
+Sets whether to retain the original content style when undoing or redoing an action.When the [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used to build the RichEditor component, the original content style is retained by default during undo and redo, and is not affected by the attributes set by this API.
 
 **Since:** 20
 

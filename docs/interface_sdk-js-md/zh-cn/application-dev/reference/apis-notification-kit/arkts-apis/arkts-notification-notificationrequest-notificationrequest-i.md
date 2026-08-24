@@ -46,13 +46,7 @@ appMessageId?: string
 autoDeletedTime?: long
 ```
 
-通知定时清除时间。设置该参数可使通知在指定时间后自动清除。默认值为0。 传入小于0的值或过去的时间值，该参数不生效。
-
-数据格式：时间戳。
-
-单位：毫秒。
-
-例如，希望某通知存留3秒（3000ms）后对其进行清除，则对应的清除时间为：new Date().getTime() + 3000。
+通知定时清除时间。设置该参数可使通知在指定时间后自动清除。默认值为0。 传入小于0的值或过去的时间值，该参数不生效。数据格式：时间戳。单位：毫秒。例如，希望某通知存留3秒（3000ms）后对其进行清除，则对应的清除时间为：new Date().getTime() + 3000。
 
 **类型：** long
 
@@ -84,13 +78,7 @@ badgeIconStyle?: int
 badgeNumber?: long
 ```
 
-应用图标上显示的通知数，该数量累计展示，默认值为0。
-
-当`badgeNumber`取值小于或等于0时，将忽略本次角标设定。
-
-当角标累加设定个数取值大于99时，通知角标将显示99+。
-
-例如，应用发布3条通知，`badgeNumber`依次设置为2、0、3，应用将依次展示为2、2、5。
+应用图标上显示的通知数，该数量累计展示，默认值为0。当`badgeNumber`取值小于或等于0时，将忽略本次角标设定。当角标累加设定个数取值大于99时，通知角标将显示99+。例如，应用发布3条通知，`badgeNumber`依次设置为2、0、3，应用将依次展示为2、2、5。
 
 **类型：** long
 
@@ -218,11 +206,7 @@ readonly creatorUserId?: int
 deliveryTime?: long
 ```
 
-通知发送时间。系统自动生成，无需开发者配置。
-
-数据格式：时间戳。
-
-单位：毫秒。
+通知发送时间。系统自动生成，无需开发者配置。数据格式：时间戳。单位：毫秒。
 
 **类型：** long
 
@@ -254,13 +238,10 @@ distributedOption?: DistributedOptions
 extraInfo?: Record<string, RecordData>
 ```
 
-扩展参数。为应用提供定制服务。默认为空。
-
-以下Key由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。
-
+扩展参数。为应用提供定制服务。默认为空。以下Key由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。  
 - 'ohos.notificationManager.wantUri'：用户点击通知时传递给应用的[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) 中的uri字段，使用 [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) 接口获取该信息。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 
@@ -322,8 +303,7 @@ id?: int
 isAlertOnce?: boolean
 ```
 
-发布或更新该通知时，是否只进行一次通知提醒，默认值为false。
-
+发布或更新该通知时，是否只进行一次通知提醒，默认值为false。  
 - true：仅首次发布通知时进行提醒，后续更新该通知时，提醒方式变更为[LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md)。 - false：每次均按照配置的通知提醒方式进行提醒。
 
 **类型：** boolean
@@ -420,11 +400,7 @@ isUnremovable?: boolean
 label?: string
 ```
 
-通知标签。
-
-label字段的功能类似于id，可以单独使用，也可与id结合共同作为通知的标识。优先推荐使用id。
-
-如果发布通知时label不为空，那么在更新或删除该通知时，也需要指定相应的label。 大小不超过202字节，超出部分会被截断。默认为空。
+通知标签。label字段的功能类似于id，可以单独使用，也可与id结合共同作为通知的标识。优先推荐使用id。如果发布通知时label不为空，那么在更新或删除该通知时，也需要指定相应的label。 大小不超过202字节，超出部分会被截断。默认为空。
 
 **类型：** string
 
@@ -456,9 +432,7 @@ largeIcon?: image.PixelMap
 notificationFlags?: NotificationFlags
 ```
 
-通知标志位设置，默认为空。从API version 23开始成为可写参数，设置该参数可削减通知的提醒方式，当通知渠道类型为 [LIVE_VIEW](arkts-notification-notificationmanager-slottype-e.md)时，该参数设置不生效。
-
-@readonly [since 8 - 22]
+通知标志位设置，默认为空。从API version 23开始成为可写参数，设置该参数可削减通知的提醒方式，当通知渠道类型为 [LIVE_VIEW](arkts-notification-notificationmanager-slottype-e.md)时，该参数设置不生效。@readonly [since 8 - 22]
 
 **类型：** [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
 
@@ -508,9 +482,7 @@ priorityNotificationType?: notificationManager.PriorityNotificationType
 removalWantAgent?: WantAgent
 ```
 
-封装了应用的行为意图，移除通知时触发该行为，默认为空。
-
-当前不支持跳转UIAbility，只支持发布公共事件（即[WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-wantagentinfo-i.md)的actionType字段取值为4）。
+封装了应用的行为意图，移除通知时触发该行为，默认为空。当前不支持跳转UIAbility，只支持发布公共事件（即[WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-wantagentinfo-i.md)的actionType字段取值为4）。
 
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
@@ -578,10 +550,8 @@ smallIcon?: image.PixelMap
 sound?: string
 ```
 
-应用通知自定义铃声资源路径，默认为空。支持两种音频资源来源：
-
-- 资源文件：应用预置的音频文件，资源文件必须放在resources/rawfile目录下，使用时直接传入文件名。 - 沙箱文件：网络下载或者用户生成的音频文件，必须放在沙箱文件目录EL1区域的files目录或 者其子目录下，传入格式为uri::{fileUri}，其中fileUri是通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)获取的路径。例如，应用 将下载的音频资源demo.mp3传入沙箱文件目录/data/storage/el1/base/files/，通过getUriFromPath获取的路径为file://{bundleName}/data/storage/el1/ base/files/demo.mp3，使用该路径发布通知即可播放应用下载的音频资源。
-
+应用通知自定义铃声资源路径，默认为空。支持两种音频资源来源：  
+- 资源文件：应用预置的音频文件，资源文件必须放在resources/rawfile目录下，使用时直接传入文件名。 - 沙箱文件：网络下载或者用户生成的音频文件，必须放在沙箱文件目录EL1区域的files目录或 者其子目录下，传入格式为uri::{fileUri}，其中fileUri是通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)获取的路径。例如，应用 将下载的音频资源demo.mp3传入沙箱文件目录/data/storage/el1/base/files/，通过getUriFromPath获取的路径为file://{bundleName}/data/storage/el1/ base/files/demo.mp3，使用该路径发布通知即可播放应用下载的音频资源。  
 支持m4a、aac、mp3、ogg、wav、flac、amr等格式。
 
 **类型：** string
@@ -598,8 +568,7 @@ sound?: string
 tapDismissed?: boolean
 ```
 
-点击通知携带的wantAgent或actionButtons时，该通知是否自动清除。当通知携带wantAgent或actionButtons时该字段生效。默认值为true。
-
+点击通知携带的wantAgent或actionButtons时，该通知是否自动清除。当通知携带wantAgent或actionButtons时该字段生效。默认值为true。  
 - true：点击通知或按钮后，自动删除当前通知。 - false：点击通知或按钮后，保留当前通知。
 
 **类型：** boolean
@@ -632,8 +601,7 @@ template?: NotificationTemplate
 updateOnly?: boolean
 ```
 
-是否仅更新通知，默认值为false。
-
+是否仅更新通知，默认值为false。  
 - true：若已存在相同ID的通知，则更新该通知；若不存在相同ID的通知，则更新失败，并且不创建新的通知。 - false：若已存在相同ID的通知，则更新该通知；若不存在相同ID的通知，则创建新的通知。
 
 **类型：** boolean

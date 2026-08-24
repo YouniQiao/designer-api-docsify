@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [GridItemModifier](arkts-arkui-griditemmodifier-c.md) | Defines GridItem Modifier |
+| [GridItemModifier](arkts-arkui-griditemmodifier-c.md) | Defines GridItem Modifier@extends GridItemAttribute @implements AttributeModifier&lt;GridItemAttribute&gt; |
 

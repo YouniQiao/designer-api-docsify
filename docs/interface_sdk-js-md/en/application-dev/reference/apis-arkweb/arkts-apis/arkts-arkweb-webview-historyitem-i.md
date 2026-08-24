@@ -1,8 +1,6 @@
 # HistoryItem
 
-Describes a historical page record.
-
-@interface HistoryItem [since 9 - 11]
+Describes a historical page record.@interface HistoryItem [since 9 - 11]
 
 **Since:** 9
 
@@ -58,7 +56,7 @@ URL of the historical page.
 icon: image.PixelMap
 ```
 
-*PixelMap** object of the icon on the historical page.
+**PixelMap** object of the icon on the historical page.
 
 **Type:** image.PixelMap
 

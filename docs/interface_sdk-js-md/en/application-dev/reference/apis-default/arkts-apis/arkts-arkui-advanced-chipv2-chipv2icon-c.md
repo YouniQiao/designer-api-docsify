@@ -6,6 +6,8 @@ Defines ChipV2 icon
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare abstract class ChipV2Icon--><!--Device-unnamed-export declare abstract class ChipV2Icon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

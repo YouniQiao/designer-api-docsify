@@ -6,6 +6,8 @@
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipGroupV2ItemStyle--><!--Device-unnamed-export declare class ChipGroupV2ItemStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ ChipGroupV2ItemStyle的构造函数
 ## backgroundColor
 
 ```TypeScript
-@Trace
-  public backgroundColor?: ColorMetrics
+public backgroundColor?: ColorMetrics
 ```
 
 ChipV2背景色。
@@ -54,6 +55,8 @@ ChipV2背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public backgroundColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace  public backgroundColor?: ColorMetrics-End-->
@@ -63,8 +66,7 @@ ChipV2背景色。
 ## backgroundSystemMaterial
 
 ```TypeScript
-@Trace
-  public backgroundSystemMaterial?: uiMaterial.Material
+public backgroundSystemMaterial?: uiMaterial.Material
 ```
 
 设置组件的系统材质，不同的材质效果不同，会影响背景颜色，边框，阴影和组件的其它视觉属性
@@ -75,6 +77,8 @@ ChipV2背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2ItemStyle-@Trace  public backgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -84,8 +88,7 @@ ChipV2背景色。
 ## fontColor
 
 ```TypeScript
-@Trace
-  public fontColor?: ColorMetrics
+public fontColor?: ColorMetrics
 ```
 
 文本字体颜色。
@@ -96,6 +99,8 @@ ChipV2背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public fontColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace  public fontColor?: ColorMetrics-End-->
@@ -105,8 +110,7 @@ ChipV2背景色。
 ## selectedBackgroundColor
 
 ```TypeScript
-@Trace
-  public selectedBackgroundColor?: ColorMetrics
+public selectedBackgroundColor?: ColorMetrics
 ```
 
 选中的背景色。
@@ -117,6 +121,8 @@ ChipV2背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public selectedBackgroundColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace  public selectedBackgroundColor?: ColorMetrics-End-->
@@ -126,8 +132,7 @@ ChipV2背景色。
 ## selectedBackgroundSystemMaterial
 
 ```TypeScript
-@Trace
-  public selectedBackgroundSystemMaterial?: uiMaterial.Material
+public selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
 选择时，为组件设置系统样式材质。不同的材料有不同的效果， 它可以影响组件的背景颜色、边框、阴影和其他视觉属性。
@@ -138,6 +143,8 @@ ChipV2背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public selectedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2ItemStyle-@Trace  public selectedBackgroundSystemMaterial?: uiMaterial.Material-End-->
@@ -147,8 +154,7 @@ ChipV2背景色。
 ## selectedFontColor
 
 ```TypeScript
-@Trace
-  public selectedFontColor?: ColorMetrics
+public selectedFontColor?: ColorMetrics
 ```
 
 选定的文本字体颜色。
@@ -159,6 +165,8 @@ ChipV2背景色。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChipGroupV2ItemStyle-@Trace  public selectedFontColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyle-@Trace  public selectedFontColor?: ColorMetrics-End-->
@@ -168,8 +176,7 @@ ChipV2背景色。
 ## size
 
 ```TypeScript
-@Trace
-  public size?: ChipV2Size | SizeT<LengthMetrics>
+public size?: ChipV2Size | SizeT<LengthMetrics>
 ```
 
 ChipV2大小。
@@ -179,6 +186,8 @@ ChipV2大小。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

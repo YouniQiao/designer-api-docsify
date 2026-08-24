@@ -1,8 +1,6 @@
 # @ohos.multimedia.avMusicTemplate
 
-This module provides the capability to media enhancement
-
-@namespace avMusicTemplate
+This module provides the capability to media enhancement@namespace avMusicTemplate
 
 **Since:** 23
 
@@ -50,34 +48,34 @@ import { avMusicTemplate } from '@kit.AVSessionKit';
 
 | Name | Description |
 | --- | --- |
-| [Album](arkts-avsession-avmusictemplate-album-i.md) | The definition of Album. |
-| [Banner](arkts-avsession-avmusictemplate-banner-i.md) | The definition of Banner. |
-| [Compilation](arkts-avsession-avmusictemplate-compilation-i.md) | The definition of compilation. |
-| [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | Custom elements of mine page. |
-| [DialogActionInfo](arkts-avsession-avmusictemplate-dialogactioninfo-i.md) | The definition of dialog action result. |
-| [DialogButtonInfo](arkts-avsession-avmusictemplate-dialogbuttoninfo-i.md) | The definition of dialog button information. |
-| [DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md) | The definition of dialog information. |
-| [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md) | The definition of EpisodeRange. |
-| [FavoriteData](arkts-avsession-avmusictemplate-favoritedata-i.md) | The definition of Favorite/Subscribe. |
-| [MediaElement](arkts-avsession-avmusictemplate-mediaelement-i.md) | The definition of Singer/Radio/Banner. |
-| [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | The definition of MediaEntity. |
-| [MediaTab](arkts-avsession-avmusictemplate-mediatab-i.md) | The definition of the tab page. |
-| [MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md) | The definition of the tab page content. |
-| [MemberPurchaseInfo](arkts-avsession-avmusictemplate-memberpurchaseinfo-i.md) | The definition of member purchase information. |
-| [OperResult](arkts-avsession-avmusictemplate-operresult-i.md) | The definition of the operate result. |
-| [PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md) | The definition of pagination object. |
-| [PlayInfo](arkts-avsession-avmusictemplate-playinfo-i.md) | The definition of play information. |
-| [QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md) | The definition of QR code Information. |
-| [QueryMediaEntityParam](arkts-avsession-avmusictemplate-querymediaentityparam-i.md) | The definition of QueryMediaEntityParam. |
-| [Ranking](arkts-avsession-avmusictemplate-ranking-i.md) | The definition of Ranking. |
-| [SearchPlayInfo](arkts-avsession-avmusictemplate-searchplayinfo-i.md) | The definition of SearchPlayInfo. |
-| [SearchPlayMusicInfo](arkts-avsession-avmusictemplate-searchplaymusicinfo-i.md) | The definition of SearchPlayMusicInfo. |
-| [SearchPlayMusicItem](arkts-avsession-avmusictemplate-searchplaymusicitem-i.md) | The definition of SearchPlayMusicItem. |
-| [SearchPlayVideoInfo](arkts-avsession-avmusictemplate-searchplayvideoinfo-i.md) | The definition of SearchPlayVideoInfo. |
-| [SettingContent](arkts-avsession-avmusictemplate-settingcontent-i.md) | The definition of setting content |
-| [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md) | The definition of setting Information. |
-| [Single](arkts-avsession-avmusictemplate-single-i.md) | The definition of Single song. |
-| [UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md) | The definition of User information. |
+| [Album](arkts-avsession-avmusictemplate-album-i.md) | The definition of Album.@extends MediaEntity @interface Album |
+| [Banner](arkts-avsession-avmusictemplate-banner-i.md) | The definition of Banner.@extends MediaEntity @interface Banner |
+| [Compilation](arkts-avsession-avmusictemplate-compilation-i.md) | The definition of compilation.@extends OperResult @interface Compilation |
+| [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | Custom elements of mine page.@extends OperResult @interface CustomElement |
+| [DialogActionInfo](arkts-avsession-avmusictemplate-dialogactioninfo-i.md) | The definition of dialog action result.@interface DialogActionInfo |
+| [DialogButtonInfo](arkts-avsession-avmusictemplate-dialogbuttoninfo-i.md) | The definition of dialog button information.@interface DialogButtonInfo |
+| [DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md) | The definition of dialog information.@interface DialogInfo |
+| [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md) | The definition of EpisodeRange.@interface EpisodeRange |
+| [FavoriteData](arkts-avsession-avmusictemplate-favoritedata-i.md) | The definition of Favorite/Subscribe.@interface FavoriteData |
+| [MediaElement](arkts-avsession-avmusictemplate-mediaelement-i.md) | The definition of Singer/Radio/Banner.@extends MediaEntity @interface MediaElement |
+| [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | The definition of MediaEntity.@interface MediaEntity |
+| [MediaTab](arkts-avsession-avmusictemplate-mediatab-i.md) | The definition of the tab page.@interface MediaTab |
+| [MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md) | The definition of the tab page content.@extends OperResult @interface MediaTabContent |
+| [MemberPurchaseInfo](arkts-avsession-avmusictemplate-memberpurchaseinfo-i.md) | The definition of member purchase information.@interface MemberPurchaseInfo |
+| [OperResult](arkts-avsession-avmusictemplate-operresult-i.md) | The definition of the operate result.@interface OperResult |
+| [PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md) | The definition of pagination object.@extends OperResult @interface PageMediaEntity |
+| [PlayInfo](arkts-avsession-avmusictemplate-playinfo-i.md) | The definition of play information.@interface PlayInfo |
+| [QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md) | The definition of QR code Information.@interface QrCodeInfo |
+| [QueryMediaEntityParam](arkts-avsession-avmusictemplate-querymediaentityparam-i.md) | The definition of QueryMediaEntityParam.@interface QueryMediaEntityParam |
+| [Ranking](arkts-avsession-avmusictemplate-ranking-i.md) | The definition of Ranking.@extends MediaEntity @interface Ranking |
+| [SearchPlayInfo](arkts-avsession-avmusictemplate-searchplayinfo-i.md) | The definition of SearchPlayInfo.@interface SearchPlayInfo |
+| [SearchPlayMusicInfo](arkts-avsession-avmusictemplate-searchplaymusicinfo-i.md) | The definition of SearchPlayMusicInfo.@interface SearchPlayMusicInfo |
+| [SearchPlayMusicItem](arkts-avsession-avmusictemplate-searchplaymusicitem-i.md) | The definition of SearchPlayMusicItem.@interface SearchPlayMusicItem |
+| [SearchPlayVideoInfo](arkts-avsession-avmusictemplate-searchplayvideoinfo-i.md) | The definition of SearchPlayVideoInfo.@interface SearchPlayVideoInfo |
+| [SettingContent](arkts-avsession-avmusictemplate-settingcontent-i.md) | The definition of setting content@interface SettingContent |
+| [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md) | The definition of setting Information.@interface SettingItem |
+| [Single](arkts-avsession-avmusictemplate-single-i.md) | The definition of Single song.@extends MediaEntity @interface Single |
+| [UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md) | The definition of User information.@interface UserInfo |
 
 <!--Del-->
 ### Interfaces(System API)
@@ -91,17 +89,17 @@ import { avMusicTemplate } from '@kit.AVSessionKit';
 
 | Name | Description |
 | --- | --- |
-| [AVMusicTemplateErrorCode](arkts-avsession-avmusictemplate-avmusictemplateerrorcode-e.md) | Enumeration ErrorCode types, returns in BusinessError.code. |
-| [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | Enumeration of AVMusicTemplate type. |
-| [ButtonType](arkts-avsession-avmusictemplate-buttontype-e.md) | Enumeration of button type. |
-| [DialogType](arkts-avsession-avmusictemplate-dialogtype-e.md) | Enumeration of dialog type. |
-| [DownloadStatus](arkts-avsession-avmusictemplate-downloadstatus-e.md) | Enumeration of DownloadStatus. |
-| [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | Enumeration of media resource type. |
-| [MemberPurchaseType](arkts-avsession-avmusictemplate-memberpurchasetype-e.md) | Enumeration of MemberPurchaseType. |
-| [PlaybackState](arkts-avsession-avmusictemplate-playbackstate-e.md) | Enumeration of play state. |
-| [SearchPlayInfoType](arkts-avsession-avmusictemplate-searchplayinfotype-e.md) | Enumeration of SearchPlayInfoType. |
-| [SettingType](arkts-avsession-avmusictemplate-settingtype-e.md) | Enumeration of setting type. |
-| [Sort](arkts-avsession-avmusictemplate-sort-e.md) | Enumeration of Sort type. |
+| [AVMusicTemplateErrorCode](arkts-avsession-avmusictemplate-avmusictemplateerrorcode-e.md) | Enumeration ErrorCode types, returns in BusinessError.code.@enum { int } |
+| [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | Enumeration of AVMusicTemplate type.@enum { string } |
+| [ButtonType](arkts-avsession-avmusictemplate-buttontype-e.md) | Enumeration of button type.@enum { int } |
+| [DialogType](arkts-avsession-avmusictemplate-dialogtype-e.md) | Enumeration of dialog type.@enum { int } |
+| [DownloadStatus](arkts-avsession-avmusictemplate-downloadstatus-e.md) | Enumeration of DownloadStatus.@enum { int } |
+| [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | Enumeration of media resource type.@enum { int } |
+| [MemberPurchaseType](arkts-avsession-avmusictemplate-memberpurchasetype-e.md) | Enumeration of MemberPurchaseType.@enum { string } |
+| [PlaybackState](arkts-avsession-avmusictemplate-playbackstate-e.md) | Enumeration of play state.@enum { int } |
+| [SearchPlayInfoType](arkts-avsession-avmusictemplate-searchplayinfotype-e.md) | Enumeration of SearchPlayInfoType.@enum { string } |
+| [SettingType](arkts-avsession-avmusictemplate-settingtype-e.md) | Enumeration of setting type.@enum { int } |
+| [Sort](arkts-avsession-avmusictemplate-sort-e.md) | Enumeration of Sort type.@enum { int } |
 
 ### Types
 

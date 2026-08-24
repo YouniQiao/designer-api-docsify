@@ -6,6 +6,8 @@ Declare struct PopoverDialog @struct { PopoverDialog }
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct PopoverDialog--><!--Device-unnamed-export declare struct PopoverDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,7 +20,7 @@ Declare struct PopoverDialog @struct { PopoverDialog }
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -26,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +40,7 @@ The method to build component.
 ## popover
 
 ```TypeScript
-@Require @PropRef
-  popover: PopoverOptions
+popover: PopoverOptions
 ```
 
 Sets the PopoverDialog options.
@@ -48,6 +51,8 @@ Sets the PopoverDialog options.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Require, @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PopoverDialog-@Require @PropRef  popover: PopoverOptions--><!--Device-PopoverDialog-@Require @PropRef  popover: PopoverOptions-End-->
@@ -57,8 +62,7 @@ Sets the PopoverDialog options.
 ## targetBuilder
 
 ```TypeScript
-@Require @BuilderParam
-  targetBuilder: () => void
+targetBuilder: () => void
 ```
 
 Sets the targetBuilder content.
@@ -69,6 +73,8 @@ Sets the targetBuilder content.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Require, @BuilderParam
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PopoverDialog-@Require @BuilderParam  targetBuilder: () => void--><!--Device-PopoverDialog-@Require @BuilderParam  targetBuilder: () => void-End-->
@@ -77,10 +83,6 @@ Sets the targetBuilder content.
 
 ## visible
 
-```TypeScript
-@Link visible: boolean
-```
-
 Sets the PopoverDialog Visible Status.
 
 **Type:** boolean
@@ -88,6 +90,8 @@ Sets the PopoverDialog Visible Status.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Link
 
 **Model restriction:** This API can be used only in the stage model.
 

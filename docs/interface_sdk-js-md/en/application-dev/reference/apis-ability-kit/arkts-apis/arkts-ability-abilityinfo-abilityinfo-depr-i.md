@@ -2,8 +2,7 @@
 
 The module provides information about an ability. Unless otherwise specified, the information is obtained through [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The APIs of this module have been deprecated since API version 9. You are advised to use
 > [bundleManager-AbilityInfo](#abilityinfo) instead.
 
@@ -23,9 +22,7 @@ The module provides information about an ability. Unless otherwise specified, th
 readonly applicationInfo: ApplicationInfo
 ```
 
-Application configuration information.
-
-The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
+Application configuration information.The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
@@ -47,8 +44,7 @@ The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to [bundle
 readonly backgroundModes: number
 ```
 
-Background service mode of the ability.
-
+Background service mode of the ability.  
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** number
@@ -201,8 +197,7 @@ Whether the ability is enabled. **true** if enabled, **false** otherwise.
 readonly formEnabled: boolean
 ```
 
-Whether the ability provides the service widget capability. **true** if the ability provides the service widget capability, **false** otherwise.
-
+Whether the ability provides the service widget capability. **true** if the ability provides the service widget capability, **false** otherwise.  
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** boolean
@@ -357,9 +352,7 @@ Ability launch mode.
 readonly metaData: Array<CustomizeData>
 ```
 
-Metadata of the ability.
-
-The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
+Metadata of the ability.The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
 
 **Type:** Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;
 
@@ -447,9 +440,7 @@ Ability display orientation.
 readonly permissions: Array<string>
 ```
 
-Permissions required for other applications to call the ability.
-
-The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
+Permissions required for other applications to call the ability.The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
 
 **Type:** Array&lt;string&gt;
 
@@ -493,8 +484,7 @@ Process name of the ability.
 readonly readPermission: string
 ```
 
-Permission required for reading the ability data.
-
+Permission required for reading the ability data.  
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
@@ -517,8 +507,7 @@ Permission required for reading the ability data.
 readonly subType: bundle.AbilitySubType
 ```
 
-Subtype of the template that can be used by the ability.
-
+Subtype of the template that can be used by the ability.  
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** bundle.AbilitySubType
@@ -541,8 +530,7 @@ Subtype of the template that can be used by the ability.
 readonly targetAbility: string
 ```
 
-Target ability that the ability alias points to.
-
+Target ability that the ability alias points to.  
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
@@ -565,8 +553,7 @@ Target ability that the ability alias points to.
 readonly type: bundle.AbilityType
 ```
 
-Ability type.
-
+Ability type.  
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** bundle.AbilityType
@@ -589,8 +576,7 @@ Ability type.
 readonly uri: string
 ```
 
-URI of the ability.
-
+URI of the ability.  
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
@@ -613,8 +599,7 @@ URI of the ability.
 readonly writePermission: string
 ```
 
-Permission required for writing data to the ability.
-
+Permission required for writing data to the ability.  
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string

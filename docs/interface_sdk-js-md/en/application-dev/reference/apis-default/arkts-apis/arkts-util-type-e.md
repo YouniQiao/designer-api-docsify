@@ -1,8 +1,6 @@
 # Type
 
-The Type represents four different encoding formats for base64
-
-@enum { number } Type
+The Type represents four different encoding formats for base64@enum { number } Type
 
 **Since:** 23
 

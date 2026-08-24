@@ -1,8 +1,6 @@
 # WallpaperType
 
-定义壁纸的枚举类型。
-
-@enum { int } WallpaperType
+定义壁纸的枚举类型。@enum { int } WallpaperType
 
 **起始版本：** 23
 

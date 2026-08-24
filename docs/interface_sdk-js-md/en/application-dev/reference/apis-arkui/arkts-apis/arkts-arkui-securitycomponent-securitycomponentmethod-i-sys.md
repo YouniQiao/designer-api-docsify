@@ -1,8 +1,6 @@
 # SecurityComponentMethod
 
-Declares the interface for the method of a security component.
-
-@interface SecurityComponentMethod
+Declares the interface for the method of a security component.@interface SecurityComponentMethod
 
 **Since:** 23
 

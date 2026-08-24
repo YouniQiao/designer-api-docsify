@@ -8,6 +8,8 @@ Defines the suffix icon class.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2SuffixImageIcon--><!--Device-unnamed-export declare class ChipV2SuffixImageIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -44,8 +46,7 @@ The constructor of ChipV2SuffixImageIcon
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 Set accessibility description.
@@ -56,6 +57,8 @@ Set accessibility description.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -65,8 +68,7 @@ Set accessibility description.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel?: string
+public accessibilityLevel?: string
 ```
 
 Set accessibility level.
@@ -79,6 +81,8 @@ Set accessibility level.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityLevel?: string--><!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityLevel?: string-End-->
@@ -88,8 +92,7 @@ Set accessibility level.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
 Set accessibility text.
@@ -100,6 +103,8 @@ Set accessibility text.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityText?: ResourceStr--><!--Device-ChipV2SuffixImageIcon-@Trace  public accessibilityText?: ResourceStr-End-->
@@ -109,8 +114,7 @@ Set accessibility text.
 ## action
 
 ```TypeScript
-@Trace
-  public action?: VoidCallback
+public action?: VoidCallback
 ```
 
 Called when suffix icon is clicked.
@@ -120,6 +124,8 @@ Called when suffix icon is clicked.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

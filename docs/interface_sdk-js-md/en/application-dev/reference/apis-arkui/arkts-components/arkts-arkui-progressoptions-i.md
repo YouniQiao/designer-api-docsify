@@ -19,11 +19,7 @@ Defines progress bar options.
 style?: ProgressStyle
 ```
 
-Style of the progress indicator.
-
-This parameter is deprecated since API version 8. You are advised to use **type** instead.
-
-Default value: **ProgressStyle.Linear**
+Style of the progress indicator.This parameter is deprecated since API version 8. You are advised to use **type** instead.Default value: **ProgressStyle.Linear**
 
 **Type:** [ProgressStyle](arkts-arkui-progressstyle-e.md)
 
@@ -43,9 +39,7 @@ Default value: **ProgressStyle.Linear**
 total?: number
 ```
 
-Total progress. If this parameter is set to a value less than or equal to 0, the value **100** is used.
-
-Default value: **100**
+Total progress. If this parameter is set to a value less than or equal to 0, the value **100** is used.Default value: **100**
 
 **Type:** number
 
@@ -65,9 +59,7 @@ Default value: **100**
 type?: Type
 ```
 
-Style of the progress indicator.
-
-Default value: **ProgressType.Linear**
+Style of the progress indicator.Default value: **ProgressType.Linear**
 
 **Type:** [Type](../../apis-default/arkts-apis/arkts-util-type-e.md)
 
@@ -87,11 +79,7 @@ Default value: **ProgressType.Linear**
 value: number
 ```
 
-Current progress. Values less than 0 are adjusted to **0**, and values greater than the **total** value are capped at the **total** value.
-
-Default value: **0**
-
-Value range: [0, total]
+Current progress. Values less than 0 are adjusted to **0**, and values greater than the **total** value are capped at the **total** value.Default value: **0**Value range: [0, total]
 
 **Type:** number
 

@@ -205,8 +205,7 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): this
 
 设置提示弹窗的背景模糊材质。未通过该接口设置时，默认取值为BlurStyle.NONE，表示无模糊。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当通过popupBackgroundBlurStyle设置弹窗气泡的背景模糊材质时，不建议再通过
 > [popupBackground](#popupbackground)设置背景色。
 
@@ -388,7 +387,7 @@ selectedColor(color: Optional<ColorMetrics>): this
 selectedFont(font: Optional<Font>): this
 ```
 
-设置选中项文字尺寸、粗细、字体族、倾斜等样式。未通过该接口设置时，默认样式为{size: '13.0fp', style: FontStyle.Normal, weight:500, family: 'HarmonyOS Sans ' }。
+设置选中项文字尺寸、粗细、字体族、倾斜等样式。未通过该接口设置时，默认样式为{size: '13.0fp', style: FontStyle.Normal, weight:500, family: 'HarmonyOS Sans' }。
 
 **起始版本：** 26.0.0
 

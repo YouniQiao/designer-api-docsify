@@ -1,8 +1,6 @@
 # EllipsisMode
 
-Enum of ellipsisMode
-
-@enum { number }
+Enum of ellipsisMode@enum { number }
 
 **Since:** 23
 

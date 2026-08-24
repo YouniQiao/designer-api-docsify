@@ -1,8 +1,6 @@
 # UserAgentFormFactor
 
-The form factors for User-Agent metadata.
-
-@enum { string }
+The form factors for User-Agent metadata.@enum { string }
 
 **Since:** 24
 

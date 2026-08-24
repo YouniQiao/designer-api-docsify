@@ -14,8 +14,7 @@ export function createBundleContext(context: Context, bundleName: string): Promi
 
 Creates the context for an application. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Starting from API version 18, the context can obtain the
 > [process name](arkts-ability-context-c.md) of the current
 > application. The **processName** property in the context created by **createBundleContext** is the same as the

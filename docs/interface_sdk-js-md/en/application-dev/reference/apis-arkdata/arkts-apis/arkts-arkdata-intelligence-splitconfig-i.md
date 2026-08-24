@@ -1,8 +1,6 @@
 # SplitConfig
 
-Manages text chunk process configurations.
-
-@interface SplitConfig
+Manages text chunk process configurations.@interface SplitConfig
 
 **Since:** 23
 

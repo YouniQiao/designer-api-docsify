@@ -1,8 +1,6 @@
 # ButtonType
 
-表示按钮类型的枚举。
-
-@enum { int }
+表示按钮类型的枚举。@enum { int }
 
 **起始版本：** 23
 

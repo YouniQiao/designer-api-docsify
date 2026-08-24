@@ -1,8 +1,6 @@
 # TextPickerOptions
 
-Defines the options of TextPicker.
-
-@interface TextPickerOptions
+Defines the options of TextPicker.@interface TextPickerOptions
 
 **Since:** 23
 
@@ -18,11 +16,9 @@ Defines the options of TextPicker.
 columnWidths?: LengthMetrics[]
 ```
 
-Width of each column in the picker.
+Width of each column in the picker.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the text length exceeds the column width, the text will be truncated. </p>
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the text length exceeds the column width, the text will be truncated. </p>
-
-**Type:** [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md)[]
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)[]
 
 **Since:** 23
 

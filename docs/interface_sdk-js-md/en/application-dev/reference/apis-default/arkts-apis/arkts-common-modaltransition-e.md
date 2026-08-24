@@ -1,8 +1,6 @@
 # ModalTransition
 
-Defines modal transition type.
-
-@enum { number }
+Defines modal transition type.@enum { number }
 
 **Since:** 23
 

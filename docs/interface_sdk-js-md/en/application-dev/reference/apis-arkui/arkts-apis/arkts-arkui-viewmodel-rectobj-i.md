@@ -1,8 +1,6 @@
 # RectObj
 
-RectObj
-
-@interface RectObj
+RectObj@interface RectObj
 
 **Since:** 6
 

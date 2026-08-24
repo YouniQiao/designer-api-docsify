@@ -4,6 +4,8 @@ ChipV2Icon定义图标的基类。
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export abstract class ChipV2Icon--><!--Device-unnamed-export abstract class ChipV2Icon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

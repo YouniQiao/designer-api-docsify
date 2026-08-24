@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## capturerState
@@ -20,6 +19,8 @@ import { audioHaptic } from '@kit.AudioKit';
 ```TypeScript
 readonly capturerState: AudioState
 ```
+
+音频状态。
 
 **类型：** AudioState
 
@@ -37,7 +38,7 @@ readonly capturerState: AudioState
 readonly clientUid: int
 ```
 
-Uid for audio capturer client application.
+音频采集器客户端应用程序的Uid。
 
 **类型：** int
 

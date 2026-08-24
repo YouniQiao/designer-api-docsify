@@ -1,8 +1,6 @@
 # ButtonStyleMode
 
-Enum for button style type.
-
-@enum { number }
+Enum for button style type.@enum { number }
 
 **Since:** 23
 

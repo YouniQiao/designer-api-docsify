@@ -1,8 +1,6 @@
 # AlertDialogParamWithButtons
 
-Defines the dialog param with buttons.
-
-@extends AlertDialogParam @interface AlertDialogParamWithButtons
+Defines the dialog param with buttons.@extends AlertDialogParam @interface AlertDialogParamWithButtons
 
 **Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-alertdialog-alertdialogparam-i.md)
 

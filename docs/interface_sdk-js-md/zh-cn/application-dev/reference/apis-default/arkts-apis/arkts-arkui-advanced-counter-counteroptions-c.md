@@ -101,11 +101,7 @@ numberOptions?: NumberStyleOptions
 type: CounterType
 ```
 
-指定当前Counter的类型。
-
-默认值：CounterType.LIST
-
-不支持设置undefined。
+指定当前Counter的类型。默认值：CounterType.LIST不支持设置undefined。
 
 **类型：** [CounterType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-countertype-e.md)
 

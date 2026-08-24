@@ -19,13 +19,7 @@ Uses an image resource as the indicator.
 borderRadius?: Length
 ```
 
-Rounded corner radius of the indicator. It cannot be set in percentage.
-
-Default value: **0.0**
-
-Unit: vp
-
-Value range: [0, +∞)
+Rounded corner radius of the indicator. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)
 
 **Type:** Length
 
@@ -67,13 +61,7 @@ Image resource of the indicator. Supported types: [DrawableDescriptor](../../api
 height?: Length
 ```
 
-Height of the indicator. It cannot be set in percentage.
-
-Default value: **2.0**
-
-Unit: vp
-
-Value range: [0, +∞)
+Height of the indicator. It cannot be set in percentage.Default value: **2.0**Unit: vp Value range: [0, +∞)
 
 **Type:** Length
 
@@ -95,13 +83,7 @@ Value range: [0, +∞)
 marginTop?: Length
 ```
 
-Spacing between the indicator and text. It cannot be set in percentage.
-
-Default value: **8.0**
-
-Unit: vp
-
-Value range: [0, +∞)
+Spacing between the indicator and text. It cannot be set in percentage.Default value: **8.0**Unit: vp Value range: [0, +∞)
 
 **Type:** Length
 
@@ -123,15 +105,7 @@ Value range: [0, +∞)
 width?: Length
 ```
 
-Width of the indicator. It cannot be set in percentage.
-
-Default value: **0.0**
-
-Unit: vp
-
-Value range: [0, +∞)
-
-If this parameter is set to **0**, the tab text width will be used instead.
+Width of the indicator. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)If this parameter is set to **0**, the tab text width will be used instead.
 
 **Type:** Length
 

@@ -1,8 +1,6 @@
 # ItemFillPolicy
 
-定义一个适合WaterFlow、Grid、List和Swiper组件的响应式item布局。
-
-@interface ItemFillPolicy
+定义一个适合WaterFlow、Grid、List和Swiper组件的响应式item布局。@interface ItemFillPolicy
 
 **起始版本：** 22
 

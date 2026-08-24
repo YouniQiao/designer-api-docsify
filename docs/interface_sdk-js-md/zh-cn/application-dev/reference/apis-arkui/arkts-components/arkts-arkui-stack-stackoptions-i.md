@@ -1,8 +1,6 @@
 # StackOptions
 
-设置堆叠容器的子组件对齐方式。
-
-@interface StackOptions
+设置堆叠容器的子组件对齐方式。@interface StackOptions
 
 **起始版本：** 23
 

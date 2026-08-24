@@ -471,7 +471,7 @@ Pushes data into the buffer of the readable stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | Uint8Array \| string \| undefined \| null | Yes | Data to read.<br> There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array \| string \| null` .<br>**Since:** 23 |
+| chunk | Uint8Array \| string \| undefined \| null | Yes | Data to read.<br> There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array \| string \| null`.<br>**Since:** 23 |
 | encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 
 **Return value:**

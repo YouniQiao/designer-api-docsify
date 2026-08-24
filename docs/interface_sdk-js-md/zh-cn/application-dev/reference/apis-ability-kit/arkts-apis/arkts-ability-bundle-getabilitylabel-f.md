@@ -3,22 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleResourceManager } from '@kit.AbilityKit';
 import { bundle } from '@kit.AbilityKit';
-import { defaultAppManager } from '@kit.AbilityKit';
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { freeInstall } from '@kit.AbilityKit';
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { overlay } from '@kit.AbilityKit';
-import { shortcutManager } from '@kit.AbilityKit';
-import { skillManager } from '@kit.AbilityKit';
-import { appDomainVerify } from '@kit.AbilityKit';
-import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAbilityLabel
@@ -27,9 +12,7 @@ import { pluginBundleManager } from '@kit.AbilityKit';
 function getAbilityLabel(bundleName: string, abilityName: string, callback: AsyncCallback<string>): void
 ```
 
-通过Bundle名称和Ability组件名获取应用名称，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+通过Bundle名称和Ability组件名获取应用名称，使用callback异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 8
 
@@ -88,9 +71,7 @@ bundle.getAbilityLabel(bundleName, abilityName, (err, data) => {
 function getAbilityLabel(bundleName: string, abilityName: string): Promise<string>
 ```
 
-通过Bundle名称和ability名称获取应用名称，使用Promise异步回调。
-
-获取调用方自己的信息时不需要权限。
+通过Bundle名称和ability名称获取应用名称，使用Promise异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 8
 

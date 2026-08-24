@@ -1,8 +1,6 @@
 # UIPickerComponentOptions
 
-Defines the options of Picker.
-
-@interface UIPickerComponentOptions
+Defines the options of Picker.@interface UIPickerComponentOptions
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # SwipeGestureHandlerOptions
 
-Defines the SwipeGestureHandler options.
-
-@extends BaseHandlerOptions @interface SwipeGestureHandlerOptions
+Defines the SwipeGestureHandler options.@extends BaseHandlerOptions @interface SwipeGestureHandlerOptions
 
 **Inheritance/Implementation:** SwipeGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)
 

@@ -18,12 +18,7 @@
 isOn: boolean
 ```
 
-开关是否打开。
-
-true：开关打开；false：开关关闭。
-
-默认值：false
-
+开关是否打开。true：开关打开；false：开关关闭。默认值：false  
 **ArkTS-Sta起始版本：** 23
 
 **类型：** boolean
@@ -44,10 +39,7 @@ true：开关打开；false：开关关闭。
 triggerChange: Callback<boolean>
 ```
 
-触发switch选中状态变化。
-
-true：状态从关切换为开；false：状态从开切换为关。
-
+触发switch选中状态变化。true：状态从关切换为开；false：状态从开切换为关。  
 **ArkTS-Sta起始版本：** 23
 
 **类型：** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;boolean&gt;

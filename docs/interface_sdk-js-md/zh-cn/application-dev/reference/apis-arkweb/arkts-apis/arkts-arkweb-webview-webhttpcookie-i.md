@@ -52,9 +52,7 @@ cookie的过期时间。时间格式详见[Date](https://developer.mozilla.org/z
 isHttpOnly: boolean
 ```
 
-标记该cookie是否只能通过HTTP请求访问。
-
-true表示仅能通过HTTP访问，不能通过JavaScript访问，false表示可以通过JavaScript访问。
+标记该cookie是否只能通过HTTP请求访问。true表示仅能通过HTTP访问，不能通过JavaScript访问，false表示可以通过JavaScript访问。
 
 **类型：** boolean
 
@@ -70,9 +68,7 @@ true表示仅能通过HTTP访问，不能通过JavaScript访问，false表示可
 isSecure: boolean
 ```
 
-标记该cookie是否只能通过HTTPS发送。
-
-true表示仅能通过HTTPS发送，不能通过HTTP发送，false表示可以通过HTTP发送。
+标记该cookie是否只能通过HTTPS发送。true表示仅能通过HTTPS发送，不能通过HTTP发送，false表示可以通过HTTP发送。
 
 **类型：** boolean
 
@@ -88,9 +84,7 @@ true表示仅能通过HTTPS发送，不能通过HTTP发送，false表示可以�
 isSessionCookie: boolean
 ```
 
-标记该cookie是否是session cookie。
-
-true表示是session cookie，false表示不是session cookie。
+标记该cookie是否是session cookie。true表示是session cookie，false表示不是session cookie。
 
 **类型：** boolean
 
@@ -140,7 +134,7 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 cookie的同站策略。
 
-**类型：** [WebHttpCookieSameSitePolicy](../../apis-default/arkts-apis/arkts-webview-webhttpcookiesamesitepolicy-e.md)
+**类型：** [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
 
 **起始版本：** 23
 

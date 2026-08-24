@@ -1,8 +1,6 @@
 # CalendarPicker属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件，还支持以下事件：
 
 **继承/实现关系：** CalendarPickerAttribute extends CommonMethod<CalendarPickerAttribute>
 
@@ -123,8 +121,7 @@ onChange(callback: Optional<Callback<Date>>)
 
 选择日期时触发该事件。不能通过双向绑定的状态变量触发。 与[onChange](#onchange)相比，callback参数新增了对undefined类型的 支持。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 18
@@ -165,7 +162,7 @@ textStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 设置入口区的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff182431', <br>font: { <br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
+| value | PickerTextStyle | 是 | 设置入口区的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
 
 ## textStyle
 
@@ -189,5 +186,5 @@ textStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 设置入口区的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff182431', <br>font: { <br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
+| style | Optional&lt;PickerTextStyle&gt; | 是 | 设置入口区的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
 

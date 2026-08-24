@@ -1,8 +1,6 @@
 # PixelRoundMode
 
-像素取整模式
-
-@enum { number }
+像素取整模式@enum { number }
 
 **起始版本：** 18
 

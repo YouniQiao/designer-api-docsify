@@ -1,8 +1,6 @@
 # Refresh properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** RefreshAttribute extends CommonMethod<RefreshAttribute>
 
@@ -39,7 +37,7 @@ Sets the maximum pull-down distance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distance | Optional&lt;number&gt; | Yes | Maximum pull-down distance. The minimum value for the maximum pull-down distance is 0. Values less than 0 are treated as **0**. If this value is less than the refresh offset ( **refreshOffset**), the refresh action will not be triggered when the pull-down gesture is released.<br>If set to **undefined** or **null**, this parameter is considered not set.<br>Default value: **undefined**.<br>Unit: vp |
+| distance | Optional&lt;number&gt; | Yes | Maximum pull-down distance. The minimum value for the maximum pull-down distance is 0. Values less than 0 are treated as **0**. If this value is less than the refresh offset (**refreshOffset**), the refresh action will not be triggered when the pull-down gesture is released.<br>If set to **undefined** or **null**, this parameter is considered not set.<br>Default value: **undefined**.<br>Unit: vp |
 
 ## maxPullDownDistance
 
@@ -47,9 +45,7 @@ Sets the maximum pull-down distance.
 maxPullDownDistance(distance: number | Resource | undefined)
 ```
 
-Sets the maximum pull-down distance. The resource type is supported.
-
-If this API is not set, the maximum pull-down distance is **undefined**.
+Sets the maximum pull-down distance. The resource type is supported.If this API is not set, the maximum pull-down distance is **undefined**.
 
 **Since:** 26.0.0
 
@@ -65,7 +61,7 @@ If this API is not set, the maximum pull-down distance is **undefined**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distance | number \| Resource \| undefined | Yes | Maximum pull-down distance.<br>Default value: **undefined**.&lt;br &gt;Unit: vp<br>Value range: [0, +∞). If the value is less than 0, **0** is used. If this value is less than the [refreshOffset](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#refreshoffset12), the refresh action will not be triggered when the pull-down gesture is released. <br>If this parameter is set to **undefined** or **null**, it is considered that this attribute is not set, meaning there is no limit on the maximum pull-down distance. |
+| distance | number \| Resource \| undefined | Yes | Maximum pull-down distance.<br>Default value: **undefined**.<br>Unit: vp<br>Value range: [0, +∞). If the value is less than 0, **0** is used. If this value is less than the [refreshOffset](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#refreshoffset12), the refresh action will not be triggered when the pull-down gesture is released. <br>If this parameter is set to **undefined** or **null**, it is considered that this attribute is not set, meaning there is no limit on the maximum pull-down distance. |
 
 ## onOffsetChange
 
@@ -75,8 +71,7 @@ onOffsetChange(callback: Callback<number>)
 
 Called when the pull-down distance changes.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 12
@@ -241,9 +236,7 @@ Sets the minimum pull-down offset required to trigger a refresh. If the distance
 refreshOffset(value: number | Resource)
 ```
 
-Sets the pull-down offset that triggers the refresh. When the pull-down distance is less than the value of this attribute, releasing the pull-down gesture does not trigger the refresh. The resource type is supported.
-
-If this API and [promptText](arkts-arkui-refreshoptions-i.md) are not set, the default offset is 64 vp. If [promptText](arkts-arkui-refreshoptions-i.md) is set, the default offset is 96 vp.
+Sets the pull-down offset that triggers the refresh. When the pull-down distance is less than the value of this attribute, releasing the pull-down gesture does not trigger the refresh. The resource type is supported.If this API and [promptText](arkts-arkui-refreshoptions-i.md) are not set, the default offset is 64 vp. If [promptText](arkts-arkui-refreshoptions-i.md) is set, the default offset is 96 vp.
 
 **Since:** 26.0.0
 

@@ -16,7 +16,7 @@ Enumerates the **salt_len** types to set when PSS padding is used in RSA signing
 HUKS_RSA_PSS_SALT_LEN_DIGEST = 0
 ```
 
-*salt_len** is set to the digest length.
+**salt_len** is set to the digest length.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ HUKS_RSA_PSS_SALT_LEN_DIGEST = 0
 HUKS_RSA_PSS_SALT_LEN_MAX = 1
 ```
 
-*salt_len** is set to the maximum length.
+**salt_len** is set to the maximum length.
 
 **Since:** 10
 

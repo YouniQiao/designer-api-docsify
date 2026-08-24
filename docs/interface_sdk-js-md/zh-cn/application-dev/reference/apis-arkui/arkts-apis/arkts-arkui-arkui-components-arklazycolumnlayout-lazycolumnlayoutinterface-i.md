@@ -1,8 +1,6 @@
 # LazyColumnLayoutInterface
 
-定义懒加载列布局组件。
-
-@interface LazyColumnLayoutInterface
+定义懒加载列布局组件。@interface LazyColumnLayoutInterface
 
 **起始版本：** 26.0.0
 

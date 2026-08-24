@@ -1,8 +1,6 @@
 # PlayInfo
 
-播放信息的定义。
-
-@interface MediaElement
+播放信息的定义。@interface MediaElement
 
 **起始版本：** 23
 

@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [StackModifier](arkts-arkui-stackmodifier-c.md) | Defines Stack Modifier |
+| [StackModifier](arkts-arkui-stackmodifier-c.md) | Defines Stack Modifier@implements StackAttribute, AttributeModifier&lt;StackAttribute&gt; |
 

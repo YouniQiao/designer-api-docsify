@@ -1,8 +1,6 @@
 # @ohos.app.cli.cliManager
 
-The module provides the capability to interact with cli tools in the system.
-
-@namespace cliManager
+The module provides the capability to interact with cli tools in the system.@namespace cliManager
 
 **Since:** 26.0.0
 

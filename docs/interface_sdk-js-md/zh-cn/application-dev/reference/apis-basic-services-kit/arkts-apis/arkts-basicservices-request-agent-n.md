@@ -12,7 +12,6 @@ The request agent api. Supports "background" and "frontend" tasks as while. Thou
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -34,8 +33,8 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 | [search](arkts-basicservices-agent-search-f.md) | 根据[Filter](arkts-basicservices-agent-filter-i.md)过滤条件查找任务id。使用 callback异步回调。 |
 | [search](arkts-basicservices-agent-search-f.md) | 根据[Filter](arkts-basicservices-agent-filter-i.md)过滤条件查找任务id。使用 Promise异步回调。 |
 | [createGroup](arkts-basicservices-agent-creategroup-f.md) | 根据[GroupConfig](arkts-basicservices-agent-groupconfig-i.md)分组条件创建分组 ，并返回分组id。使用Promise异步回调。 |
-| [attachGroup](arkts-basicservices-agent-attachgroup-f.md) | 向指定分组id中绑定多个下载任务id。使用Promise异步回调。 |
-| [deleteGroup](arkts-basicservices-agent-deletegroup-f.md) | 移除指定分组，后续不能再往该分组中添加任务id。使用Promise异步回调。 |
+| [attachGroup](arkts-basicservices-agent-attachgroup-f.md) | 向指定分组id中绑定多个下载任务id。使用Promise异步回调。如果任意一个任务id不满足添加条件，则所有列表中的任务都不会添加到分组中。 |
+| [deleteGroup](arkts-basicservices-agent-deletegroup-f.md) | 移除指定分组，后续不能再往该分组中添加任务id。使用Promise异步回调。当分组中的所有任务处于完成、失败或移除状态，并且分组被移除时，显示该分组的完成或失败通知。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -78,9 +77,9 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 | 名称 | 说明 |
 | --- | --- |
 | [Action](arkts-basicservices-agent-action-e.md) | 定义操作选项。 |
-| [Mode](arkts-basicservices-agent-mode-e.md) | 定义模式选项。 |
-| [Network](arkts-basicservices-agent-network-e.md) | 定义网络选项。 |
-| [BroadcastEvent](arkts-basicservices-agent-broadcastevent-e.md) | 定义自定义系统事件。用户可以使用公共事件接口获取该事件。 |
+| [Mode](arkts-basicservices-agent-mode-e.md) | 定义模式选项。当应用的前台任务切换到后台一段时间后会显示运行失败或暂停，而后台任务不受此操作影响。 |
+| [Network](arkts-basicservices-agent-network-e.md) | 定义网络选项。网络不满足设置条件时，未执行的任务会等待执行，执行中的任务将失败或暂停。 |
+| [BroadcastEvent](arkts-basicservices-agent-broadcastevent-e.md) | 定义自定义系统事件。用户可以使用公共事件接口获取该事件。上传下载SA具有'ohos.permission.SEND_TASK_COMPLETE_EVENT'权限，用户可以配置事件的metadata指向的二级配置文件来拦截其他事件发送者。调用CommonEventData类型传输公共事件相关数据，成员的内容填写和 [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) 介绍的 有所区别，其中CommonEventData.code表示任务的状态，目前为0x40 COMPLETE或0x41 FAILED；CommonEventData.data表示任务的taskId。<!--Del-->请参考[静态订阅公共事件](../../../basic-services/common-event/common-event-static-subscription-sys.md)以获取事件配置信息和二级配置文件的配置方式 。<!--DelEnd--> |
 | [State](arkts-basicservices-agent-state-e.md) | 定义任务当前的状态。 |
 | [Faults](arkts-basicservices-agent-faults-e.md) | 定义任务失败的原因。 |
 | [WaitingReason](arkts-basicservices-agent-waitingreason-e.md) | 枚举，定义任务等待的原因。 |

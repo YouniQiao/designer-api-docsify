@@ -16,9 +16,7 @@ Surface Rectangle information.
 offsetX?: double
 ```
 
-The horizontal offset of the surface relative to XComponent.
-
-Unit: px.
+The horizontal offset of the surface relative to XComponent.Unit: px.
 
 **Type:** double
 
@@ -38,9 +36,7 @@ Unit: px.
 offsetY?: double
 ```
 
-The vertical offset of the surface relative to XComponent.
-
-Unit: px.
+The vertical offset of the surface relative to XComponent.Unit: px.
 
 **Type:** double
 
@@ -60,9 +56,7 @@ Unit: px.
 surfaceHeight: double
 ```
 
-The height of the surface created by XComponent
-
-Unit: px.
+The height of the surface created by XComponent Unit: px.
 
 **Type:** double
 
@@ -82,9 +76,7 @@ Unit: px.
 surfaceWidth: double
 ```
 
-The width of the surface created by XComponent
-
-Unit: px.
+The width of the surface created by XComponent Unit: px.
 
 **Type:** double
 

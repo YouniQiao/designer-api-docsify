@@ -56,11 +56,8 @@ Called when auto save request is successfully handled.
 onFailure: OnFailureFn
 ```
 
-Called when auto-save fails.
-
-**NOTE：**
-
-Starting from API version 23, the original **onFailure()** API is changed to a property, but its usage remains unchanged.
+Called when auto-save fails.  
+**NOTE：**Starting from API version 23, the original **onFailure()** API is changed to a property, but its usage remains unchanged.
 
 **Type:** [OnFailureFn](arkts-ability-autofillmanager-onfailurefn-t.md)
 
@@ -80,11 +77,8 @@ Starting from API version 23, the original **onFailure()** API is changed to a p
 onSuccess: OnSuccessFn
 ```
 
-Called when auto-save is successful.
-
-**NOTE：**
-
-Starting from API version 23, the original **onSuccess()** API is changed to a property, but its usage remains unchanged.
+Called when auto-save is successful.  
+**NOTE：**Starting from API version 23, the original **onSuccess()** API is changed to a property, but its usage remains unchanged.
 
 **Type:** [OnSuccessFn](arkts-ability-autofillmanager-onsuccessfn-t.md)
 

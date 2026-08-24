@@ -1,7 +1,6 @@
 # request
 
-request模块给应用提供上传下载文件、后台代理传输的基础功能。
-
+request模块给应用提供上传下载文件、后台代理传输的基础功能。  
 - request暂不支持在Extension中调用。
 
 **起始版本：** 23
@@ -15,7 +14,6 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -85,11 +83,11 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 | [ERROR_INSUFFICIENT_SPACE](arkts-basicservices-request-con.md#error_insufficient_space) | 下载任务错误码：存储空间不足。 |
 | [ERROR_TOO_MANY_REDIRECTS](arkts-basicservices-request-con.md#error_too_many_redirects) | 下载任务错误码：网络重定向过多导致的错误。 |
 | [ERROR_UNHANDLED_HTTP_CODE](arkts-basicservices-request-con.md#error_unhandled_http_code) | 下载任务错误码：无法识别的HTTP代码。 |
-| [ERROR_UNKNOWN](arkts-basicservices-request-con.md#error_unknown) | 下载任务错误码：未知错误。 |
+| [ERROR_UNKNOWN](arkts-basicservices-request-con.md#error_unknown) | 下载任务错误码：未知错误。例如：API version 12及以下版本，系统仅支持串行地尝试连接域名相关IP，不支持单个IP的连接时间控制。若DNS返回的首个IP被阻塞，可能会由于握手超时导致ERROR_UNKNOWN错误。 |
 | [ERROR_OFFLINE](arkts-basicservices-request-con.md#error_offline) | 下载任务错误码：网络未连接。 |
 | [ERROR_UNSUPPORTED_NETWORK_TYPE](arkts-basicservices-request-con.md#error_unsupported_network_type) | 下载任务错误码：网络类型不匹配。 |
 | [PAUSED_QUEUED_FOR_WIFI](arkts-basicservices-request-con.md#paused_queued_for_wifi) | 下载任务暂停原因：文件大小超过了使用蜂窝网络会话允许的最大值，下载被暂停并等待WLAN连接。 |
-| [PAUSED_WAITING_FOR_NETWORK](arkts-basicservices-request-con.md#paused_waiting_for_network) | 下载任务暂停原因：网络问题导致下载暂停。 |
+| [PAUSED_WAITING_FOR_NETWORK](arkts-basicservices-request-con.md#paused_waiting_for_network) | 下载任务暂停原因：网络问题导致下载暂停。例如：网络断开。 |
 | [PAUSED_WAITING_TO_RETRY](arkts-basicservices-request-con.md#paused_waiting_to_retry) | 下载任务暂停原因：网络错误导致下载会话将被重试。 |
 | [PAUSED_BY_USER](arkts-basicservices-request-con.md#paused_by_user) | 下载任务暂停原因：用户暂停会话。 |
 | [PAUSED_UNKNOWN](arkts-basicservices-request-con.md#paused_unknown) | 下载任务暂停原因：未知原因导致暂停下载。 |

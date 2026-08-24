@@ -1,8 +1,6 @@
 # MakerNoteHuaweiMetadata
 
-MakerNoteHuaweiMetadata implements Metadata
-
-来自Huawei相机的照片元数据。
+MakerNoteHuaweiMetadata implements Metadata来自Huawei相机的照片元数据。
 
 **继承/实现关系：** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-image-metadata-i.md)
 
@@ -442,7 +440,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据中定义的所有键值对。 |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据中定义的所有键值对。 |
 
 **示例**
 
@@ -978,9 +976,7 @@ async function heifsMetadataGetBlob(context: common.UIAbilityContext) {
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-获取图像中属性的值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
+获取图像中属性的值。使用Promise异步回调。要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 
 **起始版本：** 23
 
@@ -1000,7 +996,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如获取失败则返回错误码。 |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如获取失败则返回错误码。 |
 
 **错误码：**
 
@@ -1585,9 +1581,7 @@ async function heifsMetadataSetBlob(context: common.UIAbilityContext) {
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-批量设置图片元数据中的指定属性的值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
+批量设置图片元数据中的指定属性的值。使用Promise异步回调。要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 
 **起始版本：** 23
 
@@ -1601,7 +1595,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string \| null&gt; | 是 | 包含要修改的MakerNoteHuaweiMetadata对象属性键值对的数组。 |
+| records | Record&lt;string, string \| null&gt; | 是 | 包含要修改的MakerNoteHuaweiMetadata对象属性键值对的数组。 |
 
 **返回值：**
 
@@ -2063,9 +2057,7 @@ isFrontCamera?: boolean
 isWindSnapshot?: boolean
 ```
 
-是否采用风快照模式拍摄。true表示采用，false表示不采用。
-
-该模式是针对拍摄快速移动物体或容易产生模糊场景（如大风中、抓拍运动物体）的专门摄影。
+是否采用风快照模式拍摄。true表示采用，false表示不采用。该模式是针对拍摄快速移动物体或容易产生模糊场景（如大风中、抓拍运动物体）的专门摄影。
 
 **类型：** boolean
 

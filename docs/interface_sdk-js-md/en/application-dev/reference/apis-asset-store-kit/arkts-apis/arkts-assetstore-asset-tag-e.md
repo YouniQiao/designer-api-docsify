@@ -396,8 +396,7 @@ Maximum number of asset records to return.
 RETURN_OFFSET = TagType.NUMBER | 0x42
 ```
 
-Offset of the asset query result.
-
+Offset of the asset query result.  
 **Note：**: This parameter specifies the starting asset record to return in batch asset query.
 
 **Since:** 11
@@ -414,8 +413,7 @@ Offset of the asset query result.
 RETURN_ORDERED_BY = TagType.NUMBER | 0x43
 ```
 
-Sorting order of the query results. Currently, the results can be sorted only by **ASSET_TAG_DATA_LABEL**.
-
+Sorting order of the query results. Currently, the results can be sorted only by **ASSET_TAG_DATA_LABEL**.  
 **Note：**: By default, assets are returned in the order in which they are added.
 
 **Since:** 11

@@ -6,6 +6,8 @@ V2状态管理操作块组件。
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct ChipV2--><!--Device-unnamed-export declare struct ChipV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ V2状态管理操作块组件。
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 设置Chip的build函数。
@@ -27,6 +28,8 @@ V2状态管理操作块组件。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,9 +40,7 @@ V2状态管理操作块组件。
 ## chipV2Options
 
 ```TypeScript
-@Require
-  @Param
-  readonly chipV2Options: ChipV2Options
+readonly chipV2Options: ChipV2Options
 ```
 
 Chip选项。
@@ -49,6 +50,8 @@ Chip选项。
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Require、@Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

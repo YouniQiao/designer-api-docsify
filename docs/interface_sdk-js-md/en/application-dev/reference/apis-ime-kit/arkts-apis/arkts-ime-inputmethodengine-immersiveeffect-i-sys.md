@@ -1,6 +1,6 @@
 # ImmersiveEffect
 
-@brief Describes the immersive effect.
+Describes the immersive effect.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 fluidLightMode?: FluidLightMode
 ```
 
-@brief Fluid light mode. If this attribute is not set, the default value is **NONE**. <br> <br>This attribute is available only to system applications.
+Fluid light mode. If this attribute is not set, the default value is **NONE**. <br> <br>This attribute is available only to system applications.
 
 **Type:** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 

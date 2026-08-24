@@ -98,7 +98,7 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-
 getFormFactors(): Array<UserAgentFormFactor>
 ```
 
-Obtains the device form factor information, such as phone and tablet. If the corresponding [setFormFactors](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setformfactors) is not called for configuration, the default value of the form factor information is: Phone: "Mobile", Watch: "Watch", Automotive: "Automotive", PC: "Desktop" , Tablet: "Tablet".
+Obtains the device form factor information, such as phone and tablet. If the corresponding [setFormFactors](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setformfactors) is not called for configuration, the default value of the form factor information is: Phone: "Mobile", Watch: "Watch", Automotive: "Automotive", PC: "Desktop", Tablet: "Tablet".
 
 **Since:** 24
 

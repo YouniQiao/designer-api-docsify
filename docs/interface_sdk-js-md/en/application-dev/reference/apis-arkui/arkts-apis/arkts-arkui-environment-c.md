@@ -23,11 +23,7 @@ For details about how to use environment parameters, see [Environment: Device En
 static EnvProp<S>(key: string, value: S): boolean
 ```
 
-Stores the built-in environment variable key from [Environment](../../../ui/state-management/arkts-environment.md) into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.
-
-You are advised to call this API when the application is started.
-
-It is incorrect to use AppStorage to read environment variables without calling **EnvProp** first.
+Stores the built-in environment variable key from [Environment](../../../ui/state-management/arkts-environment.md) into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.You are advised to call this API when the application is started.It is incorrect to use AppStorage to read environment variables without calling **EnvProp** first.
 
 **Since:** 7
 
@@ -64,11 +60,7 @@ Environment.EnvProp('accessibilityEnabled', 'default');
 static envProp<S>(key: string, value: S): boolean
 ```
 
-Stores the built-in environment variable key from [Environment](../../../ui/state-management/arkts-environment.md) into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.
-
-You are advised to call this API when the application is started.
-
-It is incorrect to use AppStorage to read environment variables without calling **envProp** first.
+Stores the built-in environment variable key from [Environment](../../../ui/state-management/arkts-environment.md) into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.You are advised to call this API when the application is started.It is incorrect to use AppStorage to read environment variables without calling **envProp** first.
 
 **Since:** 10
 

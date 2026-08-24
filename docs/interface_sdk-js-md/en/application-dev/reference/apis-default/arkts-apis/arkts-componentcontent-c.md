@@ -88,7 +88,7 @@ Constructor.
 | uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ComponentContent |
 | builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | Yes | Defines the builder that will be called to build ComponentContent. ComponentContent. |
 | args | T | Yes | Parameters used to update the ComponentContent. |
-| options | [BuildOptions](arkts-buildernode-buildoptions-i.md) | Yes | Defines the options that will be used when building. |
+| options | [BuildOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-buildoptions-i.md) | Yes | Defines the options that will be used when building. |
 
 ## dispose
 

@@ -94,9 +94,7 @@ ERROR_NOT_COMPLY_SECURITY_POLICY = 29700005
 ERROR_PARAMETER_VALIDATION_FAILED = 29700006
 ```
 
-表示输入参数校验失败。
-
-例如：参数格式不正确、取值范围无效
+表示输入参数校验失败。例如：参数格式不正确、取值范围无效
 
 **起始版本：** 23
 

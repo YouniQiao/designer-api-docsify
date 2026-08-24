@@ -1,8 +1,6 @@
 # SphereGeometry
 
-A sphere geometry type that inherits from GeometryDefinition.
-
-@extends GeometryDefinition
+A sphere geometry type that inherits from GeometryDefinition.@extends GeometryDefinition
 
 **Inheritance/Implementation:** SphereGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 

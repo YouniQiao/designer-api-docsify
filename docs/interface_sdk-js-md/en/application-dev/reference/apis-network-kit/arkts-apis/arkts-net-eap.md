@@ -21,7 +21,7 @@ import { eap } from '@kit.NetworkKit';
 | Name | Description |
 | --- | --- |
 | [logOffEthEap](arkts-network-eap-logoffetheap-f.md) | Revokes the EAP-authenticated state of an Ethernet NIC. |
-| [regCustomEapHandler](arkts-network-eap-regcustomeaphandler-f.md) | Registers a custom handler of Extensible Authentication Protocol (EAP) packets for extensible authentication. This API returns the result asynchronously through a callback. |
+| [regCustomEapHandler](arkts-network-eap-regcustomeaphandler-f.md) | Registers a custom handler of Extensible Authentication Protocol (EAP) packets for extensible authentication. This API returns the result asynchronously through a callback.The system will encapsulate the eligible EAP packets into the callback function for enterprise applications to retrieve. |
 | [replyCustomEapData](arkts-network-eap-replycustomeapdata-f.md) | Notifies the system of the extensible authentication result. |
 | [startEthEap](arkts-network-eap-startetheap-f.md) | Starts EAP authentication on an Ethernet NIC. |
 | [unregCustomEapHandler](arkts-network-eap-unregcustomeaphandler-f.md) | Unregisters the custom handler of EAP packets for extensible authentication. This API returns the result asynchronously through a callback. |
@@ -30,14 +30,14 @@ import { eap } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [EapData](arkts-network-eap-eapdata-i.md) | Defines the EAP data. |
+| [EapData](arkts-network-eap-eapdata-i.md) | Defines the EAP data.​ |
 | [EthEapProfile](arkts-network-eap-etheapprofile-i.md) | Represents the EAP profile information. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CustomResult](arkts-network-eap-customresult-e.md) | Enumerates the EAP authentication results. |
+| [CustomResult](arkts-network-eap-customresult-e.md) | Enumerates the EAP authentication results.​ |
 | [EapMethod](arkts-network-eap-eapmethod-e.md) | Enumerates the EAP authentication methods. |
 | [Phase2Method](arkts-network-eap-phase2method-e.md) | Enumerates the Phase 2 authentication methods. |
 

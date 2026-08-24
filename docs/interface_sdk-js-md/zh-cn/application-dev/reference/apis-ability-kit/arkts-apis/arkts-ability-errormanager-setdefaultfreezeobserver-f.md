@@ -14,8 +14,7 @@ function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObse
 
 发生APP_FREEZE时，支持链式回调，返回上一次注册的处理器，仅限主线程调用。 如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口请勿与
 > [on('freeze')](arkts-ability-errormanager-onerror-f.md#onerror)
 > 或

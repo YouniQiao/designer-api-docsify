@@ -67,11 +67,9 @@ setHostPageOverlayForbidden(isForbidden: boolean) : void
 
 Sets whether the page started by the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) can be overlaid by the page of the user.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-> 
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).&gt;
 > This API must be called before a window is created. You are advised to call it within the
 > [onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate) lifecycle of the
 > [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md).
@@ -105,12 +103,10 @@ Sets whether the page started by the [UIExtensionAbility](arkts-ability-app-abil
 startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<AbilityResult>
 ```
 
-Starts an ability with the caller information specified. The caller information is carried in **want** and identified at the system service layer. The ability can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses a promise to return the result.
-
+Starts an ability with the caller information specified. The caller information is carried in **want** and identified at the system service layer. The ability can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses a promise to return the result.  
 - Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
@@ -216,11 +212,9 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<voi
 
 Starts a ServiceExtensionAbility under a specified system account. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-> 
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).&gt;
 > Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
@@ -240,7 +234,7 @@ Starts a ServiceExtensionAbility under a specified system account. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount). |
 
 **Return value:**
 
@@ -274,10 +268,9 @@ Starts a ServiceExtensionAbility under a specified system account. This API uses
 startUIAbilities(wantList: Array<Want>): Promise<void>
 ```
 
-Starts multiple UIAbility components simultaneously. This API uses a promise to return the result. You can pass the Want information of multiple UIAbility instances, which can point to one or more applications. If all the UIAbility instances can be started successfully, the system displays these UIAbility instances in multiple windows simultaneously. Depending on the window handling, different devices may have varying display effects ( including window shape, quantity, and layout). This API can be properly called only on phones and tablets. If it is called on other device types, error code 801 is returned.
+Starts multiple UIAbility components simultaneously. This API uses a promise to return the result. You can pass the Want information of multiple UIAbility instances, which can point to one or more applications. If all the UIAbility instances can be started successfully, the system displays these UIAbility instances in multiple windows simultaneously. Depending on the window handling, different devices may have varying display effects (including window shape, quantity, and layout). This API can be properly called only on phones and tablets. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
@@ -338,17 +331,13 @@ startUIAbilitiesInSplitWindowMode(primaryWindowId: int, secondaryWant: Want): Pr
 
 Starts a second UIAbility after the first UIAbility instance is created, and displays them in split-screen mode. This API uses a promise to return the result. This API can be properly called only on phones. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
-> 
-> If the first UIAbility instance is destroyed, the second UIAbility is started in full-screen mode.
-> 
+> **NOTE：**&gt;
+> If the first UIAbility instance is destroyed, the second UIAbility is started in full-screen mode.&gt;
 > The second UIAbility supports only
 > [explicit startup](../../../application-models/explicit-implicit-want-mappings.md#matching-rules-of-explicit-want)
-> .
-> 
+> .&gt;
 > If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is
-> required (available only for system applications).
-> 
+> required (available only for system applications).&gt;
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 

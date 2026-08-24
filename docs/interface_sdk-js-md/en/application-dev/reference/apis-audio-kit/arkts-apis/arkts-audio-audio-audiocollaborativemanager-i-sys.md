@@ -14,7 +14,6 @@ Implements audio collaborative management.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## isCollaborativePlaybackEnabledForDevice

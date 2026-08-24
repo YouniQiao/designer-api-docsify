@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## importKey
@@ -15,8 +14,7 @@ function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 导入明文密钥，使用Callback方式回调异步返回结果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [huks.importKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-importkeyitem-f.md)
 > 替代。
@@ -142,8 +140,7 @@ function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 
 导入明文密钥。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [huks.importKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-importkeyitem-f.md)替代。
 

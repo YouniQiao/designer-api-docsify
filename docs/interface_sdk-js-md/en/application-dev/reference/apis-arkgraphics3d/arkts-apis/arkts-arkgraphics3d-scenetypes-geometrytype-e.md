@@ -1,8 +1,6 @@
 # GeometryType
 
-Enumerates the geometry types.
-
-@enum { int }
+Enumerates the geometry types.@enum { int }
 
 **Since:** 23
 

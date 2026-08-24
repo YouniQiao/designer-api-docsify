@@ -11,11 +11,6 @@ Defines the JavaScript object to be injected, including the object name, method 
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## asyncMethodList
@@ -114,11 +109,7 @@ Object participating in the registration. Only methods can be declared, not attr
 permission?: string
 ```
 
-JSON string, which is empty by default. This string is used to configure JSBridge permission control and define the URL trustlist at the object and method levels.
-
-The **permission** parameter of JavaScriptProxy supports the resource, HTTP, and HTTPS protocols, but does not support the file protocol.
-
-For the example, see [Invoking Application Functions on the Frontend Page](../../../web/web-in-page-app-function-invoking.md).
+JSON string, which is empty by default. This string is used to configure JSBridge permission control and define the URL trustlist at the object and method levels.The **permission** parameter of JavaScriptProxy supports the resource, HTTP, and HTTPS protocols, but does not support the file protocol.For the example, see [Invoking Application Functions on the Frontend Page](../../../web/web-in-page-app-function-invoking.md).
 
 **Type:** string
 

@@ -1,8 +1,6 @@
 # PathShape
 
-Represents a path used in the **clipShape** and **maskShape** APIs.
-
-This API inherits from [CommonShapeMethod](../../apis-default/arkts-apis/arkts-arkui-shape-commonshapemethod-c.md).
+Represents a path used in the **clipShape** and **maskShape** APIs.This API inherits from [CommonShapeMethod](../../apis-default/arkts-apis/arkts-arkui-shape-commonshapemethod-c.md).
 
 **Inheritance/Implementation:** PathShape extends CommonShapeMethod<PathShape>
 

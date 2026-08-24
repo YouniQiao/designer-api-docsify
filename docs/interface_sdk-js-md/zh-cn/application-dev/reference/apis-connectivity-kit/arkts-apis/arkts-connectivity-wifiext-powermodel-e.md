@@ -1,8 +1,6 @@
 # PowerModel
 
-表示功率模式的枚举。
-
-@enum { number } PowerModel
+表示功率模式的枚举。@enum { number } PowerModel
 
 **起始版本：** 8
 

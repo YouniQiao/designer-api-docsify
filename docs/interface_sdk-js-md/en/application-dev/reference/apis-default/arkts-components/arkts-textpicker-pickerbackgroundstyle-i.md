@@ -1,8 +1,6 @@
 # PickerBackgroundStyle
 
-Provide an interface to set the background style of selected items.
-
-@interface PickerBackgroundStyle
+Provide an interface to set the background style of selected items.@interface PickerBackgroundStyle
 
 **Since:** 23
 
@@ -20,7 +18,7 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 Defines the border radius of selected items.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md) \| [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 23
 

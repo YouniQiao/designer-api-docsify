@@ -1,8 +1,6 @@
 # @ohos.transfer
 
-The transfer module provides transfer ability for subsystem class or interface.
-
-@namespace transfer
+The transfer module provides transfer ability for subsystem class or interface.@namespace transfer
 
 **Since:** 23
 

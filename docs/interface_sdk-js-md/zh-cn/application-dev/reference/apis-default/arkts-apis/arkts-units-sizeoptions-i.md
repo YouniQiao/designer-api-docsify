@@ -1,8 +1,6 @@
 # SizeOptions
 
-宽高尺寸类型，用于描述组件布局时的宽高尺寸大小。
-
-@interface SizeOptions
+宽高尺寸类型，用于描述组件布局时的宽高尺寸大小。@interface SizeOptions
 
 **起始版本：** 23
 

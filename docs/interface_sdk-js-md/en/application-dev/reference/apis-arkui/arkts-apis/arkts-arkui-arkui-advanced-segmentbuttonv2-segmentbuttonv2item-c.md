@@ -4,6 +4,8 @@ Defines segmented button item.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class SegmentButtonV2Item--><!--Device-unnamed-export declare class SegmentButtonV2Item-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,21 +43,16 @@ Constructs a **SegmentButtonV2ItemOptions** instance.
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-    accessibilityDescription?: ResourceStr
+accessibilityDescription?: ResourceStr
 ```
 
-Accessibility description of the segmented button item.
-
-Default value: **""**
-
-If the value is **undefined**, the default value is used.
-
-Decorator type: @Trace
+Accessibility description of the segmented button item.Default value: **""**If the value is **undefined**, the default value is used.Decorator type: @Trace
 
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,21 +65,16 @@ Decorator type: @Trace
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-    accessibilityLevel?: string
+accessibilityLevel?: string
 ```
 
-Accessibility level of the segmented button item.
-
-Default value: **"auto"**
-
-If the value is **undefined**, the default value is used.
-
-Decorator type: @Trace
+Accessibility level of the segmented button item.Default value: **"auto"**If the value is **undefined**, the default value is used.Decorator type: @Trace
 
 **Type:** string
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,21 +87,16 @@ Decorator type: @Trace
 ## accessibilityText
 
 ```TypeScript
-@Trace
-    accessibilityText?: ResourceStr
+accessibilityText?: ResourceStr
 ```
 
-Accessibility text of the segmented button item.
-
-Default value: **""**
-
-If the value is **undefined**, the default value is used.
-
-Decorator type: @Trace
+Accessibility text of the segmented button item.Default value: **""**If the value is **undefined**, the default value is used.Decorator type: @Trace
 
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,23 +109,17 @@ Decorator type: @Trace
 ## enabled
 
 ```TypeScript
-@Trace
-    enabled: boolean
+enabled: boolean
 ```
 
-Whether the segmented button item is enabled.
-
-Default value: **true**
-
-**true**: enabled. **false**: disabled.
-
-If the value is **undefined**, the default value is used.
-
-Decorator type: @Trace
+Whether the segmented button item is enabled.Default value: **true**  
+**true**: enabled. **false**: disabled.If the value is **undefined**, the default value is used.Decorator type: @Trace
 
 **Type:** boolean
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,19 +132,16 @@ Decorator type: @Trace
 ## icon
 
 ```TypeScript
-@Trace
-    icon?: ResourceStr
+icon?: ResourceStr
 ```
 
-Image icon of the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+Image icon of the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,19 +154,16 @@ Decorator type: @Trace
 ## iconModifier
 
 ```TypeScript
-@Trace
-    iconModifier?: ImageModifier
+iconModifier?: ImageModifier
 ```
 
-Image icon modifier for the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+Image icon modifier for the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** ImageModifier
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -201,19 +176,16 @@ Decorator type: @Trace
 ## symbol
 
 ```TypeScript
-@Trace
-    symbol?: Resource
+symbol?: Resource
 ```
 
-HM Symbol icon of the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+HM Symbol icon of the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** Resource
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,19 +198,16 @@ Decorator type: @Trace
 ## symbolModifier
 
 ```TypeScript
-@Trace
-    symbolModifier?: SymbolGlyphModifier
+symbolModifier?: SymbolGlyphModifier
 ```
 
-HM Symbol icon modifier for the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+HM Symbol icon modifier for the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** SymbolGlyphModifier
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,19 +220,16 @@ Decorator type: @Trace
 ## text
 
 ```TypeScript
-@Trace
-    text?: ResourceStr
+text?: ResourceStr
 ```
 
-Text of the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+Text of the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -276,19 +242,16 @@ Decorator type: @Trace
 ## textModifier
 
 ```TypeScript
-@Trace
-    textModifier?: TextModifier
+textModifier?: TextModifier
 ```
 
-Text modifier for the segmented button item.
-
-Default value: **undefined**
-
-Decorator type: @Trace
+Text modifier for the segmented button item.Default value: **undefined**Decorator type: @Trace
 
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

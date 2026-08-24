@@ -2,8 +2,7 @@
 
 Implements a **CreateNativeMediaPlayerCallback** object to control the player created by the application for taking over the web page media playback. This object is a return value type of the [CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback) callback.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The sample effect is subject to the actual device.
 
 **Since:** 23

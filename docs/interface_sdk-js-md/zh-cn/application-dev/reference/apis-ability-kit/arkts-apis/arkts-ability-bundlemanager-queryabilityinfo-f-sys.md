@@ -12,9 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function queryAbilityInfo(want: Want, abilityFlags: int, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-根据给定的want和abilityFlags获取一个或多个AbilityInfo。使用callback异步回调。
-
-获取调用方自身的信息时不需要权限。
+根据给定的want和abilityFlags获取一个或多个AbilityInfo。使用callback异步回调。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -278,9 +276,7 @@ try {
 function queryAbilityInfo(want: Want, abilityFlags: int, userId: int, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-根据给定的want、abilityFlags和userId获取多个AbilityInfo。使用callback异步回调。
-
-获取调用方自身的信息时不需要权限。
+根据给定的want、abilityFlags和userId获取多个AbilityInfo。使用callback异步回调。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -325,9 +321,7 @@ function queryAbilityInfo(want: Want, abilityFlags: int, userId: int, callback: 
 function queryAbilityInfo(want: Want, abilityFlags: int, userId?: int): Promise<Array<AbilityInfo>>
 ```
 
-根据给定的want、abilityFlags和userId获取一个或多个AbilityInfo。使用Promise异步回调。
-
-获取调用方自身的信息时不需要权限。
+根据给定的want、abilityFlags和userId获取一个或多个AbilityInfo。使用Promise异步回调。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -377,9 +371,7 @@ function queryAbilityInfo(want: Want, abilityFlags: int, userId?: int): Promise<
 function queryAbilityInfo(wants: Array<Want>, abilityFlags: int, userId?: int): Promise<Array<AbilityInfo>>
 ```
 
-根据给定的want列表、abilityFlags和userId获取一个或多个AbilityInfo。使用Promise异步回调。
-
-获取调用方自身的信息时不需要权限。
+根据给定的want列表、abilityFlags和userId获取一个或多个AbilityInfo。使用Promise异步回调。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 

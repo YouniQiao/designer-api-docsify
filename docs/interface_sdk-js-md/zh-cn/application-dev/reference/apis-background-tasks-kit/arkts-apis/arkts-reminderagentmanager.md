@@ -51,10 +51,10 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 | [NotificationRequestProxy](arkts-backgroundtasks-reminderagentmanager-notificationrequestproxy-i.md) | 通知请求信息。 |
 | [ReminderInfo](arkts-backgroundtasks-reminderagentmanager-reminderinfo-i.md) | 代理提醒信息，包含 ReminderRequest 和 ReminderId。 |
 | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | 代理提醒对象，用于设置提醒类型、响铃时长等具体信息。 |
-| [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md) | ReminderRequestAlarm extends ReminderRequest |
-| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md) | ReminderRequestCalendar extends ReminderRequest |
-| [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md) | ReminderRequestTimer extends ReminderRequest |
-| [ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md) | 代理提醒状态信息。状态信息会在如下两种情况发送通知： |
+| [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md) | ReminderRequestAlarm extends ReminderRequest闹钟实例对象，用于设置提醒的时间。 |
+| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md) | ReminderRequestCalendar extends ReminderRequest日历实例对象，用于设置提醒的时间。 |
+| [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md) | ReminderRequestTimer extends ReminderRequest倒计时实例对象，用于设置提醒的时间。 |
+| [ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md) | 代理提醒状态信息。状态信息会在如下两种情况发送通知： 1. 用户点击代理提醒的通知按钮时，如果应用进程存在，则会发送用户点击的按钮类型的通知给应用。 如果应用未运行，则无法收到通知。 2. 由于第1点不能保证应用可以收到通知，因此应用注册新的回调函数时，会将该应用下所有用户点击的按钮类型回调给应用。 状态信息最多保存30天，应用注册新的回调函数时或者超过30天未注册回调函数，会删除缓存的状态信息。 |
 | [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md) | 跳转目标的ability信息。 |
 
 <!--Del-->
@@ -63,9 +63,9 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 | 名称 | 说明 |
 | --- | --- |
 | [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i-sys.md) | 弹出的提醒中按钮的类型和标题。 |
-| [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md) | 更新数据库需要的参数信息。 |
+| [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md) | 更新数据库需要的参数信息。数据提供方需要在module.json5中的proxyData节点定义要共享的表的标识，读写权限和基本信息。配置方式请见 [数据提供方应用的开发](../../../database/share-data-by-silent-access-sys.md#数据提供方应用的开发)。 |
 | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i-sys.md) | 代理提醒对象，用于设置提醒类型、响铃时长等具体信息。 |
-| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i-sys.md) | ReminderRequestCalendar extends ReminderRequest |
+| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i-sys.md) | ReminderRequestCalendar extends ReminderRequest日历实例对象，用于设置提醒的时间。 |
 <!--DelEnd-->
 
 ### 枚举

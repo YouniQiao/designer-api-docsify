@@ -1,8 +1,6 @@
 # CheckBoxGroupConfiguration
 
-CheckBoxGroupConfiguration used by content modifier.
-
-@extends CommonConfiguration&lt;CheckBoxGroupConfiguration&gt; @interface CheckBoxGroupConfiguration
+CheckBoxGroupConfiguration used by content modifier.@extends CommonConfiguration&lt;CheckBoxGroupConfiguration&gt; @interface CheckBoxGroupConfiguration
 
 **Inheritance/Implementation:** CheckBoxGroupConfiguration extends CommonConfiguration<CheckBoxGroupConfiguration>
 

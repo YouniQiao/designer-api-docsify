@@ -14,13 +14,11 @@ function openToast(options: ShowToastOptions): Promise<number>
 
 Shows a toast. This API uses a promise to return the toast ID.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Subwindows with **showMode** set to **TOP_MOST** or **SYSTEM_TOP_MOST** do not support **openToast** in input
 > method type windows. For details, see the constraints in the input method framework
 > [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)
-> .
-> 
+> .&gt;
 > - Directly using **openToast** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
 > **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the

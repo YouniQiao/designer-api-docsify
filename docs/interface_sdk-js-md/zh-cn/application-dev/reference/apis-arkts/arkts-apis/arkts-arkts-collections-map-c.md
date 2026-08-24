@@ -2,14 +2,14 @@
 
 一种基于键值对存储的非线性数据结构，能够高效地通过唯一键来存取对应的值。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
 > 本节使用以下标识符来表示泛型的使用：
-
 - K：Key，键。 - V：Value，值。 K和V类型都需为 [Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器类型**：\@Sendable
 
 **起始版本：** 12
+
+**装饰器类型：** @Sendable
 
 <!--Device-collections-class Map--><!--Device-collections-class Map-End-->
 
@@ -365,8 +365,7 @@ put(key: K, value: V): V | undefined
 
 向该Map添加或更新一个指定的键值对，并返回该键之前关联的值。
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - 返回**undefined**时无法直接区分是键不存在还是键存在但值为**undefined**，可在使用本接口前先使用
 > **has**接口判断键是否存在，进而区分返回的**undefined**所属情况。
 
@@ -470,8 +469,7 @@ remove(key: K): V | undefined
 
 删除该Map中的指定键及其对应值。
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - 返回**undefined**时无法直接区分是键不存在还是键存在但值为**undefined**，可在使用本接口前先使用
 > **has**接口判断键是否存在，进而区分返回的**undefined**所属情况。
 

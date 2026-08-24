@@ -12,9 +12,7 @@ import { scan } from '@kit.ConnectivityKit';
 function onDeviceFound(callback: Callback<ScanResults[]>): void
 ```
 
-订阅星闪扫描结果。使用callback异步回调。
-
-应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
+订阅星闪扫描结果。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 

@@ -20,13 +20,7 @@ import { webview } from '@kit.ArkWeb';
 x: number
 ```
 
-Horizontal scroll offset of the web page. The value is the difference between the x-coordinate of the left edge of the web page and the x-coordinate of the left edge of the Web component.
-
-When the web page is over-scrolled to the right, the value is negative.
-
-When the web page is not over-scrolled or is over-scrolled to the left, the value is 0 or positive.
-
-Unit: vp.
+Horizontal scroll offset of the web page. The value is the difference between the x-coordinate of the left edge of the web page and the x-coordinate of the left edge of the Web component.When the web page is over-scrolled to the right, the value is negative.When the web page is not over-scrolled or is over-scrolled to the left, the value is 0 or positive.Unit: vp.
 
 **Type:** number
 
@@ -44,13 +38,7 @@ Unit: vp.
 y: number
 ```
 
-Vertical scroll offset of the web page. The value is the difference between the y-coordinate of the top edge of the web page and the y-coordinate of the top edge of the Web component.
-
-When the web page is over-scrolled downward, the value is negative.
-
-When the web page is not over-scrolled or is over-scrolled upward, the value is 0 or positive.
-
-Unit: vp.
+Vertical scroll offset of the web page. The value is the difference between the y-coordinate of the top edge of the web page and the y-coordinate of the top edge of the Web component.When the web page is over-scrolled downward, the value is negative.When the web page is not over-scrolled or is over-scrolled upward, the value is 0 or positive.Unit: vp.
 
 **Type:** number
 

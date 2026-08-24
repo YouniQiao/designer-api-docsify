@@ -1,8 +1,6 @@
 # HorizontalAlign
 
-HorizontalAlign enumeration description.
-
-@enum { number }
+HorizontalAlign enumeration description.@enum { number }
 
 **Since:** 23
 

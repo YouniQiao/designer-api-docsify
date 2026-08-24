@@ -14,7 +14,6 @@ metadata流。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## isLockMetadataObjectTrackingSupported
@@ -58,10 +57,8 @@ lockMetadataObjectTracking(point: Point): void
 
 锁定对特定元数据对象（如猫脸、狗脸）的追踪。
 
-> **说明：**
-> 
-> - 该功能以point所指向的点所在的对象为追踪对象，如果该点不存在追踪对象，则功能不生效。
-> 
+> **说明：**&gt;
+> - 该功能以point所指向的点所在的对象为追踪对象，如果该点不存在追踪对象，则功能不生效。&gt;
 > - 被锁定追踪的对象离开取景范围超过三秒或调用解锁追踪后，锁定追踪自动取消。
 
 **起始版本：** 26.0.0
@@ -218,8 +215,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 监听metadata流的错误，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
@@ -245,8 +241,7 @@ on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObjec
 
 监听检测到的metadata对象，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10

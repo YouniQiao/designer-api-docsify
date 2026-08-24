@@ -1,8 +1,6 @@
 # UIPickerComponentModifier
 
-Defines Picker Modifier
-
-@implements { UIPickerComponentAttribute, AttributeModifier&lt;UIPickerComponentAttribute&gt; }
+Defines Picker Modifier@implements { UIPickerComponentAttribute, AttributeModifier&lt;UIPickerComponentAttribute&gt; }
 
 **Inheritance/Implementation:** UIPickerComponentModifier implements UIPickerComponentAttribute, AttributeModifier<UIPickerComponentAttribute>
 

@@ -4,9 +4,7 @@
 export type TagSession = _TagSession
 ```
 
-Obtains a **TagSession** object.
-
-<!--no_check-->
+Obtains a **TagSession** object.<!--no_check-->
 
 **Since:** 23
 

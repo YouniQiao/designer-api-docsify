@@ -1,8 +1,6 @@
 # MarkStyle
 
-Define the style of checkbox mark.
-
-@interface MarkStyle
+Define the style of checkbox mark.@interface MarkStyle
 
 **起始版本：** 23
 
@@ -18,9 +16,7 @@ Define the style of checkbox mark.
 size?: Length
 ```
 
-内部图标大小，单位vp。默认大小与多选框组件宽度相同。
-
-不支持百分比形式设置。设置为非法值时，按照默认大小处理。默认大小与多选框组件宽度相同。
+内部图标大小，单位vp。默认大小与多选框组件宽度相同。不支持百分比形式设置。设置为非法值时，按照默认大小处理。默认大小与多选框组件宽度相同。
 
 **类型：** [Length](arkts-length-t.md)
 

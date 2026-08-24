@@ -12,9 +12,7 @@ import { bundleState } from '@kit.BackgroundTasksKit';
 function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallback<BundleActiveInfoResponse>): void
 ```
 
-Queries usage information about each bundle within a specified period.
-
-This method queries usage information at the BY_OPTIMIZED interval by default.
+Queries usage information about each bundle within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **起始版本：** 7
 
@@ -72,9 +70,7 @@ bundleState.queryBundleStateInfos(0, 20000000000000).then((res: bundleState.Bund
 function queryBundleStateInfos(begin: number, end: number): Promise<BundleActiveInfoResponse>
 ```
 
-Queries usage information about each bundle within a specified period.
-
-This method queries usage information at the BY_OPTIMIZED interval by default.
+Queries usage information about each bundle within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **起始版本：** 7
 

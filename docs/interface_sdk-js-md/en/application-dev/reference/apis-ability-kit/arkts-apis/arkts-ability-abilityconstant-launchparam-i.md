@@ -120,11 +120,8 @@ Detailed message that describes the reason for the ability launch.
 launchUptime?: long
 ```
 
-System uptime (the time elapsed since the system booted up) when the UIAbility starts, in milliseconds.
-
-**Constraints**:
-
-This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
+System uptime (the time elapsed since the system booted up) when the UIAbility starts, in milliseconds.  
+**Constraints**:This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
 
 **Type:** long
 
@@ -144,13 +141,8 @@ This feature takes effect only when the UIAbility is started. For other types of
 launchUTCTime?: long
 ```
 
-UTC timestamp when the UIAbility starts, in milliseconds.
-
-This API can be used in atomic services since API version 23.
-
-**Constraints**:
-
-This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
+UTC timestamp when the UIAbility starts, in milliseconds.This API can be used in atomic services since API version 23.  
+**Constraints**:This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
 
 **Type:** long
 

@@ -1,8 +1,6 @@
 # EdgeOutlineStyles
 
-引入该对象时，至少传入一个参数。
-
-@interface EdgeOutlineStyles
+引入该对象时，至少传入一个参数。@interface EdgeOutlineStyles
 
 **起始版本：** 23
 

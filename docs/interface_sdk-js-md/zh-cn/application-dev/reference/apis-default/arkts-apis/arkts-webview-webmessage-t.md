@@ -4,7 +4,7 @@
 type WebMessage = ArrayBuffer | string
 ```
 
-WebMessage type supplied to [onMessageEventExt](arkts-webview-webmessageport-i.md#onmessageeventext) for indicating the type of web message.
+WebMessage type supplied to [onMessageEventExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageport-i.md#onmessageeventext) for indicating the type of web message.
 
 **起始版本：** 23
 

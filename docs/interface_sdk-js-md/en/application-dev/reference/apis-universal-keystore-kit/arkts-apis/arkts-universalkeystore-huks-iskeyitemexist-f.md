@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## isKeyItemExist
@@ -13,9 +12,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function isKeyItemExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a key exists. This API uses an asynchronous callback to return the result.
-
-If the key does not exist, the error code 12000011 is returned.
+Checks whether a key exists. This API uses an asynchronous callback to return the result.If the key does not exist, the error code 12000011 is returned.
 
 **Since:** 9
 
@@ -169,9 +166,7 @@ huks.isKeyItemExist(keyAlias, emptyOptions).then((data) => {
 function isKeyItemExist(keyAlias: string, options: HuksOptions): Promise<boolean>
 ```
 
-Checks whether a key exists. This API uses a promise to return the result.
-
-If the key does not exist, the error code 12000011 is returned.
+Checks whether a key exists. This API uses a promise to return the result.If the key does not exist, the error code 12000011 is returned.
 
 **Since:** 9
 

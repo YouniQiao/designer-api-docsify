@@ -2,12 +2,10 @@
 
 Image AI analysis options.
 
-> **Description:**
-> 
+> **Description:**&gt;
 > The types parameter in this feature has higher priority than the types parameter in
 > [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md). When both are set,
-> the value set in this feature takes precedence.
-> 
+> the value set in this feature takes precedence.&gt;
 > This feature depends on device capability and needs to be used with
 > the enableAnalyzer interface
 > of the corresponding component (for example, Image component).
@@ -26,9 +24,7 @@ Image AI analysis options.
 aiController?: ImageAnalyzerController | ESValue
 ```
 
-Image AI analysis controller. The enableAnalyzer interface of the corresponding component (for example, the enableAnalyzer interface of the Image component) must be set to true for this to take effect.
-
-Currently, only ESValue type is supported.
+Image AI analysis controller. The enableAnalyzer interface of the corresponding component (for example, the enableAnalyzer interface of the Image component) must be set to true for this to take effect.Currently, only ESValue type is supported.
 
 **Type:** [ImageAnalyzerController](arkts-arkui-imagecommon-imageanalyzercontroller-c.md) \| ESValue
 

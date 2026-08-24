@@ -1,6 +1,6 @@
 # ToolBarV2Modifier
 
-Provides APIs for setting the height (**height**), background color (**backgroundColor**), left and right padding ( **padding**, which only takes effect when there are fewer than five items) of the toolbar, and whether to display the pressed state effect (**stateEffect**).
+Provides APIs for setting the height (**height**), background color (**backgroundColor**), left and right padding (**padding**, which only takes effect when there are fewer than five items) of the toolbar, and whether to display the pressed state effect (**stateEffect**).
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Sets the background color of the toolbar. By overriding this API, you can implem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backgroundColor | [ColorMetrics](arkts-graphics-colormetrics-c.md) | Yes | toolBarV2's backgroundColor. |
+| backgroundColor | [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | Yes | toolBarV2's backgroundColor. |
 
 **Return value:**
 
@@ -65,7 +65,7 @@ Sets the height of the toolbar. By overriding this API, you can implement custom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](arkts-graphics-lengthmetrics-c.md) | Yes | toolBarV2's height. |
+| height | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | Yes | toolBarV2's height. |
 
 **Return value:**
 
@@ -95,7 +95,7 @@ Sets the left and right padding of the toolbar. By overriding this API, you can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | [LengthMetrics](arkts-graphics-lengthmetrics-c.md) | Yes | left and right padding. |
+| padding | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | Yes | left and right padding. |
 
 **Return value:**
 

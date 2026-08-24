@@ -16,11 +16,7 @@
 animated?: boolean
 ```
 
-是否支持转场动画。
-
-true：支持转场动画；false：不支持转场动画。
-
-默认值：true
+是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true
 
 **类型：** boolean
 

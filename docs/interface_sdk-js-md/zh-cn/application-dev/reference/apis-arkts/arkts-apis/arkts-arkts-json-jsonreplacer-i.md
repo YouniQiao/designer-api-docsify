@@ -37,5 +37,5 @@ jsonReplacer(): Record<string, Any>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Record](arkts-arkts-map-record-c.md)&lt;string, Any&gt; | 表示序列化结果对象的Record。 |
+| Record&lt;string, Any&gt; | 表示序列化结果对象的Record。 |
 

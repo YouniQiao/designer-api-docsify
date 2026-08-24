@@ -18,6 +18,8 @@ Build function of PopupV2. This component is implemented based on state manageme
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Builder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@Builderexport declare function PopupV2(options: PopupV2InitInfo): void--><!--Device-unnamed-@Builderexport declare function PopupV2(options: PopupV2InitInfo): void-End-->

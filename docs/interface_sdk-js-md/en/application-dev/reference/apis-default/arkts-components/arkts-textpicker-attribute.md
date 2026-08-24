@@ -1,8 +1,6 @@
 # TextPickerAttribute
 
-Defines the TextPicker component attributes.
-
-@extends CommonMethod @interface TextPickerAttribute
+Defines the TextPicker component attributes.@extends CommonMethod @interface TextPickerAttribute
 
 **Inheritance/Implementation:** TextPickerAttribute extends CommonMethod
 

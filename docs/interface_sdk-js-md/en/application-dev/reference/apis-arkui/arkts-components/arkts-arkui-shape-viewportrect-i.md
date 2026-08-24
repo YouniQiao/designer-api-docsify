@@ -1,8 +1,6 @@
 # ViewportRect
 
-Viewport bounding box.
-
-@interface ViewportRect
+Viewport bounding box.@interface ViewportRect
 
 **Since:** 23
 

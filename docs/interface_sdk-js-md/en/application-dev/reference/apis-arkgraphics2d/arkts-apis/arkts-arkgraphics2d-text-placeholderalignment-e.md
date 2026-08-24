@@ -2,13 +2,9 @@
 
 Enumerates the vertical alignment modes of a placeholder relative to the surrounding text.
 
-
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The figure shows the last three alignment modes. The first three alignment modes are similar in text baseline
-> alignment, with the comparison reference being the text baseline, indicated by the green line.
-> 
+> alignment, with the comparison reference being the text baseline, indicated by the green line.&gt;
 > 
 
 **Since:** 23

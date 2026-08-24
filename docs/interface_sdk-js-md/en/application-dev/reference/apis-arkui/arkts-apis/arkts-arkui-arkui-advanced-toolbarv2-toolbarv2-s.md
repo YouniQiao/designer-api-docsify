@@ -4,6 +4,8 @@ Declare Component ToolBarV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ToolBarV2--><!--Device-unnamed-export declare struct ToolBarV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,8 +19,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 ## activatedIndex
 
 ```TypeScript
-@Param
-  activatedIndex?: number
+activatedIndex?: number
 ```
 
 Define toolbarV2 activate item index, default is -1.
@@ -26,6 +27,8 @@ Define toolbarV2 activate item index, default is -1.
 **Type:** number
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +41,7 @@ Define toolbarV2 activate item index, default is -1.
 ## dividerModifier
 
 ```TypeScript
-@Param
-  dividerModifier?: DividerModifier
+dividerModifier?: DividerModifier
 ```
 
 Define divider Modifier.
@@ -47,6 +49,8 @@ Define divider Modifier.
 **Type:** [DividerModifier](arkts-arkui-dividermodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,9 +63,7 @@ Define divider Modifier.
 ## toolBarList
 
 ```TypeScript
-@Require
-  @Param
-  toolBarList: ToolBarV2Item[]
+toolBarList: ToolBarV2Item[]
 ```
 
 Define toolbarV2 item list.
@@ -69,6 +71,8 @@ Define toolbarV2 item list.
 **Type:** [ToolBarV2Item](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2item-c.md)[]
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,8 +85,7 @@ Define toolbarV2 item list.
 ## toolBarModifier
 
 ```TypeScript
-@Param
-  toolBarModifier?: ToolBarV2Modifier
+toolBarModifier?: ToolBarV2Modifier
 ```
 
 Define toolbarV2 modifier.
@@ -90,6 +93,8 @@ Define toolbarV2 modifier.
 **Type:** [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

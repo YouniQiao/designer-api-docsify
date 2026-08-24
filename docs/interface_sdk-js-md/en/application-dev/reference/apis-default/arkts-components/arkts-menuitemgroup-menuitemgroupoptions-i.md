@@ -1,8 +1,6 @@
 # MenuItemGroupOptions
 
-Defines the option of MenuItemGroup.
-
-@interface MenuItemGroupOptions
+Defines the option of MenuItemGroup.@interface MenuItemGroupOptions
 
 **Since:** 23
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## anonAttestKeyItemOfflineAsUser
@@ -17,11 +16,9 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 离线获取匿名证明证书。该接口使用promise返回结果。此操作不需要每次都需要网络连接， 比anonAttestKeyItemAsUser函数性能高。
 
 > **说明：**
-> 
-> 
+> &gt;
 > -离线密钥证明依赖于网络。您需要定期连接网络才能使用此API更新离线证书。
-> 
-> 
+> &gt;
 > -离线匿名密钥证明要求本地时间准确。否则，可能导致对端无法正常工作。验证证书过期。
 
 **起始版本：** 26.0.0

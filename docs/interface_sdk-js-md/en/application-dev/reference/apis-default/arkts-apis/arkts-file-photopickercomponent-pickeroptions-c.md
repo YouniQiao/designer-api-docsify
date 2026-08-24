@@ -1,8 +1,6 @@
 # PickerOptions
 
-PickerOptions Object
-
-@extends photoAccessHelper.BaseSelectOptions
+PickerOptions Object@extends photoAccessHelper.BaseSelectOptions
 
 **Inheritance/Implementation:** PickerOptions extends [photoAccessHelper.BaseSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)
 

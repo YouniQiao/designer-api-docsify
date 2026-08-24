@@ -26,7 +26,7 @@ Check whether the device supports the [openCertificateDetailDialog](arkts-device
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the CA certificate management dialog box can be opened. **true**: supported; **false** : not supported |
+| boolean | Whether the CA certificate management dialog box can be opened. **true**: supported; **false**: not supported |
 
 **Error codes:**
 

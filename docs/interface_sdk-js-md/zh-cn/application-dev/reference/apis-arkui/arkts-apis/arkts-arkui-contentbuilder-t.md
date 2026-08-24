@@ -11,6 +11,8 @@ type ContentBuilder = () => void
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Builder
+
 <!--Device-unnamed-@Buildertype ContentBuilder = () => void--><!--Device-unnamed-@Buildertype ContentBuilder = () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

@@ -14,8 +14,7 @@ function destroyVlanInterface(ifName: string, vlanId: int): Promise<void>
 
 删除指定以太网网卡上由vlanId指定的虚拟局域网。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 本接口当前仅支持PC设备，其他设备类型上调用本接口返回错误码2100002。
 
 **起始版本：** 23

@@ -16,6 +16,8 @@ Defines Component3D.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 <!--Device-unnamed-@ComponentBuilderexport declare function Component3D(    sceneOptions?: SceneOptions,    content_?: CustomBuilder,): Component3DAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Component3D(    sceneOptions?: SceneOptions,    content_?: CustomBuilder,): Component3DAttribute-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

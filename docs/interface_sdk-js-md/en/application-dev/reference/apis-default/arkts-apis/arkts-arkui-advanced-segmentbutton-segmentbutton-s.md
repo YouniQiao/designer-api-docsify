@@ -6,6 +6,8 @@ Declare Component SegmentButton
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-declare struct SegmentButton--><!--Device-unnamed-declare struct SegmentButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declare Component SegmentButton
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## enableStateAnimation
 
 ```TypeScript
-@PropRef
-  enableStateAnimation: boolean
+enableStateAnimation: boolean
 ```
 
 Enable animation when selectedIndexes change.
@@ -51,6 +53,8 @@ Enable animation when selectedIndexes change.
 
 **ArkTS mode:** ArkTS-Sta since version 24.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SegmentButton-@PropRef  enableStateAnimation: boolean--><!--Device-SegmentButton-@PropRef  enableStateAnimation: boolean-End-->
@@ -60,8 +64,7 @@ Enable animation when selectedIndexes change.
 ## maxFontScale
 
 ```TypeScript
-@PropRef
-  maxFontScale: double | Resource
+maxFontScale: double | Resource
 ```
 
 The max font scale of the segmented button option text.
@@ -71,6 +74,8 @@ The max font scale of the segmented button option text.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,8 +106,7 @@ The click event callback will be triggered when a option button of SegmentButton
 ## options
 
 ```TypeScript
-@ObjectLink
-  options: SegmentButtonOptions
+options: SegmentButtonOptions
 ```
 
 The options of SegmentButton.
@@ -113,6 +117,8 @@ The options of SegmentButton.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObjectLink
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SegmentButton-@ObjectLink  options: SegmentButtonOptions--><!--Device-SegmentButton-@ObjectLink  options: SegmentButtonOptions-End-->
@@ -122,8 +128,7 @@ The options of SegmentButton.
 ## selectedIndexes
 
 ```TypeScript
-@Link
-  selectedIndexes: int[]
+selectedIndexes: int[]
 ```
 
 The selectedIndex.
@@ -133,6 +138,8 @@ The selectedIndex.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Link
 
 **Model restriction:** This API can be used only in the stage model.
 

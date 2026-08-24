@@ -1,12 +1,6 @@
 # AVPlayer
 
-AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use [createAVPlayer()](arkts-media-media-createavplayer-f.md) to create an AVPlayer instance.
-
-When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](#onmediakeysysteminfoupdate): listens for AVPlayer state changes. [on('error')](#onmediakeysysteminfoupdate): listens for error events.
-
-Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the system might terminate applications to free up resources.
-
-For details about the audio and video playback demo, see [Audio Playback](../../../media/media/using-avplayer-for-playback.md) and [Video Playback](../../../media/media/video-playback.md).
+AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use [createAVPlayer()](arkts-media-media-createavplayer-f.md) to create an AVPlayer instance.When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](#onmediakeysysteminfoupdate): listens for AVPlayer state changes. [on('error')](#onmediakeysysteminfoupdate): listens for error events.Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the system might terminate applications to free up resources.For details about the audio and video playback demo, see [Audio Playback](../../../media/media/using-avplayer-for-playback.md) and [Video Playback](../../../media/media/video-playback.md).
 
 **Since:** 23
 
@@ -465,10 +459,8 @@ getLoadedTimeRanges(): Promise<Array<Range>>
 
 Obtains the list of loaded time ranges. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - For local media resources, the time range is from 0 to the entire media duration.
-> 
+> **NOTE：**&gt;
+> - For local media resources, the time range is from 0 to the entire media duration.&gt;
 > - For network media resources, the list of locally loaded time ranges is returned.
 
 **Since:** 26.0.0
@@ -729,11 +721,9 @@ getSeekableTimeRanges(): Promise<Array<Range>>
 
 Obtains the list of seekable time ranges. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - For local media resources and media resources that support segment-based requests, the time range is from 0
-> to the entire media duration.
-> 
+> to the entire media duration.&gt;
 > - For media resources that support only chunk-based transmission, there is no seekable time range.
 
 **Since:** 26.0.0
@@ -1088,7 +1078,7 @@ Unsubscribes from available bitrates of HLS/DASH streams. This event is reported
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableBitrates' | Yes | Event type, which is **'availableBitrates'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | No | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set. If this parameter is specified , only the specified callback is unregistered. Otherwise, all callbacks associated with the **availableBitrates** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | No | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **availableBitrates** event will be unregistered.<br>**Since:** 12 |
 
 ## off('bitrateDone')
 
@@ -2122,9 +2112,7 @@ Subscribes to the audio interruption event. When multiple audio and video assets
 on(type: 'audioOutputDeviceChangeWithInfo', callback: Callback<audio.AudioStreamDeviceChangeInfo>): void
 ```
 
-Subscribes to audio stream output device changes and reasons. This API uses an asynchronous callback to return the result.
-
-When subscribing to this event, you are advised to implement the player behavior when the device is connected or disconnected by referring to [Handling Output Device Changes Gracefully](../../../media/audio/audio-output-device-change.md).
+Subscribes to audio stream output device changes and reasons. This API uses an asynchronous callback to return the result.When subscribing to this event, you are advised to implement the player behavior when the device is connected or disconnected by referring to [Handling Output Device Changes Gracefully](../../../media/audio/audio-output-device-change.md).
 
 **Since:** 11
 
@@ -2224,8 +2212,7 @@ on(type: 'durationUpdate', callback: Callback<int>): void
 
 Subscribes to media asset duration changes. It is used to refresh the length of the progress bar. By default, this event is reported once in the prepared state. However, it can be repeatedly reported for special streams that trigger duration changes.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **durationUpdate** event is not supported in live streaming scenarios.
 
 **Since:** 9
@@ -2532,13 +2519,10 @@ on(type: 'timeUpdate', callback: Callback<int>): void
 
 Subscribes to playback position changes. It is used to refresh the current position of the progress bar. By default, this event is reported every 100 ms. However, it is reported immediately upon a successful seek operation.
 
-> **NOTE：**
-> 
-> - The **'timeUpdate'** event is not supported in live streaming scenarios.
-> 
+> **NOTE：**&gt;
+> - The **'timeUpdate'** event is not supported in live streaming scenarios.&gt;
 > - When a seek operation is performed, the progress bar can be updated based on the **'timeUpdate'** event only
-> after the seek operation is complete (**'seekdone'** received).
-> 
+> after the seek operation is complete (**'seekdone'** received).&gt;
 > - In the **pause** state, the player reports the timeUpdate event when the buffering ends.
 
 **Since:** 9
@@ -2694,9 +2678,7 @@ Register listens for audio interrupt event, refer to [InterruptEvent](../../apis
 onAudioOutputDeviceChangeWithInfo(callback: Callback<audio.AudioStreamDeviceChangeInfo>): void
 ```
 
-Subscribes to audio stream output device changes and reasons. This API uses an asynchronous callback to return the result.
-
-When subscribing to this event, you are advised to implement the player behavior when the device is connected or disconnected by referring to Responding to Audio Output Device Changes.
+Subscribes to audio stream output device changes and reasons. This API uses an asynchronous callback to return the result.When subscribing to this event, you are advised to implement the player behavior when the device is connected or disconnected by referring to Responding to Audio Output Device Changes.
 
 **Since:** 23
 
@@ -3811,9 +3793,7 @@ videoPlayer.prepare().then(() => {
 prepare(): Promise<void>
 ```
 
-Prepares for audio and video playback. This API can be called only when the AVPlayer is in the initialized state. The state changes can be detected by subscribing to the [stateChange](#onmediakeysysteminfoupdate) event. This API uses a promise to return the result.
-
-If your application frequently switches between short videos, you can create multiple AVPlayer objects to prepare the next video in advance, thereby improving the switching performance. For details, see [Smooth Switchover Between Online Short Videos](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-smooth-switching).
+Prepares for audio and video playback. This API can be called only when the AVPlayer is in the initialized state. The state changes can be detected by subscribing to the [stateChange](#onmediakeysysteminfoupdate) event. This API uses a promise to return the result.If your application frequently switches between short videos, you can create multiple AVPlayer objects to prepare the next video in advance, thereby improving the switching performance. For details, see [Smooth Switchover Between Online Short Videos](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-smooth-switching).
 
 **Since:** 23
 
@@ -4355,8 +4335,7 @@ seek(timeMs: int, mode?: SeekMode): void
 
 Seeks to the specified playback position. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the seek operation takes effect by subscribing to the [on('seekDone')](#onmediakeysysteminfoupdate) event.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Since API version 24, **seek** is supported in live streaming scenarios.
 
 **Since:** 23
@@ -4663,10 +4642,8 @@ setLoudnessGain(loudnessGain: double): Promise<void>
 
 Sets the loudness gain of the AVPlayer. After this API is called, the loudness gain takes effect immediately. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state.
-> 
+> **NOTE：**&gt;
+> - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state.&gt;
 > - Before calling this API, ensure that the audio rendering information has been set in
 > **AVPlayer.audioRendererInfo** and the **usage** parameter in **audioRendererInfo** has been set to
 > [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md),
@@ -4714,9 +4691,7 @@ async function test(){
 setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 ```
 
-Mutes or unmutes the audio. Since API version 20, this API also supports whether to display the video image. This API uses a promise to return the result.
-
-This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state.
+Mutes or unmutes the audio. Since API version 20, this API also supports whether to display the video image. This API uses a promise to return the result.This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state.
 
 **Since:** 23
 
@@ -4730,8 +4705,8 @@ This API can be called only when the AVPlayer is in the prepared, playing, pause
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaType | MediaType | Yes | Media type.<br>For API version 12 to 19, only **MEDIA_TYPE_AUD** is supported.&lt; br&gt;Since API version 20, **MEDIA_TYPE_VID** is supported. |
-| muted | boolean | Yes | For API version 12 to 19, only audio playback strategies are supported. This parameter specifies whether to mute or unmute the audio. **true** to mute, **false** otherwise.<br>Since API version 20 , video playback strategies are also supported. This parameter specifies whether to disable or enable the video image. **true** to disable, false otherwise. |
+| mediaType | MediaType | Yes | Media type.<br>For API version 12 to 19, only **MEDIA_TYPE_AUD** is supported.<br>Since API version 20, **MEDIA_TYPE_VID** is supported. |
+| muted | boolean | Yes | For API version 12 to 19, only audio playback strategies are supported. This parameter specifies whether to mute or unmute the audio. **true** to mute, **false** otherwise.<br>Since API version 20, video playback strategies are also supported. This parameter specifies whether to disable or enable the video image. **true** to disable, false otherwise. |
 
 **Return value:**
 
@@ -4840,7 +4815,7 @@ Sets the playback range and seeks to the start position of the range based on th
 | --- | --- | --- | --- |
 | startTimeMs | int | Yes | Start position of the range, in ms. The value range is [0, duration). If **-1** is passed in, the system starts playing from position 0. |
 | endTimeMs | int | Yes | End position of the range, in ms. The value range is (startTimeMs, duration]. If **-1** is passed in, the system plays the content until it reaches the final part of the asset. |
-| mode | SeekMode | No | Seek mode, which can be **SeekMode.SEEK_PREV_SYNC** or **SeekMode.SEEK_CLOSEST**.&lt;br &gt;The default value is **SeekMode.SEEK_PREV_SYNC**. |
+| mode | SeekMode | No | Seek mode, which can be **SeekMode.SEEK_PREV_SYNC** or **SeekMode.SEEK_CLOSEST**.<br>The default value is **SeekMode.SEEK_PREV_SYNC**. |
 
 **Return value:**
 
@@ -4878,8 +4853,7 @@ setPlaybackRate(rate: double): void
 
 Set playback rate. Sets the playback rate. This API can be called only when the AVPlayer is in the prepared, playing, paused, or Supported states: prepared/playing/paused/completed. completed state. The value range is [0.125, 8.0], on API 24 and below, the range is [0.125, 4.0]. You can check whether the setting takes effect through the [playbackRateDone](#onmediakeysysteminfoupdate) event.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in live mode.
 
 **Since:** 23
@@ -4977,8 +4951,7 @@ setSpeed(speed: PlaybackSpeed): void
 
 Sets the playback speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the speed setting takes effect by subscribing to the [on('speedDone')](#onmediakeysysteminfoupdate) event.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This method is not supported in live streaming scenarios.
 
 **Since:** 23
@@ -5057,9 +5030,7 @@ if (videoPlayer) {
 setSuperResolution(enabled: boolean) : Promise<void>
 ```
 
-Enables or disables super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result.
-
-Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md).
+Enables or disables super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result.Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md).
 
 **Since:** 23
 
@@ -5139,11 +5110,7 @@ Sets a track selection filter for the player. The player will use this filter to
 setVideoWindowSize(width: int, height: int) : Promise<void>
 ```
 
-Sets the resolution of the output video after super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result.
-
-The input parameter values must be in the range of 320 × 320 to 1920 × 1080 (in px).
-
-Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md).
+Sets the resolution of the output video after super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result.The input parameter values must be in the range of 320 × 320 to 1920 × 1080 (in px).Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md).
 
 **Since:** 23
 
@@ -5447,11 +5414,7 @@ Audio effect mode. The audio effect mode is a dynamic property and is restored t
 audioInterruptMode?: audio.InterruptMode
 ```
 
-Audio interruption mode. The default value is **SHARE_MODE**. It is a dynamic property
-
-and can be set only when the AVPlayer is in the prepared, playing, paused, or completed state.
-
-To take effect, this property must be set before [play()](#play) is called for the first time.
+Audio interruption mode. The default value is **SHARE_MODE**. It is a dynamic property and can be set only when the AVPlayer is in the prepared, playing, paused, or completed state.To take effect, this property must be set before [play()](#play) is called for the first time.
 
 **Type:** audio.InterruptMode
 
@@ -5469,11 +5432,7 @@ To take effect, this property must be set before [play()](#play) is called for t
 audioRendererInfo?: audio.AudioRendererInfo
 ```
 
-Audio renderer information. If the media source contains videos, the default value of **usage** is **STREAM_USAGE_MOVIE**. Otherwise, the default value of **usage** is **STREAM_USAGE_MUSIC**. The default value of **rendererFlags** is 0. If the default value of **usage** does not meet the requirements, configure [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md).
-
-This parameter can be set only when the AVPlayer is in the initialized state.
-
-To take effect, this property must be set before [prepare()](#prepare) is called for the first time.
+Audio renderer information. If the media source contains videos, the default value of **usage** is **STREAM_USAGE_MOVIE**. Otherwise, the default value of **usage** is **STREAM_USAGE_MUSIC**. The default value of **rendererFlags** is 0. If the default value of **usage** does not meet the requirements, configure [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md).This parameter can be set only when the AVPlayer is in the initialized state.To take effect, this property must be set before [prepare()](#prepare) is called for the first time.
 
 **Type:** audio.AudioRendererInfo
 
@@ -5491,11 +5450,7 @@ To take effect, this property must be set before [prepare()](#prepare) is called
 readonly currentTime: int
 ```
 
-Current video playback position, in ms. It can be used as a query parameter when the AVPlayer is in the prepared, playing, paused, or completed state.
-
-The value **-1** indicates an invalid value.
-
-In live mode, **-1** is returned by default.
+Current video playback position, in ms. It can be used as a query parameter when the AVPlayer is in the prepared, playing, paused, or completed state.The value **-1** indicates an invalid value.In live mode, **-1** is returned by default.
 
 **Type:** int
 
@@ -5513,25 +5468,13 @@ In live mode, **-1** is returned by default.
 dataSrc?: AVDataSrcDescriptor
 ```
 
-Descriptor of a streaming media asset. It can be set only when the AVPlayer is in the idle state.
-
-**Use scenario**: An application plays a file that has been downloaded from a remote source and saved locally. When the application has not yet downloaded the complete audio or video resources, it can start playing the data that has already been retrieved. By writing the retrieved data to a local file and simultaneously reading from that file, the application can achieve the capability of playing while caching.
-
-The video formats MP4, MPEG-TS, and MKV are supported.
-
-The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE are supported.
-
-A user is obtaining an audio and video file from a remote server and wants to play the downloaded file content. To implement this scenario, do as follows:
-
-1. Obtain the total file size, in bytes. If the total size cannot be obtained, set **fileSize** to **-1**. 2. Implement the **func** callback to fill in data. If **fileSize** is **-1**, the format of **func** is **func(buffer: ArrayBuffer, length: number)**, and the AVPlayer obtains data in sequence; otherwise, the format is **func(buffer: ArrayBuffer, length: number, pos: number)**, and the AVPlayer seeks and obtains data in the required positions. 3. Set **AVDataSrcDescriptor {fileSize = size, callback = func}**.
-
-**Notes:**
-
-If the media file to play is in MP4/M4A format, ensure that the **moov** field (specifying the media information) is before the **mdat** field (specifying the media data) or the fields before the **moov** field is less than 10 MB. Otherwise, the parsing fails and the media file cannot be played.
-
-**NOTE：**
-
-WebM is no longer supported since API version 11.
+Descriptor of a streaming media asset. It can be set only when the AVPlayer is in the idle state.  
+**Use scenario**: An application plays a file that has been downloaded from a remote source and saved locally. When the application has not yet downloaded the complete audio or video resources, it can start playing the data that has already been retrieved. By writing the retrieved data to a local file and simultaneously reading from that file, the application can achieve the capability of playing while caching.The video formats MP4, MPEG-TS, and MKV are supported.The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE are supported.A user is obtaining an audio and video file from a remote server and wants to play the downloaded file content. To implement this scenario, do as follows:
+1. Obtain the total file size, in bytes. If the total size cannot be obtained, set **fileSize** to **-1**.
+2. Implement the **func** callback to fill in data. If **fileSize** is **-1**, the format of **func** is **func(buffer: ArrayBuffer, length: number)**, and the AVPlayer obtains data in sequence; otherwise, the format is **func(buffer: ArrayBuffer, length: number, pos: number)**, and the AVPlayer seeks and obtains data in the required positions.
+3. Set **AVDataSrcDescriptor {fileSize = size, callback = func}**.  
+**Notes:**If the media file to play is in MP4/M4A format, ensure that the **moov** field (specifying the media information) is before the **mdat** field (specifying the media data) or the fields before the **moov** field is less than 10 MB. Otherwise, the parsing fails and the media file cannot be played.  
+**NOTE：**WebM is no longer supported since API version 11.
 
 **Type:** [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md)
 
@@ -5549,11 +5492,7 @@ WebM is no longer supported since API version 11.
 readonly duration: int
 ```
 
-Video duration, in ms. It can be used as a query parameter when the AVPlayer is in the prepared, playing, paused, or completed state.
-
-The value **-1** indicates an invalid value.
-
-In live mode, **-1** is returned by default.
+Video duration, in ms. It can be used as a query parameter when the AVPlayer is in the prepared, playing, paused, or completed state.The value **-1** indicates an invalid value.In live mode, **-1** is returned by default.
 
 **Type:** int
 
@@ -5571,29 +5510,13 @@ In live mode, **-1** is returned by default.
 fdSrc?: AVFileDescriptor
 ```
 
-FD of the media asset. It can be set only when the AVPlayer is in the idle state.
-
-**Use scenario**: This property is required when media assets of an application are continuously stored in a file.
-
-The video formats MP4, MPEG-TS, and MKV are supported.
-
-The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE are supported.
-
-Assume that a media file that stores continuous assets consists of the following:
-
-Video 1 (address offset: 0, byte length: 100)
-
-Video 2 (address offset: 101; byte length: 50)
-
-Video 3 (address offset: 151, byte length: 150)
-
-1. To play video 1: AVFileDescriptor { fd = resource handle; offset = 0; length = 100; } 2. To play video 2: AVFileDescriptor { fd = resource handle; offset = 101; length = 50; } 3. To play video 3: AVFileDescriptor { fd = resource handle; offset = 151; length = 150; }
-
-To play an independent media file, use **src=fd://xx**.
-
-**NOTE：**
-
-WebM is no longer supported since API version 11.
+FD of the media asset. It can be set only when the AVPlayer is in the idle state.  
+**Use scenario**: This property is required when media assets of an application are continuously stored in a file.The video formats MP4, MPEG-TS, and MKV are supported.The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE are supported.Assume that a media file that stores continuous assets consists of the following:Video 1 (address offset: 0, byte length: 100)Video 2 (address offset: 101; byte length: 50)Video 3 (address offset: 151, byte length: 150)
+1. To play video 1: AVFileDescriptor { fd = resource handle; offset = 0; length = 100; }
+2. To play video 2: AVFileDescriptor { fd = resource handle; offset = 101; length = 50; }
+3. To play video 3: AVFileDescriptor { fd = resource handle; offset = 151; length = 150; }
+To play an independent media file, use **src=fd://xx**.  
+**NOTE：**WebM is no longer supported since API version 11.
 
 **Type:** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
 
@@ -5611,9 +5534,7 @@ WebM is no longer supported since API version 11.
 readonly height: int
 ```
 
-Video height, in px. It can be used as a query parameter when the AVPlayer is in the prepared, playing, paused, or completed state.
-
-The value **0** indicates an invalid value.
+Video height, in px. It can be used as a query parameter when the AVPlayer is in the prepared, playing, paused, or completed state.The value **0** indicates an invalid value.
 
 **Type:** int
 
@@ -5631,11 +5552,7 @@ The value **0** indicates an invalid value.
 loop: boolean
 ```
 
-Whether to loop playback. **true** to loop, **false** otherwise. The default value is **false**. It is a dynamic property
-
-and can be set only when the AVPlayer is in the prepared, playing, paused, or completed state.
-
-This setting is not supported in live mode.
+Whether to loop playback. **true** to loop, **false** otherwise. The default value is **false**. It is a dynamic property and can be set only when the AVPlayer is in the prepared, playing, paused, or completed state.This setting is not supported in live mode.
 
 **Type:** boolean
 
@@ -5709,14 +5626,8 @@ AVPlayer state. It can be used as a query parameter when the AVPlayer is in any 
 surfaceId?: string
 ```
 
-Video window ID. By default, there is no video window.
-
-This property can be set for the first time only when the AVPlayer is in the initialized state.
-
-It can be updated when the AVPlayer is in the prepared, playing, paused, completed, or stopped state. After the reset, the video is played in the new window.
-
-**Use scenario**: It is used to render the window for video playback (not involved in audio-only playback scenarios).
-
+Video window ID. By default, there is no video window.This property can be set for the first time only when the AVPlayer is in the initialized state.It can be updated when the AVPlayer is in the prepared, playing, paused, completed, or stopped state. After the reset, the video is played in the new window.  
+**Use scenario**: It is used to render the window for video playback (not involved in audio-only playback scenarios).  
 [Create a surface ID through XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid).
 
 **Type:** string
@@ -5735,22 +5646,14 @@ It can be updated when the AVPlayer is in the prepared, playing, paused, complet
 url?: string
 ```
 
-URL of the media asset. It can be set only when the AVPlayer is in the idle state.
-
-Supported video formats: MP4, MPEG-TS, and MKV.
-
-Supported audio formats: M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE.
-
+URL of the media asset. It can be set only when the AVPlayer is in the idle state.Supported video formats: MP4, MPEG-TS, and MKV.Supported audio formats: M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE.  
 **Example of supported URLs**:
-
 1. FD: fd://xx
 
-
-
-2. HTTP: http://xx 3. HTTPS: https://xx 4. HLS: http://xx or https://xx
-
+2. HTTP: http://xx
+3. HTTPS: https://xx
+4. HLS: http://xx or https://xx  
 **NOTE：**
-
 - To set the playback URL, you need to declare the [ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet) permission. The related error code is [201 Permission Denied](../../errorcode-universal.md#201-permission-denied). - WebM is no longer supported since API version 11. - After the resource handle (FD) is transferred to an AVPlayer instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVPlayers use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** string
@@ -5769,9 +5672,7 @@ Supported audio formats: M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE.
 videoScaleType?: VideoScaleType
 ```
 
-Video scale type. The default value is **VIDEO_SCALE_TYPE_FIT**. It is a dynamic property
-
-and can be set only when the AVPlayer is in the prepared, playing, paused, or completed state.
+Video scale type. The default value is **VIDEO_SCALE_TYPE_FIT**. It is a dynamic property and can be set only when the AVPlayer is in the prepared, playing, paused, or completed state.
 
 **Type:** [VideoScaleType](arkts-media-media-videoscaletype-e.md)
 
@@ -5789,9 +5690,7 @@ and can be set only when the AVPlayer is in the prepared, playing, paused, or co
 readonly width: int
 ```
 
-Video width, in px. It can be used as a query parameter when the AVPlayer is in the prepared, playing, paused, or completed state.
-
-The value **0** indicates an invalid value.
+Video width, in px. It can be used as a query parameter when the AVPlayer is in the prepared, playing, paused, or completed state.The value **0** indicates an invalid value.
 
 **Type:** int
 

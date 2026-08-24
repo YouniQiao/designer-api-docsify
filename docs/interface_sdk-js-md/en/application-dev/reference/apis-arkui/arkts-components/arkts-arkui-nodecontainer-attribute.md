@@ -1,8 +1,6 @@
 # NodeContainer properties/events
 
-The universal attributes are supported.
-
-The universal events are supported.
+The universal attributes are supported.The universal events are supported.
 
 **Inheritance/Implementation:** NodeContainerAttribute extends CommonMethod<NodeContainerAttribute>
 

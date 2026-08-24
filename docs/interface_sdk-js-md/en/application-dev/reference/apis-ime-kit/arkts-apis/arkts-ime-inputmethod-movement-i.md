@@ -1,6 +1,6 @@
 # Movement
 
-@brief Describes the direction in which the cursor moves when the text is selected.
+Describes the direction in which the cursor moves when the text is selected.
 
 **Since:** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## direction
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 direction: Direction
 ```
 
-@brief Direction in which the cursor moves when the text is selected.
+Direction in which the cursor moves when the text is selected.
 
 **Type:** Direction
 

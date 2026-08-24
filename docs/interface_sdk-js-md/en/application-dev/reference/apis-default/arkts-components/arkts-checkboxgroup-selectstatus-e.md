@@ -1,8 +1,6 @@
 # SelectStatus
 
-CheckboxGroup SelectStatus
-
-@enum { number }
+CheckboxGroup SelectStatus@enum { number }
 
 **Since:** 23
 

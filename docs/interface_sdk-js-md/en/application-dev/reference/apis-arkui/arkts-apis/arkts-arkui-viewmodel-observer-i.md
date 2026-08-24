@@ -1,8 +1,6 @@
 # observer
 
-Defines the observer interface.
-
-@interface observer
+Defines the observer interface.@interface observer
 
 **Since:** 6
 

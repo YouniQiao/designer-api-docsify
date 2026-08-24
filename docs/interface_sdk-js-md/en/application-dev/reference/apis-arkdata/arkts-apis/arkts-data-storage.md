@@ -42,7 +42,7 @@ Lightweight storage provides applications with data processing capability and al
 
 | Name | Description |
 | --- | --- |
-| [Storage](arkts-arkdata-storage-storage-i.md) | Provides APIs for obtaining and modifying storage data. |
+| [Storage](arkts-arkdata-storage-storage-i.md) | Provides APIs for obtaining and modifying storage data.Before calling the following APIs, use [data_storage.getStorage](arkts-arkdata-storage-getstoragesync-f.md) or [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md) to obtain the **Storage** instance. |
 | [StorageObserver](arkts-arkdata-storage-storageobserver-i.md) | Define the change data information object. |
 
 ### Types

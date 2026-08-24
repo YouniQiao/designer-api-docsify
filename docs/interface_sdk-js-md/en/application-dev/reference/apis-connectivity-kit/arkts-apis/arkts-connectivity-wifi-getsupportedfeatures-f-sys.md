@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getSupportedFeatures
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function getSupportedFeatures(): number
 ```
 
-Obtains the features supported by this device.
-
-<p>To check whether this device supports a specified feature.
+Obtains the features supported by this device.<p>To check whether this device supports a specified feature.
 
 **Since:** 7
 

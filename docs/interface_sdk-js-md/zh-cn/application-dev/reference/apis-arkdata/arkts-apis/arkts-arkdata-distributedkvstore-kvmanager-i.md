@@ -640,8 +640,7 @@ getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): vo
 
 通过指定options和storeId，创建并获取分布式键值数据库，使用callback异步回调。获取数据库后，在使用完毕时需调用 [closeKVStore](#closekvstore) 关闭数据库释放资源。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 在获取已有的分布式键值数据库时，如果数据库文件无法打开（例如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，以防止数据丢失。有关备份恢复的使用方法，请参
 > 阅[数据库备份与恢复](../../../database/data-backup-and-restore.md)。
 
@@ -803,8 +802,7 @@ getKVStore<T>(storeId: string, options: Options): Promise<T>
 
 指定options和storeId，创建并获取分布式键值数据库，使用Promise回调。获取数据库后，在使用完毕时需调用 [closeKVStore](#closekvstore) 关闭数据库释放资源。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 获取已有的分布式键值数据库时，如果数据库文件无法打开（如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，防止数据丢失。备份恢复的使用方法详见
 > [数据库备份与恢复](../../../database/data-backup-and-restore.md)。
 

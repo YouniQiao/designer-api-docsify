@@ -2,11 +2,9 @@
 
 Defines the common attributes shared by all chips.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. The size settings for chips can be of two types: (1) **ChipSize**, which conveniently offers two size options,
-> **NORMAL** and **SMALL**; (2) **SizeOptions**.
-> 
+> **NORMAL** and **SMALL**; (2) **SizeOptions**.&gt;
 > 2. If **backgroundColor** or **selectedBackgroundColor** is set to **undefined**, the default background color is
 > used. If an invalid value is provided, the background color is transparent.
 
@@ -20,7 +18,6 @@ Defines the common attributes shared by all chips.
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -29,11 +26,7 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 backgroundColor?: ResourceColor
 ```
 
-Chip background color.
-
-Default value: **\$r('sys.color.ohos_id_color_button_normal')**
-
-If this parameter is set to **undefined**, the default value is used.
+Chip background color.Default value: **\$r('sys.color.ohos_id_color_button_normal')**If this parameter is set to **undefined**, the default value is used.
 
 **Type:** ResourceColor
 
@@ -53,11 +46,7 @@ If this parameter is set to **undefined**, the default value is used.
 fontColor?: ResourceColor
 ```
 
-Chip text color.
-
-Default value: **\$r('sys.color.ohos_id_color_text_primary')**
-
-If this parameter is set to **undefined**, the default value is used.
+Chip text color.Default value: **\$r('sys.color.ohos_id_color_text_primary')**If this parameter is set to **undefined**, the default value is used.
 
 **Type:** ResourceColor
 
@@ -77,11 +66,7 @@ If this parameter is set to **undefined**, the default value is used.
 selectedBackgroundColor?: ResourceColor
 ```
 
-Background color of the chip when it is activated.
-
-Default value: **\$r('sys.color.ohos_id_color_emphasize')**
-
-If this parameter is set to **undefined**, the default value is used.
+Background color of the chip when it is activated.Default value: **\$r('sys.color.ohos_id_color_emphasize')**If this parameter is set to **undefined**, the default value is used.
 
 **Type:** ResourceColor
 
@@ -101,11 +86,7 @@ If this parameter is set to **undefined**, the default value is used.
 selectedFontColor?: ResourceColor
 ```
 
-Text color of the chip when it is activated.
-
-Default value: **\$r('sys.color.ohos_id_color_text_primary_contrary')**
-
-If this parameter is set to **undefined**, the default value is used.
+Text color of the chip when it is activated.Default value: **\$r('sys.color.ohos_id_color_text_primary_contrary')**If this parameter is set to **undefined**, the default value is used.
 
 **Type:** ResourceColor
 
@@ -125,11 +106,7 @@ If this parameter is set to **undefined**, the default value is used.
 size?: ChipSize | SizeOptions
 ```
 
-Chip size. The ChipSize type needs to be imported from the Chip component.
-
-Default value: **ChipSize.NORMAL** or **{ height: 0, width: 0 }**
-
-If the value is **undefined**, the default value is used.
+Chip size. The ChipSize type needs to be imported from the Chip component.Default value: **ChipSize.NORMAL** or **{ height: 0, width: 0 }**If the value is **undefined**, the default value is used.
 
 **Type:** [ChipSize](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
 

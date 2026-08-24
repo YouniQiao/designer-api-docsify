@@ -1,8 +1,6 @@
 # CustomDialogControllerOptions
 
-Defines the options of CustomDialogController.
-
-@interface CustomDialogControllerOptions
+Defines the options of CustomDialogController.@interface CustomDialogControllerOptions
 
 **Since:** 23
 

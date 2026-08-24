@@ -11,11 +11,8 @@ Manages captions configuration. Before calling any method of **CaptionsManager**
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit';
-import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## off('enableChange')
@@ -184,11 +181,9 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 
 Subscribes to the state changes of captions configuration. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
-> 
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.&gt;
 > - After calling this method, ensure that
 > [off('enableChange')](#offenablechange)
 > is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**
@@ -248,11 +243,9 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 
 Subscribes to captions style changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
-> 
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.&gt;
 > - After calling this method, ensure that
 > [off('styleChange')](#offenablechange)
 > is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**

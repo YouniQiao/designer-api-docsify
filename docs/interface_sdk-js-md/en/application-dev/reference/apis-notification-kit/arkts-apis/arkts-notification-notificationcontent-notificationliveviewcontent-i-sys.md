@@ -54,8 +54,7 @@ Extra information of the live view. This parameter is left empty by default.
 isLocalUpdateOnly?: boolean
 ```
 
-Whether the live view is updated only locally. The default value is **false**.
-
+Whether the live view is updated only locally. The default value is **false**.  
 - **true**: Yes. - **false**: No.
 
 **Type:** boolean

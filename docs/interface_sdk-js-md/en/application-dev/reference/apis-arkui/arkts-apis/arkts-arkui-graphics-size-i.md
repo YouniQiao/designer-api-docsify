@@ -14,11 +14,7 @@ Returns the width and height of the component. The default unit is vp, but APIs 
 height: number
 ```
 
-Height of the component.
-
-Unit: vp.
-
-Value range: [0, +∞).
+Height of the component.Unit: vp.Value range: [0, +∞).
 
 **Type:** number
 
@@ -38,11 +34,7 @@ Value range: [0, +∞).
 width: number
 ```
 
-Width of the component.
-
-Unit: vp.
-
-Value range: [0, +∞).
+Width of the component.Unit: vp.Value range: [0, +∞).
 
 **Type:** number
 

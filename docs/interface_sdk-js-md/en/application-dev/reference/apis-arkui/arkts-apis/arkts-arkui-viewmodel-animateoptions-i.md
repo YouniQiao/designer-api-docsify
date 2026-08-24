@@ -1,8 +1,6 @@
 # AnimateOptions
 
-AnimateOptions
-
-@interface AnimateOptions
+AnimateOptions@interface AnimateOptions
 
 **Since:** 4
 

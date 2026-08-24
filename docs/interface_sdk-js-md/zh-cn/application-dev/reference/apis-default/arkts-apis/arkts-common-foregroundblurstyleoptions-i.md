@@ -1,8 +1,6 @@
 # ForegroundBlurStyleOptions
 
-Defines the options of ForegroundBlurStyle
-
-@extends BlurStyleOptions
+Defines the options of ForegroundBlurStyle@extends BlurStyleOptions
 
 **继承/实现关系：** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-common-blurstyleoptions-i.md)
 

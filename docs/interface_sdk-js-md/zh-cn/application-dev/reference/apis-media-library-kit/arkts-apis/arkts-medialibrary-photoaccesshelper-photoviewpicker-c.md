@@ -2,8 +2,7 @@
 
 图库选择器对象用于支持选择图片、视频等用户场景。使用前，需先创建PhotoViewPicker实例。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 如果需要重复拉起PhotoViewPicker，需要先通过NavDestination或跟随进程销毁前一个photoViewPicker。
 
 **起始版本：** 26.0.0
@@ -26,8 +25,7 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 
 通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。使用Promise异步回调。传入可选参数PhotoSelectOptions对象，返回PhotoSelectResult对象。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口
 > [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
@@ -134,8 +132,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 
 通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用callback异步返回形式，传入参数PhotoSelectOptions对象，返回PhotoSelectResult对象。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口
 > [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
@@ -175,8 +172,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用callback异步返回形式，返回PhotoSelectResult对象。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口
 > [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。

@@ -22,7 +22,7 @@ import { osAccount } from '@kit.BasicServicesKit';
 addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 ```
 
-Adds credential information, including the credential type, subtype, and token (if a non-PIN credential is added) .
+Adds credential information, including the credential type, subtype, and token (if a non-PIN credential is added).
 
 **Since:** 23
 

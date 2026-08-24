@@ -1,8 +1,6 @@
 # MaxCountType
 
-MaxCountType. include TOTAL_MAX_COUNT, PHOTO_MAX_COUNT and VIDEO_MAX_COUNT
-
-@enum { int } MaxCountType
+MaxCountType. include TOTAL_MAX_COUNT, PHOTO_MAX_COUNT and VIDEO_MAX_COUNT@enum { int } MaxCountType
 
 **Since:** 26.0.0
 

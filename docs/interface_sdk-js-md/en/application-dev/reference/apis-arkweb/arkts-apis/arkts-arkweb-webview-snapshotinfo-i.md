@@ -38,7 +38,7 @@ ID of the snapshot, used to identify this full rendering request so that the cor
 size?: SizeOptions
 ```
 
-Size of the Web rendering. The maximum supported size is 16000px 16000px. The supported length units are px, vp, and %. The length units passed in different parameters must be consistent; otherwise, the rendering size may not meet expectations. The default unit is vp. If the specified size exceeds the specification, the maximum specification is returned. If not passed, the rendering is performed at the actual size of the screenshot area. ( Example: width:'100px', height:'200px'. Or width:'20%', height:'30%'. If only a number is specified, the unit is vp.)
+Size of the Web rendering. The maximum supported size is 16000px * 16000px. The supported length units are px, vp, and %. The length units passed in different parameters must be consistent; otherwise, the rendering size may not meet expectations. The default unit is vp. If the specified size exceeds the specification, the maximum specification is returned. If not passed, the rendering is performed at the actual size of the screenshot area. (Example: width:'100px', height:'200px'. Or width:'20%', height:'30%'. If only a number is specified, the unit is vp.)
 
 **Type:** SizeOptions
 

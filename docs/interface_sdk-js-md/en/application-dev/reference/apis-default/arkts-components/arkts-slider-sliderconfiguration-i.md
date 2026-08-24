@@ -1,8 +1,6 @@
 # SliderConfiguration
 
-You need a custom class to implement the ContentModifier API.
-
-@extends CommonConfiguration&lt;SliderConfiguration&gt; @interface SliderConfiguration
+You need a custom class to implement the ContentModifier API.@extends CommonConfiguration&lt;SliderConfiguration&gt; @interface SliderConfiguration
 
 **Inheritance/Implementation:** SliderConfiguration extends CommonConfiguration<SliderConfiguration>
 

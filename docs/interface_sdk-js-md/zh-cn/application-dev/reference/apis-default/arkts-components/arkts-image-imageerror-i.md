@@ -16,9 +16,7 @@
 componentHeight: int
 ```
 
-组件的高。
-
-单位：px
+组件的高。单位：px
 
 **类型：** int
 
@@ -38,9 +36,7 @@ componentHeight: int
 componentWidth: int
 ```
 
-组件的宽。
-
-单位：px
+组件的宽。单位：px
 
 **类型：** int
 
@@ -60,9 +56,7 @@ componentWidth: int
 downloadInfo?: RequestDownloadInfo
 ```
 
-网络图片下载的详细信息，包含下载资源、网络、性能等信息。当图片来源为网络图片且下载失败时将携带此字段。
-
-默认值：null
+网络图片下载的详细信息，包含下载资源、网络、性能等信息。当图片来源为网络图片且下载失败时将携带此字段。默认值：null
 
 **类型：** [RequestDownloadInfo](arkts-requestdownloadinfo-t.md)
 
@@ -82,9 +76,7 @@ downloadInfo?: RequestDownloadInfo
 error?: BusinessError<void>
 ```
 
-图片加载异常返回的报错信息，其中code为错误码，message为错误信息。报错信息请参考以下错误信息的详细介绍。
-
-默认值：{ code : -1, message : "" }
+图片加载异常返回的报错信息，其中code为错误码，message为错误信息。报错信息请参考以下错误信息的详细介绍。默认值：{ code : -1, message : "" }
 
 **类型：** [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt;
 

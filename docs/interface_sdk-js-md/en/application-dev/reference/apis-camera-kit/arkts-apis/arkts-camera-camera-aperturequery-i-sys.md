@@ -14,7 +14,6 @@ Provides the aperture query capability.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getSupportedPhysicalApertures

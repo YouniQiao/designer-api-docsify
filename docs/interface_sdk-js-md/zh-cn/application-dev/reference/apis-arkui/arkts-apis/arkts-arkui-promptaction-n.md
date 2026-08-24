@@ -4,8 +4,7 @@
 
 > **说明：**
 
-> - 本模块不支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)的文件声明处使用，即不能在UIAbility的生命周期中调用，需要在 创建组件实例后使用。
-> 
+> - 本模块不支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)的文件声明处使用，即不能在UIAbility的生命周期中调用，需要在 创建组件实例后使用。&gt;
 > - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)说明。建议<!--Del-->在除
 > [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)等无UI界面的场景外，均<!--DelEnd-->使用
@@ -29,12 +28,12 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [showToast](arkts-arkui-promptaction-showtoast-f.md) | Creates and displays a toast. |
+| [showToast](arkts-arkui-promptaction-showtoast-f.md) | Creates and displays a toast.创建并显示即时反馈。 |
 | [openToast](arkts-arkui-promptaction-opentoast-f.md) | 显示即时反馈并通过Promise返回其id。 |
 | [closeToast](arkts-arkui-promptaction-closetoast-f.md) | 关闭即时反馈。 |
 | [showDialog](arkts-arkui-promptaction-showdialog-f.md) | 创建并显示对话框，对话框响应结果使用callback异步回调返回。 |
 | [showDialog](arkts-arkui-promptaction-showdialog-f.md) | 创建并显示对话框，对话框通过Promise返回结果。 |
-| [openCustomDialog](arkts-arkui-promptaction-opencustomdialog-f.md) | 打开自定义弹窗。通过Promise返回结果。 |
+| [openCustomDialog](arkts-arkui-promptaction-opencustomdialog-f.md) | 打开自定义弹窗。通过Promise返回结果。<!--Del-->不支持在ServiceExtension中使用。<!--DelEnd-->弹窗宽度在设备竖屏时默认为 所在窗口宽度 - 左右margin（16vp，设备为2in1时为40vp），最大默认宽度为400vp。 |
 | [closeCustomDialog](arkts-arkui-promptaction-closecustomdialog-f.md) | 关闭自定义弹窗。 |
 | [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md) | 创建并显示操作菜单，菜单响应结果使用callback异步回调返回。 |
 | [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md) | 创建并显示操作菜单，菜单响应后通过Promise返回结果。 |
@@ -44,7 +43,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 | 名称 | 说明 |
 | --- | --- |
 | [CommonController](arkts-arkui-promptaction-commoncontroller-c.md) | 公共控制器，可以控制promptAction相关组件。 |
-| [DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | 自定义弹窗控制器，继承自[CommonController](../../apis-default/arkts-apis/arkts-promptaction-commoncontroller-c.md)。 |
+| [DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | 自定义弹窗控制器，继承自[CommonController](../../apis-default/arkts-apis/arkts-promptaction-commoncontroller-c.md)。DialogController可作为UIContext弹出自定义弹窗的成员变量，具体用法可看 [openCustomDialogWithController](arkts-arkui-arkui-uicontext-promptaction-c.md#opencustomdialogwithcontroller)和 [presentCustomDialog](arkts-arkui-arkui-uicontext-promptaction-c.md#presentcustomdialog)示例。 |
 
 ### 接口
 

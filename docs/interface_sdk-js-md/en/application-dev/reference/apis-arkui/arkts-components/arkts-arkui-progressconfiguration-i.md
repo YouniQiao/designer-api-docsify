@@ -21,13 +21,8 @@ Provides progress indicator configuration. Inherits from CommonConfiguration.
 total: number
 ```
 
-Total progress.
-
-Default value: **100**
-
-**NOTE：**
-
-If the value of **total** is a negative number, it is treated as 100.
+Total progress.Default value: **100**  
+**NOTE：**If the value of **total** is a negative number, it is treated as 100.
 
 **Type:** number
 
@@ -47,11 +42,7 @@ If the value of **total** is a negative number, it is treated as 100.
 value: number
 ```
 
-Current progress. Values less than 0 are adjusted to **0**. Values greater than the value of **total** are capped at the value of **total**.
-
-Default value: **0**
-
-Value range: [0, total]
+Current progress. Values less than 0 are adjusted to **0**. Values greater than the value of **total** are capped at the value of **total**.Default value: **0**Value range: [0, total]
 
 **Type:** number
 

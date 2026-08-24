@@ -16,7 +16,6 @@ Implements depth data output. It inherits from [CameraOutput](arkts-camera-camer
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## off('depthDataAvailable')
@@ -40,7 +39,7 @@ Unsubscribes from depth data availability events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'depthDataAvailable' | 是 | Event type. The value is fixed at **'depthDataAvailable'**. The event can be listened for when a depthDataOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 否 | Callback used to return the result. If this parameter is specified , the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 否 | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 **错误码：**
 
@@ -180,8 +179,7 @@ on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void
 
 Subscribes to depth data availability events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **起始版本：** 13
@@ -230,8 +228,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to DepthDataOutput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **起始版本：** 13

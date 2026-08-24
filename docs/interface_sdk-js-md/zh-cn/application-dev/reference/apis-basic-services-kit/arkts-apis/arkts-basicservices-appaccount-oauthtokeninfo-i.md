@@ -2,8 +2,7 @@
 
 表示OAuth令牌信息。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)替代。
 
 **起始版本：** 8

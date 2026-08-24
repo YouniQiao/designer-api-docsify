@@ -33,7 +33,7 @@ Obtains the uniform data type IDs based on the given MIME type and data type.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Uniform data type IDs that match the specified MIME type and **belongsTo** (if specified ). If no match is found, the data types dynamically generated based on the rules specified by the input parameters are returned. |
+| Array&lt;string&gt; | Uniform data type IDs that match the specified MIME type and **belongsTo** (if specified). If no match is found, the data types dynamically generated based on the rules specified by the input parameters are returned. |
 
 **Error codes:**
 

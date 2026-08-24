@@ -36,8 +36,7 @@ didShow?: InterceptionShowCallback
 interception?: InterceptionCallback
 ```
 
-页面跳转前的回调，允许操作栈，在当前跳转中生效。拦截的页面不会被创建。
-
+页面跳转前的回调，允许操作栈，在当前跳转中生效。拦截的页面不会被创建。  
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** [InterceptionCallback](arkts-interceptioncallback-t.md)

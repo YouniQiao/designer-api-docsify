@@ -52,11 +52,10 @@ The authorization is canceled.
 AUTHORIZATION_INTERACTION_NOT_ALLOWED = 12300302
 ```
 
-The authorization is rejected because user interaction is not allowed.
-
-Possible causes:
-
-1. The caller is in the background. 2. The value of **isInteractionAllowed** is **false**. 3. The specified interaction context is invalid.
+The authorization is rejected because user interaction is not allowed.Possible causes:
+1. The caller is in the background.
+2. The value of **isInteractionAllowed** is **false**.
+3. The specified interaction context is invalid.
 
 **Since:** 24
 
@@ -92,9 +91,7 @@ The authorization is rejected because the authorization rules are not met, for e
 AUTHORIZATION_SERVICE_BUSY = 12300304
 ```
 
-Authorization service is busy.
-
-Possible cause: Another authorization is being processed.
+Authorization service is busy.Possible cause: Another authorization is being processed.
 
 **Since:** 24
 

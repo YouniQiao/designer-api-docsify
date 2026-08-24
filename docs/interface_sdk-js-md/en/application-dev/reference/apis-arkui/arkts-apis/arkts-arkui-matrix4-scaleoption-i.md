@@ -1,8 +1,6 @@
 # ScaleOption
 
-Set scaling parameters
-
-@interface ScaleOption
+Set scaling parameters@interface ScaleOption
 
 **Since:** 23
 

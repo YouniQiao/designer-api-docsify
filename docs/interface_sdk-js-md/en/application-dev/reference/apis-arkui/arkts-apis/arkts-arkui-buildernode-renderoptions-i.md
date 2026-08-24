@@ -14,11 +14,9 @@ Provides optional parameters for creating a BuilderNode.
 selfIdealSize?: Size
 ```
 
-Ideal size of the node.
+Ideal size of the node.Default value: **{ width: 0, height: 0 }**.
 
-Default value: **{ width: 0, height: 0 }**.
-
-**Type:** [Size](../../apis-default/arkts-apis/arkts-graphics-size-i.md)
+**Type:** Size
 
 **Since:** 11
 
@@ -36,11 +34,7 @@ Default value: **{ width: 0, height: 0 }**.
 surfaceId?: string
 ```
 
-Surface ID of the texture receiver. Typically, the texture receiver is [OH_NativeImage](../../../reference/apis-arkgraphics2d/capi-oh-nativeimage-oh-nativeimage.md).
-
-This parameter is effective only when **type** is set to **NodeRenderType.RENDER_TYPE_TEXTURE**.
-
-Default value: **""**.
+Surface ID of the texture receiver. Typically, the texture receiver is [OH_NativeImage](../../../reference/apis-arkgraphics2d/capi-oh-nativeimage-oh-nativeimage.md).This parameter is effective only when **type** is set to **NodeRenderType.RENDER_TYPE_TEXTURE**.Default value: **""**.
 
 **Type:** string
 
@@ -60,11 +54,9 @@ Default value: **""**.
 type?: NodeRenderType
 ```
 
-Rendering type of the node.
+Rendering type of the node.Default value: **NodeRenderType.RENDER_TYPE_DISPLAY**.
 
-Default value: **NodeRenderType.RENDER_TYPE_DISPLAY**.
-
-**Type:** [NodeRenderType](../../apis-default/arkts-apis/arkts-buildernode-noderendertype-e.md)
+**Type:** [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md)
 
 **Since:** 11
 

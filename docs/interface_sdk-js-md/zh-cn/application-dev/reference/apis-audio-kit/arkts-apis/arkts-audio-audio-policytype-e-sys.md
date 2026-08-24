@@ -1,6 +1,6 @@
 # PolicyType（系统接口）
 
-Enumerates type. @enum { int }
+表示静音策略类型的枚举。@enum { int }
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Enumerates type. @enum { int }
 EDM = 0
 ```
 
-EDM type.
+设备管理器下发的静音策略。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ EDM type.
 PRIVACY = 1
 ```
 
-PRIVACY type.
+安全隐私模块下发的静音策略。
 
 **起始版本：** 23
 

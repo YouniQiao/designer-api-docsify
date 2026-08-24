@@ -1,8 +1,6 @@
 # AbilityComponent properties/events
 
-Define the attribute functions of ability component.
-
-@extends CommonMethod&lt;AbilityComponentAttribute&gt;
+Define the attribute functions of ability component.@extends CommonMethod&lt;AbilityComponentAttribute&gt;
 
 **Inheritance/Implementation:** AbilityComponentAttribute extends CommonMethod<AbilityComponentAttribute>
 

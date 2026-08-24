@@ -14,7 +14,6 @@ Volume information for active audio streams.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## appVolume

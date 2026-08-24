@@ -1,8 +1,6 @@
 # EllipsisMode
 
-Enum of ellipsisMode
-
-@enum { number }
+Enum of ellipsisMode@enum { number }
 
 **起始版本：** 23
 

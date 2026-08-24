@@ -1,8 +1,6 @@
 # RowSplit属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-支持通用事件。
+除支持通用属性外，还支持以下属性：支持通用事件。
 
 **继承/实现关系：** RowSplitAttribute extends CommonMethod<RowSplitAttribute>
 
@@ -25,8 +23,7 @@ resizeable(value: boolean)
 
 设置分割线是否可拖拽。设置为true时，用户可以拖拽分割线改变子组件宽度；设置为false时，分割线位置固定。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 初始化后，动态修改margin、border、padding通用属性导致子组件宽度大于相邻分割线间距的异常情况下，不支持拖动分割线改变子组件的宽度。
 
 **起始版本：** 7

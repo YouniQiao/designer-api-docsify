@@ -1,8 +1,6 @@
 # ClickEffectLevel
 
-定义点击效果的级别及对应动效参数。
-
-@enum { number }
+定义点击效果的级别及对应动效参数。@enum { number }
 
 **起始版本：** 23
 

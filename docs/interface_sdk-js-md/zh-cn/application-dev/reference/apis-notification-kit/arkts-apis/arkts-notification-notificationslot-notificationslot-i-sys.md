@@ -14,8 +14,7 @@
 readonly authorizedStatus?: int
 ```
 
-授权状态。
-
+授权状态。  
 - 0：表示已授权。 - 1：表示待授权。
 
 **类型：** int
@@ -34,8 +33,7 @@ readonly authorizedStatus?: int
 readonly reminderMode?: int
 ```
 
-通知提醒模式。
-
+通知提醒模式。  
 - bit0：铃声提示。0表示关闭，1表示开启。 - bit1：锁屏。0表示关闭，1表示开启。 - bit2：横幅。0表示关闭，1表示开启。 - bit3：亮屏。0表示关闭，1表示开启。 - bit4：振动。0表示关闭，1表示开启。 - bit5：状态栏通知图标。0表示关闭，1表示开启。
 
 **类型：** int

@@ -1,8 +1,6 @@
 # PickerIndicatorType
 
-PickerIndicatorType
-
-@enum { int }
+PickerIndicatorType@enum { int }
 
 **Since:** 23
 

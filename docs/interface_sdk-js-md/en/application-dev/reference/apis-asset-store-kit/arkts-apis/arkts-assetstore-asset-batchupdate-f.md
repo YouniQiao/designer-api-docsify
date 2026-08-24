@@ -12,9 +12,7 @@ import { asset } from '@kit.AssetStoreKit';
 function batchUpdate(sourceAttributes: Array<AssetMap>, destAttributes: Array<AssetMap>): Promise<BatchResult>
 ```
 
-Updates assets in batches based on an attributes array.
-
-Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) can be updated in batches.
+Updates assets in batches based on an attributes array.Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) can be updated in batches.
 
 **Since:** 26.0.0
 

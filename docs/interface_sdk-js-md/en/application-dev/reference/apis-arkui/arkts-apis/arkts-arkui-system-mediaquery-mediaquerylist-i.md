@@ -1,8 +1,6 @@
 # MediaQueryList
 
-Defines the MediaQuery list info.
-
-@interface MediaQueryList
+Defines the MediaQuery list info.@interface MediaQueryList
 
 **Since:** 23
 

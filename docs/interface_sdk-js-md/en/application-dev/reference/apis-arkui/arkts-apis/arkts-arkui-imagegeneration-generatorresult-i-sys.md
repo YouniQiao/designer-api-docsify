@@ -1,8 +1,6 @@
 # GeneratorResult (System API)
 
-The result of AI-generated images
-
-@interface GeneratorResult
+The result of AI-generated images@interface GeneratorResult
 
 **Since:** 23
 

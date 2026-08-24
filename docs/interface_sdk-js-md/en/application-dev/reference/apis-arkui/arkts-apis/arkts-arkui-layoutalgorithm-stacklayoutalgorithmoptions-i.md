@@ -1,8 +1,6 @@
 # StackLayoutAlgorithmOptions
 
-Sets the alignment method of the stack layout algorithm.
-
-@interface StackLayoutAlgorithmOptions
+Sets the alignment method of the stack layout algorithm.@interface StackLayoutAlgorithmOptions
 
 **Since:** 24
 
@@ -16,11 +14,7 @@ Sets the alignment method of the stack layout algorithm.
 alignContent?: LocalizedAlignment
 ```
 
-Alignment mode of child components in the stack layout algorithm.
-
-Default value: **LocalizedAlignment.CENTER**
-
-Invalid values are treated as the default value.
+Alignment mode of child components in the stack layout algorithm.Default value: **LocalizedAlignment.CENTER**Invalid values are treated as the default value.
 
 **Type:** [LocalizedAlignment](../../apis-default/arkts-apis/arkts-enums-localizedalignment-e.md)
 

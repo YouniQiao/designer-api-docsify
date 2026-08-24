@@ -1,8 +1,6 @@
 # SearchPlayMusicItem
 
-The definition of SearchPlayMusicItem.
-
-@interface SearchPlayMusicItem
+The definition of SearchPlayMusicItem.@interface SearchPlayMusicItem
 
 **Since:** 23
 

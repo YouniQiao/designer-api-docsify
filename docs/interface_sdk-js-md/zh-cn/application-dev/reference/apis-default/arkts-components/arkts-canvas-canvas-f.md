@@ -15,6 +15,8 @@ export declare function Canvas(
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Canvas(  context?: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions?: ImageAIOptions): CanvasAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Canvas(  context?: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions?: ImageAIOptions): CanvasAttribute-End-->
@@ -46,19 +48,18 @@ export declare function Canvas(
 
 使用CanvasParams创建不缓存指令的Canvas组件。 创建Canvas组件时，最大面积不超过10000px*10000px，超过最大面积则无法正常创建。 Canvas组件未设置固定尺寸时，默认扩展至其最大可用尺寸。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 使用本接口创建的Canvas组件将在onReady回调的入参中返回一个
-> DrawingRenderingContext对象，可用于在该Canvas组件上进行绘制。
-> 
-> - 使用这个接口创建的Canvas组件在组件不可见时将不响应绘制指令。
-> 
+> DrawingRenderingContext对象，可用于在该Canvas组件上进行绘制。&gt;
+> - 使用这个接口创建的Canvas组件在组件不可见时将不响应绘制指令。&gt;
 > - 不可见场景主要包括组件所在的页面进入后台、组件滑到窗口外、
 > 设置visibility属性为隐藏等，不包括组件被其他组件或是其他窗口遮挡导致不可见的场景。
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,6 +94,8 @@ Defines Canvas Component.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

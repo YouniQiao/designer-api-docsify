@@ -2,8 +2,7 @@
 
 The **dateTimeManager** module provides APIs for system time management.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The APIs of this module are available only to
 > [MDM applications](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application), and can be
 > called only after the device administrator application is activated via

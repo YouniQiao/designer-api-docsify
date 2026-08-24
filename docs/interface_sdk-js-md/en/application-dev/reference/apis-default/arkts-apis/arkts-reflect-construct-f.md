@@ -26,7 +26,7 @@ Constructs the target with the elements of specified array as the arguments and 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | new (...args: A) =&gt; R | Yes |  |
-| argumentsList | [Readonly](arkts-readonly-t.md)&lt;A&gt; | Yes |  |
+| argumentsList | Readonly&lt;A&gt; | Yes |  |
 | newTarget | new (...args: any) =&gt; any | No |  |
 
 **Return value:**

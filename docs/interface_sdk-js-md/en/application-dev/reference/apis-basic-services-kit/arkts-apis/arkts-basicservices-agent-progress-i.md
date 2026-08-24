@@ -12,7 +12,6 @@ Describes the data structure of the task progress.
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## extras

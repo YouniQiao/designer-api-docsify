@@ -23,7 +23,7 @@ attributes: Record<string, string>
 
 Attributes in **&lt;video&gt;** or **&lt;audio&gt;**.
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 23
 
@@ -57,9 +57,7 @@ Value of the **controlslist** attribute in **&lt;video&gt;** or **&lt;audio&gt;*
 controlsShown: boolean
 ```
 
-Whether the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**.
-
-The value **true** means that the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**, and **false** means the opposite.
+Whether the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**.The value **true** means that the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**, and **false** means the opposite.
 
 **类型：** boolean
 
@@ -97,7 +95,7 @@ headers: Record<string, string>
 
 HTTP headers that need to be included in the player's request for media resources.
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 23
 
@@ -115,7 +113,7 @@ mediaSrcList: MediaSourceInfo[]
 
 Source of the media. There may be multiple sources. The application needs to select a supported source to play.
 
-**类型：** [MediaSourceInfo](arkts-webview-mediasourceinfo-c.md)[]
+**类型：** [MediaSourceInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediasourceinfo-c.md)[]
 
 **起始版本：** 23
 
@@ -149,9 +147,7 @@ Type of the media.
 muted: boolean
 ```
 
-Whether to mute the player.
-
-The value **true** means to mute the player, and **false** means the opposite.
+Whether to mute the player.The value **true** means to mute the player, and **false** means the opposite.
 
 **类型：** boolean
 
@@ -189,7 +185,7 @@ preload: Preload
 
 Whether preloading is required.
 
-**类型：** [Preload](arkts-webview-preload-e.md)
+**类型：** [Preload](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-preload-e.md)
 
 **起始版本：** 23
 
@@ -207,7 +203,7 @@ surfaceInfo: NativeMediaPlayerSurfaceInfo
 
 Surface information used for same-layer rendering.
 
-**类型：** [NativeMediaPlayerSurfaceInfo](arkts-webview-nativemediaplayersurfaceinfo-c.md)
+**类型：** [NativeMediaPlayerSurfaceInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md)
 
 **起始版本：** 23
 

@@ -21,8 +21,7 @@ static show(options?: DatePickerDialogOptions)
 
 定义日期滑动选择器弹窗并弹出。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showdatepickerdialog)来明确UI的执行上下文。
 

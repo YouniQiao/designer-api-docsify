@@ -4,9 +4,8 @@
 declare type OnTabsContentDidScrollCallback = (selectedIndex: number, index: number, position: number, mainAxisLength: number) => void
 ```
 
-Defines the callback triggered when content in the **Tabs** component scrolls.   
-> **NOTE：**
-> 
+Defines the callback triggered when content in the **Tabs** component scrolls.  
+> **NOTE：**&gt;
 > - For example, when the index of the currently selected tab page is **0**, during a transition animation from page
 > 0 to page 1, the callback is triggered for all pages within the viewport on every frame. When pages 0 and 1 are
 > both in the viewport, the callback is triggered twice per frame. The first callback has **selectedIndex** as **0**,
@@ -14,8 +13,7 @@ Defines the callback triggered when content in the **Tabs** component scrolls.
 > animation started on the current frame, and **mainAxisLength** as the length of page 0 on the main axis. The second
 > callback has **selectedIndex** as **0**, **index** as **1**, **position** as the ratio of how much page 1 has moved
 > relative to page 0 before the animation started on the current frame, and **mainAxisLength** as the length of page
-> 1 on the main axis.
-> 
+> 1 on the main axis.&gt;
 > - If the animation curve is a spring interpolation curve, during the transition animation from page 0 to page 1,
 > due to the position and velocity when the user lifts their finger off the screen, animation may overshoot and slide
 > past to page 2, then bounce back to page 1. Throughout this process, a callback is triggered for pages 1 and 2

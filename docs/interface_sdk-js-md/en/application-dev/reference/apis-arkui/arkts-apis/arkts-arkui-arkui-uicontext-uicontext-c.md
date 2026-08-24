@@ -2,10 +2,8 @@
 
 Implements a **UIContext** instance.
 
-> **NOTE：**
-> 
-> - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
-> 
+> **NOTE：**&gt;
+> - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.&gt;
 > - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a
 > **UIContext** instance: (1) using the
 > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from
@@ -99,36 +97,27 @@ animateTo(value: AnimateParam, event: () => void): void
 
 Adds transition animations for state changes in closure code.
 
-> **NOTE：**
-> 
-> - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**.
-> 
+> **NOTE：**&gt;
+> - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**.&gt;
 > - When **animateTo** is called in
 > [aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear), the
 > component's build method is not executed yet, and internal components are not created. This means the animation
-> has no initial values to work with and will not function as expected.
-> 
+> has no initial values to work with and will not function as expected.&gt;
 > - During execution of
 > [aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear),
-> the component is being destroyed, so animations should not be used.
-> 
+> the component is being destroyed, so animations should not be used.&gt;
 > - When a component appears or disappears, animation effects can be added through
-> component transition.
-> 
+> component transition.&gt;
 > - For properties that component transitions do not support, refer to
 > [Example 2: Enabling Component Disappearance After Animation Completion](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion),
-> which uses **animateTo** to achieve the effect of the component disappearing after the animation finishes.
-> 
+> which uses **animateTo** to achieve the effect of the component disappearing after the animation finishes.&gt;
 > - In certain scenarios, using animateTo with
 > [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2) may
 > produce unexpected results. For details, see
-> [Using animateTo Failed in State Management V2](../../../ui/state-management/arkts-new-local.md#using-animateto-failed-in-state-management-v2).
-> 
-> 
+> [Using animateTo Failed in State Management V2](../../../ui/state-management/arkts-new-local.md#using-animateto-failed-in-state-management-v2).&gt;>
 > - When a UIAbility switches from the foreground to the background, any limited iteration animations that are
 > currently running will end immediately, thereby triggering the
-> onFinish animation completion callback.
-> 
+> onFinish animation completion callback.&gt;
 > - If transition animations are turned off in Developer options, animations end on the current frame, and the
 > **onFinish** callback is executed immediately. Avoid placing timing-dependent functional logic inside this
 > callback.
@@ -390,8 +379,7 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 
 Closes the sheet corresponding to **bindSheetContent**. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Closing a sheet using this API will not invoke the **shouldDismiss** callback.
 
 **Since:** 12
@@ -521,8 +509,7 @@ constructor()
 
 Construct a **UIContext** object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > A **UIContext** object created using the constructor points to an ambiguous UI context, meaning it is not bound
 > to any specific UI instance. The unique ID of such a UIContext instance is -1.
 
@@ -749,8 +736,7 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 Creates a UI instance that does not depend on a window and returns its UI context. The created UI instance is a singleton.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The returned UI context can only be used to create [custom nodes](../../../ui/arkts-user-defined-node.md). It
 > cannot be used for other UI operations.
 
@@ -1205,8 +1191,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). This API returns **undefined** if the calling scope is ambiguous.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous
 > task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its
 > validity via the [isAvailable](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#isavailable) API.
@@ -1700,8 +1685,10 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 ```
 
 Get FrameNode by uniqueId. Obtains the entity node, FrameNode, of a component on the component tree using its uniqueId. The return value depends on the type of component associated with the uniqueId.
-
-1. If the uniqueId corresponds to a built-in component, the associated FrameNode is returned. 2. If the uniqueId corresponds to a custom component: If the component has rendered content, its root node is returned, with the type __Common__; if the component has no rendered content, the FrameNode of its first child component is returned. 3. If the uniqueId does not correspond to any component, null is returned.
+1. If the uniqueId corresponds to a built-in component, the associated FrameNode is returned.
+2. If the uniqueId corresponds to a custom component: If the component has rendered content, its root node is
+returned, with the type __Common__; if the component has no rendered content, the FrameNode of its first child component is returned.
+3. If the uniqueId does not correspond to any component, null is returned.
 
 **Since:** 12
 
@@ -2696,8 +2683,7 @@ getWindowId(): number | undefined
 
 Obtains the ID of the window to which the current application instance belongs.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the UIContext resides inside a
 > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that runs in the main
 > application process, the top-level window ID of the main application is returned.
@@ -3159,14 +3145,11 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 
 Creates a sheet whose content is as defined in **bindSheetContent** and displays the sheet. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set
-> **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**.
-> 
+> **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**.&gt;
 > 2. Since [updateBindSheet](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#updatebindsheet) and [closeBindSheet](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#closebindsheet)
-> depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself.
-> 
+> depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself.&gt;
 > 3. Setting **SheetOptions.UIContext** is not supported.
 
 **Since:** 12
@@ -3580,10 +3563,8 @@ struct MatrixExample {
 removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 ```
 
-Removes a local input event monitor.
-
-**Important Notes**:
-
+Removes a local input event monitor.  
+**Important Notes**:  
 - Only Monitor objects returned by addLocalInputEventMonitor can be removed. - Cannot unregister a monitor by manually constructing an object. - If an invalid object is passed, the system silently ignores it.
 
 **Since:** 26.0.0
@@ -3690,24 +3671,16 @@ static resolveUIContext(): ResolvedUIContext
 
 Obtains a UIContext instance along with its resolution strategy using a predefined priority order.
 
-> **NOTE：**
-> 
-> This API resolves and returns a UIContext instance together with the strategy used to determine it,
-> 
-> based on the following priority rules (in order):
-> 
-> 1. UIContext in the current calling scope.
-> 
-> 2. If only one UI instance exists, its UIContext is returned.
-> 
+> **NOTE：**&gt;
+> This API resolves and returns a UIContext instance together with the strategy used to determine it,&gt;
+> based on the following priority rules (in order):&gt;
+> 1. UIContext in the current calling scope.&gt;
+> 2. If only one UI instance exists, its UIContext is returned.&gt;
 > 3. If a UI instance has switched to the focused state, and the most recently focused UI instance has not been
-> destroyed, the UIContext of that most recently focused instance is returned.
-> 
+> destroyed, the UIContext of that most recently focused instance is returned.&gt;
 > 4. If a UI instance has switched to the foreground state, and the most recently foreground UI instance has not
-> been destroyed, the UIContext of that most recently foreground instance is returned.
-> 
-> 5. If multiple UI instances exist, the UIContext with the largest unique instance ID is returned.
-> 
+> been destroyed, the UIContext of that most recently foreground instance is returned.&gt;
+> 5. If multiple UI instances exist, the UIContext with the largest unique instance ID is returned.&gt;
 > 6. If none of the above conditions are met, an invalid UIContext instance is returned.
 
 **Since:** 22
@@ -4035,17 +4008,14 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 Sets the avoidance mode for the virtual keyboard.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > With **KeyboardAvoidMode.RESIZE**, the page is resized to prevent the virtual keyboard from obstructing the
 > view. Regarding components on the page, those whose width and height are set in percentage are resized with the
 > page, and those whose width and height are set to specific values are laid out according to their settings.
 > With **KeyboardAvoidMode.RESIZE**, **expandSafeArea([SafeAreaType.KEYBOARD],[SafeAreaEdge.BOTTOM])** does not
-> take effect.
-> 
+> take effect.&gt;
 > With **KeyboardAvoidMode.NONE**, keyboard avoidance is disabled, and the page will be covered by the displayed
-> keyboard.
-> 
+> keyboard.&gt;
 > **setKeyboardAvoidMode** only affects page layouts. It does not apply to popup components, including the
 > following: **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, **Toast**, **OverlayManager**.
 > For details about the avoidance mode of popup components, see
@@ -4167,9 +4137,7 @@ export default class EntryAbility extends UIAbility{
 static setResourceManagerCacheMaxCountForHSP(count: number): void
 ```
 
-Set the upper limit for the cache count of HSP resource management objects.
-
-If the upper limit of the cache is set too high, there is a risk of excessive memory overhead. It is recommended to configure it according to actual needs.
+Set the upper limit for the cache count of HSP resource management objects.If the upper limit of the cache is set too high, there is a risk of excessive memory overhead. It is recommended to configure it according to actual needs.
 
 **Since:** 21
 
@@ -4703,8 +4671,7 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 
 Updates the style of the sheet corresponding to the provided **bindSheetContent**. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **SheetOptions.UIContext**, **SheetOptions.mode**, and callback functions cannot be updated.
 
 **Since:** 12

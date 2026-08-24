@@ -1,8 +1,6 @@
 # ShapeSize
 
-Interface for shape size properties.
-
-@interface ShapeSize
+Interface for shape size properties.@interface ShapeSize
 
 **Since:** 23
 

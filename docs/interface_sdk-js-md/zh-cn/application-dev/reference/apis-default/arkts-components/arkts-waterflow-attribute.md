@@ -1,12 +1,10 @@
 # WaterFlowAttribute
 
-除支持通用属性和[滚动组件通用属性](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还支持 以下属性：
+除支持通用属性和滚动组件通用属性外，还支持 以下属性：
 
-> **说明：**
-> 
+> **说明：**&gt;
 > WaterFlow组件使用通用属性clip&lt;sup&gt;12+&lt;/sup&gt;和通用属性
-> clip&lt;sup&gt;18+&lt;/sup&gt;时默认值都为true。
-> 
+> clip&lt;sup&gt;18+&lt;/sup&gt;时默认值都为true。&gt;
 > WaterFlow组件内容裁剪模式ContentClipMode&lt;sup&gt;14+&lt;/sup&gt;枚举说明为ContentClipMode.CONTENT_ONLY，padding区域会
 > 被裁剪不显示。
 

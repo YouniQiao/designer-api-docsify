@@ -1,8 +1,6 @@
 # RotationGestureEvent
 
-Defines event info for rotation gesture.
-
-@extends BaseGestureEvent @interface RotationGestureEvent
+Defines event info for rotation gesture.@extends BaseGestureEvent @interface RotationGestureEvent
 
 **Inheritance/Implementation:** RotationGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md)
 

@@ -41,16 +41,16 @@ import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from
 | 名称 | 说明 |
 | --- | --- |
 | [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md) | 表示授权状态的枚举。 |
-| [SelectedResult](arkts-ability-abilityaccessctrl-selectedresult-e.md) | 程序访问控制提供应用程序的权限校验和管理能力，支持应用在访问受保护资源前进行权限状态判断、运行时授权申请、设置页授权引导和权限状态变化监听。权限分为system_grant（系统自动授权）、user_grant（需用户手动授权）和 manual_settings（手动设置授权）三类，应用需在配置文件中声明所需权限。权限管理机制详见[应用权限管控概述](../../../security/AccessToken/app-permission-mgmt-overview.md)。 |
-| [PermissionStateChangeType](arkts-ability-abilityaccessctrl-permissionstatechangetype-e.md) | 程序访问控制提供应用程序的权限校验和管理能力，支持应用在访问受保护资源前进行权限状态判断、运行时授权申请、设置页授权引导和权限状态变化监听。权限分为system_grant（系统自动授权）、user_grant（需用户手动授权）和 manual_settings（手动设置授权）三类，应用需在配置文件中声明所需权限。权限管理机制详见[应用权限管控概述](../../../security/AccessToken/app-permission-mgmt-overview.md)。 |
-| [PermissionStatus](arkts-ability-abilityaccessctrl-permissionstatus-e.md) | 程序访问控制提供应用程序的权限校验和管理能力，支持应用在访问受保护资源前进行权限状态判断、运行时授权申请、设置页授权引导和权限状态变化监听。权限分为system_grant（系统自动授权）、user_grant（需用户手动授权）和 manual_settings（手动设置授权）三类，应用需在配置文件中声明所需权限。权限管理机制详见[应用权限管控概述](../../../security/AccessToken/app-permission-mgmt-overview.md)。 |
-| [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md) | 程序访问控制提供应用程序的权限校验和管理能力，支持应用在访问受保护资源前进行权限状态判断、运行时授权申请、设置页授权引导和权限状态变化监听。权限分为system_grant（系统自动授权）、user_grant（需用户手动授权）和 manual_settings（手动设置授权）三类，应用需在配置文件中声明所需权限。权限管理机制详见[应用权限管控概述](../../../security/AccessToken/app-permission-mgmt-overview.md)。 |
+| [SelectedResult](arkts-ability-abilityaccessctrl-selectedresult-e.md) | 程序访问控制提供应用程序的权限校验和管理能力，支持应用在访问受保护资源前进行权限状态判断、运行时授权申请、设置页授权引导和权限状态变化监听。权限分为system_grant（系统自动授权）、user_grant（需用户手动授权）和 manual_settings（手动设置授权）三类，应用需在配置文件中声明所需权限。权限管理机制详见[应用权限管控概述](../../../security/AccessToken/app-permission-mgmt-overview.md)。该模块主要用于以下场景：  - 在业务执行前校验当前应用是否具备访问受保护资源所需要的权限。 - 在权限未授予时，拉起运行时权限弹窗或权限设置页面，请求用户授权。 - 订阅当前应用的权限状态变化事件，在权限状态变化后及时调整业务流程。 |
+| [PermissionStateChangeType](arkts-ability-abilityaccessctrl-permissionstatechangetype-e.md) | 程序访问控制提供应用程序的权限校验和管理能力，支持应用在访问受保护资源前进行权限状态判断、运行时授权申请、设置页授权引导和权限状态变化监听。权限分为system_grant（系统自动授权）、user_grant（需用户手动授权）和 manual_settings（手动设置授权）三类，应用需在配置文件中声明所需权限。权限管理机制详见[应用权限管控概述](../../../security/AccessToken/app-permission-mgmt-overview.md)。该模块主要用于以下场景：  - 在业务执行前校验当前应用是否具备访问受保护资源所需要的权限。 - 在权限未授予时，拉起运行时权限弹窗或权限设置页面，请求用户授权。 - 订阅当前应用的权限状态变化事件，在权限状态变化后及时调整业务流程。 |
+| [PermissionStatus](arkts-ability-abilityaccessctrl-permissionstatus-e.md) | 程序访问控制提供应用程序的权限校验和管理能力，支持应用在访问受保护资源前进行权限状态判断、运行时授权申请、设置页授权引导和权限状态变化监听。权限分为system_grant（系统自动授权）、user_grant（需用户手动授权）和 manual_settings（手动设置授权）三类，应用需在配置文件中声明所需权限。权限管理机制详见[应用权限管控概述](../../../security/AccessToken/app-permission-mgmt-overview.md)。该模块主要用于以下场景：  - 在业务执行前校验当前应用是否具备访问受保护资源所需要的权限。 - 在权限未授予时，拉起运行时权限弹窗或权限设置页面，请求用户授权。 - 订阅当前应用的权限状态变化事件，在权限状态变化后及时调整业务流程。 |
+| [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md) | 程序访问控制提供应用程序的权限校验和管理能力，支持应用在访问受保护资源前进行权限状态判断、运行时授权申请、设置页授权引导和权限状态变化监听。权限分为system_grant（系统自动授权）、user_grant（需用户手动授权）和 manual_settings（手动设置授权）三类，应用需在配置文件中声明所需权限。权限管理机制详见[应用权限管控概述](../../../security/AccessToken/app-permission-mgmt-overview.md)。该模块主要用于以下场景：  - 在业务执行前校验当前应用是否具备访问受保护资源所需要的权限。 - 在权限未授予时，拉起运行时权限弹窗或权限设置页面，请求用户授权。 - 订阅当前应用的权限状态变化事件，在权限状态变化后及时调整业务流程。 |
 
 <!--Del-->
 ### 枚举（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [PermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-permissionrequesttogglestatus-e-sys.md) | 程序访问控制提供应用程序的权限校验和管理能力，支持应用在访问受保护资源前进行权限状态判断、运行时授权申请、设置页授权引导和权限状态变化监听。权限分为system_grant（系统自动授权）、user_grant（需用户手动授权）和 manual_settings（手动设置授权）三类，应用需在配置文件中声明所需权限。权限管理机制详见[应用权限管控概述](../../../security/AccessToken/app-permission-mgmt-overview.md)。 |
+| [PermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-permissionrequesttogglestatus-e-sys.md) | 程序访问控制提供应用程序的权限校验和管理能力，支持应用在访问受保护资源前进行权限状态判断、运行时授权申请、设置页授权引导和权限状态变化监听。权限分为system_grant（系统自动授权）、user_grant（需用户手动授权）和 manual_settings（手动设置授权）三类，应用需在配置文件中声明所需权限。权限管理机制详见[应用权限管控概述](../../../security/AccessToken/app-permission-mgmt-overview.md)。该模块主要用于以下场景：  - 在业务执行前校验当前应用是否具备访问受保护资源所需要的权限。 - 在权限未授予时，拉起运行时权限弹窗或权限设置页面，请求用户授权。 - 订阅当前应用的权限状态变化事件，在权限状态变化后及时调整业务流程。 |
 <!--DelEnd-->
 

@@ -6,6 +6,8 @@ The class used for configuring ArcButton to support progress bar display.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcButtonProgressConfig--><!--Device-unnamed-export declare class ArcButtonProgressConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -44,8 +46,7 @@ Constructor of the ArcButtonProgressConfig.
 ## color
 
 ```TypeScript
-@Trace
-  public color?: ResourceColor
+public color?: ResourceColor
 ```
 
 Sets the foreground color of Progress.
@@ -56,6 +57,8 @@ Sets the foreground color of Progress.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ArcButtonProgressConfig-@Trace  public color?: ResourceColor--><!--Device-ArcButtonProgressConfig-@Trace  public color?: ResourceColor-End-->
@@ -65,13 +68,10 @@ Sets the foreground color of Progress.
 ## total
 
 ```TypeScript
-@Trace
-  public total?: double
+public total?: double
 ```
 
-Sets the total of Progress.
-
-Range value: [0, 2147483647].
+Sets the total of Progress.Range value: [0, 2147483647].
 
 **Type:** double
 
@@ -80,6 +80,8 @@ Range value: [0, 2147483647].
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,19 +92,18 @@ Range value: [0, 2147483647].
 ## value
 
 ```TypeScript
-@Trace
-  public value: double
+public value: double
 ```
 
-Sets the value of Progress.
-
-Range value: [0, total].
+Sets the value of Progress.Range value: [0, total].
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

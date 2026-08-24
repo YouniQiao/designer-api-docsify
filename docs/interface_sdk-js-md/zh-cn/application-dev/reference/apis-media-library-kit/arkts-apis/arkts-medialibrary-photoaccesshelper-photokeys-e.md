@@ -14,11 +14,8 @@
 URI = 'uri'
 ```
 
-文件uri。
-
-**注意：**
-
-查询照片时，该字段仅支持使用 [DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalto) 谓词。
+文件uri。  
+**注意：**查询照片时，该字段仅支持使用 [DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalto) 谓词。
 
 **起始版本：** 23
 
@@ -50,9 +47,8 @@ PHOTO_TYPE = 'media_type'
 DISPLAY_NAME = 'display_name'
 ```
 
-显示名字。规格为：
-
-- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度的取值范围为[1, 255]。 - 文件主名中不允许出现的非法英文字符，包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]。
+显示名字。规格为：  
+- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度的取值范围为[1, 255]。 - 文件主名中不允许出现的非法英文字符，包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]。
 
 **起始版本：** 23
 
@@ -228,11 +224,8 @@ TITLE = 'title'
 DATE_ADDED_MS = 'date_added_ms'
 ```
 
-文件创建时的Unix时间戳（单位：毫秒）。
-
-**注意：**
-
-查询照片时，不支持基于该字段排序。
+文件创建时的Unix时间戳（单位：毫秒）。  
+**注意：**查询照片时，不支持基于该字段排序。
 
 **起始版本：** 23
 
@@ -248,11 +241,8 @@ DATE_ADDED_MS = 'date_added_ms'
 DATE_MODIFIED_MS = 'date_modified_ms'
 ```
 
-文件修改时的Unix时间戳（单位：毫秒）。修改文件名不会改变此值，当文件内容发生修改时才会更新。
-
-**注意：**
-
-查询照片时，不支持基于该字段排序。
+文件修改时的Unix时间戳（单位：毫秒）。修改文件名不会改变此值，当文件内容发生修改时才会更新。  
+**注意：**查询照片时，不支持基于该字段排序。
 
 **起始版本：** 23
 
@@ -424,9 +414,7 @@ CHANGE_TIME = 'change_time'
 ASPECT_RATIO = 'aspect_ratio'
 ```
 
-图片和视频的宽高比。
-
-​
+图片和视频的宽高比。​
 
 **起始版本：** 23
 
@@ -442,10 +430,8 @@ ASPECT_RATIO = 'aspect_ratio'
 LOCAL_ASSET_SIZE = 'local_asset_size'
 ```
 
-本地文件的实际大小（单位：字节）。
-
-- 该属性仅表示本地文件大小，默认值为0表示纯云文件或尚未识别的本地文件大小。 - 当本地文件为动态照片且模式发生变化时，该属性会发生变化。例如：当图库中的动态照片处于“关闭动态”状态时，该属性仅表示封面帧大小。
-
+本地文件的实际大小（单位：字节）。  
+- 该属性仅表示本地文件大小，默认值为0表示纯云文件或尚未识别的本地文件大小。 - 当本地文件为动态照片且模式发生变化时，该属性会发生变化。例如：当图库中的动态照片处于“关闭动态”状态时，该属性仅表示封面帧大小。  
 ​
 
 **起始版本：** 26.0.0

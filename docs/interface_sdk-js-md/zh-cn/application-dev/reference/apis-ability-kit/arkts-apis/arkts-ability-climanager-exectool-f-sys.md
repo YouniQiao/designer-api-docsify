@@ -33,7 +33,7 @@ function execTool(toolName: string, subCommand: string, args: Record<string, Obj
 | --- | --- | --- | --- |
 | toolName | string | 是 | 目标工具的名称 |
 | subCommand | string | 是 | 此执行操作的子命令 |
-| args | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 工具的输入参数 |
+| args | Record&lt;string, Object&gt; | 是 | 工具的输入参数 |
 | challenge | string | 是 | 从访问令牌管理器获取的唯一标识符 |
 | execOptions | [ExecOptions](arkts-ability-climanager-execoptions-i-sys.md) | 否 | 此操作的选项 |
 
@@ -47,7 +47,7 @@ function execTool(toolName: string, subCommand: string, args: Record<string, Obj
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission "ohos.permission.EXEC_CLI_TOOL". |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission"ohos.permission.EXEC_CLI_TOOL". |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. Interface caller is not a system app. |
 | [35600030](../errorcode-ability.md#35600030-cli工具不存在) | No tool with the specified name exists. |
 | [35600031](../errorcode-ability.md#35600031-工具并发数已达上限) | Maximum number of processes has been reached. |

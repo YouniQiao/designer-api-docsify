@@ -34,7 +34,7 @@ SPATIAL_AUDIO_SOURCE_TYPE_STEREO = 0
 SPATIAL_AUDIO_SOURCE_TYPE_AUDIO_VIVID = 1
 ```
 
-音频源类型。
+音频生动源类型。
 
 **起始版本：** 24
 

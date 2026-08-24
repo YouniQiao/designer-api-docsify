@@ -1,8 +1,6 @@
 # ShadowStyle
 
-enum Shadow style
-
-@enum { number }
+enum Shadow style@enum { number }
 
 **起始版本：** 23
 

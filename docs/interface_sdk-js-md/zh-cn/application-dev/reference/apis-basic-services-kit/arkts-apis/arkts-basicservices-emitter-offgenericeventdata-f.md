@@ -12,9 +12,7 @@ import { emitter } from '@kit.BasicServicesKit';
 function offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-取消订阅当前Emitter类实例的事件。仅当已使用 onGenericEventData或 onceGenericEventData接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
-
-使用该接口取消事件订阅后，已通过emit接口发布但尚未执行的事件将被取消。
+取消订阅当前Emitter类实例的事件。仅当已使用 onGenericEventData或 onceGenericEventData接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。使用该接口取消事件订阅后，已通过emit接口发布但尚未执行的事件将被取消。
 
 **起始版本：** 23
 

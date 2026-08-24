@@ -370,14 +370,9 @@ Convert Asset Attributes to Compatibility Attributes
 createAlbum(name: string, callback: AsyncCallback<Album>): void
 ```
 
-Creates an album. This API uses an asynchronous callback to return the result.
-
-The album name must meet the following requirements:
-
-- The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are:
-
-. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
-
+Creates an album. This API uses an asynchronous callback to return the result.The album name must meet the following requirements:  
+- The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are:  
+. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - Duplicate album names are not allowed.
 
 **Since:** 10
@@ -452,14 +447,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAlbum(name: string): Promise<Album>
 ```
 
-Creates an album. This API uses a promise to return the result.
-
-The album name must meet the following requirements:
-
-- The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are:
-
-. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
-
+Creates an album. This API uses a promise to return the result.The album name must meet the following requirements:  
+- The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are:  
+. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - Duplicate album names are not allowed.
 
 **Since:** 10
@@ -509,15 +499,9 @@ See [createAlbum](#createalbum)
 createAsset(displayName: string, callback: AsyncCallback<PhotoAsset>): void
 ```
 
-Creates an image or video asset with the specified file name. This API uses an asynchronous callback to return the result.
-
-The file name must meet the following requirements:
-
-- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : ? " &lt; &gt; |
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+Creates an image or video asset with the specified file name. This API uses an asynchronous callback to return the result.The file name must meet the following requirements:  
+- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.  
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 23
 
@@ -686,15 +670,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(displayName: string): Promise<PhotoAsset>
 ```
 
-Creates an image or video asset with the specified file name. This API uses a promise to return the result.
-
-The file name must meet the following requirements:
-
-- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : ? " &lt; &gt; |
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+Creates an image or video asset with the specified file name. This API uses a promise to return the result.The file name must meet the following requirements:  
+- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.  
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 23
 
@@ -739,15 +717,9 @@ See [createAsset](#createasset)
 createAsset(displayName: string, options: PhotoCreateOptions): Promise<PhotoAsset>
 ```
 
-Creates an image or video asset with the specified file name and options. This API uses a promise to return the result.
-
-The file name must meet the following requirements:
-
-- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : ? " &lt; &gt; |
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+Creates an image or video asset with the specified file name and options. This API uses a promise to return the result.The file name must meet the following requirements:  
+- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.  
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 23
 
@@ -793,15 +765,9 @@ See [createAsset](#createasset)
 createAsset(displayName: string, options: PhotoCreateOptions, callback: AsyncCallback<PhotoAsset>): void
 ```
 
-Creates an image or video asset with the specified file name and options. This API uses an asynchronous callback to return the result.
-
-The file name must meet the following requirements:
-
-- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : ? " &lt; &gt; |
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+Creates an image or video asset with the specified file name and options. This API uses an asynchronous callback to return the result.The file name must meet the following requirements:  
+- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.  
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 23
 
@@ -1771,9 +1737,7 @@ Obtain the URI list to be transcoded based on bundleName, photoAsset list, and c
 getClonedAlbumUris(oldUris: Array<string>): Promise<Map<string, string>>
 ```
 
-Obtains the current URIs of cloned albums. This API uses a promise to return the result.
-
-To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
+Obtains the current URIs of cloned albums. This API uses a promise to return the result.To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
 
 **Since:** 26.0.0
 
@@ -1834,9 +1798,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getClonedAssetUris(oldUris: Array<string>): Promise<Map<string, string>>
 ```
 
-Obtains the current URIs of cloned assets. This API uses a promise to return the result.
-
-To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
+Obtains the current URIs of cloned assets. This API uses a promise to return the result.To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
 
 **Since:** 26.0.0
 
@@ -1954,9 +1916,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getDeepOptimizeSpace(): Promise<long>
 ```
 
-Obtains the size of the deep storage space. <br>Unit:Byte{s}.
-
-This API is time-consuming. Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [canPerformDeepOptimizeSpace](#canperformdeepoptimizespace) and call this API only when true is returned.
+Obtains the size of the deep storage space. <br>Unit:Byte{s}.This API is time-consuming. Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [canPerformDeepOptimizeSpace](#canperformdeepoptimizespace) and call this API only when true is returned.
 
 **Since:** 26.0.0
 
@@ -2388,9 +2348,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getPhotoAlbums(options?: FetchOptions): Promise<FetchResult<Album>>
 ```
 
-Obtains system, user, and source albums based on the specified options. This API uses a promise to return the result.
-
-Before the operation, ensure that the albums to obtain exist.
+Obtains system, user, and source albums based on the specified options. This API uses a promise to return the result.Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 23
 
@@ -3192,7 +3150,7 @@ Unregisters a listener for the **'hiddenAlbumChange'** event to stop monitoring 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hiddenAlbumChange' | Yes | Event type. The value is fixed at **'hiddenAlbumChange'**. After the unregistration is complete, any change to the hidden albums is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'hiddenAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a hidden album changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange). If this parameter is left unspecified, all listeners for the **'hiddenAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a hidden album changes. |
 
 **Error codes:**
 
@@ -3259,7 +3217,7 @@ Unregisters a listener for the **'hiddenPhotoChange'** event to stop monitoring 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hiddenPhotoChange' | Yes | Event type. The value is fixed at **'hiddenPhotoChange'**. After the unregistration is complete, any change to the hidden media assets is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'hiddenPhotoChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a hidden media asset changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange). If this parameter is left unspecified, all listeners for the **'hiddenPhotoChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a hidden media asset changes. |
 
 **Error codes:**
 
@@ -3326,7 +3284,7 @@ Unregisters a listener for the **'trashedAlbumChange'** event to stop monitoring
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'trashedAlbumChange' | Yes | Event type. The value is fixed at **'trashedAlbumChange'**. After the unregistration is complete, any change to the trashed albums is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'trashedAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when an album in the trash changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange). If this parameter is left unspecified, all listeners for the **'trashedAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when an album in the trash changes. |
 
 **Error codes:**
 
@@ -3393,7 +3351,7 @@ Unregisters a listener for the **'trashedPhotoChange'** event to stop monitoring
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'trashedPhotoChange' | Yes | Event type. The value is fixed at **'trashedPhotoChange'**. After the unregistration is complete, any change to the trashed media assets is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'trashedPhotoChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a trashed media asset changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange). If this parameter is left unspecified, all listeners for the **'trashedPhotoChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a trashed media asset changes. |
 
 **Error codes:**
 
@@ -4985,9 +4943,7 @@ Starts asynchronous asset analysis. This API uses an asynchronous callback to re
 startDeepOptimizeSpace(callback?: Callback<DeepOptimizeSpaceProgress>): Promise<void>
 ```
 
-Start deep optimize storage space.
-
-Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [canPerformDeepOptimizeSpace](#canperformdeepoptimizespace) and call this API only when true is returned.
+Start deep optimize storage space.Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [canPerformDeepOptimizeSpace](#canperformdeepoptimizespace) and call this API only when true is returned.
 
 **Since:** 26.0.0
 

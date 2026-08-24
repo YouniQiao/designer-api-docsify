@@ -1,10 +1,10 @@
 # CustomContentDialogV2
 
-Declare custom content dialog
-
-@struct { CustomContentDialogV2 }
+Declare custom content dialog@struct { CustomContentDialogV2 }
 
 **Since:** 18
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct CustomContentDialogV2--><!--Device-unnamed-export declare struct CustomContentDialogV2-End-->
 
@@ -19,8 +19,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 ## buttons
 
 ```TypeScript
-@Param
-  buttons?: AdvancedDialogV2Button[]
+buttons?: AdvancedDialogV2Button[]
 ```
 
 Sets the CustomContentDialogV2 buttons.
@@ -28,6 +27,8 @@ Sets the CustomContentDialogV2 buttons.
 **Type:** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)[]
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,8 +41,7 @@ Sets the CustomContentDialogV2 buttons.
 ## contentAreaPadding
 
 ```TypeScript
-@Param
-  contentAreaPadding?: LocalizedPadding
+contentAreaPadding?: LocalizedPadding
 ```
 
 Sets the CustomContentDialogV2 content area padding.
@@ -49,6 +49,8 @@ Sets the CustomContentDialogV2 content area padding.
 **Type:** LocalizedPadding
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,8 +63,7 @@ Sets the CustomContentDialogV2 content area padding.
 ## contentBuilder
 
 ```TypeScript
-@BuilderParam
-  contentBuilder: CustomBuilder
+contentBuilder: CustomBuilder
 ```
 
 Sets the CustomContentDialogV2 content.
@@ -70,6 +71,8 @@ Sets the CustomContentDialogV2 content.
 **Type:** CustomBuilder
 
 **Since:** 18
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +85,7 @@ Sets the CustomContentDialogV2 content.
 ## primaryTitle
 
 ```TypeScript
-@Param
-  primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
 Sets the CustomContentDialogV2 title.
@@ -91,6 +93,8 @@ Sets the CustomContentDialogV2 title.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -103,8 +107,7 @@ Sets the CustomContentDialogV2 title.
 ## secondaryTitle
 
 ```TypeScript
-@Param
-  secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
 Sets the CustomContentDialogV2 secondary title.
@@ -112,6 +115,8 @@ Sets the CustomContentDialogV2 secondary title.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

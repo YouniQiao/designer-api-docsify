@@ -31,11 +31,11 @@ import { dragController } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [AnimationOptions](arkts-arkui-dragcontroller-animationoptions-i.md) | Defines the animation options for drag preview. |
-| [DragAction](arkts-arkui-dragcontroller-dragaction-i.md) | One drag action object for drag process |
-| [DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md) | Drag and drop information |
-| [DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md) | Define the drag event parameters |
-| [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | DragInfo object description |
+| [AnimationOptions](arkts-arkui-dragcontroller-animationoptions-i.md) | Defines the animation options for drag preview.@interface AnimationOptions |
+| [DragAction](arkts-arkui-dragcontroller-dragaction-i.md) | One drag action object for drag process@interface DragAction |
+| [DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md) | Drag and drop information@interface DragAndDropInfo |
+| [DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md) | Define the drag event parameters@interface DragEventParam |
+| [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | DragInfo object description@interface DragInfo |
 | [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) | Defines parameters affecting spring loading detection. Typically, default system configurations suffice. Customization can be done by specifying the config when binding onDragSpringLoading or dynamically modifying it using the updateConfiguration method during the BEGIN state. |
 | [SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md) | Defines drag-related information when triggering spring loading callbacks. This interface provides drag data summaries and additional drag information, useful for applications needing to dynamically determine whether to respond to spring loading callbacks based on drag data. |
 
@@ -43,7 +43,7 @@ import { dragController } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md) | Defines the drag spring loading state. Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still--500ms--&gt;BEGIN--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;END |
-| [DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md) | Define the status for the application to notify the framework whether to execute drag. |
-| [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md) | Defines the Drag Status. |
+| [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md) | Defines the drag spring loading state. Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still--500ms--&gt;BEGIN--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;END@enum { number } |
+| [DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md) | Define the status for the application to notify the framework whether to execute drag.@enum { number } |
+| [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md) | Defines the Drag Status.@enum { number } |
 

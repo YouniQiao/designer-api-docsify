@@ -1,8 +1,6 @@
 # ExpandedMenuOptions
 
-Describes the expanded drop-down menu options.
-
-Inherits from MenuItemOptions.
+Describes the expanded drop-down menu options.Inherits from MenuItemOptions.
 
 **Inheritance/Implementation:** ExpandedMenuOptions extends MenuItemOptions
 

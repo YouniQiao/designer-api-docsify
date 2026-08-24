@@ -1,8 +1,6 @@
 # @ohos.bundle.bundleMonitor
 
-Bundle monitor
-
-@namespace bundleMonitor
+Bundle monitor@namespace bundleMonitor
 
 **Since:** 23
 

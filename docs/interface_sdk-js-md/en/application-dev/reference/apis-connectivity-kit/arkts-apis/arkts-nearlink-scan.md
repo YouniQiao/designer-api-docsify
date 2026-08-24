@@ -23,7 +23,7 @@ import { scan } from '@kit.ConnectivityKit';
 | Name | Description |
 | --- | --- |
 | [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md) | Unsubscribes from NearLink scanning results. This API uses an asynchronous callback to return the result. |
-| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md) | Subscribes to NearLink scanning results. This API uses an asynchronous callback to return the result. |
+| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md) | Subscribes to NearLink scanning results. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event. |
 | [startScan](arkts-connectivity-scan-startscan-f.md) | Starts NearLink scanning. This API uses a promise to return the result. You need to call scan.onDeviceFound to subscribe to the scanning results. After this API initiates scanning, the scanned device information is reported through the scan.onDeviceFound callback. After the scanning is complete, you can call [scan.stopScan](arkts-connectivity-scan-stopscan-f.md) to stop scanning. |
 | [stopScan](arkts-connectivity-scan-stopscan-f.md) | Stops NearLink scanning. This API uses a promise to return the result. |
 

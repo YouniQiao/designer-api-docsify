@@ -12,7 +12,6 @@ USB数据传输参数对象，包含USB数据传输所需的所有参数，用�
 
 ```TypeScript
 import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## buffer

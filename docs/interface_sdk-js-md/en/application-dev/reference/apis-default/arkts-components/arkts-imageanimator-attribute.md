@@ -1,8 +1,6 @@
 # ImageAnimatorAttribute
 
-Defines the ImageAnimator component attributes.
-
-@extends CommonMethod @interface ImageAnimatorAttribute
+Defines the ImageAnimator component attributes.@extends CommonMethod @interface ImageAnimatorAttribute
 
 **Inheritance/Implementation:** ImageAnimatorAttribute extends CommonMethod
 

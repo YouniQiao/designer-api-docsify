@@ -2,32 +2,25 @@
 
 Enumerates the button types.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The corner radius of the rounded rectangle button is set using the universal attribute
-> borderRadius.
-> 
+> borderRadius.&gt;
 > - For a button of the **Capsule** type, the **borderRadius** settings do not take effect, and the radius of its
-> rounded corner is always half of the button height or width, whichever is smaller.
-> 
+> rounded corner is always half of the button height or width, whichever is smaller.&gt;
 > - For a button of the **Circle** type: (1) If both its width and height are set, **borderRadius** does not take
 > effect, and the button radius is half of the width or height (whichever is smaller). (2) If either its width or
 > height is set, **borderRadius** does not take effect, and the button radius is half of the set width or height. (3)
 > If neither its width nor height is set, the button radius is as specified by **borderRadius**; if **borderRadius**
-> is set to a negative value, the value **0** will be used.
-> 
+> is set to a negative value, the value **0** will be used.&gt;
 > - The button text is set using [fontSize](arkts-arkui-button-attribute.md#fontsize),
 > [fontColor](arkts-arkui-button-attribute.md#fontcolor), [fontStyle](arkts-arkui-button-attribute.md#fontstyle),
-> [fontFamily](arkts-arkui-button-attribute.md#fontfamily), and [fontWeight](arkts-arkui-button-attribute.md#fontweight).
-> 
+> [fontFamily](arkts-arkui-button-attribute.md#fontfamily), and [fontWeight](arkts-arkui-button-attribute.md#fontweight).&gt;
 > - Before setting the gradient color, you need to set
-> backgroundColor to transparent.
-> 
+> backgroundColor to transparent.&gt;
 > - When **borderRadius** is not set, the corner radius of the rounded rectangle button remains at the default value.
 > In this case, the corner radius does not change with the button height and is subject to the **controlSize**
 > property. When **controlSize** is **NORMAL**, the corner radius is 20 vp; when **controlSize** is **SMALL**, the
-> corner radius is 14 vp.
-> 
+> corner radius is 14 vp.&gt;
 > - When border is set for the
 > button, a default
 > borderRadius value is

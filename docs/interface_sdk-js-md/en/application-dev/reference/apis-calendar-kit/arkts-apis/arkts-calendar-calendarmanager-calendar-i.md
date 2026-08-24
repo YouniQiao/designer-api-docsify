@@ -1,8 +1,6 @@
 # Calendar
 
-In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain
-
-a **Calendar** object before calling related APIs.
+In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain a **Calendar** object before calling related APIs.
 
 **Since:** 10
 
@@ -823,9 +821,7 @@ See [getEvents](#getevents)
 getEvents(callback: AsyncCallback<Event[]>):void
 ```
 
-Obtains all events in the current calendar. This API uses an asynchronous callback to return the result.
-
-For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
+Obtains all events in the current calendar. This API uses an asynchronous callback to return the result.For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
 
 **Since:** 10
 
@@ -860,9 +856,7 @@ See [getEvents](#getevents)
 openEventEditPage(id: number): Promise<void>
 ```
 
-Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID. This API uses a promise to return the result.
-
-This API can be used to view and edit calendar events in the system calendar.
+Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID. This API uses a promise to return the result.This API can be used to view and edit calendar events in the system calendar.
 
 **Since:** 26.0.0
 

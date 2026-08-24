@@ -1,8 +1,6 @@
 # DialogAlignment
 
-The alignment of dialog,
-
-@enum { number }
+The alignment of dialog,@enum { number }
 
 **Since:** 23
 

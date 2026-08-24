@@ -1,8 +1,6 @@
 # LocalizedBarrierStyle
 
-barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件。
-
-@interface LocalizedBarrierStyle
+barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件。@interface LocalizedBarrierStyle
 
 **起始版本：** 23
 

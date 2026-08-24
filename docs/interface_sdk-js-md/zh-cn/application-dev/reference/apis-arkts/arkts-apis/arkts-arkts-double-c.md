@@ -39,7 +39,7 @@ static $_invoke(): Double
 
 | 类型 | 说明 |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | 新的Double实例。 |
+| Double | 新的Double实例。 |
 
 ## $_invoke
 
@@ -63,13 +63,13 @@ static $_invoke(value: string | Double | BigInt | undefined | null): Double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| [Double](arkts-arkts-double-c.md) \| [BigInt](arkts-arkts-bigint-c.md) \| undefined \| null | 是 | 待转换为number的值。 可以是string、number或BigInt（可选）。 |
+| value | string \| Double \| [BigInt](arkts-arkts-bigint-c.md) \| undefined \| null | 是 | 待转换为number的值。 可以是string、number或BigInt（可选）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | 新的Double实例。 |
+| Double | 新的Double实例。 |
 
 ## add
 
@@ -93,13 +93,13 @@ public add(other: Double): Double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | 是 | 加法运算的右操作数。 |
+| other | Double | 是 | 加法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | 加法运算的结果。 |
+| Double | 加法运算的结果。 |
 
 ## bitCastFromLong
 
@@ -214,7 +214,7 @@ public compareTo(other: Double): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | 是 | 用于比较的Double对象。 |
+| other | Double | 是 | 用于比较的Double对象。 |
 
 **返回值：**
 
@@ -334,13 +334,13 @@ public div(other: Double): Double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | 是 | 除法运算的右操作数。 |
+| other | Double | 是 | 除法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | 除法运算的结果。 |
+| Double | 除法运算的结果。 |
 
 ## equals
 
@@ -448,7 +448,7 @@ public isGreaterEqualThan(other: Double): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | 是 | 比较运算的右操作数。 |
+| other | Double | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -478,7 +478,7 @@ public isGreaterThan(other: Double): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | 是 | 比较运算的右操作数。 |
+| other | Double | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -562,7 +562,7 @@ public isLessEqualThan(other: Double): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | 是 | 比较运算的右操作数。 |
+| other | Double | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -592,7 +592,7 @@ public isLessThan(other: Double): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | 是 | 比较运算的右操作数。 |
+| other | Double | 是 | 比较运算的右操作数。 |
 
 **返回值：**
 
@@ -730,13 +730,13 @@ public mul(other: Double): Double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | 是 | 乘法运算的右操作数。 |
+| other | Double | 是 | 乘法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | 乘法运算的结果。 |
+| Double | 乘法运算的结果。 |
 
 ## parseFloat
 
@@ -882,13 +882,13 @@ public sub(other: Double): Double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Double](arkts-arkts-double-c.md) | 是 | 减法运算的右操作数。 |
+| other | Double | 是 | 减法运算的右操作数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | 减法运算的结果。 |
+| Double | 减法运算的结果。 |
 
 ## toByte
 

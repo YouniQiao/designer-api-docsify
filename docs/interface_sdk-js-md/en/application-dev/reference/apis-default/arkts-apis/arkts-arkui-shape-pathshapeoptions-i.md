@@ -1,8 +1,6 @@
 # PathShapeOptions
 
-Interface for PathShape constructor parameters.
-
-@interface PathShapeOptions
+Interface for PathShape constructor parameters.@interface PathShapeOptions
 
 **Since:** 23
 

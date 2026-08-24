@@ -12,9 +12,7 @@ import { adminManager } from '@kit.MDMKit';
 function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEvent>): void
 ```
 
-Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs.
-
-Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md) event.
+Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs.Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md) event.
 
 **Since:** 12
 

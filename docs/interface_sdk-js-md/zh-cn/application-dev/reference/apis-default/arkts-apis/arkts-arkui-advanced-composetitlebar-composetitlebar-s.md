@@ -2,10 +2,8 @@
 
 ComposeTitleBar是一种普通标题栏组件，支持设置标题、头像（可选）和副标题（可选），可用于一级页面、二级及其以上界面显示返回键。可快速构建统一风格的标题栏，简化页面开发，支持灵活的菜单项配置和图标自定义，帮助开发者快速实现 导航和操作入口。
 
-> **说明：**
-> 
-> - 该组件仅可在Stage模型下使用。
-> 
+> **说明：**&gt;
+> - 该组件仅可在Stage模型下使用。&gt;
 > - 如果ComposeTitleBar设置通用属性和通用事件，
 > 编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ComposeTitleBar本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议
 > ComposeTitleBar设置通用属性和通用事件。
@@ -13,6 +11,8 @@ ComposeTitleBar是一种普通标题栏组件，支持设置标题、头像（�
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct ComposeTitleBar--><!--Device-unnamed-export declare struct ComposeTitleBar-End-->
 
@@ -26,8 +26,7 @@ ComposeTitleBar是一种普通标题栏组件，支持设置标题、头像（�
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -35,6 +34,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

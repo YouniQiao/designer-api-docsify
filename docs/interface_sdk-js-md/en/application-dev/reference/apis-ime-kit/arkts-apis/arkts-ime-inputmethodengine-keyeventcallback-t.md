@@ -4,7 +4,7 @@
 export type KeyEventCallback = (event: KeyEvent) => boolean
 ```
 
-@brief The callback of 'keyDown' or 'keyUp' event.
+The callback of 'keyDown' or 'keyUp' event.
 
 **Since:** 23
 

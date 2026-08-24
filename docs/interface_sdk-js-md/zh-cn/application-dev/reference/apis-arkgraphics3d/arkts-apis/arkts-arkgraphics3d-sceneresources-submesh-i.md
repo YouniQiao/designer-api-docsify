@@ -1,8 +1,6 @@
 # SubMesh
 
-子网格类型。
-
-@interface SubMesh
+子网格类型。@interface SubMesh
 
 **起始版本：** 23
 

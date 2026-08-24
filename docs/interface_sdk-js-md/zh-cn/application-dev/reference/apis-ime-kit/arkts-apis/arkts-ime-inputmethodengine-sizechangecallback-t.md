@@ -4,7 +4,7 @@
 export type SizeChangeCallback = (size: window.Size, keyboardArea?: KeyboardArea) => void
 ```
 
-@brief 当输入法面板大小变化时触发的回调。
+当输入法面板大小变化时触发的回调。
 
 **起始版本：** 23
 

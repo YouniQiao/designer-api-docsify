@@ -4,7 +4,7 @@
 export type GetTextCallback = (length: int) => string
 ```
 
-@brief 获取编辑框最新状态下光标左侧指定长度的文本内容。
+获取编辑框最新状态下光标左侧指定长度的文本内容。
 
 **起始版本：** 23
 

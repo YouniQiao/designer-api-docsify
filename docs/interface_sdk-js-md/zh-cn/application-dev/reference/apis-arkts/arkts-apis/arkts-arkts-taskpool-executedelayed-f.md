@@ -14,8 +14,7 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 
 延时执行任务。当前执行模式可以设置任务优先级，可通过cancel取消任务。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 该任务不能是任务组任务、串行队列任务、异步队列任务或周期任务。
 > - 如果任务不是长时任务，可以多次调用executeDelayed执行。
 > - 如果是长时任务，则仅支持执行一次。

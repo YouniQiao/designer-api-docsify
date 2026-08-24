@@ -1,7 +1,6 @@
 # request
 
-The **request** module provides applications with basic upload, download, and background transmission agent capabilities.
-
+The **request** module provides applications with basic upload, download, and background transmission agent capabilities.  
 - Currently, the **request** module cannot be called in extensions.
 
 **Since:** 23
@@ -15,7 +14,6 @@ The **request** module provides applications with basic upload, download, and ba
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -45,12 +43,12 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 | --- | --- |
 | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Defines the download task configuration. |
 | [DownloadInfo](arkts-basicservices-request-downloadinfo-i.md) | Defines the download task information, which is the callback parameter of the [getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo) API. |
-| [DownloadTask](arkts-basicservices-request-downloadtask-i.md) | Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md) . |
+| [DownloadTask](arkts-basicservices-request-downloadtask-i.md) | Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md). |
 | [File](arkts-basicservices-request-file-i.md) | Describes the list of files in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md). |
 | [RequestData](arkts-basicservices-request-requestdata-i.md) | Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md). |
 | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Describes the configuration of an upload task. |
 | [TaskState](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the [on('complete' \| 'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) and [off('complete' \| 'fail')](arkts-basicservices-request-uploadtask-i.md#offprogress) APIs. |
-| [UploadTask](arkts-basicservices-request-uploadtask-i.md) | Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md) . |
+| [UploadTask](arkts-basicservices-request-uploadtask-i.md) | Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md). |
 
 ### Types
 
@@ -85,11 +83,11 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 | [ERROR_INSUFFICIENT_SPACE](arkts-basicservices-request-con.md#error_insufficient_space) | (Download error codes) Insufficient storage space. |
 | [ERROR_TOO_MANY_REDIRECTS](arkts-basicservices-request-con.md#error_too_many_redirects) | (Download error codes) Error caused by too many network redirections. |
 | [ERROR_UNHANDLED_HTTP_CODE](arkts-basicservices-request-con.md#error_unhandled_http_code) | (Download error codes) Unidentified HTTP code. |
-| [ERROR_UNKNOWN](arkts-basicservices-request-con.md#error_unknown) | (Download error codes) Unknown error. |
+| [ERROR_UNKNOWN](arkts-basicservices-request-con.md#error_unknown) | (Download error codes) Unknown error.In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returned by the DNS is blocked, a handshake timeout may occur, leading to an ERROR_UNKNOWN error. |
 | [ERROR_OFFLINE](arkts-basicservices-request-con.md#error_offline) | (Download error codes) No network connection. |
 | [ERROR_UNSUPPORTED_NETWORK_TYPE](arkts-basicservices-request-con.md#error_unsupported_network_type) | (Download error codes) Network type mismatch. |
 | [PAUSED_QUEUED_FOR_WIFI](arkts-basicservices-request-con.md#paused_queued_for_wifi) | (Causes of download pause) Download paused and queuing for a WLAN connection because the file size exceeds the maximum value allowed for a mobile network session. |
-| [PAUSED_WAITING_FOR_NETWORK](arkts-basicservices-request-con.md#paused_waiting_for_network) | (Causes of download pause) Download paused due to a network connection problem. |
+| [PAUSED_WAITING_FOR_NETWORK](arkts-basicservices-request-con.md#paused_waiting_for_network) | (Causes of download pause) Download paused due to a network connection problem.Example: network disconnection |
 | [PAUSED_WAITING_TO_RETRY](arkts-basicservices-request-con.md#paused_waiting_to_retry) | (Causes of download pause) Download paused due to network error and then retried. |
 | [PAUSED_BY_USER](arkts-basicservices-request-con.md#paused_by_user) | (Causes of download pause) The user paused the session. |
 | [PAUSED_UNKNOWN](arkts-basicservices-request-con.md#paused_unknown) | (Causes of download pause) Download paused due to unknown reasons. |

@@ -12,9 +12,6 @@ LocalizedLabelMarginOptions用于定义本地化文本与左右侧图标之间�
 
 ```TypeScript
 import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
-import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from '@kit.ArkUI';
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## end
@@ -23,19 +20,7 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 end?: LengthMetrics
 ```
 
-文本与结束侧图标之间间距，不支持百分比。
-
-默认值：
-
-size为ChipSize.SMALL时，end默认值：
-
-`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`
-
-size为ChipSize.NORMAL时，end默认值：
-
-`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`
-
-值为undefined时，按默认值处理。
+文本与结束侧图标之间间距，不支持百分比。默认值：size为ChipSize.SMALL时，end默认值：`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`size为ChipSize.NORMAL时，end默认值：`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`值为undefined时，按默认值处理。
 
 **类型：** LengthMetrics
 
@@ -55,19 +40,7 @@ size为ChipSize.NORMAL时，end默认值：
 start?: LengthMetrics
 ```
 
-文本与起始侧图标的间距，不支持百分比。
-
-默认值：
-
-size为ChipSize.SMALL时，start默认值：
-
-`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`
-
-size为ChipSize.NORMAL时，start默认值：
-
-`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`
-
-值为undefined时，按默认值处理。
+文本与起始侧图标的间距，不支持百分比。默认值：size为ChipSize.SMALL时，start默认值：`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`size为ChipSize.NORMAL时，start默认值：`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`值为undefined时，按默认值处理。
 
 **类型：** LengthMetrics
 

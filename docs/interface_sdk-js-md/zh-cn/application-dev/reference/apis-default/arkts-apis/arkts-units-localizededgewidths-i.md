@@ -1,10 +1,6 @@
 # LocalizedEdgeWidths
 
-边框宽度类型，用于描述组件边框不同方向的宽度。
-
-引入该对象时，至少传入一个参数。
-
-@interface LocalizedEdgeWidths
+边框宽度类型，用于描述组件边框不同方向的宽度。引入该对象时，至少传入一个参数。@interface LocalizedEdgeWidths
 
 **起始版本：** 23
 
@@ -40,11 +36,7 @@ bottom?: LengthMetrics
 end?: LengthMetrics
 ```
 
-右内边距，组件内元素距组件右边界的尺寸。
-
-从右至左显示语言模式下为
-
-左内边距，组件内元素距组件左边界的尺寸。
+右内边距，组件内元素距组件右边界的尺寸。从右至左显示语言模式下为左内边距，组件内元素距组件左边界的尺寸。
 
 **类型：** [LengthMetrics](arkts-lengthmetrics-t.md)
 
@@ -64,11 +56,7 @@ end?: LengthMetrics
 start?: LengthMetrics
 ```
 
-左内边距，组件内元素距组件左边界的尺寸。
-
-从右至左显示语言模式下为
-
-右内边距，组件内元素距组件右边界的尺寸。
+左内边距，组件内元素距组件左边界的尺寸。从右至左显示语言模式下为右内边距，组件内元素距组件右边界的尺寸。
 
 **类型：** [LengthMetrics](arkts-lengthmetrics-t.md)
 

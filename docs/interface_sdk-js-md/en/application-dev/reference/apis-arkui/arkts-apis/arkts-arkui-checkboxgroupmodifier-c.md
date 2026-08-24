@@ -1,8 +1,6 @@
 # CheckboxGroupModifier
 
-Defines CheckboxGroup Modifier
-
-@extends CheckboxGroupAttribute @implements AttributeModifier&lt;CheckboxGroupAttribute&gt;
+Defines CheckboxGroup Modifier@extends CheckboxGroupAttribute @implements AttributeModifier&lt;CheckboxGroupAttribute&gt;
 
 **Inheritance/Implementation:** CheckboxGroupModifier extends CheckboxGroupAttribute and implements AttributeModifier<CheckboxGroupAttribute>
 

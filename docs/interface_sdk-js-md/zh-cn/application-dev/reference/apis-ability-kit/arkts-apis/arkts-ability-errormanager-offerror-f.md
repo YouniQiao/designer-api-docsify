@@ -12,9 +12,7 @@ import { errorManager } from '@kit.AbilityKit';
 function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void
 ```
 
-注销错误观测器。使用callback异步返回。
-
-仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注销错误观测器。使用callback异步返回。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 9
 
@@ -69,9 +67,7 @@ try {
 function off(type: 'error', observerId: number): Promise<void>
 ```
 
-注销错误观测器。使用Promise异步返回。
-
-仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注销错误观测器。使用Promise异步返回。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 9
 

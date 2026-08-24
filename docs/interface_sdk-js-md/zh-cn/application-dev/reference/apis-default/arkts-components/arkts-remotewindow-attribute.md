@@ -1,10 +1,6 @@
 # RemoteWindowAttribute（系统接口）
 
-支持通用属性。
-
-支持通用事件。
-
-@extends CommonMethod @interface RemoteWindowAttribute
+支持通用属性。支持通用事件。@extends CommonMethod @interface RemoteWindowAttribute
 
 **继承/实现关系：** RemoteWindowAttribute extends CommonMethod
 

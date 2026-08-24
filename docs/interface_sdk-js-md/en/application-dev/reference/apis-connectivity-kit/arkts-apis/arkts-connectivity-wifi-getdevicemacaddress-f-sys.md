@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceMacAddress
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function getDeviceMacAddress(): string[]
 ```
 
-Obtains the MAC address of a Wi-Fi device. Wi-Fi must be enabled.
-
-<p>The MAC address is unique and cannot be changed.
+Obtains the MAC address of a Wi-Fi device. Wi-Fi must be enabled.<p>The MAC address is unique and cannot be changed.
 
 **Since:** 7
 

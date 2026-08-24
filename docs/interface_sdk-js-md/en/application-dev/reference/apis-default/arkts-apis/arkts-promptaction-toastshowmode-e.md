@@ -1,8 +1,6 @@
 # ToastShowMode
 
-Enum for the toast showMode.
-
-@enum { number }
+Enum for the toast showMode.@enum { number }
 
 **Since:** 23
 

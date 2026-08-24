@@ -205,7 +205,7 @@ Gets the singleton instance of Console.
 
 | Type | Description |
 | --- | --- |
-| [Console](arkts-arkts-console-c.md) | the singleton Console instance. |
+| Console | the singleton Console instance. |
 
 ## group
 

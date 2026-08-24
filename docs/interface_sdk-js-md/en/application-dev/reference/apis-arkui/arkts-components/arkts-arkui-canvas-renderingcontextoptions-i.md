@@ -1,8 +1,6 @@
 # RenderingContextOptions
 
-Defines the options for rendering context.
-
-@interface RenderingContextOptions
+Defines the options for rendering context.@interface RenderingContextOptions
 
 **Since:** 23
 

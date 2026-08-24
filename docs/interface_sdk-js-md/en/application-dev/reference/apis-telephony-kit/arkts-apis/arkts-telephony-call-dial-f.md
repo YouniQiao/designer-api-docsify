@@ -14,8 +14,7 @@ function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback
 
 Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
 > only for system applications.
 
@@ -82,8 +81,7 @@ function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 
 Initiates a call. You can set call options as needed. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
 > only for system applications.
 
@@ -125,8 +123,7 @@ function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 
 Initiates a call. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
 > only for system applications.
 

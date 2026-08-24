@@ -16,9 +16,7 @@ Define SubTabBarStyle, the style is text and underline.
 board(value: BoardStyle): SubTabBarStyle
 ```
 
-Sets the background style (board style) of the selected subtab.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It takes effect only in the horizontal layout. </p>
+Sets the background style (board style) of the selected subtab.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It takes effect only in the horizontal layout. </p>
 
 **Since:** 23
 
@@ -222,9 +220,7 @@ Static constructor used to create a SubTabBarStyle instance. You can set custom 
 padding(value: Padding | Dimension): SubTabBarStyle
 ```
 
-Set the padding of the sub tab bar
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. <br>When the parameter is of the Dimension type, the value applies to all sides. </p>
+Set the padding of the sub tab bar<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. <br>When the parameter is of the Dimension type, the value applies to all sides. </p>
 
 **Since:** 23
 
@@ -254,9 +250,7 @@ Set the padding of the sub tab bar
 padding(padding: LocalizedPadding): SubTabBarStyle
 ```
 
-Set the padding of the sub tab bar
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This API supports mirroring but does not support percentage-based settings. </p>
+Set the padding of the sub tab bar<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This API supports mirroring but does not support percentage-based settings. </p>
 
 **Since:** 23
 
@@ -286,9 +280,7 @@ Set the padding of the sub tab bar
 selectedMode(value: SelectedMode): SubTabBarStyle
 ```
 
-Sets the display mode of the selected subtab.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It takes effect only in the horizontal layout. </p>
+Sets the display mode of the selected subtab.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It takes effect only in the horizontal layout. </p>
 
 **Since:** 23
 

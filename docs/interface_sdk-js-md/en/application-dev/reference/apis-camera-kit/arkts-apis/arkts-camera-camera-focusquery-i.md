@@ -2,8 +2,7 @@
 
 FocusQuery provides APIs to check whether a focus mode is supported.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This interface was first introduced in API version 12. In this version, a compatibility change was made that
 > preserved the initial version information of inner elements. As a result, you might see outer element's
 
@@ -17,7 +16,6 @@ FocusQuery provides APIs to check whether a focus mode is supported.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## isFocusModeSupported

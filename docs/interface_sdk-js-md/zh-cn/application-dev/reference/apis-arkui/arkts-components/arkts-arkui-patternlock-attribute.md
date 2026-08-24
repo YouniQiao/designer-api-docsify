@@ -1,8 +1,6 @@
 # PatternLock属性/事件
 
-除支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)外，还支持以下属性。
-
-除支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)外，还支持以下事件。
+除支持通用属性外，还支持以下属性。除支持通用事件外，还支持以下事件。
 
 **继承/实现关系：** PatternLockAttribute extends CommonMethod<PatternLockAttribute>
 
@@ -93,8 +91,7 @@ backgroundColor(value: ResourceColor)
 
 设置背景颜色。未通过该接口设置时，默认为透明，无背景色。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 9
@@ -141,8 +138,7 @@ onDotConnect(callback: import('../api/@ohos.base').Callback<number>)
 
 密码输入选中宫格圆点时触发该回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -169,8 +165,7 @@ onPatternComplete(callback: (input: Array<number>) => void)
 
 密码输入结束时触发该回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该回调在密码输入结束时触发，返回完整密码数组。与[onDotConnect](#ondotconnect)的关系：onDotConnect在选中每个圆点时实时触发，
 > onPatternComplete在输入结束时触发，两者可以配合使用以实现实时反馈和最终验证。
 
@@ -284,8 +279,7 @@ sideLength(value: Length)
 
 设置组件的宽度和高度（宽高相同）。当设置为0或负数时，组件不显示。未通过该接口设置时，默认宽高为288vp。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > PatternLock组件设置了通用属性宽高比aspectRatio，且不等于1时（组件尺寸被设定为长方形），九宫格依然绘制为正方形（超出组件范围）。
 
 **起始版本：** 9

@@ -1,8 +1,6 @@
 # RenderingContextOptions
 
-定义渲染上下文的具体配置参数。
-
-@interface RenderingContextOptions
+定义渲染上下文的具体配置参数。@interface RenderingContextOptions
 
 **起始版本：** 23
 

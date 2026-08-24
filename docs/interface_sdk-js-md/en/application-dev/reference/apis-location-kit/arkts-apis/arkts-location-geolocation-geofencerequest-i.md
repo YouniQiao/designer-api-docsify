@@ -1,8 +1,6 @@
 # GeofenceRequest
 
-Configuring parameters in geo fence requests
-
-@interface GeofenceRequest
+Configuring parameters in geo fence requests@interface GeofenceRequest
 
 **Since:** 8
 

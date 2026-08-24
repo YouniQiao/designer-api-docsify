@@ -1,8 +1,6 @@
 # MeasureOptions
 
-被计算文本属性。
-
-@interface MeasureOptions
+被计算文本属性。@interface MeasureOptions
 
 **起始版本：** 23
 
@@ -23,9 +21,7 @@
 baselineOffset?: double | string
 ```
 
-设置被计算文本基线的偏移量。
-
-默认值：0
+设置被计算文本基线的偏移量。默认值：0
 
 **类型：** double \| string
 
@@ -45,11 +41,8 @@ baselineOffset?: double | string
 constraintWidth?: double | string | Resource
 ```
 
-设置被计算文本布局宽度。
-
-**说明：**
-
-默认单位为vp，不支持设置百分比字符串。若不设置，则文本SizeOptions宽度为单行布局所占最大宽度值，若设置则为设置值。
+设置被计算文本布局宽度。  
+**说明：**默认单位为vp，不支持设置百分比字符串。若不设置，则文本SizeOptions宽度为单行布局所占最大宽度值，若设置则为设置值。
 
 **类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -89,15 +82,8 @@ fontFamily?: string | Resource
 fontSize?: double | string | Resource
 ```
 
-设置被计算文本字体大小，fontSize为number类型时，使用vp单位。
-
-默认值：16
-
-**说明：**
-
-不支持设置百分比字符串。
-
-从API version 12开始，fontSize为number类型时，使用fp单位。
+设置被计算文本字体大小，fontSize为number类型时，使用vp单位。默认值：16  
+**说明：**不支持设置百分比字符串。从API version 12开始，fontSize为number类型时，使用fp单位。
 
 **类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -117,11 +103,7 @@ fontSize?: double | string | Resource
 fontStyle?: int | FontStyle
 ```
 
-设置被计算文本字体样式。
-
-默认值：FontStyle.Normal
-
-int类型取值范围为[0,1]，取值间隔为1，依次对应FontStyle中的枚举值。
+设置被计算文本字体样式。默认值：FontStyle.Normal int类型取值范围为[0,1]，取值间隔为1，依次对应FontStyle中的枚举值。
 
 **类型：** int \| [FontStyle](arkts-enums-fontstyle-e.md)
 
@@ -141,9 +123,7 @@ int类型取值范围为[0,1]，取值间隔为1，依次对应FontStyle中的�
 fontWeight?: int | string | FontWeight
 ```
 
-设置被计算文本的字体粗细，int类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持int类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、" lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
-
-默认值：FontWeight.Normal
+设置被计算文本的字体粗细，int类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持int类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal
 
 **类型：** int \| string \| [FontWeight](arkts-enums-fontweight-e.md)
 
@@ -163,9 +143,7 @@ fontWeight?: int | string | FontWeight
 letterSpacing?: double | string
 ```
 
-设置被计算文本字符间距。
-
-默认值：0
+设置被计算文本字符间距。默认值：0
 
 **类型：** double \| string
 
@@ -205,9 +183,7 @@ lineHeight?: double | string | Resource
 maxLines?: int
 ```
 
-设置被计算文本最大行数。
-
-取值范围：[0, INT32_MAX]
+设置被计算文本最大行数。取值范围：[0, INT32_MAX]
 
 **类型：** int
 
@@ -227,11 +203,7 @@ maxLines?: int
 overflow?: int | TextOverflow
 ```
 
-设置被计算文本超长时的截断方式。
-
-默认值：1
-
-int类型取值范围为[0,3]，取值间隔为1，依次对应TextOverflow中的枚举值。
+设置被计算文本超长时的截断方式。默认值：1int类型取值范围为[0,3]，取值间隔为1，依次对应TextOverflow中的枚举值。
 
 **类型：** int \| [TextOverflow](arkts-enums-textoverflow-e.md)
 
@@ -251,11 +223,7 @@ int类型取值范围为[0,3]，取值间隔为1，依次对应TextOverflow中�
 textAlign?: int | TextAlign
 ```
 
-设置被计算文本水平方向的对齐方式。
-
-默认值：TextAlign.Start
-
-int类型取值范围为[0,3]，取值间隔为1，依次对应TextAlign中的枚举值。
+设置被计算文本水平方向的对齐方式。默认值：TextAlign.Start int类型取值范围为[0,3]，取值间隔为1，依次对应TextAlign中的枚举值。
 
 **类型：** int \| [TextAlign](arkts-enums-textalign-e.md)
 
@@ -275,11 +243,7 @@ int类型取值范围为[0,3]，取值间隔为1，依次对应TextAlign中的�
 textCase?: int | TextCase
 ```
 
-设置被计算文本大小写。
-
-默认值：TextCase.Normal
-
-int类型取值范围为[0,2]，取值间隔为1，依次对应TextCase中的枚举值。
+设置被计算文本大小写。默认值：TextCase.Normal int类型取值范围为[0,2]，取值间隔为1，依次对应TextCase中的枚举值。
 
 **类型：** int \| [TextCase](arkts-enums-textcase-e.md)
 
@@ -339,13 +303,8 @@ textIndent?: double | string
 wordBreak?: WordBreak
 ```
 
-设置断行规则。
-
-默认值：WordBreak.BREAK_WORD
-
-**说明：**
-
-WordBreak.BREAK_ALL与{overflow: TextOverflow.Ellipsis}，`maxLines`组合使用可实现英文单词按字母截断，超出部分以省略号显示。
+设置断行规则。默认值：WordBreak.BREAK_WORD  
+**说明：**WordBreak.BREAK_ALL与{overflow: TextOverflow.Ellipsis}，`maxLines`组合使用可实现英文单词按字母截断，超出部分以省略号显示。
 
 **类型：** [WordBreak](arkts-enums-wordbreak-e.md)
 

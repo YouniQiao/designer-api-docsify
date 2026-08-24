@@ -1,8 +1,6 @@
 # FileMeta (System API)
 
-Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service.
-
-@interface FileMeta
+Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service.@interface FileMeta
 
 **Since:** 23
 

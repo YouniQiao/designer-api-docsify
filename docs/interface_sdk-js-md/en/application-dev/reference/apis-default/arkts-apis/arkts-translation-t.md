@@ -16,5 +16,5 @@ Translation info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Vector2](arkts-graphics-vector2-i.md)
+**Property type:** [Vector2](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector2-i.md)
 

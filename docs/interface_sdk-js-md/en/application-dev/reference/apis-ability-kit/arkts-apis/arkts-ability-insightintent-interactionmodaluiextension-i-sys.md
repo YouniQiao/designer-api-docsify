@@ -16,8 +16,6 @@ Defines the information of the modal UIExtension to be displayed as the interact
 
 ```TypeScript
 import { insightIntent } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## abilityName

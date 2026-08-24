@@ -2,8 +2,7 @@
 
 描述通知计时信息。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 实际显示效果依赖于设备能力和通知中心UI样式。
 
 **起始版本：** 23
@@ -34,8 +33,7 @@ initialTime?: int
 isCountDown?: boolean
 ```
 
-是否为倒计时模式。默认为false。
-
+是否为倒计时模式。默认为false。  
 - true：时间从initialTime开始递减显示。 - false：时间从initialTime开始递增显示。
 
 **类型：** boolean
@@ -52,8 +50,7 @@ isCountDown?: boolean
 isInTitle?: boolean
 ```
 
-时间信息是否展示在通知标题中。默认为false。
-
+时间信息是否展示在通知标题中。默认为false。  
 - true：计时信息将嵌入标题区域展示。 - false：计时信息在独立区域展示。
 
 **类型：** boolean
@@ -70,8 +67,7 @@ isInTitle?: boolean
 isPaused?: boolean
 ```
 
-计时是否暂停。默认为false。
-
+计时是否暂停。默认为false。  
 - true：计时暂停在当前值。 - false：计时正常运行。
 
 **类型：** boolean

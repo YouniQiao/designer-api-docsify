@@ -12,9 +12,7 @@ import { contact } from '@kit.ContactsKit';
 function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<int>>
 ```
 
-Imports multiple contacts through UI interaction.
-
-A maximum of 100 contacts can be imported at a time. Importing contact portraits is not supported.
+Imports multiple contacts through UI interaction.A maximum of 100 contacts can be imported at a time. Importing contact portraits is not supported.
 
 **Since:** 26.0.0
 

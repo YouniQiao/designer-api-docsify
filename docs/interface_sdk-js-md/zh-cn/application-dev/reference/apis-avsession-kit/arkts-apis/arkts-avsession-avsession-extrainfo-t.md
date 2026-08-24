@@ -12,5 +12,5 @@ The extra info object.
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
-**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
+**属性类型：** Record&lt;string, Object&gt;
 

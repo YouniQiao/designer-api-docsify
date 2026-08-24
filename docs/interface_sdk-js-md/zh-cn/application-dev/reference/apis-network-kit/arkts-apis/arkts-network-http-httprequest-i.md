@@ -47,8 +47,7 @@ enableAutoCookie(enable: boolean): void
 
 设置是否自动携带和共享Cookie，用于在同一个HttpRequest实例的多次请求之间自动复用服务端下发的Cookie。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > (1) 默认值为false，表示默认不自动携带Cookie。
 
 > (2) 当配置由false切换为true后，会在后续调用request接口发起请求时生效，并自动共享Cookie。
@@ -572,8 +571,7 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 
 根据URL地址，发起HTTP网络请求，使用callback方式作为异步方法。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > (1) 此接口仅支持接收5MB以内的数据，如果需要接收超过5MB的数据，则需主动在[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)的maxLimit中进行设置，或者使用
 > [requestInStream](#requestinstream)接口发起流式请求。自
 > API version 23开始，本接口支持的最大接收数据量为50MB，API version 23之前仍为5MB，超过5MB会接收失败。
@@ -803,8 +801,7 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 
 根据URL地址和相关配置项，发起HTTP网络请求，使用callback方式作为异步方法。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > (1) 此接口仅支持接收5MB以内的数据，如果需要接收超过5MB的数据，则需主动在[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)的maxLimit中进行设置，或者使用
 > [requestInStream](#requestinstream)接口发起流式请求。自
 > API version 23开始，本接口支持的最大接收数据量为50MB，API version 23之前仍为5MB，超过5MB会接收失败。
@@ -882,8 +879,7 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 
 根据URL地址，发起HTTP网络请求，使用Promise方式作为异步方法。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > (1) 此接口仅支持接收5MB以内的数据，如果需要接收超过5MB的数据，则需主动在[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)的maxLimit中进行设置，或者使用
 > [requestInStream](#requestinstream)接口发起流式请求。自
 > API version 23开始，本接口支持的最大接收数据量为50MB，API version 23之前仍为5MB，超过5MB会接收失败。
@@ -1325,8 +1321,7 @@ requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 
 根据URL地址、相关配置项（可选），发起HTTP网络请求，同步返回响应结果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > (1) 此接口仅支持接收50MB以内的数据，如果需要接收超过50MB的数据，则需主动在[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)的maxLimit中进行设置。
 
 > (2) 如需传入cookies，请开发者自行在参数options中添加。

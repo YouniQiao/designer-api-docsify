@@ -12,7 +12,6 @@ Photo defines a full-quality image object.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## release

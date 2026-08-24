@@ -4,7 +4,7 @@
 export type ImageSmoothingQuality = 'high' | 'low' | 'medium'
 ```
 
-定义图片平滑度类型。 'high': 高画质。 'low': 低画质。 'medium': 中画质。
+定义图片平滑度类型。'high': 高画质。'low': 低画质。'medium': 中画质。
 
 **起始版本：** 23
 

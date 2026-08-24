@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## attachGroup
@@ -13,9 +12,7 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function attachGroup(gid: string, tids: string[]): Promise<void>
 ```
 
-向指定分组id中绑定多个下载任务id。使用Promise异步回调。
-
-如果任意一个任务id不满足添加条件，则所有列表中的任务都不会添加到分组中。
+向指定分组id中绑定多个下载任务id。使用Promise异步回调。如果任意一个任务id不满足添加条件，则所有列表中的任务都不会添加到分组中。
 
 **起始版本：** 23
 

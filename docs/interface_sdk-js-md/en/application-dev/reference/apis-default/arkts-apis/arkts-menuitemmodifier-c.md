@@ -1,8 +1,6 @@
 # MenuItemModifier
 
-Defines MenuItem Modifier
-
-@implements { MenuItemAttribute, AttributeModifier&lt;MenuItemAttribute&gt; }
+Defines MenuItem Modifier@implements { MenuItemAttribute, AttributeModifier&lt;MenuItemAttribute&gt; }
 
 **Inheritance/Implementation:** MenuItemModifier implements MenuItemAttribute, AttributeModifier<MenuItemAttribute>
 

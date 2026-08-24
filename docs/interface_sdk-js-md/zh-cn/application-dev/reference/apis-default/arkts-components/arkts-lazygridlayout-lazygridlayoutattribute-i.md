@@ -28,7 +28,7 @@ columnsGap(value: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
+| value | [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -116,7 +116,7 @@ rowsGap(value: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
+| value | [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
 
 **返回值：**
 

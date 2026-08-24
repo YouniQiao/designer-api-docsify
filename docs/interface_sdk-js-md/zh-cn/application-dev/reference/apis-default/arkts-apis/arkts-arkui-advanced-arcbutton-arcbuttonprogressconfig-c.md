@@ -6,6 +6,8 @@ ArcButton内进度条的参数配置。
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ArcButtonProgressConfig--><!--Device-unnamed-export declare class ArcButtonProgressConfig-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -44,19 +46,18 @@ constructor(value: double, total?: double, color?: ResourceColor)
 ## color
 
 ```TypeScript
-@Trace
-  public color?: ResourceColor
+public color?: ResourceColor
 ```
 
-进度条前景色。如果组件设置了[ArcButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)的背景色（backgroundColor），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（ [ArcButtonStyleMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。
-
-默认值："#1F71FF"，显示为蓝色。
+进度条前景色。如果组件设置了[ArcButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)的背景色（backgroundColor），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（ [ArcButtonStyleMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。默认值："#1F71FF"，显示为蓝色。
 
 **类型：** ResourceColor
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,15 +68,10 @@ constructor(value: double, total?: double, color?: ResourceColor)
 ## total
 
 ```TypeScript
-@Trace
-  public total?: double
+public total?: double
 ```
 
-进度的最大值。
-
-默认值：100
-
-取值范围：[0, 2147483647]，设置0或超出取值范围取默认值为100。
+进度的最大值。默认值：100取值范围：[0, 2147483647]，设置0或超出取值范围取默认值为100。
 
 **类型：** double
 
@@ -84,6 +80,8 @@ constructor(value: double, total?: double, color?: ResourceColor)
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -94,21 +92,18 @@ constructor(value: double, total?: double, color?: ResourceColor)
 ## value
 
 ```TypeScript
-@Trace
-  public value: double
+public value: double
 ```
 
-进度条当前值。设置小于0的数值时置为0，设置大于total的数值时置为total。
-
-默认值：0
-
-取值范围：[0, total]
+进度条当前值。设置小于0的数值时置为0，设置大于total的数值时置为total。默认值：0取值范围：[0, total]
 
 **类型：** double
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

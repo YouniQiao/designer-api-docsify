@@ -15,24 +15,7 @@ Manages GATT client. Before calling an Gatt client method, you must use [createG
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from '@kit.ConnectivityKit';
-import { access } from '@kit.ConnectivityKit';
-import { baseProfile } from '@kit.ConnectivityKit';
-import { ble } from '@kit.ConnectivityKit';
-import { connection } from '@kit.ConnectivityKit';
-import { constant } from '@kit.ConnectivityKit';
-import { hfp } from '@kit.ConnectivityKit';
-import { hid } from '@kit.ConnectivityKit';
-import { bas } from '@kit.ConnectivityKit';
-import { common } from '@kit.ConnectivityKit';
 import { bluetooth } from '@kit.ConnectivityKit';
-import { map } from '@kit.ConnectivityKit';
-import { pan } from '@kit.ConnectivityKit';
-import { pbap } from '@kit.ConnectivityKit';
-import { opp } from '@kit.ConnectivityKit';
-import { socket } from '@kit.ConnectivityKit';
-import { wearDetection } from '@kit.ConnectivityKit';
-import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -41,9 +24,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 close(): boolean
 ```
 
-Disables a BLE peripheral device.
-
-This method unregisters the device and clears the registered callbacks and handles.
+Disables a BLE peripheral device.This method unregisters the device and clears the registered callbacks and handles.
 
 **Since:** 7
 
@@ -81,9 +62,7 @@ let ret : boolean = device.close();
 connect(): boolean
 ```
 
-Connects to a BLE peripheral device.
-
-The 'BLEConnectionStateChange' event is subscribed to return the connection state.
+Connects to a BLE peripheral device.The 'BLEConnectionStateChange' event is subscribed to return the connection state.
 
 **Since:** 7
 

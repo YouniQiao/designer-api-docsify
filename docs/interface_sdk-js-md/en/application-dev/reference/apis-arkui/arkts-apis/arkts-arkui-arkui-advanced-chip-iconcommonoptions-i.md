@@ -2,8 +2,7 @@
 
 Defines the common icon options of the chip.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **fillColor** and **activatedFillColor** take effect only when the icon format is SVG.
 
 **Since:** 11
@@ -16,9 +15,6 @@ Defines the common icon options of the chip.
 
 ```TypeScript
 import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
-import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from '@kit.ArkUI';
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## activatedFillColor
@@ -27,11 +23,7 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 activatedFillColor?: ResourceColor
 ```
 
-Icon fill color when the chip is activated.
-
-Default value: **\$r('sys.color.chip_active_icon_color')**
-
-If the value is **undefined**, the default value is used.
+Icon fill color when the chip is activated.Default value: **\$r('sys.color.chip_active_icon_color')**If the value is **undefined**, the default value is used.
 
 **Type:** ResourceColor
 
@@ -51,11 +43,7 @@ If the value is **undefined**, the default value is used.
 fillColor?: ResourceColor
 ```
 
-Icon fill color.
-
-Default value: **\$r('sys.color.chip_usually_icon_color')**
-
-If the value is **undefined**, the default value is used.
+Icon fill color.Default value: **\$r('sys.color.chip_usually_icon_color')**If the value is **undefined**, the default value is used.
 
 **Type:** ResourceColor
 
@@ -75,15 +63,9 @@ If the value is **undefined**, the default value is used.
 size?: SizeOptions
 ```
 
-Icon size. This parameter cannot be set in percentage.
-
-Default value:
-
-- When **ChipSize.SMALL** is used: **{width: \$r('sys.float.chip_small_icon_size'), height: \$r('sys.float.chip_small_icon_size')}**. - When **ChipSize.NORMAL** is used: **{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}**.
-
-Unit: vp.
-
-If the value is **undefined**, the default value is used.
+Icon size. This parameter cannot be set in percentage.Default value:  
+- When **ChipSize.SMALL** is used: **{width: \$r('sys.float.chip_small_icon_size'), height: \$r('sys.float.chip_small_icon_size')}**. - When **ChipSize.NORMAL** is used: **{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}**.  
+Unit: vp.If the value is **undefined**, the default value is used.
 
 **Type:** SizeOptions
 

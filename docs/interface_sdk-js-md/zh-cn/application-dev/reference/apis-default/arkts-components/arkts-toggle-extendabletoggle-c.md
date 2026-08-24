@@ -15,8 +15,7 @@ Defines the Extendable Toggle.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableToggle>(
+static $_instantiate<T extends ExtendableToggle>(
         factory: ConstructorT<T>, 
         options: ToggleOptions,
         content_?: CustomBuilder
@@ -28,6 +27,8 @@ Constructor of Extendable Toggle.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,8 +53,7 @@ Constructor of Extendable Toggle.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-    static _instantiateImpl<T extends ExtendableToggle>(
+static _instantiateImpl<T extends ExtendableToggle>(
         styles: CustomBuilderT<T>,  
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -65,6 +65,8 @@ Entry of Extendable Toggle.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

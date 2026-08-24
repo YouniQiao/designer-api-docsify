@@ -1,8 +1,6 @@
 # Screen (System API)
 
-Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance.
-
-Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md) to obtain a Screen instance.
+Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance.Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md) to obtain a Screen instance.
 
 **Since:** 23
 
@@ -16,7 +14,6 @@ Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-scr
 
 ```TypeScript
 import { screen } from '@kit.ArkUI';
-import { screenshot } from '@kit.ArkUI';
 ```
 
 ## setDensityDpi

@@ -40,7 +40,7 @@ Whether upper case or lower case is sorted first. The value can be "upper", "low
 collation?: string
 ```
 
-Collation rule. The value can be any of the following: "big5han", "compat", "dict", "direct", "ducet", "eor", "gb2312", "phonebk", "phonetic", "pinyin", "reformed", "searchjl", "stroke", "trad", "unihan", or "zhuyin". The default value is "default".
+Collation rule. The value can be any of the following: "big5han", "compat", "dict", "direct", "ducet", "eor","gb2312", "phonebk", "phonetic", "pinyin", "reformed", "searchjl", "stroke", "trad", "unihan", or "zhuyin". The default value is "default".
 
 **Type:** string
 
@@ -112,7 +112,7 @@ Whether to use numeric collation. The value "true" means to use numeric collatio
 sensitivity?: string
 ```
 
-Differences in the strings that lead to non-zero return values. The value can be "base", "accent", "case", or "letiant". The default value is "variant".
+Differences in the strings that lead to non-zero return values. The value can be "base", "accent", "case", or"letiant". The default value is "variant".
 
 **Type:** string
 

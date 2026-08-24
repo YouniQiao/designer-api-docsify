@@ -12,8 +12,6 @@ Represents CMS verification configuration.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## contentData
@@ -80,8 +78,7 @@ trustCerts: Array<X509Cert>
 
 Trusted certificates.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You need to configure the trust certificates of all signers.
 
 **Type:** Array&lt;X509Cert&gt;

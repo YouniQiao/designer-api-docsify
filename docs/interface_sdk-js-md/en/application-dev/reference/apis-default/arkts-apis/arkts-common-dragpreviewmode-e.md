@@ -1,8 +1,6 @@
 # DragPreviewMode
 
-Defines the drag preview mode.
-
-@enum { number }
+Defines the drag preview mode.@enum { number }
 
 **Since:** 23
 

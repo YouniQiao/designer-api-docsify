@@ -1,6 +1,6 @@
 # InputWindowInfo
 
-@brief 输入法软键盘的窗口信息。
+输入法软键盘的窗口信息。
 
 **起始版本：** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## userId
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 userId?: int
 ```
 
-@brief 显示输入法窗口的用户ID。 <br> <br>该属性仅系统应用可以使用。
+显示输入法窗口的用户ID。 <br> <br>该属性仅系统应用可以使用。
 
 **类型：** int
 

@@ -21,7 +21,7 @@ Defines the file filtering configuration used by **listFile()**.
 displayName?: Array<string>
 ```
 
-Locate files that fuzzy match the specified file names, which are of the OR relationship. Currently, only the wildcard is supported.
+Locate files that fuzzy match the specified file names, which are of the OR relationship. Currently, only the wildcard * is supported.
 
 **Type:** Array&lt;string&gt;
 
@@ -39,9 +39,7 @@ Locate files that fuzzy match the specified file names, which are of the OR rela
 excludeMedia?: boolean
 ```
 
-Whether to exclude the files already in **Media**.
-
-The value **true** means to exclude the files already in **Media**; the value **false** means not to exclude the files already in **Media**. This parameter is reserved.
+Whether to exclude the files already in **Media**.The value **true** means to exclude the files already in **Media**; the value **false** means not to exclude the files already in **Media**. This parameter is reserved.
 
 **Type:** boolean
 

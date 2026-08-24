@@ -1,8 +1,6 @@
 # FileUri
 
-FileUri represents the uri of the file.
-
-@extends uri.URI
+FileUri represents the uri of the file.@extends uri.URI
 
 **Inheritance/Implementation:** FileUri extends uri.URI
 

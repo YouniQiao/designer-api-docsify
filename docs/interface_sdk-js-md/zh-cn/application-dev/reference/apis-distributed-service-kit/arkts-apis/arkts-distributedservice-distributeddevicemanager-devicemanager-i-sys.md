@@ -451,7 +451,7 @@ getOsTypeByNetworkId(networkId: string): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Returns the device operating system type. Possible return: 1. 10: Operating system based on OpenHarmony 2. 11: Operating system not based on OpenHarmony 3. -1: Unknown |
+| int | Returns the device operating system type. Possible return: |
 
 **错误码：**
 

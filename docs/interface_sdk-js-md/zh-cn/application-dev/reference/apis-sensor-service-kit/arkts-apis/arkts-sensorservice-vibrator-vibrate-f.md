@@ -14,8 +14,7 @@ function vibrate(duration: number, callback?: AsyncCallback<void>): void
 
 按照指定持续时间触发马达振动。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
 > 替代。
@@ -98,8 +97,7 @@ function vibrate(duration: number): Promise<void>
 
 按照指定持续时间触发马达振动。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
 
@@ -140,8 +138,7 @@ function vibrate(effectId: EffectId): Promise<void>
 
 按照预置振动效果触发马达振动。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
 
@@ -182,8 +179,7 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 
 按照指定振动效果触发马达振动。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
 > 替代。

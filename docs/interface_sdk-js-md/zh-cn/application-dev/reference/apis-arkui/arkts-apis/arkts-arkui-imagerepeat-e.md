@@ -1,8 +1,6 @@
 # ImageRepeat
 
-ImageRepeat enumeration description
-
-@enum { number }
+ImageRepeat enumeration description@enum { number }
 
 **起始版本：** 11
 

@@ -298,9 +298,7 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-查询当前应用通知授权状态。使用callback异步回调。
-
-用于在发布通知前检查当前应用是否被允许发送通知，避免在通知授权关闭时发布导致失败。
+查询当前应用通知授权状态。使用callback异步回调。用于在发布通知前检查当前应用是否被允许发送通知，避免在通知授权关闭时发布导致失败。
 
 **起始版本：** 23
 
@@ -343,9 +341,7 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 function isNotificationEnabled(): Promise<boolean>
 ```
 
-查询当前应用通知授权状态。使用Promise异步回调。
-
-用于在发布通知前检查当前应用是否被允许发送通知，避免在通知使能关闭时发布导致失败。
+查询当前应用通知授权状态。使用Promise异步回调。用于在发布通知前检查当前应用是否被允许发送通知，避免在通知使能关闭时发布导致失败。
 
 **起始版本：** 23
 

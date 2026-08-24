@@ -1,8 +1,6 @@
 # MouseAction
 
-Function Called by Mouse
-
-@enum { number }
+Function Called by Mouse@enum { number }
 
 **Since:** 23
 

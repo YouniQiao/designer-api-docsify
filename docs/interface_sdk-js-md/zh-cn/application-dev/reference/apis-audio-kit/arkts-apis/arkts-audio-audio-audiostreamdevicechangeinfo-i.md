@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## changeReason
@@ -21,7 +20,7 @@ import { audioHaptic } from '@kit.AudioKit';
 changeReason: AudioStreamDeviceChangeReason
 ```
 
-流设备变更原因。
+流设备变更原因。从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** [AudioStreamDeviceChangeReason](arkts-audio-audio-audiostreamdevicechangereason-e.md)
 
@@ -39,7 +38,7 @@ changeReason: AudioStreamDeviceChangeReason
 devices: AudioDeviceDescriptors
 ```
 
-设备信息。
+设备信息。从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
@@ -58,6 +57,8 @@ preDevices?: AudioDeviceDescriptors
 ```
 
 应用流设备变更前的设备信息。
+26.0.0
+此接口仅可在Stage模型下使用。从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **类型：** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 

@@ -16,13 +16,7 @@
 borderRadius?: Length
 ```
 
-下划线的圆角半径（不支持百分比设置）。
-
-默认值：0.0
-
-单位：vp
-
-取值范围：[0, +∞)
+下划线的圆角半径（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)
 
 **类型：** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -46,9 +40,7 @@ borderRadius?: Length
 drawable?: DrawableDescriptor
 ```
 
-下划线的图源。
-
-支持[DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、 [PixelMapDrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、 [LayeredDrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和 [AnimatedDrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示 默认的实线型下划线。
+下划线的图源。支持[DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、 [PixelMapDrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、 [LayeredDrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和 [AnimatedDrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示 默认的实线型下划线。
 
 **类型：** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
@@ -70,13 +62,7 @@ drawable?: DrawableDescriptor
 height?: Length
 ```
 
-下划线的高度（不支持百分比设置）。
-
-默认值：2.0
-
-单位：vp
-
-取值范围：[0, +∞)
+下划线的高度（不支持百分比设置）。默认值：2.0单位：vp取值范围：[0, +∞)
 
 **类型：** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -100,13 +86,7 @@ height?: Length
 marginTop?: Length
 ```
 
-下划线与文字的间距（不支持百分比设置）。
-
-默认值：8.0
-
-单位：vp
-
-取值范围：[0, +∞)
+下划线与文字的间距（不支持百分比设置）。默认值：8.0单位：vp取值范围：[0, +∞)
 
 **类型：** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -130,15 +110,7 @@ marginTop?: Length
 width?: Length
 ```
 
-下划线的宽度（不支持百分比设置）。
-
-默认值：0.0
-
-单位：vp
-
-取值范围：[0, +∞)
-
-宽度设置为0时，按页签文本宽度显示。
+下划线的宽度（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)宽度设置为0时，按页签文本宽度显示。
 
 **类型：** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 

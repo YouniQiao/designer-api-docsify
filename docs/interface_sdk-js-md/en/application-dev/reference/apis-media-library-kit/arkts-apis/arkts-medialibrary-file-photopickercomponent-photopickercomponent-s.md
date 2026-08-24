@@ -1,19 +1,17 @@
 # PhotoPickerComponent
 
-PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) =&gt; void, onDeselect?: (uri: string) =&gt; void, onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) =&gt; boolean, onItemClickedNotify?: ItemClickedNotifyCallback, onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onExitPhotoBrowser? : (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onPickerControllerReady?: () =&gt; void, onPhotoBrowserChanged?: ( browserItemInfo: BaseItemInfo) =&gt; boolean, onSelectedItemsDeleted?: ItemsDeletedCallback, onExceedMaxSelected?: ExceedMaxSelectedCallback, onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback, onVideoPlayStateChanged?: videoPlayStateChangedCallback, pickerController: PickerController })
+PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) =&gt; void, onDeselect?: (uri: string) =&gt; void, onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) =&gt; boolean, onItemClickedNotify?: ItemClickedNotifyCallback, onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onPickerControllerReady?: () =&gt; void, onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) =&gt; boolean, onSelectedItemsDeleted?: ItemsDeletedCallback, onExceedMaxSelected?: ExceedMaxSelectedCallback, onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback, onVideoPlayStateChanged?: videoPlayStateChangedCallback, pickerController: PickerController })Allows the application to access images or videos in the user directory without any permission.
 
-Allows the application to access images or videos in the user directory without any permission.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the **PhotoPickerComponent** is used with the **Tabs** component, the swipe gestures of the **Tabs** component
-> conflict with those of the photo browser page.
-> 
+> conflict with those of the photo browser page.&gt;
 > To prevent this problem, you can disable the swipe operation for the **Tabs** component in
 > **onEnterPhotoBrowser()** and enable it in **onExitPhotoBrowser()**. This conflict will be resolved in later
 > versions.
 
 **Since:** 12
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct PhotoPickerComponent--><!--Device-unnamed-export declare struct PhotoPickerComponent-End-->
 
@@ -28,13 +26,14 @@ import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseIt
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 Build function of PhotoPickerComponent
 
 **Since:** 12
+
+**Decorator:** @Builder
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -441,8 +440,7 @@ Callback when the video play state changed
 ## pickerController
 
 ```TypeScript
-@ObjectLink
-  pickerController: PickerController
+pickerController: PickerController
 ```
 
 PickerController
@@ -450,6 +448,8 @@ PickerController
 **Type:** [PickerController](../../apis-default/arkts-apis/arkts-file-photopickercomponent-pickercontroller-c.md)
 
 **Since:** 12
+
+**Decorator:** @ObjectLink
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

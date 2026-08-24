@@ -12,10 +12,8 @@ import { usbManager } from '@kit.MDMKit';
 function removeDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void
 ```
 
-移除禁止使用的USB设备类型。
-
-**使用场景**：
-
+移除禁止使用的USB设备类型。  
+**使用场景**：  
 - 企业安全管理场景，需要解除对某些USB设备类型的禁用 - 设备管理员需要动态调整禁止使用的USB设备类型列表 - 当某些USB设备类型不再存在安全风险时，从禁用名单中移除
 
 **起始版本：** 14

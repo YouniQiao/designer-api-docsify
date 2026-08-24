@@ -1,8 +1,6 @@
 # DragAnimationType (System API)
 
-Enum for Drag Animation Type.
-
-@enum { int }
+Enum for Drag Animation Type.@enum { int }
 
 **Since:** 26.0.0
 

@@ -4,6 +4,8 @@ Declaration of the menu item on the right side.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class EditableTitleBarMenuItemV2--><!--Device-unnamed-export declare class EditableTitleBarMenuItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ Constructor of EditableTitleBarMenuItemV2.
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 Accessibility description.
@@ -50,6 +51,8 @@ Accessibility description.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ Accessibility description.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel: string
+public accessibilityLevel: string
 ```
 
 Accessibility level, options: 'auto', 'yes', 'no'.
@@ -73,6 +75,8 @@ Accessibility level, options: 'auto', 'yes', 'no'.
 **Default:** 'auto'
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +89,7 @@ Accessibility level, options: 'auto', 'yes', 'no'.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
 Accessibility text for screen reader.
@@ -94,6 +97,8 @@ Accessibility text for screen reader.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +111,7 @@ Accessibility text for screen reader.
 ## action
 
 ```TypeScript
-@Trace
-  public action?: OnActionCallback
+public action?: OnActionCallback
 ```
 
 Callback function when click on this menu item.
@@ -115,6 +119,8 @@ Callback function when click on this menu item.
 **Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,8 +133,7 @@ Callback function when click on this menu item.
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  public defaultFocus: boolean
+public defaultFocus: boolean
 ```
 
 Whether to get focus by default.
@@ -138,6 +143,8 @@ Whether to get focus by default.
 **Default:** false
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,8 +157,7 @@ Whether to get focus by default.
 ## isEnabled
 
 ```TypeScript
-@Trace
-  public isEnabled: boolean
+public isEnabled: boolean
 ```
 
 Whether to enable this menu item.
@@ -161,6 +167,8 @@ Whether to enable this menu item.
 **Default:** true
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,8 +181,7 @@ Whether to enable this menu item.
 ## label
 
 ```TypeScript
-@Trace
-  public label?: ResourceStr
+public label?: ResourceStr
 ```
 
 Label text for long press dialog.
@@ -182,6 +189,8 @@ Label text for long press dialog.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,8 +203,7 @@ Label text for long press dialog.
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 Symbol icon style modifier.
@@ -203,6 +211,8 @@ Symbol icon style modifier.
 **Type:** SymbolGlyphModifier
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -215,8 +225,7 @@ Symbol icon style modifier.
 ## value
 
 ```TypeScript
-@Trace
-  public value: ResourceStr
+public value: ResourceStr
 ```
 
 Icon resource, supports Symbol or Image.
@@ -226,6 +235,8 @@ Icon resource, supports Symbol or Image.
 **Default:** ''
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

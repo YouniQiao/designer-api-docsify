@@ -1,8 +1,6 @@
 # PosterOptions
 
-Defines the video poster options.
-
-@interface PosterOptions
+Defines the video poster options.@interface PosterOptions
 
 **Since:** 23
 

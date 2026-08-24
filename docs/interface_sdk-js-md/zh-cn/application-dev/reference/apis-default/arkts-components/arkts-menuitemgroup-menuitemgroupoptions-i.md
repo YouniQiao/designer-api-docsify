@@ -14,9 +14,7 @@
 footer?: ResourceStr | CustomBuilder
 ```
 
-设置对应group的尾部显示信息。
-
-未设置时，不显示尾部信息。
+设置对应group的尾部显示信息。未设置时，不显示尾部信息。
 
 **类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](../arkts-apis/arkts-custombuilder-t.md)
 
@@ -36,9 +34,7 @@ footer?: ResourceStr | CustomBuilder
 header?: ResourceStr | CustomBuilder
 ```
 
-设置对应group的标题显示信息。
-
-未设置时，不显示标题信息。
+设置对应group的标题显示信息。未设置时，不显示标题信息。
 
 **类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](../arkts-apis/arkts-custombuilder-t.md)
 

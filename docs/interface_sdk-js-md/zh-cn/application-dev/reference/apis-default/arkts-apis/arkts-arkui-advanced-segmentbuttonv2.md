@@ -12,7 +12,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [SegmentButtonV2Item](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md) | Defines segmented button item. |
-| [SegmentButtonV2Items](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md) | 分段按钮选项集合。 |
+| [SegmentButtonV2Items](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md) | 分段按钮选项集合。继承自Array\&lt;[SegmentButtonV2Item](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)&gt; |
 
 ### 结构体
 

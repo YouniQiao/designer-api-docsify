@@ -15,8 +15,7 @@ Definition of base custom dialog class.
 ## _invokeImpl
 
 ```TypeScript
-@Builder
-  static _invokeImpl<S extends BaseCustomDialog<S, S_Options>, S_Options>(
+static _invokeImpl<S extends BaseCustomDialog<S, S_Options>, S_Options>(
         factory: () => S,
         initializers?: () => S_Options,
         content?: CustomBuilder
@@ -28,6 +27,8 @@ Definition of base custom dialog class.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

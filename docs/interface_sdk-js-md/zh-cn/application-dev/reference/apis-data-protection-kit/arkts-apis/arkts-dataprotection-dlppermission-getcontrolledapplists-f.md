@@ -14,8 +14,7 @@ function getControlledAppLists(): Promise<Array<string>>
 
 获取当前用户受企业DLP控制的应用程序列表。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口仅能查询通过
 > [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md)
 > 设置的受企业DLP控制的应用程序列表。

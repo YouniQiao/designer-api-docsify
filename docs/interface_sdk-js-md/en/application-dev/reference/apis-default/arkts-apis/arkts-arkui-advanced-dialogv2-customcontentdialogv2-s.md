@@ -1,12 +1,12 @@
 # CustomContentDialogV2
 
-Declare custom content dialog
-
-@struct { CustomContentDialogV2 }
+Declare custom content dialog@struct { CustomContentDialogV2 }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct CustomContentDialogV2--><!--Device-unnamed-export declare struct CustomContentDialogV2-End-->
 
@@ -20,8 +20,7 @@ Declare custom content dialog
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +40,7 @@ The method to build component.
 ## buttons
 
 ```TypeScript
-@Param
-  buttons?: AdvancedDialogV2Button[]
+buttons?: AdvancedDialogV2Button[]
 ```
 
 Sets the CustomContentDialogV2 buttons.
@@ -51,6 +51,8 @@ Sets the CustomContentDialogV2 buttons.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CustomContentDialogV2-@Param  buttons?: AdvancedDialogV2Button[]--><!--Device-CustomContentDialogV2-@Param  buttons?: AdvancedDialogV2Button[]-End-->
@@ -60,8 +62,7 @@ Sets the CustomContentDialogV2 buttons.
 ## contentAreaPadding
 
 ```TypeScript
-@Param
-  contentAreaPadding?: LocalizedPadding
+contentAreaPadding?: LocalizedPadding
 ```
 
 Sets the CustomContentDialogV2 content area padding.
@@ -72,6 +73,8 @@ Sets the CustomContentDialogV2 content area padding.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CustomContentDialogV2-@Param  contentAreaPadding?: LocalizedPadding--><!--Device-CustomContentDialogV2-@Param  contentAreaPadding?: LocalizedPadding-End-->
@@ -81,8 +84,7 @@ Sets the CustomContentDialogV2 content area padding.
 ## contentBuilder
 
 ```TypeScript
-@BuilderParam
-  contentBuilder: CustomBuilder
+contentBuilder: CustomBuilder
 ```
 
 Sets the CustomContentDialogV2 content.
@@ -93,6 +95,8 @@ Sets the CustomContentDialogV2 content.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @BuilderParam
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CustomContentDialogV2-@BuilderParam  contentBuilder: CustomBuilder--><!--Device-CustomContentDialogV2-@BuilderParam  contentBuilder: CustomBuilder-End-->
@@ -102,8 +106,7 @@ Sets the CustomContentDialogV2 content.
 ## primaryTitle
 
 ```TypeScript
-@Param
-  primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
 Sets the CustomContentDialogV2 title.
@@ -114,6 +117,8 @@ Sets the CustomContentDialogV2 title.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CustomContentDialogV2-@Param  primaryTitle?: ResourceStr--><!--Device-CustomContentDialogV2-@Param  primaryTitle?: ResourceStr-End-->
@@ -123,8 +128,7 @@ Sets the CustomContentDialogV2 title.
 ## secondaryTitle
 
 ```TypeScript
-@Param
-  secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
 Sets the CustomContentDialogV2 secondary title.
@@ -134,6 +138,8 @@ Sets the CustomContentDialogV2 secondary title.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

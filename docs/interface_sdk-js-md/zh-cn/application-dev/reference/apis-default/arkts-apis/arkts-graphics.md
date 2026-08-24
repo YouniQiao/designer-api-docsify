@@ -33,12 +33,12 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [BackgroundBlur](arkts-graphics-backgroundblur-i.md) | 设置背景模糊效果。 |
+| [BackgroundBlur](arkts-graphics-backgroundblur-i.md) | 设置背景模糊效果。.0.0.0.0 |
 | [Circle](arkts-graphics-circle-i.md) | 用于设置圆形的属性。 |
 | [CommandPath](arkts-graphics-commandpath-i.md) | 用于设置路径绘制的指令。 |
-| [ContentBlur](arkts-graphics-contentblur-i.md) | 设置内容模糊效果。 |
+| [ContentBlur](arkts-graphics-contentblur-i.md) | 设置内容模糊效果。.0.0.0.0 |
 | [Corners](arkts-graphics-corners-i.md) | 用于设置四个角的圆角属性。 |
-| [ForegroundBlur](arkts-graphics-foregroundblur-i.md) | 设置前景模糊效果。 |
+| [ForegroundBlur](arkts-graphics-foregroundblur-i.md) | 设置前景模糊效果。.0.0.0.0 |
 | [Frame](arkts-graphics-frame-i.md) | 用于设置或返回组件的布局大小和位置。 |
 | [NodeEdges](arkts-graphics-nodeedges-i.md) | 用于设置边框的属性，属性包括边框风格、边框颜色、边框宽度、边框长度等。 |
 | [RoundRect](arkts-graphics-roundrect-i.md) | 用于设置带有圆角的矩形。 |

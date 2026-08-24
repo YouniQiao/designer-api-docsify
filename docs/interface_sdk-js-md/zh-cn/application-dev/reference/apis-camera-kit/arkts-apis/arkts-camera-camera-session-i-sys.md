@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getActiveParameter
@@ -183,7 +182,7 @@ Sets key-value pairs parameters for the session.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| kvpairs | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt; | 是 | The pairs of tag name and value in camera metadata. |
+| kvpairs | Record&lt;string, string&gt; | 是 | The pairs of tag name and value in camera metadata. |
 
 **错误码：**
 

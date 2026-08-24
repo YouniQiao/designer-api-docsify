@@ -2,8 +2,7 @@
 
 用于设置索引条参数。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 23
@@ -40,11 +39,7 @@ arrayValue: Array<string>
 selected: int | Bindable<int>
 ```
 
-初始选中项索引值，若超出索引值范围，则取默认值0。与[selected](arkts-alphabetindexer-attribute.md#selected)属性同时设置时，selected属性的优先级较高。
-
-取值范围：[0, arrayValue.length-1]
-
-该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+初始选中项索引值，若超出索引值范围，则取默认值0。与[selected](arkts-alphabetindexer-attribute.md#selected)属性同时设置时，selected属性的优先级较高。取值范围：[0, arrayValue.length-1]该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **类型：** int \| [Bindable](../arkts-apis/arkts-common-bindable-i.md)&lt;int&gt;
 

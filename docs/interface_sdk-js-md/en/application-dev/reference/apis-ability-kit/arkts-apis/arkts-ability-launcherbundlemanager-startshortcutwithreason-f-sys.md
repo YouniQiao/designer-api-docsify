@@ -12,9 +12,7 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result.
-
-The launched ability can obtain the launch reason through the **launchReasonMessage** field of [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) and handle service logic accordingly.
+Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result.The launched ability can obtain the launch reason through the **launchReasonMessage** field of [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) and handle service logic accordingly.
 
 **Since:** 23
 
@@ -31,7 +29,7 @@ The launched ability can obtain the launch reason through the **launchReasonMess
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | shortcutInfo | ShortcutInfo | Yes | Shortcut information of the application. |
-| startReason | string | Yes | Reason for launching the shortcut. The value can be [AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](arkts-app-ability-abilityconstant.md#constants) , indicating a home screen shortcut launch. |
+| startReason | string | Yes | Reason for launching the shortcut. The value can be [AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](arkts-app-ability-abilityconstant.md#constants), indicating a home screen shortcut launch. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used to specify the window mode of the target ability. |
 
 **Return value:**

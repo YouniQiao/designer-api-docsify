@@ -1,6 +1,6 @@
 # KeyboardController
 
-@brief You must first use on('inputStart') to obtain a **KeyboardController** instance, and then use this instance to call the following APIs.
+You must first use on('inputStart') to obtain a **KeyboardController** instance, and then use this instance to call the following APIs.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 exitCurrentInputType(callback: AsyncCallback<void>): void
 ```
 
-@brief Exits this input type. This API can be called only by the preconfigured default input method. This API uses an asynchronous callback to return the result.
+Exits this input type. This API can be called only by the preconfigured default input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -71,7 +71,7 @@ keyboardController.exitCurrentInputType().then(() => {
 exitCurrentInputType(): Promise<void>
 ```
 
-@brief Exits this input type. This API can be called only by the preconfigured default input method. This API uses a promise to return the result.
+Exits this input type. This API can be called only by the preconfigured default input method. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -102,7 +102,7 @@ See [exitCurrentInputType](#exitcurrentinputtype)
 hide(callback: AsyncCallback<void>): void
 ```
 
-@brief Hides the keyboard. This API uses an asynchronous callback to return the result.
+Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -174,7 +174,7 @@ keyboardController.hide().then(() => {
 hide(): Promise<void>
 ```
 
-@brief Hides the keyboard. This API uses a promise to return the result.
+Hides the keyboard. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -204,7 +204,7 @@ See [hide](#hide)
 hideKeyboard(callback: AsyncCallback<void>): void
 ```
 
-@brief Hides the keyboard. This API uses an asynchronous callback to return the result.
+Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -252,7 +252,7 @@ keyboardController.hideKeyboard().then(() => {
 hideKeyboard(): Promise<void>
 ```
 
-@brief Hides the keyboard. This API uses a promise to return the result.
+Hides the keyboard. This API uses a promise to return the result.
 
 **Since:** 8
 

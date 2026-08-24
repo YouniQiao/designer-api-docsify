@@ -1,8 +1,6 @@
 # IndicatorIconInfo
 
-Set indicator item's icon for specified index.
-
-@interface IndicatorIconInfo
+Set indicator item's icon for specified index.@interface IndicatorIconInfo
 
 **Since:** 26.0.0
 

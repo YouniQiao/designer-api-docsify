@@ -1,8 +1,6 @@
 # TextAreaModifier
 
-Defines TextArea Modifier
-
-@implements { TextAreaAttribute, AttributeModifier&lt;TextAreaAttribute&gt; }
+Defines TextArea Modifier@implements { TextAreaAttribute, AttributeModifier&lt;TextAreaAttribute&gt; }
 
 **Inheritance/Implementation:** TextAreaModifier implements TextAreaAttribute, AttributeModifier<TextAreaAttribute>
 

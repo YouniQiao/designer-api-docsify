@@ -1,8 +1,6 @@
 # ResolvedUIContext
 
-UIContext.resolveUIContext接口的返回值类型，属于UIContext类型的子类，额外包含获取该UIContext的解析策略。
-
-@extends UIContext
+UIContext.resolveUIContext接口的返回值类型，属于UIContext类型的子类，额外包含获取该UIContext的解析策略。@extends UIContext
 
 **继承/实现关系：** ResolvedUIContext extends [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)
 

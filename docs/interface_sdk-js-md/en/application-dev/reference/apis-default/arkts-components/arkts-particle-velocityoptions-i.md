@@ -16,9 +16,7 @@ Defines velocity options.
 angle: ParticleTuple<double, double>
 ```
 
-Angle of particle's direction.
-
-Anonymous Object Rectification.
+Angle of particle's direction.Anonymous Object Rectification.
 
 **Type:** [ParticleTuple](arkts-particletuple-t.md)&lt;double, double&gt;
 
@@ -38,9 +36,7 @@ Anonymous Object Rectification.
 speed: ParticleTuple<double, double>
 ```
 
-Particle speed.
-
-Anonymous Object Rectification.
+Particle speed.Anonymous Object Rectification.
 
 **Type:** [ParticleTuple](arkts-particletuple-t.md)&lt;double, double&gt;
 

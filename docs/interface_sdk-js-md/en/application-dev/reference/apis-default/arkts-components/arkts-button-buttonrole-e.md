@@ -1,8 +1,6 @@
 # ButtonRole
 
-Enum for button role.
-
-@enum { number }
+Enum for button role.@enum { number }
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # InputMethodSetting
 
-@brief In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## enableInputMethod
@@ -26,7 +21,7 @@ enableInputMethod(
       bundleName: string, extensionName: string, enabledState: EnabledState, userId?: int): Promise<void>
 ```
 
-@brief Change the enabled state of an input method of a specified user.
+Change the enabled state of an input method of a specified user.
 
 **Since:** 26.0.0
 
@@ -99,7 +94,7 @@ enableInputMethodSafely();
 getAllInputMethodsSync(userId?: int): Array<InputMethodProperty>
 ```
 
-@brief Get all input methods sync of a specified user.
+Get all input methods sync of a specified user.
 
 **Since:** 26.0.0
 
@@ -146,7 +141,7 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 getDefaultInputMethodAbility(): InputMethodProperty
 ```
 
-@brief Obtains the default input method capabilities. To optimize performance, the returned **InputMethodProperty** object ensures that only the `name` and `id` attributes that uniquely identify the input method capability are correct. Other attributes may be empty. <br> <br>**Example** <br> <br>```ts <br>try { <br> const defaultAbility: inputMethod.InputMethodProperty = inputMethod.getSetting().getDefaultInputMethodAbility(); <br> console.info('Succeeded in getting default input method ability, name: ' + defaultAbility.name + ', id: ' + defaultAbility.id); <br>} catch (err) { <br> console.error(`Failed to getDefaultInputMethodAbility. Code: \${err.code}, message: \${err.message}`); <br>} <br>```
+Obtains the default input method capabilities. To optimize performance, the returned **InputMethodProperty** object ensures that only the `name` and `id` attributes that uniquely identify the input method capability are correct. Other attributes may be empty. <br> <br>**Example** <br> <br>```ts <br>try {<br> const defaultAbility: inputMethod.InputMethodProperty = inputMethod.getSetting().getDefaultInputMethodAbility(); <br> console.info('Succeeded in getting default input method ability, name: ' + defaultAbility.name + ', id: ' + defaultAbility.id); <br>} catch (err) {<br> console.error(`Failed to getDefaultInputMethodAbility. Code: \${err.code}, message: \${err.message}`); <br>} <br>```
 
 **Since:** 26.0.0
 
@@ -177,7 +172,7 @@ getDefaultInputMethodAbility(): InputMethodProperty
 getInputMethodsSync(enable: boolean, userId?: int): Array<InputMethodProperty>
 ```
 
-@brief List enabled or disabled input methods sync of a specified user.
+List enabled or disabled input methods sync of a specified user.
 
 **Since:** 26.0.0
 
@@ -225,7 +220,7 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>
 ```
 
-@brief Get subtypes of a specified input method of a specified user.
+Get subtypes of a specified input method of a specified user.
 
 **Since:** 26.0.0
 
@@ -267,7 +262,7 @@ getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubty
 isPanelShown(panelInfo: PanelInfo): boolean
 ```
 
-@brief Checks whether the input method panel of a specified type is shown.
+Checks whether the input method panel of a specified type is shown.
 
 **Since:** 23
 
@@ -330,7 +325,7 @@ console.info('Succeeded in querying isPanelShown, result: ' + result);
 isPanelShown(panelInfo: PanelInfo, displayId: long): boolean
 ```
 
-@brief Checks whether the input method panel of a specified type is shown on a specified screen.
+Checks whether the input method panel of a specified type is shown on a specified screen.
 
 **Since:** 23
 
@@ -372,7 +367,7 @@ See [isPanelShown](#ispanelshown)
 off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
-@brief Unsubscribes from the soft keyboard hide event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
+Unsubscribes from the soft keyboard hide event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
 
 **Since:** 10
 
@@ -401,7 +396,7 @@ inputMethod.getSetting().off('imeHide');
 off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
-@brief Unsubscribes from the soft keyboard show event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
+Unsubscribes from the soft keyboard show event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
 
 **Since:** 10
 
@@ -430,7 +425,7 @@ inputMethod.getSetting().off('imeShow');
 offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 ```
 
-@brief Unsubscribe from the input method change event.
+Unsubscribe from the input method change event.
 
 **Since:** 26.0.0
 
@@ -460,7 +455,7 @@ offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
 ```
 
-@brief Unsubscribe input window hide event.
+Unsubscribe input window hide event.
 
 **Since:** 23
 
@@ -482,7 +477,7 @@ offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
 offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
 ```
 
-@brief Unsubscribe input window show event.
+Unsubscribe input window show event.
 
 **Since:** 23
 
@@ -506,7 +501,7 @@ offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
 on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
-@brief Subscribes to the soft keyboard hide event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
+Subscribes to the soft keyboard hide event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -543,7 +538,7 @@ inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>
 on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
-@brief Subscribes to the soft keyboard show event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
+Subscribes to the soft keyboard show event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -580,7 +575,7 @@ inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>
 onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 ```
 
-@brief Subscribe to the input method change event.
+Subscribe to the input method change event.
 
 **Since:** 26.0.0
 
@@ -610,7 +605,7 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 onImeHide(callback: Callback<Array<InputWindowInfo>>): void
 ```
 
-@brief Subscribes to input window hidden events.
+Subscribes to input window hidden events.
 
 **Since:** 23
 
@@ -638,7 +633,7 @@ onImeHide(callback: Callback<Array<InputWindowInfo>>): void
 onImeShow(callback: Callback<Array<InputWindowInfo>>):void
 ```
 
-@brief Subscribes to input window show events.
+Subscribes to input window show events.
 
 **Since:** 23
 

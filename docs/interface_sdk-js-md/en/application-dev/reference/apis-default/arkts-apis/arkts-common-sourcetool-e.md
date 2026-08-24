@@ -1,8 +1,6 @@
 # SourceTool
 
-Defines the event tool type.
-
-@enum { number }
+Defines the event tool type.@enum { number }
 
 **Since:** 23
 

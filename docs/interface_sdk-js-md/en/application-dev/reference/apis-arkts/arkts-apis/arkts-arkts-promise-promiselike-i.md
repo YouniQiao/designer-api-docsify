@@ -45,5 +45,5 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 | Type | Description |
 | --- | --- |
-| [PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U \| E&gt;&gt; | A PromiseLike for the result of the callbacks. |
+| PromiseLike&lt;Awaited&lt;U \| E&gt;&gt; | A PromiseLike for the result of the callbacks. |
 

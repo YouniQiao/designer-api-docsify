@@ -1,6 +1,6 @@
 # InputMethodExtensionAbility
 
-@brief The **InputMethodExtensionAbility** module provides APIs for developing input methods and managing the lifecycle of input method extensions. <br> <br>   
+The **InputMethodExtensionAbility** module provides APIs for developing input methods and managing the lifecycle of input method extensions. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -25,7 +25,7 @@ import { InputMethodExtensionAbility } from '@kit.IMEKit';
 onCreate(want: Want): void
 ```
 
-@brief Called when the **InputMethodExtensionAbility** is started to implement initialization.
+Called when the **InputMethodExtensionAbility** is started to implement initialization.
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ class InputMethodExt extends InputMethodExtensionAbility {
 onDestroy(): void
 ```
 
-@brief Called when this **InputMethodExtensionAbility** is destroyed to clear resources.
+Called when this **InputMethodExtensionAbility** is destroyed to clear resources.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ class InputMethodExt extends InputMethodExtensionAbility {
 context: InputMethodExtensionContext
 ```
 
-@brief Context of the **InputMethodExtension**, which is inherited from **ExtensionContext**.
+Context of the **InputMethodExtension**, which is inherited from **ExtensionContext**.
 
 **Type:** [InputMethodExtensionContext](arkts-ime-inputmethodextensioncontext-c.md)
 

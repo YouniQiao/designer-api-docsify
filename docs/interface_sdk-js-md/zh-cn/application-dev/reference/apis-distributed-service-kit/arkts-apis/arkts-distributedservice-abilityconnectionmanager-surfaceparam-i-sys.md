@@ -1,8 +1,6 @@
 # SurfaceParam（系统接口）
 
-Surface configuration parameters.
-
-@interface SurfaceParam
+Surface configuration parameters.@interface SurfaceParam
 
 **起始版本：** 23
 

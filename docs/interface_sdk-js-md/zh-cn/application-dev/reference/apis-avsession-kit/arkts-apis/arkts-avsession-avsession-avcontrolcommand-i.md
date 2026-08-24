@@ -1,8 +1,6 @@
 # AVControlCommand
 
-会话接受的命令的对象描述。
-
-@interface AVControlCommand [since 10 - 11]
+会话接受的命令的对象描述。@interface AVControlCommand [since 10 - 11]
 
 **起始版本：** 23
 

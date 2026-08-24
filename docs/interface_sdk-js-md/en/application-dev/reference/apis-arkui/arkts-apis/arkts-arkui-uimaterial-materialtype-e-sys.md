@@ -36,14 +36,10 @@ No system material effect. The corresponding effects are: backgroundColor and bo
 SEMI_TRANSPARENT = 1
 ```
 
-Semi-transparent system material effect. The corresponding effect is as follows:
-
-backgroundColor: #f2f1f3f5 in light mode and #f2303131 in dark mode.
-
-borderColor: [token](../../../ui/theme_skinning.md#system-default-token-color-values) value of **theme.colors.compForegroundPrimary** with 10% transparency.
-
-borderWidth: 1 vp.
-
+Semi-transparent system material effect. The corresponding effect is as follows:  
+backgroundColor: #f2f1f3f5 in light mode and #f2303131 in dark mode.  
+borderColor: [token](../../../ui/theme_skinning.md#system-default-token-color-values) value of **theme.colors.compForegroundPrimary** with 10% transparency.  
+borderWidth: 1 vp.  
 shadow: ShadowStyle.OUTER_DEFAULT_SM.
 
 **Since:** 23

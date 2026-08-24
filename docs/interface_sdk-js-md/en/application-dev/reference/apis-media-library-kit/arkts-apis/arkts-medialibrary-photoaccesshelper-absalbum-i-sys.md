@@ -121,11 +121,8 @@ Whether the album is hidden. **true** if hidden, **false** otherwise.
 readonly lpath?: string
 ```
 
-Virtual path of the album.
-
-Albums and their virtual path values:
-
-- Camera application album: '/DCIM/Camera' - Screenshot application album: '/Pictures/Screenshots' - Screen recording application album: '/Pictures/Screenrecords' - User-created album: '/Pictures/Users/{Custom album name}'
+Virtual path of the album.Albums and their virtual path values:  
+- Camera application album: '/DCIM/Camera'- Screenshot application album: '/Pictures/Screenshots'- Screen recording application album: '/Pictures/Screenrecords'- User-created album: '/Pictures/Users/{Custom album name}'
 
 **Type:** string
 

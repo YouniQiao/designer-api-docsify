@@ -1,8 +1,6 @@
 # SwiperContentInfo
 
-Swiper组件的内容区信息。
-
-@interface SwiperContentInfo
+Swiper组件的内容区信息。@interface SwiperContentInfo
 
 **起始版本：** 23
 

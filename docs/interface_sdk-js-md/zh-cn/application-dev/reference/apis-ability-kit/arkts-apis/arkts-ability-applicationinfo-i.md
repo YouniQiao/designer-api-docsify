@@ -318,8 +318,7 @@ readonly iconResource: Resource
 readonly installSource: string
 ```
 
-标识应用程序的安装来源，支持的取值如下：
-
+标识应用程序的安装来源，支持的取值如下：  
 - pre-installed：表示首次开机时已安装的预置应用。 - ota：表示系统升级时新增的预置应用。 - recovery：表示用户卸载后又手动恢复的预置应用。 - bundleName：表示由此包名对应的应用安装。该bundleName代表变量，以实际值为准。 - unknown：表示应用安装来源未知。
 
 **类型：** string
@@ -392,8 +391,7 @@ readonly labelResource: Resource
 readonly metadata: Map<string, Array<Metadata>>
 ```
 
-应用程序的元信息，通过调用 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)接 口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_APPLICATION和GET_BUNDLE_INFO_WITH_METADATA获取。
-
+应用程序的元信息，通过调用 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)接 口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_APPLICATION和GET_BUNDLE_INFO_WITH_METADATA获取。  
 **说明：** 从API version 9开始支持，从API version 10开始不再维护，建议使用metadataArray替代。
 
 **类型：** Map&lt;string, Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;&gt;
@@ -482,8 +480,7 @@ readonly nativeLibraryPath: string
 readonly permissions: Array<string>
 ```
 
-访问应用程序所需的权限列表<!--Del-->，可以通过调用 [getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md) 接口，appFlags参数传入GET_APPLICATION_INFO_WITH_PERMISSION获取<!--DelEnd-->。
-
+访问应用程序所需的权限列表<!--Del-->，可以通过调用 [getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md) 接口，appFlags参数传入GET_APPLICATION_INFO_WITH_PERMISSION获取<!--DelEnd-->。  
 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)或 者 [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) 接口获取ApplicationInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md).reqPermissionDetails信息获取权限列表。
 
 **类型：** Array&lt;string&gt;

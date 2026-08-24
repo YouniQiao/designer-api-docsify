@@ -6,7 +6,7 @@ typedef struct OH_HiDebug_ResProfilerConfig {...} OH_HiDebug_ResProfilerConfig
 
 ## Overview
 
-Defines a struct for the resource profiler configuration.
+Defines a struct for the resource collection configurations.
 
 **Since**: 24
 

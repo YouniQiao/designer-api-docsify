@@ -16,7 +16,7 @@
 FONT = 0
 ```
 
-字体样式键。[TextStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#textstyle)所属键。
+字体样式键。[TextStyle](arkts-arkui-styledstring-textstyle-c.md)所属键。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ FONT = 0
 DECORATION = 1
 ```
 
-文本装饰线样式键。[DecorationStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#decorationstyle) 所属键。
+文本装饰线样式键。[DecorationStyle](arkts-arkui-styledstring-decorationstyle-c.md) 所属键。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ DECORATION = 1
 BASELINE_OFFSET = 2
 ```
 
-文本基线偏移量样式键。 [BaselineOffsetStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#baselineoffsetstyle)所 属键。
+文本基线偏移量样式键。 [BaselineOffsetStyle](arkts-arkui-styledstring-baselineoffsetstyle-c.md)所 属键。
 
 **起始版本：** 23
 
@@ -70,7 +70,7 @@ BASELINE_OFFSET = 2
 LETTER_SPACING = 3
 ```
 
-文本字符间距样式键。 [LetterSpacingStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#letterspacingstyle)所属 键。
+文本字符间距样式键。 [LetterSpacingStyle](arkts-arkui-styledstring-letterspacingstyle-c.md)所属 键。
 
 **起始版本：** 23
 
@@ -88,7 +88,7 @@ LETTER_SPACING = 3
 TEXT_SHADOW = 4
 ```
 
-文本阴影样式键。[TextShadowStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#textshadowstyle)所 属键。
+文本阴影样式键。[TextShadowStyle](arkts-arkui-styledstring-textshadowstyle-c.md)所 属键。
 
 **起始版本：** 23
 
@@ -106,7 +106,7 @@ TEXT_SHADOW = 4
 LINE_HEIGHT = 5
 ```
 
-文本行高样式键。[LineHeightStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#lineheightstyle)所 属键。
+文本行高样式键。[LineHeightStyle](arkts-arkui-styledstring-lineheightstyle-c.md)所 属键。
 
 **起始版本：** 23
 
@@ -124,7 +124,7 @@ LINE_HEIGHT = 5
 BACKGROUND_COLOR = 6
 ```
 
-文本背景色样式键。 [BackgroundColorStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#backgroundcolorstyle14) 所属键。
+文本背景色样式键。 [BackgroundColorStyle](arkts-arkui-styledstring-backgroundcolorstyle-c.md) 所属键。
 
 **起始版本：** 23
 
@@ -142,7 +142,7 @@ BACKGROUND_COLOR = 6
 URL = 7
 ```
 
-超链接样式键。[UrlStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#urlstyle14)所属键。
+超链接样式键。[UrlStyle](arkts-arkui-styledstring-urlstyle-c.md)所属键。
 
 **起始版本：** 23
 
@@ -160,7 +160,7 @@ URL = 7
 LINE_SPACING = 8
 ```
 
-文本行间距样式键。 [LineSpacingStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#linespacingstyle)所属键。
+文本行间距样式键。 [LineSpacingStyle](arkts-arkui-styledstring-linespacingstyle-c.md)所属键。
 
 **起始版本：** 26.0.0
 
@@ -178,7 +178,7 @@ LINE_SPACING = 8
 GESTURE = 100
 ```
 
-事件手势键。[GestureStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#gesturestyle)所属键。
+事件手势键。[GestureStyle](arkts-arkui-styledstring-gesturestyle-c.md)所属键。
 
 **起始版本：** 23
 
@@ -196,7 +196,7 @@ GESTURE = 100
 PARAGRAPH_STYLE = 200
 ```
 
-段落样式键。[ParagraphStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#paragraphstyle)所属键。
+段落样式键。[ParagraphStyle](arkts-arkui-styledstring-paragraphstyle-c.md)所属键。
 
 **起始版本：** 23
 
@@ -214,7 +214,7 @@ PARAGRAPH_STYLE = 200
 IMAGE = 300
 ```
 
-图片键。[ImageAttachment](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#imageattachment)所属键。
+图片键。[ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md)所属键。
 
 **起始版本：** 23
 
@@ -232,7 +232,7 @@ IMAGE = 300
 CUSTOM_SPAN = 400
 ```
 
-自定义绘制Span键。[CustomSpan](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#customspan)所属键。
+自定义绘制Span键。[CustomSpan](arkts-arkui-styledstring-customspan-c.md)所属键。
 
 **起始版本：** 23
 
@@ -250,7 +250,7 @@ CUSTOM_SPAN = 400
 USER_DATA = 500
 ```
 
-UserDataSpan键。[UserDataSpan](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#userdataspan)所 属键。
+UserDataSpan键。[UserDataSpan](arkts-arkui-styledstring-userdataspan-c.md)所 属键。
 
 **起始版本：** 23
 

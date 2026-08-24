@@ -4,9 +4,7 @@
 export type ImageOnCompleteCallback = (loadEvent?: ImageCompleteEvent) => void
 ```
 
-图片数据加载成功和解码成功时触发该回调。
-
-当组件的参数类型为 AnimatedDrawableDescriptor时该事件不触发。
+图片数据加载成功和解码成功时触发该回调。当组件的参数类型为 AnimatedDrawableDescriptor时该事件不触发。
 
 **起始版本：** 23
 

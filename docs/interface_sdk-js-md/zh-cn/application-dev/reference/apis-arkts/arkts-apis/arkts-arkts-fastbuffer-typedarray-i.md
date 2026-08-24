@@ -1,8 +1,6 @@
 # TypedArray
 
-TypedArray 继承 Int8Array 的特性与方法。
-
-@extends Int8Array
+TypedArray 继承 Int8Array 的特性与方法。@extends Int8Array
 
 **继承/实现关系：** TypedArray extends Int8Array
 

@@ -98,7 +98,7 @@ Get the rotation options result of the Surface created by XComponent.
 
 | Type | Description |
 | --- | --- |
-| [Required](../arkts-apis/arkts-required-t.md)&lt;[SurfaceRotationOptions](arkts-xcomponent-surfacerotationoptions-i.md)&gt; | The surface rotation options result. |
+| Required&lt;[SurfaceRotationOptions](arkts-xcomponent-surfacerotationoptions-i.md)&gt; | The surface rotation options result. |
 
 ## lockCanvas
 

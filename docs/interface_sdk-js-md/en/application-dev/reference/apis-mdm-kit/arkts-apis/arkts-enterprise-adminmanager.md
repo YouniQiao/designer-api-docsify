@@ -2,8 +2,7 @@
 
 The **adminManager** module provides administrator permission management capabilities for enterprise MDM applications, including enabling or disabling administrator permissions, subscribing to events, delegating applications, and granting permissions.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The APIs of this module can be called only by a device administrator application. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
@@ -36,7 +35,7 @@ import { adminManager } from '@kit.MDMKit';
 | [isByodAdmin](arkts-mdm-adminmanager-isbyodadmin-f.md) | Checks whether the current application is activated as a BYOD device administrator application based on the **EnterpriseAdminExtensionAbility** component. |
 | [setDelegatedPolicies](arkts-mdm-adminmanager-setdelegatedpolicies-f.md) | Delegates other applications to set device management policies. The applications must request the permissions required. |
 | [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md) | Enables the device administrator application to open a page for the BYOD administrator to perform activation. |
-| [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md) | Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs. |
+| [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md) | Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs.Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md) event. |
 | [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md) | Unsubscribes from system management events. After the API is successfully called, no notifications for the unsubscribed system management events will be received. |
 
 <!--Del-->

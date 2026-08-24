@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class EditableLeftIconV2--><!--Device-unnamed-export declare class EditableLeftIconV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,23 +43,18 @@ EditableLeftIconV2的构造函数。
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  public defaultFocus: boolean
+public defaultFocus: boolean
 ```
 
-是否默认获取焦点。
-
-true：获焦。
-
-false：不获焦。
-
-默认值：false。
+是否默认获取焦点。true：获焦。false：不获焦。默认值：false。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,19 +67,18 @@ false：不获焦。
 ## iconType
 
 ```TypeScript
-@Trace
-  public iconType: EditableLeftIconTypeV2
+public iconType: EditableLeftIconTypeV2
 ```
 
-图标类型。
-
-默认值：EditableLeftIconTypeV2.Back。
+图标类型。默认值：EditableLeftIconTypeV2.Back。
 
 **类型：** [EditableLeftIconTypeV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
 
 **默认值：** EditableLeftIconTypeV2.Back
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -95,8 +91,7 @@ false：不获焦。
 ## onAction
 
 ```TypeScript
-@Trace
-  public onAction?: OnActionCallback
+public onAction?: OnActionCallback
 ```
 
 点击左侧图标的回调函数。未设置时，Back类型默认执行路由返回，Cancel类型无操作。
@@ -104,6 +99,8 @@ false：不获焦。
 **类型：** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

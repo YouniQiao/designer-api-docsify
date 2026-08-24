@@ -14,7 +14,6 @@ Describes the aperture information.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## aperture

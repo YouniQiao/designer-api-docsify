@@ -12,9 +12,7 @@ import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void
 ```
 
-使能ArkTS对象泄漏检测。
-
-此接口通过一次调用即可检测ArkTS对象的内存泄漏，比之前需要调用四个函数（enable、watch、check、dump）的方法更加简洁。
+使能ArkTS对象泄漏检测。此接口通过一次调用即可检测ArkTS对象的内存泄漏，比之前需要调用四个函数（enable、watch、check、dump）的方法更加简洁。
 
 **起始版本：** 26.1.0
 
@@ -76,12 +74,9 @@ jsLeakWatcher.enableLeakWatcher(true, config, (filePath : Array<string>) => {
 function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void
 ```
 
-使能ArkTS对象泄漏检测。
+使能ArkTS对象泄漏检测。此接口通过一次调用即可检测ArkTS对象的内存泄漏，比之前需要调用四个函数（enable、watch、check、dump）的方法更加简洁；通过configs可配置项参数，自定义设置监测项各属性，相比较之前极大提升了泄漏检测性能。
 
-此接口通过一次调用即可检测ArkTS对象的内存泄漏，比之前需要调用四个函数（enable、watch、check、dump）的方法更加简洁；通过configs可配置项参数，自定义设置监测项各属性，相比较之前极大提升了泄漏检测性能。
-
-> **注意**
-> 
+> **注意**&gt;
 > 当前jsLeakWatcher泄漏检测性能开销较大，会导致应用卡顿，建议增大检测间隔时间，减少卡顿频率。
 
 **起始版本：** 26.1.0

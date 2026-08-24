@@ -1,8 +1,6 @@
 # RichEditor属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持OnDidChangeCallback、 StyledStringChangedListener、 StyledStringChangeValue和以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持OnDidChangeCallback、 StyledStringChangedListener、 StyledStringChangeValue和以下事件：
 
 **继承/实现关系：** RichEditorAttribute extends CommonMethod<RichEditorAttribute>
 
@@ -23,11 +21,7 @@
 aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 ```
 
-输入法删除内容前，触发回调。
-
-适用于需要拦截删除操作的场景，如阻止删除关键内容、删除前保存历史记录以支持撤销等。与[onDeleteComplete](#ondeletecomplete)形成will/did时 序模式：aboutToDelete在删除前触发，onDeleteComplete在删除完成后触发；aboutToDelete返回false时，组件不执行删除操作，onDeleteComplete不会触发。两者可同时使用。
-
-使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
+输入法删除内容前，触发回调。适用于需要拦截删除操作的场景，如阻止删除关键内容、删除前保存历史记录以支持撤销等。与[onDeleteComplete](#ondeletecomplete)形成will/did时 序模式：aboutToDelete在删除前触发，onDeleteComplete在删除完成后触发；aboutToDelete返回false时，组件不执行删除操作，onDeleteComplete不会触发。两者可同时使用。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
 
@@ -51,11 +45,7 @@ aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>)
 ```
 
-输入法输入内容前触发回调。
-
-可用于需要拦截输入内容的场景，如过滤敏感词、限制输入格式、实时校验输入合法性等。
-
-使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
+输入法输入内容前触发回调。可用于需要拦截输入内容的场景，如过滤敏感词、限制输入格式、实时校验输入合法性等。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
 
@@ -81,8 +71,7 @@ barState(state: BarState)
 
 RichEditor滚动条的显示模式。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 13
@@ -159,14 +148,10 @@ caretColor(value: ResourceColor)
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-设置是否开启行首标点符号压缩。
+设置是否开启行首标点符号压缩。适用于行首标点符号需要与正文内容对齐的场景。
 
-适用于行首标点符号需要与正文内容对齐的场景。
-
-> **说明：**
-> 
-> 行首标点符号默认不压缩。
-> 
+> **说明：**&gt;
+> 行首标点符号默认不压缩。&gt;
 > 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md)的行首压缩的标点范围。
 
 **起始版本：** 23
@@ -191,15 +176,9 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 copyOptions(value: CopyOptions)
 ```
 
-设置组件是否支持复制和粘贴文本内容。
-
-从API version 20开始，RichEditor组件在执行复制或剪切操作时，会将HTML格式的内容添加到剪贴板中。
-
-- 仅支持[TextSpan](arkts-arkui-richeditortextspanoptions-i.md)和[ImageSpan](arkts-arkui-richeditorimagespanoptions-i.md)向剪贴板中添加HTML内容，其他Span类 型（如[BuilderSpan](arkts-arkui-richeditorbuilderspanoptions-i.md)、[SymbolSpan](arkts-arkui-richeditorsymbolspanoptions-i.md)、 CustomSpan）则不能添加。 - 设置RichEditor组件的属性字符串时，请参考属性字符串toHtml接口文档，以了解支持转换为HTML的范围。
-
-copyOptions不为CopyOptions.None时，长按组件内容，会弹出文本选择菜单。如果通过 [bindSelectionMenu](#bindselectionmenu)等方式自定义文本选择菜单，则会弹出自定义的菜单。
-
-设置copyOptions为CopyOptions.None时，禁用复制、剪切、翻译、分享、搜索、帮写功能，且不支持拖拽操作，同时 [enableDataDetector](#enabledatadetector)的实体识别菜单和 [enableSelectedDataDetector](#enableselecteddatadetector)的AI菜单功能将受限。
+设置组件是否支持复制和粘贴文本内容。从API version 20开始，RichEditor组件在执行复制或剪切操作时，会将HTML格式的内容添加到剪贴板中。  
+- 仅支持[TextSpan](arkts-arkui-richeditortextspanoptions-i.md)和[ImageSpan](arkts-arkui-richeditorimagespanoptions-i.md)向剪贴板中添加HTML内容，其他Span类 型（如[BuilderSpan](arkts-arkui-richeditorbuilderspanoptions-i.md)、[SymbolSpan](arkts-arkui-richeditorsymbolspanoptions-i.md)、 CustomSpan）则不能添加。 - 设置RichEditor组件的属性字符串时，请参考属性字符串toHtml接口文档，以了解支持转换为HTML的范围。  
+copyOptions不为CopyOptions.None时，长按组件内容，会弹出文本选择菜单。如果通过 [bindSelectionMenu](#bindselectionmenu)等方式自定义文本选择菜单，则会弹出自定义的菜单。设置copyOptions为CopyOptions.None时，禁用复制、剪切、翻译、分享、搜索、帮写功能，且不支持拖拽操作，同时 [enableDataDetector](#enabledatadetector)的实体识别菜单和 [enableSelectedDataDetector](#enableselecteddatadetector)的AI菜单功能将受限。
 
 **起始版本：** 10
 
@@ -224,20 +203,9 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
                  options?: KeyboardOptions | undefined)
 ```
 
-设置自定义键盘。
+设置自定义键盘。当设置自定义键盘时，输入框激活后不会打开系统输入法，而是加载指定的自定义组件。自定义键盘的高度可以通过自定义组件根节点的height属性设置，宽度不可设置，使用系统默认键盘宽度。自定义键盘无法获取焦点，但是会拦截手势事件。默认在输入控件失去焦点时，关闭自定义键盘。自定义键盘支持接续功能，使用 [setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)接口，可以设置自定 义键盘之间切换时是否接续。
 
-当设置自定义键盘时，输入框激活后不会打开系统输入法，而是加载指定的自定义组件。
-
-自定义键盘的高度可以通过自定义组件根节点的height属性设置，宽度不可设置，使用系统默认键盘宽度。
-
-自定义键盘无法获取焦点，但是会拦截手势事件。
-
-默认在输入控件失去焦点时，关闭自定义键盘。
-
-自定义键盘支持接续功能，使用 [setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)接口，可以设置自定 义键盘之间切换时是否接续。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 23开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 10
@@ -263,14 +231,8 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-设置文本特殊实体识别配置，可配置识别类型、实体显示样式，并可选择是否开启长按预览功能。
-
-需配合[enableDataDetector](#enabledatadetector)一起使用，设置enableDataDetector为true时， dataDetectorConfig的配置才能生效。
-
-当有两个实体A、B重叠时，按以下规则保留实体：
-
+设置文本特殊实体识别配置，可配置识别类型、实体显示样式，并可选择是否开启长按预览功能。需配合[enableDataDetector](#enabledatadetector)一起使用，设置enableDataDetector为true时， dataDetectorConfig的配置才能生效。当有两个实体A、B重叠时，按以下规则保留实体：
 1.&nbsp;若A&nbsp;⊂&nbsp;B，则保留B，反之则保留A。
-
 2.&nbsp;当A&nbsp;⊄&nbsp;B且B&nbsp;⊄&nbsp;A时，若A.start&nbsp;&lt;&nbsp;B.start，则保留A，反之则保留B。
 
 **起始版本：** 11
@@ -295,14 +257,9 @@ dataDetectorConfig(config: TextDataDetectorConfig)
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-设置系统默认菜单的扩展项，允许配置扩展项的文本内容、图标和回调方法。
+设置系统默认菜单的扩展项，允许配置扩展项的文本内容、图标和回调方法。与[bindSelectionMenu](#bindselectionmenu)的区别：editMenuOptions在系统默认菜单风格基础上添加扩展项，触发条件不变，适合仅需扩展 菜单项的场景；bindSelectionMenu完全自定义菜单风格和触发条件，适合需要深度自定义菜单的场景。调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 
-与[bindSelectionMenu](#bindselectionmenu)的区别：editMenuOptions在系统默认菜单风格基础上添加扩展项，触发条件不变，适合仅需扩展 菜单项的场景；bindSelectionMenu完全自定义菜单风格和触发条件，适合需要深度自定义菜单的场景。
-
-调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -351,19 +308,7 @@ enableAutoSpacing(enable: Optional<boolean>)
 enableDataDetector(enable: boolean)
 ```
 
-设置是否进行文本特殊实体识别，识别的类型包括电话号码、邮箱地址、网址链接、日期、地址等。具体识别类型可通过 [dataDetectorConfig](#datadetectorconfig)属性配置。
-
-该接口依赖设备系统具备文本实体识别能力，否则设置不会生效。
-
-当enableDataDetector设置为true且未指定[dataDetectorConfig](#datadetectorconfig)属性时，系统将默认识别所有类型的实体， 并将这些实体的color和decoration更改为预设样式：
-
-触摸点击或鼠标右键点击实体时，会根据实体类型弹出对应的实体操作菜单，鼠标左键点击实体会直接响应菜单的第一个选项。
-
-对[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan)的节点文本，该功能不会生效。
-
-当copyOptions设置为CopyOptions.None时，点击实体弹出的菜单没有选择文本和复制功能。
-
-<!--RP1--><!--RP1End-->
+设置是否进行文本特殊实体识别，识别的类型包括电话号码、邮箱地址、网址链接、日期、地址等。具体识别类型可通过 [dataDetectorConfig](#datadetectorconfig)属性配置。该接口依赖设备系统具备文本实体识别能力，否则设置不会生效。当enableDataDetector设置为true且未指定[dataDetectorConfig](#datadetectorconfig)属性时，系统将默认识别所有类型的实体， 并将这些实体的color和decoration更改为预设样式：触摸点击或鼠标右键点击实体时，会根据实体类型弹出对应的实体操作菜单，鼠标左键点击实体会直接响应菜单的第一个选项。对[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan)的节点文本，该功能不会生效。当copyOptions设置为CopyOptions.None时，点击实体弹出的菜单没有选择文本和复制功能。<!--RP1--><!--RP1End-->
 
 **起始版本：** 11
 
@@ -389,8 +334,7 @@ enableHapticFeedback(isEnabled: boolean)
 
 设置RichEditor是否支持触感反馈。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 13
@@ -417,8 +361,7 @@ enableKeyboardOnFocus(isEnabled: boolean)
 
 设置RichEditor通过点击以外的方式获焦时，是否主动拉起软键盘。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -443,12 +386,9 @@ enableKeyboardOnFocus(isEnabled: boolean)
 enablePreviewText(enable: boolean)
 ```
 
-设置是否开启预上屏功能。
+设置是否开启预上屏功能。开启后，组件内显示输入法输入过程中的拼音、笔画字符。
 
-开启后，组件内显示输入法输入过程中的拼音、笔画字符。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -473,15 +413,7 @@ enablePreviewText(enable: boolean)
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-设置是否启用文本选择的AI菜单功能。启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。
-
-AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。
-
-AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。
-
-本功能仅在[copyOptions](#copyoptions)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时生效。
-
-该接口依赖设备底层具有文本识别能力，否则设置不会生效。
+设置是否启用文本选择的AI菜单功能。启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。本功能仅在[copyOptions](#copyoptions)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时生效。该接口依赖设备底层具有文本识别能力，否则设置不会生效。
 
 **起始版本：** 22
 
@@ -505,9 +437,7 @@ AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体�
 enterKeyType(value: EnterKeyType)
 ```
 
-设置软键盘输入法回车键类型。
-
-设置后，软键盘回车键的图标和触发行为将根据指定类型变化，不同EnterKeyType对应不同的回车键样式。
+设置软键盘输入法回车键类型。设置后，软键盘回车键的图标和触发行为将根据指定类型变化，不同EnterKeyType对应不同的回车键样式。
 
 **起始版本：** 12
 
@@ -531,11 +461,7 @@ enterKeyType(value: EnterKeyType)
 fallbackLineSpacing(enabled: Optional<boolean>)
 ```
 
-在多行文字叠加场景下，设置行高是否基于文字实际高度自适应。
-
-适用于混排不同字号文字、聊天消息气泡等需要避免文字重叠的场景。不通过该接口设置，默认行高不基于文字实际高度自适应。
-
-该接口依赖[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)的lineHeight属性。当lineHeight设置值小于当前字号下文本渲染出的实际高度时， fallbackLineSpacing属性将生效。
+在多行文字叠加场景下，设置行高是否基于文字实际高度自适应。适用于混排不同字号文字、聊天消息气泡等需要避免文字重叠的场景。不通过该接口设置，默认行高不基于文字实际高度自适应。该接口依赖[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)的lineHeight属性。当lineHeight设置值小于当前字号下文本渲染出的实际高度时， fallbackLineSpacing属性将生效。
 
 **起始版本：** 23
 
@@ -607,9 +533,7 @@ includeFontPadding(include: Optional<boolean>)
 keyboardAppearance(appearance: Optional<KeyboardAppearance>)
 ```
 
-设置键盘外观。
-
-适用于需要根据应用主题或沉浸式场景调整键盘视觉风格的场景，如深色模式下使用DARK外观。
+设置键盘外观。适用于需要根据应用主题或沉浸式场景调整键盘视觉风格的场景，如深色模式下使用DARK外观。
 
 **起始版本：** 15
 
@@ -681,9 +605,7 @@ maxLines(maxLines: Optional<number>)
 onCopy(callback: Callback<CopyEvent>)
 ```
 
-复制时触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的复制。
-
-使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，默认支持图文的复制。
+复制时触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的复制。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，默认支持图文的复制。
 
 **起始版本：** 12
 
@@ -707,9 +629,7 @@ onCopy(callback: Callback<CopyEvent>)
 onCut(callback: Callback<CutEvent>)
 ```
 
-剪切时触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的剪切。
-
-使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，默认支持图文的剪切。
+剪切时触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的剪切。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，默认支持图文的剪切。
 
 **起始版本：** 12
 
@@ -733,9 +653,7 @@ onCut(callback: Callback<CutEvent>)
 onDeleteComplete(callback: Callback<void>)
 ```
 
-输入法删除内容后，触发回调。
-
-使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
+输入法删除内容后，触发回调。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
 
@@ -759,12 +677,9 @@ onDeleteComplete(callback: Callback<void>)
 onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 ```
 
-在组件执行增删操作后，触发回调。如果文本实际未发生增删，则不触发该回调。
+在组件执行增删操作后，触发回调。如果文本实际未发生增删，则不触发该回调。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
-使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -789,12 +704,9 @@ onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 onDidIMEInput(callback: Callback<TextRange>)
 ```
 
-输入法输入完成后，触发回调。
+输入法输入完成后，触发回调。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
-使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -843,11 +755,7 @@ onEditingChange(callback: Callback<boolean>)
 onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>)
 ```
 
-输入法输入完成后，触发回调。
-
-该接口仅支持返回一个文本span的信息，当编辑操作涉及返回多个文本span信息时，建议使用[onDidIMEInput](#ondidimeinput)接口。
-
-使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
+输入法输入完成后，触发回调。该接口仅支持返回一个文本span的信息，当编辑操作涉及返回多个文本span信息时，建议使用[onDidIMEInput](#ondidimeinput)接口。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
 
@@ -871,9 +779,7 @@ onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>)
 onPaste(callback: PasteEventCallback)
 ```
 
-粘贴完成前，触发回调。
-
-开发者可以通过该方法，覆盖系统默认行为，实现图文的粘贴。
+粘贴完成前，触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的粘贴。
 
 **起始版本：** 11
 
@@ -921,13 +827,7 @@ onReady(callback: Callback<void>)
 onSelect(callback: Callback<RichEditorSelection>)
 ```
 
-鼠标左键双击选中内容触发回调；松开鼠标左键再次触发回调。
-
-手指长按选中内容触发回调；松开手指再次触发回调。
-
-通过手指或鼠标连续修改选中区、三击选段场景，不回调onSelect。
-
-需要实时感知选中区变化的场景和使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，请使用 onSelectionChange接口。
+鼠标左键双击选中内容触发回调；松开鼠标左键再次触发回调。手指长按选中内容触发回调；松开手指再次触发回调。通过手指或鼠标连续修改选中区、三击选段场景，不回调onSelect。需要实时感知选中区变化的场景和使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，请使用 onSelectionChange接口。
 
 **起始版本：** 10
 
@@ -943,7 +843,7 @@ onSelect(callback: Callback<RichEditorSelection>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorSelection](arkts-arkui-richeditorselection-i.md)&gt; | 是 | [RichEditorSelection](arkts-arkui-richeditorselection-i.md)为选中的所有span信息。&lt; br/&gt;选择时触发的回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;[RichEditorSelection](arkts-arkui-richeditorselection-i.md)&gt; | 是 | [RichEditorSelection](arkts-arkui-richeditorselection-i.md)为选中的所有span信息。<br/>选择时触发的回调。<br>**起始版本：** 12 |
 
 ## onSelectionChange
 
@@ -999,15 +899,7 @@ onSubmit(callback: SubmitCallback)
 onWillAttachIME(callback: Callback<IMEClient> | undefined)
 ```
 
-在组件绑定输入法前，触发回调。
-
-适用于需要定制输入法行为的场景，如设置输入法扩展配置以实现特定输入模式、自定义输入法功能等。
-
-调用IMEClient的setExtraConfig方法设置输入法扩展信息。在绑定输入法成功后，输入法会收到扩展信息，输入法 可以依据此信息实现自定义功能。
-
-<!--Del-->
-
-从API版本26.0.0开始，在输入框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;
+在组件绑定输入法前，触发回调。适用于需要定制输入法行为的场景，如设置输入法扩展配置以实现特定输入模式、自定义输入法功能等。调用IMEClient的setExtraConfig方法设置输入法扩展信息。在绑定输入法成功后，输入法会收到扩展信息，输入法 可以依据此信息实现自定义功能。<!--Del-->从API版本26.0.0开始，在输入框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;
 
 **起始版本：** 22
 
@@ -1031,12 +923,9 @@ onWillAttachIME(callback: Callback<IMEClient> | undefined)
 onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAttribute
 ```
 
-在组件执行增删操作前，触发回调。与[onDidChange](#ondidchange)形成will/did时序模式：onWillChange在增删操作前触发， onDidChange在增删操作后触发；onWillChange返回false时，组件不执行增删操作，onDidChange不会触发。两者可同时使用。
+在组件执行增删操作前，触发回调。与[onDidChange](#ondidchange)形成will/did时序模式：onWillChange在增删操作前触发， onDidChange在增删操作后触发；onWillChange返回false时，组件不执行增删操作，onDidChange不会触发。两者可同时使用。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
-使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -1061,11 +950,7 @@ onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAtt
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-设置文本排版时是否启用孤字优化。
-
-适用于长文排版、电子书阅读等需要避免段落末行仅剩一个字影响阅读体验的场景。不通过该接口设置，默认不启用孤字优化。
-
-孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。启用后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在 [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)的wordBreak属性为非BREAK_ALL并且待排版文本首个 [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)的[locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)为“zh-Hans”或 “zh-Hant”时生效。
+设置文本排版时是否启用孤字优化。适用于长文排版、电子书阅读等需要避免段落末行仅剩一个字影响阅读体验的场景。不通过该接口设置，默认不启用孤字优化。孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。启用后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在 [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)的wordBreak属性为非BREAK_ALL并且待排版文本首个 [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)的[locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)为“zh-Hans”或 “zh-Hant”时生效。
 
 **起始版本：** 26.0.0
 
@@ -1087,12 +972,9 @@ orphanCharOptimization(enabled: Optional<boolean>)
 placeholder(value: ResourceStr, style?: PlaceholderStyle)
 ```
 
-设置无输入时的提示文本。
+设置无输入时的提示文本。设置后，组件无内容时显示提示文本，用户开始输入内容后提示文本自动消失。
 
-设置后，组件无内容时显示提示文本，用户开始输入内容后提示文本自动消失。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -1118,9 +1000,7 @@ placeholder(value: ResourceStr, style?: PlaceholderStyle)
 punctuationOverflow(enabled: Optional<boolean>)
 ```
 
-设置是否启用行尾标点符号悬挂。
-
-启用后，允许行尾单个标点符号超出排版宽度而不换行，适用于需要避免行尾标点符号换行至下一行行首以提升排版美观度的场景。不通过该接口设置，默认标点符号不悬挂。
+设置是否启用行尾标点符号悬挂。启用后，允许行尾单个标点符号超出排版宽度而不换行，适用于需要避免行尾标点符号换行至下一行行首以提升排版美观度的场景。不通过该接口设置，默认标点符号不悬挂。
 
 **起始版本：** 26.0.0
 
@@ -1218,8 +1098,7 @@ singleLine(isEnable: boolean | undefined)
 
 设置是否启用单行模式。未通过该接口设置时，默认不启用单行模式。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 单行模式下换行符会显示为空格。
 
 **起始版本：** 23
@@ -1268,9 +1147,7 @@ stopBackPress(isStopped: Optional<boolean>)
 undoStyle(style: Optional<UndoStyle>)
 ```
 
-设置撤销还原时是否保留原内容的样式。
-
-使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建RichEditor组件时，撤销还原时默认保留原内容样式，不受该接口设置的属性影响。
+设置撤销还原时是否保留原内容的样式。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建RichEditor组件时，撤销还原时默认保留原内容样式，不受该接口设置的属性影响。
 
 **起始版本：** 20
 

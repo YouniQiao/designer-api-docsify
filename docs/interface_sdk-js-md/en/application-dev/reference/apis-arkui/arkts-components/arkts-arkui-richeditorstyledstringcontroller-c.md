@@ -95,11 +95,9 @@ setStyledString(styledString: StyledString): void
 
 Sets the styled string displayed in the **RichEditor** component.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When this interface is called, the StyledString of the rich text component is fully replaced and rendered
-> again.
-> 
+> again.&gt;
 > - When the content exceeds the component area, the component automatically scrolls up until the content is
 > visible at the end.
 

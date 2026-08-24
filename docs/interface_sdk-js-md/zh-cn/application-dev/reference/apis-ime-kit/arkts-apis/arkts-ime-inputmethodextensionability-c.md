@@ -34,7 +34,7 @@ import { InputMethodExtensionAbility } from '@kit.IMEKit';
 onCreate(want: Want): void
 ```
 
-@brief 生命周期回调，在拉起输入法Extension时调用，用于初始化输入法应用。 <br> <br>- 含义/功能：系统拉起输入法ExtensionAbility时触发的初始化回调。开发者在该回调中完成输入法应用的所有关键初始化工作，包括获取核心能力对象、创建输入法面板、订阅事件等。 <br>- 使用场景：当系统根据module.json5配置拉起输入法ExtensionAbility时自动触发。这是输入法应用初始化的唯一入口，所有关键对象的获取和面板创建必须在此回调中完成。 <br>- 使用后效果：回调执行完成后，输入法应用进入正常运行状态。系统将随后触发键盘显示/隐藏请求、客户端绑定等事件，输入法应用需在此之前完成初始化（如已订阅`on('inputStart')`事件、已创建面板等）， 否则后续事件可能无法正常响应。
+生命周期回调，在拉起输入法Extension时调用，用于初始化输入法应用。 <br> <br>- 含义/功能：系统拉起输入法ExtensionAbility时触发的初始化回调。开发者在该回调中完成输入法应用的所有关键初始化工作，包括获取核心能力对象、创建输入法面板、订阅事件等。 <br>- 使用场景：当系统根据module.json5配置拉起输入法ExtensionAbility时自动触发。这是输入法应用初始化的唯一入口，所有关键对象的获取和面板创建必须在此回调中完成。 <br>- 使用后效果：回调执行完成后，输入法应用进入正常运行状态。系统将随后触发键盘显示/隐藏请求、客户端绑定等事件，输入法应用需在此之前完成初始化（如已订阅`on('inputStart')`事件、已创建面板等）， 否则后续事件可能无法正常响应。
 
 **起始版本：** 23
 
@@ -93,7 +93,7 @@ class InputMethodExt extends InputMethodExtensionAbility {
 onDestroy(): void
 ```
 
-@brief 生命周期回调，在销毁输入法应用时调用，用于资源清理。 <br> <br>- 含义/功能：系统销毁输入法ExtensionAbility时触发的清理回调。开发者在该回调中释放面板、取消事件订阅等资源清理工作。 <br>- 使用场景：当系统主动销毁输入法ExtensionAbility（如系统回收资源、用户切换到其他输入法）或开发者主动调用`context.destroy()`触发销毁时自动触发。 注意：`onDestroy`回调执行后，`context`将不可用，不应在回调中或回调后继续使用`context`对象。 <br>- 使用后效果：回调执行完成后，输入法ExtensionAbility进程终止，所有资源应已释放。调用后再进行其他操作将不起效。
+生命周期回调，在销毁输入法应用时调用，用于资源清理。 <br> <br>- 含义/功能：系统销毁输入法ExtensionAbility时触发的清理回调。开发者在该回调中释放面板、取消事件订阅等资源清理工作。 <br>- 使用场景：当系统主动销毁输入法ExtensionAbility（如系统回收资源、用户切换到其他输入法）或开发者主动调用`context.destroy()`触发销毁时自动触发。 注意：`onDestroy`回调执行后，`context`将不可用，不应在回调中或回调后继续使用`context`对象。 <br>- 使用后效果：回调执行完成后，输入法ExtensionAbility进程终止，所有资源应已释放。调用后再进行其他操作将不起效。
 
 **起始版本：** 23
 
@@ -122,7 +122,7 @@ class InputMethodExt extends InputMethodExtensionAbility {
 context: InputMethodExtensionContext
 ```
 
-@brief InputMethodExtensionAbility的上下文环境，继承于ExtensionContext。
+InputMethodExtensionAbility的上下文环境，继承于ExtensionContext。
 
 **类型：** [InputMethodExtensionContext](arkts-ime-inputmethodextensioncontext-c.md)
 

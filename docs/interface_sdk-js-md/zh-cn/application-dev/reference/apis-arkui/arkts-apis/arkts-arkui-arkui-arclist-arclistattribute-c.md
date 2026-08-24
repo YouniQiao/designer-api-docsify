@@ -1,6 +1,6 @@
 # ArcListAttribute
 
-除支持通用属性外，还支持以下属性（不支持 [滚动组件通用属性](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)）：
+除支持通用属性外，还支持以下属性（不支持 滚动组件通用属性）：
 
 **继承/实现关系：** ArcListAttribute extends CommonMethod<ArcListAttribute>
 
@@ -50,9 +50,7 @@ cachedCount(count: Optional<number>): ArcListAttribute
 chainAnimation(enable: Optional<boolean>): ArcListAttribute
 ```
 
-设置当前ArcList是否启用链式联动动效，开启后列表滑动以及顶部和底部拖拽时会有链式联动的效果。
-
-链式联动效果：ArcList内的ArcListItem间隔一定距离，在基本的滑动交互行为下，主动对象驱动从动对象进行联动，驱动效果遵循弹簧物理动效。
+设置当前ArcList是否启用链式联动动效，开启后列表滑动以及顶部和底部拖拽时会有链式联动的效果。链式联动效果：ArcList内的ArcListItem间隔一定距离，在基本的滑动交互行为下，主动对象驱动从动对象进行联动，驱动效果遵循弹簧物理动效。
 
 **起始版本：** 18
 
@@ -276,9 +274,7 @@ onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute
 onReachEnd(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-列表到达末尾位置时触发。
-
-ArcList边缘效果为弹簧效果时，滑动经过末尾位置时触发一次该事件，回弹返回末尾位置时再触发一次该事件。
+列表到达末尾位置时触发。ArcList边缘效果为弹簧效果时，滑动经过末尾位置时触发一次该事件，回弹返回末尾位置时再触发一次该事件。
 
 **起始版本：** 18
 
@@ -306,9 +302,7 @@ ArcList边缘效果为弹簧效果时，滑动经过末尾位置时触发一次�
 onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-列表到达起始位置时触发。
-
-当ArcList进行初始化时，若[initialIndex](arkts-arkui-arkui-arclist-arklistoptions-i.md)设定为0，将触发一次事件。当ArcList滚动至起始位置，亦会触发一次事件。在ArcList的边缘效果设置为弹簧效果时，滑动经 过起始位置时会触发一次事件，而在回弹返回起始位置时，将再次触发一次事件。
+列表到达起始位置时触发。当ArcList进行初始化时，若[initialIndex](arkts-arkui-arkui-arclist-arklistoptions-i.md)设定为0，将触发一次事件。当ArcList滚动至起始位置，亦会触发一次事件。在ArcList的边缘效果设置为弹簧效果时，滑动经 过起始位置时会触发一次事件，而在回弹返回起始位置时，将再次触发一次事件。
 
 **起始版本：** 18
 
@@ -336,9 +330,7 @@ onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 onScrollIndex(handler: Optional<ArcScrollIndexHandler>): ArcListAttribute
 ```
 
-当子组件划入或划出ArcList的显示区域时，将触发此事件。在ArcList初始化时，此事件会被触发一次。当ArcList显示区域内的首个或末个子组件的索引值发生变化，或是显示区域中心的子组件发生变动时，同样会触发此事件。
-
-ArcList的边缘效果为弹簧效果时，在ArcList滑动到边缘后继续滑动以及松手回弹的过程中，不会触发onScrollIndex事件。
+当子组件划入或划出ArcList的显示区域时，将触发此事件。在ArcList初始化时，此事件会被触发一次。当ArcList显示区域内的首个或末个子组件的索引值发生变化，或是显示区域中心的子组件发生变动时，同样会触发此事件。ArcList的边缘效果为弹簧效果时，在ArcList滑动到边缘后继续滑动以及松手回弹的过程中，不会触发onScrollIndex事件。
 
 **起始版本：** 18
 
@@ -492,7 +484,7 @@ scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | Optional&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | 是 | 设置滚动条颜色。 <br>默认值：ColorMetrics.numeric(0xA9FFFFFF) |
+| color | Optional&lt;[ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)&gt; | 是 | 设置滚动条颜色。 <br>默认值：ColorMetrics.numeric(0xA9FFFFFF) |
 
 **返回值：**
 
@@ -520,7 +512,7 @@ scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 是 | ArcList滚动条在按压态下的宽度。 <br>默认值：LengthMetrics.vp(24) <br>非按压态宽度：LengthMetrics.vp(4) <br>设置为负值、undefined等异常值时，按滚动条的普通态宽度处理。 <br>单位：vp |
+| width | Optional&lt;[LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)&gt; | 是 | ArcList滚动条在按压态下的宽度。 <br>默认值：LengthMetrics.vp(24) <br>非按压态宽度：LengthMetrics.vp(4) <br>设置为负值、undefined等异常值时，按滚动条的普通态宽度处理。 <br>单位：vp |
 
 **返回值：**
 
@@ -548,7 +540,7 @@ space(space: Optional<LengthMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 是 | 列表子项之间的间距。 <br>默认值：LengthMetrics.vp(0) <br>ArcList子组件的visibility属性设置为None时不显示，但该子组件上下的space还会生效。 |
+| space | Optional&lt;[LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)&gt; | 是 | 列表子项之间的间距。 <br>默认值：LengthMetrics.vp(0) <br>ArcList子组件的visibility属性设置为None时不显示，但该子组件上下的space还会生效。 |
 
 **返回值：**
 

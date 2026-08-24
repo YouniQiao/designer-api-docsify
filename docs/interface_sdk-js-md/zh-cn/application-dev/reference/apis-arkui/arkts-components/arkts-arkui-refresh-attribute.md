@@ -1,8 +1,6 @@
 # Refresh属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** RefreshAttribute extends CommonMethod<RefreshAttribute>
 
@@ -47,9 +45,7 @@ maxPullDownDistance(distance: Optional<number>)
 maxPullDownDistance(distance: number | Resource | undefined)
 ```
 
-设置最大下拉距离，支持Resource资源类型。
-
-未通过该接口设置时，设置最大下拉距离为undefined。
+设置最大下拉距离，支持Resource资源类型。未通过该接口设置时，设置最大下拉距离为undefined。
 
 **起始版本：** 26.0.0
 
@@ -75,8 +71,7 @@ onOffsetChange(callback: Callback<number>)
 
 下拉距离发生变化时触发回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -241,9 +236,7 @@ refreshOffset(value: number)
 refreshOffset(value: number | Resource)
 ```
 
-设置触发刷新的下拉偏移量，当下拉距离小于该属性设置值时离手不会触发刷新，支持Resource资源类型。
-
-未通过该接口设置时，当未设置[promptText](arkts-arkui-refreshoptions-i.md)参数时，默认偏移量为64vp；设置了[promptText](arkts-arkui-refreshoptions-i.md)参数时，默认偏移量为96vp。
+设置触发刷新的下拉偏移量，当下拉距离小于该属性设置值时离手不会触发刷新，支持Resource资源类型。未通过该接口设置时，当未设置[promptText](arkts-arkui-refreshoptions-i.md)参数时，默认偏移量为64vp；设置了[promptText](arkts-arkui-refreshoptions-i.md)参数时，默认偏移量为96vp。
 
 **起始版本：** 26.0.0
 

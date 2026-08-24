@@ -1,8 +1,6 @@
 # GridCol properties/events
 
-In addition to the universal attributes, the following attributes are supported.
-
-The universal events are supported.
+In addition to the universal attributes, the following attributes are supported.The universal events are supported.
 
 **Inheritance/Implementation:** GridColAttribute extends CommonMethod<GridColAttribute>
 

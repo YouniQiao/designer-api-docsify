@@ -14,7 +14,6 @@ Describes the instance returned by the occlusion status callback, which indicate
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## isCameraLensDirty

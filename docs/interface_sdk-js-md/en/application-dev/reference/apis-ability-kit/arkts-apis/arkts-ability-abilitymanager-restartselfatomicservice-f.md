@@ -14,10 +14,8 @@ function restartSelfAtomicService(context: Context): void
 
 Restarts the current atomic service.
 
-> **NOTE：**
-> 
-> - Currently, atomic services can be started only in an independent window.
-> 
+> **NOTE：**&gt;
+> - Currently, atomic services can be started only in an independent window.&gt;
 > - If you call this API,
 > ApplicationContext.restartApp(), or
 > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds

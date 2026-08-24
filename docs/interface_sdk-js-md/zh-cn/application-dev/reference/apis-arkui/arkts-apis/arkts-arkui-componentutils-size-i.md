@@ -22,9 +22,7 @@ import { componentUtils } from '@kit.ArkUI';
 height: double
 ```
 
-组件高度。
-
-单位: px
+组件高度。单位: px
 
 **类型：** double
 
@@ -44,9 +42,7 @@ height: double
 width: double
 ```
 
-组件宽度。
-
-单位: px
+组件宽度。单位: px
 
 **类型：** double
 

@@ -16,7 +16,7 @@ corners: CornerRadius
 
 设置圆角的属性。
 
-**类型：** [CornerRadius](arkts-arkui-cornerradius-t.md)
+**类型：** [CornerRadius](../../apis-default/arkts-apis/arkts-cornerradius-t.md)
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ rect: Rect
 
 设置矩形的属性。
 
-**类型：** [Rect](arkts-arkui-rect-t.md)
+**类型：** [Rect](../../apis-default/arkts-apis/arkts-rect-t.md)
 
 **起始版本：** 12
 

@@ -11,6 +11,8 @@ export type ChipGroupV2SuffixBuilder = () => void
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Builder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@Builderexport type ChipGroupV2SuffixBuilder = () => void--><!--Device-unnamed-@Builderexport type ChipGroupV2SuffixBuilder = () => void-End-->

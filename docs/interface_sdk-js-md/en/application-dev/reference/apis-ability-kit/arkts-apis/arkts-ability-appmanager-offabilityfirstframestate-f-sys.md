@@ -29,7 +29,7 @@ Deregisters the observer used to listen for the complete of the first frame rend
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'abilityFirstFrameState' | Yes | Event type. It is fixed at **'abilityFirstFrameState'**. |
-| observer | AbilityFirstFrameStateObserver | No | Callback used for deregistration. If this parameter is left blank , all subscriptions to the specified event are canceled. |
+| observer | AbilityFirstFrameStateObserver | No | Callback used for deregistration. If this parameter is left blank, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 

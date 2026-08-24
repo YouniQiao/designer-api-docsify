@@ -1,8 +1,6 @@
 # @ohos.bundle.appDomainVerify(Define capabilities to access app domain verification info.)
 
-This module provides app domain verification info.
-
-@namespace appDomainVerify
+This module provides app domain verification info.@namespace appDomainVerify
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # BlanklessFrameInterpolationInfo
 
-Defines the frame interpolation information.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Defines the frame interpolation information.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **Since:** 23
 
@@ -23,9 +21,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 key: string
 ```
 
-Key value that uniquely identifies the page.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Key value that uniquely identifies the page.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **Type:** string
 
@@ -45,9 +41,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 reason: string
 ```
 
-Reason for the frame interpolation failure.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Reason for the frame interpolation failure.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **Type:** string
 
@@ -67,9 +61,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 state: BlanklessFrameInterpolationState
 ```
 
-Current frame interpolation state.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Current frame interpolation state.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **Type:** [BlanklessFrameInterpolationState](arkts-webview-blanklessframeinterpolationstate-e.md)
 
@@ -89,9 +81,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 timestamp: int
 ```
 
-Time when a frame is interpolated or removed.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. The value must be an integer. <br>Unit: ms.
+Time when a frame is interpolated or removed.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. The value must be an integer. <br>Unit: ms.
 
 **Type:** int
 

@@ -2,26 +2,21 @@
 
 The data type used to describe a rectangular area.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - **x** and **y** can be set to a positive or negative percentage value. For example, when **x** is set to
 > **'100%'**, the touch target is the offset from the right edge of the component by the component's width. When
 > **x** is set to **'-100%'**, the touch target is the offset from the left edge of the component by the component's
 > width. When **y** is set to **'100%'**, the touch target is the offset from the bottom edge of the component by the
 > component's height. When **y** is set to **'-100%'**, the touch target is the offset from the top edge of the
-> component by the component's height.
-> 
+> component by the component's height.&gt;
 > - **width** and **height** can only be set to positive percentage values. When **width** is set to **'100%'**, the
 > width of the touch target is equal to that of the component. For example, if the width of a component is 100 vp,
 > **'100%'** indicates that the width of the touch target is also 100 vp. When **height** is set to **'100%'**, the
-> height of the touch target is equal to that of the component.
-> 
-> - The percentage is measured relative to the component itself.
-> 
+> height of the touch target is equal to that of the component.&gt;
+> - The percentage is measured relative to the component itself.&gt;
 > - When the parent component has [clip](arkts-arkui-commonmethod-c.md#clip) set to **true**, child component
 > interaction is affected by the parent component's response region. Children outside the parent component's response
-> region won't respond to gestures or events.
-> 
+> region won't respond to gestures or events.&gt;
 > - **width** and **height** do not support **calc()** dynamic calculations.
 
 **Since:** 8
@@ -41,9 +36,7 @@ The data type used to describe a rectangular area.
 height?: Length
 ```
 
-Height of the touch target.
-
-Default value: **'100%'**
+Height of the touch target.Default value: **'100%'**
 
 **Type:** Length
 
@@ -63,9 +56,7 @@ Default value: **'100%'**
 width?: Length
 ```
 
-Width of the touch target.
-
-Default value: **'100%'**
+Width of the touch target.Default value: **'100%'**
 
 **Type:** Length
 
@@ -85,9 +76,7 @@ Default value: **'100%'**
 x?: Length
 ```
 
-X coordinate of the touch point relative to the upper left corner of the component.
-
-Default value: **0vp**
+X coordinate of the touch point relative to the upper left corner of the component.Default value: **0vp**
 
 **Type:** Length
 
@@ -107,9 +96,7 @@ Default value: **0vp**
 y?: Length
 ```
 
-Y coordinate of the touch point relative to the upper left corner of the component.
-
-Default value: **0vp**
+Y coordinate of the touch point relative to the upper left corner of the component.Default value: **0vp**
 
 **Type:** Length
 

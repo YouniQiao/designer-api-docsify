@@ -13,8 +13,7 @@ function moveFile(src: string, dest: string, mode?: int): Promise<void>
 
 Moves a file to the target path. You can set the conflict handling mode. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in a distributed directory.
 
 **Since:** 23
@@ -72,8 +71,7 @@ function moveFile(src: string, dest: string, callback: AsyncCallback<void>): voi
 
 Moves a file and forcibly overwrites the file with the same name in the destination directory. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in a distributed directory.
 
 **Since:** 23
@@ -125,8 +123,7 @@ function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<
 
 Moves a file to the target path. You can set the conflict handling mode. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in a distributed directory.
 
 **Since:** 23

@@ -143,12 +143,10 @@ localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
 listAllConnections(): WebSocketConnection[]
 ```
 
-Obtains information about all clients connected to the server.
-
+Obtains information about all clients connected to the server.  
 **Required permission**: ohos.permission.INTERNET
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is called asynchronously. The **await** keyword needs to be used to wait until the asynchronous
 > operation is complete, ensuring that information about all clients connected to the server can be correctly
 > obtained.
@@ -221,8 +219,7 @@ off(type: 'close', callback?: ClientConnectionCloseCallback): void
 
 Unsubscribes from WebSocketServer close events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -257,8 +254,7 @@ off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 
 Unsubscribes from WebSocketServer connection events (the connection between the client and server is successfully established). This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -293,8 +289,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 Unsubscribes from WebSocketServer error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -329,8 +324,7 @@ off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 
 Unsubscribes from the WebSocketServer event of receiving client messages. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -663,8 +657,7 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 
 Sends data through the WebSocket connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **send** API can be called only after a **connect** event is listened.
 > **Required permission**: ohos.permission.INTERNET
 
@@ -801,8 +794,7 @@ start(config: WebSocketServerConfig): Promise<boolean>
 
 Starts the WebSocketServer service based on the specified **config**. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You are advised not to listen for the same port when calling this API multiple times.
 > **Required permission**: ohos.permission.INTERNET
 

@@ -1,8 +1,6 @@
 # DistributionType
 
-Enumerates the color distribution types of a particle.
-
-@enum { number }
+Enumerates the color distribution types of a particle.@enum { number }
 
 **Since:** 12
 

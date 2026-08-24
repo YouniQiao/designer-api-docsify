@@ -1,8 +1,6 @@
 # RootScene properties/events
 
-Defines the attribute functions of RootScene.
-
-@extends CommonMethod&lt;RootSceneAttribute&gt;
+Defines the attribute functions of RootScene.@extends CommonMethod&lt;RootSceneAttribute&gt;
 
 **Inheritance/Implementation:** RootSceneAttribute extends CommonMethod<RootSceneAttribute>
 

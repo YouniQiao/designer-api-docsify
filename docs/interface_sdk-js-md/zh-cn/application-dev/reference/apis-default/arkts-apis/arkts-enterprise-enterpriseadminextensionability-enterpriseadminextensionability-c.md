@@ -1,14 +1,9 @@
 # EnterpriseAdminExtensionAbility
 
-本模块提供[企业设备管理扩展能力](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability企业设备管理扩展能力)，是企业设备管理应用的核心组件。
-
-**主要功能**：
-
-- 提供设备管理应用的生命周期管理能力（激活、去激活、启动等事件）。 - 提供应用生命周期事件监听能力（安装、卸载、启动、停止、更新）。 - 提供系统账号管理事件监听能力（账号新增、切换、删除）。 - 提供Kiosk模式、按键事件、日志收集、系统更新等系统级事件回调。 - 提供策略变更事件监听能力。
-
-**使用场景**：企业设备管理应用开发、企业应用生命周期管理、设备安全管控、账号管理、设备运维监控等。
-
-设备管理应用需要存在一个EnterpriseAdminExtensionAbility并重写相关接口，以此具备模块提供的各项能力，比如接收由系统发送的该应用被激活或者解除激活的通知。
+本模块提供[企业设备管理扩展能力](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability企业设备管理扩展能力)，是企业设备管理应用的核心组件。  
+**主要功能**：  
+- 提供设备管理应用的生命周期管理能力（激活、去激活、启动等事件）。 - 提供应用生命周期事件监听能力（安装、卸载、启动、停止、更新）。 - 提供系统账号管理事件监听能力（账号新增、切换、删除）。 - 提供Kiosk模式、按键事件、日志收集、系统更新等系统级事件回调。 - 提供策略变更事件监听能力。  
+**使用场景**：企业设备管理应用开发、企业应用生命周期管理、设备安全管控、账号管理、设备运维监控等。设备管理应用需要存在一个EnterpriseAdminExtensionAbility并重写相关接口，以此具备模块提供的各项能力，比如接收由系统发送的该应用被激活或者解除激活的通知。
 
 **起始版本：** 12
 
@@ -202,12 +197,8 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onAdminEnabled(): void
 ```
 
-当前设备管理应用被激活后，触发该回调。企业管理员或者员工部署并激活设备管理应用，系统通知设备管理应用已激活admin权限。设备管理应用可在此回调函数中进行初始化策略设置。无需注册，激活后默认触发该回调。
-
-与onDeviceAdminEnabled的区别：
-
-- onAdminEnabled：设备管理应用自身被激活时触发，用于设备管理应用初始化自己的策略。 - onDeviceAdminEnabled：超级设备管理应用监听普通设备管理应用激活事件，用于超级设备管理应用对普通设备管理应用进行管理。
-
+当前设备管理应用被激活后，触发该回调。企业管理员或者员工部署并激活设备管理应用，系统通知设备管理应用已激活admin权限。设备管理应用可在此回调函数中进行初始化策略设置。无需注册，激活后默认触发该回调。与onDeviceAdminEnabled的区别：  
+- onAdminEnabled：设备管理应用自身被激活时触发，用于设备管理应用初始化自己的策略。 - onDeviceAdminEnabled：超级设备管理应用监听普通设备管理应用激活事件，用于超级设备管理应用对普通设备管理应用进行管理。  
 开发者应根据应用类型和监听场景选择合适的方法：普通设备管理应用使用onAdminEnabled，超级设备管理应用监听其他应用激活时使用onDeviceAdminEnabled。
 
 **起始版本：** 12
@@ -749,13 +740,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onKeyEvent(keyEvent: systemManager.KeyEvent): void
 ```
 
-[按键事件](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)回调。MDM应用需要通过 [systemManager.addKeyEventPolicies](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-addkeyeventpolicies-f.md)接口下发按键事件 处理策略，当系统按键事件触发时，如果事件与已下发的策略匹配，则触发该回调。回调信息[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)中包含 当前发生的按键事件信息。
-
-单按键事件响应。设备单按键被触发时，[onKeyEvent](#onkeyevent)会在按下和抬起时触发两次回调事件，可由 [keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)中keyAction属性进行判断。 [keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)中keyItems属性在单按键事件中可忽略。
-
-组合按键事件响应。组合按键仅支持物理按键：电源键、音量加键、音量减键进行组合。用户按下组合键时，后按下按键的事件回调将通过 [keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)中的keyItems属性携带当前所有已按下的按键信息。其他与单按键事件响应逻辑一致。
-
-长按事件响应。当单个按键或组合按键被长时间按下时，[onKeyEvent](#onkeyevent)会以50ms的间隔（具体间隔时间可能因系统状态及性能而稍 有延长）被连续触发，其中每次回调事件[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)的actionTime属性均与按键首次按下事件回调的 [keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)的actionTime属性相同。其他情况下的响应逻辑与单个按键和组合按键一致。
+[按键事件](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)回调。MDM应用需要通过 [systemManager.addKeyEventPolicies](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-addkeyeventpolicies-f.md)接口下发按键事件 处理策略，当系统按键事件触发时，如果事件与已下发的策略匹配，则触发该回调。回调信息[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)中包含 当前发生的按键事件信息。单按键事件响应。设备单按键被触发时，[onKeyEvent](#onkeyevent)会在按下和抬起时触发两次回调事件，可由 [keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)中keyAction属性进行判断。 [keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)中keyItems属性在单按键事件中可忽略。组合按键事件响应。组合按键仅支持物理按键：电源键、音量加键、音量减键进行组合。用户按下组合键时，后按下按键的事件回调将通过 [keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)中的keyItems属性携带当前所有已按下的按键信息。其他与单按键事件响应逻辑一致。长按事件响应。当单个按键或组合按键被长时间按下时，[onKeyEvent](#onkeyevent)会以50ms的间隔（具体间隔时间可能因系统状态及性能而稍 有延长）被连续触发，其中每次回调事件[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)的actionTime属性均与按键首次按下事件回调的 [keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md)的actionTime属性相同。其他情况下的响应逻辑与单个按键和组合按键一致。
 
 **起始版本：** 23
 
@@ -876,9 +861,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onKioskModeEntering(bundleName: string, accountId: number): void
 ```
 
-应用进入Kiosk模式回调，回调中包含应用包名和用户ID。
-
-Kiosk模式为系统层面提供的一种应用运行模式，该模式下会将设备锁定在单个应用或者一组应用运行，同时对锁屏状态、状态栏、手势操作和关键功能进行控制，防止用户在设备上启动其它应用或执行其它操作。
+应用进入Kiosk模式回调，回调中包含应用包名和用户ID。Kiosk模式为系统层面提供的一种应用运行模式，该模式下会将设备锁定在单个应用或者一组应用运行，同时对锁屏状态、状态栏、手势操作和关键功能进行控制，防止用户在设备上启动其它应用或执行其它操作。
 
 **起始版本：** 20
 
@@ -950,8 +933,7 @@ onLogCollected(result: common.Result): void
 
 通过[systemManager.startCollectLog](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-startcollectlog-f.md)接口成功创建日志收集任务后， 当日志收集完成时，将触发该回调。回调中包含日志收集结果。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 日志收集成功时，必须在应用的EnterpriseAdminExtensionAbility中访问沙箱目录（/data/edm/log）获取日志，获取日志方式参考下列示例代码。应用取走日志后，建议调用
 > [systemManager.finishLogCollected](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-finishlogcollected-f.md)删除已收集到的日
 > 志。

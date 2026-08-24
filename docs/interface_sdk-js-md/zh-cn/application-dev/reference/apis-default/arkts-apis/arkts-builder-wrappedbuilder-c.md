@@ -35,8 +35,7 @@ WrappedBuilder的构造函数。
 ## builder
 
 ```TypeScript
-@Builder
-  public builder: T
+public builder: T
 ```
 
 **类型：** T
@@ -44,6 +43,8 @@ WrappedBuilder的构造函数。
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

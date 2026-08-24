@@ -322,8 +322,7 @@ getAlbum(): Album
 
 Obtains the album in the current album change request.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For the change request for creating an album, this API returns **null** before
 > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called
 > to apply the changes.
@@ -532,14 +531,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setAlbumName(name: string): void
 ```
 
-Sets the album name.
-
-The album name must meet the following requirements:
-
-- The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are:
-
-. \ / : ? " ' ` &lt; &gt; | { } [ ]
-
+Sets the album name.The album name must meet the following requirements:  
+- The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are:  
+. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - It is case-insensitive. - Duplicate album names are not allowed.
 
 **Since:** 23

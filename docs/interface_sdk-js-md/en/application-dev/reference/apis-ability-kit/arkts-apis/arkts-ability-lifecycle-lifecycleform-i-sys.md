@@ -1,8 +1,6 @@
 # LifecycleForm
 
-interface of form lifecycle.
-
-@interface LifecycleForm
+interface of form lifecycle.@interface LifecycleForm
 
 **Since:** 7
 

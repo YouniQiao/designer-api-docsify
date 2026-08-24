@@ -2,8 +2,7 @@
 
 Represents the message authentication code (MAC) parameters. You need to construct a child class object and use it as a parameter when computing an HMAC or a CMAC.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > **algName** specifies the MAC algorithm to use. It is mandatory.
 
 **Since:** 23

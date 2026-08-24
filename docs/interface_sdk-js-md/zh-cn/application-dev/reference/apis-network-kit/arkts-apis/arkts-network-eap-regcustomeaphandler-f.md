@@ -12,9 +12,7 @@ import { eap } from '@kit.NetworkKit';
 function regCustomEapHandler(netType: int, eapCode: int, eapType: int, callback: Callback<EapData>): void
 ```
 
-用于指定需要定制化处理的EAP报文类型和对应的处理callback。使用callback异步回调。
-
-系统会将符合条件的EAP报文送入callback函数中供企业应用获取。
+用于指定需要定制化处理的EAP报文类型和对应的处理callback。使用callback异步回调。系统会将符合条件的EAP报文送入callback函数中供企业应用获取。
 
 **起始版本：** 20
 

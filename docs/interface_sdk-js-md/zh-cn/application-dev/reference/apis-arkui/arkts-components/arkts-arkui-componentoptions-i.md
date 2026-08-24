@@ -19,11 +19,7 @@
 freezeWhenInactive : boolean
 ```
 
-配置自定义组件支持组件冻结。true：开启组件冻结，false：不开启组件冻结。当开发者未指定ComponentOptions时，freezeWhenInactive将使用false作为默认值。
-
-从API version 11开始，支持通过此参数配置[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)组 件冻结。示例可见[自定义组件冻结](../../../ui/state-management/arkts-custom-components-freeze.md)。
-
-从API version 12开始，支持通过此参数配置 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)组件冻结。示例可见 [自定义组件冻结](../../../ui/state-management/arkts-custom-components-freezeV2.md)。
+配置自定义组件支持组件冻结。true：开启组件冻结，false：不开启组件冻结。当开发者未指定ComponentOptions时，freezeWhenInactive将使用false作为默认值。从API version 11开始，支持通过此参数配置[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)组 件冻结。示例可见[自定义组件冻结](../../../ui/state-management/arkts-custom-components-freeze.md)。从API version 12开始，支持通过此参数配置 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)组件冻结。示例可见 [自定义组件冻结](../../../ui/state-management/arkts-custom-components-freezeV2.md)。
 
 **类型：** boolean
 

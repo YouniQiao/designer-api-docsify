@@ -24,7 +24,7 @@ function getVMRuntimeStat(item: string): long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| item | string | 是 | 所需统计信息的类型。可获取的统计信息类型如下： "ark.gc.gc-count"：当前线程的GC次数。 "ark.gc.gc-time"：当前线程触发的GC总耗时，以ms为单位。 "ark.gc.gc-bytes-allocated"：当前线程Ark虚拟机已分配的内存大小，以B为单位。 "ark.gc.gc-bytes-freed"：当前线程GC成功回收的内存，以B为单位。 "ark.gc.fullgc-longtime-count"：当前线程超长fullGC次数。 |
+| item | string | 是 | 所需统计信息的类型。可获取的统计信息类型如下："ark.gc.gc-count"：当前线程的GC次数。"ark.gc.gc-time"：当前线程触发的GC总耗时，以ms为单位。"ark.gc.gc-bytes-allocated"：当前线程Ark虚拟机已分配的内存大小，以B为单位。"ark.gc.gc-bytes-freed"：当前线程GC成功回收的内存，以B为单位。"ark.gc.fullgc-longtime-count"：当前线程超长fullGC次数。 |
 
 **返回值：**
 

@@ -29,7 +29,7 @@ Connects the current ability to the specified web native message extension abili
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | Context of the calling UIAbility. |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the Ability, whose parameters must include ' ohos.arkweb.messageReadPipe' (read pipe FD), 'ohos.arkweb.messageWritePipe' (write pipe FD), and ' ohos.arkweb.extensionOrigin' (extension URI). |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the Ability, whose parameters must include 'ohos.arkweb.messageReadPipe' (read pipe FD), 'ohos.arkweb.messageWritePipe' (write pipe FD), and 'ohos.arkweb.extensionOrigin' (extension URI). |
 | callback | [WebExtensionConnectionCallback](../../apis-default/arkts-apis/arkts-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | Yes | Callback object of the WebExtensionConnection status. |
 
 **Return value:**

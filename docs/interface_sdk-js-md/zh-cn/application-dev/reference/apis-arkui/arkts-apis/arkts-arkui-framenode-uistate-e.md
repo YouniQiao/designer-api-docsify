@@ -86,9 +86,7 @@ DISABLED = 1 << 2
 SELECTED = 1 << 3
 ```
 
-选中状态。
-
-仅特定的组件支持此状态：Checkbox、Radio、Toggle、List、Grid、MenuItem。
+选中状态。仅特定的组件支持此状态：Checkbox、Radio、Toggle、List、Grid、MenuItem。
 
 **起始版本：** 20
 

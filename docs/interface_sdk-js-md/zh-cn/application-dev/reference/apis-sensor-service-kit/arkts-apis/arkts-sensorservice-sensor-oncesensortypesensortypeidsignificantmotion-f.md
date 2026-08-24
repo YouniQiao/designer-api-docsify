@@ -14,8 +14,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Call
 
 监听有效运动传感器的数据变化一次。适用于仅需一次性获取当前有效运动数据的场景。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.SIGNIFICANT_MOTION]
 > once
 > 替代。

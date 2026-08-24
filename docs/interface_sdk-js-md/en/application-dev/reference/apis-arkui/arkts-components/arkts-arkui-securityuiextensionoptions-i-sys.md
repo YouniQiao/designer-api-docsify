@@ -21,7 +21,7 @@ Defines the options to be passed when constructing **SecurityUIExtensionComponen
 dpiFollowStrategy?: SecurityDpiFollowStrategy
 ```
 
-Resolution following strategy for **SecurityUIExtensionComponent**, used to control whether the embedded **UIExtensionAbility** content follows the host application's resolution or uses its own resolution. Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI** .
+Resolution following strategy for **SecurityUIExtensionComponent**, used to control whether the embedded **UIExtensionAbility** content follows the host application's resolution or uses its own resolution. Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**.
 
 **Type:** [SecurityDpiFollowStrategy](arkts-arkui-securitydpifollowstrategy-e-sys.md)
 

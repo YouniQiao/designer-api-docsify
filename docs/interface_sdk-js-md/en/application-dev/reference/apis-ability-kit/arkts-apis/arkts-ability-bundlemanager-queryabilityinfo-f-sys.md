@@ -12,9 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function queryAbilityInfo(want: Want, abilityFlags: int, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-Obtains the ability information based on the given want and ability flags. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want and ability flags. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -186,9 +184,7 @@ try {
 function queryAbilityInfo(want: Want, abilityFlags: int, userId: int, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-Obtains the ability information based on the given want, ability flags, and user ID. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want, ability flags, and user ID. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -206,7 +202,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
 | abilityFlags | int | Yes | Type of the ability information to obtain. |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of ability information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -233,9 +229,7 @@ See [queryAbilityInfo](#queryabilityinfo)
 function queryAbilityInfo(want: Want, abilityFlags: int, userId?: int): Promise<Array<AbilityInfo>>
 ```
 
-Obtains the ability information based on the given want, ability flags, and user ID. This API uses a promise to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want, ability flags, and user ID. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -253,7 +247,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
 | abilityFlags | int | Yes | Type of the ability information to obtain. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
@@ -285,9 +279,7 @@ See [queryAbilityInfo](#queryabilityinfo)
 function queryAbilityInfo(wants: Array<Want>, abilityFlags: int, userId?: int): Promise<Array<AbilityInfo>>
 ```
 
-Obtains the ability information based on the given want list, ability flags, and user ID. This API uses a promise to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want list, ability flags, and user ID. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -305,7 +297,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | wants | Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | List of want containing the bundle name to query. |
 | abilityFlags | int | Yes | Type of the ability information to obtain. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 

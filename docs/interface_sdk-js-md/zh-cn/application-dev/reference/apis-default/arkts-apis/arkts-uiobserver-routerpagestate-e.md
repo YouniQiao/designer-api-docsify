@@ -1,8 +1,6 @@
 # RouterPageState
 
-routerPage生命周期触发时对应的状态。
-
-@enum { number }
+routerPage生命周期触发时对应的状态。@enum { number }
 
 **起始版本：** 23
 

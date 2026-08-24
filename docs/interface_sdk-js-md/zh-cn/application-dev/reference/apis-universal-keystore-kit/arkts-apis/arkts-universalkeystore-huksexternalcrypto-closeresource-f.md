@@ -12,9 +12,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function closeResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>
 ```
 
-关闭指定资源ID的资源。使用Promise异步回调。
-
-该接口会回调 [onClearUkeyPinAuthState](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#onclearukeypinauthstate) 清理该资源关联的PIN认证状态，以及会回调 [onFinishSession](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#onfinishsession) 清理该资源关联的会话handle。
+关闭指定资源ID的资源。使用Promise异步回调。该接口会回调 [onClearUkeyPinAuthState](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#onclearukeypinauthstate) 清理该资源关联的PIN认证状态，以及会回调 [onFinishSession](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#onfinishsession) 清理该资源关联的会话handle。
 
 **起始版本：** 26.0.0
 

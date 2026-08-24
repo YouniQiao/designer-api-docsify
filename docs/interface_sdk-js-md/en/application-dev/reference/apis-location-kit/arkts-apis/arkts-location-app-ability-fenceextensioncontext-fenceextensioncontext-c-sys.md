@@ -1,8 +1,6 @@
 # FenceExtensionContext
 
-class of static subscriber extension context.
-
-@extends ExtensionContext
+class of static subscriber extension context.@extends ExtensionContext
 
 **Inheritance/Implementation:** FenceExtensionContext extends ExtensionContext
 

@@ -2,8 +2,7 @@
 
 用于保存按钮信息的数组。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > SegmentButtonItemOptionsArray仅支持保存2到5个按钮信息元素。
 
 **继承/实现关系：** SegmentButtonItemOptionsArray extends Array<SegmentButtonItemOptions>
@@ -11,6 +10,8 @@
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Observed
 
 <!--Device-unnamed-declare class SegmentButtonItemOptionsArray--><!--Device-unnamed-declare class SegmentButtonItemOptionsArray-End-->
 
@@ -83,8 +84,7 @@ pop(): SegmentButtonItemOptions | undefined
 
 移除数组末尾最后一个元素，返回被移除的元素。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 分段按钮组件数组仅支持保存2到5个按钮信息，若移除后按钮组件数量不在个数限制范围内，移除按钮信息元素失败。
 
 **起始版本：** 23
@@ -111,8 +111,7 @@ push(item: SegmentButtonTextItem | SegmentButtonIconItem | SegmentButtonIconText
 
 在数组末尾添加一个新的元素，返回添加元素后数组的长度。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > SegmentButton是仅支持显示2到5个按钮的分段按钮组件，同时SegmentButtonItemOptionsArray也只保存这2到5个按钮的具体信息，当超过按钮信息个数限制此方法无效。
 
 **起始版本：** 23
@@ -148,8 +147,7 @@ push(
 
 在数组末尾添加两个新的元素，返回添加元素后数组的长度。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > SegmentButton是仅支持显示2到5个按钮的分段按钮组件，同时SegmentButtonItemOptionsArray也只保存这2到5个按钮的具体信息，当超过按钮信息个数限制此方法无效。
 
 **起始版本：** 23
@@ -187,8 +185,7 @@ push(
 
 在数组末尾添加三个新的元素，返回添加元素后数组的长度。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > SegmentButton是仅支持显示2到5个按钮的分段按钮组件，同时SegmentButtonItemOptionsArray也只保存这2到5个按钮的具体信息，当超过按钮信息个数限制此方法无效。
 
 **起始版本：** 23
@@ -223,8 +220,7 @@ shift(): SegmentButtonItemOptions | undefined
 
 移除数组开头第一个元素，返回被移除的元素。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 分段按钮组件数组仅支持保存2到5个按钮信息，若移除后按钮组件数量不在个数限制范围内，移除按钮信息元素失败。
 
 **起始版本：** 23
@@ -251,8 +247,7 @@ splice(start: int, deleteCount: int, ...items: SegmentButtonItemOptions[]): Segm
 
 在数组中，删除从start位置开始的deleteCount数量的元素，并插入items中的元素，返回一个包含了被删除的元素的数组。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > SegmentButton是仅支持显示2到5个按钮的分段按钮组件，同时SegmentButtonItemOptionsArray也只保存这2到5个按钮的具体信息，当超过按钮信息个数限制此方法无效。
 
 **起始版本：** 23
@@ -287,8 +282,7 @@ unshift(item: SegmentButtonTextItem | SegmentButtonIconItem | SegmentButtonIconT
 
 在数组开头添加一个新的元素，返回添加元素后数组的长度。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > SegmentButton是仅支持显示2到5个按钮的分段按钮组件，同时SegmentButtonItemOptionsArray也只保存这2到5个按钮的具体信息，当超过按钮信息个数限制此方法无效。
 
 **起始版本：** 23
@@ -325,8 +319,7 @@ unshift(
 
 在数组开头添加两个新的元素，返回添加元素后数组的长度。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 分段按钮组件数组仅支持保存2到5个按钮信息，若超过分段按钮组件数量个数的限制，添加按钮信息元素失败。
 
 **起始版本：** 23
@@ -364,8 +357,7 @@ unshift(
 
 在数组开头添加三个新的元素，返回添加元素后数组的长度。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > SegmentButton是仅支持显示2到5个按钮的分段按钮组件，同时SegmentButtonItemOptionsArray也只保存这2到5个按钮的具体信息，当超过按钮信息个数限制此方法无效。
 
 **起始版本：** 23

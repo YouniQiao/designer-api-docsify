@@ -28,7 +28,7 @@ export function intlLocalesToLanguageTags(locales: string | Intl.Locale | Readon
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locales | string \| [Intl.Locale](arkts-arkts-intl-locale-c.md) \| [ReadonlyArray](arkts-arkts-readonlyarray-i.md)&lt;string \| [Intl.Locale](arkts-arkts-intl-locale-c.md)&gt; \| undefined | 是 | 区域设置。 |
+| locales | string \| [Intl.Locale](arkts-arkts-intl-locale-c.md) \| ReadonlyArray&lt;string \| [Intl.Locale](arkts-arkts-intl-locale-c.md)&gt; \| undefined | 是 | 区域设置。 |
 
 **返回值：**
 

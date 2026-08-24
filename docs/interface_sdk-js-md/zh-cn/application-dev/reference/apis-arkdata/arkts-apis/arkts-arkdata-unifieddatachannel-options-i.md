@@ -40,11 +40,7 @@ intention?: Intention
 key?: string
 ```
 
-UDMF中数据对象的唯一标识符，可通过[insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md)接口的返回值获取。不填写时默认无值，具体是否必填请参阅具体接口的参数说明。
-
-由udmf:/、intention、bundleName和groupId四部分组成，以'/'连接，比如：udmf://DataHub/com.ohos.test/0123456789。
-
-其中udmf:/固定，DataHub为对应枚举的取值，com.ohos.test为包名，0123456789为随机生成的groupId。
+UDMF中数据对象的唯一标识符，可通过[insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md)接口的返回值获取。不填写时默认无值，具体是否必填请参阅具体接口的参数说明。由udmf:/、intention、bundleName和groupId四部分组成，以'/'连接，比如：udmf://DataHub/com.ohos.test/0123456789。其中udmf:/固定，DataHub为对应枚举的取值，com.ohos.test为包名，0123456789为随机生成的groupId。
 
 **类型：** string
 

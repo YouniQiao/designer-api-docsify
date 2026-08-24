@@ -442,11 +442,13 @@
 - [@ohos.app.ability.ChildProcessArgs](arkts-app-ability-childprocessargs.md)
   - [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md)
 - [@ohos.app.ability.childProcessManager](arkts-app-ability-childprocessmanager.md)
+  - [getChildProcessInfos](arkts-ability-childprocessmanager-getchildprocessinfos-f.md)
   - [isArkChildProcessSupported](arkts-ability-childprocessmanager-isarkchildprocesssupported-f.md)
   - [isNativeChildProcessSupported](arkts-ability-childprocessmanager-isnativechildprocesssupported-f.md)
   - [startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md)
   - [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md)
   - [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md)
+  - [ChildProcessInformation](arkts-ability-childprocessmanager-childprocessinformation-t.md)
   - [StartMode](arkts-ability-childprocessmanager-startmode-e.md)
 - [@ohos.app.ability.ChildProcessOptions](arkts-app-ability-childprocessoptions.md)
   - [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md)
@@ -1869,6 +1871,8 @@
   - [BusinessAbilityInfo](arkts-businessabilityinfo.md)<!--DelEnd-->
     <!--Del-->
     - [BusinessAbilityInfo(system api)](arkts-ability-businessabilityinfo-i-sys.md)<!--DelEnd-->
+  - [ChildProcessInformation](arkts-childprocessinformation.md)
+    - [ChildProcessInformation](arkts-ability-childprocessinformation-i.md)
   <!--Del-->
   - [CliToolEvent](arkts-clitoolevent.md)<!--DelEnd-->
     <!--Del-->

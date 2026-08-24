@@ -32,7 +32,7 @@ constructor(value: AttachmentType | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AttachmentType](arkts-arkui-attachmenttype-t.md) \| undefined | 是 | PixelMap类型或 [ResourceStr](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcestr)类型图片设置项。 |
+| value | [AttachmentType](arkts-arkui-attachmenttype-t.md) \| undefined | 是 | PixelMap类型或 ResourceStr类型图片设置项。 |
 
 ## colorFilter
 
@@ -120,9 +120,7 @@ readonly resourceValue?: string
 readonly size?: SizeOptions
 ```
 
-获取属性字符串的图片尺寸。
-
-返回number类型值的单位为`px`。
+获取属性字符串的图片尺寸。返回number类型值的单位为`px`。
 
 **类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -142,11 +140,7 @@ readonly size?: SizeOptions
 readonly sizeInVp?: SizeOptions
 ```
 
-获取属性字符串的图片尺寸。
-
-返回number类型值的单位为`vp`。
-
-当ImageAttachment尺寸设置为负数值或undefined时，返回为undefined。
+获取属性字符串的图片尺寸。返回number类型值的单位为`vp`。当ImageAttachment尺寸设置为负数值或undefined时，返回为undefined。
 
 **类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -166,11 +160,7 @@ readonly sizeInVp?: SizeOptions
 readonly supportSvg2?: boolean
 ```
 
-获取属性字符串是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。
-
-true：支持SVG解析新能力；false：保持原有SVG解析能力。
-
-默认值：false
+获取属性字符串是否开启SVG标签解析能力增强功能。true：支持SVG解析新能力；false：保持原有SVG解析能力。默认值：false
 
 **类型：** boolean
 

@@ -1,8 +1,6 @@
 # RowOptions
 
-Define options used to construct a row.
-
-@interface RowOptions
+Define options used to construct a row.@interface RowOptions
 
 **Since:** 23
 
@@ -18,9 +16,7 @@ Define options used to construct a row.
 space?: string | double
 ```
 
-Row spacing.
-
-Anonymous Object Rectification
+Row spacing.Anonymous Object Rectification
 
 **Type:** string \| double
 

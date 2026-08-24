@@ -2,13 +2,11 @@
 
 StackLayoutAlgorithm constructor options.
 
-@interface StackLayoutAlgorithmOptions
-
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
 
-<!--Device-unnamed-interface StackLayoutAlgorithmOptions--><!--Device-unnamed-interface StackLayoutAlgorithmOptions-End-->
+<!--Device-unnamed-export declare interface StackLayoutAlgorithmOptions--><!--Device-unnamed-export declare interface StackLayoutAlgorithmOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,6 +1,6 @@
 # AudioSpatialDeviceType（系统接口）
 
-Describes a spatial device type group.
+枚举，空间化设备类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Describes a spatial device type group.
 SPATIAL_DEVICE_TYPE_NONE = 0
 ```
 
-Audio Spatial Device Type none.
+无空间化设备类型。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Audio Spatial Device Type none.
 SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE = 1
 ```
 
-Audio Spatial Device Type in-ear headphone.
+入耳式耳机。
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ Audio Spatial Device Type in-ear headphone.
 SPATIAL_DEVICE_TYPE_HALF_IN_EAR_HEADPHONE = 2
 ```
 
-Audio Spatial Device Type half-in-ear headphone.
+半入耳式耳机。
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ Audio Spatial Device Type half-in-ear headphone.
 SPATIAL_DEVICE_TYPE_OVER_EAR_HEADPHONE = 3
 ```
 
-Audio Spatial Device Type over-ear headphone.
+头戴式耳机。
 
 **起始版本：** 23
 
@@ -80,7 +80,7 @@ Audio Spatial Device Type over-ear headphone.
 SPATIAL_DEVICE_TYPE_GLASSES = 4
 ```
 
-Audio Spatial Device Type glasses.
+眼镜式耳机。
 
 **起始版本：** 23
 
@@ -96,7 +96,7 @@ Audio Spatial Device Type glasses.
 SPATIAL_DEVICE_TYPE_OTHERS = 5
 ```
 
-Audio Spatial Device Type others.
+其他空间化设备类型。
 
 **起始版本：** 23
 

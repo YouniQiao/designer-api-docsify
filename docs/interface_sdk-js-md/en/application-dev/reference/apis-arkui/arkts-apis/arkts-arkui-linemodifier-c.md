@@ -1,8 +1,6 @@
 # LineModifier
 
-Defines Line Modifier
-
-@implements LineAttribute, AttributeModifier&lt;LineAttribute&gt;
+Defines Line Modifier@implements LineAttribute, AttributeModifier&lt;LineAttribute&gt;
 
 **Inheritance/Implementation:** LineModifier implements LineAttribute, AttributeModifier<LineAttribute>
 

@@ -2,8 +2,7 @@
 
 formInfo模块提供了卡片信息和状态等相关类型和枚举。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 当前页面仅包含本模块的系统接口，其他公共接口参见[@ohos.app.form.formInfo (formInfo)](#ohosappformforminfo)。
 
 **起始版本：** 23

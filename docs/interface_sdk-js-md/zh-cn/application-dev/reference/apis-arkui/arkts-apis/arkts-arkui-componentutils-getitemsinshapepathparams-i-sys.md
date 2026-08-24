@@ -1,8 +1,6 @@
 # GetItemsInShapePathParams（系统接口）
 
-Image options setted when need to get the image objects.
-
-@interface GetItemsInShapePathParams
+Image options setted when need to get the image objects.@interface GetItemsInShapePathParams
 
 **起始版本：** 23
 

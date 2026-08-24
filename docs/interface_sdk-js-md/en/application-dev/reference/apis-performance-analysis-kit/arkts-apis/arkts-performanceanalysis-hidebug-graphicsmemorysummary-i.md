@@ -1,8 +1,6 @@
 # GraphicsMemorySummary
 
-Describes the GPU memory data of an application, including the GL and Graph parts.
-
-@interface GraphicsMemorySummary
+Describes the GPU memory data of an application, including the GL and Graph parts.@interface GraphicsMemorySummary
 
 **Since:** 23
 

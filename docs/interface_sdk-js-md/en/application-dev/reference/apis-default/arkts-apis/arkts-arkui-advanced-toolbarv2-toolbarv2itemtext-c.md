@@ -6,6 +6,8 @@ Defines the text of a toolbar item.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2ItemText--><!--Device-unnamed-export declare class ToolBarV2ItemText-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,21 +44,18 @@ A constructor used to create a **ToolBarV2ItemText** instance.
 ## activatedColor
 
 ```TypeScript
-@Trace
-  public activatedColor?: ColorMetrics
+public activatedColor?: ColorMetrics
 ```
 
-Font color of the toolbar item in the activated state.
+Font color of the toolbar item in the activated state.&lt;/div&gt;Default value: **\$r('sys.color.font_emphasize')**.Decorator: @Trace
 
-&lt;/div&gt;Default value: **\$r('sys.color.font_emphasize')**.
-
-Decorator: @Trace
-
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,21 +66,18 @@ Decorator: @Trace
 ## color
 
 ```TypeScript
-@Trace
-  public color?: ColorMetrics
+public color?: ColorMetrics
 ```
 
-Font color of the toolbar item.
+Font color of the toolbar item.Default value: **\$r('sys.color.font_primary')**.Decorator: @Trace
 
-Default value: **\$r('sys.color.font_primary')**.
-
-Decorator: @Trace
-
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,19 +88,18 @@ Decorator: @Trace
 ## text
 
 ```TypeScript
-@Trace
-  public text: ResourceStr
+public text: ResourceStr
 ```
 
-Text of the toolbar item.
-
-Decorator: @Trace
+Text of the toolbar item.Decorator: @Trace
 
 **Type:** ResourceStr
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,8 +1,6 @@
 # GridColOptions
 
-设置栅格列布局组件布局选项。
-
-@interface GridColOptions
+设置栅格列布局组件布局选项。@interface GridColOptions
 
 **起始版本：** 23
 

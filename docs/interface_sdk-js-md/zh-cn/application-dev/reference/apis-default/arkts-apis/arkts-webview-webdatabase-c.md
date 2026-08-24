@@ -1,8 +1,6 @@
 # WebDataBase
 
-Implements a WebDataBase object.
-
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in WebDataBase. </p>
+Implements a WebDataBase object.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in WebDataBase. </p>
 
 **起始版本：** 23
 

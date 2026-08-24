@@ -69,8 +69,7 @@ function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 
 Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Before calling **constructTLSSocketInstance**, ensure that a **TCPSocket** connection has been established and no
 > data is transmitted. After a successful upgrade, you do not need to call the **close** API for the **TCPSocket**
 > object.

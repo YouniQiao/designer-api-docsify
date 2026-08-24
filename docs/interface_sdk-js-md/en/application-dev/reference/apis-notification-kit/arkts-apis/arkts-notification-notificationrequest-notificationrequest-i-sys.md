@@ -166,8 +166,7 @@ Custom group notification information. This parameter is left empty by default.
 isRemoveAllowed?: boolean
 ```
 
-Whether the notification can be removed. If a notification is not removable, it will not be deleted when the user touches the delete button below the notification, and it also cannot be deleted by swiping left on the notification and touching the delete button. The default value is **true**.
-
+Whether the notification can be removed. If a notification is not removable, it will not be deleted when the user touches the delete button below the notification, and it also cannot be deleted by swiping left on the notification and touching the delete button. The default value is **true**.  
 - **true**: The notification can be removed. - **false**: The notification cannot be removed.
 
 **Type:** boolean

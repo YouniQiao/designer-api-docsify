@@ -1,8 +1,6 @@
 # TextPickerTextStyle
 
-Defines the text style options.
-
-@extends PickerTextStyle @interface TextPickerTextStyle
+Defines the text style options.@extends PickerTextStyle @interface TextPickerTextStyle
 
 **Inheritance/Implementation:** TextPickerTextStyle extends PickerTextStyle
 
@@ -60,9 +58,7 @@ Minimum font size, used in conjunction with maxFontSize. When minFontSize and ma
 overflow?: TextOverflow
 ```
 
-Display mode when the text is too long.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: Ineffective when set to MARQUEE. </p>
+Display mode when the text is too long.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: Ineffective when set to MARQUEE. </p>
 
 **Type:** [TextOverflow](../../apis-arkui/arkts-apis/arkts-arkui-textoverflow-e.md)
 

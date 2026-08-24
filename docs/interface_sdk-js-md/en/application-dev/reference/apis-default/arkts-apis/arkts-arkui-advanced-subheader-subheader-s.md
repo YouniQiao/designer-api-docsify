@@ -2,10 +2,8 @@
 
 The **SubHeader** component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.
 
-> **NOTE：**
-> 
-> - This component can be used only in the stage model.
-> 
+> **NOTE：**&gt;
+> - This component can be used only in the stage model.&gt;
 > - If the **SubHeader** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -16,6 +14,8 @@ The **SubHeader** component is positioned at the top of list items or content se
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct SubHeader--><!--Device-unnamed-export declare struct SubHeader-End-->
 
@@ -29,8 +29,7 @@ The **SubHeader** component is positioned at the top of list items or content se
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -38,6 +37,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,21 +49,10 @@ The method to build component.
 ## contentMargin
 
 ```TypeScript
-@PropRef
-  contentMargin?: LocalizedMargin
+contentMargin?: LocalizedMargin
 ```
 
-Margin of the content. Negative numbers are not supported.
-
-Default value:
-
-`{start: LengthMetrics.resource(`
-
-`\$r('sys.float.margin_left'))`,
-
-`end: LengthMetrics.resource(`
-
-`\$r('sys.float.margin_right'))}`
+Margin of the content. Negative numbers are not supported.Default value:`{start: LengthMetrics.resource(``\$r('sys.float.margin_left'))`,`end: LengthMetrics.resource(``\$r('sys.float.margin_right'))}`
 
 **Type:** LocalizedMargin
 
@@ -71,6 +61,8 @@ Default value:
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,17 +73,10 @@ Default value:
 ## contentPadding
 
 ```TypeScript
-@PropRef
-  contentPadding?: LocalizedPadding
+contentPadding?: LocalizedPadding
 ```
 
-Padding of the content.
-
-Default value:
-
-If a secondary title, with or without an icon, is displayed on the left:
-
-{start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)}
+Padding of the content.Default value:If a secondary title, with or without an icon, is displayed on the left:{start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)}
 
 **Type:** LocalizedPadding
 
@@ -100,6 +85,8 @@ If a secondary title, with or without an icon, is displayed on the left:
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,21 +97,18 @@ If a secondary title, with or without an icon, is displayed on the left:
 ## icon
 
 ```TypeScript
-@PropRef
-  icon?: ResourceStr
+icon?: ResourceStr
 ```
 
-Icon.
-
-Default value: **undefined**, indicating that no icon is displayed.
-
-The **icon** attribute takes effect only when the **secondaryTitle** attribute is used.
+Icon.Default value: **undefined**, indicating that no icon is displayed.The **icon** attribute takes effect only when the **secondaryTitle** attribute is used.
 
 **Type:** ResourceStr
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,9 +122,7 @@ The **icon** attribute takes effect only when the **secondaryTitle** attribute i
 iconSymbolOptions?: SymbolOptions
 ```
 
-Icon symbol options. This parameter is available when **icon** is set to a symbol glyph.
-
-Default value: **undefined**, indicating that no icon is displayed.
+Icon symbol options. This parameter is available when **icon** is set to a symbol glyph.Default value: **undefined**, indicating that no icon is displayed.
 
 **Type:** [SymbolOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)
 
@@ -160,9 +142,7 @@ Default value: **undefined**, indicating that no icon is displayed.
 operationItem?: Array<OperationOption>
 ```
 
-Items in the operation area (right).
-
-Default value: **undefined**, indicating that the operation area is not displayed.
+Items in the operation area (right).Default value: **undefined**, indicating that the operation area is not displayed.
 
 **Type:** Array&lt;[OperationOption](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheader-operationoption-c.md)&gt;
 
@@ -182,11 +162,7 @@ Default value: **undefined**, indicating that the operation area is not displaye
 operationSymbolOptions?: Array<SymbolOptions>
 ```
 
-Icon symbol options.
-
-This parameter is available when **operationType** is set to **OperationType.ICON_GROUP** and **operationItem** is set to an array of symbol glyphs.
-
-Default value: **undefined**, indicating that no symbol icon is set.
+Icon symbol options.This parameter is available when **operationType** is set to **OperationType.ICON_GROUP** and **operationItem** is set to an array of symbol glyphs.Default value: **undefined**, indicating that no symbol icon is set.
 
 **Type:** Array&lt;[SymbolOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)&gt;
 
@@ -203,19 +179,18 @@ Default value: **undefined**, indicating that no symbol icon is set.
 ## operationType
 
 ```TypeScript
-@PropRef
-  operationType?: OperationType
+operationType?: OperationType
 ```
 
-Style of elements in the operation area (right).
-
-Default value: **OperationType.BUTTON**
+Style of elements in the operation area (right).Default value: **OperationType.BUTTON**
 
 **Type:** [OperationType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheader-operationtype-e.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,21 +201,18 @@ Default value: **OperationType.BUTTON**
 ## primaryTitle
 
 ```TypeScript
-@PropRef
-  primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
-Primary title.
-
-Default value: **undefined**, indicating that no primary title is displayed.
-
-When the **primaryTitle**, **secondaryTitle**, and **icon** attributes are used simultaneously, the **primaryTitle** attribute will not take effect.
+Primary title.Default value: **undefined**, indicating that no primary title is displayed.When the **primaryTitle**, **secondaryTitle**, and **icon** attributes are used simultaneously, the **primaryTitle** attribute will not take effect.
 
 **Type:** ResourceStr
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -254,9 +226,7 @@ When the **primaryTitle**, **secondaryTitle**, and **icon** attributes are used 
 primaryTitleModifier?: TextModifier
 ```
 
-Text attributes of the primary title, such as the font color, font size, and font weight.
-
-Default value: **undefined**, indicating that the default style is used.
+Text attributes of the primary title, such as the font color, font size, and font weight.Default value: **undefined**, indicating that the default style is used.
 
 **Type:** [TextModifier](../../apis-arkui/arkts-apis/arkts-arkui-textmodifier-c.md)
 
@@ -273,19 +243,18 @@ Default value: **undefined**, indicating that the default style is used.
 ## secondaryTitle
 
 ```TypeScript
-@PropRef
-  secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
-Secondary title.
-
-Default value: **undefined**, indicating that no secondary title is displayed.
+Secondary title.Default value: **undefined**, indicating that no secondary title is displayed.
 
 **Type:** ResourceStr
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -299,9 +268,7 @@ Default value: **undefined**, indicating that no secondary title is displayed.
 secondaryTitleModifier?: TextModifier
 ```
 
-Text attributes of the secondary title, such as the font color, font size, and font weight.
-
-Default value: **undefined**, indicating that the default style is used.
+Text attributes of the secondary title, such as the font color, font size, and font weight.Default value: **undefined**, indicating that the default style is used.
 
 **Type:** [TextModifier](../../apis-arkui/arkts-apis/arkts-arkui-textmodifier-c.md)
 
@@ -321,9 +288,7 @@ Default value: **undefined**, indicating that the default style is used.
 select?: SelectOptions
 ```
 
-Content and events for selection.
-
-Default value: **undefined**, indicating that no drop-down list is displayed.
+Content and events for selection.Default value: **undefined**, indicating that no drop-down list is displayed.
 
 **Type:** [SelectOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheader-selectoptions-c.md)
 
@@ -340,21 +305,18 @@ Default value: **undefined**, indicating that no drop-down list is displayed.
 ## titleAccessibilityText
 
 ```TypeScript
-@PropRef
-  titleAccessibilityText?: ResourceStr
+titleAccessibilityText?: ResourceStr
 ```
 
-Customized content to be read in the title.
-
-Default value: **undefined**.
-
-If the value is **undefined**, the title content displayed by the component is read by default.
+Customized content to be read in the title.Default value: **undefined**.If the value is **undefined**, the title content displayed by the component is read by default.
 
 **Type:** ResourceStr
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -365,19 +327,18 @@ If the value is **undefined**, the title content displayed by the component is r
 ## titleBuilder
 
 ```TypeScript
-@BuilderParam
-  titleBuilder?: () => void
+titleBuilder?: () => void
 ```
 
-Content of the custom title area.
-
-Default value: **undefined**, indicating that no custom title is used.
+Content of the custom title area.Default value: **undefined**, indicating that no custom title is used.
 
 **Type:** () =&gt; void
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -388,8 +349,7 @@ Default value: **undefined**, indicating that no custom title is used.
 ## titleId
 
 ```TypeScript
-@PropRef
-  titleId?: string
+titleId?: string
 ```
 
 Set the id for the title.
@@ -399,6 +359,8 @@ Set the id for the title.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

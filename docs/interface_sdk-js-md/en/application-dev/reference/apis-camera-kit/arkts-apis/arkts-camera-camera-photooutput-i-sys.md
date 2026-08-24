@@ -14,7 +14,6 @@ PhotoOutput implements output information used in a photo session. It inherits f
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## burstCapture

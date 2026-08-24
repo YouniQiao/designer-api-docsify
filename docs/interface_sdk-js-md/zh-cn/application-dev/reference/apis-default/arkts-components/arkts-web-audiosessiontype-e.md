@@ -1,8 +1,6 @@
 # AudioSessionType
 
-应用中Web音频类型。
-
-@enum { number }
+应用中Web音频类型。@enum { number }
 
 **起始版本：** 23
 

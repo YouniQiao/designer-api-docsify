@@ -1,8 +1,6 @@
 # CustomDialogOptions
 
-自定义弹窗的内容，继承自BaseDialogOptions。
-
-@extends BaseDialogOptions @interface CustomDialogOptions
+自定义弹窗的内容，继承自BaseDialogOptions。@extends BaseDialogOptions @interface CustomDialogOptions
 
 **继承/实现关系：** CustomDialogOptions extends [BaseDialogOptions](arkts-promptaction-basedialogoptions-i.md)
 

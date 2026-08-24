@@ -30,11 +30,7 @@ UNKNOWN = 0
 ADOBE_RGB_1998 = 1
 ```
 
-RGB色域为Adobe RGB(1998)类型。
-
-转换函数为Adobe RGB(1998)类型。
-
-编码范围为Full类型。
+RGB色域为Adobe RGB(1998)类型。转换函数为Adobe RGB(1998)类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -50,11 +46,7 @@ RGB色域为Adobe RGB(1998)类型。
 DCI_P3 = 2
 ```
 
-RGB色域为DCI-P3类型。
-
-转换函数为Gamma 2.6类型。
-
-编码范围为Full类型。
+RGB色域为DCI-P3类型。转换函数为Gamma 2.6类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -70,11 +62,7 @@ RGB色域为DCI-P3类型。
 DISPLAY_P3 = 3
 ```
 
-RGB色域为Display P3类型。
-
-转换函数为SRGB类型。
-
-编码范围为Full类型。
+RGB色域为Display P3类型。转换函数为SRGB类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -90,13 +78,7 @@ RGB色域为Display P3类型。
 SRGB = 4
 ```
 
-RGB色域为SRGB类型。
-
-转换函数为SRGB类型。
-
-编码范围为Full类型。
-
-系统默认色域类型。
+RGB色域为SRGB类型。转换函数为SRGB类型。编码范围为Full类型。系统默认色域类型。
 
 **起始版本：** 23
 
@@ -112,11 +94,7 @@ RGB色域为SRGB类型。
 BT709 = 6
 ```
 
-RGB色域为BT709类型。
-
-转换函数为BT709类型。
-
-编码范围为Full类型。
+RGB色域为BT709类型。转换函数为BT709类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -132,11 +110,7 @@ RGB色域为BT709类型。
 BT601_EBU = 7
 ```
 
-RGB色域为BT601_P类型。
-
-转换函数为BT709类型。
-
-编码范围为Full类型。
+RGB色域为BT601_P类型。转换函数为BT709类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -152,11 +126,7 @@ RGB色域为BT601_P类型。
 BT601_SMPTE_C = 8
 ```
 
-RGB色域为BT601_N类型。
-
-转换函数为BT709类型。
-
-编码范围为Full类型。
+RGB色域为BT601_N类型。转换函数为BT709类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -172,11 +142,7 @@ RGB色域为BT601_N类型。
 BT2020_HLG = 9
 ```
 
-RGB色域为BT2020类型。
-
-转换函数为HLG类型。
-
-编码范围为Full类型。
+RGB色域为BT2020类型。转换函数为HLG类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -192,11 +158,7 @@ RGB色域为BT2020类型。
 BT2020_PQ = 10
 ```
 
-RGB色域为BT2020类型。
-
-转换函数为PQ类型。
-
-编码范围为Full类型。
+RGB色域为BT2020类型。转换函数为PQ类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -212,11 +174,7 @@ RGB色域为BT2020类型。
 P3_HLG = 11
 ```
 
-RGB色域为Display P3类型。
-
-转换函数为HLG类型。
-
-编码范围为Full类型。
+RGB色域为Display P3类型。转换函数为HLG类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -232,11 +190,7 @@ RGB色域为Display P3类型。
 P3_PQ = 12
 ```
 
-RGB色域为Display P3类型。
-
-转换函数为PQ类型。
-
-编码范围为Full类型。
+RGB色域为Display P3类型。转换函数为PQ类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -252,11 +206,7 @@ RGB色域为Display P3类型。
 ADOBE_RGB_1998_LIMIT = 13
 ```
 
-RGB色域为Adobe RGB(1998)类型。
-
-转换函数为Adobe RGB(1998)类型。
-
-编码范围为Limit类型。
+RGB色域为Adobe RGB(1998)类型。转换函数为Adobe RGB(1998)类型。编码范围为Limit类型。
 
 **起始版本：** 23
 
@@ -272,11 +222,7 @@ RGB色域为Adobe RGB(1998)类型。
 DISPLAY_P3_LIMIT = 14
 ```
 
-RGB色域为Display P3类型。
-
-转换函数为SRGB类型。
-
-编码范围为Limit类型。
+RGB色域为Display P3类型。转换函数为SRGB类型。编码范围为Limit类型。
 
 **起始版本：** 23
 
@@ -292,11 +238,7 @@ RGB色域为Display P3类型。
 SRGB_LIMIT = 15
 ```
 
-RGB色域为SRGB类型。
-
-转换函数为SRGB类型。
-
-编码范围为Limit类型。
+RGB色域为SRGB类型。转换函数为SRGB类型。编码范围为Limit类型。
 
 **起始版本：** 23
 
@@ -312,11 +254,7 @@ RGB色域为SRGB类型。
 BT709_LIMIT = 16
 ```
 
-RGB色域为BT709类型。
-
-转换函数为BT709类型。
-
-编码范围为Limit类型。
+RGB色域为BT709类型。转换函数为BT709类型。编码范围为Limit类型。
 
 **起始版本：** 23
 
@@ -332,11 +270,7 @@ RGB色域为BT709类型。
 BT601_EBU_LIMIT = 17
 ```
 
-RGB色域为BT601_P类型。
-
-转换函数为BT709类型。
-
-编码范围为Limit类型。
+RGB色域为BT601_P类型。转换函数为BT709类型。编码范围为Limit类型。
 
 **起始版本：** 23
 
@@ -352,11 +286,7 @@ RGB色域为BT601_P类型。
 BT601_SMPTE_C_LIMIT = 18
 ```
 
-RGB色域为BT601_N类型。
-
-转换函数为BT709类型。
-
-编码范围为Limit类型。
+RGB色域为BT601_N类型。转换函数为BT709类型。编码范围为Limit类型。
 
 **起始版本：** 23
 
@@ -372,11 +302,7 @@ RGB色域为BT601_N类型。
 BT2020_HLG_LIMIT = 19
 ```
 
-RGB色域为BT2020类型。
-
-转换函数为HLG类型。
-
-编码范围为Limit类型。
+RGB色域为BT2020类型。转换函数为HLG类型。编码范围为Limit类型。
 
 **起始版本：** 23
 
@@ -392,11 +318,7 @@ RGB色域为BT2020类型。
 BT2020_PQ_LIMIT = 20
 ```
 
-RGB色域为BT2020类型。
-
-转换函数为PQ类型。
-
-编码范围为Limit类型。
+RGB色域为BT2020类型。转换函数为PQ类型。编码范围为Limit类型。
 
 **起始版本：** 23
 
@@ -412,11 +334,7 @@ RGB色域为BT2020类型。
 P3_HLG_LIMIT = 21
 ```
 
-RGB色域为Display P3类型。
-
-转换函数为HLG类型。
-
-编码范围为Limit类型。
+RGB色域为Display P3类型。转换函数为HLG类型。编码范围为Limit类型。
 
 **起始版本：** 23
 
@@ -432,11 +350,7 @@ RGB色域为Display P3类型。
 P3_PQ_LIMIT = 22
 ```
 
-RGB色域为Display P3类型。
-
-转换函数为PQ类型。
-
-编码范围为Limit类型。
+RGB色域为Display P3类型。转换函数为PQ类型。编码范围为Limit类型。
 
 **起始版本：** 23
 
@@ -452,9 +366,7 @@ RGB色域为Display P3类型。
 LINEAR_P3 = 23
 ```
 
-RGB色域为Display P3类型。
-
-转换函数为Linear类型。
+RGB色域为Display P3类型。转换函数为Linear类型。
 
 **起始版本：** 23
 
@@ -470,9 +382,7 @@ RGB色域为Display P3类型。
 LINEAR_SRGB = 24
 ```
 
-RGB色域为SRGB类型。
-
-转换函数为Linear类型。
+RGB色域为SRGB类型。转换函数为Linear类型。
 
 **起始版本：** 23
 
@@ -488,11 +398,7 @@ RGB色域为SRGB类型。
 LINEAR_BT709 = LINEAR_SRGB
 ```
 
-与LINEAR_SRGB相同。
-
-RGB色域为BT709类型。
-
-转换函数为Linear类型。
+与LINEAR_SRGB相同。RGB色域为BT709类型。转换函数为Linear类型。
 
 **起始版本：** 23
 
@@ -508,9 +414,7 @@ RGB色域为BT709类型。
 LINEAR_BT2020 = 25
 ```
 
-RGB色域为BT2020类型。
-
-转换函数为Linear类型。
+RGB色域为BT2020类型。转换函数为Linear类型。
 
 **起始版本：** 23
 
@@ -526,13 +430,7 @@ RGB色域为BT2020类型。
 DISPLAY_SRGB = SRGB
 ```
 
-与SRGB相同。
-
-RGB色域为SRGB类型。
-
-转换函数为SRGB类型。
-
-编码范围为Full类型。
+与SRGB相同。RGB色域为SRGB类型。转换函数为SRGB类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -548,13 +446,7 @@ RGB色域为SRGB类型。
 DISPLAY_P3_SRGB = DISPLAY_P3
 ```
 
-与DISPLAY_P3相同。
-
-RGB色域为Display P3类型。
-
-转换函数为SRGB类型。
-
-编码范围为Full类型。
+与DISPLAY_P3相同。RGB色域为Display P3类型。转换函数为SRGB类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -570,13 +462,7 @@ RGB色域为Display P3类型。
 DISPLAY_P3_HLG = P3_HLG
 ```
 
-与P3_HLG相同。
-
-RGB色域为Display P3类型。
-
-转换函数为HLG类型。
-
-编码范围为Full类型。
+与P3_HLG相同。RGB色域为Display P3类型。转换函数为HLG类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -592,13 +478,7 @@ RGB色域为Display P3类型。
 DISPLAY_P3_PQ = P3_PQ
 ```
 
-与P3_PQ相同。
-
-RGB色域为Display P3类型。
-
-转换函数为PQ类型。
-
-编码范围为Full类型。
+与P3_PQ相同。RGB色域为Display P3类型。转换函数为PQ类型。编码范围为Full类型。
 
 **起始版本：** 23
 
@@ -614,9 +494,7 @@ RGB色域为Display P3类型。
 H_LOG = 26
 ```
 
-RGB色域为BT2020类型。
-
-转换函数为LOG类型。
+RGB色域为BT2020类型。转换函数为LOG类型。
 
 **起始版本：** 23
 
@@ -630,11 +508,7 @@ RGB色域为BT2020类型。
 DISPLAY_BT2020_SRGB = 27
 ```
 
-RGB色域为DISPLAY BT2020类型。
-
-转换函数为SRGB类型。
-
-编码范围为Full类型。
+RGB色域为DISPLAY BT2020类型。转换函数为SRGB类型。编码范围为Full类型。
 
 **起始版本：** 23
 

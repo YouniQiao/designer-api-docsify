@@ -401,7 +401,7 @@ Collation rules for the locale. The value can be: **big5han**: Pinyin sorting fo
 hourCycle: string
 ```
 
-Time system for the locale. The value can be: "h11", "h12", "h23", or "h24". For details about their display effects, see Table 5.
+Time system for the locale. The value can be:"h11", "h12", "h23", or "h24". For details about their display effects, see Table 5.
 
 **Type:** string
 

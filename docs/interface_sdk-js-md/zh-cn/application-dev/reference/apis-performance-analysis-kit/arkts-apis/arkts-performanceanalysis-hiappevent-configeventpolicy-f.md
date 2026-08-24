@@ -12,9 +12,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function configEventPolicy(policy: EventPolicy): Promise<void>
 ```
 
-系统事件相关的配置策略设置方法，使用Promise方式作为异步回调。
-
-在同一生命周期中，可以通过配置策略设置系统事件相关的策略参数。
+系统事件相关的配置策略设置方法，使用Promise方式作为异步回调。在同一生命周期中，可以通过配置策略设置系统事件相关的策略参数。
 
 **起始版本：** 23
 

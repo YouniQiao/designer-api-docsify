@@ -1,8 +1,6 @@
 # PixelRoundCalcPolicy
 
-Pixel Round Direction
-
-@enum { number }
+Pixel Round Direction@enum { number }
 
 **Since:** 23
 

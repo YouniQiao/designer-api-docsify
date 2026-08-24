@@ -1,8 +1,6 @@
 # ColumnOptions
 
-Column constructor options.
-
-@interface ColumnOptions
+Column constructor options.@interface ColumnOptions
 
 **Since:** 23
 

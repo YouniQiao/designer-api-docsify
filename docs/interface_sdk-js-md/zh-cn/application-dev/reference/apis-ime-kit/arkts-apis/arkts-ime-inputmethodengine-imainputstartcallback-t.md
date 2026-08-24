@@ -4,7 +4,7 @@
 export type IMAInputStartCallback = (kbController: KeyboardController, inputClient: InputClient) => void
 ```
 
-@brief 输入法绑定成功事件的回调函数类型，用于定义inputStart事件触发时执行的回调函数格式。
+输入法绑定成功事件的回调函数类型，用于定义inputStart事件触发时执行的回调函数格式。
 
 **起始版本：** 23
 

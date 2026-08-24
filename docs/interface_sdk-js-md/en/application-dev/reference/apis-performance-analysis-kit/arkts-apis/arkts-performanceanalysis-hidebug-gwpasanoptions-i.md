@@ -1,8 +1,6 @@
 # GwpAsanOptions
 
-GwpAsan Options.
-
-@interface GwpAsanOptions
+GwpAsan Options.@interface GwpAsanOptions
 
 **Since:** 23
 

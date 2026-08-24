@@ -52,8 +52,7 @@ Ability组件未响应。
 NORMAL = 2
 ```
 
-用户主动关闭应用，应用程序正常退出。
-
+用户主动关闭应用，应用程序正常退出。  
 **说明：**当开发者直接调用process.exit()、内核kill命令等非Ability Kit提供的能 力强制退出应用进程时，也会返回NORMAL。
 
 **起始版本：** 23
@@ -126,8 +125,7 @@ APP_FREEZE = 5
 PERFORMANCE_CONTROL = 6
 ```
 
-因系统性能问题（如设备内存不足）导致的应用程序退出。
-
+因系统性能问题（如设备内存不足）导致的应用程序退出。  
 **说明：**该接口即将废弃，建议使用RESOURCE_CONTROL替代。
 
 **起始版本：** 23
@@ -146,8 +144,7 @@ PERFORMANCE_CONTROL = 6
 RESOURCE_CONTROL = 7
 ```
 
-系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md)获取，可能原因如下:
-
+系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md)获取，可能原因如下:  
 - CPU Highload，CPU高负载。 - CPU_EXT Highload，快速CPU负载检测。 - IO Manage Control，I/O管控。 - App Memory Deterioration，应用内存超限劣化。 - Temperature Control，温度管控。 - Memory Pressure，整机低内存触发按优先级由低到高终止进程。
 
 **起始版本：** 23

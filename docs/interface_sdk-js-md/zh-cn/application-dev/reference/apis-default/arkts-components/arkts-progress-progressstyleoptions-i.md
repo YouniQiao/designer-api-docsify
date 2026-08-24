@@ -1,8 +1,6 @@
 # ProgressStyleOptions
 
-进度条样式选项。
-
-继承自[CommonProgressStyleOptions](arkts-progress-commonprogressstyleoptions-i.md)。
+进度条样式选项。继承自[CommonProgressStyleOptions](arkts-progress-commonprogressstyleoptions-i.md)。
 
 **继承/实现关系：** ProgressStyleOptions extends [CommonProgressStyleOptions](arkts-progress-commonprogressstyleoptions-i.md)
 

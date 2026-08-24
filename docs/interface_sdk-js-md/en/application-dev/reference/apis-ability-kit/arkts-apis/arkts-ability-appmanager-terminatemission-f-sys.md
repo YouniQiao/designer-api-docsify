@@ -28,7 +28,7 @@ Terminates a mission. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | int | Yes | Mission ID, which can be obtained by calling [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md) . |
+| missionId | int | Yes | Mission ID, which can be obtained by calling [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md). |
 
 **Return value:**
 

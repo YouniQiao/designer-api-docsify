@@ -4,7 +4,7 @@
 type ArrayElementPredicateFn<ElementType> = (value: ElementType) => boolean
 ```
 
-Defines the ArkTS Array predicate function, which is used by the 'retainAll' API of the Array class to determine whether array elements meet certain test conditions.
+Defines the ArkTS Array predicate function, which is used by the 'retainAll'API of the Array class to determine whether array elements meet certain test conditions.
 
 **Since:** 26.1.0
 

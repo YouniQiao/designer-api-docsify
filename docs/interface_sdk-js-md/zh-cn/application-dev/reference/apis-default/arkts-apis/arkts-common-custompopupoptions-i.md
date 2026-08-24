@@ -38,9 +38,7 @@ The height of the arrow. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This paramete
 arrowOffset?: Length
 ```
 
-The offset of the sharp corner of popup.
-
-Offset of the popup arrow relative to the popup. When the arrow is at the top or bottom of the popup: <br>The value 0 indicates that the arrow is located on the leftmost, and any other value indicates the distance from the arrow to the leftmost; the arrow is centered by default. When the arrow is on the left or right side of the popup: The value indicates the distance from the arrow to the top; the arrow is centered by default. When the popup is displayed on either edge of the screen, it will automatically deviate leftward or rightward to stay within the safe area. When the value is 0, the arrow always points to the bound component.
+The offset of the sharp corner of popup.Offset of the popup arrow relative to the popup. When the arrow is at the top or bottom of the popup: <br>The value 0 indicates that the arrow is located on the leftmost, and any other value indicates the distance from the arrow to the leftmost; the arrow is centered by default. When the arrow is on the left or right side of the popup: The value indicates the distance from the arrow to the top; the arrow is centered by default. When the popup is displayed on either edge of the screen, it will automatically deviate leftward or rightward to stay within the safe area. When the value is 0, the arrow always points to the bound component.
 
 **类型：** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -560,7 +558,11 @@ Callback function before the popup closeAnimation starts.
 onWillDismiss?: boolean | Callback<DismissPopupAction>
 ```
 
-Whether to perform dismissal event interception and interception callback. 1. If this parameter is set to false, the system does not respond to the dismissal event initiated by touching the Back button, swiping left or right on the screen, or pressing the Esc key; and the system dismisses the popup only when show is set to false. If this parameter is set to true, the system responds to the dismissal event as expected. 2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>No more onWillDismiss callback is allowed in an onWillDismiss callback. </p>
+Whether to perform dismissal event interception and interception callback.
+1. If this parameter is set to false, the system does not respond to the dismissal event initiated by
+touching the Back button, swiping left or right on the screen, or pressing the Esc key; and the system dismisses the popup only when show is set to false. If this parameter is set to true, the system responds to the dismissal event as expected.
+2. If this parameter is set to a function, the dismissal event is intercepted and the callback function
+is executed. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>No more onWillDismiss callback is allowed in an onWillDismiss callback. </p>
 
 **类型：** boolean \| [Callback](arkts-callback-t.md)&lt;[DismissPopupAction](arkts-common-dismisspopupaction-i.md)&gt;
 

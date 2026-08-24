@@ -1,6 +1,6 @@
 # Movement
 
-@brief Describes the direction in which the cursor moves when the text is selected.
+Describes the direction in which the cursor moves when the text is selected.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 direction: Direction
 ```
 
-@brief Direction in which the cursor moves when the text is selected.
+Direction in which the cursor moves when the text is selected.
 
 **Type:** Direction
 

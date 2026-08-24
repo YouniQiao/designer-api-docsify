@@ -14,7 +14,6 @@ PhotoOutput implements output information used in a photo session. It inherits f
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## capture
@@ -268,9 +267,7 @@ Enables or disables automatic extended gain map delivery.
 enableMirror(enabled: boolean): void
 ```
 
-Enables or disables dynamic photo capture.
-
-Before calling this API, check whether moving photo capture is supported by calling [isMovingPhotoSupported](#ismovingphotosupported) and whether mirroring is supported by calling [isMirrorSupported](#ismirrorsupported).
+Enables or disables dynamic photo capture.Before calling this API, check whether moving photo capture is supported by calling [isMovingPhotoSupported](#ismovingphotosupported) and whether mirroring is supported by calling [isMirrorSupported](#ismirrorsupported).
 
 **Since:** 23
 
@@ -457,8 +454,7 @@ function testGetActiveProfile(videoOutput: camera.VideoOutput): camera.Profile |
 getPhotoRotation(deviceDegree?: int): ImageRotation
 ```
 
-Obtains the photo rotation angle.
-
+Obtains the photo rotation angle.  
 - Device' natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward. - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
 
 **Since:** 23
@@ -775,8 +771,7 @@ off(type: 'captureStart', callback?: AsyncCallback<number>): void
 
 Unsubscribes from capture start events.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
@@ -1184,8 +1179,7 @@ on(type: 'captureEnd', callback: AsyncCallback<CaptureEndInfo>): void
 
 Subscribes to capture end events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
@@ -1211,8 +1205,7 @@ on(type: 'captureReady', callback: AsyncCallback<void>): void
 
 Subscribes to capture ready events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 12
@@ -1238,8 +1231,7 @@ on(type: 'captureStart', callback: AsyncCallback<number>): void
 
 Subscribes to capture start events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
@@ -1267,8 +1259,7 @@ on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): voi
 
 Subscribes to capture start events. This API uses an asynchronous callback to return the [capture start ID](arkts-camera-camera-capturestartinfo-i.md).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
@@ -1294,8 +1285,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to PhotoOutput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
@@ -1321,8 +1311,7 @@ on(type: 'estimatedCaptureDuration', callback: AsyncCallback<double>): void
 
 Subscribes to estimated capture duration events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 12
@@ -1371,8 +1360,7 @@ on(type: 'frameShutterEnd', callback: AsyncCallback<FrameShutterEndInfo>): void
 
 Subscribes to frame shutter end events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 12
@@ -1398,8 +1386,7 @@ on(type: 'photoAssetAvailable', callback: AsyncCallback<photoAccessHelper.PhotoA
 
 Subscribes to photo asset available events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 12
@@ -1425,8 +1412,7 @@ on(type: 'photoAvailable', callback: AsyncCallback<Photo>): void
 
 Subscribes to the events of returning available photos. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
@@ -1472,12 +1458,10 @@ onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 
 Subscribes to the events of returning full-quality images and uncompressed images. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - You cannot call
 > [offCapturePhotoAvailable](#offcapturephotoavailable)
-> to unregister the callback in the callback listened by this API.
-> 
+> to unregister the callback in the callback listened by this API.&gt;
 > - This API can be used to register listeners only when uncompressed images in the YUV format are captured.
 
 **Since:** 23
@@ -1637,9 +1621,7 @@ Subscribes frame shutter end event callback.
 onPhotoAssetAvailable(callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to photo asset event callback.
-
-This API processes deferred photo delivery data by quickly displaying low-quality images to give users the impression of faster photo capture, while also generating high-quality images to maintain the final output quality. For details about the design specifications, see [Optimizing Deferred Photo Delivery](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-camera-shot2see).
+Subscribes to photo asset event callback.This API processes deferred photo delivery data by quickly displaying low-quality images to give users the impression of faster photo capture, while also generating high-quality images to maintain the final output quality. For details about the design specifications, see [Optimizing Deferred Photo Delivery](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-camera-shot2see).
 
 **Since:** 23
 
@@ -1715,9 +1697,7 @@ function setMovingPhotoVideoCodecTypes(photoOutput: camera.PhotoOutput, videoCod
 setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization): void
 ```
 
-Sets the photo quality prioritization strategy.
-
-Before setting the strategy, you can call [isPhotoQualityPrioritizationSupported](#isphotoqualityprioritizationsupported) to check whether the device supports the specified photo quality prioritization strategy.
+Sets the photo quality prioritization strategy.Before setting the strategy, you can call [isPhotoQualityPrioritizationSupported](#isphotoqualityprioritizationsupported) to check whether the device supports the specified photo quality prioritization strategy.
 
 **Since:** 24
 

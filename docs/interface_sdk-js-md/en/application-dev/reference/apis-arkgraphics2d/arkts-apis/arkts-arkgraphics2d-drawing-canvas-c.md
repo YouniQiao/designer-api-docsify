@@ -2,14 +2,10 @@
 
 A carrier that carries the drawn content and drawing status.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
-> 
-> 
+> transitions.&gt;>
 > The canvas comes with a default brush. The brush is black, has anti-aliasing enabled, and has no other style
 > effects. This default brush is used when no brush or pen is actively set in the canvas.
 
@@ -33,8 +29,7 @@ attachBrush(brush: Brush): void
 
 Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the brush effect changes after this API is called, you must call the API again if you want to use the new
 > effect in the subsequent drawing.
 
@@ -82,8 +77,7 @@ attachPen(pen: Pen): void
 
 Attaches a pen to the canvas. When you draw on the canvas, the pen's style is used to outline shapes.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If the pen effect changes after this API is called, you must call the API again if you want to use the new
 > effect in the subsequent drawing.
 
@@ -973,7 +967,7 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alpha | int | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
-| red | int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255 . Any passed-in floating point number is rounded down. |
+| red | int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
 | green | int | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
 | blue | int | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
 | blendMode | BlendMode | No | Blend mode. The default mode is **SRC_OVER**. |
@@ -1127,9 +1121,7 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
       filterMode: FilterMode): void
 ```
 
-Splits an image into multiple sections based on the lattice object's configuration and draws each section into the specified target rectangle on the canvas. When this API is used, the anti-aliasing enablement setting does not take effect.
-
-The intersections of even-numbered rows and columns (starting from 0) are fixed points. If the fixed lattice area fits within the target rectangle, it will be drawn without scaling. Otherwise, it will be scaled proportionally to fit the target rectangle. Any remaining space will be filled by stretching or compressing the remaining sections to cover the entire target rectangle.
+Splits an image into multiple sections based on the lattice object's configuration and draws each section into the specified target rectangle on the canvas. When this API is used, the anti-aliasing enablement setting does not take effect.The intersections of even-numbered rows and columns (starting from 0) are fixed points. If the fixed lattice area fits within the target rectangle, it will be drawn without scaling. Otherwise, it will be scaled proportionally to fit the target rectangle. Any remaining space will be filled by stretching or compressing the remaining sections to cover the entire target rectangle.
 
 **Since:** 23
 
@@ -1216,9 +1208,7 @@ drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D
       filterMode: FilterMode): void
 ```
 
-Splits an image into nine sections using two horizontal and two vertical lines: four edge sections, four corner sections, and a central section. When this API is used, the anti-aliasing enablement setting does not take effect.
-
-If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectangle without scaling. Otherwise, they will be scaled to fit the target rectangle. Any remaining space will be filled by stretching or compressing the other five sections to cover the entire target rectangle.
+Splits an image into nine sections using two horizontal and two vertical lines: four edge sections, four corner sections, and a central section. When this API is used, the anti-aliasing enablement setting does not take effect.If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectangle without scaling. Otherwise, they will be scaled to fit the target rectangle. Any remaining space will be filled by stretching or compressing the other five sections to cover the entire target rectangle.
 
 **Since:** 23
 
@@ -1646,9 +1636,9 @@ Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed 
 | pixelmap | image.PixelMap | Yes | PixelMap** to draw. |
 | meshWidth | int | Yes | Number of columns in the mesh. The value is an integer greater than 0. |
 | meshHeight | int | Yes | Number of rows in the mesh. The value is an integer greater than 0. |
-| vertices | Array&lt;double&gt; | Yes | Array of vertices, which specify the position to draw. The value is a floating-point array and the size must be ((meshWidth+1) (meshHeight+1) + vertOffset) 2. |
+| vertices | Array&lt;double&gt; | Yes | Array of vertices, which specify the position to draw. The value is a floating-point array and the size must be ((meshWidth+1) * (meshHeight+1) + vertOffset) * 2. |
 | vertOffset | int | Yes | Number of vert elements to skip before drawing. The value is an integer greater than or equal to 0. |
-| colors | Array&lt;int&gt; \| null | Yes | Array of colors, which specify the color at each vertex. The value is an integer array and can be null. The size must be (meshWidth+1) (meshHeight+1) + colorOffset.<br>**Since:** 20 |
+| colors | Array&lt;int&gt; \| null | Yes | Array of colors, which specify the color at each vertex. The value is an integer array and can be null. The size must be (meshWidth+1) * (meshHeight+1) + colorOffset.<br>**Since:** 20 |
 | colorOffset | int | Yes | Number of color elements to skip before drawing. The value is an integer greater than or equal to 0. |
 
 **Error codes:**
@@ -2114,8 +2104,8 @@ Draws a single character. If the typeface of the current font does not support t
 | --- | --- | --- | --- |
 | text | string | Yes | Single character to draw. The length of the string must be **1**. |
 | font | Font | Yes | Font** object. |
-| x | double | Yes | X coordinate of the left point (red point in the figure below) of the character baseline ( blue line in the figure below). The value is a floating point number. |
-| y | double | Yes | Y coordinate of the left point (red point in the figure below) of the character baseline ( blue line in the figure below). The value is a floating point number. |
+| x | double | Yes | X coordinate of the left point (red point in the figure below) of the character baseline (blue line in the figure below). The value is a floating point number. |
+| y | double | Yes | Y coordinate of the left point (red point in the figure below) of the character baseline (blue line in the figure below). The value is a floating point number. |
 
 **Error codes:**
 

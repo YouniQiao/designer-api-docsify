@@ -13,16 +13,13 @@ function mmap(file: int | File, mode: MappingMode, offset: long, size: int): Pro
 
 Creates a file mapping object based on a file descriptor or file object for efficient read and write access to files. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. Memory mapping can be performed only for regular files. Non-regular files, such as
 > pipeline, socket, and device
 > files, are not supported. You can use [statSync()](arkts-fileio-statsync-f.md) to obtain file attributes and then call
-> [Stat.isFile()](arkts-fileio-stat-i.md#isfile) to check whether the file is a regular file.
-> 
+> [Stat.isFile()](arkts-fileio-stat-i.md#isfile) to check whether the file is a regular file.&gt;
 > 2. If the mapping range exceeds the raw file size and the write permission is granted for the file, the mapping
-> file size will be automatically expanded.
-> 
+> file size will be automatically expanded.&gt;
 > 3. For files from external storage or network files, the establishment of mappings and access
 > to the mapped memory
 > are not guaranteed due to differences in the underlying file system. This may cause the application to terminate

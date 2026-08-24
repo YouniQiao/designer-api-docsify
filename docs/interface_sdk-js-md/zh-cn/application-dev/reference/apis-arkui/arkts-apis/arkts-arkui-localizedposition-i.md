@@ -1,8 +1,6 @@
 # LocalizedPosition
 
-Defines the LocalizedPosition.
-
-@interface LocalizedPosition
+Defines the LocalizedPosition.@interface LocalizedPosition
 
 **起始版本：** 12
 

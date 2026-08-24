@@ -2,11 +2,12 @@
 
 AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行自定义的属性进行简化，限制最多显示5个页签，固定页签的样式、位置和大小。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 12
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct AtomicServiceTabs--><!--Device-unnamed-export declare struct AtomicServiceTabs-End-->
 
@@ -21,8 +22,7 @@ import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, On
 ## barBackgroundColor
 
 ```TypeScript
-@Prop
-  barBackgroundColor?: ResourceColor
+barBackgroundColor?: ResourceColor
 ```
 
 设置TabBar的背景颜色，默认值为透明。
@@ -30,6 +30,8 @@ import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, On
 **类型：** ResourceColor
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,8 +42,7 @@ import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, On
 ## barOverlap
 
 ```TypeScript
-@Prop
-  barOverlap?: boolean
+barOverlap?: boolean
 ```
 
 设置TabBar是否背景变模糊并叠加在TabContent之上。 true表示TabBar背景变模糊并叠加在TabContent之上，false表示TabBar背景不变模糊且不叠加在TabContent之上。默认值为true。
@@ -49,6 +50,8 @@ import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, On
 **类型：** boolean
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -77,8 +80,7 @@ Tabs组件的控制器，用于控制页签切换。默认值为new TabsControll
 ## index
 
 ```TypeScript
-@Prop
-  index?: number
+index?: number
 ```
 
 设置当前显示页签的索引，索引值从0开始，取值范围为[0, 页签数-1]，最大不超过4。默认值为0。
@@ -86,6 +88,8 @@ Tabs组件的控制器，用于控制页签切换。默认值为new TabsControll
 **类型：** number
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -96,8 +100,7 @@ Tabs组件的控制器，用于控制页签切换。默认值为new TabsControll
 ## layoutMode
 
 ```TypeScript
-@Prop
-  layoutMode?: LayoutMode
+layoutMode?: LayoutMode
 ```
 
 设置底部页签的图片、文字排布的方式，默认值为LayoutMode.VERTICAL。
@@ -105,6 +108,8 @@ Tabs组件的控制器，用于控制页签切换。默认值为new TabsControll
 **类型：** LayoutMode
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -169,8 +174,7 @@ Tabs页签点击后触发的事件，回调参数为被点击页签的索引值�
 ## tabBarOptionsArray
 
 ```TypeScript
-@Prop
-  tabBarOptionsArray: [
+tabBarOptionsArray: [
     TabBarOptions,
     TabBarOptions,
     TabBarOptions?,
@@ -185,6 +189,8 @@ Tabs页签点击后触发的事件，回调参数为被点击页签的索引值�
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AtomicServiceTabs-@Prop  tabBarOptionsArray: [    TabBarOptions,    TabBarOptions,    TabBarOptions?,    TabBarOptions?,    TabBarOptions?  ]--><!--Device-AtomicServiceTabs-@Prop  tabBarOptionsArray: [    TabBarOptions,    TabBarOptions,    TabBarOptions?,    TabBarOptions?,    TabBarOptions?  ]-End-->
@@ -194,8 +200,7 @@ Tabs页签点击后触发的事件，回调参数为被点击页签的索引值�
 ## tabBarPosition
 
 ```TypeScript
-@Prop
-  tabBarPosition?: TabBarPosition
+tabBarPosition?: TabBarPosition
 ```
 
 设置页签栏位置，默认值为TabBarPosition.BOTTOM。
@@ -203,6 +208,8 @@ Tabs页签点击后触发的事件，回调参数为被点击页签的索引值�
 **类型：** [TabBarPosition](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -213,8 +220,7 @@ Tabs页签点击后触发的事件，回调参数为被点击页签的索引值�
 ## tabContents
 
 ```TypeScript
-@BuilderParam
-  tabContents?: [ 
+tabContents?: [ 
     TabContentBuilder?,
     TabContentBuilder?,
     TabContentBuilder?,
@@ -228,6 +234,8 @@ Tabs页签点击后触发的事件，回调参数为被点击页签的索引值�
 **类型：** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

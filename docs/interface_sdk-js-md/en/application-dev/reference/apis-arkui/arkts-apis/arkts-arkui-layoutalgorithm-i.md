@@ -2,8 +2,7 @@
 
 Basic layout algorithm of the [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) container.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This type of variable can be assigned a specific layout algorithm class object, such as an object of the
 > CustomLayoutAlgorithm or RowLayoutAlgorithm class.
 

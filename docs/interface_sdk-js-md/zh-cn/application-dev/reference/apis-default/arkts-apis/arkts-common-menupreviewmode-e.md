@@ -1,8 +1,6 @@
 # MenuPreviewMode
 
-Defines the menu preview mode.
-
-@enum { number }
+Defines the menu preview mode.@enum { number }
 
 **起始版本：** 23
 

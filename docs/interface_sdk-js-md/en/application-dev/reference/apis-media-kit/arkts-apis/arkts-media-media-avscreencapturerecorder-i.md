@@ -410,10 +410,8 @@ presentPicker(): Promise<void>
 
 Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording source, such as changing the window or screen being recorded. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - The ongoing capture process remains uninterrupted while updating the recording source.
-> 
+> **NOTE：**&gt;
+> - The ongoing capture process remains uninterrupted while updating the recording source.&gt;
 > - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly
 > selected source.
 
@@ -927,9 +925,7 @@ if (avScreenCaptureRecorder != undefined) {
 skipPrivacyMode(windowIDs: Array<int>): Promise<void>
 ```
 
-During screen capture, the application can exempt its privacy windows from security purposes. This API uses a promise to return the result.
-
-For example, if a user enters a password in this application during screen capture, the application will not display a black screen.
+During screen capture, the application can exempt its privacy windows from security purposes. This API uses a promise to return the result.For example, if a user enters a password in this application during screen capture, the application will not display a black screen.
 
 **Since:** 23
 

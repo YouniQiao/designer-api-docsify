@@ -2,10 +2,8 @@
 
 The **Toolbar** component is designed to present a set of action options related to the current screen, displayed at the bottom of the screen. It can display up to five child components. If there are six or more child components, the first four are shown directly, and the additional ones are grouped under a **More** item on the rightmost side of the toolbar.
 
-> **NOTE：**
-> 
-> - This component can be used only in the stage model.
-> 
+> **NOTE：**&gt;
+> - This component can be used only in the stage model.&gt;
 > - If the **ToolBar** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -15,6 +13,8 @@ The **Toolbar** component is designed to present a set of action options related
 
 **Since:** 10
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ToolBar--><!--Device-unnamed-export declare struct ToolBar-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,25 +23,21 @@ The **Toolbar** component is designed to present a set of action options related
 
 ```TypeScript
 import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
 ```
 
 ## activateIndex
 
 ```TypeScript
-@Prop
-  activateIndex?: number
+activateIndex?: number
 ```
 
-Index of the active item.
-
-The value must be greater than or equal to -1.
-
-The default value is **-1**, indicating that there is no active item. Values less than -1 are treated as no active item.
+Index of the active item.The value must be greater than or equal to -1.The default value is **-1**, indicating that there is no active item. Values less than -1 are treated as no active item.
 
 **Type:** number
 
 **Since:** 10
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,17 +70,16 @@ Toolbar controller, which cannot be used for controlling individual toolbar item
 ## dividerModifier
 
 ```TypeScript
-@Prop
-  dividerModifier?: DividerModifier
+dividerModifier?: DividerModifier
 ```
 
-Modifier for the toolbar header divider, which can be used to customize the divider's height, color, and other attributes.
-
-Default value: system default value
+Modifier for the toolbar header divider, which can be used to customize the divider's height, color, and other attributes.Default value: system default value
 
 **Type:** [DividerModifier](arkts-arkui-dividermodifier-c.md)
 
 **Since:** 13
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,8 +92,7 @@ Default value: system default value
 ## toolBarList
 
 ```TypeScript
-@ObjectLink
-  toolBarList: ToolBarOptions
+toolBarList: ToolBarOptions
 ```
 
 Toolbar list.
@@ -106,6 +100,8 @@ Toolbar list.
 **Type:** [ToolBarOptions](arkts-arkui-arkui-advanced-toolbar-toolbaroptions-c.md)
 
 **Since:** 10
+
+**Decorator:** @ObjectLink
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,25 +114,16 @@ Toolbar list.
 ## toolBarModifier
 
 ```TypeScript
-@Prop
-  toolBarModifier?: ToolBarModifier
+toolBarModifier?: ToolBarModifier
 ```
 
-Modifier for the toolbar, which can be used to set the toolbar's height, background color, padding (which only takes effect when there are fewer than five toolbar items), and whether to display the pressed state.
-
-Default value:
-
-Height of the toolbar: **56vp**
-
-Background color: **ohos_id_toolbar_bg**
-
-Padding: **24vp**
-
-Whether to display the pressed state: yes
+Modifier for the toolbar, which can be used to set the toolbar's height, background color, padding (which only takes effect when there are fewer than five toolbar items), and whether to display the pressed state.Default value:Height of the toolbar: **56vp**Background color: **ohos_id_toolbar_bg**Padding: **24vp**Whether to display the pressed state: yes
 
 **Type:** [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md)
 
 **Since:** 13
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

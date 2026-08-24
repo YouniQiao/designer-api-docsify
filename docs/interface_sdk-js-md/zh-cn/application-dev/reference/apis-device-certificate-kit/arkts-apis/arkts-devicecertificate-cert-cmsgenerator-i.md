@@ -2,8 +2,7 @@
 
 提供生成CMS（Cryptographic Message Syntax）消息的API。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、
 > 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
 
@@ -17,8 +16,6 @@
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## addCert
@@ -27,9 +24,7 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 addCert(cert: X509Cert): void
 ```
 
-用于添加内容类型为SIGNED_DATA的CMS的证书，例如签名证书的颁发者证书。
-
-<br>如果未调用addSigner接口，并且仅添加证书后，生成的CMS签名数据将只包含证书。
+用于添加内容类型为SIGNED_DATA的CMS的证书，例如签名证书的颁发者证书。<br>如果未调用addSigner接口，并且仅添加证书后，生成的CMS签名数据将只包含证书。
 
 **起始版本：** 23
 
@@ -178,9 +173,7 @@ function testAddCert() {
 addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 ```
 
-为内容类型为ENVELOPED_DATA的CMS添加接收者信息。使用Promise方式返回结果。
-
-<br>该方法至少需要设置一个接收者。
+为内容类型为ENVELOPED_DATA的CMS添加接收者信息。使用Promise方式返回结果。<br>该方法至少需要设置一个接收者。
 
 **起始版本：** 23
 
@@ -302,8 +295,7 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 用于为内容类型为SIGNED_DATA的CMS添加签名者信息。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 自签名证书不能作为签名者。
 
 **起始版本：** 23
@@ -980,9 +972,7 @@ function testDoFinalSync() {
 getEncryptedContentData(): Promise<Uint8Array>
 ```
 
-用于获取内容类型为ENVELOPED_DATA的CMS的加密内容数据。使用Promise方式返回结果。
-
-<br>如果创建了类型为ENVELOPED_DATA的CmsGenerator并使用了数据分离来生成CMS封装数据，使用此方法来获取加密的内容数据。
+用于获取内容类型为ENVELOPED_DATA的CMS的加密内容数据。使用Promise方式返回结果。<br>如果创建了类型为ENVELOPED_DATA的CmsGenerator并使用了数据分离来生成CMS封装数据，使用此方法来获取加密的内容数据。
 
 **起始版本：** 23
 
@@ -1109,9 +1099,7 @@ async function testGetEncryptedContentData() {
 setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void
 ```
 
-为内容类型为ENVELOPED_DATA的CMS设置加密算法。
-
-<br>该方法应在创建ENVELOPED_DATA类型的CmsGenerator后立即调用。如果未调用此方法，则默认使用AES_256_GCM作为加密算法。
+为内容类型为ENVELOPED_DATA的CMS设置加密算法。<br>该方法应在创建ENVELOPED_DATA类型的CmsGenerator后立即调用。如果未调用此方法，则默认使用AES_256_GCM作为加密算法。
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # WebNativeMessagingExtensionContext
 
-WebNativeMessagingExtensionContext is the runtime context of the native web message extension ( [WebNativeMessagingExtensionAbility](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md)). It inherits from ExtensionContext and provides lifecycle management, ability startup, and native message connection control capabilities for the extension ability. In an extension that inherits from WebNativeMessagingExtensionAbility, developers can obtain this context through `this.context` and then call [startAbility](#startability) to start another ability, call [startAbilityForResult](#startabilityforresult) to start a UIAbility and receive the return result, call [terminateSelf](#terminateself) to terminate the current extension, or call [stopNativeConnection](#stopnativeconnection) to stop a specified native web message connection.
+WebNativeMessagingExtensionContext is the runtime context of the native web message extension ([WebNativeMessagingExtensionAbility](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md)). It inherits from ExtensionContext and provides lifecycle management, ability startup, and native message connection control capabilities for the extension ability. In an extension that inherits from WebNativeMessagingExtensionAbility, developers can obtain this context through `this.context` and then call [startAbility](#startability) to start another ability, call [startAbilityForResult](#startabilityforresult) to start a UIAbility and receive the return result, call [terminateSelf](#terminateself) to terminate the current extension, or call [stopNativeConnection](#stopnativeconnection) to stop a specified native web message connection.
 
 **Inheritance/Implementation:** WebNativeMessagingExtensionContext extends ExtensionContext
 
@@ -101,10 +101,7 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
 startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>
 ```
 
-Starts a UIAbility. This API uses a promise to return the result when the started UIAbility exits.
-
-After the UIAbility is started, the following situations may occur:
-
+Starts a UIAbility. This API uses a promise to return the result when the started UIAbility exits.After the UIAbility is started, the following situations may occur:  
 - Under normal circumstances, [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) can be called to terminate the UIAbility and return the result to the caller. - In abnormal cases, such as when the UIAbility is destroyed, exception information is returned to the caller, with resultCode set to -1. - Only UIAbilities of the current app can be started.
 
 **Since:** 26.0.0

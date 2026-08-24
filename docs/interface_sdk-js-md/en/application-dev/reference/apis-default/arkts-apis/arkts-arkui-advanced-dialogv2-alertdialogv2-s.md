@@ -1,12 +1,12 @@
 # AlertDialogV2
 
-Declare CustomDialog AlertDialogV2.
-
-@struct { AlertDialogV2 }
+Declare CustomDialog AlertDialogV2.@struct { AlertDialogV2 }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct AlertDialogV2--><!--Device-unnamed-export declare struct AlertDialogV2-End-->
 
@@ -20,8 +20,7 @@ Declare CustomDialog AlertDialogV2.
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,9 +40,7 @@ The method to build component.
 ## content
 
 ```TypeScript
-@Require
-  @Param
-  content: ResourceStr
+content: ResourceStr
 ```
 
 Sets the AlertDialogV2 content.
@@ -52,6 +51,8 @@ Sets the AlertDialogV2 content.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Require, @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AlertDialogV2-@Require  @Param  content: ResourceStr--><!--Device-AlertDialogV2-@Require  @Param  content: ResourceStr-End-->
@@ -61,8 +62,7 @@ Sets the AlertDialogV2 content.
 ## primaryButton
 
 ```TypeScript
-@Param
-  primaryButton?: AdvancedDialogV2Button
+primaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the AlertDialogV2 primary button.
@@ -73,6 +73,8 @@ Sets the AlertDialogV2 primary button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AlertDialogV2-@Param  primaryButton?: AdvancedDialogV2Button--><!--Device-AlertDialogV2-@Param  primaryButton?: AdvancedDialogV2Button-End-->
@@ -82,8 +84,7 @@ Sets the AlertDialogV2 primary button.
 ## primaryTitle
 
 ```TypeScript
-@Param
-  primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
 Sets the AlertDialogV2 title.
@@ -94,6 +95,8 @@ Sets the AlertDialogV2 title.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AlertDialogV2-@Param  primaryTitle?: ResourceStr--><!--Device-AlertDialogV2-@Param  primaryTitle?: ResourceStr-End-->
@@ -103,8 +106,7 @@ Sets the AlertDialogV2 title.
 ## secondaryButton
 
 ```TypeScript
-@Param
-  secondaryButton?: AdvancedDialogV2Button
+secondaryButton?: AdvancedDialogV2Button
 ```
 
 Sets the AlertDialogV2 secondary button.
@@ -115,6 +117,8 @@ Sets the AlertDialogV2 secondary button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AlertDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button--><!--Device-AlertDialogV2-@Param  secondaryButton?: AdvancedDialogV2Button-End-->
@@ -124,8 +128,7 @@ Sets the AlertDialogV2 secondary button.
 ## secondaryTitle
 
 ```TypeScript
-@Param
-  secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
 Sets the AlertDialogV2 secondary title.
@@ -135,6 +138,8 @@ Sets the AlertDialogV2 secondary title.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

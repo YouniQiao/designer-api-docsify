@@ -16,8 +16,7 @@ declare function moveFileSync(src: string, dest: string, mode?: number): void
 
 Moves a file. This API returns the result synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is not supported in a distributed directory.
 
 **Since:** 9

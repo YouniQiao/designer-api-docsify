@@ -1,8 +1,6 @@
 # TimePickerResult
 
-返回24小时制时间。
-
-@interface TimePickerResult
+返回24小时制时间。@interface TimePickerResult
 
 **起始版本：** 23
 
@@ -18,9 +16,7 @@
 hour: int
 ```
 
-选中时间的时。
-
-取值范围：[0-23]
+选中时间的时。取值范围：[0-23]
 
 **类型：** int
 
@@ -40,9 +36,7 @@ hour: int
 minute: int
 ```
 
-选中时间的分。
-
-取值范围：[0-59]
+选中时间的分。取值范围：[0-59]
 
 **类型：** int
 
@@ -62,9 +56,7 @@ minute: int
 second: int
 ```
 
-选中时间的秒。
-
-取值范围：[0-59]
+选中时间的秒。取值范围：[0-59]
 
 **类型：** int
 

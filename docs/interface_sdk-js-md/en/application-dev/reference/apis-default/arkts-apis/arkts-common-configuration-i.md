@@ -16,9 +16,7 @@ Defines the data type of the interface restriction.
 readonly colorMode: string
 ```
 
-Set colorMode.
-
-@readonly
+Set colorMode.@readonly
 
 **Type:** string
 
@@ -38,9 +36,7 @@ Set colorMode.
 readonly fontScale: double
 ```
 
-Set fontScale.
-
-@readonly
+Set fontScale.@readonly
 
 **Type:** double
 

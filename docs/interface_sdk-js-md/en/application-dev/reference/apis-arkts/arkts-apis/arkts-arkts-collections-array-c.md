@@ -2,16 +2,16 @@
 
 A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances. Pass-by-reference is recommended for better transfer performance.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
-
 - T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Inheritance/Implementation:** Array implements ConcatArray<T>
 
 **Since:** 12
+
+**Decorator:** @Sendable
 
 <!--Device-collections-class Array--><!--Device-collections-class Array-End-->
 
@@ -302,7 +302,7 @@ Copies elements within a given range from this ArkTS array to another position i
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | ArkTS array after being modified. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| Array&lt;T&gt; | ArkTS array after being modified. Possible causes: |
 
 **Error codes:**
 
@@ -538,7 +538,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Type | Description |
 | --- | --- |
-| T \| undefined | Value of the first element that passes the test. If none of the elements pass the test , **undefined** is returned. |
+| T \| undefined | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
 
 **Error codes:**
 
@@ -835,7 +835,7 @@ Check whether the input parameter is an ArkTS array.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the input parameter is an ArkTS array; otherwise, **false** is returned. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| boolean | Check result. The value **true** is returned if the input parameter is an ArkTS array; otherwise, **false** is returned. Possible causes: |
 
 ## join
 
@@ -998,7 +998,7 @@ Creates an ArkTS array with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Newly created ArkTS array. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| Array&lt;T&gt; | Newly created ArkTS array. Possible causes: |
 
 ## pop
 

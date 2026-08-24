@@ -1,8 +1,6 @@
 # GestureObserverConfigs
 
-该参数用于指定需要监听的手势回调阶段（传入空数组将无效），仅当手势触发指定阶段时才会发送通知。
-
-@interface GestureObserverConfigs
+该参数用于指定需要监听的手势回调阶段（传入空数组将无效），仅当手势触发指定阶段时才会发送通知。@interface GestureObserverConfigs
 
 **起始版本：** 26.0.0
 

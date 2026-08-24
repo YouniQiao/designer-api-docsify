@@ -14,8 +14,7 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void
 
 创建定时器，使用callback异步回调。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造
 > 成内存泄漏
 
@@ -140,8 +139,7 @@ function createTimer(options: TimerOptions): Promise<long>
 
 创建定时器，使用Promise异步回调返回定时器的ID。
 
-> **注意：**
-> 
+> **注意：**&gt;
 > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造
 > 成内存泄漏
 

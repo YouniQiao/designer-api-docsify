@@ -12,9 +12,7 @@ import { formHost } from '@kit.FormKit';
 function addForm(want: Want): Promise<formInfo.RunningFormInfo>
 ```
 
-Add a form.
-
-You can use this method to create a theme form.
+Add a form.You can use this method to create a theme form.
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # @ohos.arkui.observer
 
-Register callbacks to observe ArkUI behavior.
-
-@namespace uiObserver
+Register callbacks to observe ArkUI behavior.@namespace uiObserver
 
 **起始版本：** 23
 
@@ -65,18 +63,18 @@ Register callbacks to observe ArkUI behavior.
 | [NavDestinationSwitchInfo](arkts-uiobserver-navdestinationswitchinfo-i.md) | Navigation组件页面切换的信息。 |
 | [NavDestinationSwitchObserverOptions](arkts-uiobserver-navdestinationswitchobserveroptions-i.md) | Indicates the options of NavDestination switch. |
 | [NavigationInfo](arkts-uiobserver-navigationinfo-i.md) | Navigation组件信息。 |
-| [ObserverOptions](arkts-uiobserver-observeroptions-i.md) | observer options. |
-| [ScrollEventInfo](arkts-uiobserver-scrolleventinfo-i.md) | ScrollEvent info. |
+| [ObserverOptions](arkts-uiobserver-observeroptions-i.md) | observer options.@interface ObserverOptions |
+| [ScrollEventInfo](arkts-uiobserver-scrolleventinfo-i.md) | ScrollEvent info.@interface ScrollEventInfo |
 | [TabContentInfo](arkts-uiobserver-tabcontentinfo-i.md) | TabContent页面的切换信息。 |
-| [TextChangeEventInfo](arkts-uiobserver-textchangeeventinfo-i.md) | 文本更改事件信息 |
-| [WindowSizeLayoutBreakpointInfo](arkts-uiobserver-windowsizelayoutbreakpointinfo-i.md) | 定义窗口大小断点信息。 这个接口定义了当前窗口长宽的断点信息，基于配置好的断点阈值。 |
+| [TextChangeEventInfo](arkts-uiobserver-textchangeeventinfo-i.md) | 文本更改事件信息@interface TextChangeEventInfo |
+| [WindowSizeLayoutBreakpointInfo](arkts-uiobserver-windowsizelayoutbreakpointinfo-i.md) | 定义窗口大小断点信息。 这个接口定义了当前窗口长宽的断点信息，基于配置好的断点阈值。@interface WindowSizeLayoutBreakpointInfo |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [NavDestinationState](arkts-uiobserver-navdestinationstate-e.md) | NavDestination组件状态。 |
-| [RouterPageState](arkts-uiobserver-routerpagestate-e.md) | routerPage生命周期触发时对应的状态。 |
-| [ScrollEventType](arkts-uiobserver-scrolleventtype-e.md) | ScrollEvent type. |
-| [TabContentState](arkts-uiobserver-tabcontentstate-e.md) | TabContent组件的状态。 |
+| [NavDestinationState](arkts-uiobserver-navdestinationstate-e.md) | NavDestination组件状态。@enum { number } |
+| [RouterPageState](arkts-uiobserver-routerpagestate-e.md) | routerPage生命周期触发时对应的状态。@enum { number } |
+| [ScrollEventType](arkts-uiobserver-scrolleventtype-e.md) | ScrollEvent type.@enum { number } |
+| [TabContentState](arkts-uiobserver-tabcontentstate-e.md) | TabContent组件的状态。@enum { number } |
 

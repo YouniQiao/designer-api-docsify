@@ -23,8 +23,7 @@ filter(name: string): boolean
 
 Filters files of the [listFileExt](arkts-fileio-listfileext-f.md) or [listFileExtSync](arkts-fileio-listfileextsync-f.md) API and determines whether a specified file name should be included in the returned file list.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This function is frequently called. Do not perform time-consuming operations, such as file I/O operations and
 > network requests.
 

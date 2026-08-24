@@ -1,6 +1,6 @@
 # StreamUsage
 
-表示播放音频流类型的枚举。
+枚举，音频流使用类型。
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@
 STREAM_USAGE_SYSTEM = 9
 ```
 
-System usage, such as screen lock or key click.
+系统音(如屏幕锁定或按键音)。
 
 **起始版本：** 23
 
@@ -30,7 +30,7 @@ System usage, such as screen lock or key click.
 STREAM_USAGE_DTMF = 14
 ```
 
-DTMF dial tone usage.
+拨号音。
 
 **起始版本：** 23
 
@@ -46,7 +46,7 @@ DTMF dial tone usage.
 STREAM_USAGE_ENFORCED_TONE = 15
 ```
 
-Enforced tone usage, such as camera shutter.
+强制音(如相机快门音)。
 
 **起始版本：** 23
 
@@ -62,7 +62,7 @@ Enforced tone usage, such as camera shutter.
 STREAM_USAGE_ULTRASONIC = 16
 ```
 
-Ultrasonic playing usage. This type is only used for msdp condition.
+超声波（目前仅提供给MSDP使用）。
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ Ultrasonic playing usage. This type is only used for msdp condition.
 STREAM_USAGE_VOICE_CALL_ASSISTANT = 21
 ```
 
-Voice call assistant type. This type is only used for call assistant functionalities.
+通话辅助语音。
 
 **起始版本：** 23
 
@@ -94,7 +94,7 @@ Voice call assistant type. This type is only used for call assistant functionali
 STREAM_USAGE_ANNOUNCEMENT = 22
 ```
 
-Announcement alarm usage.
+通知音。此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
 
@@ -112,13 +112,33 @@ Announcement alarm usage.
 STREAM_USAGE_EMERGENCY = 23
 ```
 
-Emergency alarm usage.
+告警音。此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_EMERGENCY = 23--><!--Device-StreamUsage-STREAM_USAGE_EMERGENCY = 23-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
+**系统接口：** 此接口为系统接口。
+
+## STREAM_USAGE_VOICE_ASSISTANT_SYSTEM
+
+```TypeScript
+STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 24
+```
+
+Voice assistant broadcast usage for system app.
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 24--><!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 24-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

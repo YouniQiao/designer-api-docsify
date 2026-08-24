@@ -1,8 +1,6 @@
 # TimePicker属性/事件
 
-除支持通用属性外，还支持以下属性：
-
-除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** TimePickerAttribute extends CommonMethod<TimePickerAttribute>
 
@@ -111,7 +109,7 @@ disappearTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号和字体粗细。 <br>默认值： <br>{ <br>color: '#ff182431', <br>font: { <br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} |
+| value | PickerTextStyle | 是 | 边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号和字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} |
 
 ## disappearTextStyle
 
@@ -135,7 +133,7 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff182431', <br>font: { <br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
+| style | Optional&lt;PickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
 
 ## enableCascade
 
@@ -167,12 +165,9 @@ enableCascade(enabled: boolean)
 enableHapticFeedback(enable: boolean)
 ```
 
-设置是否开启触控反馈。
+设置是否开启触控反馈。开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
 
-开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -197,9 +192,7 @@ enableHapticFeedback(enable: boolean)
 enableHapticFeedback(enable: Optional<boolean>)
 ```
 
-设置是否开启触控反馈。 与[enableHapticFeedback&lt;sup&gt;12+&lt;/sup&gt;](#enablehapticfeedback)相比， enable参数新增了对undefined类型的支持。
-
-开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
+设置是否开启触控反馈。 与[enableHapticFeedback&lt;sup&gt;12+&lt;/sup&gt;](#enablehapticfeedback)相比， enable参数新增了对undefined类型的支持。开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
 
 **起始版本：** 18
 
@@ -249,8 +242,7 @@ loop(isLoop: Optional<boolean>)
 
 设置是否启用循环模式。与[loop&lt;sup&gt;11+&lt;/sup&gt;](#loop)相比， isLoop参数新增了对undefined类型的支持。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 设置了start或end且为非默认值的场景下，loop不生效。
 
 **起始版本：** 18
@@ -275,9 +267,7 @@ loop(isLoop: Optional<boolean>)
 onChange(callback: (value: TimePickerResult) => void)
 ```
 
-滑动TimePicker后，时间选项归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。适用于需要在用户确认时间选择后执行保存、 更新UI等操作的场景。
-
-回调会在滑动动画结束后触发，如果需要快速获取索引值变化， 建议使用[onEnterSelectedArea](#onenterselectedarea)接口。需要注意的是， 当[enableCascade](#enablecascade)设置为true时，由于上午/下午列与小时列存在联动关系， 该回调的行为可能不符合预期，不建议在此场景下使用。
+滑动TimePicker后，时间选项归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。适用于需要在用户确认时间选择后执行保存、 更新UI等操作的场景。回调会在滑动动画结束后触发，如果需要快速获取索引值变化， 建议使用[onEnterSelectedArea](#onenterselectedarea)接口。需要注意的是， 当[enableCascade](#enablecascade)设置为true时，由于上午/下午列与小时列存在联动关系， 该回调的行为可能不符合预期，不建议在此场景下使用。
 
 **起始版本：** 8
 
@@ -299,9 +289,7 @@ onChange(callback: (value: TimePickerResult) => void)
 onChange(callback: Optional<OnTimePickerChangeCallback>)
 ```
 
-滑动TimePicker后，时间选项归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。 与onChange相比， callback参数新增了对undefined类型的支持。
-
-回调会在滑动动画结束后触发，如果需要快速获取索引值变化， 建议使用[onEnterSelectedArea](#onenterselectedarea)接口。需要注意的是， 当[enableCascade](#enablecascade)设置为true时，由于上午/下午列与小时列存在联动关系， 该回调的行为可能不符合预期，不建议在此场景下使用。
+滑动TimePicker后，时间选项归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。 与onChange相比， callback参数新增了对undefined类型的支持。回调会在滑动动画结束后触发，如果需要快速获取索引值变化， 建议使用[onEnterSelectedArea](#onenterselectedarea)接口。需要注意的是， 当[enableCascade](#enablecascade)设置为true时，由于上午/下午列与小时列存在联动关系， 该回调的行为可能不符合预期，不建议在此场景下使用。
 
 **起始版本：** 18
 
@@ -325,12 +313,9 @@ onChange(callback: Optional<OnTimePickerChangeCallback>)
 onEnterSelectedArea(callback: Callback<TimePickerResult>)
 ```
 
-滑动TimePicker过程中，选项进入分割线区域内，触发该回调。适用于需要在滑动过程中实时更新UI、实时验证时间范围等需要快速响应的场景。 与onChange相比，该回调触发时机更早，适合需要即时反馈的场景。
+滑动TimePicker过程中，选项进入分割线区域内，触发该回调。适用于需要在滑动过程中实时更新UI、实时验证时间范围等需要快速响应的场景。 与onChange相比，该回调触发时机更早，适合需要即时反馈的场景。与onChange事件的差别在于， 该事件的触发时机早于onChange事件， 当滑动列的滑动距离超过选中项高度的一半时，选项已经进入分割线区域内，会触发该事件。 当[enableCascade](#enablecascade)设置为true时， 由于上午/下午列与小时列存在联动关系（即上午/下午标识会根据小时数自动调整），不建议使用该回调。 该回调标识的是滑动过程中选项进入分割线区域内的节点，而联动变化的选项并不涉及滑动，因此，回调的返回值中，仅当前滑动列的值会正常变化， 其余未滑动列的值保持不变。
 
-与onChange事件的差别在于， 该事件的触发时机早于onChange事件， 当滑动列的滑动距离超过选中项高度的一半时，选项已经进入分割线区域内，会触发该事件。 当[enableCascade](#enablecascade)设置为true时， 由于上午/下午列与小时列存在联动关系（即上午/下午标识会根据小时数自动调整），不建议使用该回调。 该回调标识的是滑动过程中选项进入分割线区域内的节点，而联动变化的选项并不涉及滑动，因此，回调的返回值中，仅当前滑动列的值会正常变化， 其余未滑动列的值保持不变。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 18
@@ -371,7 +356,7 @@ selectedTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 选中项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff007dff', <br>font: { <br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} |
+| value | PickerTextStyle | 是 | 选中项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} |
 
 ## selectedTextStyle
 
@@ -395,7 +380,7 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff007dff', <br>font: { <br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
+| style | Optional&lt;PickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
 
 ## textStyle
 
@@ -419,7 +404,7 @@ textStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 待选项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff182431', <br>font: { <br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
+| value | PickerTextStyle | 是 | 待选项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
 
 ## textStyle
 
@@ -443,7 +428,7 @@ textStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细。 <br>默认值： <br>{ <br>color: '#ff182431', <br>font: { <br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
+| style | Optional&lt;PickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
 
 ## useMilitaryTime
 

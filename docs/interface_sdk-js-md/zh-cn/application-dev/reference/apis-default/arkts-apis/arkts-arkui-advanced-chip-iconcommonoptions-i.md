@@ -2,8 +2,7 @@
 
 IconCommonOptions定义图标的共通属性。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 仅在图片格式为SVG时，fillColor和activatedFillColor属性才生效。
 
 **起始版本：** 23
@@ -25,11 +24,7 @@ IconCommonOptions定义图标的共通属性。
 activatedFillColor?: ResourceColor
 ```
 
-操作块激活时图标填充颜色。
-
-默认值：\$r('sys.color.chip_active_icon_color')
-
-值为undefined时，按默认值处理。
+操作块激活时图标填充颜色。默认值：\$r('sys.color.chip_active_icon_color')值为undefined时，按默认值处理。
 
 **类型：** ResourceColor
 
@@ -49,11 +44,7 @@ activatedFillColor?: ResourceColor
 fillColor?: ResourceColor
 ```
 
-图标填充颜色。
-
-默认值：\$r('sys.color.chip_usually_icon_color')
-
-值为undefined时，按默认值处理。
+图标填充颜色。默认值：\$r('sys.color.chip_usually_icon_color')值为undefined时，按默认值处理。
 
 **类型：** ResourceColor
 
@@ -73,15 +64,9 @@ fillColor?: ResourceColor
 size?: SizeOptions
 ```
 
-图标大小，不支持百分比。
-
-默认值：
-
-- 当ChipOptions.size为ChipSize.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r(' sys.float.chip_small_icon_size')} - 当ChipOptions.size为ChipSize.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r(' sys.float.chip_normal_icon_size')}
-
-单位：vp
-
-值为undefined时，按默认值处理。
+图标大小，不支持百分比。默认值：  
+- 当ChipOptions.size为ChipSize.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r('sys.float.chip_small_icon_size')} - 当ChipOptions.size为ChipSize.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}  
+单位：vp值为undefined时，按默认值处理。
 
 **类型：** SizeOptions
 

@@ -15,16 +15,12 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
 
 在应用后台渲染CustomBuilder自定义组件，并输出其截图。通过回调返回结果并支持在回调中获取离屏组件绘制区域坐标和大小。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法
-> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)对象。
-> 
-> - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。
-> 
-> - builder中的组件不支持设置动画相关的属性，如transition。
-> 
+> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)对象。&gt;
+> - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。&gt;
+> - builder中的组件不支持设置动画相关的属性，如transition。&gt;
 > - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的Image组件、Web组件。
 
 **起始版本：** 10
@@ -189,16 +185,12 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
 
 在应用后台渲染CustomBuilder自定义组件，并输出其截图。通过Promise返回结果，支持获取离屏组件绘制区域的坐标和大小。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法
-> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)对象。
-> 
-> - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。
-> 
-> - builder中的组件不支持设置动画相关的属性，如transition。
-> 
+> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)对象。&gt;
+> - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。&gt;
+> - builder中的组件不支持设置动画相关的属性，如transition。&gt;
 > - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的Image组件、Web组件。
 
 **起始版本：** 10

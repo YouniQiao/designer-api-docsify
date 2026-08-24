@@ -1,10 +1,6 @@
 # RdbStore
 
-提供管理关系数据库（RDB）方法的接口。
-
-在使用以下API前，请先通过[getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md)方法获取RdbStore实例，并使用该实例调用对应接口方法。
-
-在此基础上，建议优先使用[execute](#execute)方法完成数据库表结构和初始数据的 初始化，以确保相关接口调用的前置条件已满足。
+提供管理关系数据库（RDB）方法的接口。在使用以下API前，请先通过[getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md)方法获取RdbStore实例，并使用该实例调用对应接口方法。在此基础上，建议优先使用[execute](#execute)方法完成数据库表结构和初始数据的 初始化，以确保相关接口调用的前置条件已满足。
 
 **起始版本：** 23
 
@@ -24,13 +20,7 @@ import { relationalStore } from '@kit.ArkData';
 attach(fullPath: string, attachName: string, waitTime?: int) : Promise<int>
 ```
 
-将一个数据库文件附加到当前数据库中，以便在SQL语句中可以直接访问附加数据库中的数据，使用Promise异步回调。
-
-数据库文件来自文件，且此API不支持附加加密数据库。调用attach接口后，数据库切换为非WAL模式，性能会存在一定的劣化。
-
-attach时，数据库会切换为非WAL模式，切换模式需要确保所有的ResultSet都已经Close，所有的写操作已经结束，否则会报错14800015。
-
-attach不能并发调用，否则可能出现未响应情况并报错14800015，需要重试。
+将一个数据库文件附加到当前数据库中，以便在SQL语句中可以直接访问附加数据库中的数据，使用Promise异步回调。数据库文件来自文件，且此API不支持附加加密数据库。调用attach接口后，数据库切换为非WAL模式，性能会存在一定的劣化。attach时，数据库会切换为非WAL模式，切换模式需要确保所有的ResultSet都已经Close，所有的写操作已经结束，否则会报错14800015。attach不能并发调用，否则可能出现未响应情况并报错14800015，需要重试。
 
 **起始版本：** 23
 
@@ -101,13 +91,7 @@ if (store != undefined) {
 attach(context: Context, config: StoreConfig, attachName: string, waitTime?: int) : Promise<int>
 ```
 
-将一个当前应用的数据库附加到当前数据库中，以便在SQL语句中可以直接访问附加数据库中的数据，使用Promise异步回调。
-
-此API不支持加密数据库附加非加密数据库。调用attach接口后，数据库切换为非WAL模式，性能会存在一定的劣化。
-
-attach时，数据库会切换为非WAL模式，切换模式需要确保所有的ResultSet都已经Close，所有的写操作已经结束，否则会报错14800015。
-
-attach不能并发调用，否则可能出现未响应情况并报错14800015，需要重试。除此之外，attach附加加密数据库时，可能受到并发的影响，出现解密失败的情况，报错14800011，需要显式指定加密参数并重试。
+将一个当前应用的数据库附加到当前数据库中，以便在SQL语句中可以直接访问附加数据库中的数据，使用Promise异步回调。此API不支持加密数据库附加非加密数据库。调用attach接口后，数据库切换为非WAL模式，性能会存在一定的劣化。attach时，数据库会切换为非WAL模式，切换模式需要确保所有的ResultSet都已经Close，所有的写操作已经结束，否则会报错14800015。attach不能并发调用，否则可能出现未响应情况并报错14800015，需要重试。除此之外，attach附加加密数据库时，可能受到并发的影响，出现解密失败的情况，报错14800011，需要显式指定加密参数并重试。
 
 **起始版本：** 23
 
@@ -169,9 +153,7 @@ attach不能并发调用，否则可能出现未响应情况并报错14800015，
 backup(destName: string, callback: AsyncCallback<void>): void
 ```
 
-以指定名称备份数据库，使用callback异步回调。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+以指定名称备份数据库，使用callback异步回调。该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
 
 **起始版本：** 23
 
@@ -245,9 +227,7 @@ if (store != undefined) {
 backup(destName: string): Promise<void>
 ```
 
-以指定名称备份数据库，使用Promise异步回调。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+以指定名称备份数据库，使用Promise异步回调。该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
 
 **起始版本：** 23
 
@@ -301,21 +281,7 @@ backup(destName: string): Promise<void>
 batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<long>): void
 ```
 
-向目标表中插入一组数据，使用callback异步回调。
-
-接口报错，表示插入数据失败；接口没有报错但返回值为-1时，也表示插入数据失败。
-
-按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入 数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
-
-从API version 20开始，支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）。
+向目标表中插入一组数据，使用callback异步回调。接口报错，表示插入数据失败；接口没有报错但返回值为-1时，也表示插入数据失败。按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入 数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。从API version 20开始，支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）。
 
 **起始版本：** 23
 
@@ -678,21 +644,7 @@ if (store != undefined) {
 batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>
 ```
 
-向目标表中插入一组数据，使用Promise异步回调。
-
-接口报错，表示插入数据失败；接口没有报错但返回值为-1时，也表示插入数据失败。
-
-按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入 数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
-
-从API version 20开始，该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+向目标表中插入一组数据，使用Promise异步回调。接口报错，表示插入数据失败；接口没有报错但返回值为-1时，也表示插入数据失败。按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入 数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。从API version 20开始，该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
 
 **起始版本：** 23
 
@@ -748,19 +700,7 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>
 batchInsertSync(table: string, values: Array<ValuesBucket>): long
 ```
 
-向目标表中插入一组数据。
-
-接口报错，表示插入数据失败；接口没有报错但返回值为-1时，也表示插入数据失败。
-
-按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入 数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+向目标表中插入一组数据。接口报错，表示插入数据失败；接口没有报错但返回值为-1时，也表示插入数据失败。按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入 数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -1002,21 +942,7 @@ batchInsertWithConflictResolution(
     ): Promise<long>
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)。使用Promise异步回调。
-
-单次插入参数的最大数量限制为32766，超出上限会返回14800000错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
-
-例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
-
-请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)。使用Promise异步回调。单次插入参数的最大数量限制为32766，超出上限会返回14800000错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -1263,21 +1189,7 @@ batchInsertWithConflictResolutionSync(
     ): long
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)。
-
-单次插入参数的最大数量限制为32766，超出上限会返回14800000错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
-
-例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
-
-请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)。单次插入参数的最大数量限制为32766，超出上限会返回14800000错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -1517,23 +1429,7 @@ batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回 [Result](arkts-arkdata-relationalstore-result-i.md)。使用Promise异步回调。
-
-单次插入参数的最大数量限制为32766，超出上限会返回14800001错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
-
-例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
-
-请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
-
-conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回 [Result](arkts-arkdata-relationalstore-result-i.md)。使用Promise异步回调。单次插入参数的最大数量限制为32766，超出上限会返回14800001错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -1673,23 +1569,7 @@ batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config:
       conflict?: ConflictResolution): Result
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回 [Result](arkts-arkdata-relationalstore-result-i.md)。
-
-单次插入参数的最大数量限制为32766，超出上限会返回14800001错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
-
-例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
-
-请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
-
-conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回 [Result](arkts-arkdata-relationalstore-result-i.md)。单次插入参数的最大数量限制为32766，超出上限会返回14800001错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -1828,11 +1708,7 @@ function transBatchInsertWithReturningSyncExample(trans: relationalStore.Transac
 beginTrans(): Promise<long>
 ```
 
-在开始执行SQL语句之前，开始事务，使用Promise异步回调。
-
-与[beginTransaction](#begintransaction)的区别在于：该接口会返回事务ID， [execute](#execute)可以指定不同事务ID达到事务 隔离目的。
-
-该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+在开始执行SQL语句之前，开始事务，使用Promise异步回调。与[beginTransaction](#begintransaction)的区别在于：该接口会返回事务ID， [execute](#execute)可以指定不同事务ID达到事务 隔离目的。该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
 
 **起始版本：** 23
 
@@ -1928,9 +1804,7 @@ if (store != null) {
 beginTransaction(): void
 ```
 
-在开始执行SQL语句之前，开始事务。
-
-此接口不允许嵌套事务，且不支持在多进程或多线程中使用。
+在开始执行SQL语句之前，开始事务。此接口不允许嵌套事务，且不支持在多进程或多线程中使用。
 
 **起始版本：** 23
 
@@ -2513,38 +2387,22 @@ cloudSyncEx(config: CloudSyncConfig, progress: Callback<ProgressDetails>): Promi
 
 主动执行端云同步，根据云同步配置信息进行同步，使用Promise异步回调。使用该接口需要实现云服务功能。
 
-> **说明：**
-> 
-> [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md)中仅支持以下谓词：
-> 
-> - [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
-> 
-> - [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
-> 
-> - [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)
-> 
-> - [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)
-> 
-> - 以下谓词的数据字段类型[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)仅支持number类型的整数和string：
-> 
-> - [equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)
-> 
-> - [notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notequalto)
-> 
-> - [in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in)
-> 
-> - [notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notin)
-> 
-> - 以下谓词的数据字段类型[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)仅支持number类型的整数：
-> 
-> - [greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthan)
-> 
-> - [lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthan)
-> 
-> - [greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthanorequalto)
-> 
-> - [lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthanorequalto)
-> 
+> **说明：**&gt;
+> [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md)中仅支持以下谓词：&gt;
+> - [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)&gt;
+> - [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)&gt;
+> - [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)&gt;
+> - [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)&gt;
+> - 以下谓词的数据字段类型[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)仅支持number类型的整数和string：&gt;
+> - [equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)&gt;
+> - [notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notequalto)&gt;
+> - [in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in)&gt;
+> - [notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notin)&gt;
+> - 以下谓词的数据字段类型[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)仅支持number类型的整数：&gt;
+> - [greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthan)&gt;
+> - [lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthan)&gt;
+> - [greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthanorequalto)&gt;
+> - [lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthanorequalto)&gt;
 > 谓词中支持使用主键（必填）和资产（可选）作为同步条件：当选择资产作为同步条件时，同步模式需要设置为relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST；指定资产的数量较多时（最多支持
 > 指定50个资产），建议谓词中仅使用主键作为同步条件。
 
@@ -2605,9 +2463,7 @@ if (store != undefined) {
 commit(): void
 ```
 
-提交已执行的SQL语句，跟[beginTransaction](#begintransaction)配合使用。
-
-此接口不允许嵌套事务，且不支持在多进程或多线程中使用。
+提交已执行的SQL语句，跟[beginTransaction](#begintransaction)配合使用。此接口不允许嵌套事务，且不支持在多进程或多线程中使用。
 
 **起始版本：** 23
 
@@ -2756,9 +2612,7 @@ if (store != undefined) {
 commit(txId : long): Promise<void>
 ```
 
-提交已执行的SQL语句，跟[beginTrans](#begintrans)配合使用，使用Promise异步回调。
-
-该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+提交已执行的SQL语句，跟[beginTrans](#begintrans)配合使用，使用Promise异步回调。该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
 
 **起始版本：** 23
 
@@ -2812,13 +2666,7 @@ commit(txId : long): Promise<void>
 createTransaction(options?: TransactionOptions): Promise<Transaction>
 ```
 
-创建一个事务对象并开始事务，使用Promise异步回调。
-
-与[beginTransaction](#begintransaction)的区别在于：createTransaction接口会返回一个事务对象，不同事务对象之间是隔 离的。使用事务对象进行插入、删除或更新数据等操作，无法被注册数据变更通知[on('dataChange')](#on_datachange)监听到。
-
-一个store最多支持同时存在四个事务对象，超过后会返回14800015错误码，此时需要检查是否持有事务对象时间过长或并发事务过多，若确认无法通过上述优化解决问题，建议等待现有事务释放后，再尝试新建事务对象。
-
-优先使用createTransaction，不再推荐使用beginTransaction。
+创建一个事务对象并开始事务，使用Promise异步回调。与[beginTransaction](#begintransaction)的区别在于：createTransaction接口会返回一个事务对象，不同事务对象之间是隔 离的。使用事务对象进行插入、删除或更新数据等操作，无法被注册数据变更通知[on('dataChange')](#on_datachange)监听到。一个store最多支持同时存在四个事务对象，超过后会返回14800015错误码，此时需要检查是否持有事务对象时间过长或并发事务过多，若确认无法通过上述优化解决问题，建议等待现有事务释放后，再尝试新建事务对象。优先使用createTransaction，不再推荐使用beginTransaction。
 
 **起始版本：** 23
 
@@ -3426,11 +3274,7 @@ function transDeleteWithReturningSyncExample(trans: relationalStore.Transaction)
 detach(attachName: string, waitTime?: int) : Promise<int>
 ```
 
-将附加的数据库从当前数据库中分离，使用Promise异步回调。
-
-当所有的附加的数据库被分离后，数据库会重新切换为WAL模式。
-
-在detach之前，所有的数据库操作要确保已经结束，所有的ResultSet已经Close。并且不能并发调用，可能出现未响应情况，需要重试。
+将附加的数据库从当前数据库中分离，使用Promise异步回调。当所有的附加的数据库被分离后，数据库会重新切换为WAL模式。在detach之前，所有的数据库操作要确保已经结束，所有的ResultSet已经Close。并且不能并发调用，可能出现未响应情况，需要重试。
 
 **起始版本：** 23
 
@@ -3526,17 +3370,7 @@ emit(event: string): void
 execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 ```
 
-执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，返回值类型为ValueType，使用Promise异步回调。
-
-该接口支持执行增删改操作，支持执行PRAGMA语法的sql，支持对表的操作（建表、删表、修改表），返回结果类型由执行具体sql的结果决定。
-
-此接口不支持执行查询、附加数据库和事务操作，可以使用 [querySql](#querysql)、 [query](#query)、 [attach](#attach)、 [beginTransaction](#begintransaction)、 [commit](#commit)等接口代替。
-
-向量数据库使用该接口执行插入操作，数据来源于子查询时，支持全字段插入，暂不支持部分字段插入。
-
-不支持分号分隔的多条语句。
-
-不支持开头包含注释的语句。
+执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，返回值类型为ValueType，使用Promise异步回调。该接口支持执行增删改操作，支持执行PRAGMA语法的sql，支持对表的操作（建表、删表、修改表），返回结果类型由执行具体sql的结果决定。此接口不支持执行查询、附加数据库和事务操作，可以使用 [querySql](#querysql)、 [query](#query)、 [attach](#attach)、 [beginTransaction](#begintransaction)、 [commit](#commit)等接口代替。向量数据库使用该接口执行插入操作，数据来源于子查询时，支持全字段插入，暂不支持部分字段插入。不支持分号分隔的多条语句。不支持开头包含注释的语句。
 
 **起始版本：** 23
 
@@ -3730,15 +3564,7 @@ if (store != undefined) {
 execute(sql: string, txId: long, args?: Array<ValueType>): Promise<ValueType>
 ```
 
-执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用Promise异步回调。
-
-该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。使用该接口执行插入操作，数据来源于子查询时，支持全字段插入，暂不支持 部分字段插入。
-
-此接口不支持执行查询，可以使用 [querySql](#querysql)接口代替。
-
-不支持分号分隔的多条语句。
-
-不支持开头包含注释的语句。
+执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用Promise异步回调。该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。使用该接口执行插入操作，数据来源于子查询时，支持全字段插入，暂不支持 部分字段插入。此接口不支持执行查询，可以使用 [querySql](#querysql)接口代替。不支持分号分隔的多条语句。不支持开头包含注释的语句。
 
 **起始版本：** 23
 
@@ -3796,11 +3622,7 @@ execute(sql: string, txId: long, args?: Array<ValueType>): Promise<ValueType>
 executeSql(sql: string, callback: AsyncCallback<void>): void
 ```
 
-执行指定的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用callback异步回调。
-
-此接口不支持执行查询、附加数据库和事务操作，可以使用 [querySql](#querysql)、 [query](#query)、 [attach](#attach)、 [beginTransaction](#begintransaction)、 [commit](#commit)等接口代替。
-
-不支持分号分隔的多条语句。
+执行指定的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用callback异步回调。此接口不支持执行查询、附加数据库和事务操作，可以使用 [querySql](#querysql)、 [query](#query)、 [attach](#attach)、 [beginTransaction](#begintransaction)、 [commit](#commit)等接口代替。不支持分号分隔的多条语句。
 
 **起始版本：** 23
 
@@ -3889,11 +3711,7 @@ if (store != undefined) {
 executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void
 ```
 
-执行指定的SQL语句，支持传入SQL语句中参数的值，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用callback异步回调。
-
-此接口不支持执行查询、附加数据库和事务操作，可以使用 [querySql](#querysql)、 [query](#query)、 [attach](#attach)、 [beginTransaction](#begintransaction)、 [commit](#commit)等接口代替。
-
-不支持分号分隔的多条语句。
+执行指定的SQL语句，支持传入SQL语句中参数的值，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用callback异步回调。此接口不支持执行查询、附加数据库和事务操作，可以使用 [querySql](#querysql)、 [query](#query)、 [attach](#attach)、 [beginTransaction](#begintransaction)、 [commit](#commit)等接口代替。不支持分号分隔的多条语句。
 
 **起始版本：** 23
 
@@ -3945,11 +3763,7 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 ```
 
-执行指定的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用Promise异步回调。
-
-此接口不支持执行查询、附加数据库和事务操作，可以使用 [querySql](#querysql)、 [query](#query)、 [attach](#attach)、 [beginTransaction](#begintransaction)、 [commit](#commit)等接口代替。
-
-不支持分号分隔的多条语句。
+执行指定的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用Promise异步回调。此接口不支持执行查询、附加数据库和事务操作，可以使用 [querySql](#querysql)、 [query](#query)、 [attach](#attach)、 [beginTransaction](#begintransaction)、 [commit](#commit)等接口代替。不支持分号分隔的多条语句。
 
 **起始版本：** 23
 
@@ -4006,15 +3820,7 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 executeSync(sql: string, args?: Array<ValueType>): ValueType
 ```
 
-执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，返回值类型为ValueType。
-
-该接口支持执行增删改操作，支持执行PRAGMA语法的sql，支持对表的操作（建表、删表、修改表），返回结果类型由执行具体sql的结果决定。
-
-此接口不支持执行查询、附加数据库和事务操作，可以使用 [querySql](#querysql)、 [query](#query)、 [attach](#attach)、 [beginTransaction](#begintransaction)、 [commit](#commit)等接口代替。
-
-不支持分号分隔的多条语句。
-
-不支持开头包含注释的语句。
+执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，返回值类型为ValueType。该接口支持执行增删改操作，支持执行PRAGMA语法的sql，支持对表的操作（建表、删表、修改表），返回结果类型由执行具体sql的结果决定。此接口不支持执行查询、附加数据库和事务操作，可以使用 [querySql](#querysql)、 [query](#query)、 [attach](#attach)、 [beginTransaction](#begintransaction)、 [commit](#commit)等接口代替。不支持分号分隔的多条语句。不支持开头包含注释的语句。
 
 **起始版本：** 23
 
@@ -4305,15 +4111,7 @@ getModifyTime(
 insert(table: string, values: ValuesBucket, callback: AsyncCallback<long>): void
 ```
 
-向目标表中插入一行数据，使用callback异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+向目标表中插入一行数据，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -4679,15 +4477,7 @@ if (store != undefined) {
 insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callback: AsyncCallback<long>): void
 ```
 
-向目标表中插入一行数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用callback异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+向目标表中插入一行数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -4739,15 +4529,7 @@ insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callba
 insert(table: string, values: ValuesBucket): Promise<long>
 ```
 
-向目标表中插入一行数据，使用Promise异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+向目标表中插入一行数据，使用Promise异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -4803,15 +4585,7 @@ insert(table: string, values: ValuesBucket): Promise<long>
 insert(table: string, values: ValuesBucket, conflict: ConflictResolution): Promise<long>
 ```
 
-向目标表中插入一行数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用Promise异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+向目标表中插入一行数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用Promise异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -4868,15 +4642,7 @@ insert(table: string, values: ValuesBucket, conflict: ConflictResolution): Promi
 insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): long
 ```
 
-向目标表中插入一行数据。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+向目标表中插入一行数据。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -5081,15 +4847,7 @@ if (store != undefined) {
 insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict?: ConflictResolution): number
 ```
 
-传入Sendable数据，向目标表中插入一行数据。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+传入Sendable数据，向目标表中插入一行数据。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 12
 
@@ -5146,13 +4904,7 @@ insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict
 lockRow(predicates: RdbPredicates): Promise<void>
 ```
 
-根据RdbPredicates的指定实例对象从数据库中锁定数据，锁定数据不执行端云同步，使用Promise异步回调。
-
-该接口只支持主键为基本类型的表、不支持共享表、无主键表和复合类型主键表。
-
-该接口不支持依赖关系表之间的锁传递，如果表存在依赖关系，需要根据依赖关系手动调用该接口。
-
-该接口不支持对已删除数据的操作。
+根据RdbPredicates的指定实例对象从数据库中锁定数据，锁定数据不执行端云同步，使用Promise异步回调。该接口只支持主键为基本类型的表、不支持共享表、无主键表和复合类型主键表。该接口不支持依赖关系表之间的锁传递，如果表存在依赖关系，需要根据依赖关系手动调用该接口。该接口不支持对已删除数据的操作。
 
 **起始版本：** 23
 
@@ -5222,8 +4974,7 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 其中device通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 > 方法得到。
@@ -5326,8 +5077,7 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 其中device通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 > 方法得到。
@@ -6536,9 +6286,7 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 queryByStep(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符不超过1000个，使用Promise异步回调。该接口按行逐步获取结果，不存在2MB的单条数据大小限制。
-
-聚合函数不支持嵌套使用。
+根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符不超过1000个，使用Promise异步回调。该接口按行逐步获取结果，不存在2MB的单条数据大小限制。聚合函数不支持嵌套使用。
 
 **起始版本：** 26.0.0
 
@@ -6755,11 +6503,7 @@ if (store != undefined) {
 querySql(sql: string, callback: AsyncCallback<ResultSet>): void
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此 限制，使用此接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用，当前支持的语法见 [规格限制](../../../database/data-persistence-by-vector-store.md#规格限制)。
-
-聚合函数不支持嵌套使用。
+根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此 限制，使用此接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用，当前支持的语法见 [规格限制](../../../database/data-persistence-by-vector-store.md#规格限制)。聚合函数不支持嵌套使用。
 
 **起始版本：** 23
 
@@ -6949,11 +6693,7 @@ if (store != undefined) {
 querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个，支持传入SQL语句中参数的值，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格 小于2MB。如果单条数据超过此限制，使用此接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用，当前支持的语法见 [规格限制](../../../database/data-persistence-by-vector-store.md#规格限制)。
-
-聚合函数不支持嵌套使用。
+根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个，支持传入SQL语句中参数的值，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格 小于2MB。如果单条数据超过此限制，使用此接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用，当前支持的语法见 [规格限制](../../../database/data-persistence-by-vector-store.md#规格限制)。聚合函数不支持嵌套使用。
 
 **起始版本：** 23
 
@@ -6988,11 +6728,7 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用Promise异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限 制，使用此接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用，当前支持的语法见 [规格限制](../../../database/data-persistence-by-vector-store.md#规格限制)。
-
-聚合函数不支持嵌套使用。
+根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用Promise异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限 制，使用此接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用，当前支持的语法见 [规格限制](../../../database/data-persistence-by-vector-store.md#规格限制)。聚合函数不支持嵌套使用。
 
 **起始版本：** 23
 
@@ -7633,17 +7369,7 @@ async function queryWithoutRowCountSyncExample(store : relationalStore.RdbStore)
 rekey(cryptoParam?: CryptoParam): Promise<void>
 ```
 
-手动更新加密数据库的密钥。使用Promise异步回调。
-
-从API版本26.0.0开始，支持使用该接口更新向量数据库（创建数据库时配置StoreConfig的vector字段为true）的密钥。
-
-仅支持加密数据库进行密钥更新，不支持非加密数据库变加密数据库及加密数据库变非加密数据库，且需要保持加密参数和密钥生成方式与建库时一致。
-
-不支持对非WAL模式的数据库进行密钥更新。
-
-手动更新密钥时需要独占访问数据库，此时若存在任何未释放的结果集（ResultSet）、事务（Transaction）或其他进程打开的数据库均会引发失败。
-
-数据库越大，密钥更新所需的时间越长。
+手动更新加密数据库的密钥。使用Promise异步回调。从API版本26.0.0开始，支持使用该接口更新向量数据库（创建数据库时配置StoreConfig的vector字段为true）的密钥。仅支持加密数据库进行密钥更新，不支持非加密数据库变加密数据库及加密数据库变非加密数据库，且需要保持加密参数和密钥生成方式与建库时一致。不支持对非WAL模式的数据库进行密钥更新。手动更新密钥时需要独占访问数据库，此时若存在任何未释放的结果集（ResultSet）、事务（Transaction）或其他进程打开的数据库均会引发失败。数据库越大，密钥更新所需的时间越长。
 
 **起始版本：** 23
 
@@ -7780,22 +7506,11 @@ export default class EntryAbility extends UIAbility {
 rekeyEx(cryptoParam: CryptoParam): Promise<void>
 ```
 
-手动更新数据库的密钥或加密参数，使用Promise异步回调。
+手动更新数据库的密钥或加密参数，使用Promise异步回调。不支持对非WAL模式的数据库进行密钥更新。手动更新时需要独占访问数据库，此时若存在任何未释放的结果集（ResultSet）、事务（Transaction）或其他进程打开的数据库均会导致更新失败。支持加密数据库的参数更新，以及加密数据库与非加密数据库之间的相互转换。数据库越大，执行更新所需的时间越长。
 
-不支持对非WAL模式的数据库进行密钥更新。
-
-手动更新时需要独占访问数据库，此时若存在任何未释放的结果集（ResultSet）、事务（Transaction）或其他进程打开的数据库均会导致更新失败。
-
-支持加密数据库的参数更新，以及加密数据库与非加密数据库之间的相互转换。
-
-数据库越大，执行更新所需的时间越长。
-
-> **说明：**
-> 
-> 加密参数变更需谨慎，在完成rekeyEx操作后，getRdbStore时必须使用新的参数来打开数据库，否则可能会导致开库失败。
-> 
-> 如果rekey过程因设备断电等原因中断，操作可能成功也可能失败。因此，建议业务方做好兜底保障（使用RekeyEx前后的参数进行冗余重试），确保不会错误地判断数据库的状态，从而避免出现数据库无法打开的问题。
-> 
+> **说明：**&gt;
+> 加密参数变更需谨慎，在完成rekeyEx操作后，getRdbStore时必须使用新的参数来打开数据库，否则可能会导致开库失败。&gt;
+> 如果rekey过程因设备断电等原因中断，操作可能成功也可能失败。因此，建议业务方做好兜底保障（使用RekeyEx前后的参数进行冗余重试），确保不会错误地判断数据库的状态，从而避免出现数据库无法打开的问题。&gt;
 > 如果有加密参数变更，不建议getRdbStore时使用AllowedRebuild参数，防止因为传入的错误加密参数导致数据库发生重建。
 
 **起始版本：** 23
@@ -7846,8 +7561,7 @@ remoteQuery(
 
 根据指定条件查询远程设备数据库中的数据。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 其中device通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 > 方法得到。
@@ -8036,8 +7750,7 @@ remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: A
 
 根据指定条件查询远程设备数据库中的数据。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 其中device通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 > 方法得到。
@@ -8082,9 +7795,7 @@ remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: A
 restore(srcName: string, callback: AsyncCallback<void>): void
 ```
 
-从指定的数据库备份文件恢复数据库，使用callback异步回调。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+从指定的数据库备份文件恢复数据库，使用callback异步回调。该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
 
 **起始版本：** 23
 
@@ -8157,9 +7868,7 @@ if (store != undefined) {
 restore(srcName: string): Promise<void>
 ```
 
-从指定的数据库备份文件恢复数据库，使用Promise异步回调。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+从指定的数据库备份文件恢复数据库，使用Promise异步回调。该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
 
 **起始版本：** 23
 
@@ -8213,9 +7922,7 @@ restore(srcName: string): Promise<void>
 rollBack(): void
 ```
 
-回滚已经执行的SQL语句。
-
-此接口不允许嵌套事务，且不支持在多进程或多线程中使用。
+回滚已经执行的SQL语句。此接口不允许嵌套事务，且不支持在多进程或多线程中使用。
 
 **起始版本：** 23
 
@@ -8315,9 +8022,7 @@ if (store != undefined) {
 rollback(txId : long): Promise<void>
 ```
 
-回滚已经执行的SQL语句，跟[beginTrans](#begintrans)配合使用，使用Promise异步回调。
-
-该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+回滚已经执行的SQL语句，跟[beginTrans](#begintrans)配合使用，使用Promise异步回调。该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
 
 **起始版本：** 23
 
@@ -8703,9 +8408,7 @@ setDistributedTables(tables: Array<string>, type?: DistributedType, config?: Dis
 setLocale(locale: string) : Promise<void>
 ```
 
-设置自定义排序的语言。使用Promise异步回调。
-
-该值符合ISO 639标准，但是仅支持ICU中的部分语言，对于不支持的语言，设置自定义排序的语言时会报错14800001。
+设置自定义排序的语言。使用Promise异步回调。该值符合ISO 639标准，但是仅支持ICU中的部分语言，对于不支持的语言，设置自定义排序的语言时会报错14800001。
 
 **起始版本：** 23
 
@@ -9079,13 +8782,7 @@ store!.syncEx(relationalStore.SyncMode.SYNC_MODE_PUSH, predicates).then((result:
 unlockRow(predicates: RdbPredicates): Promise<void>
 ```
 
-根据RdbPredicates的指定实例对象从数据库中解锁数据，使用Promise异步回调。
-
-该接口只支持主键为基本类型的表、不支持共享表、无主键表和复合类型主键表。
-
-该接口不支持依赖关系表之间的锁传递，如果表存在依赖关系，需要根据依赖关系手动调用该接口。
-
-该接口不支持对已删除数据的操作。
+根据RdbPredicates的指定实例对象从数据库中解锁数据，使用Promise异步回调。该接口只支持主键为基本类型的表、不支持共享表、无主键表和复合类型主键表。该接口不支持依赖关系表之间的锁传递，如果表存在依赖关系，需要根据依赖关系手动调用该接口。该接口不支持对已删除数据的操作。
 
 **起始版本：** 23
 
@@ -9153,15 +8850,7 @@ if (store != undefined) {
 update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<long>): void
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，使用callback异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+根据RdbPredicates的指定实例对象更新数据库中的数据，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -9553,15 +9242,7 @@ update(
     ): void
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定冲突解决模式 [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用callback异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定冲突解决模式 [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -9613,15 +9294,7 @@ update(
 update(values: ValuesBucket, predicates: RdbPredicates): Promise<long>
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，使用Promise异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+根据RdbPredicates的指定实例对象更新数据库中的数据，使用Promise异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -9677,15 +9350,7 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<long>
 update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolution): Promise<long>
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定冲突解决模式 [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用Promise异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定冲突解决模式 [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用Promise异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -9742,15 +9407,7 @@ update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolu
 updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): long
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+根据RdbPredicates的指定实例对象更新数据库中的数据。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的 [query](#query) 或 [querySql](#querysql) 接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用 [queryByStep](#querybystep)接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -9935,11 +9592,7 @@ updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定当发生数据冲突时的解决模式 [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回[Result](arkts-arkdata-relationalstore-result-i.md)，使用Promise 异步回调。
-
-conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定当发生数据冲突时的解决模式 [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回[Result](arkts-arkdata-relationalstore-result-i.md)，使用Promise 异步回调。conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -10095,11 +9748,7 @@ updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config:
       conflict?: ConflictResolution): Result
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定当发生数据冲突时的解决模式 [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回[Result](arkts-arkdata-relationalstore-result-i.md)。
-
-conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定当发生数据冲突时的解决模式 [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回[Result](arkts-arkdata-relationalstore-result-i.md)。conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 23
 
@@ -10254,9 +9903,7 @@ function transUpdateWithReturningSyncExample(trans: relationalStore.Transaction)
 rebuilt: RebuildType
 ```
 
-rebuilt: [RebuildType](arkts-arkdata-relationalstore-rebuildtype-e.md)
-
-用于获取数据库是否进行过重建或修复。
+rebuilt: [RebuildType](arkts-arkdata-relationalstore-rebuildtype-e.md)用于获取数据库是否进行过重建或修复。
 
 **类型：** [RebuildType](arkts-arkdata-relationalstore-rebuildtype-e.md)
 
@@ -10272,9 +9919,7 @@ rebuilt: [RebuildType](arkts-arkdata-relationalstore-rebuildtype-e.md)
 version: int
 ```
 
-version: int
-
-设置和获取数据库版本，值为正整数。读取和设置version属性会占用数据库连接，避免对该属性进行频繁操作。使用临时变量保存读取到的version值，在数据库变更完成后将其赋值给RdbStore实例的version属性。数据库升 级时变更version属性的场景，请参考[开发指南示例代码](../../../database/data-persistence-by-rdb-store.md#开发步骤)。
+version: int设置和获取数据库版本，值为正整数。读取和设置version属性会占用数据库连接，避免对该属性进行频繁操作。使用临时变量保存读取到的version值，在数据库变更完成后将其赋值给RdbStore实例的version属性。数据库升 级时变更version属性的场景，请参考[开发指南示例代码](../../../database/data-persistence-by-rdb-store.md#开发步骤)。
 
 **类型：** int
 

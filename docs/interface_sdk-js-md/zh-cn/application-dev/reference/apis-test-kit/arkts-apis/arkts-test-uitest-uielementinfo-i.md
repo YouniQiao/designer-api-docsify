@@ -21,9 +21,7 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 readonly bundleName: string
 ```
 
-应用包名。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+应用包名。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
@@ -41,9 +39,7 @@ readonly bundleName: string
 readonly componentEventType?: ComponentEventType
 ```
 
-控件操作事件类型，若非控件操作事件返回ComponentEventType.COMPONENT_UNDEFINED。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+控件操作事件类型，若非控件操作事件返回ComponentEventType.COMPONENT_UNDEFINED。从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** [ComponentEventType](arkts-test-uitest-componenteventtype-e.md)
 
@@ -61,9 +57,7 @@ readonly componentEventType?: ComponentEventType
 readonly componentId?: string
 ```
 
-控件id，若非控件操作事件返回空字符串。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+控件id，若非控件操作事件返回空字符串。从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
@@ -81,9 +75,7 @@ readonly componentId?: string
 readonly componentRect?: Rect
 ```
 
-控件边框信息，若非控件操作事件则返回属性值均为0的Rect对象。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+控件边框信息，若非控件操作事件则返回属性值均为0的Rect对象。从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** [Rect](arkts-test-uitest-rect-i.md)
 
@@ -119,9 +111,7 @@ readonly text: string
 readonly type: string
 ```
 
-控件/窗口类型。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+控件/窗口类型。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
@@ -139,9 +129,7 @@ readonly type: string
 readonly windowChangeType?: WindowChangeType
 ```
 
-窗口变化事件类型，若非窗口变化事件返回WindowChangeType.WINDOW_UNDEFINED。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+窗口变化事件类型，若非窗口变化事件返回WindowChangeType.WINDOW_UNDEFINED。从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** [WindowChangeType](arkts-test-uitest-windowchangetype-e.md)
 
@@ -159,9 +147,7 @@ readonly windowChangeType?: WindowChangeType
 readonly windowId?: int
 ```
 
-控件所属窗口id。
-
-从API version 22开始，该接口支持在原子化服务中使用。
+控件所属窗口id。从API version 22开始，该接口支持在原子化服务中使用。
 
 **类型：** int
 

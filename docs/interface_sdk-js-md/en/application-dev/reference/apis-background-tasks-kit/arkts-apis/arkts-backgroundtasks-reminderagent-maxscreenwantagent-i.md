@@ -16,7 +16,6 @@ Provides the information about the target package and ability to start automatic
 
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

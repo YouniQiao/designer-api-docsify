@@ -164,8 +164,7 @@ printerStatus: PrinterStatus
 selectedDriver?: PpdInfo
 ```
 
-表示添加打印机时选择的驱动的信息。
-
+表示添加打印机时选择的驱动的信息。  
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)
@@ -184,8 +183,7 @@ selectedDriver?: PpdInfo
 selectedProtocol?: string
 ```
 
-表示添加打印机时使用的协议。
-
+表示添加打印机时使用的协议。  
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** string

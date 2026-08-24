@@ -1,8 +1,6 @@
 # Effect
 
-Effect resource, which inherits from SceneResource. It is obtained from the createEffect API.
-
-@extends SceneResource @interface Effect
+Effect resource, which inherits from SceneResource. It is obtained from the createEffect API.@extends SceneResource @interface Effect
 
 **Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 

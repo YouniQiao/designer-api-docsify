@@ -425,7 +425,7 @@ Sets a value or an array of values.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |  |
+| array | ArrayLike&lt;number&gt; | Yes |  |
 | offset | number | No |  |
 
 ## slice

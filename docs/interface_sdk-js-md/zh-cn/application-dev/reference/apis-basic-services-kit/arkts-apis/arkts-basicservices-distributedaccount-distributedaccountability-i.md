@@ -174,8 +174,7 @@ queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 获取分布式账号信息。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
 > 替代。
@@ -235,8 +234,7 @@ queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 获取分布式账号信息。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
 > 替代。
@@ -443,8 +441,7 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCall
 
 更新分布式账号信息。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
 > 替代。
@@ -510,8 +507,7 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 
 更新分布式账号信息。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
 > 替代。

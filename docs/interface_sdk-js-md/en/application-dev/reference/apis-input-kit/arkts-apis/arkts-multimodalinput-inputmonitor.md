@@ -2,8 +2,7 @@
 
 The **inputMonitor** module implements listening for events of input devices, including the touchscreen, mouse, and touchpad.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - In this document, **global** indicates the entire touchscreen or touchpad. For example, listening for global
 > touch events means to listen for touch events triggered when a user touches at any position on the touchpad.
 

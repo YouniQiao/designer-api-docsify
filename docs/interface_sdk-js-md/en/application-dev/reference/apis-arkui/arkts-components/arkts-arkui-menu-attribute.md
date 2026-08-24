@@ -95,9 +95,7 @@ Sets the size of all text within the menu.
 menuItemDivider(options: DividerStyleOptions | undefined)
 ```
 
-Sets the style of the menu item divider. If this attribute is not set, the divider will not be displayed.
-
-If the sum of **startMargin** and **endMargin** exceeds the component width, both **startMargin** and **endMargin** will be set to **0**.
+Sets the style of the menu item divider. If this attribute is not set, the divider will not be displayed.If the sum of **startMargin** and **endMargin** exceeds the component width, both **startMargin** and **endMargin** will be set to **0**.
 
 **Since:** 12
 

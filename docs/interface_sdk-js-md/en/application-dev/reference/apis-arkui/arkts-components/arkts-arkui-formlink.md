@@ -1,8 +1,7 @@
 # FormLink
 
 The **FormLink** component is provided for interactions between static widgets and widget providers. It supports three types of events: router, message, and call.
-
-> **NOTE** > > - This component is supported since API version 10. Updates will be marked with a superscript to indicate their > earliest API version. > > - This component can be used only in static widgets. > > - This document covers static widget development only. For comprehensive widget development guidance, see the > [widget development guide](../../../form/formkit-overview.md).
+> **NOTE**>> - This component is supported since API version 10. Updates will be marked with a superscript to indicate their> earliest API version.>> - This component can be used only in static widgets.>> - This document covers static widget development only. For comprehensive widget development guidance, see the> [widget development guide](../../../form/formkit-overview.md).
 
 ## FormLink
 

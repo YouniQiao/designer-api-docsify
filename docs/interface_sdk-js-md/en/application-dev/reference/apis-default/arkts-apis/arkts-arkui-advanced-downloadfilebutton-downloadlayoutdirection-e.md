@@ -1,8 +1,6 @@
 # DownloadLayoutDirection
 
-Enum for DownloadLayoutDirection
-
-@enum { int }
+Enum for DownloadLayoutDirection@enum { int }
 
 **Since:** 23
 

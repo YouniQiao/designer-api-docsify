@@ -6,6 +6,8 @@ Declare ContentItemV2
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ContentItemV2--><!--Device-unnamed-export declare class ContentItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ The constructor of ContentItemV2.
 ## description
 
 ```TypeScript
-@Trace
-  public description?: ResourceStr
+public description?: ResourceStr
 ```
 
 Sets the description.
@@ -54,6 +55,8 @@ Sets the description.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContentItemV2-@Trace  public description?: ResourceStr--><!--Device-ContentItemV2-@Trace  public description?: ResourceStr-End-->
@@ -63,8 +66,7 @@ Sets the description.
 ## icon
 
 ```TypeScript
-@Trace
-  public icon?: ResourceStr
+public icon?: ResourceStr
 ```
 
 Sets the icon.
@@ -75,6 +77,8 @@ Sets the icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContentItemV2-@Trace  public icon?: ResourceStr--><!--Device-ContentItemV2-@Trace  public icon?: ResourceStr-End-->
@@ -84,8 +88,7 @@ Sets the icon.
 ## iconStyle
 
 ```TypeScript
-@Trace
-  public iconStyle?: IconTypeV2
+public iconStyle?: IconTypeV2
 ```
 
 The type of icon.
@@ -96,6 +99,8 @@ The type of icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContentItemV2-@Trace  public iconStyle?: IconTypeV2--><!--Device-ContentItemV2-@Trace  public iconStyle?: IconTypeV2-End-->
@@ -105,8 +110,7 @@ The type of icon.
 ## primaryText
 
 ```TypeScript
-@Trace
-  public primaryText?: ResourceStr
+public primaryText?: ResourceStr
 ```
 
 Sets the primaryText.
@@ -117,6 +121,8 @@ Sets the primaryText.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContentItemV2-@Trace  public primaryText?: ResourceStr--><!--Device-ContentItemV2-@Trace  public primaryText?: ResourceStr-End-->
@@ -126,8 +132,7 @@ Sets the primaryText.
 ## secondaryText
 
 ```TypeScript
-@Trace
-  public secondaryText?: ResourceStr
+public secondaryText?: ResourceStr
 ```
 
 Sets the secondaryText.
@@ -138,6 +143,8 @@ Sets the secondaryText.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContentItemV2-@Trace  public secondaryText?: ResourceStr--><!--Device-ContentItemV2-@Trace  public secondaryText?: ResourceStr-End-->
@@ -147,8 +154,7 @@ Sets the secondaryText.
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 Sets the symbol.
@@ -158,6 +164,8 @@ Sets the symbol.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

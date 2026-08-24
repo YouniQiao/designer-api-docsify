@@ -1,8 +1,6 @@
 # FavoriteData
 
-The definition of Favorite/Subscribe.
-
-@interface FavoriteData
+The definition of Favorite/Subscribe.@interface FavoriteData
 
 **Since:** 23
 

@@ -2,8 +2,7 @@
 
 警告弹窗中按钮的样式。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 23
@@ -20,8 +19,7 @@
 action: VoidCallback
 ```
 
-Button选中时的回调。
-
+Button选中时的回调。  
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
@@ -42,8 +40,7 @@ Button选中时的回调。
 backgroundColor?: ResourceColor
 ```
 
-Button背景颜色。
-
+Button背景颜色。  
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
@@ -64,8 +61,7 @@ Button背景颜色。
 defaultFocus?: boolean
 ```
 
-设置Button是否是默认焦点，默认值false。值为true表示Button为默认焦点，值为false表示Button不为默认焦点。
-
+设置Button是否是默认焦点，默认值false。值为true表示Button为默认焦点，值为false表示Button不为默认焦点。  
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** boolean
@@ -88,10 +84,7 @@ defaultFocus?: boolean
 enabled?: boolean
 ```
 
-点击Button是否响应，默认值true。
-
-值为true时，Button可以响应。值为false时，Button不可以响应。
-
+点击Button是否响应，默认值true。值为true时，Button可以响应。值为false时，Button不可以响应。  
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** boolean
@@ -114,8 +107,7 @@ enabled?: boolean
 fontColor?: ResourceColor
 ```
 
-Button的文本颜色。
-
+Button的文本颜色。  
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
@@ -136,8 +128,7 @@ Button的文本颜色。
 style?: DialogButtonStyle
 ```
 
-设置Button的风格样式，默认值DialogButtonStyle.DEFAULT。
-
+设置Button的风格样式，默认值DialogButtonStyle.DEFAULT。  
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** [DialogButtonStyle](../../apis-arkui/arkts-apis/arkts-arkui-dialogbuttonstyle-e.md)
@@ -160,8 +151,7 @@ style?: DialogButtonStyle
 value: ResourceStr
 ```
 
-Button的文本内容，若值为null，则该按钮不显示。
-
+Button的文本内容，若值为null，则该按钮不显示。  
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)

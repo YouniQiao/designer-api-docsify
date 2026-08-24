@@ -1,6 +1,6 @@
 # InputMethodController
 
-@brief In the following API examples, you must first use [getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain an **InputMethodController** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain an **InputMethodController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## attach
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void
 ```
 
-@brief Attaches a self-drawing component to the input method. This API uses an asynchronous callback to return the result. <br> <br>   
+Attaches a self-drawing component to the input method. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -115,7 +110,7 @@ inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then
 attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 ```
 
-@brief Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
+Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -163,7 +158,7 @@ See [attach](#attach)
 attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-@brief Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
+Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -212,7 +207,7 @@ See [attach](#attach)
 attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>
 ```
 
-@brief Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
+Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -274,7 +269,7 @@ inputMethod.getController().attachWithUIContext(uiContext, textConfig, attachOpt
 changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void
 ```
 
-@brief Updates the information about the selected text in this edit box, to notify the input method when the selected text content or text range changes. This API uses an asynchronous callback to return the result.
+Updates the information about the selected text in this edit box, to notify the input method when the selected text content or text range changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -330,7 +325,7 @@ inputMethod.getController().changeSelection('test', 0, 5).then(() => {
 changeSelection(text: string, start: int, end: int): Promise<void>
 ```
 
-@brief Updates the information about the selected text in this edit box, to notify the input method when the selected text content or text range changes. This API uses a promise to return the result.
+Updates the information about the selected text in this edit box, to notify the input method when the selected text content or text range changes. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -371,7 +366,7 @@ See [changeSelection](#changeselection)
 detach(callback: AsyncCallback<void>): void
 ```
 
-@brief Detaches the self-drawing component from the input method. This API uses an asynchronous callback to return the result.
+Detaches the self-drawing component from the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -422,7 +417,7 @@ inputMethod.getController().detach().then(() => {
 detach(): Promise<void>
 ```
 
-@brief Detaches the self-drawing component from the input method. This API uses a promise to return the result.
+Detaches the self-drawing component from the input method. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -453,7 +448,7 @@ See [detach](#detach)
 discardTypingText(): Promise<void>
 ```
 
-@brief Discards the text that is being typed. This API uses a promise to return the result. <br> <br>   
+Discards the text that is being typed. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -498,7 +493,7 @@ inputMethod.getController().discardTypingText().then(() => {
 hideSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-@brief Hides the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>   
+Hides the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -568,7 +563,7 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 hideSoftKeyboard(): Promise<void>
 ```
 
-@brief Hides the soft keyboard. This API uses a promise to return the result. <br> <br>   
+Hides the soft keyboard. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -607,7 +602,7 @@ See [hideSoftKeyboard](#hidesoftkeyboard)
 hideTextInput(callback: AsyncCallback<void>): void
 ```
 
-@brief Exits the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>   
+Exits the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -668,7 +663,7 @@ inputMethod.getController().hideTextInput().then(() => {
 hideTextInput(): Promise<void>
 ```
 
-@brief Exits the text editing mode. This API uses a promise to return the result. <br> <br>   
+Exits the text editing mode. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -709,7 +704,7 @@ See [hideTextInput](#hidetextinput)
 off(type: 'deleteLeft', callback?: (length: number) => void): void
 ```
 
-@brief Disables listening for the leftward delete event.
+Disables listening for the leftward delete event.
 
 **Since:** 10
 
@@ -744,7 +739,7 @@ inputMethodController.off('deleteLeft');
 off(type: 'deleteRight', callback?: (length: number) => void): void
 ```
 
-@brief Disables listening for the rightward delete event.
+Disables listening for the rightward delete event.
 
 **Since:** 10
 
@@ -778,7 +773,7 @@ inputMethodController.off('deleteRight');
 off(type: 'finishTextPreview', callback?: Callback<void>): void
 ```
 
-@brief Unsubscribes from the event of finishing text preview. This API uses an asynchronous callback to return the result.
+Unsubscribes from the event of finishing text preview. This API uses an asynchronous callback to return the result.
 
 **Since:** 17
 
@@ -824,7 +819,7 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void
 ```
 
-@brief Disables listening for the event of obtaining the length of text deleted leftward. This API uses an asynchronous callback to return the result.
+Disables listening for the event of obtaining the length of text deleted leftward. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -859,7 +854,7 @@ inputMethodController.off('getLeftTextOfCursor');
 off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void
 ```
 
-@brief Disables listening for the event of obtaining the length of text deleted rightward. This API uses an asynchronous callback to return the result.
+Disables listening for the event of obtaining the length of text deleted rightward. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -894,7 +889,7 @@ inputMethodController.off('getRightTextOfCursor');
 off(type: 'getTextIndexAtCursor', callback?: () => number): void
 ```
 
-@brief Disables listening for the event of obtaining the index of text at the cursor. This API uses an asynchronous callback to return the result.
+Disables listening for the event of obtaining the index of text at the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -929,7 +924,7 @@ inputMethodController.off('getTextIndexAtCursor');
 off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void
 ```
 
-@brief Disables listening for the extended action handling event of the input method. This API uses an asynchronous callback to return the result.
+Disables listening for the extended action handling event of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -964,7 +959,7 @@ inputMethodController.off('handleExtendAction');
 off(type: 'insertText', callback?: (text: string) => void): void
 ```
 
-@brief Disables listening for the text insertion event of the input method.
+Disables listening for the text insertion event of the input method.
 
 **Since:** 10
 
@@ -999,7 +994,7 @@ inputMethodController.off('insertText');
 off(type: 'moveCursor', callback?: (direction: Direction) => void): void
 ```
 
-@brief Disables listening for the cursor movement event of the input method.
+Disables listening for the cursor movement event of the input method.
 
 **Since:** 10
 
@@ -1034,7 +1029,7 @@ inputMethodController.off('moveCursor');
 off(type: 'selectByMovement', callback?: Callback<Movement>): void
 ```
 
-@brief Disables listening for the select-by-cursor-movement event. This API uses an asynchronous callback to return the result.
+Disables listening for the select-by-cursor-movement event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1069,7 +1064,7 @@ inputMethodController.off('selectByMovement');
 off(type: 'selectByRange', callback?: Callback<Range>): void
 ```
 
-@brief Disables listening for the select-by-range event. This API uses an asynchronous callback to return the result.
+Disables listening for the select-by-range event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1104,7 +1099,7 @@ inputMethodController.off('selectByRange');
 off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void
 ```
 
-@brief Disables listening for the function key sending event of the input method.
+Disables listening for the function key sending event of the input method.
 
 **Since:** 10
 
@@ -1139,7 +1134,7 @@ inputMethodController.off('sendFunctionKey');
 off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void
 ```
 
-@brief Disables listening for the input method soft keyboard status event of the input method.
+Disables listening for the input method soft keyboard status event of the input method.
 
 **Since:** 10
 
@@ -1174,7 +1169,7 @@ inputMethodController.off('sendKeyboardStatus');
 off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void
 ```
 
-@brief Unsubscribes from the event for text preview operations in an input method application. This API uses an asynchronous callback to return the result.
+Unsubscribes from the event for text preview operations in an input method application. This API uses an asynchronous callback to return the result.
 
 **Since:** 17
 
@@ -1219,7 +1214,7 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 offDeleteLeft(callback?: Callback<int>): void
 ```
 
-@brief Unregister the callback of deleteLeft.
+Unregister the callback of deleteLeft.
 
 **Since:** 23
 
@@ -1239,7 +1234,7 @@ offDeleteLeft(callback?: Callback<int>): void
 offDeleteRight(callback?: Callback<int>): void
 ```
 
-@brief Unregister the callback of deleteRight.
+Unregister the callback of deleteRight.
 
 **Since:** 23
 
@@ -1259,7 +1254,7 @@ offDeleteRight(callback?: Callback<int>): void
 offFinishTextPreview(callback?: Callback<void>): void
 ```
 
-@brief Unsubscribe 'finishTextPreview' event.
+Unsubscribe 'finishTextPreview' event.
 
 **Since:** 23
 
@@ -1279,7 +1274,7 @@ offFinishTextPreview(callback?: Callback<void>): void
 offGetLeftTextOfCursor(callback?: GetTextCallback): void
 ```
 
-@brief Unregister the callback of getLeftTextofCursor event.
+Unregister the callback of getLeftTextofCursor event.
 
 **Since:** 23
 
@@ -1299,7 +1294,7 @@ offGetLeftTextOfCursor(callback?: GetTextCallback): void
 offGetRightTextOfCursor(callback?: GetTextCallback): void
 ```
 
-@brief Unregister the callback of getRightTextOfCursor event.
+Unregister the callback of getRightTextOfCursor event.
 
 **Since:** 23
 
@@ -1319,7 +1314,7 @@ offGetRightTextOfCursor(callback?: GetTextCallback): void
 offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void
 ```
 
-@brief Unregister the callback of getTextIndexAtCursor.
+Unregister the callback of getTextIndexAtCursor.
 
 **Since:** 23
 
@@ -1341,7 +1336,7 @@ offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void
 offHandleExtendAction(callback?: Callback<ExtendAction>): void
 ```
 
-@brief Unregister the callback of handleExtendAction.
+Unregister the callback of handleExtendAction.
 
 **Since:** 23
 
@@ -1361,7 +1356,7 @@ offHandleExtendAction(callback?: Callback<ExtendAction>): void
 offInsertText(callback?: Callback<string>): void
 ```
 
-@brief Unregister the callback of insertText.
+Unregister the callback of insertText.
 
 **Since:** 23
 
@@ -1381,7 +1376,7 @@ offInsertText(callback?: Callback<string>): void
 offMoveCursor(callback?: Callback<Direction>): void
 ```
 
-@brief Unregister the callback of moveCursor.
+Unregister the callback of moveCursor.
 
 **Since:** 23
 
@@ -1401,7 +1396,7 @@ offMoveCursor(callback?: Callback<Direction>): void
 offSelectByMovement(callback?: Callback<Movement>): void
 ```
 
-@brief Unregister the callback of selectedByMovement.
+Unregister the callback of selectedByMovement.
 
 **Since:** 23
 
@@ -1421,7 +1416,7 @@ offSelectByMovement(callback?: Callback<Movement>): void
 offSelectByRange(callback?: Callback<Range>): void
 ```
 
-@brief Unregister the callback of selectedByRange.
+Unregister the callback of selectedByRange.
 
 **Since:** 23
 
@@ -1441,7 +1436,7 @@ offSelectByRange(callback?: Callback<Range>): void
 offSendFunctionKey(callback?: Callback<FunctionKey>): void
 ```
 
-@brief Unregister the callback of sendFunctionKey.
+Unregister the callback of sendFunctionKey.
 
 **Since:** 23
 
@@ -1461,7 +1456,7 @@ offSendFunctionKey(callback?: Callback<FunctionKey>): void
 offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void
 ```
 
-@brief Unregister the callback of sendKeyboardStatus.
+Unregister the callback of sendKeyboardStatus.
 
 **Since:** 23
 
@@ -1481,7 +1476,7 @@ offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void
 offSetPreviewText(callback?:SetPreviewTextCallback): void
 ```
 
-@brief Unsubscribe 'setPreviewText' event.
+Unsubscribe 'setPreviewText' event.
 
 **Since:** 23
 
@@ -1503,7 +1498,7 @@ offSetPreviewText(callback?:SetPreviewTextCallback): void
 on(type: 'deleteLeft', callback: (length: number) => void): void
 ```
 
-@brief Enables listening for the leftward delete event. This API uses an asynchronous callback to return the result.
+Enables listening for the leftward delete event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1539,7 +1534,7 @@ inputMethod.getController().on('deleteLeft', (length: number) => {
 on(type: 'deleteRight', callback: (length: number) => void): void
 ```
 
-@brief Enables listening for the rightward delete event. This API uses an asynchronous callback to return the result.
+Enables listening for the rightward delete event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1575,7 +1570,7 @@ inputMethod.getController().on('deleteRight', (length: number) => {
 on(type: 'finishTextPreview', callback: Callback<void>): void
 ```
 
-@brief Subscribes to the event of finishing text preview. This API uses an asynchronous callback to return the result. <br> <br>   
+Subscribes to the event of finishing text preview. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -1632,7 +1627,7 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void
 ```
 
-@brief Enables listening for the event of obtaining the length of text deleted leftward. This API uses an asynchronous callback to return the result.
+Enables listening for the event of obtaining the length of text deleted leftward. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1670,7 +1665,7 @@ inputMethod.getController().on('getLeftTextOfCursor', (length: number) => {
 on(type: 'getRightTextOfCursor', callback: (length: number) => string): void
 ```
 
-@brief Enables listening for the event of obtaining the length of text deleted rightward. This API uses an asynchronous callback to return the result.
+Enables listening for the event of obtaining the length of text deleted rightward. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1708,7 +1703,7 @@ inputMethod.getController().on('getRightTextOfCursor', (length: number) => {
 on(type: 'getTextIndexAtCursor', callback: () => number): void
 ```
 
-@brief Enables listening for the event of obtaining the index of text at the cursor. This API uses an asynchronous callback to return the result.
+Enables listening for the event of obtaining the index of text at the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1746,7 +1741,7 @@ inputMethod.getController().on('getTextIndexAtCursor', () => {
 on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void
 ```
 
-@brief Enables listening for the extended action handling event of the input method. This API uses an asynchronous callback to return the result.
+Enables listening for the extended action handling event of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1782,7 +1777,7 @@ inputMethod.getController().on('handleExtendAction', (action: inputMethod.Extend
 on(type: 'insertText', callback: (text: string) => void): void
 ```
 
-@brief Enables listening for the text insertion event of the input method. This API uses an asynchronous callback to return the result.
+Enables listening for the text insertion event of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1831,7 +1826,7 @@ inputMethodController.off('insertText');
 on(type: 'moveCursor', callback: (direction: Direction) => void): void
 ```
 
-@brief Enables listening for the cursor movement event of the input method. This API uses an asynchronous callback to return the result.
+Enables listening for the cursor movement event of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1867,7 +1862,7 @@ inputMethod.getController().on('moveCursor', (direction: inputMethod.Direction) 
 on(type: 'selectByMovement', callback: Callback<Movement>): void
 ```
 
-@brief Enables listening for the select-by-cursor-movement event. This API uses an asynchronous callback to return the result.
+Enables listening for the select-by-cursor-movement event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1902,7 +1897,7 @@ inputMethod.getController().on('selectByMovement', (movement: inputMethod.Moveme
 on(type: 'selectByRange', callback: Callback<Range>): void
 ```
 
-@brief Enables listening for the select-by-range event. This API uses an asynchronous callback to return the result.
+Enables listening for the select-by-range event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1937,7 +1932,7 @@ inputMethod.getController().on('selectByRange', (range: inputMethod.Range) => {
 on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void
 ```
 
-@brief Enables listening for the function key sending event of the input method. This API uses an asynchronous callback to return the result.
+Enables listening for the function key sending event of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1973,7 +1968,7 @@ inputMethod.getController().on('sendFunctionKey', (functionKey: inputMethod.Func
 on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void
 ```
 
-@brief Enables listening for the soft keyboard status event of the input method. This API uses an asynchronous callback to return the result.
+Enables listening for the soft keyboard status event of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -2009,7 +2004,7 @@ inputMethod.getController().on('sendKeyboardStatus', (keyboardStatus: inputMetho
 on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 ```
 
-@brief Subscribes to the event for text preview operations in an input method application. This API uses an asynchronous callback to return the result. <br> <br>   
+Subscribes to the event for text preview operations in an input method application. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2065,7 +2060,7 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 onDeleteLeft(callback: Callback<int>): void
 ```
 
-@brief Register a callback and when IME sends delete left event with length, the callback will be invoked.
+Register a callback and when IME sends delete left event with length, the callback will be invoked.
 
 **Since:** 23
 
@@ -2091,7 +2086,7 @@ onDeleteLeft(callback: Callback<int>): void
 onDeleteRight(callback: Callback<int>): void
 ```
 
-@brief Register a callback and when IME sends delete right event with length, the callback will beinvoked.
+Register a callback and when IME sends delete right event with length, the callback will beinvoked.
 
 **Since:** 23
 
@@ -2117,7 +2112,7 @@ onDeleteRight(callback: Callback<int>): void
 onFinishTextPreview(callback: Callback<void>): void
 ```
 
-@brief <p>Subscribe 'finishTextPreview' event.</p> <br><p>To support the preview text feature, developers should subscribe to this event before calling attach.</p>
+<p>Subscribe 'finishTextPreview' event.</p> <br><p>To support the preview text feature, developers should subscribe to this event before calling attach.</p>
 
 **Since:** 23
 
@@ -2137,7 +2132,7 @@ onFinishTextPreview(callback: Callback<void>): void
 onGetLeftTextOfCursor(callback: GetTextCallback): void
 ```
 
-@brief Register a callback and when input method ability gets left text of cursor, the callback will be invoked.
+Register a callback and when input method ability gets left text of cursor, the callback will be invoked.
 
 **Since:** 23
 
@@ -2163,7 +2158,7 @@ onGetLeftTextOfCursor(callback: GetTextCallback): void
 onGetRightTextOfCursor(callback: GetTextCallback): void
 ```
 
-@brief Register a callback and when input method ability gets right text of cursor, the callback will be invoked.
+Register a callback and when input method ability gets right text of cursor, the callback will be invoked.
 
 **Since:** 23
 
@@ -2189,7 +2184,7 @@ onGetRightTextOfCursor(callback: GetTextCallback): void
 onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void
 ```
 
-@brief Register a callback and when input method ability gets the text index at cursor, the callback will be invoked.
+Register a callback and when input method ability gets the text index at cursor, the callback will be invoked.
 
 **Since:** 23
 
@@ -2215,7 +2210,7 @@ onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void
 onHandleExtendAction(callback: Callback<ExtendAction>): void
 ```
 
-@brief Register a callback and when IME sends extend action code, the callback will be invoked.
+Register a callback and when IME sends extend action code, the callback will be invoked.
 
 **Since:** 23
 
@@ -2241,7 +2236,7 @@ onHandleExtendAction(callback: Callback<ExtendAction>): void
 onInsertText(callback: Callback<string>): void
 ```
 
-@brief Register a callback and when IME sends insert text event, the callback will be invoked.
+Register a callback and when IME sends insert text event, the callback will be invoked.
 
 **Since:** 23
 
@@ -2267,7 +2262,7 @@ onInsertText(callback: Callback<string>): void
 onMoveCursor(callback: Callback<Direction>): void
 ```
 
-@brief Register a callback and when IME sends move cursor, the callback will be invoked.
+Register a callback and when IME sends move cursor, the callback will be invoked.
 
 **Since:** 23
 
@@ -2293,7 +2288,7 @@ onMoveCursor(callback: Callback<Direction>): void
 onSelectByMovement(callback: Callback<Movement>): void
 ```
 
-@brief Register a callback and when IME sends select event witch movement of cursor, the callback will be invoked.
+Register a callback and when IME sends select event witch movement of cursor, the callback will be invoked.
 
 **Since:** 23
 
@@ -2313,7 +2308,7 @@ onSelectByMovement(callback: Callback<Movement>): void
 onSelectByRange(callback: Callback<Range>): void
 ```
 
-@brief Register a callback and when IME sends select event with range of selection, the callback will be invoked.
+Register a callback and when IME sends select event with range of selection, the callback will be invoked.
 
 **Since:** 23
 
@@ -2333,7 +2328,7 @@ onSelectByRange(callback: Callback<Range>): void
 onSendFunctionKey(callback: Callback<FunctionKey>): void
 ```
 
-@brief Register a callback and whenIME sends functionKey, the callback will be invoked.
+Register a callback and whenIME sends functionKey, the callback will be invoked.
 
 **Since:** 23
 
@@ -2359,7 +2354,7 @@ onSendFunctionKey(callback: Callback<FunctionKey>): void
 onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void
 ```
 
-@brief Register a callback and when IME sends keyboard status, the callback will be invoked.
+Register a callback and when IME sends keyboard status, the callback will be invoked.
 
 **Since:** 23
 
@@ -2385,7 +2380,7 @@ onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void
 onSetPreviewText(callback: SetPreviewTextCallback): void
 ```
 
-@brief <p>Subscribe 'setPreviewText' event.</p> <p>To support the preview text feature, developers should subscribe to this event before calling attach.</p>
+<p>Subscribe 'setPreviewText' event.</p> <p>To support the preview text feature, developers should subscribe to this event before calling attach.</p>
 
 **Since:** 23
 
@@ -2405,7 +2400,7 @@ onSetPreviewText(callback: SetPreviewTextCallback): void
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-@brief Registers or unregisters MessageHandler. <br> <br>   
+Registers or unregisters MessageHandler. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2459,7 +2454,7 @@ inputMethodController.recvMessage();
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-@brief Sends the custom communication to the input method application. This API uses a promise to return the result. <br> <br>   
+Sends the custom communication to the input method application. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2520,7 +2515,7 @@ inputMethod.getController().sendMessage(msgId, msgParam).then(() => {
 setCallingWindow(windowId: int, callback: AsyncCallback<void>): void
 ```
 
-@brief Sets the window to be avoided by the input method. This API uses an asynchronous callback to return the result. <br> <br>   
+Sets the window to be avoided by the input method. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2581,7 +2576,7 @@ inputMethod.getController().setCallingWindow(windowId).then(() => {
 setCallingWindow(windowId: int): Promise<void>
 ```
 
-@brief Sets the window to be avoided by the input method. This API uses a promise to return the result. <br> <br>   
+Sets the window to be avoided by the input method. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2625,7 +2620,7 @@ See [setCallingWindow](#setcallingwindow)
 showSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-@brief Shows the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>   
+Shows the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2695,7 +2690,7 @@ inputMethod.getController().showSoftKeyboard(displayId).then(() => {
 showSoftKeyboard(): Promise<void>
 ```
 
-@brief Shows the soft keyboard. This API uses a promise to return the result. <br> <br>   
+Shows the soft keyboard. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2734,7 +2729,7 @@ See [showSoftKeyboard](#showsoftkeyboard)
 showTextInput(callback: AsyncCallback<void>): void
 ```
 
-@brief Enters the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>   
+Enters the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2803,7 +2798,7 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 showTextInput(): Promise<void>
 ```
 
-@brief Enters the text editing mode. This API uses a promise to return the result. <br> <br>   
+Enters the text editing mode. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2840,7 +2835,7 @@ See [showTextInput](#showtextinput)
 showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-@brief Enters the text editing mode. This API uses a promise to return the result. <br> <br>   
+Enters the text editing mode. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2883,7 +2878,7 @@ See [showTextInput](#showtextinput)
 stopInput(callback: AsyncCallback<boolean>): void
 ```
 
-@brief Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>   
+Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2944,7 +2939,7 @@ inputMethod.getController().stopInput().then((result: boolean) => {
 stopInput(): Promise<boolean>
 ```
 
-@brief Ends this input session. This API uses a promise to return the result. <br> <br>   
+Ends this input session. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -2977,7 +2972,7 @@ See [stopInput](#stopinput)
 stopInputSession(callback: AsyncCallback<boolean>): void
 ```
 
-@brief Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>   
+Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -3041,7 +3036,7 @@ inputMethod.getController().stopInputSession().then((result: boolean) => {
 stopInputSession(): Promise<boolean>
 ```
 
-@brief Ends this input session. This API uses a promise to return the result. <br> <br>   
+Ends this input session. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -3077,7 +3072,7 @@ See [stopInputSession](#stopinputsession)
 updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void
 ```
 
-@brief Updates the attribute information of this edit box. This API uses an asynchronous callback to return the result.
+Updates the attribute information of this edit box. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -3133,7 +3128,7 @@ inputMethod.getController().updateAttribute(inputAttribute).then(() => {
 updateAttribute(attribute: InputAttribute): Promise<void>
 ```
 
-@brief Updates the attribute information of this edit box. This API uses a promise to return the result.
+Updates the attribute information of this edit box. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -3172,7 +3167,7 @@ See [updateAttribute](#updateattribute)
 updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void
 ```
 
-@brief Updates the cursor information in this edit box. This API can be called to notify the input method of the cursor changes. This API uses an asynchronous callback to return the result.
+Updates the cursor information in this edit box. This API can be called to notify the input method of the cursor changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -3238,7 +3233,7 @@ inputMethod.getController().updateCursor(cursorInfo).then(() => {
 updateCursor(cursorInfo: CursorInfo): Promise<void>
 ```
 
-@brief Updates the cursor information in this edit box. This API can be called to notify the input method of the cursor changes. This API uses a promise to return the result.
+Updates the cursor information in this edit box. This API can be called to notify the input method of the cursor changes. This API uses a promise to return the result.
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # ThreatType
 
-Enum type supplied to threatType for the website's threat type.
-
-@enum { number }
+Enum type supplied to threatType for the website's threat type.@enum { number }
 
 **Since:** 23
 

@@ -20,7 +20,7 @@ import { ethernet } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [getMacAddress](arkts-network-ethernet-getmacaddress-f.md) | Obtains the names and MAC addresses of all Ethernet NICs. This API uses a promise to return the result. |
+| [getMacAddress](arkts-network-ethernet-getmacaddress-f.md) | Obtains the names and MAC addresses of all Ethernet NICs. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_ETHERNET_LOCAL_MAC |
 
 <!--Del-->
 ### Functions(System API)

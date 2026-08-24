@@ -38,9 +38,7 @@ Enumerates mouse event types.
 altKey: boolean
 ```
 
-Whether altKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether altKey is being pressed.The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -88,9 +86,7 @@ Enumerates mouse buttons.
 capsLock: boolean
 ```
 
-Whether capsLock is enabled.
-
-The value **true** indicates that capsLock is enabled, and the value **false** indicates the opposite.
+Whether capsLock is enabled.The value **true** indicates that capsLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -106,9 +102,7 @@ The value **true** indicates that capsLock is enabled, and the value **false** i
 ctrlKey: boolean
 ```
 
-Whether ctrlKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether ctrlKey is being pressed.The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -124,9 +118,7 @@ The value **true** indicates that the key is pressed, and the value **false** in
 fnKey: boolean
 ```
 
-Whether fnKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether fnKey is being pressed.The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -174,9 +166,7 @@ Y coordinate of the mouse event in the global coordinate system with the upper l
 logoKey: boolean
 ```
 
-Whether logoKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether logoKey is being pressed.The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -192,9 +182,7 @@ The value **true** indicates that the key is pressed, and the value **false** in
 numLock: boolean
 ```
 
-Whether numLock is enabled.
-
-The value **true** indicates that numLock is enabled, and the value **false** indicates the opposite.
+Whether numLock is enabled.The value **true** indicates that numLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -306,9 +294,7 @@ Y coordinate of the mouse event in the relative coordinate system with the upper
 scrollLock: boolean
 ```
 
-Whether scrollLock is enabled.
-
-The value **true** indicates that scrollLock is enabled, and the value **false** indicates the opposite.
+Whether scrollLock is enabled.The value **true** indicates that scrollLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -324,9 +310,7 @@ The value **true** indicates that scrollLock is enabled, and the value **false**
 shiftKey: boolean
 ```
 
-Whether shiftKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether shiftKey is being pressed.The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 

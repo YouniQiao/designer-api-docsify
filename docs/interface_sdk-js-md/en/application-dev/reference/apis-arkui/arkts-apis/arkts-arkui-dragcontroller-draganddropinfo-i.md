@@ -1,8 +1,6 @@
 # DragAndDropInfo
 
-Drag and drop information
-
-@interface DragAndDropInfo
+Drag and drop information@interface DragAndDropInfo
 
 **Since:** 23
 

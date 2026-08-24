@@ -15,8 +15,7 @@ Defines the Extendable GridItem.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-  static $_instantiate<T extends ExtendableGridItem>(
+static $_instantiate<T extends ExtendableGridItem>(
     factory: ConstructorT<T>, 
     value?: GridItemOptions, 
     content_?: CustomBuilder
@@ -28,6 +27,8 @@ Constructor of Extendable GridItem.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +53,7 @@ Constructor of Extendable GridItem.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-  static _instantiateImpl<T extends ExtendableGridItem>(
+static _instantiateImpl<T extends ExtendableGridItem>(
     styles: CustomBuilderT<T>, 
     factory: ConstructorT<T>, 
     content_?: CustomBuilder
@@ -65,6 +65,8 @@ Entry of Extendable GridItem.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

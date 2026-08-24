@@ -20,8 +20,7 @@ import { tag } from '@kit.ConnectivityKit';
 supportedProfiles: number[]
 ```
 
-支持的技术类型。
-
+支持的技术类型。  
 **说明：** 从API version 7开始支持，从API version 9开始废弃，使用[tag.TagInfo#technology](#taginfo)替代。
 
 **类型：** number[]

@@ -1,8 +1,6 @@
 # RoundedRectOptions
 
-Define options used to construct a rectangle with rounded corners.
-
-@interface RoundedRectOptions
+Define options used to construct a rectangle with rounded corners.@interface RoundedRectOptions
 
 **Since:** 23
 

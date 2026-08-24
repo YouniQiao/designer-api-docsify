@@ -2,8 +2,7 @@
 
 用于描述Viewport的绘制属性。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 18
@@ -15,7 +14,6 @@
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## height
@@ -24,13 +22,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 height?: Length
 ```
 
-形状视口的高度，取值范围≥0。
-
-默认值：0
-
-默认单位：vp
-
-异常值undefined、null、NaN和Infinity按照默认值处理。
+形状视口的高度，取值范围≥0。默认值：0默认单位：vp异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** Length
 
@@ -50,13 +42,7 @@ height?: Length
 width?: Length
 ```
 
-形状视口的宽度，取值范围≥0。
-
-默认值：0
-
-默认单位：vp
-
-异常值undefined、null、NaN和Infinity按照默认值处理。
+形状视口的宽度，取值范围≥0。默认值：0默认单位：vp异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** Length
 
@@ -76,13 +62,7 @@ width?: Length
 x?: Length
 ```
 
-形状视口起始点的水平坐标。
-
-默认值：0
-
-默认单位：vp
-
-异常值undefined、null、NaN和Infinity按照默认值处理。
+形状视口起始点的水平坐标。默认值：0默认单位：vp异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** Length
 
@@ -102,13 +82,7 @@ x?: Length
 y?: Length
 ```
 
-形状视口起始点的垂直坐标。
-
-默认值：0
-
-默认单位：vp
-
-异常值undefined、null、NaN和Infinity按照默认值处理。
+形状视口起始点的垂直坐标。默认值：0默认单位：vp异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** Length
 

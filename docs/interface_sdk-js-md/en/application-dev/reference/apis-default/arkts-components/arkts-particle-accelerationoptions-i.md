@@ -1,8 +1,6 @@
 # AccelerationOptions
 
-Defines acceleration options.
-
-@interface AccelerationOptions
+Defines acceleration options.@interface AccelerationOptions
 
 **Since:** 23
 

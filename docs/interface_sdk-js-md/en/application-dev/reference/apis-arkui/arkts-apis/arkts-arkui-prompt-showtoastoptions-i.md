@@ -1,8 +1,6 @@
 # ShowToastOptions
 
-Defines the options of ShowToast.
-
-@interface ShowToastOptions
+Defines the options of ShowToast.@interface ShowToastOptions
 
 **Since:** 8
 
@@ -18,7 +16,6 @@ Defines the options of ShowToast.
 
 ```TypeScript
 import { prompt } from '@kit.ArkUI';
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## bottom

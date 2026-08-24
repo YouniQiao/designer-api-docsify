@@ -1,6 +1,6 @@
 # KeyboardController
 
-@brief 下列API均需使用 on('inputStart') 获取到KeyboardController实例后，通过实例调用。
+下列API均需使用 on('inputStart') 获取到KeyboardController实例后，通过实例调用。
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 exitCurrentInputType(callback: AsyncCallback<void>): void
 ```
 
-@brief 退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用callback异步回调。
+退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -71,7 +71,7 @@ keyboardController.exitCurrentInputType().then(() => {
 exitCurrentInputType(): Promise<void>
 ```
 
-@brief 退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用promise异步回调。
+退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -102,7 +102,7 @@ exitCurrentInputType(): Promise<void>
 hide(callback: AsyncCallback<void>): void
 ```
 
-@brief 隐藏输入法。使用callback异步回调。
+隐藏输入法。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -174,7 +174,7 @@ keyboardController.hide().then(() => {
 hide(): Promise<void>
 ```
 
-@brief 隐藏输入法。使用promise异步回调。
+隐藏输入法。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -204,7 +204,7 @@ hide(): Promise<void>
 hideKeyboard(callback: AsyncCallback<void>): void
 ```
 
-@brief 隐藏输入法。使用callback异步回调。 <br> <br>   
+隐藏输入法。使用callback异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -257,7 +257,7 @@ keyboardController.hideKeyboard().then(() => {
 hideKeyboard(): Promise<void>
 ```
 
-@brief 隐藏输入法。使用promise异步回调。 <br> <br>   
+隐藏输入法。使用promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br

@@ -1,8 +1,6 @@
 # TextDecoderOptions
 
-Defines the TextDecoder related options parameters.
-
-@interface TextDecoderOptions
+Defines the TextDecoder related options parameters.@interface TextDecoderOptions
 
 **Since:** 23
 

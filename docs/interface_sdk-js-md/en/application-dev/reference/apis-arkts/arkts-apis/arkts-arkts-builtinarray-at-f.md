@@ -66,7 +66,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 
 | Type | Description |
 | --- | --- |
-| [Byte](arkts-arkts-byte-c.md) | The element at the given index. |
+| Byte | The element at the given index. |
 
 
 ## at
@@ -98,7 +98,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 
 | Type | Description |
 | --- | --- |
-| [Short](arkts-arkts-short-c.md) | The element at the given index. |
+| Short | The element at the given index. |
 
 
 ## at
@@ -130,7 +130,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 
 | Type | Description |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) | The element at the given index. |
+| Int | The element at the given index. |
 
 
 ## at
@@ -162,7 +162,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 
 | Type | Description |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) | The element at the given index. |
+| Long | The element at the given index. |
 
 
 ## at
@@ -194,7 +194,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 
 | Type | Description |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) | The element at the given index. |
+| Float | The element at the given index. |
 
 
 ## at
@@ -226,7 +226,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 
 | Type | Description |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) | The element at the given index. |
+| Double | The element at the given index. |
 
 
 ## at
@@ -258,5 +258,5 @@ Takes an integer value and returns the item at that index, allowing for positive
 
 | Type | Description |
 | --- | --- |
-| [Char](arkts-arkts-char-c.md) | The element at the given index. |
+| Char | The element at the given index. |
 

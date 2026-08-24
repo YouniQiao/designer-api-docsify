@@ -12,7 +12,6 @@ Represents the data change information.
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## isDirectory

@@ -100,11 +100,9 @@ fakeDragBy(offset: number): boolean
 
 > **说明：**
 
-> - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。
-> 
+> - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。&gt;
 > - 在[loop](arkts-arkui-swiper-attribute.md#loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子
-> 节点（向布局终点方向拖拽）的距离。
-> 
+> 节点（向布局终点方向拖拽）的距离。&gt;
 > - [onGestureSwipe](arkts-arkui-swiper-attribute.md#ongestureswipe)事件、
 > [onContentWillScroll](arkts-arkui-swiper-attribute.md#oncontentwillscroll)事件在拖拽过程中不触发。
 > [customContentTransition](arkts-arkui-swiper-attribute.md#customcontenttransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事
@@ -190,11 +188,7 @@ isFakeDragging(): boolean
 preloadItems(indices: Optional<Array<number>>): Promise<void>
 ```
 
-控制Swiper预加载指定子节点。调用该接口后会一次性加载所有指定的子节点，因此为了性能考虑，建议分批加载子节点。使用Promise异步回调。
-
-如果SwiperController对象未绑定任何Swiper组件，直接调用该接口，会抛出JS异常，并返回错误码100004。因此使用该接口时，建议通过try-catch捕获异常。
-
-与[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和自定义组件结合使用时，由于 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)只会保留缓存范围内的自定义组件，在缓存范围外的会被删除，因此需 要开发者保证通过该接口预加载的节点index在缓存范围内。
+控制Swiper预加载指定子节点。调用该接口后会一次性加载所有指定的子节点，因此为了性能考虑，建议分批加载子节点。使用Promise异步回调。如果SwiperController对象未绑定任何Swiper组件，直接调用该接口，会抛出JS异常，并返回错误码100004。因此使用该接口时，建议通过try-catch捕获异常。与[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和自定义组件结合使用时，由于 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)只会保留缓存范围内的自定义组件，在缓存范围外的会被删除，因此需 要开发者保证通过该接口预加载的节点index在缓存范围内。
 
 > **说明：**
 
@@ -277,8 +271,7 @@ startFakeDrag(): boolean
 
 > **说明：**
 
-> - Swiper已经处在真实手势拖拽中，或者已经开启了模拟拖拽，调用接口会返回false表示操作失败。
-> 
+> - Swiper已经处在真实手势拖拽中，或者已经开启了模拟拖拽，调用接口会返回false表示操作失败。&gt;
 > - 模拟拖拽无法触发嵌套滚动。
 
 **起始版本：** 23

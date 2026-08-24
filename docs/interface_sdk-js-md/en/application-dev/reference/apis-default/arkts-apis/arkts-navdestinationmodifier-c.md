@@ -1,8 +1,6 @@
 # NavDestinationModifier
 
-Defines NavDestination Modifier
-
-@implements { NavDestinationAttribute, AttributeModifier&lt;NavDestinationAttribute&gt; }
+Defines NavDestination Modifier@implements { NavDestinationAttribute, AttributeModifier&lt;NavDestinationAttribute&gt; }
 
 **Inheritance/Implementation:** NavDestinationModifier implements NavDestinationAttribute, AttributeModifier<NavDestinationAttribute>
 

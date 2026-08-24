@@ -14,8 +14,7 @@ function sendMessage(options: SendMessageOptions): void
 
 发送短信。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从 API version 6开始支持，从API version 10开始废弃。
 
 **起始版本：** 6

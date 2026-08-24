@@ -1,8 +1,6 @@
 # WaterFlow properties/events
 
-In addition to universal attributes and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
-
-In addition to universal events and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
+In addition to universal attributes and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.In addition to universal events and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
 
 **Inheritance/Implementation:** WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribute>
 
@@ -23,9 +21,7 @@ In addition to universal events and [scrollable component common events](../../.
 cachedCount(value: number)
 ```
 
-Number of items to be preloaded.
-
-This attribute takes effect only in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with virtualScroll enabled. **FlowItem** components that are outside the display and cache range will be released.
+Number of items to be preloaded.This attribute takes effect only in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with virtualScroll enabled. **FlowItem** components that are outside the display and cache range will be released.
 
 **Since:** 11
 
@@ -49,11 +45,7 @@ This attribute takes effect only in [LazyForEach](../../../ui/rendering-control/
 cachedCount(count: number, show: boolean)
 ```
 
-Sets the number of flow items to be cached (preloaded) and specifies whether to display the preloaded nodes.
-
-This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
-
-This parameter takes effect only when used with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or the [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) component that has virtualScroll enabled. **FlowItem** elements outside the visible area and cache range will be released.
+Sets the number of flow items to be cached (preloaded) and specifies whether to display the preloaded nodes.This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.This parameter takes effect only when used with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or the [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) component that has virtualScroll enabled. **FlowItem** elements outside the visible area and cache range will be released.
 
 **Since:** 14
 
@@ -100,11 +92,7 @@ Sets the gap between columns.
 columnsTemplate(value: string)
 ```
 
-Sets the number of columns in the layout. If this attribute is not set, one column is used by default.
-
-For example, **'1fr 1fr 2fr'** indicates three columns, with the first column taking up 1/4 of the parent component 's full width, the second column 1/4, and the third column 2/4.
-
-You can use **columnsTemplate('repeat(auto-fill,track-size)')** to automatically calculate the number of columns based on the specified column width **track-size**. **repeat** and **auto-fill** are keywords. The units for **track-size** can be px, vp (default), %, or a valid number. For details, see [Example 2](../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#example-2-implementing-automatic-column-count-calculation).
+Sets the number of columns in the layout. If this attribute is not set, one column is used by default.For example, **'1fr 1fr 2fr'** indicates three columns, with the first column taking up 1/4 of the parent component's full width, the second column 1/4, and the third column 2/4.You can use **columnsTemplate('repeat(auto-fill,track-size)')** to automatically calculate the number of columns based on the specified column width **track-size**. **repeat** and **auto-fill** are keywords. The units for **track-size** can be px, vp (default), %, or a valid number. For details, see [Example 2](../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#example-2-implementing-automatic-column-count-calculation).
 
 **Since:** 9
 
@@ -126,13 +114,7 @@ You can use **columnsTemplate('repeat(auto-fill,track-size)')** to automatically
 columnsTemplate(value: string | ItemFillPolicy)
 ```
 
-Sets the number of columns in the layout. If this attribute is not set, one column is used by default.
-
-When the value is of the string type, refer to [columnsTemplate(value: string)](#columnstemplate) for the usage.
-
-When the value is of the **ItemFillPolicy** type, the number of columns is determined based on the [breakpoint type](../../../ui/arkts-layout-development-grid-layout.md#breakpoints) corresponding to the width of the **WaterFlow** component.
-
-For example, the **ItemFillPolicy.BREAKPOINT_DEFAULT** component displays two columns when the component width falls within the sm or smaller breakpoint range, three columns for the md breakpoint range, and five columns for the lg or larger breakpoint range, with each column being 1 fr.
+Sets the number of columns in the layout. If this attribute is not set, one column is used by default.When the value is of the string type, refer to [columnsTemplate(value: string)](#columnstemplate) for the usage.When the value is of the **ItemFillPolicy** type, the number of columns is determined based on the [breakpoint type](../../../ui/arkts-layout-development-grid-layout.md#breakpoints) corresponding to the width of the **WaterFlow** component.For example, the **ItemFillPolicy.BREAKPOINT_DEFAULT** component displays two columns when the component width falls within the sm or smaller breakpoint range, three columns for the md breakpoint range, and five columns for the lg or larger breakpoint range, with each column being 1 fr.
 
 **Since:** 22
 
@@ -158,8 +140,7 @@ enableScrollInteraction(value: boolean)
 
 Sets whether to support the scrolling gesture.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The component cannot be scrolled through mouse press-and-drag operations.
 
 **Since:** 10
@@ -320,15 +301,14 @@ Triggered when the **WaterFlow** content reaches the start position.
 onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 ```
 
-When this API is called back, the event parameter passes the scroll offset that is about to occur. The event processing function can calculate the actually required scroll offset based on the application scenario and return it as the return value. The **WaterFlow** component will then scroll according to this returned actual scroll offset.
-
-This event is triggered when either of the following conditions is met:
-
-1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation). 2. The **WaterFlow** component scrolls by inertia. 3. Scrolling is triggered by calling the fling API.
-
+When this API is called back, the event parameter passes the scroll offset that is about to occur. The event processing function can calculate the actually required scroll offset based on the application scenario and return it as the return value. The **WaterFlow** component will then scroll according to this returned actual scroll offset.This event is triggered when either of the following conditions is met:
+1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation).
+2. The **WaterFlow** component scrolls by inertia.
+3. Scrolling is triggered by calling the fling API.
 This event is not triggered in the following scenarios:
-
-1. A scroll control API other than fling is called. 2. The out-of-bounds bounce effect is active. 3. The scrollbar is dragged.
+1. A scroll control API other than fling is called.
+2. The out-of-bounds bounce effect is active.
+3. The scrollbar is dragged.
 
 **Since:** 10
 
@@ -368,7 +348,7 @@ Triggered when the first or last item displayed in the component changes. It is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (first: number, last: number) =&gt; void | Yes | Callback function, triggered when the first or last item displayed in the waterflow changes. "first": the index of the first item displayed in the waterflow, "last": the index of the last item displayed in the waterflow. |
+| event | (first: number, last: number) =&gt; void | Yes | Callback function, triggered when the first or last item displayed in the waterflow changes."first": the index of the first item displayed in the waterflow,"last": the index of the last item displayed in the waterflow. |
 
 ## rowsGap
 
@@ -398,11 +378,7 @@ Sets the gap between rows.
 rowsTemplate(value: string)
 ```
 
-Sets the number of rows in the layout. If this attribute is not set, one row is used by default.
-
-For example, **'1fr 1fr 2fr'** indicates three rows, with the first row taking up 1/4 of the parent component's full height, the second row 1/4, and the third row 2/4.
-
-You can use **rowsTemplate('repeat(auto-fill,track-size)')** to automatically calculate the number of rows based on the specified row height **track-size**. **repeat** and **auto-fill** are keywords. The units for **track-size** can be px, vp (default), %, or a valid number.
+Sets the number of rows in the layout. If this attribute is not set, one row is used by default.For example, **'1fr 1fr 2fr'** indicates three rows, with the first row taking up 1/4 of the parent component's full height, the second row 1/4, and the third row 2/4.You can use **rowsTemplate('repeat(auto-fill,track-size)')** to automatically calculate the number of rows based on the specified row height **track-size**. **repeat** and **auto-fill** are keywords. The units for **track-size** can be px, vp (default), %, or a valid number.
 
 **Since:** 9
 
@@ -426,8 +402,7 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 
 Defines whether the **WaterFlow** component supports the generation of empty branch nodes that do not contain any child components using the **if/else** rendering control syntax in **LazyForEach** or **Repeat**. If this attribute is not set, empty branch nodes are not supported. This attribute cannot be updated after being set. Therefore, you cannot switch between the behavior of supporting empty branches and the behavior of not supporting empty branches after setting this attribute.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When [WaterFlowSections](arkts-arkui-waterflowsections-c.md) is set using the [sections](arkts-arkui-waterflowoptions-i.md) parameter,
 > or when the [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md) layout mode is set using the
 > [layoutMode](arkts-arkui-waterflowoptions-i.md) parameter, the **FlowItem** after the empty branch is displayed regardless

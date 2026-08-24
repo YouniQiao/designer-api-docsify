@@ -4,6 +4,8 @@ Object used for store least recently used sendable Object.
 
 **Since:** 18
 
+**Decorator:** @Sendable
+
 <!--Device-utils-class SendableLruCache--><!--Device-utils-class SendableLruCache-End-->
 
 **System capability:** SystemCapability.Utils.Lang

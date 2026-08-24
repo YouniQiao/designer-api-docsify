@@ -602,10 +602,8 @@ inDevices(devices: Array<string>): RdbPredicates
 
 同步分布式数据库时连接到组网内指定的远程设备。
 
-> **说明：**
-> 
-> 其中devices通过调用<!--RP2--
-> 
+> **说明：**&gt;
+> 其中devices通过调用<!--RP2-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP2End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 
@@ -727,7 +725,7 @@ isNotNull(field: string): RdbPredicates
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 **示例**
 
@@ -1045,7 +1043,7 @@ predicates.notIn("NAME", ["Lisa", "Rose"])
 offsetAs(rowOffset: number): RdbPredicates
 ```
 
-配置RdbPredicates以指定返回结果的起始位置。需要同步调用limitAs接口指定查询数量，否则将无查询结果。如需查询指定偏移位置后的所有行，limitAs接口调用需传参数-1。该方法等同于SQL语句中的"OFFSET "。
+配置RdbPredicates以指定返回结果的起始位置。需要同步调用limitAs接口指定查询数量，否则将无查询结果。如需查询指定偏移位置后的所有行，limitAs接口调用需传参数-1。该方法等同于SQL语句中的"OFFSET"。
 
 **起始版本：** 7
 

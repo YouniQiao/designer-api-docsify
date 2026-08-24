@@ -29,5 +29,5 @@
 
 | Name | Description |
 | --- | --- |
-| [PopoverOptions](arkts-arkui-advanced-dialog-popoveroptions-i.md) | Defines PopoverDialog Options |
+| [PopoverOptions](arkts-arkui-advanced-dialog-popoveroptions-i.md) | Defines PopoverDialog Options@extends CustomPopupOptions |
 

@@ -14,14 +14,11 @@ function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: N
 
 Queries the UID of the application that initiates a specified network connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - This API can be called only in VPN applications.
-> 
+> **NOTE：**&gt;
+> - This API can be called only in VPN applications.&gt;
 > - Set the port numbers of the **local** and **remote** parameters when calling the API. If the port number is not
 > set or is set to 0, the API filters out a set of UIDs that meet the conditions based on other parameters and
-> returns a matched UID.
-> 
+> returns a matched UID.&gt;
 > - When protocol is set to PROTO_TYPE_UDP, if no UID is found based on the local and remote parameters, the UID is
 > filtered based on the local parameter and the matched UID is returned.
 > **Required permission**: ohos.permission.GET_NETWORK_INFO

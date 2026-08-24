@@ -156,9 +156,7 @@ HTML file to be loaded:
 ignoreCacheControlNoStore: boolean
 ```
 
-Sets whether to ignore Cache-Control: no-store in the response header.
-
-If set to true, the header is ignored; if set to false, it is not ignored.
+Sets whether to ignore Cache-Control: no-store in the response header.If set to true, the header is ignored; if set to false, it is not ignored.
 
 **Type:** boolean
 
@@ -174,15 +172,7 @@ If set to true, the header is ignored; if set to false, it is not ignored.
 minTimeBetweenPrefetchesMs: number
 ```
 
-Sets the minimum time interval between two web page prefetches.
-
-During each prefetch, the interval from the last prefetch is calculated. If it is less than the set value, the current prefetch is canceled.
-
-Value range: [0, 500].
-
-If set to a negative number, the default value 0 is used.
-
-Unit: ms
+Sets the minimum time interval between two web page prefetches.During each prefetch, the interval from the last prefetch is calculated. If it is less than the set value, the current prefetch is canceled.Value range: [0, 500].If set to a negative number, the default value 0 is used.Unit: ms
 
 **Type:** number
 

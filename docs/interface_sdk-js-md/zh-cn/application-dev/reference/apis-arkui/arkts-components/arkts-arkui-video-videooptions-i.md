@@ -1,8 +1,6 @@
 # VideoOptions
 
-定义Video的具体配置参数。
-
-@interface VideoOptions
+定义Video的具体配置参数。@interface VideoOptions
 
 **起始版本：** 23
 

@@ -24,8 +24,7 @@ addResource(type: ResourceType, proxy: PhotoProxy): void
 
 Adds resources using **PhotoProxy** data.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
 
 **Since:** 23
@@ -178,15 +177,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest
 ```
 
-Creates an asset change request with the specified file name.
-
-The file name must meet the following requirements:
-
-- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : ? " &lt; &gt; |
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : ? " ' ` &lt; &gt; | { } [ ]
+Creates an asset change request with the specified file name.The file name must meet the following requirements:  
+- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.  
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 11
 
@@ -314,11 +307,9 @@ static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Pr
 
 Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be
-> permanently deleted. The deleted assets are not stored in the recycle bin.
-> 
+> permanently deleted. The deleted assets are not stored in the recycle bin.&gt;
 > - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this
 > operation.
 
@@ -378,12 +369,9 @@ static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 Deletes cloud media assets to the trash in batches. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - If the assets are only on the local device, no changes are made.
-> 
-> - If the assets are only in the cloud, they are moved directly to the trash.
-> 
+> **NOTE：**&gt;
+> - If the assets are only on the local device, no changes are made.&gt;
+> - If the assets are only in the cloud, they are moved directly to the trash.&gt;
 > - If the assets are on both the local device and the cloud, after deletion, they only remain on the local
 > device, and the cloud copies are moved in the trash.
 
@@ -440,8 +428,7 @@ static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>)
 
 Permanently deletes images or videos in batches. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.
 
@@ -508,8 +495,7 @@ static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<st
 
 Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.
 
@@ -583,12 +569,9 @@ static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 Deletes local media assets to the trash in batches. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - If the assets are only on the local device, they are moved directly to the trash.
-> 
-> - If the assets are only in the cloud, no changes are made.
-> 
+> **NOTE：**&gt;
+> - If the assets are only on the local device, they are moved directly to the trash.&gt;
+> - If the assets are only in the cloud, no changes are made.&gt;
 > - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and
 > the local copies are moved in the trash.
 

@@ -12,7 +12,6 @@ The inputDevice module implements input device management functions such as list
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
-import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## Summary

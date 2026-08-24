@@ -12,7 +12,6 @@ Represents information about the device-cloud sync progress.
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## error

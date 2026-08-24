@@ -1,8 +1,6 @@
 # Bias
 
-Defines the Bias.
-
-@interface Bias
+Defines the Bias.@interface Bias
 
 **Since:** 23
 

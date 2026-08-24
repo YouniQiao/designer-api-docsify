@@ -1,8 +1,6 @@
 # ScrollEventInfo
 
-ScrollEvent info.
-
-@interface ScrollEventInfo
+ScrollEvent info.@interface ScrollEventInfo
 
 **起始版本：** 23
 

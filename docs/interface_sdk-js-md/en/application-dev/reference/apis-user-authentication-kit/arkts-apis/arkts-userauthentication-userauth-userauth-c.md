@@ -16,7 +16,6 @@ Provides APIs for managing the **UserAuth** object.
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## auth

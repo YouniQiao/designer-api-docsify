@@ -1,6 +1,6 @@
 # CursorInfo
 
-@brief 光标信息。
+光标信息。
 
 **起始版本：** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## displayId
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 displayId?: long
 ```
 
-@brief 光标所在显示器的ID，该参数应为整数，最小值为0，默认值为0。
+光标所在显示器的ID，该参数应为整数，最小值为0，默认值为0。
 
 **类型：** long
 
@@ -45,7 +40,7 @@ displayId?: long
 height: double
 ```
 
-@brief 光标的高度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
+光标的高度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
 
 **类型：** double
 
@@ -61,7 +56,7 @@ height: double
 left: double
 ```
 
-@brief 光标的横坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
+光标的横坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
 
 **类型：** double
 
@@ -77,7 +72,7 @@ left: double
 top: double
 ```
 
-@brief 光标的纵坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
+光标的纵坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
 
 **类型：** double
 
@@ -93,7 +88,7 @@ top: double
 width: double
 ```
 
-@brief 光标的宽度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
+光标的宽度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
 
 **类型：** double
 

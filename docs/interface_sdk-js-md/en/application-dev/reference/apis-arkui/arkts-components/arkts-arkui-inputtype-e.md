@@ -14,9 +14,7 @@ Sets the single-line text box type.
 Normal
 ```
 
-Normal input mode. In this mode, there is no special restriction on the input characters.
-
-The inline style supports only the **InputType.Normal** type.
+Normal input mode. In this mode, there is no special restriction on the input characters.The inline style supports only the **InputType.Normal** type.
 
 **Since:** 7
 
@@ -32,9 +30,7 @@ The inline style supports only the **InputType.Normal** type.
 Number
 ```
 
-Digit input mode.
-
-Negative numbers and decimals are not supported.
+Digit input mode.Negative numbers and decimals are not supported.
 
 **Since:** 7
 
@@ -50,9 +46,7 @@ Negative numbers and decimals are not supported.
 PhoneNumber
 ```
 
-Phone number input mode.
-
-In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#), opening parentheses ((), and closing parenthesis ()); the length is not limited.
+Phone number input mode.In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#), opening parentheses ((), and closing parenthesis ()); the length is not limited.
 
 **Since:** 9
 
@@ -68,9 +62,7 @@ In this mode, the following characters are allowed: digits, spaces, plus signs (
 Email
 ```
 
-Email address input mode.
-
-This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' " + - / = ? ^ ` { | } ~ @. The at sign can appear only once.
+Email address input mode.This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % &' " * + - / = ? ^ ` { | } ~ @. The at sign can appear only once.
 
 **Since:** 7
 
@@ -86,15 +78,7 @@ This mode accepts only digits, letters, underscores (_), dots (.), and the follo
 Password
 ```
 
-Password input mode.
-
-The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
-
-The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
-
-The [decoration](arkts-arkui-textinput-attribute.md#decoration), [showUnderline](arkts-arkui-textinput-attribute.md#showunderline), and [lineHeight](arkts-arkui-textinput-attribute.md#lineheight) attributes do not take effect in password input mode.
-
-If Password Vault is enabled, autofill is available for the username and password.
+Password input mode.The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.The [decoration](arkts-arkui-textinput-attribute.md#decoration), [showUnderline](arkts-arkui-textinput-attribute.md#showunderline), and [lineHeight](arkts-arkui-textinput-attribute.md#lineheight) attributes do not take effect in password input mode.If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 7
 
@@ -110,13 +94,7 @@ If Password Vault is enabled, autofill is available for the username and passwor
 NUMBER_PASSWORD = 8
 ```
 
-Numeric password input mode.
-
-The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
-
-The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
-
-The password input mode does not support underlines. If Password Vault is enabled, autofill is available for the username and password.
+Numeric password input mode.The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.The password input mode does not support underlines. If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 11
 
@@ -134,9 +112,7 @@ The password input mode does not support underlines. If Password Vault is enable
 USER_NAME = 10
 ```
 
-User name input mode with no special restrictions.
-
-If Password Vault is enabled, autofill is available for the username and password.
+User name input mode with no special restrictions.If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 11
 
@@ -154,13 +130,7 @@ If Password Vault is enabled, autofill is available for the username and passwor
 NEW_PASSWORD = 11
 ```
 
-New password input mode with no special restrictions.
-
-The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
-
-The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
-
-If Password Vault is enabled, a new password can be automatically generated.
+New password input mode with no special restrictions.The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.If Password Vault is enabled, a new password can be automatically generated.
 
 **Since:** 11
 
@@ -178,9 +148,7 @@ If Password Vault is enabled, a new password can be automatically generated.
 NUMBER_DECIMAL = 12
 ```
 
-Number input mode with a decimal point.
-
-The value can contain digits and only one decimal point. Negative decimals are not supported. For the input mode of negative decimals, use **inputFilter**.
+Number input mode with a decimal point.The value can contain digits and only one decimal point. Negative decimals are not supported. For the input mode of negative decimals, use **inputFilter**.
 
 **Since:** 11
 

@@ -1,8 +1,6 @@
 # DividerModifier
 
-Defines Divider Modifier
-
-@implements DividerAttribute, AttributeModifier&lt;DividerAttribute&gt;
+Defines Divider Modifier@implements DividerAttribute, AttributeModifier&lt;DividerAttribute&gt;
 
 **Inheritance/Implementation:** DividerModifier implements DividerAttribute, AttributeModifier<DividerAttribute>
 

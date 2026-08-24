@@ -1,11 +1,8 @@
 # AudioRoutingManager
 
-This interface implements audio routing management.
+This interface implements audio routing management.Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
 
-Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 23
@@ -18,7 +15,6 @@ Before calling any API in AudioRoutingManager, you must use [getRoutingManager](
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## excludeOutputDevices

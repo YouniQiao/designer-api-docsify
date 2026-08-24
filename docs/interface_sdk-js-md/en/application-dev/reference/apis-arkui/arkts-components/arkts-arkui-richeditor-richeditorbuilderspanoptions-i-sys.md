@@ -18,7 +18,7 @@ dragBackgroundColor?: ColorMetrics
 
 builder span drag background color
 
-**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 

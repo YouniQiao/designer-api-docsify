@@ -1,7 +1,6 @@
 # BottomOffset
 
-Defines the distance between the popup and the bottom in different scenario modes, based on the presence or absence of a menu bar, with the default being the distance when there is no menu bar.
-
+Defines the distance between the popup and the bottom in different scenario modes, based on the presence or absence of a menu bar, with the default being the distance when there is no menu bar.  
 | Name| Value| Description| | - | - | - | | OFFSET_FOR_BAR | 0 | Distance from the bottom of the window when there is a menu bar. It sets the dialog box 88 vp away from the bottom of the window.| | OFFSET_FOR_NONE | 1 | Distance from the bottom of the window when there is no menu bar. Default value. It sets the dialog box 44 vp away from the bottom of the window.|
 
 **Since:** 12

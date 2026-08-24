@@ -1,8 +1,6 @@
 # CapsuleStyleOptions
 
-胶囊样式选项。
-
-继承自[ScanEffectOptions](arkts-progress-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-progress-commonprogressstyleoptions-i.md)。
+胶囊样式选项。继承自[ScanEffectOptions](arkts-progress-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-progress-commonprogressstyleoptions-i.md)。
 
 **继承/实现关系：** CapsuleStyleOptions extends [ScanEffectOptions](arkts-progress-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-progress-commonprogressstyleoptions-i.md)
 
@@ -42,7 +40,7 @@ borderRadius?: LengthMetrics
 
 Capsule进度条圆角半径（不支持百分比设置）。 默认值：min(width, height) / 2。
 
-**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **默认值：** min(width, height) / 2
 
@@ -122,7 +120,7 @@ font?: Font
 fontColor?: ResourceColor
 ```
 
-文本颜色。 默认值：'#ff182431' 。
+文本颜色。 默认值：'#ff182431'。
 
 **类型：** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
 

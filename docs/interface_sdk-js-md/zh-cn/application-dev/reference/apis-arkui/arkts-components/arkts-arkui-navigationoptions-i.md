@@ -19,11 +19,7 @@
 animated?: boolean
 ```
 
-是否支持转场动画。
-
-true：支持转场动画；false：不支持转场动画。
-
-默认值：true
+是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true
 
 **类型：** boolean
 
@@ -43,9 +39,7 @@ true：支持转场动画；false：不支持转场动画。
 launchMode?: LaunchMode
 ```
 
-路由栈的操作模式。
-
-默认值：LaunchMode.STANDARD
+路由栈的操作模式。默认值：LaunchMode.STANDARD
 
 **类型：** [LaunchMode](arkts-arkui-launchmode-e.md)
 

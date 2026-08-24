@@ -1,8 +1,6 @@
 # FontStyle
 
-Text style
-
-@enum { number }
+Text style@enum { number }
 
 **起始版本：** 23
 

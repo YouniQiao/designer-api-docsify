@@ -1,8 +1,6 @@
 # SliderOptions
 
-Parameters of the slider.
-
-@interface SliderOptions
+Parameters of the slider.@interface SliderOptions
 
 **Since:** 23
 

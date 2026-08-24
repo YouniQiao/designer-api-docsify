@@ -16,6 +16,8 @@ export declare function Shape(
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Shape(    value?: PixelMap,    content_?: CustomBuilder,): ShapeAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Shape(    value?: PixelMap,    content_?: CustomBuilder,): ShapeAttribute-End-->
@@ -26,7 +28,7 @@ export declare function Shape(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PixelMap](arkts-arkui-pixelmap-t.md) | 否 | 绘制目标，可将图形绘制在指定的PixelMap对象中，若未设置，则默认在当前绘制目标中进行绘制。异常值undefined和null按照无效值处理，本次设置不生效。 |
+| value | [PixelMap](arkts-arkui-pixelmap-t.md) | 否 | 绘制目标，可将图形绘制在指定的PixelMap对象中， 若未设置，则默认在当前绘制目标中进行绘制。 异常值undefined和null按照无效值处理，本次设置不生效。 |
 | content_ | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) | 否 |  |
 
 **返回值：**
@@ -51,6 +53,8 @@ Defines Shape Component.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

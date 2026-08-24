@@ -358,9 +358,7 @@ animator.update(options);
 oncancel: () => void
 ```
 
-Called when this animation is canceled.
-
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onCancel** instead.
+Called when this animation is canceled.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onCancel** instead.
 
 **Type:** () =&gt; void
 
@@ -402,9 +400,7 @@ Called when this animation is canceled.
 onfinish: () => void
 ```
 
-Called when this animation is finished.
-
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFinish** instead.
+Called when this animation is finished.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFinish** instead.
 
 **Type:** () =&gt; void
 
@@ -446,9 +442,7 @@ Called when this animation is finished.
 onframe: (progress: number) => void
 ```
 
-Called when a frame is received.
-
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFrame** instead.
+Called when a frame is received.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFrame** instead.
 
 **Type:** (progress: number) =&gt; void
 
@@ -470,8 +464,7 @@ Note: This API is supported since API version 6 and deprecated since API version
 onFrame: (progress: number) => void
 ```
 
-Called when a frame is received.
-
+Called when a frame is received.  
 **progress**: current value of the animation. Value range: [begin, end] defined in [AnimatorOptions](../../apis-default/arkts-apis/arkts-animator-animatoroptions-i.md). Default value range: [0, 1]
 
 **Type:** (progress: number) =&gt; void
@@ -492,9 +485,7 @@ Called when a frame is received.
 onrepeat: () => void
 ```
 
-Called when this animation repeats.
-
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onRepeat** instead.
+Called when this animation repeats.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onRepeat** instead.
 
 **Type:** () =&gt; void
 

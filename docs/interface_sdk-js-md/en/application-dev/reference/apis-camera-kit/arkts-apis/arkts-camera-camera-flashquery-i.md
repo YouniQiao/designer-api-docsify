@@ -2,8 +2,7 @@
 
 FlashQuery provides APIs to query the flash status and mode of a camera device.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This interface was first introduced in API version 12. In this version, a compatibility change was made that
 > preserved the initial version information of inner elements. As a result, you might see outer element's
 
@@ -17,7 +16,6 @@ FlashQuery provides APIs to query the flash status and mode of a camera device.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## hasFlash

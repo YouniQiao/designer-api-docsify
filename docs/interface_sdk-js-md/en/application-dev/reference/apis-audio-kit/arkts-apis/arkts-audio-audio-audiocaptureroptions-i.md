@@ -12,7 +12,6 @@ Describes audio capturer configurations.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## capturerInfo
@@ -37,9 +36,7 @@ Audio capturer information.
 playbackCaptureConfig?: AudioPlaybackCaptureConfig
 ```
 
-Defines configuration for capturing played audio.
-
-This API is supported since API version 10 and deprecated since API version 12. You are advised to use [AVScreenCapture](../../../reference/apis-media-kit/capi-avscreencapture.md) instead.
+Defines configuration for capturing played audio.This API is supported since API version 10 and deprecated since API version 12. You are advised to use [AVScreenCapture](../../../reference/apis-media-kit/capi-avscreencapture.md) instead.
 
 **Type:** [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
 

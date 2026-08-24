@@ -12,7 +12,6 @@ Describes the settings for Wi-Fi connection.
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## addNetworkToSystem

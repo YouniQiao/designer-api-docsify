@@ -20,9 +20,7 @@ import { image } from '@kit.ImageKit';
 height: int
 ```
 
-Height
-
-Unit:px.
+Height Unit:px.
 
 **Type:** int
 
@@ -42,9 +40,7 @@ Unit:px.
 width: int
 ```
 
-Width
-
-Unit:px.
+Width Unit:px.
 
 **Type:** int
 

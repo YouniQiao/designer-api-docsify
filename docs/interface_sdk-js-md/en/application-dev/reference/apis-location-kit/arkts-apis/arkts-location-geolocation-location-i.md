@@ -1,8 +1,6 @@
 # Location
 
-Provides information about geographic locations
-
-@interface Location
+Provides information about geographic locations@interface Location
 
 **Since:** 7
 

@@ -1,8 +1,6 @@
 # TabContentState
 
-TabContent state.
-
-@enum { number }
+TabContent state.@enum { number }
 
 **Since:** 23
 

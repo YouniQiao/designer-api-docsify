@@ -2,8 +2,7 @@
 
 Offset of the overlay from the upper left corner. By default, the overlay is in the upper left corner of the component.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 12.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
 > 's
@@ -25,9 +24,7 @@ Offset of the overlay from the upper left corner. By default, the overlay is in 
 x?: number
 ```
 
-Horizontal offset.
-
-Unit: vp.
+Horizontal offset.Unit: vp.
 
 **Type:** number
 
@@ -47,9 +44,7 @@ Unit: vp.
 y?: number
 ```
 
-Vertical offset.
-
-Unit: vp.
+Vertical offset.Unit: vp.
 
 **Type:** number
 

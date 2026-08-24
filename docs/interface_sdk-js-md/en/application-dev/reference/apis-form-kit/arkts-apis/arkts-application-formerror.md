@@ -1,8 +1,6 @@
 # @ohos.application.formError
 
-interface of formError.
-
-@namespace formError
+interface of formError.@namespace formError
 
 **Since:** 23
 
@@ -22,13 +20,13 @@ import { formError } from '@kit.FormKit';
 
 | Name | Description |
 | --- | --- |
-| [FormError](arkts-form-formerror-formerror-e.md) | Error of form. |
+| [FormError](arkts-form-formerror-formerror-e.md) | Error of form.@enum { int } |
 
 <!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [FormError](arkts-form-formerror-formerror-e-sys.md) | Error of form. |
+| [FormError](arkts-form-formerror-formerror-e-sys.md) | Error of form.@enum { int } |
 <!--DelEnd-->
 

@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [MenuItemModifier](arkts-menuitemmodifier-c.md) | Defines MenuItem Modifier |
+| [MenuItemModifier](arkts-menuitemmodifier-c.md) | Defines MenuItem Modifier@implements { MenuItemAttribute, AttributeModifier&lt;MenuItemAttribute&gt; } |
 

@@ -1,8 +1,6 @@
 # WindowSceneAttribute (System API)
 
-The WindowSceneAttribute
-
-@extends CommonMethod @interface WindowSceneAttribute
+The WindowSceneAttribute@extends CommonMethod @interface WindowSceneAttribute
 
 **Inheritance/Implementation:** WindowSceneAttribute extends CommonMethod
 

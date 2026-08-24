@@ -6,6 +6,8 @@ Declare CustomDialog ConfirmDialog @struct { ConfirmDialog }
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @CustomDialog
+
 <!--Device-unnamed-export declare struct ConfirmDialog--><!--Device-unnamed-export declare struct ConfirmDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,7 +20,7 @@ Declare CustomDialog ConfirmDialog @struct { ConfirmDialog }
 ## build
 
 ```TypeScript
-@Builder build(): void
+
 ```
 
 The method to build component.
@@ -26,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,10 +99,6 @@ Sets the ConfirmDialog Controller.
 
 ## isChecked
 
-```TypeScript
-@PropRef isChecked?: boolean
-```
-
 Sets the ConfirmDialog checkbox state.
 
 **Type:** boolean
@@ -106,6 +106,8 @@ Sets the ConfirmDialog checkbox state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

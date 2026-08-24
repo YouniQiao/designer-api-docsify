@@ -1,8 +1,6 @@
 # EpisodeRange
 
-剧集的范围的定义。
-
-@interface EpisodeRange
+剧集的范围的定义。@interface EpisodeRange
 
 **起始版本：** 23
 

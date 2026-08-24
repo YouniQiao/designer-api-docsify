@@ -1,8 +1,6 @@
 # SatelliteStatusInfo
 
-Satellite status information
-
-@interface SatelliteStatusInfo
+Satellite status information@interface SatelliteStatusInfo
 
 **Since:** 8
 

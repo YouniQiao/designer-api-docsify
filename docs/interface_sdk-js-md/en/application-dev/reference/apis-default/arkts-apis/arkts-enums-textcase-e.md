@@ -1,8 +1,6 @@
 # TextCase
 
-Letter type in text
-
-@enum { number }
+Letter type in text@enum { number }
 
 **Since:** 23
 

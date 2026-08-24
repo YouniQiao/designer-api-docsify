@@ -12,9 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createVerify(algName: string): Verify
 ```
 
-Creates a **Verify** instance.
-
-<br>For details about the supported specifications, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md).
+Creates a **Verify** instance.<br>For details about the supported specifications, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md).
 
 **Since:** 23
 
@@ -30,7 +28,7 @@ Creates a **Verify** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | Signature verification algorithm to use. Currently, RSA, ECC, DSA, SM2&lt;sup&gt;10+&lt;/sup&gt;, Ed25519&lt;sup&gt;11+&lt;/sup&gt; and ML-DSA&lt;sup&gt;26.0.0+&lt;/sup&gt; are supported. <br>If RSA PKCS1 is used, you must set the digest. If RSA PSS is used, you must set the digest and mask digest. When the RSA algorithm is used for signature verification, you can use **recover** to verify and recover the signed data. <br>For details about the supported specifications, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md) . |
+| algName | string | Yes | Signature verification algorithm to use. Currently, RSA, ECC, DSA, SM2&lt;sup&gt;10+&lt;/sup&gt;, Ed25519&lt;sup&gt;11+&lt;/sup&gt; and ML-DSA&lt;sup&gt;26.0.0+&lt;/sup&gt; are supported. <br>If RSA PKCS1 is used, you must set the digest. If RSA PSS is used, you must set the digest and mask digest. When the RSA algorithm is used for signature verification, you can use **recover** to verify and recover the signed data. <br>For details about the supported specifications, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md). |
 
 **Return value:**
 

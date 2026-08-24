@@ -1,8 +1,6 @@
 # DialogController
 
-The class used to control dialog.
-
-@extends CommonController
+The class used to control dialog.@extends CommonController
 
 **Inheritance/Implementation:** DialogController extends [CommonController](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-commoncontroller-c.md)
 

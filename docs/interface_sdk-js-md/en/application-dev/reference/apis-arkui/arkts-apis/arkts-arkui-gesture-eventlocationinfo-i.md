@@ -1,8 +1,6 @@
 # EventLocationInfo
 
-The location info used in gesture event.
-
-@interface EventLocationInfo
+The location info used in gesture event.@interface EventLocationInfo
 
 **Since:** 23
 

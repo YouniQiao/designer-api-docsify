@@ -1,8 +1,6 @@
 # Particle properties/events
 
-Defines the Particle component attribute functions.
-
-@extends CommonMethod&lt;ParticleAttribute&gt;
+Defines the Particle component attribute functions.@extends CommonMethod&lt;ParticleAttribute&gt;
 
 **Inheritance/Implementation:** ParticleAttribute extends CommonMethod<ParticleAttribute>
 

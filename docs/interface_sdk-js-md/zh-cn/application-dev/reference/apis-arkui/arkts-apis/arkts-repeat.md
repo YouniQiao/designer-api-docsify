@@ -40,5 +40,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Repeat(Defines Repeat component.)](arkts-arkui-repeat-con.md#repeat) | Repeat基于数组类型数据来进行循环渲染，一般与滚动容器组件配合使用。 |
+| [Repeat(Defines Repeat component.)](arkts-arkui-repeat-con.md#repeat) | Repeat基于数组类型数据来进行循环渲染，一般与滚动容器组件配合使用。本文档仅为API参数说明。组件描述和使用说明见[Repeat开发者指南](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)。 |
 

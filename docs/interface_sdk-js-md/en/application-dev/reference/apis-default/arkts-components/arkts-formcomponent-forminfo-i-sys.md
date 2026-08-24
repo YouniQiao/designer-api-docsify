@@ -1,8 +1,6 @@
 # FormInfo (System API)
 
-Defines the FormInfo.
-
-@interface FormInfo
+Defines the FormInfo.@interface FormInfo
 
 **Since:** 23
 

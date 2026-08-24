@@ -1,8 +1,6 @@
 # Font
 
-Defines the font used for text.
-
-@interface Font
+Defines the font used for text.@interface Font
 
 **Since:** 23
 

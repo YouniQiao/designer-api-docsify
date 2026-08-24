@@ -4,6 +4,8 @@ Defines toolBarV2 symbolGlyph.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export class ToolBarV2SymbolGlyph--><!--Device-unnamed-export class ToolBarV2SymbolGlyph-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ The constructor used to create a ToolBarV2SymbolGlyph object.
 ## activated
 
 ```TypeScript
-@Trace
-  activated?: SymbolGlyphModifier
+activated?: SymbolGlyphModifier
 ```
 
 Modifier of toolbarV2's activated symbol.
@@ -50,6 +51,8 @@ Modifier of toolbarV2's activated symbol.
 **Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ Modifier of toolbarV2's activated symbol.
 ## normal
 
 ```TypeScript
-@Trace
-  normal: SymbolGlyphModifier
+normal: SymbolGlyphModifier
 ```
 
 Modifier of toolbarV2's normal symbol.
@@ -71,6 +73,8 @@ Modifier of toolbarV2's normal symbol.
 **Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

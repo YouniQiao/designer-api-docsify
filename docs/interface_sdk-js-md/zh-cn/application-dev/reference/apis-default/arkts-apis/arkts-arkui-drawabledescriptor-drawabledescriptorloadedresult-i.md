@@ -21,9 +21,7 @@
 imageHeight: int
 ```
 
-图片的高度。
-
-单位：px
+图片的高度。单位：px
 
 **类型：** int
 
@@ -43,9 +41,7 @@ imageHeight: int
 imageWidth: int
 ```
 
-图片的宽度。
-
-单位：px
+图片的宽度。单位：px
 
 **类型：** int
 

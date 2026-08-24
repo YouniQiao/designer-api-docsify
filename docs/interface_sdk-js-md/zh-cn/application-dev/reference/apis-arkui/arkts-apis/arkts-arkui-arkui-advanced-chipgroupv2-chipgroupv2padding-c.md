@@ -4,6 +4,8 @@ ChipGroupV2Padding定义了ChipGroupV2的上下内边距，用于控制其整体
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipGroupV2Padding--><!--Device-unnamed-export declare class ChipGroupV2Padding-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,21 +43,16 @@ ChipGroupV2Padding的构造函数。
 ## bottom
 
 ```TypeScript
-@Trace
-  public bottom: Length
+public bottom: Length
 ```
 
-ChipGroupV2的下方内边距（不支持百分比）。
-
-默认值：14
-
-单位：vp
-
-值为undefined时，按默认值处理。
+ChipGroupV2的下方内边距（不支持百分比）。默认值：14单位：vp值为undefined时，按默认值处理。
 
 **类型：** Length
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,21 +65,16 @@ ChipGroupV2的下方内边距（不支持百分比）。
 ## top
 
 ```TypeScript
-@Trace
-  public top: Length
+public top: Length
 ```
 
-ChipGroupV2的上方内边距（不支持百分比）。
-
-默认值：14
-
-单位：vp
-
-值为undefined时，按默认值处理。
+ChipGroupV2的上方内边距（不支持百分比）。默认值：14单位：vp值为undefined时，按默认值处理。
 
 **类型：** Length
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

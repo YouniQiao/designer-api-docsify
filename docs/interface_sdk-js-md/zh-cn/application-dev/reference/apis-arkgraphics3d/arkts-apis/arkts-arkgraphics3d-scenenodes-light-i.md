@@ -1,8 +1,6 @@
 # Light
 
-光源，继承自Node。
-
-@extends Node @interface Light
+光源，继承自Node。@extends Node @interface Light
 
 **继承/实现关系：** Light extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 

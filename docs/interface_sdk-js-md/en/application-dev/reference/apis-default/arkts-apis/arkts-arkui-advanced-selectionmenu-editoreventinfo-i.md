@@ -1,8 +1,6 @@
 # EditorEventInfo
 
-Defines the editor event info.
-
-@interface EditorEventInfo
+Defines the editor event info.@interface EditorEventInfo
 
 **Since:** 23
 

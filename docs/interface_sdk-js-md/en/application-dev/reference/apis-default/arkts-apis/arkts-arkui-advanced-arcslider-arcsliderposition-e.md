@@ -1,8 +1,6 @@
 # ArcSliderPosition
 
-Enum for ArcSliderPosition
-
-@enum { int }
+Enum for ArcSliderPosition@enum { int }
 
 **Since:** 23
 

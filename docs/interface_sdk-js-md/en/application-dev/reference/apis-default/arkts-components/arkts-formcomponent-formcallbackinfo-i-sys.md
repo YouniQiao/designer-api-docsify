@@ -1,8 +1,6 @@
 # FormCallbackInfo (System API)
 
-Defines the FormCallbackInfo.
-
-@interface FormCallbackInfo
+Defines the FormCallbackInfo.@interface FormCallbackInfo
 
 **Since:** 23
 

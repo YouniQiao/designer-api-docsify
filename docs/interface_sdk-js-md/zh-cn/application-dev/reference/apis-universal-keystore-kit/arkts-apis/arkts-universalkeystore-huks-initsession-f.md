@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## initSession
@@ -13,12 +12,9 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function initSession(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksSessionHandle>): void
 ```
 
-initSession操作密钥接口。使用callback异步回调。
+initSession操作密钥接口。使用callback异步回调。huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
 
-huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 初始化[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥会话需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
@@ -68,12 +64,9 @@ huks.initSession、huks.updateSession、huks.finishSession为三段式接口，�
 function initSession(keyAlias: string, options: HuksOptions): Promise<HuksSessionHandle>
 ```
 
-initSession操作密钥接口。使用Promise异步回调。
+initSession操作密钥接口。使用Promise异步回调。huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
 
-huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
-
-> **说明：**
-> 
+> **说明：**&gt;
 > 初始化[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥会话需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9

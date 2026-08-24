@@ -6,6 +6,8 @@ Defines the icon content of a toolbar item.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2ItemImage--><!--Device-unnamed-export declare class ToolBarV2ItemImage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,21 +44,18 @@ A constructor used to create a **ToolBarV2ItemImage** instance.
 ## activatedColor
 
 ```TypeScript
-@Trace
-  public activatedColor?: ColorMetrics
+public activatedColor?: ColorMetrics
 ```
 
-Color of the icon when the toolbar item is activated.
+Color of the icon when the toolbar item is activated.Default value: **\$r('sys.color.icon_emphasize')**.Decorator: @Trace
 
-Default value: **\$r('sys.color.icon_emphasize')**.
-
-Decorator: @Trace
-
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,21 +66,18 @@ Decorator: @Trace
 ## color
 
 ```TypeScript
-@Trace
-  public color?: ColorMetrics
+public color?: ColorMetrics
 ```
 
-Color of the icon.
+Color of the icon.Default value: **\$r('sys.color.icon_primary')**.Decorator: @Trace
 
-Default value: **\$r('sys.color.icon_primary')**.
-
-Decorator: @Trace
-
-**Type:** [ColorMetrics](arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,19 +88,18 @@ Decorator: @Trace
 ## src
 
 ```TypeScript
-@Trace
-  public src: ResourceStr
+public src: ResourceStr
 ```
 
-Icon of the toolbar item.
-
-Decorator: @Trace
+Icon of the toolbar item.Decorator: @Trace
 
 **Type:** ResourceStr
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

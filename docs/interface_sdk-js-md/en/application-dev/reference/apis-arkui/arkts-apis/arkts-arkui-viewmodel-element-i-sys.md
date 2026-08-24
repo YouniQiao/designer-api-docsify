@@ -1,8 +1,6 @@
 # Element
 
-Element
-
-@interface Element
+Element@interface Element
 
 **Since:** 4
 

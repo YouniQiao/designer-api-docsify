@@ -1,8 +1,6 @@
 # MenuItemGroupAttribute
 
-Defines the MenuItemGroup component attribute functions.
-
-@extends CommonMethod @interface MenuItemGroupAttribute
+Defines the MenuItemGroup component attribute functions.@extends CommonMethod @interface MenuItemGroupAttribute
 
 **Inheritance/Implementation:** MenuItemGroupAttribute extends CommonMethod
 

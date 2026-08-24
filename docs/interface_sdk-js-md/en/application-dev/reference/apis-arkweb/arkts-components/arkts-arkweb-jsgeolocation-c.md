@@ -1,8 +1,6 @@
 # JsGeolocation
 
-JsGeolocation is the authorization response object provided to the app when the Web component receives a web page geolocation permission request. When a web page requests device location information through JavaScript geolocation APIs (such as navigator.geolocation), the app needs to decide whether to authorize the request. Through the invoke method, JsGeolocation allows the app to grant or deny the geolocation permission for web pages of a specified origin, and optionally save the permission decision to the system to avoid repeated authorization prompts when the same origin requests again.
-
-JsGeolocation is applicable to scenarios where web pages in the Web component actively request geolocation permission. The app must first register the [onGeolocationShow event](arkts-arkweb-web-attribute.md#ongeolocationshow). When a web page initiates a geolocation permission request, the event callback passes the JsGeolocation object to the app, and the app calls the invoke method in the callback to complete the authorization response. The " ohos.permission.LOCATION" and "ohos.permission.APPROXIMATELY_LOCATION" permissions must also be configured.
+JsGeolocation is the authorization response object provided to the app when the Web component receives a web page geolocation permission request. When a web page requests device location information through JavaScript geolocation APIs (such as navigator.geolocation), the app needs to decide whether to authorize the request. Through the invoke method, JsGeolocation allows the app to grant or deny the geolocation permission for web pages of a specified origin, and optionally save the permission decision to the system to avoid repeated authorization prompts when the same origin requests again.JsGeolocation is applicable to scenarios where web pages in the Web component actively request geolocation permission. The app must first register the [onGeolocationShow event](arkts-arkweb-web-attribute.md#ongeolocationshow). When a web page initiates a geolocation permission request, the event callback passes the JsGeolocation object to the app, and the app calls the invoke method in the callback to complete the authorization response. The "ohos.permission.LOCATION" and "ohos.permission.APPROXIMATELY_LOCATION" permissions must also be configured.
 
 **Since:** 8
 
@@ -13,11 +11,6 @@ JsGeolocation is applicable to scenarios where web pages in the Web component ac
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## constructor

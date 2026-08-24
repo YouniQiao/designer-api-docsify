@@ -1,12 +1,11 @@
 # By
 
-The UiTest framework provides a wide range of UI component feature description APIs in the **By** class to filter and match components.
-
-The APIs provided by the **By** class exhibit the following features:
-
-1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component. 2. Provide multiple match patterns for component attributes. 3. Support absolute positioning and relative positioning for components. APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isbefore) and [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isafter) can be used to specify the features of adjacent components to assist positioning.
-
-All APIs provided in the **By** class are synchronous. You are advised to use the static constructor **BY** to create a **By** object in chain mode.
+The UiTest framework provides a wide range of UI component feature description APIs in the **By** class to filter and match components.The APIs provided by the **By** class exhibit the following features:
+1. Allow one or more attributes as the match conditions.
+For example, you can specify both the **text** and **id** attributes to find the target component.
+2. Provide multiple match patterns for component attributes.
+3. Support absolute positioning and relative positioning for components.
+APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isbefore) and [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isafter) can be used to specify the features of adjacent components to assist positioning.All APIs provided in the **By** class are synchronous. You are advised to use the static constructor **BY** to create a **By** object in chain mode.
 
 **Since:** 8
 
@@ -373,7 +372,7 @@ Specifies the scrollable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Scrollable status of the component. The value **true** indicates that the component is scrollable , and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Scrollable status of the component. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 

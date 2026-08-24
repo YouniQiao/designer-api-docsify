@@ -12,9 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 ```
 
-Obtains the DND time. This API uses an asynchronous callback to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
+Obtains the DND time. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 23
 
@@ -108,9 +106,7 @@ notificationManager.getDoNotDisturbDate(userId).then((data: notificationManager.
 function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 ```
 
-Obtains the DND time. This API uses a promise to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
+Obtains the DND time. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 23
 
@@ -151,9 +147,7 @@ See [getDoNotDisturbDate](#getdonotdisturbdate)
 function getDoNotDisturbDate(userId: int, callback: AsyncCallback<DoNotDisturbDate>): void
 ```
 
-Obtains the DND time of a specified user. This API uses an asynchronous callback to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
+Obtains the DND time of a specified user. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 23
 
@@ -197,9 +191,7 @@ See [getDoNotDisturbDate](#getdonotdisturbdate)
 function getDoNotDisturbDate(userId: int): Promise<DoNotDisturbDate>
 ```
 
-Obtains the DND time of a specified user. This API uses a promise to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
+Obtains the DND time of a specified user. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 23
 

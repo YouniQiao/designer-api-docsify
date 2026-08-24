@@ -1,8 +1,6 @@
 # PositionRelativeToDoor (System API)
 
-Enum for identification result inside and outside the door
-
-@enum { int } PositionRelativeToDoor
+Enum for identification result inside and outside the door@enum { int } PositionRelativeToDoor
 
 **Since:** 23
 

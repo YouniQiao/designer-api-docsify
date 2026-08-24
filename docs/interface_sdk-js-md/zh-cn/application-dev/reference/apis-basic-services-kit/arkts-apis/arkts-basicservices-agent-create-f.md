@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## create
@@ -15,8 +14,7 @@ function create(context: BaseContext, config: Config, callback: AsyncCallback<Ta
 
 创建需要上传或下载的任务，并将其排入队列。支持HTTP/HTTPS协议，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 23
@@ -151,8 +149,7 @@ function create(context: BaseContext, config: Config): Promise<Task>
 
 创建需要上传或下载的任务，并将其排入队列。支持HTTP/HTTPS协议，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 23

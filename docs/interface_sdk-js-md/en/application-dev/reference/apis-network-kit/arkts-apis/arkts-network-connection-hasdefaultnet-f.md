@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function hasDefaultNet(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether there is an available network. This API uses an asynchronous callback to return the result. If there is an available network, [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) can be used to obtain the default network handle.
-
+Checks whether there is an available network. This API uses an asynchronous callback to return the result. If there is an available network, [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) can be used to obtain the default network handle.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
@@ -66,8 +65,7 @@ connection.hasDefaultNet().then((data: boolean) => {
 function hasDefaultNet(): Promise<boolean>
 ```
 
-Checks whether there is an available network. This API uses a promise to return the result. If there is an available network, [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) can be used to obtain the default network handle.
-
+Checks whether there is an available network. This API uses a promise to return the result. If there is an available network, [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) can be used to obtain the default network handle.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23

@@ -1,8 +1,6 @@
 # GridColModifier
 
-Defines GridCol Modifier
-
-@implements GridColAttribute, AttributeModifier&lt;GridColAttribute&gt;
+Defines GridCol Modifier@implements GridColAttribute, AttributeModifier&lt;GridColAttribute&gt;
 
 **Inheritance/Implementation:** GridColModifier implements GridColAttribute, AttributeModifier<GridColAttribute>
 

@@ -1,8 +1,6 @@
 # EventQueryType
 
-Event query type.
-
-@enum { number }
+Event query type.@enum { number }
 
 **Since:** 26.0.0
 

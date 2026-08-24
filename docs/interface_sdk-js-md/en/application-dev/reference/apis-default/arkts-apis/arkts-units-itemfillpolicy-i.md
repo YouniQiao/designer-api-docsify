@@ -1,8 +1,6 @@
 # ItemFillPolicy
 
-Define a responsive item layout suitable for WaterFlow, Grid, List, and Swiper components.
-
-@interface ItemFillPolicy
+Define a responsive item layout suitable for WaterFlow, Grid, List, and Swiper components.@interface ItemFillPolicy
 
 **Since:** 23
 

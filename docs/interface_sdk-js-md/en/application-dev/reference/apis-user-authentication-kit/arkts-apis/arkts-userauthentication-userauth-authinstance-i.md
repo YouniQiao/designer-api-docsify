@@ -16,7 +16,6 @@ Implements user authentication.
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## cancel
@@ -27,8 +26,7 @@ cancel: () => void
 
 Cancels this authentication.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Use the obtained [AuthInstance](#authinstance) object to call this API to cancel authentication.
 > This [AuthInstance](#authinstance) must be the object that is currently performing
 > authentication.
@@ -53,12 +51,10 @@ Cancels this authentication.
 off: (name: AuthEventKey) => void
 ```
 
-Unsubscribes from the user authentication events of the specified type.
-
+Unsubscribes from the user authentication events of the specified type.  
 - **name**: indicates the authentication event type. The value **result** means to unsubscribe from the authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The [AuthInstance](#authinstance) instance used to invoke this API must be the one used to
 > subscribe to the event.
 
@@ -80,12 +76,10 @@ Unsubscribes from the user authentication events of the specified type.
 on: (name: AuthEventKey, callback: AuthEvent) => void
 ```
 
-Subscribes to the user authentication events of the specified type.
-
+Subscribes to the user authentication events of the specified type.  
 - **name**: indicates the authentication event type. The value **result** means that the callback returns the authentication result, and the value **tip** means that the callback returns the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md). - **callback**: callback used to return the authentication result or tip information. For details, see [AuthEvent](arkts-userauthentication-userauth-authevent-i.md).
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Use the [AuthInstance](#authinstance) instance obtained to call this API.
 
 **Type:** (name: AuthEventKey, callback: AuthEvent) =&gt; void
@@ -108,8 +102,7 @@ start: () => void
 
 Starts authentication.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Use the obtained [AuthInstance](#authinstance) object to call this API for authentication.
 
 **Type:** () =&gt; void

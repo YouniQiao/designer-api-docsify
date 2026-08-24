@@ -2,8 +2,7 @@
 
 布局管理器对象。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
 
 **起始版本：** 23
@@ -36,8 +35,8 @@ getCharacterPositionAtCoordinate(x: double, y: double): PositionWithAffinity | u
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | double | 是 | 相对于组件的横坐标。<br/>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。 |
-| y | double | 是 | 相对于组件的纵坐标。<br/>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。 |
+| x | double | 是 | 相对于组件的横坐标。<br/>单位：px。 |
+| y | double | 是 | 相对于组件的纵坐标。<br/>单位：px。 |
 
 **返回值：**
 
@@ -67,8 +66,8 @@ getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | double | 是 | 相对于组件的横坐标。<br/>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。 |
-| y | double | 是 | 相对于组件的纵坐标。<br/>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。 |
+| x | double | 是 | 相对于组件的横坐标。<br/>单位：px。 |
+| y | double | 是 | 相对于组件的纵坐标。<br/>单位：px。 |
 | encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符位置使用的编码类型，默认值为TextEncoding.TEXT_ENCODING_UTF8。 |
 
 **返回值：**
@@ -160,8 +159,8 @@ getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | double | 是 | 相对于组件的横坐标。<br/>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。 |
-| y | double | 是 | 相对于组件的纵坐标。<br/>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。 |
+| x | double | 是 | 相对于组件的横坐标。<br/>单位：px。 |
+| y | double | 是 | 相对于组件的纵坐标。<br/>单位：px。 |
 
 **返回值：**
 
@@ -260,9 +259,7 @@ getLineCount(): int | undefined
 getLineMetrics(lineNumber: int): LineMetrics | undefined
 ```
 
-ArkTS-Sta: getLineMetrics(lineNumber: int): LineMetrics | undefined
-
-获取指定行的行信息、文本样式信息、以及字体属性信息。
+ArkTS-Sta: getLineMetrics(lineNumber: int): LineMetrics | undefined获取指定行的行信息、文本样式信息、以及字体属性信息。
 
 **起始版本：** 23
 

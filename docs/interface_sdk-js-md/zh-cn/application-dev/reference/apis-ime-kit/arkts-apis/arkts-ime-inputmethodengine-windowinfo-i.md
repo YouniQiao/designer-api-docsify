@@ -1,6 +1,6 @@
 # WindowInfo
 
-@brief 窗口信息。
+窗口信息。
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 rect: window.Rect
 ```
 
-@brief 窗口矩形区域。
+窗口矩形区域。
 
 **类型：** window.Rect
 
@@ -36,7 +36,7 @@ rect: window.Rect
 status: window.WindowStatusType
 ```
 
-@brief 窗口模式类型。
+窗口模式类型。
 
 **类型：** window.WindowStatusType
 

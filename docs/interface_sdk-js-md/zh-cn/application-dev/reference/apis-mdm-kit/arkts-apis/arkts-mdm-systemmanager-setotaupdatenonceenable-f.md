@@ -14,8 +14,7 @@ function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void
 
 设置OTA更新时Nonce的启用状态（默认为启用状态）。启用后，系统将在OTA更新过程中校验Nonce的有效性，从而防止重放攻击，提升系统安全性。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为保障系统安全，若非内网升级等特殊业务需求，不建议禁用Nonce校验。
 
 **起始版本：** 26.0.0

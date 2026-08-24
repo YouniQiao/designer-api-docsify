@@ -1,6 +1,6 @@
 # FunctionKey
 
-@brief 输入法功能键类型。
+输入法功能键类型。
 
 **起始版本：** 23
 
@@ -12,11 +12,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## enterKeyType
@@ -25,7 +20,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 enterKeyType: EnterKeyType
 ```
 
-@brief 输入法enter键类型。
+输入法enter键类型。
 
 **类型：** EnterKeyType
 

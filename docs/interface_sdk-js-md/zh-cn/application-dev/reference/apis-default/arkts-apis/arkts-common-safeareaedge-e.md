@@ -1,8 +1,6 @@
 # SafeAreaEdge
 
-Enumerates the safe area edges.
-
-@enum { number }
+Enumerates the safe area edges.@enum { number }
 
 **起始版本：** 23
 

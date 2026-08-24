@@ -21,9 +21,7 @@ ThemeControl将自定义Theme应用于App组件内，实现App组件风格跟随
 static setDefaultTheme(theme: CustomTheme | undefined): void
 ```
 
-将用户自定义Theme设置应用级默认主题，以实现应用风格跟随Theme切换。
-
-需确保在页面build前执行。因运行于静态类型上下文中的ArkTS不存在全局作用域，因此需要在入口组件的static闭包或aboutToAppear生命周期函数中调用该接口。
+将用户自定义Theme设置应用级默认主题，以实现应用风格跟随Theme切换。需确保在页面build前执行。因运行于静态类型上下文中的ArkTS不存在全局作用域，因此需要在入口组件的static闭包或aboutToAppear生命周期函数中调用该接口。
 
 **起始版本：** 23
 

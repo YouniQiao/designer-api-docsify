@@ -12,7 +12,6 @@ Describes the smooth zoom information.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## duration

@@ -14,8 +14,7 @@ function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<Shor
 
 根据给定的Bundle名称获取快捷方式信息，使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)
 > 替代。
@@ -50,8 +49,7 @@ function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>
 
 根据给定的Bundle名称获取快捷方式信息，使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)
 > 替代。

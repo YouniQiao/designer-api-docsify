@@ -6,6 +6,8 @@ Declaration of the editable title bar.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct EditableTitleBarV2--><!--Device-unnamed-export declare struct EditableTitleBarV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declaration of the editable title bar.
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## imageItem
 
 ```TypeScript
-@Param
-  imageItem?: EditableTitleBarItemV2
+imageItem?: EditableTitleBarItemV2
 ```
 
 Image item configuration, displayed on the left side of the title.
@@ -49,6 +51,8 @@ Image item configuration, displayed on the left side of the title.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarV2-@Param  imageItem?: EditableTitleBarItemV2--><!--Device-EditableTitleBarV2-@Param  imageItem?: EditableTitleBarItemV2-End-->
@@ -58,8 +62,7 @@ Image item configuration, displayed on the left side of the title.
 ## leftIcon
 
 ```TypeScript
-@Param
-  leftIcon?: EditableLeftIconV2
+leftIcon?: EditableLeftIconV2
 ```
 
 Left icon configuration.
@@ -70,6 +73,8 @@ Left icon configuration.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarV2-@Param  leftIcon?: EditableLeftIconV2--><!--Device-EditableTitleBarV2-@Param  leftIcon?: EditableLeftIconV2-End-->
@@ -79,8 +84,7 @@ Left icon configuration.
 ## menuItems
 
 ```TypeScript
-@Param
-  menuItems?: Array<EditableTitleBarMenuItemV2>
+menuItems?: Array<EditableTitleBarMenuItemV2>
 ```
 
 Custom menu items array, maximum 2-3 items.
@@ -91,6 +95,8 @@ Custom menu items array, maximum 2-3 items.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarV2-@Param  menuItems?: Array<EditableTitleBarMenuItemV2>--><!--Device-EditableTitleBarV2-@Param  menuItems?: Array<EditableTitleBarMenuItemV2>-End-->
@@ -100,8 +106,7 @@ Custom menu items array, maximum 2-3 items.
 ## options
 
 ```TypeScript
-@Param
-  options: EditableTitleBarStyleV2
+options: EditableTitleBarStyleV2
 ```
 
 Style and layout configuration.
@@ -112,6 +117,8 @@ Style and layout configuration.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarV2-@Param  options: EditableTitleBarStyleV2--><!--Device-EditableTitleBarV2-@Param  options: EditableTitleBarStyleV2-End-->
@@ -121,8 +128,7 @@ Style and layout configuration.
 ## saveButton
 
 ```TypeScript
-@Param
-  saveButton?: EditableSaveButtonV2
+saveButton?: EditableSaveButtonV2
 ```
 
 Save button configuration.
@@ -133,6 +139,8 @@ Save button configuration.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarV2-@Param  saveButton?: EditableSaveButtonV2--><!--Device-EditableTitleBarV2-@Param  saveButton?: EditableSaveButtonV2-End-->
@@ -142,9 +150,7 @@ Save button configuration.
 ## title
 
 ```TypeScript
-@Param
-  @Require
-  title: ResourceStr | EditableTitleV2
+title: ResourceStr | EditableTitleV2
 ```
 
 Title configuration, supports string or object form.
@@ -154,6 +160,8 @@ Title configuration, supports string or object form.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Param, @Require
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,8 +2,7 @@
 
 Search初始化参数。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 23
@@ -40,16 +39,10 @@ controller?: SearchController
 icon?: string
 ```
 
-设置搜索图标路径，默认使用系统搜索图标。
-
-**说明：**
-
-icon的数据源支持[使用相对路径显示图片](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#示例25使用相对路径显示图片)和网络图片。
-
+设置搜索图标路径，默认使用系统搜索图标。  
+**说明：**icon的数据源支持使用相对路径显示图片和网络图片。
 - 支持的图片格式包括png、jpg、bmp、svg、gif、pixelmap和heif。
-
 - 支持Base64字符串。格式data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data], 其中[base64 data]为Base64字符串数据。
-
 如果与属性searchIcon同时设置，则searchIcon优先。
 
 **类型：** string
@@ -90,9 +83,7 @@ placeholder?: ResourceStr
 value?: string | Bindable<string>
 ```
 
-设置当前显示的搜索文本内容。
-
-该属性支持Bindable双向绑定变量。
+设置当前显示的搜索文本内容。该属性支持Bindable双向绑定变量。
 
 **类型：** string \| [Bindable](../../apis-default/arkts-apis/arkts-common-bindable-i.md)&lt;string&gt;
 

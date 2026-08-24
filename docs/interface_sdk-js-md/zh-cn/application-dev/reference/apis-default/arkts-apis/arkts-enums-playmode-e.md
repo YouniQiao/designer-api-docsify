@@ -1,8 +1,6 @@
 # PlayMode
 
-动画播放模式。
-
-@enum { number }
+动画播放模式。@enum { number }
 
 **起始版本：** 23
 

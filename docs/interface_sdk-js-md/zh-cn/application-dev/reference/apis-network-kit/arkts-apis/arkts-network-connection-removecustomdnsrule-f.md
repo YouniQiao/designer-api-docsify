@@ -14,8 +14,7 @@ function removeCustomDnsRule(host: string, callback: AsyncCallback<void>): void
 
 删除当前应用程序中对应host的自定义DNS规则。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可调用[addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md)添加自定义规则。
 
 **起始版本：** 11
@@ -112,8 +111,7 @@ function removeCustomDnsRule(host: string): Promise<void>
 
 删除当前应用程序中对应host的自定义DNS规则。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 可调用[addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md)添加自定义规则。
 
 **起始版本：** 11

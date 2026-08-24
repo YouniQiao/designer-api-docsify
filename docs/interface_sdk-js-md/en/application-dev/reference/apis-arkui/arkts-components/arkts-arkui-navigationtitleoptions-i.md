@@ -39,13 +39,8 @@ Background blur style of the title bar. If this parameter is not set, the backgr
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Options for the title bar background blur style.
-
-**NOTE：**
-
-This parameter is only effective when **backgroundBlurStyle** is set.
-
-Avoid using this API in conjunction with **backgroundEffect**.
+Options for the title bar background blur style.  
+**NOTE：**This parameter is only effective when **backgroundBlurStyle** is set.Avoid using this API in conjunction with **backgroundEffect**.
 
 **Type:** BackgroundBlurStyleOptions
 
@@ -85,11 +80,8 @@ Background color of the title bar. If this parameter is not set, the default col
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Title bar background properties, including blur radius, brightness, saturation, and color.
-
-**NOTE：**
-
-Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
+Title bar background properties, including blur radius, brightness, saturation, and color.  
+**NOTE：**Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
 **Type:** BackgroundEffectOptions
 
@@ -109,9 +101,7 @@ Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 barStyle?: BarStyle
 ```
 
-Layout style of the title bar.
-
-Default value: **BarStyle.STANDARD**
+Layout style of the title bar.Default value: **BarStyle.STANDARD**
 
 **Type:** [BarStyle](arkts-arkui-barstyle-e.md)
 
@@ -133,15 +123,11 @@ Default value: **BarStyle.STANDARD**
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode.
-
-Observe the following when using this API:
-
-1. Make sure the **Navigation** component is in full screen. 2. When the title bar is in [Free](arkts-arkui-navigationtitlemode-e.md) display mode or in [STANDARD](arkts-arkui-barstyle-e.md) layout style, this API has no effect.
-
-**true**: yes; **false**: no
-
-Default value: **false**
+Whether to respond when the device is in semi-folded mode.Observe the following when using this API:
+1. Make sure the **Navigation** component is in full screen.
+2. When the title bar is in [Free](arkts-arkui-navigationtitlemode-e.md) display mode or in [STANDARD](arkts-arkui-barstyle-e.md) layout
+style, this API has no effect.  
+**true**: yes; **false**: no Default value: **false**
 
 **Type:** boolean
 
@@ -164,8 +150,11 @@ mainTitleModifier?: TextModifier
 ```
 
 Main title attribute modifier.
-
-1. Attribute settings configured by this modifier will override the system's default attribute settings. For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**, and **minFontSize**, the settings will take precedence over the system's default settings for size-related attributes. 2. If no modifier is used or an invalid value is set, the system reverts to its default settings. 3. In [Free](arkts-arkui-navigationtitlemode-e.md) mode, setting the font size will disable the effect where the main title's size changes in response to content scrolling.
+1. Attribute settings configured by this modifier will override the system's default attribute settings.
+For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**, and **minFontSize**, the settings will take precedence over the system's default settings for size-related attributes.
+2. If no modifier is used or an invalid value is set, the system reverts to its default settings.
+3. In [Free](arkts-arkui-navigationtitlemode-e.md) mode, setting the font size will disable the effect where the main title's
+size changes in response to content scrolling.
 
 **Type:** [TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)
 
@@ -185,15 +174,11 @@ Main title attribute modifier.
 paddingEnd?: LengthMetrics
 ```
 
-Padding at the end of the title bar.
-
-Only supported in one of the following scenarios:
-
-1. Using a non-custom menu, that is, the [menu value](arkts-arkui-navigation-attribute.md#menus) is Array&lt;NavigationMenuItem&gt; 2. Using a non-custom menu without a menu in the upper right corner, that is, the [title value](arkts-arkui-navigation-attribute.md#title) type is **ResourceStr** or **NavigationCommonTitle**
-
-Default value:
-
-LengthMetrics.resource(`\$r('sys.float.margin_right')`)
+Padding at the end of the title bar.Only supported in one of the following scenarios:
+1. Using a non-custom menu, that is, the  
+[menu value](arkts-arkui-navigation-attribute.md#menus) is Array&lt;NavigationMenuItem&gt;
+2. Using a non-custom menu without a menu in the upper right corner, that is,
+the [title value](arkts-arkui-navigation-attribute.md#title) type is **ResourceStr** or **NavigationCommonTitle**Default value:LengthMetrics.resource(`\$r('sys.float.margin_right')`)
 
 **Type:** LengthMetrics
 
@@ -215,15 +200,10 @@ LengthMetrics.resource(`\$r('sys.float.margin_right')`)
 paddingStart?: LengthMetrics
 ```
 
-Padding at the start of the title bar.
-
-Only supported in one of the following scenarios:
-
-1. Displaying the back icon, that is, [hideBackButton](arkts-arkui-navigation-attribute.md#hidebackbutton) is **false** 2. Using a non-custom title, that is, the [title value](arkts-arkui-navigation-attribute.md#title) type is **ResourceStr** or **NavigationCommonTitle**
-
-Default value:
-
-LengthMetrics.resource(**\$r('sys.float.margin_left')**)
+Padding at the start of the title bar.Only supported in one of the following scenarios:
+1. Displaying the back icon, that is, [hideBackButton](arkts-arkui-navigation-attribute.md#hidebackbutton) is **false**
+2. Using a non-custom title, that is, the [title value](arkts-arkui-navigation-attribute.md#title) type is **ResourceStr** or **NavigationCommonTitle**
+Default value:LengthMetrics.resource(**\$r('sys.float.margin_left')**)
 
 **Type:** LengthMetrics
 
@@ -266,8 +246,9 @@ subTitleModifier?: TextModifier
 ```
 
 Subtitle attribute modifier.
-
-1. Attribute settings configured by this modifier will override the system's default attribute settings. For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**, and **minFontSize**, the settings will take precedence over the system's default settings for size-related attributes. 2. If no modifier is used or an invalid value is set, the system reverts to its default settings.
+1. Attribute settings configured by this modifier will override the system's default attribute settings.
+For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**, and **minFontSize**, the settings will take precedence over the system's default settings for size-related attributes.
+2. If no modifier is used or an invalid value is set, the system reverts to its default settings.
 
 **Type:** [TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)
 

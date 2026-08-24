@@ -1,8 +1,6 @@
 # SheetOptions
 
-Component sheet options
-
-@extends BindOptions
+Component sheet options@extends BindOptions
 
 **Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-common-bindoptions-i.md)
 

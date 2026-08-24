@@ -162,8 +162,7 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 
 判断指定系统账号是否处于激活状态。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -245,8 +244,7 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 
 判断指定系统账号是否处于激活状态。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -293,8 +291,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 
 判断指定系统账号是否具有指定约束。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -378,8 +375,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 
 判断指定系统账号是否具有指定约束。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -567,8 +563,7 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 检查当前系统账号是否已认证解锁。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。建议使用
 > [isOsAccountUnlocked](#isosaccountunlocked)替代。
 
@@ -676,8 +671,7 @@ checkOsAccountVerified(): Promise<boolean>
 
 检查当前系统账号是否已认证解锁。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。建议使用
 > [isOsAccountUnlocked](#isosaccountunlocked)替代。
 
@@ -715,8 +709,7 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 检查指定系统账号是否已验证。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -758,8 +751,7 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 
 检查指定系统账号是否已验证。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -952,8 +944,7 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 获取已创建的系统账号数量。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountCount](#getosaccountcount)替代。
 
@@ -1009,8 +1000,7 @@ getCreatedOsAccountsCount(): Promise<number>
 
 获取已创建的系统账号数量。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountCount](#getosaccountcount)替代。
 
@@ -1044,8 +1034,7 @@ getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 查询当前进程所属的系统账号的信息。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -1117,8 +1106,7 @@ getCurrentOsAccount(): Promise<OsAccountInfo>
 
 查询当前进程所属的系统账号的信息。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -1158,8 +1146,7 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 获取分布式虚拟设备ID。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid)
 > 替代。
@@ -1216,8 +1203,7 @@ getDistributedVirtualDeviceId(): Promise<string>
 
 获取分布式虚拟设备ID。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid)替代。
 
@@ -1358,8 +1344,7 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 
 获取指定系统账号的全部约束。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -1423,8 +1408,7 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 
 获取指定系统账号的全部约束。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -1463,8 +1447,7 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 
 获取指定系统账号的全部约束。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -1546,8 +1529,7 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 
 获取指定系统账号的全部约束。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -1996,8 +1978,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 通过SN码查询与其关联的系统账号的账号ID。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
 > 替代。
@@ -2059,8 +2040,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 通过SN码查询与其关联的系统账号的账号ID。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
 > 替代。
@@ -2638,8 +2618,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 
 根据域账号信息，获取与其关联的系统账号的账号ID。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
 > 替代。
@@ -2699,8 +2678,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
 > 替代。
@@ -2741,8 +2719,7 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 获取当前进程所属的系统账号ID。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountLocalId](#getosaccountlocalid)替代。
 
@@ -2796,8 +2773,7 @@ getOsAccountLocalIdFromProcess(): Promise<number>
 
 获取当前进程所属的系统账号ID。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountLocalId](#getosaccountlocalid)替代。
 
@@ -2829,8 +2805,7 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 
 根据uid查询对应的系统账号ID。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)
 > 替代。
@@ -2892,8 +2867,7 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 根据uid查询对应的系统账号ID。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)替代。
 
@@ -3306,8 +3280,7 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 查询当前进程所属的系统账号的账号类型。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getOsAccountType](#getosaccounttype)替代。
 
@@ -3361,8 +3334,7 @@ getOsAccountTypeFromProcess(): Promise<OsAccountType>
 
 查询当前进程所属的系统账号的账号类型。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](#getosaccounttype)
 > 替代。
 
@@ -3394,8 +3366,7 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 
 通过系统账号ID获取与该系统账号关联的SN码。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
 > 替代。
@@ -3459,8 +3430,7 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 通过系统账号ID获取与该系统账号关联的SN码。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
 > 替代。
@@ -3657,8 +3627,7 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 
 判断是否支持多系统账号。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)
 > 替代。
@@ -3713,8 +3682,7 @@ isMultiOsAccountEnable(): Promise<boolean>
 
 判断是否支持多系统账号。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)替代。
 
@@ -3746,8 +3714,7 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 
 判断指定系统账号是否处于激活状态。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -3811,8 +3778,7 @@ isOsAccountActived(localId: number): Promise<boolean>
 
 判断指定系统账号是否处于激活状态。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -3851,8 +3817,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 
 判断指定系统账号是否具有指定约束。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -3919,8 +3884,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolea
 
 判断指定系统账号是否具有指定约束。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -4187,8 +4151,7 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 检查当前系统账号是否已验证。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [checkOsAccountVerified](#checkosaccountverified)
 > 替代。
@@ -4260,8 +4223,7 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 检查指定系统账号是否已验证。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -4295,8 +4257,7 @@ isOsAccountVerified(localId?: number): Promise<boolean>
 
 检查指定系统账号是否已验证。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -4335,8 +4296,7 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 
 检查当前系统账号是否为测试账号。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [checkOsAccountTestable](#checkosaccounttestable)
 > 替代。
@@ -4391,8 +4351,7 @@ isTestOsAccount(): Promise<boolean>
 
 检查当前系统账号是否为测试账号。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [checkOsAccountTestable](#checkosaccounttestable)替代。
 
@@ -4424,8 +4383,7 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 
 查询当前处于激活状态的系统账号的ID列表。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)
 > 替代。
@@ -4483,8 +4441,7 @@ queryActivatedOsAccountIds(): Promise<Array<number>>
 
 查询当前处于激活状态的系统账号的ID列表。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)替代。
 
@@ -4516,8 +4473,7 @@ queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 查询当前进程所属的系统账号的信息。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -4572,8 +4528,7 @@ queryCurrentOsAccount(): Promise<OsAccountInfo>
 
 查询当前进程所属的系统账号的信息。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7

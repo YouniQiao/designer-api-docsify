@@ -13,6 +13,8 @@ Indicates the type of Repeat.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Repeat<T>(arr: RepeatArray<T>): RepeatAttribute<T>--><!--Device-unnamed-@ComponentBuilderexport declare function Repeat<T>(arr: RepeatArray<T>): RepeatAttribute<T>-End-->
@@ -46,6 +48,8 @@ Defines Repeat Component. It requires calling setRepeatOptions at start of compo
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

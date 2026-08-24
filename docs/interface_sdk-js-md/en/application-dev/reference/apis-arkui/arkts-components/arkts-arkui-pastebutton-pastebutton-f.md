@@ -15,6 +15,8 @@ Set a paste button.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function PasteButton(    options?: PasteButtonOptions): PasteButtonAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function PasteButton(    options?: PasteButtonOptions): PasteButtonAttribute-End-->

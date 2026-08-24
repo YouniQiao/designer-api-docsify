@@ -1,6 +1,6 @@
 # PasteButton
 
-*PasteButton** is a security component that provides paste functionality. When users tap this component, the application temporarily gains pasteboard read permissions. <br>**Description**</br>
+**PasteButton** is a security component that provides paste functionality. When users tap this component, the application temporarily gains pasteboard read permissions. <br>**Description**</br>
 
 ## Key Enums <li>[PasteIconStyle](arkts-arkui-pasteiconstyle-e.md): Enumeration of icon styles for the paste button. Specifies the icon style displayed.</li> <li>[PasteDescription](arkts-arkui-pastedescription-e.md): Enumeration of text descriptions for the paste button. Specifies the text description displayed.</li> <li>[PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md): Enumeration of click results for the paste button. Indicates whether authorization succeeds after a click.</li> ###### Key APIs <li>[PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md): Configuration object for the paste button. Defines properties including icon, text and button type.</li> <li>[PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md): Callback for paste button clicks. Returns click events, authorization results and error messages.</li> ###### Child Components <li>Not supported.</li></ul>
 

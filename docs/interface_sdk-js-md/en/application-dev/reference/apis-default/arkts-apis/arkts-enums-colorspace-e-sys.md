@@ -1,8 +1,6 @@
 # ColorSpace
 
-Define ColorSpace enumeration.
-
-@enum { number }
+Define ColorSpace enumeration.@enum { number }
 
 **Since:** 23
 

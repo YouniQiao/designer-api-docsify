@@ -36,9 +36,7 @@ TextTimer controller.
 count?: long
 ```
 
-Timer duration, in milliseconds. It is effective only when isCountDown is true. The maximum value is 86400000 ms (24 hours). Default value: 60000 ms.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value is between 0 and 86,400,000, it is used as the initial countdown time. <br>Otherwise, the default value is used as the initial countdown time. </p>
+Timer duration, in milliseconds. It is effective only when isCountDown is true. The maximum value is 86400000 ms (24 hours). Default value: 60000 ms.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value is between 0 and 86,400,000, it is used as the initial countdown time. <br>Otherwise, the default value is used as the initial countdown time. </p>
 
 **Type:** long
 
@@ -78,9 +76,7 @@ Whether the timer is a countdown. The value true means that the timer counts dow
 startTime?: int
 ```
 
-The start time of the timer. It is effective only when isCountDown is false. The value should be an integer.
-
-Unit: ms. Default value: 0.
+The start time of the timer. It is effective only when isCountDown is false. The value should be an integer.Unit: ms. Default value: 0.
 
 **Type:** int
 

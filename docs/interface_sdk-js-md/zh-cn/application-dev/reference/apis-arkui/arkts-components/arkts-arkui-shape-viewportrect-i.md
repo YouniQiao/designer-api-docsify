@@ -1,8 +1,6 @@
 # ViewportRect
 
-用于描述Viewport的绘制属性。
-
-@interface ViewportRect
+用于描述Viewport的绘制属性。@interface ViewportRect
 
 **起始版本：** 23
 
@@ -18,9 +16,7 @@
 height?: Length
 ```
 
-形状视口的高度，取值范围≥0。 默认值：0 默认单位：vp 异常值按照默认值处理。
-
-Anonymous Object Rectification
+形状视口的高度，取值范围≥0。 默认值：0 默认单位：vp 异常值按照默认值处理。Anonymous Object Rectification
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -40,9 +36,7 @@ Anonymous Object Rectification
 width?: Length
 ```
 
-形状视口的宽度，取值范围≥0。 默认值：0 默认单位：vp 异常值按照默认值处理。
-
-Anonymous Object Rectification
+形状视口的宽度，取值范围≥0。 默认值：0 默认单位：vp 异常值按照默认值处理。Anonymous Object Rectification
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -62,9 +56,7 @@ Anonymous Object Rectification
 x?: Length
 ```
 
-形状视口起始点的水平坐标。 默认值：0 默认单位：vp 异常值按照默认值处理。
-
-Anonymous Object Rectification
+形状视口起始点的水平坐标。 默认值：0 默认单位：vp 异常值按照默认值处理。Anonymous Object Rectification
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -84,9 +76,7 @@ Anonymous Object Rectification
 y?: Length
 ```
 
-形状视口起始点的垂直坐标。 默认值：0 默认单位：vp 异常值按照默认值处理。
-
-Anonymous Object Rectification
+形状视口起始点的垂直坐标。 默认值：0 默认单位：vp 异常值按照默认值处理。Anonymous Object Rectification
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

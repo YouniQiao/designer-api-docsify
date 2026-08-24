@@ -1,8 +1,6 @@
 # DialogOptions
 
-自定义弹窗的内容，继承自BaseDialogOptions。
-
-@extends BaseDialogOptions
+自定义弹窗的内容，继承自BaseDialogOptions。@extends BaseDialogOptions
 
 **继承/实现关系：** DialogOptions extends [BaseDialogOptions](arkts-promptaction-basedialogoptions-i.md)
 

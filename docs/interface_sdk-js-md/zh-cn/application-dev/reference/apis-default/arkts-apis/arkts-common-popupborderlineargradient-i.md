@@ -16,9 +16,7 @@ Popup border LinearGradient
 colors: Array<[ResourceColor | undefined, double]>
 ```
 
-Sets the colors and positions of the gradient.
-
-When the color setting is undefined, use the default value Color.Black. The position setting ranges from 0 to 1.
+Sets the colors and positions of the gradient.When the color setting is undefined, use the default value Color.Black. The position setting ranges from 0 to 1.
 
 **类型：** Array&lt;[ResourceColor \| undefined, double]&gt;
 

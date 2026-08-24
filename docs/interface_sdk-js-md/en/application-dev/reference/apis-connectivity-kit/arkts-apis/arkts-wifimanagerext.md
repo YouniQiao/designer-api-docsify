@@ -1,10 +1,6 @@
 # @ohos.wifiManagerExt
 
-Provides extended methods to operate or manage Wi-Fi.
-
-<p>The APIs involved in this file are non-general APIs. These extended APIs are only used by some product types, such as routers. Common products should not use these APIs.</p>
-
-@namespace wifiManagerExt
+Provides extended methods to operate or manage Wi-Fi.<p>The APIs involved in this file are non-general APIs. These extended APIs are only used by some product types, such as routers. Common products should not use these APIs.</p>@namespace wifiManagerExt
 
 **Since:** 9
 
@@ -36,5 +32,5 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md) | The power Mode enumeration. |
+| [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md) | The power Mode enumeration.@enum { number } PowerMode |
 

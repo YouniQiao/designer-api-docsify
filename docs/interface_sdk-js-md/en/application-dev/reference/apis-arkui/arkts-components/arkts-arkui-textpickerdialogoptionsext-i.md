@@ -165,9 +165,7 @@ Style of cancel button.
 canLoop?: boolean
 ```
 
-Can scroll loop if true is set, on the contrary it can not.
-
-Default Value: true
+Can scroll loop if true is set, on the contrary it can not.Default Value: true
 
 **Type:** boolean
 

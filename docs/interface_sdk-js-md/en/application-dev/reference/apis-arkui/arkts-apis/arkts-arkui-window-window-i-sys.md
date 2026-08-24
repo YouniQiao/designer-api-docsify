@@ -1,8 +1,6 @@
 # Window
 
-Represents a window instance, which is the basic unit managed by the window manager.
-
-In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md), [createWindow()](arkts-arkui-window-createwindow-f.md), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+Represents a window instance, which is the basic unit managed by the window manager.In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md), [createWindow()](arkts-arkui-window-createwindow-f.md), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
 **Since:** 23
 
@@ -13,8 +11,6 @@ In the following API examples, you must use [getLastWindow()](arkts-arkui-window
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 
@@ -26,16 +22,13 @@ attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWin
 
 Attaches a first-level child window to the main window to maintain a fixed relative position. This API uses a promise to return the result. The relative position is represented by the anchor point offset between the child window and the parent window. The child window and the parent window use the same window anchor point.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - Only first-level child windows can call this API. The child window must be in floating window mode
-> (that is, the window mode is **window.WindowStatusType.FLOATING**).
-> 
+> (that is, the window mode is **window.WindowStatusType.FLOATING**).&gt;
 > - After the child window calls this API, the display position of the child window immediately follows the
 > main window and the relative position remains unchanged. In addition, the size and mode changes of the main
 > window can be listened to. The effect will persist unless the
-> [detachLayoutToParentWindow()](#detachlayouttoparentwindow) API is called for detaching.
-> 
+> [detachLayoutToParentWindow()](#detachlayouttoparentwindow) API is called for detaching.&gt;
 > -After the child window calls this API, calling APIs such as
 > [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto),
 > [maximize()](arkts-arkui-window-window-i.md#maximize), and
@@ -421,13 +414,10 @@ detachLayoutToParentWindow(): Promise<void>
 
 Detach a first-level child window from the main window to cancel a fixed relative position. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
-> - When the child window calls this API, the child window must be in the attached state.
-> 
+> **NOTE：**&gt;
+> - When the child window calls this API, the child window must be in the attached state.&gt;
 > - After detached by calling this API, the child window retains its position during attaching.
-> You can drag the child window to change its size and position.
-> 
+> You can drag the child window to change its size and position.&gt;
 > - After the detaching, calling APIs such as
 > [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto) or
 > [maximize()](arkts-arkui-window-window-i.md#maximize), and
@@ -468,9 +458,7 @@ Detach a first-level child window from the main window to cancel a fixed relativ
 enableDrag(enable: boolean): Promise<void>
 ```
 
-Enables or disables window dragging. This API takes effect only for system windows, application child windows, global floating windows, and modal windows. This API uses a promise to return the result.
-
-After window dragging is enabled, the window can be resized using the mouse or touch operations.
+Enables or disables window dragging. This API takes effect only for system windows, application child windows, global floating windows, and modal windows. This API uses a promise to return the result.After window dragging is enabled, the window can be resized using the mouse or touch operations.
 
 **Since:** 23
 
@@ -691,9 +679,7 @@ See [hide](#hide)
 hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md) is **TYPE_FLOAT**). This API uses an asynchronous callback to return the result.
-
-A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
+Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md) is **TYPE_FLOAT**). This API uses an asynchronous callback to return the result.A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
 
 **Since:** 23
 
@@ -815,9 +801,7 @@ export default class EntryAbility extends UIAbility {
 hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 ```
 
-Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md) is **TYPE_FLOAT**). This API uses a promise to return the result.
-
-A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
+Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md) is **TYPE_FLOAT**). This API uses a promise to return the result.A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
 
 **Since:** 23
 
@@ -1162,7 +1146,7 @@ Subscribes to events indicating whether the main window is in full-screen mode a
 opacity(opacity: double): void
 ```
 
-Sets the opacity for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window) .
+Sets the opacity for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window).
 
 **Since:** 23
 
@@ -1203,9 +1187,7 @@ try {
 raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void
 ```
 
-Raises a child window above a target child window. This API uses an asynchronous callback to return the result.
-
-Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
+Raises a child window above a target child window. This API uses an asynchronous callback to return the result.Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
 
 **Since:** 23
 
@@ -1320,9 +1302,7 @@ export default class EntryAbility extends UIAbility {
 raiseAboveTarget(windowId: int): Promise<void>
 ```
 
-Raises a child window above a target child window. This API uses a promise to return the result.
-
-Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
+Raises a child window above a target child window. This API uses a promise to return the result.Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
 
 **Since:** 23
 
@@ -1366,12 +1346,7 @@ See [raiseAboveTarget](#raiseabovetarget)
 raiseMainWindowAboveTarget(windowId: int): Promise<void>
 ```
 
-Moves the main window above another main window within the same application, with child windows following their parents' layer change. This API uses a promise to return the result.
-
-This API can be called only by the main window of a system application.
-
-You need to pass the ID of the target main window. Both the calling window and the target window must be in the same application process, displayed on the same physical screen, below the lock screen layer, not topmost, not modal, and have no application-modal child windows.
-
+Moves the main window above another main window within the same application, with child windows following their parents' layer change. This API uses a promise to return the result.This API can be called only by the main window of a system application.You need to pass the ID of the target main window. Both the calling window and the target window must be in the same application process, displayed on the same physical screen, below the lock screen layer, not topmost, not modal, and have no application-modal child windows.  
 - If the application's main window or its child windows currently have focus, calling this API to lower the layer will cause the window to lose focus automatically, and the highest-layered application window will gain focus. - If the main window calls this API to move above the current focused window, the highest-layered window among the raised main window and its child windows will gain focus. If the main window calls this API without moving above the current focused window, the focus remains unchanged.
 
 **Since:** 23
@@ -1533,9 +1508,7 @@ export default class RaiseMainWindowAbility extends UIAbility {
 raiseToAppTop(callback: AsyncCallback<void>): void
 ```
 
-Raises the application child window to the top layer of the application. This API uses an asynchronous callback to return the result.
-
-Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
+Raises the application child window to the top layer of the application. This API uses an asynchronous callback to return the result.Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
 
 **Since:** 23
 
@@ -1628,11 +1601,7 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) to listen for the focus status of the window.
-
-When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed).
-
-Conversely, once a blur request is sent, the window will lose focus without any conditions.
+Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) to listen for the focus status of the window.When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed).Conversely, once a blur request is sent, the window will lose focus without any conditions.
 
 **Since:** 23
 
@@ -1684,7 +1653,7 @@ promise.then(() => {
 rotate(rotateOptions: RotateOptions): void
 ```
 
-Sets the rotation parameters for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window) .
+Sets the rotation parameters for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window).
 
 **Since:** 23
 
@@ -1732,7 +1701,7 @@ try {
 scale(scaleOptions: ScaleOptions): void
 ```
 
-Sets the scale parameters for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window) .
+Sets the scale parameters for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window).
 
 **Since:** 23
 
@@ -1779,11 +1748,7 @@ try {
 setBackdropBlur(radius: double): void
 ```
 
-Blurs the background of this window.
-
-The window background refers to the lower-layer area covered by the window, which is the same as the window size.
-
-To make the blur effect visible, you must set the window background transparent by calling [setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor).
+Blurs the background of this window.The window background refers to the lower-layer area covered by the window, which is the same as the window size.To make the blur effect visible, you must set the window background transparent by calling [setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor).
 
 **Since:** 23
 
@@ -1948,11 +1913,7 @@ try {
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).
-
-If this API is not called, the default density is not used.
-
-If this API, [setDefaultDensityEnabled(true)](arkts-arkui-window-windowstage-i.md#setdefaultdensityenabled) , and [setCustomDensity](arkts-arkui-window-windowstage-i.md#setcustomdensity) are all called, the setting from the last called API will be applied.
+Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).If this API is not called, the default density is not used.If this API, [setDefaultDensityEnabled(true)](arkts-arkui-window-windowstage-i.md#setdefaultdensityenabled), and [setCustomDensity](arkts-arkui-window-windowstage-i.md#setcustomdensity) are all called, the setting from the last called API will be applied.
 
 **Since:** 23
 
@@ -2224,9 +2185,7 @@ try {
 setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>
 ```
 
-Sets whether to enable the main window to raise itself by click. This API uses a promise to return the result.
-
-By default, clicking the main window raises both the main window and its associated child windows. Disabling this feature (by passing **false**) prevents the main window and its child windows from being raised when the main window is clicked, preserving their current state. However, clicking on a child window still raises both the child window and the main window together.
+Sets whether to enable the main window to raise itself by click. This API uses a promise to return the result.By default, clicking the main window raises both the main window and its associated child windows. Disabling this feature (by passing **false**) prevents the main window and its child windows from being raised when the main window is clicked, preserving their current state. However, clicking on a child window still raises both the child window and the main window together.
 
 **Since:** 23
 
@@ -2297,11 +2256,7 @@ export default class EntryAbility extends UIAbility {
 setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable a child window to raise itself by click. This API uses an asynchronous callback to return the result.
-
-Generally, when a user clicks a child window, the child window is displayed on the top. If the **enable** parameter is set to **false**, the child window is not displayed on the top when being clicked.
-
-Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
+Sets whether to enable a child window to raise itself by click. This API uses an asynchronous callback to return the result.Generally, when a user clicks a child window, the child window is displayed on the top. If the **enable** parameter is set to **false**, the child window is not displayed on the top when being clicked.Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
 
 **Since:** 23
 
@@ -2408,34 +2363,28 @@ setRotationLocked(locked: boolean): Promise<void>
 
 Allows a [system window](../../../windowmanager/window-terminology.md#system-window) to lock or unlock its own screen-rotation behavior. When locked, the window's orientation remains unchanged. When unlocked, the window's orientation follows the main window's orientation, the system rotation-lock button, and the device's physical rotation sensor. If this API is called by a non-system window, error code 1300029 is thrown. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - If the main window sets the display orientation via
 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
 > while rotation is locked, the window restores the last orientation request when brought to the foreground after
-> unlocking.
-> 
+> unlocking.&gt;
 > - If the system window sets the display orientation via
 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
 > while rotation is locked, the window restores the last orientation request when brought to the foreground with
 > the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked**
 > does not hinder the system window at a higher level to set the display orientation by calling
 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
-> .
-> 
+> .&gt;
 > - If the sensor orientation changes while rotation is locked, the last sensor orientation is restored after
-> unlocking.
-> 
+> unlocking.&gt;
 > - If the application calls
 > [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation)
-> to set the screen orientation while rotation is locked, that screen?orientation setting is ignored.
-> 
+> to set the screen orientation while rotation is locked, that screen?orientation setting is ignored.&gt;
 > - When rotation is unlocked, the application's display orientation is determined based on the main window's
 > display orientation set via
 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
 > , the sensor orientation, and more. For details, see
-> [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview).
-> 
+> [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview).&gt;
 > - The API does not affect the launch orientation set by the **orientation** under
 > [**abilities** in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities) of the
 > application.
@@ -2534,9 +2483,7 @@ try {
 setSingleFrameComposerEnabled(enable: boolean): Promise<void>
 ```
 
-Enables or disables the single-frame composer. This API uses a promise to return the result.
-
-The single-frame composer is mainly used in scenarios that require extremely low interaction latency. It reduces the screen display latency of the rendering node.
+Enables or disables the single-frame composer. This API uses a promise to return the result.The single-frame composer is mainly used in scenarios that require extremely low interaction latency. It reduces the screen display latency of the rendering node.
 
 **Since:** 23
 
@@ -2591,9 +2538,7 @@ try {
 setSnapshotSkip(isSkip: boolean): void
 ```
 
-Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting.
-
-If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) . Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
+Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting.If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange). Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
 
 **Since:** 23
 
@@ -2623,9 +2568,7 @@ If you want the window to always be ignored during screen capture, recording, or
 setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, isSplitVisible: boolean): void
 ```
 
-Shows or hides the maximize, minimize, and split-screen buttons on the title bar of the main window.
-
-This API takes effect only for the title bar buttons (maximize, minimize, and split-screen) that are available in the current scenario.
+Shows or hides the maximize, minimize, and split-screen buttons on the title bar of the main window.This API takes effect only for the title bar buttons (maximize, minimize, and split-screen) that are available in the current scenario.
 
 **Since:** 23
 
@@ -2966,9 +2909,7 @@ See [setWaterMarkFlag](#setwatermarkflag)
 setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 ```
 
-Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).
-
-The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
+Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
 
 **Since:** 23
 
@@ -3407,7 +3348,7 @@ Starts moving this window. The window moves along with the cursor only when this
 translate(translateOptions: TranslateOptions): void
 ```
 
-Sets the translation parameters for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window) .
+Sets the translation parameters for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window).
 
 **Since:** 23
 

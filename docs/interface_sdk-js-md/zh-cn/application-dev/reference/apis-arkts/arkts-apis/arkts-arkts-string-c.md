@@ -1384,7 +1384,7 @@ static getSubstitution(matched: string, str: string, position: int, captures: st
 | str | string | 是 | 执行替换操作的原始完整字符串。 |
 | position | int | 是 | 匹配子串在原始字符串str中的起始索引，从0开始计数。 <br>取值约束：必须为大于或等于0的整数。 |
 | captures | string[] | 是 | 捕获组匹配结果数组。 |
-| namedCaptures | [Record](arkts-arkts-map-record-c.md)&lt;string, string \| undefined&gt; \| undefined | 是 | 命名捕获组的映射 对象。 |
+| namedCaptures | Record&lt;string, string \| undefined&gt; \| undefined | 是 | 命名捕获组的映射 对象。 |
 | replacement | string | 是 | 替换模板字符串。 |
 
 **返回值：**

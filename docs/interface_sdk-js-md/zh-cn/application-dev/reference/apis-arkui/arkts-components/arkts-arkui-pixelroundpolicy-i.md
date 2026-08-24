@@ -1,8 +1,6 @@
 # PixelRoundPolicy
 
-指定组件级像素取整的方向。
-
-@interface PixelRoundPolicy
+指定组件级像素取整的方向。@interface PixelRoundPolicy
 
 **起始版本：** 11
 

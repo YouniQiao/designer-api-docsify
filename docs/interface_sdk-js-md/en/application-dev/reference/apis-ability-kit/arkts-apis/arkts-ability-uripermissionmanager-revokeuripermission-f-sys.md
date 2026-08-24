@@ -14,11 +14,9 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 
 Revokes the URI permission from an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI
-> permission granted by this application.
-> 
+> permission granted by this application.&gt;
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
 > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
 > system cannot guarantee their functions.
@@ -136,11 +134,9 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 
 Revokes the URI permission from an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI
-> permission granted by this application.
-> 
+> permission granted by this application.&gt;
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
 > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
 > system cannot guarantee their functions.
@@ -183,11 +179,9 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 
 Revokes the URI permission from an application. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI
-> permission granted by this application.
-> 
+> permission granted by this application.&gt;
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
 > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
 > system cannot guarantee their functions.
@@ -240,11 +234,9 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<voi
 
 Revokes the URI permission from an application. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI
-> permission granted by this application.
-> 
+> permission granted by this application.&gt;
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
 > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
 > system cannot guarantee their functions.
@@ -292,14 +284,11 @@ function revokeUriPermission(uri: string, targetBundleName: string, appCloneInde
 
 Revokes the URI permission from an application. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI
-> permission granted by this application.
-> 
+> permission granted by this application.&gt;
 > - This API can be used to revoke the URI permissions granted to a cloned application. You need to specify the
-> application bundle name and index of the cloned application.
-> 
+> application bundle name and index of the cloned application.&gt;
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
 > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
 > system cannot guarantee their functions.

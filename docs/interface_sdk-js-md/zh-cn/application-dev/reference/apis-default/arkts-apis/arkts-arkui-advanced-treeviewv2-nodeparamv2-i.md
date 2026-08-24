@@ -21,9 +21,7 @@
 container?: OnContainerCallback
 ```
 
-绑定在节点上的右键子组件，子组件由@Builder修饰。
-
-默认值：() =&gt; void
+绑定在节点上的右键子组件，子组件由@Builder修饰。默认值：() =&gt; void
 
 **类型：** [OnContainerCallback](arkts-oncontainercallback-t.md)
 
@@ -43,13 +41,7 @@ container?: OnContainerCallback
 currentNodeId?: int
 ```
 
-当前子节点Id。
-
-取值范围：大于等于-1。
-
-不能为根节点id，不能为null，否则会抛出异常。且不能设置两个相同的currentNodeId。
-
-默认值：-1
+当前子节点Id。取值范围：大于等于-1。不能为根节点id，不能为null，否则会抛出异常。且不能设置两个相同的currentNodeId。默认值：-1
 
 **类型：** int
 
@@ -69,9 +61,7 @@ currentNodeId?: int
 editIcon?: ResourceStr
 ```
 
-编辑图标。
-
-默认值：空字符串。
+编辑图标。默认值：空字符串。
 
 **类型：** [ResourceStr](arkts-resourcestr-t.md)
 
@@ -91,9 +81,7 @@ editIcon?: ResourceStr
 icon?: ResourceStr
 ```
 
-图标。
-
-默认值：空字符串。
+图标。默认值：空字符串。
 
 **类型：** [ResourceStr](arkts-resourcestr-t.md)
 
@@ -113,11 +101,7 @@ icon?: ResourceStr
 isFolder?: boolean
 ```
 
-是否是目录。
-
-默认值：false
-
-true：是目录，false：不是目录。
+是否是目录。默认值：false true：是目录，false：不是目录。
 
 **类型：** boolean
 
@@ -137,11 +121,7 @@ true：是目录，false：不是目录。
 parentNodeId?: int
 ```
 
-父节点Id。
-
-取值范围：大于等于-1。
-
-默认值：-1，根节点id值为-1。若设置数值小于-1，该节点无效，不显示在树视图上。
+父节点Id。取值范围：大于等于-1。默认值：-1，根节点id值为-1。若设置数值小于-1，该节点无效，不显示在树视图上。
 
 **类型：** int
 
@@ -161,9 +141,7 @@ parentNodeId?: int
 primaryTitle?: ResourceStr
 ```
 
-主标题。
-
-默认值：空字符串。
+主标题。默认值：空字符串。
 
 **类型：** [ResourceStr](arkts-resourcestr-t.md)
 
@@ -183,9 +161,7 @@ primaryTitle?: ResourceStr
 secondaryTitle?: ResourceStr
 ```
 
-副标题。
-
-默认值：空字符串。
+副标题。默认值：空字符串。
 
 **类型：** [ResourceStr](arkts-resourcestr-t.md)
 
@@ -205,9 +181,7 @@ secondaryTitle?: ResourceStr
 selectedIcon?: ResourceStr
 ```
 
-选中图标。
-
-默认值：空字符串。
+选中图标。默认值：空字符串。
 
 **类型：** [ResourceStr](arkts-resourcestr-t.md)
 
@@ -227,9 +201,7 @@ selectedIcon?: ResourceStr
 symbolEditIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol编辑图标样式，优先级大于editIcon。
-
-默认值：undefined，编辑时显示与非编辑态一样
+Symbol编辑图标样式，优先级大于editIcon。默认值：undefined，编辑时显示与非编辑态一样
 
 **类型：** [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)
 
@@ -249,9 +221,7 @@ Symbol编辑图标样式，优先级大于editIcon。
 symbolIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol图标样式，显示优先级大于icon，同时设置symbolIconStyle和icon，只显示Symbol图标。
-
-默认值：undefined，表示不显示Symbol图标。
+Symbol图标样式，显示优先级大于icon，同时设置symbolIconStyle和icon，只显示Symbol图标。默认值：undefined，表示不显示Symbol图标。
 
 **类型：** [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)
 
@@ -271,9 +241,7 @@ Symbol图标样式，显示优先级大于icon，同时设置symbolIconStyle和i
 symbolSelectedIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol选中图标样式，优先级大于selectedIcon。
-
-默认值：undefined，选中时显示与未选中一样
+Symbol选中图标样式，优先级大于selectedIcon。默认值：undefined，选中时显示与未选中一样
 
 **类型：** [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)
 

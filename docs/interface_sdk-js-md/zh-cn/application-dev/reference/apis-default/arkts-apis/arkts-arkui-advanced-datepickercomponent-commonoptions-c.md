@@ -2,15 +2,11 @@
 
 CommonOptions定义日期时间选择器的通用选项。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - Date的使用请参考
-> [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。
-> 
-> - DatePickerComponent的字体字号在14vp至16vp范围内自适应变化，当组件宽度过窄时，可能出现文本显示截断的情况。
-> 
-> - 参数缺省或者设置为undefined时，均保持默认值。
-> 
+> TimePickerOptions。&gt;
+> - DatePickerComponent的字体字号在14vp至16vp范围内自适应变化，当组件宽度过窄时，可能出现文本显示截断的情况。&gt;
+> - 参数缺省或者设置为undefined时，均保持默认值。&gt;
 > - 在[DateOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)中设置start、end、selected时仅日期部分（年月日）设置生效，
 > 在[TimeOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)中设置start、end、selected时仅时间部分（时分秒）设置生效。
 
@@ -33,17 +29,12 @@ CommonOptions定义日期时间选择器的通用选项。
 enableHapticFeedback?: boolean
 ```
 
-启用或禁用触控反馈。
-
-默认值：true
-
-- true：开启触控反馈。 - false：不开启触控反馈。
-
+启用或禁用触控反馈。默认值：true  
+- true：开启触控反馈。 - false：不开启触控反馈。  
 **说明：**
-
-1. 设置为true后，其生效情况取决于系统的硬件是否支持。 2. 开启触控反馈时，需要在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions 字段以开启振动权限，配置如下：
-
-"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
+1. 设置为true后，其生效情况取决于系统的硬件是否支持。
+2. 开启触控反馈时，需要在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions
+字段以开启振动权限，配置如下："requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **类型：** boolean
 
@@ -65,11 +56,7 @@ enableHapticFeedback?: boolean
 end?: Date
 ```
 
-选择器的结束日期或时间。
-
-默认值：Date(2100, 12, 31, 23, 59, 59)
-
-取值范围：[Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+选择器的结束日期或时间。默认值：Date(2100, 12, 31, 23, 59, 59)取值范围：[Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
 
 **类型：** Date
 
@@ -89,10 +76,8 @@ end?: Date
 loop?: boolean
 ```
 
-设置是否启用循环模式。
-
-- true：启用循环模式。 - false：不启用循环模式。
-
+设置是否启用循环模式。  
+- true：启用循环模式。 - false：不启用循环模式。  
 默认值：true
 
 **类型：** boolean
@@ -177,11 +162,7 @@ selected?: Date
 start?: Date
 ```
 
-选择器的起始日期或时间。
-
-默认值：Date(1970, 0, 1, 0, 0, 0)
-
-取值范围：[Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+选择器的起始日期或时间。默认值：Date(1970, 0, 1, 0, 0, 0)取值范围：[Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
 
 **类型：** Date
 

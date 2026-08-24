@@ -1,7 +1,6 @@
 # HttpDataType
 
-Enumerates HTTP data types.
-
+Enumerates HTTP data types.  
 | Name| Value| Description | | ------------------ | -- | ----------- | | STRING | 0 | String type.| | OBJECT | 1 | Object type. | | ARRAY_BUFFER | 2 | Binary array type.|
 
 **Since:** 23

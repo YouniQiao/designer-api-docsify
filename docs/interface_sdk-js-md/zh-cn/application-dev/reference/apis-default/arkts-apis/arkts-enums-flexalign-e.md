@@ -1,8 +1,6 @@
 # FlexAlign
 
-FlexAlign enumeration description.
-
-@enum { number }
+FlexAlign enumeration description.@enum { number }
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # AnimationStopMode
 
-Animation stop mode.
-
-@enum { number }
+Animation stop mode.@enum { number }
 
 **Since:** 24
 

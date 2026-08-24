@@ -16,9 +16,7 @@ Defining interface of PageLifeCycle for custom component, when decorate with @En
 onPageShow(): void
 ```
 
-onPageShow Method.
-
-The page is triggered once each time it is displayed, including scenarios such as the routing process and the application entering the foreground
+onPageShow Method.The page is triggered once each time it is displayed, including scenarios such as the routing process and the application entering the foreground
 
 **Since:** 23
 

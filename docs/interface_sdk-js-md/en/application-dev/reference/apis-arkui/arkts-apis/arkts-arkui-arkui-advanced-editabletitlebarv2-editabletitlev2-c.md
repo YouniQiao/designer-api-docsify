@@ -4,6 +4,8 @@ Declaration of the title configuration.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class EditableTitleV2--><!--Device-unnamed-export declare class EditableTitleV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ Constructor of EditableTitleV2.
 ## mainTitle
 
 ```TypeScript
-@Trace
-  public mainTitle: ResourceStr
+public mainTitle: ResourceStr
 ```
 
 Main title content.
@@ -52,6 +53,8 @@ Main title content.
 **Default:** ''
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,8 +67,7 @@ Main title content.
 ## subTitle
 
 ```TypeScript
-@Trace
-  public subTitle?: ResourceStr
+public subTitle?: ResourceStr
 ```
 
 Subtitle content.
@@ -73,6 +75,8 @@ Subtitle content.
 **Type:** ResourceStr
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

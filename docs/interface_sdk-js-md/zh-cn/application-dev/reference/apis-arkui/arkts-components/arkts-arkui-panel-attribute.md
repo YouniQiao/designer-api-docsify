@@ -1,8 +1,6 @@
 # Panel属性/事件
 
-窗格属性。
-
-@extends CommonMethod&lt;PanelAttribute&gt;
+窗格属性。@extends CommonMethod&lt;PanelAttribute&gt;
 
 **继承/实现关系：** PanelAttribute extends CommonMethod<PanelAttribute>
 

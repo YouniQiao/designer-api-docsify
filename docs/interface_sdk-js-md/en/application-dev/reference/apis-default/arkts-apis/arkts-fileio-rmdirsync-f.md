@@ -13,8 +13,7 @@ function rmdirSync(path: string): void
 
 Removes a directory and all its subdirectories and files synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be used to remove a single file. However, you are advised to use **unlinkSync** instead.
 
 **Since:** 23

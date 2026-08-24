@@ -1,8 +1,6 @@
 # SymbolGlyph properties/events
 
-The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are supported. For text attributes, only the following attributes are supported.
-
-The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are supported. For text attributes, only the following attributes are supported.The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** SymbolGlyphAttribute extends CommonMethod<SymbolGlyphAttribute>
 
@@ -25,8 +23,7 @@ effectStrategy(value: SymbolEffectStrategy)
 
 Sets the effect strategy of the **SymbolGlyph** component.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -55,8 +52,7 @@ fontColor(value: Array<ResourceColor>)
 
 Sets the color of the **SymbolGlyph** component.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -109,12 +105,9 @@ Called when the SymbolGlyph color is set.
 fontSize(value: number | string | Resource)
 ```
 
-Sets the size of the **SymbolGlyph** component. When using the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
+Sets the size of the **SymbolGlyph** component. When using the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.The display size of the symbol glyph is controlled by the **fontSize** setting. Once **width** or **height** is specified, other universal attributes will only affect the size of the component's placeholder, not the symbol glyph itself.
 
-The display size of the symbol glyph is controlled by the **fontSize** setting. Once **width** or **height** is specified, other universal attributes will only affect the size of the component's placeholder, not the symbol glyph itself.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -141,12 +134,9 @@ The display size of the symbol glyph is controlled by the **fontSize** setting. 
 fontWeight(value: number | FontWeight | string)
 ```
 
-Sets the font weight of the **SymbolGlyph** component. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.
+Sets the font weight of the **SymbolGlyph** component. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
-The **sys.symbol.ohos_lungs** icon does not support font weight setting.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -250,8 +240,7 @@ renderingStrategy(value: SymbolRenderingStrategy)
 
 Sets the rendering strategy of the **SymbolGlyph** component.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -278,9 +267,7 @@ Sets the rendering strategy of the **SymbolGlyph** component.
 shaderStyle(shader: Array<ShaderStyle | undefined> | ShaderStyle)
 ```
 
-Applies a gradient or solid color shader effect to the **SymbolGlyph** component.
-
-This API supports RadialGradientStyle, LinearGradientStyle, and ColorShaderStyle. When set, **shaderStyle** takes precedence over fontColor and any AI-based styling. To apply a simple solid color, using fontColor is recommended.
+Applies a gradient or solid color shader effect to the **SymbolGlyph** component.This API supports RadialGradientStyle, LinearGradientStyle, and ColorShaderStyle. When set, **shaderStyle** takes precedence over fontColor and any AI-based styling. To apply a simple solid color, using fontColor is recommended.
 
 **Since:** 20
 
@@ -376,5 +363,5 @@ Sets the shadow effect of the **SymbolGlyph** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shadow | Optional&lt;ShadowOptions&gt; | Yes | Shadow effect of the **SymbolGlyph** component.<br>Unit: vp<br>Default value: {<br>radius: 0,<br>color: Color.Black<br>offsetX: 0,<br>offsetY: 0<br>} &lt; br&gt;The **fill** and **type** attributes, as well as the enumerated values of **ColoringStrategy** within the **color **attribute, are not supported. |
+| shadow | Optional&lt;ShadowOptions&gt; | Yes | Shadow effect of the **SymbolGlyph** component.<br>Unit: vp<br>Default value: {<br>radius: 0,<br>color: Color.Black<br>offsetX: 0,<br>offsetY: 0<br>} <br>The **fill** and **type** attributes, as well as the enumerated values of **ColoringStrategy** within the **color **attribute, are not supported. |
 

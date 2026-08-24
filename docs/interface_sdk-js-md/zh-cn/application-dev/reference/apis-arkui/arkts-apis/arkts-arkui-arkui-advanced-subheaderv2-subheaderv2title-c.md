@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @ObservedV2
+
 <!--Device-unnamed-export declare class SubHeaderV2Title--><!--Device-unnamed-export declare class SubHeaderV2Title-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,17 +43,16 @@ constructor(options: SubHeaderV2TitleOptions)
 ## id
 
 ```TypeScript
-@Trace
-  id?: string
+id?: string
 ```
 
-标题id。需要为标题设置id的时候设置此参数，缺省时不设置此参数。
-
-默认值：undefined，表示不设置标题id。
+标题id。需要为标题设置id的时候设置此参数，缺省时不设置此参数。默认值：undefined，表示不设置标题id。
 
 **类型：** string
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,8 +65,7 @@ constructor(options: SubHeaderV2TitleOptions)
 ## primaryTitle
 
 ```TypeScript
-@Trace
-  primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
 The first line text of content area.
@@ -73,6 +73,8 @@ The first line text of content area.
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,8 +87,7 @@ The first line text of content area.
 ## primaryTitleModifier
 
 ```TypeScript
-@Trace
-  primaryTitleModifier?: TextModifier
+primaryTitleModifier?: TextModifier
 ```
 
 Text modifier for primary title.
@@ -94,6 +95,8 @@ Text modifier for primary title.
 **类型：** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,8 +109,7 @@ Text modifier for primary title.
 ## secondaryTitle
 
 ```TypeScript
-@Trace
-  secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
 The secondary line text of content area.
@@ -115,6 +117,8 @@ The secondary line text of content area.
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,8 +131,7 @@ The secondary line text of content area.
 ## secondaryTitleModifier
 
 ```TypeScript
-@Trace
-  secondaryTitleModifier?: TextModifier
+secondaryTitleModifier?: TextModifier
 ```
 
 Text modifier for secondary title.
@@ -136,6 +139,8 @@ Text modifier for secondary title.
 **类型：** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,19 +153,16 @@ Text modifier for secondary title.
 ## titleAccessibilityText
 
 ```TypeScript
-@Trace
-  titleAccessibilityText?: ResourceStr
+titleAccessibilityText?: ResourceStr
 ```
 
-设置标题自定义朗读内容。
-
-默认值：undefined
-
-值为undefined时，默认朗读组件显示的标题内容。
+设置标题自定义朗读内容。默认值：undefined值为undefined时，默认朗读组件显示的标题内容。
 
 **类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 23
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

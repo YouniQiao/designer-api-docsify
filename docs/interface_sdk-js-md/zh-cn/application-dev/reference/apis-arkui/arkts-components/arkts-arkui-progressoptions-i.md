@@ -19,11 +19,7 @@
 style?: ProgressStyle
 ```
 
-指定进度条样式。
-
-从API version 7开始支持，从API version 8开始废弃。建议使用[type](arkts-arkui-progresstype-e.md)替代。
-
-默认值：ProgressStyle.Linear
+指定进度条样式。从API version 7开始支持，从API version 8开始废弃。建议使用[type](arkts-arkui-progresstype-e.md)替代。默认值：ProgressStyle.Linear
 
 **类型：** [ProgressStyle](arkts-arkui-progressstyle-e.md)
 
@@ -43,11 +39,7 @@ style?: ProgressStyle
 total?: number
 ```
 
-指定进度总长。设置小于0的数值时置为100。
-
-默认值：100
-
-取值范围：(0, +∞)。
+指定进度总长。设置小于0的数值时置为100。默认值：100取值范围：(0, +∞)。
 
 **类型：** number
 
@@ -67,11 +59,8 @@ total?: number
 type?: Type
 ```
 
-指定进度条类型。
-
-默认值：ProgressType.Linear
-
-**说明：** 不同的type需分别对应相应的[style](arkts-arkui-progress-attribute.md#style)属性设置，详细映射关系参考 [ProgressStyleMap](../../../reference/apis-arkui/arkui-ts/ts-basic-components-progress.md#progressstylemap10)。
+指定进度条类型。默认值：ProgressType.Linear  
+**说明：** 不同的type需分别对应相应的[style](arkts-arkui-progress-attribute.md#style)属性设置，详细映射关系参考 [ProgressStyleMap](arkts-arkui-progressstylemap-i.md)。
 
 **类型：** [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)
 
@@ -91,11 +80,7 @@ type?: Type
 value: number
 ```
 
-指定当前进度值。
-
-默认值：0
-
-取值范围：[0, total]，设置小于0的数值时置为0，设置大于total的数值时置为total，设置非法值时按默认值处理。
+指定当前进度值。默认值：0取值范围：[0, total]，设置小于0的数值时置为0，设置大于total的数值时置为total，设置非法值时按默认值处理。
 
 **类型：** number
 

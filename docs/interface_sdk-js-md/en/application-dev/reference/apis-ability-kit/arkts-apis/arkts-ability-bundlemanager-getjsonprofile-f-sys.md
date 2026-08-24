@@ -12,9 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: int): string
 ```
 
-Obtains the JSON strings of the profile based on the given profile type, bundle name, and module name. This API returns the result synchronously.
-
-No permission is required for obtaining the caller's own profile.
+Obtains the JSON strings of the profile based on the given profile type, bundle name, and module name. This API returns the result synchronously.No permission is required for obtaining the caller's own profile.
 
 **Since:** 23
 
@@ -33,7 +31,7 @@ No permission is required for obtaining the caller's own profile.
 | profileType | [ProfileType](arkts-ability-bundlemanager-profiletype-e-sys.md) | Yes | Type of the profile. |
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | No | Module name of the application. If this parameter is not passed in, the entry module is used. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0.<br>**Since:** 12 |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0.<br>**Since:** 12 |
 
 **Return value:**
 

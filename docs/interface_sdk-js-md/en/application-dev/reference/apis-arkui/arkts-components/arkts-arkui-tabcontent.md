@@ -1,17 +1,14 @@
 # TabContent
 
 The **TabContent** component is used only in the **Tabs** component. It corresponds to the content view of a switched tab page.
-
 > **NOTE**
-
-> - By default, the clip attribute of this component is set to **true**. > If you want to extend the content area to the outside of the component, disable the **clip** attribute first.
+> - By default, the clip attribute of this component is set to **true**.> If you want to extend the content area to the outside of the component, disable the **clip** attribute first.
 
 ## Child Components
 
 This component supports only one child component.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Built-in system and custom components, and rendering control types (
 > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),
 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), and

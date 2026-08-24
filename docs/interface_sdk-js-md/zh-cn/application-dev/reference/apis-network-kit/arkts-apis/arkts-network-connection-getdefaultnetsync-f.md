@@ -14,16 +14,12 @@ function getDefaultNetSync(): NetHandle
 
 获取系统默认使用的网络句柄，包含网络ID。使用同步方式返回。
 
-> **说明：**
-> 
-> - 系统默认使用的网络，该网络的capabilities必须具备[NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md)且不是VPN类型的网络。
-> 
-> - 该接口的返回由系统决定，与应用是否指定网络无关。
-> 
+> **说明：**&gt;
+> - 系统默认使用的网络，该网络的capabilities必须具备[NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md)且不是VPN类型的网络。&gt;
+> - 该接口的返回由系统决定，与应用是否指定网络无关。&gt;
 > - 一般情况下，优先级：以太网（PC）|蓝牙（手表）
 > WIFI
-> 蜂窝，特殊情况以实际返回结果为准。
-> 
+> 蜂窝，特殊情况以实际返回结果为准。&gt;
 > - [NetHandle](arkts-network-connection-nethandle-i.md)为网络唯一标识，当无网络可用时，返回0。其可用于
 > [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md)继续查询更多网络信息。
 

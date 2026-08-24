@@ -21,9 +21,7 @@
 action?: AdvancedDialogV2ButtonAction
 ```
 
-按钮的点击事件。
-
-默认无事件。
+按钮的点击事件。默认无事件。
 
 **类型：** [AdvancedDialogV2ButtonAction](../../apis-arkui/arkts-apis/arkts-arkui-advanceddialogv2buttonaction-t.md)
 
@@ -43,11 +41,9 @@ action?: AdvancedDialogV2ButtonAction
 background?: ColorMetrics
 ```
 
-按钮的背景。
+按钮的背景。默认值跟随buttonStyle。
 
-默认值跟随buttonStyle。
-
-**类型：** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 
@@ -65,9 +61,7 @@ background?: ColorMetrics
 buttonStyle?: ButtonStyleMode
 ```
 
-按钮的样式。
-
-默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
+按钮的样式。默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
 
 **类型：** ButtonStyleMode
 
@@ -109,13 +103,7 @@ content: ResourceStr
 defaultFocus?: boolean
 ```
 
-是否为默认焦点。
-
-true：按钮是默认焦点。
-
-false：按钮不是默认焦点。
-
-默认值：false
+是否为默认焦点。true：按钮是默认焦点。false：按钮不是默认焦点。默认值：false
 
 **类型：** boolean
 
@@ -137,13 +125,7 @@ false：按钮不是默认焦点。
 enabled?: boolean
 ```
 
-是否可用。
-
-true：按钮可用。
-
-false：按钮不可用。
-
-默认值：true
+是否可用。true：按钮可用。false：按钮不可用。默认值：true
 
 **类型：** boolean
 
@@ -165,11 +147,9 @@ false：按钮不可用。
 fontColor?: ColorMetrics
 ```
 
-按钮的字体颜色。
+按钮的字体颜色。默认值跟随buttonStyle。
 
-默认值跟随buttonStyle。
-
-**类型：** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 
@@ -187,9 +167,7 @@ fontColor?: ColorMetrics
 role?: ButtonRole
 ```
 
-按钮的角色。
-
-默认值：ButtonRole.NORMAL
+按钮的角色。默认值：ButtonRole.NORMAL
 
 **类型：** ButtonRole
 
@@ -211,9 +189,7 @@ role?: ButtonRole
 textAlign?: TextAlign
 ```
 
-按钮文本的对齐方式。
-
-默认值：TextAlign.Start
+按钮文本的对齐方式。默认值：TextAlign.Start
 
 **类型：** TextAlign
 

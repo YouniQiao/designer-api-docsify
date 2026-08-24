@@ -4,6 +4,8 @@ Declare Component ProgressButtonV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ProgressButtonV2--><!--Device-unnamed-export declare struct ProgressButtonV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,13 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 
 ## colorOptions
 
-```TypeScript
-@Param colorOptions?: ProgressButtonV2Color
-```
-
 Set Color options of the ProgressButtonV2.
 
 **Type:** [ProgressButtonV2Color](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,16 +36,13 @@ Set Color options of the ProgressButtonV2.
 
 ## content
 
-```TypeScript
-@Require
-  @Param readonly content: ResourceStr
-```
-
 Sets the ProgressButtonV2 content.
 
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,15 +54,13 @@ Sets the ProgressButtonV2 content.
 
 ## isEnabled
 
-```TypeScript
-@Param readonly isEnabled: boolean
-```
-
 Sets the ProgressButtonV2 isEnabled state.
 
 **Type:** boolean
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,15 +72,13 @@ Sets the ProgressButtonV2 isEnabled state.
 
 ## onClicked
 
-```TypeScript
-@Param readonly onClicked: ClickCallback
-```
-
 Sets the ProgressButtonV2 onClicked.
 
 **Type:** [ClickCallback](arkts-arkui-clickcallback-t.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,16 +90,13 @@ Sets the ProgressButtonV2 onClicked.
 
 ## progress
 
-```TypeScript
-@Require
-  @Param readonly progress: number
-```
-
 Sets the ProgressButtonV2 progress.
 
 **Type:** number
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,15 +108,13 @@ Sets the ProgressButtonV2 progress.
 
 ## progressButtonRadius
 
-```TypeScript
-@Param progressButtonRadius?: LengthMetrics
-```
-
 Set border rounded corner radius of progress.
 
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,15 +126,13 @@ Set border rounded corner radius of progress.
 
 ## progressButtonWidth
 
-```TypeScript
-@Param @Once progressButtonWidth?: LengthMetrics
-```
-
 Sets the ProgressButtonV2 progressButtonWidth.
 
-**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
+
+**Decorator:** @Param, @Once
 
 **Model restriction:** This API can be used only in the stage model.
 

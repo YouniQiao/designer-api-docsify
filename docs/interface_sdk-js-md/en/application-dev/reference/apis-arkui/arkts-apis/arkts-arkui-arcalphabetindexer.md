@@ -12,7 +12,7 @@ import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | In addition to the universal attributes, the following attributes are supported. |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported. |
 
 ### Interfaces
 

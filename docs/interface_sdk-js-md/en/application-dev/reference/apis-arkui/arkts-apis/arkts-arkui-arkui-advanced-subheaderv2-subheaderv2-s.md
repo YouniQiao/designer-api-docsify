@@ -1,13 +1,9 @@
 # SubHeaderV2
 
-The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.
+The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates.
 
-This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates.
-
-> **NOTE：**
-> 
-> - This component can be used only in the stage model.
-> 
+> **NOTE：**&gt;
+> - This component can be used only in the stage model.&gt;
 > - If the **SubHeaderV2** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -16,6 +12,8 @@ This component is implemented based on [state management V2](../../../ui/state-m
 > with the **SubHeaderV2** component.
 
 **Since:** 18
+
+**Decorator:** @ComponentV2
 
 <!--Device-unnamed-export declare struct SubHeaderV2--><!--Device-unnamed-export declare struct SubHeaderV2-End-->
 
@@ -30,19 +28,17 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 ## icon
 
 ```TypeScript
-@Param
-  readonly icon?: SubHeaderV2IconType
+readonly icon?: SubHeaderV2IconType
 ```
 
-Icon.
-
-Default value: **undefined**
-
+Icon.Default value: **undefined**  
 **icon** takes effect only when **secondaryTitle** is used for **title**.
 
 **Type:** [SubHeaderV2IconType](../../apis-default/arkts-apis/arkts-subheaderv2icontype-t.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,17 +51,16 @@ Default value: **undefined**
 ## operationItems
 
 ```TypeScript
-@Param
-  readonly operationItems?: SubHeaderV2OperationItem[]
+readonly operationItems?: SubHeaderV2OperationItem[]
 ```
 
-Items in the operation area.
-
-Default value: **undefined**
+Items in the operation area.Default value: **undefined**
 
 **Type:** [SubHeaderV2OperationItem](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,17 +73,16 @@ Default value: **undefined**
 ## operationType
 
 ```TypeScript
-@Param
-  readonly operationType?: SubHeaderV2OperationType
+readonly operationType?: SubHeaderV2OperationType
 ```
 
-Style of elements in the operation area.
-
-Default value: **SubHeaderV2OperationType.BUTTON**
+Style of elements in the operation area.Default value: **SubHeaderV2OperationType.BUTTON**
 
 **Type:** [SubHeaderV2OperationType](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,17 +95,16 @@ Default value: **SubHeaderV2OperationType.BUTTON**
 ## select
 
 ```TypeScript
-@Param
-  readonly select?: SubHeaderV2Select
+readonly select?: SubHeaderV2Select
 ```
 
-Content and events for selection.
-
-Default value: **undefined**
+Content and events for selection.Default value: **undefined**
 
 **Type:** [SubHeaderV2Select](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2select-c.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,17 +117,16 @@ Default value: **undefined**
 ## title
 
 ```TypeScript
-@Param
-  readonly title?: SubHeaderV2Title
+readonly title?: SubHeaderV2Title
 ```
 
-Title of the subheader.
-
-Default value: **undefined**
+Title of the subheader.Default value: **undefined**
 
 **Type:** [SubHeaderV2Title](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2title-c.md)
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,17 +139,16 @@ Default value: **undefined**
 ## titleBuilder
 
 ```TypeScript
-@BuilderParam
-  titleBuilder?: SubHeaderV2TitleBuilder
+titleBuilder?: SubHeaderV2TitleBuilder
 ```
 
-Custom content for the title area.
-
-Default value: **() =&gt; void**
+Custom content for the title area.Default value: **() =&gt; void**
 
 **Type:** [SubHeaderV2TitleBuilder](../../apis-default/arkts-apis/arkts-subheaderv2titlebuilder-t.md)
 
 **Since:** 18
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

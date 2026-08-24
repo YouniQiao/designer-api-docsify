@@ -1,6 +1,6 @@
 # AudioSpatializationSceneType（系统接口）
 
-Describes a spatialization scene type group.
+枚举，空间音频渲染场景类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Describes a spatialization scene type group.
 DEFAULT = 0
 ```
 
-Audio Spatialization Scene Type Default.
+空间音频默认渲染场景。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Audio Spatialization Scene Type Default.
 MUSIC = 1
 ```
 
-Audio Spatialization Scene Type Music.
+空间音频音乐渲染场景。
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ Audio Spatialization Scene Type Music.
 MOVIE = 2
 ```
 
-Audio Spatialization Scene Type Movie.
+空间音频电影渲染场景。
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ Audio Spatialization Scene Type Movie.
 AUDIOBOOK = 3
 ```
 
-Audio Spatialization Scene Type Audio Book.
+空间音频有声读物渲染场景。
 
 **起始版本：** 23
 

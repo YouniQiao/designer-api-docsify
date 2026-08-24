@@ -14,7 +14,6 @@ Describes the equivalent focal length information.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## equivalentFocalLength

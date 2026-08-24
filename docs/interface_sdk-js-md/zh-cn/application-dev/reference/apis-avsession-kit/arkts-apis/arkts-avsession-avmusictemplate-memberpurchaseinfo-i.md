@@ -1,8 +1,6 @@
 # MemberPurchaseInfo
 
-会员购买信息的定义。
-
-@interface MediaElement
+会员购买信息的定义。@interface MediaElement
 
 **起始版本：** 23
 

@@ -1,10 +1,10 @@
 # AdvancedDialogV2Button
 
-Declare AdvancedDialogV2Button.
-
-@class AdvancedDialogV2Button
+Declare AdvancedDialogV2Button.@class AdvancedDialogV2Button
 
 **Since:** 18
+
+**Decorator:** @ObservedV2
 
 <!--Device-unnamed-export declare class AdvancedDialogV2Button--><!--Device-unnamed-export declare class AdvancedDialogV2Button-End-->
 
@@ -43,8 +43,7 @@ The constructor used to create a AdvancedDialogV2Button object.
 ## action
 
 ```TypeScript
-@Trace
-  action?: AdvancedDialogV2ButtonAction
+action?: AdvancedDialogV2ButtonAction
 ```
 
 Sets the Button Callback.
@@ -52,6 +51,8 @@ Sets the Button Callback.
 **Type:** [AdvancedDialogV2ButtonAction](arkts-arkui-advanceddialogv2buttonaction-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,15 +65,16 @@ Sets the Button Callback.
 ## background
 
 ```TypeScript
-@Trace
-  background?: ColorMetrics
+background?: ColorMetrics
 ```
 
 Sets the background color of a button.
 
-**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +87,7 @@ Sets the background color of a button.
 ## buttonStyle
 
 ```TypeScript
-@Trace
-  buttonStyle?: ButtonStyleMode
+buttonStyle?: ButtonStyleMode
 ```
 
 Describes the Button style.
@@ -96,6 +97,8 @@ Describes the Button style.
 **Default:** ButtonStyleMode.TEXTUAL
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,8 +111,7 @@ Describes the Button style.
 ## content
 
 ```TypeScript
-@Trace
-  content: ResourceStr
+content: ResourceStr
 ```
 
 Sets the Display Content of a Button.
@@ -117,6 +119,8 @@ Sets the Display Content of a Button.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,8 +133,7 @@ Sets the Display Content of a Button.
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  defaultFocus?: boolean
+defaultFocus?: boolean
 ```
 
 Set the default focus of a button.
@@ -140,6 +143,8 @@ Set the default focus of a button.
 **Default:** { false }
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,8 +157,7 @@ Set the default focus of a button.
 ## enabled
 
 ```TypeScript
-@Trace
-  enabled?: boolean
+enabled?: boolean
 ```
 
 Set the availability of the button.
@@ -163,6 +167,8 @@ Set the availability of the button.
 **Default:** { true }
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -175,15 +181,16 @@ Set the availability of the button.
 ## fontColor
 
 ```TypeScript
-@Trace
-  fontColor?: ColorMetrics
+fontColor?: ColorMetrics
 ```
 
 Sets the Button Text Color.
 
-**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,8 +203,7 @@ Sets the Button Text Color.
 ## role
 
 ```TypeScript
-@Trace
-  role?: ButtonRole
+role?: ButtonRole
 ```
 
 Describes the Button role.
@@ -207,6 +213,8 @@ Describes the Button role.
 **Default:** ButtonRole.NORMAL
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,8 +227,7 @@ Describes the Button role.
 ## textAlign
 
 ```TypeScript
-@Trace
-  textAlign?: TextAlign
+textAlign?: TextAlign
 ```
 
 Set the alignment mode for the button label.
@@ -230,6 +237,8 @@ Set the alignment mode for the button label.
 **Default:** { TextAlign.Start }
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

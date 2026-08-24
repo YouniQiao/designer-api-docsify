@@ -4,11 +4,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## getSystemInputMethodConfigAbility
@@ -17,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getSystemInputMethodConfigAbility(userId?: int): ElementName
 ```
 
-@brief 获取指定用户的系统输入法设置界面Ability信息。用于启动系统输入法配置界面。
+获取指定用户的系统输入法设置界面Ability信息。用于启动系统输入法配置界面。
 
 **起始版本：** 26.0.0
 

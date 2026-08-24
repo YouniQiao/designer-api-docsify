@@ -1,8 +1,6 @@
 # MemberPurchaseType
 
-表示会员购买类型的枚举。
-
-@enum { string }
+表示会员购买类型的枚举。@enum { string }
 
 **起始版本：** 23
 

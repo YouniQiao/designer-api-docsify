@@ -1,8 +1,6 @@
 # AnimationController
 
-动画控制器对象。包含控制动画播放、停止、恢复、暂停和状态查询等方法。
-
-@interface AnimationController
+动画控制器对象。包含控制动画播放、停止、恢复、暂停和状态查询等方法。@interface AnimationController
 
 **起始版本：** 23
 

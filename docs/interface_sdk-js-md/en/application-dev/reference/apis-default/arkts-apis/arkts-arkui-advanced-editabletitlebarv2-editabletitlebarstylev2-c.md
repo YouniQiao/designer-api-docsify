@@ -6,6 +6,8 @@ Declaration of the title bar style configuration.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class EditableTitleBarStyleV2--><!--Device-unnamed-export declare class EditableTitleBarStyleV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ Constructor of EditableTitleBarStyleV2.
 ## backgroundBlurStyle
 
 ```TypeScript
-@Trace
-  public backgroundBlurStyle?: BlurStyle
+public backgroundBlurStyle?: BlurStyle
 ```
 
 Background blur style.
@@ -54,6 +55,8 @@ Background blur style.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarStyleV2-@Trace  public backgroundBlurStyle?: BlurStyle--><!--Device-EditableTitleBarStyleV2-@Trace  public backgroundBlurStyle?: BlurStyle-End-->
@@ -63,8 +66,7 @@ Background blur style.
 ## backgroundColor
 
 ```TypeScript
-@Trace
-  public backgroundColor?: ResourceColor
+public backgroundColor?: ResourceColor
 ```
 
 Background color.
@@ -75,6 +77,8 @@ Background color.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarStyleV2-@Trace  public backgroundColor?: ResourceColor--><!--Device-EditableTitleBarStyleV2-@Trace  public backgroundColor?: ResourceColor-End-->
@@ -84,8 +88,7 @@ Background color.
 ## contentMargin
 
 ```TypeScript
-@Trace
-  public contentMargin?: LocalizedMargin
+public contentMargin?: LocalizedMargin
 ```
 
 Content margin, supports RTL layout.
@@ -96,6 +99,8 @@ Content margin, supports RTL layout.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarStyleV2-@Trace  public contentMargin?: LocalizedMargin--><!--Device-EditableTitleBarStyleV2-@Trace  public contentMargin?: LocalizedMargin-End-->
@@ -105,8 +110,7 @@ Content margin, supports RTL layout.
 ## safeAreaEdges
 
 ```TypeScript
-@Trace
-  public safeAreaEdges?: Array<SafeAreaEdge>
+public safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
 Indicates the edges of the safe area.
@@ -117,6 +121,8 @@ Indicates the edges of the safe area.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarStyleV2-@Trace  public safeAreaEdges?: Array<SafeAreaEdge>--><!--Device-EditableTitleBarStyleV2-@Trace  public safeAreaEdges?: Array<SafeAreaEdge>-End-->
@@ -126,8 +132,7 @@ Indicates the edges of the safe area.
 ## safeAreaTypes
 
 ```TypeScript
-@Trace
-  public safeAreaTypes?: Array<SafeAreaType>
+public safeAreaTypes?: Array<SafeAreaType>
 ```
 
 Indicates the types of the safe area.
@@ -137,6 +142,8 @@ Indicates the types of the safe area.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

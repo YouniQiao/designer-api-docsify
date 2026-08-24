@@ -1,8 +1,6 @@
 # @ohos.curves
 
-Contains interpolator functions such as initialization, third-order Bezier curves, and spring curves.
-
-@namespace curves
+Contains interpolator functions such as initialization, third-order Bezier curves, and spring curves.@namespace curves
 
 **Since:** 23
 
@@ -39,11 +37,11 @@ import { curves } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | Interface for curve object. |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | Interface for curve object.@interface ICurve |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Curve](arkts-arkui-curves-curve-e.md) | enum Curve. |
+| [Curve](arkts-arkui-curves-curve-e.md) | enum Curve.@enum { number } |
 

@@ -6,6 +6,8 @@ Configuration parameter of ExceptionPromptV2. Use @ObservedV2 and @Trace to supp
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class PromptOptionsV2--><!--Device-unnamed-export declare class PromptOptionsV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ Constructor of PromptOptionsV2.
 ## actionText
 
 ```TypeScript
-@Trace
-  public actionText?: ResourceStr
+public actionText?: ResourceStr
 ```
 
 Text of the icon on the right of the ExceptionPromptV2. If this parameter is not set or is set to undefined, the text is not displayed.
@@ -54,6 +55,8 @@ Text of the icon on the right of the ExceptionPromptV2. If this parameter is not
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PromptOptionsV2-@Trace  public actionText?: ResourceStr--><!--Device-PromptOptionsV2-@Trace  public actionText?: ResourceStr-End-->
@@ -63,8 +66,7 @@ Text of the icon on the right of the ExceptionPromptV2. If this parameter is not
 ## icon
 
 ```TypeScript
-@Trace
-  public icon?: ResourceStr
+public icon?: ResourceStr
 ```
 
 Icon style of the ExceptionPromptV2. If this parameter is not set or is set to undefined, the icon is not displayed.
@@ -75,6 +77,8 @@ Icon style of the ExceptionPromptV2. If this parameter is not set or is set to u
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PromptOptionsV2-@Trace  public icon?: ResourceStr--><!--Device-PromptOptionsV2-@Trace  public icon?: ResourceStr-End-->
@@ -84,8 +88,7 @@ Icon style of the ExceptionPromptV2. If this parameter is not set or is set to u
 ## isShown
 
 ```TypeScript
-@Trace
-  public isShown?: boolean
+public isShown?: boolean
 ```
 
 Whether the ExceptionPromptV2 is displayed. true: The exception prompt is displayed. false: The exception prompt is hidden. Default value: false.
@@ -96,6 +99,8 @@ Whether the ExceptionPromptV2 is displayed. true: The exception prompt is displa
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PromptOptionsV2-@Trace  public isShown?: boolean--><!--Device-PromptOptionsV2-@Trace  public isShown?: boolean-End-->
@@ -105,8 +110,7 @@ Whether the ExceptionPromptV2 is displayed. true: The exception prompt is displa
 ## marginTop
 
 ```TypeScript
-@Trace
-  public marginTop: Dimension
+public marginTop: Dimension
 ```
 
 Top margin of the ExceptionPromptV2. Distance from the top to the content area of ExceptionPromptV2.
@@ -117,6 +121,8 @@ Top margin of the ExceptionPromptV2. Distance from the top to the content area o
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PromptOptionsV2-@Trace  public marginTop: Dimension--><!--Device-PromptOptionsV2-@Trace  public marginTop: Dimension-End-->
@@ -126,8 +132,7 @@ Top margin of the ExceptionPromptV2. Distance from the top to the content area o
 ## marginType
 
 ```TypeScript
-@Trace
-  public marginType: MarginTypeV2
+public marginType: MarginTypeV2
 ```
 
 Margin Type of ExceptionPromptV2. Margin from the content area to the edge of the container.
@@ -138,6 +143,8 @@ Margin Type of ExceptionPromptV2. Margin from the content area to the edge of th
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PromptOptionsV2-@Trace  public marginType: MarginTypeV2--><!--Device-PromptOptionsV2-@Trace  public marginType: MarginTypeV2-End-->
@@ -147,8 +154,7 @@ Margin Type of ExceptionPromptV2. Margin from the content area to the edge of th
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 Symbol icon style of the ExceptionPromptV2, which has higher priority than icon. If this parameter is not set or is set to undefined, the symbol icon is not displayed.
@@ -159,6 +165,8 @@ Symbol icon style of the ExceptionPromptV2, which has higher priority than icon.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PromptOptionsV2-@Trace  public symbolStyle?: SymbolGlyphModifier--><!--Device-PromptOptionsV2-@Trace  public symbolStyle?: SymbolGlyphModifier-End-->
@@ -168,17 +176,23 @@ Symbol icon style of the ExceptionPromptV2, which has higher priority than icon.
 ## tip
 
 ```TypeScript
-@Trace
-  public tip?: ResourceStr
+public tip?: ResourceStr
 ```
 
-Text content of the ExceptionPromptV2. By default, the following text resources are provided: 1. ohos_network_not_connected: displayed when no Internet connection. 2. ohos_network_connected_unstable: displayed when the Internet connection is unstable. 3. ohos_unstable_connect_server: displayed when the server fails to be connected. 4. ohos_custom_network_tips_left: displayed when an Internet connection is available but the location fails to be obtained. If this parameter is not set or is set to undefined, the text content is not displayed.
+Text content of the ExceptionPromptV2. By default, the following text resources are provided:
+1. ohos_network_not_connected: displayed when no Internet connection.
+2. ohos_network_connected_unstable: displayed when the Internet connection is unstable.
+3. ohos_unstable_connect_server: displayed when the server fails to be connected.
+4. ohos_custom_network_tips_left: displayed when an Internet connection is available
+but the location fails to be obtained. If this parameter is not set or is set to undefined, the text content is not displayed.
 
 **Type:** ResourceStr
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

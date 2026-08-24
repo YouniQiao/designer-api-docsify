@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function onSystemPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 ```
 
-@brief Subscribe to the event when the input method application sends private data commands.
+Subscribe to the event when the input method application sends private data commands.
 
 **Since:** 26.0.0
 

@@ -1,12 +1,6 @@
 # Padding
 
-type Padding = { top: Length; right: Length; bottom: Length; left: Length; }
-
-内边距类型，用于描述组件不同方向的内边距。
-
-引入该对象时，至少传入一个参数。
-
-@interface Padding
+type Padding = { top: Length; right: Length; bottom: Length; left: Length; }内边距类型，用于描述组件不同方向的内边距。引入该对象时，至少传入一个参数。@interface Padding
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # ScreenAttribute (System API)
 
-Defines the attribute functions of Screen.
-
-@extends CommonMethod
+Defines the attribute functions of Screen.@extends CommonMethod
 
 **Inheritance/Implementation:** ScreenAttribute extends CommonMethod
 

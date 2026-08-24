@@ -1,8 +1,6 @@
 # Week
 
-Set Weekend
-
-@enum { number }
+Set Weekend@enum { number }
 
 **Since:** 23
 

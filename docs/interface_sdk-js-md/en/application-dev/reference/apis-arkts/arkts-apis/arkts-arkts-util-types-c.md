@@ -11,42 +11,7 @@ Provides APIs to check different types of built-in objects, such as ArrayBuffer,
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
-import { ArrayListComparatorFn } from '@kit.ArkTS';
-import { ArrayListForEachCb } from '@kit.ArkTS';
-import { ArrayListReplaceCb } from '@kit.ArkTS';
 import { util } from '@kit.ArkTS';
-import { Deque } from '@kit.ArkTS';
-import { DequeForEachCb } from '@kit.ArkTS';
-import { HashMap } from '@kit.ArkTS';
-import { HashMapCbFn } from '@kit.ArkTS';
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
-import { LightWeightSet } from '@kit.ArkTS';
-import { LightWeightSetForEachCb } from '@kit.ArkTS';
-import { LinkedList } from '@kit.ArkTS';
-import { LinkedListForEachCb } from '@kit.ArkTS';
-import { List } from '@kit.ArkTS';
-import { ListComparatorFn } from '@kit.ArkTS';
-import { ListForEachCb } from '@kit.ArkTS';
-import { ListReplaceCb } from '@kit.ArkTS';
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
-import { Queue } from '@kit.ArkTS';
-import { QueueForEachCb } from '@kit.ArkTS';
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
-import { TreeMap } from '@kit.ArkTS';
-import { TreeMapForEachCb } from '@kit.ArkTS';
-import { TreeMapComparator } from '@kit.ArkTS';
-import { TreeSet } from '@kit.ArkTS';
-import { TreeSetForEachCb } from '@kit.ArkTS';
-import { TreeSetComparator } from '@kit.ArkTS';
-import { stream } from '@kit.ArkTS';
-import { Vector } from '@kit.ArkTS';
-import { JSON } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -443,8 +408,7 @@ isBooleanObject(value: Object): boolean
 
 Checks whether the value is of the Boolean type.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
@@ -486,8 +450,7 @@ isBoxedPrimitive(value: Object): boolean
 
 Checks whether the value is of the Boolean, Number, String, or Symbol type.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
@@ -547,7 +510,7 @@ Checks whether the value is of the DataView type.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the value is of the DataView type; otherwise , **false** is returned. |
+| boolean | Check result. The value **true** is returned if the value is of the DataView type; otherwise, **false** is returned. |
 
 **Examples**
 
@@ -771,7 +734,7 @@ Checks whether the value is a generator function.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the value is a generator function; otherwise , **false** is returned. |
+| boolean | Check result. The value **true** is returned if the value is a generator function; otherwise, **false** is returned. |
 
 **Examples**
 
@@ -1111,8 +1074,7 @@ isNumberObject(value: Object): boolean
 
 Checks whether the value is of the Number type.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
@@ -1382,8 +1344,7 @@ isStringObject(value: Object): boolean
 
 Checks whether the value is a string object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
@@ -1425,8 +1386,7 @@ isSymbolObject(value: Object): boolean
 
 Checks whether the value is a symbol object.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8

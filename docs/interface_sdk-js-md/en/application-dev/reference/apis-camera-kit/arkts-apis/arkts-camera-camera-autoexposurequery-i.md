@@ -1,7 +1,6 @@
 # AutoExposureQuery
 
-AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.   
-> 
+AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.&gt;  
 > - In this version, a compatibility change was made that preserved the initial version information of inner
 > elements. As a result, you might see outer element's
 
@@ -15,7 +14,6 @@ AutoExposureQuery provides APIs to query the automatic exposure feature of a cam
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getExposureBiasRange

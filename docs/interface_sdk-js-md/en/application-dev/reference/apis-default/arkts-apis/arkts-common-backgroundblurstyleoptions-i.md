@@ -1,8 +1,6 @@
 # BackgroundBlurStyleOptions
 
-Defines the options of backgroundBlurStyle
-
-@extends BlurStyleOptions
+Defines the options of backgroundBlurStyle@extends BlurStyleOptions
 
 **Inheritance/Implementation:** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-common-blurstyleoptions-i.md)
 

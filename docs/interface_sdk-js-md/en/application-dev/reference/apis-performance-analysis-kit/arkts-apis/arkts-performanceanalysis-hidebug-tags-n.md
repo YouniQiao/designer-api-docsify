@@ -1,8 +1,6 @@
 # tags
 
-Provide trace tags
-
-@namespace tags
+Provide trace tags@namespace tags
 
 **Since:** 23
 

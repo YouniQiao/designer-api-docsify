@@ -32,7 +32,7 @@ Creates a **Buffer** object with the specified array.
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
+| Buffer | Buffer** object created. |
 
 **Examples**
 
@@ -115,7 +115,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
+| Buffer | Buffer** object created. |
 
 **Error codes:**
 
@@ -156,7 +156,7 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Return a view of the ArrayBuffer |
+| Buffer | Return a view of the ArrayBuffer |
 
 **Error codes:**
 
@@ -189,13 +189,13 @@ Copies the data of a passed **Buffer** object to create a new **Buffer** object 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Target object. |
+| buffer | Buffer \| Uint8Array | Yes | Target object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
+| Buffer | Buffer** object created. |
 
 **Examples**
 
@@ -230,7 +230,7 @@ Creates a **Buffer** object based on the specified object.
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
+| Buffer | Buffer** object created. |
 
 **Examples**
 
@@ -264,7 +264,7 @@ Creates a **Buffer** object based on a string in the given encoding format.
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
+| Buffer | Buffer** object created. |
 
 **Examples**
 

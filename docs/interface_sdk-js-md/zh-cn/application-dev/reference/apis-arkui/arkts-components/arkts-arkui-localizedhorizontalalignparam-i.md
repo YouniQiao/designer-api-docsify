@@ -1,8 +1,6 @@
 # LocalizedHorizontalAlignParam
 
-Defines the localized horizontal align param of relative container.
-
-@interface LocalizedHorizontalAlignParam
+Defines the localized horizontal align param of relative container.@interface LocalizedHorizontalAlignParam
 
 **起始版本：** 12
 

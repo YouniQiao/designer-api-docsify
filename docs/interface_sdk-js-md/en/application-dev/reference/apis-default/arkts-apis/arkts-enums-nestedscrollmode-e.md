@@ -1,6 +1,6 @@
 # NestedScrollMode
 
-Nested scroll nested mode @enum { number } NestedScrollMode
+Nested scroll nested mode@enum { number } NestedScrollMode
 
 **Since:** 23
 

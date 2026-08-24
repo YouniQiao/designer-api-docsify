@@ -38,7 +38,7 @@ readonly eventSchemas?: Record<string, Record<string, Object>>
 
 子命令自定义事件的模式定义。以键值对形式存储，键为事件类型，值为该事件的JSON Schema定义。默认值为空对象。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt;
+**类型：** Record&lt;string, Record&lt;string, Object&gt;&gt;
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ readonly inputSchema: Record<string, Object>
 
 子命令的输入模式定义。使用JSON Schema格式定义输入参数的结构和类型。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 26.0.0
 
@@ -98,7 +98,7 @@ readonly outputSchema: Record<string, Object>
 
 子命令的输出模式定义。使用JSON Schema格式定义输出数据的结构和类型。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 26.0.0
 

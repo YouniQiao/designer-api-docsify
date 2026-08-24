@@ -1,8 +1,6 @@
 # KeyboardAvoidMode
 
-enum keyboard avoid mode
-
-@enum { number }
+enum keyboard avoid mode@enum { number }
 
 **起始版本：** 23
 

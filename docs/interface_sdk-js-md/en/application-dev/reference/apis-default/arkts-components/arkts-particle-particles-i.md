@@ -1,8 +1,6 @@
 # Particles
 
-Defines the Particles interface.
-
-@interface Particles
+Defines the Particles interface.@interface Particles
 
 **Since:** 23
 

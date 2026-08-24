@@ -4,6 +4,8 @@ Defines chip label class.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2Label--><!--Device-unnamed-export declare class ChipV2Label-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +43,7 @@ The constructor of ChipLabel
 ## activatedFontColor
 
 ```TypeScript
-@Trace
-  public activatedFontColor?: ColorMetrics
+public activatedFontColor?: ColorMetrics
 ```
 
 Text font color when chip is activated.
@@ -50,6 +51,8 @@ Text font color when chip is activated.
 **Type:** ColorMetrics
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +65,7 @@ Text font color when chip is activated.
 ## fontColor
 
 ```TypeScript
-@Trace
-  public fontColor?: ColorMetrics
+public fontColor?: ColorMetrics
 ```
 
 Text font color.
@@ -71,6 +73,8 @@ Text font color.
 **Type:** ColorMetrics
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +87,7 @@ Text font color.
 ## fontFamily
 
 ```TypeScript
-@Trace
-  public fontFamily?: string
+public fontFamily?: string
 ```
 
 Text font family.
@@ -92,6 +95,8 @@ Text font family.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +109,7 @@ Text font family.
 ## fontSize
 
 ```TypeScript
-@Trace
-  public fontSize?: LengthMetrics
+public fontSize?: LengthMetrics
 ```
 
 Text font size.
@@ -113,6 +117,8 @@ Text font size.
 **Type:** LengthMetrics
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +131,7 @@ Text font size.
 ## labelMargin
 
 ```TypeScript
-@Trace
-  public labelMargin?: ChipV2LabelMarginConfig
+public labelMargin?: ChipV2LabelMarginConfig
 ```
 
 Label margin.
@@ -134,6 +139,8 @@ Label margin.
 **Type:** [ChipV2LabelMarginConfig](arkts-arkui-arkui-advanced-chipv2-chipv2labelmarginconfig-i.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,8 +153,7 @@ Label margin.
 ## localizedLabelMargin
 
 ```TypeScript
-@Trace
-  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
+public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
 ```
 
 Localized label margin.
@@ -155,6 +161,8 @@ Localized label margin.
 **Type:** [ChipV2LocalizedLabelMarginConfig](arkts-arkui-arkui-advanced-chipv2-chipv2localizedlabelmarginconfig-i.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,8 +175,7 @@ Localized label margin.
 ## modifier
 
 ```TypeScript
-@Trace
-  public modifier?: TextModifier
+public modifier?: TextModifier
 ```
 
 Modifier for the label text.
@@ -176,6 +183,8 @@ Modifier for the label text.
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +197,7 @@ Modifier for the label text.
 ## text
 
 ```TypeScript
-@Trace
-  public text: string
+public text: string
 ```
 
 Text content.
@@ -197,6 +205,8 @@ Text content.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,8 +2,7 @@
 
 AbilityDelegatorArgs模块提供在应用程序执行测试用例期间，获取测试用例参数AbilityDelegatorArgs对象的能力。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本模块接口仅可在[单元测试框架](../../../application-test/unittest-guidelines.md)中使用。
 
 **起始版本：** 23
@@ -38,7 +37,7 @@ parameters: Record<string, string>
 
 当前启动单元测试的参数。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 23
 

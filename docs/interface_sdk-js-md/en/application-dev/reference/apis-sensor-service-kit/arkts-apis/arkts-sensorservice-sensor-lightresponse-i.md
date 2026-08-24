@@ -22,7 +22,7 @@ import { sensor } from '@kit.SensorServiceKit';
 colorTemperature?: double
 ```
 
-Color temperature, in Kelvin. This parameter is optional. If this parameter is not supported, a fixed value ( customized by the sensor) is returned. If this parameter is supported, a normal value is returned.
+Color temperature, in Kelvin. This parameter is optional. If this parameter is not supported, a fixed value (customized by the sensor) is returned. If this parameter is supported, a normal value is returned.
 
 **Type:** double
 
@@ -38,7 +38,7 @@ Color temperature, in Kelvin. This parameter is optional. If this parameter is n
 infraredLuminance?: double
 ```
 
-Infrared luminance, in cd/m?. This parameter is optional. If this parameter is not supported, a fixed value ( customized by the sensor) is returned. If this parameter is supported, a normal value is returned.
+Infrared luminance, in cd/m?. This parameter is optional. If this parameter is not supported, a fixed value (customized by the sensor) is returned. If this parameter is supported, a normal value is returned.
 
 **Type:** double
 

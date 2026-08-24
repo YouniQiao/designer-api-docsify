@@ -1,8 +1,6 @@
 # PolicyFile（系统接口）
 
-配置文件信息。
-
-@interface PolicyFile
+配置文件信息。@interface PolicyFile
 
 **起始版本：** 12
 

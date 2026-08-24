@@ -24,7 +24,7 @@ refFields: Record<string, string>
 
 表示关联表的关联字段。键值数据中键为子表字段，值为父表字段。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 23
 

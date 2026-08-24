@@ -69,7 +69,7 @@ public equals(other: Constructor): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Constructor](arkts-arkts-reflectconstructor-constructor-c.md) | 是 | 待比较的另一个构造函数对象。 |
+| other | Constructor | 是 | 待比较的另一个构造函数对象。 |
 
 **返回值：**
 

@@ -1,8 +1,6 @@
 # ScrollableCommonMethod
 
-CommonScrollableMethod
-
-@extends CommonMethod
+CommonScrollableMethod@extends CommonMethod
 
 **继承/实现关系：** ScrollableCommonMethod extends [CommonMethod](arkts-common-commonmethod-i.md)
 
@@ -560,7 +558,7 @@ scrollBarHeight(height: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
+| height | [LengthMetrics](arkts-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
 
 **返回值：**
 

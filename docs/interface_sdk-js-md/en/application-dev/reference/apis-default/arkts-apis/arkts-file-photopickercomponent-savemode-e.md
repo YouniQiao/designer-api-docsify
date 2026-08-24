@@ -1,8 +1,6 @@
 # SaveMode
 
-Enumeration type of save mode.
-
-@enum { int } SaveMode
+Enumeration type of save mode.@enum { int } SaveMode
 
 **Since:** 26.0.0
 

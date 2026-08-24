@@ -14,7 +14,6 @@ A class object that functions as a thumbnail proxy.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getThumbnail

@@ -11,8 +11,6 @@ Describes the window parameters during application startup.
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 
@@ -44,9 +42,7 @@ Whether to override system window limits. If true, the main window of the curren
 systemAnimationParams?: StartAnimationSystemParams
 ```
 
-Describes the start animation configuration. This API works only for full-screen applications.
-
-The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
+Describes the start animation configuration. This API works only for full-screen applications.The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
 
 **Type:** [StartAnimationSystemParams](arkts-arkui-window-startanimationsystemparams-i-sys.md)
 

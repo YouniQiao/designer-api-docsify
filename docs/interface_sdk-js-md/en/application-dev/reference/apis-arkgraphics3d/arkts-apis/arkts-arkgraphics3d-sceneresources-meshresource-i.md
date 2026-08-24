@@ -1,8 +1,6 @@
 # MeshResource
 
-Mesh resource, which inherits from SceneResource.
-
-@extends SceneResource @interface MeshResource
+Mesh resource, which inherits from SceneResource.@extends SceneResource @interface MeshResource
 
 **Inheritance/Implementation:** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 

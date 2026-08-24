@@ -1,8 +1,6 @@
 # AudioLatencyMode
 
-枚举，音频时延模式。
-
-@enum {int}
+枚举，音频时延模式。@enum {int}
 
 **起始版本：** 23
 

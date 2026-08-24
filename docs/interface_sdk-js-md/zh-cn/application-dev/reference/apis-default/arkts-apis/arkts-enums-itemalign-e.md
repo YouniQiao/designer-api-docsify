@@ -1,8 +1,6 @@
 # ItemAlign
 
-ItemAlign enumeration description
-
-@enum { number }
+ItemAlign enumeration description@enum { number }
 
 **起始版本：** 23
 

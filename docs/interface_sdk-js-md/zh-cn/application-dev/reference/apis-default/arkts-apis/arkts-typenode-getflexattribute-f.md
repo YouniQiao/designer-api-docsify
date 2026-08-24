@@ -22,7 +22,7 @@ Get the attribute instance of FrameNode to set attributes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-framenode-c.md) | 是 | the target FrameNode. |
+| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | the target FrameNode. |
 
 **返回值：**
 

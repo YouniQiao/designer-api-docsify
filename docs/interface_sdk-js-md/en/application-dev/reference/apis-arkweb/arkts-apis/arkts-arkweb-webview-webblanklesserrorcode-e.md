@@ -56,7 +56,7 @@ Invalid parameter.
 ERR_CONTROLLER_NOT_INITED = -3
 ```
 
-*WebViewController** is not bound to any component.
+**WebViewController** is not bound to any component.
 
 **Since:** 20
 

@@ -1,8 +1,6 @@
 # OperationMode
 
-枚举授予或激活权限的URI访问模式。
-
-@enum { int } OperationMode
+枚举授予或激活权限的URI访问模式。@enum { int } OperationMode
 
 **起始版本：** 23
 

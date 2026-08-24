@@ -16,6 +16,8 @@ Defines Swiper Component
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ComponentBuilder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Swiper(  controller?: SwiperController,  content_?: CustomBuilder): SwiperAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Swiper(  controller?: SwiperController,  content_?: CustomBuilder): SwiperAttribute-End-->
@@ -51,6 +53,8 @@ Defines Swiper Component
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

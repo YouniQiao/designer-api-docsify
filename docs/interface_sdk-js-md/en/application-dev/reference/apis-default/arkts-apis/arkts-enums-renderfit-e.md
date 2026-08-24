@@ -1,8 +1,6 @@
 # RenderFit
 
-Enum of RenderFit
-
-@enum { number } RenderFit
+Enum of RenderFit@enum { number } RenderFit
 
 **Since:** 23
 

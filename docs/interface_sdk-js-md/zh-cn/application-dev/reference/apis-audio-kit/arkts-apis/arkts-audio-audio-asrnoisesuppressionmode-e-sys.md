@@ -1,6 +1,6 @@
 # AsrNoiseSuppressionMode（系统接口）
 
-ASR noise suppression mode. @enum { int }
+枚举，自动语音识别（ASR）的噪音抑制模式。@enum { int }
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ ASR noise suppression mode. @enum { int }
 BYPASS = 0
 ```
 
-Bypass noise suppression.
+旁路噪音抑制。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Bypass noise suppression.
 STANDARD = 1
 ```
 
-Standard noise suppression.
+标准噪音抑制。
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ Standard noise suppression.
 NEAR_FIELD = 2
 ```
 
-Near field noise suppression.
+近场噪音抑制。
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ Near field noise suppression.
 FAR_FIELD = 3
 ```
 
-Far field noise suppression.
+远场噪音抑制。
 
 **起始版本：** 23
 

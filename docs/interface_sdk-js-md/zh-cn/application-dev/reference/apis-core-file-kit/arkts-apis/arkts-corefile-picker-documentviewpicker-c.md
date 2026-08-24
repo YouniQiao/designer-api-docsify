@@ -185,8 +185,7 @@ constructor(context: Context, window: window.Window)
 
 应用自行创建窗口中，可用通过该构造函数创建DocumentViewPicker对象。一般场景推荐使用constructor(context: Context)方法 创建DocumentViewPicker对象。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 19开始，2in1和Tablet设备支持该方法。
 
 **起始版本：** 23

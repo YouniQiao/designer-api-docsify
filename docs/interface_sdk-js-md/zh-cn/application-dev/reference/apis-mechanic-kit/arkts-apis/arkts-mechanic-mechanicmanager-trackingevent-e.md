@@ -1,8 +1,6 @@
 # TrackingEvent
 
-跟踪事件
-
-@enum { int }
+跟踪事件@enum { int }
 
 **起始版本：** 23
 

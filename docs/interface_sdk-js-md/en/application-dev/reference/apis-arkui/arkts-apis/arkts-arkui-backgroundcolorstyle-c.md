@@ -35,7 +35,7 @@ A constructor used to create a text background style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textBackgroundStyle | TextBackgroundStyle | Yes | Options of the text background color.<br>Default value:<br>{&lt; br&gt; color: Color.Transparent,<br> radius: 0<br>} |
+| textBackgroundStyle | TextBackgroundStyle | Yes | Options of the text background color.<br>Default value:<br>{<br> color: Color.Transparent,<br> radius: 0<br>} |
 
 ## textBackgroundStyle
 
@@ -43,17 +43,7 @@ A constructor used to create a text background style.
 readonly textBackgroundStyle: TextBackgroundStyle
 ```
 
-Text background color of the styled string.
-
-Default value:
-
-{
-
-color: Color.Transparent,
-
-radius: 0
-
-}
+Text background color of the styled string.Default value:{color: Color.Transparent,radius: 0}
 
 **Type:** TextBackgroundStyle
 

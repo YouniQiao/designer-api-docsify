@@ -16,9 +16,7 @@
 color?: ResourceColor
 ```
 
-图标颜色。
-
-默认值：Wearable设备是'#A9FFFFFF'，浅灰色；其余设备是'#99182431'，深灰色。
+图标颜色。默认值：Wearable设备是'#A9FFFFFF'，浅灰色；其余设备是'#99182431'，深灰色。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -38,9 +36,7 @@ color?: ResourceColor
 size?: Length
 ```
 
-图标尺寸，不支持百分比。
-
-默认值根据[searchIcon](arkts-arkui-search-attribute.md#searchicon)、[cancelButton](arkts-arkui-search-attribute.md#cancelbutton)属性中的实际配置生效。
+图标尺寸，不支持百分比。默认值根据[searchIcon](arkts-arkui-search-attribute.md#searchicon)、[cancelButton](arkts-arkui-search-attribute.md#cancelbutton)属性中的实际配置生效。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -60,9 +56,7 @@ size?: Length
 src?: ResourceStr
 ```
 
-图标/图片源。
-
-默认值：跟随主题。
+图标/图片源。默认值：跟随主题。
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

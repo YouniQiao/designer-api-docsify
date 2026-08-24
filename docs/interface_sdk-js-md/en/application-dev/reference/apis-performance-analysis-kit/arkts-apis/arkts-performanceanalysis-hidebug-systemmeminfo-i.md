@@ -1,8 +1,6 @@
 # SystemMemInfo
 
-Describes the system memory information, including the total memory, free memory, and available memory.
-
-@interface SystemMemInfo
+Describes the system memory information, including the total memory, free memory, and available memory.@interface SystemMemInfo
 
 **Since:** 23
 

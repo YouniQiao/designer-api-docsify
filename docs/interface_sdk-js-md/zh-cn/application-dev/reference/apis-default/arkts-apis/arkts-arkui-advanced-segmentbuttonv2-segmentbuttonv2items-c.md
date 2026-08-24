@@ -1,14 +1,14 @@
 # SegmentButtonV2Items
 
-分段按钮选项集合。
-
-继承自Array\&lt;[SegmentButtonV2Item](#segmentbuttonv2items)&gt;
+分段按钮选项集合。继承自Array\&lt;[SegmentButtonV2Item](#segmentbuttonv2items)&gt;
 
 **继承/实现关系：** SegmentButtonV2Items extends Array<SegmentButtonV2Item>
 
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @ObservedV2
 
 <!--Device-unnamed-export declare class SegmentButtonV2Items--><!--Device-unnamed-export declare class SegmentButtonV2Items-End-->
 

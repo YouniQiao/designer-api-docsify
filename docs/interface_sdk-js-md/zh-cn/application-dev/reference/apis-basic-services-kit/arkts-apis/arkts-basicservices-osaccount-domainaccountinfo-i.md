@@ -36,11 +36,9 @@ accountName: string
 additionalInfo?: Record<string, RecordData>
 ```
 
-域账号附加信息。
+域账号附加信息。此接口仅可在Stage模型下使用。
 
-此接口仅可在Stage模型下使用。
-
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 26.0.0
 

@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## originalAppIdInfo
@@ -21,7 +20,8 @@ import { audioHaptic } from '@kit.AudioKit';
 originalAppIdInfo?: AppIdInfo
 ```
 
-音频流的原始应用ID。
+表示音频流的原始应用ID信息。
+26.0.0
 
 **类型：** [AppIdInfo](arkts-audio-audio-appidinfo-i-sys.md)
 

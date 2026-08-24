@@ -1,8 +1,6 @@
 # ActionMenuOptions
 
-Defines the option of ShowActionMenu.
-
-@interface ActionMenuOptions
+Defines the option of ShowActionMenu.@interface ActionMenuOptions
 
 **Since:** 8
 
@@ -18,7 +16,6 @@ Defines the option of ShowActionMenu.
 
 ```TypeScript
 import { prompt } from '@kit.ArkUI';
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## buttons

@@ -1,8 +1,6 @@
 # CrownAction
 
-Rotating crown event behavior.
-
-@enum { number }
+Rotating crown event behavior.@enum { number }
 
 **Since:** 23
 

@@ -20,8 +20,7 @@ import { call } from '@kit.TelephonyKit';
 accountId?: int
 ```
 
-Account ID.
-
+Account ID.  
 - **0**: card slot 1. - **1**: card slot 2.&lt;br
 
 **Type:** int

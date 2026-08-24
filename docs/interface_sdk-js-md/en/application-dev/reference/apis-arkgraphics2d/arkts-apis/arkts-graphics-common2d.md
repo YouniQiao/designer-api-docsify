@@ -2,8 +2,7 @@
 
 This module defines some common data types in the 2D graphics field.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This module uses the physical pixel unit, px.
 
 **Since:** 23

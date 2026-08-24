@@ -14,7 +14,7 @@
 ACCESSORY = 26
 ```
 
-Accessory devices, such as the mic on remote control.
+辅助设备（例如遥控器上的麦克风等）。
 
 **起始版本：** 23
 
@@ -30,7 +30,7 @@ Accessory devices, such as the mic on remote control.
 BLUETOOTH_SPP = 33
 ```
 
-Bluetooth device using the spp profile.
+蓝牙设备SPP（Serial Port Profile）连接。
 
 **起始版本：** 23
 
@@ -46,7 +46,7 @@ Bluetooth device using the spp profile.
 NEARLINK_PORT = 34
 ```
 
-Nearlink port.
+星闪设备PORT连接。
 
 **起始版本：** 23
 

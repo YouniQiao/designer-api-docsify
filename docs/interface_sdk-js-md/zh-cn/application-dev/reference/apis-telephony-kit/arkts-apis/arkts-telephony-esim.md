@@ -53,7 +53,7 @@ import { eSIM } from '@kit.TelephonyKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessRule](arkts-telephony-esim-accessrule-i.md) | 访问规则。 |
+| [AccessRule](arkts-telephony-esim-accessrule-i.md) | 访问规则。@interface AccessRule |
 | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | 可下载的配置文件。 |
 
 <!--Del-->

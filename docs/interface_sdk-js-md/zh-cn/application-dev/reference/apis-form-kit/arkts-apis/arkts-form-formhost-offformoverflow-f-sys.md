@@ -12,9 +12,7 @@ import { formHost } from '@kit.FormKit';
 function offFormOverflow(callback?: Callback<formInfo.OverflowRequest>): void
 ```
 
-Cancels listening to the event of formOverflow.
-
-You can use this method to cancel listening to the event of formOverflow.
+Cancels listening to the event of formOverflow.You can use this method to cancel listening to the event of formOverflow.
 
 **起始版本：** 23
 

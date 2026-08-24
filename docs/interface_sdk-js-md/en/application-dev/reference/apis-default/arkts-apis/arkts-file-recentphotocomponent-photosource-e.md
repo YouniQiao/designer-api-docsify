@@ -1,8 +1,6 @@
 # PhotoSource
 
-Enumeration of PhotoSource type
-
-@enum { int } PhotoSource
+Enumeration of PhotoSource type@enum { int } PhotoSource
 
 **Since:** 26.0.0
 

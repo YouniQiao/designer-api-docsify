@@ -1,8 +1,6 @@
 # RssInfo
 
-描述应用进程的物理内存信息。
-
-@interface RssInfo
+描述应用进程的物理内存信息。@interface RssInfo
 
 **起始版本：** 24
 

@@ -40,9 +40,7 @@ Total number of accesses for this permission, indicating the cumulative number o
 accessRecords: Array<UsedRecordDetail>
 ```
 
-Access record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL.
-
-Default value: Query the last 10 successful access records.
+Access record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL.Default value: Query the last 10 successful access records.
 
 **Type:** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 
@@ -170,9 +168,7 @@ Total number of rejections for this permission, indicating the cumulative number
 rejectRecords: Array<UsedRecordDetail>
 ```
 
-Rejection record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL.
-
-Default value: Query the last 10 failed or rejected records.
+Rejection record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL.Default value: Query the last 10 failed or rejected records.
 
 **Type:** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 

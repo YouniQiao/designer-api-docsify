@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## initSession
@@ -13,12 +12,9 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function initSession(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksSessionHandle>): void
 ```
 
-Initializes a session for a key operation. This API uses an asynchronous callback to return the result.
+Initializes a session for a key operation. This API uses an asynchronous callback to return the result.The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
-The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Initializing a session for SE security level keys defined in
 > [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) requires the ohos.permission.ACCESS_SE_KEY permission.
 
@@ -69,12 +65,9 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 function initSession(keyAlias: string, options: HuksOptions): Promise<HuksSessionHandle>
 ```
 
-Initializes a session for a key operation. This API uses a promise to return the result.
+Initializes a session for a key operation. This API uses a promise to return the result.The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
-The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Initializing a session for SE security level keys defined in
 > [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) requires the ohos.permission.ACCESS_SE_KEY permission.
 

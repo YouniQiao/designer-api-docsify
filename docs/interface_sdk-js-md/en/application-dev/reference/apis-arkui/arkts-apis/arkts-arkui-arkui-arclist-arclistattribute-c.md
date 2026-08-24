@@ -50,7 +50,7 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 chainAnimation(enable: Optional<boolean>): ArcListAttribute
 ```
 
-Sets whether to enable chained animations, which provide a visually connected, or "chained," effect when the **ArcList** component is scrolled or its top or bottom edge is dragged. The list items are separated with even space, and one item animation starts after the previous animation during basic sliding interactions. The chained animation effect is similar with spring physics. For chained animations to work properly, the edge scrolling effect of the **ArcList** component must be set to **EdgeEffect.Spring**.
+Sets whether to enable chained animations, which provide a visually connected, or"chained," effect when the **ArcList** component is scrolled or its top or bottom edge is dragged. The list items are separated with even space, and one item animation starts after the previous animation during basic sliding interactions. The chained animation effect is similar with spring physics. For chained animations to work properly, the edge scrolling effect of the **ArcList** component must be set to **EdgeEffect.Spring**.
 
 **Since:** 18
 
@@ -484,7 +484,7 @@ Sets the color of the scrollbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;[ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)&gt; | Yes | Color of the scrollbar.<br/> Default value: **ColorMetrics.numeric(0xA9FFFFFF) |
+| color | Optional&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | Yes | Color of the scrollbar.<br/> Default value: **ColorMetrics.numeric(0xA9FFFFFF) |
 
 **Return value:**
 
@@ -512,7 +512,7 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | Optional&lt;[LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)&gt; | Yes | Width of the scrollbar.<br/> Default value: **LengthMetrics.vp(24)**.<br/>Minimum value: **LengthMetrics.vp(4)**<br>Unit: vp |
+| width | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | Width of the scrollbar.<br/> Default value: **LengthMetrics.vp(24)**.<br/>Minimum value: **LengthMetrics.vp(4)**<br>Unit: vp |
 
 **Return value:**
 
@@ -540,7 +540,7 @@ Sets the spacing between list items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | Optional&lt;[LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)&gt; | Yes | Spacing between list items.<br/> Default value: **LengthMetrics.vp(0)**.<br/>Child components of **ArcList** whose visibility attribute is set to **None** are not displayed, but the spacing above and below them still takes effect. |
+| space | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | Spacing between list items.<br/> Default value: **LengthMetrics.vp(0)**.<br/>Child components of **ArcList** whose visibility attribute is set to **None** are not displayed, but the spacing above and below them still takes effect. |
 
 **Return value:**
 

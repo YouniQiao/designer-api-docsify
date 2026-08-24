@@ -12,9 +12,7 @@ import { errorManager } from '@kit.AbilityKit';
 function off(type: 'loopObserver', observer?: LoopObserver): void
 ```
 
-注销主线程消息处理监听器。
-
-仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注销主线程消息处理监听器。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 12
 

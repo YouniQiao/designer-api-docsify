@@ -12,9 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getApplicationInfoSync(bundleName: string, applicationFlags: int, userId: int) : ApplicationInfo
 ```
 
-以同步方法根据给定的bundleName、applicationFlags和userId获取ApplicationInfo。
-
-获取调用方自身的信息时不需要权限。
+以同步方法根据给定的bundleName、applicationFlags和userId获取ApplicationInfo。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -95,9 +93,7 @@ try {
 function getApplicationInfoSync(bundleName: string, applicationFlags: int) : ApplicationInfo
 ```
 
-以同步方法根据给定的bundleName、applicationFlags获取ApplicationInfo。
-
-获取调用方自身的信息时不需要权限。
+以同步方法根据给定的bundleName、applicationFlags获取ApplicationInfo。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 

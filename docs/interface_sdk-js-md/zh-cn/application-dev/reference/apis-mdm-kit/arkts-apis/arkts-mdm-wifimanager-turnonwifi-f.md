@@ -12,11 +12,7 @@ import { wifiManager } from '@kit.MDMKit';
 function turnOnWifi(admin: Want, isForce: boolean): void
 ```
 
-打开Wi-Fi开关。适用于企业设备远程管理场景，例如管理员远程控制员工设备开启Wi-Fi或在特定策略执行时确保Wi-Fi已开启。
-
-以下情况下，通过本接口打开Wi-Fi开关，会打开失败并提示"系统功能被禁用"：
-
-​已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了Wi-Fi。需通过 [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口启用Wi-Fi，解决"系统功能被禁用"报错。
+打开Wi-Fi开关。适用于企业设备远程管理场景，例如管理员远程控制员工设备开启Wi-Fi或在特定策略执行时确保Wi-Fi已开启。以下情况下，通过本接口打开Wi-Fi开关，会打开失败并提示"系统功能被禁用"：​已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了Wi-Fi。需通过 [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口启用Wi-Fi，解决"系统功能被禁用"报错。
 
 **起始版本：** 20
 

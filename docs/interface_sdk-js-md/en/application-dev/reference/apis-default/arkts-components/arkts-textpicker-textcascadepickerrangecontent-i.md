@@ -1,8 +1,6 @@
 # TextCascadePickerRangeContent
 
-Define the contents of text cascade picker.
-
-@interface TextCascadePickerRangeContent
+Define the contents of text cascade picker.@interface TextCascadePickerRangeContent
 
 **Since:** 23
 
@@ -38,9 +36,7 @@ Linkage data.
 text: string | Resource
 ```
 
-Text information.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: If the text length exceeds the column width, the text will be truncated. </p>
+Text information.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: If the text length exceeds the column width, the text will be truncated. </p>
 
 **Type:** string \| [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md)
 

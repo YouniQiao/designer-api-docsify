@@ -1,12 +1,7 @@
 # NdefFormatableTag
 
-Provides APIs for formatting NDEF formattable tags. This class inherits from **TagSession**.
-
-**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
-
-For details about how to obtain an **NdefFormatableTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
-
-The following describes the unique APIs of **NdefFormatableTag**.
+Provides APIs for formatting NDEF formattable tags. This class inherits from **TagSession**.  
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain an **NdefFormatableTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **NdefFormatableTag**.
 
 **Inheritance/Implementation:** NdefFormatableTag extends TagSession
 
@@ -38,7 +33,7 @@ Formats this tag as an NDEF tag, and writes an NDEF message to it. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write. If this parameter is **null**, the tag is formatted only ( no data will be written). |
+| message | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write. If this parameter is **null**, the tag is formatted only (no data will be written). |
 
 **Return value:**
 
@@ -182,7 +177,7 @@ Formats this tag as an NDEF tag, writes an NDEF message to it, and then sets the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write. If this parameter is **null**, the tag is formatted only ( no data will be written). |
+| message | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write. If this parameter is **null**, the tag is formatted only (no data will be written). |
 
 **Return value:**
 
@@ -289,7 +284,7 @@ Formats this tag as an NDEF tag, writes an NDEF message to the NDEF tag, and the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write. If this parameter is **null**, the tag is formatted only ( no data will be written). |
+| message | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write. If this parameter is **null**, the tag is formatted only (no data will be written). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**

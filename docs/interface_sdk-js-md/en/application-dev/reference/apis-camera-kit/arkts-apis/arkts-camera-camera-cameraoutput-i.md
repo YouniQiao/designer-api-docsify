@@ -12,7 +12,6 @@ CameraOutput implements output information used in [Session](arkts-camera-camera
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## release

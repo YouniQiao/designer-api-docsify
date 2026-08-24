@@ -1,8 +1,6 @@
 # MenuOutlineOptions
 
-The declare of menuOutlineOptions.
-
-@interface MenuOutlineOptions
+The declare of menuOutlineOptions.@interface MenuOutlineOptions
 
 **Since:** 23
 

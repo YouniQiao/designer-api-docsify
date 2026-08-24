@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -27,6 +26,6 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 | [IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) | 定义了尾部builder接口，用于配置尾部图标及其背景区域的显示属性。 |
 | [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md) | IconOptions定义图标的通用属性。 |
 | [LabelOptions](arkts-arkui-arkui-advanced-chipgroup-labeloptions-i.md) | LabelOptions定义文本属性。 |
-| [SuffixImageIconOptions](arkts-arkui-arkui-advanced-chipgroup-suffiximageiconoptions-i.md) | 后缀图标选项的类型。 |
+| [SuffixImageIconOptions](arkts-arkui-arkui-advanced-chipgroup-suffiximageiconoptions-i.md) | 后缀图标选项的类型。继承自[IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md)。 |
 | [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md) | ChipGroup的后缀图标选项类型。 |
 

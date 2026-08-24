@@ -1,8 +1,6 @@
 # DownloadContentOptions
 
-Defines the download content options.
-
-@interface DownloadContentOptions
+Defines the download content options.@interface DownloadContentOptions
 
 **Since:** 23
 

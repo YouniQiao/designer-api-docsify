@@ -12,7 +12,6 @@ Describes the camera status information.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## camera

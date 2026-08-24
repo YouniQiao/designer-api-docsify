@@ -112,9 +112,7 @@ setAdjustedOffset(offset: int): void
 setChildrenInactive(children: int[]): void
 ```
 
-设置子项不活动。
-
-如果子组件是通过ForEach或不带virtualScroll的Repeat生成的，将其设置为inactive后，将不会显示。 如果子组件是通过LazyForEach或者通过带virtualScroll的Repeat来生成的，将其设置为非活动状态后将被销毁或回收。 带有virtualScroll的LazyForEach和Repeat只支持连续活动的子组件，在两个活动的子组件之间设置子组件为inactive不会生效。 布局在显示区域之外的子组件将自动设置为非活动状态。
+设置子项不活动。如果子组件是通过ForEach或不带virtualScroll的Repeat生成的，将其设置为inactive后，将不会显示。 如果子组件是通过LazyForEach或者通过带virtualScroll的Repeat来生成的，将其设置为非活动状态后将被销毁或回收。 带有virtualScroll的LazyForEach和Repeat只支持连续活动的子组件，在两个活动的子组件之间设置子组件为inactive不会生效。 布局在显示区域之外的子组件将自动设置为非活动状态。
 
 **起始版本：** 26.0.0
 

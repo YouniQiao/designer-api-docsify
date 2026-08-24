@@ -27,14 +27,14 @@ function alloc(size: int, fill?: string | Buffer | int | double | long, encoding
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | size | int | 是 | 指定的Buffer对象长度，单位：字节。取值为正整数，最大值为2^32-1，即4294967295。 |
-| fill | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| int \| double \| long | 否 | 填充至新缓冲区的值。默认值：0。<br>**起始版本：** 9 - 10 |
+| fill | string \| Buffer \| int \| double \| long | 否 | 填充至新缓冲区的值。默认值：0。<br>**起始版本：** 9 - 10 |
 | encoding | BufferEncoding | 否 | 编码格式（当fill为string时，才有意义）。默认值：'utf8'。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回一个Buffer对象。 |
+| Buffer | 返回一个Buffer对象。 |
 
 **示例**
 

@@ -1,6 +1,6 @@
 # AudioPersonalizedSpatialEnabledChangeForAnyDevice（系统接口）
 
-通知监听器开启个性化空间 任何设备的状态变化。
+此接口用于通知监听器任何设备个性化空间化启用状态的变化。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## deviceDescriptor
@@ -43,7 +42,7 @@ deviceDescriptor: AudioDeviceDescriptor
 enabled: boolean
 ```
 
-个性化空间化使能状态。
+个性化空间化已启用状态。
 
 **类型：** boolean
 

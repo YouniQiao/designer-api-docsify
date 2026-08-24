@@ -1,8 +1,6 @@
 # SecurityComponentMethod
 
-The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
-
-This module is mainly used in the following scenarios: - Set layout, size, text, icon, color, border, and interaction-related attributes for security components such as PasteButton and SaveButton. - Adjust the display effect and interaction experience of security components while ensuring compliance with the security component specifications. For specific constraints, see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints). - Reuse the universal attribute capabilities of security components through chained calls.
+The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.This module is mainly used in the following scenarios: - Set layout, size, text, icon, color, border, and interaction-related attributes for security components such as PasteButton and SaveButton. - Adjust the display effect and interaction experience of security components while ensuring compliance with the security component specifications. For specific constraints, see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints). - Reuse the universal attribute capabilities of security components through chained calls.
 
 ## Key Enums - [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md): Enumeration of icon and text layout directions for the security component. Specifies horizontal or vertical layout. - ButtonType: Enumeration of button styles for the security component. Specifies capsule, circle, rounded rectangle, or normal button style. ###### Key APIs - [SecurityComponentMethod](#securitycomponentmethod): A collection of universal attribute methods for security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components. ###### Child Components - Not supported
 
@@ -191,7 +189,7 @@ Sets the alignment rules for child components within a relative container. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignRule | AlignRuleOption | Yes | Alignment rule configuration object that defines anchor alignment options ( **top**, **bottom**, **left**, **right**, and **center**). Specifies the alignment position and method of the security component in RelativeContainer. |
+| alignRule | AlignRuleOption | Yes | Alignment rule configuration object that defines anchor alignment options (**top**, **bottom**, **left**, **right**, and **center**). Specifies the alignment position and method of the security component in RelativeContainer. |
 
 **Return value:**
 
@@ -295,9 +293,7 @@ Sets the border color of the security component.
 borderRadius(value: Dimension): T
 ```
 
-Sets the border radius of the security component.
-
-The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**, the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect. For details, see ButtonType.
+Sets the border radius of the security component.The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**, the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect. For details, see ButtonType.
 
 **Since:** 10
 
@@ -327,9 +323,7 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 borderRadius(radius: Dimension | BorderRadiuses): T
 ```
 
-Sets the border radius of the security component, allowing individual setting of the four corner radii.
-
-The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**, the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect. For details, see ButtonType.
+Sets the border radius of the security component, allowing individual setting of the four corner radii.The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**, the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect. For details, see ButtonType.
 
 **Since:** 15
 
@@ -510,9 +504,7 @@ Sets whether the security component is interactive.
 fallbackLineSpacing(enabled: boolean): T
 ```
 
-Enables adaptive line height based on the actual text height for multi-line text.
-
-The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of RichEditorTextStyle. When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
+Enables adaptive line height based on the actual text height for multi-line text.The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of RichEditorTextStyle. When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
 
 **Since:** 26.0.0
 
@@ -752,9 +744,7 @@ Sets the height of the security component. If not set, the height adapts to the 
 heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 ```
 
-Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments.
-
-The security component text is laid out at [maxFontSize](#maxfontsize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise, adaptation proceeds according to the specified policy, as follows: <br>**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](#maxlines) attribute for adjusting the text height. If the layout size with **maxLines** exceeds the layout constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text. <br>**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the [minFontSize](#minfontsize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](#maxfontsize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](#maxlines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text. <br>**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height. <br>If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the [maxLines](#maxlines) attribute is set, the number of lines does not exceed the **maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines. If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**, **maxLines**, **width**, and **height**. For details, see [Example](../../../reference/apis-arkui/arkui-ts/ts-securitycomponent-attributes.md#example-3)
+Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments.The security component text is laid out at [maxFontSize](#maxfontsize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise, adaptation proceeds according to the specified policy, as follows: <br>**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](#maxlines) attribute for adjusting the text height. If the layout size with **maxLines** exceeds the layout constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text. <br>**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the [minFontSize](#minfontsize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](#maxfontsize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](#maxlines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text. <br>**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height. <br>If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the [maxLines](#maxlines) attribute is set, the number of lines does not exceed the **maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines. If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**, **maxLines**, **width**, and **height**.
 
 **Since:** 18
 
@@ -934,9 +924,7 @@ Sets the anchor of the security component for moving the component with its top-
 maxFontScale(scale: number | Resource): T
 ```
 
-Sets the maximum font scale factor. When this API is invoked and the system font scaling causes the text to enlarge, the font scale factor will not exceed the set maximum scale factor.
-
-This API can be used in conjunction with [minFontScale](#minfontscale). **maxFontScale** controls the upper limit of the scale factor, and **minFontScale** controls the lower limit. They can be set independently or together to precisely control font scaling.
+Sets the maximum font scale factor. When this API is invoked and the system font scaling causes the text to enlarge, the font scale factor will not exceed the set maximum scale factor.This API can be used in conjunction with [minFontScale](#minfontscale). **maxFontScale** controls the upper limit of the scale factor, and **minFontScale** controls the lower limit. They can be set independently or together to precisely control font scaling.
 
 **Since:** 18
 
@@ -966,8 +954,7 @@ This API can be used in conjunction with [minFontScale](#minfontscale). **maxFon
 maxFontSize(maxSize: number | string | Resource): T
 ```
 
-Sets the maximum font size for text display.
-
+Sets the maximum font size for text display.  
 - When used in conjunction with [minFontSize](#minfontsize) and [maxLines](#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect. - **maxFontSize** must be greater than **minFontSize**. If **maxFontSize** is less than **minFontSize**, **minFontSize** will be treated as **maxFontSize**. - When adaptive font size is effective, the **fontSize** setting does not take effect. - If the security component text is not fully displayed, clicking does not trigger authorization. The **maxFontSize** setting affects text visibility, which in turn affects authorization behavior.
 
 **Since:** 18
@@ -1028,9 +1015,7 @@ Sets the maximum number of lines for text. By default, text wraps automatically.
 minFontScale(scale: number | Resource): T
 ```
 
-Sets the minimum font scale factor for the text. When this API is invoked and the system font scaling causes the text to shrink, the font scale factor will not fall below the set minimum scale factor.
-
-This API can be used in conjunction with [maxFontScale](#maxfontscale). **minFontScale** controls the lower limit of the scale factor and **maxFontScale** controls the upper limit. They can be set independently or together to precisely control font scaling.
+Sets the minimum font scale factor for the text. When this API is invoked and the system font scaling causes the text to shrink, the font scale factor will not fall below the set minimum scale factor.This API can be used in conjunction with [maxFontScale](#maxfontscale). **minFontScale** controls the lower limit of the scale factor and **maxFontScale** controls the upper limit. They can be set independently or together to precisely control font scaling.
 
 **Since:** 18
 
@@ -1060,8 +1045,7 @@ This API can be used in conjunction with [maxFontScale](#maxfontscale). **minFon
 minFontSize(minSize: number | string | Resource): T
 ```
 
-Sets the minimum font size for text display.
-
+Sets the minimum font size for text display.  
 - When used in conjunction with [maxFontSize](#maxfontsize) and [maxLines](#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect. - **minFontSize** must be smaller than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. - When **minFontSize** is less than or equal to 0, adaptive font size does not take effect. - When adaptive font size is effective, the **fontSize** setting does not take effect. - If the security component text is not fully displayed, clicking does not trigger authorization. The **minFontSize** setting affects text visibility, which in turn affects authorization behavior.
 
 **Since:** 18

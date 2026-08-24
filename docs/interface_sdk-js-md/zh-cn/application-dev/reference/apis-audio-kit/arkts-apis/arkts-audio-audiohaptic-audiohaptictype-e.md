@@ -1,8 +1,6 @@
 # AudioHapticType
 
-枚举，音振类型。
-
-@enum { int }
+枚举，音振类型。@enum { int }
 
 **起始版本：** 23
 

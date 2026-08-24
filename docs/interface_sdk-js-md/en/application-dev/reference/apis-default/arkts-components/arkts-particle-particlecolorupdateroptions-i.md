@@ -1,8 +1,6 @@
 # ParticleColorUpdaterOptions
 
-Defines the particle color updater options.
-
-@interface ParticleColorUpdaterOptions
+Defines the particle color updater options.@interface ParticleColorUpdaterOptions
 
 **Since:** 23
 

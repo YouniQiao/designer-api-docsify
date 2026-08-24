@@ -577,8 +577,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **UDPSocket** connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** is successfully called.
 
 **Since:** 12
@@ -857,14 +856,11 @@ getSocketFd(): Promise<int>
 
 Obtains the UDPSocket file descriptor. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This API can be called only after
-> [bind](#bind) is successfully called.
-> 
+> [bind](#bind) is successfully called.&gt;
 > - This API returns **-1** in abnormal cases such as bind exceptions or socket closed (for example, after close
-> is called).
-> 
+> is called).&gt;
 > - The lifecycle of the file descriptor is managed by the system. The application can use the
 > [close](#close) method to close the socket connection,
 > instead of directly operating the file descriptor.
@@ -1210,8 +1206,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 Obtains the status of the UDP socket connection. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** is successfully called.
 
 **Since:** 7
@@ -1567,8 +1562,7 @@ getState(): Promise<SocketStateBase>
 
 Obtains the status of the UDP socket connection. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** is successfully called.
 
 **Since:** 7
@@ -1888,9 +1882,7 @@ udp.on('message', (value: socket.SocketMessageInfo) => {
 send(options: UDPSendOptions, callback: AsyncCallback<void>): void
 ```
 
-Sends data over a UDP socket connection. This API uses an asynchronous callback to return the result.
-
-Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
+Sends data over a UDP socket connection. This API uses an asynchronous callback to return the result.Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
 
 **Since:** 7
 
@@ -2323,9 +2315,7 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 send(options: UDPSendOptions): Promise<void>
 ```
 
-Sends data over a UDP socket connection. This API uses a promise to return the result.
-
-Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
+Sends data over a UDP socket connection. This API uses a promise to return the result.Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
 
 **Since:** 7
 
@@ -2374,8 +2364,7 @@ setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 
 Sets other properties of the **UDPSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** is successfully called.
 
 **Since:** 7
@@ -2890,8 +2879,7 @@ setExtraOptions(options: UDPExtraOptions): Promise<void>
 
 Sets other properties of the **UDPSocket** object. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be called only after **bind** is successfully called.
 
 **Since:** 7

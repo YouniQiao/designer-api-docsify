@@ -1,8 +1,6 @@
 # FloatViewController
 
-Defines a float view controller instance, which is used to start and stop the float view and register callbacks.
-
-Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md) to create a float view controller instance (that is, **floatViewController**).
+Defines a float view controller instance, which is used to start and stop the float view and register callbacks.Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md) to create a float view controller instance (that is, **floatViewController**).
 
 **Since:** 26.0.0
 
@@ -259,9 +257,7 @@ Restores the main window of the float view to display in the foreground. If this
 setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-Sets whether the float view is visible when the application is running in the foreground. This API uses a promise to return the result.
-
-After the float view is created and before this API is called, the float view is visible by default when the application is running in the foreground.
+Sets whether the float view is visible when the application is running in the foreground. This API uses a promise to return the result.After the float view is created and before this API is called, the float view is visible by default when the application is running in the foreground.
 
 **Since:** 26.0.0
 

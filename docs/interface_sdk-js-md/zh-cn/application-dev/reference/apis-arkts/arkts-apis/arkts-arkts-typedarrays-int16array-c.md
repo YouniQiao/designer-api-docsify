@@ -484,7 +484,7 @@ public constructor(buf: ArrayLike<double> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buf | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;double&gt; \| ArrayBuffer | 是 | 初始化数据。 |
+| buf | ArrayLike&lt;double&gt; \| ArrayBuffer | 是 | 初始化数据。 |
 
 ## copyWithin
 
@@ -1042,7 +1042,7 @@ public static from(arrayLike: ArrayLike<double>): Int16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;double&gt; | 是 | 待转换为数组的类数组对象或可迭代对象。 |
+| arrayLike | ArrayLike&lt;double&gt; | 是 | 待转换为数组的类数组对象或可迭代对象。 |
 
 **返回值：**
 
@@ -1072,7 +1072,7 @@ public static from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: double) => doubl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | 是 | 待转换为数组的类数组对象或可迭代对象。 |
+| arrayLike | ArrayLike&lt;T&gt; | 是 | 待转换为数组的类数组对象或可迭代对象。 |
 | mapfn | (v: T, k: double) =&gt; double | 是 | 对数组中每个元素调用的映射函数。 |
 
 **返回值：**
@@ -1987,7 +1987,7 @@ public set(array: ArrayLike<double>, offset: int = 0): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;double&gt; | 是 | 包含待复制元素的ArrayLike对象。 |
+| array | ArrayLike&lt;double&gt; | 是 | 包含待复制元素的ArrayLike对象。 |
 | offset | int | 是 | 可选参数，指定在目标数组中开始写入源数组值的 偏移量，默认值为0。 |
 
 ## slice

@@ -79,9 +79,7 @@ layoutMode?: WaterFlowLayoutMode
 scroller?: Scroller
 ```
 
-可滚动组件的控制器，与可滚动组件绑定。
-
-<p>&lt;strong&gt;说明&lt;/strong&gt; <br>不允许和其他滚动类组件，如：ArcList、List、Grid、Scroll和WaterFlow绑定同一个滚动控制对象。 </p>
+可滚动组件的控制器，与可滚动组件绑定。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>不允许和其他滚动类组件，如：ArcList、List、Grid、Scroll和WaterFlow绑定同一个滚动控制对象。 </p>
 
 **类型：** Scroller
 
@@ -99,9 +97,7 @@ scroller?: Scroller
 sections?: WaterFlowSections
 ```
 
-设置FlowItem分组，实现同一个瀑布流组件内部各分组使用不同列数混合布局。适用于需要在不同区域使用不同列数布局的场景。不设置时使用统一列数布局。
-
-<p>&lt;strong&gt;说明&lt;/strong&gt; <br>1. 使用分组混合布局时会忽略columnsTemplate和rowsTemplate属性。 <br>2. 使用分组混合布局时不支持单独设置footer，可以使用最后一个分组作为尾部组件。 </p>
+设置FlowItem分组，实现同一个瀑布流组件内部各分组使用不同列数混合布局。适用于需要在不同区域使用不同列数布局的场景。不设置时使用统一列数布局。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>1. 使用分组混合布局时会忽略columnsTemplate和rowsTemplate属性。 <br>2. 使用分组混合布局时不支持单独设置footer，可以使用最后一个分组作为尾部组件。 </p>
 
 **类型：** [WaterFlowSections](arkts-arkui-waterflowsections-c.md)
 

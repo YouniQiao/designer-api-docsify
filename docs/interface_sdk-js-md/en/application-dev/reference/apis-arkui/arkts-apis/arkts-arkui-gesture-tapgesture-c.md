@@ -1,8 +1,6 @@
 # TapGesture
 
-Defines TapGesture.
-
-@extends Gesture
+Defines TapGesture.@extends Gesture
 
 **Inheritance/Implementation:** TapGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 

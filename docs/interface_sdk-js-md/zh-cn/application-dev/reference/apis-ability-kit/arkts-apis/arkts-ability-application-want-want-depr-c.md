@@ -143,14 +143,7 @@ flags?: number
 parameters?: { [key: string]: any }
 ```
 
-表示WantParams描述，由开发者自行决定传入的键值对。默认会携带以下key值：
-
-ohos.aafwk.param.callerPid 表示拉起方的pid。
-
-ohos.aafwk.param.callerToken 表示拉起方的token。
-
-ohos.aafwk.param.callerUid 表示bundleInfo中的uid，应用包里应用程序的uid。
-
+表示WantParams描述，由开发者自行决定传入的键值对。默认会携带以下key值：ohos.aafwk.param.callerPid 表示拉起方的pid。ohos.aafwk.param.callerToken 表示拉起方的token。ohos.aafwk.param.callerUid 表示bundleInfo中的uid，应用包里应用程序的uid。  
 - component.startup.newRules：表示是否启用新的管控规则。 - moduleName：表示拉起方的模块名，该字段的值即使定义成其他字符串，在传递到另一端时会被修改为正确的值。 - ohos.dlp.params.sandbox：表示dlp文件才会有。
 
 **类型：** { [key: string]: any }

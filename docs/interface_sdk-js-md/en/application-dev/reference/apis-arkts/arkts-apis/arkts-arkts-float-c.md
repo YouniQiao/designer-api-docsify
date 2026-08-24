@@ -39,13 +39,13 @@ Performs floating point addition with provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | Yes | right hand side of the addition. |
+| other | Float | Yes | right hand side of the addition. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) | result of the addition. |
+| Float | result of the addition. |
 
 ## bitCastFromInt
 
@@ -160,7 +160,7 @@ Compares this instance to other Float object. The result is less than 0 if this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | Yes | Float object to compare with. |
+| other | Float | Yes | Float object to compare with. |
 
 **Return value:**
 
@@ -256,13 +256,13 @@ Performs floating point division with provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | Yes | right hand side of the division. |
+| other | Float | Yes | right hand side of the division. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) | result of the division. |
+| Float | result of the division. |
 
 ## equals
 
@@ -370,7 +370,7 @@ Checks if this instance value is greater than or equal to value of provided inst
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | Yes | right hand side of the comparison. |
+| other | Float | Yes | right hand side of the comparison. |
 
 **Return value:**
 
@@ -400,7 +400,7 @@ Checks if this instance value is greater than value of provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | Yes | right hand side of the comparison. |
+| other | Float | Yes | right hand side of the comparison. |
 
 **Return value:**
 
@@ -484,7 +484,7 @@ Checks if this instance value is less than or equal to value of provided instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | Yes | right hand side of the comparison. |
+| other | Float | Yes | right hand side of the comparison. |
 
 **Return value:**
 
@@ -514,7 +514,7 @@ Checks if this instance value is less than value of provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | Yes | right hand side of the comparison. |
+| other | Float | Yes | right hand side of the comparison. |
 
 **Return value:**
 
@@ -652,13 +652,13 @@ Performs floating point multiplication with provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | Yes | right hand side of the multiplication. |
+| other | Float | Yes | right hand side of the multiplication. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) | result of the multiplication. |
+| Float | result of the multiplication. |
 
 ## sub
 
@@ -682,13 +682,13 @@ Performs floating point subtraction with provided instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Float](arkts-arkts-float-c.md) | Yes | right hand side of the subtraction. |
+| other | Float | Yes | right hand side of the subtraction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) | result of the subtraction. |
+| Float | result of the subtraction. |
 
 ## toByte
 

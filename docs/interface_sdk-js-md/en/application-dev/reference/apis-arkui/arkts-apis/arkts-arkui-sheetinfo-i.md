@@ -37,9 +37,7 @@ Callback when the sheet is selected.
 icon?: string | Resource
 ```
 
-Sheet icon. By default, no icon is displayed.
-
-The string type can be used to load local images and, more frequently, online images. The value can be a relative path to a local image, for example, **Image("common/test.jpg")**.
+Sheet icon. By default, no icon is displayed.The string type can be used to load local images and, more frequently, online images. The value can be a relative path to a local image, for example, **Image("common/test.jpg")**.
 
 **Type:** string \| Resource
 
@@ -57,9 +55,7 @@ The string type can be used to load local images and, more frequently, online im
 title: string | Resource
 ```
 
-Sheet text.
-
-If the text is too long to display, a scrollbar is displayed.
+Sheet text.If the text is too long to display, a scrollbar is displayed.
 
 **Type:** string \| Resource
 

@@ -1,8 +1,6 @@
 # SecurityEventInfo (System API)
 
-Provides the conditions of on/off.
-
-@interface SecurityEventInfo
+Provides the conditions of on/off.@interface SecurityEventInfo
 
 **Since:** 12
 

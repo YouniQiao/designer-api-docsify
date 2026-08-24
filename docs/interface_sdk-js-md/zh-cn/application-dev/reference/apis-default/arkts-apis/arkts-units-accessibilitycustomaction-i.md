@@ -1,8 +1,6 @@
 # AccessibilityCustomAction
 
-自定义无障碍操作接口。
-
-@interface AccessibilityCustomAction
+自定义无障碍操作接口。@interface AccessibilityCustomAction
 
 **起始版本：** 26.0.0
 
@@ -18,11 +16,8 @@
 name: ResourceStr
 ```
 
-自定义操作的名称，用于标识和绑定操作回调。
-
-**说明：**
-
-名称的文本长度需在128字节以内，超出部分将被截断。
+自定义操作的名称，用于标识和绑定操作回调。  
+**说明：**名称的文本长度需在128字节以内，超出部分将被截断。
 
 **类型：** [ResourceStr](arkts-resourcestr-t.md)
 

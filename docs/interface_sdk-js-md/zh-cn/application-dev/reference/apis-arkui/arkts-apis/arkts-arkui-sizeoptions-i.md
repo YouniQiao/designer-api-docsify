@@ -1,8 +1,6 @@
 # SizeOptions
 
-定义尺寸选项。
-
-@interface SizeOptions
+定义尺寸选项。@interface SizeOptions
 
 **起始版本：** 11
 

@@ -1,8 +1,6 @@
 # DragAnimationType（系统接口）
 
-Enum for Drag Animation Type.
-
-@enum { int }
+Enum for Drag Animation Type.@enum { int }
 
 **起始版本：** 26.0.0
 

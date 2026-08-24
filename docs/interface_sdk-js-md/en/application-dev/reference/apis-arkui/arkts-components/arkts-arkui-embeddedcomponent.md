@@ -1,16 +1,12 @@
 # EmbeddedComponent
 
 The **EmbeddedComponent** is a component used to embed into the current page the UI provided by another [EmbeddedUIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md) in the same application. The EmbeddedUIExtensionAbility runs in an independent process for UI layout and rendering.
-
 It is usually used in modular development scenarios where process isolation is required.
-
 > **NOTE**
 
 ## Constraints
 
-The **EmbeddedComponent** is supported only on devices configured with multi-process permissions.
-
-The **EmbeddedComponent** can be used only in the UIAbility, and the EmbeddedUIExtensionAbility to start must belong to the same application as the UIAbility.
+The **EmbeddedComponent** is supported only on devices configured with multi-process permissions.The **EmbeddedComponent** can be used only in the UIAbility, and the EmbeddedUIExtensionAbility to start must belong to the same application as the UIAbility.
 
 ## Child Components
 

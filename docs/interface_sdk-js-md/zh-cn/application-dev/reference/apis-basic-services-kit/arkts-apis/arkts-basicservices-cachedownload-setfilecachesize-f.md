@@ -12,8 +12,7 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function setFileCacheSize(bytes: long): void
 ```
 
-设置缓存下载组件能够保存的文件缓存的上限。
-
+设置缓存下载组件能够保存的文件缓存的上限。  
 - 使用该接口调整缓存大小时，默认使用“LRU”（最近最少使用）方式清除多余的已缓存的文件缓存内容。 - 使用该接口时，若bytes设置为0，将会删除所有缓存文件。 - 该方法为同步方法，不会阻塞调用线程。
 
 **起始版本：** 23

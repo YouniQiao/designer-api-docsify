@@ -36,11 +36,9 @@ enableMinimized?: boolean
 selfIdealSize?: Size
 ```
 
-节点的理想大小。
+节点的理想大小。默认值：{ width: 0, height: 0 }
 
-默认值：{ width: 0, height: 0 }
-
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)
+**类型：** Size
 
 **起始版本：** 23
 
@@ -58,11 +56,7 @@ selfIdealSize?: Size
 surfaceId?: string
 ```
 
-纹理接收方的surfaceId。纹理接收方一般为 [OH_NativeImage](../../../reference/apis-arkgraphics2d/capi-oh-nativeimage-oh-nativeimage.md)。
-
-surfaceId仅当type为NodeRenderType.RENDER_TYPE_TEXTURE时生效。
-
-默认值：""
+纹理接收方的surfaceId。纹理接收方一般为 OH_NativeImage。surfaceId仅当type为NodeRenderType.RENDER_TYPE_TEXTURE时生效。默认值：""
 
 **类型：** string
 
@@ -82,11 +76,9 @@ surfaceId仅当type为NodeRenderType.RENDER_TYPE_TEXTURE时生效。
 type?: NodeRenderType
 ```
 
-节点的渲染类型。
+节点的渲染类型。默认值：NodeRenderType.RENDER_TYPE_DISPLAY
 
-默认值：NodeRenderType.RENDER_TYPE_DISPLAY
-
-**类型：** [NodeRenderType](arkts-buildernode-noderendertype-e.md)
+**类型：** [NodeRenderType](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-noderendertype-e.md)
 
 **起始版本：** 23
 

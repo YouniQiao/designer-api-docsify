@@ -2,14 +2,13 @@
 
 本模块提供创建投播组件AVCastPicker的功能，提供设备发现连接的统一入口。
 
-> **说明：**
-> 
-> - 示例效果请以真机为准，当前DevEco Studio预览器无实际投播功能。<!--Del--
-> 
-> 
+> **说明：**&gt;
+> - 示例效果请以真机为准，当前DevEco Studio预览器无实际投播功能。<!--Del-->>
 > - 当前组件的使用，依赖于设备支持“设备选择界面”。当前暂无OpenHarmony设备支持，需要OEM厂商实现具体的“设备选择界面”。<!--DelEnd-->
 
 **起始版本：** 10
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
 
@@ -19,23 +18,21 @@
 
 ```TypeScript
 import { AVCastPicker } from '@kit.AVSessionKit';
-import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKit';
 ```
 
 ## activeColor
 
 ```TypeScript
-@Prop
-  activeColor?: Color | number | string
+activeColor?: Color | number | string
 ```
 
-设备连接成功状态下投播组件的颜色。
-
-未设置时，系统将优先根据normalColor的颜色匹配；如果normalColor也未设置，将采用colorMode下的颜色设置。
+设备连接成功状态下投播组件的颜色。未设置时，系统将优先根据normalColor的颜色匹配；如果normalColor也未设置，将采用colorMode下的颜色设置。
 
 **类型：** [Color](../../apis-default/arkts-apis/arkts-enums-color-e.md) \| number \| string
 
 **起始版本：** 11
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -46,17 +43,17 @@ import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@ki
 ## colorMode
 
 ```TypeScript
-@Prop
-  colorMode?: AVCastPickerColorMode
+colorMode?: AVCastPickerColorMode
 ```
 
-显示模式。默认值为AUTO。
-
+显示模式。默认值为AUTO。  
 - 当colorMode设置为AUTO时，跟随系统的深浅色模式的默认色值。 - 当colorMode设置为DARK、LIGHT时，使用对应模式的系统预设色值。
 
 **类型：** [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -67,8 +64,7 @@ import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@ki
 ## customPicker
 
 ```TypeScript
-@Prop
-  customPicker?: CustomBuilder
+customPicker?: CustomBuilder
 ```
 
 自定义样式。建议使用自定义组件样式，可有效提升组件显示速度。
@@ -76,6 +72,8 @@ import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@ki
 **类型：** [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -86,17 +84,16 @@ import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@ki
 ## normalColor
 
 ```TypeScript
-@Prop
-  normalColor?: Color | number | string
+normalColor?: Color | number | string
 ```
 
-正常状态下投播组件的颜色。
-
-未设置时，将采用colorMode下的颜色设置。
+正常状态下投播组件的颜色。未设置时，将采用colorMode下的颜色设置。
 
 **类型：** [Color](../../apis-default/arkts-apis/arkts-enums-color-e.md) \| number \| string
 
 **起始版本：** 11
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -125,17 +122,17 @@ onStateChange?: (state: AVCastPickerState) => void
 ## pickerStyle
 
 ```TypeScript
-@Prop
-  pickerStyle?: AVCastPickerStyle
+pickerStyle?: AVCastPickerStyle
 ```
 
-投播样式。
-
+投播样式。  
 - 当sessionType是audio或者video时，默认值为STYLE_PANEL。 - 当sessionType是voice_call或者video_call时，默认值为STYLE_MENU，且不可修改为STYLE_PANEL。
 
 **类型：** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -146,8 +143,7 @@ onStateChange?: (state: AVCastPickerState) => void
 ## sessionType
 
 ```TypeScript
-@Prop
-  sessionType?: string
+sessionType?: string
 ```
 
 会话类型，可参考[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)。默认值为当前应用创建的AVSessionType。
@@ -155,6 +151,8 @@ onStateChange?: (state: AVCastPickerState) => void
 **类型：** string
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

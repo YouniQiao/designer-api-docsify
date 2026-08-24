@@ -18,7 +18,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 alignment?: Alignment
 ```
 
-Alignment mode.<br> Default value: **undefined**. If **alignment** is not set and a navigation bar or soft keyboard is present, the toast is automatically adjusted according to the position of the navigation bar or soft keyboard. For details, see the description of **bottom**.<br> **NOTE：**<br> The figure below shows the position of the toast in different alignment modes.<br> <br> The text display of the toast is always left-aligned; other alignment modes are not supported.
+Alignment mode.<br> Default value: **undefined**. If **alignment** is not set and a navigation bar or soft keyboard is present, the toast is automatically adjusted according to the position of the navigation bar or soft keyboard. For details, see the description of **bottom**.<br> **NOTE：**<br> The figure below shows the position of the toast in different alignment modes.<br><br> The text display of the toast is always left-aligned; other alignment modes are not supported.
 
 **Type:** Alignment
 

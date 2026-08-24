@@ -1,8 +1,6 @@
 # FoldState (System API)
 
-Define the folding state of wallpaper
-
-@enum { int } FoldState
+Define the folding state of wallpaper@enum { int } FoldState
 
 **Since:** 23
 

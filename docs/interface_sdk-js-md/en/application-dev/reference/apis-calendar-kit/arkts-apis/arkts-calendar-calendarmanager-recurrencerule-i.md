@@ -110,9 +110,7 @@ Excluded dates set for a duplicate calendar event, in timestamp format. The valu
 expire?: number
 ```
 
-End date of the recurrence period. The value is a 13-digit timestamp. If this parameter is not specified, the event has no end date.
-
-If **expire**, **count**, and **interval** are set at the same time, the restriction that is reached first prevails.
+End date of the recurrence period. The value is a 13-digit timestamp. If this parameter is not specified, the event has no end date.If **expire**, **count**, and **interval** are set at the same time, the restriction that is reached first prevails.
 
 **Type:** number
 

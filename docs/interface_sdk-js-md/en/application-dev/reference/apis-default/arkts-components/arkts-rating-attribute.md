@@ -1,8 +1,6 @@
 # RatingAttribute
 
-Defines the Rating component attributes.
-
-@extends CommonMethod @interface RatingAttribute
+Defines the Rating component attributes.@extends CommonMethod @interface RatingAttribute
 
 **Inheritance/Implementation:** RatingAttribute extends CommonMethod
 

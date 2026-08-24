@@ -29,8 +29,8 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 | [getConnectionState](arkts-connectivity-datatransfer-getconnectionstate-f.md) | Obtains the port channel connection state with a remote device. |
 | [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md) | Unsubscribes from the connection state change event of the port channel. This API uses an asynchronous callback to return the result. |
 | [offReadData](arkts-connectivity-datatransfer-offreaddata-f.md) | Unsubscribes from the port channel data receiving event. This API uses an asynchronous callback to return the result. |
-| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md) | Subscribes to the connection state change event of the port channel. This API uses an asynchronous callback to return the result. |
-| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md) | Subscribes to the port channel data receiving event. This API uses an asynchronous callback to return the result. |
+| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md) | Subscribes to the connection state change event of the port channel. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event. |
+| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md) | Subscribes to the port channel data receiving event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event. |
 | [writeData](arkts-connectivity-datatransfer-writedata-f.md) | Sends data to a remote device using the device address and UUID. This API uses a promise to return the result. |
 
 ### Interfaces

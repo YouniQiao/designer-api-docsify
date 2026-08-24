@@ -1,8 +1,6 @@
 # GestureInfo
 
-The description of gesture information.
-
-@interface GestureInfo
+The description of gesture information.@interface GestureInfo
 
 **Since:** 23
 

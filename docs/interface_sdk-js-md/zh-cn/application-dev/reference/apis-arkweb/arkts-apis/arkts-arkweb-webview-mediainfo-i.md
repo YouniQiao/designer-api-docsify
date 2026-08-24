@@ -1,6 +1,6 @@
 # MediaInfo
 
-[CreateNativeMediaPlayerCallback](../../apis-default/arkts-apis/arkts-webview-createnativemediaplayercallback-t.md)回调函数的一个参数。包含了网页中媒体的信息。应用可以根据这些信息来创建 接管网页媒体播放的播放器。
+[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md)回调函数的一个参数。包含了网页中媒体的信息。应用可以根据这些信息来创建 接管网页媒体播放的播放器。
 
 **起始版本：** 12
 
@@ -22,7 +22,7 @@ attributes: Record<string, string>
 
 `&lt;video&gt;` 或 `&lt;audio&gt;` 标签中的属性。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 12
 
@@ -54,9 +54,7 @@ controlList: string[]
 controlsShown: boolean
 ```
 
-`&lt;video&gt;` 或 `&lt;audio&gt;` 中是否有 `controls` 属性。
-
-true 表示有，false 表示没有。
+`&lt;video&gt;` 或 `&lt;audio&gt;` 中是否有 `controls` 属性。true 表示有，false 表示没有。
 
 **类型：** boolean
 
@@ -92,7 +90,7 @@ headers: Record<string, string>
 
 播放器请求媒体资源时，需要携带的 HTTP 头。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 12
 
@@ -108,7 +106,7 @@ mediaSrcList: MediaSourceInfo[]
 
 媒体的源。可能有多个源，应用需要选择一个支持的源来播放。
 
-**类型：** [MediaSourceInfo](../../apis-default/arkts-apis/arkts-webview-mediasourceinfo-c.md)[]
+**类型：** [MediaSourceInfo](arkts-arkweb-webview-mediasourceinfo-c.md)[]
 
 **起始版本：** 12
 
@@ -142,9 +140,7 @@ mediaType: MediaType
 muted: boolean
 ```
 
-是否要求静音播放。
-
-true 表示静音播放，false 表示未静音播放。
+是否要求静音播放。true 表示静音播放，false 表示未静音播放。
 
 **类型：** boolean
 
@@ -182,7 +178,7 @@ preload: Preload
 
 是否需要预加载。
 
-**类型：** [Preload](../../apis-default/arkts-apis/arkts-webview-preload-e.md)
+**类型：** [Preload](arkts-arkweb-webview-preload-e.md)
 
 **起始版本：** 12
 
@@ -200,7 +196,7 @@ surfaceInfo: NativeMediaPlayerSurfaceInfo
 
 用于同层渲染的 surface 信息。
 
-**类型：** [NativeMediaPlayerSurfaceInfo](../../apis-default/arkts-apis/arkts-webview-nativemediaplayersurfaceinfo-c.md)
+**类型：** [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md)
 
 **起始版本：** 12
 

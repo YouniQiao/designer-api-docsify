@@ -1,8 +1,6 @@
 # PageTransitionExit
 
-Provide an interface to set transition style when a page exits.
-
-@extends CommonTransition
+Provide an interface to set transition style when a page exits.@extends CommonTransition
 
 **Inheritance/Implementation:** PageTransitionExit extends [CommonTransition](arkts-pagetransition-commontransition-c.md)
 

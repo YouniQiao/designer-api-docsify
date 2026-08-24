@@ -2,8 +2,7 @@
 
 Provides APIs for generating the messages in CMS format.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7
 > supports data types including data, signed data, enveloped data, signed and enveloped data, digested
 > data, and encrypted data. It is often used to protect data integrity and confidentiality.
@@ -18,8 +17,6 @@ Provides APIs for generating the messages in CMS format.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## addCert
@@ -28,9 +25,7 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 addCert(cert: X509Cert): void
 ```
 
-Adds a CMS certificate of the **SIGNED_DATA** content type, for example, the issuer certificate of a signing certificate.
-
-<br>If the **addSigner** API is not called and only the certificate is added, the generated CMS signed data contains only the certificate.
+Adds a CMS certificate of the **SIGNED_DATA** content type, for example, the issuer certificate of a signing certificate.<br>If the **addSigner** API is not called and only the certificate is added, the generated CMS signed data contains only the certificate.
 
 **Since:** 23
 
@@ -118,9 +113,7 @@ function testAddCert() {
 addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 ```
 
-Adds recipient information to a CMS with the content type of **ENVELOPED_DATA**. This API uses a promise to return the result.
-
-<br>At least one recipient needs to be set.
+Adds recipient information to a CMS with the content type of **ENVELOPED_DATA**. This API uses a promise to return the result.<br>At least one recipient needs to be set.
 
 **Since:** 23
 
@@ -631,9 +624,7 @@ function testDoFinalSync() {
 getEncryptedContentData(): Promise<Uint8Array>
 ```
 
-Obtains the encrypted content data of the CMS whose content type is **ENVELOPED_DATA**. This API uses a promise to return the result.
-
-<br>Obtains the encrypted content data if the **CmsGenerator** of the **ENVELOPED_DATA** type is created and data separation is used to generate detached CMS enveloped data.
+Obtains the encrypted content data of the CMS whose content type is **ENVELOPED_DATA**. This API uses a promise to return the result.<br>Obtains the encrypted content data if the **CmsGenerator** of the **ENVELOPED_DATA** type is created and data separation is used to generate detached CMS enveloped data.
 
 **Since:** 23
 
@@ -760,9 +751,7 @@ async function testGetEncryptedContentData() {
 setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void
 ```
 
-Sets the encryption algorithm for the CMS whose content type is **ENVELOPED_DATA**.
-
-<br>This method should be called immediately after the **CmsGenerator** of the **ENVELOPED_DATA** type is created. If this method is not called, AES_256_GCM is used as the encryption algorithm by default.
+Sets the encryption algorithm for the CMS whose content type is **ENVELOPED_DATA**.<br>This method should be called immediately after the **CmsGenerator** of the **ENVELOPED_DATA** type is created. If this method is not called, AES_256_GCM is used as the encryption algorithm by default.
 
 **Since:** 23
 

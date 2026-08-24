@@ -1,10 +1,6 @@
 # ImageEmbedding
 
-描述多模态嵌入模型的图像嵌入函数。
-
-下列接口都需先使用[intelligence.getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md)获取到ImageEmbedding实例，再通过此实例 调用对应接口。
-
-@interface ImageEmbedding
+描述多模态嵌入模型的图像嵌入函数。下列接口都需先使用[intelligence.getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md)获取到ImageEmbedding实例，再通过此实例 调用对应接口。@interface ImageEmbedding
 
 **起始版本：** 23
 
@@ -24,9 +20,7 @@ import { intelligence } from '@kit.ArkData';
 getEmbedding(image: Image): Promise<Array<double>>
 ```
 
-获取给定图像的嵌入向量。使用Promise异步回调。
-
-该接口需先调用[loadModel](arkts-arkdata-intelligence-textembedding-i.md#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
+获取给定图像的嵌入向量。使用Promise异步回调。该接口需先调用[loadModel](arkts-arkdata-intelligence-textembedding-i.md#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
 
 **起始版本：** 23
 
@@ -177,8 +171,7 @@ imageEmbedding?.loadModel().then(() => {
 loadModel(): Promise<void>
 ```
 
-加载图像嵌入模型。使用Promise异步回调。
-
+加载图像嵌入模型。使用Promise异步回调。  
 **配对调用：** - 调用loadModel()后，必须在使用完毕后调用[releaseModel()](#releasemodel)释放模型资源。 - 未调用releaseModel()会导致资源泄漏，影响系统性能。 - 建议将releaseModel()放在finally块中确保资源被正确释放。
 
 **起始版本：** 23

@@ -1,8 +1,6 @@
 # GenerateTextTaskPartialResult (System API)
 
-Configuration stream result for AI-generated text tasks.
-
-@interface GenerateTextTaskPartialResult
+Configuration stream result for AI-generated text tasks.@interface GenerateTextTaskPartialResult
 
 **Since:** 23
 

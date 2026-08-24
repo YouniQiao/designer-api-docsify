@@ -1,8 +1,6 @@
 # MediaCachedImageAttribute (System API)
 
-Defines the MediaCachedImage component attributes.
-
-@extends ImageAttribute @interface MediaCachedImageAttribute
+Defines the MediaCachedImage component attributes.@extends ImageAttribute @interface MediaCachedImageAttribute
 
 **Inheritance/Implementation:** MediaCachedImageAttribute extends ImageAttribute
 

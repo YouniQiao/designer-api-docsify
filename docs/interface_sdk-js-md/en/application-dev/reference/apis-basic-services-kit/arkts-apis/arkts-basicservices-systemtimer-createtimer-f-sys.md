@@ -14,8 +14,7 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void
 
 Creates a timer. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API must be used together with
 > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise
 > , memory leakage occurs.
@@ -93,8 +92,7 @@ function createTimer(options: TimerOptions): Promise<long>
 
 Creates a timer. This API uses a promise to return the timer ID.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API must be used together with
 > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise
 > , memory leakage occurs.

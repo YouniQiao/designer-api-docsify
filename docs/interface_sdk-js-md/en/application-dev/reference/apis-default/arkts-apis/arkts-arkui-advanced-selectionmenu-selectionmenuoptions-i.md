@@ -1,8 +1,6 @@
 # SelectionMenuOptions
 
-Construct parameter types for SelectionMenuOptions.
-
-@extends MenuItemOptions
+Construct parameter types for SelectionMenuOptions.@extends MenuItemOptions
 
 **Since:** 23
 

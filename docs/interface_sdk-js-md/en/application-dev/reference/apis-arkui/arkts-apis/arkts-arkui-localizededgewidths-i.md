@@ -1,8 +1,6 @@
 # LocalizedEdgeWidths
 
-Defines the localized border width property.
-
-@interface LocalizedEdgeWidths
+Defines the localized border width property.@interface LocalizedEdgeWidths
 
 **Since:** 12
 

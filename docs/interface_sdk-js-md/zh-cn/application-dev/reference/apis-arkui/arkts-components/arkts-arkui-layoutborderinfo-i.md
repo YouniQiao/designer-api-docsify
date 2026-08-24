@@ -1,8 +1,6 @@
 # LayoutBorderInfo
 
-子组件边框信息
-
-@interface LayoutBorderInfo
+子组件边框信息@interface LayoutBorderInfo
 
 **起始版本：** 9
 

@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [AgentProxy](arkts-ability-agentproxy-i-sys.md) | The proxy object of the AgentExtensionAbility, used to send messages to the AgentExtensionAbility, etc. |
+| [AgentProxy](arkts-ability-agentproxy-i-sys.md) | The proxy object of the AgentExtensionAbility, used to send messages to the AgentExtensionAbility, etc.@interface AgentProxy |
 <!--DelEnd-->
 

@@ -1,9 +1,6 @@
 # @ohos.secureElement
 
-本模块主要用于操作及管理安全单元（SecureElement，简称SE），电子设备上可能存在的安全单元有eSE（Embedded SE）和SIM卡。文档中出现的SE服务为SEService实例，参见 [createService](arkts-connectivity-omapi-createservice-f.md)。
-
-对于文档中出现以下类型说明：
-
+本模块主要用于操作及管理安全单元（SecureElement，简称SE），电子设备上可能存在的安全单元有eSE（Embedded SE）和SIM卡。文档中出现的SE服务为SEService实例，参见 [createService](arkts-connectivity-omapi-createservice-f.md)。对于文档中出现以下类型说明：  
 | 类型 | 说明 | | ------- | ---------------------------------------------- | | Reader | 此类的实例表示该设备支持的SE，如果支持eSE、SIM和SIM2，则返回3个实例，其中SIM2从API version 22开始支持。 | | Session | 此类的实例表示在某个SE Reader实例上创建连接会话。 | | Channel | 此类的实例表示在某个Session实例上创建通道，可能为基础通道或逻辑通道。 |
 
 **起始版本：** 10
@@ -24,10 +21,10 @@ import { omapi } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createService](arkts-connectivity-omapi-createservice-f.md) | 建立一个可用于连接到系统中所有可用SE的新连接（服务）。连接过程较为耗时，所以此方法仅提供异步方式。使用Promise异步回调。 |
-| [newSEService](arkts-connectivity-omapi-newseservice-f.md#newseserviceservicestate) | 建立一个可用于连接到系统中所有可用SE的新连接（服务）。连接过程较为耗时，所以此方法仅提供异步方式进行的。使用callback异步回调。 |
+| [createService](arkts-connectivity-omapi-createservice-f.md) | 建立一个可用于连接到系统中所有可用SE的新连接（服务）。连接过程较为耗时，所以此方法仅提供异步方式。使用Promise异步回调。仅当[isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected)方法返回true时，该返回SEService对象是可用的。 |
+| [newSEService](arkts-connectivity-omapi-newseservice-f.md#newseserviceservicestate) | 建立一个可用于连接到系统中所有可用SE的新连接（服务）。连接过程较为耗时，所以此方法仅提供异步方式进行的。使用callback异步回调。仅当指定的回调或者当[isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected)方法返回true时，该返回SEService对象是可用的。 |
 | [off_stateChanged](arkts-connectivity-omapi-offstatechanged-f.md#offstatechanged) | 取消订阅服务状态更改事件。 |
-| [on_stateChanged](arkts-connectivity-omapi-onstatechanged-f.md#onstatechanged) | 注册监听服务状态变化事件。 |
+| [on_stateChanged](arkts-connectivity-omapi-onstatechanged-f.md#onstatechanged) | 注册监听服务状态变化事件。调用[omapi.newSEService](arkts-connectivity-omapi-newseservice-f.md#newseserviceservicestate)或[omapi.createService](arkts-connectivity-omapi-createservice-f.md)创建服务成功后再用on接口注册回调。 |
 
 ### 接口
 

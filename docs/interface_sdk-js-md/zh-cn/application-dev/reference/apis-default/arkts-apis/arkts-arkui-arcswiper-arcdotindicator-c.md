@@ -63,7 +63,7 @@ backgroundColor(color: ResourceColor | undefined): ArcDotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | ResourceColor \| undefined | 是 | 设置弧形指示器被长按时，弧形指示器的颜色。<br/>取值为undefined时，弧形指示器被长按时，弧形指示器的颜色为'#FF404040' 。 |
+| color | ResourceColor \| undefined | 是 | 设置弧形指示器被长按时，弧形指示器的颜色。<br/>取值为undefined时，弧形指示器被长按时，弧形指示器的颜色为'#FF404040'。 |
 
 **返回值：**
 

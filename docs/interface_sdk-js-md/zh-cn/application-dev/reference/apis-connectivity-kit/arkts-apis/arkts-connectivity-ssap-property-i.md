@@ -22,7 +22,7 @@ descriptors?: PropertyDescriptor[]
 
 表示当前Property的描述符列表。若未配置则默认不携带该字段。
 
-**类型：** [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md)[]
+**类型：** PropertyDescriptor[]
 
 **起始版本：** 26.0.0
 

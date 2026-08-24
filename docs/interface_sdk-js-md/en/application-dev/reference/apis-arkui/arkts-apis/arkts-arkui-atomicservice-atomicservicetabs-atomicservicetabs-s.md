@@ -1,8 +1,10 @@
 # AtomicServiceTabs
 
-*AtomicServiceTabs** is an advanced component designed to streamline the use of the **Tabs** component by limiting customization options. It restricts the display to a maximum of five tabs, with fixed styles, positions, and sizes for the tabs.
+**AtomicServiceTabs** is an advanced component designed to streamline the use of the **Tabs** component by limiting customization options. It restricts the display to a maximum of five tabs, with fixed styles, positions, and sizes for the tabs.
 
 **Since:** 12
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct AtomicServiceTabs--><!--Device-unnamed-export declare struct AtomicServiceTabs-End-->
 
@@ -17,8 +19,7 @@ import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, On
 ## barBackgroundColor
 
 ```TypeScript
-@Prop
-  barBackgroundColor?: ResourceColor
+barBackgroundColor?: ResourceColor
 ```
 
 Sets the barBackgroundColor of tabs.
@@ -26,6 +27,8 @@ Sets the barBackgroundColor of tabs.
 **Type:** ResourceColor
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,8 +39,7 @@ Sets the barBackgroundColor of tabs.
 ## barOverlap
 
 ```TypeScript
-@Prop
-  barOverlap?: boolean
+barOverlap?: boolean
 ```
 
 set if need overlap, default value is true.
@@ -45,6 +47,8 @@ set if need overlap, default value is true.
 **Type:** boolean
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -73,8 +77,7 @@ Provide methods for switching tabs.
 ## index
 
 ```TypeScript
-@Prop
-  index?: number
+index?: number
 ```
 
 Sets the index of tabs.
@@ -82,6 +85,8 @@ Sets the index of tabs.
 **Type:** number
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -92,8 +97,7 @@ Sets the index of tabs.
 ## layoutMode
 
 ```TypeScript
-@Prop
-  layoutMode?: LayoutMode
+layoutMode?: LayoutMode
 ```
 
 Sets the layout mode of the bottom tab bar
@@ -101,6 +105,8 @@ Sets the layout mode of the bottom tab bar
 **Type:** LayoutMode
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -165,8 +171,7 @@ onTabBarClick callback of tabs when tabbar is clicked.
 ## tabBarOptionsArray
 
 ```TypeScript
-@Prop
-  tabBarOptionsArray: [
+tabBarOptionsArray: [
     TabBarOptions,
     TabBarOptions,
     TabBarOptions?,
@@ -181,6 +186,8 @@ The tabBar array of tabs.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceTabs-@Prop  tabBarOptionsArray: [    TabBarOptions,    TabBarOptions,    TabBarOptions?,    TabBarOptions?,    TabBarOptions?  ]--><!--Device-AtomicServiceTabs-@Prop  tabBarOptionsArray: [    TabBarOptions,    TabBarOptions,    TabBarOptions?,    TabBarOptions?,    TabBarOptions?  ]-End-->
@@ -190,8 +197,7 @@ The tabBar array of tabs.
 ## tabBarPosition
 
 ```TypeScript
-@Prop
-  tabBarPosition?: TabBarPosition
+tabBarPosition?: TabBarPosition
 ```
 
 set the positions of tabbar.
@@ -199,6 +205,8 @@ set the positions of tabbar.
 **Type:** [TabBarPosition](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -209,8 +217,7 @@ set the positions of tabbar.
 ## tabContents
 
 ```TypeScript
-@BuilderParam
-  tabContents?: [ 
+tabContents?: [ 
     TabContentBuilder?,
     TabContentBuilder?,
     TabContentBuilder?,
@@ -224,6 +231,8 @@ The TabContent array of tabs.
 **Type:** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -234,8 +234,7 @@ static isCanceled(): boolean
 
 检查当前正在运行的任务是否已取消。使用此方法前，需要先创建一个**Task**对象。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > isCanceled方法需要和taskpool.cancel方法搭配使用，如果不调用cancel方法，isCanceled方法默认返回false。
 
 **起始版本：** 10
@@ -520,10 +519,8 @@ onReceiveData(callback?: Function): void
 
 为任务注册回调函数，接收并处理任务池工作线程的数据。使用此方法前，需构造Task。
 
-> **说明：**
-> 
-> 该方法与[sendData](#senddata)配对使用。
-> 
+> **说明：**&gt;
+> 该方法与[sendData](#senddata)配对使用。&gt;
 > 不支持为同一任务定义多种回调函数。如果多次赋值，只有最后一次赋值的回调函数会生效。
 
 **起始版本：** 11
@@ -693,15 +690,11 @@ static sendData(...args: Object[]): void
 
 任务执行过程中向宿主线程发送消息并触发已注册的回调函数。使用此方法前需构造**Task**对象。
 
-> **说明：**
-> 
-> - 该接口应在taskpool的线程中调用。
-> 
-> - 避免在回调函数中调用该方法，否则可能导致消息无法传递到宿主线程。
-> 
+> **说明：**&gt;
+> - 该接口应在taskpool的线程中调用。&gt;
+> - 避免在回调函数中调用该方法，否则可能导致消息无法传递到宿主线程。&gt;
 > - 避免在异步函数中调用该方法，否则可能导致消息无法传递到宿主线程。如果在异步函数中使用，
-> 则需要使用**await**来确保该异步函数在任务中同步执行完成。
-> 
+> 则需要使用**await**来确保该异步函数在任务中同步执行完成。&gt;
 > - 调用该接口时，请确保处理数据的回调函数已在宿主线程注册。
 
 **起始版本：** 11
@@ -792,10 +785,8 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 
 设置任务的拷贝列表。在使用该方法前，需先构造**Task**对象。
 
-> **说明：**
-> 
-> - 此接口与[setTransferList](#settransferlist)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
-> 
+> **说明：**&gt;
+> - 此接口与[setTransferList](#settransferlist)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。&gt;
 > 该接口需搭配
 > [@Sendable装饰器](../../../arkts-utils/arkts-sendable.md#sendable装饰器)使用，否则会抛异常。建议开发者使用该装饰器以避免异常。
 
@@ -956,10 +947,8 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 设置任务的传输列表。使用该方法前需要先构造**Task**。不调用该接口，则传给任务的数据中的ArrayBuffer默认transfer转移。
 
-> **说明：**
-> 
-> - 此接口与[setCloneList](#setclonelist)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
-> 
+> **说明：**&gt;
+> - 此接口与[setCloneList](#setclonelist)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。&gt;
 > 此接口可以设置任务池中ArrayBuffer的transfer列表，transfer列表中的ArrayBuffer对象在传输时不会复制buffer内容到工作线程，
 > 而是转移buffer控制权至工作线程，传输后当前的ArrayBuffer失效。若ArrayBuffer为空，则不会transfer转移。
 

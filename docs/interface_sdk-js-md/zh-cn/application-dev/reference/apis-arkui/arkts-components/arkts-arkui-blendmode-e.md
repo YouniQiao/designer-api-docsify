@@ -2,10 +2,8 @@
 
 混合模式。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > blendMode枚举中，s表示源像素，d表示目标像素，sa表示源像素透明度，da表示目标像素透明度，r表示混合后像素，ra表示混合后像素透明度。
-
 @enum { number }
 
 **起始版本：** 12
@@ -100,7 +98,7 @@ r = d，只显示目标像素。
 SRC_OVER = 4
 ```
 
-r = s + (1 - sa) d，将源像素按照透明度进行混合，覆盖在目标像素上。
+r = s + (1 - sa) * d，将源像素按照透明度进行混合，覆盖在目标像素上。
 
 **起始版本：** 12
 
@@ -120,7 +118,7 @@ r = s + (1 - sa) d，将源像素按照透明度进行混合，覆盖在目标�
 DST_OVER = 5
 ```
 
-r = d + (1 - da) s，将目标像素按照透明度进行混合，覆盖在源像素上。
+r = d + (1 - da) * s，将目标像素按照透明度进行混合，覆盖在源像素上。
 
 **起始版本：** 12
 
@@ -140,7 +138,7 @@ r = d + (1 - da) s，将目标像素按照透明度进行混合，覆盖在源�
 SRC_IN = 6
 ```
 
-r = s da，只显示源像素中与目标像素重叠的部分。
+r = s * da，只显示源像素中与目标像素重叠的部分。
 
 **起始版本：** 12
 
@@ -160,7 +158,7 @@ r = s da，只显示源像素中与目标像素重叠的部分。
 DST_IN = 7
 ```
 
-r = d sa，只显示目标像素中与源像素重叠的部分。
+r = d * sa，只显示目标像素中与源像素重叠的部分。
 
 **起始版本：** 12
 
@@ -180,7 +178,7 @@ r = d sa，只显示目标像素中与源像素重叠的部分。
 SRC_OUT = 8
 ```
 
-r = s (1 - da)，只显示源像素中与目标像素不重叠的部分。
+r = s * (1 - da)，只显示源像素中与目标像素不重叠的部分。
 
 **起始版本：** 12
 
@@ -200,7 +198,7 @@ r = s (1 - da)，只显示源像素中与目标像素不重叠的部分。
 DST_OUT = 9
 ```
 
-r = d (1 - sa), retains the parts of the destination pixels that do not overlap with the source.
+r = d * (1 - sa), retains the parts of the destination pixels that do not overlap with the source.
 
 **起始版本：** 12
 
@@ -220,7 +218,7 @@ r = d (1 - sa), retains the parts of the destination pixels that do not overlap 
 SRC_ATOP = 10
 ```
 
-r = s da + d (1 - sa)，在源像素和目标像素重叠的地方绘制源像素，在源像素和目标像素不重叠的地方绘制目标像素。
+r = s * da + d * (1 - sa)，在源像素和目标像素重叠的地方绘制源像素，在源像素和目标像素不重叠的地方绘制目标像素。
 
 **起始版本：** 12
 
@@ -240,7 +238,7 @@ r = s da + d (1 - sa)，在源像素和目标像素重叠的地方绘制源像�
 DST_ATOP = 11
 ```
 
-r = d sa + s (1 - da): The part of the target pixels that overlap with the source pixels and the part of the source pixels that do not overlap with the target pixels are displayed.
+r = d * sa + s * (1 - da): The part of the target pixels that overlap with the source pixels and the part of the source pixels that do not overlap with the target pixels are displayed.
 
 **起始版本：** 12
 
@@ -260,7 +258,7 @@ r = d sa + s (1 - da): The part of the target pixels that overlap with the sourc
 XOR = 12
 ```
 
-r = s (1 - da) + d (1 - sa)，在源像素和目标像素重叠的地方不显示像素，不重叠的地方显示源像素和目标像素。
+r = s * (1 - da) + d * (1 - sa)，在源像素和目标像素重叠的地方不显示像素，不重叠的地方显示源像素和目标像素。
 
 **起始版本：** 12
 
@@ -300,7 +298,7 @@ r = min(s + d, 1): New pixels resulting from adding the source pixels to the tar
 MODULATE = 14
 ```
 
-r = s d，将源像素与目标像素进行乘法运算，并将结果作为新的像素值。
+r = s * d，将源像素与目标像素进行乘法运算，并将结果作为新的像素值。
 
 **起始版本：** 12
 
@@ -320,7 +318,7 @@ r = s d，将源像素与目标像素进行乘法运算，并将结果作为新�
 SCREEN = 15
 ```
 
-r = s + d - s d，将两个图像的像素值相加，然后减去它们的乘积来实现混合。
+r = s + d - s * d，将两个图像的像素值相加，然后减去它们的乘积来实现混合。
 
 **起始版本：** 12
 
@@ -360,7 +358,7 @@ OVERLAY = 16
 DARKEN = 17
 ```
 
-rc = s + d - max(s da, d sa), ra = kSrcOver，当两个颜色重叠时，较暗的颜色会覆盖较亮的颜色。
+rc = s + d - max(s * da, d * sa), ra = kSrcOver，当两个颜色重叠时，较暗的颜色会覆盖较亮的颜色。
 
 **起始版本：** 12
 
@@ -380,7 +378,7 @@ rc = s + d - max(s da, d sa), ra = kSrcOver，当两个颜色重叠时，较暗�
 LIGHTEN = 18
 ```
 
-rc = s + d - min(s da, d sa), ra = kSrcOver，将源图像和目标图像中的像素进行比较，选取两者中较亮的像素作为最终的混合结果。
+rc = s + d - min(s * da, d * sa), ra = kSrcOver，将源图像和目标图像中的像素进行比较，选取两者中较亮的像素作为最终的混合结果。
 
 **起始版本：** 12
 
@@ -480,7 +478,7 @@ SOFT_LIGHT = 22
 DIFFERENCE = 23
 ```
 
-rc = s + d - 2 (min(s da, d sa)), ra = kSrcOver: The final pixel is the result of subtracting the darker of the two pixels (source and target) from the lighter one.
+rc = s + d - 2 * (min(s * da, d * sa)), ra = kSrcOver: The final pixel is the result of subtracting the darker of the two pixels (source and target) from the lighter one.
 
 **起始版本：** 12
 
@@ -500,7 +498,7 @@ rc = s + d - 2 (min(s da, d sa)), ra = kSrcOver: The final pixel is the result o
 EXCLUSION = 24
 ```
 
-rc = s + d - 2 (s d), ra = kSrcOver，对比源像素和目标像素，亮度更高的像素减去亮度更低的像素，产生柔和的效果。
+rc = s + d - 2 * (s * d), ra = kSrcOver，对比源像素和目标像素，亮度更高的像素减去亮度更低的像素，产生柔和的效果。
 
 **起始版本：** 12
 
@@ -520,7 +518,7 @@ rc = s + d - 2 (s d), ra = kSrcOver，对比源像素和目标像素，亮度更
 MULTIPLY = 25
 ```
 
-r = s (1 - da) + d (1 - sa) + s d，将源图像与目标图像进行乘法混合，得到一张新的图像。
+r = s * (1 - da) + d * (1 - sa) + s * d，将源图像与目标图像进行乘法混合，得到一张新的图像。
 
 **起始版本：** 12
 

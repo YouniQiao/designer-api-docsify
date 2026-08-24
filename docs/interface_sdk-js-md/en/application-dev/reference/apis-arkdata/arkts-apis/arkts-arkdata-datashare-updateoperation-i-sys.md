@@ -14,7 +14,6 @@ Represents the batch update operation information.
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## predicates

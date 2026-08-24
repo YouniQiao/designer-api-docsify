@@ -4063,7 +4063,7 @@ overlay(value: string | CustomBuilder | ComponentContent<Object> | undefined, op
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [CustomBuilder](arkts-custombuilder-t.md) \| [ComponentContent](arkts-componentcontent-c.md)&lt;Object&gt; \| undefined | Yes |  |
+| value | string \| [CustomBuilder](arkts-custombuilder-t.md) \| [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;Object&gt; \| undefined | Yes |  |
 | options | [OverlayOptions](arkts-common-overlayoptions-i.md) | No |  |
 
 **Return value:**
@@ -4418,7 +4418,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding | undef
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paddingValue | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [LengthMetrics](arkts-graphics-lengthmetrics-c.md) \| [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) \| undefined | Yes |  |
+| paddingValue | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) \| undefined | Yes |  |
 
 **Return value:**
 

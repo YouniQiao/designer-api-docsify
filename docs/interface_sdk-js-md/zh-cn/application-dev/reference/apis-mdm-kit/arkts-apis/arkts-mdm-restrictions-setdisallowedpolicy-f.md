@@ -14,8 +14,7 @@ function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): v
 
 设置禁用/启用某特性。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 本接口为设备级禁用策略，影响设备所有用户。如需针对特定用户设置禁用策略，请使用
 > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口。
 

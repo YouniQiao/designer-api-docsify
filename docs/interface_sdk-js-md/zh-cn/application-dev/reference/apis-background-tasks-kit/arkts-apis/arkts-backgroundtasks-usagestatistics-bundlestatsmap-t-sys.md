@@ -14,5 +14,5 @@ FA模型的使用信息属性集合。
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, BundleStatsInfo&gt;
+**属性类型：** Record&lt;string, BundleStatsInfo&gt;
 

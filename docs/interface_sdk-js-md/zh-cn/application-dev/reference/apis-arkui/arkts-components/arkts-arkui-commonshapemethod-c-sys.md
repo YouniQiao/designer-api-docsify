@@ -1,8 +1,6 @@
 # CommonShapeMethod
 
-CommonShapeMethod
-
-@extends CommonMethod&lt;T&gt;
+CommonShapeMethod@extends CommonMethod&lt;T&gt;
 
 **继承/实现关系：** CommonShapeMethod extends CommonMethod<T>
 

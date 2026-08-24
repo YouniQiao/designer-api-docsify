@@ -10,11 +10,13 @@ export declare function UnionEffectContainer(
 ): UnionEffectContainerAttribute
 ```
 
-Provides a UnionEffectContainer Component that generates a component fusion effect for descendant components with "useUnionEffect(true)" set inside it, when their distance is less than a certain threshold.
+Provides a UnionEffectContainer Component that generates a component fusion effect for descendant components with"useUnionEffect(true)" set inside it, when their distance is less than a certain threshold.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @ComponentBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,6 +55,8 @@ Defines UnionEffectContainer
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,8 +1,6 @@
 # GridModifier
 
-Defines Grid Modifier
-
-@implements { GridAttribute, AttributeModifier&lt;GridAttribute&gt; }
+Defines Grid Modifier@implements { GridAttribute, AttributeModifier&lt;GridAttribute&gt; }
 
 **Inheritance/Implementation:** GridModifier implements GridAttribute, AttributeModifier<GridAttribute>
 

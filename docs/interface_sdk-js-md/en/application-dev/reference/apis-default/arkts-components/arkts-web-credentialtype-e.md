@@ -1,8 +1,6 @@
 # CredentialType
 
-Enum type supplied to [CredentialType](#credentialtype) when ClientAuthenticationHandler#confirm being called.
-
-@enum { int }
+Enum type supplied to [CredentialType](#credentialtype) when ClientAuthenticationHandler#confirm being called.@enum { int }
 
 **Since:** 23
 

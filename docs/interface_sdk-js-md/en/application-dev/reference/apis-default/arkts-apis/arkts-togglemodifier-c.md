@@ -1,8 +1,6 @@
 # ToggleModifier
 
-Defines Toggle Modifier
-
-@implements { ToggleAttribute, AttributeModifier&lt;ToggleAttribute&gt; }
+Defines Toggle Modifier@implements { ToggleAttribute, AttributeModifier&lt;ToggleAttribute&gt; }
 
 **Inheritance/Implementation:** ToggleModifier implements ToggleAttribute, AttributeModifier<ToggleAttribute>
 

@@ -4,11 +4,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## getController
@@ -17,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getController(): InputMethodController
 ```
 
-@brief Obtains an [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) instance.
+Obtains an [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) instance.
 
 **Since:** 23
 

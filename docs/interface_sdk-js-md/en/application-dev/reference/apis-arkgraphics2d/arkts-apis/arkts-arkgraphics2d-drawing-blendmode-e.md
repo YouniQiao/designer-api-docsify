@@ -56,7 +56,7 @@ r = d (all channels of the result equal those of the destination), keeps the des
 SRC_OVER = 3
 ```
 
-r = s + (1 - sa) d, draws the source pixels over the destination pixels, considering the source's transparency.
+r = s + (1 - sa) * d, draws the source pixels over the destination pixels, considering the source's transparency.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ r = s + (1 - sa) d, draws the source pixels over the destination pixels, conside
 DST_OVER = 4
 ```
 
-r = d + (1 - da) s, draws the destination pixels over the source pixels, considering the destination's transparency.
+r = d + (1 - da) * s, draws the destination pixels over the source pixels, considering the destination's transparency.
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ r = d + (1 - da) s, draws the destination pixels over the source pixels, conside
 SRC_IN = 5
 ```
 
-r = s da, retains only the intersection of the source pixels with the opaque parts of the destination.
+r = s * da, retains only the intersection of the source pixels with the opaque parts of the destination.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ r = s da, retains only the intersection of the source pixels with the opaque par
 DST_IN = 6
 ```
 
-r = d sa, retains only the intersection of the destination pixels with the opaque parts of the source.
+r = d * sa, retains only the intersection of the destination pixels with the opaque parts of the source.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ r = d sa, retains only the intersection of the destination pixels with the opaqu
 SRC_OUT = 7
 ```
 
-r = s (1 - da), retains the parts of the source pixels that do not overlap with the destination.
+r = s * (1 - da), retains the parts of the source pixels that do not overlap with the destination.
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ r = s (1 - da), retains the parts of the source pixels that do not overlap with 
 DST_OUT = 8
 ```
 
-r = d (1 - sa), retains the parts of the destination pixels that do not overlap with the source.
+r = d * (1 - sa), retains the parts of the destination pixels that do not overlap with the source.
 
 **Since:** 23
 
@@ -140,7 +140,7 @@ r = d (1 - sa), retains the parts of the destination pixels that do not overlap 
 SRC_ATOP = 9
 ```
 
-r = s da + d (1 - sa), covers the destination pixels with the source pixels, showing the source only in the opaque parts of the destination.
+r = s * da + d * (1 - sa), covers the destination pixels with the source pixels, showing the source only in the opaque parts of the destination.
 
 **Since:** 23
 
@@ -154,7 +154,7 @@ r = s da + d (1 - sa), covers the destination pixels with the source pixels, sho
 DST_ATOP = 10
 ```
 
-r = d sa + s (1 - da), covers the source pixels with the destination pixels, showing the destination only in the opaque parts of the source.
+r = d * sa + s * (1 - da), covers the source pixels with the destination pixels, showing the destination only in the opaque parts of the source.
 
 **Since:** 23
 
@@ -168,7 +168,7 @@ r = d sa + s (1 - da), covers the source pixels with the destination pixels, sho
 XOR = 11
 ```
 
-r = s (1 - da) + d (1 - sa), shows only the non-overlapping parts of the source and destination pixels.
+r = s * (1 - da) + d * (1 - sa), shows only the non-overlapping parts of the source and destination pixels.
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ r = min(s + d, 1), adds the color values of the source and destination pixels.
 MODULATE = 13
 ```
 
-r = s d, multiplies the color values of the source and destination pixels.
+r = s * d, multiplies the color values of the source and destination pixels.
 
 **Since:** 23
 
@@ -210,7 +210,7 @@ r = s d, multiplies the color values of the source and destination pixels.
 SCREEN = 14
 ```
 
-r = s + d - s d, inverts the color values of the source and destination pixels, multiplies them, and then inverts the result, typically producing a brighter outcome.
+r = s + d - s * d, inverts the color values of the source and destination pixels, multiplies them, and then inverts the result, typically producing a brighter outcome.
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ Selectively applies **MULTIPLY** or **SCREEN** based on the brightness of the de
 DARKEN = 16
 ```
 
-rc = s + d - max(s da, d sa), ra = s + (1 - sa) d, takes the darker color values between the source and destination pixels.
+rc = s + d - max(s * da, d * sa), ra = s + (1 - sa) * d, takes the darker color values between the source and destination pixels.
 
 **Since:** 23
 
@@ -252,7 +252,7 @@ rc = s + d - max(s da, d sa), ra = s + (1 - sa) d, takes the darker color values
 LIGHTEN = 17
 ```
 
-rc = s + d - min(s da, d sa), ra = s + (1 - sa) d, takes the lighter color values between the source and destination pixels.
+rc = s + d - min(s * da, d * sa), ra = s + (1 - sa) * d, takes the lighter color values between the source and destination pixels.
 
 **Since:** 23
 
@@ -322,7 +322,7 @@ Softly brightens or darkens the destination pixels based on the brightness of th
 DIFFERENCE = 22
 ```
 
-rc = s + d - 2 (min(s da, d sa)), ra = s + (1 - sa) d, calculates the difference between the color values of the source and destination pixels.
+rc = s + d - 2 * (min(s * da, d * sa)), ra = s + (1 - sa) * d, calculates the difference between the color values of the source and destination pixels.
 
 **Since:** 23
 
@@ -336,7 +336,7 @@ rc = s + d - 2 (min(s da, d sa)), ra = s + (1 - sa) d, calculates the difference
 EXCLUSION = 23
 ```
 
-rc = s + d - two(s d), ra = s + (1 - sa) d, similar to **DIFFERENCE** but with lower contrast.
+rc = s + d - two(s * d), ra = s + (1 - sa) * d, similar to **DIFFERENCE** but with lower contrast.
 
 **Since:** 23
 
@@ -350,7 +350,7 @@ rc = s + d - two(s d), ra = s + (1 - sa) d, similar to **DIFFERENCE** but with l
 MULTIPLY = 24
 ```
 
-r = s (1 - da) + d (1 - sa) + s d, multiplies the color values of the source and destination pixels, typically resulting in a darker outcome.
+r = s * (1 - da) + d * (1 - sa) + s * d, multiplies the color values of the source and destination pixels, typically resulting in a darker outcome.
 
 **Since:** 23
 

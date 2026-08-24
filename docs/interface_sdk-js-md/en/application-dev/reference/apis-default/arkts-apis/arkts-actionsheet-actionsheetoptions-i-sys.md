@@ -1,8 +1,6 @@
 # ActionSheetOptions
 
-The options of ActionSheet.
-
-@interface ActionSheetOptions
+The options of ActionSheet.@interface ActionSheetOptions
 
 **Since:** 23
 

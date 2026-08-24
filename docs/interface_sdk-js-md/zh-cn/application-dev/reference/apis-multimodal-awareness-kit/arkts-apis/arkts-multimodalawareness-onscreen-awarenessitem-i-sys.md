@@ -1,8 +1,7 @@
 # AwarenessItem（系统接口）
 
-提供页面信息。包括：
-
-页面基础信息，如页面内容、链接、截屏。 页面实体信息，如页面文章的标题、正文信息。 页面交互信息，如点击、滚动信息。
+提供页面信息。包括：  
+* 页面基础信息，如页面内容、链接、截屏。 * 页面实体信息，如页面文章的标题、正文信息。 * 页面交互信息，如点击、滚动信息。
 
 **起始版本：** 23
 
@@ -26,7 +25,7 @@ itemInfo: Record<string, Object>
 
 感知结果实体信息，包括内容、链接、截屏和其它实体信息。
 
-**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 23
 

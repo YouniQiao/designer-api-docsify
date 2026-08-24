@@ -19,10 +19,7 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 addText(text: string, textOperationOptions?: TextContentControllerOptions): number
 ```
 
-Inserts text at a specified position in the editable content. If no position is specified, the text is appended to the end of the existing content.
-
-This API does not work when the text is being dragged.
-
+Inserts text at a specified position in the editable content. If no position is specified, the text is appended to the end of the existing content.This API does not work when the text is being dragged.  
 **addText** only affects the UI performance within the application and has no effect on the internal logic of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
@@ -56,8 +53,7 @@ clearPreviewText(): void
 
 Notifies the input method to clear the current preview text.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
 **Since:** 17
@@ -76,12 +72,9 @@ Notifies the input method to clear the current preview text.
 deleteBackward(): void
 ```
 
-Deletes the character before the text cursor in the text box bound to the basic controller. If some text has been selected using the mouse or keyboard before this function is called, the selected text will be deleted.
+Deletes the character before the text cursor in the text box bound to the basic controller. If some text has been selected using the mouse or keyboard before this function is called, the selected text will be deleted.This API is not supported in preview display scenarios.
 
-This API is not supported in preview display scenarios.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
 **Since:** 23
@@ -102,10 +95,8 @@ deleteText(range?: TextRange): void
 
 Deletes text within a specified range in the editable content.
 
-> **NOTE：**
-> 
-> - This API does not work when the text is being dragged.
-> 
+> **NOTE：**&gt;
+> - This API does not work when the text is being dragged.&gt;
 > - **deleteText** only affects the UI performance within the application and has no effect on the internal logic
 > of the input method application. Therefore, avoid calling this API for the preview text.
 
@@ -133,18 +124,13 @@ getCaretOffset() : CaretOffset
 
 Obtains the position information of the caret.
 
-> **NOTE：**
-> 
-> - If this API is called when the caret position is updated in the current frame, it will not take effect.
-> 
+> **NOTE：**&gt;
+> - If this API is called when the caret position is updated in the current frame, it will not take effect.&gt;
 > - For the **Search** component, the returned position information is the offset of the first character relative
-> to the search icon in the component.
-> 
+> to the search icon in the component.&gt;
 > - If no text is entered in the **Search** component, the return value contains the position information relative
-> to the component.
-> 
-> - The location information in the return value is the location of the caret relative to the editable component.
-> 
+> to the component.&gt;
+> - The location information in the return value is the location of the caret relative to the editable component.&gt;
 > - If the caret position cannot be obtained (for example, when the
 > TextInputController is not bound to the TextInput component),
 > **null** is returned.
@@ -272,8 +258,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 Binds or updates the styled placeholder string.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
 **Since:** 22

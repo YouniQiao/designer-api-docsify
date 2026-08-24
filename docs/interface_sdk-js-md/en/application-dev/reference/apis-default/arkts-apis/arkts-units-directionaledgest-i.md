@@ -1,8 +1,6 @@
 # DirectionalEdgesT
 
-Defines the DirectionalEdgesT interface.
-
-@interface DirectionalEdgesT
+Defines the DirectionalEdgesT interface.@interface DirectionalEdgesT
 
 **Since:** 23
 

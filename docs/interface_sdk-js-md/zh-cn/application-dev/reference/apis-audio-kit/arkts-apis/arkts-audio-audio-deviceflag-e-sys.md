@@ -1,6 +1,6 @@
 # DeviceFlag
 
-表示音频设备类型的枚举。
+枚举，可获取的设备种类。
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@
 NONE_DEVICES_FLAG = 0
 ```
 
-None devices.
+无设备。
 
 **起始版本：** 23
 
@@ -30,7 +30,7 @@ None devices.
 DISTRIBUTED_OUTPUT_DEVICES_FLAG = 4
 ```
 
-Distributed output devices.
+分布式输出设备。
 
 **起始版本：** 23
 
@@ -46,7 +46,7 @@ Distributed output devices.
 DISTRIBUTED_INPUT_DEVICES_FLAG = 8
 ```
 
-Distributed input devices.
+分布式输入设备。
 
 **起始版本：** 23
 
@@ -62,7 +62,7 @@ Distributed input devices.
 ALL_DISTRIBUTED_DEVICES_FLAG = 12
 ```
 
-All Distributed devices.
+分布式输入和输出设备。
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # ImageCompleteEvent
 
-ImageCompleteEvent
-
-@interface ImageCompleteEvent
+ImageCompleteEvent@interface ImageCompleteEvent
 
 **Since:** 23
 

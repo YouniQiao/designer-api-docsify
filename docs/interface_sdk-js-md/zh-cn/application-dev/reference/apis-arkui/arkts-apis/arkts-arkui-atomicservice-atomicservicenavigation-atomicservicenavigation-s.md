@@ -2,11 +2,12 @@
 
 作为Page页面的根容器使用，其内部默认包含了标题栏、内容区。其中，内容区在首页默认显示导航内容，在非首页显示 NavDestination的子组件，首页和非首页通过路由进行切换。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 12
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct AtomicServiceNavigation--><!--Device-unnamed-export declare struct AtomicServiceNavigation-End-->
 
@@ -21,8 +22,7 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 ## gradientBackground
 
 ```TypeScript
-@Prop
-  gradientBackground?: GradientBackground
+gradientBackground?: GradientBackground
 ```
 
 渐变背景色选项。设置时各字段的默认值见GradientBackground。
@@ -30,6 +30,8 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 **类型：** [GradientBackground](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -40,8 +42,7 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 ## hideTitleBar
 
 ```TypeScript
-@Prop
-  hideTitleBar?: boolean
+hideTitleBar?: boolean
 ```
 
 设置是否隐藏标题栏。默认为false。false表示显示标题栏，true表示隐藏标题栏。
@@ -49,6 +50,8 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 **类型：** boolean
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -59,8 +62,7 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 ## menus
 
 ```TypeScript
-@BuilderParam
-  menus?: CustomBuilder | Array<NavigationMenuItem>
+menus?: CustomBuilder | Array<NavigationMenuItem>
 ```
 
 宽屏场景下用户自定义插入的布局样式。默认值为空，不显示任何样式。屏幕宽度低于600vp为非宽屏场景，大于等于600vp为宽屏场景。
@@ -68,6 +70,8 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 **类型：** CustomBuilder \| Array&lt;NavigationMenuItem&gt;
 
 **起始版本：** 18
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -78,8 +82,7 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 ## minContentWidth
 
 ```TypeScript
-@Prop
-  minContentWidth?: Dimension
+minContentWidth?: Dimension
 ```
 
 设置导航栏内容区最小宽度（双栏模式下生效）。默认值为360vp。
@@ -87,6 +90,8 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 **类型：** Dimension
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -97,8 +102,7 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 ## mode
 
 ```TypeScript
-@Prop
-  mode?: NavigationMode
+mode?: NavigationMode
 ```
 
 设置导航栏的显示模式。默认值为Auto。支持Stack、Split与Auto模式。
@@ -106,6 +110,8 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 **类型：** NavigationMode
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -134,8 +140,7 @@ modeChangeCallback?: Callback<NavigationMode>
 ## navBarWidth
 
 ```TypeScript
-@Prop
-  navBarWidth?: Length
+navBarWidth?: Length
 ```
 
 设置导航栏宽度。默认值为240vp。仅在Navigation组件分栏时生效。
@@ -143,6 +148,8 @@ modeChangeCallback?: Callback<NavigationMode>
 **类型：** Length
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -153,8 +160,7 @@ modeChangeCallback?: Callback<NavigationMode>
 ## navBarWidthRange
 
 ```TypeScript
-@Prop
-  navBarWidthRange?: [
+navBarWidthRange?: [
     Dimension,
     Dimension
   ]
@@ -166,6 +172,8 @@ modeChangeCallback?: Callback<NavigationMode>
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AtomicServiceNavigation-@Prop  navBarWidthRange?: [    Dimension,    Dimension  ]--><!--Device-AtomicServiceNavigation-@Prop  navBarWidthRange?: [    Dimension,    Dimension  ]-End-->
@@ -175,8 +183,7 @@ modeChangeCallback?: Callback<NavigationMode>
 ## navDestinationBuilder
 
 ```TypeScript
-@BuilderParam
-  navDestinationBuilder?: NavDestinationBuilder
+navDestinationBuilder?: NavDestinationBuilder
 ```
 
 创建NavDestination组件所需要的Builder数据。默认值为空，即无内容展示。
@@ -184,6 +191,8 @@ modeChangeCallback?: Callback<NavigationMode>
 **类型：** [NavDestinationBuilder](arkts-arkui-navdestinationbuilder-t.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -194,8 +203,7 @@ modeChangeCallback?: Callback<NavigationMode>
 ## navigationContent
 
 ```TypeScript
-@BuilderParam
-  navigationContent?: Callback<void>
+navigationContent?: Callback<void>
 ```
 
 Navigation容器内容。默认值为空，无内容展示。
@@ -203,6 +211,8 @@ Navigation容器内容。默认值为空，无内容展示。
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -213,8 +223,7 @@ Navigation容器内容。默认值为空，无内容展示。
 ## navPathStack
 
 ```TypeScript
-@State
-  navPathStack?: NavPathStack
+navPathStack?: NavPathStack
 ```
 
 路由栈信息。默认值为new NavPathStack()。
@@ -222,6 +231,8 @@ Navigation容器内容。默认值为空，无内容展示。
 **类型：** NavPathStack
 
 **起始版本：** 12
+
+**装饰器类型：** @State
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -232,8 +243,7 @@ Navigation容器内容。默认值为空，无内容展示。
 ## sideBarContent
 
 ```TypeScript
-@BuilderParam
-  sideBarContent?: Callback<void>
+sideBarContent?: Callback<void>
 ```
 
 侧边栏的内容。默认值为空。
@@ -241,6 +251,8 @@ Navigation容器内容。默认值为空，无内容展示。
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 18
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -251,8 +263,7 @@ Navigation容器内容。默认值为空，无内容展示。
 ## sideBarOptions
 
 ```TypeScript
-@Prop
-  sideBarOptions?: SideBarOptions
+sideBarOptions?: SideBarOptions
 ```
 
 侧边栏的功能选项。 默认值为 { sideBarBackground: \$r('sys.color.ohos_id_color_sub_background'), sideBarIcon: \$r('sys.symbol.open_sidebar') }。
@@ -260,6 +271,8 @@ Navigation容器内容。默认值为空，无内容展示。
 **类型：** [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -288,8 +301,7 @@ stateChangeCallback?: Callback<boolean>
 ## title
 
 ```TypeScript
-@Prop
-  title?: ResourceStr
+title?: ResourceStr
 ```
 
 设置页面标题。默认值为空字符串。当titleOptions的titleBarType字段设置为TitleBarType.ROUND_ICON或者TitleBarType.SQUARED_ICON， 且设置了titleIcon时，title标题内容将不会显示。
@@ -297,6 +309,8 @@ stateChangeCallback?: Callback<boolean>
 **类型：** ResourceStr
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -307,8 +321,7 @@ stateChangeCallback?: Callback<boolean>
 ## titleOptions
 
 ```TypeScript
-@Prop
-  titleOptions?: TitleOptions
+titleOptions?: TitleOptions
 ```
 
 标题栏选项。默认值为{ isBlurEnabled: true }。当titleBarType字段设置为TitleBarType.ROUND_ICON或者TitleBarType.SQUARED_ICON， 且设置了titleIcon时，title标题内容将不会显示。
@@ -316,6 +329,8 @@ stateChangeCallback?: Callback<boolean>
 **类型：** [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

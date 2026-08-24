@@ -105,9 +105,7 @@ Finds the position beginning first substring match in a regular expression searc
 [Symbol.split](string: string, limit?: number): string[]
 ```
 
-Returns an array of substrings that were delimited by strings in the original input that match against this regular expression.
-
-If the regular expression contains capturing parentheses, then each time this regular expression matches, the results (including any undefined results) of the capturing parentheses are spliced.
+Returns an array of substrings that were delimited by strings in the original input that match against this regular expression.If the regular expression contains capturing parentheses, then each time this regular expression matches, the results (including any undefined results) of the capturing parentheses are spliced.
 
 **Since:** -1
 

@@ -1,8 +1,6 @@
 # ColumnSplitDividerStyle
 
-Provides an interface for the style of a divider including start margin and end margin
-
-@interface ColumnSplitDividerStyle
+Provides an interface for the style of a divider including start margin and end margin@interface ColumnSplitDividerStyle
 
 **Since:** 23
 

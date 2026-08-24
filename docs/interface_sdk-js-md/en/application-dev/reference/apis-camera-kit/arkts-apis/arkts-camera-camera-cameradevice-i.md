@@ -12,7 +12,6 @@ Describes the camera device information.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## automotiveCameraPosition

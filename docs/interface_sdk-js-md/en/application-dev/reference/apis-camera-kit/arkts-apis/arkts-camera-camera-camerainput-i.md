@@ -1,8 +1,6 @@
 # CameraInput
 
-*CameraInput** defines the camera input object.
-
-It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
+**CameraInput** defines the camera input object.It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
 
 **Since:** 23
 
@@ -14,7 +12,6 @@ It provides camera device information used in [Session](arkts-camera-camera-sess
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## close
@@ -240,8 +237,7 @@ on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 
 Subscribes to CameraInput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10

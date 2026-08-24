@@ -14,7 +14,6 @@ RGB white balance gain values.
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## blueGain

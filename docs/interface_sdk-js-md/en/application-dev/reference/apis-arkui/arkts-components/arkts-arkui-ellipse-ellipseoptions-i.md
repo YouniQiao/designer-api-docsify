@@ -1,8 +1,6 @@
 # EllipseOptions
 
-Ellipse constructor options.
-
-@interface EllipseOptions
+Ellipse constructor options.@interface EllipseOptions
 
 **Since:** 23
 

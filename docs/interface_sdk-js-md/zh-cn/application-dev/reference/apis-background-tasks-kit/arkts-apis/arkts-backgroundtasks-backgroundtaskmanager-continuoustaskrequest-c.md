@@ -1,8 +1,13 @@
 # ContinuousTaskRequest
 
 通常作为 [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md) 和 [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) 接口的入参，用于指定申请或更新的长时任务信息。其中：
-
-1. 通过[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md)接口申请长时任务时，如果待申请长时任务与当前应用下已存在长时任务，两者的主类型和子类型均相同，且combinedTaskNotification均取值为true，则会合并通知。否则不会合并通知。 2. 如果长时任务本身没有通知，则不会合并，长时任务类型是否会通知请参考[BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)。 3. 如果长时任务类型中包含数据传输类型，则不会合并通知。 4. 通知合并后不能取消合并，已合并的不能更新成不合并。 5. 通知合并后，点击通知栏消息，会跳转到第一个申请的长时任务对应的UIAbility，如果调用了更新接口，则跳转到最后一次更新的长时任务对应的UIAbility。 6. 通过[updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md)接口更新长时任务时，传入的continuousTaskId必须存在，否则更新失败。 7. 从API version 22开始支持特殊场景类型[MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)的长时任务。必须单独使用且不支持通知合并，即申请或更新长时任务时，长时任务类型只能有特殊场景类型，否则返回错误。
+1. 通过[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md)接口申请长时任务时，如果待申请长时任务与当前应用下已存在长时任务，两者的主类型和子类型均相同，且combinedTaskNotification均取值为true，则会合并通知。否则不会合并通知。
+2. 如果长时任务本身没有通知，则不会合并，长时任务类型是否会通知请参考[BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)。
+3. 如果长时任务类型中包含数据传输类型，则不会合并通知。
+4. 通知合并后不能取消合并，已合并的不能更新成不合并。
+5. 通知合并后，点击通知栏消息，会跳转到第一个申请的长时任务对应的UIAbility，如果调用了更新接口，则跳转到最后一次更新的长时任务对应的UIAbility。
+6. 通过[updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md)接口更新长时任务时，传入的continuousTaskId必须存在，否则更新失败。
+7. 从API version 22开始支持特殊场景类型[MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)的长时任务。必须单独使用且不支持通知合并，即申请或更新长时任务时，长时任务类型只能有特殊场景类型，否则返回错误。
 
 **起始版本：** 24
 
@@ -477,8 +482,7 @@ class EntryAbility extends UIAbility {
 combinedTaskNotification?: boolean
 ```
 
-是否合并通知，true表示合并，false表示不合并，默认为false。
-
+是否合并通知，true表示合并，false表示不合并，默认为false。  
 **说明：** 该属性在 [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) 接口中不生效，如需在已有任务上合并通知，请重新申请该任务，并在申请时设置为支持合并。
 
 **类型：** boolean
@@ -497,13 +501,8 @@ combinedTaskNotification?: boolean
 continuousTaskId?: number
 ```
 
-长时任务ID，默认值为-1。
-
-**说明：** 如果combinedTaskNotification取值为true，则该值为必填项，且必须是存在的ID。
-
-作为 [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) 接口入参时，该属性必填，且必须是存在的ID。
-
-可以通过 [getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md) 接口查看当前所有长时任务信息。
+长时任务ID，默认值为-1。  
+**说明：** 如果combinedTaskNotification取值为true，则该值为必填项，且必须是存在的ID。作为 [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) 接口入参时，该属性必填，且必须是存在的ID。可以通过 [getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md) 接口查看当前所有长时任务信息。
 
 **类型：** number
 

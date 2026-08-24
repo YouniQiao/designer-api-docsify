@@ -1,8 +1,6 @@
 # ReverseGeoCodeRequest
 
-Configuring parameters in reverse geocode requests
-
-@interface ReverseGeoCodeRequest
+Configuring parameters in reverse geocode requests@interface ReverseGeoCodeRequest
 
 **Since:** 7
 

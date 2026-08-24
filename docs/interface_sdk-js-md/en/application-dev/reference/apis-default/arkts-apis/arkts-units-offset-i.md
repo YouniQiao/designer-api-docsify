@@ -1,8 +1,6 @@
 # Offset
 
-Defines the offset property.
-
-@interface Offset
+Defines the offset property.@interface Offset
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # ThemeColorMode
 
-enum color mode
-
-@enum { number }
+enum color mode@enum { number }
 
 **起始版本：** 23
 

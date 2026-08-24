@@ -6,6 +6,8 @@ The class for AlbumPickerController
 
 **ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
+**Decorator:** @Observed
+
 <!--Device-unnamed-export declare class AlbumPickerController--><!--Device-unnamed-export declare class AlbumPickerController-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

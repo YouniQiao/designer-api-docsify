@@ -1,8 +1,6 @@
 # MotionBlurAnchor
 
-Define motion blur anchor coordinates.
-
-@interface MotionBlurAnchor
+Define motion blur anchor coordinates.@interface MotionBlurAnchor
 
 **起始版本：** 12
 

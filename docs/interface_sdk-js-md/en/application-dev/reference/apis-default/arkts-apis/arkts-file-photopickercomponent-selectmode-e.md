@@ -1,8 +1,6 @@
 # SelectMode
 
-SelectMode. include SINGLE_SELECT and MULTI_SELECT
-
-@enum { int } SelectMode
+SelectMode. include SINGLE_SELECT and MULTI_SELECT@enum { int } SelectMode
 
 **Since:** 26.0.0
 

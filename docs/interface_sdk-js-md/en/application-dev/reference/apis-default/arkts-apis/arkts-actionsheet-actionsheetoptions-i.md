@@ -1,8 +1,6 @@
 # ActionSheetOptions
 
-The options of ActionSheet.
-
-@interface ActionSheetOptions
+The options of ActionSheet.@interface ActionSheetOptions
 
 **Since:** 23
 
@@ -590,7 +588,11 @@ Callback function before the dialog closeAnimation starts.
 onWillDismiss?: Callback<DismissDialogAction>
 ```
 
-Callback for interactive closure of the dialog box. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: 1. If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The reason parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value CLOSE_BUTTON. 2. In the onWillDismiss callback, another onWillDismiss callback is not allowed. </p>
+Callback for interactive closure of the dialog box. <p>&lt;strong&gt;NOTE&lt;/strong&gt;:
+1. If this callback is registered, the dialog box will not be closed immediately after the user touches the
+mask or the Back button, presses the Esc key, or swipes left or right on the screen. The reason parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value CLOSE_BUTTON.
+2. In the onWillDismiss callback, another onWillDismiss callback is not allowed.
+</p>
 
 **Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-actionsheet-dismissdialogaction-i.md)&gt;
 
@@ -694,9 +696,7 @@ Subtitle of the dialog box.
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
-
-Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
+Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
 
 **Type:** [SystemUiMaterial](../../apis-arkui/arkts-components/arkts-arkui-systemuimaterial-t-sys.md)
 
@@ -736,7 +736,12 @@ Title of the dialog box.
 transition?: TransitionEffect
 ```
 
-Transition effect for the entrance and exit of the dialog box. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: 1. If this parameter is not set, the default effect is used. 2. Touching the Back button during the entrance animation pauses the entrance animation and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined. 3. Touching the Back button during the exit animation does not affect the animation playback. Touching the Back button again closes the application. </p>
+Transition effect for the entrance and exit of the dialog box. <p>&lt;strong&gt;NOTE&lt;/strong&gt;:
+1. If this parameter is not set, the default effect is used.
+2. Touching the Back button during the entrance animation pauses the entrance animation and starts the exit
+animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.
+3. Touching the Back button during the exit animation does not affect the animation playback. Touching the
+Back button again closes the application. </p>
 
 **Type:** [TransitionEffect](../../apis-arkui/arkts-components/arkts-arkui-transitioneffect-c.md)
 

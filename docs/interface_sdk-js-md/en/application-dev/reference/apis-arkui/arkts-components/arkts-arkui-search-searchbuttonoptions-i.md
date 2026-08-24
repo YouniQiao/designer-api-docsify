@@ -16,9 +16,7 @@ Defines the SearchButton options
 autoDisable?: boolean
 ```
 
-Automatically disables the search button before the user enters text
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>&lt;em&gt;true&lt;/em&gt;: The search button is disabled when there is no text input. <br>&lt;em&gt;false&lt;/em&gt;: The search button remains enabled regardless of the text input. </p>
+Automatically disables the search button before the user enters text<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>&lt;em&gt;true&lt;/em&gt;: The search button is disabled when there is no text input. <br>&lt;em&gt;false&lt;/em&gt;: The search button remains enabled regardless of the text input. </p>
 
 **Type:** boolean
 
@@ -60,9 +58,7 @@ Set the SearchButton fontColor
 fontSize?: Length
 ```
 
-Set the SearchButton fontSize
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. </p>
+Set the SearchButton fontSize<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. </p>
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

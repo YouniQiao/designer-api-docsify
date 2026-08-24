@@ -1,8 +1,6 @@
 # AtomicServiceBar
 
-原子化服务栏
-
-@interface AtomicServiceBar
+原子化服务栏@interface AtomicServiceBar
 
 **起始版本：** 23
 
@@ -39,7 +37,7 @@ getBarRect(): Frame
 
 | 类型 | 说明 |
 | --- | --- |
-| [Frame](../../apis-arkui/arkts-apis/arkts-arkui-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
+| [Frame](arkts-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
 
 ## setBackgroundColor
 

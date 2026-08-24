@@ -19,9 +19,7 @@ Navigation分割线颜色及上下边距。
 color?: ResourceColor
 ```
 
-分割线的颜色。
-
-默认值：#33000000，灰色。
+分割线的颜色。默认值：#33000000，灰色。
 
 **类型：** ResourceColor
 
@@ -41,13 +39,7 @@ color?: ResourceColor
 endMargin?: Length
 ```
 
-分割线与侧边栏底端的距离。
-
-默认值：0
-
-单位：vp
-
-取值范围：[0, +∞)
+分割线与侧边栏底端的距离。默认值：0单位：vp取值范围：[0, +∞)
 
 **类型：** Length
 
@@ -67,13 +59,7 @@ endMargin?: Length
 startMargin?: Length
 ```
 
-分割线与侧边栏顶端的距离。
-
-默认值：0
-
-单位：vp
-
-取值范围：[0, +∞)
+分割线与侧边栏顶端的距离。默认值：0单位：vp取值范围：[0, +∞)
 
 **类型：** Length
 

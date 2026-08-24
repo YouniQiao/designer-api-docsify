@@ -43,9 +43,7 @@ A constructor used to create a text letter spacing style.
 readonly letterSpacing: number
 ```
 
-Letter spacing.
-
-Unit: vp
+Letter spacing.Unit: vp
 
 **Type:** number
 

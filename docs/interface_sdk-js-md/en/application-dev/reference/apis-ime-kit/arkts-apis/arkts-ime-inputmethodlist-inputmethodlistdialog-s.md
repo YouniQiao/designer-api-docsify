@@ -1,8 +1,10 @@
 # InputMethodListDialog
 
-@brief InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions}) <br> <br>Implements a dialog box showing the input method list.
+InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions}) <br> <br>Implements a dialog box showing the input method list.
 
 **Since:** 23
+
+**Decorator:** @CustomDialog
 
 <!--Device-unnamed-export declare struct InputMethodListDialog--><!--Device-unnamed-export declare struct InputMethodListDialog-End-->
 
@@ -17,13 +19,14 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
-@brief The method to build component.
+The method to build component.
 
 **Since:** 23
+
+**Decorator:** @Builder
 
 <!--Device-InputMethodListDialog-@Builder  build(): void--><!--Device-InputMethodListDialog-@Builder  build(): void-End-->
 
@@ -35,7 +38,7 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 controller: CustomDialogController
 ```
 
-@brief Sets the controller.
+Sets the controller.
 
 **Type:** CustomDialogController
 
@@ -51,7 +54,7 @@ controller: CustomDialogController
 patternOptions?: PatternOptions
 ```
 
-@brief Sets the pattern options. This parameter can be left blank when it is not default input method.
+Sets the pattern options. This parameter can be left blank when it is not default input method.
 
 **Type:** [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md)
 

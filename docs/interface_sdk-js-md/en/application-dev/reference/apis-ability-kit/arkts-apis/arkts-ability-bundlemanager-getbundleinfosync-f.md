@@ -12,9 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getBundleInfoSync(bundleName: string, bundleFlags: int, userId: int): BundleInfo
 ```
 
-Obtains the bundle information based on the given bundle name, bundle flags, and user ID. This API returns the result synchronously.
-
-No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on the given bundle name, bundle flags, and user ID. This API returns the result synchronously.No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -30,7 +28,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | int | Yes | Type of the bundle information to obtain. |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 
 **Return value:**
 
@@ -125,9 +123,7 @@ try {
 function getBundleInfoSync(bundleName: string, bundleFlags: int): BundleInfo
 ```
 
-Obtains the bundle information for the caller's user based on the given bundle name and bundle flags. This API returns the result synchronously.
-
-No permission is required for obtaining the caller's own information.
+Obtains the bundle information for the caller's user based on the given bundle name and bundle flags. This API returns the result synchronously.No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 

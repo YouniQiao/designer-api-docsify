@@ -60,7 +60,7 @@ values: Array<Record<string, CloudType>>
 
 需要查询数据的数组，包括数据记录的实际值和ExtensionValue（扩展值）。
 
-**类型：** Array&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;
+**类型：** Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;
 
 **起始版本：** 23
 

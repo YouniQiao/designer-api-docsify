@@ -94,7 +94,7 @@ offset?: string
 scrollType?: string
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SCROLL_FORWARD或SCROLL_BACKWARD时配置，组件滚动类型。 'fullScreen'表示全屏滚动；'halfScreen'表示半屏滚动。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SCROLL_FORWARD或SCROLL_BACKWARD时配置，组件滚动类型。'fullScreen'表示全屏滚动；'halfScreen'表示半屏滚动。
 
 **类型：** string
 

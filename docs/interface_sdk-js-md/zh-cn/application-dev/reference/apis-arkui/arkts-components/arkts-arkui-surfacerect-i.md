@@ -5,11 +5,9 @@
 > **说明：**
 
 > 如果未调用[setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)接口，且未设置
-> [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border)和
-> padding，则**surfaceWidth**和**surfaceHeight**属性默认为**XComponent**的尺寸。
-> 
-> 请确保**surfaceWidth**和**surfaceHeight**的值不超过8192 px。超过此限制可能导致渲染问题。
-> 
+> border和
+> padding，则**surfaceWidth**和**surfaceHeight**属性默认为**XComponent**的尺寸。&gt;
+> 请确保**surfaceWidth**和**surfaceHeight**的值不超过8192 px。超过此限制可能导致渲染问题。&gt;
 > 在沉浸式场景中，**SurfaceRect**的默认布局不包含安全区域。要实现沉浸式效果，必须使用
 > [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)接口设置surface显示区域。
 
@@ -30,9 +28,7 @@
 offsetX?: number
 ```
 
-surface矩形相对于XComponent左上角的X坐标。
-
-单位：px。
+surface矩形相对于XComponent左上角的X坐标。单位：px。
 
 **类型：** number
 
@@ -52,9 +48,7 @@ surface矩形相对于XComponent左上角的X坐标。
 offsetY?: number
 ```
 
-surface矩形相对于XComponent左上角的Y坐标。
-
-单位：px。
+surface矩形相对于XComponent左上角的Y坐标。单位：px。
 
 **类型：** number
 
@@ -74,9 +68,7 @@ surface矩形相对于XComponent左上角的Y坐标。
 surfaceHeight: number
 ```
 
-surface矩形的高度。
-
-单位：px。
+surface矩形的高度。单位：px。
 
 **类型：** number
 
@@ -96,9 +88,7 @@ surface矩形的高度。
 surfaceWidth: number
 ```
 
-surface矩形的宽度。
-
-单位：px。
+surface矩形的宽度。单位：px。
 
 **类型：** number
 

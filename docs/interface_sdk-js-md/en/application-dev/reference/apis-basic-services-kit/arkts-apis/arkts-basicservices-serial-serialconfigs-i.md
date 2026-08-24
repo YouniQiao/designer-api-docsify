@@ -100,9 +100,7 @@ Whether to enable hardware-based automatic flow control. <br>Default value: fals
 stopBits?: StopBits
 ```
 
-Stop bits.
-
-Default value: ONE
+Stop bits.Default value: ONE
 
 **Type:** StopBits
 

@@ -14,5 +14,5 @@ Array of VolumeGroupInfos, which is read-only.
 
 **System API:** This is a system API.
 
-**Property type:** Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[VolumeGroupInfo](arkts-audio-audio-volumegroupinfo-i-sys.md)&gt;&gt;
+**Property type:** Array&lt;Readonly&lt;[VolumeGroupInfo](arkts-audio-audio-volumegroupinfo-i-sys.md)&gt;&gt;
 

@@ -1,8 +1,6 @@
 # HotspotConfig (System API)
 
-Wi-Fi hotspot configuration information.
-
-@interface HotspotConfig
+Wi-Fi hotspot configuration information.@interface HotspotConfig
 
 **Since:** 7
 
@@ -20,9 +18,6 @@ Wi-Fi hotspot configuration information.
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## band

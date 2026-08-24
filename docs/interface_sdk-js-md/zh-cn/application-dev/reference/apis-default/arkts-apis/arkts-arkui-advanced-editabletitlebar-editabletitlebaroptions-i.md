@@ -21,9 +21,7 @@ Indicates the options of the editable title bar.
 backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式。
-
-默认值：BlurStyle.NONE
+标题栏背景模糊样式。默认值：BlurStyle.NONE
 
 **类型：** [BlurStyle](arkts-common-blurstyle-e.md)
 
@@ -43,9 +41,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundColor?: ResourceColor
 ```
 
-标题栏背景色。
-
-默认值：'#00000000'
+标题栏背景色。默认值：'#00000000'
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 
@@ -65,9 +61,7 @@ backgroundColor?: ResourceColor
 safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-配置扩展安全区域的方向。
-
-默认值：[SafeAreaEdge.TOP]
+配置扩展安全区域的方向。默认值：[SafeAreaEdge.TOP]
 
 **类型：** Array&lt;[SafeAreaEdge](arkts-common-safeareaedge-e.md)&gt;
 
@@ -87,9 +81,7 @@ safeAreaEdges?: Array<SafeAreaEdge>
 safeAreaTypes?: Array<SafeAreaType>
 ```
 
-配置扩展安全区域的类型。
-
-默认值：[SafeAreaType.SYSTEM]
+配置扩展安全区域的类型。默认值：[SafeAreaType.SYSTEM]
 
 **类型：** Array&lt;[SafeAreaType](arkts-common-safeareatype-e.md)&gt;
 

@@ -2,13 +2,11 @@
 
 ColumnLayoutAlgorithm constructor options.
 
-@interface ColumnLayoutAlgorithmOptions
-
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
 
-<!--Device-unnamed-interface ColumnLayoutAlgorithmOptions--><!--Device-unnamed-interface ColumnLayoutAlgorithmOptions-End-->
+<!--Device-unnamed-export declare interface ColumnLayoutAlgorithmOptions--><!--Device-unnamed-export declare interface ColumnLayoutAlgorithmOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,7 +84,7 @@ space?: LengthMetrics
 
 Vertical layout element space.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

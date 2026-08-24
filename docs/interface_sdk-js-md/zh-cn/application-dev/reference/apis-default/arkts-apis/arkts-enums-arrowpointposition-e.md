@@ -1,8 +1,6 @@
 # ArrowPointPosition
 
-ArrowPointPosition enumeration description
-
-@enum { string }
+ArrowPointPosition enumeration description@enum { string }
 
 **起始版本：** 23
 

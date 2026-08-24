@@ -1,8 +1,6 @@
 # FormComponentModifier (System API)
 
-Defines FormComponent Modifier
-
-@implements { FormComponentAttribute, AttributeModifier&lt;FormComponentAttribute&gt; }
+Defines FormComponent Modifier@implements { FormComponentAttribute, AttributeModifier&lt;FormComponentAttribute&gt; }
 
 **Inheritance/Implementation:** FormComponentModifier implements FormComponentAttribute, AttributeModifier<FormComponentAttribute>
 

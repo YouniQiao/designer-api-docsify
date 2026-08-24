@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## authType
@@ -57,10 +56,8 @@ enrolledState?: EnrolledState
 result: int
 ```
 
-用户认证结果。若成功返回SUCCESS(12500000)，若失败返回相应错误码。错误码包括：
-
-- FAIL(12500001)：认证不通过。 - CANCELED(12500003)：认证取消。 - TIMEOUT(12500004)：认证超时。 - LOCKED(12500009)：认证器锁定。 - NOT_ENROLLED(12500010)：未注册凭据。 - PIN_EXPIRED(12500013)：锁屏密码过期。
-
+用户认证结果。若成功返回SUCCESS(12500000)，若失败返回相应错误码。错误码包括：  
+- FAIL(12500001)：认证不通过。 - CANCELED(12500003)：认证取消。 - TIMEOUT(12500004)：认证超时。 - LOCKED(12500009)：认证器锁定。 - NOT_ENROLLED(12500010)：未注册凭据。 - PIN_EXPIRED(12500013)：锁屏密码过期。  
 完整错误码列表参见[UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)。
 
 **类型：** int

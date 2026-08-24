@@ -12,7 +12,7 @@ import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, P
 
 | Name | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) | Defines the moving photo view attribute functions. |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) | Defines the moving photo view attribute functions.@extends CommonMethod&lt;MovingPhotoViewAttribute&gt; |
 | [MovingPhotoViewController](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewcontroller-c.md) | Defines the MovingPhotoView controller. |
 
 <!--Del-->
@@ -20,7 +20,7 @@ import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, P
 
 | Name | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c-sys.md) | Defines the moving photo view attribute functions. |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c-sys.md) | Defines the moving photo view attribute functions.@extends CommonMethod&lt;MovingPhotoViewAttribute&gt; |
 | [MovingPhotoViewController](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewcontroller-c-sys.md) | Defines the MovingPhotoView controller. |
 <!--DelEnd-->
 
@@ -28,30 +28,30 @@ import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, P
 
 | Name | Description |
 | --- | --- |
-| [MovingPhotoViewInterface](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewinterface-i.md) | Defines the moving photo view interface. |
-| [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i.md) | Defines the moving photo view options. |
+| [MovingPhotoViewInterface](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewinterface-i.md) | Defines the moving photo view interface.@interface MovingPhotoViewInterface |
+| [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i.md) | Defines the moving photo view options.@interface MovingPhotoViewOptions |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i-sys.md) | Defines the moving photo view options. |
+| [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i-sys.md) | Defines the moving photo view options.@interface MovingPhotoViewOptions |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md) | Enumerates pixel map formats. |
+| [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md) | Enumerates pixel map formats.@enum { int } |
 
 <!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [DynamicRangeMode](arkts-medialibrary-multimedia-movingphotoview-dynamicrangemode-e-sys.md) | Dynamic range mode of moving photo. |
-| [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e-sys.md) | Enumerates pixel map formats. |
+| [DynamicRangeMode](arkts-medialibrary-multimedia-movingphotoview-dynamicrangemode-e-sys.md) | Dynamic range mode of moving photo.@enum { int } |
+| [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e-sys.md) | Enumerates pixel map formats.@enum { int } |
 <!--DelEnd-->
 
 ### Types

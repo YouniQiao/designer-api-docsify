@@ -20,7 +20,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ArcSlider](arkts-arkui-advanced-arcslider-arcslider-s.md) | Defines ArcSlider Component. |
+| [ArcSlider](arkts-arkui-advanced-arcslider-arcslider-s.md) | Defines ArcSlider Component.@struct { ArcSlider } |
 
 ### Interfaces
 
@@ -35,7 +35,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ArcSliderPosition](arkts-arkui-advanced-arcslider-arcsliderposition-e.md) | Enum for ArcSliderPosition |
+| [ArcSliderPosition](arkts-arkui-advanced-arcslider-arcsliderposition-e.md) | Enum for ArcSliderPosition@enum { int } |
 
 ### Types
 

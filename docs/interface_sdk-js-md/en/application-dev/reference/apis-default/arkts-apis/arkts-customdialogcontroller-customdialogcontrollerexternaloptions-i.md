@@ -1,8 +1,6 @@
 # CustomDialogControllerExternalOptions
 
-Defines the external options of CustomDialogController.
-
-@interface CustomDialogControllerExternalOptions
+Defines the external options of CustomDialogController.@interface CustomDialogControllerExternalOptions
 
 **Since:** 23
 

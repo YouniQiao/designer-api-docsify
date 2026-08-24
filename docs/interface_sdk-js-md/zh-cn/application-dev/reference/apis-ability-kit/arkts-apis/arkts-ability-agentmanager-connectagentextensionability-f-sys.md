@@ -15,17 +15,14 @@ function connectAgentExtensionAbility(want: Want, agentId: string,
 
 将当前调用方组件连接到 [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)。通过返回的 [AgentProxy](arkts-ability-agentproxy-i-sys.md)与 [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)进行通信，以使用 AgentExtensionAbility对外提供的能力。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 当目标Agent的AgentCard为
 > LOW_CODE
 > 类型时，AgentExtensionAbility的
 > [onConnect](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md#onconnect)只在此类Agent连接
 > 成功时回调；后续连接的此类Agent，只回调
-> [onAgentInvoked](arkts-ability-app-agent-agentextensionability-agentextensionability-c-sys.md#onagentinvoked)。
-> 
-> - 同一个AgentExtensionAbility中，最多只能同时运行100个LOW_CODE类型的Agent，否则会报35600003错误码。
-> 
+> [onAgentInvoked](arkts-ability-app-agent-agentextensionability-agentextensionability-c-sys.md#onagentinvoked)。&gt;
+> - 同一个AgentExtensionAbility中，最多只能同时运行100个LOW_CODE类型的Agent，否则会报35600003错误码。&gt;
 > - 同一个AgentExtensionAbility中，不允许重复连接同一个LOW_CODE类型的Agent。
 
 **起始版本：** 24

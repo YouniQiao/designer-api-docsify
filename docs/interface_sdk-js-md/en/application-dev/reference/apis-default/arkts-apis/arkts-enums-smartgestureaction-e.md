@@ -1,8 +1,6 @@
 # SmartGestureAction
 
-Define the actions for smart gesture shortcut.
-
-@enum { number }
+Define the actions for smart gesture shortcut.@enum { number }
 
 **Since:** 26.0.0
 

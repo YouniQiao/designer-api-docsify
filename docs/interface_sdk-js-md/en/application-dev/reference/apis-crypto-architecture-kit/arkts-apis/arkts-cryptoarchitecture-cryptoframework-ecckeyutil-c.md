@@ -24,8 +24,7 @@ static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 
 Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > According to section 2.2 in RFC 5480:
 > 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate.
 > 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented

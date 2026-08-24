@@ -1,8 +1,6 @@
 # ConsoleMessageSource
 
-The source of console message.
-
-@enum { number }
+The source of console message.@enum { number }
 
 **起始版本：** 23
 

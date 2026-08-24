@@ -1,8 +1,6 @@
 # AttestResultInfo (System API)
 
-Device attest result information.
-
-@interface AttestResultInfo
+Device attest result information.@interface AttestResultInfo
 
 **Since:** 9
 

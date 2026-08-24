@@ -38,11 +38,7 @@ cachedCount 是否按组计算。 true表示cachedCount按实际子组件个数�
 isShown?: boolean
 ```
 
-预加载范围内的节点是否进行绘制。
-
-true表示预加载范围内的节点进行绘制；false表示预加载范围内的节点不进行绘制。
-
-默认值：false
+预加载范围内的节点是否进行绘制。true表示预加载范围内的节点进行绘制；false表示预加载范围内的节点不进行绘制。默认值：false
 
 **类型：** boolean
 

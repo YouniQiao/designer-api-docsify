@@ -1,8 +1,6 @@
 # TabsModifier
 
-Defines Tabs Modifier
-
-@extends TabsAttribute @implements AttributeModifier&lt;TabsAttribute&gt;
+Defines Tabs Modifier@extends TabsAttribute @implements AttributeModifier&lt;TabsAttribute&gt;
 
 **Inheritance/Implementation:** TabsModifier extends TabsAttribute and implements AttributeModifier<TabsAttribute>
 

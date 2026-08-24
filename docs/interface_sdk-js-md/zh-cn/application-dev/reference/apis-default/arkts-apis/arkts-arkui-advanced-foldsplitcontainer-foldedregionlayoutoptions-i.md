@@ -1,8 +1,6 @@
 # FoldedRegionLayoutOptions
 
-折叠态布局信息。
-
-@interface FoldedRegionLayoutOptions
+折叠态布局信息。@interface FoldedRegionLayoutOptions
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # TaskStatistic (System API)
 
-Statistics Related to AI Image Generation Tasks.
-
-@interface TaskStatistic
+Statistics Related to AI Image Generation Tasks.@interface TaskStatistic
 
 **Since:** 23
 

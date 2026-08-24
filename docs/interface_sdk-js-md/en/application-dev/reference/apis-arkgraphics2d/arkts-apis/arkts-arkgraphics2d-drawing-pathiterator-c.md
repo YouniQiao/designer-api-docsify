@@ -2,12 +2,9 @@
 
 Implements a path operation iterator. You can read path operation instructions by traversing the iterator.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 18.
-> 
-> - This module uses the physical pixel unit, px.
-> 
+> **NOTE：**&gt;
+> - The initial APIs of this class are supported since API version 18.&gt;
+> - This module uses the physical pixel unit, px.&gt;
 > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 

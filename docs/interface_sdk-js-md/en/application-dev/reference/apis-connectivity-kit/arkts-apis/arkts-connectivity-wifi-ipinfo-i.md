@@ -1,8 +1,6 @@
 # IpInfo
 
-Wi-Fi IP information.
-
-@interface IpInfo
+Wi-Fi IP information.@interface IpInfo
 
 **Since:** 7
 
@@ -18,9 +16,6 @@ Wi-Fi IP information.
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## gateway

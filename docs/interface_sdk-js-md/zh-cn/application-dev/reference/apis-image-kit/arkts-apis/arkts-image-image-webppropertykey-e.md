@@ -14,9 +14,7 @@
 CANVAS_WIDTH = 'WebPCanvasWidth'
 ```
 
-WebP图片的画布像素宽度。
-
-单位：像素（px）。
+WebP图片的画布像素宽度。单位：像素（px）。
 
 **起始版本：** 24
 
@@ -32,9 +30,7 @@ WebP图片的画布像素宽度。
 CANVAS_HEIGHT = 'WebPCanvasHeight'
 ```
 
-WebP图片的画布像素高度。
-
-单位：像素（px）。
+WebP图片的画布像素高度。单位：像素（px）。
 
 **起始版本：** 24
 
@@ -50,9 +46,7 @@ WebP图片的画布像素高度。
 DELAY_TIME = 'WebPDelayTime'
 ```
 
-WebP图片钳制后的帧延迟时长。钳制范围为[100, 65535]。
-
-单位：毫秒（ms）。
+WebP图片钳制后的帧延迟时长。钳制范围为[100, 65535]。单位：毫秒（ms）。
 
 **起始版本：** 24
 
@@ -68,9 +62,7 @@ WebP图片钳制后的帧延迟时长。钳制范围为[100, 65535]。
 UNCLAMPED_DELAY_TIME = 'WebPUnclampedDelayTime'
 ```
 
-WebP图片未钳制的帧延迟时长。
-
-单位：毫秒（ms）。
+WebP图片未钳制的帧延迟时长。单位：毫秒（ms）。
 
 **起始版本：** 24
 

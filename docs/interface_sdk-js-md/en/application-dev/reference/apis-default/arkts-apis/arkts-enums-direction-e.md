@@ -1,8 +1,6 @@
 # Direction
 
-Sets the horizontal layout of elements.
-
-@enum { number }
+Sets the horizontal layout of elements.@enum { number }
 
 **Since:** 23
 

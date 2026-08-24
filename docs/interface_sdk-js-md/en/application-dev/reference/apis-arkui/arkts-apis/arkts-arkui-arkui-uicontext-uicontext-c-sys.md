@@ -2,10 +2,8 @@
 
 Implements a **UIContext** instance.
 
-> **NOTE：**
-> 
-> - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
-> 
+> **NOTE：**&gt;
+> - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.&gt;
 > - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a
 > **UIContext** instance: (1) using the
 > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from
@@ -314,8 +312,7 @@ setDynamicDimming(id: string, value: number): void
 
 Sets the dynamic dimming degree of the component.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Applying other visual effects after this API is called may result in conflicts.
 
 **Since:** 12

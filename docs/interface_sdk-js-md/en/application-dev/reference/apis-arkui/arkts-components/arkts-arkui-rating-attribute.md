@@ -167,11 +167,7 @@ Sets the total number of stars. Values less than 0 are treated as the default va
 starStyle(options: StarStyleOptions)
 ```
 
-Sets the star style. For details about the supported image types, see Image.
-
-Local and network images are supported. The PixelMap type is not supported.
-
-By default, the image is loaded in asynchronous mode. Synchronous loading is not supported.
+Sets the star style. For details about the supported image types, see Image.Local and network images are supported. The PixelMap type is not supported.By default, the image is loaded in asynchronous mode. Synchronous loading is not supported.
 
 **Since:** 7
 
@@ -195,13 +191,7 @@ By default, the image is loaded in asynchronous mode. Synchronous loading is not
 starStyle(options: Optional<StarStyleOptions>)
 ```
 
-Sets the star style. For details about the supported image types, see Image.
-
-Local and network images are supported. The PixelMap type is not supported.
-
-By default, the image is loaded in asynchronous mode. Synchronous loading is not supported.
-
-Compared with [starStyle](#starstyle), this API supports the **undefined** type for the **options** parameter.
+Sets the star style. For details about the supported image types, see Image.Local and network images are supported. The PixelMap type is not supported.By default, the image is loaded in asynchronous mode. Synchronous loading is not supported.Compared with [starStyle](#starstyle), this API supports the **undefined** type for the **options** parameter.
 
 **Since:** 18
 

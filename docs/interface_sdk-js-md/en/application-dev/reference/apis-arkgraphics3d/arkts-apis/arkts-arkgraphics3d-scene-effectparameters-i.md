@@ -1,8 +1,6 @@
 # EffectParameters
 
-Special effect parameter configuration, which is used to specify the special effect ID required for creating a special effect. It is used as the input parameter of the createEffect API to create a special effect object.
-
-@interface EffectParameters
+Special effect parameter configuration, which is used to specify the special effect ID required for creating a special effect. It is used as the input parameter of the createEffect API to create a special effect object.@interface EffectParameters
 
 **Since:** 23
 

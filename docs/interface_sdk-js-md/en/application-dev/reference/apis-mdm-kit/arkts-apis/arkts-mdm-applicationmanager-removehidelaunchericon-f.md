@@ -14,8 +14,7 @@ function removeHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 
 Removes applications from the home screen icon hide list.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > After unhiding, applications will be placed in the first available slot starting from the second screen of the
 > home screen. If no empty slot is found on screens 2 to 18, it will search for an empty slot on the first screen.
 > If no empty slot is available on the first screen, a small folder will be created at the position of the first

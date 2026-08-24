@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## offWifiStateChange
@@ -13,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function offWifiStateChange(callback?: Callback<int>): void
 ```
 
-取消注册WLAN状态改变事件。
-
-如果未指定callback参数，将取消注册该事件关联的所有回调函数。
+取消注册WLAN状态改变事件。如果未指定callback参数，将取消注册该事件关联的所有回调函数。
 
 **起始版本：** 23
 

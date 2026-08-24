@@ -1,8 +1,6 @@
 # BackupPriority (System API)
 
-Control backup and restore priority sequence
-
-@interface BackupPriority
+Control backup and restore priority sequence@interface BackupPriority
 
 **Since:** 23
 

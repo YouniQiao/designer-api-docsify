@@ -14,8 +14,7 @@ export function getSystemResourceManager(): ResourceManager
 
 Obtains a system resource management object for accessing preset system resources.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The **Configuration** parameter in the **ResourceManager** object obtained via this API uses the default value.
 > The default value is
 > **{"locale": "", "direction": -1, "deviceType": -1, "screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}**.

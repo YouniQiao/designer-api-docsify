@@ -15,7 +15,6 @@ Spring animation model. You can build a spring animation based on the start poin
 ## Modules to Import
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## constructor

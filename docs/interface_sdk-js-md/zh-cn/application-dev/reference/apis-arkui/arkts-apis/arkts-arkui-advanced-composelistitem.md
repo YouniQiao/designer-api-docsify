@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
-import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -17,7 +16,7 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 | [OperateButton](arkts-arkui-arkui-advanced-composelistitem-operatebutton-c.md) | 列表右侧按钮元素的类型。 |
 | [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md) | 列表右侧元素为Switch、CheckBox、Radio的类型。 |
 | [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md) | 列表右侧图标元素的类型。 |
-| [OperateItem](arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md) | 列表右侧显示的元素类型。 |
+| [OperateItem](arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md) | 列表右侧显示的元素类型。同时配置多个属性时，按button、symbolStyle、image、icon与text组合、arrow、text、radio、checkbox、switch、icon的优先级选择右侧显示内容。icon可与text或subIcon组 合，arrow可与text组合；其他情况下仅显示优先级最高的内容。 |
 
 ### 结构体
 

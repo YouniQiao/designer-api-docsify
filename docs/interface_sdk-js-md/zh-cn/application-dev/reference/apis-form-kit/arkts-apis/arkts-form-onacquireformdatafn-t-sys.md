@@ -26,7 +26,7 @@ Called when the system acquire the form data.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | Returns the wantParams object. |
+| Record&lt;string, Object&gt; | Returns the wantParams object. |
 
 **示例**
 

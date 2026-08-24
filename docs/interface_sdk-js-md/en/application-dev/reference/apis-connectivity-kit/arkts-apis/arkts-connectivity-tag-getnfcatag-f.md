@@ -14,8 +14,7 @@ function getNfcATag(tagInfo: TagInfo): NfcATag
 
 Obtains an **NfcATag** object, which allows access to the tags that use the NFC-A technology.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tag.getNfcA](arkts-connectivity-tag-getnfca-f.md) instead.
 

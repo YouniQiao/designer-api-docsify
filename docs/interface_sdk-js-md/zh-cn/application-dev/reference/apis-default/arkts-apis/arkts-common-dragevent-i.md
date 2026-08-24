@@ -16,7 +16,9 @@ DragEvent object description
 executeDropAnimation(customDropAnimation: VoidCallback): void
 ```
 
-Setup one drop animation execution callback, which will be triggered by system when user drops. Use this way to implement the custom drop animation instead of doing it in onDrop, as the system will decide when to trigger the callback during the drop handling. [Note]: 1. Please set useCustomDropAnimation to true as well when using this method. 2. Do not implement the animation no-related logics in the callback.
+Setup one drop animation execution callback, which will be triggered by system when user drops. Use this way to implement the custom drop animation instead of doing it in onDrop, as the system will decide when to trigger the callback during the drop handling. [Note]:
+1. Please set useCustomDropAnimation to true as well when using this method.
+2. Do not implement the animation no-related logics in the callback.
 
 **起始版本：** 23
 

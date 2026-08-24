@@ -1,8 +1,6 @@
 # MenuAlignType
 
-The type of alignment between select and menu.
-
-@enum { number }
+The type of alignment between select and menu.@enum { number }
 
 **Since:** 23
 

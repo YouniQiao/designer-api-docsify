@@ -12,9 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<void>): void
 ```
 
-Sets the DND time. This API uses an asynchronous callback to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
+Sets the DND time. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 23
 
@@ -132,9 +130,7 @@ notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
 function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 ```
 
-Sets the DND time. This API uses a promise to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
+Sets the DND time. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 23
 
@@ -182,9 +178,7 @@ See [setDoNotDisturbDate](#setdonotdisturbdate)
 function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int, callback: AsyncCallback<void>): void
 ```
 
-Sets the DND time for a specified user. This API uses an asynchronous callback to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
+Sets the DND time for a specified user. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 23
 
@@ -229,9 +223,7 @@ See [setDoNotDisturbDate](#setdonotdisturbdate)
 function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int): Promise<void>
 ```
 
-Sets the DND time for a specified user. This API uses a promise to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
+Sets the DND time for a specified user. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 23
 

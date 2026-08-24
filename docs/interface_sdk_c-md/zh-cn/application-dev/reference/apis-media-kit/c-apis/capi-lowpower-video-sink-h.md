@@ -4,7 +4,7 @@
 
 定义LowPowerVideoSink接口。使用LowPowerVideoSink提供的Native API进行视频通路的低功耗播放。
 
-**引用文件：** <multimedia/player_framework/lowpower_video_sink_base.h>
+**引用文件：** <multimedia/player_framework/lowpower_video_sink.h>
 
 **库：** liblowpower_avsink.so
 
@@ -168,7 +168,7 @@ OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, co
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
-| [const OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md)* surface | 指向OHNativeWindow实例的指针。请参考[OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
+| const OHNativeWindow* surface | 指向OHNativeWindow实例的指针。请参考[OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
 
 **返回：**
 
@@ -433,7 +433,7 @@ LowPowerVideoSink设置用于音画同步的OH_LowPowerAudioSink。
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* videoSink | 指向OH_LowPowerVideoSink实例的指针。 |
-| OH_LowPowerAudioSink* audioSink | Pointer to an OH_LowPowerAudioSink instance |
+| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* audioSink | 指向OH_LowPowerAudioSink实例的指针。 |
 
 **返回：**
 
@@ -511,7 +511,7 @@ OH_AVErrCode OH_LowPowerVideoSink_ReturnSamples(OH_LowPowerVideoSink* sink, OH_A
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
-| OH_AVSamplesBuffer* samples | 需要送LowPowerVideoSink消费的OH_AVSamplesBuffer，支持聚包输入。 |
+| [OH_AVSamplesBuffer](capi-avsinkbase-oh-avsamplesbuffer.md)* samples | 需要送LowPowerVideoSink消费的OH_AVSamplesBuffer，支持聚包输入。 |
 
 **返回：**
 
@@ -758,7 +758,7 @@ OH_AVErrCode OH_LowPowerVideoSink_GetLatestPts(OH_LowPowerVideoSink *sink, int64
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_LowPowerVideoSink *sink | 指向OH_LowPowerVideoSink实例的指针。. |
+| OH_LowPowerVideoSink *sink | 指向OH_LowPowerVideoSink实例的指针。 |
 | int64_t *pts | 当前播放的pts。单位为微秒（μs）。 |
 
 **返回：**

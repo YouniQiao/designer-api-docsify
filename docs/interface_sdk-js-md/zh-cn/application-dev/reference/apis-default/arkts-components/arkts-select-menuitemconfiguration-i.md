@@ -103,10 +103,7 @@ selected: boolean
 symbolIcon?: SymbolGlyphModifier
 ```
 
-下拉选项Symbol图片。
-
-symbolIcon优先级高于icon。
-
+下拉选项Symbol图片。symbolIcon优先级高于icon。  
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)

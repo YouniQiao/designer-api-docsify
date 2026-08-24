@@ -2,8 +2,7 @@
 
 Defines the divider style of the list or list item group.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
 > 's
@@ -25,9 +24,7 @@ Defines the divider style of the list or list item group.
 color?: ResourceColor
 ```
 
-Color of the divider. Anonymous Object Rectification.
-
-<p>&lt;strong&gt;Default value&lt;/strong&gt;: 0x08000000 </p>
+Color of the divider. Anonymous Object Rectification.<p>&lt;strong&gt;Default value&lt;/strong&gt;: 0x08000000 </p>
 
 **Type:** ResourceColor
 
@@ -49,9 +46,7 @@ Color of the divider. Anonymous Object Rectification.
 endMargin?: Length
 ```
 
-Distance between the divider and the end edge of the list. Anonymous Object Rectification.
-
-<p>&lt;strong&gt;Default value&lt;/strong&gt;: **0**<br>Unit: vp <br>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number or a percentage, the default value will be used. <br>If &lt;strong&gt;endMargin&lt;/strong&gt; and &lt;strong&gt;startMargin&lt;/strong&gt; add up to a value that exceeds the column width, they will be set to &lt;strong&gt;0&lt;/strong&gt;. </p>
+Distance between the divider and the end edge of the list. Anonymous Object Rectification.<p>&lt;strong&gt;Default value&lt;/strong&gt;: **0**<br>Unit: vp <br>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number or a percentage, the default value will be used. <br>If &lt;strong&gt;endMargin&lt;/strong&gt; and &lt;strong&gt;startMargin&lt;/strong&gt; add up to a value that exceeds the column width, they will be set to &lt;strong&gt;0&lt;/strong&gt;. </p>
 
 **Type:** Length
 
@@ -73,9 +68,7 @@ Distance between the divider and the end edge of the list. Anonymous Object Rect
 startMargin?: Length
 ```
 
-Distance between the divider and the start edge of the list. Anonymous Object Rectification.
-
-<p>&lt;strong&gt;Default value&lt;/strong&gt;: **0**<br>Unit: vp <br>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number or a percentage, the default value will be used. <br>If &lt;strong&gt;endMargin&lt;/strong&gt; and &lt;strong&gt;startMargin&lt;/strong&gt; add up to a value that exceeds the column width, they will be set to &lt;strong&gt;0&lt;/strong&gt;. </p>
+Distance between the divider and the start edge of the list. Anonymous Object Rectification.<p>&lt;strong&gt;Default value&lt;/strong&gt;: **0**<br>Unit: vp <br>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number or a percentage, the default value will be used. <br>If &lt;strong&gt;endMargin&lt;/strong&gt; and &lt;strong&gt;startMargin&lt;/strong&gt; add up to a value that exceeds the column width, they will be set to &lt;strong&gt;0&lt;/strong&gt;. </p>
 
 **Type:** Length
 
@@ -97,9 +90,7 @@ Distance between the divider and the start edge of the list. Anonymous Object Re
 strokeWidth: Length
 ```
 
-Width of the divider. <br>Unit: vp Anonymous Object Rectification.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number, a percentage, or a value greater than or equal to the length of the list content area, the value &lt;strong&gt;0&lt;/strong&gt; will be used. </p>
+Width of the divider. <br>Unit: vp Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number, a percentage, or a value greater than or equal to the length of the list content area, the value &lt;strong&gt;0&lt;/strong&gt; will be used. </p>
 
 **Type:** Length
 

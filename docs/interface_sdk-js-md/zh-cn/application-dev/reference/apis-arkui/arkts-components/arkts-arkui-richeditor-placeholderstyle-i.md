@@ -16,9 +16,7 @@
 font?: Font
 ```
 
-设置placeholder文本样式。
-
-默认值遵循主题设置。
+设置placeholder文本样式。默认值遵循主题设置。
 
 **类型：** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
@@ -38,9 +36,7 @@ font?: Font
 fontColor?: ResourceColor
 ```
 
-设置placeholder文本颜色。
-
-默认值遵循主题设置。
+设置placeholder文本颜色。默认值遵循主题设置。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

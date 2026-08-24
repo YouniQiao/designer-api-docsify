@@ -16,11 +16,9 @@
 margin?: LengthMetrics
 ```
 
-焦点框相对组件边缘的距离。
+焦点框相对组件边缘的距离。正数代表外侧，负数代表内侧。不支持百分比。
 
-正数代表外侧，负数代表内侧。不支持百分比。
-
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -40,7 +38,7 @@ strokeColor?: ColorMetrics
 
 焦点框颜色。
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 
@@ -58,11 +56,9 @@ strokeColor?: ColorMetrics
 strokeWidth?: LengthMetrics
 ```
 
-焦点框宽度。
+焦点框宽度。不支持负数与百分比。
 
-不支持负数与百分比。
-
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # GutterOption
 
-Defines the gutter of grid-row component.
-
-@interface GutterOption
+Defines the gutter of grid-row component.@interface GutterOption
 
 **Since:** 23
 

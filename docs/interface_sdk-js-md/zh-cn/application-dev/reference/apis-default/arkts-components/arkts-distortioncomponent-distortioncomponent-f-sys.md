@@ -16,6 +16,8 @@ Defines a DistortionComponent that provides spatial distortion visual effects.
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function DistortionComponent(    options?: DistortionComponentOptions,    content_?:CustomBuilder,): DistortionComponentAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function DistortionComponent(    options?: DistortionComponentOptions,    content_?:CustomBuilder,): DistortionComponentAttribute-End-->

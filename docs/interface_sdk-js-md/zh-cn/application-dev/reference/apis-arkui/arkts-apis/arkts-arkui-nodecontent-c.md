@@ -2,8 +2,7 @@
 
 NodeContent是ArkUI提供的ContentSlot的管理器，用于管理挂载到ContentSlot上的FrameNode节点内 容，支持动态添加、删除FrameNode节点。适用于需要通过ContentSlot动态管理FrameNode节点内容的场景，例如根据用户交互动态新增或移除文本、图片等自定义FrameNode节点。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - NodeContent对象不支持使用JSON序列化。
 
 **继承/实现关系：** NodeContent extends Content
@@ -36,7 +35,7 @@ addFrameNode(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 需要添加的FrameNode，该节点需为可被添加的有效FrameNode。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 需要添加的FrameNode，该节点需为可被添加的有效FrameNode。 |
 
 **错误码：**
 
@@ -108,7 +107,7 @@ removeFrameNode(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 需要删除的FrameNode，该节点需已添加到当前NodeContent中，若未添加则删除无效。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 需要删除的FrameNode，该节点需已添加到当前NodeContent中，若未添加则删除无效。 |
 
 **示例**
 

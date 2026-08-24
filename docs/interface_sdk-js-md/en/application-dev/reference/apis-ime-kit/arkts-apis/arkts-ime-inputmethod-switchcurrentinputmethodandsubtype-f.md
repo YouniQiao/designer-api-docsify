@@ -4,11 +4,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## switchCurrentInputMethodAndSubtype
@@ -21,7 +16,7 @@ function switchCurrentInputMethodAndSubtype(
   ): void
 ```
 
-@brief Switches to a specified subtype of a specified input method. This API uses an asynchronous callback to return the result. <br> <br>   
+Switches to a specified subtype of a specified input method. This API uses an asynchronous callback to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br
@@ -106,7 +101,7 @@ function switchCurrentInputMethodAndSubtype(
   ): Promise<boolean>
 ```
 
-@brief Switches to a specified subtype of a specified input method. This API uses a promise to return the result. <br> <br>   
+Switches to a specified subtype of a specified input method. This API uses a promise to return the result. <br> <br>   
 > **NOTE：**&lt;br
 &gt; 
 > &lt;br

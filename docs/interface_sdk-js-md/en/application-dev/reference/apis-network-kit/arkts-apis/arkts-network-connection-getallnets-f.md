@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getAllNets(callback: AsyncCallback<Array<NetHandle>>): void
 ```
 
-Obtains the list of all connected networks. This API uses an asynchronous callback to return the result.
-
+Obtains the list of all connected networks. This API uses an asynchronous callback to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
@@ -69,8 +68,7 @@ connection.getAllNets().then((data: connection.NetHandle[]) => {
 function getAllNets(): Promise<Array<NetHandle>>
 ```
 
-Obtains the list of all connected networks. This API uses a promise to return the result.
-
+Obtains the list of all connected networks. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23

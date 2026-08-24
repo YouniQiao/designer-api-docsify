@@ -16,11 +16,7 @@
 isSynchronous?: boolean
 ```
 
-是否同步回调。
-
-true：同步回调；false：异步回调。
-
-默认值：false。
+是否同步回调。true：同步回调；false：异步回调。默认值：false。
 
 **类型：** boolean
 

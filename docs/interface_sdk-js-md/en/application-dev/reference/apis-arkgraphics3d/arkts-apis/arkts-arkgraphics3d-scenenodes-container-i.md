@@ -1,8 +1,6 @@
 # Container
 
-Container for defining scene nodes. It provides a way to group scene nodes into a hierarchy.
-
-@interface Container
+Container for defining scene nodes. It provides a way to group scene nodes into a hierarchy.@interface Container
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # StarStyleOptions
 
-Define star style options.
-
-@interface StarStyleOptions
+Define star style options.@interface StarStyleOptions
 
 **Since:** 23
 

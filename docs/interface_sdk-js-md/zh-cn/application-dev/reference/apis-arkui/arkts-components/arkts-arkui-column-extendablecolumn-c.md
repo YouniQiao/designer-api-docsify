@@ -1,8 +1,6 @@
 # ExtendableColumn
 
-Defines the Extendable Column.
-
-@implements ColumnAttribute
+Defines the Extendable Column.@implements ColumnAttribute
 
 **继承/实现关系：** ExtendableColumn implements [ColumnAttribute](arkts-arkui-column-attribute.md#columnattribute)
 
@@ -17,8 +15,7 @@ Defines the Extendable Column.
 ## $_instantiate
 
 ```TypeScript
-@ComponentBuilder
-    static $_instantiate<T extends ExtendableColumn>(
+static $_instantiate<T extends ExtendableColumn>(
         factory: ConstructorT<T>, 
         options?: ColumnOptions | ColumnOptionsV2, 
         content_?: CustomBuilder
@@ -30,6 +27,8 @@ Constructor of Extendable Column.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @ComponentBuilder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,8 +53,7 @@ Constructor of Extendable Column.
 ## _instantiateImpl
 
 ```TypeScript
-@Builder
-    static _instantiateImpl<T extends ExtendableColumn>(
+static _instantiateImpl<T extends ExtendableColumn>(
         styles: CustomBuilderT<T>, 
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -67,6 +65,8 @@ Entry of Extendable Column.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

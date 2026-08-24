@@ -12,9 +12,7 @@ import { formHost } from '@kit.FormKit';
 function onFormOverflow(callback: Callback<formInfo.OverflowRequest>): void
 ```
 
-Listens to the event of formOverflow.
-
-You can use this method to listen to the event of formOverflow.
+Listens to the event of formOverflow.You can use this method to listen to the event of formOverflow.
 
 **起始版本：** 23
 

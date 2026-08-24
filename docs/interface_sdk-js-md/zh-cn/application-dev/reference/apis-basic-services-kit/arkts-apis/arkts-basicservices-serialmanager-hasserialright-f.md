@@ -12,8 +12,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 function hasSerialRight(portId: int): boolean
 ```
 
-检查应用是否具有访问串口设备的权限。应用退出后再拉起时，需要重新申请授权。通常在打开串口设备、执行串口操作前调用此接口检查权限状态。
-
+检查应用是否具有访问串口设备的权限。应用退出后再拉起时，需要重新申请授权。通常在打开串口设备、执行串口操作前调用此接口检查权限状态。  
 **前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号
 
 **起始版本：** 23

@@ -1,8 +1,6 @@
 # MouseEvent
 
-The mouse click action triggers this method invocation.
-
-@extends BaseEvent
+The mouse click action triggers this method invocation.@extends BaseEvent
 
 **Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-common-baseevent-i.md)
 

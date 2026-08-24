@@ -1,8 +1,6 @@
 # BreakPoints
 
-设置栅格容器组件的断点。
-
-@interface BreakPoints
+设置栅格容器组件的断点。@interface BreakPoints
 
 **起始版本：** 23
 

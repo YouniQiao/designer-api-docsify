@@ -1,8 +1,6 @@
 # Path2D
 
-Path2D
-
-@interface Path2D
+Path2D@interface Path2D
 
 **Since:** 4
 

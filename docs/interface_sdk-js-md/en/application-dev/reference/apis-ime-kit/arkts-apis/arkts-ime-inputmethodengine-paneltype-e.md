@@ -1,6 +1,6 @@
 # PanelType
 
-@brief Enumerates the types of the input method panel.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | SOFT_KEYBOARD | 0 | Soft keyboard type.| | STATUS_BAR | 1 | Status bar type.|
+Enumerates the types of the input method panel.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | SOFT_KEYBOARD | 0 | Soft keyboard type.| | STATUS_BAR | 1 | Status bar type.|
 
 **Since:** 23
 
@@ -14,7 +14,7 @@
 SOFT_KEYBOARD = 0
 ```
 
-@brief Panel for displaying a virtual software keyboard.
+Panel for displaying a virtual software keyboard.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ SOFT_KEYBOARD = 0
 STATUS_BAR
 ```
 
-@brief Panel for displaying status bar.
+Panel for displaying status bar.
 
 **Since:** 23
 

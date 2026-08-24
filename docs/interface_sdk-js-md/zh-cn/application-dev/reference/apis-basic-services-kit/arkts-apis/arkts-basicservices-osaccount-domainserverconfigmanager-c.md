@@ -34,7 +34,7 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameters | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 表示域服务器配置参数。 |
+| parameters | Record&lt;string, Object&gt; | 是 | 表示域服务器配置参数。 |
 
 **返回值：**
 
@@ -110,7 +110,7 @@ static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainSe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameters | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 表示域服务器配置参数。 |
+| parameters | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 表示域服务器配置参数。 |
 
 **返回值：**
 
@@ -482,7 +482,7 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configId | string | 是 | 表示服务器配置标识。 |
-| parameters | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 表示域服务器配置参数。 |
+| parameters | Record&lt;string, Object&gt; | 是 | 表示域服务器配置参数。 |
 
 **返回值：**
 
@@ -571,7 +571,7 @@ static updateServerConfig(configId: string, parameters: Record<string, RecordDat
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configId | string | 是 | 表示服务器配置标识。 |
-| parameters | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 表示域服务器配置参数。 |
+| parameters | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 表示域服务器配置参数。 |
 
 **返回值：**
 

@@ -1,8 +1,6 @@
 # GridColOptions
 
-Defines the options of grid-container child component.
-
-@interface GridColOptions
+Defines the options of grid-container child component.@interface GridColOptions
 
 **Since:** 23
 

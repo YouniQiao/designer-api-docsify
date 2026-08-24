@@ -14,8 +14,7 @@
 HUKS_TAG_INVALID = HuksTagType.HUKS_TAG_TYPE_INVALID | 0
 ```
 
-表示非法的Tag。
-
+表示非法的Tag。  
 **说明：** 从API version 8开始使用，从API version 9开始废弃。
 
 **起始版本：** 8
@@ -228,8 +227,7 @@ HUKS_TAG_SALT = HuksTagType.HUKS_TAG_TYPE_BYTES | 12
 HUKS_TAG_PWD = HuksTagType.HUKS_TAG_TYPE_BYTES | 13
 ```
 
-表示操作系统补丁级别的Tag。
-
+表示操作系统补丁级别的Tag。  
 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
@@ -280,8 +278,7 @@ HUKS_TAG_KEY_GENERATE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 15
 HUKS_TAG_DERIVE_MAIN_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 16
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -298,8 +295,7 @@ HUKS_TAG_DERIVE_MAIN_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 16
 HUKS_TAG_DERIVE_FACTOR = HuksTagType.HUKS_TAG_TYPE_BYTES | 17
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -316,8 +312,7 @@ HUKS_TAG_DERIVE_FACTOR = HuksTagType.HUKS_TAG_TYPE_BYTES | 17
 HUKS_TAG_DERIVE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 18
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -512,8 +507,7 @@ HUKS_TAG_RSA_PSS_SALT_LEN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 30
 HUKS_TAG_ACTIVE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 201
 ```
 
-原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
-
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -530,8 +524,7 @@ HUKS_TAG_ACTIVE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 201
 HUKS_TAG_ORIGINATION_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 202
 ```
 
-原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
-
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -548,8 +541,7 @@ HUKS_TAG_ORIGINATION_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 202
 HUKS_TAG_USAGE_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 203
 ```
 
-原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
-
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -566,8 +558,7 @@ HUKS_TAG_USAGE_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 203
 HUKS_TAG_CREATION_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 204
 ```
 
-原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
-
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -830,8 +821,7 @@ HUKS_TAG_ATTESTATION_APPLICATION_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 502
 HUKS_TAG_ATTESTATION_ID_BRAND = HuksTagType.HUKS_TAG_TYPE_BYTES | 503
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -848,8 +838,7 @@ HUKS_TAG_ATTESTATION_ID_BRAND = HuksTagType.HUKS_TAG_TYPE_BYTES | 503
 HUKS_TAG_ATTESTATION_ID_DEVICE = HuksTagType.HUKS_TAG_TYPE_BYTES | 504
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -866,8 +855,7 @@ HUKS_TAG_ATTESTATION_ID_DEVICE = HuksTagType.HUKS_TAG_TYPE_BYTES | 504
 HUKS_TAG_ATTESTATION_ID_PRODUCT = HuksTagType.HUKS_TAG_TYPE_BYTES | 505
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -884,8 +872,7 @@ HUKS_TAG_ATTESTATION_ID_PRODUCT = HuksTagType.HUKS_TAG_TYPE_BYTES | 505
 HUKS_TAG_ATTESTATION_ID_SERIAL = HuksTagType.HUKS_TAG_TYPE_BYTES | 506
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -902,8 +889,7 @@ HUKS_TAG_ATTESTATION_ID_SERIAL = HuksTagType.HUKS_TAG_TYPE_BYTES | 506
 HUKS_TAG_ATTESTATION_ID_IMEI = HuksTagType.HUKS_TAG_TYPE_BYTES | 507
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -920,8 +906,7 @@ HUKS_TAG_ATTESTATION_ID_IMEI = HuksTagType.HUKS_TAG_TYPE_BYTES | 507
 HUKS_TAG_ATTESTATION_ID_MEID = HuksTagType.HUKS_TAG_TYPE_BYTES | 508
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -938,8 +923,7 @@ HUKS_TAG_ATTESTATION_ID_MEID = HuksTagType.HUKS_TAG_TYPE_BYTES | 508
 HUKS_TAG_ATTESTATION_ID_MANUFACTURER = HuksTagType.HUKS_TAG_TYPE_BYTES | 509
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -956,8 +940,7 @@ HUKS_TAG_ATTESTATION_ID_MANUFACTURER = HuksTagType.HUKS_TAG_TYPE_BYTES | 509
 HUKS_TAG_ATTESTATION_ID_MODEL = HuksTagType.HUKS_TAG_TYPE_BYTES | 510
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -990,8 +973,7 @@ HUKS_TAG_ATTESTATION_ID_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 511
 HUKS_TAG_ATTESTATION_ID_SOCID = HuksTagType.HUKS_TAG_TYPE_BYTES | 512
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -1008,8 +990,7 @@ HUKS_TAG_ATTESTATION_ID_SOCID = HuksTagType.HUKS_TAG_TYPE_BYTES | 512
 HUKS_TAG_ATTESTATION_ID_UDID = HuksTagType.HUKS_TAG_TYPE_BYTES | 513
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -1121,11 +1102,8 @@ HUKS_TAG_KEY_SECURITY_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 526
 ```
 
 表示密钥安全级别。
-
-26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
+26.0.0  
+**模型约束：** 此接口仅可在Stage模型下使用。  
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 26.0.0
@@ -1142,8 +1120,7 @@ HUKS_TAG_KEY_SECURITY_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 526
 HUKS_TAG_AAD = HuksTagType.HUKS_TAG_TYPE_BYTES | 527
 ```
 
-标记指示GCM或CCM模式的附加验证数据。
-
+标记指示GCM或CCM模式的附加验证数据。  
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
@@ -1312,8 +1289,7 @@ HUKS_TAG_IS_ASYNCHRONIZED = HuksTagType.HUKS_TAG_TYPE_UINT | 1008
 HUKS_TAG_SECURE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1009
 ```
 
-表示操作系统补丁级别的Tag。
-
+表示操作系统补丁级别的Tag。  
 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
@@ -1330,8 +1306,7 @@ HUKS_TAG_SECURE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1009
 HUKS_TAG_SECURE_KEY_UUID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1010
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -1380,8 +1355,7 @@ HUKS_TAG_IS_DEVICE_PASSWORD_SET = HuksTagType.HUKS_TAG_TYPE_BOOL | 1012
 HUKS_TAG_PROCESS_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10001
 ```
 
-表示操作系统补丁级别的Tag。
-
+表示操作系统补丁级别的Tag。  
 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
@@ -1398,8 +1372,7 @@ HUKS_TAG_PROCESS_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10001
 HUKS_TAG_PACKAGE_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10002
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -1416,8 +1389,7 @@ HUKS_TAG_PACKAGE_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10002
 HUKS_TAG_ACCESS_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10003
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -1434,8 +1406,7 @@ HUKS_TAG_ACCESS_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10003
 HUKS_TAG_USES_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10004
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -1452,8 +1423,7 @@ HUKS_TAG_USES_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10004
 HUKS_TAG_CRYPTO_CTX = HuksTagType.HUKS_TAG_TYPE_ULONG | 10005
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -1486,8 +1456,7 @@ HUKS_TAG_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 10006
 HUKS_TAG_KEY_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10007
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -1504,8 +1473,7 @@ HUKS_TAG_KEY_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10007
 HUKS_TAG_PAYLOAD_LEN = HuksTagType.HUKS_TAG_TYPE_UINT | 10008
 ```
 
-原为预留字段。
-
+原为预留字段。  
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
@@ -1538,8 +1506,7 @@ HUKS_TAG_AE_TAG = HuksTagType.HUKS_TAG_TYPE_BYTES | 10009
 HUKS_TAG_IS_KEY_HANDLE = HuksTagType.HUKS_TAG_TYPE_ULONG | 10010
 ```
 
-表示操作系统补丁级别的Tag。
-
+表示操作系统补丁级别的Tag。  
 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
@@ -1556,8 +1523,7 @@ HUKS_TAG_IS_KEY_HANDLE = HuksTagType.HUKS_TAG_TYPE_ULONG | 10010
 HUKS_TAG_OS_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10101
 ```
 
-表示操作系统版本的Tag。
-
+表示操作系统版本的Tag。  
 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
@@ -1574,8 +1540,7 @@ HUKS_TAG_OS_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10101
 HUKS_TAG_OS_PATCHLEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 10102
 ```
 
-表示操作系统补丁级别的Tag。
-
+表示操作系统补丁级别的Tag。  
 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8

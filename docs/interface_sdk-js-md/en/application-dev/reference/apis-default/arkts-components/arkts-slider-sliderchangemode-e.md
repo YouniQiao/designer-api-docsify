@@ -1,8 +1,6 @@
 # SliderChangeMode
 
-State triggered by the event.
-
-@enum { number }
+State triggered by the event.@enum { number }
 
 **Since:** 23
 

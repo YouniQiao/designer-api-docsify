@@ -642,11 +642,9 @@ onRemoteMessageRequest(
 
 Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or asynchronously and returns the result in this API.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and
-> asynchronous message processing.
-> 
+> asynchronous message processing.&gt;
 > - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
 > **onRemoteMessageRequest()** takes effect.
 
@@ -687,8 +685,7 @@ onRemoteMessageRequest(
 
 Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this API. The IPC context can be obtained from the input parameter **callingInfo**.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to
 > implement synchronous and asynchronous message processing.
 > If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only

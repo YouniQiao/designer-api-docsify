@@ -1,8 +1,6 @@
 # GridItemModifier
 
-Defines GridItem Modifier
-
-@extends GridItemAttribute @implements AttributeModifier&lt;GridItemAttribute&gt;
+Defines GridItem Modifier@extends GridItemAttribute @implements AttributeModifier&lt;GridItemAttribute&gt;
 
 **Inheritance/Implementation:** GridItemModifier extends GridItemAttribute and implements AttributeModifier<GridItemAttribute>
 

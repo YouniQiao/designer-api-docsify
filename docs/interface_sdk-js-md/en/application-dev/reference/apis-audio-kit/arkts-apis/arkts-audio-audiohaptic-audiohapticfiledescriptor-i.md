@@ -2,8 +2,7 @@
 
 Describes the audio-haptic file descriptor.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Ensure that **fd** is an available file descriptor and the values of **offset** and **length** are correct.
 
 **Since:** 23

@@ -1,8 +1,6 @@
 # DividerMode
 
-Menu divider mode.
-
-@enum { number }
+Menu divider mode.@enum { number }
 
 **Since:** 23
 

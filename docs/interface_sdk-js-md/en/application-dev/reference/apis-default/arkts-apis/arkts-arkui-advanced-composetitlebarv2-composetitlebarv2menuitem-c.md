@@ -6,6 +6,8 @@ Declaration of the menu item on the right side.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ComposeTitleBarV2MenuItem--><!--Device-unnamed-export declare class ComposeTitleBarV2MenuItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ Constructor of ComposeTitleBarV2MenuItem.
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  accessibilityDescription?: ResourceStr
+accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of this menu item.
@@ -54,6 +55,8 @@ The accessibilityDescription of this menu item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComposeTitleBarV2MenuItem-@Trace  accessibilityDescription?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-@Trace  accessibilityDescription?: ResourceStr-End-->
@@ -63,19 +66,20 @@ The accessibilityDescription of this menu item.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  accessibilityLevel?: string
+accessibilityLevel?: string
 ```
 
 The accessibilityLevel of this menu item.
 
 **Type:** string
 
-**Default:** auto .The options are as follows:<br/> "auto":The value is converted to "yes" or "no" based on the component. "yes": the current component is selectable for the accessibility service. "no": The current component is not selectable for the accessibility service. "no-hide-descendants":The current component and all its child components are not selectable<br/> for the accessibility service.
+**Default:** auto .The options are as follows:<br/>"auto":The value is converted to "yes" or "no" based on the component."yes": the current component is selectable for the accessibility service."no": The current component is not selectable for the accessibility service."no-hide-descendants":The current component and all its child components are not selectable<br/> for the accessibility service.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,8 +90,7 @@ The accessibilityLevel of this menu item.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  accessibilityText?: ResourceStr
+accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of this menu item.
@@ -98,6 +101,8 @@ The accessibilityText of this menu item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComposeTitleBarV2MenuItem-@Trace  accessibilityText?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-@Trace  accessibilityText?: ResourceStr-End-->
@@ -107,8 +112,7 @@ The accessibilityText of this menu item.
 ## action
 
 ```TypeScript
-@Trace
-  action?: OnActionCallback
+action?: OnActionCallback
 ```
 
 Callback function when click on this menu item.
@@ -119,6 +123,8 @@ Callback function when click on this menu item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComposeTitleBarV2MenuItem-@Trace  action?: OnActionCallback--><!--Device-ComposeTitleBarV2MenuItem-@Trace  action?: OnActionCallback-End-->
@@ -128,8 +134,7 @@ Callback function when click on this menu item.
 ## isEnabled
 
 ```TypeScript
-@Trace
-  isEnabled?: boolean
+isEnabled?: boolean
 ```
 
 Whether to enable this menu item.
@@ -140,6 +145,8 @@ Whether to enable this menu item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComposeTitleBarV2MenuItem-@Trace  isEnabled?: boolean--><!--Device-ComposeTitleBarV2MenuItem-@Trace  isEnabled?: boolean-End-->
@@ -149,8 +156,7 @@ Whether to enable this menu item.
 ## label
 
 ```TypeScript
-@Trace
-  label?: ResourceStr
+label?: ResourceStr
 ```
 
 Icon label for this menu item.
@@ -161,6 +167,8 @@ Icon label for this menu item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComposeTitleBarV2MenuItem-@Trace  label?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItem-@Trace  label?: ResourceStr-End-->
@@ -170,8 +178,7 @@ Icon label for this menu item.
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  symbolStyle?: SymbolGlyphModifier
+symbolStyle?: SymbolGlyphModifier
 ```
 
 Symbol icon resource for this menu item, which has higher priority than value.
@@ -182,6 +189,8 @@ Symbol icon resource for this menu item, which has higher priority than value.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComposeTitleBarV2MenuItem-@Trace  symbolStyle?: SymbolGlyphModifier--><!--Device-ComposeTitleBarV2MenuItem-@Trace  symbolStyle?: SymbolGlyphModifier-End-->
@@ -191,8 +200,7 @@ Symbol icon resource for this menu item, which has higher priority than value.
 ## value
 
 ```TypeScript
-@Trace
-  value: ResourceStr
+value: ResourceStr
 ```
 
 Icon resource for this menu item.
@@ -202,6 +210,8 @@ Icon resource for this menu item.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

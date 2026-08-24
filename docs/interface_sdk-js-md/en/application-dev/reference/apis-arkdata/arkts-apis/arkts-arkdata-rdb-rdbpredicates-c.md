@@ -604,8 +604,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 > **NOTE：**
 
-> The value of **devices** can be obtained by using <!--RP2--
-> 
+> The value of **devices** can be obtained by using <!--RP2-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > . <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -731,7 +730,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 **Examples**
 

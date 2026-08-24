@@ -259,6 +259,10 @@
   - [LoadingProgress属性/事件](arkts-loadingprogress-attribute.md)
   - [LoadingProgressConfiguration](arkts-loadingprogress-loadingprogressconfiguration-i.md)
   - [LoadingProgressStyle](arkts-loadingprogress-loadingprogressstyle-e.md)
+- [MediaCachedImage](arkts-mediacachedimage.md)
+  - [MediaCachedImage属性/事件](arkts-mediacachedimage-attribute.md)
+  <!--Del-->
+  - [ASTCResource(系统接口)](arkts-mediacachedimage-astcresource-i-sys.md)<!--DelEnd-->
 - [Menu](arkts-menu.md)
   - [Menu属性/事件](arkts-menu-attribute.md)
   - [SubMenuExpandingMode](arkts-menu-submenuexpandingmode-e.md)

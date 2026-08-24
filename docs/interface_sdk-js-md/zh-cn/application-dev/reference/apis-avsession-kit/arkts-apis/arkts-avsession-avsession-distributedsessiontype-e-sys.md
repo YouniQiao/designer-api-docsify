@@ -1,8 +1,6 @@
 # DistributedSessionType（系统接口）
 
-表示远端分布式设备支持的会话类型枚举。
-
-@enum { int }
+表示远端分布式设备支持的会话类型枚举。@enum { int }
 
 **起始版本：** 23
 

@@ -1,8 +1,6 @@
 # KeyProcessingMode
 
-Key processing mode. Determines the priority of key event processing when component cannot handle the key event.
-
-@enum { number }
+Key processing mode. Determines the priority of key event processing when component cannot handle the key event.@enum { number }
 
 **Since:** 23
 

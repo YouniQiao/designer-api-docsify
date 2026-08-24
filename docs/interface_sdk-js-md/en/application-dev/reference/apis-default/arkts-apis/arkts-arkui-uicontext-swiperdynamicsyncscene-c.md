@@ -1,8 +1,6 @@
 # SwiperDynamicSyncScene
 
-Represents a dynamic synchronization scene of Swiper.
-
-@extends DynamicSyncScene
+Represents a dynamic synchronization scene of Swiper.@extends DynamicSyncScene
 
 **Inheritance/Implementation:** SwiperDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-uicontext-dynamicsyncscene-c.md)
 

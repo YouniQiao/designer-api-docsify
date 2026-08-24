@@ -14,8 +14,7 @@ function addCustomDnsRule(host: string, ip: Array<string>, callback: AsyncCallba
 
 为当前应用程序添加自定义host和对应的IP地址的映射。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 不需要时可调用[removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md)删除某一条自定义规则或调用
 > [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md)删除当前应用程序的所有的自定义DNS规则 。
 
@@ -114,8 +113,7 @@ function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>
 
 为当前应用程序添加自定义host和对应的IP地址的映射。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 不需要时可调用[removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md)删除某一条自定义规则或调用
 > [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md)删除当前应用程序的所有的自定义DNS规则 。
 

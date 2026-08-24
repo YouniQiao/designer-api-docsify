@@ -471,7 +471,7 @@ Sends a message from the Worker thread to the main thread by transferring object
 postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 ```
 
-Sends a message from the Worker thread to the host thread. In the message, a sendable object is passed by reference , and a non-sendable object is passed by serialization.
+Sends a message from the Worker thread to the host thread. In the message, a sendable object is passed by reference, and a non-sendable object is passed by serialization.
 
 **Since:** 12
 

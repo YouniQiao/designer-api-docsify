@@ -1,8 +1,6 @@
 # RotationAxisLimited（系统接口）
 
-旋转轴限位状态
-
-@enum { int }
+旋转轴限位状态@enum { int }
 
 **起始版本：** 23
 

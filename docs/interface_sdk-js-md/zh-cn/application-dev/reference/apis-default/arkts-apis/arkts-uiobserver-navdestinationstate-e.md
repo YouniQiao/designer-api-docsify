@@ -1,8 +1,6 @@
 # NavDestinationState
 
-NavDestination组件状态。
-
-@enum { number }
+NavDestination组件状态。@enum { number }
 
 **起始版本：** 23
 

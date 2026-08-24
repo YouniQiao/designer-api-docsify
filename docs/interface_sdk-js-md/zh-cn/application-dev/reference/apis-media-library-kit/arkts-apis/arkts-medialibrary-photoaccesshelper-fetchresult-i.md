@@ -608,9 +608,7 @@ getLastObject(): Promise<T>
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-获取文件检索结果中的下一个文件资产。使用callback异步回调。
-
-在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
+获取文件检索结果中的下一个文件资产。使用callback异步回调。在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
 
 **起始版本：** 23
 
@@ -688,9 +686,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getNextObject(): Promise<T>
 ```
 
-获取文件检索结果中的下一个文件资产。使用Promise异步回调。
-
-在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
+获取文件检索结果中的下一个文件资产。使用Promise异步回调。在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
 
 **起始版本：** 23
 

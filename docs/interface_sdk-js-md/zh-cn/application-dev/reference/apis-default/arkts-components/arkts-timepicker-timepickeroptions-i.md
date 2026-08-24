@@ -1,22 +1,10 @@
 # TimePickerOptions
 
-时间选择器组件的参数说明。
-
-在TimePicker组件滑动过程中修改TimePickerOptions中的属性，会导致这些属性无法生效。
-
-**Date**
-
-Date对象用于处理日期和时间，使用方式如下。
-
-**方式1：** new Date()
-
-获取系统当前日期和时间。
-
-**方式2：** new Date(value: number | string)
-
-**方式3：** new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number)
-
-@interface TimePickerOptions
+时间选择器组件的参数说明。在TimePicker组件滑动过程中修改TimePickerOptions中的属性，会导致这些属性无法生效。  
+**Date**Date对象用于处理日期和时间，使用方式如下。  
+**方式1：** new Date()获取系统当前日期和时间。  
+**方式2：** new Date(value: number | string)  
+**方式3：** new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number)@interface TimePickerOptions
 
 **起始版本：** 23
 
@@ -32,13 +20,10 @@ Date对象用于处理日期和时间，使用方式如下。
 end?: Date
 ```
 
-指定时间选择组件的结束时间。
-
-默认值：Date(0, 0, 0, 23, 59, 59)
-
+指定时间选择组件的结束时间。默认值：Date(0, 0, 0, 23, 59, 59)  
 **说明：**
-
-1. 仅设置的小时和分钟生效。 2. 设置了end且为非默认值的场景下，loop不生效。
+1. 仅设置的小时和分钟生效。
+2. 设置了end且为非默认值的场景下，loop不生效。
 
 **类型：** Date
 
@@ -58,9 +43,7 @@ end?: Date
 format?: TimePickerFormat
 ```
 
-指定需要显示的TimePicker的格式。
-
-默认值：TimePickerFormat.HOUR_MINUTE
+指定需要显示的TimePicker的格式。默认值：TimePickerFormat.HOUR_MINUTE
 
 **类型：** [TimePickerFormat](arkts-timepicker-timepickerformat-e.md)
 
@@ -82,11 +65,7 @@ format?: TimePickerFormat
 selected?: Date | Bindable<Date>
 ```
 
-设置选中项的时间。
-
-默认值：当前系统时间
-
-从API version 23开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync-static.md)双向绑定变量。
+设置选中项的时间。默认值：当前系统时间从API version 23开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync-static.md)双向绑定变量。
 
 **类型：** Date \| [Bindable](../arkts-apis/arkts-common-bindable-i.md)&lt;Date&gt;
 
@@ -106,13 +85,10 @@ selected?: Date | Bindable<Date>
 start?: Date
 ```
 
-指定时间选择组件的起始时间。
-
-默认值：Date(0, 0, 0, 0, 0, 0)
-
+指定时间选择组件的起始时间。默认值：Date(0, 0, 0, 0, 0, 0)  
 **说明：**
-
-1. 仅设置的小时和分钟生效。 2. 设置了start且为非默认值的场景下，loop不生效。
+1. 仅设置的小时和分钟生效。
+2. 设置了start且为非默认值的场景下，loop不生效。
 
 **类型：** Date
 

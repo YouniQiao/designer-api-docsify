@@ -2,3 +2,5 @@
     - [telephony_data.h](capi-telephony-data-h.md)
 - 模块
     - [Telephony](capi-telephony.md)
+- 结构体
+    - [Telephony_NetworkState](capi--telephony-networkstate.md)

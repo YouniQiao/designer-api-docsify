@@ -6,6 +6,8 @@ Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct SplitLayout--><!--Device-unnamed-export declare struct SplitLayout-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts.
 ## build
 
 ```TypeScript
-@Builder
-    build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## container
 
 ```TypeScript
-@BuilderParam
-    container: () => void
+container: () => void
 ```
 
 Container in the user-defined splitlayout display area.
@@ -49,6 +51,8 @@ Container in the user-defined splitlayout display area.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @BuilderParam
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SplitLayout-@BuilderParam    container: () => void--><!--Device-SplitLayout-@BuilderParam    container: () => void-End-->
@@ -58,8 +62,7 @@ Container in the user-defined splitlayout display area.
 ## mainImage
 
 ```TypeScript
-@State
-    mainImage: ResourceStr
+mainImage: ResourceStr
 ```
 
 Image in the layout.
@@ -70,6 +73,8 @@ Image in the layout.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @State
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SplitLayout-@State    mainImage: ResourceStr--><!--Device-SplitLayout-@State    mainImage: ResourceStr-End-->
@@ -79,8 +84,7 @@ Image in the layout.
 ## primaryText
 
 ```TypeScript
-@PropRef
-    primaryText: ResourceStr
+primaryText: ResourceStr
 ```
 
 Title text in the layout.
@@ -91,6 +95,8 @@ Title text in the layout.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SplitLayout-@PropRef    primaryText: ResourceStr--><!--Device-SplitLayout-@PropRef    primaryText: ResourceStr-End-->
@@ -100,8 +106,7 @@ Title text in the layout.
 ## secondaryText
 
 ```TypeScript
-@PropRef
-    secondaryText?: ResourceStr
+secondaryText?: ResourceStr
 ```
 
 Description text in the layout.
@@ -112,6 +117,8 @@ Description text in the layout.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @PropRef
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SplitLayout-@PropRef    secondaryText?: ResourceStr--><!--Device-SplitLayout-@PropRef    secondaryText?: ResourceStr-End-->
@@ -121,8 +128,7 @@ Description text in the layout.
 ## tertiaryText
 
 ```TypeScript
-@PropRef
-    tertiaryText?: ResourceStr
+tertiaryText?: ResourceStr
 ```
 
 Auxiliary text in the layout.
@@ -132,6 +138,8 @@ Auxiliary text in the layout.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @PropRef
 
 **Model restriction:** This API can be used only in the stage model.
 

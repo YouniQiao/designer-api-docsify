@@ -1,8 +1,6 @@
 # SourceType (System API)
 
-Enumerates the input source type.
-
-@enum { number }
+Enumerates the input source type.@enum { number }
 
 **Since:** 23
 

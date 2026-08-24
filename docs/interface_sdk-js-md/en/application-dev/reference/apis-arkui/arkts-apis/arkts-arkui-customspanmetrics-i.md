@@ -19,9 +19,7 @@ Defines the CustomSpanMetrics interface.
 height?: number
 ```
 
-Height of the custom span.
-
-Unit: vp
+Height of the custom span.Unit: vp
 
 **Type:** number
 
@@ -41,9 +39,7 @@ Unit: vp
 width: number
 ```
 
-Width of the custom span.
-
-Unit: vp
+Width of the custom span.Unit: vp
 
 **Type:** number
 

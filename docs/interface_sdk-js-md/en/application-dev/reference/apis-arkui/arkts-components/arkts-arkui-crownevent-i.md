@@ -39,9 +39,7 @@ Crown action.
 angularVelocity: number
 ```
 
-Angular velocity.
-
-Unit: deg/s
+Angular velocity.Unit: deg/s
 
 **Type:** number
 
@@ -61,11 +59,7 @@ Unit: deg/s
 degree: number
 ```
 
-Relative rotation angle.
-
-Unit: deg
-
-Value range: [-360, 360]
+Relative rotation angle.Unit: deg Value range: [-360, 360]
 
 **Type:** number
 
@@ -105,9 +99,7 @@ Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#even
 timestamp: number
 ```
 
-Timestamp.
-
-Unit: ns
+Timestamp.Unit: ns
 
 **Type:** number
 

@@ -16,6 +16,8 @@ export declare function Component3D(
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentBuilder
+
 <!--Device-unnamed-@ComponentBuilderexport declare function Component3D(    sceneOptions?: SceneOptions,    content_?: CustomBuilder,): Component3DAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Component3D(    sceneOptions?: SceneOptions,    content_?: CustomBuilder,): Component3DAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

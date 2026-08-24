@@ -1,8 +1,6 @@
 # BarState
 
-Used to set the status of the scroll bar.
-
-@enum { number }
+Used to set the status of the scroll bar.@enum { number }
 
 **起始版本：** 23
 

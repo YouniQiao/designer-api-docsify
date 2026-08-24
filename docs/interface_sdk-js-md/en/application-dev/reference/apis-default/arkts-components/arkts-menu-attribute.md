@@ -1,8 +1,6 @@
 # MenuAttribute
 
-Defines the Menu component attribute functions.
-
-@extends CommonMethod @interface MenuAttribute
+Defines the Menu component attribute functions.@extends CommonMethod @interface MenuAttribute
 
 **Inheritance/Implementation:** MenuAttribute extends CommonMethod
 

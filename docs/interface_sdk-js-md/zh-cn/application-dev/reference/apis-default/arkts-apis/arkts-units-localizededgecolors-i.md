@@ -1,10 +1,6 @@
 # LocalizedEdgeColors
 
-边框颜色，用于描述组件边框四条边的颜色。
-
-引入该对象时，至少传入一个参数。
-
-@interface LocalizedEdgeColors
+边框颜色，用于描述组件边框四条边的颜色。引入该对象时，至少传入一个参数。@interface LocalizedEdgeColors
 
 **起始版本：** 23
 
@@ -40,9 +36,7 @@ bottom?: ResourceColor
 end?: ResourceColor
 ```
 
-组件右边框颜色。
-
-从右至左显示语言模式下为组件左边框颜色。
+组件右边框颜色。从右至左显示语言模式下为组件左边框颜色。
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 
@@ -62,9 +56,7 @@ end?: ResourceColor
 start?: ResourceColor
 ```
 
-组件左边框颜色。
-
-从右至左显示语言模式下为组件右边框颜色。
+组件左边框颜色。从右至左显示语言模式下为组件右边框颜色。
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 

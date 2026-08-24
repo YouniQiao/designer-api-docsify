@@ -1,8 +1,6 @@
 # CommonShapeMethod
 
-CommonShapeMethod
-
-@extends CommonMethod
+CommonShapeMethod@extends CommonMethod
 
 **继承/实现关系：** CommonShapeMethod extends [CommonMethod](arkts-common-commonmethod-i.md)
 

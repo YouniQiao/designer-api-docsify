@@ -20,7 +20,7 @@ import { text } from '@kit.ArkGraphics2D';
 ascent: double
 ```
 
-Text ascent height, which refers to the distance from the baseline to the top of characters, in physical pixels ( px).
+Text ascent height, which refers to the distance from the baseline to the top of characters, in physical pixels (px).
 
 **Type:** double
 

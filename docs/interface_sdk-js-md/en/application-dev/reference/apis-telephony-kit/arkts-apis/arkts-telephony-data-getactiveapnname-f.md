@@ -12,8 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function getActiveApnName(): Promise<string>
 ```
 
-Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously.
-
+Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23

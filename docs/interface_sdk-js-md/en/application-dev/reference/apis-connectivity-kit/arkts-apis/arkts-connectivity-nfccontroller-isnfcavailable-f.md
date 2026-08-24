@@ -14,8 +14,7 @@ function isNfcAvailable(): boolean
 
 Checks whether the device supports NFC.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [canIUse("SystemCapability.Communication.NFC.Core")](../../../reference/common/init.md#caniuse) instead.
 

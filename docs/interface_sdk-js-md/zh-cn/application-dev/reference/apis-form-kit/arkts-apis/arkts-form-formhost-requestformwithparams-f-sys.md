@@ -29,7 +29,7 @@ function requestFormWithParams(formId: string, wantParams?: Record<string, Objec
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| wantParams | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 否 | 更新参数。 |
+| wantParams | Record&lt;string, Object&gt; | 否 | 更新参数。 |
 
 **返回值：**
 

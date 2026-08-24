@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
-import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## openScreenRefreshRateSettingsPage

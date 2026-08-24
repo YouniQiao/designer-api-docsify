@@ -33,13 +33,13 @@ import { media } from '@kit.MediaKit';
 | [AVDataSrcDescriptor](arkts-media-multimedia-media-avdatasrcdescriptor-i.md) | Defines the descriptor of an audio and video file, which is used in DataSource playback mode. Use scenario: An application can create a playback instance and start playback before it finishes downloading the audio and video resources. |
 | [AVDownloaderManager](arkts-media-multimedia-media-avdownloadermanager-i.md) | 离线下载任务管理接口，用于管理媒体资源的离线下载任务，包括创建、暂停、恢复、移除下载任务以及监听下载状态和进度变化事件。 |
 | [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md) | Media file descriptor. The caller needs to ensure that the fd is valid and the offset and length are correct. |
-| [AVRecorder](arkts-media-multimedia-media-avrecorder-i.md) | AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。 适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。 在调用AVRecorder的方法前，需要先调用 [createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。 典型录制流程： [createAVRecorder](arkts-media-media-createavrecorder-f.md) → prepare → getInputSurface（纯视频/音视频录制时） → start → pause/ resume → stop → release。 |
-| [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md) | 音视频录制的参数。 |
+| [AVRecorder](arkts-media-multimedia-media-avrecorder-i.md) | AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。 适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。 在调用AVRecorder的方法前，需要先调用 [createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。 典型录制流程： [createAVRecorder](arkts-media-media-createavrecorder-f.md) → prepare → getInputSurface（纯视频/音视频录制时） → start → pause/ resume → stop → release。音视频录制示例可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、 [视频录制开发指导](../../../media/media/video-recording.md)。 |
+| [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md) | 音视频录制的参数。audioSourceType和videoSourceType参数用于区分纯音频录制、纯视频录制和音视频录制。纯音频录制仅设置audioSourceType。纯视频录制仅设置videoSourceType。音视频录制需同时设置audioSourceType和videoSourceType。 |
 | [AVRecorderProfile](arkts-media-multimedia-media-avrecorderprofile-i.md) | 音视频录制配置参数。 |
 | [AVScreenCaptureRecordConfig](arkts-media-multimedia-media-avscreencapturerecordconfig-i.md) | Defines the screen capture parameters. |
 | [AVScreenCaptureRecorder](arkts-media-multimedia-media-avscreencapturerecorder-i.md) | 屏幕录制管理类，用于进行屏幕录制。在调用AVScreenCaptureRecorder的方法前，需要先通过 [createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md)创建一个 AVScreenCaptureRecorder实例。 |
 | [AVScreenCaptureStrategy](arkts-media-multimedia-media-avscreencapturestrategy-i.md) | Provides the media AVScreenCaptureStrategy definition. |
-| [AVTranscoder](arkts-media-multimedia-media-avtranscoder-i.md) | 视频转码管理类，用于视频转码。在调用AVTranscoder的方法前，需要先通过 [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md)构建一个AVTranscoder实例。 |
+| [AVTranscoder](arkts-media-multimedia-media-avtranscoder-i.md) | 视频转码管理类，用于视频转码。在调用AVTranscoder的方法前，需要先通过 [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md)构建一个AVTranscoder实例。视频转码demo可参考：[视频转码开发指导](../../../media/media/using-avtranscoder-for-transcodering.md) |
 | [AVTranscoderConfig](arkts-media-multimedia-media-avtranscoderconfig-i.md) | Describes the video transcoding parameters. |
 | [EncoderInfo](arkts-media-multimedia-media-encoderinfo-i.md) | 编码器信息描述。 |
 | [Location](arkts-media-multimedia-media-location-i.md) | Provides the geographical location definitions for media resources. |
@@ -60,8 +60,8 @@ import { media } from '@kit.MediaKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AVRecorder](arkts-media-multimedia-media-avrecorder-i-sys.md) | AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。 适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。 在调用AVRecorder的方法前，需要先调用 [createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。 典型录制流程： [createAVRecorder](arkts-media-media-createavrecorder-f.md) → prepare → getInputSurface（纯视频/音视频录制时） → start → pause/ resume → stop → release。 |
-| [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i-sys.md) | 音视频录制的参数。 |
+| [AVRecorder](arkts-media-multimedia-media-avrecorder-i-sys.md) | AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。 适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。 在调用AVRecorder的方法前，需要先调用 [createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。 典型录制流程： [createAVRecorder](arkts-media-media-createavrecorder-f.md) → prepare → getInputSurface（纯视频/音视频录制时） → start → pause/ resume → stop → release。音视频录制示例可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、 [视频录制开发指导](../../../media/media/video-recording.md)。 |
+| [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i-sys.md) | 音视频录制的参数。audioSourceType和videoSourceType参数用于区分纯音频录制、纯视频录制和音视频录制。纯音频录制仅设置audioSourceType。纯视频录制仅设置videoSourceType。音视频录制需同时设置audioSourceType和videoSourceType。 |
 | [AVRecorderProfile](arkts-media-multimedia-media-avrecorderprofile-i-sys.md) | 音视频录制配置参数。 |
 | [AVScreenCaptureStrategy](arkts-media-multimedia-media-avscreencapturestrategy-i-sys.md) | Provides the media AVScreenCaptureStrategy definition. |
 | [PlaybackStrategy](arkts-media-multimedia-media-playbackstrategy-i-sys.md) | Provides preferred playback settings for player. |
@@ -98,7 +98,7 @@ import { media } from '@kit.MediaKit';
 | [PlaybackSpeed](arkts-media-multimedia-media-playbackspeed-e.md) | 视频播放的倍速枚举，可通过setSpeed方法作为参数传递下去。 |
 | [PlaylistLoopMode](arkts-media-multimedia-media-playlistloopmode-e.md) | 表示播放列表循环模式的枚举。 |
 | [SeekMode](arkts-media-multimedia-media-seekmode-e.md) | 视频播放的Seek模式枚举，可通过seek方法作为参数传递下去。 |
-| [SwitchMode](arkts-media-multimedia-media-switchmode-e.md) | 表示视频播放的selectTrack模式枚举。 |
+| [SwitchMode](arkts-media-multimedia-media-switchmode-e.md) | 表示视频播放的selectTrack模式枚举。可通过selectTrack方法作为参数传递下去，当前DASH/HLS协议视频轨均支持该扩展参数（从API版本26.0.0开始HLS协议视频轨支持该扩展参数）。 |
 | [VideoScaleType](arkts-media-multimedia-media-videoscaletype-e.md) | 枚举，视频缩放模式。 |
 | [VideoSourceType](arkts-media-multimedia-media-videosourcetype-e.md) | 表示视频录制中视频源类型的枚举。 |
 
@@ -118,7 +118,7 @@ import { media } from '@kit.MediaKit';
 | [AudioState](arkts-media-audiostate-t.md) | 音频播放的状态机。可通过state属性获取当前状态。 |
 | [AVDownloadTaskState](arkts-media-avdownloadtaskstate-t.md) | 离线下载任务状态枚举。 |
 | [AVRecorderState](arkts-media-avrecorderstate-t.md) | 音视频录制的状态机。可通过state属性获取当前状态。 |
-| [MediaDescription](arkts-media-mediadescription-t.md) | Provides the container definition for media description key-value pairs. |
+| [MediaDescription](arkts-media-mediadescription-t.md) | Provides the container definition for media description key-value pairs.The media description consists of key-value pairs where keys reference @MediaDescriptionKey. |
 | [OnAVDownloadProgressChangeHandle](arkts-media-onavdownloadprogresschangehandle-t.md) | 离线下载任务进度变化事件回调方法。当下载进度相比上次变化超过1%，且距上次触发时间超过500ms时，触发该事件。 |
 | [OnAVDownloadTaskStateHandle](arkts-media-onavdownloadtaskstatehandle-t.md) | 离线下载任务状态变化事件回调方法。 |
 | [OnAVRecorderStateChangeHandler](arkts-media-onavrecorderstatechangehandler-t.md) | 录制状态机切换事件回调方法。 |

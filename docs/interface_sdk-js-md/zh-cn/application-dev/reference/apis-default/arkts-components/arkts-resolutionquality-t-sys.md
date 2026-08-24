@@ -4,9 +4,7 @@
 export type ResolutionQuality = image.ResolutionQuality
 ```
 
-type ResolutionQuality = image.ResolutionQuality;
-
-画质效果等级类型。
+type ResolutionQuality = image.ResolutionQuality;画质效果等级类型。
 
 **起始版本：** 23
 

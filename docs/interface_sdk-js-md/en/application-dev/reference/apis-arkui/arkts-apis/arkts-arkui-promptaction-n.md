@@ -2,12 +2,10 @@
 
 This module provides API for creating and displaying toasts, dialog boxes, and action menus.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md). In
 > other words, the APIs of this module can be used only after a component instance is created; they cannot be called
-> in the lifecycle of the UIAbility.
-> 
+> in the lifecycle of the UIAbility.&gt;
 > - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
 > where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
 > [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md). It is recommended that you use the dialog box APIs provided by
@@ -37,7 +35,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 | [closeToast](arkts-arkui-promptaction-closetoast-f.md) | Closes the specified toast. |
 | [showDialog](arkts-arkui-promptaction-showdialog-f.md) | Creates and displays a dialog box. This API uses an asynchronous callback to return the result. |
 | [showDialog](arkts-arkui-promptaction-showdialog-f.md) | Creates and displays a dialog box in the given settings. This API uses a promise to return the result. |
-| [openCustomDialog](arkts-arkui-promptaction-opencustomdialog-f.md) | Opens a custom dialog box. This API uses a promise to return the result. |
+| [openCustomDialog](arkts-arkui-promptaction-opencustomdialog-f.md) | Opens a custom dialog box. This API uses a promise to return the result.<!--Del-->This API cannot be used in **ServiceExtension**.<!--DelEnd-->By default, the width of the dialog box in portrait mode is the width of the window where it is located minus the left and right margins (40 vp for 2-in-1 devices and 16 vp for other devices), and the maximum width is 400 vp. |
 | [closeCustomDialog](arkts-arkui-promptaction-closecustomdialog-f.md) | Closes the specified custom dialog box. |
 | [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md) | Creates and displays an action menu. This API uses an asynchronous callback to return the result. |
 | [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md) | Creates and displays an action menu in the given settings. This API uses a promise to return the result. |
@@ -47,7 +45,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [CommonController](arkts-arkui-promptaction-commoncontroller-c.md) | Implements a common controller for managing components related to **promptAction**. |
-| [DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | Implements a custom dialog controller that inherits from [CommonController](arkts-arkui-promptaction-commoncontroller-c.md). |
+| [DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | Implements a custom dialog controller that inherits from [CommonController](arkts-arkui-promptaction-commoncontroller-c.md).It can be used as a member variable of **UIContext** to display custom dialog boxes. For specific usage, see the examples for [openCustomDialogWithController](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#opencustomdialogwithcontroller) and [presentCustomDialog](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#presentcustomdialog). |
 
 ### Interfaces
 
@@ -77,7 +75,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e.md) | Enumerates display modes for toasts. By default, the toast is displayed within the application and supports display in subwindows. |
+| [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e.md) | Enumerates display modes for toasts. By default, the toast is displayed within the application and supports display in subwindows.@enum { number } |
 | [CommonState](arkts-arkui-promptaction-commonstate-e.md) | Enumerates states of the custom dialog box. |
 
 <!--Del-->
@@ -85,7 +83,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e-sys.md) | Enumerates display modes for toasts. By default, the toast is displayed within the application and supports display in subwindows. |
+| [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e-sys.md) | Enumerates display modes for toasts. By default, the toast is displayed within the application and supports display in subwindows.@enum { number } |
 <!--DelEnd-->
 
 ### Types

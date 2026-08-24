@@ -14,9 +14,7 @@ Enumerates the types of changes that trigger the media asset or album change eve
 NOTIFY_CHANGE_YUV_READY = 3
 ```
 
-A high-quality image is ready in deferred photo delivery scenarios.
-
-Image quality metrics such as sharpness and color accuracy can be checked in the [OnDataPrepared](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md#ondataprepared) callback.
+A high-quality image is ready in deferred photo delivery scenarios.Image quality metrics such as sharpness and color accuracy can be checked in the [OnDataPrepared](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md#ondataprepared) callback.
 
 **Since:** 23
 

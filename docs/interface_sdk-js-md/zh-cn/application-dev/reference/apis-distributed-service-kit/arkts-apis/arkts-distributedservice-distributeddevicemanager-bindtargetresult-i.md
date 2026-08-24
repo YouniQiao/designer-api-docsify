@@ -1,8 +1,6 @@
 # BindTargetResult
 
-认证设备结果信息。
-
-@interface BindTargetResult
+认证设备结果信息。@interface BindTargetResult
 
 **起始版本：** 23
 

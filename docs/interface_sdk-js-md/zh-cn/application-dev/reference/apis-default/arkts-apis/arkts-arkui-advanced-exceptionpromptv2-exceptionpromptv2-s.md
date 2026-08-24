@@ -6,6 +6,8 @@ Declare struct ExceptionPromptV2 higher-order component. The exception prompt co
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @ComponentV2
+
 <!--Device-unnamed-export declare struct ExceptionPromptV2--><!--Device-unnamed-export declare struct ExceptionPromptV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declare struct ExceptionPromptV2 higher-order component. The exception prompt co
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +40,7 @@ The method to build component.
 ## onActionTextClick
 
 ```TypeScript
-@Event
-  onActionTextClick?: OnActionTextClickCallback
+onActionTextClick?: OnActionTextClickCallback
 ```
 
 Callback invoked when the icon on the right is clicked.
@@ -49,6 +51,8 @@ Callback invoked when the icon on the right is clicked.
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Event
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExceptionPromptV2-@Event  onActionTextClick?: OnActionTextClickCallback--><!--Device-ExceptionPromptV2-@Event  onActionTextClick?: OnActionTextClickCallback-End-->
@@ -58,8 +62,7 @@ Callback invoked when the icon on the right is clicked.
 ## onTipClick
 
 ```TypeScript
-@Event
-  onTipClick?: OnTipClickCallback
+onTipClick?: OnTipClickCallback
 ```
 
 Callback invoked when the prompt text on the left is clicked.
@@ -70,6 +73,8 @@ Callback invoked when the prompt text on the left is clicked.
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
+**装饰器类型：** @Event
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExceptionPromptV2-@Event  onTipClick?: OnTipClickCallback--><!--Device-ExceptionPromptV2-@Event  onTipClick?: OnTipClickCallback-End-->
@@ -79,8 +84,7 @@ Callback invoked when the prompt text on the left is clicked.
 ## options
 
 ```TypeScript
-@Param
-  options: PromptOptionsV2
+options: PromptOptionsV2
 ```
 
 ExceptionPromptV2 configuration.
@@ -90,6 +94,8 @@ ExceptionPromptV2 configuration.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**装饰器类型：** @Param
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

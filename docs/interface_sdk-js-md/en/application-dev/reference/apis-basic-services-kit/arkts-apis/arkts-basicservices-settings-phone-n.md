@@ -1,8 +1,6 @@
 # phone
 
-Provides methods for setting the answering mode of incoming and outgoing calls.
-
-@namespace phone
+Provides methods for setting the answering mode of incoming and outgoing calls.@namespace phone
 
 **Since:** 23
 
@@ -14,7 +12,6 @@ Provides methods for setting the answering mode of incoming and outgoing calls.
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
-import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

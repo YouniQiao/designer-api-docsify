@@ -1,8 +1,6 @@
 # @ohos.web.webview
 
-This module provides the capability to manage web modules.
-
-@namespace webview
+This module provides the capability to manage web modules.@namespace webview
 
 **Since:** 23
 
@@ -32,7 +30,7 @@ This module provides the capability to manage web modules.
 | [AdsBlockManager](arkts-webview-adsblockmanager-c.md) | This class is used to set adblock config. |
 | [BackForwardCacheOptions](arkts-webview-backforwardcacheoptions-c.md) | This class is used to set back forward cache options. |
 | [BackForwardCacheSupportedFeatures](arkts-webview-backforwardcachesupportedfeatures-c.md) | This class is used to enable back forward cache supported features. |
-| [GeolocationPermissions](arkts-webview-geolocationpermissions-c.md) | Implements a GeolocationPermissions object. |
+| [GeolocationPermissions](arkts-webview-geolocationpermissions-c.md) | Implements a GeolocationPermissions object.<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in GeolocationPermissions. </p> |
 | [JsMessageExt](arkts-webview-jsmessageext-c.md) | The message for indicating the of result of JavaScript code execution. |
 | [MediaSourceInfo](arkts-webview-mediasourceinfo-c.md) | Implements a **MediaSourceInfo** object to provide the information about the media source. |
 | [NativeMediaPlayerSurfaceInfo](arkts-webview-nativemediaplayersurfaceinfo-c.md) | Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface information used for same-layer rendering [when the application takes over the media playback of the web page] (../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12). |
@@ -62,9 +60,9 @@ This module provides the capability to manage web modules.
 | Name | Description |
 | --- | --- |
 | [BackForwardList](arkts-webview-backforwardlist-i.md) | Provides back and forward history list information method. related to [HistoryItem](arkts-webview-historyitem-i.md). |
-| [BlanklessFrameInterpolationInfo](arkts-webview-blanklessframeinterpolationinfo-i.md) | Defines the frame interpolation information. |
+| [BlanklessFrameInterpolationInfo](arkts-webview-blanklessframeinterpolationinfo-i.md) | Defines the frame interpolation information.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. |
 | [BlanklessInfo](arkts-webview-blanklessinfo-i.md) | Defines the blankless information. |
-| [BlanklessLoadingParam](arkts-webview-blanklessloadingparam-i.md) | Defines the blankless loading parameter. |
+| [BlanklessLoadingParam](arkts-webview-blanklessloadingparam-i.md) | Defines the blankless loading parameter.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. |
 | [CacheOptions](arkts-webview-cacheoptions-i.md) | Options of generating code cache |
 | [HistoryItem](arkts-webview-historyitem-i.md) | Provides information for history item in BackForwardList. |
 | [HitTestValue](arkts-webview-hittestvalue-i.md) | Provides element information of the click area. related to [getLastHitTest](arkts-webview-webviewcontroller-c.md#getlasthittest) method. |
@@ -90,8 +88,8 @@ This module provides the capability to manage web modules.
 | Name | Description |
 | --- | --- |
 | [ArkWebEngineVersion](arkts-webview-arkwebengineversion-e.md) | For details about the ArkWeb kernel version, see [Adaptation Guide for the M114 Kernel on OpenHarmony 6.0](https://gitcode.com/openharmony-tpc/chromium_src/blob/132_trunk/web/ReleaseNote/CompatibleWithLegacyWebEngine.md) |
-| [BlanklessFrameInterpolationState](arkts-webview-blanklessframeinterpolationstate-e.md) | Enumerates the frame interpolation states. |
-| [ControllerAttachState](arkts-webview-controllerattachstate-e.md) | Enum type supplied to [getAttachState](arkts-webview-webviewcontroller-c.md#getattachstate) for indicating the attach state of controller. |
+| [BlanklessFrameInterpolationState](arkts-webview-blanklessframeinterpolationstate-e.md) | Enumerates the frame interpolation states.&lt;strong&gt;ArkWeb Dual Web Engine Versioning Convention&lt;/strong&gt;: <p>See [ArkWeb Dual Web Engine Versioning Convention] for switching between Legacy and Evergreen Web Engine.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.@enum { number } |
+| [ControllerAttachState](arkts-webview-controllerattachstate-e.md) | Enum type supplied to [getAttachState](arkts-webview-webviewcontroller-c.md#getattachstate) for indicating the attach state of controller.@enum { number } |
 | [JsMessageType](arkts-webview-jsmessagetype-e.md) | Enum type supplied to [runJavaScriptExt](arkts-webview-webviewcontroller-c.md#runjavascriptext) for indicating the result of JavaScript code execution. @enum {number} |
 | [MediaError](arkts-webview-mediaerror-e.md) | Enumerates the error types of the player. |
 | [MediaPlaybackState](arkts-webview-mediaplaybackstate-e.md) | Enumerates the playback states on the current web page. |
@@ -103,22 +101,22 @@ This module provides the capability to manage web modules.
 | [PressureLevel](arkts-webview-pressurelevel-e.md) | Enumerates the memory pressure levels. When an application clears the cache occupied by the **Web** component, the **Web** kernel releases the cache based on the memory pressure level. |
 | [ProxySchemeFilter](arkts-webview-proxyschemefilter-e.md) | Enum type supplied to [insertProxyRule](arkts-webview-proxyconfig-c.md#insertproxyrule) for indicating the scheme filter for proxy. @enum { number } |
 | [ReadyState](arkts-webview-readystate-e.md) | Enumerates the cache states of the player. |
-| [RenderProcessMode](arkts-webview-renderprocessmode-e.md) | Defines the render process mode. |
+| [RenderProcessMode](arkts-webview-renderprocessmode-e.md) | Defines the render process mode.@enum {number} |
 | [ScrollbarMode](arkts-webview-scrollbarmode-e.md) | Enum type supplied to [setScrollbarMode](arkts-webview-webviewcontroller-c.md#setscrollbarmode) for indicating the web component scrollbar mode. |
 | [ScrollType](arkts-webview-scrolltype-e.md) | Enum type supplied to [setScrollable](arkts-webview-webviewcontroller-c.md#setscrollable) for indicating the type of scroll. |
 | [SecureDnsMode](arkts-webview-securednsmode-e.md) | Defines the mode for using HttpDns. @enum {number} |
-| [SecurityLevel](arkts-webview-securitylevel-e.md) | Defines the security level for the page. |
+| [SecurityLevel](arkts-webview-securitylevel-e.md) | Defines the security level for the page.@enum {number} |
 | [SiteIsolationMode](arkts-webview-siteisolationmode-e.md) | Indicates the site isolation mode of the application, default value depends on different devices type. @enum {number} |
 | [SourceType](arkts-webview-sourcetype-e.md) | Enumerates the media source types. |
 | [SuspendType](arkts-webview-suspendtype-e.md) | Enumerates the suspension types of the player. |
-| [UserAgentFormFactor](arkts-webview-useragentformfactor-e.md) | The form factors for User-Agent metadata. |
-| [WebBlanklessErrorCode](arkts-webview-webblanklesserrorcode-e.md) | Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](arkts-webview-webviewcontroller-c.md#setblanklessloadingwithkey) or [BlanklessInfo](arkts-webview-blanklessinfo-i.md). |
+| [UserAgentFormFactor](arkts-webview-useragentformfactor-e.md) | The form factors for User-Agent metadata.@enum { string } |
+| [WebBlanklessErrorCode](arkts-webview-webblanklesserrorcode-e.md) | Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](arkts-webview-webviewcontroller-c.md#setblanklessloadingwithkey) or [BlanklessInfo](arkts-webview-blanklessinfo-i.md).@enum { number } |
 | [WebDestroyMode](arkts-webview-webdestroymode-e.md) | Enum type supplied to SetWebDestroyMode for indicating the web component destroy mode. @enum { number } |
 | [WebDownloadErrorCode](arkts-webview-webdownloaderrorcode-e.md) | Defines the error code for download. @enum {number} |
 | [WebDownloadState](arkts-webview-webdownloadstate-e.md) | Defines the state for download. @enum {number} |
 | [WebHitTestType](arkts-webview-webhittesttype-e.md) | Enum type supplied to [getHitTest](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#gethittest) for indicating the cursor node HitTest. |
-| [WebHttpCookieSameSitePolicy](arkts-webview-webhttpcookiesamesitepolicy-e.md) | Indicates whether to restrict cookies so that only requests sent back to the same site that created them can carry them. |
-| [WebMessageType](arkts-webview-webmessagetype-e.md) | Enum type supplied to [onMessageEventExt](arkts-webview-webmessageport-i.md#onmessageeventext) for indicating the type of web message. |
+| [WebHttpCookieSameSitePolicy](arkts-webview-webhttpcookiesamesitepolicy-e.md) | Indicates whether to restrict cookies so that only requests sent back to the same site that created them can carry them.@enum { number } |
+| [WebMessageType](arkts-webview-webmessagetype-e.md) | Enum type supplied to [onMessageEventExt](arkts-webview-webmessageport-i.md#onmessageeventext) for indicating the type of web message.@enum {number} |
 | [WebResourceType](arkts-webview-webresourcetype-e.md) | Defines the resource type of request. @enum {number} |
 | [WebSoftKeyboardBehaviorMode](arkts-webview-websoftkeyboardbehaviormode-e.md) | Indicates the keyboard behavior mode of the web component, default value is DEFAULT. @enum {int} |
 

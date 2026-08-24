@@ -12,8 +12,7 @@ import { radio } from '@kit.TelephonyKit';
 function getNetworkState(slotId: int, callback: AsyncCallback<NetworkState>): void
 ```
 
-Obtains the network status of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
-
+Obtains the network status of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
@@ -87,8 +86,7 @@ radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
 function getNetworkState(slotId?: int): Promise<NetworkState>
 ```
 
-Obtains the network status of the SIM card in the specified slot. This API uses a promise to return the result.
-
+Obtains the network status of the SIM card in the specified slot. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
@@ -133,8 +131,7 @@ See [getNetworkState](#getnetworkstate)
 function getNetworkState(callback: AsyncCallback<NetworkState>): void
 ```
 
-Obtains the network status. This API uses an asynchronous callback to return the result.
-
+Obtains the network status. This API uses an asynchronous callback to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23

@@ -1,8 +1,6 @@
 # LongPressRecognizer
 
-Defines the long press gesture recognizer.
-
-@extends GestureRecognizer
+Defines the long press gesture recognizer.@extends GestureRecognizer
 
 **Inheritance/Implementation:** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md)
 

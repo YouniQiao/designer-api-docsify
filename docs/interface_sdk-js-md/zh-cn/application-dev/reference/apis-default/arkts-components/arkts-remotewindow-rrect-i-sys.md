@@ -1,8 +1,6 @@
 # RRect（系统接口）
 
-圆角矩形。
-
-@interface RRect
+圆角矩形。@interface RRect
 
 **起始版本：** 23
 

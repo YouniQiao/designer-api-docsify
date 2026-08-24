@@ -16,9 +16,7 @@ ButtonStyle icons.
 hidden: string | PixelMap | Resource
 ```
 
-Defines whether an icon is hidden.
-
-Anonymous Object Rectification.
+Defines whether an icon is hidden.Anonymous Object Rectification.
 
 **Type:** string \| [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -38,9 +36,7 @@ Anonymous Object Rectification.
 shown: string | PixelMap | Resource
 ```
 
-Defines whether an icon is shown.
-
-Anonymous Object Rectification.
+Defines whether an icon is shown.Anonymous Object Rectification.
 
 **Type:** string \| [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -60,9 +56,7 @@ Anonymous Object Rectification.
 switching?: string | PixelMap | Resource
 ```
 
-Defines whether an icon is switching.
-
-Anonymous Object Rectification.
+Defines whether an icon is switching.Anonymous Object Rectification.
 
 **Type:** string \| [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 

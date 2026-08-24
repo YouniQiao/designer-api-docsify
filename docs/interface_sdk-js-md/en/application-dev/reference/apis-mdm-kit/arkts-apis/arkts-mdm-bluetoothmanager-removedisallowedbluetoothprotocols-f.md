@@ -71,11 +71,9 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 
 Removes Bluetooth protocols from the blocklist. After the setting, specified users are no longer restricted by the transfer policy and can properly use these Bluetooth protocols.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > 1. When the SPP protocol is passed, the value of the **policy** parameter can only be
-> **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
-> 
+> **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.&gt;
 > 2. This API and
 > [removeDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#removedisallowedbluetoothprotocols) are
 > overloaded APIs. This API adds the **policy** parameter to remove the disallowing configuration based on the

@@ -14,8 +14,7 @@ function setEventHubMultithreadingEnabled(context: common.Context, enabled: bool
 
 Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md) in Context.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - When multiple Context objects communicate, you need to call this API to set each Context object to support
 > EventHub cross-thread data transfer.
 

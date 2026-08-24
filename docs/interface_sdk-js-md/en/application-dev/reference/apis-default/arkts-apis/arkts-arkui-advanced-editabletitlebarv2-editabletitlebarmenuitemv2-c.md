@@ -6,6 +6,8 @@ Declaration of the menu item on the right side.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class EditableTitleBarMenuItemV2--><!--Device-unnamed-export declare class EditableTitleBarMenuItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ Constructor of EditableTitleBarMenuItemV2.
 ## accessibilityDescription
 
 ```TypeScript
-@Trace
-  public accessibilityDescription?: ResourceStr
+public accessibilityDescription?: ResourceStr
 ```
 
 Accessibility description.
@@ -54,6 +55,8 @@ Accessibility description.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
@@ -63,8 +66,7 @@ Accessibility description.
 ## accessibilityLevel
 
 ```TypeScript
-@Trace
-  public accessibilityLevel: string
+public accessibilityLevel: string
 ```
 
 Accessibility level, options: 'auto', 'yes', 'no'.
@@ -77,6 +79,8 @@ Accessibility level, options: 'auto', 'yes', 'no'.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityLevel: string--><!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityLevel: string-End-->
@@ -86,8 +90,7 @@ Accessibility level, options: 'auto', 'yes', 'no'.
 ## accessibilityText
 
 ```TypeScript
-@Trace
-  public accessibilityText?: ResourceStr
+public accessibilityText?: ResourceStr
 ```
 
 Accessibility text for screen reader.
@@ -98,6 +101,8 @@ Accessibility text for screen reader.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityText?: ResourceStr-End-->
@@ -107,8 +112,7 @@ Accessibility text for screen reader.
 ## action
 
 ```TypeScript
-@Trace
-  public action?: OnActionCallback
+public action?: OnActionCallback
 ```
 
 Callback function when click on this menu item.
@@ -119,6 +123,8 @@ Callback function when click on this menu item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public action?: OnActionCallback--><!--Device-EditableTitleBarMenuItemV2-@Trace  public action?: OnActionCallback-End-->
@@ -128,8 +134,7 @@ Callback function when click on this menu item.
 ## defaultFocus
 
 ```TypeScript
-@Trace
-  public defaultFocus: boolean
+public defaultFocus: boolean
 ```
 
 Whether to get focus by default.
@@ -142,6 +147,8 @@ Whether to get focus by default.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public defaultFocus: boolean--><!--Device-EditableTitleBarMenuItemV2-@Trace  public defaultFocus: boolean-End-->
@@ -151,8 +158,7 @@ Whether to get focus by default.
 ## isEnabled
 
 ```TypeScript
-@Trace
-  public isEnabled: boolean
+public isEnabled: boolean
 ```
 
 Whether to enable this menu item.
@@ -165,6 +171,8 @@ Whether to enable this menu item.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public isEnabled: boolean--><!--Device-EditableTitleBarMenuItemV2-@Trace  public isEnabled: boolean-End-->
@@ -174,8 +182,7 @@ Whether to enable this menu item.
 ## label
 
 ```TypeScript
-@Trace
-  public label?: ResourceStr
+public label?: ResourceStr
 ```
 
 Label text for long press dialog.
@@ -186,6 +193,8 @@ Label text for long press dialog.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public label?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-@Trace  public label?: ResourceStr-End-->
@@ -195,8 +204,7 @@ Label text for long press dialog.
 ## symbolStyle
 
 ```TypeScript
-@Trace
-  public symbolStyle?: SymbolGlyphModifier
+public symbolStyle?: SymbolGlyphModifier
 ```
 
 Symbol icon style modifier.
@@ -207,6 +215,8 @@ Symbol icon style modifier.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTitleBarMenuItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier--><!--Device-EditableTitleBarMenuItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier-End-->
@@ -216,8 +226,7 @@ Symbol icon style modifier.
 ## value
 
 ```TypeScript
-@Trace
-  public value: ResourceStr
+public value: ResourceStr
 ```
 
 Icon resource, supports Symbol or Image.
@@ -229,6 +238,8 @@ Icon resource, supports Symbol or Image.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

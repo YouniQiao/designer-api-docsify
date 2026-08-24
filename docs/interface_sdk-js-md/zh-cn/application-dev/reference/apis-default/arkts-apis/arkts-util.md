@@ -1,8 +1,6 @@
 # @ohos.util
 
-util模块提供常用工具函数， 如用于字符串编码和解码的TextEncoder和TextDecoder， 用于有理数运算的RationalNumber8+， 用于缓存管理的LRUCache9+， 用于范围判定的ScopeHelper9+， 用于Base64编码和解码的Base64Helper9+， 用于内置对象类型检查的types8+， 以及方法的替代实现。
-
-@namespace util
+util模块提供常用工具函数， 如用于字符串编码和解码的TextEncoder和TextDecoder， 用于有理数运算的RationalNumber8+， 用于缓存管理的LRUCache9+， 用于范围判定的ScopeHelper9+， 用于Base64编码和解码的Base64Helper9+， 用于内置对象类型检查的types8+， 以及方法的替代实现。@namespace util
 
 **起始版本：** 23
 
@@ -50,16 +48,16 @@ util模块提供常用工具函数， 如用于字符串编码和解码的TextEn
 
 | 名称 | 说明 |
 | --- | --- |
-| [DecodeToStringOptions](arkts-util-decodetostringoptions-i.md) | Defines the decode with stream related options parameters. |
-| [EncodeIntoUint8ArrayInfo](arkts-util-encodeintouint8arrayinfo-i.md) | Return encoded text. |
-| [ScopeComparable](arkts-util-scopecomparable-i.md) | The ScopeComparable contains comparison methods. |
-| [TextDecoderOptions](arkts-util-textdecoderoptions-i.md) | Defines the TextDecoder related options parameters. |
+| [DecodeToStringOptions](arkts-util-decodetostringoptions-i.md) | Defines the decode with stream related options parameters.@interface DecodeToStringOptions |
+| [EncodeIntoUint8ArrayInfo](arkts-util-encodeintouint8arrayinfo-i.md) | Return encoded text.@interface EncodeIntoUint8ArrayInfo |
+| [ScopeComparable](arkts-util-scopecomparable-i.md) | The ScopeComparable contains comparison methods.@interface ScopeComparable |
+| [TextDecoderOptions](arkts-util-textdecoderoptions-i.md) | Defines the TextDecoder related options parameters.@interface TextDecoderOptions |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [Type](arkts-util-type-e.md) | Type表示base64的四种不同编码格式。 |
+| [Type](arkts-util-type-e.md) | Type表示base64的四种不同编码格式。@enum { number } Type |
 
 ### 类型
 

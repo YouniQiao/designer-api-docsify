@@ -2,11 +2,9 @@
 
 ScreenCaptureHandler 是 Web 组件提供的屏幕捕获权限处理类，用于响应网页发起的屏幕捕获请求。该类适用于在线教育、远程会议、屏幕录制等需要获取用户屏幕内容的应用场景。该类允许开发者通过 grant 或 deny 方法控制是否授予网页屏幕捕获权限，并通过 getOrigin 方法获取请求来源信息，帮助开发者在保护用户隐私的同时，灵活处理网页的屏幕捕获访问需求，提升应用的安全性和用户体验。示例代码参考 [onScreenCaptureRequest](arkts-arkweb-web-attribute.md#onscreencapturerequest)事件。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - [grant](#grant)()与 [deny](#deny)() 方法互斥，对同一个
-> ScreenCaptureHandler 实例的同一请求只能调用其中一个。
-> 
+> ScreenCaptureHandler 实例的同一请求只能调用其中一个。&gt;
 > - 调用后不应再对同一请求调用另一个方法。
 
 **起始版本：** 10
@@ -18,11 +16,6 @@ ScreenCaptureHandler 是 Web 组件提供的屏幕捕获权限处理类，用于
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## constructor

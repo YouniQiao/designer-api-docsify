@@ -1,8 +1,6 @@
 # WordBreak
 
-Enum of word break
-
-@enum { number }
+Enum of word break@enum { number }
 
 **Since:** 23
 

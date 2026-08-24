@@ -6,6 +6,8 @@ Declare ComposeListItem
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @Component
+
 <!--Device-unnamed-export declare struct ComposeListItem--><!--Device-unnamed-export declare struct ComposeListItem-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declare ComposeListItem
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @Builder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +40,7 @@ The method to build component.
 ## contentItem
 
 ```TypeScript
-@PropRef
-  contentItem?: ContentItem
+contentItem?: ContentItem
 ```
 
 The ContentItem.
@@ -49,6 +51,8 @@ The ContentItem.
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @PropRef
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ComposeListItem-@PropRef  contentItem?: ContentItem--><!--Device-ComposeListItem-@PropRef  contentItem?: ContentItem-End-->
@@ -58,8 +62,7 @@ The ContentItem.
 ## operateItem
 
 ```TypeScript
-@PropRef
-  operateItem?: OperateItem
+operateItem?: OperateItem
 ```
 
 The OperateItem.
@@ -69,6 +72,8 @@ The OperateItem.
 **起始版本：** 23
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**装饰器类型：** @PropRef
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

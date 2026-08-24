@@ -1,12 +1,12 @@
 # DownloadFileButton
 
-Declare struct DownloadFileButton
-
-@struct { DownloadFileButton }
+Declare struct DownloadFileButton@struct { DownloadFileButton }
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Component
 
 <!--Device-unnamed-export declare struct DownloadFileButton--><!--Device-unnamed-export declare struct DownloadFileButton-End-->
 
@@ -20,8 +20,7 @@ Declare struct DownloadFileButton
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -29,6 +28,8 @@ The method to build component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 

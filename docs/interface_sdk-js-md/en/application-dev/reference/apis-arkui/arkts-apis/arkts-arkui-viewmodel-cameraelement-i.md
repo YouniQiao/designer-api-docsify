@@ -1,8 +1,6 @@
 # CameraElement
 
-The &lt;camera&gt; component provides preview and photographing functions.
-
-@extends Element @interface CameraElement
+The &lt;camera&gt; component provides preview and photographing functions.@extends Element @interface CameraElement
 
 **Inheritance/Implementation:** CameraElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 

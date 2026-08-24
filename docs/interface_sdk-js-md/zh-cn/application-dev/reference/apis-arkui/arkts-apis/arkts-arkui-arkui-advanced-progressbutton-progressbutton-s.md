@@ -2,15 +2,15 @@
 
 文本下载按钮，可显示具体下载进度。
 
-> **说明：**
-> 
-> - 该组件仅可在Stage模型下使用。
-> 
+> **说明：**&gt;
+> - 该组件仅可在Stage模型下使用。&gt;
 > - 如果ProgressButton设置通用属性和通用事件，编
 > 译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ProgressButton本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议
 > ProgressButton设置通用属性和通用事件。
 
 **起始版本：** 10
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct ProgressButton--><!--Device-unnamed-export declare struct ProgressButton-End-->
 
@@ -20,7 +20,6 @@
 
 ```TypeScript
 import { ProgressButton } from '@kit.ArkUI';
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUI';
 ```
 
 ## clickCallback
@@ -46,8 +45,7 @@ clickCallback: () => void
 ## colorOptions
 
 ```TypeScript
-@Prop
-  colorOptions?: ProgressButtonColorOptions
+colorOptions?: ProgressButtonColorOptions
 ```
 
 下载按钮颜色。用于自定义按钮各部分的颜色（进度条、描边、文本、背景）。需要自定义颜色时传入此参数，不传入时使用系统默认配色方案。
@@ -55,6 +53,8 @@ clickCallback: () => void
 **类型：** [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,19 +67,17 @@ clickCallback: () => void
 ## content
 
 ```TypeScript
-@Prop
-  content: ResourceStr
+content: ResourceStr
 ```
 
-下载按钮的文本。
-
-默认值：空字符串。
-
+下载按钮的文本。默认值：空字符串。  
 **说明：**最长显示组件宽度，超出部分用省略号代替。从API version 20开始，支持Resource类型。
 
 **类型：** ResourceStr
 
 **起始版本：** 10
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,19 +90,16 @@ clickCallback: () => void
 ## enable
 
 ```TypeScript
-@Prop
-  enable: boolean
+enable: boolean
 ```
 
-下载按钮是否可以点击。
-
-true：可以点击。
-
-false：不可点击。
+下载按钮是否可以点击。true：可以点击。false：不可点击。
 
 **类型：** boolean
 
 **起始版本：** 10
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -117,19 +112,16 @@ false：不可点击。
 ## progress
 
 ```TypeScript
-@Prop
-  progress: number
+progress: number
 ```
 
-下载按钮的当前进度值。
-
-取值范围：[0,100]。设置小于0的数值时置为0，设置大于100的数值时置为100。
-
-默认值：0
+下载按钮的当前进度值。取值范围：[0,100]。设置小于0的数值时置为0，设置大于100的数值时置为100。默认值：0
 
 **类型：** number
 
 **起始版本：** 10
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -142,21 +134,16 @@ false：不可点击。
 ## progressButtonRadius
 
 ```TypeScript
-@Prop
-  progressButtonRadius?: LengthMetrics
+progressButtonRadius?: LengthMetrics
 ```
 
-下载按钮的圆角（不支持百分比设置）。
-
-取值范围：[0, height/2]
-
-默认值：height/2
-
-设置值小于0时按照0处理，设置其他非法数值时，按照默认值处理。当直接入参为undefined时，按照默认值处理，入参为LengthMetrics.vp时，建议传入具体数值，传入null/undefined会导致显示异常。
+下载按钮的圆角（不支持百分比设置）。取值范围：[0, height/2]默认值：height/2设置值小于0时按照0处理，设置其他非法数值时，按照默认值处理。当直接入参为undefined时，按照默认值处理，入参为LengthMetrics.vp时，建议传入具体数值，传入null/undefined会导致显示异常。
 
 **类型：** LengthMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -172,11 +159,7 @@ false：不可点击。
 progressButtonWidth?: Length
 ```
 
-下载按钮的宽度，单位vp。
-
-取值范围：大于等于44vp。
-
-默认值：44vp。当取值为非Resource类型且小于默认值或取值为非法值时，识别值为默认值。当取值为Resource类型且小于默认值时识别为默认值，为非法值时下载按钮的宽度显示为容器宽度的100%。
+下载按钮的宽度，单位vp。取值范围：大于等于44vp。默认值：44vp。当取值为非Resource类型且小于默认值或取值为非法值时，识别值为默认值。当取值为Resource类型且小于默认值时识别为默认值，为非法值时下载按钮的宽度显示为容器宽度的100%。
 
 **类型：** Length
 

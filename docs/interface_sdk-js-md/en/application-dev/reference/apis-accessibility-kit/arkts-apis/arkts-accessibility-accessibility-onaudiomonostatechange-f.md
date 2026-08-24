@@ -3,11 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit';
-import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## onAudioMonoStateChange
@@ -18,11 +15,9 @@ function onAudioMonoStateChange(callback: Callback<boolean>): void
 
 Subscribes to the state changes of mono audio mode. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
-> 
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.&gt;
 > - After calling this method, ensure that
 > [accessibility.offAudioMonoStateChange](arkts-accessibility-accessibility-offaudiomonostatechange-f.md) is used to unsubscribe
 > before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle callback).

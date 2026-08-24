@@ -1,12 +1,6 @@
 # AudioCapturer
 
-提供音频采集的相关接口。
-
-在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md)获取AudioCapturer实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 8开始支持。
+提供音频采集的相关接口。在使用AudioCapturer的接口之前，需先通过 [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) 获取AudioCapturer实例。
 
 **起始版本：** 23
 
@@ -18,7 +12,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## offReadMicInData
@@ -27,7 +20,7 @@ import { audioHaptic } from '@kit.AudioKit';
 offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 ```
 
-取消订阅micIn音频数据回调。
+取消监听Mic-In音频数据读取回调。
 
 **起始版本：** 24
 
@@ -43,7 +36,7 @@ offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 否 | 用于读取缓冲的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 否 | 需要取消监听的回调函数，默认值为空。不传入时，表示取消该事件的所有监听。 |
 
 **错误码：**
 
@@ -110,7 +103,11 @@ async function unregisterReadMicInDataCallback(): Promise<void> {
 onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 ```
 
-订阅micIn音频数据回调。此回调的优先级高于“readData”回调。 如果此回调和'readData'回调都被订阅，则仅此回调将被调用。 有关更多详细信息，请参见onReadData。 当有音频缓冲可用于读取更多数据时，触发该事件。
+订阅Mic-In音频数据读取回调。使用callback异步回调。
+
+> **说明：**&gt;
+> - 此回调的优先级高于`onReadData`回调。如果同时订阅两者，仅会触发此回调。&gt;
+> - 当有可供读取的音频缓冲区、可继续读取更多音频数据时，会触发此回调。
 
 **起始版本：** 24
 
@@ -126,7 +123,7 @@ onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 是 | 读取缓冲的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 是 | 回调函数，返回读取到的音频数据缓冲区。 |
 
 **错误码：**
 
@@ -209,7 +206,7 @@ async function registerReadMicInDataCallback(): Promise<void> {
 setInputDeviceToAccessory(): void
 ```
 
-Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY. Other capturers' devices will not be affected by this method. This method can only be used before the capture stream starts. Besides, if audio accessory is not connected, this method will report fail. After calling this function, the input device of this capturer will not be affected by other interfaces.
+将此捕获器的默认输入设备设置为 DEVICE_TYPE_ACCESSORY。 其他捕获器的设备不会受到此方法的影响。 此方法只能在捕获流开始之前使用。此外， 如果音频配件未连接，此方法将报告失败。调用此函数后，该捕获器的输入设备将不再受其他接口的影响。
 
 **起始版本：** 23
 

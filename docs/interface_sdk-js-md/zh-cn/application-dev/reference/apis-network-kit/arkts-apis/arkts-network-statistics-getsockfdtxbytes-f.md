@@ -14,8 +14,7 @@ function getSockfdTxBytes(sockfd: int, callback: AsyncCallback<long>): void
 
 获取指定Socket的上行流量（单位：字节）。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 推荐在Socket连接时使用，否则Socket已经关闭后无法查询到对应流量数据。
 
 **起始版本：** 23
@@ -106,8 +105,7 @@ function getSockfdTxBytes(sockfd: int): Promise<long>
 
 获取指定Socket的上行流量（单位：字节）。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 推荐在Socket连接时使用，否则Socket已经关闭后无法查询到对应流量数据。
 
 **起始版本：** 23

@@ -12,7 +12,6 @@ USB异步传输回调。
 
 ```TypeScript
 import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## actualLength

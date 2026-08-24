@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -21,7 +20,7 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 
 | 名称 | 说明 |
 | --- | --- |
-| [TreeView](arkts-arkui-arkui-advanced-treeview-treeview-s.md) | 树视图作为一种分层显示的列表，适合显示嵌套结构。树视图包含父节点和子节点，支持展开或折叠。 |
+| [TreeView](arkts-arkui-arkui-advanced-treeview-treeview-s.md) | 树视图作为一种分层显示的列表，适合显示嵌套结构。树视图包含父节点和子节点，支持展开或折叠。树视图适用于效率型应用的侧边导航栏中，如备忘录、电子邮件、图库等。 |
 
 ### 接口
 

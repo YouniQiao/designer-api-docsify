@@ -1,8 +1,6 @@
 # WindowAnimationFinishedCallback (System API)
 
-Window animation finished callback.
-
-@interface WindowAnimationFinishedCallback
+Window animation finished callback.@interface WindowAnimationFinishedCallback
 
 **Since:** 23
 

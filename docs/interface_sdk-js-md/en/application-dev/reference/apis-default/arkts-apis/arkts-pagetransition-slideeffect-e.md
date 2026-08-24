@@ -1,8 +1,6 @@
 # SlideEffect
 
-Declare the sliding effect of transition.
-
-@enum { number }
+Declare the sliding effect of transition.@enum { number }
 
 **Since:** 23
 

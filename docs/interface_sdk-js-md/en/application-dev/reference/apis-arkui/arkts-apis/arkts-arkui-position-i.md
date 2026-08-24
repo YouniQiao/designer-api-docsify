@@ -1,8 +1,6 @@
 # Position
 
-Defines the position.
-
-@interface Position
+Defines the position.@interface Position
 
 **Since:** 11
 

@@ -1,8 +1,6 @@
 # WebCaptureMode
 
-Web屏幕捕获模式。
-
-@enum { number }
+Web屏幕捕获模式。@enum { number }
 
 **起始版本：** 23
 

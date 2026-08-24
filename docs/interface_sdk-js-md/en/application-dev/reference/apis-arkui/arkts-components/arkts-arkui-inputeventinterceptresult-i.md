@@ -19,10 +19,8 @@ Input event interception result interface, used by the listener callback [InputE
 action: InputEventInterceptAction
 ```
 
-Input event interception action.
-
-**CONTINUE**: The event is allowed to continue being passed to the UI framework.
-
+Input event interception action.  
+**CONTINUE**: The event is allowed to continue being passed to the UI framework.  
 **BLOCK**: The event is blocked from being passed to the UI framework.
 
 **Type:** InputEventInterceptAction

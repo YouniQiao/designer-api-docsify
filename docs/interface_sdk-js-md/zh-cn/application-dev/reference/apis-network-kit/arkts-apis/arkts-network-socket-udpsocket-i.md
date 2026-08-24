@@ -577,8 +577,7 @@ getLocalAddress(): Promise<NetAddress>
 
 获取UDP连接的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 12
@@ -857,12 +856,9 @@ getSocketFd(): Promise<int>
 
 获取UDPSocket的文件描述符。使用Promise异步回调。
 
-> **说明：**
-> 
-> - [bind](#bind)方法调用成功后，才可调用此方法。
-> 
-> - bind异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
-> 
+> **说明：**&gt;
+> - [bind](#bind)方法调用成功后，才可调用此方法。&gt;
+> - bind异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。&gt;
 > - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭Socket连接，避免直接操作
 > 文件描述符进行关闭。
 
@@ -1207,8 +1203,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 获取UDPSocket状态。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
@@ -1564,8 +1559,7 @@ getState(): Promise<SocketStateBase>
 
 获取UDPSocket状态。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
@@ -1885,9 +1879,7 @@ udp.on('message', (value: socket.SocketMessageInfo) => {
 send(options: UDPSendOptions, callback: AsyncCallback<void>): void
 ```
 
-通过UDPSocket连接发送数据。使用callback异步回调。
-
-发送数据前，需要先调用[UDPSocket.bind()](#bind)绑定 IP地址和端口。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
+通过UDPSocket连接发送数据。使用callback异步回调。发送数据前，需要先调用[UDPSocket.bind()](#bind)绑定 IP地址和端口。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
 
 **起始版本：** 7
 
@@ -2320,9 +2312,7 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 send(options: UDPSendOptions): Promise<void>
 ```
 
-通过UDPSocket连接发送数据。使用Promise异步回调。
-
-发送数据前，需要先调用[UDPSocket.bind()](#bind)绑定 IP地址和端口。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
+通过UDPSocket连接发送数据。使用Promise异步回调。发送数据前，需要先调用[UDPSocket.bind()](#bind)绑定 IP地址和端口。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
 
 **起始版本：** 7
 
@@ -2371,8 +2361,7 @@ setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 
 设置UDPSocket连接的其他属性。使用callback异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
@@ -2887,8 +2876,7 @@ setExtraOptions(options: UDPExtraOptions): Promise<void>
 
 设置UDPSocket连接的其他属性。使用Promise异步回调。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 7

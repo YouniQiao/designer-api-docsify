@@ -100,9 +100,7 @@ Asset size. In the device-cloud sync mechanism, this field is one of the key bas
 status?: AssetStatus
 ```
 
-Asset status.
-
-Default value: **ASSET_NORMAL**.
+Asset status.Default value: **ASSET_NORMAL**.
 
 **Type:** AssetStatus
 

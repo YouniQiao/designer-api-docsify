@@ -1,8 +1,6 @@
 # AnimationPropertyType
 
-Define the property type enumeration used in animation.
-
-@enum { number }
+Define the property type enumeration used in animation.@enum { number }
 
 **Since:** 23
 

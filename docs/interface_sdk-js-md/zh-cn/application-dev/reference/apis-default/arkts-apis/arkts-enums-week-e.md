@@ -1,8 +1,6 @@
 # Week
 
-Set Weekend
-
-@enum { number }
+Set Weekend@enum { number }
 
 **起始版本：** 23
 

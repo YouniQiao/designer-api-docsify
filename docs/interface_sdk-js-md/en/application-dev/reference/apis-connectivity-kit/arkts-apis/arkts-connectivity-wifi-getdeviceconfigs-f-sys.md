@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceConfigs
@@ -15,9 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function getDeviceConfigs(): Array<WifiDeviceConfig>
 ```
 
-Obtains the list of all existing Wi-Fi configurations.
-
-<p>You can obtain only the Wi-Fi configurations you created on your own application.
+Obtains the list of all existing Wi-Fi configurations.<p>You can obtain only the Wi-Fi configurations you created on your own application.
 
 **Since:** 7
 

@@ -4,6 +4,8 @@ Declare struct ExceptionPrompt higher-order component.
 
 **Since:** 12
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ExceptionPrompt--><!--Device-unnamed-export declare struct ExceptionPrompt-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -12,7 +14,6 @@ Declare struct ExceptionPrompt higher-order component.
 
 ```TypeScript
 import { MarginType, PromptOptions, ExceptionPrompt } from '@kit.ArkUI';
-import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2 } from '@kit.ArkUI';
 ```
 
 ## build
@@ -75,15 +76,13 @@ Callback when clicking the text on the left.
 
 ## options
 
-```TypeScript
-@Prop options: PromptOptions
-```
-
 Configuration information of ExceptionPrompt.
 
 **Type:** [PromptOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionprompt-promptoptions-i.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

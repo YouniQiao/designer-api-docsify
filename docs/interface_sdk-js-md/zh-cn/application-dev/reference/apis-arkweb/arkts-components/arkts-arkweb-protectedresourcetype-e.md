@@ -14,9 +14,7 @@ ProtectedResourceType 枚举定义了 Web 组件需要访问的受保护资源�
 MidiSysex = "TYPE_MIDI_SYSEX"
 ```
 
-MIDI SYSEX资源。
-
-目前仅支持权限事件上报，MIDI设备的使用还未支持。
+MIDI SYSEX资源。目前仅支持权限事件上报，MIDI设备的使用还未支持。
 
 **起始版本：** 9
 

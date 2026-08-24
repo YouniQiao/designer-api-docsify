@@ -1,8 +1,6 @@
 # WebBlanklessErrorCode
 
-Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](arkts-webview-webviewcontroller-c.md#setblanklessloadingwithkey) or [BlanklessInfo](arkts-webview-blanklessinfo-i.md).
-
-@enum { number }
+Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey) or [BlanklessInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessinfo-i.md).@enum { number }
 
 **起始版本：** 23
 
@@ -114,9 +112,7 @@ The system determines that the change is too large when the similarity is less t
 ERR_DURATION_OUT_OF_RANGE = -6
 ```
 
-The value of BlanklessLoadingParam.duration is out of the valid value range.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+The value of BlanklessLoadingParam.duration is out of the valid value range.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **起始版本：** 23
 
@@ -134,9 +130,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 ```
 
-The value of BlanklessLoadingParam.expirationTime is invalid.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+The value of BlanklessLoadingParam.expirationTime is invalid.Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **起始版本：** 23
 

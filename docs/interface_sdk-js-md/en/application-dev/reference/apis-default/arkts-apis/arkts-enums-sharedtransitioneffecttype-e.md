@@ -1,8 +1,6 @@
 # SharedTransitionEffectType
 
-SharedTransitionEffectType enumeration description
-
-@enum { number }
+SharedTransitionEffectType enumeration description@enum { number }
 
 **Since:** 23
 

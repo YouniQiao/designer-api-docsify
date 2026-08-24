@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { dataShare } from '@kit.ArkData';
-import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## delete
@@ -467,9 +466,7 @@ on(
     ): DataProxyResult[]
 ```
 
-订阅指定URI对应共享配置变更事件。若订阅者已注册变更通知，当配置发布方修改配置时，订阅者将会接收到callback通知，通知携带数据变更类型、变化的URI、变更的共享配置内容。使用callback异步回调。该功能不允许跨用户 订阅通知，不允许订阅未发布的配置。订阅成功后若权限被收回，则后续不再通知订阅者。
-
-触发通知：配置发布方调用[publish](#publish)、 [delete](#delete)、 [delete](#delete)接口发布、删除指定配置或者删除所有配置时会自动触 发通知。
+订阅指定URI对应共享配置变更事件。若订阅者已注册变更通知，当配置发布方修改配置时，订阅者将会接收到callback通知，通知携带数据变更类型、变化的URI、变更的共享配置内容。使用callback异步回调。该功能不允许跨用户 订阅通知，不允许订阅未发布的配置。订阅成功后若权限被收回，则后续不再通知订阅者。触发通知：配置发布方调用[publish](#publish)、 [delete](#delete)、 [delete](#delete)接口发布、删除指定配置或者删除所有配置时会自动触 发通知。
 
 **起始版本：** 20
 

@@ -6,6 +6,8 @@ Declare struct ExceptionPromptV2 higher-order component. The exception prompt co
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ExceptionPromptV2--><!--Device-unnamed-export declare struct ExceptionPromptV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declare struct ExceptionPromptV2 higher-order component. The exception prompt co
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## onActionTextClick
 
 ```TypeScript
-@Event
-  onActionTextClick?: OnActionTextClickCallback
+onActionTextClick?: OnActionTextClickCallback
 ```
 
 Callback invoked when the icon on the right is clicked.
@@ -49,6 +51,8 @@ Callback invoked when the icon on the right is clicked.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExceptionPromptV2-@Event  onActionTextClick?: OnActionTextClickCallback--><!--Device-ExceptionPromptV2-@Event  onActionTextClick?: OnActionTextClickCallback-End-->
@@ -58,8 +62,7 @@ Callback invoked when the icon on the right is clicked.
 ## onTipClick
 
 ```TypeScript
-@Event
-  onTipClick?: OnTipClickCallback
+onTipClick?: OnTipClickCallback
 ```
 
 Callback invoked when the prompt text on the left is clicked.
@@ -70,6 +73,8 @@ Callback invoked when the prompt text on the left is clicked.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExceptionPromptV2-@Event  onTipClick?: OnTipClickCallback--><!--Device-ExceptionPromptV2-@Event  onTipClick?: OnTipClickCallback-End-->
@@ -79,8 +84,7 @@ Callback invoked when the prompt text on the left is clicked.
 ## options
 
 ```TypeScript
-@Param
-  options: PromptOptionsV2
+options: PromptOptionsV2
 ```
 
 ExceptionPromptV2 configuration.
@@ -90,6 +94,8 @@ ExceptionPromptV2 configuration.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

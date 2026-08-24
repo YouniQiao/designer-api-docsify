@@ -38,7 +38,7 @@ Returns a section of an SharedArrayBuffer.
 readonly [Symbol.species]: SharedArrayBuffer
 ```
 
-**Type:** [SharedArrayBuffer](arkts-lib-es2017-sharedmemory-sharedarraybuffer-i.md)
+**Type:** SharedArrayBuffer
 
 **Since:** -1
 

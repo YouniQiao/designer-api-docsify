@@ -1,8 +1,6 @@
 # WindowStage
 
-Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance.
-
-Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
+Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance.Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
 
 **Since:** 23
 
@@ -13,8 +11,6 @@ Before calling any of the following APIs, you must use [onWindowStageCreate()](.
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 
@@ -24,9 +20,7 @@ import { window } from '@kit.ArkUI';
 disableWindowDecor(): void
 ```
 
-Disables window decorators.
-
-When window decorators are disabled and the main window transitions into full-screen mode, hovering the cursor over the hot zone of the top window's title bar will cause a floating title bar to appear. To prevent the floating title bar from appearing, call [setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown).
+Disables window decorators.When window decorators are disabled and the main window transitions into full-screen mode, hovering the cursor over the hot zone of the top window's title bar will cause a floating title bar to appear. To prevent the floating title bar from appearing, call [setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown).
 
 **Since:** 23
 
@@ -133,8 +127,7 @@ setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promis
 
 Sets the image displayed in the multitasking view and on dock hover. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Before calling this API, you are advised to complete page loading via
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent) or
 > [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If this API is called before the application
@@ -272,7 +265,7 @@ Sets the image displayed in the multitasking view. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imgResourceId | number | Yes | Resource ID of the custom image. The image must be stored in the **resources/base/media** directory and its resource ID can be obtained using the **\\$r** resource access mode. For example, to obtain the resource ID of the startIcon image, use the following: \\$r("app.media.startIcon") .id. |
+| imgResourceId | number | Yes | Resource ID of the custom image. The image must be stored in the **resources/base/media** directory and its resource ID can be obtained using the **\\$r** resource access mode. For example, to obtain the resource ID of the startIcon image, use the following: \\$r("app.media.startIcon").id. |
 | value | ImageFit | Yes | Fill mode of the custom image. |
 
 **Return value:**

@@ -1,6 +1,6 @@
 # DownloadTask
 
-Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md) .
+Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md).
 
 **Since:** 23
 
@@ -12,7 +12,6 @@ Implements file downloads. Before using any APIs of this class, you must obtain 
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## delete
@@ -23,8 +22,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 Deletes the download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -123,8 +121,7 @@ delete(): Promise<boolean>
 
 Deletes the download task. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -160,8 +157,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 Obtains the information about this download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -243,8 +239,7 @@ getTaskInfo(): Promise<DownloadInfo>
 
 Obtains the information about this download task. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -280,8 +275,7 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -363,8 +357,7 @@ getTaskMimeType(): Promise<string>
 
 Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -496,7 +489,7 @@ Unsubscribes from download failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Event type.<br>- **'fail'**: download task failure. |
-| callback | (err: int) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](arkts-basicservices-request-n.md#constants) . |
+| callback | (err: int) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](arkts-basicservices-request-n.md#constants). |
 
 **Error codes:**
 
@@ -837,7 +830,7 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Event type.<br>- **'fail'**: download task failure. |
-| callback | (err: int) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes, see [Download Error Codes](arkts-basicservices-request-n.md#constants) . |
+| callback | (err: int) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes, see [Download Error Codes](arkts-basicservices-request-n.md#constants). |
 
 **Error codes:**
 
@@ -908,8 +901,7 @@ on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): v
 
 Subscribes to download progress events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > To maintain a balance between power consumption and performance, this API cannot be called when the application
 > is running in the background.
 
@@ -1559,8 +1551,7 @@ restore(callback: AsyncCallback<boolean>): void
 
 Restores the download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -1642,8 +1633,7 @@ restore(): Promise<boolean>
 
 Restores the download task. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -1869,8 +1859,7 @@ suspend(callback: AsyncCallback<boolean>): void
 
 Suspends this download task. You can use [restore](#restore) to restore the download. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 
@@ -1952,8 +1941,7 @@ suspend(): Promise<boolean>
 
 Suspends this download task. You can use [restore](#restore) to restore the download. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
 

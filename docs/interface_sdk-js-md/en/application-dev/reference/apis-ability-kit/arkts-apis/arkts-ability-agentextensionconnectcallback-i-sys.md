@@ -1,8 +1,6 @@
 # AgentExtensionConnectCallback (System API)
 
-Agent extension connect callback.
-
-@interface AgentExtensionConnectCallback
+Agent extension connect callback.@interface AgentExtensionConnectCallback
 
 **Since:** 24
 

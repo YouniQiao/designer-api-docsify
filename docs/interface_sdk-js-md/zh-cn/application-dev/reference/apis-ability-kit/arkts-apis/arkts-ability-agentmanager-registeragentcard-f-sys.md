@@ -12,10 +12,7 @@ import { agentManager } from '@kit.AbilityKit';
 function registerAgentCard(agentCard: AgentCard): Promise<void>
 ```
 
-注册AgentCard到系统中，使系统能够识别和调用对应的AgentExtensionAbility。
-
-系统会根据类型对appInfo进行校验：
-
+注册AgentCard到系统中，使系统能够识别和调用对应的AgentExtensionAbility。系统会根据类型对appInfo进行校验：  
 - APP、LOW_CODE类型：校验bundle和ability是否存在，并验证ability是否为agent类型。 - ATOMIC_SERVICE类型：在原子化服务已安装时，校验ability是否存在，并验证ability是否为agent类型。
 
 **起始版本：** 26.0.0

@@ -1,8 +1,6 @@
 # AlertDialogButtonOptions
 
-Button param used for AlertDialogParamWithOptions.
-
-@extends AlertDialogButtonBaseOptions @interface AlertDialogButtonOptions
+Button param used for AlertDialogParamWithOptions.@extends AlertDialogButtonBaseOptions @interface AlertDialogButtonOptions
 
 **Inheritance/Implementation:** AlertDialogButtonOptions extends [AlertDialogButtonBaseOptions](arkts-alertdialog-alertdialogbuttonbaseoptions-i.md)
 

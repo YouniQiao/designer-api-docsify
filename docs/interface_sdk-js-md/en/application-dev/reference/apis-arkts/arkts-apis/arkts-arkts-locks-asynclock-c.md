@@ -4,6 +4,8 @@ Class to execute an asynchronous operation under lock.
 
 **Since:** 12
 
+**Decorator:** @Sendable
+
 <!--Device-locks-class AsyncLock--><!--Device-locks-class AsyncLock-End-->
 
 **System capability:** SystemCapability.Utils.Lang

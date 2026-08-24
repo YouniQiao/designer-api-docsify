@@ -70,7 +70,7 @@ Phone number entry mode. In this mode, the following are allowed: digits, spaces
 EMAIL = 5
 ```
 
-E-mail address input mode. This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' + - / = ? ^ ` { | } ~ @ (which can only appear once).
+E-mail address input mode. This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' * + - / = ? ^ ` { | } ~ @ (which can only appear once).
 
 **起始版本：** 23
 

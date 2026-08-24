@@ -11,6 +11,8 @@ Defines the suffix builder of the ChipGroupV2.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Builder
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-@Builderexport type ChipGroupV2SuffixBuilder = () => void--><!--Device-unnamed-@Builderexport type ChipGroupV2SuffixBuilder = () => void-End-->

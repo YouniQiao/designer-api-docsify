@@ -1,8 +1,6 @@
 # CrownSensitivity
 
-Sensitivity of rotating crown.
-
-@enum { number }
+Sensitivity of rotating crown.@enum { number }
 
 **Since:** 23
 

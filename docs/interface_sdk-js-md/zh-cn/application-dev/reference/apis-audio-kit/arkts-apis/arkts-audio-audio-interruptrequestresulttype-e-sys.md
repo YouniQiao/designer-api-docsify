@@ -1,6 +1,6 @@
 # InterruptRequestResultType（系统接口）
 
-Enumerates audio interrupt request result type.
+枚举，音频中断请求结果类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Enumerates audio interrupt request result type.
 INTERRUPT_REQUEST_GRANT = 0
 ```
 
-Request audio interrupt success
+请求音频中断成功。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Request audio interrupt success
 INTERRUPT_REQUEST_REJECT = 1
 ```
 
-Request audio interrupt fail, may have higher priority type
+请求音频中断失败，可能具有较高优先级类型。
 
 **起始版本：** 23
 

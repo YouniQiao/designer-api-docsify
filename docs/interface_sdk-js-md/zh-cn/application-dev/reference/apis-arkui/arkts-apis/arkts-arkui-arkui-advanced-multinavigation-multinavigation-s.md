@@ -10,10 +10,11 @@ MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管�
 > [pushDestination](ts-basic-components-navigation.md#pushdestination11)等)，可能会发生无法预期的问题。
 
 > MultiNavigation在深层嵌套场景下，可能存在路由动效异常的问题。
-
 @struct { MultiNavigation }
 
 **起始版本：** 14
+
+**装饰器类型：** @Component
 
 <!--Device-unnamed-export declare struct MultiNavigation--><!--Device-unnamed-export declare struct MultiNavigation-End-->
 
@@ -28,8 +29,7 @@ import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 ## multiStack
 
 ```TypeScript
-@State
-  multiStack: MultiNavPathStack
+multiStack: MultiNavPathStack
 ```
 
 设置路由栈。
@@ -37,6 +37,8 @@ import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 **类型：** [MultiNavPathStack](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-multinavpathstack-c.md)
 
 **起始版本：** 14
+
+**装饰器类型：** @State
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +51,7 @@ import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 ## navDestination
 
 ```TypeScript
-@BuilderParam
-  navDestination: NavDestinationBuildFunction
+navDestination: NavDestinationBuildFunction
 ```
 
 设置加载目标页面的路由规则。
@@ -58,6 +59,8 @@ import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 **类型：** [NavDestinationBuildFunction](arkts-arkui-navdestinationbuildfunction-t.md)
 
 **起始版本：** 14
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

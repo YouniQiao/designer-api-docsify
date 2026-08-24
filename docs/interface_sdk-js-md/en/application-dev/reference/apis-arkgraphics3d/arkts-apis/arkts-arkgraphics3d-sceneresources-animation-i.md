@@ -1,8 +1,6 @@
 # Animation
 
-Animation resource, which inherits from SceneResource.
-
-@extends SceneResource @interface Animation
+Animation resource, which inherits from SceneResource.@extends SceneResource @interface Animation
 
 **Inheritance/Implementation:** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 

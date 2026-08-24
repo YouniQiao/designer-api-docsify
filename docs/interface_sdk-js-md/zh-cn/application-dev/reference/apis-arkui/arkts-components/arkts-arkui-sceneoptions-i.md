@@ -1,8 +1,6 @@
 # SceneOptions
 
-3D场景控制使用的场景选项
-
-@interface SceneOptions
+3D场景控制使用的场景选项@interface SceneOptions
 
 **起始版本：** 12
 

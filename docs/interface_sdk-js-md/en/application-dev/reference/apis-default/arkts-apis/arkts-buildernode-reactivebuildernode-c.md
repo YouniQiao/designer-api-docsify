@@ -33,7 +33,7 @@ Build the ReactiveBuilderNode with the builder.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | builder | CustomBuilder | Yes | Defines the builder that will be called to build the node. |
-| options | [BuildOptions](arkts-buildernode-buildoptions-i.md) | No | Defines the options that will be used when building. |
+| options | [BuildOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-buildoptions-i.md) | No | Defines the options that will be used when building. |
 
 ## constructor
 
@@ -58,7 +58,7 @@ Constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ReactiveBuilderNode |
-| options | [RenderOptions](arkts-buildernode-renderoptions-i.md) | No | Render options of the ReactiveBuilderNode |
+| options | [RenderOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-renderoptions-i.md) | No | Render options of the ReactiveBuilderNode |
 
 ## dispose
 
@@ -118,7 +118,7 @@ Get the FrameNode in ReactiveBuilderNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode inside the ReactiveBuilderNode, or null if not contained. |
+| [FrameNode](arkts-framenode-c.md) \| null | Returns a FrameNode inside the ReactiveBuilderNode, or null if not contained. |
 
 ## isDisposed
 
@@ -150,9 +150,7 @@ Get if the ReactiveBuilderNode is disposed.
 postInputEvent(event: InputEventType): boolean
 ```
 
-Dispatch the input event to the FrameNode in the current ReactiveBuilderNode. postInputEvent dispatches the event from a middle node in the component tree downwards. To ensure the event is dispatched correctly, the event coordinates need to be transformed into the coordinate system of the parent component.
-
-Note: The input coordinate values need to be converted to pixels (px). Left mouse click events will be converted to touch events. When forwarding, note that if touch events and mouse events are bound to outer layers, it may cause coordinate offset. When injecting axis events, since axis events lack rotation axis information, injected events cannot trigger rotate gestures Forwarded events will undergo touch testing in the subtree of the target component where they are dispatched and trigger corresponding gestures. Original events will also trigger gestures in the current component's component tree. The competition outcome between these two types of gestures is not guaranteed. For developer-constructed events, required fields must be assigned values, such as the touches field for touch events and the scrollStep field for axis events. Also, ensure event completeness - for example, both DOWN and UP fields in TouchType for touch events must be present to prevent undefined behavior. Webview has already handled coordinate system transformations, so events be dispatched directly. The postInputEvent interface requires providing gesture coordinates relative to the window coordinates within the input event peer. It is not recommended to forward the same event multiple times. The postInputEvent parameter does not support UIExtensionComponent.
+Dispatch the input event to the FrameNode in the current ReactiveBuilderNode. postInputEvent dispatches the event from a middle node in the component tree downwards. To ensure the event is dispatched correctly, the event coordinates need to be transformed into the coordinate system of the parent component.Note: The input coordinate values need to be converted to pixels (px). Left mouse click events will be converted to touch events. When forwarding, note that if touch events and mouse events are bound to outer layers, it may cause coordinate offset. When injecting axis events, since axis events lack rotation axis information, injected events cannot trigger rotate gestures Forwarded events will undergo touch testing in the subtree of the target component where they are dispatched and trigger corresponding gestures. Original events will also trigger gestures in the current component's component tree. The competition outcome between these two types of gestures is not guaranteed. For developer-constructed events, required fields must be assigned values, such as the touches field for touch events and the scrollStep field for axis events. Also, ensure event completeness - for example, both DOWN and UP fields in TouchType for touch events must be present to prevent undefined behavior. Webview has already handled coordinate system transformations, so events be dispatched directly. The postInputEvent interface requires providing gesture coordinates relative to the window coordinates within the input event peer. It is not recommended to forward the same event multiple times. The postInputEvent parameter does not support UIExtensionComponent.
 
 **Since:** 26.0.0
 
@@ -168,7 +166,7 @@ Note: The input coordinate values need to be converted to pixels (px). Left mous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InputEventType](arkts-inputeventtype-t.md) | Yes | The event which will be sent. |
+| event | [InputEventType](../../apis-arkui/arkts-apis/arkts-arkui-inputeventtype-t.md) | Yes | The event which will be sent. |
 
 **Return value:**
 
@@ -182,9 +180,7 @@ Note: The input coordinate values need to be converted to pixels (px). Left mous
 postInputEventWithStrategy(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean
 ```
 
-Dispatch event to targetNode with competition strategy. postInputEventWithStrategy dispatches the event from a middle node in the component tree downwards. To ensure the event is dispatched correctly, the event coordinates need to be transformed into the coordinate system of the parent component.
-
-Notes: The input coordinate values need to be converted to pixels (px). Left mouse click events will be converted to touch events. When forwarding, note that if touch events and mouse events are bound to outer layers, it may cause coordinate offset. When injecting axis events, since axis events lack rotation axis information, injected events cannot trigger rotate gestures Forwarded events will undergo touch testing in the subtree of the target component where they are dispatched and trigger corresponding gestures. Original events will also trigger gestures in the current component's component tree. The competition outcome between these two types of gestures is not guaranteed. For developer-constructed events, required fields must be assigned values, such as the touches field for touch events and the scrollStep field for axis events. Also, ensure event completeness - for example, both DOWN and UP fields in TouchType for touch events must be present to prevent undefined behavior. Webview has already handled coordinate system transformations, so events can be dispatched directly. The postInputEvent interface requires providing gesture coordinates relative to the window coordinates within the input event peer. It is not recommended to forward the same event multiple times. The postInputEvent parameter does not support UIExtensionComponent.
+Dispatch event to targetNode with competition strategy. postInputEventWithStrategy dispatches the event from a middle node in the component tree downwards. To ensure the event is dispatched correctly, the event coordinates need to be transformed into the coordinate system of the parent component.Notes: The input coordinate values need to be converted to pixels (px). Left mouse click events will be converted to touch events. When forwarding, note that if touch events and mouse events are bound to outer layers, it may cause coordinate offset. When injecting axis events, since axis events lack rotation axis information, injected events cannot trigger rotate gestures Forwarded events will undergo touch testing in the subtree of the target component where they are dispatched and trigger corresponding gestures. Original events will also trigger gestures in the current component's component tree. The competition outcome between these two types of gestures is not guaranteed. For developer-constructed events, required fields must be assigned values, such as the touches field for touch events and the scrollStep field for axis events. Also, ensure event completeness - for example, both DOWN and UP fields in TouchType for touch events must be present to prevent undefined behavior. Webview has already handled coordinate system transformations, so events can be dispatched directly. The postInputEvent interface requires providing gesture coordinates relative to the window coordinates within the input event peer. It is not recommended to forward the same event multiple times. The postInputEvent parameter does not support UIExtensionComponent.
 
 **Since:** 26.0.0
 
@@ -200,7 +196,7 @@ Notes: The input coordinate values need to be converted to pixels (px). Left mou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InputEventType](arkts-inputeventtype-t.md) | Yes | The event which will be sent to the targetNode. |
+| event | [InputEventType](../../apis-arkui/arkts-apis/arkts-arkui-inputeventtype-t.md) | Yes | The event which will be sent to the targetNode. |
 | competitionStrategy | CompetitionStrategy | No | The competition strategy. |
 
 **Return value:**
@@ -215,9 +211,7 @@ Notes: The input coordinate values need to be converted to pixels (px). Left mou
 postTouchEvent(event: TouchEvent): boolean
 ```
 
-Dispatch the touchEvent to the FrameNode in the current ReactiveBuilderNode. postTouchEvent dispatches the event from a middle node in the component tree downwards. To ensure the event is dispatched correctly, it needs to be transformed into the coordinate system of the parent component.
-
-<p>&lt;strong&gt;Note:&lt;/strong&gt; <br>The coordinates you pass in need to be converted to pixel values (px). If the ReactiveBuilderNode has any <br>affine transformations applied to it, they must be taken into account and combined with the touch event <br>coordinates. In Webview, coordinate system transformations are already handled internally, so you can <br>directly dispatch the touch event without additional adjustments. <br>The postTouchEvent API can be called only once for the same timestamp. <br>UIExtensionComponent is not supported. </p>
+Dispatch the touchEvent to the FrameNode in the current ReactiveBuilderNode. postTouchEvent dispatches the event from a middle node in the component tree downwards. To ensure the event is dispatched correctly, it needs to be transformed into the coordinate system of the parent component.<p>&lt;strong&gt;Note:&lt;/strong&gt; <br>The coordinates you pass in need to be converted to pixel values (px). If the ReactiveBuilderNode has any <br>affine transformations applied to it, they must be taken into account and combined with the touch event <br>coordinates. In Webview, coordinate system transformations are already handled internally, so you can <br>directly dispatch the touch event without additional adjustments. <br>The postTouchEvent API can be called only once for the same timestamp. <br>UIExtensionComponent is not supported. </p>
 
 **Since:** 26.0.0
 
@@ -239,7 +233,7 @@ Dispatch the touchEvent to the FrameNode in the current ReactiveBuilderNode. pos
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the TouchEvent has been successfully posted, false otherwise. If the event does not hit the expected component, ensure the following: 1. The coordinate system has been correctly transformed 2. The component is in an interactive state. 3. The event has been bound to the component. |
+| boolean | Returns true if the TouchEvent has been successfully posted, false otherwise. If the event does not hit the expected component, ensure the following: |
 
 ## recycle
 

@@ -1,8 +1,6 @@
 # RingStyleOptions
 
-环形无刻度样式选项。
-
-继承自[ScanEffectOptions](arkts-progress-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-progress-commonprogressstyleoptions-i.md)。
+环形无刻度样式选项。继承自[ScanEffectOptions](arkts-progress-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-progress-commonprogressstyleoptions-i.md)。
 
 **继承/实现关系：** RingStyleOptions extends [ScanEffectOptions](arkts-progress-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-progress-commonprogressstyleoptions-i.md)
 

@@ -14,8 +14,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Cal
 
 监听环境温度传感器数据变化一次。适用于仅需一次性获取当前环境温度数据的场景。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
 > once
 > 替代。

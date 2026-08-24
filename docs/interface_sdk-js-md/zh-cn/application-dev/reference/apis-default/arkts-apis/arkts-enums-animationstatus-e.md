@@ -1,8 +1,6 @@
 # AnimationStatus
 
-Animation status.
-
-@enum { number }
+Animation status.@enum { number }
 
 **起始版本：** 23
 

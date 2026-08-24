@@ -14,7 +14,6 @@ Defines the camera prelaunch configuration. Currently, the configuration is used
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## activeTime

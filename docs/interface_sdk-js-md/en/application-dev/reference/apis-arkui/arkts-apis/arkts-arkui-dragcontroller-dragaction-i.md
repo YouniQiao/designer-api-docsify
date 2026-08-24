@@ -1,8 +1,6 @@
 # DragAction
 
-One drag action object for drag process
-
-@interface DragAction
+One drag action object for drag process@interface DragAction
 
 **Since:** 23
 

@@ -16,6 +16,8 @@ export declare function RichText(
 
 **ArkTS模式：** ArkTS-Sta起始版本为23。
 
+**装饰器类型：** @ComponentBuilder
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function RichText(    content: string | Resource,    content_?: CustomBuilder,): RichTextAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function RichText(    content: string | Resource,    content_?: CustomBuilder,): RichTextAttribute-End-->

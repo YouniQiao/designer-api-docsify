@@ -1,8 +1,6 @@
 # @ohos.app.ability.systemConfiguration
 
-The class of a system configuration.
-
-@namespace systemConfiguration
+The class of a system configuration.@namespace systemConfiguration
 
 **Since:** 24
 

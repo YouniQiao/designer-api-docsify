@@ -1,12 +1,6 @@
 # EdgeStyles
 
-type EdgeStyles = { top: BorderStyle; right: BorderStyle; bottom: BorderStyle; left: BorderStyle; }
-
-边框样式，用于描述组件边框四条边的样式。
-
-引入该对象时，至少传入一个参数。
-
-@interface EdgeStyles
+type EdgeStyles = { top: BorderStyle; right: BorderStyle; bottom: BorderStyle; left: BorderStyle; }边框样式，用于描述组件边框四条边的样式。引入该对象时，至少传入一个参数。@interface EdgeStyles
 
 **起始版本：** 23
 

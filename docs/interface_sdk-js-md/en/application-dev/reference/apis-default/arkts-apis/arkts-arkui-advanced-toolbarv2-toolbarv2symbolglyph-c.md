@@ -6,6 +6,8 @@ Defines the icon symbol options.
 
 **ArkTS mode:** ArkTS-Sta since version 23.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ToolBarV2SymbolGlyph--><!--Device-unnamed-export declare class ToolBarV2SymbolGlyph-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,23 +44,19 @@ A constructor used to create a **ToolBarV2SymbolGlyph** object.
 ## activated
 
 ```TypeScript
-@Trace
-  public activated?: SymbolGlyphModifier
+public activated?: SymbolGlyphModifier
 ```
 
-Icon symbol of the toolbar item in activated state.
-
-Default value:
-
-**fontColor**: **\$r('sys.color.icon_emphasize')**, **fontSize**: **24vp**
-
-Decorator: @Trace
+Icon symbol of the toolbar item in activated state.Default value:  
+**fontColor**: **\$r('sys.color.icon_emphasize')**, **fontSize**: **24vp**Decorator: @Trace
 
 **Type:** [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,19 +67,18 @@ Decorator: @Trace
 ## normal
 
 ```TypeScript
-@Trace
-  public normal: SymbolGlyphModifier
+public normal: SymbolGlyphModifier
 ```
 
-Icon symbol of the toolbar item in normal state.
-
-Decorator: @Trace
+Icon symbol of the toolbar item in normal state.Decorator: @Trace
 
 **Type:** [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta since version 23.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

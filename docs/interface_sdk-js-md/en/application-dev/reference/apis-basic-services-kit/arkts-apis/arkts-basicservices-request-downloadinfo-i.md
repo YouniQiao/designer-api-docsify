@@ -12,7 +12,6 @@ Defines the download task information, which is the callback parameter of the [g
 
 ```TypeScript
 import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## description
@@ -101,7 +100,7 @@ Total size of the files to download, in bytes.
 failedReason: int
 ```
 
-Cause of the download failure. The value can be any constant in [Download Error Codes](arkts-basicservices-request-n.md#constants) .
+Cause of the download failure. The value can be any constant in [Download Error Codes](arkts-basicservices-request-n.md#constants).
 
 **Type:** int
 
@@ -149,7 +148,7 @@ URI of the saved file.
 pausedReason: int
 ```
 
-Cause of download pause. The value can be any constant in [Causes of Download Pause](arkts-basicservices-request-n.md#constants) .
+Cause of download pause. The value can be any constant in [Causes of Download Pause](arkts-basicservices-request-n.md#constants).
 
 **Type:** int
 
@@ -165,7 +164,7 @@ Cause of download pause. The value can be any constant in [Causes of Download Pa
 status: int
 ```
 
-Download task status code. The value can be any constant in [Download Task Status Codes](arkts-basicservices-request-n.md#constants) .
+Download task status code. The value can be any constant in [Download Task Status Codes](arkts-basicservices-request-n.md#constants).
 
 **Type:** int
 

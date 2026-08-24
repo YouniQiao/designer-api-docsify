@@ -21,9 +21,7 @@
 buttons?: [PopupV2Button | undefined, PopupV2Button | undefined]
 ```
 
-设置PopupV2操作按钮，按钮最多设置两个。默认不显示按钮。
-
-默认值：[{ text: '' }, { text: '' }]
+设置PopupV2操作按钮，按钮最多设置两个。默认不显示按钮。默认值：[{ text: '' }, { text: '' }]
 
 **类型：** [PopupV2Button \| undefined, PopupV2Button \| undefined]
 
@@ -43,9 +41,7 @@ buttons?: [PopupV2Button | undefined, PopupV2Button | undefined]
 direction?: Direction
 ```
 
-布局方向。
-
-默认值：Direction.Auto
+布局方向。默认值：Direction.Auto
 
 **类型：** Direction
 
@@ -67,8 +63,7 @@ direction?: Direction
 icon?: ResourceStr
 ```
 
-设置PopupV2图标。
-
+设置PopupV2图标。  
 **说明：** 默认值：''，不显示图标。
 
 **类型：** ResourceStr
@@ -89,9 +84,7 @@ icon?: ResourceStr
 iconModifier?: ImageModifier
 ```
 
-设置图标属性，如图标颜色、大小、边框等。
-
-默认值：undefined，使用系统图标属性。
+设置图标属性，如图标颜色、大小、边框等。默认值：undefined，使用系统图标属性。
 
 **类型：** [ImageModifier](../../apis-arkui/arkts-components/arkts-arkui-imagemodifier-t.md)
 
@@ -111,13 +104,11 @@ iconModifier?: ImageModifier
 maxWidth?: Dimension
 ```
 
-设置PopupV2的最大宽度，通过此接口PopupV2可以自定义宽度显示。
-
-默认值：400vp
-
+设置PopupV2的最大宽度，通过此接口PopupV2可以自定义宽度显示。默认值：400vp  
 **说明：**
-
-1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。 2. maxWidth是数字类型，支持float和整型，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。 3. 当类型为Resource时，如果未设置单位，默认单位为px。
+1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。
+2. maxWidth是数字类型，支持float和整型，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。
+3. 当类型为Resource时，如果未设置单位，默认单位为px。
 
 **类型：** Dimension
 
@@ -139,8 +130,7 @@ maxWidth?: Dimension
 message: ResourceStr
 ```
 
-设置PopupV2内容文本。
-
+设置PopupV2内容文本。  
 **说明：** 默认值：''，不显示内容文本。
 
 **类型：** ResourceStr
@@ -161,9 +151,7 @@ message: ResourceStr
 messageModifier?: TextModifier
 ```
 
-设置内容文本属性，如设置内容文本颜色、字体大小、字重等。
-
-默认值：undefined，使用系统内容文本属性。
+设置内容文本属性，如设置内容文本颜色、字体大小、字重等。默认值：undefined，使用系统内容文本属性。
 
 **类型：** [TextModifier](../../apis-arkui/arkts-apis/arkts-arkui-textmodifier-c.md)
 
@@ -183,9 +171,7 @@ messageModifier?: TextModifier
 onClose?: VoidCallback
 ```
 
-设置PopupV2关闭按钮回调函数。
-
-默认不设置关闭按钮回调函数。
+设置PopupV2关闭按钮回调函数。默认不设置关闭按钮回调函数。
 
 **类型：** VoidCallback
 
@@ -205,9 +191,7 @@ onClose?: VoidCallback
 showClose?: boolean | Resource
 ```
 
-设置PopupV2关闭按钮。true：显示关闭按钮；false：不显示关闭按钮。Resource类型：显示对应的图标。
-
-默认值：true
+设置PopupV2关闭按钮。true：显示关闭按钮；false：不显示关闭按钮。Resource类型：显示对应的图标。默认值：true
 
 **类型：** boolean \| Resource
 
@@ -229,8 +213,7 @@ showClose?: boolean | Resource
 title?: ResourceStr
 ```
 
-设置PopupV2标题文本。
-
+设置PopupV2标题文本。  
 **说明：** 默认值：''，不显示标题文本。
 
 **类型：** ResourceStr
@@ -251,9 +234,7 @@ title?: ResourceStr
 titleModifier?: TextModifier
 ```
 
-设置标题文本属性，如设置标题颜色、字体大小、字重等。
-
-默认值：undefined，使用系统标题文本属性。
+设置标题文本属性，如设置标题颜色、字体大小、字重等。默认值：undefined，使用系统标题文本属性。
 
 **类型：** [TextModifier](../../apis-arkui/arkts-apis/arkts-arkui-textmodifier-c.md)
 

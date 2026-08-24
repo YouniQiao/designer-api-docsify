@@ -1,9 +1,6 @@
 # Ashmem
 
-提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。
-
-共享内存只适用与本设备内跨进程通信。
-
+提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。共享内存只适用与本设备内跨进程通信。  
 - 大数据传输：传输大量数据(如图片、文件)时使用共享内存提升效率。 - 跨进程数据共享：多个进程需要共享访问同一块内存数据。 - 传输效率问题：大数据通过共享内存传输避免序列化开销，提升传输效率。 - 内存复用问题：多进程可共享访问同一内存，避免数据拷贝。 - 提升传输性能：共享内存机制大幅提升大数据传输效率。 - 减少内存占用：避免数据多次拷贝，节省内存资源。
 
 **起始版本：** 23
@@ -26,8 +23,7 @@ closeAshmem(): void
 
 关闭这个Ashmem。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 关闭Ashmem对象前需要先解除地址映射。
 
 **起始版本：** 23
@@ -565,8 +561,7 @@ readAshmem(size: number, offset: number): number[]
 
 从此Ashmem对象关联的共享文件中读取数据。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 9
@@ -682,8 +677,7 @@ readDataFromAshmem(size: int, offset: int): ArrayBuffer
 
 从此Ashmem对象关联的共享文件中读取数据。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 23
@@ -747,8 +741,7 @@ readFromAshmem(size: number, offset: number): number[]
 
 从此Ashmem对象关联的共享文件中读取数据。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 8
@@ -920,8 +913,7 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 将数据写入此Ashmem对象关联的共享文件。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 9
@@ -1018,8 +1010,7 @@ writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 
 将数据写入此Ashmem对象关联的共享文件。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 23
@@ -1075,8 +1066,7 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 将数据写入此Ashmem对象关联的共享文件。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 8

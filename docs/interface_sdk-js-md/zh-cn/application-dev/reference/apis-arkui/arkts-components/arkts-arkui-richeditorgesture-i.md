@@ -19,11 +19,7 @@
 onClick?: Callback<ClickEvent>
 ```
 
-ClickEvent为用户点击事件。
-
-点击完成时回调事件。
-
-双击时，第一次点击触发回调事件。
+ClickEvent为用户点击事件。点击完成时回调事件。双击时，第一次点击触发回调事件。
 
 **类型：** Callback&lt;ClickEvent&gt;
 
@@ -43,9 +39,7 @@ ClickEvent为用户点击事件。
 onLongPress?: Callback<GestureEvent>
 ```
 
-[GestureEvent](../../../reference/apis-arkui/arkui-ts/ts-gesture-common.md#gestureevent对象说明)为用户长按事件。
-
-长按完成时回调事件。
+GestureEvent为用户长按事件。长按完成时回调事件。
 
 **类型：** Callback&lt;GestureEvent&gt;
 

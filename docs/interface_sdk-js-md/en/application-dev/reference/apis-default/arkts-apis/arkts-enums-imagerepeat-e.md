@@ -1,8 +1,6 @@
 # ImageRepeat
 
-ImageRepeat enumeration description
-
-@enum { number }
+ImageRepeat enumeration description@enum { number }
 
 **Since:** 23
 

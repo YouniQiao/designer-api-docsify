@@ -1,8 +1,6 @@
 # Run
 
-Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class.
-
-Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class to create a **Run** object.
+Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class.Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class to create a **Run** object.
 
 **Since:** 23
 
@@ -267,14 +265,10 @@ getImageBounds(): common2D.Rect
 
 Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line.
 
-> **NOTE：**
-> 
-> The figure shows the image boundaries for the string " a b ".
-> 
-> 
-> 
-> The figure shows the image boundaries for the string "j" or "E".
-> 
+> **NOTE：**&gt;
+> The figure shows the image boundaries for the string " a b ".&gt;
+> &gt;
+> The figure shows the image boundaries for the string "j" or "E".&gt;
 > 
 
 **Since:** 23
@@ -619,16 +613,12 @@ Obtains the text style of this typesetting unit.
 getTypographicBounds(): TypographicBounds
 ```
 
-Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a " and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.
+Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.
 
-> **NOTE：**
-> 
-> The figure shows the typesetting boundaries for the string " a b ".
-> 
-> 
-> 
-> The figure shows the typesetting boundaries for the string "j" or "E".
-> 
+> **NOTE：**&gt;
+> The figure shows the typesetting boundaries for the string " a b ".&gt;
+> &gt;
+> The figure shows the typesetting boundaries for the string "j" or "E".&gt;
 > !
 > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 

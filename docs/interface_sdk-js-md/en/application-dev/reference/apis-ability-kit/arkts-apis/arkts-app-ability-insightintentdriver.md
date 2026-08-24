@@ -2,8 +2,7 @@
 
 The module provides APIs for executing intent calls. The system executes intent calls based on user interaction and more.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > Starting from API version 20, this module supports application navigation using intents defined by the
 > @InsightIntentLink
 > decorator.

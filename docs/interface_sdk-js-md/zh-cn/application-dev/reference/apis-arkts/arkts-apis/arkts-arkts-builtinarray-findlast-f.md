@@ -68,7 +68,7 @@ export function findLast(self: FixedArray<byte>, predicate: (elem: byte, index: 
 
 | 类型 | 说明 |
 | --- | --- |
-| [Byte](arkts-arkts-byte-c.md) \| undefined | 找到时返回该元素的值，否则返回undefined。 |
+| Byte \| undefined | 找到时返回该元素的值，否则返回undefined。 |
 
 
 ## findLast
@@ -101,7 +101,7 @@ export function findLast(self: FixedArray<short>, predicate: (elem: short, index
 
 | 类型 | 说明 |
 | --- | --- |
-| [Short](arkts-arkts-short-c.md) \| undefined | 找到时返回该元素的值，否则返回undefined。 |
+| Short \| undefined | 找到时返回该元素的值，否则返回undefined。 |
 
 
 ## findLast
@@ -134,7 +134,7 @@ export function findLast(self: FixedArray<int>, predicate: (elem: int, index: in
 
 | 类型 | 说明 |
 | --- | --- |
-| [Int](arkts-arkts-int-c.md) \| undefined | 找到时返回该元素的值，否则返回undefined。 |
+| Int \| undefined | 找到时返回该元素的值，否则返回undefined。 |
 
 
 ## findLast
@@ -167,7 +167,7 @@ export function findLast(self: FixedArray<long>, predicate: (elem: long, index: 
 
 | 类型 | 说明 |
 | --- | --- |
-| [Long](arkts-arkts-long-c.md) \| undefined | 找到时返回该元素的值，否则返回undefined。 |
+| Long \| undefined | 找到时返回该元素的值，否则返回undefined。 |
 
 
 ## findLast
@@ -200,7 +200,7 @@ export function findLast(self: FixedArray<float>, predicate: (elem: float, index
 
 | 类型 | 说明 |
 | --- | --- |
-| [Float](arkts-arkts-float-c.md) \| undefined | 找到时返回该元素的值，否则返回undefined。 |
+| Float \| undefined | 找到时返回该元素的值，否则返回undefined。 |
 
 
 ## findLast
@@ -233,7 +233,7 @@ export function findLast(self: FixedArray<double>, predicate: (elem: double, ind
 
 | 类型 | 说明 |
 | --- | --- |
-| [Double](arkts-arkts-double-c.md) \| undefined | 找到时返回该元素的值，否则返回undefined。 |
+| Double \| undefined | 找到时返回该元素的值，否则返回undefined。 |
 
 
 ## findLast
@@ -266,5 +266,5 @@ export function findLast(self: FixedArray<char>, predicate: (elem: char, index: 
 
 | 类型 | 说明 |
 | --- | --- |
-| [Char](arkts-arkts-char-c.md) \| undefined | 找到时返回该元素的值，否则返回undefined。 |
+| Char \| undefined | 找到时返回该元素的值，否则返回undefined。 |
 

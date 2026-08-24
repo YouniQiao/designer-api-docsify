@@ -1,8 +1,6 @@
 # BatteryPluggedType
 
-Enumerates charger types.
-
-@enum { int }
+Enumerates charger types.@enum { int }
 
 **Since:** 23
 

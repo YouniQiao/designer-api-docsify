@@ -1,8 +1,6 @@
 # PresetSplitRatio
 
-区域比例。
-
-@enum { double }
+区域比例。@enum { double }
 
 **起始版本：** 23
 

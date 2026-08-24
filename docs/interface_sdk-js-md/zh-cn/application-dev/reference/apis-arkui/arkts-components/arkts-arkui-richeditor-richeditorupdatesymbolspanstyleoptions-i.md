@@ -1,8 +1,6 @@
 # RichEditorUpdateSymbolSpanStyleOptions
 
-SymbolSpan样式选项。
-
-继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md)。
+SymbolSpan样式选项。继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md)。
 
 **继承/实现关系：** RichEditorUpdateSymbolSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md)
 

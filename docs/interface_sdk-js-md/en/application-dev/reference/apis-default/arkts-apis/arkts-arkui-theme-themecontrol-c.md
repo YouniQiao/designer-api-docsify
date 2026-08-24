@@ -21,8 +21,7 @@ Class ThemeControl provides the Theme management for whole Ability and pages.
 static setDefaultTheme(theme: CustomTheme | undefined): void
 ```
 
-Sets the default Theme:
-
+Sets the default Theme:  
 - for whole Ability when invoked from the Ability level code. - for the ArkUI page and for later opened pages when invoked at the ArkUI page level.
 
 **Since:** 23

@@ -1,8 +1,6 @@
 # PlayInfo
 
-The definition of play information.
-
-@interface PlayInfo
+The definition of play information.@interface PlayInfo
 
 **Since:** 23
 

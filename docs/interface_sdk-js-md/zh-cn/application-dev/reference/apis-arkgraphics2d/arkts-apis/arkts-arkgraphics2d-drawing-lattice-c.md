@@ -2,12 +2,9 @@
 
 矩形网格对象。该对象用于将图像按照矩形网格进行划分，支持固定指定网格区域、缩放其余网格实现局部拉伸、自定义网格绘制类型、网格颜色填充以及指定绘制边界矩形等能力。创建Lattice对象后，需配合 [Canvas.drawImageLattice](arkts-arkgraphics2d-drawing-canvas-c.md#drawimagelattice)方法使用以实现图像的局部拉伸绘制。
 
-> **说明：**
-> 
-> - 本Class首批接口从API version 12开始支持。
-> 
-> - 本模块使用屏幕物理像素单位px。
-> 
+> **说明：**&gt;
+> - 本Class首批接口从API version 12开始支持。&gt;
+> - 本模块使用屏幕物理像素单位px。&gt;
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
@@ -46,8 +43,8 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 | fXCount | number | 是 | X坐标值数组的元素个数，需与xDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
 | fYCount | number | 是 | Y坐标值数组的元素个数，需与yDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
 | fBounds | common2D.Rect \| null | 否 | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参 数为小数，会直接舍弃小数部分，转为整数）。 |
-| fRectTypes | Array&lt;RectType&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) ( fYCount + 1)。 |
-| fColors | Array&lt;common2D.Color&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。不传入 时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) (fYCount + 1)。 |
+| fRectTypes | Array&lt;RectType&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
+| fColors | Array&lt;common2D.Color&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。不传入 时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
 
 **返回值：**
 
@@ -131,8 +128,8 @@ static createImageLattice(xDivs: Array<int>, yDivs: Array<int>, fXCount: int, fY
 | fXCount | int | 是 | X坐标值数组的元素个数，需与xDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
 | fYCount | int | 是 | Y坐标值数组的元素个数，需与yDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
 | fBounds | common2D.Rect \| null | 否 | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参 数为小数，会直接舍弃小数部分，转为整数）。 |
-| fRectTypes | Array&lt;RectType&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) ( fYCount + 1)。 |
-| fColors | Array&lt;common2D.Color&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。不传入 时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) (fYCount + 1)。 |
+| fRectTypes | Array&lt;RectType&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
+| fColors | Array&lt;common2D.Color&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。不传入 时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
 
 **返回值：**
 
@@ -174,8 +171,8 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 | fXCount | number | 是 | X坐标值数组的元素个数，需与xDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
 | fYCount | number | 是 | Y坐标值数组的元素个数，需与yDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
 | fBounds | common2D.Rect \| null | 否 | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参 数为小数，会直接舍弃小数部分，转为整数）。 |
-| fRectTypes | Array&lt;RectType&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) ( fYCount + 1)。 |
-| fColors | Array&lt;number&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。颜色用16进制ARGB 格式的32位无符号整数表示，取值范围[0, 4294967295]。不传入时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) (fYCount + 1)。 |
+| fRectTypes | Array&lt;RectType&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
+| fColors | Array&lt;number&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。颜色用16进制ARGB 格式的32位无符号整数表示，取值范围[0, 4294967295]。不传入时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
 
 **返回值：**
 
@@ -217,8 +214,8 @@ static createImageLatticeWithArrayInt(xDivs: Array<int>, yDivs: Array<int>, fXCo
 | fXCount | int | 是 | X坐标值数组的元素个数，需与xDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
 | fYCount | int | 是 | Y坐标值数组的元素个数，需与yDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
 | fBounds | common2D.Rect \| null | 否 | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参 数为小数，会直接舍弃小数部分，转为整数）。 |
-| fRectTypes | Array&lt;RectType&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) ( fYCount + 1)。 |
-| fColors | Array&lt;int&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。颜色用16进制ARGB 格式的32位无符号整数表示，取值范围[0, 4294967295]。不传入时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) (fYCount + 1)。 |
+| fRectTypes | Array&lt;RectType&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
+| fColors | Array&lt;int&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。颜色用16进制ARGB 格式的32位无符号整数表示，取值范围[0, 4294967295]。不传入时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
 
 **返回值：**
 

@@ -1,8 +1,6 @@
 # FlexOptions
 
-Describes the layout and alignment of child components within the Flex component.
-
-@interface FlexOptions
+Describes the layout and alignment of child components within the Flex component.@interface FlexOptions
 
 **Since:** 23
 

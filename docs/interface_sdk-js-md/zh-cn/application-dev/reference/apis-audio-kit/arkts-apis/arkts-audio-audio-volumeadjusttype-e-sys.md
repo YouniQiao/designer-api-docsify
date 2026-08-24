@@ -1,6 +1,6 @@
 # VolumeAdjustType（系统接口）
 
-Enumerates volume adjustment types.
+枚举，音量调节类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Enumerates volume adjustment types.
 VOLUME_UP = 0
 ```
 
-Adjust volume up.
+向上调节音量。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Adjust volume up.
 VOLUME_DOWN = 1
 ```
 
-Adjust volume down.
+向下调节音量。
 
 **起始版本：** 23
 

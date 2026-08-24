@@ -1,8 +1,6 @@
 # GeneratorNodeGraphOptions (System API)
 
-Parameters used to open the NodeGraphComponent.
-
-@interface GeneratorNodeGraphOptions
+Parameters used to open the NodeGraphComponent.@interface GeneratorNodeGraphOptions
 
 **Since:** 26.0.0
 

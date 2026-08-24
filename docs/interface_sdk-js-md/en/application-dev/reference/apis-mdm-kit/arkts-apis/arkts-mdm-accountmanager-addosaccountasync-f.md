@@ -14,8 +14,7 @@ function addOsAccountAsync(admin: Want, name: string, type: osAccount.OsAccountT
 
 Adds an account in the background. This API uses a promise to return the result. This API is applicable to scenarios where enterprises need to create accounts in batches or remotely manage accounts. Accounts can be created without user interaction, improving management efficiency.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait
 > for the asynchronous return of this API.
 

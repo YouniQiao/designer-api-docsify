@@ -25,9 +25,8 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 > 单位：默认为vp，可通过LengthMetrics或LocalizedBorderRadiuses类型指定单位。
 
-> **说明：**
-> 
-> 1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)类型的value参数同时作用于四个圆角半径大小，
+> **说明：**&gt;
+> 1. [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)类型的value参数同时作用于四个圆角半径大小，
 > unit参数用于设置单位。
 > 2. BorderRadiuses类型可以设置四个不同值的圆角半径，所有单位固定为vp。
 > 3. LocalizedBorderRadiuses类型可以设置四个不同值的圆角半径，并且可以单独设置每个圆角的单位。
@@ -54,8 +53,7 @@ color?: ResourceColor
 
 选中项的背景颜色。
 
-> 默认值：
-> 
+> 默认值：&gt;
 > 'sys.color.comp_background_tertiary'
 
 > **说明：**未设置该属性时，使用默认值。

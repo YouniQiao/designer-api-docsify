@@ -1,8 +1,6 @@
 # BatteryChargeState
 
-Enumerates charging states.
-
-@enum { int }
+Enumerates charging states.@enum { int }
 
 **Since:** 23
 

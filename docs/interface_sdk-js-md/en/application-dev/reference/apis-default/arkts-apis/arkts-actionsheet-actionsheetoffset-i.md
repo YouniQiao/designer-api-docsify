@@ -1,8 +1,6 @@
 # ActionSheetOffset
 
-ActionSheet offset.
-
-@interface ActionSheetOffset
+ActionSheet offset.@interface ActionSheetOffset
 
 **Since:** 23
 

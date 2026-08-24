@@ -1,10 +1,6 @@
 # StartAnimationParams
 
-Describes the parameters for the startup animation.
-
-The configuration is valid only for transitions between different abilities within the same application.
-
-The configuration is valid only full-screen applications.
+Describes the parameters for the startup animation.The configuration is valid only for transitions between different abilities within the same application.The configuration is valid only full-screen applications.
 
 **Since:** 23
 
@@ -15,8 +11,6 @@ The configuration is valid only full-screen applications.
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
 import { window } from '@kit.ArkUI';
 ```
 

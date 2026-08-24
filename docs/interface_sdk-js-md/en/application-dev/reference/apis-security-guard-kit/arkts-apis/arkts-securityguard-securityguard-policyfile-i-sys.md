@@ -1,8 +1,6 @@
 # PolicyFile (System API)
 
-Provides policy file information.
-
-@interface PolicyFile
+Provides policy file information.@interface PolicyFile
 
 **Since:** 12
 

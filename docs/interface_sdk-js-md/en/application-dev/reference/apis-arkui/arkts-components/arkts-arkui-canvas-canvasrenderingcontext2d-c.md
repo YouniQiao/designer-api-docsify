@@ -1,8 +1,6 @@
 # CanvasRenderingContext2D
 
-Draw context object for the Canvas component.
-
-@extends CanvasRenderer
+Draw context object for the Canvas component.@extends CanvasRenderer
 
 **Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvas-canvasrenderer-c.md)
 

@@ -2,8 +2,7 @@
 
 Defines options for the paste button, including icon, text and button type.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - You are advised to specify at least one of **icon** or **text**.
 
 > - If neither **icon** nor **text** is specified, **PasteButton** is created with default styles as follows:

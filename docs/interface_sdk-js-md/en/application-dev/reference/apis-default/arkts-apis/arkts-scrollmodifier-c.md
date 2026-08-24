@@ -1,8 +1,6 @@
 # ScrollModifier
 
-Defines Scroll Modifier
-
-@implements { ScrollAttribute,AttributeModifier&lt;ScrollAttribute&gt; }
+Defines Scroll Modifier@implements { ScrollAttribute,AttributeModifier&lt;ScrollAttribute&gt; }
 
 **Inheritance/Implementation:** ScrollModifier implements ScrollAttribute, AttributeModifier<ScrollAttribute>
 

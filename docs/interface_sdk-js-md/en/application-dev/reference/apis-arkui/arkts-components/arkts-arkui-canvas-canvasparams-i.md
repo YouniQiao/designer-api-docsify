@@ -1,8 +1,6 @@
 # CanvasParams
 
-Defines the parameters for creating Canvas.
-
-@interface CanvasParams
+Defines the parameters for creating Canvas.@interface CanvasParams
 
 **Since:** 23
 

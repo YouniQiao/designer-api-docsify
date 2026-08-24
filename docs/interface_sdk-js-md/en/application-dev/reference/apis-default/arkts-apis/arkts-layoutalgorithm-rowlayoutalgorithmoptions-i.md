@@ -2,13 +2,11 @@
 
 RowLayoutAlgorithm constructor options.
 
-@interface RowLayoutAlgorithmOptions
-
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta since version 24.
 
-<!--Device-unnamed-interface RowLayoutAlgorithmOptions--><!--Device-unnamed-interface RowLayoutAlgorithmOptions-End-->
+<!--Device-unnamed-export declare interface RowLayoutAlgorithmOptions--><!--Device-unnamed-export declare interface RowLayoutAlgorithmOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,7 +84,7 @@ space?: LengthMetrics
 
 Horizontal layout element spacing.
 
-**Type:** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

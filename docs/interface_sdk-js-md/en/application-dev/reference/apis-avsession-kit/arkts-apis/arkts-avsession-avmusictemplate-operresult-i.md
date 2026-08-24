@@ -1,8 +1,6 @@
 # OperResult
 
-The definition of the operate result.
-
-@interface OperResult
+The definition of the operate result.@interface OperResult
 
 **Since:** 23
 

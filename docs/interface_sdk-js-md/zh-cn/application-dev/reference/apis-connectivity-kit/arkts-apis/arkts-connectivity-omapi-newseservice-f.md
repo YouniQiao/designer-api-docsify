@@ -12,9 +12,7 @@ import { omapi } from '@kit.ConnectivityKit';
 function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService
 ```
 
-建立一个可用于连接到系统中所有可用SE的新连接（服务）。连接过程较为耗时，所以此方法仅提供异步方式进行的。使用callback异步回调。
-
-仅当指定的回调或者当[isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected)方法返回true时，该返回SEService对象是可用的。
+建立一个可用于连接到系统中所有可用SE的新连接（服务）。连接过程较为耗时，所以此方法仅提供异步方式进行的。使用callback异步回调。仅当指定的回调或者当[isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected)方法返回true时，该返回SEService对象是可用的。
 
 **起始版本：** 10
 

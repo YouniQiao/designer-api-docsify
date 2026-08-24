@@ -2,16 +2,13 @@
 
 描述附有图片的通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。
 
-> **说明：**
-> 
+> **说明：**&gt;
 > - 当该类型通知与其他通知形成组通知时，该通知类型的展示效果默认为折叠态，
 > 显示的标题与正文为该类型继承的NotificationBasicContent中的`title`与`text`。
 > 当该类型通知单独展示，没有与其他通知形成组通知时，该通知类型的展示效果
 > 默认为展开态，显示的标题为展开时的标题`expandedTitle`，
-> 显示的正文为该类型继承的NotificationBasicContent中的`text`+该类型的图片内容`picture`。
-> 
-> - 用户点击成组展示的通知，查看各个通知详情时，该通知的展示效果变化为展开态。
-> 
+> 显示的正文为该类型继承的NotificationBasicContent中的`text`+该类型的图片内容`picture`。&gt;
+> - 用户点击成组展示的通知，查看各个通知详情时，该通知的展示效果变化为展开态。&gt;
 > - 实际显示效果依赖于设备能力和通知中心UI样式。
 
 **继承/实现关系：** NotificationPictureContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)

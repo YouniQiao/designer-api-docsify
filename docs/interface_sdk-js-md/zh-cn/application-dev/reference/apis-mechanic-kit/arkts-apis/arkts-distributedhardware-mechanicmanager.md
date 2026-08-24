@@ -1,8 +1,6 @@
 # @ohos.distributedHardware.mechanicManager
 
-提供与本设备连接的机械设备的控制和交互能力。 包括连接管理、控制和监控功能
-
-@namespace mechanicManager
+提供与本设备连接的机械设备的控制和交互能力。 包括连接管理、控制和监控功能@namespace mechanicManager
 
 **起始版本：** 23
 
@@ -101,10 +99,10 @@ import { mechanicManager } from '@kit.MechanicKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md) | Device attach states. |
-| [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | 相机跟踪布局 |
+| [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md) | Device attach states.@enum { int } |
+| [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | 相机跟踪布局@enum { int } |
 | [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | Enumerates the mechanical device types. @enum { int } |
-| [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md) | 跟踪事件 |
+| [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md) | 跟踪事件@enum { int } |
 
 <!--Del-->
 ### 枚举（系统接口）
@@ -116,11 +114,11 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [MarchingMode](arkts-mechanic-mechanicmanager-marchingmode-e-sys.md) | 行进模式定义 |
 | [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e-sys.md) | Enumerates the mechanical device types. @enum { int } |
 | [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md) | 具身设备事件定义 |
-| [Operation](arkts-mechanic-mechanicmanager-operation-e-sys.md) | 用户操作 |
-| [Result](arkts-mechanic-mechanicmanager-result-e-sys.md) | Rotation execution results. |
-| [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md) | 旋转轴限位状态 |
-| [SearchDirection](arkts-mechanic-mechanicmanager-searchdirection-e-sys.md) | Search direction. |
+| [Operation](arkts-mechanic-mechanicmanager-operation-e-sys.md) | 用户操作@enum { int } |
+| [Result](arkts-mechanic-mechanicmanager-result-e-sys.md) | Rotation execution results.@enum { int } |
+| [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md) | 旋转轴限位状态@enum { int } |
+| [SearchDirection](arkts-mechanic-mechanicmanager-searchdirection-e-sys.md) | Search direction.@enum { int } |
 | [SpeedGear](arkts-mechanic-mechanicmanager-speedgear-e-sys.md) | 速度档位定义 |
-| [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md) | Target type. |
+| [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md) | Target type.@enum { int } |
 <!--DelEnd-->
 

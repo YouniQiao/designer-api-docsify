@@ -54,8 +54,7 @@ enableAutoCookie(enable: boolean): void
 
 Sets whether to automatically carry and share cookies. That is, whether to automatically reuse the cookies delivered by the server among multiple requests of the same **HttpRequest** instance.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > (1) The default value is **false**, indicating that cookies are not automatically carried.
 
 > (2) If the value is changed from **false** to **true**, the setting takes effect when the **request** API is
@@ -667,8 +666,7 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 
 Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
 > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call
 > [requestInStream](#requestinstream) to
@@ -923,8 +921,7 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 
 Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
 > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call
 > [requestInStream](#requestinstream) to
@@ -1006,8 +1003,7 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 
 Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
 > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call
 > [requestInStream](#requestinstream) to
@@ -1453,8 +1449,7 @@ requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 
 Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit**
 > parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md).
 
@@ -1464,7 +1459,6 @@ Initiates an HTTP network request based on the URL and related configuration opt
 > HTTP request.
 
 > (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned.
-
 **Required permission**: ohos.permission.INTERNET
 
 **Since:** 26.0.0

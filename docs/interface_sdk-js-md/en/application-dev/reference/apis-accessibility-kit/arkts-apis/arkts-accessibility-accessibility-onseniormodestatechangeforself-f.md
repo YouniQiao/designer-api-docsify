@@ -3,11 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit';
-import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## onSeniorModeStateChangeForSelf
@@ -16,15 +13,11 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function onSeniorModeStateChangeForSelf(callback: Callback<boolean>): void
 ```
 
-Subscribes to the "senior mode" change event of the app itself. This API uses an asynchronous callback to return the result.
+Subscribes to the "senior mode" change event of the app itself. This API uses an asynchronous callback to return the result.Unlike [accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md), which listens for system-level senior mode state changes, this API only monitors the state of the app itself.
 
-Unlike [accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md), which listens for system-level senior mode state changes, this API only monitors the state of the app itself.
-
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
-> 
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.&gt;
 > - After calling this method, ensure that
 > [accessibility.offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md) is used to
 > unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle

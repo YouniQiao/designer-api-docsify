@@ -28,5 +28,5 @@ import { BundleVersion } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Describe bundle version |
+| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Describe bundle version@interface BundleVersion |
 

@@ -1,8 +1,6 @@
 # MaterialProperty
 
-Defines the textures, property factors, and texture samplers used by a material.
-
-@interface MaterialProperty
+Defines the textures, property factors, and texture samplers used by a material.@interface MaterialProperty
 
 **Since:** 23
 

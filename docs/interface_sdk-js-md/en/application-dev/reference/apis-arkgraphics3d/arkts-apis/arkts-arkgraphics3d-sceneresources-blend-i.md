@@ -1,8 +1,6 @@
 # Blend
 
-Controls the transparency of materials.
-
-@interface Blend
+Controls the transparency of materials.@interface Blend
 
 **Since:** 23
 

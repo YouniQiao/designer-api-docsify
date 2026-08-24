@@ -6,6 +6,8 @@ Defines chip label class.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ObservedV2
+
 <!--Device-unnamed-export declare class ChipV2Label--><!--Device-unnamed-export declare class ChipV2Label-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +44,7 @@ The constructor of ChipV2Label
 ## activatedFontColor
 
 ```TypeScript
-@Trace
-  public activatedFontColor?: ColorMetrics
+public activatedFontColor?: ColorMetrics
 ```
 
 Text font color when chip is activated.
@@ -54,6 +55,8 @@ Text font color when chip is activated.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Label-@Trace  public activatedFontColor?: ColorMetrics--><!--Device-ChipV2Label-@Trace  public activatedFontColor?: ColorMetrics-End-->
@@ -63,8 +66,7 @@ Text font color when chip is activated.
 ## fontColor
 
 ```TypeScript
-@Trace
-  public fontColor?: ColorMetrics
+public fontColor?: ColorMetrics
 ```
 
 Text font color.
@@ -75,6 +77,8 @@ Text font color.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Label-@Trace  public fontColor?: ColorMetrics--><!--Device-ChipV2Label-@Trace  public fontColor?: ColorMetrics-End-->
@@ -84,8 +88,7 @@ Text font color.
 ## fontFamily
 
 ```TypeScript
-@Trace
-  public fontFamily?: string
+public fontFamily?: string
 ```
 
 Text font family.
@@ -96,6 +99,8 @@ Text font family.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Label-@Trace  public fontFamily?: string--><!--Device-ChipV2Label-@Trace  public fontFamily?: string-End-->
@@ -105,8 +110,7 @@ Text font family.
 ## fontSize
 
 ```TypeScript
-@Trace
-  public fontSize?: LengthMetrics
+public fontSize?: LengthMetrics
 ```
 
 Text font size.
@@ -117,6 +121,8 @@ Text font size.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Label-@Trace  public fontSize?: LengthMetrics--><!--Device-ChipV2Label-@Trace  public fontSize?: LengthMetrics-End-->
@@ -126,8 +132,7 @@ Text font size.
 ## labelMargin
 
 ```TypeScript
-@Trace
-  public labelMargin?: ChipV2LabelMarginConfig
+public labelMargin?: ChipV2LabelMarginConfig
 ```
 
 Label margin.
@@ -138,6 +143,8 @@ Label margin.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Label-@Trace  public labelMargin?: ChipV2LabelMarginConfig--><!--Device-ChipV2Label-@Trace  public labelMargin?: ChipV2LabelMarginConfig-End-->
@@ -147,8 +154,7 @@ Label margin.
 ## localizedLabelMargin
 
 ```TypeScript
-@Trace
-  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
+public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
 ```
 
 Localized label margin.
@@ -159,6 +165,8 @@ Localized label margin.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Label-@Trace  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig--><!--Device-ChipV2Label-@Trace  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig-End-->
@@ -168,8 +176,7 @@ Localized label margin.
 ## modifier
 
 ```TypeScript
-@Trace
-  public modifier?: TextModifier
+public modifier?: TextModifier
 ```
 
 Modifier for the label text.
@@ -180,6 +187,8 @@ Modifier for the label text.
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChipV2Label-@Trace  public modifier?: TextModifier--><!--Device-ChipV2Label-@Trace  public modifier?: TextModifier-End-->
@@ -189,8 +198,7 @@ Modifier for the label text.
 ## text
 
 ```TypeScript
-@Trace
-  public text: string
+public text: string
 ```
 
 Text content.
@@ -200,6 +208,8 @@ Text content.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

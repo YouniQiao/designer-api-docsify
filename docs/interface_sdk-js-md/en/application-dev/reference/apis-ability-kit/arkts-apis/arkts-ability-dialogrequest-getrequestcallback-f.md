@@ -14,8 +14,7 @@ function getRequestCallback(want: Want): RequestCallback
 
 Obtains the request callback from Want.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes,
 > the request callback can be obtained from Want. If this API is used in other scenarios, no return value is
 > obtained.

@@ -14,7 +14,6 @@ Describes the profile of depth data. It inherits from [Profile](arkts-camera-cam
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## dataAccuracy

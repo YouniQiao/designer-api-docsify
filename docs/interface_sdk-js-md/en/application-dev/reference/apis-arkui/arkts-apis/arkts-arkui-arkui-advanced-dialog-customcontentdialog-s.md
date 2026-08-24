@@ -4,6 +4,8 @@ Declare custom content dialog
 
 **Since:** 12
 
+**Decorator:** @CustomDialog
+
 <!--Device-unnamed-export declare struct CustomContentDialog--><!--Device-unnamed-export declare struct CustomContentDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -12,7 +14,6 @@ Declare custom content dialog
 
 ```TypeScript
 import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
-import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUI';
 ```
 
 ## buttons
@@ -57,15 +58,13 @@ Sets the CustomContentDialog content area padding.
 
 ## contentBuilder
 
-```TypeScript
-@BuilderParam contentBuilder: () => void
-```
-
 Sets the CustomContentDialog content.
 
 **Type:** () =&gt; void
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

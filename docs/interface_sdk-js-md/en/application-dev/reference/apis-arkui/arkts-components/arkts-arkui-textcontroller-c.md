@@ -16,13 +16,6 @@ controller: TextController = new TextController() ```
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
-import { NodeRenderType, RenderOptions, BuilderNode, ReactiveBuilderNode, BuildOptions, NodeController, FrameNode, DrawContext, Size, Offset, Position, Pivot, Scale, Translation, Matrix4, Rotation, Frame, RenderNode, XComponentNode, LengthMetrics, ColorMetrics, BackgroundBlur, ContentBlur, ForegroundBlur, LengthUnit, LengthMetricsUnit, LayoutConstraint, ComponentContent, ReactiveComponentContent, NodeContent, Content, typeNode, NodeAdapter, ShapeMask, ShapeClip, Rect, RoundRect, edgeColors, edgeWidths, borderStyles, borderRadiuses, ExpandMode, ChildrenCountMode, UIState, InputEventType } from '@kit.ArkUI';
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## closeSelectionMenu
@@ -100,25 +93,19 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 Sets the text selection area, which will be highlighted.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > If [copyOption](arkts-arkui-text-attribute.md#copyoption) is set to **CopyOptions.None**, the setting of
-> **setTextSelection** does not take effect.
-> 
+> **setTextSelection** does not take effect.&gt;
 > If [textOverflow](arkts-arkui-text-attribute.md#textoverflow) is set to **TextOverflow.MARQUEE**, the setting of
-> **setTextSelection** does not take effect.
-> 
+> **setTextSelection** does not take effect.&gt;
 > If the value of **selectionStart** is greater than or equal to that of **selectionEnd**, no text will be
 > selected. The value range is [0, textSize], where **textSize** indicates the maximum number of characters in the
 > text content. If the value is less than 0, the value **0** will be used. If the value is greater than
-> **textSize**, **textSize** will be used.
-> 
+> **textSize**, **textSize** will be used.&gt;
 > If the selection range falls within a truncated or invisible area, selection is ignored. When truncation is
-> disabled, selection can extend beyond the parent component's bounds.
-> 
+> disabled, selection can extend beyond the parent component's bounds.&gt;
 > On PC or 2-in-1 devices, calling **setTextSelection** does not show the menu even if **options** is set to
-> **MenuPolicy.SHOW**.
-> 
+> **MenuPolicy.SHOW**.&gt;
 > When an emoji is truncated by the selection range, the emoji is selected if its start position is within the
 > specified text selection range.
 

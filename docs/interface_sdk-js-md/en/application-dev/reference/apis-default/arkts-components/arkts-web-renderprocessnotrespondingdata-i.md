@@ -1,8 +1,6 @@
 # RenderProcessNotRespondingData
 
-Defines the render process not responding info.
-
-@interface RenderProcessNotRespondingData
+Defines the render process not responding info.@interface RenderProcessNotRespondingData
 
 **Since:** 23
 

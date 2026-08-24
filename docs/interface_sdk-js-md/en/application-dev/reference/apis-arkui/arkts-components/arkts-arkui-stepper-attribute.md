@@ -1,8 +1,6 @@
 # Stepper properties/events
 
-Defines the stepper attribute functions
-
-@extends CommonMethod&lt;StepperAttribute&gt;
+Defines the stepper attribute functions@extends CommonMethod&lt;StepperAttribute&gt;
 
 **Inheritance/Implementation:** StepperAttribute extends CommonMethod<StepperAttribute>
 

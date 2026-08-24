@@ -20,10 +20,8 @@ import { call } from '@kit.TelephonyKit';
 accountId?: int
 ```
 
-帐户Id。
-
-- 0：卡槽1。 - 1：卡槽2。
-
+帐户Id。  
+- 0：卡槽1。 - 1：卡槽2。  
 。此接口为系统接口。
 
 **类型：** int

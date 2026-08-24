@@ -6,6 +6,8 @@ Declare TreeViewV2 Component
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct TreeViewV2--><!--Device-unnamed-export declare struct TreeViewV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,8 +20,7 @@ Declare TreeViewV2 Component
 ## build
 
 ```TypeScript
-@Builder
-  build(): void
+build(): void
 ```
 
 The method to build component.
@@ -27,6 +28,8 @@ The method to build component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +40,7 @@ The method to build component.
 ## treeControllerV2
 
 ```TypeScript
-@Param
-  treeControllerV2: TreeControllerV2
+treeControllerV2: TreeControllerV2
 ```
 
 Node data source of TreeViewV2.
@@ -48,6 +50,8 @@ Node data source of TreeViewV2.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

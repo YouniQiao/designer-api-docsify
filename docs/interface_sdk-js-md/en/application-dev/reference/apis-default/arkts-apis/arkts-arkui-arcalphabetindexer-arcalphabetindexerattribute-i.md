@@ -99,7 +99,7 @@ Definitions fonts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | Yes | Default font style of the letter index bar. Default value: { size: '13.0fp', style:FontStyle.Normal, weight:500, family:'HarmonyOS Sans' } |
+| font | Optional&lt;Font&gt; | Yes | Default font style of the letter index bar. Default value: {size: '13.0fp', style:FontStyle.Normal, weight:500, family:'HarmonyOS Sans'} |
 
 **Return value:**
 
@@ -279,7 +279,7 @@ Popup text style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | Yes | Font style of the prompt pop-up. Default value: { size: '19.0fp', style:FontStyle.Normal, weight:500, family:'HarmonyOS Sans' } |
+| font | Optional&lt;Font&gt; | Yes | Font style of the prompt pop-up. Default value: {size: '19.0fp', style:FontStyle.Normal, weight:500, family:'HarmonyOS Sans'} |
 
 **Return value:**
 
@@ -399,7 +399,7 @@ Selected text style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | Yes | Text style of the selected item. Default value: { size: '13.0fp', style:FontStyle.Normal, weight:500, family:'HarmonyOS Sans' } |
+| font | Optional&lt;Font&gt; | Yes | Text style of the selected item. Default value: {size: '13.0fp', style:FontStyle.Normal, weight:500, family:'HarmonyOS Sans'} |
 
 **Return value:**
 

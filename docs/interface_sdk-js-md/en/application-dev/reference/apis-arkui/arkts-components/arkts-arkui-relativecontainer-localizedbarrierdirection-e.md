@@ -1,8 +1,6 @@
 # LocalizedBarrierDirection
 
-Specifies the localized direction value of Barrier.
-
-@enum { number }
+Specifies the localized direction value of Barrier.@enum { number }
 
 **Since:** 23
 

@@ -1,8 +1,6 @@
 # DateStyleOptions
 
-DateStyleOptions定义了日期内联型Counter的属性和事件。
-
-继承于[CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-commonoptions-c.md)。
+DateStyleOptions定义了日期内联型Counter的属性和事件。继承于[CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-commonoptions-c.md)。
 
 **继承/实现关系：** DateStyleOptions extends [CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-commonoptions-c.md)
 

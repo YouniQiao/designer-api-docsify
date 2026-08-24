@@ -1,8 +1,6 @@
 # RdbStore
 
-Provides APIs for managing data in an RDB store.
-
-Before using the APIs of this class, use [executeSql](#executesql) to initialize the database table structure and related data.
+Provides APIs for managing data in an RDB store.Before using the APIs of this class, use [executeSql](#executesql) to initialize the database table structure and related data.
 
 **Since:** 7
 
@@ -565,8 +563,7 @@ Obtains the distributed table name of a remote device based on the local table n
 
 > **NOTE：**
 
-> The value of **device** can be obtained by <!--RP1--
-> 
+> The value of **device** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > . <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -650,8 +647,7 @@ Obtains the distributed table name of a remote device based on the local table n
 
 > **NOTE：**
 
-> The value of **device** can be obtained by <!--RP1--
-> 
+> The value of **device** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > . <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -793,7 +789,7 @@ Queries data from the RDB store based on specified conditions. This API uses an 
 | --- | --- | --- | --- |
 | predicates | RdbPredicates | Yes | Query conditions specified by the **RdbPredicates** object. |
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is not specified, the query applies to all columns. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
 
 **Examples**
 
@@ -881,7 +877,7 @@ Queries data using the specified SQL statement. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | sql | string | Yes | SQL statement to run. |
 | bindArgs | Array&lt;ValueType&gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
 
 **Examples**
 

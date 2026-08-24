@@ -1,8 +1,6 @@
 # MediaQueryList
 
-定义MediaQuery列表信息。
-
-@interface MediaQueryList
+定义MediaQuery列表信息。@interface MediaQueryList
 
 **起始版本：** 23
 

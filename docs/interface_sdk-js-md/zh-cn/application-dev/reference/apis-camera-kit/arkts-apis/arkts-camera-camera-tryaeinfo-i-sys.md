@@ -14,7 +14,6 @@ Describes the Try AE parameters. Try AE indicates that the hardware reports the 
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## captureInterval

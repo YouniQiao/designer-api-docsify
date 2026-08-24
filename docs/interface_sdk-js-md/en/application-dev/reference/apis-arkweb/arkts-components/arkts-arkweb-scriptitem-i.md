@@ -1,8 +1,6 @@
 # ScriptItem
 
-Describes the **ScriptItem** object registered with the **Web** component through the [javaScriptOnDocumentStart](arkts-arkweb-web-attribute.md#javascriptondocumentstart) attribute.
-
-@interface ScriptItem [since 11 - 11]
+Describes the **ScriptItem** object registered with the **Web** component through the [javaScriptOnDocumentStart](arkts-arkweb-web-attribute.md#javascriptondocumentstart) attribute.@interface ScriptItem [since 11 - 11]
 
 **Since:** 11
 
@@ -13,11 +11,6 @@ Describes the **ScriptItem** object registered with the **Web** component throug
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-import { webview } from '@kit.ArkWeb';
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## script
@@ -45,8 +38,15 @@ scriptRules: Array<string>
 ```
 
 A set of matching rules for allowed sources.
-
-1. To allow URLs from all sources, use the wildcard "*". 2. To perform exact matching, specify the website address, for example, "https://www.example.com". 3. To perform fuzzy matching, use the "*" wildcard, for example, "https://*.example.com". Patterns such as "x.*.y.com" and "*foobar.com" are not allowed. 4. If the source is an IP address, use rule 2. 5. For protocols other than HTTP/HTTPS (custom protocols), exact matching and fuzzy matching are not supported, and the rule must end with `://`, for example, "resource://". 6. In a set of scriptRules, if any rule does not meet the above requirements, the entire set of scriptRules does not take effect.
+1. To allow URLs from all sources, use the wildcard "*".
+2. To perform exact matching, specify the website address, for example, "https://www.example.com".
+3. To perform fuzzy matching, use the "*" wildcard, for example, "https://*.example.com".
+Patterns such as "x.*.y.com" and "*foobar.com" are not allowed.
+4. If the source is an IP address, use rule 2.
+5. For protocols other than HTTP/HTTPS (custom protocols), exact matching and fuzzy matching are not supported,
+and the rule must end with `://`, for example, "resource://".
+6. In a set of scriptRules, if any rule does not meet the above requirements,
+the entire set of scriptRules does not take effect.
 
 **Type:** Array&lt;string&gt;
 

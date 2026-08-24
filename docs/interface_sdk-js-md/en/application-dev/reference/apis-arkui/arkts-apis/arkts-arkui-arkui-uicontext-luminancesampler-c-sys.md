@@ -2,8 +2,7 @@
 
 Sets the background luminance color picking parameters, registers the luminance change listening callback, and unregisters the listening callback.
 
-> **NOTE：**
-> 
+> **NOTE：**&gt;
 > In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler) in
 > **UIContext** to obtain a **LuminanceSampler** object, and then call the APIs using the obtained object.
 
@@ -145,9 +144,7 @@ struct PagePicker {
 onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 ```
 
-Registers the callback for listening to color picking.
-
-The background luminance is divided into three ranges based on the luminance threshold and dark threshold set by the [setBackgroundLuminanceSamplingConfigs](#setbackgroundluminancesamplingconfigs) API: [0, Dark threshold], (Dark threshold, Luminance threshold], and (Luminance threshold, 255]. The callback is triggered when the background luminance range changes (or the listener callback is registered for the first time) and the interval between the current color picking and the last color picking reaches the specified interval, and the current background luminance is returned.
+Registers the callback for listening to color picking.The background luminance is divided into three ranges based on the luminance threshold and dark threshold set by the [setBackgroundLuminanceSamplingConfigs](#setbackgroundluminancesamplingconfigs) API: [0, Dark threshold], (Dark threshold, Luminance threshold], and (Luminance threshold, 255]. The callback is triggered when the background luminance range changes (or the listener callback is registered for the first time) and the interval between the current color picking and the last color picking reaches the specified interval, and the current background luminance is returned.
 
 **Since:** 23
 

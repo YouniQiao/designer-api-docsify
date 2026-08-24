@@ -1,8 +1,6 @@
 # DisplayIntentType (System API)
 
-Enumerates the screenshot display intent type.
-
-@enum { int }
+Enumerates the screenshot display intent type.@enum { int }
 
 **Since:** 26.0.0
 

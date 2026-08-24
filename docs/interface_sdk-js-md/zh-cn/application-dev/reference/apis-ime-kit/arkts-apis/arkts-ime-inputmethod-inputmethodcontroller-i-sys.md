@@ -1,6 +1,6 @@
 # InputMethodController
 
-@brief 下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md)获取到InputMethodController实例，再通过实例调用对应方法。 <br> <br>InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作： <br> <br>- 绑定管理：通过 [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) 建立与输入法的绑定，通过[detach](arkts-ime-inputmethod-inputmethodcontroller-i.md#detach)解除绑定。attach和 detach必须配对使用。 <br>- 键盘控制：通过[showTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#showtextinput)拉起软键盘 进入编辑状态，通过[hideTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#hidetextinput)隐藏软键盘 退出编辑状态。showTextInput和hideTextInput必须配对使用。 <br>- 编辑框状态同步：通过 [updateCursor](arkts-ime-inputmethod-inputmethodcontroller-i.md#updatecursor) 、 [changeSelection](arkts-ime-inputmethod-inputmethodcontroller-i.md#changeselection) 、 [updateAttribute](arkts-ime-inputmethod-inputmethodcontroller-i.md#updateattribute) 等接口向输入法同步光标、选区、属性等编辑框状态信息。 <br>- 事件订阅：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。 <br> <br>典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` <br> <br>   
+下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md)获取到InputMethodController实例，再通过实例调用对应方法。 <br> <br>InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作： <br> <br>- 绑定管理：通过 [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) 建立与输入法的绑定，通过[detach](arkts-ime-inputmethod-inputmethodcontroller-i.md#detach)解除绑定。attach和 detach必须配对使用。 <br>- 键盘控制：通过[showTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#showtextinput)拉起软键盘 进入编辑状态，通过[hideTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#hidetextinput)隐藏软键盘 退出编辑状态。showTextInput和hideTextInput必须配对使用。 <br>- 编辑框状态同步：通过 [updateCursor](arkts-ime-inputmethod-inputmethodcontroller-i.md#updatecursor) 、 [changeSelection](arkts-ime-inputmethod-inputmethodcontroller-i.md#changeselection) 、 [updateAttribute](arkts-ime-inputmethod-inputmethodcontroller-i.md#updateattribute) 等接口向输入法同步光标、选区、属性等编辑框状态信息。 <br>- 事件订阅：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。 <br> <br>典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -17,11 +17,6 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## hideSoftKeyboard
@@ -30,7 +25,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 hideSoftKeyboard(displayId: long): Promise<void>
 ```
 
-@brief 隐藏指定屏幕上的输入法软键盘。使用Promise异步回调。 <br> <br>   
+隐藏指定屏幕上的输入法软键盘。使用Promise异步回调。 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br
@@ -156,7 +151,7 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 showSoftKeyboard(displayId: long): Promise<void>
 ```
 
-@brief 在指定屏幕上显示输入法软键盘。使用Promise异步回调。 <br> <br>配合使用： <br> <br>- 此方法与hideSoftKeyboard配合使用，可实现对软键盘的显示和隐藏控制 <br>- 通常在调用showSoftKeyboard显示软键盘后，可在需要时调用hideSoftKeyboard隐藏软键盘 <br>- 需要编辑框与输入法绑定时才能调用 <br> <br>   
+在指定屏幕上显示输入法软键盘。使用Promise异步回调。 <br> <br>配合使用： <br> <br>- 此方法与hideSoftKeyboard配合使用，可实现对软键盘的显示和隐藏控制 <br>- 通常在调用showSoftKeyboard显示软键盘后，可在需要时调用hideSoftKeyboard隐藏软键盘 <br>- 需要编辑框与输入法绑定时才能调用 <br> <br>   
 > **说明：** &lt;br
 &gt; 
 > &lt;br

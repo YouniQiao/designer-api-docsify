@@ -21,9 +21,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式。
-
-默认值：BlurStyle.NONE，表示无模糊效果。
+标题栏背景模糊样式。默认值：BlurStyle.NONE，表示无模糊效果。
 
 **类型：** BlurStyle
 
@@ -43,9 +41,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundColor?: ResourceColor
 ```
 
-标题栏背景色。
-
-默认值：'#00000000'，表示背景透明。
+标题栏背景色。默认值：'#00000000'，表示背景透明。
 
 **类型：** ResourceColor
 
@@ -65,17 +61,7 @@ backgroundColor?: ResourceColor
 contentMargin?: LocalizedMargin
 ```
 
-标题栏外边距，不支持设置负数。
-
-默认值：
-
-{
-
-start: LengthMetrics.resource(\$r('sys.float.margin_left')),
-
-end: LengthMetrics.resource(\$r('sys.float.margin_right'))
-
-}。
+标题栏外边距，不支持设置负数。默认值：{start: LengthMetrics.resource(\$r('sys.float.margin_left')),end: LengthMetrics.resource(\$r('sys.float.margin_right'))}。
 
 **类型：** LocalizedMargin
 
@@ -95,9 +81,7 @@ end: LengthMetrics.resource(\$r('sys.float.margin_right'))
 safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-扩展安全区域的方向。
-
-默认值：[SafeAreaEdge.TOP]。
+扩展安全区域的方向。默认值：[SafeAreaEdge.TOP]。
 
 **类型：** Array&lt;SafeAreaEdge&gt;
 
@@ -117,9 +101,7 @@ safeAreaEdges?: Array<SafeAreaEdge>
 safeAreaTypes?: Array<SafeAreaType>
 ```
 
-扩展安全区域的类型。
-
-默认值：[SafeAreaType.SYSTEM]。
+扩展安全区域的类型。默认值：[SafeAreaType.SYSTEM]。
 
 **类型：** Array&lt;SafeAreaType&gt;
 

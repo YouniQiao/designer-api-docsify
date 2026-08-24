@@ -1,8 +1,6 @@
 # DatePickerOptions
 
-Parameters of the date picker.
-
-@interface DatePickerOptions
+Parameters of the date picker.@interface DatePickerOptions
 
 **Since:** 23
 
@@ -40,9 +38,7 @@ End date of the picker.
 mode?: DatePickerMode
 ```
 
-Date columns to be displayed.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In DatePickerDialog, with showTime=true, this parameter has no effect and the default three columns for year, <br>month, and day are displayed. </p>
+Date columns to be displayed.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In DatePickerDialog, with showTime=true, this parameter has no effect and the default three columns for year, <br>month, and day are displayed. </p>
 
 **Type:** [DatePickerMode](arkts-datepicker-datepickermode-e.md)
 
